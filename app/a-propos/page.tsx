@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "À propos | Dilamco",
+  title: "À propos",
   description:
     "À propos de Dilamco : cuisines, armoires et vanités sur mesure haut de gamme. Approche clé en main selon le projet, contrôle qualité et exécution soignée à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

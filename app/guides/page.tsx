@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Guides | Dilamco",
+  title: "Guides",
   description:
     "Guides et conseils pour projets de cuisines, vanités et rénovations sur mesure. Décisions éclairées, de l’inspiration à la soumission, à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

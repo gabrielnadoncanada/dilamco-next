@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comparatifs | Dilamco",
+  title: "Comparatifs",
   description:
     "Comparatifs pour aider à choisir : sur mesure vs IKEA, sur mesure vs Home Depot, cuisiniste vs entrepreneur général. Décisions orientées durabilité, exécution et coûts cachés.",
   alternates: {

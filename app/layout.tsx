@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Dilamco | Cuisines, vanités et armoires sur mesure au Québec",
+    default: "Cuisines, vanités et armoires sur mesure au Québec | Dilamco",
     template: "%s | Dilamco",
   },
 

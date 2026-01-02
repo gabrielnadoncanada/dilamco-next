@@ -4,7 +4,7 @@ import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
-  title: "Comparatif des matériaux | Dilamco",
+  title: "Comparatif des matériaux",
   description:
     "Comparatif des matériaux pour cuisines, vanités et armoires sur mesure : MDF, mélamine, contreplaqué et bois massif. Choisir selon l’usage, l’humidité, la stabilité et la durabilité.",
   alternates: {
@@ -304,6 +304,5 @@ export default function Comparatif() {
         </p>
       </section>
     </main>
-    </>
   );
 }

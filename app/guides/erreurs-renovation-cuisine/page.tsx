@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Erreurs fréquentes en rénovation de cuisine | Dilamco",
+  title: "Erreurs fréquentes en rénovation de cuisine",
   description:
     "Guide : erreurs fréquentes en rénovation de cuisine (matériaux, ergonomie, coordination, installation, échéancier) et comment les éviter avant de commencer le chantier.",
   alternates: {

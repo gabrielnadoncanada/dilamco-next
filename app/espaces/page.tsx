@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Espaces sur mesure | Dilamco",
+  title: "Espaces sur mesure",
   description:
     "Découvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial. Design, fabrication, installation et option rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

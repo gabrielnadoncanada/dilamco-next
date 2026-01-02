@@ -4,7 +4,7 @@ const siteUrl = "https://dilamco.com";
 
 export const metadata: Metadata = {
   title:
-    "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
+    "Cuisines, vanités et armoires sur mesure clé en main à Montréal | Dilamco",
   description:
     "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
   alternates: { canonical: `${siteUrl}/` },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cuisine sur mesure vs IKEA | Dilamco",
+  title: "Cuisine sur mesure vs IKEA",
   description:
     "Comparatif cuisine sur mesure vs IKEA : personnalisation, ergonomie, matériaux, installation et rénovation. Aidez-vous à choisir la solution adaptée à votre projet à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

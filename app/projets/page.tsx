@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projets | Dilamco",
+  title: "Projets",
   description:
     "Projets sur mesure réalisés par Dilamco : cuisines, salles de bain, walk-in, salles de lavage et commercial. Réalisations à Montréal, Laval et sur la Rive-Sud.",
   alternates: {
@@ -102,8 +102,6 @@ export default function Projets() {
           </li>
         </ul>
       </section>
-
-
 
       <section aria-labelledby="processus">
         <h2 id="processus">Notre approche projet</h2>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Comment choisir une cuisine sur mesure | Dilamco",
+  title: "Comment choisir une cuisine sur mesure",
   description:
     "Guide complet pour choisir une cuisine sur mesure : usages, ergonomie, matériaux, rangement, quincaillerie, installation et rénovation. Orienté décision, sans prix.",
   alternates: {

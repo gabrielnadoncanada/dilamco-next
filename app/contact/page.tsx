@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Soumission | Dilamco",
+  title: "Contact & soumission",
   description:
     "Contactez Dilamco pour une soumission : cuisine, salle de bain, walk-in, salle de lavage ou commercial. Sur mesure haut de gamme et option clé en main à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

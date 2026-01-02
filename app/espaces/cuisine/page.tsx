@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import {
+  serviceJsonLd,
+  faqJsonLd,
+  breadcrumbJsonLd,
+} from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
-  title: "Cuisine sur mesure | Dilamco",
+  title: "Cuisine sur mesure",
   description:
     "Cuisine sur mesure haut de gamme : design, fabrication et installation. Armoires, îlots et rangement optimisé, avec option rénovation de cuisine clé en main à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

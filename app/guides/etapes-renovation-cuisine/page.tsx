@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Étapes d'une rénovation de cuisine | Dilamco",
+  title: "Étapes d'une rénovation de cuisine",
   description:
     "Guide : étapes d’une rénovation de cuisine, du cadrage au design, aux travaux techniques, à l’installation et aux finitions. Comprendre le bon ordre des étapes avant de démarrer.",
   alternates: {
