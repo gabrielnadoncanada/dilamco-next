@@ -201,32 +201,6 @@ export default function SalleDeLavage() {
         </ul>
       </section>
 
-      <section aria-labelledby="local">
-        <h2 id="local">Zones desservies</h2>
-        <p>
-          Nos salles de lavage sur mesure sont réalisées principalement à
-          Montréal, Laval et sur la Rive-Sud.
-        </p>
-        <ul>
-          <li>
-            <a href="/montreal/cuisine-sur-mesure/">Projets à Montréal</a>
-          </li>
-          <li>
-            <a href="/laval/cuisine-sur-mesure/">Projets à Laval</a>
-          </li>
-          <li>
-            <a href="/rive-sud/cuisine-sur-mesure/">Projets sur la Rive-Sud</a>
-          </li>
-        </ul>
-        <p>
-          <small>
-            Note : des pages locales dédiées “salle de lavage sur mesure”
-            peuvent être ajoutées si ce service devient une priorité de
-            positionnement.
-          </small>
-        </p>
-      </section>
-
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — salle de lavage sur mesure</h2>
         <dl>

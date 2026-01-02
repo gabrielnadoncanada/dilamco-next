@@ -64,7 +64,6 @@ export type ProjectData = {
     installationHref?: string; // /services/installation/
     designHref?: string; // /services/design/
     fabricationHref?: string; // /services/fabrication/
-    localHref?: string; // e.g. /montreal/cuisine-sur-mesure/ (only if pages local are active)
   };
 
   // Supporting links
@@ -162,7 +161,6 @@ export const PROJECTS: ProjectData[] = [
       installationHref: CORE_HREF.installation,
       designHref: CORE_HREF.design,
       fabricationHref: CORE_HREF.fabrication,
-      localHref: "/montreal/cuisine-sur-mesure/",
     },
     materials: [
       { label: "Pourquoi le contreplaqué", href: CORE_HREF.plywood },
@@ -216,7 +214,6 @@ export const PROJECTS: ProjectData[] = [
     optionalLinks: {
       galleryHref: SPACE_GALLERY_HREF["salle-de-bain"],
       installationHref: CORE_HREF.installation,
-      localHref: "/laval/vanite-sur-mesure/",
     },
     materials: [
       { label: "Pourquoi le contreplaqué", href: CORE_HREF.plywood },

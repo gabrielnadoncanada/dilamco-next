@@ -190,31 +190,6 @@ export default function WalkIn() {
         </ul>
       </section>
 
-      <section aria-labelledby="local">
-        <h2 id="local">Zones desservies</h2>
-        <p>
-          Nos walk-in sur mesure sont réalisés principalement à Montréal, Laval
-          et sur la Rive-Sud.
-        </p>
-        <ul>
-          <li>
-            <a href="/montreal/cuisine-sur-mesure/">Projets à Montréal</a>
-          </li>
-          <li>
-            <a href="/laval/cuisine-sur-mesure/">Projets à Laval</a>
-          </li>
-          <li>
-            <a href="/rive-sud/cuisine-sur-mesure/">Projets sur la Rive-Sud</a>
-          </li>
-        </ul>
-        <p>
-          <small>
-            Note : des pages locales dédiées “walk-in sur mesure” peuvent être
-            ajoutées si ce service devient une priorité de positionnement.
-          </small>
-        </p>
-      </section>
-
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — walk-in & rangement sur mesure</h2>
         <dl>

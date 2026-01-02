@@ -213,17 +213,15 @@ export default function Contact() {
           </li>
         </ul>
         <p>
-          <a href="/montreal/cuisine-sur-mesure/">
-            Cuisine sur mesure à Montréal
-          </a>{" "}
+          <a href="/espaces/cuisine/">Cuisine sur mesure</a>
           {" | "}
-          <a href="/laval/cuisine-sur-mesure/">
-            Cuisine sur mesure à Laval
-          </a>{" "}
+          <a href="/espaces/salle-de-bain/">Salle de bain / vanité</a>
           {" | "}
-          <a href="/rive-sud/cuisine-sur-mesure/">
-            Cuisine sur mesure sur la Rive-Sud
-          </a>
+          <a href="/espaces/walk-in/">Walk-in / rangement</a>
+          {" | "}
+          <a href="/espaces/salle-de-lavage/">Salle de lavage</a>
+          {" | "}
+          <a href="/espaces/commercial/">Commercial</a>
         </p>
       </section>
     </main>

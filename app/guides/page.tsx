@@ -108,29 +108,6 @@ export default function Guides() {
         </p>
       </section>
 
-      <section aria-labelledby="local">
-        <h2 id="local">Projets locaux</h2>
-        <p>
-          Nos guides s’appliquent principalement à des projets réalisés à
-          Montréal, Laval et sur la Rive-Sud.
-        </p>
-        <ul>
-          <li>
-            <a href="/montreal/cuisine-sur-mesure/">
-              Cuisine sur mesure à Montréal
-            </a>
-          </li>
-          <li>
-            <a href="/laval/cuisine-sur-mesure/">Cuisine sur mesure à Laval</a>
-          </li>
-          <li>
-            <a href="/rive-sud/cuisine-sur-mesure/">
-              Cuisine sur mesure sur la Rive-Sud
-            </a>
-          </li>
-        </ul>
-      </section>
-
       <section aria-labelledby="cta">
         <h2 id="cta">Parlez-nous de votre projet</h2>
         <p>

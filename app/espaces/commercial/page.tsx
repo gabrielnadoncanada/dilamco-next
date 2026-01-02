@@ -206,25 +206,6 @@ export default function Commercial() {
         </ul>
       </section>
 
-      <section aria-labelledby="local">
-        <h2 id="local">Zones desservies</h2>
-        <p>
-          Nos projets commerciaux sont réalisés principalement à Montréal, Laval
-          et sur la Rive-Sud.
-        </p>
-        <ul>
-          <li>
-            <a href="/montreal/cuisine-sur-mesure/">Projets à Montréal</a>
-          </li>
-          <li>
-            <a href="/laval/cuisine-sur-mesure/">Projets à Laval</a>
-          </li>
-          <li>
-            <a href="/rive-sud/cuisine-sur-mesure/">Projets sur la Rive-Sud</a>
-          </li>
-        </ul>
-      </section>
-
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — commercial sur mesure</h2>
         <dl>

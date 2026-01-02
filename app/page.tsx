@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: `${siteUrl}/`,
-    title: "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
+    title:
+      "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
     description:
       "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
     images: [
@@ -27,7 +28,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
+    title:
+      "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
     description:
       "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
     images: ["/opengraph-image"],
@@ -133,54 +135,6 @@ export default function Home() {
           <a href="/materiaux/">Voir nos matériaux</a> {" | "}
           <a href="/services/">Découvrir nos services</a>
         </p>
-      </section>
-
-      <section aria-labelledby="local">
-        <h2 id="local">Zones desservies</h2>
-        <p>
-          Nous réalisons des projets principalement à <strong>Montréal</strong>,{" "}
-          <strong>Laval</strong> et sur la <strong>Rive-Sud</strong>. Pour les
-          projets d’envergure, d’autres secteurs au Québec peuvent être
-          considérés.
-        </p>
-
-        <ul>
-          <li>
-            <a href="/montreal/cuisine-sur-mesure/">
-              Cuisine sur mesure à Montréal
-            </a>{" "}
-            {" — "}
-            <a href="/montreal/renovation-cuisine/">
-              Rénovation de cuisine à Montréal
-            </a>{" "}
-            {" — "}
-            <a href="/montreal/vanite-sur-mesure/">
-              Vanité sur mesure à Montréal
-            </a>
-          </li>
-          <li>
-            <a href="/laval/cuisine-sur-mesure/">Cuisine sur mesure à Laval</a>{" "}
-            {" — "}
-            <a href="/laval/renovation-cuisine/">
-              Rénovation de cuisine à Laval
-            </a>{" "}
-            {" — "}
-            <a href="/laval/vanite-sur-mesure/">Vanité sur mesure à Laval</a>
-          </li>
-          <li>
-            <a href="/rive-sud/cuisine-sur-mesure/">
-              Cuisine sur mesure sur la Rive-Sud
-            </a>{" "}
-            {" — "}
-            <a href="/rive-sud/renovation-cuisine/">
-              Rénovation de cuisine sur la Rive-Sud
-            </a>{" "}
-            {" — "}
-            <a href="/rive-sud/vanite-sur-mesure/">
-              Vanité sur mesure sur la Rive-Sud
-            </a>
-          </li>
-        </ul>
       </section>
 
       <section aria-labelledby="processus">
