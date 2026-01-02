@@ -1,10 +1,7 @@
 // app/services/renovation/[type]/page.tsx
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import {
-  getRenovationSubServiceByType,
-  type RenovationType,
-} from "@/data/services";
+import { getRenovationSubServiceByType } from "@/data/services/utils";
 import { JsonLd } from "@/seo/JsonLd";
 import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
 
@@ -185,9 +182,7 @@ export default async function RenovationSubServicePage({
               : "Rénovation de salle de bain",
         })}
       />
-      {subService.faq.length > 0 && (
-        <JsonLd data={faqJsonLd(subService.faq)} />
-      )}
+      {subService.faq.length > 0 && <JsonLd data={faqJsonLd(subService.faq)} />}
       <main id="contenu">
         <header>
           <h1>{subService.hero.h1}</h1>
