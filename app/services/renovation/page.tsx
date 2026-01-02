@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Rénovation clé en main | Dilamco",
   description:
-    "Rénovation clé en main : planification, coordination des corps de métier, exécution et finition. Cuisine et salle de bain à Montréal, Laval et sur la Rive-Sud.",
+    "Rénovation clé en main : planification, coordination des corps de métier, exécution et finition. Cuisine, salle de bain, plancher et agrandissement à Montréal, Laval et sur la Rive-Sud.",
   alternates: {
     canonical: "https://dilamco.com/services/renovation/",
   },
@@ -23,7 +23,7 @@ export default function Renovation() {
         </p>
         <p>
           <a href="/contact/">Demander une soumission</a> {" | "}
-          <a href="/projets/cuisine/">Voir des projets</a>
+          <a href="/projets/">Voir des projets</a>
         </p>
       </header>
 
@@ -50,8 +50,8 @@ export default function Renovation() {
             des imprévus.
           </li>
           <li>
-            <strong>Installation & finition :</strong> alignements, ajustements,
-            inspection finale.
+            <strong>Installation &amp; finition :</strong> alignements,
+            ajustements, inspection finale.
           </li>
         </ul>
       </section>
@@ -93,6 +93,22 @@ export default function Renovation() {
               installation de vanités sur mesure.
             </p>
           </li>
+          <li>
+            <a href="/services/renovation/plancher/">Rénovation de plancher</a>
+            <p>
+              Niveaux, transitions et coordination des étapes pour une finition
+              cohérente, surtout en cuisine et salle de bain.
+            </p>
+          </li>
+          <li>
+            <a href="/services/renovation/agrandissement-de-maison/">
+              Agrandissement de maison
+            </a>
+            <p>
+              Planification, coordination et exécution complète pour ajouter de
+              l’espace et intégrer l’agrandissement à l’existant.
+            </p>
+          </li>
         </ul>
       </section>
 
@@ -123,41 +139,16 @@ export default function Renovation() {
         <p>
           <a href="/espaces/cuisine/">Cuisine sur mesure</a> {" | "}
           <a href="/espaces/salle-de-bain/">
-            Salle de bain & vanités sur mesure
+            Salle de bain &amp; vanités sur mesure
           </a>
         </p>
-      </section>
-
-      <section aria-labelledby="local">
-        <h2 id="local">Zones desservies</h2>
-        <p>
-          Nos projets de rénovation sont réalisés principalement à Montréal,
-          Laval et sur la Rive-Sud.
-        </p>
-        <ul>
-          <li>
-            <a href="/montreal/renovation-cuisine/">
-              Rénovation de cuisine à Montréal
-            </a>
-          </li>
-          <li>
-            <a href="/laval/renovation-cuisine/">
-              Rénovation de cuisine à Laval
-            </a>
-          </li>
-          <li>
-            <a href="/rive-sud/renovation-cuisine/">
-              Rénovation de cuisine sur la Rive-Sud
-            </a>
-          </li>
-        </ul>
       </section>
 
       <section aria-labelledby="cta">
         <h2 id="cta">Parlez-nous de votre projet de rénovation</h2>
         <p>
-          Indiquez votre ville (Montréal/Laval/Rive-Sud), l’espace concerné
-          (cuisine ou salle de bain) et si vous modifiez
+          Indiquez votre ville (Montréal/Laval/Rive-Sud), le type de projet
+          (cuisine, salle de bain, plancher, agrandissement) et si vous modifiez
           plomberie/électricité/plancher. On revient vers vous avec les
           prochaines étapes.
         </p>

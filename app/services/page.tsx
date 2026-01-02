@@ -71,55 +71,6 @@ export default function Services() {
         </ul>
       </section>
 
-      <section aria-labelledby="par-espace">
-        <h2 id="par-espace">Services par espace</h2>
-        <p>
-          Pour certains projets, c’est plus simple de partir de l’espace
-          (cuisine, salle de bain, rangement).
-        </p>
-
-        <ul>
-          <li>
-            <strong>Cuisine</strong> :{" "}
-            <a href="/services/design-cuisine/">design</a>,{" "}
-            <a href="/services/fabrication-armoire-cuisine/">
-              fabrication d’armoires
-            </a>
-            , <a href="/services/renovation/cuisine/">rénovation de cuisine</a>
-          </li>
-          <li>
-            <strong>Salle de bain</strong> :{" "}
-            <a href="/services/design-salle-de-bain/">design</a>,{" "}
-            <a href="/services/fabrication-armoire-salle-de-bain/">
-              fabrication vanités & armoires
-            </a>
-            ,{" "}
-            <a href="/services/renovation/salle-de-bain/">
-              rénovation salle de bain
-            </a>
-          </li>
-          <li>
-            <strong>Walk-in</strong> :{" "}
-            <a href="/services/design-walk-in/">design</a>,{" "}
-            <a href="/services/fabrication-armoire-walk-in/">
-              fabrication modules
-            </a>
-          </li>
-          <li>
-            <strong>Salle de lavage</strong> :{" "}
-            <a href="/services/design-salle-de-lavage/">design</a>,{" "}
-            <a href="/services/fabrication-armoire-salle-de-lavage/">
-              fabrication armoires
-            </a>
-          </li>
-          <li>
-            <strong>Commercial</strong> :{" "}
-            <a href="/services/design-commercial/">design</a>,{" "}
-            <a href="/services/fabrication-armoire-commerciale/">fabrication</a>
-          </li>
-        </ul>
-      </section>
-
       <section aria-labelledby="renovation-types">
         <h2 id="renovation-types">Rénovation par type</h2>
         <p>

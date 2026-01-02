@@ -202,29 +202,6 @@ export default function SalleDeBain() {
         </ul>
       </section>
 
-      <section aria-labelledby="local">
-        <h2 id="local">Zones desservies</h2>
-        <p>
-          Nos vanités sur mesure sont réalisées principalement à Montréal, Laval
-          et sur la Rive-Sud.
-        </p>
-        <ul>
-          <li>
-            <a href="/montreal/vanite-sur-mesure/">
-              Vanité sur mesure à Montréal
-            </a>
-          </li>
-          <li>
-            <a href="/laval/vanite-sur-mesure/">Vanité sur mesure à Laval</a>
-          </li>
-          <li>
-            <a href="/rive-sud/vanite-sur-mesure/">
-              Vanité sur mesure sur la Rive-Sud
-            </a>
-          </li>
-        </ul>
-      </section>
-
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — salle de bain & vanités sur mesure</h2>
         <dl>
