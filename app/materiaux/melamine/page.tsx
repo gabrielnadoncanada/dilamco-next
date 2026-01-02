@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Mélamine | Dilamco",
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
 };
 
 export default function Melamine() {
+  const faqItems = [
+    {
+      q: "La mélamine est-elle un matériau bas de gamme?",
+      a: "Pas forcément. Elle peut être pertinente selon le projet. La durabilité dépend surtout de l'usage, de la qualité des chants, de la quincaillerie et de l'installation.",
+    },
+    {
+      q: "La mélamine gonfle-t-elle?",
+      a: "Elle peut se dégrader si l'humidité s'infiltre, surtout lorsque les chants sont endommagés. D'où l'importance des protections et d'une bonne exécution.",
+    },
+    {
+      q: "Mélamine ou MDF : lequel choisir?",
+      a: "Le MDF est souvent choisi pour des portes peintes (surface très uniforme). La mélamine est plutôt choisie pour son fini décoratif et un coût souvent plus maîtrisé. Le bon choix dépend du style, de l'usage et de l'environnement.",
+    },
+    {
+      q: "Est-ce recommandé en salle de bain?",
+      a: "Ça dépend du contexte (ventilation, usage, protections). Dans certains projets, une autre solution sera préférable pour réduire les risques à long terme.",
+    },
+  ];
+
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Matériaux", url: SITE.url + "/materiaux/" },
@@ -22,6 +42,7 @@ export default function Melamine() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>
         <h1>Mélamine — usages, limites et alternatives en sur mesure</h1>
@@ -167,34 +188,12 @@ export default function Melamine() {
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — mélamine</h2>
         <dl>
-          <dt>La mélamine est-elle un matériau bas de gamme?</dt>
-          <dd>
-            Pas forcément. Elle peut être pertinente selon le projet. La
-            durabilité dépend surtout de l’usage, de la qualité des chants, de
-            la quincaillerie et de l’installation.
-          </dd>
-
-          <dt>La mélamine gonfle-t-elle?</dt>
-          <dd>
-            Elle peut se dégrader si l’humidité s’infiltre, surtout lorsque les
-            chants sont endommagés. D’où l’importance des protections et d’une
-            bonne exécution.
-          </dd>
-
-          <dt>Mélamine ou MDF : lequel choisir?</dt>
-          <dd>
-            Le MDF est souvent choisi pour des portes peintes (surface très
-            uniforme). La mélamine est plutôt choisie pour son fini décoratif et
-            un coût souvent plus maîtrisé. Le bon choix dépend du style, de
-            l’usage et de l’environnement.
-          </dd>
-
-          <dt>Est-ce recommandé en salle de bain?</dt>
-          <dd>
-            Ça dépend du contexte (ventilation, usage, protections). Dans
-            certains projets, une autre solution sera préférable pour réduire
-            les risques à long terme.
-          </dd>
+          {faqItems.map((item: FAQItem) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
 

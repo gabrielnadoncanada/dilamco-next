@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
 import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Cuisine sur mesure | Dilamco",
@@ -226,36 +227,12 @@ export default function Cuisine() {
         <section aria-labelledby="faq">
           <h2 id="faq">FAQ — cuisine sur mesure</h2>
           <dl>
-            <dt>Cuisine sur mesure vs semi-custom : quelle différence?</dt>
-            <dd>
-              Le sur mesure est conçu pour votre espace exact (dimensions,
-              contraintes, ergonomie). Le semi-custom part de modules prédéfinis
-              avec des variations. Le choix dépend du niveau d’adaptation et de
-              finition recherché.
-            </dd>
-
-            <dt>
-              Qu’est-ce qui influence le plus la durabilité d’une cuisine?
-            </dt>
-            <dd>
-              La durabilité dépend du matériau, mais aussi de l’assemblage, des
-              chants, de la quincaillerie et de l’installation. L’usage
-              (charges, humidité, entretien) compte autant que le look.
-            </dd>
-
-            <dt>Est-ce possible en condo ou dans un espace difficile?</dt>
-            <dd>
-              Oui. Le sur mesure est particulièrement pertinent lorsque l’espace
-              impose des contraintes (murs irréguliers, accès, plomberie,
-              intégration électroménagers).
-            </dd>
-
-            <dt>Quels sont les délais typiques?</dt>
-            <dd>
-              Les délais varient selon la complexité et la disponibilité.
-              L’échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à
-              préciser lors de la soumission.
-            </dd>
+            {faqItems.map((item: FAQItem) => (
+              <div key={item.q}>
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
+              </div>
+            ))}
           </dl>
         </section>
 

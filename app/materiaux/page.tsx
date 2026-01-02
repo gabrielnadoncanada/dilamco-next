@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { faqJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Matériaux | Dilamco",
@@ -31,8 +33,14 @@ export default function Materiaux() {
     },
   ];
 
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>

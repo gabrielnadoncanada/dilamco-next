@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Salle de lavage sur mesure | Dilamco",
@@ -13,8 +14,40 @@ export const metadata: Metadata = {
 };
 
 export default function SalleDeLavage() {
+  const faqItems = [
+    {
+      q: "Comment optimiser une petite buanderie?",
+      a: "En structurant des zones (lavage, pliage, rangement) et en exploitant la hauteur. Le sur mesure aide à éviter les espaces perdus et à intégrer les contraintes techniques.",
+    },
+    {
+      q: "Tiroirs ou portes pour ranger les produits?",
+      a: "Les tiroirs donnent un accès plus simple (surtout en profondeur). Les portes peuvent être utiles pour des items volumineux. Le bon choix dépend de la configuration et de vos habitudes.",
+    },
+    {
+      q: "Quels matériaux tiennent bien avec l'humidité?",
+      a: "Le point clé est la stabilité et la protection des chants. La durabilité dépend aussi de l'assemblage, de la quincaillerie et de la qualité d'installation.",
+    },
+    {
+      q: "Est-ce possible dans un placard?",
+      a: "Oui. Le sur mesure est particulièrement pertinent dans un placard, car il faut gérer les dégagements, l'ouverture, la circulation et souvent des contraintes techniques.",
+    },
+    {
+      q: "Quels sont les délais typiques?",
+      a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à préciser lors de la soumission.",
+    },
+  ];
+
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Espaces", url: SITE.url + "/espaces/" },
+    { name: "Salle de lavage", url: SITE.url + "/espaces/salle-de-lavage/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
+      <main id="contenu">
       <header>
         <h1>
           Salle de lavage sur mesure — armoires et rangement durable pour
@@ -207,40 +240,12 @@ export default function SalleDeLavage() {
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — salle de lavage sur mesure</h2>
         <dl>
-          <dt>Comment optimiser une petite buanderie?</dt>
-          <dd>
-            En structurant des zones (lavage, pliage, rangement) et en
-            exploitant la hauteur. Le sur mesure aide à éviter les espaces
-            perdus et à intégrer les contraintes techniques.
-          </dd>
-
-          <dt>Tiroirs ou portes pour ranger les produits?</dt>
-          <dd>
-            Les tiroirs donnent un accès plus simple (surtout en profondeur).
-            Les portes peuvent être utiles pour des items volumineux. Le bon
-            choix dépend de la configuration et de vos habitudes.
-          </dd>
-
-          <dt>Quels matériaux tiennent bien avec l’humidité?</dt>
-          <dd>
-            Le point clé est la stabilité et la protection des chants. La
-            durabilité dépend aussi de l’assemblage, de la quincaillerie et de
-            la qualité d’installation.
-          </dd>
-
-          <dt>Est-ce possible dans un placard?</dt>
-          <dd>
-            Oui. Le sur mesure est particulièrement pertinent dans un placard,
-            car il faut gérer les dégagements, l’ouverture, la circulation et
-            souvent des contraintes techniques.
-          </dd>
-
-          <dt>Quels sont les délais typiques?</dt>
-          <dd>
-            Les délais varient selon la complexité et la disponibilité.
-            L’échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à
-            préciser lors de la soumission.
-          </dd>
+          {faqItems.map((item: FAQItem) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
 

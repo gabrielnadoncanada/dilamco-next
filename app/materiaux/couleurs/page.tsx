@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Couleurs et finis | Dilamco",
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
 };
 
 export default function Couleurs() {
+  const faqItems = [
+    {
+      q: "Mat ou satiné : lequel est le plus durable?",
+      a: "En général, le satiné est un excellent compromis pour l'entretien, surtout en cuisine. Le mat peut être très beau, mais il est plus exigeant selon l'usage.",
+    },
+    {
+      q: "Les couleurs foncées sont-elles risquées?",
+      a: "Pas si l'éclairage est bon et si le fini est adapté. Elles fonctionnent très bien en accent (îlot, garde-manger) ou dans un espace bien éclairé.",
+    },
+    {
+      q: "Peut-on changer la couleur plus tard?",
+      a: "Selon les matériaux et le type de fini, c'est parfois possible, mais pas toujours simple. C'est une décision à cadrer au moment du design.",
+    },
+    {
+      q: "Comment éviter que le rendu \"jaunisse\" ou se démode?",
+      a: "Privilégier une base intemporelle (neutres, bois) et utiliser les accents de façon plus flexible (poignées, luminaires, accessoires).",
+    },
+  ];
+
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Matériaux", url: SITE.url + "/materiaux/" },
@@ -22,6 +42,7 @@ export default function Couleurs() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>
         <h1>
@@ -209,32 +230,12 @@ export default function Couleurs() {
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — couleurs & finis</h2>
         <dl>
-          <dt>Mat ou satiné : lequel est le plus durable?</dt>
-          <dd>
-            En général, le satiné est un excellent compromis pour l’entretien,
-            surtout en cuisine. Le mat peut être très beau, mais il est plus
-            exigeant selon l’usage.
-          </dd>
-
-          <dt>Les couleurs foncées sont-elles risquées?</dt>
-          <dd>
-            Pas si l’éclairage est bon et si le fini est adapté. Elles
-            fonctionnent très bien en accent (îlot, garde-manger) ou dans un
-            espace bien éclairé.
-          </dd>
-
-          <dt>Peut-on changer la couleur plus tard?</dt>
-          <dd>
-            Selon les matériaux et le type de fini, c’est parfois possible, mais
-            pas toujours simple. C’est une décision à cadrer au moment du
-            design.
-          </dd>
-
-          <dt>Comment éviter que le rendu “jaunisse” ou se démode?</dt>
-          <dd>
-            Privilégier une base intemporelle (neutres, bois) et utiliser les
-            accents de façon plus flexible (poignées, luminaires, accessoires).
-          </dd>
+          {faqItems.map((item: FAQItem) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
 

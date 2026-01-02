@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Bois massif | Dilamco",
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
 };
 
 export default function BoisMassif() {
+  const faqItems = [
+    {
+      q: "Le bois massif est-il toujours meilleur?",
+      a: "Non. Il est excellent pour l'esthétique et certaines applications, mais des panneaux techniques peuvent être plus stables et plus adaptés à certaines contraintes.",
+    },
+    {
+      q: "Est-ce recommandé en cuisine?",
+      a: "Oui, souvent pour les portes et éléments visibles. Le choix dépend du fini, de l'entretien et de l'environnement (vapeur, chaleur, usage).",
+    },
+    {
+      q: "Comment réagit-il à l'humidité?",
+      a: "Le bois peut bouger avec l'humidité. La conception, la finition et l'usage du matériau aux bons endroits sont essentiels pour limiter les effets.",
+    },
+    {
+      q: "Peut-on combiner bois massif et autres matériaux?",
+      a: "Oui. C'est souvent la meilleure approche : bois massif pour les éléments visibles, et matériaux plus stables pour certaines structures, selon le projet.",
+    },
+  ];
+
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Matériaux", url: SITE.url + "/materiaux/" },
@@ -22,6 +42,7 @@ export default function BoisMassif() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>
         <h1>Bois massif — authenticité, caractère et limites à connaître</h1>
@@ -225,33 +246,12 @@ export default function BoisMassif() {
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — bois massif</h2>
         <dl>
-          <dt>Le bois massif est-il toujours meilleur?</dt>
-          <dd>
-            Non. Il est excellent pour l’esthétique et certaines applications,
-            mais des panneaux techniques peuvent être plus stables et plus
-            adaptés à certaines contraintes.
-          </dd>
-
-          <dt>Est-ce recommandé en cuisine?</dt>
-          <dd>
-            Oui, souvent pour les portes et éléments visibles. Le choix dépend
-            du fini, de l’entretien et de l’environnement (vapeur, chaleur,
-            usage).
-          </dd>
-
-          <dt>Comment réagit-il à l’humidité?</dt>
-          <dd>
-            Le bois peut bouger avec l’humidité. La conception, la finition et
-            l’usage du matériau aux bons endroits sont essentiels pour limiter
-            les effets.
-          </dd>
-
-          <dt>Peut-on combiner bois massif et autres matériaux?</dt>
-          <dd>
-            Oui. C’est souvent la meilleure approche : bois massif pour les
-            éléments visibles, et matériaux plus stables pour certaines
-            structures, selon le projet.
-          </dd>
+          {faqItems.map((item: FAQItem) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
 

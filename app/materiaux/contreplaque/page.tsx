@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Pourquoi le contreplaqué | Dilamco",
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
 };
 
 export default function Contreplaque() {
+  const faqItems = [
+    {
+      q: "Le contreplaqué est-il toujours meilleur que le MDF?",
+      a: "Pas nécessairement. Le contreplaqué est souvent très pertinent pour la structure et la tenue des vis, tandis que le MDF peut être adapté pour certains finis ou applications. Le choix dépend de l'usage et du contexte.",
+    },
+    {
+      q: "Le contreplaqué est-il adapté à la salle de bain?",
+      a: "Ça dépend de l'environnement et des détails de protection (chants, finition, installation). L'objectif est de choisir une solution durable selon l'usage réel.",
+    },
+    {
+      q: "Est-ce plus cher?",
+      a: "Souvent, oui. Le coût reflète généralement la qualité structurelle et la durabilité recherchée. L'impact dépend du projet et des composantes concernées.",
+    },
+    {
+      q: "Est-ce visible une fois installé?",
+      a: "Généralement non, sauf si certaines tranches sont exposées volontairement au design. Dans tous les cas, le traitement des chants et la finition sont déterminants.",
+    },
+  ];
+
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Matériaux", url: SITE.url + "/materiaux/" },
@@ -22,6 +42,7 @@ export default function Contreplaque() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>
         <h1>Contreplaqué — stabilité, durabilité et structure intelligente</h1>
@@ -230,34 +251,12 @@ export default function Contreplaque() {
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — contreplaqué</h2>
         <dl>
-          <dt>Le contreplaqué est-il toujours meilleur que le MDF?</dt>
-          <dd>
-            Pas nécessairement. Le contreplaqué est souvent très pertinent pour
-            la structure et la tenue des vis, tandis que le MDF peut être adapté
-            pour certains finis ou applications. Le choix dépend de l’usage et
-            du contexte.
-          </dd>
-
-          <dt>Le contreplaqué est-il adapté à la salle de bain?</dt>
-          <dd>
-            Ça dépend de l’environnement et des détails de protection (chants,
-            finition, installation). L’objectif est de choisir une solution
-            durable selon l’usage réel.
-          </dd>
-
-          <dt>Est-ce plus cher?</dt>
-          <dd>
-            Souvent, oui. Le coût reflète généralement la qualité structurelle
-            et la durabilité recherchée. L’impact dépend du projet et des
-            composantes concernées.
-          </dd>
-
-          <dt>Est-ce visible une fois installé?</dt>
-          <dd>
-            Généralement non, sauf si certaines tranches sont exposées
-            volontairement au design. Dans tous les cas, le traitement des
-            chants et la finition sont déterminants.
-          </dd>
+          {faqItems.map((item: FAQItem) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
 

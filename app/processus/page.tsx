@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Processus | Dilamco",
@@ -32,8 +33,14 @@ export default function Processus() {
     },
   ];
 
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Processus", url: SITE.url + "/processus/" },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd
         data={serviceJsonLd({
           name: "Processus Dilamco",
@@ -270,33 +277,12 @@ export default function Processus() {
         <section aria-labelledby="faq">
           <h2 id="faq">FAQ — processus</h2>
           <dl>
-            <dt>
-              Est-ce que tous les projets suivent exactement les mêmes étapes?
-            </dt>
-            <dd>
-              La structure est la même, mais la portée varie. Un projet
-              “aménagement seulement” est plus simple qu’une rénovation complète
-              avec travaux connexes.
-            </dd>
-
-            <dt>À quel moment la fabrication démarre-t-elle?</dt>
-            <dd>
-              Lorsque le plan et les décisions essentielles sont validés. Les
-              changements tardifs sont la source la plus fréquente de reprises
-              et de délais.
-            </dd>
-
-            <dt>Faites-vous l’installation?</dt>
-            <dd>
-              Oui. L’installation et les ajustements sont essentiels pour un
-              résultat durable et une finition propre.
-            </dd>
-
-            <dt>Le processus est-il adapté aux condos?</dt>
-            <dd>
-              Oui. On tient compte des contraintes d’accès, d’horaires et de
-              logistique propres aux immeubles.
-            </dd>
+            {faqItems.map((item: FAQItem) => (
+              <div key={item.q}>
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
+              </div>
+            ))}
           </dl>
         </section>
 

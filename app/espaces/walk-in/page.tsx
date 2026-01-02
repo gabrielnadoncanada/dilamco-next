@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Walk-in & rangement sur mesure | Dilamco",
@@ -13,8 +14,36 @@ export const metadata: Metadata = {
 };
 
 export default function WalkIn() {
+  const faqItems = [
+    {
+      q: "Walk-in sur mesure vs modulaire : quelle différence?",
+      a: "Le sur mesure s'adapte à l'espace exact (dimensions, angles, contraintes) et à vos habitudes. Le modulaire est plus standard et peut laisser des zones perdues ou moins optimisées.",
+    },
+    {
+      q: "Est-ce possible dans un petit espace?",
+      a: "Oui. Le sur mesure est particulièrement utile dans les espaces serrés, car il permet d'optimiser la circulation et de maximiser le rangement sans \"perdre\" des centimètres.",
+    },
+    {
+      q: "Quels matériaux sont recommandés pour un walk-in?",
+      a: "Le choix dépend de l'usage, des charges et du niveau de finition. La durabilité dépend aussi de la qualité des chants, de la quincaillerie et de l'installation.",
+    },
+    {
+      q: "Quels sont les délais typiques?",
+      a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à préciser lors de la soumission.",
+    },
+  ];
+
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Espaces", url: SITE.url + "/espaces/" },
+    { name: "Walk-in & rangement", url: SITE.url + "/espaces/walk-in/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
+      <main id="contenu">
       <header>
         <h1>
           Walk-in & rangement sur mesure — organisation pensée pour votre espace
@@ -196,33 +225,12 @@ export default function WalkIn() {
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — walk-in & rangement sur mesure</h2>
         <dl>
-          <dt>Walk-in sur mesure vs modulaire : quelle différence?</dt>
-          <dd>
-            Le sur mesure s’adapte à l’espace exact (dimensions, angles,
-            contraintes) et à vos habitudes. Le modulaire est plus standard et
-            peut laisser des zones perdues ou moins optimisées.
-          </dd>
-
-          <dt>Est-ce possible dans un petit espace?</dt>
-          <dd>
-            Oui. Le sur mesure est particulièrement utile dans les espaces
-            serrés, car il permet d’optimiser la circulation et de maximiser le
-            rangement sans “perdre” des centimètres.
-          </dd>
-
-          <dt>Quels matériaux sont recommandés pour un walk-in?</dt>
-          <dd>
-            Le choix dépend de l’usage, des charges et du niveau de finition. La
-            durabilité dépend aussi de la qualité des chants, de la
-            quincaillerie et de l’installation.
-          </dd>
-
-          <dt>Quels sont les délais typiques?</dt>
-          <dd>
-            Les délais varient selon la complexité et la disponibilité.
-            L’échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à
-            préciser lors de la soumission.
-          </dd>
+          {faqItems.map((item: FAQItem) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
 

@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRenovationSubServiceByType } from "@/data/services/utils";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 type Params = { type: string };
 
@@ -169,8 +170,19 @@ export default async function RenovationSubServicePage({
       ? "Parlez-nous de votre projet de rénovation de cuisine"
       : "Parlez-nous de votre projet de rénovation de salle de bain";
 
+  // Extract service name from title (remove " | Dilamco" suffix)
+  const serviceName = subService.metadata.title.replace(" | Dilamco", "");
+
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Services", url: SITE.url + "/services/" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
+    { name: serviceName, url: subService.metadata.canonical },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd
         data={serviceJsonLd({
           name: subService.metadata.title,

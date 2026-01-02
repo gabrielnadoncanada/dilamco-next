@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/data/services/utils";
 import type { ServiceSlug } from "@/data/services/types";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 
 type Params = { slug: string };
@@ -172,8 +172,18 @@ export default async function ServicePage({
   const service = getServiceBySlug(slug as ServiceSlug);
   if (!service) notFound();
 
+  // Extract service name from title (remove " | Dilamco" suffix)
+  const serviceName = service.metadata.title.replace(" | Dilamco", "");
+
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Services", url: SITE.url + "/services/" },
+    { name: serviceName, url: service.metadata.canonical },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd
         data={serviceJsonLd({
           name: service.jsonLd.name,

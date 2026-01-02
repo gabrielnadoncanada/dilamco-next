@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Commercial sur mesure | Dilamco",
@@ -13,6 +14,29 @@ export const metadata: Metadata = {
 };
 
 export default function Commercial() {
+  const faqItems = [
+    {
+      q: "Faites-vous des projets commerciaux de petite taille?",
+      a: "Oui, selon le contexte. Le point clé est la clarté des besoins, des contraintes et du calendrier. Décrivez le type d'espace et l'usage lors de la demande de soumission.",
+    },
+    {
+      q: "Quels matériaux sont recommandés pour usage intensif?",
+      a: "Le choix dépend de l'environnement (chocs, nettoyage, humidité). La durabilité dépend aussi des chants, de la quincaillerie et de l'installation.",
+    },
+    {
+      q: "Travaillez-vous avec des entrepreneurs ou des architectes?",
+      a: "Oui, selon le projet. Nous pouvons collaborer avec les intervenants en place pour cadrer la fabrication et l'installation.",
+    },
+    {
+      q: "Quels sont les délais typiques?",
+      a: "Les délais varient selon la complexité et la disponibilité. L'échéance est à préciser lors de la soumission, afin d'aligner le plan et la production.",
+    },
+    {
+      q: "Pouvez-vous intervenir dans un espace en opération?",
+      a: "Selon les contraintes, il est parfois possible de planifier l'intervention pour limiter l'impact sur vos opérations (heures, accès, phasage).",
+    },
+  ];
+
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
@@ -22,6 +46,7 @@ export default function Commercial() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>
         <h1>
@@ -220,39 +245,12 @@ export default function Commercial() {
       <section aria-labelledby="faq">
         <h2 id="faq">FAQ — commercial sur mesure</h2>
         <dl>
-          <dt>Faites-vous des projets commerciaux de petite taille?</dt>
-          <dd>
-            Oui, selon le contexte. Le point clé est la clarté des besoins, des
-            contraintes et du calendrier. Décrivez le type d’espace et l’usage
-            lors de la demande de soumission.
-          </dd>
-
-          <dt>Quels matériaux sont recommandés pour usage intensif?</dt>
-          <dd>
-            Le choix dépend de l’environnement (chocs, nettoyage, humidité). La
-            durabilité dépend aussi des chants, de la quincaillerie et de
-            l’installation.
-          </dd>
-
-          <dt>Travaillez-vous avec des entrepreneurs ou des architectes?</dt>
-          <dd>
-            Oui, selon le projet. Nous pouvons collaborer avec les intervenants
-            en place pour cadrer la fabrication et l’installation.
-          </dd>
-
-          <dt>Quels sont les délais typiques?</dt>
-          <dd>
-            Les délais varient selon la complexité et la disponibilité.
-            L’échéance est à préciser lors de la soumission, afin d’aligner le
-            plan et la production.
-          </dd>
-
-          <dt>Pouvez-vous intervenir dans un espace en opération?</dt>
-          <dd>
-            Selon les contraintes, il est parfois possible de planifier
-            l’intervention pour limiter l’impact sur vos opérations (heures,
-            accès, phasage).
-          </dd>
+          {faqItems.map((item: FAQItem) => (
+            <div key={item.q}>
+              <dt>{item.q}</dt>
+              <dd>{item.a}</dd>
+            </div>
+          ))}
         </dl>
       </section>
 

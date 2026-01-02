@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "MDF | Dilamco",
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
 };
 
 export default function MDF() {
+  const faqItems = [
+    {
+      q: "Le MDF est-il un matériau \"bas de gamme\"?",
+      a: "Pas nécessairement. Le MDF peut être un excellent choix pour certaines applications (ex. portes peintes) si l'exécution est soignée et si l'usage est bien cadré.",
+    },
+    {
+      q: "Le MDF gonfle-t-il avec l'humidité?",
+      a: "Il peut réagir à l'eau si la protection est insuffisante, surtout aux chants. La finition et l'installation jouent un rôle important.",
+    },
+    {
+      q: "MDF ou mélamine : lequel choisir?",
+      a: "Le MDF est souvent choisi pour la finition (peinture, surface uniforme). La mélamine vise plutôt un compromis économique avec différents finis. Le \"bon\" choix dépend de votre usage, de l'espace et du niveau de durabilité recherché.",
+    },
+    {
+      q: "Le MDF est-il recommandé en salle de bain?",
+      a: "Ça peut être possible selon la ventilation, l'usage et la protection des chants. Pour certains projets, une autre solution sera préférable pour réduire les risques à long terme.",
+    },
+  ];
+
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Matériaux", url: SITE.url + "/materiaux/" },
@@ -22,6 +42,7 @@ export default function MDF() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>
         <h1>MDF — quand et pourquoi l’utiliser en sur mesure</h1>

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
   title: "Salle de bain & vanités sur mesure | Dilamco",
@@ -13,6 +14,25 @@ export const metadata: Metadata = {
 };
 
 export default function SalleDeBain() {
+  const faqItems = [
+    {
+      q: "Quels matériaux sont les plus adaptés en salle de bain?",
+      a: "Les matériaux doivent être choisis en fonction de l'humidité, des chants et de la stabilité. La solution la plus durable dépend aussi de l'assemblage, de la quincaillerie et de l'installation.",
+    },
+    {
+      q: "MDF ou mélamine en salle de bain : lequel choisir?",
+      a: "Ça dépend du fini recherché et du niveau d'humidité. Le point critique est la protection des chants et la qualité d'exécution. Un mauvais détail de finition peut ruiner n'importe quel matériau.",
+    },
+    {
+      q: "Tiroirs ou portes : qu'est-ce qui est le plus pratique?",
+      a: "Les tiroirs facilitent l'accès (surtout en profondeur). Les portes peuvent être pertinentes selon la plomberie et l'organisation. Le sur mesure permet d'optimiser les deux.",
+    },
+    {
+      q: "Quels sont les délais typiques?",
+      a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à préciser lors de la soumission.",
+    },
+  ];
+
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
@@ -22,6 +42,7 @@ export default function SalleDeBain() {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
       <header>
         <h1>
