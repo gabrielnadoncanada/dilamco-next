@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Mélamine | Dilamco",
@@ -10,8 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default function Melamine() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
+    { name: "Mélamine", url: SITE.url + "/materiaux/melamine/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>Mélamine — usages, limites et alternatives en sur mesure</h1>
         <p>
@@ -200,5 +211,6 @@ export default function Melamine() {
         </p>
       </section>
     </main>
+    </>
   );
 }

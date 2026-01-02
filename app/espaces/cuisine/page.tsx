@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
@@ -32,8 +32,15 @@ export default function Cuisine() {
     },
   ];
 
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Espaces", url: SITE.url + "/espaces/" },
+    { name: "Cuisine sur mesure", url: SITE.url + "/espaces/cuisine/" },
+  ];
+
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd
         data={serviceJsonLd({
           name: "Cuisine sur mesure",

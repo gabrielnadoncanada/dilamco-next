@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { faqJsonLd } from "@/seo/schema/builders";
 
 export const metadata: Metadata = {
   title: "Matériaux | Dilamco",
@@ -10,8 +12,29 @@ export const metadata: Metadata = {
 };
 
 export default function Materiaux() {
+  const faqItems = [
+    {
+      q: "Contreplaqué ou MDF : lequel choisir?",
+      a: "Ça dépend de l'usage : stabilité et résistance structurelle vs surface uniforme (souvent pour portes peintes). Le bon choix tient compte de l'humidité et de la durabilité visée.",
+    },
+    {
+      q: "La mélamine est-elle un bon choix?",
+      a: "Elle peut être pertinente selon le contexte et le budget, mais elle est plus sensible aux impacts et à l'humidité si les chants sont endommagés.",
+    },
+    {
+      q: "La quincaillerie \"soft-close\" vaut-elle la peine?",
+      a: "Oui si elle est fiable et bien installée : confort au quotidien, moins de stress sur les composants, meilleure perception de qualité.",
+    },
+    {
+      q: "Quels matériaux éviter en salle de bain?",
+      a: "Tout ce qui est mal protégé contre l'humidité (chants exposés, mauvaise ventilation, matériaux inadaptés) augmente les risques à moyen terme.",
+    },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={faqJsonLd(faqItems)} />
+      <main id="contenu">
       <header>
         <h1>Matériaux — durabilité, finition et performance</h1>
         <p>
@@ -275,5 +298,6 @@ export default function Materiaux() {
         </p>
       </section>
     </main>
+    </>
   );
 }

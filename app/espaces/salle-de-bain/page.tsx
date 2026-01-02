@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Salle de bain & vanités sur mesure | Dilamco",
@@ -10,8 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default function SalleDeBain() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Espaces", url: SITE.url + "/espaces/" },
+    { name: "Salle de bain & vanités", url: SITE.url + "/espaces/salle-de-bain/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>
           Salle de bain & vanités sur mesure — durabilité en milieu humide
@@ -263,5 +274,6 @@ export default function SalleDeBain() {
         </p>
       </section>
     </main>
+    </>
   );
 }

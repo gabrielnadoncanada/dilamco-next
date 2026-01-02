@@ -1,7 +1,8 @@
 // app/services/[slug]/page.tsx
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getServiceBySlug, type ServiceSlug } from "@/data/services";
+import { getServiceBySlug } from "@/data/services/utils";
+import type { ServiceSlug } from "@/data/services/types";
 import { JsonLd } from "@/seo/JsonLd";
 import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
@@ -23,7 +24,7 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const service = getServiceBySlug(slug as ServiceSlug);
   if (!service) return {};
 
   return {
@@ -168,7 +169,7 @@ export default async function ServicePage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const service = getServiceBySlug(slug as ServiceSlug);
   if (!service) notFound();
 
   return (

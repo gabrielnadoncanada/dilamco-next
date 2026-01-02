@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Salle de lavage sur mesure | Dilamco",
@@ -269,5 +272,6 @@ export default function SalleDeLavage() {
         </p>
       </section>
     </main>
+    </>
   );
 }

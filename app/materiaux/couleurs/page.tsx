@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Couleurs et finis | Dilamco",
@@ -10,8 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default function Couleurs() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
+    { name: "Couleurs et finis", url: SITE.url + "/materiaux/couleurs/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>
           Couleurs & finis — trouver l’équilibre entre style et durabilité
@@ -239,5 +250,6 @@ export default function Couleurs() {
         </p>
       </section>
     </main>
+    </>
   );
 }

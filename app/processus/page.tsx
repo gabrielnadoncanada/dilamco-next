@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd } from "@/seo/schema/builders";
+import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
@@ -13,6 +13,25 @@ export const metadata: Metadata = {
 };
 
 export default function Processus() {
+  const faqItems = [
+    {
+      q: "Est-ce que tous les projets suivent exactement les mêmes étapes?",
+      a: "La structure est la même, mais la portée varie. Un projet \"aménagement seulement\" est plus simple qu'une rénovation complète avec travaux connexes.",
+    },
+    {
+      q: "À quel moment la fabrication démarre-t-elle?",
+      a: "Lorsque le plan et les décisions essentielles sont validés. Les changements tardifs sont la source la plus fréquente de reprises et de délais.",
+    },
+    {
+      q: "Faites-vous l'installation?",
+      a: "Oui. L'installation et les ajustements sont essentiels pour un résultat durable et une finition propre.",
+    },
+    {
+      q: "Le processus est-il adapté aux condos?",
+      a: "Oui. On tient compte des contraintes d'accès, d'horaires et de logistique propres aux immeubles.",
+    },
+  ];
+
   return (
     <>
       <JsonLd
@@ -25,6 +44,7 @@ export default function Processus() {
           areaServed: ["Montréal", "Laval", "Rive-Sud", "Québec"],
         })}
       />
+      <JsonLd data={faqJsonLd(faqItems)} />
 
       <main id="contenu">
         <header>

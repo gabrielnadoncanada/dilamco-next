@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Commercial sur mesure | Dilamco",
@@ -10,8 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default function Commercial() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Espaces", url: SITE.url + "/espaces/" },
+    { name: "Commercial", url: SITE.url + "/espaces/commercial/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>
           Aménagement commercial sur mesure — mobilier et rangement durables
@@ -272,5 +283,6 @@ export default function Commercial() {
         </p>
       </section>
     </main>
+    </>
   );
 }

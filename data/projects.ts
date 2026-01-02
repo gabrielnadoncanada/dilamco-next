@@ -291,6 +291,125 @@ export const PROJECTS: ProjectData[] = [
       },
     ],
   },
+  {
+    space: "cuisine",
+    slug: "cuisine-sur-mesure-montreal",
+    title: "Cuisine sur mesure — Montréal",
+    metaDescription:
+      "Projet de cuisine sur mesure à Montréal : conception, fabrication et installation. Exemple de solution durable avec rangement optimisé et finition précise.",
+    summary:
+      "Cuisine sur mesure réalisée à Montréal : optimisation du rangement, choix de matériaux durables et installation avec alignements propres.",
+    area: "montreal",
+    city: "Montréal",
+    scope: [
+      "Cadrage et validation des besoins",
+      "Design et planification",
+      "Fabrication sur mesure",
+      "Installation et ajustements",
+    ],
+    constraints: [
+      "Contraintes d’espace et circulation",
+      "Murs/planchers parfois irréguliers (ajustements sur place)",
+      "Intégration des électroménagers et dégagements",
+    ],
+    solution: [
+      "Configuration optimisée selon l’usage réel (zones de travail et rangement)",
+      "Choix de matériaux stables et quincaillerie fiable",
+      "Installation précise : alignements, niveaux, finitions et inspection finale",
+    ],
+    results: [
+      "Rangement plus fonctionnel et circulation plus fluide",
+      "Finition cohérente et lignes propres",
+      "Durabilité accrue via matériaux + quincaillerie + pose",
+    ],
+    requiredLinks: {
+      spaceHref: SPACE_HREF.cuisine,
+      renovationHref: CORE_HREF.renovation,
+      materialHref: CORE_HREF.plywood,
+      contactHref: CORE_HREF.contact,
+    },
+    optionalLinks: {
+      galleryHref: SPACE_GALLERY_HREF.cuisine,
+      installationHref: CORE_HREF.installation,
+      designHref: CORE_HREF.design,
+      fabricationHref: CORE_HREF.fabrication,
+    },
+    materials: [
+      { label: "Pourquoi le contreplaqué", href: CORE_HREF.plywood },
+      {
+        label: "Comparatif des matériaux",
+        href: CORE_HREF.materialsComparison,
+      },
+      { label: "Quincaillerie", href: CORE_HREF.hardware },
+      { label: "Couleurs et finis", href: CORE_HREF.colors },
+    ],
+    services: [
+      { label: "Design", href: CORE_HREF.design },
+      { label: "Fabrication", href: CORE_HREF.fabrication },
+      { label: "Installation", href: CORE_HREF.installation },
+      { label: "Rénovation clé en main", href: CORE_HREF.renovation },
+    ],
+  },
+
+  {
+    space: "cuisine",
+    slug: "cuisine-sur-mesure-rive-sud",
+    title: "Cuisine sur mesure — Rive-Sud",
+    metaDescription:
+      "Projet de cuisine sur mesure sur la Rive-Sud : conception, fabrication et installation. Exemple concret de solution durable, intégrée et bien exécutée.",
+    summary:
+      "Cuisine sur mesure réalisée sur la Rive-Sud : rangement optimisé, intégration propre et installation avec finitions soignées.",
+    area: "rive-sud",
+    city: "Rive-Sud",
+    scope: [
+      "Cadrage et validation des besoins",
+      "Design et planification",
+      "Fabrication sur mesure",
+      "Installation et ajustements",
+    ],
+    constraints: [
+      "Contraintes d’implantation (ouvertures, circulation, îlot)",
+      "Transitions et alignements visibles (joints, lignes, finitions)",
+      "Coordination avec travaux connexes au besoin",
+    ],
+    solution: [
+      "Optimisation du rangement et des zones de travail selon l’espace",
+      "Matériaux stables et choix cohérents avec l’usage",
+      "Installation ajustée sur place : alignements, transitions et inspection finale",
+    ],
+    results: [
+      "Espace plus fonctionnel au quotidien",
+      "Finition cohérente et durable",
+      "Intégration propre avec l’existant",
+    ],
+    requiredLinks: {
+      spaceHref: SPACE_HREF.cuisine,
+      renovationHref: CORE_HREF.renovation,
+      materialHref: CORE_HREF.plywood,
+      contactHref: CORE_HREF.contact,
+    },
+    optionalLinks: {
+      galleryHref: SPACE_GALLERY_HREF.cuisine,
+      installationHref: CORE_HREF.installation,
+      designHref: CORE_HREF.design,
+      fabricationHref: CORE_HREF.fabrication,
+    },
+    materials: [
+      { label: "Pourquoi le contreplaqué", href: CORE_HREF.plywood },
+      {
+        label: "Comparatif des matériaux",
+        href: CORE_HREF.materialsComparison,
+      },
+      { label: "Quincaillerie", href: CORE_HREF.hardware },
+      { label: "Couleurs et finis", href: CORE_HREF.colors },
+    ],
+    services: [
+      { label: "Design", href: CORE_HREF.design },
+      { label: "Fabrication", href: CORE_HREF.fabrication },
+      { label: "Installation", href: CORE_HREF.installation },
+      { label: "Rénovation clé en main", href: CORE_HREF.renovation },
+    ],
+  },
 ];
 
 // Helper indexes (optional convenience)

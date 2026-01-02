@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Quincaillerie | Dilamco",
@@ -10,8 +13,36 @@ export const metadata: Metadata = {
 };
 
 export default function Quincaillerie() {
+  const faqItems = [
+    {
+      q: "Le soft-close est-il vraiment utile?",
+      a: "Oui si le système est fiable et bien installé : fermeture plus douce, moins de chocs, et meilleure expérience au quotidien.",
+    },
+    {
+      q: "Est-ce que la quincaillerie influence la durée de vie?",
+      a: "Oui. Ce sont les pièces qui bougent et qui s'usent. Une quincaillerie de qualité garde ses réglages, supporte mieux les charges, et vieillit mieux.",
+    },
+    {
+      q: "Peut-on remplacer la quincaillerie plus tard?",
+      a: "Parfois, mais ce n'est pas toujours simple. Il vaut mieux choisir un système cohérent dès le départ, surtout pour les tiroirs et les charges élevées.",
+    },
+    {
+      q: "Pourquoi l'installation est-elle aussi importante?",
+      a: "Parce que la précision (alignements, ajustements, fixations) affecte directement le fonctionnement. Une bonne quincaillerie mal installée ne donnera pas un bon résultat.",
+    },
+  ];
+
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
+    { name: "Quincaillerie", url: SITE.url + "/materiaux/quincaillerie/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <JsonLd data={faqJsonLd(faqItems)} />
+      <main id="contenu">
       <header>
         <h1>Quincaillerie — confort, précision et durabilité au quotidien</h1>
         <p>
@@ -241,5 +272,6 @@ export default function Quincaillerie() {
         </p>
       </section>
     </main>
+    </>
   );
 }
