@@ -9,6 +9,9 @@ import {
   getProjectByParams,
   getProjectCanonicalUrl,
 } from "@/data/projects";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 type Params = { space: ProjectSpace; slug: string };
 
@@ -16,14 +19,39 @@ export function generateStaticParams(): Params[] {
   return PROJECTS.map((p) => ({ space: p.space, slug: p.slug }));
 }
 
-export function generateMetadata({ params }: { params: Params }): Metadata {
-  const project = getProjectByParams(params.space, params.slug);
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { space, slug } = await params;
+  const project = getProjectByParams(space, slug);
   if (!project) return {};
+
+  const canonical = getProjectCanonicalUrl(project);
 
   return {
     title: `${project.title} | Dilamco`,
     description: project.metaDescription,
-    alternates: { canonical: getProjectCanonicalUrl(project) },
+    alternates: { canonical },
+
+    openGraph: {
+      type: "article",
+      url: canonical,
+      title: project.title,
+      description: project.metaDescription,
+      images: [
+        {
+          url: `/projets/${project.space}/${project.slug}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: project.title,
+      description: project.metaDescription,
+      images: [`/projets/${project.space}/${project.slug}/opengraph-image`],
+    },
   };
 }
 
@@ -44,16 +72,17 @@ function getSpaceIntro(space: ProjectSpace): string {
   }
 }
 
-export default function ProjectPage({
+export default async function ProjectPage({
   params,
 }: {
-  params: { space: ProjectSpace; slug: string };
+  params: Promise<{ space: ProjectSpace; slug: string }>;
 }) {
-  const project = getProjectByParams(params.space, params.slug);
+  const { space, slug } = await params;
+  const project = getProjectByParams(space, slug);
   if (!project) notFound();
 
   // Safety: ensure route matches project data (avoid accidental duplicates)
-  if (project.space !== params.space) notFound();
+  if (project.space !== space) notFound();
 
   const spaceLabel = SPACE_LABEL[project.space];
   const locationLabel = project.neighborhood
@@ -62,8 +91,17 @@ export default function ProjectPage({
 
   const spaceIntro = getSpaceIntro(project.space);
 
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Projets", url: SITE.url + "/projets/" },
+    { name: SPACE_LABEL[project.space], url: SITE.url + `/projets/${project.space}/` },
+    { name: project.title, url: getProjectCanonicalUrl(project) },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>{project.title}</h1>
         <p>
@@ -177,5 +215,6 @@ export default function ProjectPage({
         </p>
       </section>
     </main>
+    </>
   );
 }

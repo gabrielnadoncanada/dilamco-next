@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Service de fabrication | Dilamco",
@@ -10,8 +13,38 @@ export const metadata: Metadata = {
 };
 
 export default function Fabrication() {
+  const faqItems = [
+    {
+      q: "Quelle est la différence entre sur mesure et semi-custom?",
+      a: "Le sur mesure s'adapte à l'espace exact (dimensions, contraintes, ergonomie). Le semi-custom part de modules prédéfinis avec certaines variations. Le bon choix dépend du niveau d'adaptation et de finition recherché.",
+    },
+    {
+      q: "Quels matériaux vieillissent le mieux?",
+      a: "Ça dépend de l'espace (humidité, usage, entretien). La durabilité dépend autant du matériau que des chants, de la quincaillerie et de l'installation.",
+    },
+    {
+      q: "Est-ce personnalisable à 100 %?",
+      a: "L'objectif est d'adapter le projet à votre espace et à votre usage. La faisabilité dépend des contraintes techniques (dimensions, accès, équipements) et du niveau de finition recherché.",
+    },
+    {
+      q: "Quels sont les délais de fabrication?",
+      a: "Les délais varient selon la complexité et la disponibilité. L'échéance est à préciser lors de la soumission, afin d'aligner le design, la production et l'installation.",
+    },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Fabrication sur mesure d'armoires et cuisines",
+          description:
+            "Fabrication sur mesure : durabilité, précision et finition haut de gamme. Matériaux orientés usage, assemblage soigné et préparation pour une installation impeccable.",
+          url: SITE.url + "/services/fabrication/",
+          serviceType: "Fabrication",
+        })}
+      />
+      <JsonLd data={faqJsonLd(faqItems)} />
+      <main id="contenu">
       <header>
         <h1>Fabrication sur mesure — précision, constance et durabilité</h1>
         <p>
@@ -245,5 +278,6 @@ export default function Fabrication() {
         </p>
       </section>
     </main>
+    </>
   );
 }

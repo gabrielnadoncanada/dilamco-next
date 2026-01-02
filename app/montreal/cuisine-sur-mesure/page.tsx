@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { serviceJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Cuisine sur mesure à Montréal | Dilamco",
@@ -10,7 +13,18 @@ export const metadata: Metadata = {
 
 export default function MontrealCuisine() {
   return (
-    <main id="contenu">
+    <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Cuisine sur mesure à Montréal",
+          description:
+            "Conception, fabrication et installation de cuisines sur mesure à Montréal.",
+          url: SITE.url + "/montreal/cuisine-sur-mesure/",
+          serviceType: "Cuisine sur mesure",
+          areaServed: ["Montréal"],
+        })}
+      />
+      <main id="contenu">
       <header><h1>Cuisine sur mesure à Montréal</h1></header>
       <p>Conception et réalisation de cuisines sur mesure haut de gamme à Montréal, avec option rénovation de cuisine clé en main selon le projet.</p>
       <ul>
@@ -20,6 +34,7 @@ export default function MontrealCuisine() {
       </ul>
       <p><a href="/contact/">Demander une soumission</a></p>
     </main>
+    </>
   );
 }
 

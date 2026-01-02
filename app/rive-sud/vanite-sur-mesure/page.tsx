@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { serviceJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Vanité sur mesure à Rive-Sud | Dilamco",
@@ -10,7 +13,18 @@ export const metadata: Metadata = {
 
 export default function RiveSudVanite() {
   return (
-    <main id="contenu">
+    <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Vanité sur mesure à Rive-Sud",
+          description:
+            "Vanités sur mesure à Rive-Sud, conçues pour durer en environnement humide, avec option rénovation salle de bain clé en main.",
+          url: SITE.url + "/rive-sud/vanite-sur-mesure/",
+          serviceType: "Vanité sur mesure",
+          areaServed: ["Rive-Sud"],
+        })}
+      />
+      <main id="contenu">
       <header><h1>Vanité sur mesure à Rive-Sud</h1></header>
       <p>Vanités sur mesure à Rive-Sud, conçues pour durer en environnement humide, avec option rénovation salle de bain clé en main.</p>
       <ul>
@@ -20,6 +34,7 @@ export default function RiveSudVanite() {
       </ul>
       <p><a href="/contact/">Demander une soumission</a></p>
     </main>
+    </>
   );
 }
 

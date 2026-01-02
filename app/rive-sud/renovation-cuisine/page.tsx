@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { serviceJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Rénovation de cuisine à Rive-Sud | Dilamco",
@@ -10,7 +13,18 @@ export const metadata: Metadata = {
 
 export default function RiveSudRenovationCuisine() {
   return (
-    <main id="contenu">
+    <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Rénovation de cuisine à Rive-Sud",
+          description:
+            "Rénovation de cuisine à Rive-Sud : coordination, exécution et installation d'armoires sur mesure, avec un seul responsable si nécessaire.",
+          url: SITE.url + "/rive-sud/renovation-cuisine/",
+          serviceType: "Rénovation de cuisine",
+          areaServed: ["Rive-Sud"],
+        })}
+      />
+      <main id="contenu">
       <header><h1>Rénovation de cuisine à Rive-Sud</h1></header>
       <p>Rénovation de cuisine à Rive-Sud : coordination, exécution et installation d'armoires sur mesure, avec un seul responsable si nécessaire.</p>
       <ul>
@@ -20,6 +34,7 @@ export default function RiveSudRenovationCuisine() {
       </ul>
       <p><a href="/contact/">Demander une soumission</a></p>
     </main>
+    </>
   );
 }
 

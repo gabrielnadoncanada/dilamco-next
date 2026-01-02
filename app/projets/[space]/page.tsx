@@ -24,10 +24,33 @@ export async function generateMetadata({
   const { space } = await params;
   const content = SPACE_CONTENT[space];
   if (!content) return {};
+  
   return {
     title: content.metadata.title,
     description: content.metadata.description,
     alternates: { canonical: content.metadata.canonical },
+
+    openGraph: {
+      type: "website",
+      url: content.metadata.canonical,
+      title: content.metadata.title,
+      description: content.metadata.description,
+      images: [
+        {
+          url: `/projets/${space}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: content.metadata.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: content.metadata.title,
+      description: content.metadata.description,
+      images: [`/projets/${space}/opengraph-image`],
+    },
   };
 }
 

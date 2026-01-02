@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Cuisine sur mesure | Dilamco",
@@ -10,8 +13,38 @@ export const metadata: Metadata = {
 };
 
 export default function Cuisine() {
+  const faqItems = [
+    {
+      q: "Cuisine sur mesure vs semi-custom : quelle différence?",
+      a: "Le sur mesure est conçu pour votre espace exact (dimensions, contraintes, ergonomie). Le semi-custom part de modules prédéfinis avec des variations. Le choix dépend du niveau d'adaptation et de finition recherché.",
+    },
+    {
+      q: "Qu'est-ce qui influence le plus la durabilité d'une cuisine?",
+      a: "La durabilité dépend du matériau, mais aussi de l'assemblage, des chants, de la quincaillerie et de l'installation. L'usage (charges, humidité, entretien) compte autant que le look.",
+    },
+    {
+      q: "Est-ce possible en condo ou dans un espace difficile?",
+      a: "Oui. Le sur mesure est particulièrement pertinent lorsque l'espace impose des contraintes (murs irréguliers, accès, plomberie, intégration électroménagers).",
+    },
+    {
+      q: "Quels sont les délais typiques?",
+      a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à préciser lors de la soumission.",
+    },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Cuisine sur mesure",
+          description:
+            "Cuisine sur mesure haut de gamme : design, fabrication et installation. Armoires, îlots et rangement optimisé, avec option rénovation de cuisine clé en main.",
+          url: SITE.url + "/espaces/cuisine/",
+          serviceType: "Cuisine sur mesure",
+        })}
+      />
+      <JsonLd data={faqJsonLd(faqItems)} />
+      <main id="contenu">
       <header>
         <h1>Cuisine sur mesure — design, fabrication et installation</h1>
         <p>
@@ -265,5 +298,6 @@ export default function Cuisine() {
         </p>
       </section>
     </main>
+    </>
   );
 }

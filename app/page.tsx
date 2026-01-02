@@ -1,11 +1,37 @@
 import type { Metadata } from "next";
 
+const siteUrl = "https://dilamco.com";
+
 export const metadata: Metadata = {
   title:
     "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
   description:
     "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
-  alternates: { canonical: "https://dilamco.com/" },
+  alternates: { canonical: `${siteUrl}/` },
+
+  openGraph: {
+    type: "website",
+    url: `${siteUrl}/`,
+    title: "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
+    description:
+      "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Dilamco — Sur mesure, durable, bien exécuté",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
+    description:
+      "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Home() {

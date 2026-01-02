@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { serviceJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Vanité sur mesure à Laval | Dilamco",
@@ -10,7 +13,18 @@ export const metadata: Metadata = {
 
 export default function LavalVanite() {
   return (
-    <main id="contenu">
+    <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Vanité sur mesure à Laval",
+          description:
+            "Vanités sur mesure à Laval, conçues pour durer en environnement humide, avec option rénovation salle de bain clé en main.",
+          url: SITE.url + "/laval/vanite-sur-mesure/",
+          serviceType: "Vanité sur mesure",
+          areaServed: ["Laval"],
+        })}
+      />
+      <main id="contenu">
       <header><h1>Vanité sur mesure à Laval</h1></header>
       <p>Vanités sur mesure à Laval, conçues pour durer en environnement humide, avec option rénovation salle de bain clé en main.</p>
       <ul>
@@ -20,6 +34,7 @@ export default function LavalVanite() {
       </ul>
       <p><a href="/contact/">Demander une soumission</a></p>
     </main>
+    </>
   );
 }
 

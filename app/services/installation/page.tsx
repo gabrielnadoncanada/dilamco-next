@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Service d’installation | Dilamco",
@@ -10,8 +13,42 @@ export const metadata: Metadata = {
 };
 
 export default function Installation() {
+  const faqItems = [
+    {
+      q: "Combien de temps dure une installation?",
+      a: "La durée dépend du type de projet et de sa complexité. Une cuisine complète nécessite généralement plus de temps qu'un walk-in ou une vanité.",
+    },
+    {
+      q: "Des ajustements sont-ils normaux?",
+      a: "Oui. Les ajustements font partie d'une installation professionnelle et sont essentiels pour un rendu final propre et durable.",
+    },
+    {
+      q: "Installez-vous seulement vos propres armoires?",
+      a: "Oui. Nous installons les éléments que nous fabriquons afin de garantir la qualité et la cohérence du résultat.",
+    },
+    {
+      q: "Que se passe-t-il s'il y a un imprévu?",
+      a: "Les imprévus sont évalués sur place. Nous ajustons l'installation ou recommandons la meilleure solution selon le contexte.",
+    },
+    {
+      q: "Travaillez-vous en condo ou en commercial?",
+      a: "Oui. Nous adaptons l'installation aux contraintes d'accès, d'horaire et d'usage propres à chaque environnement.",
+    },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd
+        data={serviceJsonLd({
+          name: "Installation d'armoires et cuisines sur mesure",
+          description:
+            "Installation précise, ajustements, alignements et finition durable.",
+          url: SITE.url + "/services/installation/",
+          serviceType: "Installation",
+        })}
+      />
+      <JsonLd data={faqJsonLd(faqItems)} />
+      <main id="contenu">
       <header>
         <h1>
           Installation professionnelle — précision, alignement et finition
@@ -228,5 +265,6 @@ export default function Installation() {
         </p>
       </section>
     </main>
+    </>
   );
 }

@@ -2,12 +2,45 @@ import type { Metadata } from "next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
+import { JsonLd } from "@/seo/JsonLd";
+import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
+
+const siteUrl = "https://dilamco.com";
 
 export const metadata: Metadata = {
-  title:
-    "Dilamco | Cuisines, vanités et armoires sur mesure clé en main à Montréal",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "Dilamco | Cuisines, vanités et armoires sur mesure au Québec",
+    template: "%s | Dilamco",
+  },
+
   description:
-    "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme. Design, fabrication, installation et rénovation clé en main à Montréal et partout au Québec.",
+    "Cuisines, vanités, armoires et rangements sur mesure. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et Rive-Sud.",
+
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Dilamco — Sur mesure, durable, bien exécuté",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/opengraph-image"],
+  },
+
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({
@@ -22,6 +55,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={localBusinessJsonLd()} />
         {/* <Header />
         <Breadcrumbs /> */}
         {children}
