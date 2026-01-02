@@ -1,20 +1,17 @@
-// app/services/[slug]/page.tsx
+// app/services/renovation/[type]/page.tsx
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getServiceBySlug, type ServiceSlug } from "@/data/services";
+import {
+  getRenovationSubServiceByType,
+  type RenovationType,
+} from "@/data/services";
 import { JsonLd } from "@/seo/JsonLd";
 import { serviceJsonLd, faqJsonLd } from "@/seo/schema/builders";
-import { SITE } from "@/seo/schema/site";
 
-type Params = { slug: string };
+type Params = { type: string };
 
 export function generateStaticParams() {
-  return [
-    { slug: "design" },
-    { slug: "fabrication" },
-    { slug: "installation" },
-    { slug: "renovation" },
-  ];
+  return [{ type: "cuisine" }, { type: "salle-de-bain" }];
 }
 
 export async function generateMetadata({
@@ -22,35 +19,26 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const service = getServiceBySlug(slug);
-  if (!service) return {};
+  const { type } = await params;
+  const subService = getRenovationSubServiceByType(type);
+  if (!subService) return {};
 
   return {
-    title: service.metadata.title,
-    description: service.metadata.description,
-    alternates: { canonical: service.metadata.canonical },
+    title: subService.metadata.title,
+    description: subService.metadata.description,
+    alternates: { canonical: subService.metadata.canonical },
 
     openGraph: {
       type: "website",
-      url: service.metadata.canonical,
-      title: service.metadata.title,
-      description: service.metadata.description,
-      images: [
-        {
-          url: `/services/${service.slug}/opengraph-image`,
-          width: 1200,
-          height: 630,
-          alt: service.metadata.title,
-        },
-      ],
+      url: subService.metadata.canonical,
+      title: subService.metadata.title,
+      description: subService.metadata.description,
     },
 
     twitter: {
       card: "summary_large_image",
-      title: service.metadata.title,
-      description: service.metadata.description,
-      images: [`/services/${service.slug}/opengraph-image`],
+      title: subService.metadata.title,
+      description: subService.metadata.description,
     },
   };
 }
@@ -115,15 +103,22 @@ function renderSection(section: any) {
       return (
         <section key={id} aria-labelledby={id}>
           <h2 id={id}>{title}</h2>
+          {content.intro && <p>{content.intro}</p>}
           {content.itemsWithLinks && (
             <ul>
               {content.itemsWithLinks.map((item: any, idx: number) => (
                 <li key={idx}>
-                  <strong>{item.label}</strong>
-                  {item.link && (
+                  {item.label === item.link?.label ? (
+                    <a href={item.link.href}>{item.link.label}</a>
+                  ) : (
                     <>
-                      <br />
-                      <a href={item.link.href}>{item.link.label}</a>
+                      <strong>{item.label}</strong>
+                      {item.link && (
+                        <>
+                          <br />
+                          <a href={item.link.href}>{item.link.label}</a>
+                        </>
+                      )}
                     </>
                   )}
                 </li>
@@ -162,49 +157,65 @@ function renderSection(section: any) {
   }
 }
 
-export default async function ServicePage({
+export default async function RenovationSubServicePage({
   params,
 }: {
   params: Promise<Params>;
 }) {
-  const { slug } = await params;
-  const service = getServiceBySlug(slug);
-  if (!service) notFound();
+  const { type } = await params;
+  const subService = getRenovationSubServiceByType(type);
+  if (!subService) notFound();
+
+  // Determine CTA text based on type
+  const ctaTitle =
+    type === "cuisine"
+      ? "Parlez-nous de votre projet de rénovation de cuisine"
+      : "Parlez-nous de votre projet de rénovation de salle de bain";
 
   return (
     <>
       <JsonLd
         data={serviceJsonLd({
-          name: service.jsonLd.name,
-          description: service.jsonLd.description,
-          url: service.metadata.canonical,
-          serviceType: service.jsonLd.serviceType,
+          name: subService.metadata.title,
+          description: subService.metadata.description,
+          url: subService.metadata.canonical,
+          serviceType:
+            type === "cuisine"
+              ? "Rénovation de cuisine"
+              : "Rénovation de salle de bain",
         })}
       />
-      {service.faq.length > 0 && <JsonLd data={faqJsonLd(service.faq)} />}
+      {subService.faq.length > 0 && (
+        <JsonLd data={faqJsonLd(subService.faq)} />
+      )}
       <main id="contenu">
         <header>
-          <h1>{service.hero.h1}</h1>
-          {service.hero.paragraphs.map((p, idx) => (
+          <h1>{subService.hero.h1}</h1>
+          {subService.hero.paragraphs.map((p, idx) => (
             <p key={idx}>{p}</p>
           ))}
           <p>
-            {service.hero.ctaLinks.map((link, idx) => (
+            {subService.hero.ctaLinks.map((link, idx) => (
               <span key={link.href}>
                 <a href={link.href}>{link.label}</a>
-                {idx < service.hero.ctaLinks.length - 1 ? " | " : ""}
+                {idx < subService.hero.ctaLinks.length - 1 ? " | " : ""}
               </span>
             ))}
           </p>
         </header>
 
-        {service.sections.map((section) => renderSection(section))}
+        {subService.sections.map((section) => renderSection(section))}
 
-        {service.faq.length > 0 && (
+        {subService.faq.length > 0 && (
           <section aria-labelledby="faq">
-            <h2 id="faq">FAQ — {service.slug}</h2>
+            <h2 id="faq">
+              FAQ —{" "}
+              {type === "cuisine"
+                ? "rénovation de cuisine"
+                : "rénovation de salle de bain"}
+            </h2>
             <dl>
-              {service.faq.map((item, idx) => (
+              {subService.faq.map((item, idx) => (
                 <div key={idx}>
                   <dt>{item.q}</dt>
                   <dd>{item.a}</dd>
@@ -215,11 +226,11 @@ export default async function ServicePage({
         )}
 
         <section aria-labelledby="cta">
-          <h2 id="cta">Parlez-nous de votre projet</h2>
+          <h2 id="cta">{ctaTitle}</h2>
           <p>
-            Dites-nous votre espace, votre secteur (Montréal/Laval/Rive-Sud) et
-            vos priorités. On vous propose la prochaine étape la plus simple
-            pour avancer.
+            Dites-nous votre secteur (Montréal/Laval/Rive-Sud), votre échéance
+            et la portée souhaitée (partielle ou clé en main). On vous propose
+            la prochaine étape la plus simple pour avancer.
           </p>
           <p>
             <a href="/contact/">Demander une soumission</a>

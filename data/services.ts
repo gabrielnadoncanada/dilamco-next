@@ -162,7 +162,10 @@ export const SERVICES: ServiceData[] = [
             "Équipements : électroménagers, évier, hottes, accessoires et intégrations.",
           ],
           links: [
-            { label: "Comparatif des matériaux", href: "/materiaux/comparatif/" },
+            {
+              label: "Comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+            },
           ],
         },
       },
@@ -180,7 +183,10 @@ export const SERVICES: ServiceData[] = [
             "Installation plus précise : moins d'ajustements inutiles sur site.",
           ],
           links: [
-            { label: "Voir le service d'installation", href: "/services/installation/" },
+            {
+              label: "Voir le service d'installation",
+              href: "/services/installation/",
+            },
           ],
         },
       },
@@ -191,24 +197,38 @@ export const SERVICES: ServiceData[] = [
           type: "list-with-links",
           itemsWithLinks: [
             {
-              label: "Cuisine : zones de travail, circulation, îlot, rangement et intégration.",
+              label:
+                "Cuisine : zones de travail, circulation, îlot, rangement et intégration.",
               link: { label: "Cuisine sur mesure", href: "/espaces/cuisine/" },
             },
             {
-              label: "Salle de bain : contraintes d'humidité, rangement, ergonomie.",
-              link: { label: "Salle de bain & vanités", href: "/espaces/salle-de-bain/" },
+              label:
+                "Salle de bain : contraintes d'humidité, rangement, ergonomie.",
+              link: {
+                label: "Salle de bain & vanités",
+                href: "/espaces/salle-de-bain/",
+              },
             },
             {
-              label: "Walk-in : organisation par zones, accessibilité, rangement vertical.",
+              label:
+                "Walk-in : organisation par zones, accessibilité, rangement vertical.",
               link: { label: "Walk-in & rangement", href: "/espaces/walk-in/" },
             },
             {
-              label: "Salle de lavage : zones lavage/pliage, contraintes techniques, entretien.",
-              link: { label: "Salle de lavage", href: "/espaces/salle-de-lavage/" },
+              label:
+                "Salle de lavage : zones lavage/pliage, contraintes techniques, entretien.",
+              link: {
+                label: "Salle de lavage",
+                href: "/espaces/salle-de-lavage/",
+              },
             },
             {
-              label: "Commercial : fonctionnalité, usage intensif, contraintes et calendrier.",
-              link: { label: "Commercial sur mesure", href: "/espaces/commercial/" },
+              label:
+                "Commercial : fonctionnalité, usage intensif, contraintes et calendrier.",
+              link: {
+                label: "Commercial sur mesure",
+                href: "/espaces/commercial/",
+              },
             },
           ],
         },
@@ -270,7 +290,7 @@ export const SERVICES: ServiceData[] = [
     sections: [
       {
         id: "sur-mesure",
-        title: "Ce que signifie \"fabrication sur mesure\"",
+        title: 'Ce que signifie "fabrication sur mesure"',
         content: {
           type: "text",
           paragraphs: [
@@ -314,7 +334,10 @@ export const SERVICES: ServiceData[] = [
           ],
           links: [
             { label: "Voir les matériaux", href: "/materiaux/" },
-            { label: "Pourquoi le contreplaqué", href: "/materiaux/contreplaque/" },
+            {
+              label: "Pourquoi le contreplaqué",
+              href: "/materiaux/contreplaque/",
+            },
             { label: "Quincaillerie", href: "/materiaux/quincaillerie/" },
           ],
         },
@@ -332,7 +355,12 @@ export const SERVICES: ServiceData[] = [
             "Réduction des reprises : moins d'ajustements imprévus sur site.",
             "Durabilité : meilleure tenue dans le temps (portes, tiroirs, quincaillerie).",
           ],
-          links: [{ label: "Voir le service d'installation", href: "/services/installation/" }],
+          links: [
+            {
+              label: "Voir le service d'installation",
+              href: "/services/installation/",
+            },
+          ],
         },
       },
       {
@@ -342,24 +370,38 @@ export const SERVICES: ServiceData[] = [
           type: "list-with-links",
           itemsWithLinks: [
             {
-              label: "Cuisine : modules, îlots, rangement optimisé, intégration électroménagers.",
+              label:
+                "Cuisine : modules, îlots, rangement optimisé, intégration électroménagers.",
               link: { label: "Cuisine sur mesure", href: "/espaces/cuisine/" },
             },
             {
-              label: "Salle de bain : vanités et rangement adaptés à l'humidité.",
-              link: { label: "Salle de bain & vanités", href: "/espaces/salle-de-bain/" },
+              label:
+                "Salle de bain : vanités et rangement adaptés à l'humidité.",
+              link: {
+                label: "Salle de bain & vanités",
+                href: "/espaces/salle-de-bain/",
+              },
             },
             {
-              label: "Walk-in : alignements verticaux, organisation et accessoires.",
+              label:
+                "Walk-in : alignements verticaux, organisation et accessoires.",
               link: { label: "Walk-in & rangement", href: "/espaces/walk-in/" },
             },
             {
-              label: "Salle de lavage : usage fréquent, contraintes techniques, surfaces faciles à entretenir.",
-              link: { label: "Salle de lavage", href: "/espaces/salle-de-lavage/" },
+              label:
+                "Salle de lavage : usage fréquent, contraintes techniques, surfaces faciles à entretenir.",
+              link: {
+                label: "Salle de lavage",
+                href: "/espaces/salle-de-lavage/",
+              },
             },
             {
-              label: "Commercial : usage intensif, durabilité et cohérence fonctionnelle.",
-              link: { label: "Commercial sur mesure", href: "/espaces/commercial/" },
+              label:
+                "Commercial : usage intensif, durabilité et cohérence fonctionnelle.",
+              link: {
+                label: "Commercial sur mesure",
+                href: "/espaces/commercial/",
+              },
             },
           ],
         },
@@ -471,24 +513,37 @@ export const SERVICES: ServiceData[] = [
           type: "list-with-links",
           itemsWithLinks: [
             {
-              label: "Cuisine : armoires, îlots, intégration des électroménagers.",
+              label:
+                "Cuisine : armoires, îlots, intégration des électroménagers.",
               link: { label: "Cuisine sur mesure", href: "/espaces/cuisine/" },
             },
             {
-              label: "Salle de bain : vanités, protection des chants en milieu humide.",
-              link: { label: "Salle de bain & vanités", href: "/espaces/salle-de-bain/" },
+              label:
+                "Salle de bain : vanités, protection des chants en milieu humide.",
+              link: {
+                label: "Salle de bain & vanités",
+                href: "/espaces/salle-de-bain/",
+              },
             },
             {
-              label: "Walk-in : alignements verticaux et optimisation de l'espace.",
+              label:
+                "Walk-in : alignements verticaux et optimisation de l'espace.",
               link: { label: "Walk-in & rangement", href: "/espaces/walk-in/" },
             },
             {
-              label: "Salle de lavage : dégagements, vibration et contraintes techniques.",
-              link: { label: "Salle de lavage", href: "/espaces/salle-de-lavage/" },
+              label:
+                "Salle de lavage : dégagements, vibration et contraintes techniques.",
+              link: {
+                label: "Salle de lavage",
+                href: "/espaces/salle-de-lavage/",
+              },
             },
             {
               label: "Commercial : usage intensif, durabilité et coordination.",
-              link: { label: "Commercial sur mesure", href: "/espaces/commercial/" },
+              link: {
+                label: "Commercial sur mesure",
+                href: "/espaces/commercial/",
+              },
             },
           ],
         },
@@ -521,7 +576,12 @@ export const SERVICES: ServiceData[] = [
           paragraphs: [
             "Nous installons les éléments que nous fabriquons. Lorsque le projet inclut d'autres travaux (plomberie, électricité, planchers), nous pouvons coordonner les interventions ou recommander une approche clé en main selon le contexte.",
           ],
-          links: [{ label: "Voir la rénovation clé en main", href: "/services/renovation/" }],
+          links: [
+            {
+              label: "Voir la rénovation clé en main",
+              href: "/services/renovation/",
+            },
+          ],
         },
       },
       {
@@ -560,7 +620,8 @@ export const SERVICES: ServiceData[] = [
     ],
     jsonLd: {
       name: "Installation d'armoires et cuisines sur mesure",
-      description: "Installation précise, ajustements, alignements et finition durable.",
+      description:
+        "Installation précise, ajustements, alignements et finition durable.",
       serviceType: "Installation",
     },
   },
@@ -583,7 +644,8 @@ export const SERVICES: ServiceData[] = [
     faq: [],
     jsonLd: {
       name: "Rénovation clé en main",
-      description: "Coordination et exécution lorsque le projet implique plusieurs corps de métier.",
+      description:
+        "Coordination et exécution lorsque le projet implique plusieurs corps de métier.",
       serviceType: "Rénovation",
     },
   },
@@ -599,7 +661,10 @@ export function getServiceCanonicalUrl(service: ServiceData): string {
 }
 
 // Renovation sub-services
-export const RENOVATION_SUB_SERVICES: Record<RenovationType, RenovationSubServiceData> = {
+export const RENOVATION_SUB_SERVICES: Record<
+  RenovationType,
+  RenovationSubServiceData
+> = {
   cuisine: {
     type: "cuisine",
     metadata: {
@@ -619,7 +684,154 @@ export const RENOVATION_SUB_SERVICES: Record<RenovationType, RenovationSubServic
       ],
     },
     sections: [
-      // Sections à compléter selon le contenu existant
+      {
+        id: "pour-qui",
+        title: "À qui s'adresse une rénovation clé en main?",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Si vous préférez gérer vous-même les corps de métier, la rénovation clé en main n'est peut-être pas l'option la plus pertinente. L'objectif ici est la tranquillité d'esprit et un résultat final bien exécuté.",
+          ],
+          items: [
+            "Vous voulez éviter la gestion de chantier et limiter les allers-retours entre intervenants.",
+            "Vous rénovez une cuisine existante (maison ou condo) et vous cherchez un résultat cohérent.",
+            "Vous souhaitez réduire les imprévus grâce à une séquence de travaux claire.",
+          ],
+        },
+      },
+      {
+        id: "inclus",
+        title: "Ce qui est inclus (selon le projet)",
+        content: {
+          type: "list",
+          intro:
+            "Chaque rénovation est cadrée selon vos besoins et la réalité du lieu. Les inclusions exactes sont confirmées lors de la soumission.",
+          items: [
+            "Design & planification : organisation de l'espace, ergonomie, plan et décisions clés.",
+            "Fabrication sur mesure : armoires, îlot, rangement optimisé selon l'espace.",
+            "Installation : alignements, ajustements sur place et finition soignée.",
+            "Coordination : séquencement des étapes et coordination des travaux connexes au besoin.",
+          ],
+          links: [
+            { label: "Design", href: "/services/design/" },
+            { label: "Fabrication", href: "/services/fabrication/" },
+            { label: "Installation", href: "/services/installation/" },
+          ],
+        },
+      },
+      {
+        id: "transparence",
+        title: "Transparence (ce qui varie)",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Une rénovation peut inclure plusieurs travaux connexes. Selon le mandat, certains éléments peuvent être inclus, coordonnés ou réalisés par d'autres intervenants. L'objectif est d'éviter les zones grises et de cadrer le plan avant le début des travaux.",
+          ],
+          items: [
+            "Électroménagers : généralement choisis par le client; l'intégration est planifiée au design.",
+            "Travaux structurels majeurs : évalués au cas par cas selon la portée du projet.",
+            "Finitions (planchers, dosseret, peinture, etc.) : incluses ou coordonnées selon le mandat.",
+          ],
+        },
+      },
+      {
+        id: "design-role",
+        title: "Le design en rénovation : réduire les imprévus",
+        content: {
+          type: "text",
+          paragraphs: [
+            "En rénovation, l'existant impose des contraintes : murs irréguliers, plomberie, ventilation, accès et intégration des équipements. Le design sert à prendre les décisions tôt, avant la production et l'installation, pour éviter des compromis visibles à la fin.",
+          ],
+          items: [
+            "Organisation : zones de travail, circulation, rangement et intégration.",
+            "Contraintes : plomberie/électricité (intégration), dimensions, dégagements.",
+            "Prévisibilité : séquence claire des étapes et décisions validées avant exécution.",
+          ],
+          links: [
+            { label: "Voir le service de design", href: "/services/design/" },
+          ],
+        },
+      },
+      {
+        id: "coordination",
+        title: "Coordination & exécution",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accès, interruptions, délais).",
+          ],
+          items: [
+            "Séquencement : planifier l'ordre des travaux pour réduire les reprises.",
+            "Phasage : limiter l'impact sur la vie quotidienne lorsque possible.",
+            "Qualité finale : alignements, transitions et finitions inspectées.",
+          ],
+        },
+      },
+      {
+        id: "durabilite",
+        title: "Matériaux & durabilité",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Le choix des matériaux influence la durabilité, mais la qualité finale dépend aussi des chants, de la quincaillerie et de l'installation. Nous orientons les choix selon l'usage et l'entretien attendu.",
+          ],
+          links: [
+            { label: "Voir les matériaux", href: "/materiaux/" },
+            {
+              label: "Comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+            },
+          ],
+        },
+      },
+      {
+        id: "projets",
+        title: "Projets de rénovation de cuisine",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Consultez nos projets pour voir des exemples de configurations, de niveaux de finition et de résultats obtenus sur différents types d'espaces.",
+          ],
+          links: [
+            {
+              label: "Voir les projets de cuisines",
+              href: "/projets/cuisine/",
+            },
+          ],
+        },
+      },
+      {
+        id: "local",
+        title: "Zones desservies",
+        content: {
+          type: "list-with-links",
+          intro:
+            "Nos rénovations de cuisine sont réalisées principalement à Montréal, Laval et sur la Rive-Sud.",
+          itemsWithLinks: [
+            {
+              label: "Rénovation de cuisine à Montréal",
+              link: {
+                label: "Rénovation de cuisine à Montréal",
+                href: "/montreal/renovation-cuisine/",
+              },
+            },
+            {
+              label: "Rénovation de cuisine à Laval",
+              link: {
+                label: "Rénovation de cuisine à Laval",
+                href: "/laval/renovation-cuisine/",
+              },
+            },
+            {
+              label: "Rénovation de cuisine sur la Rive-Sud",
+              link: {
+                label: "Rénovation de cuisine sur la Rive-Sud",
+                href: "/rive-sud/renovation-cuisine/",
+              },
+            },
+          ],
+        },
+      },
     ],
     faq: [
       {
@@ -659,11 +871,170 @@ export const RENOVATION_SUB_SERVICES: Record<RenovationType, RenovationSubServic
       ],
       ctaLinks: [
         { label: "Demander une soumission", href: "/contact/" },
-        { label: "Voir des projets de salles de bain", href: "/projets/salle-de-bain/" },
+        {
+          label: "Voir des projets de salles de bain",
+          href: "/projets/salle-de-bain/",
+        },
       ],
     },
     sections: [
-      // Sections à compléter selon le contenu existant
+      {
+        id: "pour-qui",
+        title: "À qui s'adresse une rénovation clé en main?",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Si votre objectif est uniquement décoratif ou temporaire, la rénovation clé en main n'est peut-être pas l'option la plus pertinente. L'objectif ici est la durabilité, la cohérence et la tranquillité d'esprit.",
+          ],
+          items: [
+            "Vous voulez réduire les risques liés à l'eau grâce à une planification et une exécution cadrées.",
+            "Vous rénovez une salle de bain existante (maison ou condo) et vous cherchez un résultat durable.",
+            "Vous préférez éviter la gestion de chantier et les zones grises entre intervenants.",
+          ],
+        },
+      },
+      {
+        id: "inclus",
+        title: "Ce qui est inclus (selon le projet)",
+        content: {
+          type: "list",
+          intro:
+            "Les inclusions exactes varient selon la portée (partielle ou complète). Elles sont confirmées lors de la soumission, pour éviter toute ambiguïté.",
+          items: [
+            "Design & planification : organisation de l'espace, ergonomie, décisions clés.",
+            "Vanités et rangement sur mesure : conception adaptée à l'usage et à l'humidité.",
+            "Installation : alignements, ajustements sur place et finition soignée.",
+            "Coordination : séquencement et coordination des travaux connexes au besoin.",
+          ],
+          links: [
+            { label: "Design", href: "/services/design/" },
+            { label: "Fabrication", href: "/services/fabrication/" },
+            { label: "Installation", href: "/services/installation/" },
+            { label: "Vanités sur mesure", href: "/espaces/salle-de-bain/" },
+          ],
+        },
+      },
+      {
+        id: "variable",
+        title: "Transparence (ce qui varie)",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Une rénovation de salle de bain peut inclure plusieurs travaux connexes. Selon le mandat, certains éléments peuvent être inclus, coordonnés ou réalisés par d'autres intervenants. L'objectif est de cadrer le plan avant de démarrer.",
+          ],
+          items: [
+            "Douche / bain : selon la portée de la rénovation.",
+            "Plomberie majeure : évaluée au cas par cas selon l'existant.",
+            "Ventilation : intégrée à la planification lorsque nécessaire.",
+            "Finitions (céramique, peinture, etc.) : incluses ou coordonnées selon le mandat.",
+          ],
+        },
+      },
+      {
+        id: "design-role",
+        title: "Le design en rénovation : éviter les erreurs coûteuses",
+        content: {
+          type: "text",
+          paragraphs: [
+            "En salle de bain, les erreurs se paient cher. Le design sert à intégrer l'existant (plomberie, drains, dégagements) et à prendre les décisions avant la démolition, afin de limiter les imprévus et les compromis.",
+          ],
+          items: [
+            "Ergonomie : circulation, accès, hauteur de vanité, rangement.",
+            "Contraintes : plomberie/ventilation (intégration), dimensions et dégagements.",
+            "Prévisibilité : séquence claire des étapes et décisions validées tôt.",
+          ],
+          links: [
+            { label: "Voir le service de design", href: "/services/design/" },
+          ],
+        },
+      },
+      {
+        id: "humidite",
+        title: "Humidité, eau & durabilité (priorités)",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Une salle de bain est un environnement exigeant : éclaboussures, vapeur, nettoyage fréquent. La durabilité dépend des matériaux, mais surtout des détails : chants, quincaillerie et qualité d'installation.",
+          ],
+          items: [
+            "Matériaux adaptés : choix cohérents avec l'usage et l'humidité.",
+            "Protection des chants : limiter l'infiltration d'eau et l'usure.",
+            "Quincaillerie : usage répété, fiabilité et ajustements dans le temps.",
+            "Ventilation : planifiée au besoin pour réduire les risques à long terme.",
+          ],
+          links: [
+            { label: "Voir les matériaux", href: "/materiaux/" },
+            {
+              label: "Comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+            },
+            { label: "Quincaillerie", href: "/materiaux/quincaillerie/" },
+          ],
+        },
+      },
+      {
+        id: "coordination",
+        title: "Coordination & exécution",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accès, interruptions, contraintes).",
+          ],
+          items: [
+            "Séquencement : organiser l'ordre des travaux pour limiter les reprises.",
+            "Phasage : réduire l'impact sur la vie quotidienne lorsque possible.",
+            "Inspection finale : vérification et ajustements avant la livraison.",
+          ],
+        },
+      },
+      {
+        id: "projets",
+        title: "Projets de rénovation de salle de bain",
+        content: {
+          type: "text",
+          paragraphs: [
+            "Consultez nos projets pour voir des exemples de vanités sur mesure, de configurations, et de niveaux de finition obtenus dans des environnements humides.",
+          ],
+          links: [
+            {
+              label: "Voir les projets de salles de bain",
+              href: "/projets/salle-de-bain/",
+            },
+          ],
+        },
+      },
+      {
+        id: "local",
+        title: "Zones desservies",
+        content: {
+          type: "list-with-links",
+          intro:
+            "Nos rénovations de salle de bain sont réalisées principalement à Montréal, Laval et sur la Rive-Sud.",
+          itemsWithLinks: [
+            {
+              label: "Rénovation de salle de bain à Montréal",
+              link: {
+                label: "Rénovation de salle de bain à Montréal",
+                href: "/montreal/renovation-salle-de-bain/",
+              },
+            },
+            {
+              label: "Rénovation de salle de bain à Laval",
+              link: {
+                label: "Rénovation de salle de bain à Laval",
+                href: "/laval/renovation-salle-de-bain/",
+              },
+            },
+            {
+              label: "Rénovation de salle de bain sur la Rive-Sud",
+              link: {
+                label: "Rénovation de salle de bain sur la Rive-Sud",
+                href: "/rive-sud/renovation-salle-de-bain/",
+              },
+            },
+          ],
+        },
+      },
     ],
     faq: [
       {
