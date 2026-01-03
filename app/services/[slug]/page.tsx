@@ -4,7 +4,11 @@ import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/data/services/utils";
 import type { ServiceSlug } from "@/data/services/types";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import {
+  serviceJsonLd,
+  faqJsonLd,
+  breadcrumbJsonLd,
+} from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 
 type Params = { slug: string };

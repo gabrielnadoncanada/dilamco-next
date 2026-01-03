@@ -12,7 +12,7 @@ export const RENOVATION_SUB_SERVICES: Record<
   cuisine: {
     type: "cuisine",
     metadata: {
-      title: "Rénovation de cuisine | Dilamco",
+      title: "Rénovation de cuisine",
       description:
         "Rénovation de cuisine clé en main : design, coordination, fabrication et installation d'armoires sur mesure. Un seul partenaire, du plan à la finition, à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/renovation/cuisine/`,
@@ -171,7 +171,7 @@ export const RENOVATION_SUB_SERVICES: Record<
   "salle-de-bain": {
     type: "salle-de-bain",
     metadata: {
-      title: "Rénovation salle de bain | Dilamco",
+      title: "Rénovation salle de bain",
       description:
         "Rénovation de salle de bain clé en main : design, coordination, vanités sur mesure et finition durable. Approche orientée humidité, exécution et tranquillité d'esprit à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/renovation/salle-de-bain/`,
@@ -342,7 +342,7 @@ export const RENOVATION_SUB_SERVICES: Record<
   plancher: {
     type: "plancher",
     metadata: {
-      title: "Rénovation de plancher | Dilamco",
+      title: "Rénovation de plancher",
       description:
         "Rénovation de plancher : planification, coordination et finition soignée. Intégration du plancher dans un projet de rénovation (cuisine, salle de bain) à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/renovation/plancher/`,
@@ -476,7 +476,7 @@ export const RENOVATION_SUB_SERVICES: Record<
   "agrandissement-de-maison": {
     type: "agrandissement-de-maison",
     metadata: {
-      title: "Agrandissement de maison | Dilamco",
+      title: "Agrandissement de maison",
       description:
         "Agrandissement de maison clé en main : planification, coordination et exécution complète. Projets résidentiels réalisés à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/renovation/agrandissement-de-maison/`,

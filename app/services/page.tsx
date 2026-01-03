@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | Dilamco",
+  title: "Services",
   description:
     "Services Dilamco : design, fabrication sur mesure, installation et rénovation clé en main. Projets haut de gamme à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

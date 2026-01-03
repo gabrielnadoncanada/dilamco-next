@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import {
+  serviceJsonLd,
+  faqJsonLd,
+  breadcrumbJsonLd,
+} from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
-  title: "Processus | Dilamco",
+  title: "Processus",
   description:
     "Découvrez le processus Dilamco : design, fabrication, installation et, selon le projet, rénovation clé en main. Une méthode structurée du plan à la finition.",
   alternates: {
@@ -17,7 +21,7 @@ export default function Processus() {
   const faqItems = [
     {
       q: "Est-ce que tous les projets suivent exactement les mêmes étapes?",
-      a: "La structure est la même, mais la portée varie. Un projet \"aménagement seulement\" est plus simple qu'une rénovation complète avec travaux connexes.",
+      a: 'La structure est la même, mais la portée varie. Un projet "aménagement seulement" est plus simple qu\'une rénovation complète avec travaux connexes.',
     },
     {
       q: "À quel moment la fabrication démarre-t-elle?",

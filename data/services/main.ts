@@ -9,7 +9,7 @@ export const SERVICES: ServiceData[] = [
   {
     slug: "design",
     metadata: {
-      title: "Service de design | Dilamco",
+      title: "Service de design",
       description:
         "Service de design : optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux. Un design orienté usage, prêt pour fabrication et installation, à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/design/`,
@@ -200,7 +200,7 @@ export const SERVICES: ServiceData[] = [
   {
     slug: "fabrication",
     metadata: {
-      title: "Service de fabrication | Dilamco",
+      title: "Service de fabrication",
       description:
         "Fabrication sur mesure : durabilité, précision et finition haut de gamme. Matériaux orientés usage, assemblage soigné et préparation pour une installation impeccable à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/fabrication/`,
@@ -384,7 +384,7 @@ export const SERVICES: ServiceData[] = [
   {
     slug: "installation",
     metadata: {
-      title: "Service d'installation | Dilamco",
+      title: "Service d'installation",
       description:
         "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée pour cuisines, salles de bain, walk-in et projets commerciaux à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/installation/`,
@@ -556,7 +556,7 @@ export const SERVICES: ServiceData[] = [
   {
     slug: "renovation",
     metadata: {
-      title: "Rénovation clé en main | Dilamco",
+      title: "Rénovation clé en main",
       description:
         "Rénovation clé en main : coordination et exécution lorsque le projet implique plusieurs corps de métier. Réduire les imprévus et livrer un résultat cohérent à Montréal, Laval et sur la Rive-Sud.",
       canonical: `${SITE_URL}/services/renovation/`,

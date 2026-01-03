@@ -53,7 +53,7 @@ export const SPACE_CONTENT: Record<ProjectSpace, SpaceContent> = {
   commercial: {
     space: "commercial",
     metadata: {
-      title: "Projets commerciaux | Dilamco",
+      title: "Projets commerciaux",
       description:
         "Projets commerciaux sur mesure : exemples d’aménagements réalisés (bureaux, commerces, restauration). Conception, fabrication et installation avec un focus sur durabilité et exécution.",
       canonical: "https://dilamco.com/projets/commercial/",
@@ -174,7 +174,7 @@ export const SPACE_CONTENT: Record<ProjectSpace, SpaceContent> = {
   cuisine: {
     space: "cuisine",
     metadata: {
-      title: "Projets de cuisines sur mesure | Dilamco",
+      title: "Projets de cuisines sur mesure",
       description:
         "Projets de cuisines sur mesure : réalisations et exemples de configurations (condo, îlot, rangement optimisé, rénovation). Conception, fabrication et installation à Montréal, Laval et Rive-Sud.",
       canonical: "https://dilamco.com/projets/cuisine/",
@@ -334,7 +334,7 @@ export const SPACE_CONTENT: Record<ProjectSpace, SpaceContent> = {
   "salle-de-bain": {
     space: "salle-de-bain",
     metadata: {
-      title: "Projets de salles de bain sur mesure | Dilamco",
+      title: "Projets de salles de bain sur mesure",
       description:
         "Projets de salles de bain sur mesure : vanités, rangements et aménagements réalisés. Exemples de solutions adaptées à l’humidité, à l’entretien et aux contraintes d’espace à Montréal, Laval et Rive-Sud.",
       canonical: "https://dilamco.com/projets/salle-de-bain/",
@@ -506,7 +506,7 @@ export const SPACE_CONTENT: Record<ProjectSpace, SpaceContent> = {
   "salle-de-lavage": {
     space: "salle-de-lavage",
     metadata: {
-      title: "Projets de salles de lavage sur mesure | Dilamco",
+      title: "Projets de salles de lavage sur mesure",
       description:
         "Projets de salles de lavage sur mesure : rangements, comptoirs et aménagements réalisés. Exemples de solutions durables adaptées à l’humidité, au rangement et à l’optimisation d’espace à Montréal, Laval et Rive-Sud.",
       canonical: "https://dilamco.com/projets/salle-de-lavage/",
@@ -699,7 +699,7 @@ export const SPACE_CONTENT: Record<ProjectSpace, SpaceContent> = {
   "walk-in": {
     space: "walk-in",
     metadata: {
-      title: "Projets de walk-in sur mesure | Dilamco",
+      title: "Projets de walk-in sur mesure",
       description:
         "Projets de walk-in sur mesure : aménagements de garde-robes et rangements réalisés. Exemples de solutions optimisées (sections, tiroirs, accessoires) conçues pour la fonctionnalité et la durabilité à Montréal, Laval et Rive-Sud.",
       canonical: "https://dilamco.com/projets/walk-in/",

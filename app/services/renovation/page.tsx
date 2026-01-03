@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rénovation clé en main | Dilamco",
+  title: "Rénovation clé en main",
   description:
     "Rénovation clé en main : planification, coordination des corps de métier, exécution et finition. Cuisine, salle de bain, plancher et agrandissement à Montréal, Laval et sur la Rive-Sud.",
   alternates: {

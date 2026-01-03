@@ -5,7 +5,7 @@ import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
-  title: "Quincaillerie | Dilamco",
+  title: "Quincaillerie",
   description:
     "Quincaillerie d’armoires : charnières, coulisses et mécanismes. Comprendre l’impact sur le confort, les réglages et la durabilité en cuisine et salle de bain.",
   alternates: {
