@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Comparatifs",
@@ -10,8 +13,15 @@ export const metadata: Metadata = {
 };
 
 export default function Comparatifs() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Comparatifs", url: SITE.url + "/comparatifs/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>Comparatifs — faire le bon choix avant d’investir</h1>
         <p>
@@ -168,5 +178,6 @@ export default function Comparatifs() {
         </p>
       </section>
     </main>
+    </>
   );
 }

@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Contact & soumission",
@@ -10,8 +13,15 @@ export const metadata: Metadata = {
 };
 
 export default function Contact() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Contact", url: SITE.url + "/contact/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>Contact & soumission — Dilamco</h1>
         <p>
@@ -225,5 +235,6 @@ export default function Contact() {
         </p>
       </section>
     </main>
+    </>
   );
 }

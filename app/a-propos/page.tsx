@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "À propos",
@@ -10,8 +13,15 @@ export const metadata: Metadata = {
 };
 
 export default function APropos() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "À propos", url: SITE.url + "/a-propos/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>À propos de Dilamco</h1>
         <p>
@@ -113,5 +123,6 @@ export default function APropos() {
         </p>
       </section>
     </main>
+    </>
   );
 }

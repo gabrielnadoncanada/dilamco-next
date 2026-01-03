@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { faqJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
 };
 
 export default function ErreursRenovationCuisine() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Guides", url: SITE.url + "/guides/" },
+    {
+      name: "Erreurs fréquentes en rénovation de cuisine",
+      url: SITE.url + "/guides/erreurs-renovation-cuisine/",
+    },
+  ];
+
   const faqItems: FAQItem[] = [
     {
       q: "Quelle est l'erreur la plus coûteuse?",
@@ -34,6 +44,7 @@ export default function ErreursRenovationCuisine() {
 
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
         <header>

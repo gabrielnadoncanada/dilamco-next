@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
-import { faqJsonLd } from "@/seo/schema/builders";
+import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
 
 export const metadata: Metadata = {
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
 };
 
 export default function CommentChoisirCuisine() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Guides", url: SITE.url + "/guides/" },
+    {
+      name: "Comment choisir une cuisine sur mesure",
+      url: SITE.url + "/guides/comment-choisir-cuisine-sur-mesure/",
+    },
+  ];
+
   const faqItems: FAQItem[] = [
     {
       q: "Sur mesure vs semi-custom : quelle différence?",
@@ -38,6 +48,7 @@ export default function CommentChoisirCuisine() {
 
   return (
     <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
         <header>

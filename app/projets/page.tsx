@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Projets",
@@ -10,8 +13,15 @@ export const metadata: Metadata = {
 };
 
 export default function Projets() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Projets", url: SITE.url + "/projets/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>Projets sur mesure — cuisines, salles de bain et rénovations</h1>
         <p>
@@ -140,5 +150,6 @@ export default function Projets() {
         </p>
       </section>
     </main>
+    </>
   );
 }

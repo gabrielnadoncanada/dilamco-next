@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Rénovation clé en main",
@@ -10,8 +13,16 @@ export const metadata: Metadata = {
 };
 
 export default function Renovation() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Services", url: SITE.url + "/services/" },
+    { name: "Rénovation clé en main", url: SITE.url + "/services/renovation/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>Rénovation clé en main — coordination, exécution et finition</h1>
         <p>
@@ -157,5 +168,6 @@ export default function Renovation() {
         </p>
       </section>
     </main>
+    </>
   );
 }

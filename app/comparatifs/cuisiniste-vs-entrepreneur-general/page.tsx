@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Cuisiniste vs entrepreneur général",
@@ -11,8 +14,19 @@ export const metadata: Metadata = {
 };
 
 export default function CuisinisteVsEntrepreneur() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Comparatifs", url: SITE.url + "/comparatifs/" },
+    {
+      name: "Cuisiniste vs entrepreneur général",
+      url: SITE.url + "/comparatifs/cuisiniste-vs-entrepreneur-general/",
+    },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>
           Cuisiniste ou entrepreneur général : qui choisir pour votre projet de
@@ -211,5 +225,6 @@ export default function CuisinisteVsEntrepreneur() {
         </p>
       </section>
     </main>
+    </>
   );
 }

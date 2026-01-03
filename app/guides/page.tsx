@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 export const metadata: Metadata = {
   title: "Guides",
@@ -10,8 +13,15 @@ export const metadata: Metadata = {
 };
 
 export default function Guides() {
+  const crumbs = [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Guides", url: SITE.url + "/guides/" },
+  ];
+
   return (
-    <main id="contenu">
+    <>
+      <JsonLd data={breadcrumbJsonLd(crumbs)} />
+      <main id="contenu">
       <header>
         <h1>Guides & conseils — cuisines et rénovations sur mesure</h1>
         <p>
@@ -120,5 +130,6 @@ export default function Guides() {
         </p>
       </section>
     </main>
+    </>
   );
 }
