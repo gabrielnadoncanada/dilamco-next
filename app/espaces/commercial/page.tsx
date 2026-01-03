@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/espaces/commercial/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/espaces/commercial/",
+    title: "Commercial sur mesure | Dilamco",
+    description:
+      "Aménagement commercial sur mesure : mobilier et rangement robustes pour usage intensif. Design, fabrication et installation à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Commercial sur mesure Dilamco",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial sur mesure | Dilamco",
+    description:
+      "Aménagement commercial sur mesure : mobilier et rangement robustes pour usage intensif.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Commercial() {

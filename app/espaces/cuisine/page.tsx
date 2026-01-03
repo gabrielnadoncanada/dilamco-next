@@ -15,6 +15,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/espaces/cuisine/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/espaces/cuisine/",
+    title: "Cuisine sur mesure | Dilamco",
+    description:
+      "Cuisine sur mesure haut de gamme : design, fabrication et installation. Armoires, îlots et rangement optimisé, avec option rénovation de cuisine clé en main à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Cuisine sur mesure Dilamco — Haut de gamme",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cuisine sur mesure | Dilamco",
+    description:
+      "Cuisine sur mesure haut de gamme : design, fabrication et installation.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Cuisine() {

@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/espaces/salle-de-bain/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/espaces/salle-de-bain/",
+    title: "Salle de bain & vanités sur mesure | Dilamco",
+    description:
+      "Vanités et rangement de salle de bain sur mesure conçus pour l'humidité : design, fabrication et installation. Option rénovation de salle de bain clé en main à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Salle de bain & vanités sur mesure Dilamco",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Salle de bain & vanités sur mesure | Dilamco",
+    description:
+      "Vanités et rangement de salle de bain sur mesure conçus pour l'humidité.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function SalleDeBain() {

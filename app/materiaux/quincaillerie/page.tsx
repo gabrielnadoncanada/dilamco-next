@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/materiaux/quincaillerie/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/materiaux/quincaillerie/",
+    title: "Quincaillerie | Dilamco",
+    description:
+      "Quincaillerie d'armoires : charnières, coulisses et mécanismes. Comprendre l'impact sur le confort, les réglages et la durabilité en cuisine et salle de bain.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Quincaillerie — Matériaux sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quincaillerie | Dilamco",
+    description:
+      "Quincaillerie d'armoires : charnières, coulisses et mécanismes.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Quincaillerie() {

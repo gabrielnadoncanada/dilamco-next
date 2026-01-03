@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/espaces/salle-de-lavage/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/espaces/salle-de-lavage/",
+    title: "Salle de lavage sur mesure | Dilamco",
+    description:
+      "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie. Praticité, durabilité et configuration adaptée à votre espace à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Salle de lavage sur mesure Dilamco",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Salle de lavage sur mesure | Dilamco",
+    description:
+      "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function SalleDeLavage() {

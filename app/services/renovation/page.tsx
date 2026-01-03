@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/services/renovation/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/services/renovation/",
+    title: "Rénovation clé en main | Dilamco",
+    description:
+      "Rénovation clé en main : planification, coordination des corps de métier, exécution et finition. Cuisine, salle de bain, plancher et agrandissement à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Rénovation clé en main Dilamco",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rénovation clé en main | Dilamco",
+    description:
+      "Rénovation clé en main : planification, coordination des corps de métier, exécution et finition.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Renovation() {

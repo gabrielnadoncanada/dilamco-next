@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/materiaux/comparatif/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/materiaux/comparatif/",
+    title: "Comparatif des matériaux | Dilamco",
+    description:
+      "Comparatif des matériaux pour cuisines, vanités et armoires sur mesure : MDF, mélamine, contreplaqué et bois massif. Choisir selon l'usage, l'humidité, la stabilité et la durabilité.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Comparatif des matériaux — Sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Comparatif des matériaux | Dilamco",
+    description:
+      "Comparatif des matériaux pour cuisines, vanités et armoires sur mesure.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Comparatif() {

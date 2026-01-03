@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/materiaux/mdf/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/materiaux/mdf/",
+    title: "MDF | Dilamco",
+    description:
+      "MDF : avantages, limites et usages recommandés pour armoires, vanités et projets sur mesure. Comprendre quand le MDF est pertinent (portes peintes) et quand privilégier d'autres matériaux.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "MDF — Matériaux sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MDF | Dilamco",
+    description:
+      "MDF : avantages, limites et usages recommandés pour armoires, vanités et projets sur mesure.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function MDF() {

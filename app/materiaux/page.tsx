@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/materiaux/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/materiaux/",
+    title: "Matériaux | Dilamco",
+    description:
+      "Matériaux et comparatifs pour cuisines, vanités et armoires sur mesure : contreplaqué, MDF, mélamine, bois massif, quincaillerie, couleurs et finis. Choix orientés durabilité à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Matériaux Dilamco — Choix orientés durabilité",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Matériaux | Dilamco",
+    description:
+      "Matériaux et comparatifs pour cuisines, vanités et armoires sur mesure.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Materiaux() {

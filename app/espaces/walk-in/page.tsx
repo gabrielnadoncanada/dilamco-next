@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/espaces/walk-in/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/espaces/walk-in/",
+    title: "Walk-in & rangement sur mesure | Dilamco",
+    description:
+      "Walk-in et rangement sur mesure : organisation, modules adaptés, optimisation de l'espace et finition haut de gamme. Design, fabrication et installation à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Walk-in & rangement sur mesure Dilamco",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Walk-in & rangement sur mesure | Dilamco",
+    description:
+      "Walk-in et rangement sur mesure : organisation, modules adaptés, optimisation de l'espace.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function WalkIn() {

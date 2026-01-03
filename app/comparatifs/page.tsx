@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/comparatifs/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/comparatifs/",
+    title: "Comparatifs | Dilamco",
+    description:
+      "Comparatifs pour aider à choisir : sur mesure vs IKEA, sur mesure vs Home Depot, cuisiniste vs entrepreneur général. Décisions orientées durabilité, exécution et coûts cachés.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Comparatifs Dilamco — Sur mesure vs alternatives",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Comparatifs | Dilamco",
+    description:
+      "Comparatifs pour aider à choisir : sur mesure vs IKEA, sur mesure vs Home Depot.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Comparatifs() {

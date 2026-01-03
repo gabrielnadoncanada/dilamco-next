@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/projets/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/projets/",
+    title: "Projets | Dilamco",
+    description:
+      "Projets sur mesure réalisés par Dilamco : cuisines, salles de bain, walk-in, salles de lavage et commercial. Réalisations à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Projets Dilamco — Réalisations sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Projets | Dilamco",
+    description:
+      "Projets sur mesure réalisés par Dilamco : cuisines, salles de bain, walk-in.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Projets() {

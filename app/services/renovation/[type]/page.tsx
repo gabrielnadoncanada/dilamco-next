@@ -31,6 +31,16 @@ export async function generateMetadata({
       url: subService.metadata.canonical,
       title: subService.metadata.title,
       description: subService.metadata.description,
+      siteName: "Dilamco",
+      locale: "fr_CA",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: subService.metadata.title,
+        },
+      ],
     },
 
     twitter: {

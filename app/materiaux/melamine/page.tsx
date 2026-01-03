@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/materiaux/melamine/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/materiaux/melamine/",
+    title: "Mélamine | Dilamco",
+    description:
+      "Mélamine : avantages, limites et usages recommandés pour armoires et projets sur mesure. Comprendre quand la mélamine est pertinente, ses précautions (chants, humidité) et les alternatives.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Mélamine — Matériaux sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mélamine | Dilamco",
+    description:
+      "Mélamine : avantages, limites et usages recommandés pour armoires et projets sur mesure.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Melamine() {

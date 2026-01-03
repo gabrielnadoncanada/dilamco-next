@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/guides/comment-choisir-cuisine-sur-mesure/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/guides/comment-choisir-cuisine-sur-mesure/",
+    title: "Comment choisir une cuisine sur mesure | Dilamco",
+    description:
+      "Guide complet pour choisir une cuisine sur mesure : usages, ergonomie, matériaux, rangement, quincaillerie, installation et rénovation. Orienté décision, sans prix.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Guide : Comment choisir une cuisine sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Comment choisir une cuisine sur mesure | Dilamco",
+    description:
+      "Guide complet pour choisir une cuisine sur mesure : usages, ergonomie, matériaux, rangement, quincaillerie.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function CommentChoisirCuisine() {

@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/guides/erreurs-renovation-cuisine/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/guides/erreurs-renovation-cuisine/",
+    title: "Erreurs fréquentes en rénovation de cuisine | Dilamco",
+    description:
+      "Guide : erreurs fréquentes en rénovation de cuisine (matériaux, ergonomie, coordination, installation, échéancier) et comment les éviter avant de commencer le chantier.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Guide : Erreurs fréquentes en rénovation de cuisine",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Erreurs fréquentes en rénovation de cuisine | Dilamco",
+    description:
+      "Guide : erreurs fréquentes en rénovation de cuisine et comment les éviter.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function ErreursRenovationCuisine() {

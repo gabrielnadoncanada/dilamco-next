@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/guides/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/guides/",
+    title: "Guides | Dilamco",
+    description:
+      "Guides et conseils pour projets de cuisines, vanités et rénovations sur mesure. Décisions éclairées, de l'inspiration à la soumission, à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Guides Dilamco — Conseils pour projets sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Guides | Dilamco",
+    description:
+      "Guides et conseils pour projets de cuisines, vanités et rénovations sur mesure.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Guides() {

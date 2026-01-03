@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/comparatifs/cuisine-sur-mesure-vs-ikea/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/comparatifs/cuisine-sur-mesure-vs-ikea/",
+    title: "Cuisine sur mesure vs IKEA | Dilamco",
+    description:
+      "Comparatif cuisine sur mesure vs IKEA : personnalisation, ergonomie, matériaux, installation et rénovation. Aidez-vous à choisir la solution adaptée à votre projet à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Comparatif : Cuisine sur mesure vs IKEA",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cuisine sur mesure vs IKEA | Dilamco",
+    description:
+      "Comparatif cuisine sur mesure vs IKEA : personnalisation, ergonomie, matériaux.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function CuisineVsIkea() {

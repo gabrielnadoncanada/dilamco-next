@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/guides/etapes-renovation-cuisine/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/guides/etapes-renovation-cuisine/",
+    title: "Étapes d'une rénovation de cuisine | Dilamco",
+    description:
+      "Guide : étapes d'une rénovation de cuisine, du cadrage au design, aux travaux techniques, à l'installation et aux finitions. Comprendre le bon ordre des étapes avant de démarrer.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Guide : Étapes d'une rénovation de cuisine",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Étapes d'une rénovation de cuisine | Dilamco",
+    description:
+      "Guide : étapes d'une rénovation de cuisine, du cadrage au design, aux travaux techniques.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function EtapesRenovationCuisine() {

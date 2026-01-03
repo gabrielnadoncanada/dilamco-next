@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/espaces/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/espaces/",
+    title: "Espaces sur mesure | Dilamco",
+    description:
+      "Découvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial. Design, fabrication, installation et option rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Espaces sur mesure Dilamco",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Espaces sur mesure | Dilamco",
+    description:
+      "Découvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Espaces() {

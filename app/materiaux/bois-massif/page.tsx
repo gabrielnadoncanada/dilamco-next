@@ -11,6 +11,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/materiaux/bois-massif/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/materiaux/bois-massif/",
+    title: "Bois massif | Dilamco",
+    description:
+      "Bois massif : avantages, limites et usages recommandés pour armoires, portes et mobilier sur mesure. Comprendre stabilité, humidité, finition et alternatives (MDF, mélamine, contreplaqué) pour faire le bon choix.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Bois massif — Matériaux sur mesure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bois massif | Dilamco",
+    description:
+      "Bois massif : avantages, limites et usages recommandés pour armoires sur mesure.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function BoisMassif() {

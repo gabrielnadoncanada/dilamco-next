@@ -11,6 +11,30 @@ export const metadata: Metadata = {
     canonical:
       "https://dilamco.com/comparatifs/cuisine-sur-mesure-vs-home-depot/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/comparatifs/cuisine-sur-mesure-vs-home-depot/",
+    title: "Cuisine sur mesure vs Home Depot | Dilamco",
+    description:
+      "Comparatif cuisine sur mesure vs Home Depot : différences de matériaux, personnalisation, installation et rénovation. Aidez-vous à choisir la solution adaptée à votre projet à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Comparatif : Cuisine sur mesure vs Home Depot",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cuisine sur mesure vs Home Depot | Dilamco",
+    description:
+      "Comparatif cuisine sur mesure vs Home Depot : différences de matériaux, personnalisation.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function CuisineVsHomeDepot() {

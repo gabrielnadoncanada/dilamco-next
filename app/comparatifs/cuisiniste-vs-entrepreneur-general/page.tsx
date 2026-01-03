@@ -11,6 +11,30 @@ export const metadata: Metadata = {
     canonical:
       "https://dilamco.com/comparatifs/cuisiniste-vs-entrepreneur-general/",
   },
+  openGraph: {
+    type: "article",
+    url: "https://dilamco.com/comparatifs/cuisiniste-vs-entrepreneur-general/",
+    title: "Cuisiniste vs entrepreneur général | Dilamco",
+    description:
+      "Cuisiniste ou entrepreneur général pour votre cuisine? Comparatif clair : responsabilités, rénovation, coordination, qualité d'installation et risques. Trouvez la solution adaptée à votre projet à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Comparatif : Cuisiniste vs entrepreneur général",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cuisiniste vs entrepreneur général | Dilamco",
+    description:
+      "Cuisiniste ou entrepreneur général pour votre cuisine? Comparatif clair.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function CuisinisteVsEntrepreneur() {

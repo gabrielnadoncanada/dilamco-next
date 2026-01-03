@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/services/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/services/",
+    title: "Services | Dilamco",
+    description:
+      "Services Dilamco : design, fabrication sur mesure, installation et rénovation clé en main. Projets haut de gamme à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Services Dilamco — Design, fabrication, installation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services | Dilamco",
+    description:
+      "Services Dilamco : design, fabrication sur mesure, installation et rénovation clé en main.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Services() {

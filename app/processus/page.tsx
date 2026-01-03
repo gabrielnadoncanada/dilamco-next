@@ -15,6 +15,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/processus/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/processus/",
+    title: "Processus | Dilamco",
+    description:
+      "Découvrez le processus Dilamco : design, fabrication, installation et, selon le projet, rénovation clé en main. Une méthode structurée du plan à la finition.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Processus Dilamco — Du plan à la finition",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Processus | Dilamco",
+    description:
+      "Découvrez le processus Dilamco : design, fabrication, installation et rénovation clé en main.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function Processus() {

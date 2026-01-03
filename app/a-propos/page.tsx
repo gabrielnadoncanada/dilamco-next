@@ -10,6 +10,30 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://dilamco.com/a-propos/",
   },
+  openGraph: {
+    type: "website",
+    url: "https://dilamco.com/a-propos/",
+    title: "À propos | Dilamco",
+    description:
+      "À propos de Dilamco : cuisines, armoires et vanités sur mesure haut de gamme. Approche clé en main selon le projet, contrôle qualité et exécution soignée à Montréal, Laval et sur la Rive-Sud.",
+    siteName: "Dilamco",
+    locale: "fr_CA",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "À propos de Dilamco — Sur mesure haut de gamme",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "À propos | Dilamco",
+    description:
+      "À propos de Dilamco : cuisines, armoires et vanités sur mesure haut de gamme.",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function APropos() {
