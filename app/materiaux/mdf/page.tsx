@@ -190,34 +190,12 @@ export default function MDF() {
         <section aria-labelledby="faq">
           <h2 id="faq">FAQ — MDF</h2>
           <dl>
-            <dt>Le MDF est-il un matériau “bas de gamme”?</dt>
-            <dd>
-              Pas nécessairement. Le MDF peut être un excellent choix pour
-              certaines applications (ex. portes peintes) si l’exécution est
-              soignée et si l’usage est bien cadré.
-            </dd>
-
-            <dt>Le MDF gonfle-t-il avec l’humidité?</dt>
-            <dd>
-              Il peut réagir à l’eau si la protection est insuffisante, surtout
-              aux chants. La finition et l’installation jouent un rôle
-              important.
-            </dd>
-
-            <dt>MDF ou mélamine : lequel choisir?</dt>
-            <dd>
-              Le MDF est souvent choisi pour la finition (peinture, surface
-              uniforme). La mélamine vise plutôt un compromis économique avec
-              différents finis. Le “bon” choix dépend de votre usage, de
-              l’espace et du niveau de durabilité recherché.
-            </dd>
-
-            <dt>Le MDF est-il recommandé en salle de bain?</dt>
-            <dd>
-              Ça peut être possible selon la ventilation, l’usage et la
-              protection des chants. Pour certains projets, une autre solution
-              sera préférable pour réduire les risques à long terme.
-            </dd>
+            {faqItems.map((item: FAQItem) => (
+              <div key={item.q}>
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
+              </div>
+            ))}
           </dl>
         </section>
 

@@ -267,33 +267,12 @@ export default function Materiaux() {
         <section aria-labelledby="faq">
           <h2 id="faq">FAQ matériaux</h2>
           <dl>
-            <dt>Contreplaqué ou MDF : lequel choisir?</dt>
-            <dd>
-              Ça dépend de l’usage : stabilité et résistance structurelle vs
-              surface uniforme (souvent pour portes peintes). Le bon choix tient
-              compte de l’humidité et de la durabilité visée.
-            </dd>
-
-            <dt>La mélamine est-elle un bon choix?</dt>
-            <dd>
-              Elle peut être pertinente selon le contexte et le budget, mais
-              elle est plus sensible aux impacts et à l’humidité si les chants
-              sont endommagés.
-            </dd>
-
-            <dt>La quincaillerie “soft-close” vaut-elle la peine?</dt>
-            <dd>
-              Oui si elle est fiable et bien installée : confort au quotidien,
-              moins de stress sur les composants, meilleure perception de
-              qualité.
-            </dd>
-
-            <dt>Quels matériaux éviter en salle de bain?</dt>
-            <dd>
-              Tout ce qui est mal protégé contre l’humidité (chants exposés,
-              mauvaise ventilation, matériaux inadaptés) augmente les risques à
-              moyen terme.
-            </dd>
+            {faqItems.map((item: FAQItem) => (
+              <div key={item.q}>
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
+              </div>
+            ))}
           </dl>
         </section>
 

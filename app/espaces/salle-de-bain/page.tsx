@@ -241,33 +241,12 @@ export default function SalleDeBain() {
         <section aria-labelledby="faq">
           <h2 id="faq">FAQ — salle de bain & vanités sur mesure</h2>
           <dl>
-            <dt>Quels matériaux sont les plus adaptés en salle de bain?</dt>
-            <dd>
-              Les matériaux doivent être choisis en fonction de l’humidité, des
-              chants et de la stabilité. La solution la plus durable dépend
-              aussi de l’assemblage, de la quincaillerie et de l’installation.
-            </dd>
-
-            <dt>MDF ou mélamine en salle de bain : lequel choisir?</dt>
-            <dd>
-              Ça dépend du fini recherché et du niveau d’humidité. Le point
-              critique est la protection des chants et la qualité d’exécution.
-              Un mauvais détail de finition peut ruiner n’importe quel matériau.
-            </dd>
-
-            <dt>Tiroirs ou portes : qu’est-ce qui est le plus pratique?</dt>
-            <dd>
-              Les tiroirs facilitent l’accès (surtout en profondeur). Les portes
-              peuvent être pertinentes selon la plomberie et l’organisation. Le
-              sur mesure permet d’optimiser les deux.
-            </dd>
-
-            <dt>Quels sont les délais typiques?</dt>
-            <dd>
-              Les délais varient selon la complexité et la disponibilité.
-              L’échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à
-              préciser lors de la soumission.
-            </dd>
+            {faqItems.map((item: FAQItem) => (
+              <div key={item.q}>
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
+              </div>
+            ))}
           </dl>
         </section>
 
