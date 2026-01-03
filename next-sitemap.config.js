@@ -8,6 +8,8 @@ module.exports = {
     "/api/*",
     "/admin/*",
     "/_next/*",
+    "**/opengraph-image",
+    "**/opengraph-image/*",
   ],
 
   robotsTxtOptions: {
@@ -17,6 +19,11 @@ module.exports = {
   },
 
   transform: async (config, path) => {
+    // Exclure les images Open Graph (pas des pages HTML)
+    if (path.includes("/opengraph-image")) {
+      return null; // Exclure du sitemap
+    }
+
     let priority = 0.7;
     let changefreq = "weekly";
 

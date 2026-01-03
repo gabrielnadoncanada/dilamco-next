@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getRenovationSubServiceByType } from "@/data/services/utils";
+import { RENOVATION_SUB_SERVICES } from "@/data/services/renovation";
 import { JsonLd } from "@/seo/JsonLd";
 import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
@@ -9,7 +10,7 @@ import { SITE } from "@/seo/schema/site";
 type Params = { type: string };
 
 export function generateStaticParams() {
-  return [{ type: "cuisine" }, { type: "salle-de-bain" }];
+  return Object.keys(RENOVATION_SUB_SERVICES).map((type) => ({ type }));
 }
 
 export async function generateMetadata({

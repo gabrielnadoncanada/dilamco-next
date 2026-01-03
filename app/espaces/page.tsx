@@ -147,6 +147,5 @@ export default function Espaces() {
         </p>
       </section>
     </main>
-    </>
   );
 }
