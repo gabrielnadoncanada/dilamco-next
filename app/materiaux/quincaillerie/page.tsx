@@ -4,6 +4,7 @@ import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
 import { Cta12 } from "@/components/cta12";
+import { Faq1 } from "@/components/faq1";
 
 export const metadata: Metadata = {
   title: "Quincaillerie",
@@ -253,17 +254,15 @@ export default function Quincaillerie() {
           </p>
         </section>
 
-        <section aria-labelledby="faq">
-          <h2 id="faq">FAQ — quincaillerie</h2>
-          <dl>
-            {faqItems.map((item: FAQItem) => (
-              <div key={item.q}>
-                <dt>{item.q}</dt>
-                <dd>{item.a}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+        <Faq1
+          aria-labelledby="faq"
+          heading="FAQ — quincaillerie"
+          items={faqItems.map((item: FAQItem) => ({
+            id: item.q,
+            question: item.q,
+            answer: item.a,
+          }))}
+        />
 
         <Cta12
           aria-labelledby="cta"
