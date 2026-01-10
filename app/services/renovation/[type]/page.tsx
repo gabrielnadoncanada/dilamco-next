@@ -6,6 +6,8 @@ import { RENOVATION_SUB_SERVICES } from "@/data/services/renovation";
 import { JsonLd } from "@/seo/JsonLd";
 import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import { Faq1 } from "@/components/faq1";
+import { Cta12 } from "@/components/cta12";
 
 type Params = { type: string };
 
@@ -225,35 +227,32 @@ export default async function RenovationSubServicePage({
         {subService.sections.map((section) => renderSection(section))}
 
         {subService.faq.length > 0 && (
-          <section aria-labelledby="faq">
-            <h2 id="faq">
-              FAQ —{" "}
-              {type === "cuisine"
+          <Faq1
+            aria-labelledby="faq"
+            heading={`FAQ — ${
+              type === "cuisine"
                 ? "rénovation de cuisine"
-                : "rénovation de salle de bain"}
-            </h2>
-            <dl>
-              {subService.faq.map((item, idx) => (
-                <div key={idx}>
-                  <dt>{item.q}</dt>
-                  <dd>{item.a}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+                : "rénovation de salle de bain"
+            }`}
+            items={subService.faq.map((item) => ({
+              id: item.q,
+              question: item.q,
+              answer: item.a,
+            }))}
+          />
         )}
 
-        <section aria-labelledby="cta">
-          <h2 id="cta">{ctaTitle}</h2>
-          <p>
-            Dites-nous votre secteur (Montréal/Laval/Rive-Sud), votre échéance
-            et la portée souhaitée (partielle ou clé en main). On vous propose
-            la prochaine étape la plus simple pour avancer.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a>
-          </p>
-        </section>
+        <Cta12
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          buttons={{
+            primary: {
+              text: "Demander une soumission",
+              url: "/contact/",
+            },
+          }}
+        />
       </main>
     </>
   );

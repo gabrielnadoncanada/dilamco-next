@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import { Cta12 } from "@/components/cta12";
 
 export const metadata: Metadata = {
   title: "Guides",
@@ -142,17 +143,17 @@ export default function Guides() {
         </p>
       </section>
 
-      <section aria-labelledby="cta">
-        <h2 id="cta">Parlez-nous de votre projet</h2>
-        <p>
-          Que vous soyez au début de votre réflexion ou prêt à avancer,
-          parlez-nous de votre projet. Nous vous guiderons vers une solution
-          cohérente avec votre espace et vos contraintes.
-        </p>
-        <p>
-          <a href="/contact/">Parler à un conseiller</a>
-        </p>
-      </section>
+      <Cta12
+        aria-labelledby="cta"
+        heading="Parlez-nous de votre projet"
+        description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+        buttons={{
+          primary: {
+            text: "Demander une soumission",
+            url: "/contact/",
+          },
+        }}
+      />
     </main>
     </>
   );

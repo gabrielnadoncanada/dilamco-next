@@ -12,6 +12,7 @@ import {
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import { Cta12 } from "@/components/cta12";
 
 type Params = { space: ProjectSpace; slug: string };
 
@@ -204,25 +205,17 @@ export default async function ProjectPage({
           </ul>
         </section>
 
-        <section aria-labelledby="cta">
-          <h2 id="cta">Parlez-nous de votre projet</h2>
-          <p>
-            <a href={project.requiredLinks.contactHref}>
-              Demander une soumission
-            </a>
-          </p>
-          <p>
-            Liens utiles : <a href={project.requiredLinks.spaceHref}>Espace</a>
-            {" | "}
-            <a href={project.requiredLinks.renovationHref}>Rénovation</a>
-            {" | "}
-            <a href={project.requiredLinks.materialHref}>Matériaux</a>
-            {" | "}
-            <a href={CORE_HREF.installation}>Installation</a>
-            {" | "}
-            <a href={CORE_HREF.materialsHub}>Tous les matériaux</a>
-          </p>
-        </section>
+        <Cta12
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          buttons={{
+            primary: {
+              text: "Demander une soumission",
+              url: project.requiredLinks.contactHref,
+            },
+          }}
+        />
       </main>
     </>
   );

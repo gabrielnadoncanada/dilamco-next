@@ -7,6 +7,7 @@ import {
 } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
+import { Cta12 } from "@/components/cta12";
 
 export const metadata: Metadata = {
   title: "Cuisine sur mesure",
@@ -279,17 +280,17 @@ export default function Cuisine() {
           </ul>
         </section>
 
-        <section aria-labelledby="cta">
-          <h2 id="cta">Parlez-nous de votre projet de cuisine</h2>
-          <p>
-            Dites-nous votre secteur (Montréal/Laval/Rive-Sud), votre échéance
-            et vos besoins (îlot, rangement, style, contraintes). On vous
-            propose la prochaine étape la plus simple pour avancer.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a>
-          </p>
-        </section>
+        <Cta12
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          buttons={{
+            primary: {
+              text: "Demander une soumission",
+              url: "/contact/",
+            },
+          }}
+        />
       </main>
     </>
   );

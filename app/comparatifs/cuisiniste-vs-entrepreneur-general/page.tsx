@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import { Cta12 } from "@/components/cta12";
 
 export const metadata: Metadata = {
   title: "Cuisiniste vs entrepreneur général",
@@ -235,19 +236,21 @@ export default function CuisinisteVsEntrepreneur() {
         </p>
       </section>
 
-      <section aria-labelledby="cta">
-        <h2 id="cta">Parlez-nous de votre projet</h2>
-        <p>
-          Dites-nous votre ville (Montréal/Laval/Rive-Sud), si vous rénovez
-          (oui/non) et ce que vous voulez changer
-          (plomberie/électricité/plancher). On revient vers vous avec les
-          prochaines étapes.
-        </p>
-        <p>
-          <a href="/contact/">Demander une soumission</a> {" | "}
-          <a href="/services/renovation/">Solution Dilamco</a>
-        </p>
-      </section>
+      <Cta12
+        aria-labelledby="cta"
+        heading="Parlez-nous de votre projet"
+        description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+        buttons={{
+          primary: {
+            text: "Demander une soumission",
+            url: "/contact/",
+          },
+          secondary: {
+            text: "Solution Dilamco",
+            url: "/services/renovation/",
+          },
+        }}
+      />
     </main>
     </>
   );

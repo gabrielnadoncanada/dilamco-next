@@ -10,6 +10,7 @@ import { SPACE_CONTENT } from "@/data/spaces";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import { Faq1 } from "@/components/faq1";
 
 type Params = { space: ProjectSpace };
 
@@ -128,17 +129,16 @@ function renderSection(
 
     case "faq":
       return (
-        <section key={section.id} aria-labelledby={section.id}>
-          <h2 id={section.id}>{section.title}</h2>
-          <dl>
-            {section.items.map((item) => (
-              <div key={item.q}>
-                <dt>{item.q}</dt>
-                <dd>{item.a}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
+        <Faq1
+          key={section.id}
+          aria-labelledby={section.id}
+          heading={section.title}
+          items={section.items.map((item) => ({
+            id: item.q,
+            question: item.q,
+            answer: item.a,
+          }))}
+        />
       );
 
     default:

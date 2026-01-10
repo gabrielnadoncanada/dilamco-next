@@ -3,6 +3,7 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
+import { Cta12 } from "@/components/cta12";
 
 export const metadata: Metadata = {
   title: "Bois massif",
@@ -282,17 +283,17 @@ export default function BoisMassif() {
           </dl>
         </section>
 
-        <section aria-labelledby="cta">
-          <h2 id="cta">Choisir le bon matériau pour votre projet</h2>
-          <p>
-            Dites-nous votre espace (cuisine, salle de bain, walk-in), votre
-            secteur (Montréal/Laval/Rive-Sud) et le rendu recherché. On vous
-            aide à choisir une combinaison durable et cohérente.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a>
-          </p>
-        </section>
+        <Cta12
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          buttons={{
+            primary: {
+              text: "Demander une soumission",
+              url: "/contact/",
+            },
+          }}
+        />
       </main>
     </>
   );

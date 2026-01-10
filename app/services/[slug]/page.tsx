@@ -10,6 +10,8 @@ import {
   breadcrumbJsonLd,
 } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import { Faq1 } from "@/components/faq1";
+import { Cta12 } from "@/components/cta12";
 
 type Params = { slug: string };
 
@@ -216,30 +218,28 @@ export default async function ServicePage({
         {service.sections.map((section) => renderSection(section))}
 
         {service.faq.length > 0 && (
-          <section aria-labelledby="faq">
-            <h2 id="faq">FAQ — {service.slug}</h2>
-            <dl>
-              {service.faq.map((item, idx) => (
-                <div key={idx}>
-                  <dt>{item.q}</dt>
-                  <dd>{item.a}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
+          <Faq1
+            aria-labelledby="faq"
+            heading={`FAQ — ${service.slug}`}
+            items={service.faq.map((item) => ({
+              id: item.q,
+              question: item.q,
+              answer: item.a,
+            }))}
+          />
         )}
 
-        <section aria-labelledby="cta">
-          <h2 id="cta">Parlez-nous de votre projet</h2>
-          <p>
-            Dites-nous votre espace, votre secteur (Montréal/Laval/Rive-Sud) et
-            vos priorités. On vous propose la prochaine étape la plus simple
-            pour avancer.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a>
-          </p>
-        </section>
+        <Cta12
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          buttons={{
+            primary: {
+              text: "Demander une soumission",
+              url: "/contact/",
+            },
+          }}
+        />
       </main>
     </>
   );

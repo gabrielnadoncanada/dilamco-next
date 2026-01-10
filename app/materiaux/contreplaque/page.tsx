@@ -3,6 +3,7 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
+import { Cta12 } from "@/components/cta12";
 
 export const metadata: Metadata = {
   title: "Pourquoi le contreplaqué",
@@ -296,19 +297,21 @@ export default function Contreplaque() {
           </dl>
         </section>
 
-        <section aria-labelledby="cta">
-          <h2 id="cta">Choisir la bonne structure pour votre projet</h2>
-          <p>
-            Dites-nous votre espace (cuisine, salle de bain, walk-in,
-            commercial), votre secteur (Montréal/Laval/Rive-Sud) et vos
-            priorités (durabilité, entretien, finition). On vous aide à choisir
-            une combinaison cohérente.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/materiaux/comparatif/">Comparer les matériaux</a>
-          </p>
-        </section>
+        <Cta12
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          buttons={{
+            primary: {
+              text: "Demander une soumission",
+              url: "/contact/",
+            },
+            secondary: {
+              text: "Comparer les matériaux",
+              url: "/materiaux/comparatif/",
+            },
+          }}
+        />
       </main>
     </>
   );
