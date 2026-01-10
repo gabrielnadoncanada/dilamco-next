@@ -2,11 +2,14 @@ import { SITE } from "./site";
 
 export type JsonLd = Record<string, unknown>;
 
+const ORG_ID = `${SITE.url}/#organization`;
+const LOCALBUSINESS_ID = `${SITE.url}/#localbusiness`;
+
 export function organizationJsonLd(): JsonLd {
   const data: JsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": `${SITE.url}/#organization`,
+    "@id": ORG_ID,
     name: SITE.name,
     url: SITE.url,
     legalName: SITE.legalName,
@@ -25,7 +28,7 @@ export function localBusinessJsonLd(): JsonLd {
   const data: JsonLd = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "@id": `${SITE.url}/#localbusiness`,
+    "@id": LOCALBUSINESS_ID,
     name: SITE.name,
     url: SITE.url,
     image: SITE.imageUrl,
@@ -93,7 +96,13 @@ export function serviceJsonLd(args: {
     description: args.description,
     serviceType: args.serviceType,
     url: args.url,
-    provider: { "@id": `${SITE.url}/#organization` },
+
+    // ✅ provider = entité locale (LocalBusiness)
+    provider: { "@id": LOCALBUSINESS_ID },
+
+    // ✅ brand = entité corporate (Organization)
+    brand: { "@id": ORG_ID },
+
     areaServed: (args.areaServed ?? SITE.areasServed).map((a) => ({
       "@type": "Place",
       name: a,
