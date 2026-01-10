@@ -4,8 +4,13 @@ import Footer from "../components/Footer";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 const siteUrl = "https://dilamco.com";
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -49,11 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr-CA">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    <html lang="fr-CA" className={jakarta.className}>
       <body>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localBusinessJsonLd()} />
