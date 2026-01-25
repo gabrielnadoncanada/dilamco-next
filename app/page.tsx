@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Cta12 } from "@/components/cta12";
-
+import { ActionButtons } from "@/components/ActionButtons";
+import { ArrowRight } from "lucide-react";
+import { Process1 } from "@/components/process1";
+import { Section } from "@/components/Section";
 const siteUrl = "https://dilamco.com";
 
 export const metadata: Metadata = {
@@ -75,10 +78,20 @@ export default function Home() {
           </li>
         </ul>
 
-        <p>
-          <a href="/contact/">Obtenir une soumission gratuite</a> {" | "}
-          <a href="/projets/">Voir nos réalisations</a>
-        </p>
+        <ActionButtons
+          buttons={[
+            {
+              text: "Obtenir une soumission gratuite",
+              href: "/contact",
+            },
+            {
+              text: "Voir nos réalisations",
+              href: "/projets",
+              variant: "outline",
+              icon: ArrowRight,
+            },
+          ]}
+        />
       </section>
 
       <section aria-labelledby="espaces">
@@ -132,40 +145,66 @@ export default function Home() {
           </li>
         </ul>
 
-        <p>
-          <a href="/materiaux/">Voir nos matériaux</a> {" | "}
-          <a href="/services/">Découvrir nos services</a>
-        </p>
+        <ActionButtons
+          buttons={[
+            {
+              text: "Voir nos matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Découvrir nos services",
+              href: "/services/",
+              variant: "outline",
+            },
+          ]}
+        />
       </section>
 
-      <section aria-labelledby="processus">
-        <h2 id="processus">Une approche simple, une exécution cadrée</h2>
-        <ol>
-          <li>
-            <strong>Analyse & design :</strong> besoins, contraintes, plan et
-            choix de matériaux.
-          </li>
-          <li>
-            <strong>Fabrication sur mesure :</strong> production selon votre
-            configuration.
-          </li>
-          <li>
-            <strong>Coordination (si applicable) :</strong> travaux connexes
-            pour une rénovation complète.
-          </li>
-          <li>
-            <strong>Installation & ajustements :</strong> finition, alignements,
-            inspection finale.
-          </li>
-        </ol>
-        <p>
-          <a href="/services/renovation/cuisine/">
-            Voir la rénovation de cuisine
-          </a>{" "}
-          {" | "}
-          <a href="/services/installation/">Voir l’installation</a>
-        </p>
-      </section>
+      <Section aria-labelledby="processus">
+        <Process1
+          heading="Une approche simple, une exécution cadrée"
+          description="Une approche simple, une exécution cadrée"
+          steps={[
+            {
+              step: "1",
+              title: "Analyse & design",
+              description: "Besoins, contraintes, plan et choix de matériaux.",
+            },
+            {
+              step: "2",
+              title: "Fabrication sur mesure",
+              description: "Production selon votre configuration.",
+            },
+            {
+              step: "3",
+              title: "Coordination (si applicable)",
+              description: "Travaux connexes pour une rénovation complète.",
+            },
+            {
+              step: "4",
+              title: "Installation & ajustements",
+              description: "Finition, alignements, inspection finale.",
+            },
+          ]}
+          actions={
+            <ActionButtons
+              buttons={[
+                {
+                  text: "Voir la rénovation de cuisine",
+                  href: "/services/renovation/cuisine/",
+                  variant: "outline",
+                },
+                {
+                  text: "Voir l'installation",
+                  href: "/services/installation/",
+                  variant: "outline",
+                },
+              ]}
+            />
+          }
+        />
+      </Section>
 
       <section aria-labelledby="preuves">
         <h2 id="preuves">Projets récents</h2>
@@ -189,17 +228,23 @@ export default function Home() {
         </ul>
       </section>
 
-      <Cta12
-        aria-labelledby="cta"
-        heading="Parlez-nous de votre projet"
-        description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-        buttons={{
-          primary: {
-            text: "Demander une soumission",
-            url: "/contact/",
-          },
-        }}
-      />
+      <Section aria-labelledby="cta">
+        <Cta12
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          actions={
+            <ActionButtons
+              className="lg:justify-center"
+              buttons={[
+                {
+                  text: "Demander une soumission",
+                  href: "/contact/",
+                },
+              ]}
+            />
+          }
+        />
+      </Section>
     </main>
   );
 }

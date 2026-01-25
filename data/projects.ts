@@ -361,6 +361,20 @@ export const PROJECTS: ProjectData[] = [
       "Cuisine sur mesure réalisée sur la Rive-Sud : rangement optimisé, intégration propre et installation avec finitions soignées.",
     area: "rive-sud",
     city: "Rive-Sud",
+    images: [
+      {
+        src: "/images/projects/cuisine-rive-sud/1.webp",
+        alt: "Cuisine sur mesure — Rive-Sud",
+      },
+      {
+        src: "/images/projects/cuisine-rive-sud/2.webp",
+        alt: "Cuisine sur mesure — Rive-Sud",
+      },
+      {
+        src: "/images/projects/cuisine-rive-sud/3.webp",
+        alt: "Cuisine sur mesure — Rive-Sud",
+      },
+    ],
     scope: [
       "Cadrage et validation des besoins",
       "Design et planification",

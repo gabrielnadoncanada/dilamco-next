@@ -6,6 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { Navbar4 } from "@/components/navbar4";
 
 const siteUrl = "https://dilamco.com";
 const jakarta = Plus_Jakarta_Sans({
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localBusinessJsonLd()} />
+        {/* <Navbar4 /> */}
         {/* <Header />
         <Breadcrumbs /> */}
         {children}

@@ -13,6 +13,7 @@ import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { Cta12 } from "@/components/cta12";
+import Image from "next/image";
 
 type Params = { space: ProjectSpace; slug: string };
 
@@ -145,6 +146,49 @@ export default async function ProjectPage({
             ) : null}
           </p>
         </header>
+
+        <section aria-labelledby="images" className="container">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
+            {project.images?.slice(0, 3).map((img, index, arr) => {
+              const hasThird = arr.length >= 3;
+
+              const wrapperClass =
+                index === 0
+                  ? // Hero: takes 2 cols + 2 rows
+                    "relative overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 h-[420px] md:h-[520px]"
+                  : index === 1
+                  ? // Right top: if no 3rd image, span both rows (fills the empty space)
+                    `relative overflow-hidden rounded-2xl md:col-span-1 ${
+                      hasThird
+                        ? "md:row-span-1 md:h-full"
+                        : "md:row-span-2 md:h-full"
+                    } h-[240px]`
+                  : // Right bottom: only exists if 3rd image exists
+                    "relative overflow-hidden rounded-2xl md:col-span-1 md:row-span-1 h-[240px] md:h-full";
+
+              return (
+                <div
+                  key={img.src}
+                  className={`${wrapperClass} shadow-sm ring-1 ring-black/5`}
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover"
+                    quality={90}
+                    priority={index === 0}
+                    sizes={
+                      index === 0
+                        ? "(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
+                        : "(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                    }
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </section>
 
         <section aria-labelledby="scope">
           <h2 id="scope">Mandat</h2>
