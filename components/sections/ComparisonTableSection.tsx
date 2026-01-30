@@ -20,6 +20,7 @@ interface ComparisonTableSectionProps
     label: string;
     values: string[];
   }>;
+  firstColumnLabel?: string;
   className?: string;
 }
 
@@ -28,6 +29,7 @@ const ComparisonTableSection = ({
   description,
   columns,
   rows,
+  firstColumnLabel = "Matériau",
   className,
   ...props
 }: ComparisonTableSectionProps) => {
@@ -48,7 +50,7 @@ const ComparisonTableSection = ({
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="w-[200px]">Matériau</TableHead>
+                <TableHead className="w-[200px]">{firstColumnLabel}</TableHead>
                 {columns.map((column, index) => (
                   <TableHead key={index}>{column}</TableHead>
                 ))}

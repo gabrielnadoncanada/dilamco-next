@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { TextSection } from "@/components/sections/TextSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Comparatifs",
@@ -47,162 +52,142 @@ export default function Comparatifs() {
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <main id="contenu">
-      <header>
-        <h1>Comparatifs — faire le bon choix avant d’investir</h1>
-        <p>
-          Ces comparatifs sont conçus pour vous aider à décider, pas pour faire
-          du marketing. Un projet réussi dépend autant du choix des matériaux
-          que de l’exécution (installation, ajustements) et de la gestion des
-          risques (coordination, coûts cachés). Nos projets sont réalisés
-          principalement à Montréal, Laval et sur la Rive-Sud.
-        </p>
-        <p>
-          <a href="/contact/">Parler de votre projet</a> {" | "}
-          <a href="/projets/">Voir nos réalisations</a>
-        </p>
-      </header>
+        <HeroSection
+          heading="Comparatifs — faire le bon choix avant d'investir"
+          description={
+            <>
+              <p>
+                Ces comparatifs sont conçus pour vous aider à décider, pas pour faire
+                du marketing. Un projet réussi dépend autant du choix des matériaux
+                que de l'exécution (installation, ajustements) et de la gestion des
+                risques (coordination, coûts cachés). Nos projets sont réalisés
+                principalement à Montréal, Laval et sur la Rive-Sud.
+              </p>
+            </>
+          }
+          actionsSlot={
+            <ActionButtons
+              className="justify-start"
+              buttons={[
+                {
+                  text: "Parler de votre projet",
+                  href: "/contact/",
+                },
+                {
+                  text: "Voir nos réalisations",
+                  href: "/projets/",
+                  variant: "outline",
+                },
+              ]}
+            />
+          }
+        />
 
-      <section aria-labelledby="liste">
-        <h2 id="liste">Comparatifs disponibles</h2>
-        <p>Choisissez le comparatif le plus proche de votre situation.</p>
+        <FeatureGridSection
+          aria-labelledby="liste"
+          heading="Comparatifs disponibles"
+          description="Choisissez le comparatif le plus proche de votre situation."
+          features={[
+            {
+              title: "Cuisine sur mesure vs IKEA",
+              description:
+                "Utile si vous hésitez entre une solution standardisée et une cuisine adaptée à votre espace. Personnalisation réelle vs modules standard, durabilité et matériaux (structure, chants, quincaillerie), coûts cachés : ajustements, installation, retouches.",
+              href: "/comparatifs/cuisine-sur-mesure-vs-ikea/",
+            },
+            {
+              title: "Cuisine sur mesure vs Home Depot",
+              description:
+                "Utile si vous comparez une cuisine « prête à installer » à un projet sur mesure avec un rendu haut de gamme. Finition et cohérence visuelle, adaptation à l'espace (coins, murs, contraintes), qualité d'installation et longévité.",
+              href: "/comparatifs/cuisine-sur-mesure-vs-home-depot/",
+            },
+            {
+              title: "Cuisiniste vs entrepreneur général",
+              description:
+                "Utile si vous voulez comprendre qui porte la responsabilité du résultat final dans un projet avec plusieurs intervenants. Responsabilité unique vs responsabilités fragmentées, coordination du chantier et calendrier, gestion des imprévus et qualité finale.",
+              href: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
+            },
+          ]}
+          columns={3}
+        />
 
-        <ul>
-          <li>
-            <a href="/comparatifs/cuisine-sur-mesure-vs-ikea/">
-              Cuisine sur mesure vs IKEA
-            </a>
-            <p>
-              Utile si vous hésitez entre une solution standardisée et une
-              cuisine adaptée à votre espace.
-            </p>
-            <ul>
-              <li>Personnalisation réelle vs modules standard</li>
-              <li>
-                Durabilité et matériaux (structure, chants, quincaillerie)
-              </li>
-              <li>Coûts cachés : ajustements, installation, retouches</li>
-            </ul>
-            <p>
-              <a href="/espaces/cuisine/">Cuisine sur mesure</a> {" | "}
-              <a href="/services/installation/">Installation</a> {" | "}
-              <a href="/contact/">Soumission</a>
-            </p>
-          </li>
+        <TextSection
+          aria-labelledby="framework"
+          heading="Comment comparer efficacement"
+          paragraphs={[
+            "Avant de décider, comparez avec des critères stables (pas seulement le look).",
+          ]}
+        />
 
-          <li>
-            <a href="/comparatifs/cuisine-sur-mesure-vs-home-depot/">
-              Cuisine sur mesure vs Home Depot
-            </a>
-            <p>
-              Utile si vous comparez une cuisine “prête à installer” à un projet
-              sur mesure avec un rendu haut de gamme.
-            </p>
-            <ul>
-              <li>Finition et cohérence visuelle</li>
-              <li>Adaptation à l’espace (coins, murs, contraintes)</li>
-              <li>Qualité d’installation et longévité</li>
-            </ul>
-            <p>
-              <a href="/espaces/cuisine/">Cuisine sur mesure</a> {" | "}
-              <a href="/services/renovation/cuisine/">
-                Rénovation de cuisine
-              </a>{" "}
-              {" | "}
-              <a href="/contact/">Soumission</a>
-            </p>
-          </li>
+        <ListSection
+          aria-labelledby="critères"
+          heading=""
+          items={[
+            "Durabilité : structure, chants, quincaillerie, résistance à l'usage.",
+            "Personnalisation : adaptation réelle à l'espace (ergonomie, rangement, accès aux coins).",
+            "Installation & finition : alignements, ajustements, retouches.",
+            "Risque & coûts cachés : coordination, imprévus, délais, reprises.",
+          ]}
+          variant="bullets"
+          links={[
+            {
+              text: "Voir les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-          <li>
-            <a href="/comparatifs/cuisiniste-vs-entrepreneur-general/">
-              Cuisiniste vs entrepreneur général
-            </a>
-            <p>
-              Utile si vous voulez comprendre qui porte la responsabilité du
-              résultat final dans un projet avec plusieurs intervenants.
-            </p>
-            <ul>
-              <li>Responsabilité unique vs responsabilités fragmentées</li>
-              <li>Coordination du chantier et calendrier</li>
-              <li>Gestion des imprévus et qualité finale</li>
-            </ul>
-            <p>
-              <a href="/services/renovation/">Rénovation clé en main</a> {" | "}
-              <a href="/services/design/">Design</a> {" | "}
-              <a href="/contact/">Soumission</a>
-            </p>
-          </li>
-        </ul>
-      </section>
+        <TextSection
+          aria-labelledby="situations"
+          heading="Choisir selon votre situation"
+          paragraphs={[]}
+        />
 
-      <section aria-labelledby="framework">
-        <h2 id="framework">Comment comparer efficacement</h2>
-        <p>
-          Avant de décider, comparez avec des critères stables (pas seulement le
-          look).
-        </p>
-        <ul>
-          <li>
-            <strong>Durabilité :</strong> structure, chants, quincaillerie,
-            résistance à l’usage.
-          </li>
-          <li>
-            <strong>Personnalisation :</strong> adaptation réelle à l’espace
-            (ergonomie, rangement, accès aux coins).
-          </li>
-          <li>
-            <strong>Installation & finition :</strong> alignements, ajustements,
-            retouches.
-          </li>
-          <li>
-            <strong>Risque & coûts cachés :</strong> coordination, imprévus,
-            délais, reprises.
-          </li>
-        </ul>
-        <p>
-          <a href="/materiaux/">Voir les matériaux</a> {" | "}
-          <a href="/services/installation/">Voir l’installation</a>
-        </p>
-      </section>
+        <ListSection
+          aria-labelledby="situations-details"
+          heading=""
+          items={[
+            "Vous voulez un résultat durable et cohérent : privilégiez le sur mesure adapté à l'espace.",
+            "Vous voulez minimiser la gestion de chantier : une approche clé en main peut réduire les imprévus.",
+            "Vous avez besoin d'orientation : commencez par cadrer les besoins et le plan.",
+          ]}
+          variant="bullets"
+          links={[
+            {
+              text: "Cuisine sur mesure",
+              href: "/espaces/cuisine/",
+              variant: "outline",
+            },
+            {
+              text: "Rénovation clé en main",
+              href: "/services/renovation/",
+              variant: "outline",
+            },
+            {
+              text: "Service de design",
+              href: "/services/design/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-      <section aria-labelledby="situations">
-        <h2 id="situations">Choisir selon votre situation</h2>
-        <ul>
-          <li>
-            <strong>Vous voulez un résultat durable et cohérent :</strong>{" "}
-            privilégiez le sur mesure adapté à l’espace.
-            <p>
-              <a href="/espaces/cuisine/">Cuisine sur mesure</a>
-            </p>
-          </li>
-          <li>
-            <strong>Vous voulez minimiser la gestion de chantier :</strong> une
-            approche clé en main peut réduire les imprévus.
-            <p>
-              <a href="/services/renovation/">Rénovation clé en main</a>
-            </p>
-          </li>
-          <li>
-            <strong>Vous avez besoin d’orientation :</strong> commencez par
-            cadrer les besoins et le plan.
-            <p>
-              <a href="/services/design/">Service de design</a>
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <CTASection
-        aria-labelledby="cta"
-        heading="Parlez-nous de votre projet"
-        description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-        actions={[
-          {
-            text: "Demander une soumission",
-            href: "/contact/",
-          },
-        ]}
-      />
-    </main>
+        <CTASection
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          actions={[
+            {
+              text: "Demander une soumission",
+              href: "/contact/",
+            },
+          ]}
+        />
+      </main>
     </>
   );
 }
