@@ -7,8 +7,14 @@ import {
 } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Cuisine sur mesure",
@@ -83,212 +89,215 @@ export default function Cuisine() {
       />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>Cuisine sur mesure — design, fabrication et installation</h1>
-          <p>
-            Une cuisine sur mesure est conçue pour votre espace réel et votre
-            usage quotidien : circulation, zones de travail, rangement, accès
-            aux coins, et finition. Dilamco réalise des cuisines sur mesure haut
-            de gamme avec option de rénovation clé en main selon le projet —
-            principalement à Montréal, Laval et sur la Rive-Sud.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/projets/cuisine/">Voir des projets de cuisines</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Cuisine sur mesure, design, fabrication et installation"
+          description={
+            <>
+              <p>
+                Une cuisine sur mesure est conçue pour votre espace réel et votre
+                usage quotidien : circulation, zones de travail, rangement, accès
+                aux coins, et finition. Dilamco réalise des cuisines sur mesure haut
+                de gamme avec option de rénovation clé en main selon le projet —
+                principalement à Montréal, Laval et sur la Rive-Sud.
+              </p>
+            </>
+          }
+          image={{
+            src: "/images/spaces/cabinet-cuisines.webp",
+            alt: "Cuisine sur mesure",
+          }}
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir des projets de cuisines",
+                href: "/projets/cuisine/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="pour-qui">
-          <h2 id="pour-qui">À qui s’adresse une cuisine sur mesure?</h2>
-          <ul>
-            <li>
-              Vous voulez <strong>optimiser chaque centimètre</strong> (condo,
-              murs irréguliers, contraintes d’accès).
-            </li>
-            <li>
-              Vous recherchez un <strong>résultat durable</strong> et un rendu
-              cohérent (matériaux, quincaillerie, finition).
-            </li>
-            <li>
-              Vous avez des contraintes à intégrer :{" "}
-              <strong>plomberie, électroménagers, îlot</strong>, rangement
-              spécifique.
-            </li>
-          </ul>
-          <p>
-            Si vous cherchez une solution standardisée ou temporaire, le sur
-            mesure n’est probablement pas l’option la plus pertinente.
-            L’objectif ici est la durabilité et la cohérence du résultat final.
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="pour-qui"
+          heading="À qui s'adresse une cuisine sur mesure?"
+          items={[
+            "Vous voulez optimiser chaque centimètre (condo, murs irréguliers, contraintes d'accès).",
+            "Vous recherchez un résultat durable et un rendu cohérent (matériaux, quincaillerie, finition).",
+            "Vous avez des contraintes à intégrer : plomberie, électroménagers, îlot, rangement spécifique.",
+          ]}
+          variant="checkmarks"
+        />
 
-        <section aria-labelledby="ce-qui-est-inclus">
-          <h2 id="ce-qui-est-inclus">
-            Ce que comprend une cuisine sur mesure Dilamco
-          </h2>
-          <ul>
-            <li>
-              <strong>Design & planification :</strong> besoins, ergonomie,
-              plan, choix de matériaux.
-            </li>
-            <li>
-              <strong>Fabrication sur mesure :</strong> armoires, modules, îlot
-              et rangement adaptés.
-            </li>
-            <li>
-              <strong>Installation précise :</strong> alignements, ajustements,
-              finition et inspection finale.
-            </li>
-            <li>
-              <strong>Option clé en main :</strong> coordination des travaux
-              connexes lorsque le projet inclut une rénovation.
-            </li>
-          </ul>
+        <FeatureGridSection
+          aria-labelledby="ce-qui-est-inclus"
+          heading="Ce que comprend une cuisine sur mesure Dilamco"
+          features={[
+            {
+              title: "Design & planification",
+              description: "Besoins, ergonomie, plan, choix de matériaux.",
+            },
+            {
+              title: "Fabrication sur mesure",
+              description: "Armoires, modules, îlot et rangement adaptés.",
+            },
+            {
+              title: "Installation précise",
+              description: "Alignements, ajustements, finition et inspection finale.",
+            },
+            {
+              title: "Option clé en main",
+              description: "Coordination des travaux connexes lorsque le projet inclut une rénovation.",
+            },
+          ]}
+          columns={2}
+        />
 
-          <section aria-labelledby="services">
-            <h3 id="services">Services associés</h3>
-            <ul>
-              <li>
-                <a href="/services/design/">Design</a>
-              </li>
-              <li>
-                <a href="/services/fabrication/">Fabrication</a>
-              </li>
-              <li>
-                <a href="/services/installation/">Installation</a>
-              </li>
-              <li>
-                <a href="/services/renovation/cuisine/">
-                  Rénovation de cuisine
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="services"
+          heading="Services associés"
+          links={[
+            { label: "Design", href: "/services/design/" },
+            { label: "Fabrication", href: "/services/fabrication/" },
+            { label: "Installation", href: "/services/installation/" },
+            {
+              label: "Rénovation de cuisine",
+              href: "/services/renovation/cuisine/",
+            },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="fonctionnalite">
-          <h2 id="fonctionnalite">Fonctionnalité & ergonomie</h2>
-          <p>
-            Une belle cuisine doit aussi être simple à vivre. Nous concevons
-            autour de l’usage : zones de préparation, accès au rangement,
-            circulation et intégration des électroménagers.
-          </p>
-          <ul>
-            <li>
-              <strong>Circulation :</strong> dégagements et zones de travail
-              cohérentes.
-            </li>
-            <li>
-              <strong>Rangement intelligent :</strong> tiroirs, coins, hauteurs
-              adaptées, organisation.
-            </li>
-            <li>
-              <strong>Durabilité :</strong> choix adaptés aux cycles
-              d’ouverture, aux charges et à l’entretien.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/">Voir les matériaux</a> {" | "}
-            <a href="/materiaux/quincaillerie/">Voir la quincaillerie</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="fonctionnalite"
+          heading="Fonctionnalité & ergonomie"
+          paragraphs={[
+            "Une belle cuisine doit aussi être simple à vivre. Nous concevons autour de l'usage : zones de préparation, accès au rangement, circulation et intégration des électroménagers.",
+          ]}
+          links={[
+            {
+              text: "Voir les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="materiaux">
-          <h2 id="materiaux">Matériaux & fabrication</h2>
-          <p>
-            Le rendu haut de gamme est une somme de décisions : structure,
-            chants, quincaillerie, assemblage et installation. Le bon matériau
-            dépend de l’usage et des contraintes du projet.
-          </p>
-          <ul>
-            <li>
-              <strong>Structure & stabilité :</strong> choix orientés durabilité
-              (ex. contreplaqué selon le contexte).
-            </li>
-            <li>
-              <strong>Portes & finis :</strong> MDF, bois massif, finis adaptés
-              au style et à l’entretien.
-            </li>
-            <li>
-              <strong>Tiroirs & quincaillerie :</strong> confort au quotidien,
-              fiabilité, cycles d’ouverture répétés.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/contreplaque/">Pourquoi le contreplaqué</a>{" "}
-            {" | "}
-            <a href="/materiaux/mdf/">MDF</a> {" | "}
-            <a href="/materiaux/melamine/">Mélamine</a> {" | "}
-            <a href="/materiaux/bois-massif/">Bois massif</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="fonctionnalite-details"
+          heading=""
+          items={[
+            "Circulation : dégagements et zones de travail cohérentes.",
+            "Rangement intelligent : tiroirs, coins, hauteurs adaptées, organisation.",
+            "Durabilité : choix adaptés aux cycles d'ouverture, aux charges et à l'entretien.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="renovation">
-          <h2 id="renovation">Rénovation de cuisine (option clé en main)</h2>
-          <p>
-            Si votre projet implique plus que l’installation d’armoires
-            (plomberie, électricité, plancher, dosseret, etc.), une approche clé
-            en main peut réduire les imprévus et mieux cadrer le calendrier.
-          </p>
-          <p>
-            <a href="/services/renovation/cuisine/">
-              Voir la rénovation de cuisine
-            </a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="materiaux"
+          heading="Matériaux & fabrication"
+          paragraphs={[
+            "Le rendu haut de gamme est une somme de décisions : structure, chants, quincaillerie, assemblage et installation. Le bon matériau dépend de l'usage et des contraintes du projet.",
+          ]}
+          links={[
+            {
+              text: "Pourquoi le contreplaqué",
+              href: "/materiaux/contreplaque/",
+              variant: "outline",
+            },
+            {
+              text: "MDF",
+              href: "/materiaux/mdf/",
+              variant: "outline",
+            },
+            {
+              text: "Mélamine",
+              href: "/materiaux/melamine/",
+              variant: "outline",
+            },
+            {
+              text: "Bois massif",
+              href: "/materiaux/bois-massif/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="projets">
-          <h2 id="projets">Projets de cuisines</h2>
-          <p>
-            Consultez nos réalisations pour voir le style, le niveau de finition
-            et des configurations possibles (îlots, rangement, intégration
-            électroménagers).
-          </p>
-          <ul>
-            <li>
-              <a href="/projets/cuisine/">Voir tous les projets de cuisines</a>
-            </li>
-            <li>
-              <a href="/projets/">Voir tous les projets</a>
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="materiaux-details"
+          heading=""
+          items={[
+            "Structure & stabilité : choix orientés durabilité (ex. contreplaqué selon le contexte).",
+            "Portes & finis : MDF, bois massif, finis adaptés au style et à l'entretien.",
+            "Tiroirs & quincaillerie : confort au quotidien, fiabilité, cycles d'ouverture répétés.",
+          ]}
+          variant="bullets"
+        />
 
-        <Faq1
+        <TextSection
+          aria-labelledby="renovation"
+          heading="Rénovation de cuisine (option clé en main)"
+          paragraphs={[
+            "Si votre projet implique plus que l'installation d'armoires (plomberie, électricité, plancher, dosseret, etc.), une approche clé en main peut réduire les imprévus et mieux cadrer le calendrier.",
+          ]}
+          links={[
+            {
+              text: "Voir la rénovation de cuisine",
+              href: "/services/renovation/cuisine/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="projets"
+          heading="Projets de cuisines"
+          links={[
+            { label: "Voir tous les projets de cuisines", href: "/projets/cuisine/" },
+            { label: "Voir tous les projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — cuisine sur mesure"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <section aria-labelledby="liens">
-          <h2 id="liens">Liens utiles</h2>
-          <ul>
-            <li>
-              <a href="/services/">Services</a>
-            </li>
-            <li>
-              <a href="/materiaux/">Matériaux</a>
-            </li>
-            <li>
-              <a href="/contact/">Demander une soumission</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="liens"
+          heading="Liens utiles"
+          links={[
+            { label: "Services", href: "/services/" },
+            { label: "Matériaux", href: "/materiaux/" },
+            { label: "Demander une soumission", href: "/contact/" },
+          ]}
+          columns={3}
+        />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

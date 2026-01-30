@@ -18,7 +18,7 @@ export const RENOVATION_SUB_SERVICES: Record<
       canonical: `${SITE_URL}/services/renovation/cuisine/`,
     },
     hero: {
-      h1: "Rénovation de cuisine clé en main — un seul partenaire, du plan à la finition",
+      h1: "Rénovation de cuisine clé en main, un seul partenaire, du plan à la finition",
       paragraphs: [
         "Une rénovation de cuisine réussie dépend autant de la coordination que du résultat final. Dilamco propose une approche clé en main lorsque le projet le requiert : design orienté usage, fabrication sur mesure, installation précise et coordination des étapes connexes — principalement à Montréal, Laval et sur la Rive-Sud.",
       ],
@@ -177,7 +177,7 @@ export const RENOVATION_SUB_SERVICES: Record<
       canonical: `${SITE_URL}/services/renovation/salle-de-bain/`,
     },
     hero: {
-      h1: "Rénovation de salle de bain clé en main — durabilité, coordination et finition",
+      h1: "Rénovation de salle de bain clé en main, durabilité, coordination et finition",
       paragraphs: [
         "Une rénovation de salle de bain est un projet sensible : humidité, plomberie, ventilation et risques de dégâts d'eau. Dilamco propose une approche clé en main lorsque le projet le requiert : design orienté usage, vanités sur mesure, installation précise et coordination des étapes connexes — principalement à Montréal, Laval et sur la Rive-Sud.",
       ],
@@ -348,7 +348,7 @@ export const RENOVATION_SUB_SERVICES: Record<
       canonical: `${SITE_URL}/services/renovation/plancher/`,
     },
     hero: {
-      h1: "Rénovation de plancher — coordination, niveaux et finition",
+      h1: "Rénovation de plancher, coordination, niveaux et finition",
       paragraphs: [
         "En rénovation, le plancher influence tout : niveaux, transitions, alignements et finition. Dilamco intervient lorsque le plancher doit être intégré à un projet plus large (cuisine, salle de bain ou rénovation clé en main) avec une séquence de travaux claire et une exécution soignée.",
       ],
@@ -482,7 +482,7 @@ export const RENOVATION_SUB_SERVICES: Record<
       canonical: `${SITE_URL}/services/renovation/agrandissement-de-maison/`,
     },
     hero: {
-      h1: "Agrandissement de maison — planification, coordination et exécution complète",
+      h1: "Agrandissement de maison, planification, coordination et exécution complète",
       paragraphs: [
         "Un agrandissement de maison est un projet structurant : fondation, structure, enveloppe, puis aménagement intérieur. Dilamco réalise des projets d’agrandissement résidentiel complets, avec une coordination claire des étapes et un objectif simple : livrer un espace fonctionnel, durable et bien intégré à l’existant.",
       ],

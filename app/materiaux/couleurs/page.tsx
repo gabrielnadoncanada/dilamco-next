@@ -3,8 +3,13 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Couleurs et finis",
@@ -70,213 +75,238 @@ export default function Couleurs() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>
-            Couleurs & finis — trouver l’équilibre entre style et durabilité
-          </h1>
-          <p>
-            La couleur influence la lumière, la perception de l’espace et
-            l’entretien au quotidien. Le fini dépend aussi du matériau (portes
-            peintes, bois, mélamine) et de l’usage (cuisine vs salle de bain).
-            Cette page vous aide à cadrer vos choix avant de finaliser une
-            sélection de finis lors du design.
-          </p>
-          <p>
-            <a href="/services/design/">Parler design et finis</a> {" | "}
-            <a href="/contact/">Demander une soumission</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Couleurs & finis, trouver l'équilibre entre style et durabilité"
+          description="La couleur influence la lumière, la perception de l'espace et l'entretien au quotidien. Le fini dépend aussi du matériau (portes peintes, bois, mélamine) et de l'usage (cuisine vs salle de bain). Cette page vous aide à cadrer vos choix avant de finaliser une sélection de finis lors du design."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler design et finis",
+                href: "/services/design/",
+              },
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="methode">
-          <h2 id="methode">Comment choisir une couleur (méthode simple)</h2>
-          <ul>
-            <li>
-              <strong>Lumière :</strong> l’exposition et l’éclairage changent la
-              perception d’une même couleur.
-            </li>
-            <li>
-              <strong>Volume :</strong> une petite pièce réagit différemment
-              qu’un grand espace.
-            </li>
-            <li>
-              <strong>Usage & entretien :</strong> traces, éclaboussures,
-              nettoyage, enfants, animaux.
-            </li>
-            <li>
-              <strong>Matériau & fini :</strong> portes peintes, bois, mélamine
-              : rendu et réparabilité ne sont pas identiques.
-            </li>
-          </ul>
-          <p>
-            Pour structurer tout ça, le plus efficace est de passer par le{" "}
-            <a href="/services/design/">service de design</a>.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="methode"
+          heading="Comment choisir une couleur (méthode simple)"
+          paragraphs={[
+            "Pour structurer tout ça, le plus efficace est de passer par le service de design.",
+          ]}
+          links={[
+            {
+              text: "Voir le service de design",
+              href: "/services/design/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="familles">
-          <h2 id="familles">Grandes familles de couleurs</h2>
+        <ListSection
+          aria-labelledby="methode-details"
+          heading=""
+          items={[
+            "Lumière : l'exposition et l'éclairage changent la perception d'une même couleur.",
+            "Volume : une petite pièce réagit différemment qu'un grand espace.",
+            "Usage & entretien : traces, éclaboussures, nettoyage, enfants, animaux.",
+            "Matériau & fini : portes peintes, bois, mélamine : rendu et réparabilité ne sont pas identiques.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Neutres (blancs, beiges, gris)</h3>
-          <ul>
-            <li>Intemporels et lumineux, faciles à intégrer.</li>
-            <li>
-              Le choix du fini (mat/satiné) influence beaucoup l’entretien.
-            </li>
-          </ul>
+        <TextSection
+          aria-labelledby="familles"
+          heading="Grandes familles de couleurs"
+          paragraphs={[]}
+        />
 
-          <h3>Tons foncés (noir, anthracite, bleus profonds)</h3>
-          <ul>
-            <li>Impact visuel fort, rendu très “architectural”.</li>
-            <li>Demandent une bonne lumière et une finition soignée.</li>
-            <li>Peuvent être utilisés en accent (ex. îlot) pour équilibrer.</li>
-          </ul>
+        <ListSection
+          aria-labelledby="neutres"
+          heading="Neutres (blancs, beiges, gris)"
+          items={[
+            "Intemporels et lumineux, faciles à intégrer.",
+            "Le choix du fini (mat/satiné) influence beaucoup l'entretien.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Bois & textures</h3>
-          <ul>
-            <li>
-              Apporte chaleur et matière, souvent très apprécié en haut de
-              gamme.
-            </li>
-            <li>
-              Le veinage et la teinte varient : on vise une cohérence, pas une
-              uniformité parfaite.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="tons-fonces"
+          heading="Tons foncés (noir, anthracite, bleus profonds)"
+          items={[
+            "Impact visuel fort, rendu très « architectural ».",
+            "Demandent une bonne lumière et une finition soignée.",
+            "Peuvent être utilisés en accent (ex. îlot) pour équilibrer.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="selon-espace">
-          <h2 id="selon-espace">Choisir selon l’espace</h2>
+        <ListSection
+          aria-labelledby="bois-textures"
+          heading="Bois & textures"
+          items={[
+            "Apporte chaleur et matière, souvent très apprécié en haut de gamme.",
+            "Le veinage et la teinte varient : on vise une cohérence, pas une uniformité parfaite.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Cuisine</h3>
-          <ul>
-            <li>
-              Les contrastes (îlot vs périmètre) structurent l’espace et cachent
-              mieux l’usage.
-            </li>
-            <li>Prioriser la cohérence avec comptoir, dosseret et plancher.</li>
-            <li>
-              Penser “entretien” : zones près de l’évier, cuisson, poignées.
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/cuisine/">Voir Cuisine sur mesure</a>
-          </p>
+        <TextSection
+          aria-labelledby="selon-espace"
+          heading="Choisir selon l'espace"
+          paragraphs={[]}
+        />
 
-          <h3>Salle de bain</h3>
-          <ul>
-            <li>
-              Humidité et nettoyage fréquent : le fini et les détails
-              d’exécution comptent.
-            </li>
-            <li>Éviter les choix “fragiles” si la ventilation est limitée.</li>
-          </ul>
-          <p>
-            <a href="/espaces/salle-de-bain/">Voir Salle de bain & vanités</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="cuisine-details"
+          heading="Cuisine"
+          items={[
+            "Les contrastes (îlot vs périmètre) structurent l'espace et cachent mieux l'usage.",
+            "Prioriser la cohérence avec comptoir, dosseret et plancher.",
+            "Penser « entretien » : zones près de l'évier, cuisson, poignées.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="materiau">
-          <h2 id="materiau">Couleur et matériau : ce que ça change</h2>
-          <ul>
-            <li>
-              <strong>MDF :</strong> souvent utilisé pour des portes peintes
-              (surface très uniforme).
-            </li>
-            <li>
-              <strong>Bois massif :</strong> variations naturelles (teinte et
-              grain), rendu chaleureux.
-            </li>
-            <li>
-              <strong>Mélamine :</strong> grande variété de finis décoratifs,
-              réparations plus difficiles en cas d’impact.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/mdf/">MDF</a> {" | "}
-            <a href="/materiaux/bois-massif/">Bois massif</a> {" | "}
-            <a href="/materiaux/melamine/">Mélamine</a>
-          </p>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="cuisine-link"
+          heading=""
+          links={[
+            { label: "Voir Cuisine sur mesure", href: "/espaces/cuisine/" },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="finitions">
-          <h2 id="finitions">Finitions & entretien (mat, satiné, brillant)</h2>
-          <ul>
-            <li>
-              <strong>Mat :</strong> look doux et contemporain, peut marquer
-              selon l’usage et la qualité du fini.
-            </li>
-            <li>
-              <strong>Satiné :</strong> bon compromis pour l’entretien (souvent
-              très pertinent en cuisine).
-            </li>
-            <li>
-              <strong>Brillant :</strong> effet “miroir”, montre davantage les
-              imperfections et traces, mais augmente la luminosité.
-            </li>
-          </ul>
-          <p>
-            Le ressenti final dépend aussi de la quincaillerie (poignées,
-            mécanismes) et de l’installation.
-          </p>
-          <p>
-            <a href="/materiaux/quincaillerie/">Voir la quincaillerie</a>{" "}
-            {" | "}
-            <a href="/services/installation/">Voir l’installation</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="sdb-details"
+          heading="Salle de bain"
+          items={[
+            "Humidité et nettoyage fréquent : le fini et les détails d'exécution comptent.",
+            "Éviter les choix « fragiles » si la ventilation est limitée.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="erreurs">
-          <h2 id="erreurs">Erreurs fréquentes à éviter</h2>
-          <ul>
-            <li>
-              Choisir une couleur foncée sans tenir compte de la lumière réelle.
-            </li>
-            <li>
-              Multiplier les textures sans fil conducteur (bois + pierre +
-              motifs + métal).
-            </li>
-            <li>
-              Copier une photo “inspiration” sans adapter au contexte
-              (dimensions, lumière, usage).
-            </li>
-            <li>
-              Ignorer l’entretien au quotidien (traces, éclaboussures, zones de
-              contact).
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="sdb-link"
+          heading=""
+          links={[
+            { label: "Voir Salle de bain & vanités", href: "/espaces/salle-de-bain/" },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="projets">
-          <h2 id="projets">Voir des exemples concrets</h2>
-          <p>
-            La meilleure façon de valider un choix est de le voir dans un projet
-            complet (lumière, comptoir, plancher, quincaillerie).
-          </p>
-          <p>
-            <a href="/projets/">Voir nos projets</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="materiau"
+          heading="Couleur et matériau : ce que ça change"
+          paragraphs={[]}
+          links={[
+            {
+              text: "MDF",
+              href: "/materiaux/mdf/",
+              variant: "outline",
+            },
+            {
+              text: "Bois massif",
+              href: "/materiaux/bois-massif/",
+              variant: "outline",
+            },
+            {
+              text: "Mélamine",
+              href: "/materiaux/melamine/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <Faq1
+        <ListSection
+          aria-labelledby="materiau-details"
+          heading=""
+          items={[
+            "MDF : souvent utilisé pour des portes peintes (surface très uniforme).",
+            "Bois massif : variations naturelles (teinte et grain), rendu chaleureux.",
+            "Mélamine : grande variété de finis décoratifs, réparations plus difficiles en cas d'impact.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="finitions"
+          heading="Finitions & entretien (mat, satiné, brillant)"
+          paragraphs={[
+            "Le ressenti final dépend aussi de la quincaillerie (poignées, mécanismes) et de l'installation.",
+          ]}
+          links={[
+            {
+              text: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="finitions-details"
+          heading=""
+          items={[
+            "Mat : look doux et contemporain, peut marquer selon l'usage et la qualité du fini.",
+            "Satiné : bon compromis pour l'entretien (souvent très pertinent en cuisine).",
+            "Brillant : effet « miroir », montre davantage les imperfections et traces, mais augmente la luminosité.",
+          ]}
+          variant="bullets"
+        />
+
+        <ListSection
+          aria-labelledby="erreurs"
+          heading="Erreurs fréquentes à éviter"
+          items={[
+            "Choisir une couleur foncée sans tenir compte de la lumière réelle.",
+            "Multiplier les textures sans fil conducteur (bois + pierre + motifs + métal).",
+            "Copier une photo « inspiration » sans adapter au contexte (dimensions, lumière, usage).",
+            "Ignorer l'entretien au quotidien (traces, éclaboussures, zones de contact).",
+          ]}
+          variant="bullets"
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="projets"
+          heading="Voir des exemples concrets"
+          links={[
+            { label: "Voir nos projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — couleurs & finis"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

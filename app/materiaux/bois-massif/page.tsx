@@ -3,8 +3,13 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Bois massif",
@@ -70,228 +75,200 @@ export default function BoisMassif() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>Bois massif — authenticité, caractère et limites à connaître</h1>
-          <p>
-            Le bois massif est un matériau noble, apprécié pour son grain, sa
-            profondeur visuelle et son toucher. C’est aussi un matériau “vivant”
-            : il réagit à l’humidité et à la température. Pour un résultat
-            durable, l’important n’est pas seulement “bois massif ou non”, mais{" "}
-            <strong>où</strong> et <strong>comment</strong> il est utilisé dans
-            un projet sur mesure.
-          </p>
-          <p>
-            <a href="/contact/">Parler de votre projet</a> {" | "}
-            <a href="/projets/">Voir nos réalisations</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Bois massif — authenticité, caractère et limites à connaître"
+          description="Le bois massif est un matériau noble, apprécié pour son grain, sa profondeur visuelle et son toucher. C'est aussi un matériau « vivant » : il réagit à l'humidité et à la température. Pour un résultat durable, l'important n'est pas seulement « bois massif ou non », mais où et comment il est utilisé dans un projet sur mesure."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler de votre projet",
+                href: "/contact/",
+              },
+              {
+                text: "Voir nos réalisations",
+                href: "/projets/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="definition">
-          <h2 id="definition">Qu’est-ce que le bois massif?</h2>
-          <p>
-            Le bois massif correspond à une pièce de bois “pleine” (non composée
-            de fibres ou de particules). Il se distingue des panneaux techniques
-            (MDF, mélamine, contreplaqué) et des solutions comme le placage
-            (fine couche de bois sur un support).
-          </p>
-          <p>
-            Visuellement, il présente des variations naturelles : veinage,
-            nœuds, teinte et texture. Ces variations font partie du charme du
-            matériau.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="definition"
+          heading="Qu'est-ce que le bois massif?"
+          paragraphs={[
+            "Le bois massif correspond à une pièce de bois « pleine » (non composée de fibres ou de particules). Il se distingue des panneaux techniques (MDF, mélamine, contreplaqué) et des solutions comme le placage (fine couche de bois sur un support).",
+            "Visuellement, il présente des variations naturelles : veinage, nœuds, teinte et texture. Ces variations font partie du charme du matériau.",
+          ]}
+        />
 
-        <section aria-labelledby="avantages">
-          <h2 id="avantages">Avantages du bois massif</h2>
-          <ul>
-            <li>
-              <strong>Esthétique naturelle :</strong> grain unique, rendu
-              chaleureux, profondeur visuelle.
-            </li>
-            <li>
-              <strong>Caractère haut de gamme :</strong> perception premium et
-              présence dans l’espace.
-            </li>
-            <li>
-              <strong>Réparabilité :</strong> certaines marques peuvent être
-              retouchées ou poncées selon le fini.
-            </li>
-            <li>
-              <strong>Valeur perçue :</strong> matériau reconnu et recherché
-              pour des éléments visibles.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="avantages"
+          heading="Avantages du bois massif"
+          items={[
+            "Esthétique naturelle : grain unique, rendu chaleureux, profondeur visuelle.",
+            "Caractère haut de gamme : perception premium et présence dans l'espace.",
+            "Réparabilité : certaines marques peuvent être retouchées ou poncées selon le fini.",
+            "Valeur perçue : matériau reconnu et recherché pour des éléments visibles.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="limites">
-          <h2 id="limites">Limites et contraintes (à connaître)</h2>
-          <p>
-            Le bois massif peut être excellent, mais il demande une conception
-            et une exécution appropriées. Ignorer ses contraintes mène souvent à
-            des attentes irréalistes.
-          </p>
-          <ul>
-            <li>
-              <strong>Mouvement :</strong> le bois peut bouger avec l’humidité
-              et la température (expansion/contraction).
-            </li>
-            <li>
-              <strong>Stabilité :</strong> selon l’usage et les dimensions,
-              certains panneaux techniques peuvent être plus stables.
-            </li>
-            <li>
-              <strong>Entretien :</strong> selon le fini, il peut être plus
-              sensible aux chocs, à l’eau ou aux produits.
-            </li>
-            <li>
-              <strong>Coût :</strong> généralement plus élevé, surtout pour de
-              grandes surfaces ou des essences spécifiques.
-            </li>
-          </ul>
-          <p>
-            En pratique, la durabilité vient d’un ensemble : matériau + chants +
-            finition + quincaillerie + installation.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="limites"
+          heading="Limites et contraintes (à connaître)"
+          paragraphs={[
+            "Le bois massif peut être excellent, mais il demande une conception et une exécution appropriées. Ignorer ses contraintes mène souvent à des attentes irréalistes.",
+            "En pratique, la durabilité vient d'un ensemble : matériau + chants + finition + quincaillerie + installation.",
+          ]}
+        />
 
-        <section aria-labelledby="ou-pertinent">
-          <h2 id="ou-pertinent">Où le bois massif est le plus pertinent</h2>
-          <p>
-            Le bois massif est souvent le meilleur choix pour les éléments
-            visibles où l’esthétique et le toucher comptent, tout en gardant une
-            conception adaptée.
-          </p>
-          <ul>
-            <li>
-              <strong>Portes et façades :</strong> éléments les plus visibles et
-              les plus “premium”.
-            </li>
-            <li>
-              <strong>Détails décoratifs :</strong> moulures, encadrements,
-              accents.
-            </li>
-            <li>
-              <strong>Pièces sélectionnées :</strong> là où le matériau apporte
-              un vrai gain esthétique.
-            </li>
-          </ul>
-          <p>
-            <a href="/services/design/">Voir le service de design</a> {" | "}
-            <a href="/services/fabrication/">Voir la fabrication</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="limites-details"
+          heading=""
+          items={[
+            "Mouvement : le bois peut bouger avec l'humidité et la température (expansion/contraction).",
+            "Stabilité : selon l'usage et les dimensions, certains panneaux techniques peuvent être plus stables.",
+            "Entretien : selon le fini, il peut être plus sensible aux chocs, à l'eau ou aux produits.",
+            "Coût : généralement plus élevé, surtout pour de grandes surfaces ou des essences spécifiques.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="ou-deconseille">
-          <h2 id="ou-deconseille">Où le bois massif est souvent déconseillé</h2>
-          <p>
-            Le bois massif n’est pas toujours le meilleur choix pour les
-            structures ou grandes surfaces qui exigent une stabilité maximale,
-            surtout dans certains environnements.
-          </p>
-          <ul>
-            <li>
-              <strong>Caissons et structures complètes :</strong> des panneaux
-              techniques peuvent offrir plus de stabilité.
-            </li>
-            <li>
-              <strong>Zones très humides :</strong> selon le contexte, il faut
-              prioriser stabilité et protection.
-            </li>
-            <li>
-              <strong>Grandes surfaces :</strong> plus le panneau est grand,
-              plus le mouvement peut devenir visible.
-            </li>
-          </ul>
-          <p>
-            Alternatives fréquentes selon l’usage :{" "}
-            <a href="/materiaux/contreplaque/">contreplaqué</a>,{" "}
-            <a href="/materiaux/mdf/">MDF</a>,{" "}
-            <a href="/materiaux/melamine/">mélamine</a>.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="ou-pertinent"
+          heading="Où le bois massif est le plus pertinent"
+          paragraphs={[
+            "Le bois massif est souvent le meilleur choix pour les éléments visibles où l'esthétique et le toucher comptent, tout en gardant une conception adaptée.",
+          ]}
+          links={[
+            {
+              text: "Voir le service de design",
+              href: "/services/design/",
+              variant: "outline",
+            },
+            {
+              text: "Voir la fabrication",
+              href: "/services/fabrication/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="comparaisons">
-          <h2 id="comparaisons">Bois massif vs autres matériaux</h2>
-          <p>
-            Le bon choix dépend de l’espace (cuisine, salle de bain, walk-in),
-            du niveau d’entretien attendu et du rendu souhaité.
-          </p>
-          <ul>
-            <li>
-              <strong>Bois massif vs MDF :</strong> souvent choisi pour la
-              texture et le grain; le MDF peut être pertinent selon le fini.
-            </li>
-            <li>
-              <strong>Bois massif vs mélamine :</strong> la mélamine vise
-              surtout praticité et entretien; le bois vise caractère.
-            </li>
-            <li>
-              <strong>Bois massif vs contreplaqué :</strong> le contreplaqué est
-              souvent privilégié pour la stabilité des structures.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/comparatif/">
-              Voir le comparatif des matériaux
-            </a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="ou-pertinent-details"
+          heading=""
+          items={[
+            "Portes et façades : éléments les plus visibles et les plus « premium ».",
+            "Détails décoratifs : moulures, encadrements, accents.",
+            "Pièces sélectionnées : là où le matériau apporte un vrai gain esthétique.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="finition">
-          <h2 id="finition">Finition & entretien</h2>
-          <p>
-            La finition influence directement la durabilité et l’entretien. Le
-            choix dépend du rendu recherché et de votre quotidien (nettoyage,
-            humidité, usage).
-          </p>
-          <ul>
-            <li>
-              <strong>Protection :</strong> plus la protection est élevée, plus
-              le matériau résiste à l’usage.
-            </li>
-            <li>
-              <strong>Entretien :</strong> privilégier des habitudes simples et
-              des produits adaptés au fini.
-            </li>
-            <li>
-              <strong>Prévention :</strong> éviter l’eau stagnante et les
-              nettoyants agressifs.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="ou-deconseille"
+          heading="Où le bois massif est souvent déconseillé"
+          paragraphs={[
+            "Le bois massif n'est pas toujours le meilleur choix pour les structures ou grandes surfaces qui exigent une stabilité maximale, surtout dans certains environnements.",
+          ]}
+        />
 
-        <section aria-labelledby="projets">
-          <h2 id="projets">Projets utilisant le bois massif</h2>
-          <p>
-            Le bois massif est souvent utilisé sur des éléments visibles
-            (portes, façades, accents) pour un rendu chaleureux. Consultez nos
-            réalisations pour voir des exemples de finitions et de styles.
-          </p>
-          <p>
-            <a href="/projets/">Voir les projets</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="ou-deconseille-details"
+          heading=""
+          items={[
+            "Caissons et structures complètes : des panneaux techniques peuvent offrir plus de stabilité.",
+            "Zones très humides : selon le contexte, il faut prioriser stabilité et protection.",
+            "Grandes surfaces : plus le panneau est grand, plus le mouvement peut devenir visible.",
+          ]}
+          variant="bullets"
+        />
 
-        <Faq1
+        <RelatedLinksSection
+          aria-labelledby="alternatives"
+          heading="Alternatives fréquentes selon l'usage"
+          links={[
+            { label: "Contreplaqué", href: "/materiaux/contreplaque/" },
+            { label: "MDF", href: "/materiaux/mdf/" },
+            { label: "Mélamine", href: "/materiaux/melamine/" },
+          ]}
+          columns={3}
+        />
+
+        <TextSection
+          aria-labelledby="comparaisons"
+          heading="Bois massif vs autres matériaux"
+          paragraphs={[
+            "Le bon choix dépend de l'espace (cuisine, salle de bain, walk-in), du niveau d'entretien attendu et du rendu souhaité.",
+          ]}
+          links={[
+            {
+              text: "Voir le comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="comparaisons-details"
+          heading=""
+          items={[
+            "Bois massif vs MDF : souvent choisi pour la texture et le grain; le MDF peut être pertinent selon le fini.",
+            "Bois massif vs mélamine : la mélamine vise surtout praticité et entretien; le bois vise caractère.",
+            "Bois massif vs contreplaqué : le contreplaqué est souvent privilégié pour la stabilité des structures.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="finition"
+          heading="Finition & entretien"
+          paragraphs={[
+            "La finition influence directement la durabilité et l'entretien. Le choix dépend du rendu recherché et de votre quotidien (nettoyage, humidité, usage).",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="finition-details"
+          heading=""
+          items={[
+            "Protection : plus la protection est élevée, plus le matériau résiste à l'usage.",
+            "Entretien : privilégier des habitudes simples et des produits adaptés au fini.",
+            "Prévention : éviter l'eau stagnante et les nettoyants agressifs.",
+          ]}
+          variant="bullets"
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="projets"
+          heading="Projets utilisant le bois massif"
+          links={[
+            { label: "Voir les projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — bois massif"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

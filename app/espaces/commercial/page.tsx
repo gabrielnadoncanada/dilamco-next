@@ -3,8 +3,14 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Commercial sur mesure",
@@ -74,237 +80,208 @@ export default function Commercial() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>
-            Aménagement commercial sur mesure — mobilier et rangement durables
-          </h1>
-          <p>
-            En commercial, la priorité est la fiabilité : usage intensif,
-            entretien, contraintes du lieu, calendrier et coordination. Dilamco
-            conçoit et réalise du mobilier et du rangement sur mesure pour
-            espaces commerciaux, avec une exécution robuste et un résultat
-            prévisible — principalement à Montréal, Laval et sur la Rive-Sud.
-          </p>
-          <p>
-            <a href="/contact/">Parler de votre projet</a> {" | "}
-            <a href="/projets/commercial/">Voir des projets commerciaux</a>
-          </p>
-        </header>
+        <HeroSection
+          image={{
+            src: "/images/spaces/commercial.webp",
+            alt: "Aménagement commercial sur mesure",
+          }}
+          heading="Aménagement commercial sur mesure, mobilier et rangement durables"
+          description="En commercial, la priorité est la fiabilité : usage intensif, entretien, contraintes du lieu, calendrier et coordination. Dilamco conçoit et réalise du mobilier et du rangement sur mesure pour espaces commerciaux, avec une exécution robuste et un résultat prévisible — principalement à Montréal, Laval et sur la Rive-Sud."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler de votre projet",
+                href: "/contact/",
+              },
+              {
+                text: "Voir des projets commerciaux",
+                href: "/projets/commercial/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="types">
-          <h2 id="types">Types d’espaces commerciaux</h2>
-          <p>
-            Le sur mesure est particulièrement pertinent lorsque l’espace impose
-            des contraintes (accès, équipements, circulation) ou lorsque l’usage
-            est intensif.
-          </p>
-          <ul>
-            <li>
-              <strong>Bureaux & espaces professionnels :</strong> rangements,
-              mobilier intégré, zones d’accueil.
-            </li>
-            <li>
-              <strong>Commerces de détail :</strong> mobilier de présentation,
-              arrière-boutique, rangements.
-            </li>
-            <li>
-              <strong>Espaces de services :</strong> mobilier fonctionnel,
-              organisation, durabilité au quotidien.
-            </li>
-            <li>
-              <strong>Espaces communs :</strong> comptoirs, rangements muraux,
-              solutions intégrées.
-            </li>
-          </ul>
-          <p>
-            Si votre besoin est strictement décoratif ou temporaire, le sur
-            mesure commercial est souvent moins pertinent. Ici, l’objectif est
-            la durabilité et la fonctionnalité.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="types"
+          heading="Types d'espaces commerciaux"
+          paragraphs={[
+            "Le sur mesure est particulièrement pertinent lorsque l'espace impose des contraintes (accès, équipements, circulation) ou lorsque l'usage est intensif.",
+            "Si votre besoin est strictement décoratif ou temporaire, le sur mesure commercial est souvent moins pertinent. Ici, l'objectif est la durabilité et la fonctionnalité.",
+          ]}
+        />
 
-        <section aria-labelledby="inclus">
-          <h2 id="inclus">Ce que comprend un projet commercial Dilamco</h2>
-          <ul>
-            <li>
-              <strong>Analyse des besoins :</strong> usage, contraintes du lieu,
-              circulation, dimensions et accès.
-            </li>
-            <li>
-              <strong>Design fonctionnel :</strong> plan orienté opération et
-              ergonomie.
-            </li>
-            <li>
-              <strong>Fabrication sur mesure :</strong> mobilier et rangement
-              adaptés au contexte.
-            </li>
-            <li>
-              <strong>Installation professionnelle :</strong> alignements,
-              ajustements, finition et inspection finale.
-            </li>
-          </ul>
+        <ListSection
+          aria-labelledby="types-details"
+          heading=""
+          items={[
+            "Bureaux & espaces professionnels : rangements, mobilier intégré, zones d'accueil.",
+            "Commerces de détail : mobilier de présentation, arrière-boutique, rangements.",
+            "Espaces de services : mobilier fonctionnel, organisation, durabilité au quotidien.",
+            "Espaces communs : comptoirs, rangements muraux, solutions intégrées.",
+          ]}
+          variant="bullets"
+        />
 
-          <section aria-labelledby="services">
-            <h3 id="services">Services associés</h3>
-            <ul>
-              <li>
-                <a href="/services/design/">Design</a>
-              </li>
-              <li>
-                <a href="/services/fabrication/">Fabrication</a>
-              </li>
-              <li>
-                <a href="/services/installation/">Installation</a>
-              </li>
-              <li>
-                <a href="/services/renovation/">
-                  Rénovation clé en main (si applicable)
-                </a>
-              </li>
-            </ul>
-          </section>
-        </section>
+        <FeatureGridSection
+          aria-labelledby="inclus"
+          heading="Ce que comprend un projet commercial Dilamco"
+          features={[
+            {
+              title: "Analyse des besoins",
+              description: "Usage, contraintes du lieu, circulation, dimensions et accès.",
+            },
+            {
+              title: "Design fonctionnel",
+              description: "Plan orienté opération et ergonomie.",
+            },
+            {
+              title: "Fabrication sur mesure",
+              description: "Mobilier et rangement adaptés au contexte.",
+            },
+            {
+              title: "Installation professionnelle",
+              description: "Alignements, ajustements, finition et inspection finale.",
+            },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="durabilite">
-          <h2 id="durabilite">Usage intensif & durabilité</h2>
-          <p>
-            En commercial, la longévité se joue sur les détails : structures
-            stables, chants résistants, quincaillerie conçue pour des cycles
-            répétés et finitions faciles à entretenir.
-          </p>
-          <ul>
-            <li>
-              <strong>Matériaux adaptés :</strong> sélection orientée usage et
-              stabilité.
-            </li>
-            <li>
-              <strong>Chants & finition :</strong> résistance aux impacts et à
-              l’usure.
-            </li>
-            <li>
-              <strong>Quincaillerie :</strong> charnières et coulisses pour
-              usage fréquent.
-            </li>
-            <li>
-              <strong>Entretien :</strong> surfaces cohérentes avec le nettoyage
-              régulier.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/">Voir les matériaux</a> {" | "}
-            <a href="/materiaux/quincaillerie/">Quincaillerie</a> {" | "}
-            <a href="/materiaux/comparatif/">Comparatif des matériaux</a>
-          </p>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="services"
+          heading="Services associés"
+          links={[
+            { label: "Design", href: "/services/design/" },
+            { label: "Fabrication", href: "/services/fabrication/" },
+            { label: "Installation", href: "/services/installation/" },
+            {
+              label: "Rénovation clé en main (si applicable)",
+              href: "/services/renovation/",
+            },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="contraintes">
-          <h2 id="contraintes">Contraintes du lieu & coordination</h2>
-          <p>
-            Un projet commercial impose souvent des contraintes particulières :
-            accès, heures d’intervention, intégration d’équipements, réseaux
-            existants et calendrier. Nous cadrons le projet pour limiter les
-            surprises et livrer un résultat cohérent.
-          </p>
-          <ul>
-            <li>
-              <strong>Intégration :</strong> adaptation aux équipements et
-              contraintes existantes.
-            </li>
-            <li>
-              <strong>Dégagements & accès :</strong> circulation, portes, zones
-              de travail et dimensions.
-            </li>
-            <li>
-              <strong>Phasage :</strong> planification pour réduire l’impact sur
-              vos opérations (selon le contexte).
-            </li>
-            <li>
-              <strong>Coordination :</strong> collaboration avec d’autres
-              intervenants lorsque nécessaire.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="durabilite"
+          heading="Usage intensif & durabilité"
+          paragraphs={[
+            "En commercial, la longévité se joue sur les détails : structures stables, chants résistants, quincaillerie conçue pour des cycles répétés et finitions faciles à entretenir.",
+          ]}
+          links={[
+            {
+              text: "Voir les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+            {
+              text: "Comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="configurations">
-          <h2 id="configurations">Configurations possibles</h2>
-          <p>
-            Quelques exemples de solutions fréquentes en commercial (adaptées à
-            votre contexte).
-          </p>
-          <ul>
-            <li>
-              <strong>Comptoirs de service :</strong> réception, accueil, zones
-              transactionnelles.
-            </li>
-            <li>
-              <strong>Rangements muraux :</strong> optimisation verticale, zones
-              de stockage.
-            </li>
-            <li>
-              <strong>Mobilier intégré :</strong> solutions sur mesure non
-              standardisées.
-            </li>
-            <li>
-              <strong>Arrière-boutique :</strong> organisation des produits,
-              accès rapide, durabilité.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="durabilite-details"
+          heading=""
+          items={[
+            "Matériaux adaptés : sélection orientée usage et stabilité.",
+            "Chants & finition : résistance aux impacts et à l'usure.",
+            "Quincaillerie : charnières et coulisses pour usage fréquent.",
+            "Entretien : surfaces cohérentes avec le nettoyage régulier.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="projets">
-          <h2 id="projets">Projets commerciaux</h2>
-          <p>
-            Consultez nos réalisations pour voir des exemples de mobilier et de
-            rangement adaptés à des usages intensifs, avec un niveau de finition
-            professionnel.
-          </p>
-          <ul>
-            <li>
-              <a href="/projets/commercial/">
-                Voir tous les projets commerciaux
-              </a>
-            </li>
-            <li>
-              <a href="/projets/">Voir tous les projets</a>
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="contraintes"
+          heading="Contraintes du lieu & coordination"
+          paragraphs={[
+            "Un projet commercial impose souvent des contraintes particulières : accès, heures d'intervention, intégration d'équipements, réseaux existants et calendrier. Nous cadrons le projet pour limiter les surprises et livrer un résultat cohérent.",
+          ]}
+        />
 
-        <Faq1
+        <ListSection
+          aria-labelledby="contraintes-details"
+          heading=""
+          items={[
+            "Intégration : adaptation aux équipements et contraintes existantes.",
+            "Dégagements & accès : circulation, portes, zones de travail et dimensions.",
+            "Phasage : planification pour réduire l'impact sur vos opérations (selon le contexte).",
+            "Coordination : collaboration avec d'autres intervenants lorsque nécessaire.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="configurations"
+          heading="Configurations possibles"
+          paragraphs={[
+            "Quelques exemples de solutions fréquentes en commercial (adaptées à votre contexte).",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="configurations-details"
+          heading=""
+          items={[
+            "Comptoirs de service : réception, accueil, zones transactionnelles.",
+            "Rangements muraux : optimisation verticale, zones de stockage.",
+            "Mobilier intégré : solutions sur mesure non standardisées.",
+            "Arrière-boutique : organisation des produits, accès rapide, durabilité.",
+          ]}
+          variant="bullets"
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="projets"
+          heading="Projets commerciaux"
+          links={[
+            {
+              label: "Voir tous les projets commerciaux",
+              href: "/projets/commercial/",
+            },
+            { label: "Voir tous les projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — commercial sur mesure"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <section aria-labelledby="liens">
-          <h2 id="liens">Liens utiles</h2>
-          <ul>
-            <li>
-              <a href="/projets/commercial/">Projets</a>
-            </li>
-            <li>
-              <a href="/materiaux/">Matériaux</a>
-            </li>
-            <li>
-              <a href="/contact/">Demander une soumission</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="liens"
+          heading="Liens utiles"
+          links={[
+            { label: "Projets", href: "/projets/commercial/" },
+            { label: "Matériaux", href: "/materiaux/" },
+            { label: "Demander une soumission", href: "/contact/" },
+          ]}
+          columns={3}
+        />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

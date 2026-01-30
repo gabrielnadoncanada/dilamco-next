@@ -3,8 +3,14 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Walk-in & rangement sur mesure",
@@ -70,221 +76,188 @@ export default function WalkIn() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>
-            Walk-in & rangement sur mesure — organisation pensée pour votre
-            espace
-          </h1>
-          <p>
-            Un walk-in sur mesure se définit par l’usage : vêtements longs et
-            courts, chaussures, accessoires, circulation et accès. Dilamco
-            conçoit et réalise des solutions de rangement sur mesure haut de
-            gamme, adaptées à votre espace réel, avec une finition durable —
-            principalement à Montréal, Laval et sur la Rive-Sud.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/projets/walk-in/">Voir des projets de walk-in</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Walk-in & rangement sur mesure,organisation pensée pour votre espace"
+          description="Un walk-in sur mesure se définit par l'usage : vêtements longs et courts, chaussures, accessoires, circulation et accès. Dilamco conçoit et réalise des solutions de rangement sur mesure haut de gamme, adaptées à votre espace réel, avec une finition durable — principalement à Montréal, Laval et sur la Rive-Sud."
+          image={{
+            src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+            alt: "Walk-in & rangement sur mesure",
+          }}
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir des projets de walk-in",
+                href: "/projets/walk-in/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="pour-qui">
-          <h2 id="pour-qui">À qui s’adresse un walk-in sur mesure?</h2>
-          <ul>
-            <li>
-              Vous voulez <strong>optimiser un espace atypique</strong> (angles,
-              plafonds bas, niches, condo).
-            </li>
-            <li>
-              Vous cherchez une <strong>organisation précise</strong> (tiroirs
-              accessoires, zones vêtements, rangement chaussures).
-            </li>
-            <li>
-              Vous souhaitez un rendu <strong>durable et cohérent</strong>{" "}
-              (matériaux, chants, quincaillerie, finition).
-            </li>
-          </ul>
-          <p>
-            Si vous cherchez une solution temporaire ou strictement modulaire,
-            le sur mesure est moins pertinent. Le but ici est de gagner en
-            fonctionnalité au quotidien et d’obtenir une solution durable.
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="pour-qui"
+          heading="À qui s'adresse un walk-in sur mesure?"
+          items={[
+            "Vous voulez optimiser un espace atypique (angles, plafonds bas, niches, condo).",
+            "Vous cherchez une organisation précise (tiroirs accessoires, zones vêtements, rangement chaussures).",
+            "Vous souhaitez un rendu durable et cohérent (matériaux, chants, quincaillerie, finition).",
+          ]}
+          variant="checkmarks"
+        />
 
-        <section aria-labelledby="inclus">
-          <h2 id="inclus">Ce que comprend un walk-in Dilamco</h2>
-          <ul>
-            <li>
-              <strong>Design & planification :</strong> besoins, contraintes,
-              circulation et plan d’organisation.
-            </li>
-            <li>
-              <strong>Fabrication sur mesure :</strong> modules, étagères,
-              tiroirs et zones adaptées.
-            </li>
-            <li>
-              <strong>Installation précise :</strong> alignements, ajustements,
-              finition et inspection finale.
-            </li>
-          </ul>
+        <FeatureGridSection
+          aria-labelledby="inclus"
+          heading="Ce que comprend un walk-in Dilamco"
+          features={[
+            {
+              title: "Design & planification",
+              description: "Besoins, contraintes, circulation et plan d'organisation.",
+            },
+            {
+              title: "Fabrication sur mesure",
+              description: "Modules, étagères, tiroirs et zones adaptées.",
+            },
+            {
+              title: "Installation précise",
+              description: "Alignements, ajustements, finition et inspection finale.",
+            },
+          ]}
+          columns={3}
+        />
 
-          <section aria-labelledby="services">
-            <h3 id="services">Services associés</h3>
-            <ul>
-              <li>
-                <a href="/services/design/">Design</a>
-              </li>
-              <li>
-                <a href="/services/fabrication/">Fabrication</a>
-              </li>
-              <li>
-                <a href="/services/installation/">Installation</a>
-              </li>
-            </ul>
-          </section>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="services"
+          heading="Services associés"
+          links={[
+            { label: "Design", href: "/services/design/" },
+            { label: "Fabrication", href: "/services/fabrication/" },
+            { label: "Installation", href: "/services/installation/" },
+          ]}
+          columns={3}
+        />
 
-        <section aria-labelledby="organisation">
-          <h2 id="organisation">
-            Organisation & fonctionnalité (le cœur du sur mesure)
-          </h2>
-          <p>
-            Le sur mesure permet de structurer l’espace selon vos habitudes.
-            L’objectif : rendre le rangement simple, accessible et cohérent,
-            sans “zones mortes” difficiles à utiliser.
-          </p>
-          <ul>
-            <li>
-              <strong>Zones vêtements :</strong> sections pour vêtements longs,
-              courts et pliés.
-            </li>
-            <li>
-              <strong>Chaussures :</strong> rangement dédié et accessible.
-            </li>
-            <li>
-              <strong>Accessoires :</strong> tiroirs compartimentés pour
-              optimiser le quotidien.
-            </li>
-            <li>
-              <strong>Étagères :</strong> dimensions adaptées, avec possibilité
-              d’ajustement selon le besoin.
-            </li>
-            <li>
-              <strong>Évolutivité :</strong> organisation pensée pour s’adapter
-              (nouveaux besoins, saisons, etc.).
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="organisation"
+          heading="Organisation & fonctionnalité (le cœur du sur mesure)"
+          paragraphs={[
+            "Le sur mesure permet de structurer l'espace selon vos habitudes. L'objectif : rendre le rangement simple, accessible et cohérent, sans \"zones mortes\" difficiles à utiliser.",
+          ]}
+        />
 
-        <section aria-labelledby="materiaux">
-          <h2 id="materiaux">Matériaux & durabilité</h2>
-          <p>
-            Un walk-in est utilisé tous les jours. La durabilité dépend des
-            matériaux, des chants, de la quincaillerie et de la qualité
-            d’installation.
-          </p>
-          <ul>
-            <li>
-              <strong>Stabilité :</strong> structures adaptées pour limiter les
-              déformations dans le temps.
-            </li>
-            <li>
-              <strong>Chants & finition :</strong> résistance aux impacts et à
-              l’usure.
-            </li>
-            <li>
-              <strong>Quincaillerie :</strong> coulisses et charnières pour
-              usage répété.
-            </li>
-            <li>
-              <strong>Entretien :</strong> finis cohérents avec votre quotidien.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/">Voir les matériaux</a> {" | "}
-            <a href="/materiaux/comparatif/">Comparatif des matériaux</a>{" "}
-            {" | "}
-            <a href="/materiaux/quincaillerie/">Quincaillerie</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="organisation-details"
+          heading=""
+          items={[
+            "Zones vêtements : sections pour vêtements longs, courts et pliés.",
+            "Chaussures : rangement dédié et accessible.",
+            "Accessoires : tiroirs compartimentés pour optimiser le quotidien.",
+            "Étagères : dimensions adaptées, avec possibilité d'ajustement selon le besoin.",
+            "Évolutivité : organisation pensée pour s'adapter (nouveaux besoins, saisons, etc.).",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="configurations">
-          <h2 id="configurations">Configurations possibles</h2>
-          <p>
-            Voici quelques configurations fréquentes, adaptées selon l’espace
-            disponible.
-          </p>
-          <ul>
-            <li>
-              <strong>Walk-in en L, en U ou linéaire :</strong> selon la
-              circulation et les murs disponibles.
-            </li>
-            <li>
-              <strong>Garde-robe ouvert ou fermé :</strong> rendu minimaliste ou
-              protection accrue.
-            </li>
-            <li>
-              <strong>Tiroirs intégrés :</strong> accessoires, bijoux,
-              ceintures, petits items.
-            </li>
-            <li>
-              <strong>Étagères ajustées :</strong> valises, paniers, linge,
-              zones saisonnières.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="materiaux"
+          heading="Matériaux & durabilité"
+          paragraphs={[
+            "Un walk-in est utilisé tous les jours. La durabilité dépend des matériaux, des chants, de la quincaillerie et de la qualité d'installation.",
+          ]}
+          links={[
+            {
+              text: "Voir les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+            {
+              text: "Quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="projets">
-          <h2 id="projets">Projets de walk-in</h2>
-          <p>
-            Consultez nos réalisations pour voir des exemples d’organisation, de
-            finitions et de configurations possibles.
-          </p>
-          <ul>
-            <li>
-              <a href="/projets/walk-in/">Voir tous les projets de walk-in</a>
-            </li>
-            <li>
-              <a href="/projets/">Voir tous les projets</a>
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="materiaux-details"
+          heading=""
+          items={[
+            "Stabilité : structures adaptées pour limiter les déformations dans le temps.",
+            "Chants & finition : résistance aux impacts et à l'usure.",
+            "Quincaillerie : coulisses et charnières pour usage répété.",
+            "Entretien : finis cohérents avec votre quotidien.",
+          ]}
+          variant="bullets"
+        />
 
-        <Faq1
+        <TextSection
+          aria-labelledby="configurations"
+          heading="Configurations possibles"
+          paragraphs={[
+            "Voici quelques configurations fréquentes, adaptées selon l'espace disponible.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="configurations-details"
+          heading=""
+          items={[
+            "Walk-in en L, en U ou linéaire : selon la circulation et les murs disponibles.",
+            "Garde-robe ouvert ou fermé : rendu minimaliste ou protection accrue.",
+            "Tiroirs intégrés : accessoires, bijoux, ceintures, petits items.",
+            "Étagères ajustées : valises, paniers, linge, zones saisonnières.",
+          ]}
+          variant="bullets"
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="projets"
+          heading="Projets de walk-in"
+          links={[
+            { label: "Voir tous les projets de walk-in", href: "/projets/walk-in/" },
+            { label: "Voir tous les projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — walk-in & rangement sur mesure"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <section aria-labelledby="liens">
-          <h2 id="liens">Liens utiles</h2>
-          <ul>
-            <li>
-              <a href="/projets/walk-in/">Projets</a>
-            </li>
-            <li>
-              <a href="/materiaux/">Matériaux</a>
-            </li>
-            <li>
-              <a href="/contact/">Demander une soumission</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="liens"
+          heading="Liens utiles"
+          links={[
+            { label: "Projets", href: "/projets/walk-in/" },
+            { label: "Matériaux", href: "/materiaux/" },
+            { label: "Demander une soumission", href: "/contact/" },
+          ]}
+          columns={3}
+        />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

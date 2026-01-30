@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { Cta12 } from "@/components/cta12";
-import { Process1 } from "@/components/process1";
-import { Section } from "@/components/Section";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ProofSection } from "@/components/sections/ProofSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { CTASection } from "@/components/sections/CTASection";
 import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
@@ -50,118 +53,115 @@ export default function APropos() {
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <main id="contenu">
-        <header>
-          <h1>À propos de Dilamco</h1>
-          <p>
-            Dilamco conçoit et réalise des cuisines, armoires et vanités sur
-            mesure haut de gamme. Notre objectif est simple : livrer un résultat
-            durable, cohérent et bien exécuté — du plan à l'installation — avec
-            une approche clé en main lorsque le projet le requiert. Nous
-            réalisons des projets principalement à Montréal, Laval et sur la
-            Rive-Sud.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/projets/">Voir nos réalisations</a>
-          </p>
-        </header>
-
-        <section aria-labelledby="mission">
-          <h2 id="mission">Notre approche</h2>
-          <p>
-            Le sur mesure ne se résume pas à des dimensions. C'est une façon de
-            concevoir l'espace autour de votre usage : circulation, accès,
-            ergonomie, rangement et finition. Nous privilégions des décisions
-            cohérentes avec les contraintes réelles (humidité, charges, cycles
-            d'ouverture) pour maximiser la durabilité.
-          </p>
-        </section>
-
-        <section aria-labelledby="differenciation">
-          <h2 id="differenciation">Ce qui distingue Dilamco</h2>
-          <ul>
-            <li>
-              <strong>Sur mesure réel :</strong> adapté à votre espace, pas à un
-              catalogue standard.
-            </li>
-            <li>
-              <strong>Qualité et durabilité :</strong> choix de matériaux
-              orientés usage, quincaillerie fiable et assemblage robuste.
-            </li>
-            <li>
-              <strong>Exécution soignée :</strong> l'installation et les
-              ajustements déterminent le rendu final.
-            </li>
-            <li>
-              <strong>Clé en main (si applicable) :</strong> coordination des
-              travaux connexes pour réduire les imprévus et livrer un résultat
-              cohérent.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/">Voir nos matériaux</a> {" | "}
-            <a href="/services/">Voir nos services</a>
-          </p>
-        </section>
-
-        <Section aria-labelledby="processus">
-          <Process1
-            heading="Une démarche cadrée"
-            description="Une approche structurée pour garantir un résultat durable et bien exécuté."
-            steps={[
+        <HeroSection
+          heading="À propos de Dilamco"
+          description="Dilamco conçoit et réalise des cuisines, armoires et vanités sur mesure haut de gamme. Notre objectif est simple : livrer un résultat durable, cohérent et bien exécuté — du plan à l'installation — avec une approche clé en main lorsque le projet le requiert. Nous réalisons des projets principalement à Montréal, Laval et sur la Rive-Sud."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
               {
-                step: "1",
-                title: "Analyse & design",
-                description:
-                  "Comprendre vos besoins et contraintes, puis structurer le plan.",
+                text: "Demander une soumission",
+                href: "/contact/",
               },
               {
-                step: "2",
-                title: "Fabrication sur mesure",
-                description: "Production adaptée à la configuration réelle.",
+                text: "Voir nos réalisations",
+                href: "/projets/",
+                variant: "outline",
               },
-              {
-                step: "3",
-                title: "Coordination (si applicable)",
-                description:
-                  "Gestion des étapes connexes lors d'une rénovation complète.",
-              },
-              {
-                step: "4",
-                title: "Installation & inspection",
-                description: "Ajustements, finition et vérification finale.",
-              },
-            ]}
-          />
-        </Section>
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="preuves">
-          <h2 id="preuves">Voir des exemples concrets</h2>
-          <p>
-            La meilleure façon de juger le niveau de finition et les
-            configurations possibles est de consulter nos projets.
-          </p>
-          <p>
-            <a href="/projets/">Voir nos projets</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="mission"
+          heading="Notre approche"
+          paragraphs={[
+            "Le sur mesure ne se résume pas à des dimensions. C'est une façon de concevoir l'espace autour de votre usage : circulation, accès, ergonomie, rangement et finition. Nous privilégions des décisions cohérentes avec les contraintes réelles (humidité, charges, cycles d'ouverture) pour maximiser la durabilité.",
+          ]}
+        />
 
-        <Section aria-labelledby="cta">
-          <Cta12
-            heading="Parlez-nous de votre projet"
-            description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-            actions={
-              <ActionButtons
-                buttons={[
-                  {
-                    text: "Demander une soumission",
-                    href: "/contact/",
-                  },
-                ]}
-              />
-            }
-          />
-        </Section>
+        <ProofSection
+          aria-labelledby="differenciation"
+          heading="Ce qui distingue Dilamco"
+          items={[
+            {
+              title: "Sur mesure réel",
+              description: "Adapté à votre espace, pas à un catalogue standard.",
+            },
+            {
+              title: "Qualité et durabilité",
+              description: "Choix de matériaux orientés usage, quincaillerie fiable et assemblage robuste.",
+            },
+            {
+              title: "Exécution soignée",
+              description: "L'installation et les ajustements déterminent le rendu final.",
+            },
+            {
+              title: "Clé en main (si applicable)",
+              description: "Coordination des travaux connexes pour réduire les imprévus et livrer un résultat cohérent.",
+            },
+          ]}
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="differenciation-links"
+          heading=""
+          links={[
+            { label: "Voir nos matériaux", href: "/materiaux/" },
+            { label: "Voir nos services", href: "/services/" },
+          ]}
+          columns={2}
+        />
+
+        <ProcessSection
+          aria-labelledby="processus"
+          heading="Une démarche cadrée"
+          description="Une approche structurée pour garantir un résultat durable et bien exécuté."
+          steps={[
+            {
+              step: "1",
+              title: "Analyse & design",
+              description:
+                "Comprendre vos besoins et contraintes, puis structurer le plan.",
+            },
+            {
+              step: "2",
+              title: "Fabrication sur mesure",
+              description: "Production adaptée à la configuration réelle.",
+            },
+            {
+              step: "3",
+              title: "Coordination (si applicable)",
+              description:
+                "Gestion des étapes connexes lors d'une rénovation complète.",
+            },
+            {
+              step: "4",
+              title: "Installation & inspection",
+              description: "Ajustements, finition et vérification finale.",
+            },
+          ]}
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="preuves"
+          heading="Voir des exemples concrets"
+          links={[
+            { label: "Voir nos projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <CTASection
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          actions={[
+            {
+              text: "Demander une soumission",
+              href: "/contact/",
+            },
+          ]}
+        />
       </main>
     </>
   );

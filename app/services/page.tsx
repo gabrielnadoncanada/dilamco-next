@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { Cta12 } from "@/components/cta12";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -47,143 +53,133 @@ export default function Services() {
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <main id="contenu">
-      <header>
-        <h1>
-          Services — design, fabrication, installation et rénovation clé en main
-        </h1>
-        <p>
-          Dilamco réalise des cuisines, vanités et espaces sur mesure haut de
-          gamme. Selon le projet, nous pouvons prendre en charge l’ensemble :
-          design, fabrication, installation et coordination des travaux connexes
-          pour livrer un résultat cohérent — principalement à Montréal, Laval et
-          sur la Rive-Sud.
-        </p>
-        <p>
-          <a href="/contact/">Demander une soumission</a> {" | "}
-          <a href="/projets/">Voir nos réalisations</a>
-        </p>
-      </header>
+        <HeroSection
+          heading="Services — design, fabrication, installation et rénovation clé en main"
+          description="Dilamco réalise des cuisines, vanités et espaces sur mesure haut de gamme. Selon le projet, nous pouvons prendre en charge l'ensemble : design, fabrication, installation et coordination des travaux connexes pour livrer un résultat cohérent — principalement à Montréal, Laval et sur la Rive-Sud."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir nos réalisations",
+                href: "/projets/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-      <section aria-labelledby="piliers">
-        <h2 id="piliers">Nos services principaux</h2>
-        <p>
-          Choisissez le service qui correspond à l’étape où vous êtes rendu.
-        </p>
+        <FeatureGridSection
+          aria-labelledby="piliers"
+          heading="Nos services principaux"
+          description="Choisissez le service qui correspond à l'étape où vous êtes rendu."
+          features={[
+            {
+              title: "Design",
+              description: "Analyse des besoins, optimisation de l'espace, plan et choix de matériaux. Idéal pour cadrer le projet avant de fabriquer.",
+            },
+            {
+              title: "Fabrication",
+              description: "Fabrication sur mesure orientée durabilité : matériaux adaptés à l'usage, détails robustes et finition soignée.",
+            },
+            {
+              title: "Installation",
+              description: "Alignements, ajustements, finition. Une installation précise est essentielle pour un rendu haut de gamme.",
+            },
+            {
+              title: "Rénovation clé en main",
+              description: "Coordination et exécution lorsque le projet implique plusieurs corps de métier. Objectif : réduire les imprévus et livrer un résultat cohérent.",
+            },
+          ]}
+          columns={2}
+        />
 
-        <ul>
-          <li>
-            <a href="/services/design/">Design</a>
-            <p>
-              Analyse des besoins, optimisation de l’espace, plan et choix de
-              matériaux. Idéal pour cadrer le projet avant de fabriquer.
-            </p>
-          </li>
+        <RelatedLinksSection
+          aria-labelledby="renovation-types"
+          heading="Rénovation par type"
+          links={[
+            { label: "Rénovation de cuisine", href: "/services/renovation/cuisine/" },
+            {
+              label: "Rénovation salle de bain",
+              href: "/services/renovation/salle-de-bain/",
+            },
+            { label: "Rénovation de plancher", href: "/services/renovation/plancher/" },
+            {
+              label: "Agrandissement de maison",
+              href: "/services/renovation/agrandissement-de-maison/",
+            },
+          ]}
+          columns={2}
+        />
 
-          <li>
-            <a href="/services/fabrication/">Fabrication</a>
-            <p>
-              Fabrication sur mesure orientée durabilité : matériaux adaptés à
-              l’usage, détails robustes et finition soignée.
-            </p>
-          </li>
+        <TextSection
+          aria-labelledby="cle-en-main"
+          heading="Quand choisir une approche clé en main?"
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir la rénovation clé en main",
+              href: "/services/renovation/",
+              variant: "outline",
+            },
+            {
+              text: "Parler de votre projet",
+              href: "/contact/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-          <li>
-            <a href="/services/installation/">Installation</a>
-            <p>
-              Alignements, ajustements, finition. Une installation précise est
-              essentielle pour un rendu haut de gamme.
-            </p>
-          </li>
+        <ListSection
+          aria-labelledby="cle-en-main-details"
+          heading=""
+          items={[
+            "Rénovation de cuisine complète : plomberie, électricité, plancher, dosseret, installation et finition.",
+            "Salle de bain : humidité, ventilation, étanchéité et détails d'exécution.",
+            "Projet multi-intervenants : vous voulez un responsable unique et un calendrier mieux maîtrisé.",
+          ]}
+          variant="bullets"
+        />
 
-          <li>
-            <a href="/services/renovation/">Rénovation clé en main</a>
-            <p>
-              Coordination et exécution lorsque le projet implique plusieurs
-              corps de métier. Objectif : réduire les imprévus et livrer un
-              résultat cohérent.
-            </p>
-          </li>
-        </ul>
-      </section>
+        <TextSection
+          aria-labelledby="qualite"
+          heading="Qualité et durabilité"
+          paragraphs={[
+            "Le haut de gamme, c'est une somme de décisions : matériaux adaptés à l'usage, quincaillerie fiable, assemblage robuste et installation précise.",
+          ]}
+          links={[
+            {
+              text: "Pourquoi le contreplaqué",
+              href: "/materiaux/contreplaque/",
+              variant: "outline",
+            },
+            {
+              text: "Quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+            {
+              text: "Voir tous les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-      <section aria-labelledby="renovation-types">
-        <h2 id="renovation-types">Rénovation par type</h2>
-        <p>
-          Si votre projet implique une rénovation complète, voici les pages les
-          plus pertinentes.
-        </p>
-
-        <ul>
-          <li>
-            <a href="/services/renovation/cuisine/">Rénovation de cuisine</a>
-          </li>
-          <li>
-            <a href="/services/renovation/salle-de-bain/">
-              Rénovation salle de bain
-            </a>
-          </li>
-          <li>
-            <a href="/services/renovation/plancher/">Rénovation de plancher</a>
-          </li>
-          <li>
-            <a href="/services/renovation/agrandissement-de-maison/">
-              Agrandissement de maison
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="cle-en-main">
-        <h2 id="cle-en-main">Quand choisir une approche clé en main?</h2>
-        <ul>
-          <li>
-            <strong>Rénovation de cuisine complète</strong> : plomberie,
-            électricité, plancher, dosseret, installation et finition.
-          </li>
-          <li>
-            <strong>Salle de bain</strong> : humidité, ventilation, étanchéité
-            et détails d’exécution.
-          </li>
-          <li>
-            <strong>Projet multi-intervenants</strong> : vous voulez un
-            responsable unique et un calendrier mieux maîtrisé.
-          </li>
-        </ul>
-
-        <p>
-          <a href="/services/renovation/">Voir la rénovation clé en main</a>{" "}
-          {" | "}
-          <a href="/contact/">Parler de votre projet</a>
-        </p>
-      </section>
-
-      <section aria-labelledby="qualite">
-        <h2 id="qualite">Qualité et durabilité</h2>
-        <p>
-          Le haut de gamme, c’est une somme de décisions : matériaux adaptés à
-          l’usage, quincaillerie fiable, assemblage robuste et installation
-          précise.
-        </p>
-        <p>
-          <a href="/materiaux/contreplaque/">Pourquoi le contreplaqué</a>{" "}
-          {" | "}
-          <a href="/materiaux/quincaillerie/">Quincaillerie</a> {" | "}
-          <a href="/materiaux/">Voir tous les matériaux</a>
-        </p>
-      </section>
-
-      <Cta12
-        aria-labelledby="cta"
-        heading="Parlez-nous de votre projet"
-        description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-        buttons={{
-          primary: {
-            text: "Demander une soumission",
-            url: "/contact/",
-          },
-        }}
-      />
-    </main>
+        <CTASection
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          actions={[
+            {
+              text: "Demander une soumission",
+              href: "/contact/",
+            },
+          ]}
+        />
+      </main>
     </>
   );
 }

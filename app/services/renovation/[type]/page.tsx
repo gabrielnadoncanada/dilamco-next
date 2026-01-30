@@ -6,8 +6,13 @@ import { RENOVATION_SUB_SERVICES } from "@/data/services/renovation";
 import { JsonLd } from "@/seo/JsonLd";
 import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { Faq1 } from "@/components/faq1";
-import { Cta12 } from "@/components/cta12";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 
 type Params = { type: string };
 
@@ -59,108 +64,92 @@ function renderSection(section: any) {
 
   switch (content.type) {
     case "text":
+      const textLinks: ActionButton[] | undefined = content.links?.map(
+        (link: any) => ({
+          text: link.label,
+          href: link.href,
+          variant: "outline" as const,
+        })
+      );
+
       return (
-        <section key={id} aria-labelledby={id}>
-          <h2 id={id}>{title}</h2>
-          {content.paragraphs?.map((p: string, idx: number) => (
-            <p key={idx}>{p}</p>
-          ))}
-          {content.items && (
-            <ul>
-              {content.items.map((item: string, idx: number) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          )}
-          {content.links && (
-            <p>
-              {content.links.map((link: any, idx: number) => (
-                <span key={link.href}>
-                  <a href={link.href}>{link.label}</a>
-                  {idx < content.links.length - 1 ? " | " : ""}
-                </span>
-              ))}
-            </p>
-          )}
-        </section>
+        <TextSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          paragraphs={content.paragraphs || []}
+          links={textLinks}
+        />
       );
 
     case "list":
+      const listLinks: ActionButton[] | undefined = content.links?.map(
+        (link: any) => ({
+          text: link.label,
+          href: link.href,
+          variant: "outline" as const,
+        })
+      );
+
       return (
-        <section key={id} aria-labelledby={id}>
-          <h2 id={id}>{title}</h2>
-          {content.intro && <p>{content.intro}</p>}
-          {content.items && (
-            <ul>
-              {content.items.map((item: string, idx: number) => (
-                <li key={idx}>{item}</li>
-              ))}
-            </ul>
-          )}
-          {content.links && (
-            <p>
-              {content.links.map((link: any, idx: number) => (
-                <span key={link.href}>
-                  <a href={link.href}>{link.label}</a>
-                  {idx < content.links.length - 1 ? " | " : ""}
-                </span>
-              ))}
-            </p>
-          )}
-        </section>
+        <ListSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={content.intro}
+          items={content.items || []}
+          links={listLinks}
+          variant="bullets"
+        />
       );
 
     case "list-with-links":
       return (
-        <section key={id} aria-labelledby={id}>
-          <h2 id={id}>{title}</h2>
-          {content.intro && <p>{content.intro}</p>}
-          {content.itemsWithLinks && (
-            <ul>
-              {content.itemsWithLinks.map((item: any, idx: number) => (
-                <li key={idx}>
-                  {item.label === item.link?.label ? (
-                    <a href={item.link.href}>{item.link.label}</a>
-                  ) : (
-                    <>
-                      <strong>{item.label}</strong>
-                      {item.link && (
-                        <>
-                          <br />
-                          <a href={item.link.href}>{item.link.label}</a>
-                        </>
-                      )}
-                    </>
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
+        <ListSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={content.intro}
+          items={
+            content.itemsWithLinks?.map((item: any) =>
+              item.link
+                ? item.label === item.link.label
+                  ? item.link.label
+                  : `${item.label} — ${item.link.label}`
+                : item.label
+            ) || []
+          }
+          variant="bullets"
+        />
       );
 
     case "steps":
+      const stepLinks: ActionButton[] | undefined = content.links?.map(
+        (link: any) => ({
+          text: link.label,
+          href: link.href,
+          variant: "outline" as const,
+        })
+      );
+
       return (
-        <section key={id} aria-labelledby={id}>
-          <h2 id={id}>{title}</h2>
-          {content.steps && (
-            <ol>
-              {content.steps.map((step: string, idx: number) => (
-                <li key={idx}>{step}</li>
-              ))}
-            </ol>
-          )}
-          {content.links && (
-            <p>
-              {content.links.map((link: any, idx: number) => (
-                <span key={link.href}>
-                  <a href={link.href}>{link.label}</a>
-                  {idx < content.links.length - 1 ? " | " : ""}
-                </span>
-              ))}
-            </p>
-          )}
-        </section>
+        <ProcessSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          steps={
+            content.steps?.map((step: string, idx: number) => ({
+              step: String(idx + 1),
+              title: step,
+              description: "",
+            })) || []
+          }
+          actions={
+            stepLinks && stepLinks.length > 0 ? (
+              <ActionButtons buttons={stepLinks} />
+            ) : undefined
+          }
+        />
       );
 
     default:
@@ -209,49 +198,44 @@ export default async function RenovationSubServicePage({
       />
       {subService.faq.length > 0 && <JsonLd data={faqJsonLd(subService.faq)} />}
       <main id="contenu">
-        <header>
-          <h1>{subService.hero.h1}</h1>
-          {subService.hero.paragraphs.map((p, idx) => (
-            <p key={idx}>{p}</p>
-          ))}
-          <p>
-            {subService.hero.ctaLinks.map((link, idx) => (
-              <span key={link.href}>
-                <a href={link.href}>{link.label}</a>
-                {idx < subService.hero.ctaLinks.length - 1 ? " | " : ""}
-              </span>
-            ))}
-          </p>
-        </header>
+        <HeroSection
+          heading={subService.hero.h1}
+          description={subService.hero.paragraphs.join(" ")}
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={subService.hero.ctaLinks.map((link) => ({
+              text: link.label,
+              href: link.href,
+              variant: link.href === "/contact/" ? ("default" as const) : ("outline" as const),
+            }))} />
+          }
+        />
 
-        {subService.sections.map((section) => renderSection(section))}
+        {subService.sections.map((section: any) => renderSection(section))}
 
         {subService.faq.length > 0 && (
-          <Faq1
+          <FAQSection
             aria-labelledby="faq"
-            heading={`FAQ — ${
-              type === "cuisine"
+            heading={`FAQ — ${type === "cuisine"
                 ? "rénovation de cuisine"
                 : "rénovation de salle de bain"
-            }`}
+              }`}
             items={subService.faq.map((item) => ({
-              id: item.q,
               question: item.q,
               answer: item.a,
             }))}
           />
         )}
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

@@ -10,7 +10,13 @@ import { SPACE_CONTENT } from "@/data/spaces";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 
 type Params = { space: ProjectSpace };
 
@@ -28,7 +34,7 @@ export async function generateMetadata({
   const { space } = await params;
   const content = SPACE_CONTENT[space];
   if (!content) return {};
-  
+
   return {
     title: content.metadata.title,
     description: content.metadata.description,
@@ -63,78 +69,73 @@ function renderSection(
 ) {
   switch (section.type) {
     case "text":
+      const textLinks: ActionButton[] | undefined = section.links?.map((l) => ({
+        text: l.label,
+        href: l.href,
+        variant: "outline" as const,
+      }));
+
       return (
-        <section key={section.id} aria-labelledby={section.id}>
-          <h2 id={section.id}>{section.title}</h2>
-          {section.paragraphs.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-          {section.links?.length ? (
-            <p>
-              {section.links.map((l, idx) => (
-                <span key={l.href}>
-                  <a href={l.href}>{l.label}</a>
-                  {idx < section.links!.length - 1 ? " | " : ""}
-                </span>
-              ))}
-            </p>
-          ) : null}
-        </section>
+        <TextSection
+          key={section.id}
+          aria-labelledby={section.id}
+          heading={section.title}
+          paragraphs={section.paragraphs}
+          links={textLinks}
+        />
       );
 
     case "list":
+      const listLinks: ActionButton[] | undefined = section.links?.map((l) => ({
+        text: l.label,
+        href: l.href,
+        variant: "outline" as const,
+      }));
+
       return (
-        <section key={section.id} aria-labelledby={section.id}>
-          <h2 id={section.id}>{section.title}</h2>
-          {section.intro ? <p>{section.intro}</p> : null}
-          <ul>
-            {section.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          {section.links?.length ? (
-            <p>
-              {section.links.map((l, idx) => (
-                <span key={l.href}>
-                  <a href={l.href}>{l.label}</a>
-                  {idx < section.links!.length - 1 ? " | " : ""}
-                </span>
-              ))}
-            </p>
-          ) : null}
-        </section>
+        <ListSection
+          key={section.id}
+          aria-labelledby={section.id}
+          heading={section.title}
+          intro={section.intro}
+          items={section.items}
+          links={listLinks}
+          variant="bullets"
+        />
       );
 
     case "steps":
+      const stepLinks: ActionButton[] | undefined = section.links?.map((l) => ({
+        text: l.label,
+        href: l.href,
+        variant: "outline" as const,
+      }));
+
       return (
-        <section key={section.id} aria-labelledby={section.id}>
-          <h2 id={section.id}>{section.title}</h2>
-          <ol>
-            {section.steps.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
-          </ol>
-          {section.links?.length ? (
-            <p>
-              {section.links.map((l, idx) => (
-                <span key={l.href}>
-                  <a href={l.href}>{l.label}</a>
-                  {idx < section.links!.length - 1 ? " | " : ""}
-                </span>
-              ))}
-            </p>
-          ) : null}
-        </section>
+        <ProcessSection
+          key={section.id}
+          aria-labelledby={section.id}
+          heading={section.title}
+          steps={section.steps.map((step, idx) => ({
+            step: String(idx + 1),
+            title: step,
+            description: "",
+          }))}
+          actions={
+            stepLinks && stepLinks.length > 0 ? (
+              <ActionButtons buttons={stepLinks} />
+            ) : undefined
+          }
+        />
       );
 
     case "faq":
       return (
-        <Faq1
+        <FAQSection
           key={section.id}
           aria-labelledby={section.id}
           heading={section.title}
           items={section.items.map((item) => ({
-            id: item.q,
             question: item.q,
             answer: item.a,
           }))}
@@ -169,65 +170,66 @@ export default async function ProjectsSpacePage({
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <main id="contenu">
-      <header>
-        <h1>{content.hero.h1}</h1>
+        <HeroSection
+          heading={content.hero.h1}
+          description={content.hero.paragraphs.join(" ")}
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={content.hero.ctaLinks.map((l) => ({
+              text: l.label,
+              href: l.href,
+              variant: l.href === "/contact/" ? ("default" as const) : ("outline" as const),
+            }))} />
+          }
+        />
 
-        {content.hero.paragraphs.map((p) => (
-          <p key={p}>{p}</p>
-        ))}
+        {content.sections.map((section) => renderSection(section))}
 
-        <p>
-          {content.hero.ctaLinks.map((l, idx) => (
-            <span key={l.href}>
-              <a href={l.href}>{l.label}</a>
-              {idx < content.hero.ctaLinks.length - 1 ? " | " : ""}
-            </span>
-          ))}
-        </p>
-      </header>
-
-      {content.sections.map((section) => renderSection(section))}
-
-      {/* Dynamic projects list (from data/projects.ts) */}
-      <section aria-labelledby="projects">
-        <h2 id="projects">Projets</h2>
-        <p>
-          Chaque projet est documenté avec un format simple : lieu, mandat,
-          contraintes, solution, matériaux et résultat.
-        </p>
+        {/* Dynamic projects list (from data/projects.ts) */}
+        <TextSection
+          aria-labelledby="projects"
+          heading="Projets"
+          paragraphs={[
+            "Chaque projet est documenté avec un format simple : lieu, mandat, contraintes, solution, matériaux et résultat.",
+          ]}
+        />
 
         {projects.length === 0 ? (
-          <p>
-            Aucun projet publié pour l’instant.{" "}
-            <a href="/contact/">Contactez-nous</a> pour discuter de votre
-            besoin.
-          </p>
+          <TextSection
+            aria-labelledby="no-projects"
+            heading=""
+            paragraphs={[
+              "Aucun projet publié pour l'instant.",
+            ]}
+            links={[
+              {
+                text: "Contactez-nous",
+                href: "/contact/",
+                variant: "outline",
+              },
+            ]}
+          />
         ) : (
-          <ul>
-            {projects.map((p) => (
-              <li key={p.slug}>
-                <a href={`/projets/${p.space}/${p.slug}/`}>{p.title}</a> —{" "}
-                {p.neighborhood ? `${p.neighborhood}, ` : ""}
-                {p.city}
-              </li>
-            ))}
-          </ul>
+          <RelatedLinksSection
+            aria-labelledby="projects-list"
+            heading=""
+            links={projects.map((p) => ({
+              label: `${p.title} — ${p.neighborhood ? `${p.neighborhood}, ` : ""}${p.city}`,
+              href: `/projets/${p.space}/${p.slug}/`,
+            }))}
+            columns={2}
+          />
         )}
-      </section>
 
-      <section aria-labelledby="links">
-        <h2 id="links">Liens utiles</h2>
-        <ul>
-          {content.footerLinks.map((l) => (
-            <li key={l.href}>
-              <a href={l.href}>{l.label}</a>
-            </li>
-          ))}
-        </ul>
-
-        <p>(Espace : {spaceLabel})</p>
-      </section>
-    </main>
+        <RelatedLinksSection
+          aria-labelledby="links"
+          heading="Liens utiles"
+          links={content.footerLinks.map((l) => ({
+            label: l.label,
+            href: l.href,
+          }))}
+          columns={2}
+        />
+      </main>
     </>
   );
 }

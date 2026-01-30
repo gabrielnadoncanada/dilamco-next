@@ -3,8 +3,13 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Mélamine",
@@ -70,171 +75,172 @@ export default function Melamine() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>Mélamine — usages, limites et alternatives en sur mesure</h1>
-          <p>
-            La mélamine est une solution populaire pour des armoires et
-            rangements grâce à sa variété de finis et à un coût souvent plus
-            maîtrisé. Ce n’est pas un matériau universel : sa durabilité dépend
-            beaucoup de l’usage, de la protection des chants et de la qualité
-            d’installation.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/materiaux/comparatif/">
-              Voir le comparatif des matériaux
-            </a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Mélamine — usages, limites et alternatives en sur mesure"
+          description="La mélamine est une solution populaire pour des armoires et rangements grâce à sa variété de finis et à un coût souvent plus maîtrisé. Ce n'est pas un matériau universel : sa durabilité dépend beaucoup de l'usage, de la protection des chants et de la qualité d'installation."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir le comparatif des matériaux",
+                href: "/materiaux/comparatif/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="cest-quoi">
-          <h2 id="cest-quoi">C’est quoi la mélamine?</h2>
-          <p>
-            En pratique, la “mélamine” désigne un panneau recouvert d’un
-            revêtement décoratif. Le rendu (couleur, texture, imitation bois)
-            est très varié. La performance finale dépend autant du panneau que
-            de la finition des chants et de l’exécution.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="cest-quoi"
+          heading="C'est quoi la mélamine?"
+          paragraphs={[
+            'En pratique, la « mélamine » désigne un panneau recouvert d\'un revêtement décoratif. Le rendu (couleur, texture, imitation bois) est très varié. La performance finale dépend autant du panneau que de la finition des chants et de l\'exécution.',
+          ]}
+        />
 
-        <section aria-labelledby="avantages">
-          <h2 id="avantages">Avantages (quand c’est pertinent)</h2>
-          <ul>
-            <li>
-              <strong>Variété de finis :</strong> options modernes, textures,
-              imitations bois, couleurs.
-            </li>
-            <li>
-              <strong>Entretien simple :</strong> surface facile à nettoyer au
-              quotidien.
-            </li>
-            <li>
-              <strong>Coût maîtrisé :</strong> intéressant pour certains projets
-              ou certaines zones.
-            </li>
-            <li>
-              <strong>Surface stable :</strong> fini uniforme, sans peinture à
-              entretenir.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="avantages"
+          heading="Avantages (quand c'est pertinent)"
+          items={[
+            "Variété de finis : options modernes, textures, imitations bois, couleurs.",
+            "Entretien simple : surface facile à nettoyer au quotidien.",
+            "Coût maîtrisé : intéressant pour certains projets ou certaines zones.",
+            "Surface stable : fini uniforme, sans peinture à entretenir.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="limites">
-          <h2 id="limites">Limites et précautions</h2>
-          <p>
-            La mélamine peut très bien performer, mais elle est plus sensible à
-            certains facteurs. Une exécution moyenne (chants abîmés,
-            infiltration) vieillit mal.
-          </p>
-          <ul>
-            <li>
-              <strong>Chants :</strong> point faible principal. Si un chant est
-              endommagé, l’humidité peut s’infiltrer et dégrader le panneau.
-            </li>
-            <li>
-              <strong>Impacts :</strong> les coups sur les arêtes peuvent
-              marquer ou ébrécher la surface.
-            </li>
-            <li>
-              <strong>Humidité :</strong> plus délicat près des zones d’eau
-              (évier, lave-vaisselle, salle de bain) si la protection est
-              insuffisante.
-            </li>
-            <li>
-              <strong>Réparations :</strong> plus difficiles à rendre invisibles
-              qu’une surface peinte.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="limites"
+          heading="Limites et précautions"
+          paragraphs={[
+            "La mélamine peut très bien performer, mais elle est plus sensible à certains facteurs. Une exécution moyenne (chants abîmés, infiltration) vieillit mal.",
+          ]}
+        />
 
-        <section aria-labelledby="cuisine-vs-sdb">
-          <h2 id="cuisine-vs-sdb">Mélamine en cuisine vs en salle de bain</h2>
+        <ListSection
+          aria-labelledby="limites-details"
+          heading=""
+          items={[
+            "Chants : point faible principal. Si un chant est endommagé, l'humidité peut s'infiltrer et dégrader le panneau.",
+            "Impacts : les coups sur les arêtes peuvent marquer ou ébrécher la surface.",
+            "Humidité : plus délicat près des zones d'eau (évier, lave-vaisselle, salle de bain) si la protection est insuffisante.",
+            "Réparations : plus difficiles à rendre invisibles qu'une surface peinte.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Mélamine en cuisine</h3>
-          <ul>
-            <li>
-              Peut être pertinente pour certains caissons et rangements, selon
-              l’usage et le niveau de finition recherché.
-            </li>
-            <li>
-              Les zones proches de l’eau exigent une attention particulière
-              (chants, protections, installation).
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/cuisine/">Voir la page Cuisine sur mesure</a>
-          </p>
+        <TextSection
+          aria-labelledby="cuisine-vs-sdb"
+          heading="Mélamine en cuisine vs en salle de bain"
+          paragraphs={[]}
+        />
 
-          <h3>Mélamine en salle de bain</h3>
-          <ul>
-            <li>
-              Le contexte est plus exigeant (humidité). La ventilation et les
-              détails d’exécution comptent énormément.
-            </li>
-            <li>
-              Selon le projet, il peut être préférable de limiter la mélamine ou
-              de la combiner avec d’autres matériaux pour maximiser la
-              durabilité.
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/salle-de-bain/">
-              Voir la page Salle de bain & vanités
-            </a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="cuisine-details"
+          heading="Mélamine en cuisine"
+          items={[
+            "Peut être pertinente pour certains caissons et rangements, selon l'usage et le niveau de finition recherché.",
+            "Les zones proches de l'eau exigent une attention particulière (chants, protections, installation).",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="comparaisons">
-          <h2 id="comparaisons">Mélamine vs MDF vs contreplaqué</h2>
-          <p>
-            La mélamine est souvent choisie pour le fini et le coût; le MDF pour
-            une finition peinte uniforme; le contreplaqué pour la stabilité et
-            certaines applications plus exigeantes. Le bon choix dépend de
-            l’usage, de l’humidité et de la durabilité visée.
-          </p>
-          <p>
-            <a href="/materiaux/comparatif/">Voir le comparatif complet</a>{" "}
-            {" | "}
-            <a href="/materiaux/mdf/">MDF</a> {" | "}
-            <a href="/materiaux/contreplaque/">Pourquoi le contreplaqué</a>
-          </p>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="cuisine-link"
+          heading=""
+          links={[
+            { label: "Voir la page Cuisine sur mesure", href: "/espaces/cuisine/" },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="comment-on-lutilise">
-          <h2 id="comment-on-lutilise">Comment nous utilisons la mélamine</h2>
-          <p>
-            Notre approche : utiliser la mélamine de façon ciblée lorsque c’est
-            pertinent, et privilégier d’autres matériaux lorsque l’usage
-            (humidité, impacts, cycles d’ouverture) exige plus de robustesse.
-            L’objectif est un résultat durable une fois installé, pas un choix
-            “par défaut”.
-          </p>
-          <p>
-            <a href="/materiaux/">Voir tous les matériaux</a> {" | "}
-            <a href="/services/installation/">Voir l’installation</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="sdb-details"
+          heading="Mélamine en salle de bain"
+          items={[
+            "Le contexte est plus exigeant (humidité). La ventilation et les détails d'exécution comptent énormément.",
+            "Selon le projet, il peut être préférable de limiter la mélamine ou de la combiner avec d'autres matériaux pour maximiser la durabilité.",
+          ]}
+          variant="bullets"
+        />
 
-        <Faq1
+        <RelatedLinksSection
+          aria-labelledby="sdb-link"
+          heading=""
+          links={[
+            { label: "Voir la page Salle de bain & vanités", href: "/espaces/salle-de-bain/" },
+          ]}
+          columns={2}
+        />
+
+        <TextSection
+          aria-labelledby="comparaisons"
+          heading="Mélamine vs MDF vs contreplaqué"
+          paragraphs={[
+            "La mélamine est souvent choisie pour le fini et le coût; le MDF pour une finition peinte uniforme; le contreplaqué pour la stabilité et certaines applications plus exigeantes. Le bon choix dépend de l'usage, de l'humidité et de la durabilité visée.",
+          ]}
+          links={[
+            {
+              text: "Voir le comparatif complet",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+            {
+              text: "MDF",
+              href: "/materiaux/mdf/",
+              variant: "outline",
+            },
+            {
+              text: "Pourquoi le contreplaqué",
+              href: "/materiaux/contreplaque/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="comment-on-lutilise"
+          heading="Comment nous utilisons la mélamine"
+          paragraphs={[
+            "Notre approche : utiliser la mélamine de façon ciblée lorsque c'est pertinent, et privilégier d'autres matériaux lorsque l'usage (humidité, impacts, cycles d'ouverture) exige plus de robustesse. L'objectif est un résultat durable une fois installé, pas un choix « par défaut ».",
+          ]}
+          links={[
+            {
+              text: "Voir tous les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — mélamine"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

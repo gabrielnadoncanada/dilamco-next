@@ -3,8 +3,14 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Salle de lavage sur mesure",
@@ -74,232 +80,192 @@ export default function SalleDeLavage() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>
-            Salle de lavage sur mesure — armoires et rangement durable pour
-            buanderie
-          </h1>
-          <p>
-            Une buanderie est un espace technique : humidité, plomberie,
-            vibration, produits ménagers et usage fréquent. Dilamco conçoit et
-            réalise des salles de lavage sur mesure haut de gamme, pensées pour
-            être pratiques et durables — principalement à Montréal, Laval et sur
-            la Rive-Sud.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/projets/salle-de-lavage/">
-              Voir des projets de salle de lavage
-            </a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Salle de lavage sur mesure, armoires et rangement durable pour buanderie"
+          description="Une buanderie est un espace technique : humidité, plomberie, vibration, produits ménagers et usage fréquent. Dilamco conçoit et réalise des salles de lavage sur mesure haut de gamme, pensées pour être pratiques et durables — principalement à Montréal, Laval et sur la Rive-Sud."
+          image={{
+            src: "/images/spaces/vanite-salles-de-lavage.webp",
+            alt: "Salle de lavage sur mesure",
+          }}
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir des projets de salle de lavage",
+                href: "/projets/salle-de-lavage/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="pour-qui">
-          <h2 id="pour-qui">À qui s’adresse une salle de lavage sur mesure?</h2>
-          <ul>
-            <li>
-              Vous voulez <strong>optimiser un espace restreint</strong> (condo,
-              corridor, placard, sous-sol).
-            </li>
-            <li>
-              Vous cherchez un espace{" "}
-              <strong>simple à utiliser au quotidien</strong> (pliage, paniers,
-              produits, linge).
-            </li>
-            <li>
-              Vous avez des contraintes à intégrer : <strong>plomberie</strong>,
-              drains, chauffe-eau, panneaux, ventilation.
-            </li>
-          </ul>
-          <p>
-            Si vous cherchez une solution standard sans adaptation, le sur
-            mesure est moins pertinent. Le sur mesure est surtout utile quand
-            l’espace est technique, atypique ou lorsqu’on veut un rangement
-            réellement fonctionnel.
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="pour-qui"
+          heading="À qui s'adresse une salle de lavage sur mesure?"
+          items={[
+            "Vous voulez optimiser un espace restreint (condo, corridor, placard, sous-sol).",
+            "Vous cherchez un espace simple à utiliser au quotidien (pliage, paniers, produits, linge).",
+            "Vous avez des contraintes à intégrer : plomberie, drains, chauffe-eau, panneaux, ventilation.",
+          ]}
+          variant="checkmarks"
+        />
 
-        <section aria-labelledby="inclus">
-          <h2 id="inclus">Ce que comprend une salle de lavage Dilamco</h2>
-          <ul>
-            <li>
-              <strong>Design & planification :</strong> besoins, contraintes,
-              circulation et plan d’organisation.
-            </li>
-            <li>
-              <strong>Fabrication sur mesure :</strong> armoires, modules,
-              comptoir de pliage et rangement adapté.
-            </li>
-            <li>
-              <strong>Installation précise :</strong> alignements, ajustements,
-              finition et inspection finale.
-            </li>
-          </ul>
+        <FeatureGridSection
+          aria-labelledby="inclus"
+          heading="Ce que comprend une salle de lavage Dilamco"
+          features={[
+            {
+              title: "Design & planification",
+              description: "Besoins, contraintes, circulation et plan d'organisation.",
+            },
+            {
+              title: "Fabrication sur mesure",
+              description: "Armoires, modules, comptoir de pliage et rangement adapté.",
+            },
+            {
+              title: "Installation précise",
+              description: "Alignements, ajustements, finition et inspection finale.",
+            },
+          ]}
+          columns={3}
+        />
 
-          <section aria-labelledby="services">
-            <h3 id="services">Services associés</h3>
-            <ul>
-              <li>
-                <a href="/services/design/">Design</a>
-              </li>
-              <li>
-                <a href="/services/fabrication/">Fabrication</a>
-              </li>
-              <li>
-                <a href="/services/installation/">Installation</a>
-              </li>
-            </ul>
-          </section>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="services"
+          heading="Services associés"
+          links={[
+            { label: "Design", href: "/services/design/" },
+            { label: "Fabrication", href: "/services/fabrication/" },
+            { label: "Installation", href: "/services/installation/" },
+          ]}
+          columns={3}
+        />
 
-        <section aria-labelledby="fonctionnalite">
-          <h2 id="fonctionnalite">
-            Fonctionnalité : organiser les zones (lavage, pliage, rangement)
-          </h2>
-          <p>
-            Une buanderie efficace réduit le désordre. Le sur mesure permet de
-            structurer l’espace selon vos habitudes et la réalité des lieux.
-          </p>
-          <ul>
-            <li>
-              <strong>Zone lavage :</strong> accès simple à la laveuse/sécheuse,
-              circulation et dégagements cohérents.
-            </li>
-            <li>
-              <strong>Zone pliage :</strong> comptoir pratique et hauteur
-              confortable.
-            </li>
-            <li>
-              <strong>Produits ménagers :</strong> rangement sécurisé et
-              accessible.
-            </li>
-            <li>
-              <strong>Rangement vertical :</strong> armoires hautes et colonnes
-              pour maximiser l’espace.
-            </li>
-            <li>
-              <strong>Paniers & linge :</strong> organisation logique pour
-              éviter que tout s’accumule.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="fonctionnalite"
+          heading="Fonctionnalité : organiser les zones (lavage, pliage, rangement)"
+          paragraphs={[
+            "Une buanderie efficace réduit le désordre. Le sur mesure permet de structurer l'espace selon vos habitudes et la réalité des lieux.",
+          ]}
+        />
 
-        <section aria-labelledby="technique">
-          <h2 id="technique">Contraintes techniques & durabilité</h2>
-          <p>
-            Les problèmes d’une salle de lavage viennent souvent de détails :
-            chants exposés à l’eau, surfaces difficiles à nettoyer,
-            quincaillerie qui fatigue. Notre approche vise la durabilité dans le
-            temps.
-          </p>
-          <ul>
-            <li>
-              <strong>Humidité & éclaboussures :</strong> matériaux adaptés et
-              protection des chants.
-            </li>
-            <li>
-              <strong>Surfaces faciles à entretenir :</strong> conception pensée
-              pour le nettoyage régulier.
-            </li>
-            <li>
-              <strong>Usage répété :</strong> quincaillerie fiable pour
-              ouvertures fréquentes (tiroirs/portes).
-            </li>
-            <li>
-              <strong>Conception autour des contraintes :</strong> plomberie,
-              drains, ventilation, éléments techniques.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/">Voir les matériaux</a> {" | "}
-            <a href="/materiaux/comparatif/">Comparatif des matériaux</a>{" "}
-            {" | "}
-            <a href="/materiaux/quincaillerie/">Quincaillerie</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="fonctionnalite-details"
+          heading=""
+          items={[
+            "Zone lavage : accès simple à la laveuse/sécheuse, circulation et dégagements cohérents.",
+            "Zone pliage : comptoir pratique et hauteur confortable.",
+            "Produits ménagers : rangement sécurisé et accessible.",
+            "Rangement vertical : armoires hautes et colonnes pour maximiser l'espace.",
+            "Paniers & linge : organisation logique pour éviter que tout s'accumule.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="configurations">
-          <h2 id="configurations">Configurations possibles</h2>
-          <p>
-            Le sur mesure s’adapte à la configuration réelle de votre buanderie.
-          </p>
-          <ul>
-            <li>
-              <strong>Buanderie en corridor :</strong> rangement vertical et
-              comptoir de pliage sans bloquer la circulation.
-            </li>
-            <li>
-              <strong>Buanderie dans un placard :</strong> modules adaptés,
-              accès simple, gestion des portes et dégagements.
-            </li>
-            <li>
-              <strong>Évier utilitaire (si applicable) :</strong> rangement
-              adapté aux produits et à l’espace humide.
-            </li>
-            <li>
-              <strong>Empilage laveuse/sécheuse :</strong> optimisation de la
-              hauteur et du rangement.
-            </li>
-            <li>
-              <strong>Armoires hautes + colonne :</strong> maximiser le
-              rangement pour linge, paniers et accessoires.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="technique"
+          heading="Contraintes techniques & durabilité"
+          paragraphs={[
+            "Les problèmes d'une salle de lavage viennent souvent de détails : chants exposés à l'eau, surfaces difficiles à nettoyer, quincaillerie qui fatigue. Notre approche vise la durabilité dans le temps.",
+          ]}
+          links={[
+            {
+              text: "Voir les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+            {
+              text: "Quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="projets">
-          <h2 id="projets">Projets de salles de lavage</h2>
-          <p>
-            Consultez nos réalisations pour voir des exemples d’organisation, de
-            finition et de configurations (corridor, placard, sous-sol, etc.).
-          </p>
-          <ul>
-            <li>
-              <a href="/projets/salle-de-lavage/">
-                Voir tous les projets de salle de lavage
-              </a>
-            </li>
-            <li>
-              <a href="/projets/">Voir tous les projets</a>
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="technique-details"
+          heading=""
+          items={[
+            "Humidité & éclaboussures : matériaux adaptés et protection des chants.",
+            "Surfaces faciles à entretenir : conception pensée pour le nettoyage régulier.",
+            "Usage répété : quincaillerie fiable pour ouvertures fréquentes (tiroirs/portes).",
+            "Conception autour des contraintes : plomberie, drains, ventilation, éléments techniques.",
+          ]}
+          variant="bullets"
+        />
 
-        <Faq1
+        <TextSection
+          aria-labelledby="configurations"
+          heading="Configurations possibles"
+          paragraphs={[
+            "Le sur mesure s'adapte à la configuration réelle de votre buanderie.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="configurations-details"
+          heading=""
+          items={[
+            "Buanderie en corridor : rangement vertical et comptoir de pliage sans bloquer la circulation.",
+            "Buanderie dans un placard : modules adaptés, accès simple, gestion des portes et dégagements.",
+            "Évier utilitaire (si applicable) : rangement adapté aux produits et à l'espace humide.",
+            "Empilage laveuse/sécheuse : optimisation de la hauteur et du rangement.",
+            "Armoires hautes + colonne : maximiser le rangement pour linge, paniers et accessoires.",
+          ]}
+          variant="bullets"
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="projets"
+          heading="Projets de salles de lavage"
+          links={[
+            {
+              label: "Voir tous les projets de salle de lavage",
+              href: "/projets/salle-de-lavage/",
+            },
+            { label: "Voir tous les projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — salle de lavage sur mesure"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <section aria-labelledby="liens">
-          <h2 id="liens">Liens utiles</h2>
-          <ul>
-            <li>
-              <a href="/projets/salle-de-lavage/">Projets</a>
-            </li>
-            <li>
-              <a href="/materiaux/">Matériaux</a>
-            </li>
-            <li>
-              <a href="/contact/">Demander une soumission</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="liens"
+          heading="Liens utiles"
+          links={[
+            { label: "Projets", href: "/projets/salle-de-lavage/" },
+            { label: "Matériaux", href: "/materiaux/" },
+            { label: "Demander une soumission", href: "/contact/" },
+          ]}
+          columns={3}
+        />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

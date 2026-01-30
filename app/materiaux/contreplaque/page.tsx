@@ -3,8 +3,13 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Pourquoi le contreplaqué",
@@ -73,243 +78,237 @@ export default function Contreplaque() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>
-            Contreplaqué — stabilité, durabilité et structure intelligente
-          </h1>
-          <p>
-            Le contreplaqué est un matériau “technique” souvent privilégié en
-            sur mesure pour la structure des armoires. Son avantage principal
-            vient de sa composition en plis croisés : un comportement plus
-            stable et plus prévisible, utile dans des environnements réels
-            (variations d’humidité, usage intensif, contraintes de chantier).
-          </p>
-          <p>
-            <a href="/contact/">Parler de votre projet</a> {" | "}
-            <a href="/projets/">Voir nos réalisations</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Contreplaqué, stabilité, durabilité et structure intelligente"
+          description="Le contreplaqué est un matériau « technique » souvent privilégié en sur mesure pour la structure des armoires. Son avantage principal vient de sa composition en plis croisés : un comportement plus stable et plus prévisible, utile dans des environnements réels (variations d'humidité, usage intensif, contraintes de chantier)."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler de votre projet",
+                href: "/contact/",
+              },
+              {
+                text: "Voir nos réalisations",
+                href: "/projets/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="definition">
-          <h2 id="definition">Qu’est-ce que le contreplaqué?</h2>
-          <p>
-            Le contreplaqué est constitué de plusieurs couches de bois (plis)
-            collées ensemble, avec un sens de fibre alterné d’un pli à l’autre.
-            Cette structure “croisée” améliore la stabilité dimensionnelle par
-            rapport à certains panneaux, tout en offrant une bonne résistance
-            mécanique.
-          </p>
-          <p>
-            Il se distingue du <a href="/materiaux/mdf/">MDF</a> (fibres), de la{" "}
-            <a href="/materiaux/melamine/">mélamine</a> (panneau + revêtement)
-            et du <a href="/materiaux/bois-massif/">bois massif</a> (pièce
-            pleine).
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="definition"
+          heading="Qu'est-ce que le contreplaqué?"
+          paragraphs={[
+            "Le contreplaqué est constitué de plusieurs couches de bois (plis) collées ensemble, avec un sens de fibre alterné d'un pli à l'autre. Cette structure « croisée » améliore la stabilité dimensionnelle par rapport à certains panneaux, tout en offrant une bonne résistance mécanique.",
+            "Il se distingue du MDF (fibres), de la mélamine (panneau + revêtement) et du bois massif (pièce pleine).",
+          ]}
+          links={[
+            {
+              text: "MDF",
+              href: "/materiaux/mdf/",
+              variant: "outline",
+            },
+            {
+              text: "Mélamine",
+              href: "/materiaux/melamine/",
+              variant: "outline",
+            },
+            {
+              text: "Bois massif",
+              href: "/materiaux/bois-massif/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="avantages">
-          <h2 id="avantages">
-            Avantages du contreplaqué (pourquoi on l’utilise)
-          </h2>
-          <ul>
-            <li>
-              <strong>Stabilité :</strong> les plis croisés réduisent les
-              déformations et rendent le comportement plus prévisible.
-            </li>
-            <li>
-              <strong>Tenue des vis :</strong> bonne résistance au vissage et
-              aux fixations, utile pour les caissons et l’installation.
-            </li>
-            <li>
-              <strong>Durabilité :</strong> structure robuste pour des projets à
-              long terme et un usage intensif.
-            </li>
-            <li>
-              <strong>Polyvalence :</strong> pertinent pour cuisines, walk-in et
-              certains contextes à contraintes.
-            </li>
-          </ul>
-          <p>
-            Le contreplaqué se voit rarement une fois le projet terminé… mais il
-            influence directement la tenue dans le temps.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="avantages"
+          heading="Avantages du contreplaqué (pourquoi on l'utilise)"
+          paragraphs={[
+            "Le contreplaqué se voit rarement une fois le projet terminé… mais il influence directement la tenue dans le temps.",
+          ]}
+        />
 
-        <section aria-labelledby="comparaison">
-          <h2 id="comparaison">Contreplaqué vs autres matériaux</h2>
-          <p>
-            Le bon matériau dépend de l’espace, du niveau d’entretien attendu et
-            du type de composante (structure, portes, tiroirs).
-          </p>
-          <ul>
-            <li>
-              <strong>Contreplaqué vs MDF :</strong> souvent plus stable en
-              structure et plus rassurant pour la tenue des vis.
-            </li>
-            <li>
-              <strong>Contreplaqué vs mélamine :</strong> la mélamine vise
-              surtout praticité/coût; le contreplaqué vise structure/durabilité.
-            </li>
-            <li>
-              <strong>Contreplaqué vs bois massif :</strong> le bois massif est
-              apprécié pour l’esthétique, mais le contreplaqué est souvent plus
-              cohérent pour la structure.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/comparatif/">
-              Voir le comparatif des matériaux
-            </a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="avantages-details"
+          heading=""
+          items={[
+            "Stabilité : les plis croisés réduisent les déformations et rendent le comportement plus prévisible.",
+            "Tenue des vis : bonne résistance au vissage et aux fixations, utile pour les caissons et l'installation.",
+            "Durabilité : structure robuste pour des projets à long terme et un usage intensif.",
+            "Polyvalence : pertinent pour cuisines, walk-in et certains contextes à contraintes.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="usages">
-          <h2 id="usages">Où le contreplaqué est le plus pertinent</h2>
-          <p>
-            Le contreplaqué est souvent utilisé là où la stabilité et la
-            solidité comptent le plus : structures, caissons et composantes
-            internes.
-          </p>
-          <ul>
-            <li>
-              <strong>Caissons d’armoires :</strong> structure principale,
-              stabilité et alignements.
-            </li>
-            <li>
-              <strong>Composantes internes :</strong> tablettes, séparations,
-              modules porteurs.
-            </li>
-            <li>
-              <strong>Tiroirs :</strong> selon le design, fonds et éléments
-              structurels robustes (ex. contreplaqué de bouleau).
-            </li>
-            <li>
-              <strong>Projets à contraintes :</strong> lorsque la durabilité et
-              la tenue dans le temps sont prioritaires.
-            </li>
-          </ul>
-          <p>
-            <a href="/services/fabrication/">Voir la fabrication</a> {" | "}
-            <a href="/services/installation/">Voir l’installation</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="comparaison"
+          heading="Contreplaqué vs autres matériaux"
+          paragraphs={[
+            "Le bon matériau dépend de l'espace, du niveau d'entretien attendu et du type de composante (structure, portes, tiroirs).",
+          ]}
+          links={[
+            {
+              text: "Voir le comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="humidite">
-          <h2 id="humidite">Contreplaqué & humidité</h2>
-          <p>
-            Le contreplaqué tolère généralement mieux certains contextes que des
-            panneaux à fibres, mais il n’est pas “imperméable”. La durabilité
-            dépend des détails : protection des chants, qualité d’assemblage,
-            finition et installation.
-          </p>
-          <ul>
-            <li>
-              <strong>Cuisine :</strong> pertinent pour la structure, surtout si
-              la finition et les chants sont soignés.
-            </li>
-            <li>
-              <strong>Salle de bain / buanderie :</strong> faisable selon le
-              contexte, avec des choix adaptés et une protection cohérente.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/quincaillerie/">Voir la quincaillerie</a>{" "}
-            {" | "}
-            <a href="/materiaux/">Voir tous les matériaux</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="comparaison-details"
+          heading=""
+          items={[
+            "Contreplaqué vs MDF : souvent plus stable en structure et plus rassurant pour la tenue des vis.",
+            "Contreplaqué vs mélamine : la mélamine vise surtout praticité/coût; le contreplaqué vise structure/durabilité.",
+            "Contreplaqué vs bois massif : le bois massif est apprécié pour l'esthétique, mais le contreplaqué est souvent plus cohérent pour la structure.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="limites">
-          <h2 id="limites">Limites & points à surveiller</h2>
-          <p>
-            Tous les contreplaqués ne se valent pas. La qualité dépend du grade,
-            de la stabilité, des faces et de la cohérence d’assemblage.
-          </p>
-          <ul>
-            <li>
-              <strong>Qualité variable :</strong> le grade influence la
-              stabilité, l’apparence et la durabilité.
-            </li>
-            <li>
-              <strong>Coût :</strong> souvent plus élevé que des options
-              standard.
-            </li>
-            <li>
-              <strong>Tranches visibles :</strong> si exposées, elles doivent
-              être traitées ou intégrées au design.
-            </li>
-            <li>
-              <strong>Exécution :</strong> la performance dépend aussi de la
-              fabrication et de l’installation.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="usages"
+          heading="Où le contreplaqué est le plus pertinent"
+          paragraphs={[
+            "Le contreplaqué est souvent utilisé là où la stabilité et la solidité comptent le plus : structures, caissons et composantes internes.",
+          ]}
+          links={[
+            {
+              text: "Voir la fabrication",
+              href: "/services/fabrication/",
+              variant: "outline",
+            },
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="pourquoi-dilamco">
-          <h2 id="pourquoi-dilamco">
-            Pourquoi Dilamco privilégie souvent le contreplaqué
-          </h2>
-          <p>
-            Pour un projet sur mesure haut de gamme, la structure doit rester
-            stable et durable. Le contreplaqué contribue à un résultat plus
-            cohérent, avec des alignements plus prévisibles et une meilleure
-            tenue dans le temps.
-          </p>
-          <ul>
-            <li>
-              <strong>Stabilité :</strong> lignes plus constantes et moins de
-              variations visibles.
-            </li>
-            <li>
-              <strong>Durabilité :</strong> meilleure résistance à l’usage
-              quotidien.
-            </li>
-            <li>
-              <strong>Cohérence :</strong> fabrication et installation plus
-              propres lorsqu’on part d’une structure stable.
-            </li>
-          </ul>
-          <p>
-            <a href="/contact/">Demander une soumission</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="usages-details"
+          heading=""
+          items={[
+            "Caissons d'armoires : structure principale, stabilité et alignements.",
+            "Composantes internes : tablettes, séparations, modules porteurs.",
+            "Tiroirs : selon le design, fonds et éléments structurels robustes (ex. contreplaqué de bouleau).",
+            "Projets à contraintes : lorsque la durabilité et la tenue dans le temps sont prioritaires.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="projets">
-          <h2 id="projets">Projets (structure orientée durabilité)</h2>
-          <p>
-            Consultez nos réalisations pour voir des projets où la structure et
-            la fabrication ont été pensées pour durer, selon l’espace et
-            l’usage.
-          </p>
-          <p>
-            <a href="/projets/">Voir les projets</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="humidite"
+          heading="Contreplaqué & humidité"
+          paragraphs={[
+            "Le contreplaqué tolère généralement mieux certains contextes que des panneaux à fibres, mais il n'est pas « imperméable ». La durabilité dépend des détails : protection des chants, qualité d'assemblage, finition et installation.",
+          ]}
+          links={[
+            {
+              text: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+            {
+              text: "Voir tous les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <Faq1
+        <ListSection
+          aria-labelledby="humidite-details"
+          heading=""
+          items={[
+            "Cuisine : pertinent pour la structure, surtout si la finition et les chants sont soignés.",
+            "Salle de bain / buanderie : faisable selon le contexte, avec des choix adaptés et une protection cohérente.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="limites"
+          heading="Limites & points à surveiller"
+          paragraphs={[
+            "Tous les contreplaqués ne se valent pas. La qualité dépend du grade, de la stabilité, des faces et de la cohérence d'assemblage.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="limites-details"
+          heading=""
+          items={[
+            "Qualité variable : le grade influence la stabilité, l'apparence et la durabilité.",
+            "Coût : souvent plus élevé que des options standard.",
+            "Tranches visibles : si exposées, elles doivent être traitées ou intégrées au design.",
+            "Exécution : la performance dépend aussi de la fabrication et de l'installation.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="pourquoi-dilamco"
+          heading="Pourquoi Dilamco privilégie souvent le contreplaqué"
+          paragraphs={[
+            "Pour un projet sur mesure haut de gamme, la structure doit rester stable et durable. Le contreplaqué contribue à un résultat plus cohérent, avec des alignements plus prévisibles et une meilleure tenue dans le temps.",
+          ]}
+          links={[
+            {
+              text: "Demander une soumission",
+              href: "/contact/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="pourquoi-dilamco-details"
+          heading=""
+          items={[
+            "Stabilité : lignes plus constantes et moins de variations visibles.",
+            "Durabilité : meilleure résistance à l'usage quotidien.",
+            "Cohérence : fabrication et installation plus propres lorsqu'on part d'une structure stable.",
+          ]}
+          variant="bullets"
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="projets"
+          heading="Projets (structure orientée durabilité)"
+          links={[
+            { label: "Voir les projets", href: "/projets/" },
+          ]}
+          columns={2}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — contreplaqué"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-            secondary: {
+            {
               text: "Comparer les matériaux",
-              url: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
             },
-          }}
+          ]}
         />
       </main>
     </>

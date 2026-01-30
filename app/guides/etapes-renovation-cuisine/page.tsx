@@ -3,13 +3,19 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Étapes d'une rénovation de cuisine",
   description:
-    "Guide : étapes d’une rénovation de cuisine, du cadrage au design, aux travaux techniques, à l’installation et aux finitions. Comprendre le bon ordre des étapes avant de démarrer.",
+    "Guide : étapes d'une rénovation de cuisine, du cadrage au design, aux travaux techniques, à l'installation et aux finitions. Comprendre le bon ordre des étapes avant de démarrer.",
   alternates: {
     canonical: "https://dilamco.com/guides/etapes-renovation-cuisine/",
   },
@@ -73,357 +79,374 @@ export default function EtapesRenovationCuisine() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>
-            Les étapes d’une rénovation de cuisine — du plan à la finition
-          </h1>
-          <p>
-            Une rénovation de cuisine réussie dépend surtout de l’ordre des
-            étapes. Quand le séquencement est mauvais, les coûts cachés et les
-            délais apparaissent : reprises, changements tardifs, coordination
-            difficile. Ce guide présente le déroulement typique d’un projet, de
-            la planification à l’inspection finale, pour vous aider à cadrer
-            votre décision avant de lancer le chantier.
-          </p>
-          <p>
-            <a href="/contact/">Parler de votre projet</a> {" | "}
-            <a href="/services/renovation/cuisine/">
-              Voir la rénovation de cuisine
-            </a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Les étapes d'une rénovation de cuisine — du plan à la finition"
+          description="Une rénovation de cuisine réussie dépend surtout de l'ordre des étapes. Quand le séquencement est mauvais, les coûts cachés et les délais apparaissent : reprises, changements tardifs, coordination difficile. Ce guide présente le déroulement typique d'un projet, de la planification à l'inspection finale, pour vous aider à cadrer votre décision avant de lancer le chantier."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler de votre projet",
+                href: "/contact/",
+              },
+              {
+                text: "Voir la rénovation de cuisine",
+                href: "/services/renovation/cuisine/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <nav aria-labelledby="sommaire">
-          <h2 id="sommaire">Sommaire</h2>
-          <ol>
-            <li>
-              <a href="#overview">Vue d’ensemble</a>
-            </li>
-            <li>
-              <a href="#cadrage">Cadrer le projet</a>
-            </li>
-            <li>
-              <a href="#design">Design & planification</a>
-            </li>
-            <li>
-              <a href="#materiaux">Choix des matériaux</a>
-            </li>
-            <li>
-              <a href="#preparation">Préparation du chantier</a>
-            </li>
-            <li>
-              <a href="#travaux">Travaux techniques</a>
-            </li>
-            <li>
-              <a href="#fabrication">Fabrication & installation</a>
-            </li>
-            <li>
-              <a href="#finitions">Ajustements & finitions</a>
-            </li>
-            <li>
-              <a href="#inspection">Inspection finale</a>
-            </li>
-            <li>
-              <a href="#delais">Délais : à quoi s’attendre</a>
-            </li>
-            <li>
-              <a href="#erreurs">Erreurs de séquencement à éviter</a>
-            </li>
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
-          </ol>
-        </nav>
+        <TextSection
+          aria-labelledby="overview"
+          heading="Vue d'ensemble (le bon ordre des étapes)"
+          paragraphs={[
+            "Les projets varient, mais la logique reste la même : on planifie, on prépare, on exécute les travaux techniques, puis on installe et on finit proprement.",
+          ]}
+        />
 
-        <section aria-labelledby="overview">
-          <h2 id="overview">Vue d’ensemble (le bon ordre des étapes)</h2>
-          <p>
-            Les projets varient, mais la logique reste la même : on planifie, on
-            prépare, on exécute les travaux techniques, puis on installe et on
-            finit proprement.
-          </p>
-          <ol>
-            <li>Cadrage du projet (portée, contraintes, priorités).</li>
-            <li>Design & planification (plan, ergonomie, intégrations).</li>
-            <li>
-              Choix des matériaux et finis (usage, entretien, durabilité).
-            </li>
-            <li>
-              Préparation du chantier (logistique, démolition, protection).
-            </li>
-            <li>
-              Travaux techniques (plomberie, électricité, ventilation,
-              murs/plancher si applicable).
-            </li>
-            <li>Fabrication et installation des armoires.</li>
-            <li>Ajustements, quincaillerie et finitions.</li>
-            <li>Inspection finale et validation du fonctionnement.</li>
-          </ol>
-        </section>
+        <ListSection
+          aria-labelledby="overview-steps"
+          heading=""
+          items={[
+            "Cadrage du projet (portée, contraintes, priorités).",
+            "Design & planification (plan, ergonomie, intégrations).",
+            "Choix des matériaux et finis (usage, entretien, durabilité).",
+            "Préparation du chantier (logistique, démolition, protection).",
+            "Travaux techniques (plomberie, électricité, ventilation, murs/plancher si applicable).",
+            "Fabrication et installation des armoires.",
+            "Ajustements, quincaillerie et finitions.",
+            "Inspection finale et validation du fonctionnement.",
+          ]}
+          variant="numbered"
+        />
 
-        <section aria-labelledby="cadrage">
-          <h2 id="cadrage">1) Cadrer le projet</h2>
-          <p>
-            Avant de parler matériaux ou style, clarifiez le cadre : qu’est-ce
-            qui doit changer et pourquoi? Une rénovation peut aller d’un
-            remplacement d’armoires à un projet complet avec travaux connexes.
-          </p>
-          <ul>
-            <li>
-              <strong>Objectifs :</strong> rangement, circulation, îlot, usage
-              quotidien, entretien.
-            </li>
-            <li>
-              <strong>Portée :</strong> armoires seulement vs rénovation
-              complète (plomberie/électricité/plancher).
-            </li>
-            <li>
-              <strong>Contraintes :</strong> condo, accès, horaires, ascenseur,
-              stationnement, bruit.
-            </li>
-            <li>
-              <strong>Échéance :</strong> période souhaitée, flexibilité,
-              dépendances.
-            </li>
-          </ul>
-          <p>
-            Pour cadrer les priorités dès le départ :{" "}
-            <a href="/services/design/">Design</a>.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="cadrage"
+          heading="1) Cadrer le projet"
+          paragraphs={[
+            "Avant de parler matériaux ou style, clarifiez le cadre : qu'est-ce qui doit changer et pourquoi? Une rénovation peut aller d'un remplacement d'armoires à un projet complet avec travaux connexes.",
+          ]}
+        />
 
-        <section aria-labelledby="design">
-          <h2 id="design">2) Design & planification</h2>
-          <p>
-            C’est l’étape qui évite 80% des problèmes : plan fonctionnel,
-            circulation, zones de travail, intégration des électroménagers et
-            validation des contraintes techniques.
-          </p>
-          <ul>
-            <li>
-              Plan et ergonomie (circulation, dégagements, îlot réaliste).
-            </li>
-            <li>
-              Intégration des électroménagers (dimensions, dégagements,
-              sorties).
-            </li>
-            <li>
-              Validation des contraintes (murs, fenêtres, plomberie,
-              ventilation).
-            </li>
-            <li>Décisions structurantes prises avant fabrication.</li>
-          </ul>
-          <p>
-            <a href="/services/design/">Voir le service de design</a> {" | "}
-            <a href="/espaces/cuisine/">Voir Cuisine sur mesure</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="cadrage-details"
+          heading=""
+          items={[
+            "Objectifs : rangement, circulation, îlot, usage quotidien, entretien.",
+            "Portée : armoires seulement vs rénovation complète (plomberie/électricité/plancher).",
+            "Contraintes : condo, accès, horaires, ascenseur, stationnement, bruit.",
+            "Échéance : période souhaitée, flexibilité, dépendances.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="materiaux">
-          <h2 id="materiaux">3) Choix des matériaux et finis</h2>
-          <p>
-            Les matériaux doivent être choisis selon l’usage (humidité, impacts,
-            entretien) et le rendu recherché. Le “bon” choix dépend aussi des
-            chants, de la quincaillerie et de l’installation.
-          </p>
-          <ul>
-            <li>Structure (caissons) vs portes (fini et rendu).</li>
-            <li>Humidité (évier, lave-vaisselle) et entretien au quotidien.</li>
-            <li>Choix des couleurs et finis selon la lumière et le style.</li>
-          </ul>
-          <p>
-            <a href="/materiaux/comparatif/">Comparatif des matériaux</a>{" "}
-            {" | "}
-            <a href="/materiaux/couleurs/">Couleurs & finis</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="cadrage-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Design",
+              href: "/services/design/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="preparation">
-          <h2 id="preparation">4) Préparation du chantier</h2>
-          <p>
-            Une préparation solide réduit le chaos : protection des zones,
-            planification des intervenants, séquence claire. En condo, la
-            logistique est souvent un facteur majeur.
-          </p>
-          <ul>
-            <li>Protection (planchers, circulation, zones adjacentes).</li>
-            <li>Démolition (si applicable) et gestion des débris.</li>
-            <li>
-              Accès chantier : stationnement, ascenseur, horaires, voisins.
-            </li>
-            <li>Coordination : qui intervient, quand, et dans quel ordre?</li>
-          </ul>
-          <p>
-            <a href="/services/renovation/cuisine/">
-              Voir la rénovation de cuisine
-            </a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="design"
+          heading="2) Design & planification"
+          paragraphs={[
+            "C'est l'étape qui évite 80% des problèmes : plan fonctionnel, circulation, zones de travail, intégration des électroménagers et validation des contraintes techniques.",
+          ]}
+        />
 
-        <section aria-labelledby="travaux">
-          <h2 id="travaux">5) Travaux techniques (avant l’installation)</h2>
-          <p>
-            Les travaux techniques doivent être prêts avant l’installation des
-            armoires. Sinon, on se retrouve à refaire des éléments finis (murs,
-            peinture, plancher) ou à modifier le plan.
-          </p>
-          <ul>
-            <li>
-              <strong>Plomberie :</strong> évier, lave-vaisselle,
-              relocalisations si nécessaires.
-            </li>
-            <li>
-              <strong>Électricité :</strong> circuits, prises, éclairage, hotte
-              et électroménagers.
-            </li>
-            <li>
-              <strong>Ventilation :</strong> conduits, efficacité, bruit et
-              conformité.
-            </li>
-            <li>
-              <strong>Murs/plancher :</strong> selon la portée (gypse, peinture,
-              revêtements).
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="design-details"
+          heading=""
+          items={[
+            "Plan et ergonomie (circulation, dégagements, îlot réaliste).",
+            "Intégration des électroménagers (dimensions, dégagements, sorties).",
+            "Validation des contraintes (murs, fenêtres, plomberie, ventilation).",
+            "Décisions structurantes prises avant fabrication.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="fabrication">
-          <h2 id="fabrication">6) Fabrication & installation des armoires</h2>
-          <p>
-            Une fois le plan validé, la fabrication suit le projet.
-            L’installation exige précision et ajustements : niveaux,
-            alignements, jeux réguliers et finition propre.
-          </p>
-          <ul>
-            <li>Fabrication sur mesure selon le plan final.</li>
-            <li>Installation : niveaux, alignements, ajustements.</li>
-            <li>Préparation pour comptoir et éléments connexes.</li>
-          </ul>
-          <p>
-            <a href="/services/fabrication/">Voir la fabrication</a> {" | "}
-            <a href="/services/installation/">Voir l’installation</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="design-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir le service de design",
+              href: "/services/design/",
+              variant: "outline",
+            },
+            {
+              text: "Voir Cuisine sur mesure",
+              href: "/espaces/cuisine/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="finitions">
-          <h2 id="finitions">7) Ajustements & finitions</h2>
-          <p>
-            C’est l’étape qui fait la différence entre “correct” et “haut de
-            gamme” : portes alignées, tiroirs fluides, mécanismes réglés,
-            finitions propres.
-          </p>
-          <ul>
-            <li>Réglage des portes, tiroirs et mécanismes.</li>
-            <li>
-              Quincaillerie : confort, stabilité des réglages, usage quotidien.
-            </li>
-            <li>Finitions : joints, retouches, détails visibles.</li>
-          </ul>
-          <p>
-            <a href="/materiaux/quincaillerie/">Voir la quincaillerie</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="materiaux"
+          heading="3) Choix des matériaux et finis"
+          paragraphs={[
+            "Les matériaux doivent être choisis selon l'usage (humidité, impacts, entretien) et le rendu recherché. Le \"bon\" choix dépend aussi des chants, de la quincaillerie et de l'installation.",
+          ]}
+        />
 
-        <section aria-labelledby="inspection">
-          <h2 id="inspection">8) Inspection finale</h2>
-          <p>
-            L’inspection finale valide le fonctionnement et la finition :
-            ouverture/fermeture, alignements, tiroirs, accessoires, et points de
-            détail. C’est aussi le moment de confirmer les dernières retouches
-            si nécessaires.
-          </p>
-          <ul>
-            <li>Vérification globale et fonctionnement.</li>
-            <li>Validation du résultat avec le client.</li>
-            <li>Liste de retouches (si applicable) et finalisation.</li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="materiaux-details"
+          heading=""
+          items={[
+            "Structure (caissons) vs portes (fini et rendu).",
+            "Humidité (évier, lave-vaisselle) et entretien au quotidien.",
+            "Choix des couleurs et finis selon la lumière et le style.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="delais">
-          <h2 id="delais">Délais : à quoi s’attendre (sans chiffres)</h2>
-          <p>
-            Les délais varient selon la complexité, la disponibilité et la
-            portée des travaux. Ce qui allonge le plus un projet : changements
-            tardifs, décisions non finalisées, et séquencement mal coordonné
-            entre intervenants.
-          </p>
-          <ul>
-            <li>Valider le plan et les électroménagers avant fabrication.</li>
-            <li>
-              Confirmer les choix de matériaux/finis avant de lancer la
-              production.
-            </li>
-            <li>Planifier une marge pour imprévus, surtout en rénovation.</li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="materiaux-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+            {
+              text: "Couleurs & finis",
+              href: "/materiaux/couleurs/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="erreurs">
-          <h2 id="erreurs">Erreurs de séquencement à éviter</h2>
-          <ul>
-            <li>
-              Commander ou fabriquer avant que le plan soit vraiment final.
-            </li>
-            <li>
-              Modifier la plomberie/électricité après l’installation des
-              armoires.
-            </li>
-            <li>
-              Installer avant que les murs/planchers soient prêts (selon la
-              portée).
-            </li>
-            <li>Sous-estimer l’étape d’ajustements et de finition.</li>
-          </ul>
-          <p>
-            <a href="/guides/erreurs-renovation-cuisine/">
-              Voir les erreurs fréquentes
-            </a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="preparation"
+          heading="4) Préparation du chantier"
+          paragraphs={[
+            "Une préparation solide réduit le chaos : protection des zones, planification des intervenants, séquence claire. En condo, la logistique est souvent un facteur majeur.",
+          ]}
+        />
 
-        <Faq1
+        <ListSection
+          aria-labelledby="preparation-details"
+          heading=""
+          items={[
+            "Protection (planchers, circulation, zones adjacentes).",
+            "Démolition (si applicable) et gestion des débris.",
+            "Accès chantier : stationnement, ascenseur, horaires, voisins.",
+            "Coordination : qui intervient, quand, et dans quel ordre?",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="preparation-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir la rénovation de cuisine",
+              href: "/services/renovation/cuisine/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="travaux"
+          heading="5) Travaux techniques (avant l'installation)"
+          paragraphs={[
+            "Les travaux techniques doivent être prêts avant l'installation des armoires. Sinon, on se retrouve à refaire des éléments finis (murs, peinture, plancher) ou à modifier le plan.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="travaux-details"
+          heading=""
+          items={[
+            "Plomberie : évier, lave-vaisselle, relocalisations si nécessaires.",
+            "Électricité : circuits, prises, éclairage, hotte et électroménagers.",
+            "Ventilation : conduits, efficacité, bruit et conformité.",
+            "Murs/plancher : selon la portée (gypse, peinture, revêtements).",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="fabrication"
+          heading="6) Fabrication & installation des armoires"
+          paragraphs={[
+            "Une fois le plan validé, la fabrication suit le projet. L'installation exige précision et ajustements : niveaux, alignements, jeux réguliers et finition propre.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="fabrication-details"
+          heading=""
+          items={[
+            "Fabrication sur mesure selon le plan final.",
+            "Installation : niveaux, alignements, ajustements.",
+            "Préparation pour comptoir et éléments connexes.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="fabrication-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir la fabrication",
+              href: "/services/fabrication/",
+              variant: "outline",
+            },
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="finitions"
+          heading="7) Ajustements & finitions"
+          paragraphs={[
+            "C'est l'étape qui fait la différence entre \"correct\" et \"haut de gamme\" : portes alignées, tiroirs fluides, mécanismes réglés, finitions propres.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="finitions-details"
+          heading=""
+          items={[
+            "Réglage des portes, tiroirs et mécanismes.",
+            "Quincaillerie : confort, stabilité des réglages, usage quotidien.",
+            "Finitions : joints, retouches, détails visibles.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="finitions-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="inspection"
+          heading="8) Inspection finale"
+          paragraphs={[
+            "L'inspection finale valide le fonctionnement et la finition : ouverture/fermeture, alignements, tiroirs, accessoires, et points de détail. C'est aussi le moment de confirmer les dernières retouches si nécessaires.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="inspection-details"
+          heading=""
+          items={[
+            "Vérification globale et fonctionnement.",
+            "Validation du résultat avec le client.",
+            "Liste de retouches (si applicable) et finalisation.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="delais"
+          heading="Délais : à quoi s'attendre (sans chiffres)"
+          paragraphs={[
+            "Les délais varient selon la complexité, la disponibilité et la portée des travaux. Ce qui allonge le plus un projet : changements tardifs, décisions non finalisées, et séquencement mal coordonné entre intervenants.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="delais-details"
+          heading=""
+          items={[
+            "Valider le plan et les électroménagers avant fabrication.",
+            "Confirmer les choix de matériaux/finis avant de lancer la production.",
+            "Planifier une marge pour imprévus, surtout en rénovation.",
+          ]}
+          variant="bullets"
+        />
+
+        <ListSection
+          aria-labelledby="erreurs"
+          heading="Erreurs de séquencement à éviter"
+          items={[
+            "Commander ou fabriquer avant que le plan soit vraiment final.",
+            "Modifier la plomberie/électricité après l'installation des armoires.",
+            "Installer avant que les murs/planchers soient prêts (selon la portée).",
+            "Sous-estimer l'étape d'ajustements et de finition.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="erreurs-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir les erreurs fréquentes",
+              href: "/guides/erreurs-renovation-cuisine/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — étapes d'une rénovation de cuisine"
           items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
 
-        <section aria-labelledby="liens">
-          <h2 id="liens">Liens utiles</h2>
-          <ul>
-            <li>
-              <a href="/services/renovation/cuisine/">Rénovation de cuisine</a>
-            </li>
-            <li>
-              <a href="/espaces/cuisine/">Cuisine sur mesure</a>
-            </li>
-            <li>
-              <a href="/materiaux/comparatif/">Comparatif des matériaux</a>
-            </li>
-            <li>
-              <a href="/guides/erreurs-renovation-cuisine/">
-                Erreurs fréquentes
-              </a>
-            </li>
-            <li>
-              <a href="/contact/">Demander une soumission</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="liens"
+          heading="Liens utiles"
+          links={[
+            { label: "Rénovation de cuisine", href: "/services/renovation/cuisine/" },
+            { label: "Cuisine sur mesure", href: "/espaces/cuisine/" },
+            { label: "Comparatif des matériaux", href: "/materiaux/comparatif/" },
+            { label: "Erreurs fréquentes", href: "/guides/erreurs-renovation-cuisine/" },
+            { label: "Demander une soumission", href: "/contact/" },
+          ]}
+          columns={2}
+        />
       </main>
     </>
   );

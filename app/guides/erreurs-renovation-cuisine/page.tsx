@@ -3,8 +3,13 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Erreurs fréquentes en rénovation de cuisine",
@@ -64,7 +69,7 @@ export default function ErreursRenovationCuisine() {
     },
     {
       q: "Pourquoi l'installation est-elle aussi importante?",
-      a: 'Parce qu\'elle conditionne les alignements, les ajustements et la finition. C\'est souvent ce qui fait la différence entre "correct" et "haut de gamme".',
+      a: "Parce qu'elle conditionne les alignements, les ajustements et la finition. C'est souvent ce qui fait la différence entre \"correct\" et \"haut de gamme\".",
     },
   ];
 
@@ -73,335 +78,372 @@ export default function ErreursRenovationCuisine() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>
-            Les erreurs fréquentes en rénovation de cuisine (et comment les
-            éviter)
-          </h1>
-          <p>
-            Une rénovation de cuisine combine plusieurs décisions et plusieurs
-            intervenants : plan, matériaux, plomberie, électricité,
-            installation, finitions. Beaucoup d’erreurs coûtent cher non
-            seulement en argent, mais aussi en délais et en stress. Ce guide
-            vous aide à repérer les pièges les plus courants et à les éviter
-            avant le chantier.
-          </p>
-          <p>
-            <a href="/contact/">Parler de votre projet</a> {" | "}
-            <a href="/services/renovation/cuisine/">
-              Voir la rénovation de cuisine
-            </a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Les erreurs fréquentes en rénovation de cuisine (et comment les éviter)"
+          description="Une rénovation de cuisine combine plusieurs décisions et plusieurs intervenants : plan, matériaux, plomberie, électricité, installation, finitions. Beaucoup d'erreurs coûtent cher non seulement en argent, mais aussi en délais et en stress. Ce guide vous aide à repérer les pièges les plus courants et à les éviter avant le chantier."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler de votre projet",
+                href: "/contact/",
+              },
+              {
+                text: "Voir la rénovation de cuisine",
+                href: "/services/renovation/cuisine/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <nav aria-labelledby="sommaire">
-          <h2 id="sommaire">Sommaire</h2>
-          <ol>
-            <li>
-              <a href="#planification">Sous-estimer la planification</a>
-            </li>
-            <li>
-              <a href="#materiaux">
-                Choisir les matériaux pour le look seulement
-              </a>
-            </li>
-            <li>
-              <a href="#ergonomie">Négliger l’ergonomie et la circulation</a>
-            </li>
-            <li>
-              <a href="#technique">
-                Sous-estimer plomberie / électricité / ventilation
-              </a>
-            </li>
-            <li>
-              <a href="#coordination">
-                Manque de coordination et responsabilités floues
-              </a>
-            </li>
-            <li>
-              <a href="#installation">
-                Sous-estimer l’installation (et les ajustements)
-              </a>
-            </li>
-            <li>
-              <a href="#quincaillerie">Choisir une quincaillerie inadéquate</a>
-            </li>
-            <li>
-              <a href="#echeancier">Échéancier irréaliste</a>
-            </li>
-            <li>
-              <a href="#prix">Comparer uniquement sur le prix</a>
-            </li>
-            <li>
-              <a href="#checklist">Checklist avant de démarrer</a>
-            </li>
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
-          </ol>
-        </nav>
+        <TextSection
+          aria-labelledby="planification"
+          heading="1) Sous-estimer la planification"
+          paragraphs={[
+            "La cause la plus fréquente des dépassements et des délais : des décisions prises \"pendant\" le chantier. Une modification tardive peut déclencher des effets en chaîne (plomberie, électricité, gypse, comptoir, installation).",
+          ]}
+        />
 
-        <section aria-labelledby="planification">
-          <h2 id="planification">1) Sous-estimer la planification</h2>
-          <p>
-            La cause la plus fréquente des dépassements et des délais : des
-            décisions prises “pendant” le chantier. Une modification tardive
-            peut déclencher des effets en chaîne (plomberie, électricité, gypse,
-            comptoir, installation).
-          </p>
-          <ul>
-            <li>Plan incomplet ou non validé avant de démarrer.</li>
-            <li>
-              Choix de finis tardifs (portes, poignées, robinetterie,
-              éclairage).
-            </li>
-            <li>
-              Électroménagers non confirmés (dimensions, sorties, dégagements).
-            </li>
-          </ul>
-          <p>
-            Solution : cadrer le plan et les choix en amont via le{" "}
-            <a href="/services/design/">service de design</a>.
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="planification-details"
+          heading=""
+          items={[
+            "Plan incomplet ou non validé avant de démarrer.",
+            "Choix de finis tardifs (portes, poignées, robinetterie, éclairage).",
+            "Électroménagers non confirmés (dimensions, sorties, dégagements).",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="materiaux">
-          <h2 id="materiaux">
-            2) Choisir les matériaux pour le look seulement
-          </h2>
-          <p>
-            Un matériau peut être beau et pourtant mal adapté à l’usage
-            (humidité, impacts, entretien). Le point critique est souvent la
-            protection des chants et la cohérence du système (matériau +
-            quincaillerie + installation).
-          </p>
-          <ul>
-            <li>Ignorer l’humidité près de l’évier et du lave-vaisselle.</li>
-            <li>Choisir un matériau fragile sur des zones très sollicitées.</li>
-            <li>Sous-estimer l’impact des chants et de la finition.</li>
-          </ul>
-          <p>
-            <a href="/materiaux/comparatif/">
-              Voir le comparatif des matériaux
-            </a>{" "}
-            {" | "}
-            <a href="/materiaux/mdf/">MDF</a> {" | "}
-            <a href="/materiaux/melamine/">Mélamine</a> {" | "}
-            <a href="/materiaux/contreplaque/">Contreplaqué</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="planification-links"
+          heading=""
+          paragraphs={[
+            "Solution : cadrer le plan et les choix en amont via le service de design.",
+          ]}
+          links={[
+            {
+              text: "Service de design",
+              href: "/services/design/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="ergonomie">
-          <h2 id="ergonomie">3) Négliger l’ergonomie et la circulation</h2>
-          <p>
-            Une cuisine peut être superbe et pourtant inconfortable : îlot trop
-            grand, dégagements trop serrés, portes qui se frappent, zones de
-            travail mal placées.
-          </p>
-          <ul>
-            <li>Îlot dimensionné “pour la photo”, pas pour la circulation.</li>
-            <li>Ouvrir un tiroir bloque un passage ou un électroménager.</li>
-            <li>
-              Rangement non adapté aux habitudes (vaisselle, casseroles,
-              déchets).
-            </li>
-          </ul>
-          <p>
-            Référence : <a href="/espaces/cuisine/">Cuisine sur mesure</a>.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="materiaux"
+          heading="2) Choisir les matériaux pour le look seulement"
+          paragraphs={[
+            "Un matériau peut être beau et pourtant mal adapté à l'usage (humidité, impacts, entretien). Le point critique est souvent la protection des chants et la cohérence du système (matériau + quincaillerie + installation).",
+          ]}
+        />
 
-        <section aria-labelledby="technique">
-          <h2 id="technique">
-            4) Sous-estimer plomberie / électricité / ventilation
-          </h2>
-          <p>
-            Les contraintes techniques sont souvent la source des surprises :
-            sorties électriques mal placées, plomberie à déplacer, ventilation
-            insuffisante, éclairage à revoir.
-          </p>
-          <ul>
-            <li>Prises et circuits non adaptés aux électroménagers.</li>
-            <li>Plomberie non alignée avec le plan (évier, lave-vaisselle).</li>
-            <li>
-              Hotte et ventilation sous-estimées (bruit, efficacité, conduits).
-            </li>
-          </ul>
-          <p>
-            Dans un projet plus large, une approche clé en main peut réduire les
-            imprévus :{" "}
-            <a href="/services/renovation/cuisine/">Rénovation de cuisine</a>.
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="materiaux-details"
+          heading=""
+          items={[
+            "Ignorer l'humidité près de l'évier et du lave-vaisselle.",
+            "Choisir un matériau fragile sur des zones très sollicitées.",
+            "Sous-estimer l'impact des chants et de la finition.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="coordination">
-          <h2 id="coordination">
-            5) Manque de coordination et responsabilités floues
-          </h2>
-          <p>
-            Quand plusieurs intervenants sont impliqués, les problèmes viennent
-            souvent des zones grises : qui coordonne, qui valide, qui est
-            responsable si quelque chose ne fit pas?
-          </p>
-          <ul>
-            <li>
-              Calendrier qui glisse parce que les étapes ne sont pas séquencées.
-            </li>
-            <li>
-              Reprises (gypse, peinture, plancher) à cause d’un changement de
-              dernière minute.
-            </li>
-            <li>
-              Responsabilités fragmentées : chacun fait sa partie, personne ne
-              porte le résultat final.
-            </li>
-          </ul>
-          <p>
-            À lire :{" "}
-            <a href="/comparatifs/cuisiniste-vs-entrepreneur-general/">
-              Cuisiniste vs entrepreneur général
-            </a>
-            .
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="materiaux-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir le comparatif des matériaux",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+            {
+              text: "MDF",
+              href: "/materiaux/mdf/",
+              variant: "outline",
+            },
+            {
+              text: "Mélamine",
+              href: "/materiaux/melamine/",
+              variant: "outline",
+            },
+            {
+              text: "Contreplaqué",
+              href: "/materiaux/contreplaque/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="installation">
-          <h2 id="installation">
-            6) Sous-estimer l’installation (et les ajustements)
-          </h2>
-          <p>
-            Même une excellente fabrication peut donner un résultat moyen si
-            l’installation est approximative : alignements, niveaux,
-            ajustements, finitions et inspection finale.
-          </p>
-          <ul>
-            <li>Portes et tiroirs désalignés, jeux irréguliers.</li>
-            <li>Finitions bâclées autour des murs et des caissons.</li>
-            <li>Peu ou pas d’ajustements après la pose.</li>
-          </ul>
-          <p>
-            <a href="/services/installation/">Voir l’installation</a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="ergonomie"
+          heading="3) Négliger l'ergonomie et la circulation"
+          paragraphs={[
+            "Une cuisine peut être superbe et pourtant inconfortable : îlot trop grand, dégagements trop serrés, portes qui se frappent, zones de travail mal placées.",
+          ]}
+        />
 
-        <section aria-labelledby="quincaillerie">
-          <h2 id="quincaillerie">7) Choisir une quincaillerie inadéquate</h2>
-          <p>
-            La quincaillerie influence le confort et la longévité : charnières
-            qui gardent leurs réglages, coulisses stables en charge, fermeture
-            contrôlée.
-          </p>
-          <ul>
-            <li>Tiroirs qui frottent, prennent du jeu, ou “accrochent”.</li>
-            <li>Portes qui se désalignent, réglages instables.</li>
-            <li>Usure prématurée sur les zones les plus utilisées.</li>
-          </ul>
-          <p>
-            <a href="/materiaux/quincaillerie/">Voir la quincaillerie</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="ergonomie-details"
+          heading=""
+          items={[
+            "Îlot dimensionné \"pour la photo\", pas pour la circulation.",
+            "Ouvrir un tiroir bloque un passage ou un électroménager.",
+            "Rangement non adapté aux habitudes (vaisselle, casseroles, déchets).",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="echeancier">
-          <h2 id="echeancier">8) Échéancier irréaliste</h2>
-          <p>
-            Les délais s’allongent quand les dépendances entre étapes ne sont
-            pas respectées (démolition, plomberie/électricité, murs, plancher,
-            peinture, comptoir, installation, finitions). Prévoir une marge
-            réduit le stress et les décisions précipitées.
-          </p>
-          <ul>
-            <li>Planifier l’ordre des étapes (et les temps de séchage).</li>
-            <li>
-              Confirmer la disponibilité des matériaux et des intervenants.
-            </li>
-            <li>Éviter les changements tardifs qui cassent le calendrier.</li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="ergonomie-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Cuisine sur mesure",
+              href: "/espaces/cuisine/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="prix">
-          <h2 id="prix">9) Comparer uniquement sur le prix</h2>
-          <p>
-            Deux soumissions peuvent être incomparables : l’une inclut
-            coordination, ajustements et finition; l’autre non. Les “coûts
-            cachés” (reprises, délais, gestion) apparaissent souvent après coup.
-          </p>
-          <ul>
-            <li>Comparer la portée : qui fait quoi, et jusqu’où?</li>
-            <li>
-              Comparer l’installation : ajustements inclus? inspection finale?
-            </li>
-            <li>Comparer la coordination : responsabilités claires?</li>
-          </ul>
-          <p>
-            Référence :{" "}
-            <a href="/comparatifs/cuisiniste-vs-entrepreneur-general/">
-              Cuisiniste vs entrepreneur général
-            </a>
-            .
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="technique"
+          heading="4) Sous-estimer plomberie / électricité / ventilation"
+          paragraphs={[
+            "Les contraintes techniques sont souvent la source des surprises : sorties électriques mal placées, plomberie à déplacer, ventilation insuffisante, éclairage à revoir.",
+          ]}
+        />
 
-        <section aria-labelledby="checklist">
-          <h2 id="checklist">10) Checklist avant de démarrer</h2>
-          <p>Avant de lancer le chantier, assurez-vous d’avoir :</p>
-          <ul>
-            <li>Un plan validé (dimensions, électroménagers, dégagements).</li>
-            <li>
-              Les matériaux choisis selon l’usage (humidité, entretien,
-              durabilité).
-            </li>
-            <li>
-              Des responsabilités claires (coordination, décisions, validation).
-            </li>
-            <li>Un échéancier réaliste et séquencé.</li>
-            <li>
-              Une installation prévue (ajustements et inspection finale inclus).
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="technique-details"
+          heading=""
+          items={[
+            "Prises et circuits non adaptés aux électroménagers.",
+            "Plomberie non alignée avec le plan (évier, lave-vaisselle).",
+            "Hotte et ventilation sous-estimées (bruit, efficacité, conduits).",
+          ]}
+          variant="bullets"
+        />
 
-        <Faq1
+        <TextSection
+          aria-labelledby="technique-links"
+          heading=""
+          paragraphs={[
+            "Dans un projet plus large, une approche clé en main peut réduire les imprévus :",
+          ]}
+          links={[
+            {
+              text: "Rénovation de cuisine",
+              href: "/services/renovation/cuisine/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="coordination"
+          heading="5) Manque de coordination et responsabilités floues"
+          paragraphs={[
+            "Quand plusieurs intervenants sont impliqués, les problèmes viennent souvent des zones grises : qui coordonne, qui valide, qui est responsable si quelque chose ne fit pas?",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="coordination-details"
+          heading=""
+          items={[
+            "Calendrier qui glisse parce que les étapes ne sont pas séquencées.",
+            "Reprises (gypse, peinture, plancher) à cause d'un changement de dernière minute.",
+            "Responsabilités fragmentées : chacun fait sa partie, personne ne porte le résultat final.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="coordination-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Cuisiniste vs entrepreneur général",
+              href: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="installation"
+          heading="6) Sous-estimer l'installation (et les ajustements)"
+          paragraphs={[
+            "Même une excellente fabrication peut donner un résultat moyen si l'installation est approximative : alignements, niveaux, ajustements, finitions et inspection finale.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="installation-details"
+          heading=""
+          items={[
+            "Portes et tiroirs désalignés, jeux irréguliers.",
+            "Finitions bâclées autour des murs et des caissons.",
+            "Peu ou pas d'ajustements après la pose.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="installation-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="quincaillerie"
+          heading="7) Choisir une quincaillerie inadéquate"
+          paragraphs={[
+            "La quincaillerie influence le confort et la longévité : charnières qui gardent leurs réglages, coulisses stables en charge, fermeture contrôlée.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="quincaillerie-details"
+          heading=""
+          items={[
+            "Tiroirs qui frottent, prennent du jeu, ou \"accrochent\".",
+            "Portes qui se désalignent, réglages instables.",
+            "Usure prématurée sur les zones les plus utilisées.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="quincaillerie-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="echeancier"
+          heading="8) Échéancier irréaliste"
+          paragraphs={[
+            "Les délais s'allongent quand les dépendances entre étapes ne sont pas respectées (démolition, plomberie/électricité, murs, plancher, peinture, comptoir, installation, finitions). Prévoir une marge réduit le stress et les décisions précipitées.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="echeancier-details"
+          heading=""
+          items={[
+            "Planifier l'ordre des étapes (et les temps de séchage).",
+            "Confirmer la disponibilité des matériaux et des intervenants.",
+            "Éviter les changements tardifs qui cassent le calendrier.",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="prix"
+          heading="9) Comparer uniquement sur le prix"
+          paragraphs={[
+            "Deux soumissions peuvent être incomparables : l'une inclut coordination, ajustements et finition; l'autre non. Les \"coûts cachés\" (reprises, délais, gestion) apparaissent souvent après coup.",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="prix-details"
+          heading=""
+          items={[
+            "Comparer la portée : qui fait quoi, et jusqu'où?",
+            "Comparer l'installation : ajustements inclus? inspection finale?",
+            "Comparer la coordination : responsabilités claires?",
+          ]}
+          variant="bullets"
+        />
+
+        <TextSection
+          aria-labelledby="prix-links"
+          heading=""
+          paragraphs={[]}
+          links={[
+            {
+              text: "Cuisiniste vs entrepreneur général",
+              href: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="checklist"
+          heading="10) Checklist avant de démarrer"
+          paragraphs={[
+            "Avant de lancer le chantier, assurez-vous d'avoir :",
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="checklist-details"
+          heading=""
+          items={[
+            "Un plan validé (dimensions, électroménagers, dégagements).",
+            "Les matériaux choisis selon l'usage (humidité, entretien, durabilité).",
+            "Des responsabilités claires (coordination, décisions, validation).",
+            "Un échéancier réaliste et séquencé.",
+            "Une installation prévue (ajustements et inspection finale inclus).",
+          ]}
+          variant="bullets"
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — erreurs en rénovation de cuisine"
           items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
 
-        <section aria-labelledby="liens">
-          <h2 id="liens">Liens utiles</h2>
-          <ul>
-            <li>
-              <a href="/materiaux/comparatif/">Comparatif des matériaux</a>
-            </li>
-            <li>
-              <a href="/services/installation/">Installation</a>
-            </li>
-            <li>
-              <a href="/services/renovation/cuisine/">Rénovation de cuisine</a>
-            </li>
-            <li>
-              <a href="/espaces/cuisine/">Cuisine sur mesure</a>
-            </li>
-            <li>
-              <a href="/contact/">Demander une soumission</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="liens"
+          heading="Liens utiles"
+          links={[
+            { label: "Comparatif des matériaux", href: "/materiaux/comparatif/" },
+            { label: "Installation", href: "/services/installation/" },
+            { label: "Rénovation de cuisine", href: "/services/renovation/cuisine/" },
+            { label: "Cuisine sur mesure", href: "/espaces/cuisine/" },
+            { label: "Demander une soumission", href: "/contact/" },
+          ]}
+          columns={2}
+        />
       </main>
     </>
   );

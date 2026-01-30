@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
-import { Cta12 } from "@/components/cta12";
 import { ActionButtons } from "@/components/ActionButtons";
-import { ArrowRight } from "lucide-react";
-import { Process1 } from "@/components/process1";
-import { Section } from "@/components/Section";
+import { ArrowRight, Ruler, Shield, Wrench } from "lucide-react";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { ProofSection } from "@/components/sections/ProofSection";
+import { StepsSection } from "@/components/sections/StepsSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { SliderSection, type SliderItem } from "@/components/sections/SliderSection";
+import { CTASection } from "@/components/sections/CTASection";
 const siteUrl = "https://dilamco.com";
 
 export const metadata: Metadata = {
@@ -43,43 +47,15 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main id="contenu">
-      <header>
-        <h1>Dilamco — Sur mesure haut de gamme, clé en main</h1>
-        <p>
-          Cuisines, vanités et rangement sur mesure. Design, fabrication,
-          installation et rénovation complète au besoin — principalement à
-          Montréal, Laval et sur la Rive-Sud.
-        </p>
-      </header>
-
-      <section aria-labelledby="hero">
-        <h2 id="hero">
-          Cuisines, salles de bain et espaces sur mesure, sans casse-tête
-        </h2>
-        <p>
-          Vous voulez un résultat cohérent, durable et bien exécuté. On vous
-          accompagne du plan à la finition : design, fabrication sur mesure,
-          installation précise, et coordination des travaux connexes lorsque le
-          projet le requiert.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Sur mesure réel :</strong> adapté à votre espace (coins,
-            accès, circulation, rangement).
-          </li>
-          <li>
-            <strong>Qualité et durabilité :</strong> matériaux et détails de
-            fabrication pensés pour durer.
-          </li>
-          <li>
-            <strong>Approche clé en main :</strong> un seul responsable pour
-            réduire les imprévus.
-          </li>
-        </ul>
-
-        <ActionButtons
-          buttons={[
+      <HeroSection
+        heading="Dilamco — Sur mesure haut de gamme, clé en main"
+        description="Cuisines, vanités et rangement sur mesure. Design, fabrication, installation et rénovation complète au besoin — principalement à Montréal, Laval et sur la Rive-Sud."
+        image={{
+          src: "/images/hero-image.webp",
+          alt: "Dilamco — Sur mesure haut de gamme, clé en main",
+        }}
+        actionsSlot={
+          <ActionButtons className="justify-start" buttons={[
             {
               text: "Obtenir une soumission gratuite",
               href: "/contact",
@@ -90,161 +66,165 @@ export default function Home() {
               variant: "outline",
               icon: ArrowRight,
             },
-          ]}
-        />
-      </section>
+          ]} />
+        }
+      />
 
-      <section aria-labelledby="espaces">
-        <h2 id="espaces">Choisissez votre espace</h2>
-        <p>
-          Chaque espace a ses contraintes. Notre travail : optimiser la
-          fonctionnalité, la durabilité et la finition — sans compromis sur le
-          look.
-        </p>
-        <ul>
-          <li>
-            <a href="/espaces/cuisine/">Cuisine sur mesure</a>
-          </li>
-          <li>
-            <a href="/espaces/salle-de-bain/">
-              Salle de bain & vanités sur mesure
-            </a>
-          </li>
-          <li>
-            <a href="/espaces/walk-in/">Walk-in & rangement</a>
-          </li>
-          <li>
-            <a href="/espaces/salle-de-lavage/">Salle de lavage</a>
-          </li>
-          <li>
-            <a href="/espaces/commercial/">Commercial</a>
-          </li>
-        </ul>
-      </section>
+      <FeatureGridSection
+        aria-labelledby="hero"
+        heading="Cuisines, salles de bain et espaces sur mesure, sans casse-tête"
+        description="Vous voulez un résultat cohérent, durable et bien exécuté. On vous accompagne du plan à la finition : design, fabrication sur mesure, installation précise, et coordination des travaux connexes lorsque le projet le requiert."
+        features={[
+          {
+            title: "Sur mesure réel",
+            description: "Adapté à votre espace (coins, accès, circulation, rangement).",
+            icon: Ruler,
+          },
+          {
+            title: "Qualité et durabilité",
+            description: "Matériaux et détails de fabrication pensés pour durer.",
+            icon: Shield,
+          },
+          {
+            title: "Approche clé en main",
+            description: "Un seul responsable pour réduire les imprévus.",
+            icon: Wrench,
+          },
+        ]}
+        columns={3}
+      />
 
-      <section aria-labelledby="differenciation">
-        <h2 id="differenciation">Ce qui distingue Dilamco</h2>
-        <p>
-          Le haut de gamme, ce n’est pas un mot : c’est une somme de décisions
-          (matériaux, assemblage, quincaillerie, installation) et une exécution
-          contrôlée.
-        </p>
-
-        <ul>
-          <li>
-            <strong>Design orienté usage :</strong> rangement logique,
-            ergonomie, accès aux coins, circulation fluide.
-          </li>
-          <li>
-            <strong>Fabrication robuste :</strong> choix de matériaux adaptés à
-            la cuisine et à l’humidité en salle de bain.
-          </li>
-          <li>
-            <strong>Installation soignée :</strong> alignements, ajustements,
-            finition — le détail qui change tout.
-          </li>
-        </ul>
-
-        <ActionButtons
-          buttons={[
-            {
-              text: "Voir nos matériaux",
-              href: "/materiaux/",
-              variant: "outline",
+      <SliderSection
+        aria-labelledby="espaces"
+        heading="Choisissez votre espace"
+        description="Découvrez nos solutions sur mesure pour chaque espace de votre maison ou entreprise."
+        items={[
+          {
+            id: "cuisine",
+            title: "Cuisine sur mesure",
+            description: "Transformez votre cuisine en un espace unique, pensé pour vous et sans compromis sur la qualité ni explosion du budget.",
+            href: "/espaces/cuisine/",
+            image: {
+              src: "/images/spaces/cabinet-cuisines.webp",
+              alt: "Custom kitchen cabinets and design",
             },
-            {
-              text: "Découvrir nos services",
-              href: "/services/",
-              variant: "outline",
+          },
+          {
+            id: "salle-de-bain",
+            title: "Salle de bain & vanités sur mesure",
+            description: "Offrez-vous une salle de bain élégante, fonctionnelle et durable, conçue selon vos goûts et vos besoins.",
+            href: "/espaces/salle-de-bain/",
+            image: {
+              src: "/images/spaces/vanite-salles-de-bain.webp",
+              alt: "Custom bathroom vanity and design",
             },
-          ]}
-        />
-      </section>
+          },
+          {
+            id: "walk-in",
+            title: "Walk-in & rangement",
+            href: "/espaces/walk-in/",
+            description: "Maximisez chaque espace avec une garde-robe ou un walk-in conçu pour vous, élégant, fonctionnel et durable.",
+            image: {
+              src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+              alt: "Custom walk-in closet and storage",
+            },
+          },
+          {
+            id: "salle-de-lavage",
+            title: "Salle de lavage",
+            href: "/espaces/salle-de-lavage/",
+            description: "Optimisez vos tâches quotidiennes avec une salle de lavage sur-mesure, pensée pour être pratique, durable et élégante.",
+            image: {
+              src: "/images/spaces/vanite-salles-de-lavage.webp",
+              alt: "Custom laundry room cabinets",
+            },
+          },
+          {
+            id: "commercial",
+            title: "Commercial",
+            href: "/espaces/commercial/",
+            description: "Transformez vos espaces commerciaux en des lieux de vente attrayants et fonctionnels, conçus pour maximiser votre rentabilité.",
+            image: {
+              src: "/images/spaces/commercial.webp",
+              alt: "Commercial custom spaces",
+            },
+          },
+        ]}
+      />
 
-      <Section aria-labelledby="processus">
-        <Process1
-          heading="Une approche simple, une exécution cadrée"
-          description="Une approche simple, une exécution cadrée"
-          steps={[
-            {
-              step: "1",
-              title: "Analyse & design",
-              description: "Besoins, contraintes, plan et choix de matériaux.",
-            },
-            {
-              step: "2",
-              title: "Fabrication sur mesure",
-              description: "Production selon votre configuration.",
-            },
-            {
-              step: "3",
-              title: "Coordination (si applicable)",
-              description: "Travaux connexes pour une rénovation complète.",
-            },
-            {
-              step: "4",
-              title: "Installation & ajustements",
-              description: "Finition, alignements, inspection finale.",
-            },
-          ]}
-          actions={
-            <ActionButtons
-              buttons={[
-                {
-                  text: "Voir la rénovation de cuisine",
-                  href: "/services/renovation/cuisine/",
-                  variant: "outline",
-                },
-                {
-                  text: "Voir l'installation",
-                  href: "/services/installation/",
-                  variant: "outline",
-                },
-              ]}
-            />
-          }
-        />
-      </Section>
+      <ProofSection
+        aria-labelledby="differenciation"
+        heading="Ce qui distingue Dilamco"
+        description="Le haut de gamme, ce n'est pas un mot : c'est une somme de décisions (matériaux, assemblage, quincaillerie, installation) et une exécution contrôlée."
+        items={[
+          {
+            title: "Design orienté usage",
+            description: "Rangement logique, ergonomie, accès aux coins, circulation fluide.",
+          },
+          {
+            title: "Fabrication robuste",
+            description: "Choix de matériaux adaptés à la cuisine et à l'humidité en salle de bain.",
+          },
+          {
+            title: "Installation soignée",
+            description: "Alignements, ajustements, finition — le détail qui change tout.",
+          },
+        ]}
+      />
 
-      <section aria-labelledby="preuves">
-        <h2 id="preuves">Projets récents</h2>
-        <p>
-          La meilleure preuve, c’est un projet livré. Consultez nos réalisations
-          pour voir le style, le niveau de finition et les configurations
-          possibles.
-        </p>
-        <ul>
-          <li>
-            <a href="/projets/cuisine/">Voir les projets de cuisines</a>
-          </li>
-          <li>
-            <a href="/projets/salle-de-bain/">
-              Voir les projets de salles de bain
-            </a>
-          </li>
-          <li>
-            <a href="/projets/">Voir tous les projets</a>
-          </li>
-        </ul>
-      </section>
+      <StepsSection
+        aria-labelledby="processus"
+        heading="Une approche simple, une exécution cadrée"
+        description="Une approche simple, une exécution cadrée"
+        steps={[
+          {
+            id: "1",
+            title: "Analyse & design",
+            description: "Besoins, contraintes, plan et choix de matériaux.",
+          },
+          {
+            id: "2",
+            title: "Fabrication sur mesure",
+            description: "Production selon votre configuration.",
+          },
+          {
+            id: "3",
+            title: "Coordination (si applicable)",
+            description: "Travaux connexes pour une rénovation complète.",
+          },
+          {
+            id: "4",
+            title: "Installation & ajustements",
+            description: "Finition, alignements, inspection finale.",
+          },
+        ]}
+      />
 
-      <Section aria-labelledby="cta">
-        <Cta12
-          heading="Parlez-nous de votre projet"
-          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          actions={
-            <ActionButtons
-              className="lg:justify-center"
-              buttons={[
-                {
-                  text: "Demander une soumission",
-                  href: "/contact/",
-                },
-              ]}
-            />
-          }
-        />
-      </Section>
+      <RelatedLinksSection
+        aria-labelledby="preuves"
+        heading="Projets récents"
+        links={[
+          { label: "Voir les projets de cuisines", href: "/projets/cuisine/" },
+          {
+            label: "Voir les projets de salles de bain",
+            href: "/projets/salle-de-bain/",
+          },
+          { label: "Voir tous les projets", href: "/projets/" },
+        ]}
+        columns={3}
+      />
+
+      <CTASection
+        aria-labelledby="cta"
+        heading="Parlez-nous de votre projet"
+        description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+        actions={[
+          {
+            text: "Demander une soumission",
+            href: "/contact/",
+          },
+        ]}
+      />
     </main>
   );
 }

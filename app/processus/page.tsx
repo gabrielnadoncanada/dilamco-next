@@ -7,8 +7,15 @@ import {
 } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Faq1 } from "@/components/faq1";
-import { Cta12 } from "@/components/cta12";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { ProofSection } from "@/components/sections/ProofSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Processus",
@@ -84,268 +91,181 @@ export default function Processus() {
       <JsonLd data={faqJsonLd(faqItems)} />
 
       <main id="contenu">
-        <header>
-          <h1>Notre processus — du plan à la finition</h1>
-          <p>
-            Une cuisine, une salle de bain ou un aménagement sur mesure n’est
-            pas seulement un produit : c’est un projet. La différence entre un
-            résultat “correct” et un résultat haut de gamme vient surtout de la
-            méthode : décisions prises tôt, coordination claire, fabrication
-            cohérente et installation précise.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/projets/">Voir des projets</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Notre processus, du plan à la finition"
+          description="Une cuisine, une salle de bain ou un aménagement sur mesure n'est pas seulement un produit : c'est un projet. La différence entre un résultat « correct » et un résultat haut de gamme vient surtout de la méthode : décisions prises tôt, coordination claire, fabrication cohérente et installation précise."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir des projets",
+                href: "/projets/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <nav aria-labelledby="sommaire">
-          <h2 id="sommaire">Sommaire</h2>
-          <ol>
-            <li>
-              <a href="#pourquoi">Pourquoi un processus clair</a>
-            </li>
-            <li>
-              <a href="#etapes">Les étapes du processus</a>
-            </li>
-            <li>
-              <a href="#ce-que-vous-recevez">Ce que vous recevez</a>
-            </li>
-            <li>
-              <a href="#ce-quon-vous-demande">Ce qu’on vous demande</a>
-            </li>
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
-          </ol>
-        </nav>
+        <TextSection
+          aria-labelledby="pourquoi"
+          heading="Pourquoi un processus clair?"
+          paragraphs={[
+            "Un bon résultat dépend moins des « bonnes intentions » que d'un déroulement maîtrisé. Un processus clair sert à réduire les zones grises, protéger la qualité et rendre le projet plus prévisible.",
+          ]}
+        />
 
-        <section aria-labelledby="pourquoi">
-          <h2 id="pourquoi">Pourquoi un processus clair?</h2>
-          <p>
-            Un bon résultat dépend moins des “bonnes intentions” que d’un
-            déroulement maîtrisé. Un processus clair sert à réduire les zones
-            grises, protéger la qualité et rendre le projet plus prévisible.
-          </p>
-          <ul>
-            <li>
-              <strong>Réduire les imprévus :</strong> moins de reprises, moins
-              de décisions en urgence.
-            </li>
-            <li>
-              <strong>Clarifier les responsabilités :</strong> qui fait quoi, à
-              quel moment.
-            </li>
-            <li>
-              <strong>Protéger la qualité :</strong> alignements, ajustements,
-              finitions et durabilité.
-            </li>
-            <li>
-              <strong>Améliorer l’expérience :</strong> un déroulement plus
-              simple, plus prévisible.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="pourquoi-details"
+          heading=""
+          items={[
+            "Réduire les imprévus : moins de reprises, moins de décisions en urgence.",
+            "Clarifier les responsabilités : qui fait quoi, à quel moment.",
+            "Protéger la qualité : alignements, ajustements, finitions et durabilité.",
+            "Améliorer l'expérience : un déroulement plus simple, plus prévisible.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="etapes">
-          <h2 id="etapes">Les étapes du processus Dilamco</h2>
+        <ProcessSection
+          aria-labelledby="etapes"
+          heading="Les étapes du processus Dilamco"
+          steps={[
+            {
+              step: "1",
+              title: "Cadrage du projet",
+              description: "On clarifie la portée (aménagement seulement vs rénovation), vos priorités, les contraintes (espace, circulation, intégrations) et votre échéance.",
+            },
+            {
+              step: "2",
+              title: "Design & planification",
+              description: "On valide un plan fonctionnel et réaliste : circulation, dégagements, modules, intégrations, et décisions structurantes avant fabrication.",
+            },
+            {
+              step: "3",
+              title: "Choix des matériaux & finis",
+              description: "On choisit selon l'usage (humidité, impacts, entretien) et le rendu recherché. Une solution durable dépend aussi des chants, de la quincaillerie et de l'installation.",
+            },
+            {
+              step: "4",
+              title: "Préparation & coordination (selon la portée)",
+              description: "Si le projet inclut des travaux connexes, on planifie la séquence : démolition, plomberie, électricité, ventilation, murs/plancher, pour éviter les reprises et les délais.",
+            },
+            {
+              step: "5",
+              title: "Fabrication sur mesure",
+              description: "La fabrication démarre lorsque le plan et les choix essentiels sont validés. L'objectif : cohérence, précision et qualité stable.",
+            },
+            {
+              step: "6",
+              title: "Installation, ajustements & finition",
+              description: "L'installation et les ajustements sont déterminants : niveaux, alignements, jeux réguliers, réglages des portes/tiroirs, et finitions propres.",
+            },
+            {
+              step: "7",
+              title: "Inspection finale",
+              description: "On valide le fonctionnement (portes/tiroirs), les alignements et les points de finition. L'objectif est un résultat propre, durable et cohérent avec le plan.",
+            },
+          ]}
+        />
 
-          <section aria-labelledby="etape-1">
-            <h3 id="etape-1">1) Cadrage du projet</h3>
-            <p>
-              On clarifie la portée (aménagement seulement vs rénovation), vos
-              priorités, les contraintes (espace, circulation, intégrations) et
-              votre échéance.
-            </p>
-            <ul>
-              <li>
-                Type d’espace : cuisine, salle de bain, walk-in, salle de
-                lavage, commercial.
-              </li>
-              <li>
-                Objectifs : rangement, circulation, style, entretien,
-                durabilité.
-              </li>
-              <li>
-                Contraintes : accès, condo, dimensions, points techniques.
-              </li>
-            </ul>
-          </section>
+        <RelatedLinksSection
+          aria-labelledby="etapes-links"
+          heading="Ressources pour approfondir"
+          links={[
+            { label: "Service Design", href: "/services/design/" },
+            { label: "Guide : choisir une cuisine sur mesure", href: "/guides/comment-choisir-cuisine-sur-mesure/" },
+            { label: "Comparatif des matériaux", href: "/materiaux/comparatif/" },
+            { label: "Quincaillerie", href: "/materiaux/quincaillerie/" },
+            { label: "Couleurs & finis", href: "/materiaux/couleurs/" },
+            { label: "Rénovation clé en main", href: "/services/renovation/" },
+            { label: "Guide : étapes d'une rénovation", href: "/guides/etapes-renovation-cuisine/" },
+            { label: "Guide : erreurs fréquentes", href: "/guides/erreurs-renovation-cuisine/" },
+            { label: "Service Fabrication", href: "/services/fabrication/" },
+            { label: "Service Installation", href: "/services/installation/" },
+          ]}
+          columns={3}
+        />
 
-          <section aria-labelledby="etape-2">
-            <h3 id="etape-2">2) Design & planification</h3>
-            <p>
-              On valide un plan fonctionnel et réaliste : circulation,
-              dégagements, modules, intégrations, et décisions structurantes
-              avant fabrication.
-            </p>
-            <p>
-              <a href="/services/design/">Service Design</a> {" | "}
-              <a href="/guides/comment-choisir-cuisine-sur-mesure/">
-                Guide : choisir une cuisine sur mesure
-              </a>
-            </p>
-          </section>
+        <ProofSection
+          aria-labelledby="ce-que-vous-recevez"
+          heading="Ce que vous recevez"
+          items={[
+            {
+              title: "Un plan clair",
+              description: "Priorités, configuration et décisions structurantes.",
+            },
+            {
+              title: "Des choix cohérents",
+              description: "Matériaux, finis et quincaillerie adaptés à l'usage.",
+            },
+            {
+              title: "Une exécution maîtrisée",
+              description: "Fabrication et installation avec ajustements.",
+            },
+            {
+              title: "Une finition propre",
+              description: "Alignements, détails visibles, inspection finale.",
+            },
+          ]}
+        />
 
-          <section aria-labelledby="etape-3">
-            <h3 id="etape-3">3) Choix des matériaux & finis</h3>
-            <p>
-              On choisit selon l’usage (humidité, impacts, entretien) et le
-              rendu recherché. Une solution durable dépend aussi des chants, de
-              la quincaillerie et de l’installation.
-            </p>
-            <ul>
-              <li>
-                <a href="/materiaux/comparatif/">Comparatif des matériaux</a>
-              </li>
-              <li>
-                <a href="/materiaux/quincaillerie/">Quincaillerie</a>
-              </li>
-              <li>
-                <a href="/materiaux/couleurs/">Couleurs & finis</a>
-              </li>
-            </ul>
-          </section>
+        <TextSection
+          aria-labelledby="ce-quon-vous-demande"
+          heading="Ce qu'on vous demande (pour avancer vite)"
+          paragraphs={[
+            "Pour vous orienter efficacement, quelques informations suffisent :",
+          ]}
+        />
 
-          <section aria-labelledby="etape-4">
-            <h3 id="etape-4">
-              4) Préparation & coordination (selon la portée)
-            </h3>
-            <p>
-              Si le projet inclut des travaux connexes, on planifie la séquence
-              : démolition, plomberie, électricité, ventilation, murs/plancher,
-              pour éviter les reprises et les délais.
-            </p>
-            <p>
-              <a href="/services/renovation/">Rénovation clé en main</a> {" | "}
-              <a href="/guides/etapes-renovation-cuisine/">
-                Guide : étapes d’une rénovation
-              </a>{" "}
-              {" | "}
-              <a href="/guides/erreurs-renovation-cuisine/">
-                Guide : erreurs fréquentes
-              </a>
-            </p>
-          </section>
+        <ListSection
+          aria-labelledby="ce-quon-vous-demande-details"
+          heading=""
+          items={[
+            "Votre secteur (Montréal / Laval / Rive-Sud).",
+            "Le type d'espace (cuisine, salle de bain, walk-in, salle de lavage, commercial).",
+            "La portée (aménagement seulement ou rénovation complète).",
+            "Vos priorités (rangement, îlot, style, entretien, contraintes).",
+            "Votre échéance (quand vous souhaitez démarrer).",
+          ]}
+          variant="bullets"
+        />
 
-          <section aria-labelledby="etape-5">
-            <h3 id="etape-5">5) Fabrication sur mesure</h3>
-            <p>
-              La fabrication démarre lorsque le plan et les choix essentiels
-              sont validés. L’objectif : cohérence, précision et qualité stable.
-            </p>
-            <p>
-              <a href="/services/fabrication/">Service Fabrication</a>
-            </p>
-          </section>
-
-          <section aria-labelledby="etape-6">
-            <h3 id="etape-6">6) Installation, ajustements & finition</h3>
-            <p>
-              L’installation et les ajustements sont déterminants : niveaux,
-              alignements, jeux réguliers, réglages des portes/tiroirs, et
-              finitions propres.
-            </p>
-            <p>
-              <a href="/services/installation/">Service Installation</a>
-            </p>
-          </section>
-
-          <section aria-labelledby="etape-7">
-            <h3 id="etape-7">7) Inspection finale</h3>
-            <p>
-              On valide le fonctionnement (portes/tiroirs), les alignements et
-              les points de finition. L’objectif est un résultat propre, durable
-              et cohérent avec le plan.
-            </p>
-          </section>
-        </section>
-
-        <section aria-labelledby="ce-que-vous-recevez">
-          <h2 id="ce-que-vous-recevez">Ce que vous recevez</h2>
-          <ul>
-            <li>
-              <strong>Un plan clair :</strong> priorités, configuration et
-              décisions structurantes.
-            </li>
-            <li>
-              <strong>Des choix cohérents :</strong> matériaux, finis et
-              quincaillerie adaptés à l’usage.
-            </li>
-            <li>
-              <strong>Une exécution maîtrisée :</strong> fabrication et
-              installation avec ajustements.
-            </li>
-            <li>
-              <strong>Une finition propre :</strong> alignements, détails
-              visibles, inspection finale.
-            </li>
-          </ul>
-        </section>
-
-        <section aria-labelledby="ce-quon-vous-demande">
-          <h2 id="ce-quon-vous-demande">
-            Ce qu’on vous demande (pour avancer vite)
-          </h2>
-          <p>
-            Pour vous orienter efficacement, quelques informations suffisent :
-          </p>
-          <ul>
-            <li>Votre secteur (Montréal / Laval / Rive-Sud).</li>
-            <li>
-              Le type d’espace (cuisine, salle de bain, walk-in, salle de
-              lavage, commercial).
-            </li>
-            <li>La portée (aménagement seulement ou rénovation complète).</li>
-            <li>
-              Vos priorités (rangement, îlot, style, entretien, contraintes).
-            </li>
-            <li>Votre échéance (quand vous souhaitez démarrer).</li>
-          </ul>
-        </section>
-
-        <Faq1
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — processus"
           items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
 
-        <section aria-labelledby="liens">
-          <h2 id="liens">Liens utiles</h2>
-          <ul>
-            <li>
-              <a href="/espaces/">Espaces</a>
-            </li>
-            <li>
-              <a href="/services/">Services</a>
-            </li>
-            <li>
-              <a href="/projets/">Projets</a>
-            </li>
-            <li>
-              <a href="/materiaux/">Matériaux</a>
-            </li>
-            <li>
-              <a href="/contact/">Contact</a>
-            </li>
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="liens"
+          heading="Liens utiles"
+          links={[
+            { label: "Espaces", href: "/espaces/" },
+            { label: "Services", href: "/services/" },
+            { label: "Projets", href: "/projets/" },
+            { label: "Matériaux", href: "/materiaux/" },
+            { label: "Contact", href: "/contact/" },
+          ]}
+          columns={3}
+        />
       </main>
     </>
   );

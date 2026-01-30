@@ -3,8 +3,13 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Quincaillerie",
@@ -70,210 +75,214 @@ export default function Quincaillerie() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>Quincaillerie — confort, précision et durabilité au quotidien</h1>
-          <p>
-            La quincaillerie (charnières, coulisses, mécanismes) est souvent le
-            facteur le plus déterminant de l’expérience au quotidien. Ce sont
-            les pièces qui bougent, donc celles qui s’usent. Une quincaillerie
-            de qualité, bien installée et bien ajustée, améliore la longévité,
-            la stabilité et le “feel” haut de gamme.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/materiaux/">Voir tous les matériaux</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Quincaillerie, confort, précision et durabilité au quotidien"
+          description="La quincaillerie (charnières, coulisses, mécanismes) est souvent le facteur le plus déterminant de l'expérience au quotidien. Ce sont les pièces qui bougent, donc celles qui s'usent. Une quincaillerie de qualité, bien installée et bien ajustée, améliore la longévité, la stabilité et le « feel » haut de gamme."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir tous les matériaux",
+                href: "/materiaux/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="pourquoi">
-          <h2 id="pourquoi">Pourquoi la quincaillerie est critique</h2>
-          <ul>
-            <li>
-              <strong>Usage réel :</strong> ce sont des milliers de cycles
-              d’ouverture/fermeture sur la durée de vie d’une cuisine.
-            </li>
-            <li>
-              <strong>Réglages :</strong> une bonne quincaillerie permet des
-              ajustements précis (portes alignées, tiroirs stables).
-            </li>
-            <li>
-              <strong>Perception de qualité :</strong> une cuisine peut
-              “sembler” haut de gamme ou standard selon la fluidité des tiroirs
-              et des portes.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="pourquoi"
+          heading="Pourquoi la quincaillerie est critique"
+          items={[
+            "Usage réel : ce sont des milliers de cycles d'ouverture/fermeture sur la durée de vie d'une cuisine.",
+            "Réglages : une bonne quincaillerie permet des ajustements précis (portes alignées, tiroirs stables).",
+            "Perception de qualité : une cuisine peut « sembler » haut de gamme ou standard selon la fluidité des tiroirs et des portes.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="types">
-          <h2 id="types">Types de quincaillerie</h2>
+        <TextSection
+          aria-labelledby="types"
+          heading="Types de quincaillerie"
+          paragraphs={[]}
+        />
 
-          <h3>Charnières</h3>
-          <ul>
-            <li>
-              <strong>Ajustabilité :</strong> alignements et corrections fines
-              (vertical, horizontal, profondeur).
-            </li>
-            <li>
-              <strong>Soft-close :</strong> fermeture amortie pour réduire les
-              chocs et améliorer le confort.
-            </li>
-          </ul>
+        <ListSection
+          aria-labelledby="charnieres"
+          heading="Charnières"
+          items={[
+            "Ajustabilité : alignements et corrections fines (vertical, horizontal, profondeur).",
+            "Soft-close : fermeture amortie pour réduire les chocs et améliorer le confort.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Coulisses de tiroirs</h3>
-          <ul>
-            <li>
-              <strong>Extension :</strong> accès complet au contenu (selon le
-              système).
-            </li>
-            <li>
-              <strong>Capacité de charge :</strong> important pour casseroles,
-              vaisselle et tiroirs très utilisés.
-            </li>
-            <li>
-              <strong>Stabilité :</strong> tiroirs fluides, sans jeu, même en
-              charge.
-            </li>
-          </ul>
+        <ListSection
+          aria-labelledby="coulisses"
+          heading="Coulisses de tiroirs"
+          items={[
+            "Extension : accès complet au contenu (selon le système).",
+            "Capacité de charge : important pour casseroles, vaisselle et tiroirs très utilisés.",
+            "Stabilité : tiroirs fluides, sans jeu, même en charge.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Mécanismes et accessoires</h3>
-          <ul>
-            <li>
-              Solutions d’angle et rangement spécialisé (selon configuration).
-            </li>
-            <li>
-              Mécanismes escamotables et accessoires pour optimiser l’usage.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="mecanismes"
+          heading="Mécanismes et accessoires"
+          items={[
+            "Solutions d'angle et rangement spécialisé (selon configuration).",
+            "Mécanismes escamotables et accessoires pour optimiser l'usage.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="qualite">
-          <h2 id="qualite">Quincaillerie de qualité : ce que ça change</h2>
-          <ul>
-            <li>
-              <strong>Confort :</strong> ouverture fluide, fermeture contrôlée,
-              moins de bruit.
-            </li>
-            <li>
-              <strong>Durabilité :</strong> moins de jeu, moins d’affaissement,
-              réglages qui tiennent.
-            </li>
-            <li>
-              <strong>Entretien réduit :</strong> moins d’ajustements à refaire
-              avec le temps.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="qualite"
+          heading="Quincaillerie de qualité : ce que ça change"
+          items={[
+            "Confort : ouverture fluide, fermeture contrôlée, moins de bruit.",
+            "Durabilité : moins de jeu, moins d'affaissement, réglages qui tiennent.",
+            "Entretien réduit : moins d'ajustements à refaire avec le temps.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="bas-de-gamme">
-          <h2 id="bas-de-gamme">Risques d’une quincaillerie bas de gamme</h2>
-          <ul>
-            <li>Portes qui se désalignent, réglages qui bougent.</li>
-            <li>
-              Tiroirs qui frottent, qui “accrochent” ou qui prennent du jeu.
-            </li>
-            <li>Usure prématurée et remplacements plus rapides.</li>
-            <li>
-              Expérience quotidienne frustrante, même si le design est beau.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="bas-de-gamme"
+          heading="Risques d'une quincaillerie bas de gamme"
+          items={[
+            "Portes qui se désalignent, réglages qui bougent.",
+            "Tiroirs qui frottent, qui « accrochent » ou qui prennent du jeu.",
+            "Usure prématurée et remplacements plus rapides.",
+            "Expérience quotidienne frustrante, même si le design est beau.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="cuisine-sdb">
-          <h2 id="cuisine-sdb">
-            Cuisine vs salle de bain : contraintes différentes
-          </h2>
+        <TextSection
+          aria-labelledby="cuisine-sdb"
+          heading="Cuisine vs salle de bain : contraintes différentes"
+          paragraphs={[]}
+        />
 
-          <h3>Cuisine</h3>
-          <ul>
-            <li>Cycles d’ouverture très élevés (usage quotidien intensif).</li>
-            <li>
-              Charges importantes (vaisselle, casseroles, tiroirs profonds).
-            </li>
-            <li>La stabilité des coulisses devient un point critique.</li>
-          </ul>
-          <p>
-            <a href="/espaces/cuisine/">Voir la page Cuisine sur mesure</a>
-          </p>
+        <ListSection
+          aria-labelledby="cuisine-details"
+          heading="Cuisine"
+          items={[
+            "Cycles d'ouverture très élevés (usage quotidien intensif).",
+            "Charges importantes (vaisselle, casseroles, tiroirs profonds).",
+            "La stabilité des coulisses devient un point critique.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Salle de bain</h3>
-          <ul>
-            <li>
-              Humidité : importance des détails d’exécution et de la cohérence
-              des choix.
-            </li>
-            <li>
-              Réglages fins et protection globale (installation et finition).
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/salle-de-bain/">
-              Voir la page Salle de bain & vanités
-            </a>
-          </p>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="cuisine-link"
+          heading=""
+          links={[
+            { label: "Voir la page Cuisine sur mesure", href: "/espaces/cuisine/" },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="materiaux">
-          <h2 id="materiaux">Lien entre matériaux et quincaillerie</h2>
-          <p>
-            Les matériaux et la quincaillerie forment un système : structure,
-            chants, assemblage, quincaillerie et installation. Une bonne
-            quincaillerie ne compense pas une mauvaise exécution, et un bon
-            matériau peut être “ruiné” par une quincaillerie faible.
-          </p>
-          <p>
-            <a href="/materiaux/contreplaque/">Pourquoi le contreplaqué</a>{" "}
-            {" | "}
-            <a href="/materiaux/mdf/">MDF</a> {" | "}
-            <a href="/materiaux/melamine/">Mélamine</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="sdb-details"
+          heading="Salle de bain"
+          items={[
+            "Humidité : importance des détails d'exécution et de la cohérence des choix.",
+            "Réglages fins et protection globale (installation et finition).",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="choix">
-          <h2 id="choix">Comment nous choisissons la quincaillerie</h2>
-          <ul>
-            <li>
-              <strong>Usage :</strong> fréquence, charges, tiroirs très
-              sollicités.
-            </li>
-            <li>
-              <strong>Contexte :</strong> humidité (salle de bain),
-              environnement, contraintes.
-            </li>
-            <li>
-              <strong>Réglages :</strong> précision et stabilité des ajustements
-              dans le temps.
-            </li>
-            <li>
-              <strong>Installation :</strong> une pose et des ajustements
-              soignés sont essentiels.
-            </li>
-          </ul>
-          <p>
-            <a href="/services/installation/">Voir l’installation</a> {" | "}
-            <a href="/services/design/">Voir le design</a>
-          </p>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="sdb-link"
+          heading=""
+          links={[
+            { label: "Voir la page Salle de bain & vanités", href: "/espaces/salle-de-bain/" },
+          ]}
+          columns={2}
+        />
 
-        <Faq1
+        <TextSection
+          aria-labelledby="materiaux"
+          heading="Lien entre matériaux et quincaillerie"
+          paragraphs={[
+            "Les matériaux et la quincaillerie forment un système : structure, chants, assemblage, quincaillerie et installation. Une bonne quincaillerie ne compense pas une mauvaise exécution, et un bon matériau peut être « ruiné » par une quincaillerie faible.",
+          ]}
+          links={[
+            {
+              text: "Pourquoi le contreplaqué",
+              href: "/materiaux/contreplaque/",
+              variant: "outline",
+            },
+            {
+              text: "MDF",
+              href: "/materiaux/mdf/",
+              variant: "outline",
+            },
+            {
+              text: "Mélamine",
+              href: "/materiaux/melamine/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="choix"
+          heading="Comment nous choisissons la quincaillerie"
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+            {
+              text: "Voir le design",
+              href: "/services/design/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <ListSection
+          aria-labelledby="choix-details"
+          heading=""
+          items={[
+            "Usage : fréquence, charges, tiroirs très sollicités.",
+            "Contexte : humidité (salle de bain), environnement, contraintes.",
+            "Réglages : précision et stabilité des ajustements dans le temps.",
+            "Installation : une pose et des ajustements soignés sont essentiels.",
+          ]}
+          variant="bullets"
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — quincaillerie"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

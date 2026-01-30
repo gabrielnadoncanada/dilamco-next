@@ -15,7 +15,7 @@ export const SERVICES: ServiceData[] = [
       canonical: `${SITE_URL}/services/design/`,
     },
     hero: {
-      h1: "Service de design — structurer le projet avant de fabriquer",
+      h1: "Service de design, structurer le projet avant de fabriquer",
       paragraphs: [
         "Le design est l'étape qui réduit les erreurs coûteuses. Il sert à cadrer l'usage, organiser l'espace, intégrer les contraintes (murs, plomberie, électroménagers) et prendre les bonnes décisions avant la fabrication et l'installation. Chez Dilamco, le design est orienté fonctionnalité et exécution — principalement à Montréal, Laval et sur la Rive-Sud.",
       ],
@@ -206,7 +206,7 @@ export const SERVICES: ServiceData[] = [
       canonical: `${SITE_URL}/services/fabrication/`,
     },
     hero: {
-      h1: "Fabrication sur mesure — précision, constance et durabilité",
+      h1: "Fabrication sur mesure, précision, constance et durabilité",
       paragraphs: [
         "La fabrication détermine la solidité, la stabilité et la longévité d'un projet. Chez Dilamco, le sur mesure ne se limite pas à \"couper à la bonne largeur\" : nous fabriquons selon les dimensions réelles, l'usage prévu et les contraintes de l'espace, afin d'obtenir un résultat cohérent et durable — principalement à Montréal, Laval et sur la Rive-Sud.",
       ],
@@ -390,7 +390,7 @@ export const SERVICES: ServiceData[] = [
       canonical: `${SITE_URL}/services/installation/`,
     },
     hero: {
-      h1: "Installation professionnelle — précision, alignement et finition",
+      h1: "Installation professionnelle, précision, alignement et finition",
       paragraphs: [
         "Une installation de qualité est déterminante pour le résultat final. Même des armoires bien fabriquées peuvent sembler médiocres si elles sont mal posées. Chez Dilamco, l'installation fait partie intégrante du projet : ajustements sur place, alignements précis et finition soignée — principalement à Montréal, Laval et sur la Rive-Sud.",
       ],

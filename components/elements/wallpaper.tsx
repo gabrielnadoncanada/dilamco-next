@@ -1,0 +1,48 @@
+import { clsx } from 'clsx/lite'
+import type { ComponentProps } from 'react'
+
+const html = String.raw
+
+const noisePattern = `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(
+  html`
+    <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 100 100">
+      <filter id="n">
+        <feTurbulence type="turbulence" baseFrequency="1.4" numOctaves="1" seed="2" stitchTiles="stitch" result="n" />
+        <feComponentTransfer result="g">
+          <feFuncR type="linear" slope="4" intercept="1" />
+          <feFuncG type="linear" slope="4" intercept="1" />
+          <feFuncB type="linear" slope="4" intercept="1" />
+        </feComponentTransfer>
+        <feColorMatrix type="saturate" values="0" in="g" />
+      </filter>
+      <rect width="100%" height="100%" filter="url(#n)" />
+    </svg>
+  `.replace(/\s+/g, ' '),
+)}")`
+
+export function Wallpaper({
+  children,
+  color,
+  className,
+  ...props
+}: ComponentProps<'div'>) {
+  return (
+    <div
+
+      className={clsx(
+        'relative overflow-hidden bg-linear-to-b from-[#253b2f] to-[#253b2f] dark:from-[#253b2f] dark:to-[#253b2f]',
+        className,
+      )}
+      {...props}
+    >
+      <div
+        className="absolute inset-0 opacity-30 mix-blend-overlay dark:opacity-25"
+        style={{
+          backgroundPosition: 'center',
+          backgroundImage: noisePattern,
+        }}
+      />
+      <div className="relative">{children}</div>
+    </div>
+  )
+}

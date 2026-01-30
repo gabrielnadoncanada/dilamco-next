@@ -3,8 +3,13 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Cta12 } from "@/components/cta12";
-import { Faq1 } from "@/components/faq1";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "MDF",
@@ -70,169 +75,172 @@ export default function MDF() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>MDF — quand et pourquoi l’utiliser en sur mesure</h1>
-          <p>
-            Le MDF (panneau de fibres à densité moyenne) est souvent utilisé en
-            aménagement sur mesure, notamment pour obtenir une surface très
-            uniforme (idéal pour des portes peintes). Ce n’est pas un matériau
-            universel : le contexte (humidité, usage, finition, protection des
-            chants) détermine s’il est pertinent.
-          </p>
-          <p>
-            <a href="/contact/">Demander une soumission</a> {" | "}
-            <a href="/materiaux/comparatif/">
-              Voir le comparatif des matériaux
-            </a>
-          </p>
-        </header>
+        <HeroSection
+          heading="MDF, quand et pourquoi l'utiliser en sur mesure"
+          description="Le MDF (panneau de fibres à densité moyenne) est souvent utilisé en aménagement sur mesure, notamment pour obtenir une surface très uniforme (idéal pour des portes peintes). Ce n'est pas un matériau universel : le contexte (humidité, usage, finition, protection des chants) détermine s'il est pertinent."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: "/contact/",
+              },
+              {
+                text: "Voir le comparatif des matériaux",
+                href: "/materiaux/comparatif/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="cest-quoi">
-          <h2 id="cest-quoi">C’est quoi le MDF?</h2>
-          <p>
-            Le MDF est composé de fibres de bois compressées. Sa densité
-            uniforme donne une surface lisse, ce qui le rend intéressant pour
-            certaines finitions (ex. peinture) et certaines pièces (portes et
-            façades).
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="cest-quoi"
+          heading="C'est quoi le MDF?"
+          paragraphs={[
+            "Le MDF est composé de fibres de bois compressées. Sa densité uniforme donne une surface lisse, ce qui le rend intéressant pour certaines finitions (ex. peinture) et certaines pièces (portes et façades).",
+          ]}
+        />
 
-        <section aria-labelledby="avantages">
-          <h2 id="avantages">Avantages du MDF (quand il est pertinent)</h2>
-          <ul>
-            <li>
-              <strong>Surface uniforme :</strong> excellent rendu pour des{" "}
-              <strong>portes peintes</strong>.
-            </li>
-            <li>
-              <strong>Finition stable :</strong> pas de grain comme le bois
-              massif, aspect régulier.
-            </li>
-            <li>
-              <strong>Bon compromis :</strong> souvent pertinent pour certaines
-              façades lorsque le style recherché est moderne et épuré.
-            </li>
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="avantages"
+          heading="Avantages du MDF (quand il est pertinent)"
+          items={[
+            "Surface uniforme : excellent rendu pour des portes peintes.",
+            "Finition stable : pas de grain comme le bois massif, aspect régulier.",
+            "Bon compromis : souvent pertinent pour certaines façades lorsque le style recherché est moderne et épuré.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="limites">
-          <h2 id="limites">Limites et précautions</h2>
-          <p>
-            Le MDF peut très bien performer lorsqu’il est utilisé au bon
-            endroit, mais il demande une exécution rigoureuse.
-          </p>
-          <ul>
-            <li>
-              <strong>Humidité :</strong> le MDF réagit à l’eau si mal protégé
-              (surtout aux chants).
-            </li>
-            <li>
-              <strong>Chants et protections :</strong> la durabilité dépend
-              beaucoup de la qualité de finition et de l’entretien.
-            </li>
-            <li>
-              <strong>Usage :</strong> ce n’est pas toujours le meilleur choix
-              pour des zones fortement exposées à l’eau ou aux impacts répétés.
-            </li>
-          </ul>
-        </section>
+        <TextSection
+          aria-labelledby="limites"
+          heading="Limites et précautions"
+          paragraphs={[
+            "Le MDF peut très bien performer lorsqu'il est utilisé au bon endroit, mais il demande une exécution rigoureuse.",
+          ]}
+        />
 
-        <section aria-labelledby="cuisine-vs-sdb">
-          <h2 id="cuisine-vs-sdb">MDF en cuisine vs en salle de bain</h2>
-          <h3>MDF en cuisine</h3>
-          <ul>
-            <li>
-              Souvent pertinent pour des <strong>portes peintes</strong> et des
-              façades.
-            </li>
-            <li>
-              La protection des chants et une finition durable restent
-              critiques.
-            </li>
-            <li>
-              Pour la structure et les zones très sollicitées, d’autres
-              matériaux peuvent être plus adaptés selon le projet.
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/cuisine/">Voir la page Cuisine sur mesure</a>
-          </p>
+        <ListSection
+          aria-labelledby="limites-details"
+          heading=""
+          items={[
+            "Humidité : le MDF réagit à l'eau si mal protégé (surtout aux chants).",
+            "Chants et protections : la durabilité dépend beaucoup de la qualité de finition et de l'entretien.",
+            "Usage : ce n'est pas toujours le meilleur choix pour des zones fortement exposées à l'eau ou aux impacts répétés.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>MDF en salle de bain</h3>
-          <ul>
-            <li>
-              Possible si le contexte est favorable (ventilation, protection,
-              usage).
-            </li>
-            <li>
-              En milieu humide, les détails d’exécution (chants, joints,
-              installation) deviennent déterminants.
-            </li>
-            <li>
-              Selon le projet, des alternatives peuvent être préférables pour
-              maximiser la durabilité.
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/salle-de-bain/">
-              Voir la page Salle de bain & vanités
-            </a>
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="cuisine-vs-sdb"
+          heading="MDF en cuisine vs en salle de bain"
+          paragraphs={[]}
+        />
 
-        <section aria-labelledby="comparaisons">
-          <h2 id="comparaisons">MDF vs mélamine vs contreplaqué</h2>
-          <p>
-            Chaque matériau répond à une logique différente. Le MDF est souvent
-            choisi pour la finition; la mélamine pour un compromis économique;
-            le contreplaqué pour la stabilité et certaines applications plus
-            exigeantes.
-          </p>
-          <p>
-            <a href="/materiaux/comparatif/">Voir le comparatif complet</a>{" "}
-            {" | "}
-            <a href="/materiaux/contreplaque/">Pourquoi le contreplaqué</a>{" "}
-            {" | "}
-            <a href="/materiaux/melamine/">Mélamine</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="cuisine-details"
+          heading="MDF en cuisine"
+          items={[
+            "Souvent pertinent pour des portes peintes et des façades.",
+            "La protection des chants et une finition durable restent critiques.",
+            "Pour la structure et les zones très sollicitées, d'autres matériaux peuvent être plus adaptés selon le projet.",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="comment-on-lutilise">
-          <h2 id="comment-on-lutilise">Comment nous utilisons le MDF</h2>
-          <p>
-            Notre approche : utiliser le MDF là où il est pertinent (ex.
-            certaines portes et façades), et privilégier d’autres matériaux
-            lorsque l’usage (humidité, charges, cycles d’ouverture) exige plus
-            de stabilité ou de résistance. L’objectif n’est pas de “choisir un
-            matériau populaire”, mais d’obtenir un résultat durable une fois
-            installé.
-          </p>
-          <p>
-            <a href="/materiaux/">Voir tous les matériaux</a> {" | "}
-            <a href="/services/installation/">Voir l’installation</a>
-          </p>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="cuisine-link"
+          heading=""
+          links={[
+            { label: "Voir la page Cuisine sur mesure", href: "/espaces/cuisine/" },
+          ]}
+          columns={2}
+        />
 
-        <Faq1
+        <ListSection
+          aria-labelledby="sdb-details"
+          heading="MDF en salle de bain"
+          items={[
+            "Possible si le contexte est favorable (ventilation, protection, usage).",
+            "En milieu humide, les détails d'exécution (chants, joints, installation) deviennent déterminants.",
+            "Selon le projet, des alternatives peuvent être préférables pour maximiser la durabilité.",
+          ]}
+          variant="bullets"
+        />
+
+        <RelatedLinksSection
+          aria-labelledby="sdb-link"
+          heading=""
+          links={[
+            { label: "Voir la page Salle de bain & vanités", href: "/espaces/salle-de-bain/" },
+          ]}
+          columns={2}
+        />
+
+        <TextSection
+          aria-labelledby="comparaisons"
+          heading="MDF vs mélamine vs contreplaqué"
+          paragraphs={[
+            "Chaque matériau répond à une logique différente. Le MDF est souvent choisi pour la finition; la mélamine pour un compromis économique; le contreplaqué pour la stabilité et certaines applications plus exigeantes.",
+          ]}
+          links={[
+            {
+              text: "Voir le comparatif complet",
+              href: "/materiaux/comparatif/",
+              variant: "outline",
+            },
+            {
+              text: "Pourquoi le contreplaqué",
+              href: "/materiaux/contreplaque/",
+              variant: "outline",
+            },
+            {
+              text: "Mélamine",
+              href: "/materiaux/melamine/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <TextSection
+          aria-labelledby="comment-on-lutilise"
+          heading="Comment nous utilisons le MDF"
+          paragraphs={[
+            "Notre approche : utiliser le MDF là où il est pertinent (ex. certaines portes et façades), et privilégier d'autres matériaux lorsque l'usage (humidité, charges, cycles d'ouverture) exige plus de stabilité ou de résistance. L'objectif n'est pas de « choisir un matériau populaire », mais d'obtenir un résultat durable une fois installé.",
+          ]}
+          links={[
+            {
+              text: "Voir tous les matériaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
+
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — MDF"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

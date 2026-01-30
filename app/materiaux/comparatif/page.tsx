@@ -3,8 +3,15 @@ import { JsonLd } from "@/seo/JsonLd";
 import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import type { FAQItem } from "@/data/services/types";
-import { Faq1 } from "@/components/faq1";
-import { Cta12 } from "@/components/cta12";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ComparisonTableSection } from "@/components/sections/ComparisonTableSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Comparatif des matériaux",
@@ -26,7 +33,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Comparatif des matériaux — Sur mesure",
+        alt: "Comparatif des matériaux, Sur mesure",
       },
     ],
   },
@@ -70,276 +77,219 @@ export default function Comparatif() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
-        <header>
-          <h1>Comparatif des matériaux — faire le bon choix selon l’usage</h1>
-          <p>
-            Il n’existe pas de “meilleur matériau” universel. Le bon choix
-            dépend de l’usage (cuisine ou salle de bain), de l’humidité, de la
-            durabilité visée et du type de finition recherché. La qualité
-            d’assemblage, la protection des chants, la quincaillerie et
-            l’installation comptent autant que le matériau.
-          </p>
-          <p>
-            <a href="/contact/">Parler de votre projet</a> {" | "}
-            <a href="/materiaux/">Voir tous les matériaux</a>
-          </p>
-        </header>
+        <HeroSection
+          heading="Comparatif des matériaux, faire le bon choix selon l'usage"
+          description="Il n'existe pas de « meilleur matériau » universel. Le bon choix dépend de l'usage (cuisine ou salle de bain), de l'humidité, de la durabilité visée et du type de finition recherché. La qualité d'assemblage, la protection des chants, la quincaillerie et l'installation comptent autant que le matériau."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler de votre projet",
+                href: "/contact/",
+              },
+              {
+                text: "Voir tous les matériaux",
+                href: "/materiaux/",
+                variant: "outline",
+              },
+            ]} />
+          }
+        />
 
-        <section aria-labelledby="tableau">
-          <h2 id="tableau">Tableau comparatif</h2>
-          <p>
-            Ce tableau résume les tendances générales. Pour décider
-            correctement, il faut ensuite l’appliquer à votre espace, votre
-            usage et vos contraintes.
-          </p>
+        <ComparisonTableSection
+          aria-labelledby="tableau"
+          heading="Tableau comparatif"
+          description="Ce tableau résume les tendances générales. Pour décider correctement, il faut ensuite l'appliquer à votre espace, votre usage et vos contraintes."
+          columns={[
+            "Usage recommandé",
+            "Stabilité",
+            "Humidité",
+            "Finition",
+            "Durabilité perçue",
+          ]}
+          rows={[
+            {
+              label: "Contreplaqué",
+              values: [
+                "Structures, environnements plus exigeants, projets orientés durabilité",
+                "Très bonne",
+                "Bonne",
+                "Variable (selon composantes)",
+                "Élevée",
+              ],
+            },
+            {
+              label: "MDF",
+              values: [
+                "Portes et façades, surtout pour finition peinte",
+                "Bonne",
+                "Moyenne (protection essentielle)",
+                "Très uniforme (peinture)",
+                "Moyenne",
+              ],
+            },
+            {
+              label: "Mélamine",
+              values: [
+                "Rangements et caissons ciblés, projets où le fini décoratif est prioritaire",
+                "Moyenne",
+                "Faible à moyenne (chants critiques)",
+                "Très variée (textures, bois, couleurs)",
+                "Variable",
+              ],
+            },
+            {
+              label: "Bois massif",
+              values: [
+                "Portes/éléments esthétiques, projets recherchant une texture naturelle",
+                "Variable (selon essence et conception)",
+                "Moyenne (peut bouger)",
+                "Naturelle (grain/variations)",
+                "Élevée (si bien conçu)",
+              ],
+            },
+          ]}
+        />
 
-          <table>
-            <thead>
-              <tr>
-                <th>Matériau</th>
-                <th>Usage recommandé</th>
-                <th>Stabilité</th>
-                <th>Humidité</th>
-                <th>Finition</th>
-                <th>Durabilité perçue</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Contreplaqué</td>
-                <td>
-                  Structures, environnements plus exigeants, projets orientés
-                  durabilité
-                </td>
-                <td>Très bonne</td>
-                <td>Bonne</td>
-                <td>Variable (selon composantes)</td>
-                <td>Élevée</td>
-              </tr>
-              <tr>
-                <td>MDF</td>
-                <td>Portes et façades, surtout pour finition peinte</td>
-                <td>Bonne</td>
-                <td>Moyenne (protection essentielle)</td>
-                <td>Très uniforme (peinture)</td>
-                <td>Moyenne</td>
-              </tr>
-              <tr>
-                <td>Mélamine</td>
-                <td>
-                  Rangements et caissons ciblés, projets où le fini décoratif
-                  est prioritaire
-                </td>
-                <td>Moyenne</td>
-                <td>Faible à moyenne (chants critiques)</td>
-                <td>Très variée (textures, bois, couleurs)</td>
-                <td>Variable</td>
-              </tr>
-              <tr>
-                <td>Bois massif</td>
-                <td>
-                  Portes/éléments esthétiques, projets recherchant une texture
-                  naturelle
-                </td>
-                <td>Variable (selon essence et conception)</td>
-                <td>Moyenne (peut “bouger”)</td>
-                <td>Naturelle (grain/variations)</td>
-                <td>Élevée (si bien conçu)</td>
-              </tr>
-            </tbody>
-          </table>
+        <RelatedLinksSection
+          aria-labelledby="materiaux-links"
+          heading=""
+          links={[
+            { label: "Pourquoi le contreplaqué", href: "/materiaux/contreplaque/" },
+            { label: "MDF", href: "/materiaux/mdf/" },
+            { label: "Mélamine", href: "/materiaux/melamine/" },
+            { label: "Bois massif", href: "/materiaux/bois-massif/" },
+          ]}
+          columns={2}
+        />
 
-          <p>
-            <small>
-              Note : “Humidité” et “durabilité” dépendent fortement des chants,
-              de l’assemblage, de la quincaillerie et de l’installation.
-            </small>
-          </p>
+        <FeatureGridSection
+          aria-labelledby="par-materiau"
+          heading="Résumé par matériau"
+          features={[
+            {
+              title: "Contreplaqué",
+              description: "Très bon choix lorsque la stabilité et la structure sont prioritaires. Souvent pertinent pour viser une durabilité supérieure. Le rendu final dépend aussi des composantes (portes, quincaillerie, finition).",
+            },
+            {
+              title: "MDF",
+              description: "Très utilisé pour des portes peintes grâce à sa surface uniforme. Sensible à l'humidité si mal protégé (chants et finition critiques). Pertinent quand l'objectif principal est une finition peinte régulière.",
+            },
+            {
+              title: "Mélamine",
+              description: "Large choix de finis décoratifs et entretien simple. Point faible : les chants (impacts et infiltration). Peut être très correcte si utilisée de façon ciblée et bien exécutée.",
+            },
+            {
+              title: "Bois massif",
+              description: "Texture et variations naturelles (très apprécié en haut de gamme). Peut bouger : conception et assemblage comptent énormément. Souvent utilisé là où l'esthétique et la matière sont prioritaires.",
+            },
+          ]}
+          columns={2}
+        />
 
-          <p>
-            <a href="/materiaux/contreplaque/">Pourquoi le contreplaqué</a>{" "}
-            {" | "}
-            <a href="/materiaux/mdf/">MDF</a> {" | "}
-            <a href="/materiaux/melamine/">Mélamine</a> {" | "}
-            <a href="/materiaux/bois-massif/">Bois massif</a>
-          </p>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="materiaux-pages"
+          heading=""
+          links={[
+            { label: "Voir la page Contreplaqué", href: "/materiaux/contreplaque/" },
+            { label: "Voir la page MDF", href: "/materiaux/mdf/" },
+            { label: "Voir la page Mélamine", href: "/materiaux/melamine/" },
+            { label: "Voir la page Bois massif", href: "/materiaux/bois-massif/" },
+          ]}
+          columns={2}
+        />
 
-        <section aria-labelledby="par-materiau">
-          <h2 id="par-materiau">Résumé par matériau</h2>
+        <FeatureGridSection
+          aria-labelledby="par-espace"
+          heading="Comparatif par espace"
+          features={[
+            {
+              title: "Cuisine",
+              description: "Cycles d'ouverture élevés et charges importantes (tiroirs, vaisselle, casseroles). Humidité ponctuelle près de l'évier et du lave-vaisselle. Un bon compromis dépend du niveau de finition et de durabilité recherché.",
+            },
+            {
+              title: "Salle de bain",
+              description: "Humidité plus constante : ventilation et détails d'exécution critiques. Les chants et la protection des zones exposées font une grande différence. Selon le projet, certains matériaux sont plus pertinents que d'autres.",
+            },
+          ]}
+          columns={2}
+        />
 
-          <h3>Contreplaqué</h3>
-          <ul>
-            <li>
-              Très bon choix lorsque la stabilité et la structure sont
-              prioritaires.
-            </li>
-            <li>Souvent pertinent pour viser une durabilité supérieure.</li>
-            <li>
-              Le rendu final dépend aussi des composantes (portes,
-              quincaillerie, finition).
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/contreplaque/">Voir la page Contreplaqué</a>
-          </p>
+        <RelatedLinksSection
+          aria-labelledby="espaces-links"
+          heading=""
+          links={[
+            { label: "Voir Cuisine sur mesure", href: "/espaces/cuisine/" },
+            {
+              label: "Voir Salle de bain & vanités",
+              href: "/espaces/salle-de-bain/",
+            },
+          ]}
+          columns={2}
+        />
 
-          <h3>MDF</h3>
-          <ul>
-            <li>
-              Très utilisé pour des portes peintes grâce à sa surface uniforme.
-            </li>
-            <li>
-              Sensible à l’humidité si mal protégé (chants et finition
-              critiques).
-            </li>
-            <li>
-              Pertinent quand l’objectif principal est une finition peinte
-              régulière.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/mdf/">Voir la page MDF</a>
-          </p>
+        <TextSection
+          aria-labelledby="ce-que-ca-ne-dit-pas"
+          heading="Ce que le tableau ne montre pas"
+          paragraphs={[
+            "Deux projets peuvent utiliser « le même matériau » et vieillir très différemment. Les facteurs suivants sont souvent décisifs :",
+          ]}
+          links={[
+            {
+              text: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie/",
+              variant: "outline",
+            },
+            {
+              text: "Voir l'installation",
+              href: "/services/installation/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-          <h3>Mélamine</h3>
-          <ul>
-            <li>Large choix de finis décoratifs et entretien simple.</li>
-            <li>Point faible : les chants (impacts et infiltration).</li>
-            <li>
-              Peut être très correcte si utilisée de façon ciblée et bien
-              exécutée.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/melamine/">Voir la page Mélamine</a>
-          </p>
+        <ListSection
+          aria-labelledby="ce-que-ca-ne-dit-pas-details"
+          heading=""
+          items={[
+            "Chants et protections : point critique pour l'humidité et les impacts.",
+            "Assemblage : rigidité, précision, stabilité.",
+            "Quincaillerie : charnières et coulisses = confort + longévité.",
+            "Installation : alignements, ajustements et inspection finale.",
+          ]}
+          variant="bullets"
+        />
 
-          <h3>Bois massif</h3>
-          <ul>
-            <li>
-              Texture et variations naturelles (très apprécié en haut de gamme).
-            </li>
-            <li>
-              Peut “bouger” : conception et assemblage comptent énormément.
-            </li>
-            <li>
-              Souvent utilisé là où l’esthétique et la matière sont
-              prioritaires.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/bois-massif/">Voir la page Bois massif</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="erreurs"
+          heading="Erreurs fréquentes à éviter"
+          items={[
+            "Choisir un matériau pour le look seulement, sans considérer l'usage.",
+            "Ignorer l'humidité (salle de bain, zones d'eau en cuisine).",
+            "Sous-estimer l'impact des chants et des détails de finition.",
+            "Copier une inspiration sans adapter aux contraintes réelles (lumière, dimensions).",
+          ]}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="par-espace">
-          <h2 id="par-espace">Comparatif par espace</h2>
-
-          <h3>Cuisine</h3>
-          <ul>
-            <li>
-              Cycles d’ouverture élevés et charges importantes (tiroirs,
-              vaisselle, casseroles).
-            </li>
-            <li>Humidité ponctuelle près de l’évier et du lave-vaisselle.</li>
-            <li>
-              Un bon compromis dépend du niveau de finition et de durabilité
-              recherché.
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/cuisine/">Voir Cuisine sur mesure</a>
-          </p>
-
-          <h3>Salle de bain</h3>
-          <ul>
-            <li>
-              Humidité plus constante : ventilation et détails d’exécution
-              critiques.
-            </li>
-            <li>
-              Les chants et la protection des zones exposées font une grande
-              différence.
-            </li>
-            <li>
-              Selon le projet, certains matériaux sont plus pertinents que
-              d’autres.
-            </li>
-          </ul>
-          <p>
-            <a href="/espaces/salle-de-bain/">Voir Salle de bain & vanités</a>
-          </p>
-        </section>
-
-        <section aria-labelledby="ce-que-ca-ne-dit-pas">
-          <h2 id="ce-que-ca-ne-dit-pas">Ce que le tableau ne montre pas</h2>
-          <p>
-            Deux projets peuvent utiliser “le même matériau” et vieillir très
-            différemment. Les facteurs suivants sont souvent décisifs :
-          </p>
-          <ul>
-            <li>
-              <strong>Chants et protections :</strong> point critique pour
-              l’humidité et les impacts.
-            </li>
-            <li>
-              <strong>Assemblage :</strong> rigidité, précision, stabilité.
-            </li>
-            <li>
-              <strong>Quincaillerie :</strong> charnières et coulisses = confort
-              + longévité.
-            </li>
-            <li>
-              <strong>Installation :</strong> alignements, ajustements et
-              inspection finale.
-            </li>
-          </ul>
-          <p>
-            <a href="/materiaux/quincaillerie/">Voir la quincaillerie</a>{" "}
-            {" | "}
-            <a href="/services/installation/">Voir l’installation</a>
-          </p>
-        </section>
-
-        <section aria-labelledby="erreurs">
-          <h2 id="erreurs">Erreurs fréquentes à éviter</h2>
-          <ul>
-            <li>
-              Choisir un matériau pour le look seulement, sans considérer
-              l’usage.
-            </li>
-            <li>Ignorer l’humidité (salle de bain, zones d’eau en cuisine).</li>
-            <li>
-              Sous-estimer l’impact des chants et des détails de finition.
-            </li>
-            <li>
-              Copier une inspiration sans adapter aux contraintes réelles
-              (lumière, dimensions).
-            </li>
-          </ul>
-        </section>
-
-        <Faq1
+        <FAQSection
           aria-labelledby="faq"
           heading="FAQ — comparatif des matériaux"
-          items={faqItems.map((item: FAQItem) => ({
-            id: item.q,
+          items={faqItems.map((item) => ({
             question: item.q,
             answer: item.a,
           }))}
         />
 
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: "/contact/",
+              href: "/contact/",
             },
-          }}
+          ]}
         />
       </main>
     </>

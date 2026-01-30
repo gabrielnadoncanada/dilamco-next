@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { Cta12 } from "@/components/cta12";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { ListSection } from "@/components/sections/ListSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 export const metadata: Metadata = {
   title: "Guides",
   description:
-    "Guides et conseils pour projets de cuisines, vanités et rénovations sur mesure. Décisions éclairées, de l’inspiration à la soumission, à Montréal, Laval et sur la Rive-Sud.",
+    "Guides et conseils pour projets de cuisines, vanités et rénovations sur mesure. Décisions éclairées, de l'inspiration à la soumission, à Montréal, Laval et sur la Rive-Sud.",
   alternates: {
     canonical: "https://dilamco.com/guides/",
   },
@@ -47,114 +52,94 @@ export default function Guides() {
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <main id="contenu">
-      <header>
-        <h1>Guides & conseils — cuisines et rénovations sur mesure</h1>
-        <p>
-          Concevoir une cuisine ou planifier une rénovation implique des
-          décisions importantes : matériaux, délais, organisation des travaux.
-          Ces guides pratiques sont basés sur des projets réels et visent à vous
-          aider à clarifier votre projet avant de passer à l’étape de la
-          soumission. Nos projets sont réalisés principalement à Montréal, Laval
-          et sur la Rive-Sud.
-        </p>
-        <p>
-          <a href="/contact/">Parler de votre projet</a>
-        </p>
-      </header>
+        <HeroSection
+          heading="Guides & conseils — cuisines et rénovations sur mesure"
+          description="Concevoir une cuisine ou planifier une rénovation implique des décisions importantes : matériaux, délais, organisation des travaux. Ces guides pratiques sont basés sur des projets réels et visent à vous aider à clarifier votre projet avant de passer à l'étape de la soumission. Nos projets sont réalisés principalement à Montréal, Laval et sur la Rive-Sud."
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Parler de votre projet",
+                href: "/contact/",
+              },
+            ]} />
+          }
+        />
 
-      <section aria-labelledby="categories">
-        <h2 id="categories">Catégories de guides</h2>
-        <ul>
-          <li>Choisir son espace (cuisine, salle de bain, rangement)</li>
-          <li>Rénovation & planification</li>
-          <li>Matériaux & durabilité</li>
-          <li>Comparatifs & décisions</li>
-        </ul>
-      </section>
+        <ListSection
+          aria-labelledby="categories"
+          heading="Catégories de guides"
+          items={[
+            "Choisir son espace (cuisine, salle de bain, rangement)",
+            "Rénovation & planification",
+            "Matériaux & durabilité",
+            "Comparatifs & décisions",
+          ]}
+          variant="bullets"
+        />
 
-      <section aria-labelledby="liste-guides">
-        <h2 id="liste-guides">Guides disponibles</h2>
-        <p>
-          Chaque guide répond à une question précise et vous dirige vers les
-          pages pertinentes si vous souhaitez aller plus loin.
-        </p>
+        <TextSection
+          aria-labelledby="liste-guides"
+          heading="Guides disponibles"
+          paragraphs={[
+            "Chaque guide répond à une question précise et vous dirige vers les pages pertinentes si vous souhaitez aller plus loin.",
+          ]}
+        />
 
-        <ul>
-          <li>
-            <a href="/guides/comment-choisir-cuisine-sur-mesure/">
-              Comment choisir une cuisine sur mesure
-            </a>
-            <p>
-              Critères clés, compromis et erreurs à éviter pour concevoir une
-              cuisine adaptée à votre espace et à votre usage.
-              <br />
-              <a href="/espaces/cuisine/">Voir les cuisines sur mesure</a>
-            </p>
-          </li>
+        <RelatedLinksSection
+          aria-labelledby="guides-list"
+          heading=""
+          links={[
+            {
+              label: "Comment choisir une cuisine sur mesure",
+              href: "/guides/comment-choisir-cuisine-sur-mesure/",
+            },
+            {
+              label: "Étapes d'une rénovation de cuisine",
+              href: "/guides/etapes-renovation-cuisine/",
+            },
+            {
+              label: "Erreurs fréquentes en rénovation de cuisine",
+              href: "/guides/erreurs-renovation-cuisine/",
+            },
+          ]}
+          columns={3}
+        />
 
-          <li>
-            <a href="/guides/etapes-renovation-cuisine/">
-              Étapes d’une rénovation de cuisine
-            </a>
-            <p>
-              Ordre logique des travaux, coordination et délais typiques pour
-              éviter les mauvaises surprises.
-              <br />
-              <a href="/services/renovation/cuisine/">
-                Voir la rénovation de cuisine
-              </a>
-            </p>
-          </li>
+        <TextSection
+          aria-labelledby="utilisation"
+          heading="Comment utiliser ces guides"
+          paragraphs={[
+            "Ces contenus sont conçus pour vous aider à structurer votre réflexion. Si vous avez déjà une idée claire de votre projet (espace, échéance, secteur), vous pouvez passer directement à la demande de soumission.",
+          ]}
+          links={[
+            {
+              text: "Demander une soumission",
+              href: "/contact/",
+              variant: "outline",
+            },
+          ]}
+        />
 
-          <li>
-            <a href="/guides/erreurs-renovation-cuisine/">
-              Erreurs fréquentes en rénovation de cuisine
-            </a>
-            <p>
-              Les pièges courants (budget, matériaux, planification) et comment
-              les éviter.
-              <br />
-              <a href="/materiaux/comparatif/">
-                Voir le comparatif des matériaux
-              </a>
-            </p>
-          </li>
-        </ul>
-      </section>
+        <TextSection
+          aria-labelledby="positionnement"
+          heading="Notre positionnement"
+          paragraphs={[
+            "Dilamco se spécialise dans le sur mesure haut de gamme. Ces guides s'adressent à des projets conçus pour durer, avec une exécution soignée et, lorsque requis, une approche clé en main.",
+          ]}
+        />
 
-      <section aria-labelledby="utilisation">
-        <h2 id="utilisation">Comment utiliser ces guides</h2>
-        <p>
-          Ces contenus sont conçus pour vous aider à structurer votre réflexion.
-          Si vous avez déjà une idée claire de votre projet (espace, échéance,
-          secteur), vous pouvez passer directement à la demande de soumission.
-        </p>
-        <p>
-          <a href="/contact/">Demander une soumission</a>
-        </p>
-      </section>
-
-      <section aria-labelledby="positionnement">
-        <h2 id="positionnement">Notre positionnement</h2>
-        <p>
-          Dilamco se spécialise dans le sur mesure haut de gamme. Ces guides
-          s’adressent à des projets conçus pour durer, avec une exécution
-          soignée et, lorsque requis, une approche clé en main.
-        </p>
-      </section>
-
-      <Cta12
-        aria-labelledby="cta"
-        heading="Parlez-nous de votre projet"
-        description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-        buttons={{
-          primary: {
-            text: "Demander une soumission",
-            url: "/contact/",
-          },
-        }}
-      />
-    </main>
+        <CTASection
+          aria-labelledby="cta"
+          heading="Parlez-nous de votre projet"
+          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+          actions={[
+            {
+              text: "Demander une soumission",
+              href: "/contact/",
+            },
+          ]}
+        />
+      </main>
     </>
   );
 }

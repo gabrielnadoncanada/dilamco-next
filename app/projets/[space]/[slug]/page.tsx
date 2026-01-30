@@ -12,8 +12,13 @@ import {
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { Cta12 } from "@/components/cta12";
-import Image from "next/image";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { GallerySection } from "@/components/sections/GallerySection";
+import { ListSection } from "@/components/sections/ListSection";
+import { TextSection } from "@/components/sections/TextSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { ActionButtons } from "@/components/ActionButtons";
 
 type Params = { space: ProjectSpace; slug: string };
 
@@ -111,154 +116,138 @@ export default async function ProjectPage({
     <>
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <main id="contenu">
-        <header>
-          <h1>{project.title}</h1>
-          <p>
-            <strong>Lieu :</strong> {locationLabel}
-          </p>
-          <p>{project.summary}</p>
-          <p>{spaceIntro}</p>
+        <HeroSection
+          heading={project.title}
+          description={`${locationLabel}. ${project.summary} ${spaceIntro}`}
+          actionsSlot={
+            <ActionButtons className="justify-start" buttons={[
+              {
+                text: "Demander une soumission",
+                href: project.requiredLinks.contactHref,
+              },
+              ...(project.optionalLinks?.galleryHref
+                ? [
+                  {
+                    text: "Voir tous les projets",
+                    href: project.optionalLinks.galleryHref,
+                    variant: "outline" as const,
+                  },
+                ]
+                : []),
+            ]} />
+          }
+        />
 
-          <p>
-            Ce projet illustre notre approche{" "}
-            <a href={project.requiredLinks.spaceHref}>
-              {spaceLabel} sur mesure
-            </a>{" "}
-            et notre{" "}
-            <a href={project.requiredLinks.renovationHref}>
-              rénovation clé en main
-            </a>
-            .
-          </p>
+        <TextSection
+          aria-labelledby="context"
+          heading=""
+          paragraphs={[
+            `Ce projet illustre notre approche ${spaceLabel} sur mesure et notre rénovation clé en main.`,
+          ]}
+          links={[
+            {
+              text: `${spaceLabel} sur mesure`,
+              href: project.requiredLinks.spaceHref,
+              variant: "outline",
+            },
+            {
+              text: "Rénovation clé en main",
+              href: project.requiredLinks.renovationHref,
+              variant: "outline",
+            },
+          ]}
+        />
 
-          <p>
-            <a href={project.requiredLinks.contactHref}>
-              Demander une soumission
-            </a>
-            {project.optionalLinks?.galleryHref ? (
-              <>
-                {" "}
-                |{" "}
-                <a href={project.optionalLinks.galleryHref}>
-                  Voir tous les projets
-                </a>
-              </>
-            ) : null}
-          </p>
-        </header>
+        {project.images && project.images.length > 0 && (
+          <GallerySection
+            aria-labelledby="images"
+            images={project.images.map((img) => ({
+              src: img.src,
+              alt: img.alt,
+            }))}
+            columns={3}
+          />
+        )}
 
-        <section aria-labelledby="images" className="container">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-2">
-            {project.images?.slice(0, 3).map((img, index, arr) => {
-              const hasThird = arr.length >= 3;
+        <ListSection
+          aria-labelledby="scope"
+          heading="Mandat"
+          items={project.scope}
+          variant="bullets"
+        />
 
-              const wrapperClass =
-                index === 0
-                  ? // Hero: takes 2 cols + 2 rows
-                    "relative overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 h-[420px] md:h-[520px]"
-                  : index === 1
-                  ? // Right top: if no 3rd image, span both rows (fills the empty space)
-                    `relative overflow-hidden rounded-2xl md:col-span-1 ${
-                      hasThird
-                        ? "md:row-span-1 md:h-full"
-                        : "md:row-span-2 md:h-full"
-                    } h-[240px]`
-                  : // Right bottom: only exists if 3rd image exists
-                    "relative overflow-hidden rounded-2xl md:col-span-1 md:row-span-1 h-[240px] md:h-full";
+        <TextSection
+          aria-labelledby="constraints"
+          heading="Contraintes"
+          paragraphs={[]}
+          links={[
+            {
+              text: "Coordination clé en main",
+              href: project.requiredLinks.renovationHref,
+              variant: "outline",
+            },
+            {
+              text: "Installation",
+              href: CORE_HREF.installation,
+              variant: "outline",
+            },
+          ]}
+        />
 
-              return (
-                <div
-                  key={img.src}
-                  className={`${wrapperClass} shadow-sm ring-1 ring-black/5`}
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    className="object-cover"
-                    quality={90}
-                    priority={index === 0}
-                    sizes={
-                      index === 0
-                        ? "(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
-                        : "(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                    }
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </section>
+        <ListSection
+          aria-labelledby="constraints-details"
+          heading=""
+          items={project.constraints}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="scope">
-          <h2 id="scope">Mandat</h2>
-          <ul>
-            {project.scope.map((i) => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
-        </section>
+        <ListSection
+          aria-labelledby="solution"
+          heading="Solution"
+          items={project.solution}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="constraints">
-          <h2 id="constraints">Contraintes</h2>
-          <ul>
-            {project.constraints.map((i) => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
-          <p>
-            Pour une exécution cohérente :{" "}
-            <a href={project.requiredLinks.renovationHref}>
-              coordination clé en main
-            </a>
-            {" | "}
-            <a href={CORE_HREF.installation}>installation</a>.
-          </p>
-        </section>
+        <TextSection
+          aria-labelledby="materials"
+          heading="Matériaux"
+          paragraphs={[]}
+          links={[
+            {
+              text: "Voir le détail",
+              href: project.requiredLinks.materialHref,
+              variant: "outline",
+            },
+          ]}
+        />
 
-        <section aria-labelledby="solution">
-          <h2 id="solution">Solution</h2>
-          <ul>
-            {project.solution.map((i) => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
-        </section>
+        <RelatedLinksSection
+          aria-labelledby="materials-list"
+          heading=""
+          links={project.materials.map((m) => ({
+            label: m.label,
+            href: m.href,
+          }))}
+          columns={2}
+        />
 
-        <section aria-labelledby="materials">
-          <h2 id="materials">Matériaux</h2>
-          <ul>
-            {project.materials.map((m) => (
-              <li key={m.href}>
-                <a href={m.href}>{m.label}</a>
-              </li>
-            ))}
-          </ul>
-          <p>
-            Matériau clé :{" "}
-            <a href={project.requiredLinks.materialHref}>voir le détail</a>
-          </p>
-        </section>
+        <ListSection
+          aria-labelledby="result"
+          heading="Résultat"
+          items={project.results}
+          variant="bullets"
+        />
 
-        <section aria-labelledby="result">
-          <h2 id="result">Résultat</h2>
-          <ul>
-            {project.results.map((i) => (
-              <li key={i}>{i}</li>
-            ))}
-          </ul>
-        </section>
-
-        <Cta12
+        <CTASection
           aria-labelledby="cta"
           heading="Parlez-nous de votre projet"
           description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          buttons={{
-            primary: {
+          actions={[
+            {
               text: "Demander une soumission",
-              url: project.requiredLinks.contactHref,
+              href: project.requiredLinks.contactHref,
             },
-          }}
+          ]}
         />
       </main>
     </>
