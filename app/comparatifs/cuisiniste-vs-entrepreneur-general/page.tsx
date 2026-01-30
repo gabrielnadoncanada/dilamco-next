@@ -221,7 +221,7 @@ export default function CuisinisteVsEntrepreneur() {
               href: "/projets/cuisine/",
             },
           ]}
-          columns={1}
+          columns={2}
         />
 
         <CTASection
