@@ -54,7 +54,7 @@ export default function Services() {
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <main id="contenu">
         <HeroSection
-          heading="Services — design, fabrication, installation et rénovation clé en main"
+          heading="Services, design, fabrication, installation et rénovation clé en main"
           description="Dilamco réalise des cuisines, vanités et espaces sur mesure haut de gamme. Selon le projet, nous pouvons prendre en charge l'ensemble : design, fabrication, installation et coordination des travaux connexes pour livrer un résultat cohérent — principalement à Montréal, Laval et sur la Rive-Sud."
           actionsSlot={
             <ActionButtons className="justify-start" buttons={[

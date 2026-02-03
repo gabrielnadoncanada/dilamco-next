@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Heading } from "@/components/ui/heading";
+import { Container } from "../elements/container";
 
 interface LinkItem {
   label: string;
@@ -32,30 +33,32 @@ const RelatedLinksSection = ({
 
   return (
     <Section className={className} {...props}>
-      <div className="space-y-8 md:space-y-12">
-        <div className="text-center">
-          <Heading variant="h2" className="mb-4">
-            {heading}
-          </Heading>
+      <Container>
+        <div className="space-y-8 md:space-y-12">
+          <div className="text-center">
+            <Heading variant="h2" className="mb-4">
+              {heading}
+            </Heading>
+          </div>
+          <div
+            className={cn(
+              "grid grid-cols-1 gap-4 md:gap-6",
+              gridCols[columns]
+            )}
+          >
+            {links.map((link, index) => (
+              <Card key={index} className="transition-colors hover:bg-accent">
+                <Link href={link.href}>
+                  <CardContent className="flex items-center justify-between p-6">
+                    <span className="font-medium">{link.label}</span>
+                    <ArrowRight className="size-4 text-muted-foreground" />
+                  </CardContent>
+                </Link>
+              </Card>
+            ))}
+          </div>
         </div>
-        <div
-          className={cn(
-            "grid grid-cols-1 gap-4 md:gap-6",
-            gridCols[columns]
-          )}
-        >
-          {links.map((link, index) => (
-            <Card key={index} className="transition-colors hover:bg-accent">
-              <Link href={link.href}>
-                <CardContent className="flex items-center justify-between p-6">
-                  <span className="font-medium">{link.label}</span>
-                  <ArrowRight className="size-4 text-muted-foreground" />
-                </CardContent>
-              </Link>
-            </Card>
-          ))}
-        </div>
-      </div>
+      </Container>
     </Section>
   );
 };

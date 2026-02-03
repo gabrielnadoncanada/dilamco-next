@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { Section } from "@/components/Section";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 import { Heading } from "@/components/ui/heading";
+import { Container } from "../elements/container";
 
 interface TextSectionProps extends React.HTMLAttributes<HTMLElement> {
   heading: string;
@@ -20,22 +21,23 @@ const TextSection = ({
 }: TextSectionProps) => {
   return (
     <Section className={className} {...props}>
-
-      <Heading variant="h2" className="mb-6">
-        {heading}
-      </Heading>
-      <div className="prose prose-neutral dark:prose-invert max-w-none space-y-4">
-        {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-base leading-relaxed text-muted-foreground md:text-lg">
-            {paragraph}
-          </p>
-        ))}
-      </div>
-      {links && links.length > 0 && (
-        <div className="pt-4">
-          <ActionButtons buttons={links} />
+      <Container>
+        <Heading variant="h2" className="mb-6">
+          {heading}
+        </Heading>
+        <div className="prose prose-neutral dark:prose-invert max-w-none space-y-4">
+          {paragraphs.map((paragraph, index) => (
+            <p key={index} className="text-base leading-relaxed text-muted-foreground md:text-lg">
+              {paragraph}
+            </p>
+          ))}
         </div>
-      )}
+        {links && links.length > 0 && (
+          <div className="pt-4">
+            <ActionButtons buttons={links} />
+          </div>
+        )}
+      </Container>
     </Section>
   );
 };

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Dilamco — Sur mesure, durable, bien exécuté",
+        alt: "Dilamco, sur mesure, durable, bien exécuté",
       },
     ],
   },
@@ -48,11 +48,11 @@ export default function Home() {
   return (
     <main id="contenu">
       <HeroSection
-        heading="Dilamco — Sur mesure haut de gamme, clé en main"
+        heading="Dilamco, sur mesure haut de gamme, clé en main"
         description="Cuisines, vanités et rangement sur mesure. Design, fabrication, installation et rénovation complète au besoin — principalement à Montréal, Laval et sur la Rive-Sud."
         image={{
           src: "/images/hero-image.webp",
-          alt: "Dilamco — Sur mesure haut de gamme, clé en main",
+          alt: "Dilamco, sur mesure haut de gamme, clé en main",
         }}
         actionsSlot={
           <ActionButtons className="justify-start" buttons={[

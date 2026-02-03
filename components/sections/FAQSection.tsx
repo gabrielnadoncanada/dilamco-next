@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Heading } from "@/components/ui/heading";
+import { Container } from "../elements/container";
 
 interface FAQItem {
   question: string;
@@ -28,23 +29,25 @@ const FAQSection = ({
 }: FAQSectionProps) => {
   return (
     <Section className={className} {...props}>
-      <div className="text-center">
-        <Heading variant="h2" className="mb-4">
-          {heading}
-        </Heading>
-      </div>
-      <Accordion type="single" collapsible className="w-full">
-        {items.map((item, index) => (
-          <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="text-left font-semibold hover:no-underline">
-              {item.question}
-            </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">
-              {item.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <Container>
+        <div className="text-center">
+          <Heading variant="h2" className="mb-4">
+            {heading}
+          </Heading>
+        </div>
+        <Accordion type="single" collapsible className="w-full">
+          {items.map((item, index) => (
+            <AccordionItem key={index} value={`item-${index}`}>
+              <AccordionTrigger className="text-left font-semibold hover:no-underline">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Container>
     </Section>
   );
 };

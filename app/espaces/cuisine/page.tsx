@@ -14,7 +14,9 @@ import { TextSection } from "@/components/sections/TextSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
 import { ActionButtons } from "@/components/ActionButtons";
+import { Checklist } from "@/components/Checklist";
 
 export const metadata: Metadata = {
   title: "Cuisine sur mesure",
@@ -73,6 +75,104 @@ export default function Cuisine() {
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
     { name: "Cuisine sur mesure", url: SITE.url + "/espaces/cuisine/" },
+  ];
+
+  const featureImageTextItems: FeatureImageTextItem[] = [
+    {
+      ariaLabelledby: "fonctionnalite",
+      heading: "Fonctionnalité & ergonomie",
+      content: (
+        <>
+          <p>Une belle cuisine doit aussi être simple à vivre. Nous concevons autour de l'usage : zones de préparation, accès au rangement, circulation et intégration des électroménagers.</p>
+          <Checklist
+            items={[
+              "Circulation : dégagements et zones de travail cohérentes.",
+              "Rangement intelligent : tiroirs, coins, hauteurs adaptées, organisation.",
+              "Durabilité : choix adaptés aux cycles d'ouverture, aux charges et à l'entretien.",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/hero-image.webp",
+        alt: "Fonctionnalité & ergonomie",
+      },
+      links: [
+        {
+          text: "Voir les matériaux",
+          href: "/materiaux/",
+          variant: "outline",
+        },
+        {
+          text: "Voir la quincaillerie",
+          href: "/materiaux/quincaillerie/",
+          variant: "outline",
+        },
+      ],
+    },
+    {
+      ariaLabelledby: "materiaux",
+      heading: "Matériaux & fabrication",
+      content: (
+        <>
+          <p>Le rendu haut de gamme est une somme de décisions : structure, chants, quincaillerie, assemblage et installation. Le bon matériau dépend de l'usage et des contraintes du projet.</p>
+          <Checklist
+            items={[
+              "Structure & stabilité : choix orientés durabilité (ex. contreplaqué selon le contexte).",
+              "Portes & finis : MDF, bois massif, finis adaptés au style et à l'entretien.",
+              "Tiroirs & quincaillerie : confort au quotidien, fiabilité, cycles d'ouverture répétés.",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/hero-image.webp",
+        alt: "Fonctionnalité & ergonomie",
+      },
+      links: [
+
+        {
+          text: "Pourquoi le contreplaqué",
+          href: "/materiaux/contreplaque/",
+          variant: "outline",
+        },
+        {
+          text: "MDF",
+          href: "/materiaux/mdf/",
+          variant: "outline",
+        },
+        {
+          text: "Mélamine",
+          href: "/materiaux/melamine/",
+          variant: "outline",
+        },
+        {
+          text: "Bois massif",
+          href: "/materiaux/bois-massif/",
+          variant: "outline",
+        },
+      ],
+    },
+    {
+      ariaLabelledby: "renovation",
+      heading: "Rénovation de cuisine (option clé en main)",
+      content: (
+        <>
+          <p>Si votre projet implique plus que l'installation d'armoires (plomberie, électricité, plancher, dosseret, etc.), une approche clé en main peut réduire les imprévus et mieux cadrer le calendrier.</p>
+        </>
+      ),
+      image: {
+        src: "/images/hero-image.webp",
+        alt: "Fonctionnalité & ergonomie",
+      },
+      links: [
+        {
+          text: "Voir la rénovation de cuisine",
+          href: "/services/renovation/cuisine/",
+          variant: "outline",
+        }
+      ],
+    },
   ];
 
   return (
@@ -171,92 +271,10 @@ export default function Cuisine() {
           columns={2}
         />
 
-        <TextSection
-          aria-labelledby="fonctionnalite"
-          heading="Fonctionnalité & ergonomie"
-          paragraphs={[
-            "Une belle cuisine doit aussi être simple à vivre. Nous concevons autour de l'usage : zones de préparation, accès au rangement, circulation et intégration des électroménagers.",
-          ]}
-          links={[
-            {
-              text: "Voir les matériaux",
-              href: "/materiaux/",
-              variant: "outline",
-            },
-            {
-              text: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie/",
-              variant: "outline",
-            },
-          ]}
-        />
+        <FeatureImageText items={featureImageTextItems} />
 
-        <ListSection
-          aria-labelledby="fonctionnalite-details"
-          heading=""
-          items={[
-            "Circulation : dégagements et zones de travail cohérentes.",
-            "Rangement intelligent : tiroirs, coins, hauteurs adaptées, organisation.",
-            "Durabilité : choix adaptés aux cycles d'ouverture, aux charges et à l'entretien.",
-          ]}
-          variant="bullets"
-        />
 
-        <TextSection
-          aria-labelledby="materiaux"
-          heading="Matériaux & fabrication"
-          paragraphs={[
-            "Le rendu haut de gamme est une somme de décisions : structure, chants, quincaillerie, assemblage et installation. Le bon matériau dépend de l'usage et des contraintes du projet.",
-          ]}
-          links={[
-            {
-              text: "Pourquoi le contreplaqué",
-              href: "/materiaux/contreplaque/",
-              variant: "outline",
-            },
-            {
-              text: "MDF",
-              href: "/materiaux/mdf/",
-              variant: "outline",
-            },
-            {
-              text: "Mélamine",
-              href: "/materiaux/melamine/",
-              variant: "outline",
-            },
-            {
-              text: "Bois massif",
-              href: "/materiaux/bois-massif/",
-              variant: "outline",
-            },
-          ]}
-        />
 
-        <ListSection
-          aria-labelledby="materiaux-details"
-          heading=""
-          items={[
-            "Structure & stabilité : choix orientés durabilité (ex. contreplaqué selon le contexte).",
-            "Portes & finis : MDF, bois massif, finis adaptés au style et à l'entretien.",
-            "Tiroirs & quincaillerie : confort au quotidien, fiabilité, cycles d'ouverture répétés.",
-          ]}
-          variant="bullets"
-        />
-
-        <TextSection
-          aria-labelledby="renovation"
-          heading="Rénovation de cuisine (option clé en main)"
-          paragraphs={[
-            "Si votre projet implique plus que l'installation d'armoires (plomberie, électricité, plancher, dosseret, etc.), une approche clé en main peut réduire les imprévus et mieux cadrer le calendrier.",
-          ]}
-          links={[
-            {
-              text: "Voir la rénovation de cuisine",
-              href: "/services/renovation/cuisine/",
-              variant: "outline",
-            },
-          ]}
-        />
 
         <RelatedLinksSection
           aria-labelledby="projets"

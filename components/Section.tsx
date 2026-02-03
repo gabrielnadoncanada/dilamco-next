@@ -47,9 +47,7 @@ const Section = ({
       )}
       {...props}
     >
-      <Container>
-        {children}
-      </Container>
+      {children}
     </section>
   );
 };

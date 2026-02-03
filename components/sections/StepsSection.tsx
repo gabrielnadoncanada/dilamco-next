@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Section } from "@/components/Section";
 import { Heading } from "@/components/ui/heading";
+import { Container } from "../elements/container";
 
 export interface Step {
   id: string | number;
@@ -55,27 +56,29 @@ const StepsSection = ({
 
   return (
     <Section className={className} {...props}>
-      <div className="space-y-8 md:space-y-12">
-        <div>
-          <Heading variant="h2" className="mb-4">
-            {heading}
-          </Heading>
-          {description && (
-            <p className="mt-4 text-muted-foreground md:text-lg">
-              {description}
-            </p>
-          )}
+      <Container>
+        <div className="space-y-8 md:space-y-12">
+          <div>
+            <Heading variant="h2" className="mb-4">
+              {heading}
+            </Heading>
+            {description && (
+              <p className="mt-4 text-muted-foreground md:text-lg">
+                {description}
+              </p>
+            )}
+          </div>
+          <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-6">
+            {steps.map((step, index) => (
+              <StepItem
+                key={typeof step.id === "string" ? step.id : index}
+                step={step}
+                isLast={index === steps.length - 1}
+              />
+            ))}
+          </div>
         </div>
-        <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-6">
-          {steps.map((step, index) => (
-            <StepItem
-              key={typeof step.id === "string" ? step.id : index}
-              step={step}
-              isLast={index === steps.length - 1}
-            />
-          ))}
-        </div>
-      </div>
+      </Container>
     </Section>
   );
 };

@@ -80,7 +80,7 @@ export default function SalleDeBain() {
       <JsonLd data={faqJsonLd(faqItems)} />
       <main id="contenu">
         <HeroSection
-          heading="Salle de bain & vanités sur mesure — durabilité en milieu humide"
+          heading="Salle de bain & vanités sur mesure, durabilité en milieu humide"
           description="Une salle de bain impose des contraintes spécifiques : humidité, ventilation, éclaboussures, nettoyage fréquent et usage quotidien. Dilamco conçoit et réalise des vanités et rangements sur mesure haut de gamme, pensés pour durer, avec option de rénovation complète clé en main selon le projet — principalement à Montréal, Laval et sur la Rive-Sud."
           image={{
             src: "/images/spaces/vanite-salles-de-bain.webp",
