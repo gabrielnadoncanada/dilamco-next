@@ -18,6 +18,7 @@
   --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-border-tertiary: var(--border-tertiary);
   --color-sidebar: var(--sidebar);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
@@ -41,12 +42,33 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-md: calc(var(--radius) - 0.5px);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: clamp(1*1rem,((1 - ((1.5 - 1)/(var(--site--viewport-max) - var(--site--viewport-min))*var(--site--viewport-min)))*1rem + ((1.5 - 1)/(var(--site--viewport-max) - var(--site--viewport-min)))*100vw),1.5*1rem);
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  /* typography variables */
+  --_typography---font-size--h1: clamp(2.125 * 1rem, ((2.125 - ((3.25 - 2.125) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3.25 - 2.125) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3.25 * 1rem);
+
+   /* section spacing variables */
+  --_spacing---section-space--none: 0px;
+  --_spacing---section-space--small: clamp(4 * 1rem, ((4 - ((6 - 4) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((6 - 4) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 6 * 1rem);
+  --_spacing---section-space--main: clamp(6 * 1rem, ((6 - ((8 - 6) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((8 - 6) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 8 * 1rem);
+  --_spacing---section-space--large: clamp(8 * 1rem, ((8 - ((12.5 - 8) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((12.5 - 8) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 12.5 * 1rem);
+  --_spacing---section-space--page-top: clamp(12 * 1rem, ((12 - ((15 - 12) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((15 - 12) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 15 * 1rem);
+
+  /* padding variables */
+  --_spacing---space--0-25rem: clamp(.25 * 1rem, ((.25 - ((.25 - .25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((.25 - .25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), .25 * 1rem);
+  --_spacing---space--0-75rem: clamp(.75 * 1rem, ((.75 - ((.75 - .75) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((.75 - .75) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), .75 * 1rem);
+  --_spacing---space--0-5rem: clamp(.5 * 1rem, ((.5 - ((.5 - .5) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((.5 - .5) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), .5 * 1rem);
+  --_spacing---space--1rem: clamp(1 * 1rem, ((1 - ((1 - 1) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((1 - 1) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 1 * 1rem);
+  --_spacing---space--1-5rem: clamp(1.5 * 1rem, ((1.5 - ((1.5 - 1.5) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((1.5 - 1.5) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 1.5 * 1rem);
+  --_spacing---space--2rem: clamp(1.75 * 1rem, ((1.75 - ((2 - 1.75) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2 - 1.75) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2 * 1rem);
+  --_spacing---space--2-5rem: clamp(2 * 1rem, ((2 - ((2.5 - 2) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2.5 - 2) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2.5 * 1rem);
+  --_spacing---space--3rem: clamp(2.5 * 1rem, ((2.5 - ((3 - 2.5) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3 - 2.5) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3 * 1rem);
+  --_spacing---space--4rem: clamp(3.25 * 1rem, ((3.25 - ((4 - 3.25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((4 - 3.25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 4 * 1rem);
 }
 
 :root {
@@ -82,21 +104,26 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --border-width--main: .0625rem;
+  --site--viewport-max: 90;
+  --site--viewport-min: 20;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
+  --background: #141413;
+  --foreground: var(--swatch--gray-050);
+  --card: var(--swatch--gray-850);
+  --card-foreground: var(--swatch--gray-050);
+  --muted-foreground: var(--swatch--gray-450);
+  --border-tertiary: var(--swatch--gray-750);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
+  --muted: #1f1e1d;
+
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.704 0.191 22.216);
@@ -116,6 +143,29 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+
+
+   
+  --swatch--gray-050: #faf9f5;
+  --swatch--gray-150: #f0eee6;
+  --swatch--gray-350: #c2c0b6;
+  --swatch--gray-450: #9c9a92;
+  --swatch--gray-500: #87867f;
+  --swatch--gray-550: #73726c;
+  --swatch--gray-750: #30302e;
+  --swatch--gray-800: #262624;
+  --swatch--gray-850: #1f1e1d;
+  --swatch--gray-900: #1a1918;
+  --swatch--gray-950: #141413; 
+}
+
+
+.dark [data-surface="muted"] {
+  --background: var(--swatch--gray-850);
+  --card: var(--swatch--gray-950);
+  
+  --muted-foreground: var(--swatch--gray-450);
 }
 
 @layer base {

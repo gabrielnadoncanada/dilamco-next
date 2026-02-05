@@ -6,6 +6,7 @@ import type { MenuItem, NavAction } from "../navbar.types";
 import { MOBILE_BUTTONS, NAVIGATION } from "../navbar.constants";
 import { ActionButtons } from "./action-buttons";
 import { MobileMenuItem } from "./mobile-menu-item";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface MobileNavigationMenuProps {
   open: boolean;
@@ -37,7 +38,10 @@ export function MobileNavigationMenu({
             </div>
             <div className="flex flex-col gap-6">
               <div className="flex flex-col gap-4">
-                <ActionButtons actions={actions} />
+                <div className="flex items-center justify-between">
+                  <ActionButtons actions={actions} />
+                  <ThemeToggle />
+                </div>
               </div>
               <Accordion type="multiple" className="w-full">
                 {navItems.map((item, index) => (

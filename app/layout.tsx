@@ -6,6 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const siteUrl = "https://dilamco.com";
 const jakarta = Plus_Jakarta_Sans({
@@ -57,14 +58,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr-CA" className={jakarta.className}>
+    <html lang="fr-CA" className={jakarta.className} suppressHydrationWarning>
       <body>
-        <JsonLd data={organizationJsonLd()} />
-        <JsonLd data={localBusinessJsonLd()} />
-        
-        <Header/>
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <JsonLd data={organizationJsonLd()} />
+          <JsonLd data={localBusinessJsonLd()} />
+          
+          <Header/>
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

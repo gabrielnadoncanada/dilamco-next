@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Section } from "@/components/Section";
+import { Section } from "@/components/ui/section";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type LucideIcon } from "lucide-react";
 import { Heading } from "@/components/ui/heading";

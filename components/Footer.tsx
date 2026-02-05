@@ -2,6 +2,9 @@ import { cn } from "@/lib/utils";
 import { BRAND, FOOTER_NAV, LEGAL_LINKS, COPYRIGHT_TEXT } from "@/lib/navigation";
 import { Logo, LogoImage, LogoText } from "./footer/Logo";
 import { SmartLink } from "./footer/SmartLink";
+import { Section } from "./ui/section";
+import { Container } from "./elements/container";
+import { Divider } from "./ui/divider";
 
 interface FooterProps {
   className?: string;
@@ -26,8 +29,9 @@ export const Footer = ({
   bottomLinks = LEGAL_LINKS,
 }: FooterProps) => {
   return (
-    <section className={cn("py-32", className)}>
-      <div className="container">
+    <Section variant="default" className={cn(className, 'py-[var(--_spacing---section-space--small)]')}>
+      <Divider />
+      <Container>
         <footer>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
@@ -79,7 +83,7 @@ export const Footer = ({
             </ul>
           </div>
         </footer>
-      </div>
-    </section>
+      </Container>
+    </Section>
   );
 };

@@ -10,7 +10,9 @@ import { TextSection } from "@/components/sections/TextSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
 import { ActionButtons } from "@/components/ActionButtons";
+import { Checklist } from "@/components/Checklist";
 
 export const metadata: Metadata = {
   title: "Salle de bain & vanités sur mesure",
@@ -71,6 +73,96 @@ export default function SalleDeBain() {
     {
       name: "Salle de bain & vanités",
       url: SITE.url + "/espaces/salle-de-bain/",
+    },
+  ];
+
+  const featureImageTextItems: FeatureImageTextItem[] = [
+    {
+      ariaLabelledby: "humidite",
+      heading: "Humidité & durabilité : les points qui comptent vraiment",
+      content: (
+        <>
+          <p>En salle de bain, les problèmes viennent rarement "d'un mauvais look". Ils viennent de l'humidité : chants endommagés, gonflement, quincaillerie qui fatigue. Notre priorité est de réduire ces risques dès la conception.</p>
+          <Checklist
+            items={[
+              "Matériaux adaptés : choix orientés stabilité et usage en milieu humide.",
+              "Protection des chants : un détail critique pour limiter l'infiltration d'eau.",
+              "Quincaillerie fiable : charnières et coulisses pour usage quotidien (soft-close selon le besoin).",
+              "Contexte du projet : ventilation et configuration (surtout en rénovation).",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-salles-de-bain.webp",
+        alt: "Humidité & durabilité en salle de bain",
+      },
+      links: [
+        {
+          text: "Comparatif des matériaux",
+          href: "/materiaux/comparatif/",
+          variant: "outline",
+        },
+        {
+          text: "Quincaillerie",
+          href: "/materiaux/quincaillerie/",
+          variant: "outline",
+        },
+        {
+          text: "Pourquoi le contreplaqué",
+          href: "/materiaux/contreplaque/",
+          variant: "outline",
+        },
+      ],
+    },
+    {
+      ariaLabelledby: "configurations",
+      heading: "Configurations possibles",
+      content: (
+        <>
+          <p>Le sur mesure permet d'adapter la vanité à votre espace, vos habitudes et vos contraintes.</p>
+          <Checklist
+            items={[
+              "Simple ou double lavabo selon la largeur disponible.",
+              "Tiroirs vs portes selon vos préférences d'organisation.",
+              "Rangement vertical pour maximiser l'espace dans les petites salles de bain.",
+              "Intégration plomberie propre et fonctionnelle (sans perdre du rangement inutilement).",
+              "Finition cohérente avec le style (moderne, chaleureux, classique).",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-salles-de-bain.webp",
+        alt: "Configurations possibles de vanités sur mesure",
+      },
+      links: [
+        {
+          text: "Couleurs et finis",
+          href: "/materiaux/couleurs/",
+          variant: "outline",
+        },
+      ],
+    },
+    {
+      ariaLabelledby: "renovation",
+      heading: "Rénovation de salle de bain (option clé en main)",
+      content: (
+        <>
+          <p>Si votre projet inclut des travaux connexes (douche/bain, céramique, plomberie, ventilation, électricité), une approche clé en main peut réduire les imprévus et mieux cadrer le calendrier.</p>
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-salles-de-bain.webp",
+        alt: "Rénovation de salle de bain clé en main",
+      },
+      links: [
+        {
+          text: "Voir la rénovation salle de bain",
+          href: "/services/renovation/salle-de-bain/",
+          variant: "outline",
+        },
+      ],
     },
   ];
 
@@ -151,85 +243,7 @@ export default function SalleDeBain() {
           columns={2}
         />
 
-        <TextSection
-          aria-labelledby="humidite"
-          heading="Humidité & durabilité : les points qui comptent vraiment"
-          paragraphs={[
-            "En salle de bain, les problèmes viennent rarement \"d'un mauvais look\". Ils viennent de l'humidité : chants endommagés, gonflement, quincaillerie qui fatigue. Notre priorité est de réduire ces risques dès la conception.",
-          ]}
-          links={[
-            {
-              text: "Comparatif des matériaux",
-              href: "/materiaux/comparatif/",
-              variant: "outline",
-            },
-            {
-              text: "Quincaillerie",
-              href: "/materiaux/quincaillerie/",
-              variant: "outline",
-            },
-            {
-              text: "Pourquoi le contreplaqué",
-              href: "/materiaux/contreplaque/",
-              variant: "outline",
-            },
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="humidite-details"
-          heading=""
-          items={[
-            "Matériaux adaptés : choix orientés stabilité et usage en milieu humide.",
-            "Protection des chants : un détail critique pour limiter l'infiltration d'eau.",
-            "Quincaillerie fiable : charnières et coulisses pour usage quotidien (soft-close selon le besoin).",
-            "Contexte du projet : ventilation et configuration (surtout en rénovation).",
-          ]}
-          variant="bullets"
-        />
-
-        <TextSection
-          aria-labelledby="configurations"
-          heading="Configurations possibles"
-          paragraphs={[
-            "Le sur mesure permet d'adapter la vanité à votre espace, vos habitudes et vos contraintes.",
-          ]}
-          links={[
-            {
-              text: "Couleurs et finis",
-              href: "/materiaux/couleurs/",
-              variant: "outline",
-            },
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="configurations-details"
-          heading=""
-          items={[
-            "Simple ou double lavabo selon la largeur disponible.",
-            "Tiroirs vs portes selon vos préférences d'organisation.",
-            "Rangement vertical pour maximiser l'espace dans les petites salles de bain.",
-            "Intégration plomberie propre et fonctionnelle (sans perdre du rangement inutilement).",
-            "Finition cohérente avec le style (moderne, chaleureux, classique).",
-          ]}
-          variant="bullets"
-        />
-
-        <TextSection
-          aria-labelledby="renovation"
-          heading="Rénovation de salle de bain (option clé en main)"
-          paragraphs={[
-            "Si votre projet inclut des travaux connexes (douche/bain, céramique, plomberie, ventilation, électricité), une approche clé en main peut réduire les imprévus et mieux cadrer le calendrier.",
-          ]}
-          links={[
-            {
-              text: "Voir la rénovation salle de bain",
-              href: "/services/renovation/salle-de-bain/",
-              variant: "outline",
-            },
-          ]}
-        />
+        <FeatureImageText items={featureImageTextItems} />
 
         <RelatedLinksSection
           aria-labelledby="projets"

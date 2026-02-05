@@ -10,7 +10,9 @@ import { TextSection } from "@/components/sections/TextSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
 import { ActionButtons } from "@/components/ActionButtons";
+import { Checklist } from "@/components/Checklist";
 
 export const metadata: Metadata = {
   title: "Walk-in & rangement sur mesure",
@@ -69,6 +71,90 @@ export default function WalkIn() {
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
     { name: "Walk-in & rangement", url: SITE.url + "/espaces/walk-in/" },
+  ];
+
+  const featureImageTextItems: FeatureImageTextItem[] = [
+    {
+      ariaLabelledby: "organisation",
+      heading: "Organisation & fonctionnalité (le cœur du sur mesure)",
+      content: (
+        <>
+          <p>Le sur mesure permet de structurer l'espace selon vos habitudes. L'objectif : rendre le rangement simple, accessible et cohérent, sans "zones mortes" difficiles à utiliser.</p>
+          <Checklist
+            items={[
+              "Zones vêtements : sections pour vêtements longs, courts et pliés.",
+              "Chaussures : rangement dédié et accessible.",
+              "Accessoires : tiroirs compartimentés pour optimiser le quotidien.",
+              "Étagères : dimensions adaptées, avec possibilité d'ajustement selon le besoin.",
+              "Évolutivité : organisation pensée pour s'adapter (nouveaux besoins, saisons, etc.).",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+        alt: "Organisation & fonctionnalité d'un walk-in sur mesure",
+      },
+    },
+    {
+      ariaLabelledby: "materiaux",
+      heading: "Matériaux & durabilité",
+      content: (
+        <>
+          <p>Un walk-in est utilisé tous les jours. La durabilité dépend des matériaux, des chants, de la quincaillerie et de la qualité d'installation.</p>
+          <Checklist
+            items={[
+              "Stabilité : structures adaptées pour limiter les déformations dans le temps.",
+              "Chants & finition : résistance aux impacts et à l'usure.",
+              "Quincaillerie : coulisses et charnières pour usage répété.",
+              "Entretien : finis cohérents avec votre quotidien.",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+        alt: "Matériaux & durabilité d'un walk-in sur mesure",
+      },
+      links: [
+        {
+          text: "Voir les matériaux",
+          href: "/materiaux/",
+          variant: "outline",
+        },
+        {
+          text: "Comparatif des matériaux",
+          href: "/materiaux/comparatif/",
+          variant: "outline",
+        },
+        {
+          text: "Quincaillerie",
+          href: "/materiaux/quincaillerie/",
+          variant: "outline",
+        },
+      ],
+    },
+    {
+      ariaLabelledby: "configurations",
+      heading: "Configurations possibles",
+      content: (
+        <>
+          <p>Voici quelques configurations fréquentes, adaptées selon l'espace disponible.</p>
+          <Checklist
+            items={[
+              "Walk-in en L, en U ou linéaire : selon la circulation et les murs disponibles.",
+              "Garde-robe ouvert ou fermé : rendu minimaliste ou protection accrue.",
+              "Tiroirs intégrés : accessoires, bijoux, ceintures, petits items.",
+              "Étagères ajustées : valises, paniers, linge, zones saisonnières.",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+        alt: "Configurations possibles d'un walk-in sur mesure",
+      },
+    },
   ];
 
   return (
@@ -140,83 +226,7 @@ export default function WalkIn() {
           columns={3}
         />
 
-        <TextSection
-          aria-labelledby="organisation"
-          heading="Organisation & fonctionnalité (le cœur du sur mesure)"
-          paragraphs={[
-            "Le sur mesure permet de structurer l'espace selon vos habitudes. L'objectif : rendre le rangement simple, accessible et cohérent, sans \"zones mortes\" difficiles à utiliser.",
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="organisation-details"
-          heading=""
-          items={[
-            "Zones vêtements : sections pour vêtements longs, courts et pliés.",
-            "Chaussures : rangement dédié et accessible.",
-            "Accessoires : tiroirs compartimentés pour optimiser le quotidien.",
-            "Étagères : dimensions adaptées, avec possibilité d'ajustement selon le besoin.",
-            "Évolutivité : organisation pensée pour s'adapter (nouveaux besoins, saisons, etc.).",
-          ]}
-          variant="bullets"
-        />
-
-        <TextSection
-          aria-labelledby="materiaux"
-          heading="Matériaux & durabilité"
-          paragraphs={[
-            "Un walk-in est utilisé tous les jours. La durabilité dépend des matériaux, des chants, de la quincaillerie et de la qualité d'installation.",
-          ]}
-          links={[
-            {
-              text: "Voir les matériaux",
-              href: "/materiaux/",
-              variant: "outline",
-            },
-            {
-              text: "Comparatif des matériaux",
-              href: "/materiaux/comparatif/",
-              variant: "outline",
-            },
-            {
-              text: "Quincaillerie",
-              href: "/materiaux/quincaillerie/",
-              variant: "outline",
-            },
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="materiaux-details"
-          heading=""
-          items={[
-            "Stabilité : structures adaptées pour limiter les déformations dans le temps.",
-            "Chants & finition : résistance aux impacts et à l'usure.",
-            "Quincaillerie : coulisses et charnières pour usage répété.",
-            "Entretien : finis cohérents avec votre quotidien.",
-          ]}
-          variant="bullets"
-        />
-
-        <TextSection
-          aria-labelledby="configurations"
-          heading="Configurations possibles"
-          paragraphs={[
-            "Voici quelques configurations fréquentes, adaptées selon l'espace disponible.",
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="configurations-details"
-          heading=""
-          items={[
-            "Walk-in en L, en U ou linéaire : selon la circulation et les murs disponibles.",
-            "Garde-robe ouvert ou fermé : rendu minimaliste ou protection accrue.",
-            "Tiroirs intégrés : accessoires, bijoux, ceintures, petits items.",
-            "Étagères ajustées : valises, paniers, linge, zones saisonnières.",
-          ]}
-          variant="bullets"
-        />
+        <FeatureImageText items={featureImageTextItems} />
 
         <RelatedLinksSection
           aria-labelledby="projets"

@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ProofSection } from "@/components/sections/ProofSection";
 import { ListSection } from "@/components/sections/ListSection";
 import { SliderSection, type SliderItem } from "@/components/sections/SliderSection";
-import { Section } from "@/components/Section";
+import { Section } from "@/components/ui/section";
 import { ActionButtons } from "@/components/ActionButtons";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";

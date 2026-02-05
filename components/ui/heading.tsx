@@ -8,8 +8,8 @@ const headingVariants = cva(
   {
     variants: {
       variant: {
-        h1: "text-5xl/12 tracking-tight text-balance sm:text-[5rem]/20 text-white",
-        h2: "text-[2rem]/10 tracking-tight text-pretty sm:text-5xl/14 dark:text-white",
+        h1: "text-[length:var(--_typography---font-size--h1)] tracking-tight text-balance mb-[var(--_spacing---space--0-75rem)]",
+        h2: "text-[2rem]/10 tracking-tight text-pretty sm:text-5xl/14 mb-[var(--_spacing---space--2-5rem)] text-[var(--_typography---font-size--h1)]",
         h3: "text-2xl/10 tracking-tight",
         h4: "text-base/8 font-medium",
         h5: "text-base md:text-lg lg:text-xl",
@@ -32,10 +32,10 @@ interface HeadingProps
 
 const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ className, as, variant, ...props }, ref) => {
-    // Si 'as' n'est pas fourni, utiliser 'variant' comme balise par défaut
-    // Sinon utiliser 'variant' pour le style et 'as' pour la balise
+
     const Component = as || (variant as HeadingElement) || "h1"
     const styleVariant = (variant || as || "h1") as NonNullable<VariantProps<typeof headingVariants>["variant"]>
+    console.log("styleVariant", styleVariant, headingVariants({ variant: styleVariant }))
 
     return (
       <Component

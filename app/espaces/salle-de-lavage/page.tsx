@@ -10,7 +10,9 @@ import { TextSection } from "@/components/sections/TextSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
 import { ActionButtons } from "@/components/ActionButtons";
+import { Checklist } from "@/components/Checklist";
 
 export const metadata: Metadata = {
   title: "Salle de lavage sur mesure",
@@ -73,6 +75,91 @@ export default function SalleDeLavage() {
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
     { name: "Salle de lavage", url: SITE.url + "/espaces/salle-de-lavage/" },
+  ];
+
+  const featureImageTextItems: FeatureImageTextItem[] = [
+    {
+      ariaLabelledby: "fonctionnalite",
+      heading: "Fonctionnalité : organiser les zones (lavage, pliage, rangement)",
+      content: (
+        <>
+          <p>Une buanderie efficace réduit le désordre. Le sur mesure permet de structurer l'espace selon vos habitudes et la réalité des lieux.</p>
+          <Checklist
+            items={[
+              "Zone lavage : accès simple à la laveuse/sécheuse, circulation et dégagements cohérents.",
+              "Zone pliage : comptoir pratique et hauteur confortable.",
+              "Produits ménagers : rangement sécurisé et accessible.",
+              "Rangement vertical : armoires hautes et colonnes pour maximiser l'espace.",
+              "Paniers & linge : organisation logique pour éviter que tout s'accumule.",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-salles-de-lavage.webp",
+        alt: "Fonctionnalité d'une salle de lavage sur mesure",
+      },
+    },
+    {
+      ariaLabelledby: "technique",
+      heading: "Contraintes techniques & durabilité",
+      content: (
+        <>
+          <p>Les problèmes d'une salle de lavage viennent souvent de détails : chants exposés à l'eau, surfaces difficiles à nettoyer, quincaillerie qui fatigue. Notre approche vise la durabilité dans le temps.</p>
+          <Checklist
+            items={[
+              "Humidité & éclaboussures : matériaux adaptés et protection des chants.",
+              "Surfaces faciles à entretenir : conception pensée pour le nettoyage régulier.",
+              "Usage répété : quincaillerie fiable pour ouvertures fréquentes (tiroirs/portes).",
+              "Conception autour des contraintes : plomberie, drains, ventilation, éléments techniques.",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-salles-de-lavage.webp",
+        alt: "Contraintes techniques & durabilité d'une salle de lavage sur mesure",
+      },
+      links: [
+        {
+          text: "Voir les matériaux",
+          href: "/materiaux/",
+          variant: "outline",
+        },
+        {
+          text: "Comparatif des matériaux",
+          href: "/materiaux/comparatif/",
+          variant: "outline",
+        },
+        {
+          text: "Quincaillerie",
+          href: "/materiaux/quincaillerie/",
+          variant: "outline",
+        },
+      ],
+    },
+    {
+      ariaLabelledby: "configurations",
+      heading: "Configurations possibles",
+      content: (
+        <>
+          <p>Le sur mesure s'adapte à la configuration réelle de votre buanderie.</p>
+          <Checklist
+            items={[
+              "Buanderie en corridor : rangement vertical et comptoir de pliage sans bloquer la circulation.",
+              "Buanderie dans un placard : modules adaptés, accès simple, gestion des portes et dégagements.",
+              "Évier utilitaire (si applicable) : rangement adapté aux produits et à l'espace humide.",
+              "Empilage laveuse/sécheuse : optimisation de la hauteur et du rangement.",
+              "Armoires hautes + colonne : maximiser le rangement pour linge, paniers et accessoires.",
+            ]}
+          />
+        </>
+      ),
+      image: {
+        src: "/images/spaces/vanite-salles-de-lavage.webp",
+        alt: "Configurations possibles d'une salle de lavage sur mesure",
+      },
+    },
   ];
 
   return (
@@ -144,84 +231,7 @@ export default function SalleDeLavage() {
           columns={3}
         />
 
-        <TextSection
-          aria-labelledby="fonctionnalite"
-          heading="Fonctionnalité : organiser les zones (lavage, pliage, rangement)"
-          paragraphs={[
-            "Une buanderie efficace réduit le désordre. Le sur mesure permet de structurer l'espace selon vos habitudes et la réalité des lieux.",
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="fonctionnalite-details"
-          heading=""
-          items={[
-            "Zone lavage : accès simple à la laveuse/sécheuse, circulation et dégagements cohérents.",
-            "Zone pliage : comptoir pratique et hauteur confortable.",
-            "Produits ménagers : rangement sécurisé et accessible.",
-            "Rangement vertical : armoires hautes et colonnes pour maximiser l'espace.",
-            "Paniers & linge : organisation logique pour éviter que tout s'accumule.",
-          ]}
-          variant="bullets"
-        />
-
-        <TextSection
-          aria-labelledby="technique"
-          heading="Contraintes techniques & durabilité"
-          paragraphs={[
-            "Les problèmes d'une salle de lavage viennent souvent de détails : chants exposés à l'eau, surfaces difficiles à nettoyer, quincaillerie qui fatigue. Notre approche vise la durabilité dans le temps.",
-          ]}
-          links={[
-            {
-              text: "Voir les matériaux",
-              href: "/materiaux/",
-              variant: "outline",
-            },
-            {
-              text: "Comparatif des matériaux",
-              href: "/materiaux/comparatif/",
-              variant: "outline",
-            },
-            {
-              text: "Quincaillerie",
-              href: "/materiaux/quincaillerie/",
-              variant: "outline",
-            },
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="technique-details"
-          heading=""
-          items={[
-            "Humidité & éclaboussures : matériaux adaptés et protection des chants.",
-            "Surfaces faciles à entretenir : conception pensée pour le nettoyage régulier.",
-            "Usage répété : quincaillerie fiable pour ouvertures fréquentes (tiroirs/portes).",
-            "Conception autour des contraintes : plomberie, drains, ventilation, éléments techniques.",
-          ]}
-          variant="bullets"
-        />
-
-        <TextSection
-          aria-labelledby="configurations"
-          heading="Configurations possibles"
-          paragraphs={[
-            "Le sur mesure s'adapte à la configuration réelle de votre buanderie.",
-          ]}
-        />
-
-        <ListSection
-          aria-labelledby="configurations-details"
-          heading=""
-          items={[
-            "Buanderie en corridor : rangement vertical et comptoir de pliage sans bloquer la circulation.",
-            "Buanderie dans un placard : modules adaptés, accès simple, gestion des portes et dégagements.",
-            "Évier utilitaire (si applicable) : rangement adapté aux produits et à l'espace humide.",
-            "Empilage laveuse/sécheuse : optimisation de la hauteur et du rangement.",
-            "Armoires hautes + colonne : maximiser le rangement pour linge, paniers et accessoires.",
-          ]}
-          variant="bullets"
-        />
+        <FeatureImageText items={featureImageTextItems} />
 
         <RelatedLinksSection
           aria-labelledby="projets"

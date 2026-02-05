@@ -12,6 +12,7 @@ import { ActionButtons } from "./components/action-buttons";
 import { MobileNavigationMenu } from "./components/mobile-navigation-menu";
 import type { NavbarProps } from "./navbar.types";
 import { Container } from "../elements/container";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar({
   className,
@@ -38,6 +39,7 @@ export function Navbar({
               <DesktopNavigation navigation={navigation} />
             </div>
             <div className="hidden items-center gap-3 xl:flex">
+              <ThemeToggle />
               <ActionButtons actions={actions} size="sm" />
             </div>
             <div className="xl:hidden">

@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Section } from "@/components/Section";
+import { Section } from "@/components/ui/section";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
 import { Heading } from "@/components/ui/heading";

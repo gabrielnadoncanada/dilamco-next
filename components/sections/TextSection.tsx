@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Section } from "@/components/Section";
+import { Section } from "@/components/ui/section";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 import { Heading } from "@/components/ui/heading";
 import { Container } from "../elements/container";

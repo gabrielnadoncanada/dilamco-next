@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Section } from "@/components/Section";
+import { Section } from "@/components/ui/section";
 import { type LucideIcon } from "lucide-react";
 import { Heading } from "@/components/ui/heading";
 import { Container } from "../elements/container";

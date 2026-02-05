@@ -1,26 +1,19 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
-import { Container } from "./elements/container";
+import { Container } from "../elements/container";
 const sectionVariants = cva(
   "w-full",
   {
     variants: {
       variant: {
         default: "",
-        accent: "bg-accent",
-        muted: "bg-muted",
+        muted: "bg-background",
       },
-      maxWidth: {
-        default: "max-w-6xl",
-        wide: "max-w-7xl",
-        narrow: "max-w-4xl",
-        full: "max-w-none"
-      },
+
     },
     defaultVariants: {
       variant: "default",
-      maxWidth: "default",
     },
   }
 );
@@ -36,13 +29,13 @@ const Section = ({
   children,
   className,
   variant,
-  maxWidth,
   ...props
 }: SectionProps) => {
   return (
     <section
+      data-surface={variant}
       className={cn(
-        "py-16 md:py-20 lg:py-24",
+        "pt-[var(--_spacing---section-space--main)] relative pb-[var(--_spacing---section-space--large)] bg-background text-foreground",
         className
       )}
       {...props}

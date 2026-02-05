@@ -273,9 +273,6 @@ export default function Cuisine() {
 
         <FeatureImageText items={featureImageTextItems} />
 
-
-
-
         <RelatedLinksSection
           aria-labelledby="projets"
           heading="Projets de cuisines"
