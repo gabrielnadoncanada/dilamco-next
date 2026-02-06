@@ -1,13 +1,12 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Section } from "@/components/ui/section";
+import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 import { Heading } from "@/components/ui/heading";
 import { Wallpaper } from "../elements/wallpaper";
 import clsx from "clsx";
 import { Container } from "../elements/container";
 
-interface HeroSectionProps extends React.HTMLAttributes<HTMLElement> {
+interface HeroSectionProps extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children" | "container" | "align" | "padding"> {
   heading: string;
   description?: string | React.ReactNode;
   actions?: ActionButton[];
@@ -28,14 +27,23 @@ const HeroSection = ({
   className,
   ...props
 }: HeroSectionProps) => {
+  const renderedActions = actionsSlot ?? (actions && actions.length > 0 ? (
+    <ActionButtons className="justify-start" buttons={actions} />
+  ) : null);
+
   return (
-    <section className={clsx('flex flex-col gap-16 px-2  w-full', className)} {...props}>
+    <SectionShell
+      className={clsx("flex flex-col gap-16 px-2 w-full", className)}
+      padding="none"
+      container={false}
+      {...props}
+    >
       <Wallpaper className="rounded-lg">
         <div className="-mx-2 sm:px-6 md:px-12 lg:px-0">
           <Container className="flex flex-col gap-16">
             <div className="flex gap-x-10 gap-y-16 max-lg:flex-col sm:gap-y-24">
               <div className="flex shrink-0 z-20 flex-col items-start gap-6 py-16 sm:py-32 lg:basis-5xl lg:py-40">
-                <Heading variant="h1" className="max-w-5xl">
+                <Heading variant="h1" className="max-w-5xl text-[length:var(--_typography---font-size--display-1)] leading-[var(--_typography---line-height--1-1)] text-white">
                   {heading}
                 </Heading>
                 {description && (
@@ -43,7 +51,7 @@ const HeroSection = ({
                     {typeof description === "string" ? <p>{description}</p> : description}
                   </div>
                 )}
-                {actionsSlot}
+                {renderedActions}
               </div>
               {image && (
 
@@ -59,7 +67,7 @@ const HeroSection = ({
           </Container>
         </div>
       </Wallpaper >
-    </section >
+    </SectionShell>
   );
 };
 

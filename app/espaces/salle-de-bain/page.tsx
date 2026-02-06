@@ -204,39 +204,28 @@ export default function SalleDeBain() {
           variant="checkmarks"
         />
 
-        <FeatureGridSection
-          aria-labelledby="inclus"
+        <RelatedLinksSection
+          aria-labelledby="ce-qui-est-inclus"
           heading="Ce que comprend une salle de bain sur mesure Dilamco"
-          features={[
+          links={[
             {
-              title: "Design & planification",
+              label: "Design & planification",
+              href: "/services/design/",
               description: "Besoins, contraintes, plan et choix de matériaux.",
             },
             {
-              title: "Fabrication sur mesure",
+              label: "Fabrication sur mesure",
+              href: "/services/fabrication/",
               description: "Vanité, rangement, modules adaptés (simple ou double).",
             },
             {
-              title: "Installation précise",
+              label: "Installation précise",
+              href: "/services/installation/",
               description: "Alignements, ajustements, finition et inspection finale.",
             },
             {
-              title: "Option clé en main",
+              label: "Option clé en main",
               description: "Coordination des travaux connexes lors d'une rénovation complète.",
-            },
-          ]}
-          columns={2}
-        />
-
-        <RelatedLinksSection
-          aria-labelledby="services"
-          heading="Services associés"
-          links={[
-            { label: "Design", href: "/services/design/" },
-            { label: "Fabrication", href: "/services/fabrication/" },
-            { label: "Installation", href: "/services/installation/" },
-            {
-              label: "Rénovation salle de bain",
               href: "/services/renovation/salle-de-bain/",
             },
           ]}

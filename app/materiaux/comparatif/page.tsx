@@ -162,77 +162,60 @@ export default function Comparatif() {
           columns={2}
         />
 
-        <FeatureGridSection
-          aria-labelledby="par-materiau"
-          heading="Résumé par matériau"
-          features={[
-            {
-              title: "Contreplaqué",
-              description: "Très bon choix lorsque la stabilité et la structure sont prioritaires. Souvent pertinent pour viser une durabilité supérieure. Le rendu final dépend aussi des composantes (portes, quincaillerie, finition).",
-            },
-            {
-              title: "MDF",
-              description: "Très utilisé pour des portes peintes grâce à sa surface uniforme. Sensible à l'humidité si mal protégé (chants et finition critiques). Pertinent quand l'objectif principal est une finition peinte régulière.",
-            },
-            {
-              title: "Mélamine",
-              description: "Large choix de finis décoratifs et entretien simple. Point faible : les chants (impacts et infiltration). Peut être très correcte si utilisée de façon ciblée et bien exécutée.",
-            },
-            {
-              title: "Bois massif",
-              description: "Texture et variations naturelles (très apprécié en haut de gamme). Peut bouger : conception et assemblage comptent énormément. Souvent utilisé là où l'esthétique et la matière sont prioritaires.",
-            },
-          ]}
-          columns={2}
-        />
 
         <RelatedLinksSection
           aria-labelledby="materiaux-pages"
-          heading=""
+          heading="Résumé par matériau"
           links={[
-            { label: "Voir la page Contreplaqué", href: "/materiaux/contreplaque/" },
-            { label: "Voir la page MDF", href: "/materiaux/mdf/" },
-            { label: "Voir la page Mélamine", href: "/materiaux/melamine/" },
-            { label: "Voir la page Bois massif", href: "/materiaux/bois-massif/" },
+            {
+              label: "Contreplaqué",
+              description: "Très bon choix lorsque la stabilité et la structure sont prioritaires. Souvent pertinent pour viser une durabilité supérieure. Le rendu final dépend aussi des composantes (portes, quincaillerie, finition).",
+              href: "/materiaux/contreplaque/"
+            },
+            {
+              label: "MDF",
+              description: "Très utilisé pour des portes peintes grâce à sa surface uniforme. Sensible à l'humidité si mal protégé (chants et finition critiques). Pertinent quand l'objectif principal est une finition peinte régulière.",
+              href: "/materiaux/mdf/"
+            },
+            {
+              label: "Mélamine",
+              description: "Large choix de finis décoratifs et entretien simple. Point faible : les chants (impacts et infiltration). Peut être très correcte si utilisée de façon ciblée et bien exécuté.",
+              href: "/materiaux/melamine/"
+            },
+            {
+              label: "Bois massif",
+              description: "Texture et variations naturelles (très apprécié en haut de gamme). Peut bouger : conception et assemblage comptent énormément. Souvent utilisé là où l'esthétique et la matière sont prioritaires.",
+              href: "/materiaux/bois-massif/"
+            },
           ]}
           columns={2}
         />
 
-        <FeatureGridSection
-          aria-labelledby="par-espace"
-          heading="Comparatif par espace"
-          features={[
-            {
-              title: "Cuisine",
-              description: "Cycles d'ouverture élevés et charges importantes (tiroirs, vaisselle, casseroles). Humidité ponctuelle près de l'évier et du lave-vaisselle. Un bon compromis dépend du niveau de finition et de durabilité recherché.",
-            },
-            {
-              title: "Salle de bain",
-              description: "Humidité plus constante : ventilation et détails d'exécution critiques. Les chants et la protection des zones exposées font une grande différence. Selon le projet, certains matériaux sont plus pertinents que d'autres.",
-            },
-          ]}
-          columns={2}
-        />
+
 
         <RelatedLinksSection
           aria-labelledby="espaces-links"
-          heading=""
+          heading="Comparatif par espace"
           links={[
-            { label: "Voir Cuisine sur mesure", href: "/espaces/cuisine/" },
             {
-              label: "Voir Salle de bain & vanités",
+              label: "Cuisine",
+              description: "Cycles d'ouverture élevés et charges importantes (tiroirs, vaisselle, casseroles). Humidité ponctuelle près de l'évier et du lave-vaisselle. Un bon compromis dépend du niveau de finition et de durabilité recherché.",
+              href: "/espaces/cuisine/"
+            },
+            {
+              label: "Salle de bain",
+              description: "Humidité plus constante : ventilation et détails d'exécution critiques. Les chants et la protection des zones exposées font une grande différence. Selon le projet, certains matériaux sont plus pertinents que d'autres.",
               href: "/espaces/salle-de-bain/",
             },
           ]}
           columns={2}
         />
 
-        <TextSection
-          aria-labelledby="ce-que-ca-ne-dit-pas"
+
+        <ListSection
+          aria-labelledby="ce-que-ca-ne-dit-pas-details"
           heading="Ce que le tableau ne montre pas"
-          paragraphs={[
-            "Deux projets peuvent utiliser « le même matériau » et vieillir très différemment. Les facteurs suivants sont souvent décisifs :",
-          ]}
+          intro="Deux projets peuvent utiliser « le même matériau » et vieillir très différemment. Les facteurs suivants sont souvent décisifs :"
           links={[
             {
               text: "Voir la quincaillerie",
@@ -245,11 +228,6 @@ export default function Comparatif() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="ce-que-ca-ne-dit-pas-details"
-          heading=""
           items={[
             "Chants et protections : point critique pour l'humidité et les impacts.",
             "Assemblage : rigidité, précision, stabilité.",

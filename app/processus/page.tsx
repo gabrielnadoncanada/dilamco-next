@@ -109,17 +109,11 @@ export default function Processus() {
           }
         />
 
-        <TextSection
-          aria-labelledby="pourquoi"
-          heading="Pourquoi un processus clair?"
-          paragraphs={[
-            "Un bon résultat dépend moins des « bonnes intentions » que d'un déroulement maîtrisé. Un processus clair sert à réduire les zones grises, protéger la qualité et rendre le projet plus prévisible.",
-          ]}
-        />
 
         <ListSection
           aria-labelledby="pourquoi-details"
-          heading=""
+          heading="Pourquoi un processus clair?"
+          intro="Un bon résultat dépend moins des « bonnes intentions » que d'un déroulement maîtrisé. Un processus clair sert à réduire les zones grises, protéger la qualité et rendre le projet plus prévisible."
           items={[
             "Réduire les imprévus : moins de reprises, moins de décisions en urgence.",
             "Clarifier les responsabilités : qui fait quoi, à quel moment.",
@@ -212,17 +206,11 @@ export default function Processus() {
           ]}
         />
 
-        <TextSection
-          aria-labelledby="ce-quon-vous-demande"
-          heading="Ce qu'on vous demande (pour avancer vite)"
-          paragraphs={[
-            "Pour vous orienter efficacement, quelques informations suffisent :",
-          ]}
-        />
 
         <ListSection
           aria-labelledby="ce-quon-vous-demande-details"
-          heading=""
+          heading="Ce qu'on vous demande (pour avancer vite)"
+          intro="Pour vous orienter efficacement, quelques informations suffisent :"
           items={[
             "Votre secteur (Montréal / Laval / Rive-Sud).",
             "Le type d'espace (cuisine, salle de bain, walk-in, salle de lavage, commercial).",

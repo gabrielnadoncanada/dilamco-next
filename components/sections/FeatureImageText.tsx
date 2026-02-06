@@ -1,9 +1,8 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Section } from "@/components/ui/section";
+import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import { Heading } from "../ui/heading";
 import { type ActionButton, ActionButtons } from "../ActionButtons";
-import { Container } from "../elements/container";
 
 export interface FeatureImageTextItem {
   ariaLabelledby: string;
@@ -16,7 +15,7 @@ export interface FeatureImageTextItem {
   links?: ActionButton[];
 }
 
-interface FeatureImageTextProps extends Omit<React.HTMLAttributes<HTMLElement>, "content" | "title"> {
+interface FeatureImageTextProps extends Omit<SectionShellProps, "content" | "title" | "intro" | "actions" | "children"> {
   items: FeatureImageTextItem[];
   className?: string;
 }
@@ -79,8 +78,8 @@ const FeatureImageTextItem = ({
 
 const FeatureImageText = ({ items, className, ...sectionProps }: FeatureImageTextProps) => {
   return (
-    <Section className={cn("space-y-10 md:space-y-16", className)} {...sectionProps}>
-      <Container className="space-y-10 md:space-y-16">
+    <SectionShell className={cn("space-y-10 md:space-y-16", className)} {...sectionProps}>
+      <div className="space-y-10 md:space-y-16">
         {items.map((item, index) => (
           <FeatureImageTextItem
             key={item.ariaLabelledby}
@@ -91,8 +90,8 @@ const FeatureImageText = ({ items, className, ...sectionProps }: FeatureImageTex
             links={item.links}
           />
         ))}
-      </Container>
-    </Section>
+      </div>
+    </SectionShell>
   );
 };
 

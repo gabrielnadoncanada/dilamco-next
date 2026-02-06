@@ -93,12 +93,12 @@ export default function Couleurs() {
           }
         />
 
-        <TextSection
-          aria-labelledby="methode"
+
+
+        <ListSection
+          aria-labelledby="methode-details"
           heading="Comment choisir une couleur (méthode simple)"
-          paragraphs={[
-            "Pour structurer tout ça, le plus efficace est de passer par le service de design.",
-          ]}
+          intro="Pour structurer tout ça, le plus efficace est de passer par le service de design."
           links={[
             {
               text: "Voir le service de design",
@@ -106,11 +106,6 @@ export default function Couleurs() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="methode-details"
-          heading=""
           items={[
             "Lumière : l'exposition et l'éclairage changent la perception d'une même couleur.",
             "Volume : une petite pièce réagit différemment qu'un grand espace.",
@@ -202,10 +197,10 @@ export default function Couleurs() {
           columns={2}
         />
 
-        <TextSection
-          aria-labelledby="materiau"
+
+        <ListSection
+          aria-labelledby="materiau-details"
           heading="Couleur et matériau : ce que ça change"
-          paragraphs={[]}
           links={[
             {
               text: "MDF",
@@ -223,11 +218,6 @@ export default function Couleurs() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="materiau-details"
-          heading=""
           items={[
             "MDF : souvent utilisé pour des portes peintes (surface très uniforme).",
             "Bois massif : variations naturelles (teinte et grain), rendu chaleureux.",
@@ -236,12 +226,11 @@ export default function Couleurs() {
           variant="bullets"
         />
 
-        <TextSection
-          aria-labelledby="finitions"
+
+        <ListSection
+          aria-labelledby="finitions-details"
           heading="Finitions & entretien (mat, satiné, brillant)"
-          paragraphs={[
-            "Le ressenti final dépend aussi de la quincaillerie (poignées, mécanismes) et de l'installation.",
-          ]}
+          intro="Le ressenti final dépend aussi de la quincaillerie (poignées, mécanismes) et de l'installation."
           links={[
             {
               text: "Voir la quincaillerie",
@@ -254,11 +243,6 @@ export default function Couleurs() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="finitions-details"
-          heading=""
           items={[
             "Mat : look doux et contemporain, peut marquer selon l'usage et la qualité du fini.",
             "Satiné : bon compromis pour l'entretien (souvent très pertinent en cuisine).",

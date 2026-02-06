@@ -77,30 +77,7 @@ export default function Commercial() {
     { name: "Commercial", url: SITE.url + "/espaces/commercial/" },
   ];
 
-  const typesFeatureImageTextItems: FeatureImageTextItem[] = [
-    {
-      ariaLabelledby: "types",
-      heading: "Types d'espaces commerciaux",
-      content: (
-        <>
-          <p>Le sur mesure est particulièrement pertinent lorsque l'espace impose des contraintes (accès, équipements, circulation) ou lorsque l'usage est intensif.</p>
-          <p>Si votre besoin est strictement décoratif ou temporaire, le sur mesure commercial est souvent moins pertinent. Ici, l'objectif est la durabilité et la fonctionnalité.</p>
-          <Checklist
-            items={[
-              "Bureaux & espaces professionnels : rangements, mobilier intégré, zones d'accueil.",
-              "Commerces de détail : mobilier de présentation, arrière-boutique, rangements.",
-              "Espaces de services : mobilier fonctionnel, organisation, durabilité au quotidien.",
-              "Espaces communs : comptoirs, rangements muraux, solutions intégrées.",
-            ]}
-          />
-        </>
-      ),
-      image: {
-        src: "/images/spaces/commercial.webp",
-        alt: "Types d'espaces commerciaux sur mesure",
-      },
-    },
-  ];
+
 
   const featureImageTextItems: FeatureImageTextItem[] = [
     {
@@ -212,42 +189,38 @@ export default function Commercial() {
           }
         />
 
-        <FeatureImageText items={typesFeatureImageTextItems} />
-
-        <FeatureGridSection
-          aria-labelledby="inclus"
-          heading="Ce que comprend un projet commercial Dilamco"
-          features={[
-            {
-              title: "Analyse des besoins",
-              description: "Usage, contraintes du lieu, circulation, dimensions et accès.",
-            },
-            {
-              title: "Design fonctionnel",
-              description: "Plan orienté opération et ergonomie.",
-            },
-            {
-              title: "Fabrication sur mesure",
-              description: "Mobilier et rangement adaptés au contexte.",
-            },
-            {
-              title: "Installation professionnelle",
-              description: "Alignements, ajustements, finition et inspection finale.",
-            },
+        <ListSection
+          aria-labelledby="pour-qui"
+          heading="Types d'espaces commerciaux"
+          intro="Le sur mesure est particulièrement pertinent lorsque l'espace impose des contraintes (accès, équipements, circulation) ou lorsque l'usage est intensif."
+          items={[
+            "Bureaux & espaces professionnels : rangements, mobilier intégré, zones d'accueil.",
+            "Commerces de détail : mobilier de présentation, arrière-boutique, rangements.",
+            "Espaces de services : mobilier fonctionnel, organisation, durabilité au quotidien.",
+            "Espaces communs : comptoirs, rangements muraux, solutions intégrées.",
           ]}
-          columns={2}
+          variant="checkmarks"
         />
 
         <RelatedLinksSection
-          aria-labelledby="services"
-          heading="Services associés"
+          aria-labelledby="ce-qui-est-inclus"
+          heading="Ce que comprend un projet commercial Dilamco"
           links={[
-            { label: "Design", href: "/services/design/" },
-            { label: "Fabrication", href: "/services/fabrication/" },
-            { label: "Installation", href: "/services/installation/" },
             {
-              label: "Rénovation clé en main (si applicable)",
-              href: "/services/renovation/",
+              label: "Analyse des besoins", href: "/services/design/",
+              description: "Usage, contraintes du lieu, circulation, dimensions et accès.",
+            },
+            {
+              label: "Design fonctionnel", href: "/services/fabrication/",
+              description: "Plan orienté opération et ergonomie.",
+            },
+            {
+              label: "Fabrication sur mesure", href: "/services/fabrication/",
+              description: "Mobilier et rangement adaptés au contexte.",
+            },
+            {
+              label: "Installation professionnelle", href: "/services/installation/",
+              description: "Alignements, ajustements, finition et inspection finale.",
             },
           ]}
           columns={2}

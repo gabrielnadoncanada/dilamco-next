@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Section } from "@/components/ui/section";
+import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type LucideIcon } from "lucide-react";
 import { Heading } from "@/components/ui/heading";
-import { Container } from "../elements/container";
 
 interface Feature {
   title: string;
@@ -14,7 +13,7 @@ interface Feature {
   href?: string;
 }
 
-interface FeatureGridSectionProps extends React.HTMLAttributes<HTMLElement> {
+interface FeatureGridSectionProps extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading: string;
   description?: string;
   features: Feature[];
@@ -37,58 +36,50 @@ const FeatureGridSection = ({
   };
 
   return (
-    <Section className={className} {...props}>
-      <Container>
-        <div className="space-y-8 md:space-y-12">
-          <div className="text-center">
-            <Heading variant="h2" className="mb-4 text-balance">
-              {heading}
-            </Heading>
-            {description && (
-              <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-                {description}
-              </p>
-            )}
-          </div>
-          <div
-            className={cn(
-              "grid grid-cols-1 gap-6 md:gap-8",
-              gridCols[columns]
-            )}
-          >
-            {features.map((feature, index) => {
-              const cardContent = (
-                <Card className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
-                  <CardHeader>
-                    {feature.icon && (
-                      <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary/10">
-                        <feature.icon className="size-6 text-primary" />
-                      </div>
-                    )}
-                    <CardTitle>{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              );
+    <SectionShell
+      className={className}
+      title={<Heading variant="h2" className="text-balance">{heading}</Heading>}
+      intro={description}
+      align="center"
+      {...props}
+    >
+      <div
+        className={cn(
+          "grid grid-cols-1 gap-6 md:gap-8",
+          gridCols[columns]
+        )}
+      >
+        {features.map((feature, index) => {
+          const cardContent = (
+            <Card className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
+              <CardHeader>
+                {feature.icon && (
+                  <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                    <feature.icon className="size-6 text-primary" />
+                  </div>
+                )}
+                <CardTitle>{feature.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  {feature.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          );
 
-              if (feature.href) {
-                return (
-                  <Link key={index} href={feature.href} className="block">
-                    {cardContent}
-                  </Link>
-                );
-              }
+          if (feature.href) {
+            return (
+              <Link key={index} href={feature.href} className="block">
+                {cardContent}
+              </Link>
+            );
+          }
 
-              return <React.Fragment key={index}>{cardContent}</React.Fragment>;
-            })}
-          </div>
-        </div>
-      </Container>
-    </Section>
+          return <React.Fragment key={index}>{cardContent}</React.Fragment>;
+        })}
+      </div>
+    </SectionShell>
   );
 };
 

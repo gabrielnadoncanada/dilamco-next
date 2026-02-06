@@ -225,46 +225,45 @@ export default function Cuisine() {
           aria-labelledby="pour-qui"
           heading="À qui s'adresse une cuisine sur mesure?"
           items={[
-            "Vous voulez optimiser chaque centimètre (condo, murs irréguliers, contraintes d'accès).",
-            "Vous recherchez un résultat durable et un rendu cohérent (matériaux, quincaillerie, finition).",
-            "Vous avez des contraintes à intégrer : plomberie, électroménagers, îlot, rangement spécifique.",
+            {
+              title: "Optimisation de l'espace",
+              description: "Vous voulez optimiser chaque centimètre (condo, murs irréguliers, contraintes d'accès).",
+            },
+            {
+              title: "Résultat durable",
+              description: "Vous recherchez un résultat durable et un rendu cohérent (matériaux, quincaillerie, finition).",
+            },
+            {
+              title: "Contraintes à intégrer",
+              description: "Plomberie, électroménagers, îlot, rangement spécifique.",
+            },
           ]}
           variant="checkmarks"
         />
 
-        <FeatureGridSection
+        <RelatedLinksSection
           aria-labelledby="ce-qui-est-inclus"
           heading="Ce que comprend une cuisine sur mesure Dilamco"
-          features={[
+          links={[
             {
-              title: "Design & planification",
-              description: "Besoins, ergonomie, plan, choix de matériaux.",
+              label: "Design & planification",
+              href: "/services/design/",
+              description: "Besoins, ergonomie, plan, choix de matériaux."
             },
             {
-              title: "Fabrication sur mesure",
+              label: "Fabrication sur mesure",
+              href: "/services/fabrication/",
               description: "Armoires, modules, îlot et rangement adaptés.",
             },
             {
-              title: "Installation précise",
+              label: "Installation précise",
+              href: "/services/installation/",
               description: "Alignements, ajustements, finition et inspection finale.",
-            },
-            {
-              title: "Option clé en main",
-              description: "Coordination des travaux connexes lorsque le projet inclut une rénovation.",
-            },
-          ]}
-          columns={2}
-        />
 
-        <RelatedLinksSection
-          aria-labelledby="services"
-          heading="Services associés"
-          links={[
-            { label: "Design", href: "/services/design/" },
-            { label: "Fabrication", href: "/services/fabrication/" },
-            { label: "Installation", href: "/services/installation/" },
+            },
             {
-              label: "Rénovation de cuisine",
+              label: "Option clé en main",
+              description: "Coordination des travaux connexes lorsque le projet inclut une rénovation.",
               href: "/services/renovation/cuisine/",
             },
           ]}

@@ -200,33 +200,23 @@ export default function SalleDeLavage() {
           variant="checkmarks"
         />
 
-        <FeatureGridSection
-          aria-labelledby="inclus"
+
+        <RelatedLinksSection
+          aria-labelledby="ce-qui-est-inclus"
           heading="Ce que comprend une salle de lavage Dilamco"
-          features={[
+          links={[
             {
-              title: "Design & planification",
+              label: "Design & planification", href: "/services/design/",
               description: "Besoins, contraintes, circulation et plan d'organisation.",
             },
             {
-              title: "Fabrication sur mesure",
+              label: "Fabrication sur mesure", href: "/services/fabrication/",
               description: "Armoires, modules, comptoir de pliage et rangement adapté.",
             },
             {
-              title: "Installation précise",
+              label: "Installation précise", href: "/services/installation/",
               description: "Alignements, ajustements, finition et inspection finale.",
             },
-          ]}
-          columns={3}
-        />
-
-        <RelatedLinksSection
-          aria-labelledby="services"
-          heading="Services associés"
-          links={[
-            { label: "Design", href: "/services/design/" },
-            { label: "Fabrication", href: "/services/fabrication/" },
-            { label: "Installation", href: "/services/installation/" },
           ]}
           columns={3}
         />

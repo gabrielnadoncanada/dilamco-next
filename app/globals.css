@@ -51,8 +51,24 @@
 
   /* typography variables */
   --_typography---font-size--h1: clamp(2.125 * 1rem, ((2.125 - ((3.25 - 2.125) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3.25 - 2.125) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3.25 * 1rem);
-
-   /* section spacing variables */
+  --_typography---font-size--h2: clamp(1.875*1rem,((1.875 - ((2.75 - 1.875)/(var(--site--viewport-max) - var(--site--viewport-min))*var(--site--viewport-min)))*1rem + ((2.75 - 1.875)/(var(--site--viewport-max) - var(--site--viewport-min)))*100vw),2.75*1rem);
+  --_typography---font-size--h3: clamp(1.75*1rem,((1.75 - ((2.25 - 1.75)/(var(--site--viewport-max) - var(--site--viewport-min))*var(--site--viewport-min)))*1rem + ((2.25 - 1.75)/(var(--site--viewport-max) - var(--site--viewport-min)))*100vw),2.25*1rem);
+  --_typography---font-size--h4: clamp(1.4375*1rem,((1.4375 - ((2 - 1.4375)/(var(--site--viewport-max) - var(--site--viewport-min))*var(--site--viewport-min)))*1rem + ((2 - 1.4375)/(var(--site--viewport-max) - var(--site--viewport-min)))*100vw),2*1rem);
+  --_typography---font-size--h5: clamp(1.25*1rem,((1.25 - ((1.5625 - 1.25)/(var(--site--viewport-max) - var(--site--viewport-min))*var(--site--viewport-min)))*1rem + ((1.5625 - 1.25)/(var(--site--viewport-max) - var(--site--viewport-min)))*100vw),1.5625*1rem);
+  --_typography---font-size--h6: clamp(1*1rem,((1 - ((1.1875 - 1)/(var(--site--viewport-max) - var(--site--viewport-min))*var(--site--viewport-min)))*1rem + ((1.1875 - 1)/(var(--site--viewport-max) - var(--site--viewport-min)))*100vw),1.1875*1rem);
+  
+  
+  
+  
+  
+  --_typography---font-size--display-1: clamp(2.625*1rem,((2.625 - ((4.5 - 2.625)/(var(--site--viewport-max) - var(--site--viewport-min))*var(--site--viewport-min)))*1rem + ((4.5 - 2.625)/(var(--site--viewport-max) - var(--site--viewport-min)))*100vw),4.5*1rem);
+  
+  /* typography line-height variables */
+  --_typography---line-height--1-1: 1.1;
+  
+  
+  
+  /* section spacing variables */
   --_spacing---section-space--none: 0px;
   --_spacing---section-space--small: clamp(4 * 1rem, ((4 - ((6 - 4) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((6 - 4) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 6 * 1rem);
   --_spacing---section-space--main: clamp(6 * 1rem, ((6 - ((8 - 6) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((8 - 6) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 8 * 1rem);

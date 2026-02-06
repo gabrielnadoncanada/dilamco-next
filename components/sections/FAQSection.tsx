@@ -1,6 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Section } from "@/components/ui/section";
+import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import {
   Accordion,
   AccordionContent,
@@ -8,14 +7,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Heading } from "@/components/ui/heading";
-import { Container } from "../elements/container";
+import { Divider } from "../ui/divider";
 
 interface FAQItem {
   question: string;
   answer: string;
 }
 
-interface FAQSectionProps extends React.HTMLAttributes<HTMLElement> {
+interface FAQSectionProps extends Omit<SectionShellProps, "title" | "children"> {
   heading: string;
   items: FAQItem[];
   className?: string;
@@ -28,27 +27,26 @@ const FAQSection = ({
   ...props
 }: FAQSectionProps) => {
   return (
-    <Section className={className} {...props}>
-      <Container>
-        <div className="text-center">
-          <Heading variant="h2" className="mb-4">
-            {heading}
-          </Heading>
-        </div>
-        <Accordion type="single" collapsible className="w-full">
-          {items.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left font-semibold hover:no-underline">
-                {item.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
-                {item.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </Container>
-    </Section>
+    <SectionShell
+      className={className}
+      title={<Heading variant="h2">{heading}</Heading>}
+      align="center"
+      {...props}
+    >
+      <Divider />
+      <Accordion type="single" collapsible className="w-full">
+        {items.map((item, index) => (
+          <AccordionItem key={index} value={`item-${index}`}>
+            <AccordionTrigger className="text-left font-semibold hover:no-underline">
+              {item.question}
+            </AccordionTrigger>
+            <AccordionContent className="text-muted-foreground">
+              {item.answer}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </SectionShell>
   );
 };
 

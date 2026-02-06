@@ -1,48 +1,21 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-import { cva, type VariantProps } from "class-variance-authority";
-import { Container } from "../elements/container";
-const sectionVariants = cva(
-  "w-full",
-  {
-    variants: {
-      variant: {
-        default: "",
-        muted: "bg-background",
-      },
-
-    },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-);
+import {
+  SectionShell,
+  type SectionAlign,
+  type SectionContainer,
+  type SectionPadding,
+  type SectionShellProps,
+  type SectionSurface,
+} from "./section-shell";
 
 interface SectionProps
-  extends React.HTMLAttributes<HTMLElement>,
-  VariantProps<typeof sectionVariants> {
-  children: React.ReactNode;
-  className?: string;
+  extends Omit<SectionShellProps, "surface"> {
+  variant?: SectionSurface;
 }
 
-const Section = ({
-  children,
-  className,
-  variant,
-  ...props
-}: SectionProps) => {
-  return (
-    <section
-      data-surface={variant}
-      className={cn(
-        "pt-[var(--_spacing---section-space--main)] relative pb-[var(--_spacing---section-space--large)] bg-background text-foreground",
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </section>
-  );
+const Section = ({ variant = "default", ...props }: SectionProps) => {
+  return <SectionShell surface={variant} {...props} />;
 };
 
 export { Section };
+export type { SectionProps, SectionSurface, SectionPadding, SectionAlign, SectionContainer };

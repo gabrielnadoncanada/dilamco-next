@@ -234,10 +234,10 @@ export default function Quincaillerie() {
           ]}
         />
 
-        <TextSection
-          aria-labelledby="choix"
+
+        <ListSection
+          aria-labelledby="choix-details"
           heading="Comment nous choisissons la quincaillerie"
-          paragraphs={[]}
           links={[
             {
               text: "Voir l'installation",
@@ -250,11 +250,6 @@ export default function Quincaillerie() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="choix-details"
-          heading=""
           items={[
             "Usage : fréquence, charges, tiroirs très sollicités.",
             "Contexte : humidité (salle de bain), environnement, contraintes.",

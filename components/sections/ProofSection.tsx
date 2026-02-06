@@ -1,9 +1,7 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Section } from "@/components/ui/section";
+import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import { type LucideIcon } from "lucide-react";
 import { Heading } from "@/components/ui/heading";
-import { Container } from "../elements/container";
 
 interface ProofItem {
   title: string;
@@ -11,7 +9,7 @@ interface ProofItem {
   icon?: LucideIcon;
 }
 
-interface ProofSectionProps extends React.HTMLAttributes<HTMLElement> {
+interface ProofSectionProps extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading: string;
   description?: string;
   items: ProofItem[];
@@ -26,39 +24,31 @@ const ProofSection = ({
   ...props
 }: ProofSectionProps) => {
   return (
-    <Section className={className} {...props}>
-      <Container>
-        <div className="space-y-8 md:space-y-12">
-          <div className="text-center">
-            <Heading variant="h2" className="mb-4">
-              {heading}
-            </Heading>
-            {description && (
-              <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-                {description}
-              </p>
-            )}
-          </div>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
-            {items.map((item, index) => (
-              <div key={index} className="flex gap-4">
-                {item.icon && (
-                  <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                    <item.icon className="size-6 text-primary" />
-                  </div>
-                )}
-                <div className="flex-1">
-                  <Heading variant="h5" as="h3" className="mb-2">
-                    {item.title}
-                  </Heading>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </div>
+    <SectionShell
+      className={className}
+      title={<Heading variant="h2">{heading}</Heading>}
+      intro={description}
+      align="center"
+      {...props}
+    >
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
+        {items.map((item, index) => (
+          <div key={index} className="flex gap-4">
+            {item.icon && (
+              <div className="flex size-12 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <item.icon className="size-6 text-primary" />
               </div>
-            ))}
+            )}
+            <div className="flex-1">
+              <Heading variant="h5" as="h3" className="mb-2">
+                {item.title}
+              </Heading>
+              <p className="text-muted-foreground">{item.description}</p>
+            </div>
           </div>
-        </div>
-      </Container>
-    </Section>
+        ))}
+      </div>
+    </SectionShell>
   );
 };
 

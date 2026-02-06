@@ -4,7 +4,7 @@ import { ArrowRight, Ruler, Shield, Wrench } from "lucide-react";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
 import { ProofSection } from "@/components/sections/ProofSection";
-import { StepsSection } from "@/components/sections/StepsSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { SliderSection, type SliderItem } from "@/components/sections/SliderSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -172,28 +172,29 @@ export default function Home() {
         ]}
       />
 
-      <StepsSection
+      <ProcessSection
         aria-labelledby="processus"
         heading="Une approche simple, une exécution cadrée"
         description="Une approche simple, une exécution cadrée"
+        layout="timeline"
         steps={[
           {
-            id: "1",
+            step: "1",
             title: "Analyse & design",
             description: "Besoins, contraintes, plan et choix de matériaux.",
           },
           {
-            id: "2",
+            step: "2",
             title: "Fabrication sur mesure",
             description: "Production selon votre configuration.",
           },
           {
-            id: "3",
+            step: "3",
             title: "Coordination (si applicable)",
             description: "Travaux connexes pour une rénovation complète.",
           },
           {
-            id: "4",
+            step: "4",
             title: "Installation & ajustements",
             description: "Finition, alignements, inspection finale.",
           },

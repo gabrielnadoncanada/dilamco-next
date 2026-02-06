@@ -1,7 +1,5 @@
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Section } from "@/components/ui/section";
-import { Container } from "@/components/elements/container";
+import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import {
   Table,
   TableBody,
@@ -13,7 +11,7 @@ import {
 import { Heading } from "@/components/ui/heading";
 
 interface ComparisonTableSectionProps
-  extends React.HTMLAttributes<HTMLElement> {
+  extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading: string;
   description?: string;
   columns: string[];
@@ -35,44 +33,36 @@ const ComparisonTableSection = ({
   ...props
 }: ComparisonTableSectionProps) => {
   return (
-    <Section className={className} {...props}>
-      <Container>
-        <div className="space-y-8 md:space-y-12">
-          <div className="text-center">
-            <Heading variant="h2" className="mb-4">
-              {heading}
-            </Heading>
-            {description && (
-              <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-                {description}
-              </p>
-            )}
-          </div>
-          <div className="overflow-x-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-[200px]">{firstColumnLabel}</TableHead>
-                  {columns.map((column, index) => (
-                    <TableHead key={index}>{column}</TableHead>
-                  ))}
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {rows.map((row, rowIndex) => (
-                  <TableRow key={rowIndex}>
-                    <TableCell className="font-medium">{row.label}</TableCell>
-                    {row.values.map((value, colIndex) => (
-                      <TableCell key={colIndex}>{value}</TableCell>
-                    ))}
-                  </TableRow>
+    <SectionShell
+      className={className}
+      title={<Heading variant="h2">{heading}</Heading>}
+      intro={description}
+      align="center"
+      {...props}
+    >
+      <div className="overflow-x-auto">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className="w-[200px]">{firstColumnLabel}</TableHead>
+              {columns.map((column, index) => (
+                <TableHead key={index}>{column}</TableHead>
+              ))}
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {rows.map((row, rowIndex) => (
+              <TableRow key={rowIndex}>
+                <TableCell className="font-medium">{row.label}</TableCell>
+                {row.values.map((value, colIndex) => (
+                  <TableCell key={colIndex}>{value}</TableCell>
                 ))}
-              </TableBody>
-            </Table>
-          </div>
-        </div>
-      </Container>
-    </Section>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </SectionShell>
   );
 };
 

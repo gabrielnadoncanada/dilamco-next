@@ -122,17 +122,11 @@ export default function Contreplaque() {
           ]}
         />
 
-        <TextSection
-          aria-labelledby="avantages"
-          heading="Avantages du contreplaqué (pourquoi on l'utilise)"
-          paragraphs={[
-            "Le contreplaqué se voit rarement une fois le projet terminé… mais il influence directement la tenue dans le temps.",
-          ]}
-        />
 
         <ListSection
           aria-labelledby="avantages-details"
-          heading=""
+          heading="Avantages du contreplaqué (pourquoi on l'utilise)"
+          intro="Le contreplaqué se voit rarement une fois le projet terminé… mais il influence directement la tenue dans le temps."
           items={[
             "Stabilité : les plis croisés réduisent les déformations et rendent le comportement plus prévisible.",
             "Tenue des vis : bonne résistance au vissage et aux fixations, utile pour les caissons et l'installation.",
@@ -142,12 +136,12 @@ export default function Contreplaque() {
           variant="bullets"
         />
 
-        <TextSection
-          aria-labelledby="comparaison"
-          heading="Contreplaqué vs autres matériaux"
-          paragraphs={[
-            "Le bon matériau dépend de l'espace, du niveau d'entretien attendu et du type de composante (structure, portes, tiroirs).",
-          ]}
+
+
+        <ListSection
+          aria-labelledby="comparaison-details"
+          heading="Comparaison contreplaqué vs autres matériaux"
+          intro="Le bon matériau dépend de l'espace, du niveau d'entretien attendu et du type de composante (structure, portes, tiroirs)."
           links={[
             {
               text: "Voir le comparatif des matériaux",
@@ -155,11 +149,6 @@ export default function Contreplaque() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="comparaison-details"
-          heading=""
           items={[
             "Contreplaqué vs MDF : souvent plus stable en structure et plus rassurant pour la tenue des vis.",
             "Contreplaqué vs mélamine : la mélamine vise surtout praticité/coût; le contreplaqué vise structure/durabilité.",
@@ -168,12 +157,12 @@ export default function Contreplaque() {
           variant="bullets"
         />
 
-        <TextSection
-          aria-labelledby="usages"
+
+
+        <ListSection
+          aria-labelledby="usages-details"
           heading="Où le contreplaqué est le plus pertinent"
-          paragraphs={[
-            "Le contreplaqué est souvent utilisé là où la stabilité et la solidité comptent le plus : structures, caissons et composantes internes.",
-          ]}
+          intro="Le contreplaqué est souvent utilisé là où la stabilité et la solidité comptent le plus : structures, caissons et composantes internes."
           links={[
             {
               text: "Voir la fabrication",
@@ -181,16 +170,11 @@ export default function Contreplaque() {
               variant: "outline",
             },
             {
-              text: "Voir l'installation",
-              href: "/services/installation/",
+              text: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie/",
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="usages-details"
-          heading=""
           items={[
             "Caissons d'armoires : structure principale, stabilité et alignements.",
             "Composantes internes : tablettes, séparations, modules porteurs.",
@@ -200,12 +184,10 @@ export default function Contreplaque() {
           variant="bullets"
         />
 
-        <TextSection
-          aria-labelledby="humidite"
+        <ListSection
+          aria-labelledby="humidite-details"
           heading="Contreplaqué & humidité"
-          paragraphs={[
-            "Le contreplaqué tolère généralement mieux certains contextes que des panneaux à fibres, mais il n'est pas « imperméable ». La durabilité dépend des détails : protection des chants, qualité d'assemblage, finition et installation.",
-          ]}
+          intro="Le contreplaqué tolère généralement mieux certains contextes que des panneaux à fibres, mais il n'est pas « imperméable ». La durabilité dépend des détails : protection des chants, qualité d'assemblage, finition et installation."
           links={[
             {
               text: "Voir la quincaillerie",
@@ -218,11 +200,6 @@ export default function Contreplaque() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="humidite-details"
-          heading=""
           items={[
             "Cuisine : pertinent pour la structure, surtout si la finition et les chants sont soignés.",
             "Salle de bain / buanderie : faisable selon le contexte, avec des choix adaptés et une protection cohérente.",
@@ -230,17 +207,12 @@ export default function Contreplaque() {
           variant="bullets"
         />
 
-        <TextSection
-          aria-labelledby="limites"
-          heading="Limites & points à surveiller"
-          paragraphs={[
-            "Tous les contreplaqués ne se valent pas. La qualité dépend du grade, de la stabilité, des faces et de la cohérence d'assemblage.",
-          ]}
-        />
 
         <ListSection
           aria-labelledby="limites-details"
-          heading=""
+          heading="Limites & points à surveiller"
+          intro="Tous les contreplaqués ne se valent pas. La qualité dépend du grade, de la stabilité, des faces et de la cohérence d'assemblage."
+
           items={[
             "Qualité variable : le grade influence la stabilité, l'apparence et la durabilité.",
             "Coût : souvent plus élevé que des options standard.",
@@ -250,12 +222,10 @@ export default function Contreplaque() {
           variant="bullets"
         />
 
-        <TextSection
-          aria-labelledby="pourquoi-dilamco"
+        <ListSection
+          aria-labelledby="pourquoi-dilamco-details"
           heading="Pourquoi Dilamco privilégie souvent le contreplaqué"
-          paragraphs={[
-            "Pour un projet sur mesure haut de gamme, la structure doit rester stable et durable. Le contreplaqué contribue à un résultat plus cohérent, avec des alignements plus prévisibles et une meilleure tenue dans le temps.",
-          ]}
+          intro="Pour un projet sur mesure haut de gamme, la structure doit rester stable et durable. Le contreplaqué contribue à un résultat plus cohérent, avec des alignements plus prévisibles et une meilleure tenue dans le temps."
           links={[
             {
               text: "Demander une soumission",
@@ -263,11 +233,6 @@ export default function Contreplaque() {
               variant: "outline",
             },
           ]}
-        />
-
-        <ListSection
-          aria-labelledby="pourquoi-dilamco-details"
-          heading=""
           items={[
             "Stabilité : lignes plus constantes et moins de variations visibles.",
             "Durabilité : meilleure résistance à l'usage quotidien.",
