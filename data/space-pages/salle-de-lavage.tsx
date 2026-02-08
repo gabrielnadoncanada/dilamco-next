@@ -1,51 +1,17 @@
-import type { Metadata } from "next";
-import { JsonLd } from "@/seo/JsonLd";
-import { faqJsonLd, breadcrumbJsonLd } from "@/seo/schema/builders";
+﻿import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
-import type { FAQItem } from "@/data/services/types";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { ListSection } from "@/components/sections/ListSection";
-import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
-import { TextSection } from "@/components/sections/TextSection";
-import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
-import { FAQSection } from "@/components/sections/FAQSection";
-import { CTASection } from "@/components/sections/CTASection";
-import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
+import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import { ActionButtons } from "@/components/ActionButtons";
 import { Checklist } from "@/components/Checklist";
+import { type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Salle de lavage sur mesure",
   description:
     "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie. Praticité, durabilité et configuration adaptée à votre espace à Montréal, Laval et sur la Rive-Sud.",
-  alternates: {
-    canonical: "https://dilamco.com/espaces/salle-de-lavage/",
-  },
-  openGraph: {
-    type: "website",
-    url: "https://dilamco.com/espaces/salle-de-lavage/",
-    title: "Salle de lavage sur mesure | Dilamco",
-    description:
-      "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie. Praticité, durabilité et configuration adaptée à votre espace à Montréal, Laval et sur la Rive-Sud.",
-    siteName: "Dilamco",
-    locale: "fr_CA",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Salle de lavage sur mesure Dilamco",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Salle de lavage sur mesure | Dilamco",
-    description:
-      "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie.",
-    images: ["/opengraph-image"],
-  },
-};
+  path: "/espaces/salle-de-lavage/",
+  ogAlt: "Salle de lavage sur mesure Dilamco",
+});
 
 export default function SalleDeLavage() {
   const faqItems = [
@@ -67,14 +33,8 @@ export default function SalleDeLavage() {
     },
     {
       q: "Quels sont les délais typiques?",
-      a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0–3 mois, 3–6 mois, etc.) est un bon point de départ à préciser lors de la soumission.",
+      a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0-3 mois, 3-6 mois, etc.) est un bon point de départ à préciser lors de la soumission.",
     },
-  ];
-
-  const crumbs = [
-    { name: "Accueil", url: SITE.url + "/" },
-    { name: "Espaces", url: SITE.url + "/espaces/" },
-    { name: "Salle de lavage", url: SITE.url + "/espaces/salle-de-lavage/" },
   ];
 
   const featureImageTextItems: FeatureImageTextItem[] = [
@@ -83,7 +43,10 @@ export default function SalleDeLavage() {
       heading: "Fonctionnalité : organiser les zones (lavage, pliage, rangement)",
       content: (
         <>
-          <p>Une buanderie efficace réduit le désordre. Le sur mesure permet de structurer l'espace selon vos habitudes et la réalité des lieux.</p>
+          <p>
+            Une buanderie efficace réduit le désordre. Le sur mesure permet de
+            structurer l'espace selon vos habitudes et la réalité des lieux.
+          </p>
           <Checklist
             items={[
               "Zone lavage : accès simple à la laveuse/sécheuse, circulation et dégagements cohérents.",
@@ -105,7 +68,12 @@ export default function SalleDeLavage() {
       heading: "Contraintes techniques & durabilité",
       content: (
         <>
-          <p>Les problèmes d'une salle de lavage viennent souvent de détails : chants exposés à l'eau, surfaces difficiles à nettoyer, quincaillerie qui fatigue. Notre approche vise la durabilité dans le temps.</p>
+          <p>
+            Les problèmes d'une salle de lavage viennent souvent de détails :
+            chants exposés à l'eau, surfaces difficiles à nettoyer,
+            quincaillerie qui fatigue. Notre approche vise la durabilité dans
+            le temps.
+          </p>
           <Checklist
             items={[
               "Humidité & éclaboussures : matériaux adaptés et protection des chants.",
@@ -163,111 +131,113 @@ export default function SalleDeLavage() {
   ];
 
   return (
-    <>
-      <JsonLd data={breadcrumbJsonLd(crumbs)} />
-      <JsonLd data={faqJsonLd(faqItems)} />
-      <main id="contenu">
-        <HeroSection
-          heading="Salle de lavage sur mesure, armoires et rangement durable pour buanderie"
-          description="Une buanderie est un espace technique : humidité, plomberie, vibration, produits ménagers et usage fréquent. Dilamco conçoit et réalise des salles de lavage sur mesure haut de gamme, pensées pour être pratiques et durables — principalement à Montréal, Laval et sur la Rive-Sud."
-          image={{
+    <SpacePageTemplate
+      data={{
+        breadcrumbs: [
+          { name: "Accueil", url: SITE.url + "/" },
+          { name: "Espaces", url: SITE.url + "/espaces/" },
+          {
+            name: "Salle de lavage",
+            url: SITE.url + "/espaces/salle-de-lavage/",
+          },
+        ],
+        service: {
+          name: "Salle de lavage sur mesure",
+          description:
+            "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie. Praticité et durabilité.",
+          url: SITE.url + "/espaces/salle-de-lavage/",
+          serviceType: "Salle de lavage sur mesure",
+        },
+        hero: {
+          heading:
+            "Salle de lavage sur mesure, armoires et rangement durable pour buanderie",
+          description:
+            "Une buanderie est un espace technique : humidité, plomberie, vibration, produits ménagers et usage fréquent. Dilamco conçoit et réalise des salles de lavage sur mesure haut de gamme, pensées pour être pratiques et durables - principalement à Montréal, Laval et sur la Rive-Sud.",
+          image: {
             src: "/images/spaces/vanite-salles-de-lavage.webp",
             alt: "Salle de lavage sur mesure",
-          }}
-          actionsSlot={
-            <ActionButtons className="justify-start" buttons={[
-              {
-                text: "Demander une soumission",
-                href: "/contact/",
-              },
-              {
-                text: "Voir des projets de salle de lavage",
-                href: "/projets/salle-de-lavage/",
-                variant: "outline",
-              },
-            ]} />
-          }
-        />
-
-        <ListSection
-          aria-labelledby="pour-qui"
-          heading="À qui s'adresse une salle de lavage sur mesure?"
-          items={[
+          },
+          actionsSlot: (
+            <ActionButtons
+              className="justify-start"
+              buttons={[
+                {
+                  text: "Demander une soumission",
+                  href: "/contact/",
+                },
+                {
+                  text: "Voir des projets de salle de lavage",
+                  href: "/projets/salle-de-lavage/",
+                  variant: "outline",
+                },
+              ]}
+            />
+          ),
+        },
+        audience: {
+          ariaLabelledby: "pour-qui",
+          heading: "À qui s'adresse une salle de lavage sur mesure?",
+          items: [
             "Vous voulez optimiser un espace restreint (condo, corridor, placard, sous-sol).",
             "Vous cherchez un espace simple à utiliser au quotidien (pliage, paniers, produits, linge).",
             "Vous avez des contraintes à intégrer : plomberie, drains, chauffe-eau, panneaux, ventilation.",
-          ]}
-          variant="checkmarks"
-        />
-
-
-        <RelatedLinksSection
-          aria-labelledby="ce-qui-est-inclus"
-          heading="Ce que comprend une salle de lavage Dilamco"
-          links={[
+          ],
+          variant: "checkmarks",
+        },
+        includedLinks: {
+          ariaLabelledby: "ce-qui-est-inclus",
+          heading: "Ce que comprend une salle de lavage Dilamco",
+          links: [
             {
-              label: "Design & planification", href: "/services/design/",
-              description: "Besoins, contraintes, circulation et plan d'organisation.",
+              label: "Design & planification",
+              href: "/services/design/",
+              description:
+                "Besoins, contraintes, circulation et plan d'organisation.",
             },
             {
-              label: "Fabrication sur mesure", href: "/services/fabrication/",
-              description: "Armoires, modules, comptoir de pliage et rangement adapté.",
+              label: "Fabrication sur mesure",
+              href: "/services/fabrication/",
+              description:
+                "Armoires, modules, comptoir de pliage et rangement adapté.",
             },
             {
-              label: "Installation précise", href: "/services/installation/",
-              description: "Alignements, ajustements, finition et inspection finale.",
+              label: "Installation précise",
+              href: "/services/installation/",
+              description:
+                "Alignements, ajustements, finition et inspection finale.",
             },
-          ]}
-          columns={3}
-        />
-
-        <FeatureImageText items={featureImageTextItems} />
-
-        <RelatedLinksSection
-          aria-labelledby="projets"
-          heading="Projets de salles de lavage"
-          links={[
+          ],
+          columns: 3,
+        },
+        featureImageTextItems,
+        projectLinks: {
+          ariaLabelledby: "projets",
+          heading: "Projets de salles de lavage",
+          links: [
             {
               label: "Voir tous les projets de salle de lavage",
               href: "/projets/salle-de-lavage/",
             },
             { label: "Voir tous les projets", href: "/projets/" },
-          ]}
-          columns={2}
-        />
-
-        <FAQSection
-          aria-labelledby="faq"
-          heading="FAQ — salle de lavage sur mesure"
-          items={faqItems.map((item) => ({
-            question: item.q,
-            answer: item.a,
-          }))}
-        />
-
-        <RelatedLinksSection
-          aria-labelledby="liens"
-          heading="Liens utiles"
-          links={[
+          ],
+          columns: 2,
+        },
+        faq: {
+          ariaLabelledby: "faq",
+          heading: "FAQ - salle de lavage sur mesure",
+          items: faqItems,
+        },
+        usefulLinks: {
+          ariaLabelledby: "liens",
+          heading: "Liens utiles",
+          links: [
             { label: "Projets", href: "/projets/salle-de-lavage/" },
             { label: "Matériaux", href: "/materiaux/" },
             { label: "Demander une soumission", href: "/contact/" },
-          ]}
-          columns={3}
-        />
-
-        <CTASection
-          aria-labelledby="cta"
-          heading="Parlez-nous de votre projet"
-          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          actions={[
-            {
-              text: "Demander une soumission",
-              href: "/contact/",
-            },
-          ]}
-        />
-      </main>
-    </>
+          ],
+          columns: 3,
+        },
+      }}
+    />
   );
 }

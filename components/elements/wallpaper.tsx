@@ -30,7 +30,7 @@ export function Wallpaper({
     <div
 
       className={clsx(
-        'relative overflow-hidden bg-linear-to-b from-[#253b2f] to-[#253b2f] dark:from-[#253b2f] dark:to-[#253b2f]',
+        'relative overflow-hidden bg-brand-primary',
         className,
       )}
       {...props}

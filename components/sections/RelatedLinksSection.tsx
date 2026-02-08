@@ -56,13 +56,19 @@ const RelatedLinksSection = ({
     >
       <Divider />
       <div
+        data-animate-card-wrap
         className={cn(
           "group grid grid-cols-1 gap-4 md:gap-6",
           gridCols[columns]
         )}
       >
         {links.map((link, index) => (
-          <Link key={index} href={link.href} className="block">
+          <Link
+            key={index}
+            href={link.href}
+            className="block"
+            data-animate-card-card
+          >
             <Card
               className={cn(
                 "min-h-[200px] h-full rounded-xl p-[var(--_spacing---space--2rem)]",

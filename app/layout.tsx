@@ -2,22 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "../components/Header";
 import { Footer } from "../components/Footer";
-import Breadcrumbs from "../components/Breadcrumbs";
 import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { SectionHeaderMotion } from "@/components/animations/SectionHeaderMotion";
 
-const siteUrl = "https://dilamco.com";
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: "--font-jakarta",
 });
 
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE.url),
 
   title: {
     default: "Cuisines, vanités et armoires sur mesure au Québec | Dilamco",
@@ -29,8 +30,8 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: siteUrl,
-    siteName: "Dilamco",
+    url: SITE.url,
+    siteName: SITE.name,
     locale: "fr_CA",
     images: [
       {
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: siteUrl,
+    canonical: SITE.url,
   },
 };
 
@@ -58,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr-CA" className={jakarta.className} suppressHydrationWarning>
+    <html lang="fr-CA" className={jakarta.variable} suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
@@ -68,8 +69,9 @@ export default function RootLayout({
         >
           <JsonLd data={organizationJsonLd()} />
           <JsonLd data={localBusinessJsonLd()} />
-          
-          <Header/>
+
+          <SectionHeaderMotion />
+          <Header />
           {children}
           <Footer />
         </ThemeProvider>

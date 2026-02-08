@@ -1,5 +1,6 @@
-// app/services/[slug]/page.tsx
+﻿// app/services/[slug]/page.tsx
 import type { Metadata } from "next";
+import { DEFAULT_CTA } from "@/data/shared-content";
 import { notFound } from "next/navigation";
 import { getServiceBySlug } from "@/data/services/utils";
 import type { ServiceSlug } from "@/data/services/types";
@@ -11,12 +12,10 @@ import {
 } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { TextSection } from "@/components/sections/TextSection";
-import { ListSection } from "@/components/sections/ListSection";
-import { ProcessSection } from "@/components/sections/ProcessSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
-import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
+import { ActionButtons } from "@/components/ActionButtons";
+import { renderSection } from "@/lib/render-section";
 
 type Params = { slug: string };
 
@@ -67,101 +66,6 @@ export async function generateMetadata({
   };
 }
 
-function renderSection(section: any) {
-  const { id, title, content } = section;
-
-  switch (content.type) {
-    case "text":
-      const textLinks: ActionButton[] | undefined = content.links?.map(
-        (link: any) => ({
-          text: link.label,
-          href: link.href,
-          variant: "outline" as const,
-        })
-      );
-
-      return (
-        <TextSection
-          key={id}
-          aria-labelledby={id}
-          heading={title}
-          paragraphs={content.paragraphs || []}
-          links={textLinks}
-        />
-      );
-
-    case "list":
-      const listLinks: ActionButton[] | undefined = content.links?.map(
-        (link: any) => ({
-          text: link.label,
-          href: link.href,
-          variant: "outline" as const,
-        })
-      );
-
-      return (
-        <ListSection
-          key={id}
-          aria-labelledby={id}
-          heading={title}
-          intro={content.intro}
-          items={content.items || []}
-          links={listLinks}
-          variant="bullets"
-        />
-      );
-
-    case "list-with-links":
-      return (
-        <ListSection
-          key={id}
-          aria-labelledby={id}
-          heading={title}
-          items={
-            content.itemsWithLinks?.map((item: any) =>
-              item.link
-                ? `${item.label} — ${item.link.label}`
-                : item.label
-            ) || []
-          }
-          variant="bullets"
-        />
-      );
-
-    case "steps":
-      const stepLinks: ActionButton[] | undefined = content.links?.map(
-        (link: any) => ({
-          text: link.label,
-          href: link.href,
-          variant: "outline" as const,
-        })
-      );
-
-      return (
-        <ProcessSection
-          key={id}
-          aria-labelledby={id}
-          heading={title}
-          steps={
-            content.steps?.map((step: string, idx: number) => ({
-              step: String(idx + 1),
-              title: step,
-              description: "",
-            })) || []
-          }
-          actions={
-            stepLinks && stepLinks.length > 0 ? (
-              <ActionButtons buttons={stepLinks} />
-            ) : undefined
-          }
-        />
-      );
-
-    default:
-      return null;
-  }
-}
-
 export default async function ServicePage({
   params,
 }: {
@@ -171,7 +75,6 @@ export default async function ServicePage({
   const service = getServiceBySlug(slug as ServiceSlug);
   if (!service) notFound();
 
-  // Extract service name from title (remove " | Dilamco" suffix)
   const serviceName = service.metadata.title.replace(" | Dilamco", "");
 
   const crumbs = [
@@ -197,20 +100,38 @@ export default async function ServicePage({
           heading={service.hero.h1}
           description={service.hero.paragraphs.join(" ")}
           actionsSlot={
-            <ActionButtons className="justify-start" buttons={service.hero.ctaLinks.map((link) => ({
-              text: link.label,
-              href: link.href,
-              variant: link.href === "/contact/" ? ("default" as const) : ("outline" as const),
-            }))} />
+            <ActionButtons
+              className="justify-start"
+              buttons={service.hero.ctaLinks.map((link) => ({
+                text: link.label,
+                href: link.href,
+                variant:
+                  link.href === "/contact/"
+                    ? ("default" as const)
+                    : ("outline" as const),
+              }))}
+            />
           }
         />
 
-        {service.sections.map((section: any) => renderSection(section))}
+        {service.sections.map((section: any) =>
+          renderSection({
+            id: section.id,
+            title: section.title,
+            type: section.content.type,
+            paragraphs: section.content.paragraphs,
+            intro: section.content.intro,
+            items: section.content.items,
+            itemsWithLinks: section.content.itemsWithLinks,
+            steps: section.content.steps,
+            links: section.content.links,
+          })
+        )}
 
         {service.faq.length > 0 && (
           <FAQSection
             aria-labelledby="faq"
-            heading={`FAQ — ${service.slug}`}
+            heading={`FAQ â€” ${service.slug}`}
             items={service.faq.map((item) => ({
               question: item.q,
               answer: item.a,
@@ -218,17 +139,7 @@ export default async function ServicePage({
           />
         )}
 
-        <CTASection
-          aria-labelledby="cta"
-          heading="Parlez-nous de votre projet"
-          description="Dites-nous votre espace (cuisine/salle de bain), votre secteur (Montréal/Laval/Rive-Sud) et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
-          actions={[
-            {
-              text: "Demander une soumission",
-              href: "/contact/",
-            },
-          ]}
-        />
+        <CTASection aria-labelledby="cta" {...DEFAULT_CTA} />
       </main>
     </>
   );

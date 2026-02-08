@@ -75,6 +75,7 @@ const SectionShell = ({
     <div className={cn("w-full", contentClassName)}>
       {hasHeader && (
         <div
+          data-animate-header-wrap
           className={cn(
             "mb-8 flex flex-col gap-4 md:mb-10",
             titleAlignClassMap[align],
@@ -86,24 +87,35 @@ const SectionShell = ({
               {eyebrow}
             </div>
           )}
-          {title &&
-            (typeof title === "string" ? (
-              <Heading variant="h2">{title}</Heading>
-            ) : (
-              title
-            ))}
+          {title && (
+            <div data-animate-header-heading>
+              {typeof title === "string" ? <Heading variant="h2">{title}</Heading> : title}
+            </div>
+          )}
           {intro &&
             (typeof intro === "string" ? (
-              <p className="max-w-3xl text-lg text-muted-foreground">{intro}</p>
+              <p data-animate-header-text className="max-w-3xl text-lg text-muted-foreground">
+                {intro}
+              </p>
             ) : (
-              <div className="max-w-3xl text-lg text-muted-foreground">{intro}</div>
+              <div
+                data-animate-header-text
+                className="max-w-3xl text-lg text-muted-foreground"
+              >
+                {intro}
+              </div>
             ))}
           {actions && (
-            <div className={cn("flex", actionAlignClassMap[align])}>{actions}</div>
+            <div data-animate-header-cta className={cn("flex", actionAlignClassMap[align])}>
+              {actions}
+            </div>
           )}
         </div>
       )}
       {children && <div className={bodyClassName}>{children}</div>}
+      {!hasHeader && actions && (
+        <div className={cn("flex", actionAlignClassMap[align])}>{actions}</div>
+      )}
     </div>
   );
 

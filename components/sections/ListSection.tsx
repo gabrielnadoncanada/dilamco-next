@@ -11,6 +11,7 @@ interface ListSectionProps extends Omit<SectionShellProps, "title" | "intro" | "
   items: Array<ListItem | string>;
   links?: ActionButton[];
   variant?: "bullets" | "checkmarks" | "numbered";
+  layout?: "default" | "split";
   className?: string;
 }
 
@@ -33,10 +34,14 @@ const ListSection = ({
   items,
   links,
   variant = "bullets",
+  layout = "default",
   className,
   ...props
 }: ListSectionProps) => {
   const IconComponent = variant === "checkmarks" ? Check : ChevronRight;
+  const hasStructuredItems = items.some((item) => typeof item !== "string" && Boolean(item.title));
+  const useSplitLayout =
+    variant !== "numbered" && (layout === "split" || (layout === "default" && hasStructuredItems));
 
   return (
     <SectionShell
@@ -55,6 +60,34 @@ const ListSection = ({
       >
         {items.map((rawItem, index) => {
           const item = normalizeListItem(rawItem);
+          const hasTitle = Boolean(item.title);
+
+          if (useSplitLayout && hasTitle) {
+            return (
+              <div
+                key={index}
+                className="grid gap-6 border-t border-border/60 py-8 md:grid-cols-2 md:gap-10"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 shrink-0 rounded-full border border-border/80 p-1">
+                    <IconComponent
+                      className={cn(
+                        "size-4",
+                        variant === "checkmarks" ? "text-primary" : "text-muted-foreground"
+                      )}
+                    />
+                  </div>
+                  <Heading variant="h3" className="text-pretty">
+                    {item.title}
+                  </Heading>
+                </div>
+                <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
+                  {item.description}
+                </p>
+              </div>
+            );
+          }
+
           return (
             <div
               key={index}

@@ -35,7 +35,6 @@ const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
 
     const Component = as || (variant as HeadingElement) || "h1"
     const styleVariant = (variant || as || "h1") as NonNullable<VariantProps<typeof headingVariants>["variant"]>
-    console.log("styleVariant", styleVariant, headingVariants({ variant: styleVariant }))
 
     return (
       <Component

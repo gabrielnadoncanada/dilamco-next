@@ -9,8 +9,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-primary: var(--brand-primary);
+  --font-sans: var(--font-site);
+  --font-mono: ui-monospace, monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -76,11 +77,11 @@
   --_spacing---section-space--page-top: clamp(12 * 1rem, ((12 - ((15 - 12) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((15 - 12) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 15 * 1rem);
 
   /* padding variables */
-  --_spacing---space--0-25rem: clamp(.25 * 1rem, ((.25 - ((.25 - .25) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((.25 - .25) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), .25 * 1rem);
-  --_spacing---space--0-75rem: clamp(.75 * 1rem, ((.75 - ((.75 - .75) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((.75 - .75) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), .75 * 1rem);
-  --_spacing---space--0-5rem: clamp(.5 * 1rem, ((.5 - ((.5 - .5) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((.5 - .5) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), .5 * 1rem);
-  --_spacing---space--1rem: clamp(1 * 1rem, ((1 - ((1 - 1) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((1 - 1) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 1 * 1rem);
-  --_spacing---space--1-5rem: clamp(1.5 * 1rem, ((1.5 - ((1.5 - 1.5) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((1.5 - 1.5) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 1.5 * 1rem);
+  --_spacing---space--0-25rem: 0.25rem;
+  --_spacing---space--0-75rem: 0.75rem;
+  --_spacing---space--0-5rem: 0.5rem;
+  --_spacing---space--1rem: 1rem;
+  --_spacing---space--1-5rem: 1.5rem;
   --_spacing---space--2rem: clamp(1.75 * 1rem, ((1.75 - ((2 - 1.75) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2 - 1.75) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2 * 1rem);
   --_spacing---space--2-5rem: clamp(2 * 1rem, ((2 - ((2.5 - 2) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((2.5 - 2) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 2.5 * 1rem);
   --_spacing---space--3rem: clamp(2.5 * 1rem, ((2.5 - ((3 - 2.5) / (var(--site--viewport-max) - var(--site--viewport-min)) * var(--site--viewport-min))) * 1rem + ((3 - 2.5) / (var(--site--viewport-max) - var(--site--viewport-min))) * 100vw), 3 * 1rem);
@@ -88,6 +89,8 @@
 }
 
 :root {
+  --brand-primary: #253b2f;
+  --font-site: var(--font-jakarta);
   --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -126,6 +129,7 @@
 }
 
 .dark {
+  --brand-primary: #253b2f;
   --background: #141413;
   --foreground: var(--swatch--gray-050);
   --card: var(--swatch--gray-850);
@@ -191,6 +195,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 
   .container {
