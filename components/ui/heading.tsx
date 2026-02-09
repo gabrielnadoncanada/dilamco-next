@@ -9,7 +9,7 @@ const headingVariants = cva(
     variants: {
       variant: {
         h1: "text-[length:var(--_typography---font-size--h1)] tracking-tight text-balance mb-[var(--_spacing---space--0-75rem)]",
-        h2: "text-[2rem]/10 tracking-tight text-pretty sm:text-5xl/14 mb-[var(--_spacing---space--2-5rem)] text-[var(--_typography---font-size--h1)]",
+        h2: "text-[2rem]/10 tracking-tight text-pretty sm:text-5xl/14  text-[var(--_typography---font-size--h1)]",
         h3: "text-2xl/10 tracking-tight",
         h4: "text-base/8 font-medium",
         h5: "text-base md:text-lg lg:text-xl",

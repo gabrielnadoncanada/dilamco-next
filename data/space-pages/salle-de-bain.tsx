@@ -184,9 +184,18 @@ export const pageData: SpacePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "Vous voulez optimiser l'espace (petite salle de bain, condo, circulation serrée).",
-          "Vous cherchez une solution durable malgré l'humidité (matériaux, chants, quincaillerie).",
-          "Vous avez des contraintes à intégrer : double lavabo, rangement vertical, plomberie, niches.",
+          {
+            title: "Optimisation de l'espace",
+            description: "Vous voulez optimiser chaque centimètre (condo, murs irréguliers, contraintes d'accès).",
+          },
+          {
+            title: "Résultat durable",
+            description: "Vous recherchez un résultat durable et un rendu cohérent (matériaux, quincaillerie, finition).",
+          },
+          {
+            title: "Contraintes à intégrer",
+            description: "Plomberie, électroménagers, îlot, rangement spécifique.",
+          },
         ],
         variant: "checkmarks",
       },

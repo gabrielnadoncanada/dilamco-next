@@ -5,6 +5,7 @@ import { SectionShell, type SectionShellProps } from "@/components/ui/section-sh
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type LucideIcon } from "lucide-react";
 import { Heading } from "@/components/ui/heading";
+import { Divider } from "../ui/divider";
 
 interface Feature {
   title: string;
@@ -43,6 +44,7 @@ const FeatureGridSection = ({
       align="center"
       {...props}
     >
+      <Divider />
       <div
         className={cn(
           "grid grid-cols-1 gap-6 md:gap-8",

@@ -180,9 +180,18 @@ export const pageData: SpacePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "Vous voulez optimiser un espace restreint (condo, corridor, placard, sous-sol).",
-          "Vous cherchez un espace simple à utiliser au quotidien (pliage, paniers, produits, linge).",
-          "Vous avez des contraintes à intégrer : plomberie, drains, chauffe-eau, panneaux, ventilation.",
+          {
+            title: "Optimisation de l'espace",
+            description: "Vous voulez optimiser un espace restreint (condo, corridor, placard, sous-sol).",
+          },
+          {
+            title: "Organisation précise",
+            description: "Vous cherchez un espace simple à utiliser au quotidien (pliage, paniers, produits, linge).",
+          },
+          {
+            title: "Contraintes à intégrer",
+            description: "Plomberie, drains, chauffe-eau, panneaux, ventilation.",
+          },
         ],
         variant: "checkmarks",
       },

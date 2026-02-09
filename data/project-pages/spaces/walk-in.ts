@@ -1,4 +1,4 @@
-﻿import type { SpaceContent } from "@/types/spaces";
+import type { SpaceContent } from "@/types/spaces";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const WALK_IN_PROJECT_PAGE: SpaceContent = {
@@ -116,9 +116,8 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
       title: "Matériaux, quincaillerie & durabilité",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro: 
           "Un walk-in est un espace de cycles : tiroirs et portes sont sollicités quotidiennement. Une quincaillerie adaptée et une installation précise évitent les désalignements et l'usure prématurée.",
-        ],
         links: [
           { title: "Voir la quincaillerie", href: "/materiaux/quincaillerie/" },
           { title: "Voir l'installation", href: "/services/installation/" },

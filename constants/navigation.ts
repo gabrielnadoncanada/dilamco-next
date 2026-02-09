@@ -20,7 +20,7 @@ import type { MenuItem } from "@/components/navbar/navbar.types";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
 
 export const BRAND: Brand = {
-  url: "https://dilamco.com",
+  url: "http://localhost:3000/",
   src: "/images/logo.svg",
   alt: "Dilamco",
   title: "Dilamco",

@@ -77,7 +77,7 @@ const SectionShell = ({
         <div
           data-animate-header-wrap
           className={cn(
-            "mb-8 flex flex-col gap-4 md:mb-10",
+            "mb-8 flex flex-col gap-4 md:mb-10 lg:mb-16",
             titleAlignClassMap[align],
             headerClassName
           )}

@@ -8,7 +8,8 @@ export type SpaceSection = {
   content:
     | {
         type: typeof SECTION_TYPES.TEXT;
-        paragraphs: string[];
+        intro?: string;
+        paragraphs?: string[];
         links?: GenericLink[];
       }
     | {
@@ -19,11 +20,13 @@ export type SpaceSection = {
       }
     | {
         type: typeof SECTION_TYPES.STEPS;
+        intro?: string;
         steps: string[];
         links?: GenericLink[];
       }
     | {
         type: typeof SECTION_TYPES.FAQ;
+        intro?: string;
         items: Array<{ q: string; a: string }>;
       };
 };

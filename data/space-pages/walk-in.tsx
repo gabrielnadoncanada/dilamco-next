@@ -175,9 +175,18 @@ export const pageData: SpacePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "Vous voulez optimiser un espace atypique (angles, plafonds bas, niches, condo).",
-          "Vous cherchez une organisation précise (tiroirs accessoires, zones vêtements, rangement chaussures).",
-          "Vous souhaitez un rendu durable et cohérent (matériaux, chants, quincaillerie, finition).",
+          {
+            title: "Optimisation de l'espace",
+            description: "Vous voulez optimiser un espace atypique (angles, plafonds bas, niches, condo).",
+          },
+          {
+            title: "Organisation précise",
+            description: "Vous cherchez une organisation précise (tiroirs accessoires, zones vêtements, rangement chaussures).",
+          },
+          {
+            title: "Rendu durable",
+            description: "Vous souhaitez un rendu durable et cohérent (matériaux, chants, quincaillerie, finition).",
+          },
         ],
         variant: "checkmarks",
       },

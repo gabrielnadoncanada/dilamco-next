@@ -2,6 +2,7 @@ import React from "react";
 import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import { type LucideIcon } from "lucide-react";
 import { Heading } from "@/components/ui/heading";
+import { Divider } from "@/components/ui/divider";
 
 interface ProofItem {
   title: string;
@@ -31,6 +32,7 @@ const ProofSection = ({
       align="center"
       {...props}
     >
+      <Divider />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
         {items.map((item, index) => (
           <div key={index} className="flex gap-4">

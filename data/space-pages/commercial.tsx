@@ -180,10 +180,22 @@ export const pageData: SpacePageData = {
         intro:
           "Le sur mesure est particulièrement pertinent lorsque l'espace impose des contraintes (accès, équipements, circulation) ou lorsque l'usage est intensif.",
         items: [
-          "Bureaux & espaces professionnels : rangements, mobilier intégré, zones d'accueil.",
-          "Commerces de détail : mobilier de présentation, arrière-boutique, rangements.",
-          "Espaces de services : mobilier fonctionnel, organisation, durabilité au quotidien.",
-          "Espaces communs : comptoirs, rangements muraux, solutions intégrées.",
+          {
+            title: "Bureaux & espaces professionnels",
+            description: "Rangements, mobilier intégré, zones d'accueil.",
+          },
+          {
+            title: "Commerces de détail",
+            description: "Mobilier de présentation, arrière-boutique, rangements.",
+          },
+          {
+            title: "Espaces de services",
+            description: "Mobilier fonctionnel, organisation, durabilité au quotidien.",
+          },
+          {
+            title: "Espaces communs",
+            description: "Comptoirs, rangements muraux, solutions intégrées.",
+          },
         ],
         variant: "checkmarks",
       },

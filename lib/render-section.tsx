@@ -146,6 +146,7 @@ export function renderSection(
           key={id}
           aria-labelledby={id}
           heading={title}
+          intro={normalized.intro}
           paragraphs={normalized.paragraphs ?? []}
           links={toActionButtons(normalized.links)}
         />
@@ -183,6 +184,7 @@ export function renderSection(
           key={id}
           aria-labelledby={id}
           heading={title}
+          intro={normalized.intro}
           items={(normalized.steps ?? []).map((step, idx) => ({
             step: String(idx + 1),
             title: step,
@@ -202,6 +204,7 @@ export function renderSection(
           key={id}
           aria-labelledby={id}
           heading={title}
+          intro={normalized.intro}
           items={normalized.relatedLinks ?? []}
           columns={normalized.columns}
         />
@@ -216,6 +219,7 @@ export function renderSection(
           key={id}
           aria-labelledby={id}
           heading={title}
+          intro={normalized.intro}
           items={(normalized.faqItems ?? []).map((item) => ({
             question: item.q,
             answer: item.a,

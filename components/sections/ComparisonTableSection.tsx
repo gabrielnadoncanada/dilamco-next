@@ -9,6 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Heading } from "@/components/ui/heading";
+import { Divider } from "../ui/divider";
 
 interface ComparisonTableSectionProps
   extends Omit<SectionShellProps, "title" | "intro" | "children"> {
@@ -41,6 +42,7 @@ const ComparisonTableSection = ({
       align="center"
       {...props}
     >
+      <Divider />
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>

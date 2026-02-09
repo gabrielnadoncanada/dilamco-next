@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
 import { Heading } from "../ui/heading";
 import { type ActionButton, ActionButtons } from "../ActionButtons";
+import { Divider } from "../ui/divider";
 
 export interface FeatureImageTextItem {
   ariaLabelledby: string;
@@ -79,6 +80,7 @@ const FeatureImageTextItem = ({
 const FeatureImageText = ({ items, className, ...sectionProps }: FeatureImageTextProps) => {
   return (
     <SectionShell className={cn("space-y-10 md:space-y-16", className)} {...sectionProps}>
+      <Divider />
       <div className="space-y-10 md:space-y-16">
         {items.map((item, index) => (
           <FeatureImageTextItem

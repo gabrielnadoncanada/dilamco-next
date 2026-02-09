@@ -13,7 +13,7 @@ interface Step {
 
 interface ProcessSectionProps extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
   heading: string;
-  description?: string;
+  intro?: string;
   items: Step[];
   actions?: React.ReactNode;
   layout?: "cards" | "timeline";
@@ -22,7 +22,7 @@ interface ProcessSectionProps extends Omit<SectionShellProps, "title" | "intro" 
 
 const ProcessSection = ({
   heading,
-  description,
+  intro,
   items,
   actions,
   layout = "cards",
@@ -39,7 +39,7 @@ const ProcessSection = ({
     <SectionShell
       className={className}
       title={<Heading variant="h2">{heading}</Heading>}
-      intro={description}
+      intro={intro}
       actions={actions}
       align="center"
       {...props}

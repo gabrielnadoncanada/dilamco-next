@@ -5,6 +5,7 @@ import { Heading } from "@/components/ui/heading";
 import { Divider } from "../ui/divider";
 interface TextSectionProps extends Omit<SectionShellProps, "title" | "actions" | "children"> {
   heading: string;
+  intro?: string;
   paragraphs: string[];
   links?: ActionButton[];
   className?: string;
@@ -12,6 +13,7 @@ interface TextSectionProps extends Omit<SectionShellProps, "title" | "actions" |
 
 const TextSection = ({
   heading,
+  intro,
   paragraphs,
   links,
   className,
@@ -21,6 +23,7 @@ const TextSection = ({
     <SectionShell
       className={className}
       title={<Heading variant="h2">{heading}</Heading>}
+      intro={intro}
       actions={links && links.length > 0 ? <ActionButtons buttons={links} /> : undefined}
       {...props}
     ><Divider />
