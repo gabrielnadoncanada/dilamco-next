@@ -11,9 +11,9 @@ export const PROJECT_AMENAGEMENT_SUR_MESURE_BUREAU_CENTRE_VILLE_MONTREAL: Projec
     slug: "amenagement-sur-mesure-bureau-centre-ville-montreal",
     title: "Aménagement sur mesure, bureau (Centre-ville de Montréal)",
     metaDescription:
-      "Projet commercial sur mesure : aménagement de bureau Ã  Montréal. Usage intensif, durabilité, coordination et installation précise.",
+      "Projet commercial sur mesure : aménagement de bureau à Montréal. Usage intensif, durabilité, coordination et installation précise.",
     summary:
-      "Aménagement commercial conÃ§u pour usage intensif : modules robustes, choix de quincaillerie, et finition propre en zone visible.",
+      "Aménagement commercial conçu pour usage intensif : modules robustes, choix de quincaillerie, et finition propre en zone visible.",
     area: "montreal",
     city: "Montréal",
     neighborhood: "Centre-ville",
@@ -25,7 +25,7 @@ export const PROJECT_AMENAGEMENT_SUR_MESURE_BUREAU_CENTRE_VILLE_MONTREAL: Projec
     ],
     constraints: [
       "Échéancier serré",
-      "AccÃ¨s limité (fenêtres de travail)",
+      "Accès limité (fenêtres de travail)",
       "Usage intensif et entretien fréquent",
     ],
     solution: [

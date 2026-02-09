@@ -31,7 +31,7 @@ export const COMMERCIAL_PROJECT_PAGE: SpaceContent = {
         type: SECTION_TYPES.LIST,
         items: [
           "Bureaux et espaces corporatifs (rangements, zones communes, mobilier intégré)",
-          "Commerces de détail (comptoirs, présentoirs, rangements, arriÃ¨re-boutique)",
+          "Commerces de détail (comptoirs, présentoirs, rangements, arrière-boutique)",
           "Restauration (comptoirs, banquettes, rangements, zones de service)",
           "Espaces d'accueil (réception, vestiaires, rangements fonctionnels)",
         ],
@@ -48,7 +48,7 @@ export const COMMERCIAL_PROJECT_PAGE: SpaceContent = {
         items: [
           "Type d'espace : bureau, commerce, restauration, etc.",
           "Mandat : ce qui devait être réalisé (objectif principal).",
-          "Contraintes : délais, accÃ¨s, usage intensif, dimensions, intégrations.",
+          "Contraintes : délais, accès, usage intensif, dimensions, intégrations.",
           "Solution : approche, modules, choix de matériaux, quincaillerie.",
           "Résultat : bénéfices concrets (fonction, durabilité, fluidité, finition).",
         ],
@@ -83,7 +83,7 @@ export const COMMERCIAL_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "processus",
-      title: "Processus (du besoin Ã  l'installation)",
+      title: "Processus (du besoin à l'installation)",
       content: {
         type: SECTION_TYPES.STEPS,
         steps: [
@@ -117,7 +117,7 @@ export const COMMERCIAL_PROJECT_PAGE: SpaceContent = {
           },
           {
             q: "Pouvez-vous livrer dans un échéancier serré?",
-            a: "Ã‡a dépend de la portée et de la disponibilité. Le meilleur levier est une planification claire et des décisions validées tÃ´t.",
+            a: "Ça dépend de la portée et de la disponibilité. Le meilleur levier est une planification claire et des décisions validées tôt.",
           },
           {
             q: "Quels types de projets commerciaux réalisez-vous?",

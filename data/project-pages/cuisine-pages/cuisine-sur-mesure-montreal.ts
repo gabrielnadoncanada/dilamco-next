@@ -10,9 +10,9 @@ export const PROJECT_CUISINE_SUR_MESURE_MONTREAL: ProjectData = {
   slug: "cuisine-sur-mesure-montreal",
   title: "Cuisine sur mesure, Montréal",
   metaDescription:
-    "Projet de cuisine sur mesure Ã  Montréal : conception, fabrication et installation. Exemple de solution durable avec rangement optimisé et finition précise.",
+    "Projet de cuisine sur mesure à Montréal : conception, fabrication et installation. Exemple de solution durable avec rangement optimisé et finition précise.",
   summary:
-    "Cuisine sur mesure réalisée Ã  Montréal : optimisation du rangement, choix de matériaux durables et installation avec alignements propres.",
+    "Cuisine sur mesure réalisée à Montréal : optimisation du rangement, choix de matériaux durables et installation avec alignements propres.",
   area: "montreal",
   city: "Montréal",
   scope: [

@@ -1,4 +1,4 @@
-﻿import { SITE_URL } from "@/constants/site";
+import { SITE_URL } from "@/constants/site";
 import type { ServiceData } from "@/types/service-pages";
 import { SECTION_TYPES } from "@/constants/section-types";
 
@@ -7,13 +7,13 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
   metadata: {
     title: "Service de design",
     description:
-      "Service de design : optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux. Un design orienté usage, prêt pour fabrication et installation, Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Service de design : optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux. Un design orienté usage, prêt pour fabrication et installation, à Montréal, Laval et sur la Rive-Sud.",
     canonical: `${SITE_URL}/services/design/`,
   },
   hero: {
     h1: "Service de design, structurer le projet avant de fabriquer",
     paragraphs: [
-      "Le design est l'étape qui réduit les erreurs coÃ»teuses. Il sert Ã  cadrer l'usage, organiser l'espace, intégrer les contraintes (murs, plomberie, électroménagers) et prendre les bonnes décisions avant la fabrication et l'installation. Chez Dilamco, le design est orienté fonctionnalité et exécution, principalement Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Le design est l'étape qui réduit les erreurs coûteuses. Il sert à cadrer l'usage, organiser l'espace, intégrer les contraintes (murs, plomberie, électroménagers) et prendre les bonnes décisions avant la fabrication et l'installation. Chez Dilamco, le design est orienté fonctionnalité et exécution, principalement à Montréal, Laval et sur la Rive-Sud.",
     ],
     ctaLinks: [
       { title: "Parler de votre projet", href: "/contact/" },
@@ -23,15 +23,15 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
   sections: [
     {
       id: "role",
-      title: "Le rÃ´le du design dans un projet sur mesure",
+      title: "Le rôle du design dans un projet sur mesure",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Un bon design n'est pas décoratif : il rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles Ã  la fin.",
+          "Un bon design n'est pas décoratif : il rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles à la fin.",
         ],
         items: [
           "Optimiser l'espace : circulation, zones de travail, dégagements, hauteurs.",
-          "Structurer le rangement : accÃ¨s, organisation, priorités d'usage.",
+          "Structurer le rangement : accès, organisation, priorités d'usage.",
           "Intégrer les contraintes : murs irréguliers, plomberie, équipements.",
           "Aligner les décisions : matériaux, finition, calendrier et niveau de complexité.",
         ],
@@ -47,7 +47,7 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
           "Organisation fonctionnelle : plan d'espace et logique de rangement.",
           "Choix matériaux & finis : décisions cohérentes avec l'usage (durabilité, entretien).",
           "Planification : cadrage des étapes pour préparer fabrication et installation.",
-          "Préparation Ã  l'exécution : un design pensé pour être fabriqué et posé proprement.",
+          "Préparation à l'exécution : un design pensé pour être fabriqué et posé proprement.",
         ],
         links: [
           { title: "Voir la fabrication", href: "/services/fabrication/" },
@@ -58,11 +58,11 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
     },
     {
       id: "usage",
-      title: "Design orienté usage (le cÅ“ur de notre approche)",
+      title: "Design orienté usage (le cœur de notre approche)",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Notre approche vise Ã  rendre l'espace simple Ã  vivre. Le design est construit autour des gestes du quotidien : accÃ¨s au rangement, zones de travail, circulation et cohérence des dimensions.",
+          "Notre approche vise à rendre l'espace simple à vivre. Le design est construit autour des gestes du quotidien : accès au rangement, zones de travail, circulation et cohérence des dimensions.",
         ],
         items: [
           "Ergonomie : hauteurs, dégagements, logique de déplacement.",
@@ -77,11 +77,11 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Le design doit tenir compte de la réalité du bÃ¢timent et des équipements. Nous intégrons les contraintes techniques dÃ¨s le départ afin d'éviter des compromis tardifs.",
+          "Le design doit tenir compte de la réalité du bâtiment et des équipements. Nous intégrons les contraintes techniques dès le départ afin d'éviter des compromis tardifs.",
         ],
         items: [
           "Plomberie & électricité : intégration des emplacements et dégagements (sans exécuter les travaux).",
-          "Condo et bÃ¢timents existants : murs irréguliers, accÃ¨s, contraintes de chantier.",
+          "Condo et bâtiments existants : murs irréguliers, accès, contraintes de chantier.",
           "Humidité : choix adaptés en salle de bain et salle de lavage.",
           "Équipements : électroménagers, évier, hottes, accessoires et intégrations.",
         ],
@@ -99,7 +99,7 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Plus les décisions sont prises tÃ´t, plus le projet est prévisible. Un design solide réduit les imprévus, simplifie la fabrication et rend l'installation plus propre.",
+          "Plus les décisions sont prises tôt, plus le projet est prévisible. Un design solide réduit les imprévus, simplifie la fabrication et rend l'installation plus propre.",
         ],
         items: [
           "Moins d'imprévus : contraintes identifiées avant la production.",
@@ -166,15 +166,15 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
   faq: [
     {
       q: "Le design est-il obligatoire?",
-      a: "Dans un projet sur mesure, le design sert Ã  cadrer les décisions avant la fabrication. Il est fortement recommandé pour éviter des compromis tardifs et clarifier l'organisation.",
+      a: "Dans un projet sur mesure, le design sert à cadrer les décisions avant la fabrication. Il est fortement recommandé pour éviter des compromis tardifs et clarifier l'organisation.",
     },
     {
-      q: "Peut-on passer directement Ã  la fabrication?",
-      a: "Ã‡a dépend du projet. Même lorsque l'idée est claire, il faut valider les contraintes, l'organisation et les dimensions pour assurer un résultat cohérent.",
+      q: "Peut-on passer directement à la fabrication?",
+      a: "Ça dépend du projet. Même lorsque l'idée est claire, il faut valider les contraintes, l'organisation et les dimensions pour assurer un résultat cohérent.",
     },
     {
-      q: "Est-ce que Ã§a fonctionne en condo?",
-      a: "Oui. Le design est particuliÃ¨rement utile en condo pour gérer les contraintes d'accÃ¨s, d'espace et d'intégration des équipements.",
+      q: "Est-ce que ça fonctionne en condo?",
+      a: "Oui. Le design est particulièrement utile en condo pour gérer les contraintes d'accès, d'espace et d'intégration des équipements.",
     },
     {
       q: "Quand intervient le design dans le projet?",

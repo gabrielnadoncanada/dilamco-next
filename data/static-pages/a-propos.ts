@@ -4,21 +4,21 @@ import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
 import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
-  title: "Ã€ propos",
+  title: "À propos",
   description:
-    "Ã€ propos de Dilamco : cuisines, armoires et vanités sur mesure haut de gamme.",
+    "À propos de Dilamco : cuisines, armoires et vanités sur mesure haut de gamme.",
   path: "/a-propos/",
-  ogAlt: "Ã€ propos de Dilamco",
+  ogAlt: "À propos de Dilamco",
 });
 export const pageData: ArticlePageData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Ã€ propos", url: SITE.url + "/a-propos/" },
+    { name: "À propos", url: SITE.url + "/a-propos/" },
   ],
   hero: {
-    heading: "Ã€ propos de Dilamco",
+    heading: "À propos de Dilamco",
     description:
-      "Nous concevons et réalisons des espaces sur mesure avec exécution soignée, du plan Ã  l'installation.",
+      "Nous concevons et réalisons des espaces sur mesure avec exécution soignée, du plan à l'installation.",
     actions: [
       { text: "Demander une soumission", href: "/contact/" },
       { text: "Voir nos réalisations", href: "/projets/", variant: "outline" },
@@ -43,7 +43,7 @@ export const pageData: ArticlePageData = {
         items: [
           {
             title: "Sur mesure réel",
-            description: "Adapté Ã  votre espace et non Ã  un catalogue.",
+            description: "Adapté à votre espace et non à un catalogue.",
           },
           {
             title: "Durabilité",

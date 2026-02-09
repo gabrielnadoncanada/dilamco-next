@@ -6,7 +6,7 @@ import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
   title: "Étapes d'une rénovation de cuisine",
   description:
-    "Guide : étapes d'une rénovation de cuisine, du cadrage au design, aux travaux techniques, Ã  l'installation et aux finitions. Comprendre le bon ordre des étapes avant de démarrer.",
+    "Guide : étapes d'une rénovation de cuisine, du cadrage au design, aux travaux techniques, à l'installation et aux finitions. Comprendre le bon ordre des étapes avant de démarrer.",
   path: "/guides/etapes-renovation-cuisine/",
   ogAlt: "Guide : Étapes d'une rénovation de cuisine",
 });
@@ -17,11 +17,11 @@ const faqItems = [
   },
   {
     q: "Faut-il tout décider avant de démarrer?",
-    a: "Les décisions structurantes oui : plan, électroménagers, contraintes techniques, matériaux et séquence des travaux. Ã‡a réduit fortement les reprises et les délais.",
+    a: "Les décisions structurantes oui : plan, électroménagers, contraintes techniques, matériaux et séquence des travaux. Ça réduit fortement les reprises et les délais.",
   },
   {
     q: 'Quand "commander" ou lancer la fabrication?',
-    a: "Lorsque le plan est final, les contraintes techniques validées, et les choix essentiels confirmés. Les changements tardifs coÃ»tent cher.",
+    a: "Lorsque le plan est final, les contraintes techniques validées, et les choix essentiels confirmés. Les changements tardifs coûtent cher.",
   },
   {
     q: "Clé en main ou coordination personnelle?",
@@ -38,9 +38,9 @@ export const pageData: ArticlePageData = {
     },
   ],
   hero: {
-    heading: "Les étapes d'une rénovation de cuisine - du plan Ã  la finition",
+    heading: "Les étapes d'une rénovation de cuisine - du plan à la finition",
     description:
-      "Une rénovation de cuisine réussie dépend surtout de l'ordre des étapes. Quand le séquencement est mauvais, les coÃ»ts cachés et les délais apparaissent : reprises, changements tardifs, coordination difficile. Ce guide présente le déroulement typique d'un projet, de la planification Ã  l'inspection finale, pour vous aider Ã  cadrer votre décision avant de lancer le chantier.",
+      "Une rénovation de cuisine réussie dépend surtout de l'ordre des étapes. Quand le séquencement est mauvais, les coûts cachés et les délais apparaissent : reprises, changements tardifs, coordination difficile. Ce guide présente le déroulement typique d'un projet, de la planification à l'inspection finale, pour vous aider à cadrer votre décision avant de lancer le chantier.",
     actions: [
       {
         text: "Parler de votre projet",
@@ -88,7 +88,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Avant de parler matériaux ou style, clarifiez le cadre : qu'est-ce qui doit changer et pourquoi? Une rénovation peut aller d'un remplacement d'armoires Ã  un projet complet avec travaux connexes.",
+          "Avant de parler matériaux ou style, clarifiez le cadre : qu'est-ce qui doit changer et pourquoi? Une rénovation peut aller d'un remplacement d'armoires à un projet complet avec travaux connexes.",
         ],
       },
     },
@@ -99,8 +99,8 @@ export const pageData: ArticlePageData = {
         type: SECTION_TYPES.LIST,
         items: [
           "Objectifs : rangement, circulation, îlot, usage quotidien, entretien.",
-          "Portée : armoires seulement vs rénovation complÃ¨te (plomberie/électricité/plancher).",
-          "Contraintes : condo, accÃ¨s, horaires, ascenseur, stationnement, bruit.",
+          "Portée : armoires seulement vs rénovation complète (plomberie/électricité/plancher).",
+          "Contraintes : condo, accès, horaires, ascenseur, stationnement, bruit.",
           "Échéance : période souhaitée, flexibilité, dépendances.",
         ],
         variant: "bullets",
@@ -127,7 +127,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "C'est l'étape qui évite 80% des problÃ¨mes : plan fonctionnel, circulation, zones de travail, intégration des électroménagers et validation des contraintes techniques.",
+          "C'est l'étape qui évite 80% des problèmes : plan fonctionnel, circulation, zones de travail, intégration des électroménagers et validation des contraintes techniques.",
         ],
       },
     },
@@ -183,7 +183,7 @@ export const pageData: ArticlePageData = {
         items: [
           "Structure (caissons) vs portes (fini et rendu).",
           "Humidité (évier, lave-vaisselle) et entretien au quotidien.",
-          "Choix des couleurs et finis selon la lumiÃ¨re et le style.",
+          "Choix des couleurs et finis selon la lumière et le style.",
         ],
         variant: "bullets",
       },
@@ -226,7 +226,7 @@ export const pageData: ArticlePageData = {
         items: [
           "Protection (planchers, circulation, zones adjacentes).",
           "Démolition (si applicable) et gestion des débris.",
-          "AccÃ¨s chantier : stationnement, ascenseur, horaires, voisins.",
+          "Accès chantier : stationnement, ascenseur, horaires, voisins.",
           "Coordination : qui intervient, quand, et dans quel ordre?",
         ],
         variant: "bullets",
@@ -253,7 +253,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Les travaux techniques doivent être prêts avant l'installation des armoires. Sinon, on se retrouve Ã  refaire des éléments finis (murs, peinture, plancher) ou Ã  modifier le plan.",
+          "Les travaux techniques doivent être prêts avant l'installation des armoires. Sinon, on se retrouve à refaire des éléments finis (murs, peinture, plancher) ou à modifier le plan.",
         ],
       },
     },
@@ -358,7 +358,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "L'inspection finale valide le fonctionnement et la finition : ouverture/fermeture, alignements, tiroirs, accessoires, et points de détail. C'est aussi le moment de confirmer les derniÃ¨res retouches si nécessaires.",
+          "L'inspection finale valide le fonctionnement et la finition : ouverture/fermeture, alignements, tiroirs, accessoires, et points de détail. C'est aussi le moment de confirmer les dernières retouches si nécessaires.",
         ],
       },
     },
@@ -377,7 +377,7 @@ export const pageData: ArticlePageData = {
     },
     {
       id: "delais",
-      title: "Délais : Ã  quoi s'attendre (sans chiffres)",
+      title: "Délais : à quoi s'attendre (sans chiffres)",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
@@ -400,12 +400,12 @@ export const pageData: ArticlePageData = {
     },
     {
       id: "erreurs",
-      title: "Erreurs de séquencement Ã  éviter",
+      title: "Erreurs de séquencement à éviter",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
           "Commander ou fabriquer avant que le plan soit vraiment final.",
-          "Modifier la plomberie/électricité aprÃ¨s l'installation des armoires.",
+          "Modifier la plomberie/électricité après l'installation des armoires.",
           "Installer avant que les murs/planchers soient prêts (selon la portée).",
           "Sous-estimer l'étape d'ajustements et de finition.",
         ],

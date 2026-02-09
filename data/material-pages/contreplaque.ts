@@ -18,10 +18,10 @@ export const metadata: Metadata = createPageMetadata({
 const faqItems = [
   {
     q: "Le contreplaqué est-il toujours meilleur que le MDF?",
-    a: "Pas nécessairement. Le contreplaqué est souvent trÃ¨s pertinent pour la structure, tandis que le MDF peut être adapté pour certaines faÃ§ades et finis.",
+    a: "Pas nécessairement. Le contreplaqué est souvent très pertinent pour la structure, tandis que le MDF peut être adapté pour certaines façades et finis.",
   },
   {
-    q: "Le contreplaqué est-il adapté Ã  la salle de bain?",
+    q: "Le contreplaqué est-il adapté à la salle de bain?",
     a: "Selon le contexte, oui. Les détails de protection et d'installation restent déterminants.",
   },
   {
@@ -59,7 +59,7 @@ const sections: ContentArticleSection[] = [
       intro:
         "Il influence directement la tenue dans le temps, même s'il est peu visible une fois posé.",
       items: [
-        "Stabilité accrue grÃ¢ce aux plis croisés.",
+        "Stabilité accrue grâce aux plis croisés.",
         "Bonne tenue des vis et fixations.",
         "Structure robuste pour usage intensif.",
         "Polyvalence sur cuisines, rangements et projets exigeants.",
@@ -72,7 +72,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       intro:
-        "Le bon matériau dépend de l'espace et du rÃ´le de la piÃ¨ce (structure, porte, intérieur).",
+        "Le bon matériau dépend de l'espace et du rôle de la pièce (structure, porte, intérieur).",
       links: [
         {
           title: "Voir le comparatif des matériaux",
@@ -88,14 +88,14 @@ const sections: ContentArticleSection[] = [
   },
   {
     id: "usages",
-    title: "OÃ¹ il est le plus pertinent",
+    title: "Où il est le plus pertinent",
     content: {
       type: SECTION_TYPES.LIST,
       items: [
         "Caissons d'armoires.",
         "Composantes internes porteuses.",
         "Tiroirs et modules soumis aux charges.",
-        "Projets orientés durabilité Ã  long terme.",
+        "Projets orientés durabilité à long terme.",
       ],
       links: [
         { title: "Voir la fabrication", href: "/services/fabrication/" },
@@ -122,14 +122,14 @@ const sections: ContentArticleSection[] = [
   },
   {
     id: "limites",
-    title: "Limites et points Ã  surveiller",
+    title: "Limites et points à surveiller",
     content: {
       type: SECTION_TYPES.LIST,
       items: [
         "Qualité variable selon le grade.",
-        "CoÃ»t souvent plus élevé.",
-        "Tranches Ã  traiter si visibles.",
-        "Performance liée Ã  l'exécution finale.",
+        "Coût souvent plus élevé.",
+        "Tranches à traiter si visibles.",
+        "Performance liée à l'exécution finale.",
       ],
     },
   },

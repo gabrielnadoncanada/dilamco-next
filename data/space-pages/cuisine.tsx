@@ -193,14 +193,14 @@ export const pageData: SpacePageData = {
   sections: [
     {
       id: "pour-qui",
-      title: "Ã€ qui s'adresse une cuisine sur mesure?",
+      title: "À qui s'adresse une cuisine sur mesure?",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
           {
             title: "Optimisation de l'espace",
             description:
-              "Vous voulez optimiser chaque centimÃ¨tre (condo, murs irréguliers, contraintes d'accÃ¨s).",
+              "Vous voulez optimiser chaque centimètre (condo, murs irréguliers, contraintes d'accès).",
           },
           {
             title: "Résultat durable",
@@ -208,7 +208,7 @@ export const pageData: SpacePageData = {
               "Vous recherchez un résultat durable et un rendu cohérent (matériaux, quincaillerie, finition).",
           },
           {
-            title: "Contraintes Ã  intégrer",
+            title: "Contraintes à intégrer",
             description:
               "Plomberie, électroménagers, îlot, rangement spécifique.",
           },

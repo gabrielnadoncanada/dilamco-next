@@ -10,9 +10,9 @@ export const PROJECT_CUISINE_SUR_MESURE_PLATEAU_MONT_ROYAL: ProjectData = {
   slug: "cuisine-sur-mesure-plateau-mont-royal",
   title: "Cuisine sur mesure, Plateau-Mont-Royal",
   metaDescription:
-    "Projet de cuisine sur mesure Ã  Montréal (Plateau-Mont-Royal) : conception, fabrication et installation. Exemple concret de solution durable et finition précise.",
+    "Projet de cuisine sur mesure à Montréal (Plateau-Mont-Royal) : conception, fabrication et installation. Exemple concret de solution durable et finition précise.",
   summary:
-    "Cuisine sur mesure réalisée Ã  Montréal : optimisation du rangement, choix de matériaux durables, et installation avec alignements propres.",
+    "Cuisine sur mesure réalisée à Montréal : optimisation du rangement, choix de matériaux durables, et installation avec alignements propres.",
   area: "montreal",
   city: "Montréal",
   neighborhood: "Plateau-Mont-Royal",

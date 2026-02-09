@@ -18,7 +18,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Projets sur mesure, cuisines, salles de bain et rénovations",
     description:
-      "Découvrez des projets réels livrés par Dilamco Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Découvrez des projets réels livrés par Dilamco à Montréal, Laval et sur la Rive-Sud.",
     actions: [
       { text: "Voir les espaces", href: "/espaces/", variant: "outline" },
       { text: "Parler de votre projet", href: "/contact/" },
@@ -36,12 +36,12 @@ export const pageData: ArticlePageData = {
           {
             title: "Cuisines sur mesure",
             href: "/projets/cuisine/",
-            description: "Avec ou sans rénovation complÃ¨te.",
+            description: "Avec ou sans rénovation complète.",
           },
           {
             title: "Salles de bain & vanités",
             href: "/projets/salle-de-bain/",
-            description: "Matériaux adaptés Ã  l'humidité et finition soignée.",
+            description: "Matériaux adaptés à l'humidité et finition soignée.",
           },
           {
             title: "Walk-in & rangement",

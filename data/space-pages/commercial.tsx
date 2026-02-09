@@ -10,7 +10,7 @@ import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata = createPageMetadata({
   title: "Commercial sur mesure",
   description:
-    "Aménagement commercial sur mesure : mobilier et rangement robustes pour usage intensif. Design, fabrication et installation Ã  Montréal, Laval et sur la Rive-Sud.",
+    "Aménagement commercial sur mesure : mobilier et rangement robustes pour usage intensif. Design, fabrication et installation à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/commercial/",
   ogAlt: "Commercial sur mesure Dilamco",
 });
@@ -30,11 +30,11 @@ const faqItems = [
   },
   {
     q: "Quels sont les délais typiques?",
-    a: "Les délais varient selon la complexité et la disponibilité. L'échéance est Ã  préciser lors de la soumission, afin d'aligner le plan et la production.",
+    a: "Les délais varient selon la complexité et la disponibilité. L'échéance est à préciser lors de la soumission, afin d'aligner le plan et la production.",
   },
   {
     q: "Pouvez-vous intervenir dans un espace en opération?",
-    a: "Selon les contraintes, il est parfois possible de planifier l'intervention pour limiter l'impact sur vos opérations (heures, accÃ¨s, phasage).",
+    a: "Selon les contraintes, il est parfois possible de planifier l'intervention pour limiter l'impact sur vos opérations (heures, accès, phasage).",
   },
 ];
 
@@ -46,14 +46,14 @@ const featureImageTextItems: FeatureImageTextItem[] = [
       <>
         <p>
           En commercial, la longévité se joue sur les détails : structures
-          stables, chants résistants, quincaillerie conÃ§ue pour des cycles
-          répétés et finitions faciles Ã  entretenir.
+          stables, chants résistants, quincaillerie conçue pour des cycles
+          répétés et finitions faciles à entretenir.
         </p>
         <Checklist
           items={[
             "Matériaux adaptés : sélection orientée usage et stabilité.",
-            "Chants & finition : résistance aux impacts et Ã  l'usure.",
-            "Quincaillerie : charniÃ¨res et coulisses pour usage fréquent.",
+            "Chants & finition : résistance aux impacts et à l'usure.",
+            "Quincaillerie : charnières et coulisses pour usage fréquent.",
             "Entretien : surfaces cohérentes avec le nettoyage régulier.",
           ]}
         />
@@ -87,15 +87,15 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     content: (
       <>
         <p>
-          Un projet commercial impose souvent des contraintes particuliÃ¨res :
-          accÃ¨s, heures d'intervention, intégration d'équipements, réseaux
+          Un projet commercial impose souvent des contraintes particulières :
+          accès, heures d'intervention, intégration d'équipements, réseaux
           existants et calendrier. Nous cadrons le projet pour limiter les
           surprises et livrer un résultat cohérent.
         </p>
         <Checklist
           items={[
             "Intégration : adaptation aux équipements et contraintes existantes.",
-            "Dégagements & accÃ¨s : circulation, portes, zones de travail et dimensions.",
+            "Dégagements & accès : circulation, portes, zones de travail et dimensions.",
             "Phasage : planification pour réduire l'impact sur vos opérations (selon le contexte).",
             "Coordination : collaboration avec d'autres intervenants lorsque nécessaire.",
           ]}
@@ -113,7 +113,7 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     content: (
       <>
         <p>
-          Quelques exemples de solutions fréquentes en commercial (adaptées Ã
+          Quelques exemples de solutions fréquentes en commercial (adaptées à
           votre contexte).
         </p>
         <Checklist
@@ -121,7 +121,7 @@ const featureImageTextItems: FeatureImageTextItem[] = [
             "Comptoirs de service : réception, accueil, zones transactionnelles.",
             "Rangements muraux : optimisation verticale, zones de stockage.",
             "Mobilier intégré : solutions sur mesure non standardisées.",
-            "ArriÃ¨re-boutique : organisation des produits, accÃ¨s rapide, durabilité.",
+            "Arrière-boutique : organisation des produits, accès rapide, durabilité.",
           ]}
         />
       </>
@@ -149,7 +149,7 @@ export const pageData: SpacePageData = {
   hero: {
     heading: "Aménagement commercial sur mesure, mobilier et rangement durables",
     description:
-      "En commercial, la priorité est la fiabilité : usage intensif, entretien, contraintes du lieu, calendrier et coordination. Dilamco conÃ§oit et réalise du mobilier et du rangement sur mesure pour espaces commerciaux, avec une exécution robuste et un résultat prévisible - principalement Ã  Montréal, Laval et sur la Rive-Sud.",
+      "En commercial, la priorité est la fiabilité : usage intensif, entretien, contraintes du lieu, calendrier et coordination. Dilamco conçoit et réalise du mobilier et du rangement sur mesure pour espaces commerciaux, avec une exécution robuste et un résultat prévisible - principalement à Montréal, Laval et sur la Rive-Sud.",
     image: {
       src: "/images/spaces/commercial.webp",
       alt: "Aménagement commercial sur mesure",

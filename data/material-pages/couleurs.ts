@@ -10,7 +10,7 @@ import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
   title: "Couleurs et finis",
   description:
-    "Couleurs et finis pour cuisines, vanités et armoires sur mesure : choisir selon la lumiÃ¨re, l'usage et les matériaux.",
+    "Couleurs et finis pour cuisines, vanités et armoires sur mesure : choisir selon la lumière, l'usage et les matériaux.",
   path: "/materiaux/couleurs/",
   ogAlt: "Couleurs et finis - Matériaux sur mesure",
 });
@@ -22,7 +22,7 @@ const faqItems = [
   },
   {
     q: "Les couleurs foncées sont-elles risquées?",
-    a: "Pas avec une bonne lumiÃ¨re et un fini adapté.",
+    a: "Pas avec une bonne lumière et un fini adapté.",
   },
   {
     q: "Peut-on changer la couleur plus tard?",
@@ -41,12 +41,12 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       intro:
-        "Structurer les choix dÃ¨s la phase design évite les erreurs de rendu.",
+        "Structurer les choix dès la phase design évite les erreurs de rendu.",
       links: [
         { title: "Voir le service de design", href: "/services/design/" },
       ],
       items: [
-        "LumiÃ¨re.",
+        "Lumière.",
         "Volume.",
         "Usage et entretien.",
         "Type de matériau et fini.",
@@ -58,7 +58,7 @@ const sections: ContentArticleSection[] = [
     title: "Neutres",
     content: {
       type: SECTION_TYPES.LIST,
-      items: ["Intemporels.", "Lumineux.", "Faciles Ã  intégrer."],
+      items: ["Intemporels.", "Lumineux.", "Faciles à intégrer."],
     },
   },
   {
@@ -68,7 +68,7 @@ const sections: ContentArticleSection[] = [
       type: SECTION_TYPES.LIST,
       items: [
         "Impact visuel fort.",
-        "Demandent une bonne lumiÃ¨re.",
+        "Demandent une bonne lumière.",
         "Souvent excellents en accent.",
       ],
     },
@@ -138,7 +138,7 @@ const sections: ContentArticleSection[] = [
         { title: "Mélamine", href: "/materiaux/melamine/" },
       ],
       items: [
-        "MDF : homogÃ¨ne pour peinture.",
+        "MDF : homogène pour peinture.",
         "Bois : texture naturelle.",
         "Mélamine : large variété de décors.",
       ],
@@ -154,7 +154,7 @@ const sections: ContentArticleSection[] = [
         { title: "Voir l'installation", href: "/services/installation/" },
       ],
       items: [
-        "Mat : trÃ¨s esthétique mais parfois plus exigeant.",
+        "Mat : très esthétique mais parfois plus exigeant.",
         "Satiné : compromis solide.",
         "Brillant : lumineux mais marque davantage.",
       ],
@@ -166,7 +166,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       items: [
-        "Choisir sans considérer la lumiÃ¨re réelle.",
+        "Choisir sans considérer la lumière réelle.",
         "Multiplier les textures sans logique.",
         "Copier une inspiration sans adapter au contexte.",
       ],
@@ -192,7 +192,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Couleurs et finis : style + durabilité",
     description:
-      "La couleur influence la lumiÃ¨re, la perception de l'espace et l'entretien. Le bon choix dépend du matériau, de l'usage et du contexte réel.",
+      "La couleur influence la lumière, la perception de l'espace et l'entretien. Le bon choix dépend du matériau, de l'usage et du contexte réel.",
     actions: [
       { text: "Parler design et finis", href: "/services/design/" },
       {

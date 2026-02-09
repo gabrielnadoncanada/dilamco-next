@@ -13,7 +13,7 @@ export const metadata: Metadata = createPageMetadata({
 const faqItems = [
   {
     q: "Sur mesure vs semi-custom : quelle différence?",
-    a: "Le sur mesure est conÃ§u pour votre espace exact (dimensions, contraintes, ergonomie). Le semi-custom part de modules prédéfinis avec variations. Le bon choix dépend du niveau d'adaptation et de finition recherché.",
+    a: "Le sur mesure est conçu pour votre espace exact (dimensions, contraintes, ergonomie). Le semi-custom part de modules prédéfinis avec variations. Le bon choix dépend du niveau d'adaptation et de finition recherché.",
   },
   {
     q: "Quel matériau est le plus durable?",
@@ -21,7 +21,7 @@ const faqItems = [
   },
   {
     q: "Une cuisine sur mesure est-elle possible en condo?",
-    a: "Oui. Le sur mesure est souvent pertinent en condo lorsque l'espace impose des contraintes (murs irréguliers, circulation, accÃ¨s, intégration).",
+    a: "Oui. Le sur mesure est souvent pertinent en condo lorsque l'espace impose des contraintes (murs irréguliers, circulation, accès, intégration).",
   },
   {
     q: "Qu'est-ce qui influence le résultat final le plus?",
@@ -44,7 +44,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Comment choisir une cuisine sur mesure - guide complet",
     description:
-      "Une cuisine sur mesure est un investissement structurant : elle influence votre confort quotidien, l'organisation de l'espace et la durabilité sur plusieurs années. Le sur mesure ne se résume pas au style : l'ergonomie, les matériaux, la quincaillerie et l'installation déterminent le résultat final. Ce guide vous aide Ã  cadrer vos décisions et Ã  éviter les erreurs coÃ»teuses.",
+      "Une cuisine sur mesure est un investissement structurant : elle influence votre confort quotidien, l'organisation de l'espace et la durabilité sur plusieurs années. Le sur mesure ne se résume pas au style : l'ergonomie, les matériaux, la quincaillerie et l'installation déterminent le résultat final. Ce guide vous aide à cadrer vos décisions et à éviter les erreurs coûteuses.",
     actions: [
       {
         text: "Parler de votre projet",
@@ -64,7 +64,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          'Une cuisine sur mesure est conÃ§ue pour votre espace exact et votre usage réel : dimensions, circulation, zones de travail, intégration des électroménagers, rangement, et finition. Elle se distingue des approches standardisées (modules fixes) et du "semi-custom" (modules prédéfinis avec variations).',
+          'Une cuisine sur mesure est conçue pour votre espace exact et votre usage réel : dimensions, circulation, zones de travail, intégration des électroménagers, rangement, et finition. Elle se distingue des approches standardisées (modules fixes) et du "semi-custom" (modules prédéfinis avec variations).',
           "Si vous hésitez entre une solution standard et le sur mesure, consultez nos comparatifs :",
         ],
         links: [
@@ -87,7 +87,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Le sur mesure devient particuliÃ¨rement pertinent lorsque l'espace impose des contraintes, ou lorsque vous visez une durabilité supérieure et un rendu cohérent.",
+          "Le sur mesure devient particulièrement pertinent lorsque l'espace impose des contraintes, ou lorsque vous visez une durabilité supérieure et un rendu cohérent.",
         ],
       },
     },
@@ -97,7 +97,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "Condo / espace contraint : murs irréguliers, circulation serrée, accÃ¨s limité, intégrations complexes.",
+          "Condo / espace contraint : murs irréguliers, circulation serrée, accès limité, intégrations complexes.",
           "Rangement précis : besoins spécifiques, coins, tiroirs profonds, organisation sur la hauteur.",
           "Projet long terme : vous voulez une cuisine pensée pour durer, pas une solution temporaire.",
         ],
@@ -138,7 +138,7 @@ export const pageData: ArticlePageData = {
         items: [
           "Circulation : dégagements, portes, tiroirs et zones de passage.",
           "Zones de travail : préparation, cuisson, lavage, rangement.",
-          "ÃŽlot : fonctions (préparation, repas, rangement) et dimensions réalistes.",
+          "Îlot : fonctions (préparation, repas, rangement) et dimensions réalistes.",
         ],
         variant: "bullets",
       },
@@ -159,7 +159,7 @@ export const pageData: ArticlePageData = {
         items: [
           "Plomberie, évier, lave-vaisselle, hotte, prises et éclairage.",
           "Hauteurs, soffites, murs non droits, radiateurs, fenêtres.",
-          "AccÃ¨s chantier (condo) : ascenseur, stationnement, horaires.",
+          "Accès chantier (condo) : ascenseur, stationnement, horaires.",
         ],
         variant: "bullets",
       },
@@ -170,7 +170,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Le style est important, mais il doit rester cohérent avec la lumiÃ¨re, le volume et l'entretien au quotidien.",
+          "Le style est important, mais il doit rester cohérent avec la lumière, le volume et l'entretien au quotidien.",
         ],
         links: [
           {
@@ -206,7 +206,7 @@ export const pageData: ArticlePageData = {
         type: SECTION_TYPES.LIST,
         items: [
           "Structure (caissons) : stabilité et durabilité.",
-          "Portes et faÃ§ades : rendu esthétique, fini, entretien.",
+          "Portes et façades : rendu esthétique, fini, entretien.",
         ],
         variant: "bullets",
       },
@@ -225,7 +225,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "MDF : souvent pertinent pour portes peintes (surface uniforme), plus sensible Ã  l'humidité si mal protégé.",
+          "MDF : souvent pertinent pour portes peintes (surface uniforme), plus sensible à l'humidité si mal protégé.",
           "Mélamine : finis variés, chants critiques (impacts et infiltration).",
           "Contreplaqué : stabilité et structure, souvent pertinent pour viser une durabilité supérieure.",
           "Bois massif : texture naturelle, variations normales, usage ciblé.",
@@ -269,7 +269,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Le sur mesure est souvent rentabilisé par l'optimisation du rangement : accÃ¨s, profondeur, coins, hauteurs et organisation.",
+          "Le sur mesure est souvent rentabilisé par l'optimisation du rangement : accès, profondeur, coins, hauteurs et organisation.",
         ],
       },
     },
@@ -279,10 +279,10 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "Tiroirs vs portes : accÃ¨s plus simple en tiroirs, selon la configuration.",
+          "Tiroirs vs portes : accès plus simple en tiroirs, selon la configuration.",
           'Coins : solutions d\'angle ou aménagements pour éviter les "zones mortes".',
           "Hauteur : maximiser l'espace vertical si le contexte le permet.",
-          "Garde-manger : organisation et accÃ¨s selon vos habitudes.",
+          "Garde-manger : organisation et accès selon vos habitudes.",
         ],
         variant: "bullets",
       },
@@ -293,7 +293,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          'La quincaillerie et l\'installation déterminent une grande partie du ressenti "haut de gamme" : portes alignées, tiroirs fluides, réglages qui tiennent, fermeture contrÃ´lée.',
+          'La quincaillerie et l\'installation déterminent une grande partie du ressenti "haut de gamme" : portes alignées, tiroirs fluides, réglages qui tiennent, fermeture contrôlée.',
         ],
       },
     },
@@ -303,8 +303,8 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "CharniÃ¨res : ajustabilité, stabilité des réglages, soft-close selon le besoin.",
-          "Coulisses : capacité de charge, stabilité, extension selon le systÃ¨me.",
+          "Charnières : ajustabilité, stabilité des réglages, soft-close selon le besoin.",
+          "Coulisses : capacité de charge, stabilité, extension selon le système.",
           "Installation : alignements, ajustements, inspection finale.",
         ],
         variant: "bullets",
@@ -349,14 +349,14 @@ export const pageData: ArticlePageData = {
     },
     {
       id: "erreurs",
-      title: "8) Erreurs fréquentes Ã  éviter",
+      title: "8) Erreurs fréquentes à éviter",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
           "Choisir uniquement pour le look, sans cadrer l'usage et l'entretien.",
           "Comparer uniquement sur le prix, sans considérer l'installation et les ajustements.",
           "Ignorer l'impact des chants, de la quincaillerie et des détails de finition.",
-          "Copier une inspiration sans adapter aux dimensions et Ã  la lumiÃ¨re réelle.",
+          "Copier une inspiration sans adapter aux dimensions et à la lumière réelle.",
           "Sous-estimer l'espace nécessaire pour l'îlot et la circulation.",
         ],
         variant: "bullets",
@@ -364,7 +364,7 @@ export const pageData: ArticlePageData = {
     },
     {
       id: "delais",
-      title: "9) Délais : Ã  quoi s'attendre (sans prix)",
+      title: "9) Délais : à quoi s'attendre (sans prix)",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [

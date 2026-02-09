@@ -26,7 +26,7 @@ const faqItems = [
   },
   {
     q: "Mélamine ou MDF?",
-    a: "Le MDF est souvent choisi pour peinture uniforme, la mélamine pour les finis décoratifs et un coÃ»t plus maîtrisé.",
+    a: "Le MDF est souvent choisi pour peinture uniforme, la mélamine pour les finis décoratifs et un coût plus maîtrisé.",
   },
   {
     q: "Est-ce recommandé en salle de bain?",
@@ -53,7 +53,7 @@ const sections: ContentArticleSection[] = [
       items: [
         "Grande variété de finis.",
         "Entretien simple.",
-        "CoÃ»t maîtrisé dans plusieurs projets.",
+        "Coût maîtrisé dans plusieurs projets.",
       ],
     },
   },
@@ -65,7 +65,7 @@ const sections: ContentArticleSection[] = [
       items: [
         "Chants sensibles aux impacts.",
         "Humidité critique si infiltration.",
-        "Réparations plus difficiles Ã  invisibiliser.",
+        "Réparations plus difficiles à invisibiliser.",
       ],
     },
   },
@@ -76,7 +76,7 @@ const sections: ContentArticleSection[] = [
       type: SECTION_TYPES.LIST,
       items: [
         "Pertinente sur certaines composantes.",
-        "Zones d'eau Ã  traiter avec attention.",
+        "Zones d'eau à traiter avec attention.",
       ],
     },
   },
@@ -95,8 +95,8 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       items: [
-        "Contexte plus exigeant Ã  cause de l'humidité.",
-        "Combinaisons de matériaux souvent plus sÃ»res.",
+        "Contexte plus exigeant à cause de l'humidité.",
+        "Combinaisons de matériaux souvent plus sûres.",
       ],
     },
   },
@@ -120,7 +120,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Chaque matériau répond Ã  une logique différente : coÃ»t/décor, finition peinte, ou stabilité structurelle.",
+        "Chaque matériau répond à une logique différente : coût/décor, finition peinte, ou stabilité structurelle.",
       ],
       links: [
         { title: "Comparatif complet", href: "/materiaux/comparatif/" },
@@ -135,7 +135,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Nous utilisons la mélamine de faÃ§on ciblée lorsque c'est pertinent, et proposons des alternatives quand l'usage exige plus de robustesse.",
+        "Nous utilisons la mélamine de façon ciblée lorsque c'est pertinent, et proposons des alternatives quand l'usage exige plus de robustesse.",
       ],
       links: [
         { title: "Voir tous les matériaux", href: "/materiaux/" },
@@ -154,7 +154,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Mélamine - usages, limites et alternatives",
     description:
-      "La mélamine est populaire pour sa variété de finis et un coÃ»t souvent plus maîtrisé. Sa durabilité dépend surtout des chants, de l'usage et de l'installation.",
+      "La mélamine est populaire pour sa variété de finis et un coût souvent plus maîtrisé. Sa durabilité dépend surtout des chants, de l'usage et de l'installation.",
     actions: [
       { text: "Demander une soumission", href: "/contact/" },
       {

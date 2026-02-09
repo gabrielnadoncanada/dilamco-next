@@ -6,7 +6,7 @@ export const RENOVATION_SERVICE_PAGE: ServiceData = {
   metadata: {
     title: "Rénovation clé en main",
     description:
-      "Rénovation clé en main : coordination et exécution lorsque le projet implique plusieurs corps de métier. Réduire les imprévus et livrer un résultat cohérent Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Rénovation clé en main : coordination et exécution lorsque le projet implique plusieurs corps de métier. Réduire les imprévus et livrer un résultat cohérent à Montréal, Laval et sur la Rive-Sud.",
     canonical: `${SITE_URL}/services/renovation/`,
   },
   hero: {

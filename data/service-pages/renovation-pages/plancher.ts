@@ -7,13 +7,13 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
   metadata: {
     title: "Rénovation de plancher",
     description:
-      "Rénovation de plancher : planification, coordination et finition soignée. Intégration du plancher dans un projet de rénovation (cuisine, salle de bain) Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Rénovation de plancher : planification, coordination et finition soignée. Intégration du plancher dans un projet de rénovation (cuisine, salle de bain) à Montréal, Laval et sur la Rive-Sud.",
     canonical: `${SITE_URL}/services/renovation/plancher/`,
   },
   hero: {
     h1: "Rénovation de plancher, coordination, niveaux et finition",
     paragraphs: [
-      "En rénovation, le plancher influence tout : niveaux, transitions, alignements et finition. Dilamco intervient lorsque le plancher doit être intégré Ã  un projet plus large (cuisine, salle de bain ou rénovation clé en main) avec une séquence de travaux claire et une exécution soignée.",
+      "En rénovation, le plancher influence tout : niveaux, transitions, alignements et finition. Dilamco intervient lorsque le plancher doit être intégré à un projet plus large (cuisine, salle de bain ou rénovation clé en main) avec une séquence de travaux claire et une exécution soignée.",
     ],
     ctaLinks: [
       { title: "Demander une soumission", href: "/contact/" },
@@ -30,13 +30,13 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Un plancher n'est pas seulement un choix esthétique : en rénovation, il détermine les niveaux, les transitions et une partie de la qualité perÃ§ue. Une rénovation de plancher devient particuliÃ¨rement pertinente lorsqu'elle est liée Ã  une cuisine, une salle de bain ou un réaménagement.",
+          "Un plancher n'est pas seulement un choix esthétique : en rénovation, il détermine les niveaux, les transitions et une partie de la qualité perçue. Une rénovation de plancher devient particulièrement pertinente lorsqu'elle est liée à une cuisine, une salle de bain ou un réaménagement.",
         ],
         items: [
           "Votre plancher est usé, endommagé ou présente des variations de niveau.",
           "Vous rénovez une cuisine ou une salle de bain et vous voulez une finition cohérente.",
           "Vous changez la disposition (îlot, électroménagers, zones de circulation) et le plancher doit suivre.",
-          "Vous devez gérer des zones sensibles (humidité, transitions entre piÃ¨ces, seuils).",
+          "Vous devez gérer des zones sensibles (humidité, transitions entre pièces, seuils).",
         ],
       },
     },
@@ -50,8 +50,8 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
         ],
         items: [
           "Niveaux : impact direct sur l'alignement des armoires et des électroménagers.",
-          "Transitions : jonctions entre piÃ¨ces, seuils et finitions périmétriques.",
-          "Séquence : éviter de poser trop tÃ´t ou trop tard, selon la portée du chantier.",
+          "Transitions : jonctions entre pièces, seuils et finitions périmétriques.",
+          "Séquence : éviter de poser trop tôt ou trop tard, selon la portée du chantier.",
         ],
         links: [
           { title: "Installation", href: "/services/installation/" },
@@ -86,11 +86,11 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
     },
     {
       id: "projets",
-      title: "Projets oÃ¹ le plancher fait partie du résultat final",
+      title: "Projets où le plancher fait partie du résultat final",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Le plancher influence la cohérence du projet, surtout en cuisine et en salle de bain. Consultez nos projets pour voir des exemples de rénovation oÃ¹ les niveaux, transitions et finitions ont été intégrés Ã  la planification globale.",
+          "Le plancher influence la cohérence du projet, surtout en cuisine et en salle de bain. Consultez nos projets pour voir des exemples de rénovation où les niveaux, transitions et finitions ont été intégrés à la planification globale.",
         ],
         links: [{ title: "Voir les projets", href: "/projets/" }],
       },
@@ -101,7 +101,7 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Nos projets de rénovation intégrant le plancher sont réalisés principalement Ã  Montréal, Laval et sur la Rive-Sud.",
+          "Nos projets de rénovation intégrant le plancher sont réalisés principalement à Montréal, Laval et sur la Rive-Sud.",
         ],
         links: [
           { title: "Rénovation clé en main", href: "/services/renovation/" },
@@ -116,7 +116,7 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
   faq: [
     {
       q: "Est-ce que je peux refaire uniquement le plancher?",
-      a: "Oui. Certains projets portent uniquement sur le plancher. Toutefois, dÃ¨s qu'il y a des armoires, des transitions complexes ou une rénovation plus large, la coordination devient un facteur déterminant.",
+      a: "Oui. Certains projets portent uniquement sur le plancher. Toutefois, dès qu'il y a des armoires, des transitions complexes ou une rénovation plus large, la coordination devient un facteur déterminant.",
     },
     {
       q: "Dans quel ordre faut-il faire les travaux?",
@@ -124,7 +124,7 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
     },
     {
       q: "Est-ce possible en condo?",
-      a: "Oui. En condo, il faut parfois respecter des rÃ¨gles d'immeuble (horaires, acoustique, accÃ¨s). Ces contraintes sont discutées au cadrage du projet.",
+      a: "Oui. En condo, il faut parfois respecter des règles d'immeuble (horaires, acoustique, accès). Ces contraintes sont discutées au cadrage du projet.",
     },
     {
       q: "Est-ce que le plancher influence l'installation des armoires?",
@@ -132,7 +132,7 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
     },
     {
       q: "Faites-vous tous les types de planchers?",
-      a: "La solution dépend du contexte (piÃ¨ce, usage, humidité, entretien). Le choix est cadré avec vous lors du design et de la soumission, afin d'assurer une cohérence avec le reste du projet.",
+      a: "La solution dépend du contexte (pièce, usage, humidité, entretien). Le choix est cadré avec vous lors du design et de la soumission, afin d'assurer une cohérence avec le reste du projet.",
     },
   ],
 };

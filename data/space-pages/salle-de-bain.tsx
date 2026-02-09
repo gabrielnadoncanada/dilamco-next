@@ -180,13 +180,13 @@ export const pageData: SpacePageData = {
   sections: [
     {
       id: "pour-qui",
-      title: "Ã€ qui s'adresse une vanité sur mesure?",
+      title: "À qui s'adresse une vanité sur mesure?",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
           "Vous voulez optimiser l'espace (petite salle de bain, condo, circulation serrée).",
           "Vous cherchez une solution durable malgré l'humidité (matériaux, chants, quincaillerie).",
-          "Vous avez des contraintes Ã  intégrer : double lavabo, rangement vertical, plomberie, niches.",
+          "Vous avez des contraintes à intégrer : double lavabo, rangement vertical, plomberie, niches.",
         ],
         variant: "checkmarks",
       },
@@ -215,7 +215,7 @@ export const pageData: SpacePageData = {
           {
             title: "Option clé en main",
             description:
-              "Coordination des travaux connexes lors d'une rénovation complÃ¨te.",
+              "Coordination des travaux connexes lors d'une rénovation complète.",
             href: "/services/renovation/salle-de-bain/",
           },
         ],

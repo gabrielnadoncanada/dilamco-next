@@ -7,13 +7,13 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
   metadata: {
     title: "Service d'installation",
     description:
-      "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée pour cuisines, salles de bain, walk-in et projets commerciaux Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée pour cuisines, salles de bain, walk-in et projets commerciaux à Montréal, Laval et sur la Rive-Sud.",
     canonical: `${SITE_URL}/services/installation/`,
   },
   hero: {
     h1: "Installation professionnelle, précision, alignement et finition",
     paragraphs: [
-      "Une installation de qualité est déterminante pour le résultat final. Même des armoires bien fabriquées peuvent sembler médiocres si elles sont mal posées. Chez Dilamco, l'installation fait partie intégrante du projet : ajustements sur place, alignements précis et finition soignée, principalement Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Une installation de qualité est déterminante pour le résultat final. Même des armoires bien fabriquées peuvent sembler médiocres si elles sont mal posées. Chez Dilamco, l'installation fait partie intégrante du projet : ajustements sur place, alignements précis et finition soignée, principalement à Montréal, Laval et sur la Rive-Sud.",
     ],
     ctaLinks: [
       { title: "Demander une soumission", href: "/contact/" },
@@ -44,7 +44,7 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
         type: SECTION_TYPES.LIST,
         items: [
           "Préparation du site : vérification des murs, planchers et niveaux.",
-          "Mise Ã  niveau et fixation : ancrage sécuritaire et stable des modules.",
+          "Mise à niveau et fixation : ancrage sécuritaire et stable des modules.",
           "Ajustement des portes et tiroirs : alignement précis et fonctionnement fluide.",
           "Gestion des joints et transitions : finition propre et cohérente.",
           "Inspection finale : vérification et ajustements avant la livraison.",
@@ -140,7 +140,7 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
   faq: [
     {
       q: "Combien de temps dure une installation?",
-      a: "La durée dépend du type de projet et de sa complexité. Une cuisine complÃ¨te nécessite généralement plus de temps qu'un walk-in ou une vanité.",
+      a: "La durée dépend du type de projet et de sa complexité. Une cuisine complète nécessite généralement plus de temps qu'un walk-in ou une vanité.",
     },
     {
       q: "Des ajustements sont-ils normaux?",
@@ -156,7 +156,7 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
     },
     {
       q: "Travaillez-vous en condo ou en commercial?",
-      a: "Oui. Nous adaptons l'installation aux contraintes d'accÃ¨s, d'horaire et d'usage propres Ã  chaque environnement.",
+      a: "Oui. Nous adaptons l'installation aux contraintes d'accès, d'horaire et d'usage propres à chaque environnement.",
     },
   ],
   jsonLd: {

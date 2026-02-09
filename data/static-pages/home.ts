@@ -6,9 +6,9 @@ import { SPACE_SLIDER_ITEMS } from "@/constants/shared-content";
 import { SITE } from "@/seo/schema/site";
 import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
-  title: "Cuisines, vanités et armoires sur mesure clé en main Ã  Montréal",
+  title: "Cuisines, vanités et armoires sur mesure clé en main à Montréal",
   description:
-    "Dilamco conÃ§oit et réalise des cuisines, vanités et armoires sur mesure haut de gamme.",
+    "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme.",
   path: "/",
   ogAlt: "Dilamco, sur mesure, durable, bien exécuté",
 });
@@ -17,7 +17,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Dilamco, sur mesure haut de gamme, clé en main",
     description:
-      "Cuisines, vanités et rangement sur mesure. Design, fabrication, installation et rénovation complÃ¨te au besoin.",
+      "Cuisines, vanités et rangement sur mesure. Design, fabrication, installation et rénovation complète au besoin.",
     image: {
       src: "/images/hero-image.webp",
       alt: "Dilamco, sur mesure haut de gamme, clé en main",
@@ -39,11 +39,11 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.FEATURE_GRID,
         description:
-          "Accompagnement du plan Ã  la finition avec coordination lorsque requis.",
+          "Accompagnement du plan à la finition avec coordination lorsque requis.",
         items: [
           {
             title: "Sur mesure réel",
-            description: "Adapté Ã  votre espace.",
+            description: "Adapté à votre espace.",
             icon: Ruler,
           },
           {
@@ -83,7 +83,7 @@ export const pageData: ArticlePageData = {
           },
           {
             title: "Fabrication robuste",
-            description: "Matériaux adaptés Ã  la réalité du chantier.",
+            description: "Matériaux adaptés à la réalité du chantier.",
           },
           {
             title: "Installation soignée",

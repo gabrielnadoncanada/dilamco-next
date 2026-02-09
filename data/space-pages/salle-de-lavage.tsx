@@ -176,13 +176,13 @@ export const pageData: SpacePageData = {
   sections: [
     {
       id: "pour-qui",
-      title: "Ã€ qui s'adresse une salle de lavage sur mesure?",
+      title: "À qui s'adresse une salle de lavage sur mesure?",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
           "Vous voulez optimiser un espace restreint (condo, corridor, placard, sous-sol).",
-          "Vous cherchez un espace simple Ã  utiliser au quotidien (pliage, paniers, produits, linge).",
-          "Vous avez des contraintes Ã  intégrer : plomberie, drains, chauffe-eau, panneaux, ventilation.",
+          "Vous cherchez un espace simple à utiliser au quotidien (pliage, paniers, produits, linge).",
+          "Vous avez des contraintes à intégrer : plomberie, drains, chauffe-eau, panneaux, ventilation.",
         ],
         variant: "checkmarks",
       },

@@ -85,7 +85,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Un projet fluide dépend d'un périmÃ¨tre clair, d'une coordination maîtrisée et d'un responsable principal.",
+          "Un projet fluide dépend d'un périmètre clair, d'une coordination maîtrisée et d'un responsable principal.",
         ],
         links: [
           {

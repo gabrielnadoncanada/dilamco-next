@@ -13,15 +13,15 @@ export const metadata: Metadata = createPageMetadata({
 const faqItems = [
   {
     q: "Contreplaqué ou MDF?",
-    a: "Le choix dépend du rÃ´le de la piÃ¨ce, de l'humidité et de la durabilité visée.",
+    a: "Le choix dépend du rôle de la pièce, de l'humidité et de la durabilité visée.",
   },
   {
     q: "La mélamine est-elle un bon choix?",
-    a: "Oui dans certains contextes, avec attention aux chants et Ã  l'installation.",
+    a: "Oui dans certains contextes, avec attention aux chants et à l'installation.",
   },
   {
     q: "La quincaillerie soft-close vaut-elle la peine?",
-    a: "Oui, si le systÃ¨me est fiable et bien installé.",
+    a: "Oui, si le système est fiable et bien installé.",
   },
   {
     q: "Quels matériaux éviter en salle de bain?",
@@ -100,12 +100,12 @@ export const pageData: ArticlePageData = {
           {
             title: "Mélamine",
             href: "/materiaux/melamine/",
-            description: "Décor et coÃ»t maîtrisé.",
+            description: "Décor et coût maîtrisé.",
           },
           {
             title: "Bois massif",
             href: "/materiaux/bois-massif/",
-            description: "Texture naturelle et caractÃ¨re.",
+            description: "Texture naturelle et caractère.",
           },
           {
             title: "Quincaillerie",
@@ -132,12 +132,12 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TABLE,
         description:
-          "Pour une lecture complÃ¨te, consultez la page comparatif.",
+          "Pour une lecture complète, consultez la page comparatif.",
         columns: ["Durabilité", "Humidité", "Stabilité", "Usage typique"],
         rows: [
           {
             title: "Contreplaqué",
-            values: ["Élevée", "Bonne", "TrÃ¨s bonne", "Structures exigeantes"],
+            values: ["Élevée", "Bonne", "Très bonne", "Structures exigeantes"],
           },
           {
             title: "MDF",
@@ -147,7 +147,7 @@ export const pageData: ArticlePageData = {
             title: "Mélamine",
             values: [
               "Variable",
-              "Faible Ã  moyenne",
+              "Faible à moyenne",
               "Moyenne",
               "Applications économiques",
             ],

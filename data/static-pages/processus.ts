@@ -27,7 +27,7 @@ const faqItems = [
   },
   {
     q: "Le processus convient-il aux condos?",
-    a: "Oui, avec adaptation Ã  la logistique du bÃ¢timent.",
+    a: "Oui, avec adaptation à la logistique du bâtiment.",
   },
 ];
 export const pageData: ArticlePageData = {
@@ -46,7 +46,7 @@ export const pageData: ArticlePageData = {
     }),
   ],
   hero: {
-    heading: "Notre processus, du plan Ã  la finition",
+    heading: "Notre processus, du plan à la finition",
     description:
       "Une méthode cadrée pour réduire les imprévus et protéger la qualité finale.",
     actions: [
@@ -65,7 +65,7 @@ export const pageData: ArticlePageData = {
         items: [
           "Moins d'imprévus.",
           "Responsabilités claires.",
-          "Qualité mieux contrÃ´lée.",
+          "Qualité mieux contrôlée.",
           "Expérience client plus simple.",
         ],
         variant: "bullets",
@@ -100,7 +100,7 @@ export const pageData: ArticlePageData = {
           {
             step: "5",
             title: "Fabrication",
-            description: "Production sur mesure aprÃ¨s validation.",
+            description: "Production sur mesure après validation.",
           },
           {
             step: "6",

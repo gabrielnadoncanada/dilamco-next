@@ -25,7 +25,7 @@ const faqItems = [
     a: "Oui, souvent pour les portes et éléments visibles. Le choix dépend du fini, de l'entretien et de l'environnement.",
   },
   {
-    q: "Comment réagit-il Ã  l'humidité?",
+    q: "Comment réagit-il à l'humidité?",
     a: "Le bois peut bouger avec l'humidité. La conception, la finition et l'usage aux bons endroits limitent les effets.",
   },
   {
@@ -41,8 +41,8 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Le bois massif correspond Ã  une piÃ¨ce de bois pleine. Il se distingue du MDF, de la mélamine, du contreplaqué et du placage.",
-        "Il présente des variations naturelles de veinage, de teinte et de texture, qui font partie de son caractÃ¨re.",
+        "Le bois massif correspond à une pièce de bois pleine. Il se distingue du MDF, de la mélamine, du contreplaqué et du placage.",
+        "Il présente des variations naturelles de veinage, de teinte et de texture, qui font partie de son caractère.",
       ],
     },
   },
@@ -53,7 +53,7 @@ const sections: ContentArticleSection[] = [
       type: SECTION_TYPES.LIST,
       items: [
         "Esthétique naturelle : rendu chaleureux et profondeur visuelle.",
-        "CaractÃ¨re haut de gamme : forte valeur perÃ§ue.",
+        "Caractère haut de gamme : forte valeur perçue.",
         "Réparabilité : certaines marques peuvent être reprises selon le fini.",
         "Matériau recherché pour les éléments visibles.",
       ],
@@ -66,7 +66,7 @@ const sections: ContentArticleSection[] = [
       type: SECTION_TYPES.TEXT,
       paragraphs: [
         "Le bois massif demande une conception et une exécution adaptées.",
-        "La durabilité vient d'un systÃ¨me complet : matériau, finition, quincaillerie et installation.",
+        "La durabilité vient d'un système complet : matériau, finition, quincaillerie et installation.",
       ],
     },
   },
@@ -77,19 +77,19 @@ const sections: ContentArticleSection[] = [
       type: SECTION_TYPES.LIST,
       items: [
         "Mouvement selon humidité et température.",
-        "Stabilité parfois inférieure Ã  certains panneaux techniques pour de grandes surfaces.",
+        "Stabilité parfois inférieure à certains panneaux techniques pour de grandes surfaces.",
         "Entretien dépendant du fini.",
-        "CoÃ»t généralement plus élevé.",
+        "Coût généralement plus élevé.",
       ],
     },
   },
   {
     id: "ou-pertinent",
-    title: "OÃ¹ le bois massif est le plus pertinent",
+    title: "Où le bois massif est le plus pertinent",
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Le bois massif est souvent optimal sur les éléments visibles oÃ¹ le rendu et le toucher comptent.",
+        "Le bois massif est souvent optimal sur les éléments visibles où le rendu et le toucher comptent.",
       ],
       links: [
         { title: "Voir le service de design", href: "/services/design/" },
@@ -103,20 +103,20 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       items: [
-        "Portes et faÃ§ades.",
+        "Portes et façades.",
         "Détails décoratifs.",
-        "PiÃ¨ces sélectionnées Ã  forte valeur visuelle.",
+        "Pièces sélectionnées à forte valeur visuelle.",
       ],
     },
   },
   {
     id: "ou-deconseille-details",
-    title: "OÃ¹ il est souvent moins pertinent",
+    title: "Où il est souvent moins pertinent",
     content: {
       type: SECTION_TYPES.LIST,
       items: [
-        "Structures complÃ¨tes de caissons.",
-        "Zones trÃ¨s humides selon le contexte.",
+        "Structures complètes de caissons.",
+        "Zones très humides selon le contexte.",
         "Grandes surfaces nécessitant une stabilité maximale.",
       ],
     },
@@ -156,7 +156,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       items: [
-        "Protection adaptée Ã  l'usage.",
+        "Protection adaptée à l'usage.",
         "Entretien simple et cohérent avec le fini.",
         "Prévenir l'eau stagnante et les nettoyants agressifs.",
       ],
@@ -180,9 +180,9 @@ export const pageData: ArticlePageData = {
     { name: "Bois massif", url: SITE.url + "/materiaux/bois-massif/" },
   ],
   hero: {
-    heading: "Bois massif - authenticité, caractÃ¨re et limites Ã  connaître",
+    heading: "Bois massif - authenticité, caractère et limites à connaître",
     description:
-      "Le bois massif est un matériau noble, apprécié pour son grain et sa profondeur visuelle. C'est aussi un matériau vivant : il réagit Ã  l'humidité et Ã  la température. L'important n'est pas seulement bois massif ou non, mais oÃ¹ et comment il est utilisé.",
+      "Le bois massif est un matériau noble, apprécié pour son grain et sa profondeur visuelle. C'est aussi un matériau vivant : il réagit à l'humidité et à la température. L'important n'est pas seulement bois massif ou non, mais où et comment il est utilisé.",
     actions: [
       { text: "Parler de votre projet", href: "/contact/" },
       { text: "Voir nos réalisations", href: "/projets/", variant: "outline" },

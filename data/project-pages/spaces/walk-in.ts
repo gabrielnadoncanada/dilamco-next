@@ -6,13 +6,13 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
   metadata: {
     title: "Projets de walk-in sur mesure",
     description:
-      "Projets de walk-in sur mesure : aménagements de garde-robes et rangements réalisés. Exemples de solutions optimisées (sections, tiroirs, accessoires) conÃ§ues pour la fonctionnalité et la durabilité Ã  Montréal, Laval et Rive-Sud.",
+      "Projets de walk-in sur mesure : aménagements de garde-robes et rangements réalisés. Exemples de solutions optimisées (sections, tiroirs, accessoires) conçues pour la fonctionnalité et la durabilité à Montréal, Laval et Rive-Sud.",
     canonical: "https://dilamco.com/projets/walk-in/",
   },
   hero: {
     h1: "Projets de walk-in sur mesure, réalisations",
     paragraphs: [
-      "Un walk-in réussi, c'est d'abord de la fonction : zones de suspendus, tiroirs, tablettes, accessoires, circulation et accÃ¨s. Le sur mesure permet d'exploiter chaque mur et chaque hauteur, même dans des espaces irréguliers. Cette page sert de preuve concrÃ¨te : des exemples de projets de walk-in sur mesure réalisés, ou Ã  documenter, pour illustrer des solutions durables, bien organisées et bien exécutées.",
+      "Un walk-in réussi, c'est d'abord de la fonction : zones de suspendus, tiroirs, tablettes, accessoires, circulation et accès. Le sur mesure permet d'exploiter chaque mur et chaque hauteur, même dans des espaces irréguliers. Cette page sert de preuve concrète : des exemples de projets de walk-in sur mesure réalisés, ou à documenter, pour illustrer des solutions durables, bien organisées et bien exécutées.",
     ],
     ctaLinks: [
       { title: "Parler de votre projet de walk-in", href: "/contact/" },
@@ -32,7 +32,7 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
           "Les walk-in se décident sur vos habitudes : quantité de suspendus, tiroirs, accessoires, saisonnier, et circulation. Voici des catégories utiles :",
         items: [
           "Walk-in en L / en U (optimisation des murs, circulation centrale)",
-          "Walk-in en couloir (profondeur, dégagements, accÃ¨s rapide)",
+          "Walk-in en couloir (profondeur, dégagements, accès rapide)",
           "Walk-in partagé (deux personnes : zones distinctes, organisation)",
           "Walk-in avec îlot / module central (tiroirs, pliage, accessoires)",
           "Rangements intégrés (valises, linge, chaussures, accessoires)",
@@ -49,12 +49,12 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
           "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
-          "Type d'espace : walk-in fermé, garde-robe, piÃ¨ce dédiée, couloir.",
-          "Mandat : objectif (plus de rangement, organisation, accÃ¨s, esthétique).",
+          "Type d'espace : walk-in fermé, garde-robe, pièce dédiée, couloir.",
+          "Mandat : objectif (plus de rangement, organisation, accès, esthétique).",
           "Contraintes : dimensions, angles, portes/fenêtres, circulation, éclairage.",
           "Solution : zones (suspendus/tiroirs/tablettes), modules, accessoires.",
           "Finition : couleurs/fini, cohérence avec l'espace, entretien.",
-          "Résultat : bénéfices (rangement utile, accÃ¨s, organisation, durabilité).",
+          "Résultat : bénéfices (rangement utile, accès, organisation, durabilité).",
         ],
         links: [
           { title: "Couleurs & finis", href: "/materiaux/couleurs/" },
@@ -71,16 +71,16 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
         items: [
           "Habitudes : suspendus longs vs courts, pliage, accessoires, chaussures.",
           "Circulation : dégagements, ouverture des tiroirs, portes, passages.",
-          "Hauteur : exploiter le vertical sans perdre l'accÃ¨s (zones saisonniÃ¨res).",
+          "Hauteur : exploiter le vertical sans perdre l'accès (zones saisonnières).",
           "Éclairage : zones sombres, profondeur, éclairage intégré si nécessaire.",
-          "Organisation : chaque chose Ã  sa place (sinon le walk-in â€œredevient un placardâ€).",
+          "Organisation : chaque chose à sa place (sinon le walk-in "redevient un placard").",
         ],
       },
     },
 
     {
       id: "zones",
-      title: "Zones fonctionnelles Ã  prévoir",
+      title: "Zones fonctionnelles à prévoir",
       content: {
         type: SECTION_TYPES.LIST,
         intro:
@@ -89,7 +89,7 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
           "Suspendus : longs (robes/manteaux) et courts (chemises/vestons) séparés.",
           "Tiroirs : sous-vêtements, accessoires, bijoux, ceintures, etc.",
           "Tablettes : pliage, paniers, sacs, linge.",
-          "Chaussures : sections dédiées, accÃ¨s visuel rapide.",
+          "Chaussures : sections dédiées, accès visuel rapide.",
           "Saisonnier : valises, boîtes, hors-saison en hauteur.",
         ],
       },
@@ -101,11 +101,11 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.LIST,
         intro:
-          "Les détails font souvent la différence : accessibilité, organisation et confort au quotidien. L'objectif est de réduire le â€œfouillisâ€ et d'améliorer l'accÃ¨s.",
+          "Les détails font souvent la différence : accessibilité, organisation et confort au quotidien. L'objectif est de réduire le "fouillis" et d'améliorer l'accès.",
         items: [
           "Paniers, séparateurs, modules pour accessoires.",
           "Rangements dédiés (cravates, ceintures, bijoux, sacs).",
-          "Miroir, banc, zone de dépÃ´t (selon l'espace).",
+          "Miroir, banc, zone de dépôt (selon l'espace).",
           "Éclairage plus ciblé sur les zones profondes.",
         ],
       },
@@ -128,11 +128,11 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "processus",
-      title: "Processus (du besoin Ã  l'installation)",
+      title: "Processus (du besoin à l'installation)",
       content: {
         type: SECTION_TYPES.STEPS,
         steps: [
-          "Cadrage : habitudes, volumes Ã  ranger, zones nécessaires, contraintes.",
+          "Cadrage : habitudes, volumes à ranger, zones nécessaires, contraintes.",
           "Design : plan, modules, circulation, détails (tiroirs/accessoires).",
           "Fabrication : production sur mesure selon les décisions validées.",
           "Installation : pose, ajustements, finition et inspection.",

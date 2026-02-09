@@ -10,7 +10,7 @@ import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
   title: "Quincaillerie",
   description:
-    "Quincaillerie d'armoires : charniÃ¨res, coulisses et mécanismes. Comprendre l'impact sur le confort, les réglages et la durabilité.",
+    "Quincaillerie d'armoires : charnières, coulisses et mécanismes. Comprendre l'impact sur le confort, les réglages et la durabilité.",
   path: "/materiaux/quincaillerie/",
   ogAlt: "Quincaillerie - Matériaux sur mesure",
 });
@@ -18,15 +18,15 @@ export const metadata: Metadata = createPageMetadata({
 const faqItems = [
   {
     q: "Le soft-close est-il utile?",
-    a: "Oui, si le systÃ¨me est fiable et bien installé : confort, moins de chocs et meilleure longévité.",
+    a: "Oui, si le système est fiable et bien installé : confort, moins de chocs et meilleure longévité.",
   },
   {
     q: "La quincaillerie influence-t-elle la durée de vie?",
-    a: "Oui. Ce sont les piÃ¨ces qui bougent et s'usent.",
+    a: "Oui. Ce sont les pièces qui bougent et s'usent.",
   },
   {
     q: "Peut-on remplacer plus tard?",
-    a: "Parfois, mais c'est préférable de choisir correctement dÃ¨s le départ.",
+    a: "Parfois, mais c'est préférable de choisir correctement dès le départ.",
   },
   {
     q: "Pourquoi l'installation compte autant?",
@@ -49,7 +49,7 @@ const sections: ContentArticleSection[] = [
   },
   {
     id: "charnieres",
-    title: "CharniÃ¨res",
+    title: "Charnières",
     content: {
       type: SECTION_TYPES.LIST,
       items: ["Ajustabilité fine.", "Soft-close pour confort et protection."],
@@ -132,7 +132,7 @@ const sections: ContentArticleSection[] = [
   },
   {
     id: "systeme",
-    title: "Matériaux + quincaillerie = systÃ¨me",
+    title: "Matériaux + quincaillerie = système",
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
@@ -176,7 +176,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Quincaillerie, confort, précision et durabilité",
     description:
-      "CharniÃ¨res, coulisses et mécanismes sont souvent le facteur principal de l'expérience quotidienne. Une bonne quincaillerie bien installée améliore fortement la longévité et le ressenti haut de gamme.",
+      "Charnières, coulisses et mécanismes sont souvent le facteur principal de l'expérience quotidienne. Une bonne quincaillerie bien installée améliore fortement la longévité et le ressenti haut de gamme.",
     actions: [
       { text: "Demander une soumission", href: "/contact/" },
       {

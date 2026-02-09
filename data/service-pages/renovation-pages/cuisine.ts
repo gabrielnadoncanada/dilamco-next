@@ -7,13 +7,13 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
   metadata: {
     title: "Rénovation de cuisine",
     description:
-      "Rénovation de cuisine clé en main : design, coordination, fabrication et installation d'armoires sur mesure. Un seul partenaire, du plan Ã  la finition, Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Rénovation de cuisine clé en main : design, coordination, fabrication et installation d'armoires sur mesure. Un seul partenaire, du plan à la finition, à Montréal, Laval et sur la Rive-Sud.",
     canonical: `${SITE_URL}/services/renovation/cuisine/`,
   },
   hero: {
-    h1: "Rénovation de cuisine clé en main, un seul partenaire, du plan Ã  la finition",
+    h1: "Rénovation de cuisine clé en main, un seul partenaire, du plan à la finition",
     paragraphs: [
-      "Une rénovation de cuisine réussie dépend autant de la coordination que du résultat final. Dilamco propose une approche clé en main lorsque le projet le requiert : design orienté usage, fabrication sur mesure, installation précise et coordination des étapes connexes, principalement Ã  Montréal, Laval et sur la Rive-Sud.",
+      "Une rénovation de cuisine réussie dépend autant de la coordination que du résultat final. Dilamco propose une approche clé en main lorsque le projet le requiert : design orienté usage, fabrication sur mesure, installation précise et coordination des étapes connexes, principalement à Montréal, Laval et sur la Rive-Sud.",
     ],
     ctaLinks: [
       { title: "Demander une soumission", href: "/contact/" },
@@ -23,7 +23,7 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
   sections: [
     {
       id: "pour-qui",
-      title: "Ã€ qui s'adresse une rénovation clé en main?",
+      title: "À qui s'adresse une rénovation clé en main?",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
@@ -32,7 +32,7 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
         items: [
           "Vous voulez éviter la gestion de chantier et limiter les allers-retours entre intervenants.",
           "Vous rénovez une cuisine existante (maison ou condo) et vous cherchez un résultat cohérent.",
-          "Vous souhaitez réduire les imprévus grÃ¢ce Ã  une séquence de travaux claire.",
+          "Vous souhaitez réduire les imprévus grâce à une séquence de travaux claire.",
         ],
       },
     },
@@ -77,7 +77,7 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "En rénovation, l'existant impose des contraintes : murs irréguliers, plomberie, ventilation, accÃ¨s et intégration des équipements. Le design sert Ã  prendre les décisions tÃ´t, avant la production et l'installation, pour éviter des compromis visibles Ã  la fin.",
+          "En rénovation, l'existant impose des contraintes : murs irréguliers, plomberie, ventilation, accès et intégration des équipements. Le design sert à prendre les décisions tôt, avant la production et l'installation, pour éviter des compromis visibles à la fin.",
         ],
         items: [
           "Organisation : zones de travail, circulation, rangement et intégration.",
@@ -95,7 +95,7 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accÃ¨s, interruptions, délais).",
+          "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accès, interruptions, délais).",
         ],
         items: [
           "Séquencement : planifier l'ordre des travaux pour réduire les reprises.",
@@ -141,15 +141,15 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
   faq: [
     {
       q: "Combien de temps dure une rénovation de cuisine?",
-      a: "La durée varie selon la portée (partielle vs complÃ¨te), les contraintes du lieu et la coordination des étapes. L'échéance est confirmée lors de la soumission.",
+      a: "La durée varie selon la portée (partielle vs complète), les contraintes du lieu et la coordination des étapes. L'échéance est confirmée lors de la soumission.",
     },
     {
       q: "Est-ce possible en condo?",
-      a: "Oui. En condo, il faut souvent gérer l'accÃ¨s, les horaires et certaines contraintes techniques. Le design sert Ã  cadrer ces éléments dÃ¨s le départ.",
+      a: "Oui. En condo, il faut souvent gérer l'accès, les horaires et certaines contraintes techniques. Le design sert à cadrer ces éléments dès le départ.",
     },
     {
       q: "Dois-je quitter le logement pendant les travaux?",
-      a: "Ã‡a dépend de la portée. Pour une rénovation complÃ¨te, il peut y avoir des périodes moins confortables. Le phasage est discuté pour limiter l'impact lorsque possible.",
+      a: "Ça dépend de la portée. Pour une rénovation complète, il peut y avoir des périodes moins confortables. Le phasage est discuté pour limiter l'impact lorsque possible.",
     },
     {
       q: "Comment sont gérés les imprévus?",

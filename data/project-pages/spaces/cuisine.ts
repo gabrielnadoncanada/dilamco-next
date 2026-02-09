@@ -6,13 +6,13 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
   metadata: {
     title: "Projets de cuisines sur mesure",
     description:
-      "Projets de cuisines sur mesure : réalisations et exemples de configurations (condo, îlot, rangement optimisé, rénovation). Conception, fabrication et installation Ã  Montréal, Laval et Rive-Sud.",
+      "Projets de cuisines sur mesure : réalisations et exemples de configurations (condo, îlot, rangement optimisé, rénovation). Conception, fabrication et installation à Montréal, Laval et Rive-Sud.",
     canonical: "https://dilamco.com/projets/cuisine/",
   },
   hero: {
     h1: "Projets de cuisines sur mesure, réalisations",
     paragraphs: [
-      "Chaque cuisine est conÃ§ue selon l'espace réel (dimensions, circulation, lumiÃ¨re) et l'usage quotidien (rangement, zones de travail, intégrations). Cette page sert de preuve concrÃ¨te : des exemples de projets de cuisines sur mesure réalisés (ou Ã  documenter) pour illustrer des solutions cohérentes, durables et bien exécutées.",
+      "Chaque cuisine est conçue selon l'espace réel (dimensions, circulation, lumière) et l'usage quotidien (rangement, zones de travail, intégrations). Cette page sert de preuve concrète : des exemples de projets de cuisines sur mesure réalisés (ou à documenter) pour illustrer des solutions cohérentes, durables et bien exécutées.",
     ],
     ctaLinks: [
       { title: "Parler de votre projet de cuisine", href: "/contact/" },
@@ -28,10 +28,10 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
         intro:
           "Les cuisines se ressemblent en photo, mais elles se décident sur des contraintes réelles. Voici des catégories utiles pour cadrer votre cas :",
         items: [
-          "Cuisines de condo (accÃ¨s chantier, circulation serrée, intégrations)",
+          "Cuisines de condo (accès chantier, circulation serrée, intégrations)",
           "Cuisines familiales (usage intensif, durabilité, rangement)",
           "Cuisines avec îlot (préparation, repas, circulation, rangement)",
-          "Rénovations complÃ¨tes (coordination, travaux techniques, séquence)",
+          "Rénovations complètes (coordination, travaux techniques, séquence)",
           "Styles contemporains et intemporels (couleurs, finis, cohérence)",
         ],
         links: [
@@ -52,9 +52,9 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
           "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
-          "Type de projet : armoires seulement ou rénovation complÃ¨te.",
+          "Type de projet : armoires seulement ou rénovation complète.",
           "Mandat : objectif principal (rangement, îlot, intégrations).",
-          "Contraintes : dimensions, circulation, accÃ¨s condo, plomberie/électricité.",
+          "Contraintes : dimensions, circulation, accès condo, plomberie/électricité.",
           "Solution : configuration, modules, logique de rangement.",
           "Matériaux : structure vs portes, finis, points d'attention.",
           "Résultat : bénéfices concrets (fonction, fluidité, durabilité, finition).",
@@ -88,7 +88,7 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Une cuisine durable est un systÃ¨me : structure, chants, quincaillerie et installation. Le matériau seul ne garantit pas la longévité, l'exécution et les ajustements sont déterminants.",
+          "Une cuisine durable est un système : structure, chants, quincaillerie et installation. Le matériau seul ne garantit pas la longévité, l'exécution et les ajustements sont déterminants.",
         ],
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
@@ -102,11 +102,11 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "renovation",
-      title: "Armoires seulement vs rénovation complÃ¨te",
+      title: "Armoires seulement vs rénovation complète",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Certains projets se limitent aux armoires et Ã  l'installation. D'autres nécessitent une rénovation complÃ¨te (plomberie, électricité, murs, plancher, dosseret). Dans ce cas, la coordination et le séquencement deviennent critiques pour éviter reprises et délais.",
+          "Certains projets se limitent aux armoires et à l'installation. D'autres nécessitent une rénovation complète (plomberie, électricité, murs, plancher, dosseret). Dans ce cas, la coordination et le séquencement deviennent critiques pour éviter reprises et délais.",
         ],
         links: [
           {
@@ -127,7 +127,7 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "processus",
-      title: "Processus (du besoin Ã  l'installation)",
+      title: "Processus (du besoin à l'installation)",
       content: {
         type: SECTION_TYPES.STEPS,
         steps: [
@@ -151,18 +151,18 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
         items: [
           {
             q: "Faites-vous des cuisines de condo?",
-            a: "Oui. Le sur mesure est souvent particuliÃ¨rement pertinent en condo (contraintes d'espace, intégrations, accÃ¨s chantier).",
+            a: "Oui. Le sur mesure est souvent particulièrement pertinent en condo (contraintes d'espace, intégrations, accès chantier).",
           },
           {
             q: "Est-ce que chaque projet est unique?",
-            a: "Oui. Les dimensions, la circulation, la lumiÃ¨re, les contraintes techniques et l'usage déterminent la configuration.",
+            a: "Oui. Les dimensions, la circulation, la lumière, les contraintes techniques et l'usage déterminent la configuration.",
           },
           {
             q: "Faites-vous l'installation?",
             a: "Oui. L'installation et les ajustements font partie des éléments clés pour un résultat durable et cohérent.",
           },
           {
-            q: "Peut-on voir des projets similaires au nÃ´tre?",
+            q: "Peut-on voir des projets similaires au nôtre?",
             a: "Oui, lorsque les projets sont documentés. Plus vous décrivez votre contexte, plus il est facile d'orienter vers des exemples pertinents.",
           },
         ],

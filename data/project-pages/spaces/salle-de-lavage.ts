@@ -6,13 +6,13 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
   metadata: {
     title: "Projets de salles de lavage sur mesure",
     description:
-      "Projets de salles de lavage sur mesure : rangements, comptoirs et aménagements réalisés. Exemples de solutions durables adaptées Ã  l'humidité, au rangement et Ã  l'optimisation d'espace Ã  Montréal, Laval et Rive-Sud.",
+      "Projets de salles de lavage sur mesure : rangements, comptoirs et aménagements réalisés. Exemples de solutions durables adaptées à l'humidité, au rangement et à l'optimisation d'espace à Montréal, Laval et Rive-Sud.",
     canonical: "https://dilamco.com/projets/salle-de-lavage/",
   },
   hero: {
     h1: "Projets de salles de lavage sur mesure, réalisations",
     paragraphs: [
-      "Une salle de lavage est un espace trÃ¨s fonctionnel : humidité, produits ménagers, paniers, circulation, bruit et ventilation. Le sur mesure permet d'optimiser chaque zone (tri, pliage, rangement) et d'obtenir un aménagement durable. Cette page sert de preuve concrÃ¨te : des exemples de projets de salles de lavage sur mesure réalisés, ou Ã  documenter, pour illustrer des solutions cohérentes, robustes et bien exécutées.",
+      "Une salle de lavage est un espace très fonctionnel : humidité, produits ménagers, paniers, circulation, bruit et ventilation. Le sur mesure permet d'optimiser chaque zone (tri, pliage, rangement) et d'obtenir un aménagement durable. Cette page sert de preuve concrète : des exemples de projets de salles de lavage sur mesure réalisés, ou à documenter, pour illustrer des solutions cohérentes, robustes et bien exécutées.",
     ],
     ctaLinks: [
       {
@@ -35,10 +35,10 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
           "Les salles de lavage se décident sur l'usage réel : rangement, zones de tri, circulation, humidité et entretien. Voici des catégories utiles :",
         items: [
           "Petites salles de lavage (optimisation d'espace, rangement vertical)",
-          "Salle de lavage + mudroom (manteaux, bottes, banc, zones de dépÃ´t)",
+          "Salle de lavage + mudroom (manteaux, bottes, banc, zones de dépôt)",
           "Aménagements avec comptoir de pliage (fonction, hauteur, robustesse)",
           "Rangements fermés (produits, paniers, accessoires) et niches techniques",
-          "Rénovations complÃ¨tes (travaux techniques, séquencement, coordination)",
+          "Rénovations complètes (travaux techniques, séquencement, coordination)",
         ],
         links: [
           {
@@ -62,11 +62,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
           "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
-          "Type de projet : aménagement seulement ou rénovation complÃ¨te.",
+          "Type de projet : aménagement seulement ou rénovation complète.",
           "Mandat : objectif principal (rangement, pliage, tri, circulation).",
-          "Contraintes : humidité, ventilation, plomberie, accÃ¨s, bruit, dimensions.",
+          "Contraintes : humidité, ventilation, plomberie, accès, bruit, dimensions.",
           "Solution : zones (tri/pliage), modules, rangement, intégrations.",
-          "Matériaux : choix adaptés Ã  l'humidité et Ã  l'entretien.",
+          "Matériaux : choix adaptés à l'humidité et à l'entretien.",
           "Résultat : bénéfices concrets (fonction, rangement utile, entretien, durabilité).",
         ],
         links: [
@@ -83,28 +83,28 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "Humidité et fuites : zones exposées (laveuse, sécheuse, évier) â†’ protection essentielle.",
-          "Produits ménagers : rangement sécuritaire, accÃ¨s rapide, surfaces faciles Ã  nettoyer.",
-          "Fonction : tri, pliage, dépÃ´t, circulation (éviter les â€œgoulotsâ€).",
+          "Humidité et fuites : zones exposées (laveuse, sécheuse, évier) → protection essentielle.",
+          "Produits ménagers : rangement sécuritaire, accès rapide, surfaces faciles à nettoyer.",
+          "Fonction : tri, pliage, dépôt, circulation (éviter les "goulots").",
           "Ventilation : impact sur la durabilité et les finis.",
           "Plomberie/électricité : sorties et dégagements pour appareils et accessoires.",
-          "Finition : alignements et ajustements (portes/tiroirs trÃ¨s sollicités).",
+          "Finition : alignements et ajustements (portes/tiroirs très sollicités).",
         ],
       },
     },
 
     {
       id: "fonction",
-      title: "Zones fonctionnelles Ã  prévoir (ce qui change la vie)",
+      title: "Zones fonctionnelles à prévoir (ce qui change la vie)",
       content: {
         type: SECTION_TYPES.LIST,
         intro:
-          "Une bonne salle de lavage est organisée par zones. Le sur mesure permet de dimensionner chaque zone selon vos habitudes, au lieu de â€œfaire rentrerâ€ des modules standards.",
+          "Une bonne salle de lavage est organisée par zones. Le sur mesure permet de dimensionner chaque zone selon vos habitudes, au lieu de "faire rentrer" des modules standards.",
         items: [
-          "Zone tri : paniers, bacs, accÃ¨s direct.",
-          "Zone pliage : comptoir robuste Ã  une hauteur confortable.",
+          "Zone tri : paniers, bacs, accès direct.",
+          "Zone pliage : comptoir robuste à une hauteur confortable.",
           "Zone rangement : produits, serviettes, accessoires, aspirateur, etc.",
-          "Zone dépÃ´t : si mudroom (manteaux, sacs, chaussures, banc).",
+          "Zone dépôt : si mudroom (manteaux, sacs, chaussures, banc).",
         ],
       },
     },
@@ -115,7 +115,7 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Ici, le bon choix est celui qui résiste Ã  l'usage réel : humidité, éclaboussures, nettoyage, et parfois des produits plus agressifs. La durabilité dépend aussi des chants, de l'assemblage, de la quincaillerie et de l'installation.",
+          "Ici, le bon choix est celui qui résiste à l'usage réel : humidité, éclaboussures, nettoyage, et parfois des produits plus agressifs. La durabilité dépend aussi des chants, de l'assemblage, de la quincaillerie et de l'installation.",
         ],
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
@@ -132,7 +132,7 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Les portes et tiroirs d'une salle de lavage sont souvent trÃ¨s sollicités. Une quincaillerie adaptée et une installation précise évitent rapidement les jeux, frottements et désalignements.",
+          "Les portes et tiroirs d'une salle de lavage sont souvent très sollicités. Une quincaillerie adaptée et une installation précise évitent rapidement les jeux, frottements et désalignements.",
         ],
         links: [
           { title: "Voir la quincaillerie", href: "/materiaux/quincaillerie/" },
@@ -143,11 +143,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "renovation",
-      title: "Aménagement seulement vs rénovation complÃ¨te",
+      title: "Aménagement seulement vs rénovation complète",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Selon l'état de la piÃ¨ce, vous pouvez faire un projet â€œaménagement + installationâ€ ou une rénovation complÃ¨te (plomberie, ventilation, murs/plancher, éclairage). Dans ce cas, le séquencement et la coordination deviennent critiques.",
+          "Selon l'état de la pièce, vous pouvez faire un projet "aménagement + installation" ou une rénovation complète (plomberie, ventilation, murs/plancher, éclairage). Dans ce cas, le séquencement et la coordination deviennent critiques.",
         ],
         links: [
           {
@@ -164,7 +164,7 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "processus",
-      title: "Processus (du besoin Ã  l'installation)",
+      title: "Processus (du besoin à l'installation)",
       content: {
         type: SECTION_TYPES.STEPS,
         steps: [
@@ -189,14 +189,14 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
         items: [
           {
             q: "Est-ce que le sur mesure vaut la peine dans une petite salle de lavage?",
-            a: "Oui. C'est souvent lÃ  oÃ¹ le sur mesure apporte le plus : optimiser la hauteur, intégrer des zones de rangement, et améliorer la circulation.",
+            a: "Oui. C'est souvent là où le sur mesure apporte le plus : optimiser la hauteur, intégrer des zones de rangement, et améliorer la circulation.",
           },
           {
             q: "Peut-on ajouter un comptoir de pliage?",
-            a: "Oui. L'important est de le dimensionner selon l'espace et de choisir des surfaces faciles Ã  entretenir.",
+            a: "Oui. L'important est de le dimensionner selon l'espace et de choisir des surfaces faciles à entretenir.",
           },
           {
-            q: "Quels matériaux sont adaptés Ã  l'humidité?",
+            q: "Quels matériaux sont adaptés à l'humidité?",
             a: "La durabilité dépend de la protection, de l'assemblage, de la quincaillerie et de l'installation, autant que du matériau.",
           },
           {

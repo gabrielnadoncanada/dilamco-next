@@ -19,7 +19,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Espaces sur mesure, cuisines, salles de bain et rangement",
     description:
-      "Chaque espace a ses contraintes. Notre rÃ´le : créer des solutions durables, fonctionnelles et bien exécutées.",
+      "Chaque espace a ses contraintes. Notre rôle : créer des solutions durables, fonctionnelles et bien exécutées.",
     image: {
       src: "/images/spaces/spaces.png",
       alt: "Espaces sur mesure, cuisines, salles de bain et rangement",
@@ -31,7 +31,7 @@ export const pageData: ArticlePageData = {
       title: "Choisissez votre espace",
       content: {
         type: SECTION_TYPES.SLIDER,
-        description: "Sélectionnez l'espace correspondant Ã  votre projet.",
+        description: "Sélectionnez l'espace correspondant à votre projet.",
         items: SPACE_SLIDER_ITEMS,
       },
     },
@@ -41,10 +41,10 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.PROOF,
         items: [
-          { title: "Sur mesure réel", description: "Adapté Ã  votre espace." },
+          { title: "Sur mesure réel", description: "Adapté à votre espace." },
           {
             title: "Matériaux orientés usage",
-            description: "Choix adaptés Ã  la cuisine et Ã  la salle de bain.",
+            description: "Choix adaptés à la cuisine et à la salle de bain.",
           },
           {
             title: "Installation précise",

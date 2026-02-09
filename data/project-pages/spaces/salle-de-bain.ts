@@ -6,13 +6,13 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
   metadata: {
     title: "Projets de salles de bain sur mesure",
     description:
-      "Projets de salles de bain sur mesure : vanités, rangements et aménagements réalisés. Exemples de solutions adaptées Ã  l'humidité, Ã  l'entretien et aux contraintes d'espace Ã  Montréal, Laval et Rive-Sud.",
+      "Projets de salles de bain sur mesure : vanités, rangements et aménagements réalisés. Exemples de solutions adaptées à l'humidité, à l'entretien et aux contraintes d'espace à Montréal, Laval et Rive-Sud.",
     canonical: "https://dilamco.com/projets/salle-de-bain/",
   },
   hero: {
     h1: "Projets de salles de bain sur mesure, réalisations",
     paragraphs: [
-      "Une salle de bain impose des contraintes spécifiques : humidité, ventilation, nettoyage fréquent, et parfois peu d'espace. Cette page sert de preuve concrÃ¨te : des exemples de projets de salles de bain sur mesure (vanités et rangements) réalisés, ou Ã  documenter, pour illustrer des solutions cohérentes, durables et bien exécutées.",
+      "Une salle de bain impose des contraintes spécifiques : humidité, ventilation, nettoyage fréquent, et parfois peu d'espace. Cette page sert de preuve concrète : des exemples de projets de salles de bain sur mesure (vanités et rangements) réalisés, ou à documenter, pour illustrer des solutions cohérentes, durables et bien exécutées.",
     ],
     ctaLinks: [
       { title: "Parler de votre projet de salle de bain", href: "/contact/" },
@@ -34,7 +34,7 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
           "Petites salles de bain (optimisation d'espace, circulation, rangement vertical)",
           "Vanités doubles (usage quotidien, organisation, dégagements)",
           "Salles de bain principales (durabilité, finition, cohérence globale)",
-          "Rénovations complÃ¨tes (coordination, travaux techniques, séquence)",
+          "Rénovations complètes (coordination, travaux techniques, séquence)",
           "Styles contemporains et intemporels (couleurs, finis, cohérence)",
         ],
         links: [
@@ -59,11 +59,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
           "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
-          "Type de projet : vanité/rangements seulement ou rénovation complÃ¨te.",
+          "Type de projet : vanité/rangements seulement ou rénovation complète.",
           "Mandat : objectif principal (rangement, double lavabo, optimisation, style).",
-          "Contraintes : humidité/ventilation, dimensions, plomberie, accÃ¨s chantier.",
+          "Contraintes : humidité/ventilation, dimensions, plomberie, accès chantier.",
           "Solution : configuration, modules, logique de rangement, ergonomie.",
-          "Matériaux : choix adaptés Ã  l'humidité + points d'attention.",
+          "Matériaux : choix adaptés à l'humidité + points d'attention.",
           "Résultat : bénéfices concrets (entretien, durabilité, finition, usage).",
         ],
         links: [
@@ -81,11 +81,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
         type: SECTION_TYPES.LIST,
         items: [
           "Humidité : éclaboussures, vapeur, variations de température (protection essentielle).",
-          "Ventilation : impact direct sur la durabilité (et sur les finis Ã  choisir).",
+          "Ventilation : impact direct sur la durabilité (et sur les finis à choisir).",
           "Entretien : traces d'eau, produits de nettoyage, usage quotidien.",
           "Plomberie : position des sorties, siphon, dégagements dans les caissons.",
           "Rangement : optimiser sans bloquer la circulation (petits espaces).",
-          "Finition : alignements, ajustements, détails visibles Ã  hauteur d'Å“il.",
+          "Finition : alignements, ajustements, détails visibles à hauteur d'œil.",
         ],
       },
     },
@@ -96,7 +96,7 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "En salle de bain, la durabilité dépend beaucoup de la protection (chants, zones exposées), de la qualité d'assemblage et de l'installation. On privilégie des choix cohérents avec l'humidité et l'entretien, plutÃ´t que de décider â€œau lookâ€.",
+          "En salle de bain, la durabilité dépend beaucoup de la protection (chants, zones exposées), de la qualité d'assemblage et de l'installation. On privilégie des choix cohérents avec l'humidité et l'entretien, plutôt que de décider "au look".",
         ],
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
@@ -109,11 +109,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "installation",
-      title: "Installation & ajustements (ce qui â€œfait haut de gammeâ€)",
+      title: "Installation & ajustements (ce qui "fait haut de gamme")",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "En salle de bain, les alignements et les ajustements sont trÃ¨s visibles. La précision de l'installation et la quincaillerie influencent directement le confort et la longévité.",
+          "En salle de bain, les alignements et les ajustements sont très visibles. La précision de l'installation et la quincaillerie influencent directement le confort et la longévité.",
         ],
         links: [
           { title: "Voir l'installation", href: "/services/installation/" },
@@ -124,11 +124,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "renovation",
-      title: "Vanité seulement vs rénovation complÃ¨te",
+      title: "Vanité seulement vs rénovation complète",
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Certains projets consistent Ã  remplacer la vanité et optimiser le rangement. D'autres nécessitent une rénovation complÃ¨te (plomberie, ventilation, murs, céramique, éclairage). Dans ce cas, la coordination et le séquencement deviennent critiques.",
+          "Certains projets consistent à remplacer la vanité et optimiser le rangement. D'autres nécessitent une rénovation complète (plomberie, ventilation, murs, céramique, éclairage). Dans ce cas, la coordination et le séquencement deviennent critiques.",
         ],
         links: [
           {
@@ -141,7 +141,7 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "processus",
-      title: "Processus (du besoin Ã  l'installation)",
+      title: "Processus (du besoin à l'installation)",
       content: {
         type: SECTION_TYPES.STEPS,
         steps: [
@@ -165,10 +165,10 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
         items: [
           {
             q: "Est-ce que le sur mesure est utile dans une petite salle de bain?",
-            a: "Oui. C'est souvent lÃ  oÃ¹ le sur mesure apporte le plus : optimisation d'espace, rangement utile, dégagements et circulation.",
+            a: "Oui. C'est souvent là où le sur mesure apporte le plus : optimisation d'espace, rangement utile, dégagements et circulation.",
           },
           {
-            q: "Quels matériaux sont les plus adaptés Ã  l'humidité?",
+            q: "Quels matériaux sont les plus adaptés à l'humidité?",
             a: "La durabilité dépend de la protection, de l'assemblage, de la quincaillerie et de l'installation, autant que du matériau.",
           },
           {
@@ -176,8 +176,8 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
             a: "Oui. L'installation et les ajustements font partie des éléments clés pour un résultat durable et cohérent.",
           },
           {
-            q: "Peut-on faire seulement la vanité sans rénover toute la piÃ¨ce?",
-            a: "Oui, selon le contexte. Si la plomberie, la ventilation et les murs sont en bon état, un projet â€œvanité + rangementâ€ peut être pertinent.",
+            q: "Peut-on faire seulement la vanité sans rénover toute la pièce?",
+            a: "Oui, selon le contexte. Si la plomberie, la ventilation et les murs sont en bon état, un projet "vanité + rangement" peut être pertinent.",
           },
         ],
       },

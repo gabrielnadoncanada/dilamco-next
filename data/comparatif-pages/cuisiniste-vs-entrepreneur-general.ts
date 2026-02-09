@@ -10,7 +10,7 @@ import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
   title: "Cuisiniste vs entrepreneur général",
   description:
-    "Cuisiniste ou entrepreneur général pour votre cuisine? Comparatif clair : responsabilités, rénovation, coordination, qualité d'installation et risques. Trouvez la solution adaptée Ã  votre projet Ã  Montréal, Laval et sur la Rive-Sud.",
+    "Cuisiniste ou entrepreneur général pour votre cuisine? Comparatif clair : responsabilités, rénovation, coordination, qualité d'installation et risques. Trouvez la solution adaptée à votre projet à Montréal, Laval et sur la Rive-Sud.",
   path: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
   ogAlt: "Comparatif : Cuisiniste vs entrepreneur général",
 });
@@ -18,7 +18,7 @@ export const metadata: Metadata = createPageMetadata({
 const sections: ContentArticleSection[] = [
   {
     id: "roles",
-    title: "Comprendre les rÃ´les",
+    title: "Comprendre les rôles",
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [],
@@ -55,20 +55,20 @@ const sections: ContentArticleSection[] = [
     title: "Comparatif rapide",
     content: {
       type: SECTION_TYPES.TABLE,
-      firstColumnLabel: "CritÃ¨re",
+      firstColumnLabel: "Critère",
       columns: ["Cuisiniste", "Entrepreneur général"],
       rows: [
         {
           title: "Design de cuisine",
-          values: ["TrÃ¨s spécialisé", "Variable"],
+          values: ["Très spécialisé", "Variable"],
         },
         {
           title: "Armoires / sur mesure",
           values: ["Souvent via fournisseur", "Souvent sous-traitées"],
         },
         {
-          title: "Rénovation complÃ¨te",
-          values: ["Souvent externalisée", "Oui (cÅ“ur de métier)"],
+          title: "Rénovation complète",
+          values: ["Souvent externalisée", "Oui (cœur de métier)"],
         },
         {
           title: "Coordination des intervenants",
@@ -120,7 +120,7 @@ const sections: ContentArticleSection[] = [
   },
   {
     id: "scenario-2",
-    title: "2) Rénovation complÃ¨te de cuisine",
+    title: "2) Rénovation complète de cuisine",
     content: {
       type: SECTION_TYPES.LIST,
       items: [
@@ -135,7 +135,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       items: [
-        "Quand vous voulez une cuisine sur mesure avec une rénovation, le risque principal est la fragmentation : design d'un cÃ´té, chantier de l'autre. Une approche intégrée peut réduire les frictions et améliorer la cohérence entre le plan, l'exécution et la finition.",
+        "Quand vous voulez une cuisine sur mesure avec une rénovation, le risque principal est la fragmentation : design d'un côté, chantier de l'autre. Une approche intégrée peut réduire les frictions et améliorer la cohérence entre le plan, l'exécution et la finition.",
       ],
       variant: "numbered",
     },
@@ -146,7 +146,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Selon le projet, Dilamco peut intervenir comme spécialiste du sur mesure (design, fabrication et installation) et, lorsque requis, offrir une option clé en main pour simplifier la coordination. L'objectif est de clarifier la responsabilité et de livrer un résultat cohérent, du plan Ã  la finition.",
+        "Selon le projet, Dilamco peut intervenir comme spécialiste du sur mesure (design, fabrication et installation) et, lorsque requis, offrir une option clé en main pour simplifier la coordination. L'objectif est de clarifier la responsabilité et de livrer un résultat cohérent, du plan à la finition.",
       ],
       links: [
         {
@@ -166,11 +166,11 @@ const sections: ContentArticleSection[] = [
   },
   {
     id: "cout-risques",
-    title: "CoÃ»t, risques et tranquillité d'esprit",
+    title: "Coût, risques et tranquillité d'esprit",
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Sans entrer dans des chiffres, le point important est de comparer Ã  périmÃ¨tre égal : ce qui est inclus, qui coordonne, qui assume les ajustements sur place, et le niveau de finition attendu. Un projet bien cadré réduit les retouches, les délais et les incohérences.",
+        "Sans entrer dans des chiffres, le point important est de comparer à périmètre égal : ce qui est inclus, qui coordonne, qui assume les ajustements sur place, et le niveau de finition attendu. Un projet bien cadré réduit les retouches, les délais et les incohérences.",
       ],
     },
   },
@@ -203,7 +203,7 @@ export const pageData: ArticlePageData = {
     heading:
       "Cuisiniste ou entrepreneur général : qui choisir pour votre projet de cuisine?",
     description:
-      "Beaucoup de projets de cuisine dérapent non pas Ã  cause des armoires, mais Ã  cause d'un problÃ¨me de responsabilités : qui gÃ¨re le chantier, qui coordonne les intervenants, et qui répond du résultat final? Le bon choix dépend surtout de la nature de votre projet : simple remplacement d'armoires, ou rénovation complÃ¨te (plomberie, électricité, plancher, etc.).",
+      "Beaucoup de projets de cuisine dérapent non pas à cause des armoires, mais à cause d'un problème de responsabilités : qui gère le chantier, qui coordonne les intervenants, et qui répond du résultat final? Le bon choix dépend surtout de la nature de votre projet : simple remplacement d'armoires, ou rénovation complète (plomberie, électricité, plancher, etc.).",
   },
   sections,
   cta: {

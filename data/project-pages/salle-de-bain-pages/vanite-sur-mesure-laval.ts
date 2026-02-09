@@ -10,9 +10,9 @@ export const PROJECT_VANITE_SUR_MESURE_LAVAL: ProjectData = {
   slug: "vanite-sur-mesure-laval",
   title: "Vanité sur mesure, Laval",
   metaDescription:
-    "Projet de vanité sur mesure Ã  Laval : conception, fabrication et installation. Exemple de solution résistante Ã  l'humidité et durable.",
+    "Projet de vanité sur mesure à Laval : conception, fabrication et installation. Exemple de solution résistante à l'humidité et durable.",
   summary:
-    "Vanité sur mesure conÃ§ue pour un environnement humide : matériaux adaptés, quincaillerie fiable, et installation précise.",
+    "Vanité sur mesure conçue pour un environnement humide : matériaux adaptés, quincaillerie fiable, et installation précise.",
   area: "laval",
   city: "Laval",
   scope: ["Cadrage", "Design", "Fabrication sur mesure", "Installation"],
@@ -22,13 +22,13 @@ export const PROJECT_VANITE_SUR_MESURE_LAVAL: ProjectData = {
     "Finition durable",
   ],
   solution: [
-    "Configuration de rangement adaptée Ã  l'usage",
+    "Configuration de rangement adaptée à l'usage",
     "Choix de matériaux stables et résistants",
     "Pose avec ajustements fins et alignements propres",
   ],
   results: [
     "Rangement plus fonctionnel",
-    "Résistance accrue Ã  l'humidité",
+    "Résistance accrue à l'humidité",
     "Finition nette et durable",
   ],
   requiredLinks: {

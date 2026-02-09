@@ -18,7 +18,7 @@ export const metadata: Metadata = createPageMetadata({
 const faqItems = [
   {
     q: "MDF ou mélamine?",
-    a: "MDF pour fini peint uniforme, mélamine pour décor/coÃ»t maîtrisé.",
+    a: "MDF pour fini peint uniforme, mélamine pour décor/coût maîtrisé.",
   },
   {
     q: "Le contreplaqué est-il toujours préférable?",
@@ -40,20 +40,20 @@ const sections: ContentArticleSection[] = [
     title: "Tableau comparatif",
     content: {
       type: SECTION_TYPES.TABLE,
-      description: "Résumé général Ã  adapter Ã  votre contexte réel.",
+      description: "Résumé général à adapter à votre contexte réel.",
       columns: [
         "Usage recommandé",
         "Stabilité",
         "Humidité",
         "Finition",
-        "Durabilité perÃ§ue",
+        "Durabilité perçue",
       ],
       rows: [
         {
           title: "Contreplaqué",
           values: [
             "Structures exigeantes",
-            "TrÃ¨s bonne",
+            "Très bonne",
             "Bonne",
             "Variable",
             "Élevée",
@@ -62,10 +62,10 @@ const sections: ContentArticleSection[] = [
         {
           title: "MDF",
           values: [
-            "Portes et faÃ§ades peintes",
+            "Portes et façades peintes",
             "Bonne",
             "Moyenne",
-            "TrÃ¨s uniforme",
+            "Très uniforme",
             "Moyenne",
           ],
         },
@@ -74,8 +74,8 @@ const sections: ContentArticleSection[] = [
           values: [
             "Rangements ciblés",
             "Moyenne",
-            "Faible Ã  moyenne",
-            "TrÃ¨s variée",
+            "Faible à moyenne",
+            "Très variée",
             "Variable",
           ],
         },
@@ -143,13 +143,13 @@ const sections: ContentArticleSection[] = [
         "Protection des chants.",
         "Qualité d'assemblage.",
         "Quincaillerie.",
-        "Ajustements Ã  l'installation.",
+        "Ajustements à l'installation.",
       ],
     },
   },
   {
     id: "erreurs",
-    title: "Erreurs Ã  éviter",
+    title: "Erreurs à éviter",
     content: {
       type: SECTION_TYPES.LIST,
       items: [

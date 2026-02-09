@@ -37,7 +37,7 @@ const faqItems = [
 const featureImageTextItems: FeatureImageTextItem[] = [
   {
     ariaLabelledby: "organisation",
-    heading: "Organisation & fonctionnalité (le cÃ…â€œur du sur mesure)",
+    heading: "Organisation & fonctionnalité (le cœur du sur mesure)",
     content: (
       <>
         <p>
@@ -171,7 +171,7 @@ export const pageData: SpacePageData = {
   sections: [
     {
       id: "pour-qui",
-      title: "Ã€ qui s'adresse un walk-in sur mesure?",
+      title: "À qui s'adresse un walk-in sur mesure?",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
@@ -196,7 +196,7 @@ export const pageData: SpacePageData = {
           {
             title: "Fabrication sur mesure",
             href: "/services/fabrication/",
-            description: "Modules, étagÃ¨res, tiroirs et zones adaptées.",
+            description: "Modules, étagères, tiroirs et zones adaptées.",
           },
           {
             title: "Installation précise",

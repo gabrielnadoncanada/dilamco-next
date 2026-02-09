@@ -19,7 +19,7 @@ export const pageData: ArticlePageData = {
     heading:
       "Services : design, fabrication, installation et rénovation clé en main",
     description:
-      "Selon le projet, nous prenons en charge l'ensemble du plan Ã  la finition.",
+      "Selon le projet, nous prenons en charge l'ensemble du plan à la finition.",
     actions: [
       { text: "Demander une soumission", href: "/contact/" },
       { text: "Voir nos réalisations", href: "/projets/", variant: "outline" },
@@ -31,7 +31,7 @@ export const pageData: ArticlePageData = {
       title: "Nos services principaux",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
-        intro: "Choisissez le service qui correspond Ã  votre étape.",
+        intro: "Choisissez le service qui correspond à votre étape.",
         items: [
           {
             title: "Design",
@@ -89,7 +89,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.LIST,
         items: [
-          "Rénovation complÃ¨te de cuisine.",
+          "Rénovation complète de cuisine.",
           "Salle de bain avec contraintes techniques.",
           "Projet multi-intervenants.",
         ],
@@ -114,7 +114,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Le haut de gamme repose sur un systÃ¨me cohérent : matériaux, assemblage, quincaillerie et installation.",
+          "Le haut de gamme repose sur un système cohérent : matériaux, assemblage, quincaillerie et installation.",
         ],
         links: [
           {

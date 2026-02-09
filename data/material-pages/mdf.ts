@@ -22,14 +22,14 @@ const faqItems = [
   },
   {
     q: "Le MDF gonfle-t-il avec l'humidité?",
-    a: "Il peut réagir Ã  l'eau si la protection est insuffisante, surtout aux chants.",
+    a: "Il peut réagir à l'eau si la protection est insuffisante, surtout aux chants.",
   },
   {
     q: "MDF ou mélamine?",
     a: "Le MDF est souvent choisi pour la finition peinte uniforme; la mélamine pour un compromis décoratif et budgétaire.",
   },
   {
-    q: "Le MDF est-il adapté Ã  la salle de bain?",
+    q: "Le MDF est-il adapté à la salle de bain?",
     a: "Selon ventilation, usage et protection. Dans certains contextes, d'autres matériaux seront préférables.",
   },
 ];
@@ -53,7 +53,7 @@ const sections: ContentArticleSection[] = [
       items: [
         "Surface uniforme pour peinture.",
         "Rendu visuel régulier.",
-        "Bon compromis sur certaines faÃ§ades.",
+        "Bon compromis sur certaines façades.",
       ],
     },
   },
@@ -63,7 +63,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.LIST,
       items: [
-        "Sensibilité Ã  l'humidité si protection insuffisante.",
+        "Sensibilité à l'humidité si protection insuffisante.",
         "Chants et finitions critiques.",
         "Pas toujours idéal pour les zones les plus exposées.",
       ],
@@ -122,7 +122,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Le MDF vise surtout la finition, la mélamine la variété décorative/coÃ»t, et le contreplaqué la stabilité structurelle.",
+        "Le MDF vise surtout la finition, la mélamine la variété décorative/coût, et le contreplaqué la stabilité structurelle.",
       ],
       links: [
         { title: "Comparatif complet", href: "/materiaux/comparatif/" },
@@ -137,7 +137,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.TEXT,
       paragraphs: [
-        "Nous utilisons le MDF lÃ  oÃ¹ il est pertinent et combinons avec d'autres matériaux lorsque l'usage exige plus de stabilité ou de résistance.",
+        "Nous utilisons le MDF là où il est pertinent et combinons avec d'autres matériaux lorsque l'usage exige plus de stabilité ou de résistance.",
       ],
       links: [
         { title: "Voir tous les matériaux", href: "/materiaux/" },
@@ -156,7 +156,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "MDF, quand et pourquoi l'utiliser en sur mesure",
     description:
-      "Le MDF est souvent utilisé pour obtenir une surface trÃ¨s uniforme, idéale pour des portes peintes. Ce n'est pas un matériau universel : le contexte d'usage et la protection des chants déterminent sa pertinence.",
+      "Le MDF est souvent utilisé pour obtenir une surface très uniforme, idéale pour des portes peintes. Ce n'est pas un matériau universel : le contexte d'usage et la protection des chants déterminent sa pertinence.",
     actions: [
       { text: "Demander une soumission", href: "/contact/" },
       {
