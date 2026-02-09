@@ -96,7 +96,7 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "En salle de bain, la durabilité dépend beaucoup de la protection (chants, zones exposées), de la qualité d'assemblage et de l'installation. On privilégie des choix cohérents avec l'humidité et l'entretien, plutôt que de décider "au look".",
+          "En salle de bain, la durabilité dépend beaucoup de la protection (chants, zones exposées), de la qualité d'assemblage et de l'installation. On privilégie des choix cohérents avec l'humidité et l'entretien, plutôt que de décider \"au look\".",
         ],
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
@@ -109,7 +109,7 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
 
     {
       id: "installation",
-      title: "Installation & ajustements (ce qui "fait haut de gamme")",
+      title: 'Installation & ajustements (ce qui "fait haut de gamme")',
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
@@ -177,7 +177,7 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
           },
           {
             q: "Peut-on faire seulement la vanité sans rénover toute la pièce?",
-            a: "Oui, selon le contexte. Si la plomberie, la ventilation et les murs sont en bon état, un projet "vanité + rangement" peut être pertinent.",
+            a: 'Oui, selon le contexte. Si la plomberie, la ventilation et les murs sont en bon état, un projet "vanité + rangement" peut être pertinent.',
           },
         ],
       },

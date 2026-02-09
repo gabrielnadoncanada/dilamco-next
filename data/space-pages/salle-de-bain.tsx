@@ -10,7 +10,7 @@ import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata = createPageMetadata({
   title: "Salle de bain & vanités sur mesure",
   description:
-    "Vanités et rangement de salle de bain sur mesure conà§us pour l'humidité : design, fabrication et installation. Option rénovation de salle de bain clé en main à  Montréal, Laval et sur la Rive-Sud.",
+    "Vanités et rangement de salle de bain sur mesure conçus pour l'humidité : design, fabrication et installation. Option rénovation de salle de bain clé en main à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/salle-de-bain/",
   ogAlt: "Salle de bain & vanités sur mesure Dilamco",
 });
@@ -30,7 +30,7 @@ const faqItems = [
   },
   {
     q: "Quels sont les délais typiques?",
-    a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0-3 mois, 3-6 mois, etc.) est un bon point de départ à  préciser lors de la soumission.",
+    a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0-3 mois, 3-6 mois, etc.) est un bon point de départ à préciser lors de la soumission.",
   },
 ];
 
@@ -155,7 +155,7 @@ export const pageData: SpacePageData = {
   hero: {
     heading: "Salle de bain & vanités sur mesure, durabilité en milieu humide",
     description:
-      "Une salle de bain impose des contraintes spécifiques : humidité, ventilation, éclaboussures, nettoyage fréquent et usage quotidien. Dilamco conà§oit et réalise des vanités et rangements sur mesure haut de gamme, pensés pour durer, avec option de rénovation complà¨te clé en main selon le projet - principalement à  Montréal, Laval et sur la Rive-Sud.",
+      "Une salle de bain impose des contraintes spécifiques : humidité, ventilation, éclaboussures, nettoyage fréquent et usage quotidien. Dilamco conà§oit et réalise des vanités et rangements sur mesure haut de gamme, pensés pour durer, avec option de rénovation complà¨te clé en main selon le projet - principalement à Montréal, Laval et sur la Rive-Sud.",
     image: {
       src: "/images/spaces/vanite-salles-de-bain.webp",
       alt: "Salle de bain & vanités sur mesure",

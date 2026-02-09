@@ -73,7 +73,7 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
           "Circulation : dégagements, ouverture des tiroirs, portes, passages.",
           "Hauteur : exploiter le vertical sans perdre l'accès (zones saisonnières).",
           "Éclairage : zones sombres, profondeur, éclairage intégré si nécessaire.",
-          "Organisation : chaque chose à sa place (sinon le walk-in "redevient un placard").",
+          'Organisation : chaque chose à sa place (sinon le walk-in "redevient un placard").',
         ],
       },
     },
@@ -101,7 +101,7 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.LIST,
         intro:
-          "Les détails font souvent la différence : accessibilité, organisation et confort au quotidien. L'objectif est de réduire le "fouillis" et d'améliorer l'accès.",
+          "Les détails font souvent la différence : accessibilité, organisation et confort au quotidien. L'objectif est de réduire le \"fouillis\" et d'améliorer l'accès.",
         items: [
           "Paniers, séparateurs, modules pour accessoires.",
           "Rangements dédiés (cravates, ceintures, bijoux, sacs).",

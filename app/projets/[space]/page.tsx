@@ -109,7 +109,7 @@ export default async function ProjectsSpacePage({
           aria-labelledby="projects"
           heading="Projets"
           paragraphs={[
-            "Chaque projet est documentà© avec un format simple : lieu, mandat, contraintes, solution, matà©riaux et rà©sultat.",
+            "Chaque projet est documenté avec un format simple : lieu, mandat, contraintes, solution, matériaux et résultat.",
           ]}
         />
 
@@ -117,7 +117,7 @@ export default async function ProjectsSpacePage({
           <TextSection
             aria-labelledby="no-projects"
             heading=""
-            paragraphs={["Aucun projet publià© pour l'instant."]}
+            paragraphs={["Aucun projet publié pour l'instant."]}
             links={[
               {
                 text: "Contactez-nous",
@@ -131,7 +131,7 @@ export default async function ProjectsSpacePage({
             aria-labelledby="projects-list"
             heading=""
             items={projects.map((p) => ({
-              title: `${p.title} Ã¢â‚¬â€ ${p.neighborhood ? `${p.neighborhood}, ` : ""}${p.city}`,
+              title: `${p.title} » ${p.neighborhood ? `${p.neighborhood}, ` : ""}${p.city}`,
               href: `/projets/${p.space}/${p.slug}/`,
             }))}
             columns={2}

@@ -31,7 +31,7 @@ export default async function OpenGraphImage({ params }: { params: Promise<Param
   const content = PROJECT_SPACE_PAGES[space];
 
   const title = content?.metadata?.title ?? "Projets sur mesure | Dilamco";
-  const desc = content?.metadata?.description ?? "Rà©alisations et à©tudes de cas Ã¢â‚¬â€ Dilamco.";
+  const desc = content?.metadata?.description ?? "Réalisations et études de cas » Dilamco.";
 
   return new ImageResponse(
     (
@@ -52,7 +52,7 @@ export default async function OpenGraphImage({ params }: { params: Promise<Param
           {desc}
         </div>
         <div style={{ marginTop: 44, fontSize: 20, opacity: 0.8 }}>
-          Montrà©al Ã¢â‚¬Â¢ Laval Ã¢â‚¬Â¢ Rive-Sud
+          Montréal » Laval » Rive-Sud
         </div>
       </div>
     ),

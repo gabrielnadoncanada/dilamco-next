@@ -85,7 +85,7 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
         items: [
           "Humidité et fuites : zones exposées (laveuse, sécheuse, évier) → protection essentielle.",
           "Produits ménagers : rangement sécuritaire, accès rapide, surfaces faciles à nettoyer.",
-          "Fonction : tri, pliage, dépôt, circulation (éviter les "goulots").",
+          'Fonction : tri, pliage, dépôt, circulation (éviter les "goulots").',
           "Ventilation : impact sur la durabilité et les finis.",
           "Plomberie/électricité : sorties et dégagements pour appareils et accessoires.",
           "Finition : alignements et ajustements (portes/tiroirs très sollicités).",
@@ -99,7 +99,7 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.LIST,
         intro:
-          "Une bonne salle de lavage est organisée par zones. Le sur mesure permet de dimensionner chaque zone selon vos habitudes, au lieu de "faire rentrer" des modules standards.",
+          'Une bonne salle de lavage est organisée par zones. Le sur mesure permet de dimensionner chaque zone selon vos habitudes, au lieu de "faire rentrer" des modules standards.',
         items: [
           "Zone tri : paniers, bacs, accès direct.",
           "Zone pliage : comptoir robuste à une hauteur confortable.",
@@ -147,7 +147,7 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       content: {
         type: SECTION_TYPES.TEXT,
         paragraphs: [
-          "Selon l'état de la pièce, vous pouvez faire un projet "aménagement + installation" ou une rénovation complète (plomberie, ventilation, murs/plancher, éclairage). Dans ce cas, le séquencement et la coordination deviennent critiques.",
+          'Selon l\'état de la pièce, vous pouvez faire un projet "aménagement + installation" ou une rénovation complète (plomberie, ventilation, murs/plancher, éclairage). Dans ce cas, le séquencement et la coordination deviennent critiques.',
         ],
         links: [
           {
