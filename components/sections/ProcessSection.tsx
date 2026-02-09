@@ -14,7 +14,7 @@ interface Step {
 interface ProcessSectionProps extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
   heading: string;
   description?: string;
-  steps: Step[];
+  items: Step[];
   actions?: React.ReactNode;
   layout?: "cards" | "timeline";
   className?: string;
@@ -23,13 +23,13 @@ interface ProcessSectionProps extends Omit<SectionShellProps, "title" | "intro" 
 const ProcessSection = ({
   heading,
   description,
-  steps,
+  items,
   actions,
   layout = "cards",
   className,
   ...props
 }: ProcessSectionProps) => {
-  if (!steps || steps.length === 0) {
+  if (!items || items.length === 0) {
     return null;
   }
 
@@ -47,13 +47,13 @@ const ProcessSection = ({
       <Divider />
       {layout === "timeline" ? (
         <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-6">
-          {steps.map((step, index) => (
+          {items.map((step, index) => (
             <div key={typeof step.id === "string" ? step.id : index} className="max-lg:flex max-lg:gap-4">
               <div className="relative lg:py-6">
                 <div
                   className={cn(
                     "absolute h-full w-1 -translate-x-1/2 translate-y-11 bg-muted/50 bg-linear-to-b max-lg:left-1/2 lg:top-1/2 lg:h-1 lg:w-full lg:translate-x-6 lg:-translate-y-1/2 lg:bg-linear-to-r",
-                    index === steps.length - 1 && "from-muted/50 to-white"
+                    index === items.length - 1 && "from-muted/50 to-white"
                   )}
                 />
                 <div className="relative z-0 grid size-11 place-content-center rounded-full border-4 bg-background">
@@ -69,7 +69,7 @@ const ProcessSection = ({
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          {steps.map((step, index) => (
+          {items.map((step, index) => (
             <Card key={typeof step.id === "string" ? step.id : index} className="relative">
               <CardHeader>
                 <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10 text-lg font-semibold text-primary">

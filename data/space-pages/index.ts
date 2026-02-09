@@ -1,47 +1,48 @@
-import type { Metadata } from "next";
-import type { ComponentType } from "react";
-import CommercialPage, { metadata as commercialMetadata } from "@/data/space-pages/commercial";
-import CuisinePage, { metadata as cuisineMetadata } from "@/data/space-pages/cuisine";
-import SalleDeBainPage, {
+import type { SpaceSlug } from "@/types/page-slugs";
+import type { SpacePageDefinition } from "@/types/page-definitions";
+import {
+  metadata as commercialMetadata,
+  pageData as commercialPageData,
+} from "@/data/space-pages/commercial";
+import {
+  metadata as cuisineMetadata,
+  pageData as cuisinePageData,
+} from "@/data/space-pages/cuisine";
+import {
   metadata as salleDeBainMetadata,
+  pageData as salleDeBainPageData,
 } from "@/data/space-pages/salle-de-bain";
-import SalleDeLavagePage, {
+import {
   metadata as salleDeLavageMetadata,
+  pageData as salleDeLavagePageData,
 } from "@/data/space-pages/salle-de-lavage";
-import WalkInPage, { metadata as walkInMetadata } from "@/data/space-pages/walk-in";
+import {
+  metadata as walkInMetadata,
+  pageData as walkInPageData,
+} from "@/data/space-pages/walk-in";
 
-export type SpaceSlug =
-  | "cuisine"
-  | "salle-de-bain"
-  | "walk-in"
-  | "salle-de-lavage"
-  | "commercial";
-
-interface SpacePageDefinition {
-  Component: ComponentType;
-  metadata: Metadata;
-}
+export type { SpaceSlug } from "@/types/page-slugs";
 
 export const SPACE_PAGES: Record<SpaceSlug, SpacePageDefinition> = {
   cuisine: {
-    Component: CuisinePage,
     metadata: cuisineMetadata,
+    pageData: cuisinePageData,
   },
   "salle-de-bain": {
-    Component: SalleDeBainPage,
     metadata: salleDeBainMetadata,
+    pageData: salleDeBainPageData,
   },
   "walk-in": {
-    Component: WalkInPage,
     metadata: walkInMetadata,
+    pageData: walkInPageData,
   },
   "salle-de-lavage": {
-    Component: SalleDeLavagePage,
     metadata: salleDeLavageMetadata,
+    pageData: salleDeLavagePageData,
   },
   commercial: {
-    Component: CommercialPage,
     metadata: commercialMetadata,
+    pageData: commercialPageData,
   },
 };
 

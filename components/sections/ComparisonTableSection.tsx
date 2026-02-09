@@ -16,7 +16,8 @@ interface ComparisonTableSectionProps
   description?: string;
   columns: string[];
   rows: Array<{
-    label: string;
+    label?: string;
+    title?: string;
     values: string[];
   }>;
   firstColumnLabel?: string;
@@ -53,7 +54,7 @@ const ComparisonTableSection = ({
           <TableBody>
             {rows.map((row, rowIndex) => (
               <TableRow key={rowIndex}>
-                <TableCell className="font-medium">{row.label}</TableCell>
+                <TableCell className="font-medium">{row.label ?? row.title}</TableCell>
                 {row.values.map((value, colIndex) => (
                   <TableCell key={colIndex}>{value}</TableCell>
                 ))}

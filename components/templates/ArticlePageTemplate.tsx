@@ -1,5 +1,4 @@
-﻿import type { ReactNode } from "react";
-import { DEFAULT_CTA } from "@/data/shared-content";
+import { DEFAULT_CTA } from "@/constants/shared-content";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd, faqJsonLd } from "@/seo/schema/builders";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -10,252 +9,119 @@ import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
 import { ProofSection } from "@/components/sections/ProofSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
-import { SliderSection, type SliderItem } from "@/components/sections/SliderSection";
+import { SliderSection } from "@/components/sections/SliderSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import type { ActionButton } from "@/components/ActionButtons";
-import type { LucideIcon } from "lucide-react";
-
-type ListEntry = { title: string; description: string } | string;
-type RelatedLink = { label: string; href: string; description?: string };
-
-type TextArticleSection = {
-  type: "text";
-  ariaLabelledby: string;
-  heading: string;
-  paragraphs: string[];
-  links?: ActionButton[];
-  className?: string;
-};
-
-type ListArticleSection = {
-  type: "list";
-  ariaLabelledby: string;
-  heading: string;
-  intro?: string;
-  items: ListEntry[];
-  links?: ActionButton[];
-  variant?: "bullets" | "checkmarks" | "numbered";
-  className?: string;
-};
-
-type TableArticleSection = {
-  type: "table";
-  ariaLabelledby: string;
-  heading: string;
-  description?: string;
-  columns: string[];
-  rows: Array<{ label: string; values: string[] }>;
-  firstColumnLabel?: string;
-  className?: string;
-};
-
-type RelatedLinksArticleSection = {
-  type: "relatedLinks";
-  ariaLabelledby: string;
-  heading: string;
-  links: RelatedLink[];
-  columns?: 2 | 3;
-  intro?: ReactNode;
-  className?: string;
-};
-
-type FeatureGridArticleSection = {
-  type: "featureGrid";
-  ariaLabelledby: string;
-  heading: string;
-  description?: string;
-  features: Array<{
-    title: string;
-    description: string;
-    icon?: LucideIcon;
-    href?: string;
-  }>;
-  columns?: 2 | 3 | 4;
-  className?: string;
-};
-
-type ProofArticleSection = {
-  type: "proof";
-  ariaLabelledby: string;
-  heading: string;
-  description?: string;
-  items: Array<{
-    title: string;
-    description: string;
-    icon?: LucideIcon;
-  }>;
-  className?: string;
-};
-
-type ProcessArticleSection = {
-  type: "process";
-  ariaLabelledby: string;
-  heading: string;
-  description?: string;
-  steps: Array<{
-    id?: string | number;
-    step?: string | number;
-    title: string;
-    description: string;
-  }>;
-  layout?: "cards" | "timeline";
-  actions?: ReactNode;
-  className?: string;
-};
-
-type SliderArticleSection = {
-  type: "slider";
-  ariaLabelledby: string;
-  heading?: string;
-  description?: string;
-  items: SliderItem[];
-  showNavigation?: boolean;
-  className?: string;
-};
-
-type CustomArticleSection = {
-  type: "custom";
-  node: ReactNode;
-};
-
-export type ArticlePageSection =
-  | TextArticleSection
-  | ListArticleSection
-  | TableArticleSection
-  | RelatedLinksArticleSection
-  | FeatureGridArticleSection
-  | ProofArticleSection
-  | ProcessArticleSection
-  | SliderArticleSection
-  | CustomArticleSection;
-
-export interface ArticlePageData {
-  breadcrumbs: Array<{ name: string; url: string }>;
-  extraJsonLd?: Record<string, unknown>[];
-  hero: {
-    heading: string;
-    description?: string | ReactNode;
-    image?: { src: string; alt: string };
-    actions?: ActionButton[];
-    actionsSlot?: ReactNode;
-  };
-  sections: ArticlePageSection[];
-  faq?: {
-    ariaLabelledby: string;
-    heading: string;
-    items: Array<{ q: string; a: string }>;
-  };
-  cta?: {
-    heading: string;
-    description: string;
-    actions: ActionButton[];
-  };
-  showCta?: boolean;
-  footerSections?: ArticlePageSection[];
+import type {
+  ArticlePageData,
+  ContentArticleSection,
+  ContentLink,
+} from "@/types/article-page";
+import { SECTION_TYPES } from "@/constants/section-types";
+function toActionButtons(links?: ContentLink[]): ActionButton[] | undefined {
+  return links?.map((link) => ({
+    text: link.title ?? link.label ?? link.text ?? "",
+    href: link.href,
+    variant: "outline",
+  }));
 }
 
-function renderSection(section: ArticlePageSection, index: number) {
-  switch (section.type) {
-    case "text":
+function renderSection(section: ContentArticleSection, index: number) {
+  const { id, title, content } = section;
+
+  switch (content.type) {
+    case SECTION_TYPES.TEXT:
       return (
         <TextSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          paragraphs={section.paragraphs}
-          links={section.links}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          paragraphs={content.paragraphs}
+          links={toActionButtons(content.links)}
         />
       );
-    case "list":
+    case SECTION_TYPES.LIST:
       return (
         <ListSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          intro={section.intro}
-          items={section.items}
-          links={section.links}
-          variant={section.variant}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          intro={content.intro}
+          items={content.items}
+          links={toActionButtons(content.links)}
+          variant={content.variant ?? "bullets"}
         />
       );
-    case "table":
+    case SECTION_TYPES.TABLE:
       return (
         <ComparisonTableSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          description={section.description}
-          columns={section.columns}
-          rows={section.rows}
-          firstColumnLabel={section.firstColumnLabel}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          description={content.description}
+          columns={content.columns}
+          rows={content.rows}
+          firstColumnLabel={content.firstColumnLabel}
         />
       );
-    case "relatedLinks":
+    case SECTION_TYPES.RELATED_LINKS:
       return (
         <RelatedLinksSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          links={section.links}
-          columns={section.columns}
-          intro={section.intro}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          items={content.items}
+          columns={content.columns}
+          intro={content.intro}
         />
       );
-    case "featureGrid":
+    case SECTION_TYPES.FEATURE_GRID:
       return (
         <FeatureGridSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          description={section.description}
-          features={section.features}
-          columns={section.columns}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          description={content.description}
+          items={content.items}
+          columns={content.columns}
         />
       );
-    case "proof":
+    case SECTION_TYPES.PROOF:
       return (
         <ProofSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          description={section.description}
-          items={section.items}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          description={content.description}
+          items={content.items}
         />
       );
-    case "process":
+    case SECTION_TYPES.PROCESS:
       return (
         <ProcessSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          description={section.description}
-          steps={section.steps}
-          layout={section.layout}
-          actions={section.actions}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          description={content.description}
+          items={content.items}
+          layout={content.layout}
+          actions={content.actions}
         />
       );
-    case "slider":
+    case SECTION_TYPES.SLIDER:
       return (
         <SliderSection
           key={index}
-          aria-labelledby={section.ariaLabelledby}
-          heading={section.heading}
-          description={section.description}
-          items={section.items}
-          showNavigation={section.showNavigation}
-          className={section.className}
+          aria-labelledby={id}
+          heading={title}
+          description={content.description}
+          items={content.items}
+          showNavigation={content.showNavigation}
         />
       );
-    case "custom":
-      return <div key={index}>{section.node}</div>;
+    case SECTION_TYPES.CUSTOM:
+      return <div key={index}>{content.node}</div>;
     default:
       return null;
   }
@@ -295,3 +161,4 @@ export function ArticlePageTemplate({ data }: { data: ArticlePageData }) {
     </>
   );
 }
+

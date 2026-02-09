@@ -1,6 +1,6 @@
 "use client";
 import { Navbar } from "@/components/navbar";
-import { MAIN_NAV, BRAND } from "@/lib/navigation";
+import { MAIN_NAV, BRAND } from "@/constants/navigation";
 
 export default function Header() {
   return (

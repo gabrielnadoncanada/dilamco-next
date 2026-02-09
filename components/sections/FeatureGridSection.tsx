@@ -16,7 +16,7 @@ interface Feature {
 interface FeatureGridSectionProps extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading: string;
   description?: string;
-  features: Feature[];
+  items: Feature[];
   columns?: 2 | 3 | 4;
   className?: string;
 }
@@ -24,7 +24,7 @@ interface FeatureGridSectionProps extends Omit<SectionShellProps, "title" | "int
 const FeatureGridSection = ({
   heading,
   description,
-  features,
+  items,
   columns = 3,
   className,
   ...props
@@ -49,7 +49,7 @@ const FeatureGridSection = ({
           gridCols[columns]
         )}
       >
-        {features.map((feature, index) => {
+        {items.map((feature, index) => {
           const cardContent = (
             <Card className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
               <CardHeader>

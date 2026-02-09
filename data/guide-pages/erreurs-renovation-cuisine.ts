@@ -1,8 +1,8 @@
 ﻿import type { Metadata } from "next";
-import type { ArticlePageData } from "@/components/templates/ArticlePageTemplate";
+import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
-
+import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
   title: "Erreurs fréquentes en rénovation de cuisine",
   description:
@@ -10,7 +10,6 @@ export const metadata: Metadata = createPageMetadata({
   path: "/guides/erreurs-renovation-cuisine/",
   ogAlt: "Guide : Erreurs fréquentes en rénovation de cuisine",
 });
-
 const faqItems = [
   {
     q: "Quelle est l'erreur la plus coûteuse?",
@@ -26,10 +25,9 @@ const faqItems = [
   },
   {
     q: "Pourquoi l'installation est-elle aussi importante?",
-    a: "Parce qu'elle conditionne les alignements, les ajustements et la finition. C'est souvent ce qui fait la différence entre \"correct\" et \"haut de gamme\".",
+    a: 'Parce qu\'elle conditionne les alignements, les ajustements et la finition. C\'est souvent ce qui fait la différence entre "correct" et "haut de gamme".',
   },
 ];
-
 export const pageData: ArticlePageData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -40,9 +38,10 @@ export const pageData: ArticlePageData = {
     },
   ],
   hero: {
-    heading: "Les erreurs fréquentes en rénovation de cuisine (et comment les éviter)",
+    heading:
+      "Les erreurs fréquentes en rénovation de cuisine (et comment les éviter)",
     description:
-      "Une rénovation de cuisine combine plusieurs décisions et plusieurs intervenants : plan, matériaux, plomberie, électricité, installation, finitions. Beaucoup d'erreurs coûtent cher non seulement en argent, mais aussi en délais et en stress. Ce guide vous aide à repérer les pièges les plus courants et à les éviter avant le chantier.",
+      "Une rénovation de cuisine combine plusieurs décisions et plusieurs intervenants : plan, matériaux, plomberie, électricité, installation, finitions. Beaucoup d'erreurs sont coûteuses non seulement en argent, mais aussi en délais et en stress. Ce guide vous aide à repérer les pièges les plus courants et à les éviter avant le chantier.",
     actions: [
       {
         text: "Parler de votre projet",
@@ -57,319 +56,328 @@ export const pageData: ArticlePageData = {
   },
   sections: [
     {
-      type: "text",
-      ariaLabelledby: "planification",
-      heading: "1) Sous-estimer la planification",
-      paragraphs: [
-        "La cause la plus fréquente des dépassements et des délais : des décisions prises \"pendant\" le chantier. Une modification tardive peut déclencher des effets en chaîne (plomberie, électricité, gypse, comptoir, installation).",
-      ],
+      id: "planification-details",
+      title: "1) Sous-estimer la planification",
+      content: {
+        intro:
+          "La cause la plus fréquente des dépassements et des délais : des décisions prises 'pendant' le chantier. Une modification tardive peut déclencher des effets en chaîne (plomberie, électricité, gypse, comptoir, installation).",
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Plan incomplet ou non validé avant de démarrer.",
+          "Choix de finis tardifs (portes, poignées, robinetterie, éclairage).",
+          "Électroménagers non confirmés (dimensions, sorties, dégagements).",
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "list",
-      ariaLabelledby: "planification-details",
-      heading: "",
-      items: [
-        "Plan incomplet ou non validé avant de démarrer.",
-        "Choix de finis tardifs (portes, poignées, robinetterie, éclairage).",
-        "Électroménagers non confirmés (dimensions, sorties, dégagements).",
-      ],
-      variant: "bullets",
+      id: "planification-links",
+      title: "",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [
+          "Solution : cadrer le plan et les choix en amont via le service de design.",
+        ],
+        links: [
+          {
+            text: "Service de design",
+            href: "/services/design/",
+            variant: "outline",
+          },
+        ],
+      },
+    },
+
+    {
+      id: "materiaux-details",
+      title: "2) Choisir les matériaux pour le look seulement",
+      content: {
+        intro:
+          "Solution : choisir les matériaux selon l'usage (humidité, impacts, entretien) et le rendu recherché. Le \"bon\" choix dépend aussi des chants, de la quincaillerie et de l'installation.",
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Ignorer l'humidité près de l'évier et du lave-vaisselle.",
+          "Choisir un matériau fragile sur des zones très sollicitées.",
+          "Sous-estimer l'impact des chants et de la finition.",
+        ],
+        variant: "bullets",
+        links: [
+          {
+            text: "Voir le comparatif des matériaux",
+            href: "/materiaux/comparatif/",
+            variant: "outline",
+          },
+          {
+            text: "MDF",
+            href: "/materiaux/mdf/",
+            variant: "outline",
+          },
+          {
+            text: "Mélamine",
+            href: "/materiaux/melamine/",
+            variant: "outline",
+          },
+          {
+            text: "Contreplaqué",
+            href: "/materiaux/contreplaque/",
+            variant: "outline",
+          },
+        ],
+      },
+    },
+
+    {
+      id: "ergonomie-details",
+      title: "3) Négliger l'ergonomie et la circulation",
+      content: {
+        intro:
+          "Une cuisine peut être superbe et pourtant inconfortable : îlot trop grand, dégagements trop serrés, portes qui se frappent, zones de travail mal placées.",
+
+        type: SECTION_TYPES.LIST,
+        items: [
+          'Îlot dimensionné "pour la photo", pas pour la circulation.',
+          "Ouvrir un tiroir bloque un passage ou un électroménager.",
+          "Rangement non adapté aux habitudes (vaisselle, casseroles, déchets).",
+        ],
+        links: [
+          {
+            text: "Cuisine sur mesure",
+            href: "/espaces/cuisine/",
+            variant: "outline",
+          },
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "planification-links",
-      heading: "",
-      paragraphs: [
-        "Solution : cadrer le plan et les choix en amont via le service de design.",
-      ],
-      links: [
-        {
-          text: "Service de design",
-          href: "/services/design/",
-          variant: "outline",
-        },
-      ],
+      id: "technique-details",
+      title: "4) Sous-estimer plomberie / électricité / ventilation",
+      content: {
+        intro:
+          "Les contraintes techniques sont souvent la source des surprises : sorties électriques mal placées, plomberie à déplacer, ventilation insuffisante, éclairage à revoir.",
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Prises et circuits non adaptés aux électroménagers.",
+          "Plomberie non alignée avec le plan (évier, lave-vaisselle).",
+          "Hotte et ventilation sous-estimées (bruit, efficacité, conduits).",
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "materiaux",
-      heading: "2) Choisir les matériaux pour le look seulement",
-      paragraphs: [
-        "Un matériau peut être beau et pourtant mal adapté à l'usage (humidité, impacts, entretien). Le point critique est souvent la protection des chants et la cohérence du système (matériau + quincaillerie + installation).",
-      ],
+      id: "technique-links",
+      title: "",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [
+          "Dans un projet plus large, une approche clé en main peut réduire les imprévus :",
+        ],
+        links: [
+          {
+            text: "Rénovation de cuisine",
+            href: "/services/renovation/cuisine/",
+            variant: "outline",
+          },
+        ],
+      },
     },
     {
-      type: "list",
-      ariaLabelledby: "materiaux-details",
-      heading: "",
-      items: [
-        "Ignorer l'humidité près de l'évier et du lave-vaisselle.",
-        "Choisir un matériau fragile sur des zones très sollicitées.",
-        "Sous-estimer l'impact des chants et de la finition.",
-      ],
-      variant: "bullets",
+      id: "coordination",
+      title: "5) Manque de coordination et responsabilités floues",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [
+          "Quand plusieurs intervenants sont impliqués, les problèmes viennent souvent des zones grises : qui coordonne, qui valide, qui est responsable si quelque chose ne fit pas?",
+        ],
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "materiaux-links",
-      heading: "",
-      paragraphs: [],
-      links: [
-        {
-          text: "Voir le comparatif des matériaux",
-          href: "/materiaux/comparatif/",
-          variant: "outline",
-        },
-        {
-          text: "MDF",
-          href: "/materiaux/mdf/",
-          variant: "outline",
-        },
-        {
-          text: "Mélamine",
-          href: "/materiaux/melamine/",
-          variant: "outline",
-        },
-        {
-          text: "Contreplaqué",
-          href: "/materiaux/contreplaque/",
-          variant: "outline",
-        },
-      ],
+      id: "coordination-details",
+      title: "",
+      content: {
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Calendrier qui glisse parce que les étapes ne sont pas séquencées.",
+          "Reprises (gypse, peinture, plancher) à cause d'un changement de dernière minute.",
+          "Responsabilités fragmentées : chacun fait sa partie, personne ne porte le résultat final.",
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "ergonomie",
-      heading: "3) Négliger l'ergonomie et la circulation",
-      paragraphs: [
-        "Une cuisine peut être superbe et pourtant inconfortable : îlot trop grand, dégagements trop serrés, portes qui se frappent, zones de travail mal placées.",
-      ],
+      id: "coordination-links",
+      title: "",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [],
+        links: [
+          {
+            text: "Cuisiniste vs entrepreneur général",
+            href: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
+            variant: "outline",
+          },
+        ],
+      },
     },
     {
-      type: "list",
-      ariaLabelledby: "ergonomie-details",
-      heading: "",
-      items: [
-        "Îlot dimensionné \"pour la photo\", pas pour la circulation.",
-        "Ouvrir un tiroir bloque un passage ou un électroménager.",
-        "Rangement non adapté aux habitudes (vaisselle, casseroles, déchets).",
-      ],
-      variant: "bullets",
+      id: "installation",
+      title: "6) Sous-estimer l'installation (et les ajustements)",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [
+          "Même une excellente fabrication peut donner un résultat moyen si l'installation est approximative : alignements, niveaux, ajustements, finitions et inspection finale.",
+        ],
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "ergonomie-links",
-      heading: "",
-      paragraphs: [],
-      links: [
-        {
-          text: "Cuisine sur mesure",
-          href: "/espaces/cuisine/",
-          variant: "outline",
-        },
-      ],
+      id: "installation-details",
+      title: "",
+      content: {
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Portes et tiroirs désalignés, jeux irréguliers.",
+          "Finitions bâclées autour des murs et des caissons.",
+          "Peu ou pas d'ajustements après la pose.",
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "technique",
-      heading: "4) Sous-estimer plomberie / électricité / ventilation",
-      paragraphs: [
-        "Les contraintes techniques sont souvent la source des surprises : sorties électriques mal placées, plomberie à déplacer, ventilation insuffisante, éclairage à revoir.",
-      ],
+      id: "installation-links",
+      title: "",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [],
+        links: [
+          {
+            text: "Voir l'installation",
+            href: "/services/installation/",
+            variant: "outline",
+          },
+        ],
+      },
     },
     {
-      type: "list",
-      ariaLabelledby: "technique-details",
-      heading: "",
-      items: [
-        "Prises et circuits non adaptés aux électroménagers.",
-        "Plomberie non alignée avec le plan (évier, lave-vaisselle).",
-        "Hotte et ventilation sous-estimées (bruit, efficacité, conduits).",
-      ],
-      variant: "bullets",
+      id: "quincaillerie",
+      title: "7) Choisir une quincaillerie inadéquate",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [
+          "La quincaillerie influence le confort et la longévité : charnières qui gardent leurs réglages, coulisses stables en charge, fermeture contrôlée.",
+        ],
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "technique-links",
-      heading: "",
-      paragraphs: [
-        "Dans un projet plus large, une approche clé en main peut réduire les imprévus :",
-      ],
-      links: [
-        {
-          text: "Rénovation de cuisine",
-          href: "/services/renovation/cuisine/",
-          variant: "outline",
-        },
-      ],
+      id: "quincaillerie-details",
+      title: "",
+      content: {
+        type: SECTION_TYPES.LIST,
+        items: [
+          'Tiroirs qui frottent, prennent du jeu, ou "accrochent".',
+          "Portes qui se désalignent, réglages instables.",
+          "Usure prématurée sur les zones les plus utilisées.",
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "coordination",
-      heading: "5) Manque de coordination et responsabilités floues",
-      paragraphs: [
-        "Quand plusieurs intervenants sont impliqués, les problèmes viennent souvent des zones grises : qui coordonne, qui valide, qui est responsable si quelque chose ne fit pas?",
-      ],
+      id: "quincaillerie-links",
+      title: "",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [],
+        links: [
+          {
+            text: "Voir la quincaillerie",
+            href: "/materiaux/quincaillerie/",
+            variant: "outline",
+          },
+        ],
+      },
     },
     {
-      type: "list",
-      ariaLabelledby: "coordination-details",
-      heading: "",
-      items: [
-        "Calendrier qui glisse parce que les étapes ne sont pas séquencées.",
-        "Reprises (gypse, peinture, plancher) à cause d'un changement de dernière minute.",
-        "Responsabilités fragmentées : chacun fait sa partie, personne ne porte le résultat final.",
-      ],
-      variant: "bullets",
+      id: "echeancier",
+      title: "8) Échéancier irréaliste",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [
+          "Les délais s'allongent quand les dépendances entre étapes ne sont pas respectées (démolition, plomberie/électricité, murs, plancher, peinture, comptoir, installation, finitions). Prévoir une marge réduit le stress et les décisions précipitées.",
+        ],
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "coordination-links",
-      heading: "",
-      paragraphs: [],
-      links: [
-        {
-          text: "Cuisiniste vs entrepreneur général",
-          href: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
-          variant: "outline",
-        },
-      ],
+      id: "echeancier-details",
+      title: "",
+      content: {
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Planifier l'ordre des étapes (et les temps de séchage).",
+          "Confirmer la disponibilité des matériaux et des intervenants.",
+          "Éviter les changements tardifs qui cassent le calendrier.",
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "installation",
-      heading: "6) Sous-estimer l'installation (et les ajustements)",
-      paragraphs: [
-        "Même une excellente fabrication peut donner un résultat moyen si l'installation est approximative : alignements, niveaux, ajustements, finitions et inspection finale.",
-      ],
+      id: "prix",
+      title: "9) Comparer uniquement sur le prix",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [
+          "Deux soumissions peuvent être incomparables : l'une inclut coordination, ajustements et finition; l'autre non. Les \"coûts cachés\" (reprises, délais, gestion) apparaissent souvent après coup.",
+        ],
+      },
     },
     {
-      type: "list",
-      ariaLabelledby: "installation-details",
-      heading: "",
-      items: [
-        "Portes et tiroirs désalignés, jeux irréguliers.",
-        "Finitions bâclées autour des murs et des caissons.",
-        "Peu ou pas d'ajustements après la pose.",
-      ],
-      variant: "bullets",
+      id: "prix-details",
+      title: "",
+      content: {
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Comparer la portée : qui fait quoi, et jusqu'où?",
+          "Comparer l'installation : ajustements inclus? inspection finale?",
+          "Comparer la coordination : responsabilités claires?",
+        ],
+        variant: "bullets",
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "installation-links",
-      heading: "",
-      paragraphs: [],
-      links: [
-        {
-          text: "Voir l'installation",
-          href: "/services/installation/",
-          variant: "outline",
-        },
-      ],
+      id: "prix-links",
+      title: "",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: [],
+        links: [
+          {
+            text: "Cuisiniste vs entrepreneur général",
+            href: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
+            variant: "outline",
+          },
+        ],
+      },
     },
     {
-      type: "text",
-      ariaLabelledby: "quincaillerie",
-      heading: "7) Choisir une quincaillerie inadéquate",
-      paragraphs: [
-        "La quincaillerie influence le confort et la longévité : charnières qui gardent leurs réglages, coulisses stables en charge, fermeture contrôlée.",
-      ],
+      id: "checklist",
+      title: "10) Checklist avant de démarrer",
+      content: {
+        type: SECTION_TYPES.TEXT,
+        paragraphs: ["Avant de lancer le chantier, assurez-vous d'avoir :"],
+      },
     },
     {
-      type: "list",
-      ariaLabelledby: "quincaillerie-details",
-      heading: "",
-      items: [
-        "Tiroirs qui frottent, prennent du jeu, ou \"accrochent\".",
-        "Portes qui se désalignent, réglages instables.",
-        "Usure prématurée sur les zones les plus utilisées.",
-      ],
-      variant: "bullets",
-    },
-    {
-      type: "text",
-      ariaLabelledby: "quincaillerie-links",
-      heading: "",
-      paragraphs: [],
-      links: [
-        {
-          text: "Voir la quincaillerie",
-          href: "/materiaux/quincaillerie/",
-          variant: "outline",
-        },
-      ],
-    },
-    {
-      type: "text",
-      ariaLabelledby: "echeancier",
-      heading: "8) Échéancier irréaliste",
-      paragraphs: [
-        "Les délais s'allongent quand les dépendances entre étapes ne sont pas respectées (démolition, plomberie/électricité, murs, plancher, peinture, comptoir, installation, finitions). Prévoir une marge réduit le stress et les décisions précipitées.",
-      ],
-    },
-    {
-      type: "list",
-      ariaLabelledby: "echeancier-details",
-      heading: "",
-      items: [
-        "Planifier l'ordre des étapes (et les temps de séchage).",
-        "Confirmer la disponibilité des matériaux et des intervenants.",
-        "Éviter les changements tardifs qui cassent le calendrier.",
-      ],
-      variant: "bullets",
-    },
-    {
-      type: "text",
-      ariaLabelledby: "prix",
-      heading: "9) Comparer uniquement sur le prix",
-      paragraphs: [
-        "Deux soumissions peuvent être incomparables : l'une inclut coordination, ajustements et finition; l'autre non. Les \"coûts cachés\" (reprises, délais, gestion) apparaissent souvent après coup.",
-      ],
-    },
-    {
-      type: "list",
-      ariaLabelledby: "prix-details",
-      heading: "",
-      items: [
-        "Comparer la portée : qui fait quoi, et jusqu'où?",
-        "Comparer l'installation : ajustements inclus? inspection finale?",
-        "Comparer la coordination : responsabilités claires?",
-      ],
-      variant: "bullets",
-    },
-    {
-      type: "text",
-      ariaLabelledby: "prix-links",
-      heading: "",
-      paragraphs: [],
-      links: [
-        {
-          text: "Cuisiniste vs entrepreneur général",
-          href: "/comparatifs/cuisiniste-vs-entrepreneur-general/",
-          variant: "outline",
-        },
-      ],
-    },
-    {
-      type: "text",
-      ariaLabelledby: "checklist",
-      heading: "10) Checklist avant de démarrer",
-      paragraphs: [
-        "Avant de lancer le chantier, assurez-vous d'avoir :",
-      ],
-    },
-    {
-      type: "list",
-      ariaLabelledby: "checklist-details",
-      heading: "",
-      items: [
-        "Un plan validé (dimensions, électroménagers, dégagements).",
-        "Les matériaux choisis selon l'usage (humidité, entretien, durabilité).",
-        "Des responsabilités claires (coordination, décisions, validation).",
-        "Un échéancier réaliste et séquencé.",
-        "Une installation prévue (ajustements et inspection finale inclus).",
-      ],
-      variant: "bullets",
+      id: "checklist-details",
+      title: "",
+      content: {
+        type: SECTION_TYPES.LIST,
+        items: [
+          "Un plan validé (dimensions, électroménagers, dégagements).",
+          "Les matériaux choisis selon l'usage (humidité, entretien, durabilité).",
+          "Des responsabilités claires (coordination, décisions, validation).",
+          "Un échéancier réaliste et séquencé.",
+          "Une installation prévue (ajustements et inspection finale inclus).",
+        ],
+        variant: "bullets",
+      },
     },
   ],
   faq: {
@@ -379,17 +387,22 @@ export const pageData: ArticlePageData = {
   },
   footerSections: [
     {
-      type: "relatedLinks",
-      ariaLabelledby: "liens",
-      heading: "Liens utiles",
-      links: [
-        { label: "Comparatif des matériaux", href: "/materiaux/comparatif/" },
-        { label: "Installation", href: "/services/installation/" },
-        { label: "Rénovation de cuisine", href: "/services/renovation/cuisine/" },
-        { label: "Cuisine sur mesure", href: "/espaces/cuisine/" },
-        { label: "Demander une soumission", href: "/contact/" },
-      ],
-      columns: 2,
+      id: "liens",
+      title: "Liens utiles",
+      content: {
+        type: SECTION_TYPES.RELATED_LINKS,
+        items: [
+          { title: "Comparatif des matériaux", href: "/materiaux/comparatif/" },
+          { title: "Installation", href: "/services/installation/" },
+          {
+            title: "Rénovation de cuisine",
+            href: "/services/renovation/cuisine/",
+          },
+          { title: "Cuisine sur mesure", href: "/espaces/cuisine/" },
+          { title: "Demander une soumission", href: "/contact/" },
+        ],
+        columns: 2,
+      },
     },
   ],
 };

@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import { SITE } from "@/seo/schema/site";
-
-interface PageMetadataOptions {
-  title: string;
-  description: string;
-  path: string;
-  ogAlt?: string;
-}
+import type { PageMetadataOptions } from "@/types/metadata";
 
 export function createPageMetadata({
   title,

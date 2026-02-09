@@ -1,28 +1,77 @@
-import type { ReactNode } from "react";
+﻿import type { ReactNode } from "react";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { ListSection } from "@/components/sections/ListSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { TextSection } from "@/components/sections/TextSection";
+import { SECTION_TYPES } from "@/constants/section-types";
 
-type SectionLink = { label: string; href: string };
+type SectionLink = { title?: string; label?: string; href: string };
 
 type SectionItemWithLink = {
-  label: string;
+  title?: string;
+  label?: string;
   link?: SectionLink;
+};
+
+type ListEntry = string | { title: string; description: string };
+
+type RelatedLink = {
+  title?: string;
+  label?: string;
+  href: string;
+  description?: string;
 };
 
 export type RenderableSection = {
   id: string;
   title: string;
-  type: "text" | "list" | "steps" | "list-with-links" | "faq";
+  type:
+  | typeof SECTION_TYPES.TEXT
+  | typeof SECTION_TYPES.LIST
+  | typeof SECTION_TYPES.STEPS
+  | typeof SECTION_TYPES.LIST_WITH_LINKS
+  | typeof SECTION_TYPES.RELATED_LINKS
+  | typeof SECTION_TYPES.CUSTOM
+  | typeof SECTION_TYPES.FAQ;
   paragraphs?: string[];
   intro?: string;
-  items?: string[];
+  items?: ListEntry[];
   itemsWithLinks?: SectionItemWithLink[];
   steps?: string[];
   links?: SectionLink[];
+  variant?: "bullets" | "checkmarks" | "numbered";
+  relatedLinks?: RelatedLink[];
+  columns?: 2 | 3;
+  node?: ReactNode;
   faqItems?: Array<{ q: string; a: string }>;
+};
+
+export type RenderableSectionWithContent = {
+  id: string;
+  title: string;
+  content: {
+    type:
+    | typeof SECTION_TYPES.TEXT
+    | typeof SECTION_TYPES.LIST
+    | typeof SECTION_TYPES.STEPS
+    | typeof SECTION_TYPES.LIST_WITH_LINKS
+    | typeof SECTION_TYPES.RELATED_LINKS
+    | typeof SECTION_TYPES.CUSTOM
+    | typeof SECTION_TYPES.FAQ;
+    paragraphs?: string[];
+    intro?: string;
+    items?: ListEntry[] | Array<{ q: string; a: string }> | RelatedLink[];
+    itemsWithLinks?: SectionItemWithLink[];
+    steps?: string[];
+    links?: SectionLink[];
+    variant?: "bullets" | "checkmarks" | "numbered";
+    relatedLinks?: RelatedLink[];
+    columns?: 2 | 3;
+    node?: ReactNode;
+    faqItems?: Array<{ q: string; a: string }>;
+  };
 };
 
 type RenderSectionOptions = {
@@ -31,7 +80,7 @@ type RenderSectionOptions = {
 
 function toActionButtons(links?: SectionLink[]): ActionButton[] | undefined {
   return links?.map((link) => ({
-    text: link.label,
+    text: link.title ?? link.label ?? "",
     href: link.href,
     variant: "outline",
   }));
@@ -43,67 +92,98 @@ function mapItemsWithLinks(
 ) {
   return (
     items?.map((item) => {
-      if (!item.link) return item.label;
-      if (dedupeLinkedLabel && item.label === item.link.label) {
-        return item.link.label;
+      const itemText = item.title ?? item.label ?? "";
+      if (!item.link) return itemText;
+      const linkText = item.link.title ?? item.link.label ?? "";
+      if (dedupeLinkedLabel && itemText === linkText) {
+        return linkText;
       }
-      return `${item.label} â€” ${item.link.label}`;
+      return `${itemText} - ${linkText}`;
     }) ?? []
   );
 }
 
 export function renderSection(
-  section: RenderableSection,
+  section: RenderableSection | RenderableSectionWithContent,
   options: RenderSectionOptions = {}
 ): ReactNode {
-  const { id, title, type } = section;
+  const normalized: RenderableSection =
+    "content" in section
+      ? {
+        id: section.id,
+        title: section.title,
+        type: section.content.type,
+        paragraphs: section.content.paragraphs,
+        intro: section.content.intro,
+        items:
+          section.content.type === SECTION_TYPES.LIST
+            ? (section.content.items as ListEntry[] | undefined)
+            : undefined,
+        itemsWithLinks: section.content.itemsWithLinks,
+        steps: section.content.steps,
+        links: section.content.links,
+        variant: section.content.variant,
+        relatedLinks:
+          section.content.type === SECTION_TYPES.RELATED_LINKS
+            ? (section.content.items as RelatedLink[] | undefined)
+            : section.content.relatedLinks,
+        columns: section.content.columns,
+        node: section.content.node,
+        faqItems:
+          section.content.type === SECTION_TYPES.FAQ
+            ? (section.content.items as Array<{ q: string; a: string }>)
+            : section.content.faqItems,
+      }
+      : section;
+
+  const { id, title, type } = normalized;
   const dedupeLinkedLabel = options.dedupeLinkedLabel ?? false;
 
   switch (type) {
-    case "text":
+    case SECTION_TYPES.TEXT:
       return (
         <TextSection
           key={id}
           aria-labelledby={id}
           heading={title}
-          paragraphs={section.paragraphs ?? []}
-          links={toActionButtons(section.links)}
+          paragraphs={normalized.paragraphs ?? []}
+          links={toActionButtons(normalized.links)}
         />
       );
 
-    case "list":
+    case SECTION_TYPES.LIST:
       return (
         <ListSection
           key={id}
           aria-labelledby={id}
           heading={title}
-          intro={section.intro}
-          items={section.items ?? []}
-          links={toActionButtons(section.links)}
-          variant="bullets"
+          intro={normalized.intro}
+          items={normalized.items ?? []}
+          links={toActionButtons(normalized.links)}
+          variant={normalized.variant ?? "bullets"}
         />
       );
 
-    case "list-with-links":
+    case SECTION_TYPES.LIST_WITH_LINKS:
       return (
         <ListSection
           key={id}
           aria-labelledby={id}
           heading={title}
-          intro={section.intro}
-          items={mapItemsWithLinks(section.itemsWithLinks, dedupeLinkedLabel)}
+          intro={normalized.intro}
+          items={mapItemsWithLinks(normalized.itemsWithLinks, dedupeLinkedLabel)}
           variant="bullets"
         />
       );
 
-    case "steps":
-      const stepLinks = toActionButtons(section.links);
+    case SECTION_TYPES.STEPS:
+      const stepLinks = toActionButtons(normalized.links);
       return (
         <ProcessSection
           key={id}
           aria-labelledby={id}
           heading={title}
-          steps={(section.steps ?? []).map((step, idx) => ({
+          items={(normalized.steps ?? []).map((step, idx) => ({
             step: String(idx + 1),
             title: step,
             description: "",
@@ -116,13 +196,27 @@ export function renderSection(
         />
       );
 
-    case "faq":
+    case SECTION_TYPES.RELATED_LINKS:
+      return (
+        <RelatedLinksSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          items={normalized.relatedLinks ?? []}
+          columns={normalized.columns}
+        />
+      );
+
+    case SECTION_TYPES.CUSTOM:
+      return <div key={id}>{normalized.node ?? null}</div>;
+
+    case SECTION_TYPES.FAQ:
       return (
         <FAQSection
           key={id}
           aria-labelledby={id}
           heading={title}
-          items={(section.faqItems ?? []).map((item) => ({
+          items={(normalized.faqItems ?? []).map((item) => ({
             question: item.q,
             answer: item.a,
           }))}

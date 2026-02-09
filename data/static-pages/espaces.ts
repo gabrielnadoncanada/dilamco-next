@@ -1,9 +1,9 @@
 ﻿import type { Metadata } from "next";
-import type { ArticlePageData } from "@/components/templates/ArticlePageTemplate";
+import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
-import { SPACE_SLIDER_ITEMS } from "@/data/shared-content";
+import { SPACE_SLIDER_ITEMS } from "@/constants/shared-content";
 import { SITE } from "@/seo/schema/site";
-
+import { SECTION_TYPES } from "@/constants/section-types";
 export const metadata: Metadata = createPageMetadata({
   title: "Espaces sur mesure",
   description:
@@ -11,7 +11,6 @@ export const metadata: Metadata = createPageMetadata({
   path: "/espaces/",
   ogAlt: "Espaces sur mesure Dilamco",
 });
-
 export const pageData: ArticlePageData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -20,7 +19,7 @@ export const pageData: ArticlePageData = {
   hero: {
     heading: "Espaces sur mesure, cuisines, salles de bain et rangement",
     description:
-      "Chaque espace a ses contraintes. Notre rôle : créer des solutions durables, fonctionnelles et bien exécutées.",
+      "Chaque espace a ses contraintes. Notre rÃ´le : créer des solutions durables, fonctionnelles et bien exécutées.",
     image: {
       src: "/images/spaces/spaces.png",
       alt: "Espaces sur mesure, cuisines, salles de bain et rangement",
@@ -28,32 +27,48 @@ export const pageData: ArticlePageData = {
   },
   sections: [
     {
-      type: "slider",
-      ariaLabelledby: "liste-espaces",
-      heading: "Choisissez votre espace",
-      description: "Sélectionnez l'espace correspondant à votre projet.",
-      items: SPACE_SLIDER_ITEMS,
+      id: "liste-espaces",
+      title: "Choisissez votre espace",
+      content: {
+        type: SECTION_TYPES.SLIDER,
+        description: "Sélectionnez l'espace correspondant Ã  votre projet.",
+        items: SPACE_SLIDER_ITEMS,
+      },
     },
     {
-      type: "proof",
-      ariaLabelledby: "differenciation",
-      heading: "Pourquoi nos espaces sont pensés pour durer",
-      items: [
-        { title: "Sur mesure réel", description: "Adapté à votre espace." },
-        { title: "Matériaux orientés usage", description: "Choix adaptés à la cuisine et à la salle de bain." },
-        { title: "Installation précise", description: "Alignements, ajustements et finition." },
-        { title: "Approche clé en main", description: "Coordination possible selon le projet." },
-      ],
+      id: "differenciation",
+      title: "Pourquoi nos espaces sont pensés pour durer",
+      content: {
+        type: SECTION_TYPES.PROOF,
+        items: [
+          { title: "Sur mesure réel", description: "Adapté Ã  votre espace." },
+          {
+            title: "Matériaux orientés usage",
+            description: "Choix adaptés Ã  la cuisine et Ã  la salle de bain.",
+          },
+          {
+            title: "Installation précise",
+            description: "Alignements, ajustements et finition.",
+          },
+          {
+            title: "Approche clé en main",
+            description: "Coordination possible selon le projet.",
+          },
+        ],
+      },
     },
     {
-      type: "relatedLinks",
-      ariaLabelledby: "links",
-      heading: "",
-      links: [
-        { label: "Voir nos matériaux", href: "/materiaux/" },
-        { label: "Voir nos services", href: "/services/" },
-      ],
-      columns: 2,
+      id: "links",
+      title: "",
+      content: {
+        type: SECTION_TYPES.RELATED_LINKS,
+        items: [
+          { title: "Voir nos matériaux", href: "/materiaux/" },
+          { title: "Voir nos services", href: "/services/" },
+        ],
+        columns: 2,
+      },
     },
   ],
 };
+

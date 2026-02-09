@@ -1,6 +1,6 @@
 // app/services/[slug]/opengraph-image.tsx
 import { ImageResponse } from "next/og";
-import { SERVICES, type ServiceSlug } from "@/data/services";
+import { SERVICES, type ServiceSlug } from "@/data/service-pages";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

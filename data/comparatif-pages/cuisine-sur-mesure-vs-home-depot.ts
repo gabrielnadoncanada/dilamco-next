@@ -1,7 +1,11 @@
-﻿import type { Metadata } from "next";
-import type { ArticlePageData } from "@/components/templates/ArticlePageTemplate";
+import type { Metadata } from "next";
+import type {
+  ArticlePageData,
+  ContentArticleSection,
+} from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
+import { SECTION_TYPES } from "@/constants/section-types";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Cuisine sur mesure vs Home Depot",
@@ -11,31 +15,20 @@ export const metadata: Metadata = createPageMetadata({
   ogAlt: "Comparatif : Cuisine sur mesure vs Home Depot",
 });
 
-export const pageData: ArticlePageData = {
-  breadcrumbs: [
-    { name: "Accueil", url: SITE.url + "/" },
-    { name: "Comparatifs", url: SITE.url + "/comparatifs/" },
-    {
-      name: "Cuisine sur mesure vs Home Depot",
-      url: SITE.url + "/comparatifs/cuisine-sur-mesure-vs-home-depot/",
-    },
-  ],
-  hero: {
-    heading: "Cuisine sur mesure vs Home Depot : quelle solution pour votre projet?",
-    description:
-      "Home Depot peut convenir à certains projets, surtout lorsque l'espace est standard et que vous acceptez quelques compromis. Une cuisine sur mesure devient souvent préférable quand l'ergonomie, la durabilité et l'intégration à votre espace sont prioritaires - surtout si le projet implique une rénovation.",
-  },
-  sections: [
-    {
-      type: "text",
-      ariaLabelledby: "pour-qui",
-      heading: "À qui s'adresse chaque option?",
+const sections: ContentArticleSection[] = [
+  {
+    id: "pour-qui",
+    title: "À qui s'adresse chaque option?",
+    content: {
+      type: SECTION_TYPES.TEXT,
       paragraphs: [],
     },
-    {
-      type: "list",
-      ariaLabelledby: "home-depot",
-      heading: "Une cuisine de type Home Depot peut convenir si :",
+  },
+  {
+    id: "home-depot",
+    title: "Une cuisine de type Home Depot peut convenir si :",
+    content: {
+      type: SECTION_TYPES.LIST,
       items: [
         "Votre cuisine est plutôt standard (peu d'angles, peu de contraintes d'accès).",
         "Vous cherchez une solution rapide avec des choix déjà configurés.",
@@ -44,10 +37,12 @@ export const pageData: ArticlePageData = {
       ],
       variant: "bullets",
     },
-    {
-      type: "list",
-      ariaLabelledby: "sur-mesure",
-      heading: "Une cuisine sur mesure est souvent préférable si :",
+  },
+  {
+    id: "sur-mesure",
+    title: "Une cuisine sur mesure est souvent préférable si :",
+    content: {
+      type: SECTION_TYPES.LIST,
       items: [
         "Votre espace est atypique (angles, murs irréguliers, contraintes d'accès, plafonds).",
         "Vous voulez maximiser le rangement et l'ergonomie au quotidien.",
@@ -56,10 +51,12 @@ export const pageData: ArticlePageData = {
       ],
       variant: "checkmarks",
     },
-    {
-      type: "table",
-      ariaLabelledby: "tableau",
-      heading: "Comparatif rapide",
+  },
+  {
+    id: "tableau",
+    title: "Comparatif rapide",
+    content: {
+      type: SECTION_TYPES.TABLE,
       firstColumnLabel: "Critère",
       columns: ["Cuisine sur mesure (Dilamco)", "Cuisine type Home Depot"],
       rows: [
@@ -101,10 +98,12 @@ export const pageData: ArticlePageData = {
         },
       ],
     },
-    {
-      type: "list",
-      ariaLabelledby: "materiaux-details",
-      heading: "Matériaux : l'impact sur la durabilité",
+  },
+  {
+    id: "materiaux-details",
+    title: "Matériaux : l'impact sur la durabilité",
+    content: {
+      type: SECTION_TYPES.LIST,
       intro:
         "Une cuisine est soumise à l'humidité, aux charges et à l'usage quotidien. Au-delà du style, la durabilité dépend beaucoup de la structure, des assemblages et de la qualité des composants.",
       items: [
@@ -114,21 +113,21 @@ export const pageData: ArticlePageData = {
       variant: "bullets",
       links: [
         {
-          text: "Pourquoi le contreplaqué",
+          label: "Pourquoi le contreplaqué",
           href: "/materiaux/contreplaque/",
-          variant: "outline",
         },
         {
-          text: "Voir les matériaux",
+          label: "Voir les matériaux",
           href: "/materiaux/",
-          variant: "outline",
         },
       ],
     },
-    {
-      type: "list",
-      ariaLabelledby: "installation-details",
-      heading: "Installation et rénovation : le vrai facteur de résultat",
+  },
+  {
+    id: "installation-details",
+    title: "Installation et rénovation : le vrai facteur de résultat",
+    content: {
+      type: SECTION_TYPES.LIST,
       intro:
         "Beaucoup de déceptions viennent moins du « produit » que de l'exécution : alignements, ajustements, gestion des murs et planchers irréguliers, finition, et coordination des travaux connexes si vous rénovez.",
       items: [
@@ -138,29 +137,31 @@ export const pageData: ArticlePageData = {
       variant: "bullets",
       links: [
         {
-          text: "Voir la rénovation de cuisine",
+          label: "Voir la rénovation de cuisine",
           href: "/services/renovation/cuisine/",
-          variant: "outline",
         },
         {
-          text: "Voir l'installation",
+          label: "Voir l'installation",
           href: "/services/installation/",
-          variant: "outline",
         },
       ],
     },
-    {
-      type: "text",
-      ariaLabelledby: "cout",
-      heading: "Et le coût, concrètement?",
+  },
+  {
+    id: "cout",
+    title: "Et le coût, concrètement?",
+    content: {
+      type: SECTION_TYPES.TEXT,
       paragraphs: [
         "Une solution standard peut sembler plus économique au départ. Une solution sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec plus d'optimisation, une meilleure cohérence et une exécution plus contrôlée. L'important est de comparer à périmètre égal : ce qui est inclus, l'installation, et le niveau de finition.",
       ],
     },
-    {
-      type: "list",
-      ariaLabelledby: "quand-choisir",
-      heading: "Quand le sur mesure devient le meilleur choix",
+  },
+  {
+    id: "quand-choisir",
+    title: "Quand le sur mesure devient le meilleur choix",
+    content: {
+      type: SECTION_TYPES.LIST,
       items: [
         "Vous voulez maximiser le rangement et l'ergonomie (usage quotidien).",
         "Votre espace est atypique ou vous voulez un rendu parfaitement intégré.",
@@ -170,18 +171,33 @@ export const pageData: ArticlePageData = {
       variant: "checkmarks",
       links: [
         {
-          text: "Voir la page Cuisine sur mesure",
+          label: "Voir la page Cuisine sur mesure",
           href: "/espaces/cuisine/",
-          variant: "outline",
         },
         {
-          text: "Voir des projets de cuisines",
+          label: "Voir des projets de cuisines",
           href: "/projets/cuisine/",
-          variant: "outline",
         },
       ],
     },
+  },
+];
+
+export const pageData: ArticlePageData = {
+  breadcrumbs: [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Comparatifs", url: SITE.url + "/comparatifs/" },
+    {
+      name: "Cuisine sur mesure vs Home Depot",
+      url: SITE.url + "/comparatifs/cuisine-sur-mesure-vs-home-depot/",
+    },
   ],
+  hero: {
+    heading: "Cuisine sur mesure vs Home Depot : quelle solution pour votre projet?",
+    description:
+      "Home Depot peut convenir à certains projets, surtout lorsque l'espace est standard et que vous acceptez quelques compromis. Une cuisine sur mesure devient souvent préférable quand l'ergonomie, la durabilité et l'intégration à votre espace sont prioritaires - surtout si le projet implique une rénovation.",
+  },
+  sections,
   cta: {
     heading: "Parlez-nous de votre projet",
     description:
@@ -199,3 +215,5 @@ export const pageData: ArticlePageData = {
     ],
   },
 };
+
+

@@ -1,23 +1,19 @@
 import { cn } from "@/lib/utils";
-import { BRAND, FOOTER_NAV, LEGAL_LINKS, COPYRIGHT_TEXT } from "@/lib/navigation";
-import { Logo, LogoImage, LogoText } from "./footer/Logo";
+import { BRAND, FOOTER_NAV, LEGAL_LINKS, COPYRIGHT_TEXT } from "@/constants/navigation";
+import { Logo, LogoImage } from "./footer/Logo";
 import { SmartLink } from "./footer/SmartLink";
 import { Section } from "./ui/section";
 import { Container } from "./elements/container";
 import { Divider } from "./ui/divider";
+import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
 
 interface FooterProps {
   className?: string;
-  logo?: {
-    url: string;
-    src: string;
-    alt: string;
-    title: string;
-  };
+  logo?: Omit<Brand, "tagline">;
   tagline?: string;
-  menuItems?: typeof FOOTER_NAV;
+  menuItems?: FooterNavSection[];
   copyright?: string;
-  bottomLinks?: typeof LEGAL_LINKS;
+  bottomLinks?: LegalLink[];
 }
 
 export const Footer = ({

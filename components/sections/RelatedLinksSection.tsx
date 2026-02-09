@@ -11,8 +11,9 @@ import Link from "next/link";
 import { Heading } from "@/components/ui/heading";
 import { Divider } from "../ui/divider";
 
-interface LinkItem {
-  label: string;
+interface RelatedLink {
+  title?: string;
+  label?: string;
   href: string;
   description?: string;
 }
@@ -20,7 +21,7 @@ interface LinkItem {
 interface RelatedLinksSectionProps
   extends Omit<SectionShellProps, "title" | "intro" | "children" | "surface"> {
   heading: string;
-  links: LinkItem[];
+  items: RelatedLink[];
   columns?: 2 | 3;
   intro?: React.ReactNode;
   sectionVariant?: SectionSurface;
@@ -30,7 +31,7 @@ interface RelatedLinksSectionProps
 const RelatedLinksSection = ({
   heading,
   sectionVariant = "default",
-  links,
+  items,
   columns = 3,
   intro,
   className,
@@ -62,7 +63,7 @@ const RelatedLinksSection = ({
           gridCols[columns]
         )}
       >
-        {links.map((link, index) => (
+        {items.map((link, index) => (
           <Link
             key={index}
             href={link.href}
@@ -79,7 +80,7 @@ const RelatedLinksSection = ({
             >
               <CardHeader className="p-0 pr-[var(--_spacing---space--1-5rem)]">
                 <Heading variant="h3" className="text-2xl">
-                  {link.label}
+                  {link.title ?? link.label}
                 </Heading>
               </CardHeader>
               {link.description && (

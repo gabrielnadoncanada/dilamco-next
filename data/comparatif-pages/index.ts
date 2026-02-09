@@ -1,5 +1,5 @@
-﻿import type { Metadata } from "next";
-import type { ArticlePageData } from "@/components/templates/ArticlePageTemplate";
+import type { ComparatifSlug } from "@/types/page-slugs";
+import type { ComparatifPageDefinition } from "@/types/page-definitions";
 import {
   metadata as cuisineVsHomeDepotMetadata,
   pageData as cuisineVsHomeDepotPageData,
@@ -13,15 +13,7 @@ import {
   pageData as cuisinisteVsEntrepreneurPageData,
 } from "@/data/comparatif-pages/cuisiniste-vs-entrepreneur-general";
 
-export type ComparatifSlug =
-  | "cuisine-sur-mesure-vs-home-depot"
-  | "cuisine-sur-mesure-vs-ikea"
-  | "cuisiniste-vs-entrepreneur-general";
-
-interface ComparatifPageDefinition {
-  metadata: Metadata;
-  pageData: ArticlePageData;
-}
+export type { ComparatifSlug } from "@/types/page-slugs";
 
 export const COMPARATIF_PAGES: Record<ComparatifSlug, ComparatifPageDefinition> = {
   "cuisine-sur-mesure-vs-home-depot": {
@@ -45,3 +37,4 @@ export const COMPARATIF_PAGE_SLUGS = Object.keys(
 export function getComparatifPageBySlug(slug: string) {
   return COMPARATIF_PAGES[slug as ComparatifSlug] ?? null;
 }
+

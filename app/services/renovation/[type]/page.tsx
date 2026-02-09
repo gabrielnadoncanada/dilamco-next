@@ -1,21 +1,17 @@
 ﻿// app/services/renovation/[type]/page.tsx
 import type { Metadata } from "next";
-import { DEFAULT_CTA } from "@/data/shared-content";
 import { notFound } from "next/navigation";
-import { getRenovationSubServiceByType } from "@/data/services/utils";
-import { RENOVATION_SUB_SERVICES } from "@/data/services/renovation";
-import { JsonLd } from "@/seo/JsonLd";
-import {
-  serviceJsonLd,
-  faqJsonLd,
-  breadcrumbJsonLd,
-} from "@/seo/schema/builders";
-import { SITE } from "@/seo/schema/site";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { FAQSection } from "@/components/sections/FAQSection";
-import { CTASection } from "@/components/sections/CTASection";
 import { ActionButtons } from "@/components/ActionButtons";
+import { CTASection } from "@/components/sections/CTASection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { DEFAULT_CTA } from "@/constants/shared-content";
+import { getRenovationSubServiceByType } from "@/data/service-pages/utils";
+import { RENOVATION_SUB_SERVICES } from "@/data/service-pages/renovation";
 import { renderSection } from "@/lib/render-section";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 type Params = { type: string };
 
@@ -76,9 +72,23 @@ export default async function RenovationSubServicePage({
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "RÃ©novation", url: SITE.url + "/services/renovation/" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
     { name: serviceName, url: subService.metadata.canonical },
   ];
+
+  const faqHeadingByType: Record<string, string> = {
+    cuisine: "FAQ - rénovation de cuisine",
+    "salle-de-bain": "FAQ - rénovation de salle de bain",
+    plancher: "FAQ - rénovation de plancher",
+    "agrandissement-de-maison": "FAQ - agrandissement de maison",
+  };
+
+  const serviceTypeByType: Record<string, string> = {
+    cuisine: "Rénovation de cuisine",
+    "salle-de-bain": "Rénovation de salle de bain",
+    plancher: "Rénovation de plancher",
+    "agrandissement-de-maison": "Agrandissement de maison",
+  };
 
   return (
     <>
@@ -88,13 +98,13 @@ export default async function RenovationSubServicePage({
           name: subService.metadata.title,
           description: subService.metadata.description,
           url: subService.metadata.canonical,
-          serviceType:
-            type === "cuisine"
-              ? "RÃ©novation de cuisine"
-              : "RÃ©novation de salle de bain",
+          serviceType: serviceTypeByType[type] ?? "Rénovation",
         })}
       />
-      {subService.faq.length > 0 && <JsonLd data={faqJsonLd(subService.faq)} />}
+      {subService.faq.length > 0 ? (
+        <JsonLd data={faqJsonLd(subService.faq)} />
+      ) : null}
+
       <main id="contenu">
         <HeroSection
           heading={subService.hero.h1}
@@ -103,7 +113,7 @@ export default async function RenovationSubServicePage({
             <ActionButtons
               className="justify-start"
               buttons={subService.hero.ctaLinks.map((link) => ({
-                text: link.label,
+                text: link.title ?? link.label ?? "",
                 href: link.href,
                 variant:
                   link.href === "/contact/"
@@ -114,40 +124,25 @@ export default async function RenovationSubServicePage({
           }
         />
 
-        {subService.sections.map((section: any) =>
-          renderSection(
-            {
-              id: section.id,
-              title: section.title,
-              type: section.content.type,
-              paragraphs: section.content.paragraphs,
-              intro: section.content.intro,
-              items: section.content.items,
-              itemsWithLinks: section.content.itemsWithLinks,
-              steps: section.content.steps,
-              links: section.content.links,
-            },
-            { dedupeLinkedLabel: true }
-          )
+        {subService.sections.map((section) =>
+          renderSection(section, { dedupeLinkedLabel: true })
         )}
 
-        {subService.faq.length > 0 && (
+        {subService.faq.length > 0 ? (
           <FAQSection
             aria-labelledby="faq"
-            heading={`FAQ â€” ${
-              type === "cuisine"
-                ? "rÃ©novation de cuisine"
-                : "rÃ©novation de salle de bain"
-            }`}
+            heading={faqHeadingByType[type] ?? `FAQ - ${serviceName}`}
             items={subService.faq.map((item) => ({
               question: item.q,
               answer: item.a,
             }))}
           />
-        )}
+        ) : null}
 
         <CTASection aria-labelledby="cta" {...DEFAULT_CTA} />
       </main>
     </>
   );
 }
+
+

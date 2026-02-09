@@ -1,7 +1,7 @@
-// app/projets/[space]/opengraph-image.tsx
+﻿// app/projets/[space]/opengraph-image.tsx
 import { ImageResponse } from "next/og";
 import { type ProjectSpace } from "@/data/projects";
-import { SPACE_CONTENT } from "@/data/spaces";
+import { PROJECT_SPACE_PAGES } from "@/data/project-pages/spaces";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -9,7 +9,7 @@ export const contentType = "image/png";
 type Params = { space: string };
 
 export function generateStaticParams() {
-  return Object.keys(SPACE_CONTENT).map((space) => ({ space }));
+  return Object.keys(PROJECT_SPACE_PAGES).map((space) => ({ space }));
 }
 
 function isProjectSpace(v: string): v is ProjectSpace {
@@ -28,10 +28,10 @@ export default async function OpenGraphImage({ params }: { params: Promise<Param
     return new ImageResponse(<div>Not found</div>, size);
   }
 
-  const content = SPACE_CONTENT[space];
+  const content = PROJECT_SPACE_PAGES[space];
 
   const title = content?.metadata?.title ?? "Projets sur mesure | Dilamco";
-  const desc = content?.metadata?.description ?? "Réalisations et études de cas — Dilamco.";
+  const desc = content?.metadata?.description ?? "Rà©alisations et à©tudes de cas Ã¢â‚¬â€ Dilamco.";
 
   return new ImageResponse(
     (
@@ -52,10 +52,12 @@ export default async function OpenGraphImage({ params }: { params: Promise<Param
           {desc}
         </div>
         <div style={{ marginTop: 44, fontSize: 20, opacity: 0.8 }}>
-          Montréal • Laval • Rive-Sud
+          Montrà©al Ã¢â‚¬Â¢ Laval Ã¢â‚¬Â¢ Rive-Sud
         </div>
       </div>
     ),
     size
   );
 }
+
+

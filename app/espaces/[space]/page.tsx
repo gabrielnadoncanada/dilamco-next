@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import {
   getSpacePageBySlug,
   SPACE_PAGE_SLUGS,
@@ -32,6 +33,5 @@ export default async function SpacePage({
   const page = getSpacePageBySlug(space);
   if (!page) notFound();
 
-  const Component = page.Component;
-  return <Component />;
+  return <SpacePageTemplate data={page.pageData} />;
 }

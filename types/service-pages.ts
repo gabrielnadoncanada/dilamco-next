@@ -1,5 +1,4 @@
-// data/services/types.ts
-// Type definitions for services
+﻿import type { GenericLink } from "@/types/links";
 
 export type ServiceSlug =
   | "design"
@@ -13,11 +12,6 @@ export type RenovationType =
   | "plancher"
   | "agrandissement-de-maison";
 
-export type ServiceLink = {
-  label: string;
-  href: string;
-};
-
 export type FAQItem = {
   q: string;
   a: string;
@@ -27,15 +21,16 @@ export type ServiceSection = {
   id: string;
   title: string;
   content: {
-    type: "text" | "list" | "steps" | "list-with-links";
+    type: "text" | "list" | "steps" | "list-with-links" | "related-links";
     paragraphs?: string[];
-    items?: string[];
+    items?: Array<string | GenericLink>;
     itemsWithLinks?: Array<{
-      label: string;
-      link?: ServiceLink;
+      title?: string;
+      label?: string;
+      link?: GenericLink;
     }>;
     steps?: string[];
-    links?: ServiceLink[];
+    links?: GenericLink[];
     intro?: string;
   };
 };
@@ -50,7 +45,7 @@ export type ServiceData = {
   hero: {
     h1: string;
     paragraphs: string[];
-    ctaLinks: ServiceLink[];
+    ctaLinks: GenericLink[];
   };
   sections: ServiceSection[];
   faq: FAQItem[];
@@ -71,7 +66,7 @@ export type RenovationSubServiceData = {
   hero: {
     h1: string;
     paragraphs: string[];
-    ctaLinks: ServiceLink[];
+    ctaLinks: GenericLink[];
   };
   sections: ServiceSection[];
   faq: FAQItem[];

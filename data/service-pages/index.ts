@@ -5,7 +5,7 @@
 export type {
   ServiceSlug,
   RenovationType,
-  ServiceLink,
+  GenericLink,
   FAQItem,
   ServiceSection,
   ServiceData,

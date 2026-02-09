@@ -1,7 +1,11 @@
-﻿import type { Metadata } from "next";
-import type { ArticlePageData } from "@/components/templates/ArticlePageTemplate";
+import type { Metadata } from "next";
+import type {
+  ArticlePageData,
+  ContentArticleSection,
+} from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
+import { SECTION_TYPES } from "@/constants/section-types";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Cuisine sur mesure vs IKEA",
@@ -11,31 +15,20 @@ export const metadata: Metadata = createPageMetadata({
   ogAlt: "Comparatif : Cuisine sur mesure vs IKEA",
 });
 
-export const pageData: ArticlePageData = {
-  breadcrumbs: [
-    { name: "Accueil", url: SITE.url + "/" },
-    { name: "Comparatifs", url: SITE.url + "/comparatifs/" },
-    {
-      name: "Cuisine sur mesure vs IKEA",
-      url: SITE.url + "/comparatifs/cuisine-sur-mesure-vs-ikea/",
-    },
-  ],
-  hero: {
-    heading: "Cuisine sur mesure vs IKEA : quelle option correspond à votre projet?",
-    description:
-      "IKEA est populaire pour de bonnes raisons : accessibilité, choix variés et solution rapide pour des cuisines plutôt standards. Une cuisine sur mesure devient souvent préférable quand l'espace est atypique, que vous voulez optimiser l'ergonomie et le rangement, ou que le projet implique une rénovation et une finition haut de gamme.",
-  },
-  sections: [
-    {
-      type: "text",
-      ariaLabelledby: "pour-qui",
-      heading: "À qui s'adresse chaque option?",
+const sections: ContentArticleSection[] = [
+  {
+    id: "pour-qui",
+    title: "À qui s'adresse chaque option?",
+    content: {
+      type: SECTION_TYPES.TEXT,
       paragraphs: [],
     },
-    {
-      type: "list",
-      ariaLabelledby: "ikea",
-      heading: "Une cuisine IKEA peut convenir si :",
+  },
+  {
+    id: "ikea",
+    title: "Une cuisine IKEA peut convenir si :",
+    content: {
+      type: SECTION_TYPES.LIST,
       items: [
         "Votre cuisine est standard (peu de contraintes d'angles, de hauteurs ou d'accès).",
         "Vous cherchez une solution rapide avec des configurations déjà définies.",
@@ -44,10 +37,12 @@ export const pageData: ArticlePageData = {
       ],
       variant: "bullets",
     },
-    {
-      type: "list",
-      ariaLabelledby: "sur-mesure",
-      heading: "Une cuisine sur mesure est souvent préférable si :",
+  },
+  {
+    id: "sur-mesure",
+    title: "Une cuisine sur mesure est souvent préférable si :",
+    content: {
+      type: SECTION_TYPES.LIST,
       items: [
         "Votre espace est atypique (angles, murs irréguliers, contraintes d'accès, plafonds).",
         "Vous voulez maximiser le rangement et l'ergonomie au quotidien.",
@@ -56,10 +51,12 @@ export const pageData: ArticlePageData = {
       ],
       variant: "checkmarks",
     },
-    {
-      type: "table",
-      ariaLabelledby: "tableau",
-      heading: "Comparatif rapide",
+  },
+  {
+    id: "tableau",
+    title: "Comparatif rapide",
+    content: {
+      type: SECTION_TYPES.TABLE,
       firstColumnLabel: "Critère",
       columns: ["Cuisine sur mesure (Dilamco)", "Cuisine IKEA"],
       rows: [
@@ -108,25 +105,28 @@ export const pageData: ArticlePageData = {
         },
       ],
     },
-    {
-      type: "text",
-      ariaLabelledby: "standard-vs-surmesure",
-      heading: "Standardisation vs adaptation réelle à votre espace",
+  },
+  {
+    id: "standard-vs-surmesure",
+    title: "Standardisation vs adaptation réelle à votre espace",
+    content: {
+      type: SECTION_TYPES.TEXT,
       paragraphs: [
         "IKEA propose un système modulaire efficace, mais la standardisation implique parfois des compromis : espaces perdus, panneaux de compensation, coins moins accessibles ou choix plus limités pour optimiser le rangement. Le sur mesure permet d'ajuster les dimensions, l'ergonomie et l'intérieur des armoires pour mieux correspondre à vos usages.",
       ],
       links: [
         {
-          text: "Voir la page Cuisine sur mesure",
+          label: "Voir la page Cuisine sur mesure",
           href: "/espaces/cuisine/",
-          variant: "outline",
         },
       ],
     },
-    {
-      type: "list",
-      ariaLabelledby: "materiaux-details",
-      heading: "Matériaux et durabilité",
+  },
+  {
+    id: "materiaux-details",
+    title: "Matériaux et durabilité",
+    content: {
+      type: SECTION_TYPES.LIST,
       intro:
         "Une cuisine est soumise à l'humidité et à l'usage quotidien. Au-delà du style, la durabilité dépend de la structure, des assemblages, de la quincaillerie et de la qualité d'installation.",
       items: [
@@ -136,49 +136,51 @@ export const pageData: ArticlePageData = {
       variant: "bullets",
       links: [
         {
-          text: "Pourquoi le contreplaqué",
+          label: "Pourquoi le contreplaqué",
           href: "/materiaux/contreplaque/",
-          variant: "outline",
         },
         {
-          text: "Voir les matériaux",
+          label: "Voir les matériaux",
           href: "/materiaux/",
-          variant: "outline",
         },
       ],
     },
-    {
-      type: "text",
-      ariaLabelledby: "installation",
-      heading: "Montage, installation et réalité du chantier",
+  },
+  {
+    id: "installation",
+    title: "Montage, installation et réalité du chantier",
+    content: {
+      type: SECTION_TYPES.TEXT,
       paragraphs: [
         "Le résultat final dépend souvent de l'exécution : alignements, ajustements, gestion des murs et planchers irréguliers, et finition. Une cuisine standard peut très bien paraître… si le montage et l'installation sont impeccables. Le sur mesure inclut généralement une approche où l'installation et les ajustements font partie intégrante du projet.",
       ],
       links: [
         {
-          text: "Voir l'installation",
+          label: "Voir l'installation",
           href: "/services/installation/",
-          variant: "outline",
         },
         {
-          text: "Voir la rénovation de cuisine",
+          label: "Voir la rénovation de cuisine",
           href: "/services/renovation/cuisine/",
-          variant: "outline",
         },
       ],
     },
-    {
-      type: "text",
-      ariaLabelledby: "cout",
-      heading: "Et le budget?",
+  },
+  {
+    id: "cout",
+    title: "Et le budget?",
+    content: {
+      type: SECTION_TYPES.TEXT,
       paragraphs: [
         "IKEA est souvent plus abordable à l'achat. L'écart peut toutefois se réduire selon la complexité : montage, installation, ajustements, retouches et coordination si vous rénovez. Une cuisine sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec une ergonomie optimisée et une finition plus stable dans le temps.",
       ],
     },
-    {
-      type: "list",
-      ariaLabelledby: "quand-ikea",
-      heading: "Quand IKEA n'est plus la bonne solution",
+  },
+  {
+    id: "quand-ikea",
+    title: "Quand IKEA n'est plus la bonne solution",
+    content: {
+      type: SECTION_TYPES.LIST,
       items: [
         "Votre espace est atypique ou vous voulez exploiter chaque centimètre.",
         "Vous recherchez un rendu haut de gamme et une finition cohérente.",
@@ -188,18 +190,33 @@ export const pageData: ArticlePageData = {
       variant: "checkmarks",
       links: [
         {
-          text: "Rénovation de cuisine clé en main",
+          label: "Rénovation de cuisine clé en main",
           href: "/services/renovation/cuisine/",
-          variant: "outline",
         },
         {
-          text: "Voir des projets de cuisines",
+          label: "Voir des projets de cuisines",
           href: "/projets/cuisine/",
-          variant: "outline",
         },
       ],
     },
+  },
+];
+
+export const pageData: ArticlePageData = {
+  breadcrumbs: [
+    { name: "Accueil", url: SITE.url + "/" },
+    { name: "Comparatifs", url: SITE.url + "/comparatifs/" },
+    {
+      name: "Cuisine sur mesure vs IKEA",
+      url: SITE.url + "/comparatifs/cuisine-sur-mesure-vs-ikea/",
+    },
   ],
+  hero: {
+    heading: "Cuisine sur mesure vs IKEA : quelle option correspond à votre projet?",
+    description:
+      "IKEA est populaire pour de bonnes raisons : accessibilité, choix variés et solution rapide pour des cuisines plutôt standards. Une cuisine sur mesure devient souvent préférable quand l'espace est atypique, que vous voulez optimiser l'ergonomie et le rangement, ou que le projet implique une rénovation et une finition haut de gamme.",
+  },
+  sections,
   cta: {
     heading: "Parlez-nous de votre projet",
     description:
@@ -217,3 +234,5 @@ export const pageData: ArticlePageData = {
     ],
   },
 };
+
+

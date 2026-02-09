@@ -1,4 +1,4 @@
-// app/projets/[space]/[slug]/page.tsx
+﻿// app/projets/[space]/[slug]/page.tsx
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -71,11 +71,11 @@ function getSpaceIntro(space: ProjectSpace): string {
     case "cuisine":
       return "Optimisation du rangement, circulation et finition durable pour un usage quotidien.";
     case "salle-de-bain":
-      return "Solutions adaptées à l’humidité, à l’entretien et aux contraintes d’espace.";
+      return "Solutions adaptées Ã  l'humidité, Ã  l'entretien et aux contraintes d'espace.";
     case "salle-de-lavage":
-      return "Aménagement fonctionnel en contexte d’humidité, avec matériaux et quincaillerie cohérents.";
+      return "Aménagement fonctionnel en contexte d'humidité, avec matériaux et quincaillerie cohérents.";
     case "walk-in":
-      return "Rangement optimisé, modularité et accès simple au quotidien.";
+      return "Rangement optimisé, modularité et accÃ¨s simple au quotidien.";
     case "commercial":
       return "Usage intensif, durabilité, coordination et finitions propres en zones visibles.";
     default:
@@ -224,8 +224,8 @@ export default async function ProjectPage({
         <RelatedLinksSection
           aria-labelledby="materials-list"
           heading=""
-          links={project.materials.map((m) => ({
-            label: m.label,
+          items={project.materials.map((m) => ({
+            title: m.title ?? m.label ?? "",
             href: m.href,
           }))}
           columns={2}
@@ -253,3 +253,5 @@ export default async function ProjectPage({
     </>
   );
 }
+
+

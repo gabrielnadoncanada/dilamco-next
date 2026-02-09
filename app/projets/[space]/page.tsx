@@ -6,7 +6,7 @@ import {
   SPACE_LABEL,
   type ProjectSpace,
 } from "@/data/projects";
-import { SPACE_CONTENT } from "@/data/spaces";
+import { PROJECT_SPACE_PAGES } from "@/data/project-pages/spaces";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
@@ -19,7 +19,7 @@ import { renderSection } from "@/lib/render-section";
 type Params = { space: ProjectSpace };
 
 export function generateStaticParams(): Params[] {
-  return (Object.keys(SPACE_CONTENT) as ProjectSpace[]).map((space) => ({
+  return (Object.keys(PROJECT_SPACE_PAGES) as ProjectSpace[]).map((space) => ({
     space,
   }));
 }
@@ -30,7 +30,7 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { space } = await params;
-  const content = SPACE_CONTENT[space];
+  const content = PROJECT_SPACE_PAGES[space];
   if (!content) return {};
 
   return {
@@ -69,7 +69,7 @@ export default async function ProjectsSpacePage({
 }) {
   const { space } = await params;
 
-  const content = SPACE_CONTENT[space];
+  const content = PROJECT_SPACE_PAGES[space];
   if (!content) notFound();
 
   const projects = PROJECTS_BY_SPACE[space] ?? [];
@@ -92,7 +92,7 @@ export default async function ProjectsSpacePage({
             <ActionButtons
               className="justify-start"
               buttons={content.hero.ctaLinks.map((l) => ({
-                text: l.label,
+                text: l.title ?? l.label ?? "",
                 href: l.href,
                 variant:
                   l.href === "/contact/"
@@ -103,28 +103,13 @@ export default async function ProjectsSpacePage({
           }
         />
 
-        {content.sections.map((section) =>
-          renderSection({
-            id: section.id,
-            title: section.title,
-            type: section.type,
-            paragraphs: section.type === "text" ? section.paragraphs : undefined,
-            intro: section.type === "list" ? section.intro : undefined,
-            items: section.type === "list" ? section.items : undefined,
-            steps: section.type === "steps" ? section.steps : undefined,
-            links:
-              section.type === "faq"
-                ? undefined
-                : section.links?.map((l) => ({ label: l.label, href: l.href })),
-            faqItems: section.type === "faq" ? section.items : undefined,
-          })
-        )}
+        {content.sections.map((section) => renderSection(section))}
 
         <TextSection
           aria-labelledby="projects"
           heading="Projets"
           paragraphs={[
-            "Chaque projet est documentÃ© avec un format simple : lieu, mandat, contraintes, solution, matÃ©riaux et rÃ©sultat.",
+            "Chaque projet est documentà© avec un format simple : lieu, mandat, contraintes, solution, matà©riaux et rà©sultat.",
           ]}
         />
 
@@ -132,7 +117,7 @@ export default async function ProjectsSpacePage({
           <TextSection
             aria-labelledby="no-projects"
             heading=""
-            paragraphs={["Aucun projet publiÃ© pour l'instant."]}
+            paragraphs={["Aucun projet publià© pour l'instant."]}
             links={[
               {
                 text: "Contactez-nous",
@@ -145,8 +130,8 @@ export default async function ProjectsSpacePage({
           <RelatedLinksSection
             aria-labelledby="projects-list"
             heading=""
-            links={projects.map((p) => ({
-              label: `${p.title} â€” ${p.neighborhood ? `${p.neighborhood}, ` : ""}${p.city}`,
+            items={projects.map((p) => ({
+              title: `${p.title} Ã¢â‚¬â€ ${p.neighborhood ? `${p.neighborhood}, ` : ""}${p.city}`,
               href: `/projets/${p.space}/${p.slug}/`,
             }))}
             columns={2}
@@ -156,8 +141,8 @@ export default async function ProjectsSpacePage({
         <RelatedLinksSection
           aria-labelledby="links"
           heading="Liens utiles"
-          links={content.footerLinks.map((l) => ({
-            label: l.label,
+          items={content.footerLinks.map((l) => ({
+            title: l.title ?? l.label ?? "",
             href: l.href,
           }))}
           columns={2}
@@ -166,3 +151,7 @@ export default async function ProjectsSpacePage({
     </>
   );
 }
+
+
+
+

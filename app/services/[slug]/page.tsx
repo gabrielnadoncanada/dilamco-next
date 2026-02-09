@@ -1,21 +1,17 @@
 ﻿// app/services/[slug]/page.tsx
 import type { Metadata } from "next";
-import { DEFAULT_CTA } from "@/data/shared-content";
 import { notFound } from "next/navigation";
-import { getServiceBySlug } from "@/data/services/utils";
-import type { ServiceSlug } from "@/data/services/types";
-import { JsonLd } from "@/seo/JsonLd";
-import {
-  serviceJsonLd,
-  faqJsonLd,
-  breadcrumbJsonLd,
-} from "@/seo/schema/builders";
-import { SITE } from "@/seo/schema/site";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { FAQSection } from "@/components/sections/FAQSection";
-import { CTASection } from "@/components/sections/CTASection";
 import { ActionButtons } from "@/components/ActionButtons";
+import { CTASection } from "@/components/sections/CTASection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { DEFAULT_CTA } from "@/constants/shared-content";
+import { getServiceBySlug } from "@/data/service-pages/utils";
+import type { ServiceSlug } from "@/types/service-pages";
 import { renderSection } from "@/lib/render-section";
+import { JsonLd } from "@/seo/JsonLd";
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/seo/schema/builders";
+import { SITE } from "@/seo/schema/site";
 
 type Params = { slug: string };
 
@@ -94,7 +90,8 @@ export default async function ServicePage({
           serviceType: service.jsonLd.serviceType,
         })}
       />
-      {service.faq.length > 0 && <JsonLd data={faqJsonLd(service.faq)} />}
+      {service.faq.length > 0 ? <JsonLd data={faqJsonLd(service.faq)} /> : null}
+
       <main id="contenu">
         <HeroSection
           heading={service.hero.h1}
@@ -103,7 +100,7 @@ export default async function ServicePage({
             <ActionButtons
               className="justify-start"
               buttons={service.hero.ctaLinks.map((link) => ({
-                text: link.label,
+                text: link.title ?? link.label ?? "",
                 href: link.href,
                 variant:
                   link.href === "/contact/"
@@ -114,33 +111,23 @@ export default async function ServicePage({
           }
         />
 
-        {service.sections.map((section: any) =>
-          renderSection({
-            id: section.id,
-            title: section.title,
-            type: section.content.type,
-            paragraphs: section.content.paragraphs,
-            intro: section.content.intro,
-            items: section.content.items,
-            itemsWithLinks: section.content.itemsWithLinks,
-            steps: section.content.steps,
-            links: section.content.links,
-          })
-        )}
+        {service.sections.map((section) => renderSection(section))}
 
-        {service.faq.length > 0 && (
+        {service.faq.length > 0 ? (
           <FAQSection
             aria-labelledby="faq"
-            heading={`FAQ â€” ${service.slug}`}
+            heading={`FAQ - ${service.slug}`}
             items={service.faq.map((item) => ({
               question: item.q,
               answer: item.a,
             }))}
           />
-        )}
+        ) : null}
 
         <CTASection aria-labelledby="cta" {...DEFAULT_CTA} />
       </main>
     </>
   );
 }
+
+
