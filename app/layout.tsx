@@ -7,6 +7,7 @@ import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { SectionHeaderMotion } from "@/components/animations/SectionHeaderMotion";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -63,6 +64,7 @@ export default function RootLayout({
 
           <SectionHeaderMotion />
           <Header />
+          <Breadcrumbs />
           {children}
           <Footer />
         </ThemeProvider>
