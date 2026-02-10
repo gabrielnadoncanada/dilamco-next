@@ -1,4 +1,7 @@
-﻿import type { GenericLink } from "@/types/links";
+import type { GenericLink } from "@/types/links";
+import { SECTION_TYPES } from "@/constants/section-types";
+
+export type { GenericLink } from "@/types/links";
 
 export type ServiceSlug =
   | "design"
@@ -17,18 +20,36 @@ export type FAQItem = {
   a: string;
 };
 
+type ListEntry = string | { title: string; description: string };
+
+type RelatedLink = {
+  title?: string;
+  label?: string;
+  href: string;
+  description?: string;
+};
+
+type SectionItemWithLink = {
+  title?: string;
+  label?: string;
+  link?: GenericLink;
+};
+
 export type ServiceSection = {
   id: string;
   title: string;
   content: {
-    type: "text" | "list" | "steps" | "list-with-links" | "related-links";
+    type:
+      | typeof SECTION_TYPES.TEXT
+      | typeof SECTION_TYPES.LIST
+      | typeof SECTION_TYPES.STEPS
+      | typeof SECTION_TYPES.LIST_WITH_LINKS
+      | typeof SECTION_TYPES.RELATED_LINKS
+      | typeof SECTION_TYPES.CUSTOM
+      | typeof SECTION_TYPES.FAQ;
     paragraphs?: string[];
-    items?: Array<string | GenericLink>;
-    itemsWithLinks?: Array<{
-      title?: string;
-      label?: string;
-      link?: GenericLink;
-    }>;
+    items?: ListEntry[] | RelatedLink[] | Array<{ q: string; a: string }>;
+    itemsWithLinks?: SectionItemWithLink[];
     steps?: string[];
     links?: GenericLink[];
     intro?: string;
