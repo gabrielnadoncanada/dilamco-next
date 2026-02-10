@@ -103,7 +103,7 @@ function renderSection(section: ContentArticleSection, index: number) {
           key={index}
           aria-labelledby={id}
           heading={title}
-          description={content.description}
+          intro={content.description}
           items={content.items}
           layout={content.layout}
           actions={content.actions}
@@ -161,4 +161,3 @@ export function ArticlePageTemplate({ data }: { data: ArticlePageData }) {
     </>
   );
 }
-
