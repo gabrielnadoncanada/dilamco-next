@@ -96,6 +96,7 @@ export default async function ServicePage({
         <HeroSection
           heading={service.hero.h1}
           description={service.hero.paragraphs.join(" ")}
+          image={service.hero.image}
           actionsSlot={
             <ActionButtons
               className="justify-start"
@@ -129,5 +130,4 @@ export default async function ServicePage({
     </>
   );
 }
-
 

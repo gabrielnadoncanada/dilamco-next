@@ -67,6 +67,10 @@ export type ServiceData = {
     h1: string;
     paragraphs: string[];
     ctaLinks: GenericLink[];
+    image?: {
+      src: string;
+      alt: string;
+    };
   };
   sections: ServiceSection[];
   faq: FAQItem[];
