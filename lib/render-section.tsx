@@ -1,13 +1,18 @@
-﻿import type { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
+import { ComparisonTableSection } from "@/components/sections/ComparisonTableSection";
 import { FAQSection } from "@/components/sections/FAQSection";
+import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
 import { ListSection } from "@/components/sections/ListSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { ProofSection } from "@/components/sections/ProofSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
+import { SliderSection, type SliderItem } from "@/components/sections/SliderSection";
 import { TextSection } from "@/components/sections/TextSection";
 import { SECTION_TYPES } from "@/constants/section-types";
+import type { LucideIcon } from "lucide-react";
 
-type SectionLink = { title?: string; label?: string; href: string };
+type SectionLink = { title?: string; label?: string; text?: string; href: string };
 
 type SectionItemWithLink = {
   title?: string;
@@ -24,28 +29,72 @@ type RelatedLink = {
   description?: string;
 };
 
+type TableRow = { label?: string; title?: string; values: string[] };
+
+type ProcessItem = {
+  id?: string | number;
+  step?: string | number;
+  title: string;
+  description: string;
+};
+
+type FeatureGridItem = {
+  title: string;
+  description: string;
+  icon?: LucideIcon;
+  href?: string;
+};
+
+type ProofItem = {
+  title: string;
+  description: string;
+  icon?: LucideIcon;
+};
+
+type FaqItem = { q: string; a: string };
+
 export type RenderableSection = {
   id: string;
   title: string;
   type:
-  | typeof SECTION_TYPES.TEXT
-  | typeof SECTION_TYPES.LIST
-  | typeof SECTION_TYPES.STEPS
-  | typeof SECTION_TYPES.LIST_WITH_LINKS
-  | typeof SECTION_TYPES.RELATED_LINKS
-  | typeof SECTION_TYPES.CUSTOM
-  | typeof SECTION_TYPES.FAQ;
+    | typeof SECTION_TYPES.TEXT
+    | typeof SECTION_TYPES.LIST
+    | typeof SECTION_TYPES.TABLE
+    | typeof SECTION_TYPES.STEPS
+    | typeof SECTION_TYPES.LIST_WITH_LINKS
+    | typeof SECTION_TYPES.RELATED_LINKS
+    | typeof SECTION_TYPES.FEATURE_GRID
+    | typeof SECTION_TYPES.PROOF
+    | typeof SECTION_TYPES.PROCESS
+    | typeof SECTION_TYPES.SLIDER
+    | typeof SECTION_TYPES.CUSTOM
+    | typeof SECTION_TYPES.FAQ;
   paragraphs?: string[];
-  intro?: string;
-  items?: ListEntry[];
+  intro?: ReactNode;
+  description?: string;
+  items?:
+    | ListEntry[]
+    | Array<ListEntry | RelatedLink>
+    | RelatedLink[]
+    | ProcessItem[]
+    | FeatureGridItem[]
+    | ProofItem[]
+    | SliderItem[]
+    | FaqItem[];
   itemsWithLinks?: SectionItemWithLink[];
   steps?: string[];
   links?: SectionLink[];
   variant?: "bullets" | "checkmarks" | "numbered";
   relatedLinks?: RelatedLink[];
-  columns?: 2 | 3;
+  columns?: 2 | 3 | 4;
+  tableColumns?: string[];
+  rows?: TableRow[];
+  firstColumnLabel?: string;
+  layout?: "cards" | "timeline";
+  actions?: ReactNode;
+  showNavigation?: boolean;
   node?: ReactNode;
-  faqItems?: Array<{ q: string; a: string }>;
+  faqItems?: FaqItem[];
 };
 
 export type RenderableSectionWithContent = {
@@ -53,24 +102,43 @@ export type RenderableSectionWithContent = {
   title: string;
   content: {
     type:
-    | typeof SECTION_TYPES.TEXT
-    | typeof SECTION_TYPES.LIST
-    | typeof SECTION_TYPES.STEPS
-    | typeof SECTION_TYPES.LIST_WITH_LINKS
-    | typeof SECTION_TYPES.RELATED_LINKS
-    | typeof SECTION_TYPES.CUSTOM
-    | typeof SECTION_TYPES.FAQ;
+      | typeof SECTION_TYPES.TEXT
+      | typeof SECTION_TYPES.LIST
+      | typeof SECTION_TYPES.TABLE
+      | typeof SECTION_TYPES.STEPS
+      | typeof SECTION_TYPES.LIST_WITH_LINKS
+      | typeof SECTION_TYPES.RELATED_LINKS
+      | typeof SECTION_TYPES.FEATURE_GRID
+      | typeof SECTION_TYPES.PROOF
+      | typeof SECTION_TYPES.PROCESS
+      | typeof SECTION_TYPES.SLIDER
+      | typeof SECTION_TYPES.CUSTOM
+      | typeof SECTION_TYPES.FAQ;
     paragraphs?: string[];
-    intro?: string;
-    items?: ListEntry[] | Array<{ q: string; a: string }> | RelatedLink[];
+    intro?: ReactNode;
+    description?: string;
+    items?:
+      | ListEntry[]
+      | Array<ListEntry | RelatedLink>
+      | RelatedLink[]
+      | ProcessItem[]
+      | FeatureGridItem[]
+      | ProofItem[]
+      | SliderItem[]
+      | FaqItem[];
     itemsWithLinks?: SectionItemWithLink[];
     steps?: string[];
     links?: SectionLink[];
     variant?: "bullets" | "checkmarks" | "numbered";
     relatedLinks?: RelatedLink[];
-    columns?: 2 | 3;
+    columns?: string[] | 2 | 3 | 4;
+    rows?: TableRow[];
+    firstColumnLabel?: string;
+    layout?: "cards" | "timeline";
+    actions?: ReactNode;
+    showNavigation?: boolean;
     node?: ReactNode;
-    faqItems?: Array<{ q: string; a: string }>;
+    faqItems?: FaqItem[];
   };
 };
 
@@ -80,7 +148,7 @@ type RenderSectionOptions = {
 
 function toActionButtons(links?: SectionLink[]): ActionButton[] | undefined {
   return links?.map((link) => ({
-    text: link.title ?? link.label ?? "",
+    text: link.title ?? link.label ?? link.text ?? "",
     href: link.href,
     variant: "outline",
   }));
@@ -103,6 +171,16 @@ function mapItemsWithLinks(
   );
 }
 
+function toListEntries(
+  items?: Array<ListEntry | RelatedLink>
+): ListEntry[] {
+  return (items ?? []).map((item) => {
+    if (typeof item === "string") return item;
+    if ("href" in item) return item.title ?? item.label ?? item.href;
+    return item;
+  });
+}
+
 export function renderSection(
   section: RenderableSection | RenderableSectionWithContent,
   options: RenderSectionOptions = {}
@@ -110,32 +188,48 @@ export function renderSection(
   const normalized: RenderableSection =
     "content" in section
       ? {
-        id: section.id,
-        title: section.title,
-        type: section.content.type,
-        paragraphs: section.content.paragraphs,
-        intro: section.content.intro,
-        items:
-          section.content.type === SECTION_TYPES.LIST
-            ? (section.content.items as ListEntry[] | undefined)
-            : undefined,
-        itemsWithLinks: section.content.itemsWithLinks,
-        steps: section.content.steps,
-        links: section.content.links,
-        variant: section.content.variant,
-        relatedLinks:
-          section.content.type === SECTION_TYPES.RELATED_LINKS
-            ? (section.content.items as RelatedLink[] | undefined)
-            : section.content.relatedLinks,
-        columns: section.content.columns,
-        node: section.content.node,
-        faqItems:
-          section.content.type === SECTION_TYPES.FAQ
-            ? (section.content.items as Array<{ q: string; a: string }>)
-            : section.content.faqItems,
-      }
+          id: section.id,
+          title: section.title,
+          type: section.content.type,
+          paragraphs: section.content.paragraphs,
+          intro: section.content.intro,
+          description: section.content.description,
+          items:
+            section.content.type === SECTION_TYPES.LIST
+              ? toListEntries(
+                  section.content.items as Array<ListEntry | RelatedLink> | undefined
+                )
+              : undefined,
+          itemsWithLinks: section.content.itemsWithLinks,
+          steps: section.content.steps,
+          links: section.content.links,
+          variant: section.content.variant,
+          relatedLinks:
+            section.content.type === SECTION_TYPES.RELATED_LINKS
+              ? (section.content.items as RelatedLink[] | undefined)
+              : section.content.relatedLinks,
+          columns:
+            typeof section.content.columns === "number"
+              ? section.content.columns
+              : undefined,
+          tableColumns:
+            section.content.type === SECTION_TYPES.TABLE
+              ? (section.content.columns as string[] | undefined)
+              : undefined,
+          rows: section.content.rows,
+          firstColumnLabel: section.content.firstColumnLabel,
+          layout: section.content.layout,
+          actions: section.content.actions,
+          showNavigation: section.content.showNavigation,
+          node: section.content.node,
+          faqItems:
+            section.content.type === SECTION_TYPES.FAQ
+              ? (section.content.items as FaqItem[] | undefined)
+              : section.content.faqItems,
+        }
       : section;
 
+  const rawItems = "content" in section ? section.content.items : normalized.items;
   const { id, title, type } = normalized;
   const dedupeLinkedLabel = options.dedupeLinkedLabel ?? false;
 
@@ -146,7 +240,7 @@ export function renderSection(
           key={id}
           aria-labelledby={id}
           heading={title}
-          intro={normalized.intro}
+          intro={typeof normalized.intro === "string" ? normalized.intro : undefined}
           paragraphs={normalized.paragraphs ?? []}
           links={toActionButtons(normalized.links)}
         />
@@ -158,10 +252,23 @@ export function renderSection(
           key={id}
           aria-labelledby={id}
           heading={title}
-          intro={normalized.intro}
-          items={normalized.items ?? []}
+          intro={typeof normalized.intro === "string" ? normalized.intro : undefined}
+          items={toListEntries(normalized.items as Array<ListEntry | RelatedLink> | undefined)}
           links={toActionButtons(normalized.links)}
           variant={normalized.variant ?? "bullets"}
+        />
+      );
+
+    case SECTION_TYPES.TABLE:
+      return (
+        <ComparisonTableSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          description={normalized.description}
+          columns={normalized.tableColumns ?? []}
+          rows={normalized.rows ?? []}
+          firstColumnLabel={normalized.firstColumnLabel}
         />
       );
 
@@ -171,20 +278,20 @@ export function renderSection(
           key={id}
           aria-labelledby={id}
           heading={title}
-          intro={normalized.intro}
+          intro={typeof normalized.intro === "string" ? normalized.intro : undefined}
           items={mapItemsWithLinks(normalized.itemsWithLinks, dedupeLinkedLabel)}
           variant="bullets"
         />
       );
 
-    case SECTION_TYPES.STEPS:
+    case SECTION_TYPES.STEPS: {
       const stepLinks = toActionButtons(normalized.links);
       return (
         <ProcessSection
           key={id}
           aria-labelledby={id}
           heading={title}
-          intro={normalized.intro}
+          intro={typeof normalized.intro === "string" ? normalized.intro : undefined}
           items={(normalized.steps ?? []).map((step, idx) => ({
             step: String(idx + 1),
             title: step,
@@ -197,6 +304,7 @@ export function renderSection(
           }
         />
       );
+    }
 
     case SECTION_TYPES.RELATED_LINKS:
       return (
@@ -206,7 +314,55 @@ export function renderSection(
           heading={title}
           intro={normalized.intro}
           items={normalized.relatedLinks ?? []}
-          columns={normalized.columns}
+          columns={normalized.columns as 2 | 3 | undefined}
+        />
+      );
+
+    case SECTION_TYPES.FEATURE_GRID:
+      return (
+        <FeatureGridSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          description={normalized.description}
+          items={(rawItems as FeatureGridItem[] | undefined) ?? []}
+          columns={normalized.columns as 2 | 3 | 4 | undefined}
+        />
+      );
+
+    case SECTION_TYPES.PROOF:
+      return (
+        <ProofSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          description={normalized.description}
+          items={(rawItems as ProofItem[] | undefined) ?? []}
+        />
+      );
+
+    case SECTION_TYPES.PROCESS:
+      return (
+        <ProcessSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={normalized.description}
+          items={(rawItems as ProcessItem[] | undefined) ?? []}
+          layout={normalized.layout}
+          actions={normalized.actions}
+        />
+      );
+
+    case SECTION_TYPES.SLIDER:
+      return (
+        <SliderSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          description={normalized.description}
+          items={(rawItems as SliderItem[] | undefined) ?? []}
+          showNavigation={normalized.showNavigation}
         />
       );
 

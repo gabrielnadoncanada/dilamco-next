@@ -1,4 +1,4 @@
-﻿import type { SpaceContent } from "@/types/spaces";
+import type { SpaceContent } from "@/types/spaces";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
@@ -11,9 +11,8 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
   },
   hero: {
     h1: "Projets de salles de bain sur mesure, réalisations",
-    paragraphs: [
+    intro:
       "Une salle de bain impose des contraintes spécifiques : humidité, ventilation, nettoyage fréquent, et parfois peu d'espace. Cette page sert de preuve concrète : des exemples de projets de salles de bain sur mesure (vanités et rangements) réalisés, ou à documenter, pour illustrer des solutions cohérentes, durables et bien exécutées.",
-    ],
     ctaLinks: [
       { title: "Parler de votre projet de salle de bain", href: "/contact/" },
       {
@@ -95,9 +94,8 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
       title: "Matériaux & choix techniques (penser humidité)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "En salle de bain, la durabilité dépend beaucoup de la protection (chants, zones exposées), de la qualité d'assemblage et de l'installation. On privilégie des choix cohérents avec l'humidité et l'entretien, plutôt que de décider \"au look\".",
-        ],
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
           { title: "MDF", href: "/materiaux/mdf/" },
@@ -112,9 +110,8 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
       title: 'Installation & ajustements (ce qui "fait haut de gamme")',
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "En salle de bain, les alignements et les ajustements sont très visibles. La précision de l'installation et la quincaillerie influencent directement le confort et la longévité.",
-        ],
         links: [
           { title: "Voir l'installation", href: "/services/installation/" },
           { title: "Voir la quincaillerie", href: "/materiaux/quincaillerie/" },
@@ -127,9 +124,8 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
       title: "Vanité seulement vs rénovation complète",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Certains projets consistent à remplacer la vanité et optimiser le rangement. D'autres nécessitent une rénovation complète (plomberie, ventilation, murs, céramique, éclairage). Dans ce cas, la coordination et le séquencement deviennent critiques.",
-        ],
         links: [
           {
             title: "Voir la rénovation de salle de bain",

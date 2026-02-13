@@ -1,4 +1,4 @@
-﻿import { SITE_URL } from "@/constants/site";
+import { SITE_URL } from "@/constants/site";
 import type { ServiceData } from "@/types/service-pages";
 import { SECTION_TYPES } from "@/constants/section-types";
 
@@ -12,9 +12,8 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
   },
   hero: {
     h1: "Fabrication sur mesure, précision, constance et durabilité",
-    paragraphs: [
+    intro:
       "La fabrication détermine la solidité, la stabilité et la longévité d'un projet. Chez Dilamco, le sur mesure ne se limite pas à \"couper à la bonne largeur\" : nous fabriquons selon les dimensions réelles, l'usage prévu et les contraintes de l'espace, afin d'obtenir un résultat cohérent et durable, principalement à Montréal, Laval et sur la Rive-Sud.",
-    ],
     ctaLinks: [
       { title: "Parler de votre projet", href: "/contact/" },
       { title: "Voir nos réalisations", href: "/projets/" },
@@ -26,9 +25,8 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
       title: 'Ce que signifie "fabrication sur mesure"',
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le sur mesure vise une adaptation réelle à votre espace et à votre usage : circulation, accès, rangement, contraintes techniques et niveau de finition. L'objectif est de livrer un projet qui vieillit bien, sans compromis sur les détails critiques.",
-        ],
         items: [
           "Dimensions réelles : adaptation à l'espace (murs, angles, contraintes).",
           "Cohérence entre modules : alignements et proportions maîtrisés.",
@@ -55,9 +53,8 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
       title: "Matériaux, assemblage et détails qui font la différence",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le haut de gamme se joue dans des éléments parfois invisibles au premier regard : stabilité des structures, qualité des chants, fiabilité de la quincaillerie et cohérence d'assemblage.",
-        ],
         items: [
           "Structures stables : choix de panneaux orientés durabilité selon le contexte.",
           "Portes & finis : MDF, mélamine, bois massif, selon le rendu et l'entretien souhaités.",
@@ -80,9 +77,8 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
       title: "Précision & constance",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Un bon résultat vient de la constance : modules cohérents, alignements prévisibles et ajustements maîtrisés. Plus la fabrication est précise, plus l'installation peut être propre, rapide et durable.",
-        ],
         items: [
           "Cohérence : uniformité des lignes, des hauteurs et des alignements.",
           "Réduction des reprises : moins d'ajustements imprévus sur site.",
@@ -138,9 +134,8 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
       title: "Transparence",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Nous visons un résultat durable et cohérent. Cela implique des choix techniques et une exécution soignée. Si votre priorité est une solution temporaire ou strictement standard, le sur mesure haut de gamme n'est probablement pas l'option la plus pertinente.",
-        ],
       },
     },
     {
@@ -148,9 +143,8 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
       title: "Projets fabriqués",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Consultez nos projets pour voir des exemples de configurations, de finitions et de types d'espaces réalisés.",
-        ],
         links: [{ title: "Voir les projets", href: "/projets/" }],
       },
     },

@@ -1,4 +1,4 @@
-﻿import { SITE_URL } from "@/constants/site";
+import { SITE_URL } from "@/constants/site";
 import type { RenovationSubServiceData } from "@/types/service-pages";
 import { SECTION_TYPES } from "@/constants/section-types";
 
@@ -12,9 +12,8 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
   },
   hero: {
     h1: "Rénovation de plancher, coordination, niveaux et finition",
-    paragraphs: [
+    intro:
       "En rénovation, le plancher influence tout : niveaux, transitions, alignements et finition. Dilamco intervient lorsque le plancher doit être intégré à un projet plus large (cuisine, salle de bain ou rénovation clé en main) avec une séquence de travaux claire et une exécution soignée.",
-    ],
     ctaLinks: [
       { title: "Demander une soumission", href: "/contact/" },
       {
@@ -29,9 +28,8 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
       title: "Quand une rénovation de plancher est pertinente",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Un plancher n'est pas seulement un choix esthétique : en rénovation, il détermine les niveaux, les transitions et une partie de la qualité perçue. Une rénovation de plancher devient particulièrement pertinente lorsqu'elle est liée à une cuisine, une salle de bain ou un réaménagement.",
-        ],
         items: [
           "Votre plancher est usé, endommagé ou présente des variations de niveau.",
           "Vous rénovez une cuisine ou une salle de bain et vous voulez une finition cohérente.",
@@ -45,9 +43,8 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
       title: "Le plancher n'est jamais isolé dans une rénovation",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le point critique, ce n'est pas seulement le matériau : c'est l'ordre des étapes. Un plancher mal séquencé peut créer des reprises, des écarts de niveau, des transitions visibles ou des ajustements complexes lors de l'installation des armoires.",
-        ],
         items: [
           "Niveaux : impact direct sur l'alignement des armoires et des électroménagers.",
           "Transitions : jonctions entre pièces, seuils et finitions périmétriques.",
@@ -89,9 +86,8 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
       title: "Projets où le plancher fait partie du résultat final",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le plancher influence la cohérence du projet, surtout en cuisine et en salle de bain. Consultez nos projets pour voir des exemples de rénovation où les niveaux, transitions et finitions ont été intégrés à la planification globale.",
-        ],
         links: [{ title: "Voir les projets", href: "/projets/" }],
       },
     },
@@ -100,9 +96,8 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
       title: "Zones desservies",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Nos projets de rénovation intégrant le plancher sont réalisés principalement à Montréal, Laval et sur la Rive-Sud.",
-        ],
         links: [
           { title: "Rénovation clé en main", href: "/services/renovation/" },
           {

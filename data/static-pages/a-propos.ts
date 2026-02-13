@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
@@ -30,9 +30,7 @@ export const pageData: ArticlePageData = {
       title: "Notre approche",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
-          "Le sur mesure est une méthode : usage, ergonomie, contraintes et durabilité avant le style.",
-        ],
+        intro: "Le sur mesure est une méthode : usage, ergonomie, contraintes et durabilité avant le style.",
       },
     },
     {

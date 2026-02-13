@@ -11,9 +11,8 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
   },
   hero: {
     h1: "Projets de walk-in sur mesure, réalisations",
-    paragraphs: [
+    intro:
       "Un walk-in réussi, c'est d'abord de la fonction : zones de suspendus, tiroirs, tablettes, accessoires, circulation et accès. Le sur mesure permet d'exploiter chaque mur et chaque hauteur, même dans des espaces irréguliers. Cette page sert de preuve concrète : des exemples de projets de walk-in sur mesure réalisés, ou à documenter, pour illustrer des solutions durables, bien organisées et bien exécutées.",
-    ],
     ctaLinks: [
       { title: "Parler de votre projet de walk-in", href: "/contact/" },
       {

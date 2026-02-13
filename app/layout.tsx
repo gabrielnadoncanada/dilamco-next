@@ -70,7 +70,7 @@ export default function RootLayout({
           <JsonLd data={organizationJsonLd()} />
           <JsonLd data={localBusinessJsonLd()} />
 
-          <SectionHeaderMotion />
+
           <Header />
           {children}
           <Footer />

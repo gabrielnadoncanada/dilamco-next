@@ -40,7 +40,8 @@ export type SpaceContent = {
   };
   hero: {
     h1: string;
-    paragraphs: string[];
+    intro?: string;
+    paragraphs?: string[];
     ctaLinks: GenericLink[];
   };
   sections: SpaceSection[];

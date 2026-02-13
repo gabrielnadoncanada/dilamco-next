@@ -1,9 +1,9 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heading } from "@/components/ui/heading";
-import { Divider } from "../ui/divider";
+import { Heading } from "@/components/elements/heading";
+import { Divider } from "../elements/divider";
 interface Step {
   id?: string | number;
   step?: string | number;

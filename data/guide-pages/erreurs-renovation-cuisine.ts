@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
@@ -361,7 +361,7 @@ export const pageData: ArticlePageData = {
       title: "10) Checklist avant de démarrer",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: ["Avant de lancer le chantier, assurez-vous d'avoir :"],
+        intro: "Avant de lancer le chantier, assurez-vous d'avoir :",
       },
     },
     {

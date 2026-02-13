@@ -1,13 +1,13 @@
 import React from "react";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Heading } from "@/components/ui/heading";
-import { Divider } from "../ui/divider";
+import { Heading } from "@/components/elements/heading";
+import { Divider } from "../elements/divider";
 
 interface FAQItem {
   question: string;

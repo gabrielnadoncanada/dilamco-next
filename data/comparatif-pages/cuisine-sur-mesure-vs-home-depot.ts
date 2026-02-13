@@ -62,11 +62,17 @@ const sections: ContentArticleSection[] = [
       rows: [
         {
           label: "Dimensions",
-          values: ["Adaptées à votre espace", "Majoritairement modulaires / standard"],
+          values: [
+            "Adaptées à votre espace",
+            "Majoritairement modulaires / standard",
+          ],
         },
         {
           label: "Rangement",
-          values: ["Optimisé selon vos usages", "Limité aux options disponibles"],
+          values: [
+            "Optimisé selon vos usages",
+            "Limité aux options disponibles",
+          ],
         },
         {
           label: "Matériaux",
@@ -152,9 +158,8 @@ const sections: ContentArticleSection[] = [
     title: "Et le coût, concrètement?",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Une solution standard peut sembler plus économique au départ. Une solution sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec plus d'optimisation, une meilleure cohérence et une exécution plus contrôlée. L'important est de comparer à périmètre égal : ce qui est inclus, l'installation, et le niveau de finition.",
-      ],
     },
   },
   {
@@ -193,7 +198,8 @@ export const pageData: ArticlePageData = {
     },
   ],
   hero: {
-    heading: "Cuisine sur mesure vs Home Depot : quelle solution pour votre projet?",
+    heading:
+      "Cuisine sur mesure vs Home Depot : quelle solution pour votre projet?",
     description:
       "Home Depot peut convenir à certains projets, surtout lorsque l'espace est standard et que vous acceptez quelques compromis. Une cuisine sur mesure devient souvent préférable quand l'ergonomie, la durabilité et l'intégration à votre espace sont prioritaires - surtout si le projet implique une rénovation.",
   },
@@ -215,5 +221,3 @@ export const pageData: ArticlePageData = {
     ],
   },
 };
-
-

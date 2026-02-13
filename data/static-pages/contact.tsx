@@ -3,7 +3,7 @@ import type { ArticlePageData } from "@/types/article-page";
 import { SPACE_SLIDER_ITEMS } from "@/constants/shared-content";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
-import { Section } from "@/components/ui/section";
+import { Section } from "@/components/elements/section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Heading } from "@/components/ui/heading";
+import { Heading } from "@/components/elements/heading";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SECTION_TYPES } from "@/constants/section-types";
 

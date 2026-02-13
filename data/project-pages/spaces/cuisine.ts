@@ -1,4 +1,4 @@
-﻿import type { SpaceContent } from "@/types/spaces";
+import type { SpaceContent } from "@/types/spaces";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const CUISINE_PROJECT_PAGE: SpaceContent = {
@@ -11,9 +11,8 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
   },
   hero: {
     h1: "Projets de cuisines sur mesure, réalisations",
-    paragraphs: [
+    intro:
       "Chaque cuisine est conçue selon l'espace réel (dimensions, circulation, lumière) et l'usage quotidien (rangement, zones de travail, intégrations). Cette page sert de preuve concrète : des exemples de projets de cuisines sur mesure réalisés (ou à documenter) pour illustrer des solutions cohérentes, durables et bien exécutées.",
-    ],
     ctaLinks: [
       { title: "Parler de votre projet de cuisine", href: "/contact/" },
       { title: "Voir la page Cuisine sur mesure", href: "/espaces/cuisine/" },
@@ -87,9 +86,8 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
       title: "Matériaux & choix techniques (ce qui fait durer)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Une cuisine durable est un système : structure, chants, quincaillerie et installation. Le matériau seul ne garantit pas la longévité, l'exécution et les ajustements sont déterminants.",
-        ],
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
           {
@@ -105,9 +103,8 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
       title: "Armoires seulement vs rénovation complète",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Certains projets se limitent aux armoires et à l'installation. D'autres nécessitent une rénovation complète (plomberie, électricité, murs, plancher, dosseret). Dans ce cas, la coordination et le séquencement deviennent critiques pour éviter reprises et délais.",
-        ],
         links: [
           {
             title: "Voir la rénovation de cuisine",

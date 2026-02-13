@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type {
   ArticlePageData,
   ContentArticleSection,
@@ -88,9 +88,8 @@ const sections: ContentArticleSection[] = [
     title: "Où le bois massif est le plus pertinent",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Le bois massif est souvent optimal sur les éléments visibles où le rendu et le toucher comptent.",
-      ],
       links: [
         { title: "Voir le service de design", href: "/services/design/" },
         { title: "Voir la fabrication", href: "/services/fabrication/" },
@@ -139,9 +138,7 @@ const sections: ContentArticleSection[] = [
     title: "Bois massif vs autres matériaux",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
-        "Le bon choix dépend de l'espace, de l'entretien attendu et du rendu final.",
-      ],
+      intro: "Le bon choix dépend de l'espace, de l'entretien attendu et du rendu final.",
       links: [
         {
           title: "Voir le comparatif des matériaux",

@@ -66,9 +66,8 @@ export const pageData: ArticlePageData = {
       title: "Comment utiliser ces guides",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Utilisez-les pour structurer vos priorités, puis passez  la soumission quand le cadre est clair.",
-        ],
         links: [
           {
             text: "Demander une soumission",
@@ -83,9 +82,8 @@ export const pageData: ArticlePageData = {
       title: "Notre positionnement",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Dilamco se concentre sur des projets sur mesure durables, avec exécution soignée et option clé en main.",
-        ],
       },
     },
   ],

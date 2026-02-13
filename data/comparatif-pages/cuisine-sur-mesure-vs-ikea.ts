@@ -111,9 +111,8 @@ const sections: ContentArticleSection[] = [
     title: "Standardisation vs adaptation réelle à votre espace",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "IKEA propose un système modulaire efficace, mais la standardisation implique parfois des compromis : espaces perdus, panneaux de compensation, coins moins accessibles ou choix plus limités pour optimiser le rangement. Le sur mesure permet d'ajuster les dimensions, l'ergonomie et l'intérieur des armoires pour mieux correspondre à vos usages.",
-      ],
       links: [
         {
           label: "Voir la page Cuisine sur mesure",
@@ -151,9 +150,8 @@ const sections: ContentArticleSection[] = [
     title: "Montage, installation et réalité du chantier",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Le résultat final dépend souvent de l'exécution : alignements, ajustements, gestion des murs et planchers irréguliers, et finition. Une cuisine standard peut très bien paraître… si le montage et l'installation sont impeccables. Le sur mesure inclut généralement une approche où l'installation et les ajustements font partie intégrante du projet.",
-      ],
       links: [
         {
           label: "Voir l'installation",
@@ -171,9 +169,8 @@ const sections: ContentArticleSection[] = [
     title: "Et le budget?",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "IKEA est souvent plus abordable à l'achat. L'écart peut toutefois se réduire selon la complexité : montage, installation, ajustements, retouches et coordination si vous rénovez. Une cuisine sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec une ergonomie optimisée et une finition plus stable dans le temps.",
-      ],
     },
   },
   {
@@ -212,7 +209,8 @@ export const pageData: ArticlePageData = {
     },
   ],
   hero: {
-    heading: "Cuisine sur mesure vs IKEA : quelle option correspond à votre projet?",
+    heading:
+      "Cuisine sur mesure vs IKEA : quelle option correspond à votre projet?",
     description:
       "IKEA est populaire pour de bonnes raisons : accessibilité, choix variés et solution rapide pour des cuisines plutôt standards. Une cuisine sur mesure devient souvent préférable quand l'espace est atypique, que vous voulez optimiser l'ergonomie et le rangement, ou que le projet implique une rénovation et une finition haut de gamme.",
   },
@@ -234,5 +232,3 @@ export const pageData: ArticlePageData = {
     ],
   },
 };
-
-

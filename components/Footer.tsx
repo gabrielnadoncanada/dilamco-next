@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils";
 import { BRAND, FOOTER_NAV, LEGAL_LINKS, COPYRIGHT_TEXT } from "@/constants/navigation";
 import { Logo, LogoImage } from "./footer/Logo";
 import { SmartLink } from "./footer/SmartLink";
-import { Section } from "./ui/section";
+import { Section } from "./elements/section";
 import { Container } from "./elements/container";
-import { Divider } from "./ui/divider";
+import { Divider } from "./elements/divider";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
 
 interface FooterProps {

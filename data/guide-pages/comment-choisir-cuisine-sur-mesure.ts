@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
@@ -86,9 +86,8 @@ export const pageData: ArticlePageData = {
       title: "2) Quand le sur mesure est pertinent",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le sur mesure devient particulièrement pertinent lorsque l'espace impose des contraintes, ou lorsque vous visez une durabilité supérieure et un rendu cohérent.",
-        ],
       },
     },
     {
@@ -109,9 +108,8 @@ export const pageData: ArticlePageData = {
       title: "",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Si vous cherchez une solution strictement économique ou temporaire, le sur mesure n'est probablement pas l'option la plus pertinente.",
-        ],
       },
     },
     {
@@ -169,9 +167,8 @@ export const pageData: ArticlePageData = {
       title: "3.3 Style et cohérence",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le style est important, mais il doit rester cohérent avec la lumière, le volume et l'entretien au quotidien.",
-        ],
         links: [
           {
             text: "Voir Couleurs & finis",
@@ -186,9 +183,8 @@ export const pageData: ArticlePageData = {
       title: "4) Matériaux : choisir selon l'usage",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Un bon choix de matériaux se fait selon l'humidité, l'usage et la durabilité visée. Le matériau seul ne garantit rien : l'assemblage, la protection des chants, la quincaillerie et l'installation font une grande différence.",
-        ],
       },
     },
     {
@@ -268,9 +264,8 @@ export const pageData: ArticlePageData = {
       title: "5) Rangement : éviter les pertes d'espace",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le sur mesure est souvent rentabilisé par l'optimisation du rangement : accès, profondeur, coins, hauteurs et organisation.",
-        ],
       },
     },
     {
@@ -292,9 +287,8 @@ export const pageData: ArticlePageData = {
       title: "6) Quincaillerie & installation (souvent sous-estimées)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           'La quincaillerie et l\'installation déterminent une grande partie du ressenti "haut de gamme" : portes alignées, tiroirs fluides, réglages qui tiennent, fermeture contrôlée.',
-        ],
       },
     },
     {
@@ -335,9 +329,8 @@ export const pageData: ArticlePageData = {
       title: "7) Sur mesure vs rénovation clé en main",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           'Une cuisine peut être un projet "armoires + installation", ou un projet plus large qui inclut plomberie, électricité, plancher, dosseret, peinture, etc. Lorsque plusieurs corps de métier sont impliqués, une approche clé en main réduit souvent les risques et les imprévus.',
-        ],
         links: [
           {
             text: "Voir la rénovation de cuisine",
@@ -367,9 +360,8 @@ export const pageData: ArticlePageData = {
       title: "9) Délais : à quoi s'attendre (sans prix)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Les délais varient selon la complexité, la disponibilité et l'ampleur du projet. Généralement, il faut prévoir :",
-        ],
       },
     },
     {

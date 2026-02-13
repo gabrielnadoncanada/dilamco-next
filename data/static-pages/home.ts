@@ -15,22 +15,13 @@ export const metadata: Metadata = createPageMetadata({
 export const pageData: ArticlePageData = {
   breadcrumbs: [{ name: "Accueil", url: SITE.url + "/" }],
   hero: {
-    heading: "Dilamco, sur mesure haut de gamme, clé en main",
-    description:
-      "Cuisines, vanités et rangement sur mesure. Design, fabrication, installation et rénovation complète au besoin.",
+    heading: "Cuisine sur mesure haut de gamme.",
+    description: "Design, fabrication et installation clé en main à Montréal.",
     image: {
       src: "/images/hero-image.webp",
       alt: "Dilamco, sur mesure haut de gamme, clé en main",
     },
-    actions: [
-      { text: "Obtenir une soumission gratuite", href: "/contact" },
-      {
-        text: "Voir nos réalisations",
-        href: "/projets",
-        variant: "outline",
-        icon: ArrowRight,
-      },
-    ],
+    actions: [{ text: "Obtenir une soumission", href: "/contact" }],
   },
   sections: [
     {

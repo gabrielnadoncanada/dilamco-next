@@ -1,9 +1,9 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
-import { Heading } from "../ui/heading";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
+import { Heading } from "../elements/heading";
 import { type ActionButton, ActionButtons } from "../ActionButtons";
-import { Divider } from "../ui/divider";
+import { Divider } from "../elements/divider";
 
 export interface FeatureImageTextItem {
   ariaLabelledby: string;

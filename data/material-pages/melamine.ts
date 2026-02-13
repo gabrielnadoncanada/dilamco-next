@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type {
   ArticlePageData,
   ContentArticleSection,
@@ -40,9 +40,8 @@ const sections: ContentArticleSection[] = [
     title: "C'est quoi la mélamine?",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "La mélamine est un panneau recouvert d'un revêtement décoratif. Le rendu dépend de la qualité des chants et de l'exécution.",
-      ],
     },
   },
   {
@@ -119,9 +118,8 @@ const sections: ContentArticleSection[] = [
     title: "Mélamine vs MDF vs contreplaqué",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Chaque matériau répond à une logique différente : coût/décor, finition peinte, ou stabilité structurelle.",
-      ],
       links: [
         { title: "Comparatif complet", href: "/materiaux/comparatif/" },
         { title: "MDF", href: "/materiaux/mdf/" },
@@ -134,9 +132,8 @@ const sections: ContentArticleSection[] = [
     title: "Comment nous l'utilisons",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Nous utilisons la mélamine de façon ciblée lorsque c'est pertinent, et proposons des alternatives quand l'usage exige plus de robustesse.",
-      ],
       links: [
         { title: "Voir tous les matériaux", href: "/materiaux/" },
         { title: "Voir l'installation", href: "/services/installation/" },

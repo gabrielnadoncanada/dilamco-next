@@ -1,9 +1,9 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { SectionShell, type SectionShellProps, type SectionSurface } from "@/components/ui/section-shell";
+import { SectionShell, type SectionShellProps, type SectionSurface } from "@/components/elements/section-shell";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
-import { Heading } from "@/components/ui/heading";
-import { Divider } from "../ui/divider";
+import { Heading } from "@/components/elements/heading";
+import { Divider } from "../elements/divider";
 
 interface CTASectionProps extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children" | "surface"> {
   heading: string;

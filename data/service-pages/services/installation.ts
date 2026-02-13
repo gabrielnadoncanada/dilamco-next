@@ -1,4 +1,4 @@
-﻿import { SITE_URL } from "@/constants/site";
+import { SITE_URL } from "@/constants/site";
 import type { ServiceData } from "@/types/service-pages";
 import { SECTION_TYPES } from "@/constants/section-types";
 
@@ -12,9 +12,8 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
   },
   hero: {
     h1: "Installation professionnelle, précision, alignement et finition",
-    paragraphs: [
+    intro:
       "Une installation de qualité est déterminante pour le résultat final. Même des armoires bien fabriquées peuvent sembler médiocres si elles sont mal posées. Chez Dilamco, l'installation fait partie intégrante du projet : ajustements sur place, alignements précis et finition soignée, principalement à Montréal, Laval et sur la Rive-Sud.",
-    ],
     ctaLinks: [
       { title: "Demander une soumission", href: "/contact/" },
       { title: "Voir des projets installés", href: "/projets/" },
@@ -26,9 +25,8 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
       title: "Pourquoi l'installation fait toute la différence",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Les murs, planchers et plafonds ne sont jamais parfaitement droits. Une installation professionnelle tient compte de ces réalités et ajuste chaque élément pour obtenir un résultat propre, durable et cohérent.",
-        ],
         items: [
           "Alignements : portes, tiroirs et modules droits malgré les irrégularités.",
           "Ajustements : réglages fins sur place pour un rendu uniforme.",
@@ -94,9 +92,8 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
       title: "Détails techniques qui font la différence",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le niveau de finition dépend de décisions prises sur le terrain. Ces détails sont souvent invisibles sur un plan, mais évidents une fois le projet terminé.",
-        ],
         items: [
           "Tolérances : ajustements pour absorber les écarts des murs et planchers.",
           "Protection des chants : limiter l'infiltration d'humidité et l'usure.",
@@ -114,9 +111,8 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
       title: "Coordination & limites",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Nous installons les éléments que nous fabriquons. Lorsque le projet inclut d'autres travaux (plomberie, électricité, planchers), nous pouvons coordonner les interventions ou recommander une approche clé en main selon le contexte.",
-        ],
         links: [
           {
             title: "Voir la rénovation clé en main",
@@ -130,9 +126,8 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
       title: "Projets installés",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Consultez nos projets pour voir le niveau d'alignement, de finition et d'intégration obtenu sur différents types d'espaces.",
-        ],
         links: [{ title: "Voir les projets", href: "/projets/" }],
       },
     },

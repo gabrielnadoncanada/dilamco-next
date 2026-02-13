@@ -1,4 +1,4 @@
-﻿import { SITE_URL } from "@/constants/site";
+import { SITE_URL } from "@/constants/site";
 import type { ServiceData } from "@/types/service-pages";
 
 export const RENOVATION_SERVICE_PAGE: ServiceData = {
@@ -11,9 +11,7 @@ export const RENOVATION_SERVICE_PAGE: ServiceData = {
   },
   hero: {
     h1: "Rénovation clé en main",
-    paragraphs: [
-      "Coordination des travaux connexes au besoin (plomberie, électricité, plancher, etc.).",
-    ],
+    intro: "Coordination des travaux connexes au besoin (plomberie, électricité, plancher, etc.).",
     ctaLinks: [{ title: "Soumission", href: "/contact/" }],
   },
   sections: [],

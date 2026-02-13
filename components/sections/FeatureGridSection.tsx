@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type LucideIcon } from "lucide-react";
-import { Heading } from "@/components/ui/heading";
-import { Divider } from "../ui/divider";
+import { Heading } from "@/components/elements/heading";
+import { Divider } from "../elements/divider";
 
 interface Feature {
   title: string;

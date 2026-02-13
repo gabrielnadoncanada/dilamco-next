@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import {
   Table,
   TableBody,
@@ -8,8 +8,8 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Heading } from "@/components/ui/heading";
-import { Divider } from "../ui/divider";
+import { Heading } from "@/components/elements/heading";
+import { Divider } from "../elements/divider";
 
 interface ComparisonTableSectionProps
   extends Omit<SectionShellProps, "title" | "intro" | "children"> {

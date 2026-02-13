@@ -1,4 +1,4 @@
-﻿import { SITE_URL } from "@/constants/site";
+import { SITE_URL } from "@/constants/site";
 import type { RenovationSubServiceData } from "@/types/service-pages";
 import { SECTION_TYPES } from "@/constants/section-types";
 
@@ -13,9 +13,8 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
     },
     hero: {
       h1: "Agrandissement de maison, planification, coordination et exécution complète",
-      paragraphs: [
+      intro:
         "Un agrandissement de maison est un projet structurant : fondation, structure, enveloppe, puis aménagement intérieur. Dilamco réalise des projets d'agrandissement résidentiel complets, avec une coordination claire des étapes et un objectif simple : livrer un espace fonctionnel, durable et bien intégré à l'existant.",
-      ],
       ctaLinks: [
         { title: "Demander une soumission", href: "/contact/" },
         {
@@ -30,9 +29,8 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
         title: "Quand un agrandissement de maison est pertinent",
         content: {
           type: SECTION_TYPES.TEXT,
-          paragraphs: [
+          intro:
             "Un agrandissement de maison est envisagé lorsqu'un espace supplémentaire est nécessaire et que la configuration actuelle ne répond plus aux besoins. Ce type de projet vise une transformation durable, intégrée à la structure existante.",
-          ],
           items: [
             "Vous manquez d'espace et souhaitez éviter un déménagement.",
             "Vous souhaitez ajouter une ou plusieurs pièces (chambre, bureau, salle familiale, etc.).",
@@ -46,9 +44,8 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
         title: "Un agrandissement est un projet global",
         content: {
           type: SECTION_TYPES.TEXT,
-          paragraphs: [
+          intro:
             "Un agrandissement ne se limite pas à ajouter des mètres carrés. Il implique une intégration structurelle, architecturale et fonctionnelle avec le bâtiment existant. La réussite du projet dépend autant de la planification que de l'exécution.",
-          ],
           items: [
             "Structure : fondations, charpente, ouvertures et jonctions avec l'existant.",
             "Enveloppe : murs, toiture, isolation et continuité thermique.",
@@ -82,9 +79,8 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
         title: "Coordination & responsabilité",
         content: {
           type: SECTION_TYPES.TEXT,
-          paragraphs: [
+          intro:
             "Un agrandissement implique plusieurs étapes critiques. Une coordination claire permet de réduire les retards, les conflits entre corps de métier et les reprises coûteuses.",
-          ],
           items: [
             "Séquencement : ordre logique des travaux pour assurer la continuité.",
             "Responsabilité : un cadre clair sur les rôles et les livrables.",
@@ -97,9 +93,8 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
         title: "Intégration à la maison existante",
         content: {
           type: SECTION_TYPES.TEXT,
-          paragraphs: [
+          intro:
             "L'un des enjeux majeurs d'un agrandissement est l'intégration visuelle et fonctionnelle. L'objectif est que l'agrandissement fasse partie de la maison, et non qu'il apparaisse comme un ajout distinct.",
-          ],
           items: [
             "Alignement des niveaux et des plafonds.",
             "Transitions fluides entre les espaces.",
@@ -112,9 +107,8 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
         title: "Projets d'agrandissement résidentiel",
         content: {
           type: SECTION_TYPES.TEXT,
-          paragraphs: [
+          intro:
             "Consultez nos projets pour voir des exemples d'agrandissements intégrés à des maisons existantes, avec différents types de configurations et de portées.",
-          ],
           links: [{ title: "Voir les projets", href: "/projets/" }],
         },
       },
@@ -123,9 +117,8 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
         title: "Zones desservies",
         content: {
           type: SECTION_TYPES.TEXT,
-          paragraphs: [
+          intro:
             "Nos projets d'agrandissement de maison sont réalisés principalement à Montréal, Laval et sur la Rive-Sud.",
-          ],
           links: [
             { title: "Rénovation clé en main", href: "/services/renovation/" },
           ],

@@ -4,12 +4,13 @@ import {
   SectionShell,
   type SectionShellProps,
   type SectionSurface,
-} from "@/components/ui/section-shell";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { LinkIcon } from "lucide-react";
+} from "@/components/elements/section-shell";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight, LinkIcon } from "lucide-react";
 import Link from "next/link";
-import { Heading } from "@/components/ui/heading";
-import { Divider } from "../ui/divider";
+import { Heading } from "@/components/elements/heading";
+import { Divider } from "../elements/divider";
+import { Button } from "../ui/button";
 
 interface RelatedLink {
   title?: string;
@@ -70,30 +71,21 @@ const RelatedLinksSection = ({
             className="block"
             data-animate-card-card
           >
-            <Card
-              className={cn(
-                "min-h-[200px] h-full rounded-xl p-[var(--_spacing---space--2rem)]",
-                "flex flex-col justify-between transition-colors",
-                "group-hover:bg-transparent",
-                "hover:bg-card"
-              )}
-            >
-              <CardHeader className="p-0 pr-[var(--_spacing---space--1-5rem)]">
-                <Heading variant="h3" className="text-2xl">
-                  {link.title ?? link.label}
-                </Heading>
-              </CardHeader>
-              {link.description && (
-                <CardContent className="p-0">
-                  <p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-                    {link.description}
-                  </p>
-                </CardContent>
-              )}
+            <Card className="">
 
-              <CardFooter className="p-0 space-x-2">
-                <LinkIcon className="size-4 rotate-100" />
-                <span className="font-medium">En savoir plus</span>
+              <CardHeader>
+                <CardTitle>{link.title}</CardTitle>
+                <CardDescription>
+                  {link.description}
+                </CardDescription>
+              </CardHeader>
+              <CardFooter v-if={link.href}>
+                <Button asChild>
+                  <Link href={link.href || "#"}>
+                    En savoir plus
+                    <ArrowRight data-icon="inline-start" />
+                  </Link>
+                </Button>
               </CardFooter>
             </Card>
           </Link>

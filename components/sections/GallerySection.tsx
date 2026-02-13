@@ -1,9 +1,9 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
-import { Heading } from "@/components/ui/heading";
+import { Heading } from "@/components/elements/heading";
 
 interface Image {
   src: string;

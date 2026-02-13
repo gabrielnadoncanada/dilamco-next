@@ -7,12 +7,12 @@ export interface ActionButton {
   text: string;
   href: string;
   variant?:
-    | "default"
-    | "outline"
-    | "secondary"
-    | "ghost"
-    | "link"
-    | "destructive";
+  | "default"
+  | "outline"
+  | "secondary"
+  | "ghost"
+  | "link"
+  | "destructive";
   icon?: LucideIcon;
   [key: string]: unknown;
 }
@@ -25,7 +25,7 @@ export interface ActionButtonsProps
 export function ActionButtons({ buttons, className, ...props }: ActionButtonsProps) {
   return (
     <div
-      className={cn("flex w-full flex-col gap-2 sm:flex-row justify-center items-center", className)}
+      className={cn("flex w-full items-center justify-center gap-2 **:data-[slot=button]:shadow-none", className)}
       {...props}
     >
       {buttons.map((button, index) => {

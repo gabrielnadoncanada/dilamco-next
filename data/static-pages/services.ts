@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
@@ -113,9 +113,8 @@ export const pageData: ArticlePageData = {
       title: "Qualité et durabilité",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le haut de gamme repose sur un système cohérent : matériaux, assemblage, quincaillerie et installation.",
-        ],
         links: [
           {
             text: "Pourquoi le contreplaqué",

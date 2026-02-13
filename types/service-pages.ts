@@ -1,4 +1,4 @@
-﻿import type { GenericLink } from "@/types/links";
+import type { GenericLink } from "@/types/links";
 
 export type ServiceSlug =
   | "design"
@@ -44,7 +44,8 @@ export type ServiceData = {
   };
   hero: {
     h1: string;
-    paragraphs: string[];
+    intro?: string;
+    paragraphs?: string[];
     ctaLinks: GenericLink[];
   };
   sections: ServiceSection[];
@@ -65,7 +66,8 @@ export type RenovationSubServiceData = {
   };
   hero: {
     h1: string;
-    paragraphs: string[];
+    intro?: string;
+    paragraphs?: string[];
     ctaLinks: GenericLink[];
   };
   sections: ServiceSection[];

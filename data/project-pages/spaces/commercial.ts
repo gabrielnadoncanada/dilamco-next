@@ -1,4 +1,4 @@
-﻿import type { SpaceContent } from "@/types/spaces";
+import type { SpaceContent } from "@/types/spaces";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const COMMERCIAL_PROJECT_PAGE: SpaceContent = {
@@ -11,9 +11,8 @@ export const COMMERCIAL_PROJECT_PAGE: SpaceContent = {
   },
   hero: {
     h1: "Projets commerciaux, aménagements sur mesure réalisés",
-    paragraphs: [
+    intro:
       "Les projets commerciaux imposent des contraintes spécifiques : usage intensif, durabilité, coordination avec d'autres intervenants, et parfois des échéanciers serrés. Lorsque des travaux connexes sont requis, notre approche de rénovation clé en main permet de cadrer, coordonner et livrer un résultat cohérent.",
-    ],
     ctaLinks: [
       { title: "Parler de votre projet commercial", href: "/contact/" },
       {

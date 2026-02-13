@@ -84,9 +84,8 @@ export const pageData: ArticlePageData = {
       title: "Le vrai enjeu : responsabilités claires",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Un projet fluide dépend d'un périmètre clair, d'une coordination maîtrisée et d'un responsable principal.",
-        ],
         links: [
           {
             text: "Cuisiniste vs entrepreneur général",
@@ -101,9 +100,8 @@ export const pageData: ArticlePageData = {
       title: "Rénovation + sur mesure",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le sur mesure prend sa pleine valeur quand il est aligné avec la réalité du chantier.",
-        ],
         links: [
           {
             text: "Cuisine sur mesure",

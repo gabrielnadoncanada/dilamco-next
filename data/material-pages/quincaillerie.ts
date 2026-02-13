@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type {
   ArticlePageData,
   ContentArticleSection,
@@ -135,9 +135,8 @@ const sections: ContentArticleSection[] = [
     title: "Matériaux + quincaillerie = système",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Le résultat final dépend de l'ensemble : structure, chants, quincaillerie, installation.",
-      ],
       links: [
         {
           title: "Pourquoi le contreplaqué",

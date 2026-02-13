@@ -128,7 +128,8 @@ export type ContentArticleSection = {
   content:
     | {
         type: typeof SECTION_TYPES.TEXT;
-        paragraphs: string[];
+        paragraphs?: string[];
+        intro?: string;
         links?: ContentLink[];
       }
     | {
@@ -231,5 +232,3 @@ export interface ArticlePageData {
   showCta?: boolean;
   footerSections?: ContentArticleSection[];
 }
-
-

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import type {
   ArticlePageData,
   ContentArticleSection,
@@ -94,9 +94,8 @@ const sections: ContentArticleSection[] = [
     title: "Le vrai enjeu : la responsabilité et la coordination",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Les Â« zones grises Â» arrivent quand plusieurs parties se partagent le projet : qui ajuste si les murs ne sont pas d'équerre? Qui corrige si le plan doit être adapté sur place? Qui assume un retard si un corps de métier décale l'échéancier? Plus votre projet est complexe, plus la coordination devient un facteur déterminant.",
-      ],
     },
   },
   {
@@ -145,9 +144,8 @@ const sections: ContentArticleSection[] = [
     title: "L'approche Dilamco : sur mesure, avec option clé en main",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Selon le projet, Dilamco peut intervenir comme spécialiste du sur mesure (design, fabrication et installation) et, lorsque requis, offrir une option clé en main pour simplifier la coordination. L'objectif est de clarifier la responsabilité et de livrer un résultat cohérent, du plan à la finition.",
-      ],
       links: [
         {
           title: "Cuisine sur mesure",
@@ -169,9 +167,8 @@ const sections: ContentArticleSection[] = [
     title: "Coût, risques et tranquillité d'esprit",
     content: {
       type: SECTION_TYPES.TEXT,
-      paragraphs: [
+      intro:
         "Sans entrer dans des chiffres, le point important est de comparer à périmètre égal : ce qui est inclus, qui coordonne, qui assume les ajustements sur place, et le niveau de finition attendu. Un projet bien cadré réduit les retouches, les délais et les incohérences.",
-      ],
     },
   },
   {

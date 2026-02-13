@@ -1,4 +1,4 @@
-﻿import type { SpaceContent } from "@/types/spaces";
+import type { SpaceContent } from "@/types/spaces";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
@@ -11,9 +11,8 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
   },
   hero: {
     h1: "Projets de salles de lavage sur mesure, réalisations",
-    paragraphs: [
+    intro:
       "Une salle de lavage est un espace très fonctionnel : humidité, produits ménagers, paniers, circulation, bruit et ventilation. Le sur mesure permet d'optimiser chaque zone (tri, pliage, rangement) et d'obtenir un aménagement durable. Cette page sert de preuve concrète : des exemples de projets de salles de lavage sur mesure réalisés, ou à documenter, pour illustrer des solutions cohérentes, robustes et bien exécutées.",
-    ],
     ctaLinks: [
       {
         title: "Parler de votre projet de salle de lavage",
@@ -114,9 +113,8 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       title: "Matériaux & choix techniques (penser humidité + entretien)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Ici, le bon choix est celui qui résiste à l'usage réel : humidité, éclaboussures, nettoyage, et parfois des produits plus agressifs. La durabilité dépend aussi des chants, de l'assemblage, de la quincaillerie et de l'installation.",
-        ],
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
           { title: "Mélamine", href: "/materiaux/melamine/" },
@@ -131,9 +129,8 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       title: "Installation & quincaillerie (usage intensif)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Les portes et tiroirs d'une salle de lavage sont souvent très sollicités. Une quincaillerie adaptée et une installation précise évitent rapidement les jeux, frottements et désalignements.",
-        ],
         links: [
           { title: "Voir la quincaillerie", href: "/materiaux/quincaillerie/" },
           { title: "Voir l'installation", href: "/services/installation/" },
@@ -146,9 +143,8 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
       title: "Aménagement seulement vs rénovation complète",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           'Selon l\'état de la pièce, vous pouvez faire un projet "aménagement + installation" ou une rénovation complète (plomberie, ventilation, murs/plancher, éclairage). Dans ce cas, le séquencement et la coordination deviennent critiques.',
-        ],
         links: [
           {
             title: "Voir la rénovation clé en main",

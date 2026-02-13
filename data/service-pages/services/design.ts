@@ -12,9 +12,8 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
   },
   hero: {
     h1: "Service de design, structurer le projet avant de fabriquer",
-    paragraphs: [
+    intro:
       "Le design est l'étape qui réduit les erreurs coûteuses. Il sert à cadrer l'usage, organiser l'espace, intégrer les contraintes (murs, plomberie, électroménagers) et prendre les bonnes décisions avant la fabrication et l'installation. Chez Dilamco, le design est orienté fonctionnalité et exécution, principalement à Montréal, Laval et sur la Rive-Sud.",
-    ],
     ctaLinks: [
       { title: "Parler de votre projet", href: "/contact/" },
       { title: "Voir nos réalisations", href: "/projets/" },
@@ -26,9 +25,8 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       title: "Le rôle du design dans un projet sur mesure",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Un bon design n'est pas décoratif : il rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles à la fin.",
-        ],
         items: [
           "Optimiser l'espace : circulation, zones de travail, dégagements, hauteurs.",
           "Structurer le rangement : accès, organisation, priorités d'usage.",
@@ -61,9 +59,8 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       title: "Design orienté usage (le cœur de notre approche)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Notre approche vise à rendre l'espace simple à vivre. Le design est construit autour des gestes du quotidien : accès au rangement, zones de travail, circulation et cohérence des dimensions.",
-        ],
         items: [
           "Ergonomie : hauteurs, dégagements, logique de déplacement.",
           "Rangement intelligent : coins, tiroirs, modules adaptés et organisation.",
@@ -76,9 +73,8 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       title: "Contraintes techniques (intégration, pas improvisation)",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le design doit tenir compte de la réalité du bâtiment et des équipements. Nous intégrons les contraintes techniques dès le départ afin d'éviter des compromis tardifs.",
-        ],
         items: [
           "Plomberie & électricité : intégration des emplacements et dégagements (sans exécuter les travaux).",
           "Condo et bâtiments existants : murs irréguliers, accès, contraintes de chantier.",
@@ -98,9 +94,8 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       title: "Le design réduit le risque",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Plus les décisions sont prises tôt, plus le projet est prévisible. Un design solide réduit les imprévus, simplifie la fabrication et rend l'installation plus propre.",
-        ],
         items: [
           "Moins d'imprévus : contraintes identifiées avant la production.",
           "Meilleure cohérence : proportions, alignements, logique de modules.",
@@ -157,9 +152,8 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       title: "Ce que ce service n'est pas",
       content: {
         type: SECTION_TYPES.TEXT,
-        paragraphs: [
+        intro:
           "Le design Dilamco n'est pas une démarche d'inspiration \"Pinterest\" déconnectée de la réalité. Il vise un plan cohérent, faisable, et prêt pour la fabrication et l'installation.",
-        ],
       },
     },
   ],

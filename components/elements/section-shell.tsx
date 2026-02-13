@@ -1,7 +1,8 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Container } from "@/components/elements/container";
-import { Heading } from "@/components/ui/heading";
+import { Heading } from "@/components/elements/heading";
+import { Badge } from "../ui/badge";
 
 export type SectionSurface = "default" | "muted";
 export type SectionPadding = "none" | "small" | "main" | "large" | "page-top";
@@ -30,14 +31,14 @@ const containerClassMap: Record<Exclude<SectionContainer, boolean>, string> = {
 };
 
 const paddingClassMap: Record<SectionPadding, string> = {
-  none: "pt-[var(--_spacing---section-space--none)] pb-[var(--_spacing---section-space--none)]",
+  none: "pt-0 pb-0",
   small:
-    "pt-[var(--_spacing---section-space--small)] pb-[var(--_spacing---section-space--small)]",
-  main: "pt-[var(--_spacing---section-space--main)] pb-[var(--_spacing---section-space--large)]",
+    "pt-4 pb-4",
+  main: "pt-8 pb-8",
   large:
-    "pt-[var(--_spacing---section-space--large)] pb-[var(--_spacing---section-space--large)]",
+    "pt-16 pb-16",
   "page-top":
-    "pt-[var(--_spacing---section-space--page-top)] pb-[var(--_spacing---section-space--large)]",
+    "pt-32 pb-32",
 };
 
 const titleAlignClassMap: Record<SectionAlign, string> = {
@@ -53,7 +54,7 @@ const actionAlignClassMap: Record<SectionAlign, string> = {
 const SectionShell = ({
   className,
   surface = "default",
-  padding = "main",
+  padding = "none",
   container = "default",
   eyebrow,
   title,
@@ -72,20 +73,20 @@ const SectionShell = ({
     container === true || container === false ? "default" : container;
 
   const shellContent = (
-    <div className={cn("w-full", contentClassName)}>
+    <>
       {hasHeader && (
         <div
           data-animate-header-wrap
           className={cn(
-            "mb-8 flex flex-col gap-4 md:mb-10 lg:mb-16",
+            "flex flex-col gap-2 px-6 pb-8 md:pb-16 lg:pb-20 xl:gap-4",
             titleAlignClassMap[align],
             headerClassName
           )}
         >
           {eyebrow && (
-            <div className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+            <Badge variant="secondary">
               {eyebrow}
-            </div>
+            </Badge>
           )}
           {title && (
             <div data-animate-header-heading>
@@ -94,19 +95,19 @@ const SectionShell = ({
           )}
           {intro &&
             (typeof intro === "string" ? (
-              <p data-animate-header-text className="max-w-3xl text-lg text-muted-foreground">
+              <p data-animate-header-text className="text-foreground max-w-4xl text-base text-balance sm:text-lg">
                 {intro}
               </p>
             ) : (
               <div
                 data-animate-header-text
-                className="max-w-3xl text-lg text-muted-foreground"
+                className="text-foreground max-w-4xl text-base text-balance sm:text-lg"
               >
                 {intro}
               </div>
             ))}
           {actions && (
-            <div data-animate-header-cta className={cn("flex", actionAlignClassMap[align])}>
+            <div data-animate-header-cta className={cn("flex pt-2 ", actionAlignClassMap[align])}>
               {actions}
             </div>
           )}
@@ -114,9 +115,9 @@ const SectionShell = ({
       )}
       {children && <div className={bodyClassName}>{children}</div>}
       {!hasHeader && actions && (
-        <div className={cn("flex", actionAlignClassMap[align])}>{actions}</div>
+        <div className={cn("flex pt-2", actionAlignClassMap[align])}>{actions}</div>
       )}
-    </div>
+    </>
   );
 
   return (

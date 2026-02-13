@@ -1,7 +1,7 @@
 import React from "react";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
-import { Heading } from "@/components/ui/heading";
+import { Heading } from "@/components/elements/heading";
 import { Wallpaper } from "../elements/wallpaper";
 import clsx from "clsx";
 import { Container } from "../elements/container";
@@ -46,12 +46,6 @@ const HeroSection = ({
                 <Heading variant="h1" className="max-w-5xl text-[length:var(--_typography---font-size--display-1)] leading-[var(--_typography---line-height--1-1)] text-white">
                   {heading}
                 </Heading>
-                {description && (
-                  <div className="flex max-w-3xl flex-col gap-4 text-lg/8 text-white/70">
-                    {typeof description === "string" ? <p>{description}</p> : description}
-                  </div>
-                )}
-                {renderedActions}
               </div>
               {image && (
 
@@ -67,6 +61,12 @@ const HeroSection = ({
           </Container>
         </div>
       </Wallpaper >
+      {description && (
+        <div className="flex max-w-3xl flex-col gap-4 text-lg/8 text-white/70">
+          {typeof description === "string" ? <p>{description}</p> : description}
+        </div>
+      )}
+      {renderedActions}
     </SectionShell>
   );
 };

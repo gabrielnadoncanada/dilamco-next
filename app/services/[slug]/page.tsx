@@ -1,4 +1,4 @@
-﻿// app/services/[slug]/page.tsx
+// app/services/[slug]/page.tsx
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ActionButtons } from "@/components/ActionButtons";
@@ -95,7 +95,7 @@ export default async function ServicePage({
       <main id="contenu">
         <HeroSection
           heading={service.hero.h1}
-          description={service.hero.paragraphs.join(" ")}
+          description={service.hero.intro ?? service.hero.paragraphs?.join(" ") ?? ""}
           actionsSlot={
             <ActionButtons
               className="justify-start"

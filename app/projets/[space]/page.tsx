@@ -1,4 +1,4 @@
-﻿// app/projets/[space]/page.tsx
+// app/projets/[space]/page.tsx
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
@@ -87,7 +87,7 @@ export default async function ProjectsSpacePage({
       <main id="contenu">
         <HeroSection
           heading={content.hero.h1}
-          description={content.hero.paragraphs.join(" ")}
+          description={content.hero.intro ?? content.hero.paragraphs?.join(" ") ?? ""}
           actionsSlot={
             <ActionButtons
               className="justify-start"

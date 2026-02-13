@@ -1,20 +1,22 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
-import { SectionShell, type SectionShellProps } from "@/components/ui/section-shell";
+import { ArrowLeft, ArrowRight, BluetoothIcon, PlusIcon } from "lucide-react";
+import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Heading } from "@/components/ui/heading";
+import { Heading } from "@/components/elements/heading";
 import type { CarouselApi } from "@/components/ui/carousel";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import { Divider } from "@/components/ui/divider";
+import { Divider } from "@/components/elements/divider";
+import { AlertDialog } from "@/components/ui/alert-dialog";
+import { AlertDialogAction, AlertDialogMedia, AlertDialogTitle, AlertDialogHeader, AlertDialogCancel, AlertDialogContent, AlertDialogFooter, AlertDialogDescription, AlertDialogTrigger } from "../ui/alert-dialog";
 
 export interface SliderItem {
   id: string;
@@ -126,43 +128,31 @@ const SliderSection = ({
                   </div>
                 ) : (
                   <Link href={item.href || "#"} className="group">
-                    <Card className="p-2 gap-0">
-                      <div>
-                        {item.image && (
-                          <div className="flex aspect-3/2 overflow-clip rounded-sm">
-                            <div className="flex-1">
-                              <div className="relative h-full w-full origin-bottom transition duration-300 group-hover:scale-105">
-                                <img
-                                  src={item.image.src}
-                                  alt={item.image.alt}
-                                  className="h-full w-full object-cover object-center"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-
-                      <CardContent className="p-6">
-
-                        {item.label && (
-                          <div className="mt-6">
-                            <Badge>{item.label}</Badge>
-                          </div>
-                        )}
-                        <Heading variant="h3">{item.title}</Heading>
-                        {item.description && (
-                          <div className="line-clamp-2 text-sm text-muted-foreground md:text-base">
-                            {item.description}
-                          </div>
-                        )}
-                        {item.href && (
-                          <div className="flex items-center text-sm">
-                            Read more{" "}
-                            <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
-                          </div>
-                        )}
-                      </CardContent>
+                    <Card className="relative w-full max-w-sm overflow-hidden pt-0">
+                      {item.image && (
+                        <>
+                          <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
+                          <img
+                            src={item.image.src}
+                            alt={item.image.alt}
+                            className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
+                          />
+                        </>
+                      )}
+                      <CardHeader>
+                        <CardTitle>{item.title}</CardTitle>
+                        <CardDescription>
+                          {item.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardFooter v-if={item.href}>
+                        <Button asChild>
+                          <Link href={item.href || "#"}>
+                            En savoir plus
+                            <ArrowRight data-icon="inline-start" />
+                          </Link>
+                        </Button>
+                      </CardFooter>
                     </Card>
                   </Link>
                 )}
