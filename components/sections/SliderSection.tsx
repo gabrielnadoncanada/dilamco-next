@@ -120,7 +120,7 @@ const SliderSection = ({
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
+                className="max-w-[320px] pl-[20px] lg:max-w-[400px]"
               >
                 {item.content ? (
                   <div className="rounded-xl bg-muted p-6">
@@ -131,11 +131,11 @@ const SliderSection = ({
                     <Card className="relative w-full max-w-sm overflow-hidden pt-0">
                       {item.image && (
                         <>
-                          <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color" />
+                          <div className="bg-primary absolute inset-0 z-30 aspect-square opacity-50 mix-blend-color" />
                           <img
                             src={item.image.src}
                             alt={item.image.alt}
-                            className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale"
+                            className="relative z-20 aspect-square w-full object-cover brightness-60 grayscale"
                           />
                         </>
                       )}

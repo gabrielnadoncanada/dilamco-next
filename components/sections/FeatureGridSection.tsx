@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { type LucideIcon } from "lucide-react";
 import { Heading } from "@/components/elements/heading";
 import { Divider } from "../elements/divider";
+import { Item, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
 
 interface Feature {
   title: string;
@@ -45,44 +46,31 @@ const FeatureGridSection = ({
       {...props}
     >
       <Divider />
-      <div
+      <ItemGroup
         className={cn(
           "grid grid-cols-1 gap-6 md:gap-8",
           gridCols[columns]
         )}
       >
         {items.map((feature, index) => {
-          const cardContent = (
-            <Card className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
-              <CardHeader>
+          return (
+            <Item key={index} variant="outline" className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
+              <ItemMedia variant="icon">
                 {feature.icon && (
-                  <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary/10">
+                  <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
                     <feature.icon className="size-6 text-primary" />
                   </div>
                 )}
-                <CardTitle>{feature.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">
-                  {feature.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+              </ItemMedia>
+              <ItemContent>
+                <ItemTitle>{feature.title}</ItemTitle>
+                <ItemDescription>{feature.description}</ItemDescription>
+              </ItemContent>
+            </Item>
           );
-
-          if (feature.href) {
-            return (
-              <Link key={index} href={feature.href} className="block">
-                {cardContent}
-              </Link>
-            );
-          }
-
-          return <React.Fragment key={index}>{cardContent}</React.Fragment>;
         })}
-      </div>
+      </ItemGroup>
     </SectionShell>
   );
 };
-
 export { FeatureGridSection };

@@ -46,7 +46,7 @@ const ProcessSection = ({
     >
       <Divider />
       {layout === "timeline" ? (
-        <div className="mt-12 grid gap-10 lg:grid-cols-3 lg:gap-6">
+        <div className="grid gap-10 lg:grid-cols-3 lg:gap-6">
           {items.map((step, index) => (
             <div key={typeof step.id === "string" ? step.id : index} className="max-lg:flex max-lg:gap-4">
               <div className="relative lg:py-6">

@@ -15,7 +15,8 @@ export const metadata: Metadata = createPageMetadata({
 export const pageData: ArticlePageData = {
   breadcrumbs: [{ name: "Accueil", url: SITE.url + "/" }],
   hero: {
-    heading: "Cuisine sur mesure haut de gamme.",
+    heading: "Cuisines et vanités sur mesure haut de gamme.",
+
     description: "Design, fabrication et installation clé en main à Montréal.",
     image: {
       src: "/images/hero-image.webp",
@@ -25,26 +26,29 @@ export const pageData: ArticlePageData = {
   },
   sections: [
     {
-      id: "hero",
-      title: "Cuisines, salles de bain et espaces sur mesure, sans casse-tête",
+      id: "benefits",
+      title: "Des espaces sur mesure, sans compromis",
       content: {
         type: SECTION_TYPES.FEATURE_GRID,
         description:
-          "Accompagnement du plan à la finition avec coordination lorsque requis.",
+          "De la conception à l'installation : décisions claires, exécution précise, résultat durable.",
         items: [
           {
-            title: "Sur mesure réel",
-            description: "Adapté à votre espace.",
+            title: "Conçu pour votre espace réel",
+            description:
+              "Implantation, ergonomie et rangement adaptés à votre configuration.",
             icon: Ruler,
           },
           {
-            title: "Qualité et durabilité",
-            description: "Décisions techniques pensées pour durer.",
+            title: "Matériaux durables, fabrication maîtrisée",
+            description:
+              "Sélection rigoureuse et production contrôlée pour un résultat qui traverse les années.",
             icon: Shield,
           },
           {
-            title: "Approche clé en main",
-            description: "Un seul responsable pour réduire les imprévus.",
+            title: "Un seul responsable, du plan à la pose",
+            description:
+              "Moins d'intermédiaires, moins d'imprévus, plus de cohérence.",
             icon: Wrench,
           },
         ],
@@ -66,50 +70,58 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.PROOF,
         description:
-          "Le haut de gamme est une somme de décisions et d'exécution.",
+          "Le haut de gamme ne se déclare pas. Il se construit à chaque étape.",
         items: [
           {
-            title: "Design orienté usage",
-            description: "Ergonomie, rangement et circulation.",
+            title: "Conception orientée usage",
+            description:
+              "Ergonomie réelle, circulation fluide, rangements pensés selon votre quotidien.",
           },
           {
-            title: "Fabrication robuste",
-            description: "Matériaux adaptés à la réalité du chantier.",
+            title: "Qualité contrôlée à la source",
+            description:
+              "Matériaux durables et fabrication supervisée, sans compromis sur la finition.",
           },
           {
-            title: "Installation soignée",
-            description: "Alignements et ajustements précis.",
+            title: "Installation millimétrée",
+            description:
+              "Alignements nets, ajustements précis, inspection finale avant livraison.",
           },
         ],
       },
     },
     {
       id: "processus",
-      title: "Une approche simple, une exécution cadrée",
+      title: "Une démarche claire. Une exécution maîtrisée.",
       content: {
         type: SECTION_TYPES.PROCESS,
-        description: "Une approche simple, une exécution cadrée",
+        description:
+          "Un seul interlocuteur, des étapes simples, des validations avant production.",
         layout: "timeline",
         items: [
           {
             step: "1",
-            title: "Analyse & design",
-            description: "Besoins, contraintes et plan.",
+            title: "Comprendre votre projet",
+            description:
+              "Nous analysons vos besoins, contraintes et priorités avant toute décision.",
           },
           {
             step: "2",
-            title: "Fabrication",
-            description: "Production sur mesure.",
+            title: "Concevoir sur mesure",
+            description:
+              "Plans détaillés et solutions adaptées à votre espace réel.",
           },
           {
             step: "3",
-            title: "Coordination",
-            description: "Travaux connexes si applicable.",
+            title: "Fabriquer avec précision",
+            description:
+              "Production contrôlée, matériaux durables, qualité vérifiée.",
           },
           {
             step: "4",
-            title: "Installation",
-            description: "Ajustements et inspection finale.",
+            title: "Installer et finaliser",
+            description:
+              "Ajustements précis et inspection complète avant la livraison.",
           },
         ],
       },

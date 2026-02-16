@@ -48,7 +48,7 @@ const RelatedLinksSection = ({
       surface={sectionVariant}
       className={cn(className)}
       title={
-        <Heading variant="h1" as="h2" className="text-center">
+        <Heading variant="h2" as="h2" className="text-center">
           {heading}
         </Heading>
       }

@@ -26,7 +26,7 @@ const CTASection = ({
       surface={variant}
       className={cn(className)}
       padding="small"
-      title={<Heading variant="h1" as="h2" className="lg:mb-2">{heading}</Heading>}
+      title={<Heading variant="h2" as="h2" >{heading}</Heading>}
       intro={description}
       actions={<ActionButtons buttons={actions} className="justify-center" />}
       align="center"

@@ -8,6 +8,10 @@ import { SITE } from "@/seo/schema/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { SectionHeaderMotion } from "@/components/animations/SectionHeaderMotion";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import { Plus_Jakarta_Sans } from "next/font/google";
+
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -52,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr-CA" suppressHydrationWarning>
-      <body>
+      <body className={plusJakartaSans.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
