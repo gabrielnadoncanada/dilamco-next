@@ -109,10 +109,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "standard-vs-surmesure",
     title: "Standardisation vs adaptation réelle à votre espace",
+    intro:
+      "IKEA propose un système modulaire efficace, mais la standardisation implique parfois des compromis : espaces perdus, panneaux de compensation, coins moins accessibles ou choix plus limités pour optimiser le rangement. Le sur mesure permet d'ajuster les dimensions, l'ergonomie et l'intérieur des armoires pour mieux correspondre à vos usages.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "IKEA propose un système modulaire efficace, mais la standardisation implique parfois des compromis : espaces perdus, panneaux de compensation, coins moins accessibles ou choix plus limités pour optimiser le rangement. Le sur mesure permet d'ajuster les dimensions, l'ergonomie et l'intérieur des armoires pour mieux correspondre à vos usages.",
+
       links: [
         {
           label: "Voir la page Cuisine sur mesure",
@@ -124,10 +125,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "materiaux-details",
     title: "Matériaux et durabilité",
+    intro:
+      "Une cuisine est soumise à l'humidité et à l'usage quotidien. Au-delà du style, la durabilité dépend de la structure, des assemblages, de la quincaillerie et de la qualité d'installation.",
     content: {
       type: SECTION_TYPES.LIST,
-      intro:
-        "Une cuisine est soumise à l'humidité et à l'usage quotidien. Au-delà du style, la durabilité dépend de la structure, des assemblages, de la quincaillerie et de la qualité d'installation.",
+
       items: [
         "Sur mesure : choix de matériaux et de configurations adaptés à la cuisine, avec une structure pensée pour durer.",
         "IKEA : la qualité varie selon les gammes. L'installation et la protection contre l'humidité ont un impact important sur la longévité.",
@@ -148,10 +150,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "installation",
     title: "Montage, installation et réalité du chantier",
+    intro:
+      "Le résultat final dépend souvent de l'exécution : alignements, ajustements, gestion des murs et planchers irréguliers, et finition. Une cuisine standard peut très bien paraître… si le montage et l'installation sont impeccables. Le sur mesure inclut généralement une approche où l'installation et les ajustements font partie intégrante du projet.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Le résultat final dépend souvent de l'exécution : alignements, ajustements, gestion des murs et planchers irréguliers, et finition. Une cuisine standard peut très bien paraître… si le montage et l'installation sont impeccables. Le sur mesure inclut généralement une approche où l'installation et les ajustements font partie intégrante du projet.",
+
       links: [
         {
           label: "Voir l'installation",
@@ -167,10 +170,10 @@ const sections: ContentArticleSection[] = [
   {
     id: "cout",
     title: "Et le budget?",
+    intro:
+      "IKEA est souvent plus abordable à l'achat. L'écart peut toutefois se réduire selon la complexité : montage, installation, ajustements, retouches et coordination si vous rénovez. Une cuisine sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec une ergonomie optimisée et une finition plus stable dans le temps.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "IKEA est souvent plus abordable à l'achat. L'écart peut toutefois se réduire selon la complexité : montage, installation, ajustements, retouches et coordination si vous rénovez. Une cuisine sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec une ergonomie optimisée et une finition plus stable dans le temps.",
     },
   },
   {

@@ -44,7 +44,8 @@ const faqItems = [
 const featureImageTextItems: FeatureImageTextItem[] = [
   {
     ariaLabelledby: "fonctionnalite",
-    heading: "Fonctionnalité : structurer les zones (lavage, pliage, rangement)",
+    heading:
+      "Fonctionnalité : structurer les zones (lavage, pliage, rangement)",
     content: (
       <>
         <p>

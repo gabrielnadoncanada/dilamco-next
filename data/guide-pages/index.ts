@@ -35,4 +35,3 @@ export const GUIDE_PAGE_SLUGS = Object.keys(GUIDE_PAGES) as GuideSlug[];
 export function getGuidePageBySlug(slug: string) {
   return GUIDE_PAGES[slug as GuideSlug] ?? null;
 }
-

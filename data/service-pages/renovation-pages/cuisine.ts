@@ -23,10 +23,11 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "pour-qui",
       title: "À qui s'adresse une rénovation clé en main?",
+      intro:
+        "Si vous préférez gérer vous-même les corps de métier, la rénovation clé en main n'est peut-être pas l'option la plus pertinente. L'objectif ici est la tranquillité d'esprit et un résultat final bien exécuté.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Si vous préférez gérer vous-même les corps de métier, la rénovation clé en main n'est peut-être pas l'option la plus pertinente. L'objectif ici est la tranquillité d'esprit et un résultat final bien exécuté.",
+
         items: [
           "Vous voulez éviter la gestion de chantier et limiter les allers-retours entre intervenants.",
           "Vous rénovez une cuisine existante (maison ou condo) et vous cherchez un résultat cohérent.",
@@ -37,10 +38,11 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "inclus",
       title: "Ce qui est inclus (selon le projet)",
+      intro:
+        "Chaque rénovation est cadrée selon vos besoins et la réalité du lieu. Les inclusions exactes sont confirmées lors de la soumission.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Chaque rénovation est cadrée selon vos besoins et la réalité du lieu. Les inclusions exactes sont confirmées lors de la soumission.",
+
         items: [
           "Design & planification : organisation de l'espace, ergonomie, plan et décisions clés.",
           "Fabrication sur mesure : armoires, îlot, rangement optimisé selon l'espace.",
@@ -57,10 +59,11 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "transparence",
       title: "Transparence (ce qui varie)",
+      intro:
+        "Une rénovation peut inclure plusieurs travaux connexes. Selon le mandat, certains éléments peuvent être inclus, coordonnés ou réalisés par d'autres intervenants. L'objectif est d'éviter les zones grises et de cadrer le plan avant le début des travaux.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Une rénovation peut inclure plusieurs travaux connexes. Selon le mandat, certains éléments peuvent être inclus, coordonnés ou réalisés par d'autres intervenants. L'objectif est d'éviter les zones grises et de cadrer le plan avant le début des travaux.",
+
         items: [
           "Électroménagers : généralement choisis par le client; l'intégration est planifiée au design.",
           "Travaux structurels majeurs : évalués au cas par cas selon la portée du projet.",
@@ -71,10 +74,11 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "design-role",
       title: "Le design en rénovation : réduire les imprévus",
+      intro:
+        "En rénovation, l'existant impose des contraintes : murs irréguliers, plomberie, ventilation, accès et intégration des équipements. Le design sert à prendre les décisions tôt, avant la production et l'installation, pour éviter des compromis visibles à la fin.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "En rénovation, l'existant impose des contraintes : murs irréguliers, plomberie, ventilation, accès et intégration des équipements. Le design sert à prendre les décisions tôt, avant la production et l'installation, pour éviter des compromis visibles à la fin.",
+
         items: [
           "Organisation : zones de travail, circulation, rangement et intégration.",
           "Contraintes : plomberie/électricité (intégration), dimensions, dégagements.",
@@ -88,10 +92,11 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "coordination",
       title: "Coordination & exécution",
+      intro:
+        "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accès, interruptions, délais).",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accès, interruptions, délais).",
+
         items: [
           "Séquencement : planifier l'ordre des travaux pour réduire les reprises.",
           "Phasage : limiter l'impact sur la vie quotidienne lorsque possible.",
@@ -102,10 +107,11 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "durabilite",
       title: "Matériaux & durabilité",
+      intro:
+        "Le choix des matériaux influence la durabilité, mais la qualité finale dépend aussi des chants, de la quincaillerie et de l'installation. Nous orientons les choix selon l'usage et l'entretien attendu.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le choix des matériaux influence la durabilité, mais la qualité finale dépend aussi des chants, de la quincaillerie et de l'installation. Nous orientons les choix selon l'usage et l'entretien attendu.",
+
         links: [
           { title: "Voir les matériaux", href: "/materiaux/" },
           {
@@ -118,10 +124,11 @@ export const CUISINE_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "projets",
       title: "Projets de rénovation de cuisine",
+      intro:
+        "Consultez nos projets pour voir des exemples de configurations, de niveaux de finition et de résultats obtenus sur différents types d'espaces.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Consultez nos projets pour voir des exemples de configurations, de niveaux de finition et de résultats obtenus sur différents types d'espaces.",
+
         links: [
           {
             title: "Voir les projets de cuisines",

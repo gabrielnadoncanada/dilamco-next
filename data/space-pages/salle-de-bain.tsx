@@ -15,7 +15,8 @@ export const metadata = createPageMetadata({
   description:
     "Vanités et rangements de salle de bain sur mesure pensés pour l’humidité : conception, fabrication et installation. Option rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/salle-de-bain/",
-  ogAlt: "Salle de bain & vanités sur mesure Dilamco — durable en milieu humide",
+  ogAlt:
+    "Salle de bain & vanités sur mesure Dilamco — durable en milieu humide",
 });
 
 const faqItems = [
@@ -227,7 +228,8 @@ export const pageData: SpacePageData = {
           {
             title: "Installation précise",
             href: "/services/installation/",
-            description: "Alignements nets, ajustements fins et inspection finale.",
+            description:
+              "Alignements nets, ajustements fins et inspection finale.",
           },
           {
             title: "Option clé en main",

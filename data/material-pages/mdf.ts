@@ -38,10 +38,10 @@ const sections: ContentArticleSection[] = [
   {
     id: "cest-quoi",
     title: "C'est quoi le MDF?",
+    intro:
+      "Le MDF est composé de fibres compressées. Sa densité uniforme favorise les finis peints et un rendu régulier.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Le MDF est composé de fibres compressées. Sa densité uniforme favorise les finis peints et un rendu régulier.",
     },
   },
   {
@@ -118,10 +118,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "comparaisons",
     title: "MDF vs mélamine vs contreplaqué",
+    intro:
+      "Le MDF vise surtout la finition, la mélamine la variété décorative/coût, et le contreplaqué la stabilité structurelle.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Le MDF vise surtout la finition, la mélamine la variété décorative/coût, et le contreplaqué la stabilité structurelle.",
+
       links: [
         { title: "Comparatif complet", href: "/materiaux/comparatif/" },
         { title: "Pourquoi le contreplaqué", href: "/materiaux/contreplaque/" },
@@ -132,10 +133,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "approche",
     title: "Comment nous l'utilisons",
+    intro:
+      "Nous utilisons le MDF là où il est pertinent et combinons avec d'autres matériaux lorsque l'usage exige plus de stabilité ou de résistance.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Nous utilisons le MDF là où il est pertinent et combinons avec d'autres matériaux lorsque l'usage exige plus de stabilité ou de résistance.",
+
       links: [
         { title: "Voir tous les matériaux", href: "/materiaux/" },
         { title: "Voir l'installation", href: "/services/installation/" },

@@ -30,10 +30,11 @@ export const pageData: ArticlePageData = {
     {
       id: "categories",
       title: "Explorer par catégorie",
+      intro:
+        "Parcourez nos projets par type d’espace pour trouver des configurations proches de votre besoin et de votre budget.",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
-        intro:
-          "Parcourez nos projets par type d’espace pour trouver des configurations proches de votre besoin et de votre budget.",
+
         items: [
           {
             title: "Cuisines sur mesure",

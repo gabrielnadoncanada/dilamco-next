@@ -15,7 +15,10 @@ import {
 
 export type { ComparatifSlug } from "@/types/page-slugs";
 
-export const COMPARATIF_PAGES: Record<ComparatifSlug, ComparatifPageDefinition> = {
+export const COMPARATIF_PAGES: Record<
+  ComparatifSlug,
+  ComparatifPageDefinition
+> = {
   "cuisine-sur-mesure-vs-home-depot": {
     metadata: cuisineVsHomeDepotMetadata,
     pageData: cuisineVsHomeDepotPageData,
@@ -31,10 +34,9 @@ export const COMPARATIF_PAGES: Record<ComparatifSlug, ComparatifPageDefinition> 
 };
 
 export const COMPARATIF_PAGE_SLUGS = Object.keys(
-  COMPARATIF_PAGES
+  COMPARATIF_PAGES,
 ) as ComparatifSlug[];
 
 export function getComparatifPageBySlug(slug: string) {
   return COMPARATIF_PAGES[slug as ComparatifSlug] ?? null;
 }
-

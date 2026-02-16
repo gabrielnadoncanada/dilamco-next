@@ -25,10 +25,11 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
     {
       id: "regroupements",
       title: "Regroupements (pour vous situer rapidement)",
+      intro:
+        "Les walk-in se décident sur vos habitudes : quantité de suspendus, tiroirs, accessoires, saisonnier, et circulation. Voici des catégories utiles :",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Les walk-in se décident sur vos habitudes : quantité de suspendus, tiroirs, accessoires, saisonnier, et circulation. Voici des catégories utiles :",
+
         items: [
           "Walk-in en L / en U (optimisation des murs, circulation centrale)",
           "Walk-in en couloir (profondeur, dégagements, accès rapide)",
@@ -42,10 +43,11 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
     {
       id: "format",
       title: "Format recommandé pour documenter un projet",
+      intro:
+        "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
+
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
           "Type d'espace : walk-in fermé, garde-robe, pièce dédiée, couloir.",
@@ -80,10 +82,11 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
     {
       id: "zones",
       title: "Zones fonctionnelles à prévoir",
+      intro:
+        "Un walk-in performant est organisé par zones. Le sur mesure permet de dimensionner chaque zone selon votre réalité, au lieu d'adapter vos habitudes aux modules standards.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Un walk-in performant est organisé par zones. Le sur mesure permet de dimensionner chaque zone selon votre réalité, au lieu d'adapter vos habitudes aux modules standards.",
+
         items: [
           "Suspendus : longs (robes/manteaux) et courts (chemises/vestons) séparés.",
           "Tiroirs : sous-vêtements, accessoires, bijoux, ceintures, etc.",
@@ -97,10 +100,11 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
     {
       id: "accessoires",
       title: "Accessoires et détails utiles",
+      intro:
+        "Les détails font souvent la différence : accessibilité, organisation et confort au quotidien. L'objectif est de réduire le \"fouillis\" et d'améliorer l'accès.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Les détails font souvent la différence : accessibilité, organisation et confort au quotidien. L'objectif est de réduire le \"fouillis\" et d'améliorer l'accès.",
+
         items: [
           "Paniers, séparateurs, modules pour accessoires.",
           "Rangements dédiés (cravates, ceintures, bijoux, sacs).",
@@ -113,10 +117,11 @@ export const WALK_IN_PROJECT_PAGE: SpaceContent = {
     {
       id: "materiaux",
       title: "Matériaux, quincaillerie & durabilité",
+      intro:
+        "Un walk-in est un espace de cycles : tiroirs et portes sont sollicités quotidiennement. Une quincaillerie adaptée et une installation précise évitent les désalignements et l'usure prématurée.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro: 
-          "Un walk-in est un espace de cycles : tiroirs et portes sont sollicités quotidiennement. Une quincaillerie adaptée et une installation précise évitent les désalignements et l'usure prématurée.",
+
         links: [
           { title: "Voir la quincaillerie", href: "/materiaux/quincaillerie/" },
           { title: "Voir l'installation", href: "/services/installation/" },

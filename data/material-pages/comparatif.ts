@@ -129,9 +129,10 @@ const sections: ContentArticleSection[] = [
   {
     id: "facteurs",
     title: "Ce que le tableau ne montre pas",
+    intro: "La performance réelle dépend aussi de l'exécution.",
     content: {
       type: SECTION_TYPES.LIST,
-      intro: "La performance réelle dépend aussi de l'exécution.",
+
       links: [
         {
           title: "Voir la quincaillerie",

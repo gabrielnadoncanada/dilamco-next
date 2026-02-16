@@ -25,10 +25,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
     {
       id: "regroupements",
       title: "Regroupements (pour vous situer rapidement)",
+      intro:
+        "Les salles de bain se ressemblent en photo, mais elles se décident sur des contraintes réelles : humidité, entretien, rangement et circulation. Voici des catégories utiles :",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Les salles de bain se ressemblent en photo, mais elles se décident sur des contraintes réelles : humidité, entretien, rangement et circulation. Voici des catégories utiles :",
+
         items: [
           "Petites salles de bain (optimisation d'espace, circulation, rangement vertical)",
           "Vanités doubles (usage quotidien, organisation, dégagements)",
@@ -52,10 +53,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
     {
       id: "format",
       title: "Format recommandé pour documenter un projet",
+      intro:
+        "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
+
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
           "Type de projet : vanité/rangements seulement ou rénovation complète.",
@@ -92,10 +94,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
     {
       id: "materiaux",
       title: "Matériaux & choix techniques (penser humidité)",
+      intro:
+        "En salle de bain, la durabilité dépend beaucoup de la protection (chants, zones exposées), de la qualité d'assemblage et de l'installation. On privilégie des choix cohérents avec l'humidité et l'entretien, plutôt que de décider \"au look\".",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "En salle de bain, la durabilité dépend beaucoup de la protection (chants, zones exposées), de la qualité d'assemblage et de l'installation. On privilégie des choix cohérents avec l'humidité et l'entretien, plutôt que de décider \"au look\".",
+
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
           { title: "MDF", href: "/materiaux/mdf/" },
@@ -108,10 +111,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
     {
       id: "installation",
       title: 'Installation & ajustements (ce qui "fait haut de gamme")',
+      intro:
+        "En salle de bain, les alignements et les ajustements sont très visibles. La précision de l'installation et la quincaillerie influencent directement le confort et la longévité.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "En salle de bain, les alignements et les ajustements sont très visibles. La précision de l'installation et la quincaillerie influencent directement le confort et la longévité.",
+
         links: [
           { title: "Voir l'installation", href: "/services/installation/" },
           { title: "Voir la quincaillerie", href: "/materiaux/quincaillerie/" },
@@ -122,10 +126,11 @@ export const SALLE_DE_BAIN_PROJECT_PAGE: SpaceContent = {
     {
       id: "renovation",
       title: "Vanité seulement vs rénovation complète",
+      intro:
+        "Certains projets consistent à remplacer la vanité et optimiser le rangement. D'autres nécessitent une rénovation complète (plomberie, ventilation, murs, céramique, éclairage). Dans ce cas, la coordination et le séquencement deviennent critiques.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Certains projets consistent à remplacer la vanité et optimiser le rangement. D'autres nécessitent une rénovation complète (plomberie, ventilation, murs, céramique, éclairage). Dans ce cas, la coordination et le séquencement deviennent critiques.",
+
         links: [
           {
             title: "Voir la rénovation de salle de bain",

@@ -23,10 +23,11 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
     {
       id: "importance",
       title: "Pourquoi l'installation fait toute la différence",
+      intro:
+        "Les murs, planchers et plafonds ne sont jamais parfaitement droits. Une installation professionnelle tient compte de ces réalités et ajuste chaque élément pour obtenir un résultat propre, durable et cohérent.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Les murs, planchers et plafonds ne sont jamais parfaitement droits. Une installation professionnelle tient compte de ces réalités et ajuste chaque élément pour obtenir un résultat propre, durable et cohérent.",
+
         items: [
           "Alignements : portes, tiroirs et modules droits malgré les irrégularités.",
           "Ajustements : réglages fins sur place pour un rendu uniforme.",
@@ -90,10 +91,11 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
     {
       id: "details",
       title: "Détails techniques qui font la différence",
+      intro:
+        "Le niveau de finition dépend de décisions prises sur le terrain. Ces détails sont souvent invisibles sur un plan, mais évidents une fois le projet terminé.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le niveau de finition dépend de décisions prises sur le terrain. Ces détails sont souvent invisibles sur un plan, mais évidents une fois le projet terminé.",
+
         items: [
           "Tolérances : ajustements pour absorber les écarts des murs et planchers.",
           "Protection des chants : limiter l'infiltration d'humidité et l'usure.",
@@ -109,10 +111,11 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
     {
       id: "coordination",
       title: "Coordination & limites",
+      intro:
+        "Nous installons les éléments que nous fabriquons. Lorsque le projet inclut d'autres travaux (plomberie, électricité, planchers), nous pouvons coordonner les interventions ou recommander une approche clé en main selon le contexte.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Nous installons les éléments que nous fabriquons. Lorsque le projet inclut d'autres travaux (plomberie, électricité, planchers), nous pouvons coordonner les interventions ou recommander une approche clé en main selon le contexte.",
+
         links: [
           {
             title: "Voir la rénovation clé en main",
@@ -124,10 +127,11 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
     {
       id: "preuves",
       title: "Projets installés",
+      intro:
+        "Consultez nos projets pour voir le niveau d'alignement, de finition et d'intégration obtenu sur différents types d'espaces.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Consultez nos projets pour voir le niveau d'alignement, de finition et d'intégration obtenu sur différents types d'espaces.",
+
         links: [{ title: "Voir les projets", href: "/projets/" }],
       },
     },

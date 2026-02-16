@@ -58,9 +58,9 @@ export const pageData: ArticlePageData = {
     {
       id: "planification-details",
       title: "1) Sous-estimer la planification",
+      intro:
+        "La cause la plus fréquente des dépassements et des délais : des décisions prises 'pendant' le chantier. Une modification tardive peut déclencher des effets en chaîne (plomberie, électricité, gypse, comptoir, installation).",
       content: {
-        intro:
-          "La cause la plus fréquente des dépassements et des délais : des décisions prises 'pendant' le chantier. Une modification tardive peut déclencher des effets en chaîne (plomberie, électricité, gypse, comptoir, installation).",
         type: SECTION_TYPES.LIST,
         items: [
           "Plan incomplet ou non validé avant de démarrer.",
@@ -91,9 +91,9 @@ export const pageData: ArticlePageData = {
     {
       id: "materiaux-details",
       title: "2) Choisir les matériaux pour le look seulement",
+      intro:
+        "Solution : choisir les matériaux selon l'usage (humidité, impacts, entretien) et le rendu recherché. Le \"bon\" choix dépend aussi des chants, de la quincaillerie et de l'installation.",
       content: {
-        intro:
-          "Solution : choisir les matériaux selon l'usage (humidité, impacts, entretien) et le rendu recherché. Le \"bon\" choix dépend aussi des chants, de la quincaillerie et de l'installation.",
         type: SECTION_TYPES.LIST,
         items: [
           "Ignorer l'humidité près de l'évier et du lave-vaisselle.",
@@ -129,10 +129,9 @@ export const pageData: ArticlePageData = {
     {
       id: "ergonomie-details",
       title: "3) Négliger l'ergonomie et la circulation",
+      intro:
+        "Une cuisine peut être superbe et pourtant inconfortable : îlot trop grand, dégagements trop serrés, portes qui se frappent, zones de travail mal placées.",
       content: {
-        intro:
-          "Une cuisine peut être superbe et pourtant inconfortable : îlot trop grand, dégagements trop serrés, portes qui se frappent, zones de travail mal placées.",
-
         type: SECTION_TYPES.LIST,
         items: [
           'Îlot dimensionné "pour la photo", pas pour la circulation.',
@@ -152,9 +151,9 @@ export const pageData: ArticlePageData = {
     {
       id: "technique-details",
       title: "4) Sous-estimer plomberie / électricité / ventilation",
+      intro:
+        "Les contraintes techniques sont souvent la source des surprises : sorties électriques mal placées, plomberie à déplacer, ventilation insuffisante, éclairage à revoir.",
       content: {
-        intro:
-          "Les contraintes techniques sont souvent la source des surprises : sorties électriques mal placées, plomberie à déplacer, ventilation insuffisante, éclairage à revoir.",
         type: SECTION_TYPES.LIST,
         items: [
           "Prises et circuits non adaptés aux électroménagers.",
@@ -359,9 +358,9 @@ export const pageData: ArticlePageData = {
     {
       id: "checklist",
       title: "10) Checklist avant de démarrer",
+      intro: "Avant de lancer le chantier, assurez-vous d'avoir :",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro: "Avant de lancer le chantier, assurez-vous d'avoir :",
       },
     },
     {

@@ -55,10 +55,11 @@ export const pageData: ArticlePageData = {
     {
       id: "methodologie",
       title: "Comment nous choisissons les matériaux",
+      intro:
+        "La performance dépend aussi de l'assemblage, des chants et de l'installation.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "La performance dépend aussi de l'assemblage, des chants et de l'installation.",
+
         items: [
           "Humidité.",
           "Charges d'usage.",
@@ -83,9 +84,10 @@ export const pageData: ArticlePageData = {
     {
       id: "pages",
       title: "Pages matériaux",
+      intro: "Explorez les compromis par matériau.",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
-        intro: "Explorez les compromis par matériau.",
+
         items: [
           {
             title: "Pourquoi le contreplaqué",
@@ -131,8 +133,7 @@ export const pageData: ArticlePageData = {
       title: "Comparatif rapide",
       content: {
         type: SECTION_TYPES.TABLE,
-        description:
-          "Pour une lecture complète, consultez la page comparatif.",
+        description: "Pour une lecture complète, consultez la page comparatif.",
         columns: ["Durabilité", "Humidité", "Stabilité", "Usage typique"],
         rows: [
           {

@@ -29,9 +29,10 @@ export const pageData: ArticlePageData = {
     {
       id: "piliers",
       title: "Nos services principaux",
+      intro: "Choisissez le service qui correspond à votre étape.",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
-        intro: "Choisissez le service qui correspond à votre étape.",
+
         items: [
           {
             title: "Design",
@@ -111,10 +112,11 @@ export const pageData: ArticlePageData = {
     {
       id: "qualite",
       title: "Qualité et durabilité",
+      intro:
+        "Le haut de gamme repose sur un système cohérent : matériaux, assemblage, quincaillerie et installation.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le haut de gamme repose sur un système cohérent : matériaux, assemblage, quincaillerie et installation.",
+
         links: [
           {
             text: "Pourquoi le contreplaqué",

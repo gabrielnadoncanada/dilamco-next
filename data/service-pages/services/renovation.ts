@@ -11,7 +11,8 @@ export const RENOVATION_SERVICE_PAGE: ServiceData = {
   },
   hero: {
     h1: "Rénovation clé en main",
-    intro: "Coordination des travaux connexes au besoin (plomberie, électricité, plancher, etc.).",
+    intro:
+      "Coordination des travaux connexes au besoin (plomberie, électricité, plancher, etc.).",
     ctaLinks: [{ title: "Soumission", href: "/contact/" }],
   },
   sections: [],

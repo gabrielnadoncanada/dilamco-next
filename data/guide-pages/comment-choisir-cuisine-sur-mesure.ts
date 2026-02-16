@@ -84,10 +84,10 @@ export const pageData: ArticlePageData = {
     {
       id: "quand",
       title: "2) Quand le sur mesure est pertinent",
+      intro:
+        "Le sur mesure devient particulièrement pertinent lorsque l'espace impose des contraintes, ou lorsque vous visez une durabilité supérieure et un rendu cohérent.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le sur mesure devient particulièrement pertinent lorsque l'espace impose des contraintes, ou lorsque vous visez une durabilité supérieure et un rendu cohérent.",
       },
     },
     {
@@ -106,10 +106,10 @@ export const pageData: ArticlePageData = {
     {
       id: "quand-conclusion",
       title: "",
+      intro:
+        "Si vous cherchez une solution strictement économique ou temporaire, le sur mesure n'est probablement pas l'option la plus pertinente.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Si vous cherchez une solution strictement économique ou temporaire, le sur mesure n'est probablement pas l'option la plus pertinente.",
       },
     },
     {
@@ -165,10 +165,11 @@ export const pageData: ArticlePageData = {
     {
       id: "decisions-style",
       title: "3.3 Style et cohérence",
+      intro:
+        "Le style est important, mais il doit rester cohérent avec la lumière, le volume et l'entretien au quotidien.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le style est important, mais il doit rester cohérent avec la lumière, le volume et l'entretien au quotidien.",
+
         links: [
           {
             text: "Voir Couleurs & finis",
@@ -181,10 +182,10 @@ export const pageData: ArticlePageData = {
     {
       id: "materiaux",
       title: "4) Matériaux : choisir selon l'usage",
+      intro:
+        "Un bon choix de matériaux se fait selon l'humidité, l'usage et la durabilité visée. Le matériau seul ne garantit rien : l'assemblage, la protection des chants, la quincaillerie et l'installation font une grande différence.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Un bon choix de matériaux se fait selon l'humidité, l'usage et la durabilité visée. Le matériau seul ne garantit rien : l'assemblage, la protection des chants, la quincaillerie et l'installation font une grande différence.",
       },
     },
     {
@@ -262,10 +263,10 @@ export const pageData: ArticlePageData = {
     {
       id: "rangement",
       title: "5) Rangement : éviter les pertes d'espace",
+      intro:
+        "Le sur mesure est souvent rentabilisé par l'optimisation du rangement : accès, profondeur, coins, hauteurs et organisation.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le sur mesure est souvent rentabilisé par l'optimisation du rangement : accès, profondeur, coins, hauteurs et organisation.",
       },
     },
     {
@@ -285,10 +286,10 @@ export const pageData: ArticlePageData = {
     {
       id: "quincaillerie",
       title: "6) Quincaillerie & installation (souvent sous-estimées)",
+      intro:
+        'La quincaillerie et l\'installation déterminent une grande partie du ressenti "haut de gamme" : portes alignées, tiroirs fluides, réglages qui tiennent, fermeture contrôlée.',
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          'La quincaillerie et l\'installation déterminent une grande partie du ressenti "haut de gamme" : portes alignées, tiroirs fluides, réglages qui tiennent, fermeture contrôlée.',
       },
     },
     {
@@ -327,10 +328,11 @@ export const pageData: ArticlePageData = {
     {
       id: "cle-en-main",
       title: "7) Sur mesure vs rénovation clé en main",
+      intro:
+        'Une cuisine peut être un projet "armoires + installation", ou un projet plus large qui inclut plomberie, électricité, plancher, dosseret, peinture, etc. Lorsque plusieurs corps de métier sont impliqués, une approche clé en main réduit souvent les risques et les imprévus.',
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          'Une cuisine peut être un projet "armoires + installation", ou un projet plus large qui inclut plomberie, électricité, plancher, dosseret, peinture, etc. Lorsque plusieurs corps de métier sont impliqués, une approche clé en main réduit souvent les risques et les imprévus.',
+
         links: [
           {
             text: "Voir la rénovation de cuisine",
@@ -358,10 +360,10 @@ export const pageData: ArticlePageData = {
     {
       id: "delais",
       title: "9) Délais : à quoi s'attendre (sans prix)",
+      intro:
+        "Les délais varient selon la complexité, la disponibilité et l'ampleur du projet. Généralement, il faut prévoir :",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Les délais varient selon la complexité, la disponibilité et l'ampleur du projet. Généralement, il faut prévoir :",
       },
     },
     {

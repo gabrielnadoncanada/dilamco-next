@@ -38,10 +38,10 @@ const sections: ContentArticleSection[] = [
   {
     id: "definition",
     title: "C'est quoi la mélamine?",
+    intro:
+      "La mélamine est un panneau recouvert d'un revêtement décoratif. Le rendu dépend de la qualité des chants et de l'exécution.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "La mélamine est un panneau recouvert d'un revêtement décoratif. Le rendu dépend de la qualité des chants et de l'exécution.",
     },
   },
   {
@@ -116,10 +116,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "comparaisons",
     title: "Mélamine vs MDF vs contreplaqué",
+    intro:
+      "Chaque matériau répond à une logique différente : coût/décor, finition peinte, ou stabilité structurelle.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Chaque matériau répond à une logique différente : coût/décor, finition peinte, ou stabilité structurelle.",
+
       links: [
         { title: "Comparatif complet", href: "/materiaux/comparatif/" },
         { title: "MDF", href: "/materiaux/mdf/" },
@@ -130,10 +131,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "approche",
     title: "Comment nous l'utilisons",
+    intro:
+      "Nous utilisons la mélamine de façon ciblée lorsque c'est pertinent, et proposons des alternatives quand l'usage exige plus de robustesse.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Nous utilisons la mélamine de façon ciblée lorsque c'est pertinent, et proposons des alternatives quand l'usage exige plus de robustesse.",
+
       links: [
         { title: "Voir tous les matériaux", href: "/materiaux/" },
         { title: "Voir l'installation", href: "/services/installation/" },

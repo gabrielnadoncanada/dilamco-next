@@ -1,9 +1,5 @@
 ﻿// data/projects.ts
-import type {
-  ProjectArea,
-  ProjectData,
-  ProjectSpace,
-} from "@/types/projects";
+import type { ProjectArea, ProjectData, ProjectSpace } from "@/types/projects";
 import type { GenericLink } from "@/types/links";
 import {
   CORE_HREF,
@@ -39,7 +35,7 @@ export const PROJECTS_BY_SPACE: Record<ProjectSpace, ProjectData[]> = {
 
 export function getProjectByParams(
   space: ProjectSpace,
-  slug: string
+  slug: string,
 ): ProjectData | undefined {
   return PROJECTS.find((p) => p.space === space && p.slug === slug);
 }

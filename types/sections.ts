@@ -69,16 +69,18 @@ type TextContent = {
   type: typeof SECTION_TYPES.TEXT;
   paragraphs?: string[];
   items?: Array<ListEntry | RelatedLink>;
-  intro?: string;
   links?: SectionLink[];
+  /** @deprecated Use section.intro instead */
+  intro?: string;
 };
 
 type ListContent = {
   type: typeof SECTION_TYPES.LIST;
-  intro?: string;
   items: Array<ListEntry | RelatedLink>;
   links?: SectionLink[];
   variant?: "bullets" | "checkmarks" | "numbered";
+  /** @deprecated Use section.intro instead */
+  intro?: string;
 };
 
 type TableContent = {
@@ -91,21 +93,24 @@ type TableContent = {
 
 type StepsContent = {
   type: typeof SECTION_TYPES.STEPS;
-  intro?: string;
   steps?: string[];
   links?: SectionLink[];
+  /** @deprecated Use section.intro instead */
+  intro?: string;
 };
 
 type ListWithLinksContent = {
   type: typeof SECTION_TYPES.LIST_WITH_LINKS;
-  intro?: string;
   itemsWithLinks?: SectionItemWithLink[];
+  /** @deprecated Use section.intro instead */
+  intro?: string;
 };
 
 type RelatedLinksContent = {
   type: typeof SECTION_TYPES.RELATED_LINKS;
   items: RelatedLink[];
   columns?: 2 | 3;
+  /** @deprecated Use section.intro instead */
   intro?: ReactNode;
 };
 
@@ -139,9 +144,10 @@ type SliderContent = {
 
 type FaqContent = {
   type: typeof SECTION_TYPES.FAQ;
-  intro?: ReactNode;
   items?: FaqItem[];
   faqItems?: FaqItem[];
+  /** @deprecated Use section.intro instead */
+  intro?: ReactNode;
 };
 
 type CustomContent = {
@@ -166,6 +172,7 @@ export type SectionContent =
 export type ContentSection = {
   id: string;
   title: string;
+  intro?: string | ReactNode;
   content: SectionContent;
 };
 
@@ -279,15 +286,15 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
     type: z.literal(SECTION_TYPES.TEXT),
     paragraphs: z.array(z.string()).optional(),
     items: z.array(z.union([listEntrySchema, relatedLinkSchema])).optional(),
-    intro: z.string().optional(),
     links: z.array(linkSchema).optional(),
+    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.LIST),
-    intro: z.string().optional(),
     items: z.array(z.union([listEntrySchema, relatedLinkSchema])),
     links: z.array(linkSchema).optional(),
     variant: z.enum(["bullets", "checkmarks", "numbered"]).optional(),
+    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.TABLE),
@@ -298,13 +305,12 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal(SECTION_TYPES.STEPS),
-    intro: z.string().optional(),
     steps: z.array(z.string()).optional(),
     links: z.array(linkSchema).optional(),
+    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.LIST_WITH_LINKS),
-    intro: z.string().optional(),
     itemsWithLinks: z
       .array(
         z.object({
@@ -314,12 +320,13 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
         })
       )
       .optional(),
+    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.RELATED_LINKS),
     items: z.array(relatedLinkSchema),
     columns: z.union([z.literal(2), z.literal(3)]).optional(),
-    intro: z.any().optional(),
+    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.FEATURE_GRID),
@@ -351,15 +358,16 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal(SECTION_TYPES.FAQ),
-    intro: z.any().optional(),
     items: z.array(faqItemSchema).optional(),
     faqItems: z.array(faqItemSchema).optional(),
+    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
 ]);
 
 export const contentSectionSchema = z.object({
   id: z.string().min(1),
   title: z.string(),
+  intro: z.union([z.string(), z.any()]).optional(),
   content: sectionContentSchema,
 });
 

@@ -127,9 +127,10 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     content: (
       <>
         <p>
-          Si votre projet implique plus que l’installation d’armoires (plomberie,
-          électricité, plancher, dosseret, etc.), l’option clé en main permet de
-          mieux cadrer le calendrier, les priorités et les imprévus.
+          Si votre projet implique plus que l’installation d’armoires
+          (plomberie, électricité, plancher, dosseret, etc.), l’option clé en
+          main permet de mieux cadrer le calendrier, les priorités et les
+          imprévus.
         </p>
       </>
     ),
@@ -229,7 +230,8 @@ export const pageData: SpacePageData = {
           {
             title: "Conception & planification",
             href: "/services/design/",
-            description: "Implantation, ergonomie, plans et choix de matériaux.",
+            description:
+              "Implantation, ergonomie, plans et choix de matériaux.",
           },
           {
             title: "Fabrication sur mesure",
@@ -240,7 +242,8 @@ export const pageData: SpacePageData = {
           {
             title: "Installation précise",
             href: "/services/installation/",
-            description: "Alignements nets, ajustements fins et inspection finale.",
+            description:
+              "Alignements nets, ajustements fins et inspection finale.",
           },
           {
             title: "Option clé en main",

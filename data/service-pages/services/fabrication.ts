@@ -23,10 +23,11 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
     {
       id: "sur-mesure",
       title: 'Ce que signifie "fabrication sur mesure"',
+      intro:
+        "Le sur mesure vise une adaptation réelle à votre espace et à votre usage : circulation, accès, rangement, contraintes techniques et niveau de finition. L'objectif est de livrer un projet qui vieillit bien, sans compromis sur les détails critiques.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le sur mesure vise une adaptation réelle à votre espace et à votre usage : circulation, accès, rangement, contraintes techniques et niveau de finition. L'objectif est de livrer un projet qui vieillit bien, sans compromis sur les détails critiques.",
+
         items: [
           "Dimensions réelles : adaptation à l'espace (murs, angles, contraintes).",
           "Cohérence entre modules : alignements et proportions maîtrisés.",
@@ -51,10 +52,11 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
     {
       id: "details",
       title: "Matériaux, assemblage et détails qui font la différence",
+      intro:
+        "Le haut de gamme se joue dans des éléments parfois invisibles au premier regard : stabilité des structures, qualité des chants, fiabilité de la quincaillerie et cohérence d'assemblage.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le haut de gamme se joue dans des éléments parfois invisibles au premier regard : stabilité des structures, qualité des chants, fiabilité de la quincaillerie et cohérence d'assemblage.",
+
         items: [
           "Structures stables : choix de panneaux orientés durabilité selon le contexte.",
           "Portes & finis : MDF, mélamine, bois massif, selon le rendu et l'entretien souhaités.",
@@ -75,10 +77,11 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
     {
       id: "precision",
       title: "Précision & constance",
+      intro:
+        "Un bon résultat vient de la constance : modules cohérents, alignements prévisibles et ajustements maîtrisés. Plus la fabrication est précise, plus l'installation peut être propre, rapide et durable.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Un bon résultat vient de la constance : modules cohérents, alignements prévisibles et ajustements maîtrisés. Plus la fabrication est précise, plus l'installation peut être propre, rapide et durable.",
+
         items: [
           "Cohérence : uniformité des lignes, des hauteurs et des alignements.",
           "Réduction des reprises : moins d'ajustements imprévus sur site.",
@@ -132,19 +135,20 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
     {
       id: "transparence",
       title: "Transparence",
+      intro:
+        "Nous visons un résultat durable et cohérent. Cela implique des choix techniques et une exécution soignée. Si votre priorité est une solution temporaire ou strictement standard, le sur mesure haut de gamme n'est probablement pas l'option la plus pertinente.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Nous visons un résultat durable et cohérent. Cela implique des choix techniques et une exécution soignée. Si votre priorité est une solution temporaire ou strictement standard, le sur mesure haut de gamme n'est probablement pas l'option la plus pertinente.",
       },
     },
     {
       id: "preuves",
       title: "Projets fabriqués",
+      intro:
+        "Consultez nos projets pour voir des exemples de configurations, de finitions et de types d'espaces réalisés.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Consultez nos projets pour voir des exemples de configurations, de finitions et de types d'espaces réalisés.",
+
         links: [{ title: "Voir les projets", href: "/projets/" }],
       },
     },

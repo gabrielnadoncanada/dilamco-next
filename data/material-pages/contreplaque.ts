@@ -54,10 +54,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "avantages",
     title: "Avantages du contreplaqué",
+    intro:
+      "Il influence directement la tenue dans le temps, même s'il est peu visible une fois posé.",
     content: {
       type: SECTION_TYPES.LIST,
-      intro:
-        "Il influence directement la tenue dans le temps, même s'il est peu visible une fois posé.",
+
       items: [
         "Stabilité accrue grâce aux plis croisés.",
         "Bonne tenue des vis et fixations.",
@@ -69,10 +70,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "comparaison",
     title: "Comparaison avec les autres matériaux",
+    intro:
+      "Le bon matériau dépend de l'espace et du rôle de la pièce (structure, porte, intérieur).",
     content: {
       type: SECTION_TYPES.LIST,
-      intro:
-        "Le bon matériau dépend de l'espace et du rôle de la pièce (structure, porte, intérieur).",
+
       links: [
         {
           title: "Voir le comparatif des matériaux",
@@ -109,10 +111,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "humidite",
     title: "Contreplaqué et humidité",
+    intro:
+      "Ce n'est pas un matériau imperméable. Les chants, l'assemblage et la finition restent critiques.",
     content: {
       type: SECTION_TYPES.LIST,
-      intro:
-        "Ce n'est pas un matériau imperméable. Les chants, l'assemblage et la finition restent critiques.",
+
       items: [
         "Pertinent en cuisine avec exécution soignée.",
         "Possible en salle de bain selon contexte et protections.",

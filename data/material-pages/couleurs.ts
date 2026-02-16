@@ -38,10 +38,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "methode",
     title: "Méthode simple pour choisir",
+    intro:
+      "Structurer les choix dès la phase design évite les erreurs de rendu.",
     content: {
       type: SECTION_TYPES.LIST,
-      intro:
-        "Structurer les choix dès la phase design évite les erreurs de rendu.",
+
       links: [
         { title: "Voir le service de design", href: "/services/design/" },
       ],
@@ -209,4 +210,3 @@ export const pageData: ArticlePageData = {
     items: faqItems,
   },
 };
-

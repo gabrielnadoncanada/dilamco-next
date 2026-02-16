@@ -14,7 +14,9 @@ export const PROJECT_SPACE_PAGES: Record<ProjectSpace, SpaceContent> = {
   "walk-in": WALK_IN_PROJECT_PAGE,
 };
 
-export const PROJECT_SPACE_SLUGS = Object.keys(PROJECT_SPACE_PAGES) as ProjectSpace[];
+export const PROJECT_SPACE_SLUGS = Object.keys(
+  PROJECT_SPACE_PAGES,
+) as ProjectSpace[];
 
 export function getProjectSpacePageBySlug(space: string) {
   return PROJECT_SPACE_PAGES[space as ProjectSpace] ?? null;

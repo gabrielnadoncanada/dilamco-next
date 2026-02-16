@@ -3,7 +3,12 @@
 
 import { SERVICES } from "./main";
 import { RENOVATION_SUB_SERVICES } from "./renovation";
-import type { ServiceData, RenovationSubServiceData, RenovationType, ServiceSlug } from "./types";
+import type {
+  ServiceData,
+  RenovationSubServiceData,
+  RenovationType,
+  ServiceSlug,
+} from "./types";
 
 export function getServiceBySlug(slug: ServiceSlug): ServiceData | undefined {
   return SERVICES.find((s) => s.slug === slug);
@@ -14,7 +19,7 @@ export function getServiceCanonicalUrl(service: ServiceData): string {
 }
 
 export function getRenovationSubServiceByType(
-  type: string
+  type: string,
 ): RenovationSubServiceData | undefined {
   return RENOVATION_SUB_SERVICES[type as RenovationType];
 }

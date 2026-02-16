@@ -28,10 +28,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
     {
       id: "regroupements",
       title: "Regroupements (pour vous situer rapidement)",
+      intro:
+        "Les salles de lavage se décident sur l'usage réel : rangement, zones de tri, circulation, humidité et entretien. Voici des catégories utiles :",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Les salles de lavage se décident sur l'usage réel : rangement, zones de tri, circulation, humidité et entretien. Voici des catégories utiles :",
+
         items: [
           "Petites salles de lavage (optimisation d'espace, rangement vertical)",
           "Salle de lavage + mudroom (manteaux, bottes, banc, zones de dépôt)",
@@ -55,10 +56,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
     {
       id: "format",
       title: "Format recommandé pour documenter un projet",
+      intro:
+        "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
+
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
           "Type de projet : aménagement seulement ou rénovation complète.",
@@ -95,10 +97,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
     {
       id: "fonction",
       title: "Zones fonctionnelles à prévoir (ce qui change la vie)",
+      intro:
+        'Une bonne salle de lavage est organisée par zones. Le sur mesure permet de dimensionner chaque zone selon vos habitudes, au lieu de "faire rentrer" des modules standards.',
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          'Une bonne salle de lavage est organisée par zones. Le sur mesure permet de dimensionner chaque zone selon vos habitudes, au lieu de "faire rentrer" des modules standards.',
+
         items: [
           "Zone tri : paniers, bacs, accès direct.",
           "Zone pliage : comptoir robuste à une hauteur confortable.",
@@ -111,10 +114,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
     {
       id: "materiaux",
       title: "Matériaux & choix techniques (penser humidité + entretien)",
+      intro:
+        "Ici, le bon choix est celui qui résiste à l'usage réel : humidité, éclaboussures, nettoyage, et parfois des produits plus agressifs. La durabilité dépend aussi des chants, de l'assemblage, de la quincaillerie et de l'installation.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Ici, le bon choix est celui qui résiste à l'usage réel : humidité, éclaboussures, nettoyage, et parfois des produits plus agressifs. La durabilité dépend aussi des chants, de l'assemblage, de la quincaillerie et de l'installation.",
+
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
           { title: "Mélamine", href: "/materiaux/melamine/" },
@@ -127,10 +131,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
     {
       id: "installation",
       title: "Installation & quincaillerie (usage intensif)",
+      intro:
+        "Les portes et tiroirs d'une salle de lavage sont souvent très sollicités. Une quincaillerie adaptée et une installation précise évitent rapidement les jeux, frottements et désalignements.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Les portes et tiroirs d'une salle de lavage sont souvent très sollicités. Une quincaillerie adaptée et une installation précise évitent rapidement les jeux, frottements et désalignements.",
+
         links: [
           { title: "Voir la quincaillerie", href: "/materiaux/quincaillerie/" },
           { title: "Voir l'installation", href: "/services/installation/" },
@@ -141,10 +146,11 @@ export const SALLE_DE_LAVAGE_PROJECT_PAGE: SpaceContent = {
     {
       id: "renovation",
       title: "Aménagement seulement vs rénovation complète",
+      intro:
+        'Selon l\'état de la pièce, vous pouvez faire un projet "aménagement + installation" ou une rénovation complète (plomberie, ventilation, murs/plancher, éclairage). Dans ce cas, le séquencement et la coordination deviennent critiques.',
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          'Selon l\'état de la pièce, vous pouvez faire un projet "aménagement + installation" ou une rénovation complète (plomberie, ventilation, murs/plancher, éclairage). Dans ce cas, le séquencement et la coordination deviennent critiques.',
+
         links: [
           {
             title: "Voir la rénovation clé en main",

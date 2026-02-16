@@ -51,7 +51,11 @@ export const pageData: ArticlePageData = {
         items: [
           { title: "Courriel", description: "info@dilamco.com", icon: Mail },
           { title: "Téléphone", description: "é définir", icon: Phone },
-          { title: "Zones", description: "Montréal é Laval é Rive-Sud", icon: MapPin },
+          {
+            title: "Zones",
+            description: "Montréal é Laval é Rive-Sud",
+            icon: MapPin,
+          },
         ],
       },
     },
@@ -68,7 +72,9 @@ export const pageData: ArticlePageData = {
                   Demande de soumission
                 </Heading>
                 <p className="text-lg text-muted-foreground">
-                  Donnez-nous quelques détails (espace, secteur, échéance). Plus l&apos;information est précise, plus la soumission sera fiable.
+                  Donnez-nous quelques détails (espace, secteur, échéance). Plus
+                  l&apos;information est précise, plus la soumission sera
+                  fiable.
                 </p>
               </div>
 
@@ -85,21 +91,39 @@ export const pageData: ArticlePageData = {
                     />
 
                     <fieldset className="space-y-4">
-                      <legend className="mb-4 text-lg font-semibold">Informations de base</legend>
+                      <legend className="mb-4 text-lg font-semibold">
+                        Informations de base
+                      </legend>
 
                       <div className="space-y-2">
                         <Label htmlFor="nom">Nom</Label>
-                        <Input id="nom" name="nom" autoComplete="name" required />
+                        <Input
+                          id="nom"
+                          name="nom"
+                          autoComplete="name"
+                          required
+                        />
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="courriel">Courriel</Label>
-                        <Input id="courriel" name="courriel" type="email" autoComplete="email" required />
+                        <Input
+                          id="courriel"
+                          name="courriel"
+                          type="email"
+                          autoComplete="email"
+                          required
+                        />
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="telephone">Téléphone</Label>
-                        <Input id="telephone" name="telephone" type="tel" autoComplete="tel" />
+                        <Input
+                          id="telephone"
+                          name="telephone"
+                          type="tel"
+                          autoComplete="tel"
+                        />
                       </div>
 
                       <div className="space-y-2">
@@ -115,7 +139,9 @@ export const pageData: ArticlePageData = {
                     </fieldset>
 
                     <fieldset className="space-y-4">
-                      <legend className="mb-4 text-lg font-semibold">Détails du projet</legend>
+                      <legend className="mb-4 text-lg font-semibold">
+                        Détails du projet
+                      </legend>
 
                       <div className="space-y-2">
                         <Label htmlFor="espace">Espace concerné</Label>
@@ -125,10 +151,18 @@ export const pageData: ArticlePageData = {
                           </SelectTrigger>
                           <SelectContent>
                             <SelectItem value="cuisine">Cuisine</SelectItem>
-                            <SelectItem value="salle-de-bain">Salle de bain / vanité</SelectItem>
-                            <SelectItem value="walk-in">Walk-in / rangement</SelectItem>
-                            <SelectItem value="salle-de-lavage">Salle de lavage</SelectItem>
-                            <SelectItem value="commercial">Commercial</SelectItem>
+                            <SelectItem value="salle-de-bain">
+                              Salle de bain / vanité
+                            </SelectItem>
+                            <SelectItem value="walk-in">
+                              Walk-in / rangement
+                            </SelectItem>
+                            <SelectItem value="salle-de-lavage">
+                              Salle de lavage
+                            </SelectItem>
+                            <SelectItem value="commercial">
+                              Commercial
+                            </SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -140,9 +174,15 @@ export const pageData: ArticlePageData = {
                             <SelectValue placeholder="Sélectionner..." />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="sur-mesure">Sur mesure (design + fabrication + installation)</SelectItem>
-                            <SelectItem value="renovation">Rénovation clé en main (selon le projet)</SelectItem>
-                            <SelectItem value="a-determiner">é déterminer / besoin de conseils</SelectItem>
+                            <SelectItem value="sur-mesure">
+                              Sur mesure (design + fabrication + installation)
+                            </SelectItem>
+                            <SelectItem value="renovation">
+                              Rénovation clé en main (selon le projet)
+                            </SelectItem>
+                            <SelectItem value="a-determiner">
+                              é déterminer / besoin de conseils
+                            </SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -224,4 +264,3 @@ export const pageData: ArticlePageData = {
   ],
   showCta: false,
 };
-

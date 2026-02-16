@@ -133,10 +133,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "systeme",
     title: "Matériaux + quincaillerie = système",
+    intro:
+      "Le résultat final dépend de l'ensemble : structure, chants, quincaillerie, installation.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Le résultat final dépend de l'ensemble : structure, chants, quincaillerie, installation.",
+
       links: [
         {
           title: "Pourquoi le contreplaqué",
@@ -192,4 +193,3 @@ export const pageData: ArticlePageData = {
     items: faqItems,
   },
 };
-

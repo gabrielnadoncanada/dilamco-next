@@ -28,9 +28,10 @@ export const pageData: ArticlePageData = {
     {
       id: "approche",
       title: "Notre approche",
+      intro:
+        "Le sur mesure est une méthode : usage, ergonomie, contraintes et durabilité avant le style.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro: "Le sur mesure est une méthode : usage, ergonomie, contraintes et durabilité avant le style.",
       },
     },
     {
@@ -111,4 +112,3 @@ export const pageData: ArticlePageData = {
     },
   ],
 };
-

@@ -40,9 +40,9 @@ export const pageData: ArticlePageData = {
     {
       id: "guides-list",
       title: "Guides disponibles",
+      intro:
+        "Chaque guide répond à une question précise et renvoie aux pages liées pour approfondir.",
       content: {
-        intro:
-          "Chaque guide répond à une question précise et renvoie aux pages liées pour approfondir.",
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
           {
@@ -64,10 +64,11 @@ export const pageData: ArticlePageData = {
     {
       id: "utilisation",
       title: "Comment utiliser ces guides",
+      intro:
+        "Utilisez-les pour structurer vos priorités, puis passez  la soumission quand le cadre est clair.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Utilisez-les pour structurer vos priorités, puis passez  la soumission quand le cadre est clair.",
+
         links: [
           {
             text: "Demander une soumission",
@@ -80,10 +81,10 @@ export const pageData: ArticlePageData = {
     {
       id: "positionnement",
       title: "Notre positionnement",
+      intro:
+        "Dilamco se concentre sur des projets sur mesure durables, avec exécution soignée et option clé en main.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Dilamco se concentre sur des projets sur mesure durables, avec exécution soignée et option clé en main.",
       },
     },
   ],

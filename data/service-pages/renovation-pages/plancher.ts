@@ -26,10 +26,11 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "pour-qui",
       title: "Quand une rénovation de plancher est pertinente",
+      intro:
+        "Un plancher n'est pas seulement un choix esthétique : en rénovation, il détermine les niveaux, les transitions et une partie de la qualité perçue. Une rénovation de plancher devient particulièrement pertinente lorsqu'elle est liée à une cuisine, une salle de bain ou un réaménagement.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Un plancher n'est pas seulement un choix esthétique : en rénovation, il détermine les niveaux, les transitions et une partie de la qualité perçue. Une rénovation de plancher devient particulièrement pertinente lorsqu'elle est liée à une cuisine, une salle de bain ou un réaménagement.",
+
         items: [
           "Votre plancher est usé, endommagé ou présente des variations de niveau.",
           "Vous rénovez une cuisine ou une salle de bain et vous voulez une finition cohérente.",
@@ -41,10 +42,11 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "plancher-integrer",
       title: "Le plancher n'est jamais isolé dans une rénovation",
+      intro:
+        "Le point critique, ce n'est pas seulement le matériau : c'est l'ordre des étapes. Un plancher mal séquencé peut créer des reprises, des écarts de niveau, des transitions visibles ou des ajustements complexes lors de l'installation des armoires.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le point critique, ce n'est pas seulement le matériau : c'est l'ordre des étapes. Un plancher mal séquencé peut créer des reprises, des écarts de niveau, des transitions visibles ou des ajustements complexes lors de l'installation des armoires.",
+
         items: [
           "Niveaux : impact direct sur l'alignement des armoires et des électroménagers.",
           "Transitions : jonctions entre pièces, seuils et finitions périmétriques.",
@@ -66,10 +68,11 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "inclus",
       title: "Ce qui est inclus (selon le projet)",
+      intro:
+        "La portée exacte dépend de votre projet (plancher seul vs rénovation plus large). Les inclusions sont confirmées lors de la soumission.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "La portée exacte dépend de votre projet (plancher seul vs rénovation plus large). Les inclusions sont confirmées lors de la soumission.",
+
         items: [
           "Évaluation de l'existant : niveaux, état, contraintes et transitions.",
           "Planification : séquence des étapes et coordination avec les autres travaux.",
@@ -84,20 +87,22 @@ export const PLANCHER_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "projets",
       title: "Projets où le plancher fait partie du résultat final",
+      intro:
+        "Le plancher influence la cohérence du projet, surtout en cuisine et en salle de bain. Consultez nos projets pour voir des exemples de rénovation où les niveaux, transitions et finitions ont été intégrés à la planification globale.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le plancher influence la cohérence du projet, surtout en cuisine et en salle de bain. Consultez nos projets pour voir des exemples de rénovation où les niveaux, transitions et finitions ont été intégrés à la planification globale.",
+
         links: [{ title: "Voir les projets", href: "/projets/" }],
       },
     },
     {
       id: "local",
       title: "Zones desservies",
+      intro:
+        "Nos projets de rénovation intégrant le plancher sont réalisés principalement à Montréal, Laval et sur la Rive-Sud.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Nos projets de rénovation intégrant le plancher sont réalisés principalement à Montréal, Laval et sur la Rive-Sud.",
+
         links: [
           { title: "Rénovation clé en main", href: "/services/renovation/" },
           {

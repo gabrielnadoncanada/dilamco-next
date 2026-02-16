@@ -59,13 +59,16 @@ export function normalizeContentSection(
 ): RenderableSection {
   const dedupeLinkedLabel = options.dedupeLinkedLabel ?? false;
   const { id, title, content } = section;
+  const intro =
+    section.intro ??
+    ("intro" in content && (content as { intro?: string | ReactNode }).intro);
 
   if (content.type === SECTION_TYPES.LIST) {
     return {
       id,
       title,
       type: content.type,
-      intro: content.intro,
+      intro,
       items: toListEntries(content.items),
       links: content.links,
       variant: content.variant,
@@ -89,7 +92,7 @@ export function normalizeContentSection(
       id,
       title,
       type: content.type,
-      intro: content.intro,
+      intro,
       relatedLinks: content.items,
       columns: content.columns,
     };
@@ -144,7 +147,7 @@ export function normalizeContentSection(
       id,
       title,
       type: content.type,
-      intro: content.intro,
+      intro,
       faqItems: content.items ?? content.faqItems,
     };
   }
@@ -162,7 +165,7 @@ export function normalizeContentSection(
       id,
       title,
       type: content.type,
-      intro: content.intro,
+      intro,
       paragraphs,
       links: content.links,
     };
@@ -173,7 +176,7 @@ export function normalizeContentSection(
       id,
       title,
       type: content.type,
-      intro: content.intro,
+      intro,
       steps: content.steps,
       links: content.links,
     };
@@ -184,7 +187,7 @@ export function normalizeContentSection(
       id,
       title,
       type: content.type,
-      intro: content.intro,
+      intro,
       items: mapItemsWithLinks(content.itemsWithLinks, dedupeLinkedLabel),
       itemsWithLinks: content.itemsWithLinks,
     };

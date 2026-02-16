@@ -58,10 +58,11 @@ export const pageData: ArticlePageData = {
     {
       id: "pourquoi",
       title: "Pourquoi un processus clair",
+      intro:
+        "Une méthode claire réduit les zones grises et améliore la prévisibilité du chantier.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Une méthode claire réduit les zones grises et améliore la prévisibilité du chantier.",
+
         items: [
           "Moins d'imprévus.",
           "Responsabilités claires.",

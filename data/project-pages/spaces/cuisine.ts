@@ -22,10 +22,11 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
     {
       id: "regroupements",
       title: "Regroupements (pour vous situer rapidement)",
+      intro:
+        "Les cuisines se ressemblent en photo, mais elles se décident sur des contraintes réelles. Voici des catégories utiles pour cadrer votre cas :",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Les cuisines se ressemblent en photo, mais elles se décident sur des contraintes réelles. Voici des catégories utiles pour cadrer votre cas :",
+
         items: [
           "Cuisines de condo (accès chantier, circulation serrée, intégrations)",
           "Cuisines familiales (usage intensif, durabilité, rangement)",
@@ -45,10 +46,11 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
     {
       id: "format",
       title: "Format recommandé pour documenter un projet",
+      intro:
+        "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Pour maximiser la crédibilité (et le SEO), chaque projet devrait suivre la même structure. Même un format texte simple apporte de la valeur.",
+
         items: [
           "Ville / secteur : Montréal, Laval ou Rive-Sud.",
           "Type de projet : armoires seulement ou rénovation complète.",
@@ -84,10 +86,11 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
     {
       id: "materiaux",
       title: "Matériaux & choix techniques (ce qui fait durer)",
+      intro:
+        "Une cuisine durable est un système : structure, chants, quincaillerie et installation. Le matériau seul ne garantit pas la longévité, l'exécution et les ajustements sont déterminants.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Une cuisine durable est un système : structure, chants, quincaillerie et installation. Le matériau seul ne garantit pas la longévité, l'exécution et les ajustements sont déterminants.",
+
         links: [
           { title: "Comparer les matériaux", href: "/materiaux/comparatif/" },
           {
@@ -101,10 +104,11 @@ export const CUISINE_PROJECT_PAGE: SpaceContent = {
     {
       id: "renovation",
       title: "Armoires seulement vs rénovation complète",
+      intro:
+        "Certains projets se limitent aux armoires et à l'installation. D'autres nécessitent une rénovation complète (plomberie, électricité, murs, plancher, dosseret). Dans ce cas, la coordination et le séquencement deviennent critiques pour éviter reprises et délais.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Certains projets se limitent aux armoires et à l'installation. D'autres nécessitent une rénovation complète (plomberie, électricité, murs, plancher, dosseret). Dans ce cas, la coordination et le séquencement deviennent critiques pour éviter reprises et délais.",
+
         links: [
           {
             title: "Voir la rénovation de cuisine",

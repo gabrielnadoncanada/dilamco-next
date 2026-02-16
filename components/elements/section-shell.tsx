@@ -88,24 +88,28 @@ const SectionShell = ({
               {eyebrow}
             </Badge>
           )}
-          {title && (
-            <div data-animate-header-heading>
-              {typeof title === "string" ? <Heading variant="h2">{title}</Heading> : title}
-            </div>
-          )}
-          {intro &&
-            (typeof intro === "string" ? (
-              <p data-animate-header-text className="text-foreground max-w-4xl text-base text-balance sm:text-lg">
-                {intro}
-              </p>
-            ) : (
-              <div
-                data-animate-header-text
-                className="text-foreground max-w-4xl text-base text-balance sm:text-lg"
-              >
-                {intro}
+
+          <div className="flex flex-col gap-2 xl:gap-4 ">
+            {title && (
+
+              <div data-animate-header-heading>
+                {typeof title === "string" ? <Heading variant="h2">{title}</Heading> : title}
               </div>
-            ))}
+            )}
+            {intro &&
+              (typeof intro === "string" ? (
+                <p data-animate-header-text className="text-foreground max-w-4xl text-base text-balance sm:text-lg">
+                  {intro}
+                </p>
+              ) : (
+                <div
+                  data-animate-header-text
+                  className="text-foreground max-w-4xl text-base text-balance sm:text-lg"
+                >
+                  {intro}
+                </div>
+              ))}
+          </div>
           {actions && (
             <div data-animate-header-cta className={cn("flex pt-2 ", actionAlignClassMap[align])}>
               {actions}

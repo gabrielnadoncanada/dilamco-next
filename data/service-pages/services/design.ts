@@ -27,10 +27,11 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
     {
       id: "role",
       title: "Le rôle du design dans un projet sur mesure",
+      intro:
+        "Un bon design n'est pas décoratif : il rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles à la fin.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Un bon design n'est pas décoratif : il rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles à la fin.",
+
         items: [
           "Optimiser l'espace : circulation, zones de travail, dégagements, hauteurs.",
           "Structurer le rangement : accès, organisation, priorités d'usage.",
@@ -61,10 +62,11 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
     {
       id: "usage",
       title: "Design orienté usage (le cœur de notre approche)",
+      intro:
+        "Notre approche vise à rendre l'espace simple à vivre. Le design est construit autour des gestes du quotidien : accès au rangement, zones de travail, circulation et cohérence des dimensions.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Notre approche vise à rendre l'espace simple à vivre. Le design est construit autour des gestes du quotidien : accès au rangement, zones de travail, circulation et cohérence des dimensions.",
+
         items: [
           "Ergonomie : hauteurs, dégagements, logique de déplacement.",
           "Rangement intelligent : coins, tiroirs, modules adaptés et organisation.",
@@ -75,10 +77,11 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
     {
       id: "contraintes",
       title: "Contraintes techniques (intégration, pas improvisation)",
+      intro:
+        "Le design doit tenir compte de la réalité du bâtiment et des équipements. Nous intégrons les contraintes techniques dès le départ afin d'éviter des compromis tardifs.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le design doit tenir compte de la réalité du bâtiment et des équipements. Nous intégrons les contraintes techniques dès le départ afin d'éviter des compromis tardifs.",
+
         items: [
           "Plomberie & électricité : intégration des emplacements et dégagements (sans exécuter les travaux).",
           "Condo et bâtiments existants : murs irréguliers, accès, contraintes de chantier.",
@@ -96,10 +99,11 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
     {
       id: "risque",
       title: "Le design réduit le risque",
+      intro:
+        "Plus les décisions sont prises tôt, plus le projet est prévisible. Un design solide réduit les imprévus, simplifie la fabrication et rend l'installation plus propre.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Plus les décisions sont prises tôt, plus le projet est prévisible. Un design solide réduit les imprévus, simplifie la fabrication et rend l'installation plus propre.",
+
         items: [
           "Moins d'imprévus : contraintes identifiées avant la production.",
           "Meilleure cohérence : proportions, alignements, logique de modules.",
@@ -154,10 +158,10 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
     {
       id: "pas",
       title: "Ce que ce service n'est pas",
+      intro:
+        "Le design Dilamco n'est pas une démarche d'inspiration \"Pinterest\" déconnectée de la réalité. Il vise un plan cohérent, faisable, et prêt pour la fabrication et l'installation.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Le design Dilamco n'est pas une démarche d'inspiration \"Pinterest\" déconnectée de la réalité. Il vise un plan cohérent, faisable, et prêt pour la fabrication et l'installation.",
       },
     },
   ],

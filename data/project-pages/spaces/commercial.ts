@@ -40,10 +40,11 @@ export const COMMERCIAL_PROJECT_PAGE: SpaceContent = {
     {
       id: "format",
       title: "Comment présenter un projet (format recommandé)",
+      intro:
+        "Pour maximiser la crédibilité (et le SEO), chaque projet devrait être décrit avec la même structure, même si vous n'avez pas encore toutes les photos.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Pour maximiser la crédibilité (et le SEO), chaque projet devrait être décrit avec la même structure, même si vous n'avez pas encore toutes les photos.",
+
         items: [
           "Type d'espace : bureau, commerce, restauration, etc.",
           "Mandat : ce qui devait être réalisé (objectif principal).",

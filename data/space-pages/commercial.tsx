@@ -178,10 +178,11 @@ export const pageData: SpacePageData = {
     {
       id: "pour-qui",
       title: "Types d’espaces commerciaux",
+      intro:
+        "Le sur mesure est particulièrement pertinent lorsque l’espace impose des contraintes (accès, équipements, circulation) ou lorsque l’usage est intensif.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Le sur mesure est particulièrement pertinent lorsque l’espace impose des contraintes (accès, équipements, circulation) ou lorsque l’usage est intensif.",
+
         items: [
           {
             title: "Bureaux & espaces professionnels",
@@ -189,7 +190,8 @@ export const pageData: SpacePageData = {
           },
           {
             title: "Commerces de détail",
-            description: "Mobilier de présentation, arrière-boutique et stockage.",
+            description:
+              "Mobilier de présentation, arrière-boutique et stockage.",
           },
           {
             title: "Espaces de services",
@@ -219,12 +221,14 @@ export const pageData: SpacePageData = {
           {
             title: "Conception fonctionnelle",
             href: "/services/design/",
-            description: "Implantation claire, pensée pour l’opération et l’ergonomie.",
+            description:
+              "Implantation claire, pensée pour l’opération et l’ergonomie.",
           },
           {
             title: "Fabrication sur mesure",
             href: "/services/fabrication/",
-            description: "Mobilier et rangement adaptés au contexte et à l’usage.",
+            description:
+              "Mobilier et rangement adaptés au contexte et à l’usage.",
           },
           {
             title: "Installation professionnelle",

@@ -108,10 +108,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "materiaux-details",
     title: "Matériaux : l'impact sur la durabilité",
+    intro:
+      "Une cuisine est soumise à l'humidité, aux charges et à l'usage quotidien. Au-delà du style, la durabilité dépend beaucoup de la structure, des assemblages et de la qualité des composants.",
     content: {
       type: SECTION_TYPES.LIST,
-      intro:
-        "Une cuisine est soumise à l'humidité, aux charges et à l'usage quotidien. Au-delà du style, la durabilité dépend beaucoup de la structure, des assemblages et de la qualité des composants.",
+
       items: [
         "Sur mesure : choix de matériaux orientés usage (cuisine / humidité), détails de fabrication robustes, et possibilité de configurer l'intérieur selon vos besoins.",
         "Standard : les matériaux et la structure varient selon la gamme. Dans tous les cas, la longévité dépend beaucoup de l'installation et de la protection contre l'humidité.",
@@ -132,10 +133,11 @@ const sections: ContentArticleSection[] = [
   {
     id: "installation-details",
     title: "Installation et rénovation : le vrai facteur de résultat",
+    intro:
+      "Beaucoup de déceptions viennent moins du « produit » que de l'exécution : alignements, ajustements, gestion des murs et planchers irréguliers, finition, et coordination des travaux connexes si vous rénovez.",
     content: {
       type: SECTION_TYPES.LIST,
-      intro:
-        "Beaucoup de déceptions viennent moins du « produit » que de l'exécution : alignements, ajustements, gestion des murs et planchers irréguliers, finition, et coordination des travaux connexes si vous rénovez.",
+
       items: [
         "Si vous rénovez : la coordination (plomberie, électricité, plancher, dosseret) devient souvent le point le plus complexe.",
         "Sur mesure + option clé en main : vous réduisez les risques d'incohérence entre le plan, le chantier et l'installation.",
@@ -156,10 +158,10 @@ const sections: ContentArticleSection[] = [
   {
     id: "cout",
     title: "Et le coût, concrètement?",
+    intro:
+      "Une solution standard peut sembler plus économique au départ. Une solution sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec plus d'optimisation, une meilleure cohérence et une exécution plus contrôlée. L'important est de comparer à périmètre égal : ce qui est inclus, l'installation, et le niveau de finition.",
     content: {
       type: SECTION_TYPES.TEXT,
-      intro:
-        "Une solution standard peut sembler plus économique au départ. Une solution sur mesure coûte généralement plus, mais vise un résultat mieux intégré à votre espace, avec plus d'optimisation, une meilleure cohérence et une exécution plus contrôlée. L'important est de comparer à périmètre égal : ce qui est inclus, l'installation, et le niveau de finition.",
     },
   },
   {

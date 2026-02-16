@@ -1,69 +1,78 @@
-import React from "react";
 import { cn } from "@/lib/utils";
+
+import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
-import { type LucideIcon } from "lucide-react";
-import { Item, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
-import { SectionFooterDivider, SectionTitle, getGridCols } from "@/components/sections/section-helpers";
+import { Badge } from "@/components/ui/badge";
 
 interface Feature {
+  id?: string;
   title: string;
   description: string;
-  icon?: LucideIcon;
+  image?: string;
   href?: string;
 }
 
-interface FeatureGridSectionProps extends Omit<SectionShellProps, "title" | "intro" | "children"> {
+interface FeatureGridSectionProps
+  extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
   heading: string;
   description?: string;
+  eyebrow?: string;
   items: Feature[];
-  columns?: 2 | 3 | 4;
+  links?: ActionButton[];
   className?: string;
 }
+
+const fallbackImages = [
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-1.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-2.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/block-3.svg",
+];
 
 const FeatureGridSection = ({
   heading,
   description,
+  eyebrow,
   items,
-  columns = 3,
+  links,
   className,
   ...props
 }: FeatureGridSectionProps) => {
   return (
     <SectionShell
-      className={className}
-      title={<SectionTitle heading={heading} className="text-balance" />}
+      title={heading}
       intro={description}
+      eyebrow={eyebrow}
+      actions={links && links.length > 0 ? <ActionButtons buttons={links} /> : undefined}
+
       align="center"
+      className={cn("relative overflow-hidden bg-accent ", className)}
+      headerClassName="relative  flex flex-col items-center text-center"
+      bodyClassName=" grid gap-6 md:grid-cols-3 md:gap-8"
       {...props}
     >
 
-      <ItemGroup
-        className={cn(
-          "grid grid-cols-1 gap-6 md:gap-8",
-          getGridCols(columns)
-        )}
-      >
-        {items.map((feature, index) => {
-          const featureKey = feature.href ?? `${feature.title}-${index}`;
-          return (
-            <Item key={featureKey} variant="outline" className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
-              <ItemMedia variant="icon">
-                {feature.icon && (
-                  <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
-                    <feature.icon className="size-6 text-primary" />
-                  </div>
-                )}
-              </ItemMedia>
-              <ItemContent>
-                <ItemTitle>{feature.title}</ItemTitle>
-                <ItemDescription>{feature.description}</ItemDescription>
-              </ItemContent>
-            </Item>
-          );
-        })}
-      </ItemGroup>
-      <SectionFooterDivider />
+      {items.map((item, index) => (
+        <a
+          key={item.id ?? item.href ?? item.title}
+          href={item.href ?? "#"}
+          className={cn(
+            "relative flex flex-col items-center rounded-xl border bg-background/70 px-6 py-10 text-center backdrop-blur-sm lg:px-8 lg:py-12",
+            index === 1 && "md:translate-y-4",
+          )}
+        >
+          <div className="mb-6 flex aspect-square w-16 items-center justify-center md:w-20 lg:mb-8">
+            <img
+              src={item.image ?? fallbackImages[index % fallbackImages.length]}
+              alt={item.title}
+              className="h-full w-full object-contain object-center"
+            />
+          </div>
+          <h3 className="mb-3 text-lg font-semibold md:text-xl">{item.title}</h3>
+          <p className="mb-auto text-sm text-muted-foreground">{item.description}</p>
+        </a>
+      ))}
     </SectionShell>
   );
 };
+
 export { FeatureGridSection };

@@ -26,10 +26,11 @@ export const SALLE_DE_BAIN_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "pour-qui",
       title: "À qui s'adresse une rénovation clé en main?",
+      intro:
+        "Si votre objectif est uniquement décoratif ou temporaire, la rénovation clé en main n'est peut-être pas l'option la plus pertinente. L'objectif ici est la durabilité, la cohérence et la tranquillité d'esprit.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Si votre objectif est uniquement décoratif ou temporaire, la rénovation clé en main n'est peut-être pas l'option la plus pertinente. L'objectif ici est la durabilité, la cohérence et la tranquillité d'esprit.",
+
         items: [
           "Vous voulez réduire les risques liés à l'eau grâce à une planification et une exécution cadrées.",
           "Vous rénovez une salle de bain existante (maison ou condo) et vous cherchez un résultat durable.",
@@ -40,10 +41,11 @@ export const SALLE_DE_BAIN_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "inclus",
       title: "Ce qui est inclus (selon le projet)",
+      intro:
+        "Les inclusions exactes varient selon la portée (partielle ou complète). Elles sont confirmées lors de la soumission, pour éviter toute ambiguïté.",
       content: {
         type: SECTION_TYPES.LIST,
-        intro:
-          "Les inclusions exactes varient selon la portée (partielle ou complète). Elles sont confirmées lors de la soumission, pour éviter toute ambiguïté.",
+
         items: [
           "Design & planification : organisation de l'espace, ergonomie, décisions clés.",
           "Vanités et rangement sur mesure : conception adaptée à l'usage et à l'humidité.",
@@ -61,10 +63,11 @@ export const SALLE_DE_BAIN_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "variable",
       title: "Transparence (ce qui varie)",
+      intro:
+        "Une rénovation de salle de bain peut inclure plusieurs travaux connexes. Selon le mandat, certains éléments peuvent être inclus, coordonnés ou réalisés par d'autres intervenants. L'objectif est de cadrer le plan avant de démarrer.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Une rénovation de salle de bain peut inclure plusieurs travaux connexes. Selon le mandat, certains éléments peuvent être inclus, coordonnés ou réalisés par d'autres intervenants. L'objectif est de cadrer le plan avant de démarrer.",
+
         items: [
           "Douche / bain : selon la portée de la rénovation.",
           "Plomberie majeure : évaluée au cas par cas selon l'existant.",
@@ -76,10 +79,11 @@ export const SALLE_DE_BAIN_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "design-role",
       title: "Le design en rénovation : éviter les erreurs coûteuses",
+      intro:
+        "En salle de bain, les erreurs se paient cher. Le design sert à intégrer l'existant (plomberie, drains, dégagements) et à prendre les décisions avant la démolition, afin de limiter les imprévus et les compromis.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "En salle de bain, les erreurs se paient cher. Le design sert à intégrer l'existant (plomberie, drains, dégagements) et à prendre les décisions avant la démolition, afin de limiter les imprévus et les compromis.",
+
         items: [
           "Ergonomie : circulation, accès, hauteur de vanité, rangement.",
           "Contraintes : plomberie/ventilation (intégration), dimensions et dégagements.",
@@ -93,10 +97,11 @@ export const SALLE_DE_BAIN_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "humidite",
       title: "Humidité, eau & durabilité (priorités)",
+      intro:
+        "Une salle de bain est un environnement exigeant : éclaboussures, vapeur, nettoyage fréquent. La durabilité dépend des matériaux, mais surtout des détails : chants, quincaillerie et qualité d'installation.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Une salle de bain est un environnement exigeant : éclaboussures, vapeur, nettoyage fréquent. La durabilité dépend des matériaux, mais surtout des détails : chants, quincaillerie et qualité d'installation.",
+
         items: [
           "Matériaux adaptés : choix cohérents avec l'usage et l'humidité.",
           "Protection des chants : limiter l'infiltration d'eau et l'usure.",
@@ -116,10 +121,11 @@ export const SALLE_DE_BAIN_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "coordination",
       title: "Coordination & exécution",
+      intro:
+        "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accès, interruptions, contraintes).",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Une rénovation clé en main vise un résultat final cohérent. Cela implique une coordination claire : séquence des étapes, phasage, et communication sur les points critiques (accès, interruptions, contraintes).",
+
         items: [
           "Séquencement : organiser l'ordre des travaux pour limiter les reprises.",
           "Phasage : réduire l'impact sur la vie quotidienne lorsque possible.",
@@ -130,10 +136,11 @@ export const SALLE_DE_BAIN_RENOVATION_PAGE: RenovationSubServiceData = {
     {
       id: "projets",
       title: "Projets de rénovation de salle de bain",
+      intro:
+        "Consultez nos projets pour voir des exemples de vanités sur mesure, de configurations, et de niveaux de finition obtenus dans des environnements humides.",
       content: {
         type: SECTION_TYPES.TEXT,
-        intro:
-          "Consultez nos projets pour voir des exemples de vanités sur mesure, de configurations, et de niveaux de finition obtenus dans des environnements humides.",
+
         links: [
           {
             title: "Voir les projets de salles de bain",

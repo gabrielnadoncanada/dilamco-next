@@ -27,10 +27,11 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
       {
         id: "pour-qui",
         title: "Quand un agrandissement de maison est pertinent",
+        intro:
+          "Un agrandissement de maison est envisagé lorsqu'un espace supplémentaire est nécessaire et que la configuration actuelle ne répond plus aux besoins. Ce type de projet vise une transformation durable, intégrée à la structure existante.",
         content: {
           type: SECTION_TYPES.TEXT,
-          intro:
-            "Un agrandissement de maison est envisagé lorsqu'un espace supplémentaire est nécessaire et que la configuration actuelle ne répond plus aux besoins. Ce type de projet vise une transformation durable, intégrée à la structure existante.",
+
           items: [
             "Vous manquez d'espace et souhaitez éviter un déménagement.",
             "Vous souhaitez ajouter une ou plusieurs pièces (chambre, bureau, salle familiale, etc.).",
@@ -42,10 +43,11 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
       {
         id: "portee",
         title: "Un agrandissement est un projet global",
+        intro:
+          "Un agrandissement ne se limite pas à ajouter des mètres carrés. Il implique une intégration structurelle, architecturale et fonctionnelle avec le bâtiment existant. La réussite du projet dépend autant de la planification que de l'exécution.",
         content: {
           type: SECTION_TYPES.TEXT,
-          intro:
-            "Un agrandissement ne se limite pas à ajouter des mètres carrés. Il implique une intégration structurelle, architecturale et fonctionnelle avec le bâtiment existant. La réussite du projet dépend autant de la planification que de l'exécution.",
+
           items: [
             "Structure : fondations, charpente, ouvertures et jonctions avec l'existant.",
             "Enveloppe : murs, toiture, isolation et continuité thermique.",
@@ -56,10 +58,11 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
       {
         id: "inclus",
         title: "Ce qui est généralement inclus (selon le projet)",
+        intro:
+          "La portée exacte varie selon le type d'agrandissement. Les inclusions sont définies clairement lors de la soumission afin d'éviter toute ambiguïté.",
         content: {
           type: SECTION_TYPES.LIST,
-          intro:
-            "La portée exacte varie selon le type d'agrandissement. Les inclusions sont définies clairement lors de la soumission afin d'éviter toute ambiguïté.",
+
           items: [
             "Analyse du projet : besoins, contraintes, faisabilité et intégration à l'existant.",
             "Planification : séquence des travaux et coordination des intervenants.",
@@ -77,10 +80,11 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
       {
         id: "coordination",
         title: "Coordination & responsabilité",
+        intro:
+          "Un agrandissement implique plusieurs étapes critiques. Une coordination claire permet de réduire les retards, les conflits entre corps de métier et les reprises coûteuses.",
         content: {
           type: SECTION_TYPES.TEXT,
-          intro:
-            "Un agrandissement implique plusieurs étapes critiques. Une coordination claire permet de réduire les retards, les conflits entre corps de métier et les reprises coûteuses.",
+
           items: [
             "Séquencement : ordre logique des travaux pour assurer la continuité.",
             "Responsabilité : un cadre clair sur les rôles et les livrables.",
@@ -91,10 +95,11 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
       {
         id: "integration",
         title: "Intégration à la maison existante",
+        intro:
+          "L'un des enjeux majeurs d'un agrandissement est l'intégration visuelle et fonctionnelle. L'objectif est que l'agrandissement fasse partie de la maison, et non qu'il apparaisse comme un ajout distinct.",
         content: {
           type: SECTION_TYPES.TEXT,
-          intro:
-            "L'un des enjeux majeurs d'un agrandissement est l'intégration visuelle et fonctionnelle. L'objectif est que l'agrandissement fasse partie de la maison, et non qu'il apparaisse comme un ajout distinct.",
+
           items: [
             "Alignement des niveaux et des plafonds.",
             "Transitions fluides entre les espaces.",
@@ -105,20 +110,22 @@ export const AGRANDISSEMENT_DE_MAISON_RENOVATION_PAGE: RenovationSubServiceData 
       {
         id: "projets",
         title: "Projets d'agrandissement résidentiel",
+        intro:
+          "Consultez nos projets pour voir des exemples d'agrandissements intégrés à des maisons existantes, avec différents types de configurations et de portées.",
         content: {
           type: SECTION_TYPES.TEXT,
-          intro:
-            "Consultez nos projets pour voir des exemples d'agrandissements intégrés à des maisons existantes, avec différents types de configurations et de portées.",
+
           links: [{ title: "Voir les projets", href: "/projets/" }],
         },
       },
       {
         id: "local",
         title: "Zones desservies",
+        intro:
+          "Nos projets d'agrandissement de maison sont réalisés principalement à Montréal, Laval et sur la Rive-Sud.",
         content: {
           type: SECTION_TYPES.TEXT,
-          intro:
-            "Nos projets d'agrandissement de maison sont réalisés principalement à Montréal, Laval et sur la Rive-Sud.",
+
           links: [
             { title: "Rénovation clé en main", href: "/services/renovation/" },
           ],
