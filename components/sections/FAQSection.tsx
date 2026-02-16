@@ -6,8 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Heading } from "@/components/elements/heading";
-import { Divider } from "../elements/divider";
+import { SectionFooterDivider, SectionTitle } from "@/components/sections/section-helpers";
 
 interface FAQItem {
   question: string;
@@ -29,14 +28,14 @@ const FAQSection = ({
   return (
     <SectionShell
       className={className}
-      title={<Heading variant="h2">{heading}</Heading>}
+      title={<SectionTitle heading={heading} />}
       align="center"
       {...props}
     >
 
       <Accordion type="single" collapsible className="w-full">
         {items.map((item, index) => (
-          <AccordionItem key={index} value={`item-${index}`}>
+          <AccordionItem key={`${item.question}-${index}`} value={`item-${index}`}>
             <AccordionTrigger className="text-left font-semibold hover:no-underline">
               {item.question}
             </AccordionTrigger>
@@ -46,7 +45,7 @@ const FAQSection = ({
           </AccordionItem>
         ))}
       </Accordion>
-      <Divider />
+      <SectionFooterDivider />
     </SectionShell>
   );
 };

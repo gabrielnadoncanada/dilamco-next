@@ -9,9 +9,12 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { renderSection } from "@/lib/render-section";
+import { validateContentSections } from "@/lib/section-validation";
 import type { SpacePageData } from "@/types/space-page";
 
 export function SpacePageTemplate({ data }: { data: SpacePageData }) {
+  const validatedSections = validateContentSections(data.sections);
+
   return (
     <>
       <JsonLd data={breadcrumbJsonLd(data.breadcrumbs)} />
@@ -20,7 +23,7 @@ export function SpacePageTemplate({ data }: { data: SpacePageData }) {
 
       <main id="contenu">
         <HeroSection {...data.hero} />
-        {data.sections.map((section) => renderSection(section))}
+        {validatedSections.map((section) => renderSection(section))}
 
         {data.faq ? (
           <FAQSection

@@ -15,6 +15,7 @@ import { TextSection } from "@/components/sections/TextSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { ActionButtons } from "@/components/ActionButtons";
 import { renderSection } from "@/lib/render-section";
+import { validateContentSections } from "@/lib/section-validation";
 
 type Params = { space: ProjectSpace };
 
@@ -73,6 +74,7 @@ export default async function ProjectsSpacePage({
   if (!content) notFound();
 
   const projects = PROJECTS_BY_SPACE[space] ?? [];
+  const validatedSections = validateContentSections(content.sections);
   const spaceLabel = SPACE_LABEL[space];
 
   const crumbs = [
@@ -103,7 +105,7 @@ export default async function ProjectsSpacePage({
           }
         />
 
-        {content.sections.map((section) => renderSection(section))}
+        {validatedSections.map((section) => renderSection(section))}
 
         <TextSection
           aria-labelledby="projects"
@@ -151,7 +153,6 @@ export default async function ProjectsSpacePage({
     </>
   );
 }
-
 
 
 

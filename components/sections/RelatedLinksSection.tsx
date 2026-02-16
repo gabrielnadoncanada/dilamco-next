@@ -8,9 +8,8 @@ import {
 import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { Heading } from "@/components/elements/heading";
-import { Divider } from "../elements/divider";
 import { Button } from "../ui/button";
+import { SectionFooterDivider, SectionTitle, getGridCols } from "@/components/sections/section-helpers";
 
 interface RelatedLink {
   title?: string;
@@ -38,19 +37,12 @@ const RelatedLinksSection = ({
   className,
   ...props
 }: RelatedLinksSectionProps) => {
-  const gridCols = {
-    2: "md:grid-cols-2",
-    3: "md:grid-cols-2 lg:grid-cols-3",
-  };
-
   return (
     <SectionShell
       surface={sectionVariant}
       className={cn(className)}
       title={
-        <Heading variant="h2" as="h2" className="text-center">
-          {heading}
-        </Heading>
+        <SectionTitle heading={heading} className="text-center" />
       }
       intro={intro}
       align="center"
@@ -60,7 +52,7 @@ const RelatedLinksSection = ({
         data-animate-card-wrap
         className={cn(
           "group grid grid-cols-1 gap-4 md:gap-6",
-          gridCols[columns]
+          getGridCols(columns)
         )}
       >
         {items.map((link, index) => (
@@ -87,7 +79,7 @@ const RelatedLinksSection = ({
           </Card>
         ))}
       </div>
-      <Divider />
+      <SectionFooterDivider />
     </SectionShell>
   );
 };

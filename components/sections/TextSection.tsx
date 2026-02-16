@@ -1,8 +1,7 @@
 import React from "react";
 import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
-import { Heading } from "@/components/elements/heading";
-import { Divider } from "../elements/divider";
+import { SectionFooterDivider, SectionTitle } from "@/components/sections/section-helpers";
 interface TextSectionProps extends Omit<SectionShellProps, "title" | "actions" | "children"> {
   heading: string;
   intro?: string;
@@ -22,19 +21,19 @@ const TextSection = ({
   return (
     <SectionShell
       className={className}
-      title={<Heading variant="h2">{heading}</Heading>}
+      title={<SectionTitle heading={heading} />}
       intro={intro}
       actions={links && links.length > 0 ? <ActionButtons buttons={links} /> : undefined}
       {...props}
     >
       <div className="prose prose-neutral dark:prose-invert max-w-none space-y-4">
         {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-base leading-relaxed text-muted-foreground md:text-lg">
+          <p key={`${heading}-${index}`} className="text-base leading-relaxed text-muted-foreground md:text-lg">
             {paragraph}
           </p>
         ))}
       </div>
-      <Divider />
+      <SectionFooterDivider />
     </SectionShell>
   );
 };

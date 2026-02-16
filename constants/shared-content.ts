@@ -1,5 +1,5 @@
 import type { ActionButton } from "@/components/ActionButtons";
-import type { SliderItem } from "@/components/sections/SliderSection";
+import type { SliderSectionItem } from "@/types/sections";
 
 export const DEFAULT_CTA = {
   heading: "Parlez-nous de votre projet",
@@ -13,7 +13,7 @@ export const DEFAULT_CTA = {
   ] satisfies ActionButton[],
 } as const;
 
-export const SPACE_SLIDER_ITEMS: SliderItem[] = [
+export const SPACE_SLIDER_ITEMS: SliderSectionItem[] = [
   {
     id: "cuisine",
     title: "Cuisine sur mesure",

@@ -61,11 +61,12 @@ const ListSection = ({
         {items.map((rawItem, index) => {
           const item = normalizeListItem(rawItem);
           const hasTitle = Boolean(item.title);
+          const itemKey = `${item.title || "item"}-${item.description || ""}-${index}`;
 
           if (useSplitLayout && hasTitle) {
             return (
               <div
-                key={index}
+                key={itemKey}
                 className="grid gap-6 border-t border-border/60 py-8 md:grid-cols-2 md:gap-10"
               >
                 <div className="flex items-start gap-4">
@@ -90,7 +91,7 @@ const ListSection = ({
 
           return (
             <div
-              key={index}
+              key={itemKey}
               className={cn("flex gap-3", variant === "numbered" && "list-item")}
             >
               {variant !== "numbered" && (

@@ -14,19 +14,9 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Divider } from "@/components/elements/divider";
+import type { SliderSectionItem } from "@/types/sections";
 
-export interface SliderItem {
-  id: string;
-  title: string;
-  description?: string;
-  label?: string;
-  href?: string;
-  image?: {
-    src: string;
-    alt: string;
-  };
-  content?: React.ReactNode;
-}
+export type SliderItem = SliderSectionItem;
 
 interface SliderSectionProps extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading?: string;

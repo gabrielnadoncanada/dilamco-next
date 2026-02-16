@@ -1,12 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { type LucideIcon } from "lucide-react";
-import { Heading } from "@/components/elements/heading";
-import { Divider } from "../elements/divider";
 import { Item, ItemContent, ItemDescription, ItemGroup, ItemMedia, ItemTitle } from "@/components/ui/item";
+import { SectionFooterDivider, SectionTitle, getGridCols } from "@/components/sections/section-helpers";
 
 interface Feature {
   title: string;
@@ -31,16 +28,10 @@ const FeatureGridSection = ({
   className,
   ...props
 }: FeatureGridSectionProps) => {
-  const gridCols = {
-    2: "md:grid-cols-2",
-    3: "md:grid-cols-2 lg:grid-cols-3",
-    4: "md:grid-cols-2 lg:grid-cols-4",
-  };
-
   return (
     <SectionShell
       className={className}
-      title={<Heading variant="h2" className="text-balance">{heading}</Heading>}
+      title={<SectionTitle heading={heading} className="text-balance" />}
       intro={description}
       align="center"
       {...props}
@@ -49,12 +40,13 @@ const FeatureGridSection = ({
       <ItemGroup
         className={cn(
           "grid grid-cols-1 gap-6 md:gap-8",
-          gridCols[columns]
+          getGridCols(columns)
         )}
       >
         {items.map((feature, index) => {
+          const featureKey = feature.href ?? `${feature.title}-${index}`;
           return (
-            <Item key={index} variant="outline" className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
+            <Item key={featureKey} variant="outline" className={cn("h-full", feature.href && "transition-all hover:shadow-lg cursor-pointer")}>
               <ItemMedia variant="icon">
                 {feature.icon && (
                   <div className="flex size-12 items-center justify-center rounded-lg bg-primary/10">
@@ -70,7 +62,7 @@ const FeatureGridSection = ({
           );
         })}
       </ItemGroup>
-      <Divider />
+      <SectionFooterDivider />
     </SectionShell>
   );
 };

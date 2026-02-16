@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card } from "@/components/ui/card";
-import { Heading } from "@/components/elements/heading";
+import { SectionTitle, getGridCols } from "@/components/sections/section-helpers";
 
 interface Image {
   src: string;
@@ -24,16 +24,10 @@ const GallerySection = ({
   className,
   ...props
 }: GallerySectionProps) => {
-  const gridCols = {
-    2: "md:grid-cols-2",
-    3: "md:grid-cols-2 lg:grid-cols-3",
-    4: "md:grid-cols-2 lg:grid-cols-4",
-  };
-
   return (
     <SectionShell
       className={className}
-      title={heading ? <Heading variant="h2">{heading}</Heading> : undefined}
+      title={heading ? <SectionTitle heading={heading} /> : undefined}
       align="center"
       {...props}
     >
@@ -41,11 +35,11 @@ const GallerySection = ({
         <div
           className={cn(
             "grid grid-cols-1 gap-4 md:gap-6",
-            gridCols[columns]
+            getGridCols(columns)
           )}
         >
           {images.map((image, index) => (
-            <Card key={index} className="overflow-hidden p-0">
+            <Card key={`${image.src}-${index}`} className="overflow-hidden p-0">
               <AspectRatio ratio={4 / 3}>
                 <img
                   src={image.src}
@@ -60,11 +54,11 @@ const GallerySection = ({
         <div
           className={cn(
             "grid grid-cols-1 gap-4 md:gap-6",
-            gridCols[columns]
+            getGridCols(columns)
           )}
         >
           {[1, 2, 3].map((i) => (
-            <Card key={i} className="overflow-hidden p-0">
+            <Card key={`placeholder-${i}`} className="overflow-hidden p-0">
               <AspectRatio ratio={4 / 3}>
                 <div className="flex h-full w-full items-center justify-center bg-muted text-muted-foreground">
                   <span className="text-sm">Image placeholder</span>

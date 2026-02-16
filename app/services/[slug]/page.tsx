@@ -9,6 +9,7 @@ import { DEFAULT_CTA } from "@/constants/shared-content";
 import { getServiceBySlug } from "@/data/service-pages/utils";
 import type { ServiceSlug } from "@/types/service-pages";
 import { renderSection } from "@/lib/render-section";
+import { validateContentSections } from "@/lib/section-validation";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
@@ -72,6 +73,7 @@ export default async function ServicePage({
   if (!service) notFound();
 
   const serviceName = service.metadata.title.replace(" | Dilamco", "");
+  const validatedSections = validateContentSections(service.sections);
 
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
@@ -111,7 +113,7 @@ export default async function ServicePage({
           }
         />
 
-        {service.sections.map((section) => renderSection(section))}
+        {validatedSections.map((section) => renderSection(section))}
 
         {service.faq.length > 0 ? (
           <FAQSection
@@ -129,4 +131,3 @@ export default async function ServicePage({
     </>
   );
 }
-

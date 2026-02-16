@@ -9,6 +9,7 @@ import { DEFAULT_CTA } from "@/constants/shared-content";
 import { getRenovationSubServiceByType } from "@/data/service-pages/utils";
 import { RENOVATION_SUB_SERVICES } from "@/data/service-pages/renovation";
 import { renderSection } from "@/lib/render-section";
+import { validateContentSections } from "@/lib/section-validation";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
@@ -68,6 +69,7 @@ export default async function RenovationSubServicePage({
   if (!subService) notFound();
 
   const serviceName = subService.metadata.title.replace(" | Dilamco", "");
+  const validatedSections = validateContentSections(subService.sections);
 
   const crumbs = [
     { name: "Accueil", url: SITE.url + "/" },
@@ -124,7 +126,7 @@ export default async function RenovationSubServicePage({
           }
         />
 
-        {subService.sections.map((section) =>
+        {validatedSections.map((section) =>
           renderSection(section, { dedupeLinkedLabel: true })
         )}
 
@@ -144,5 +146,4 @@ export default async function RenovationSubServicePage({
     </>
   );
 }
-
 

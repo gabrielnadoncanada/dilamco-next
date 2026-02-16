@@ -1,4 +1,5 @@
 import type { GenericLink } from "@/types/links";
+import type { ContentSection } from "@/types/sections";
 
 export type ServiceSlug =
   | "design"
@@ -17,23 +18,9 @@ export type FAQItem = {
   a: string;
 };
 
-export type ServiceSection = {
-  id: string;
-  title: string;
-  content: {
-    type: "text" | "list" | "steps" | "list-with-links" | "related-links";
-    paragraphs?: string[];
-    items?: Array<string | GenericLink>;
-    itemsWithLinks?: Array<{
-      title?: string;
-      label?: string;
-      link?: GenericLink;
-    }>;
-    steps?: string[];
-    links?: GenericLink[];
-    intro?: string;
-  };
-};
+export type { GenericLink };
+
+export type ServiceSection = ContentSection;
 
 export type ServiceData = {
   slug: ServiceSlug;
@@ -46,6 +33,10 @@ export type ServiceData = {
     h1: string;
     intro?: string;
     paragraphs?: string[];
+    image?: {
+      src: string;
+      alt: string;
+    };
     ctaLinks: GenericLink[];
   };
   sections: ServiceSection[];
@@ -68,6 +59,10 @@ export type RenovationSubServiceData = {
     h1: string;
     intro?: string;
     paragraphs?: string[];
+    image?: {
+      src: string;
+      alt: string;
+    };
     ctaLinks: GenericLink[];
   };
   sections: ServiceSection[];

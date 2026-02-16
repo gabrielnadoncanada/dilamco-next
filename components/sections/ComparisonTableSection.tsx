@@ -49,16 +49,16 @@ const ComparisonTableSection = ({
             <TableRow>
               <TableHead className="w-[200px]">{firstColumnLabel}</TableHead>
               {columns.map((column, index) => (
-                <TableHead key={index}>{column}</TableHead>
+                <TableHead key={`${column}-${index}`}>{column}</TableHead>
               ))}
             </TableRow>
           </TableHeader>
           <TableBody>
             {rows.map((row, rowIndex) => (
-              <TableRow key={rowIndex}>
+              <TableRow key={`${row.label ?? row.title ?? "row"}-${rowIndex}`}>
                 <TableCell className="font-medium">{row.label ?? row.title}</TableCell>
                 {row.values.map((value, colIndex) => (
-                  <TableCell key={colIndex}>{value}</TableCell>
+                  <TableCell key={`${value}-${colIndex}`}>{value}</TableCell>
                 ))}
               </TableRow>
             ))}
