@@ -51,7 +51,7 @@ const ListSection = ({
       actions={links && links.length > 0 ? <ActionButtons buttons={links} /> : undefined}
       align="center"
       {...props}
-    ><Divider />
+    >
       <div
         className={cn(
           "space-y-4",
@@ -115,6 +115,7 @@ const ListSection = ({
           );
         })}
       </div>
+      <Divider />
     </SectionShell>
   );
 };

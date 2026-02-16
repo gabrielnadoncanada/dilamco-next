@@ -5,8 +5,8 @@ import {
   type SectionShellProps,
   type SectionSurface,
 } from "@/components/elements/section-shell";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, LinkIcon } from "lucide-react";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Heading } from "@/components/elements/heading";
 import { Divider } from "../elements/divider";
@@ -56,7 +56,6 @@ const RelatedLinksSection = ({
       align="center"
       {...props}
     >
-      <Divider />
       <div
         data-animate-card-wrap
         className={cn(
@@ -65,32 +64,30 @@ const RelatedLinksSection = ({
         )}
       >
         {items.map((link, index) => (
-          <Link
-            key={index}
-            href={link.href}
-            className="block"
+          <Card
+            key={`${link.href}-${index}`}
             data-animate-card-card
           >
-            <Card className="">
-
-              <CardHeader>
-                <CardTitle>{link.title}</CardTitle>
-                <CardDescription>
-                  {link.description}
-                </CardDescription>
-              </CardHeader>
-              <CardFooter v-if={link.href}>
+            <CardHeader>
+              <CardTitle>{link.title ?? link.label}</CardTitle>
+              <CardDescription>
+                {link.description}
+              </CardDescription>
+            </CardHeader>
+            {link.href && (
+              <CardFooter>
                 <Button asChild>
-                  <Link href={link.href || "#"}>
+                  <Link href={link.href}>
                     En savoir plus
                     <ArrowRight data-icon="inline-start" />
                   </Link>
                 </Button>
               </CardFooter>
-            </Card>
-          </Link>
+            )}
+          </Card>
         ))}
       </div>
+      <Divider />
     </SectionShell>
   );
 };

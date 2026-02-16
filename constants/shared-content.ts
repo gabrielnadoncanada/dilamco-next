@@ -29,7 +29,7 @@ export const SPACE_SLIDER_ITEMS: SliderItem[] = [
     id: "salle-de-bain",
     title: "Salle de bain & vanités sur mesure",
     description:
-      "Offrez-vous une salle de bain élégante, fonctionnelle et durable, conÃ§ue selon vos goÃ»ts et vos besoins.",
+      "Offrez-vous une salle de bain élégante, fonctionnelle et durable, conçue selon vos goûts et vos besoins.",
     href: "/espaces/salle-de-bain/",
     image: {
       src: "/images/spaces/vanite-salles-de-bain.webp",
@@ -41,7 +41,7 @@ export const SPACE_SLIDER_ITEMS: SliderItem[] = [
     title: "Walk-in & rangement",
     href: "/espaces/walk-in/",
     description:
-      "Maximisez chaque espace avec une garde-robe ou un walk-in conÃ§u pour vous, élégant, fonctionnel et durable.",
+      "Maximisez chaque espace avec une garde-robe ou un walk-in conçu pour vous, élégant, fonctionnel et durable.",
     image: {
       src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
       alt: "Custom walk-in closet and storage",
@@ -52,7 +52,7 @@ export const SPACE_SLIDER_ITEMS: SliderItem[] = [
     title: "Salle de lavage",
     href: "/espaces/salle-de-lavage/",
     description:
-      "Optimisez vos tÃ¢ches quotidiennes avec une salle de lavage sur-mesure, pensée pour être pratique, durable et élégante.",
+      "Optimisez vos tâches quotidiennes avec une salle de lavage sur-mesure, pensée pour être pratique, durable et élégante.",
     image: {
       src: "/images/spaces/vanite-salles-de-lavage.webp",
       alt: "Custom laundry room cabinets",
@@ -63,7 +63,7 @@ export const SPACE_SLIDER_ITEMS: SliderItem[] = [
     title: "Commercial",
     href: "/espaces/commercial/",
     description:
-      "Transformez vos espaces commerciaux en des lieux de vente attrayants et fonctionnels, conÃ§us pour maximiser votre rentabilité.",
+      "Transformez vos espaces commerciaux en des lieux de vente attrayants et fonctionnels, conçus pour maximiser votre rentabilité.",
     image: {
       src: "/images/spaces/commercial.webp",
       alt: "Commercial custom spaces",

@@ -44,7 +44,6 @@ const ProcessSection = ({
       align="center"
       {...props}
     >
-      <Divider />
       {layout === "timeline" ? (
         <div className="grid gap-10 lg:grid-cols-3 lg:gap-6">
           {items.map((step, index) => (
@@ -84,6 +83,8 @@ const ProcessSection = ({
           ))}
         </div>
       )}
+      <Divider />
+
     </SectionShell>
   );
 };

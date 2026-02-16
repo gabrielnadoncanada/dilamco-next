@@ -85,7 +85,7 @@ export const MAIN_NAV: MenuItem[] = [
             label: "Fabrication",
             url: "/services/fabrication/",
             icon: Settings2,
-            description: "Fabrication sur mesure, précision et contrÃ´le.",
+            description: "Fabrication sur mesure, précision et contrôle.",
           },
           {
             label: "Installation",
@@ -126,7 +126,7 @@ export const MAIN_NAV: MenuItem[] = [
             label: "Agrandissement de maison",
             url: "/services/renovation/agrandissement-de-maison/",
             icon: Building2,
-            description: "Planification, coordination et exécution complÃ¨te.",
+            description: "Planification, coordination et exécution complète.",
           },
         ],
       },
@@ -146,7 +146,7 @@ export const MAIN_NAV: MenuItem[] = [
             label: "Matériaux (hub)",
             url: "/materiaux/",
             icon: LayoutGrid,
-            description: "Vue d'ensemble des matériaux et critÃ¨res.",
+            description: "Vue d'ensemble des matériaux et critères.",
           },
           {
             label: "Contreplaqué",
@@ -177,10 +177,10 @@ export const MAIN_NAV: MenuItem[] = [
     ],
   },
   {
-    title: "Ã€ propos",
+    title: "À propos",
     groups: [
       {
-        title: "Ã€ propos",
+        title: "À propos",
         links: [
           {
             label: "Notre approche",
@@ -192,7 +192,7 @@ export const MAIN_NAV: MenuItem[] = [
             label: "Processus",
             url: "/processus/",
             icon: LayoutGrid,
-            description: "Du cadrage Ã  l'installation finale.",
+            description: "Du cadrage à l'installation finale.",
           },
         ],
       },
@@ -230,7 +230,7 @@ export const FOOTER_NAV: FooterNavSection[] = [
     ],
   },
   {
-    title: "Ã€ propos",
+    title: "À propos",
     links: [
       { text: "Notre approche", url: "/a-propos/" },
       { text: "Processus", url: "/processus/" },

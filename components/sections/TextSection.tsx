@@ -26,7 +26,7 @@ const TextSection = ({
       intro={intro}
       actions={links && links.length > 0 ? <ActionButtons buttons={links} /> : undefined}
       {...props}
-    ><Divider />
+    >
       <div className="prose prose-neutral dark:prose-invert max-w-none space-y-4">
         {paragraphs.map((paragraph, index) => (
           <p key={index} className="text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -34,6 +34,7 @@ const TextSection = ({
           </p>
         ))}
       </div>
+      <Divider />
     </SectionShell>
   );
 };

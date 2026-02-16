@@ -45,7 +45,7 @@ const FeatureGridSection = ({
       align="center"
       {...props}
     >
-      <Divider />
+
       <ItemGroup
         className={cn(
           "grid grid-cols-1 gap-6 md:gap-8",
@@ -70,6 +70,7 @@ const FeatureGridSection = ({
           );
         })}
       </ItemGroup>
+      <Divider />
     </SectionShell>
   );
 };

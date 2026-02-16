@@ -33,7 +33,7 @@ const FAQSection = ({
       align="center"
       {...props}
     >
-      <Divider />
+
       <Accordion type="single" collapsible className="w-full">
         {items.map((item, index) => (
           <AccordionItem key={index} value={`item-${index}`}>
@@ -46,6 +46,7 @@ const FAQSection = ({
           </AccordionItem>
         ))}
       </Accordion>
+      <Divider />
     </SectionShell>
   );
 };

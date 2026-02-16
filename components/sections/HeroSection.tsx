@@ -46,6 +46,12 @@ const HeroSection = ({
                 <Heading variant="h1" className="max-w-5xl  text-white">
                   {heading}
                 </Heading>
+                {description && (
+                  <div className="flex max-w-3xl flex-col gap-4 text-lg/8 text-white/100">
+                    {typeof description === "string" ? <p>{description}</p> : description}
+                  </div>
+                )}
+                {renderedActions}
               </div>
               {image && (
                 <>
@@ -62,14 +68,6 @@ const HeroSection = ({
           </Container>
         </div>
       </Wallpaper >
-      <div className="bg-[#F5F3EF] rounded-b-lg">
-        {description && (
-          <div className="flex max-w-3xl flex-col gap-4 text-lg/8 text-white/70">
-            {typeof description === "string" ? <p>{description}</p> : description}
-          </div>
-        )}
-        {renderedActions}
-      </div>
     </SectionShell >
   );
 };

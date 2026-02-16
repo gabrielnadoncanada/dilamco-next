@@ -32,7 +32,6 @@ const ProofSection = ({
       align="center"
       {...props}
     >
-      <Divider />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
         {items.map((item, index) => (
           <div key={index} className="flex gap-4">
@@ -50,6 +49,8 @@ const ProofSection = ({
           </div>
         ))}
       </div>
+      <Divider />
+
     </SectionShell>
   );
 };

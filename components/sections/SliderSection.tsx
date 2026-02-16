@@ -1,13 +1,12 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, BluetoothIcon, PlusIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/elements/heading";
 import type { CarouselApi } from "@/components/ui/carousel";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import {
   Carousel,
@@ -15,8 +14,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import { Divider } from "@/components/elements/divider";
-import { AlertDialog } from "@/components/ui/alert-dialog";
-import { AlertDialogAction, AlertDialogMedia, AlertDialogTitle, AlertDialogHeader, AlertDialogCancel, AlertDialogContent, AlertDialogFooter, AlertDialogDescription, AlertDialogTrigger } from "../ui/alert-dialog";
 
 export interface SliderItem {
   id: string;
@@ -104,7 +101,6 @@ const SliderSection = ({
       ) : undefined}
       {...props}
     >
-      <Divider />
       <div className="w-full">
         <Carousel
           setApi={setCarouselApi}
@@ -116,7 +112,7 @@ const SliderSection = ({
             },
           }}
         >
-          <CarouselContent className="mr-[20px] 2xl:mr-[calc(50vw-700px+20px)]">
+          <CarouselContent className="mr-[20px]">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
@@ -127,40 +123,41 @@ const SliderSection = ({
                     {item.content}
                   </div>
                 ) : (
-                  <Link href={item.href || "#"} className="group">
-                    <Card className="relative w-full max-w-sm overflow-hidden pt-0">
-                      {item.image && (
-                        <>
-                          <div className="bg-primary absolute inset-0 z-30 aspect-square opacity-50 mix-blend-color" />
-                          <img
-                            src={item.image.src}
-                            alt={item.image.alt}
-                            className="relative z-20 aspect-square w-full object-cover brightness-60 grayscale"
-                          />
-                        </>
-                      )}
-                      <CardHeader>
-                        <CardTitle>{item.title}</CardTitle>
-                        <CardDescription>
-                          {item.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardFooter v-if={item.href}>
+                  <Card className="relative w-full max-w-sm overflow-hidden pt-0">
+                    {item.image && (
+                      <>
+                        <div className="bg-primary absolute inset-0 z-30 aspect-square opacity-50 mix-blend-color" />
+                        <img
+                          src={item.image.src}
+                          alt={item.image.alt}
+                          className="relative z-20 aspect-square w-full object-cover brightness-60 grayscale"
+                        />
+                      </>
+                    )}
+                    <CardHeader>
+                      <CardTitle>{item.title}</CardTitle>
+                      <CardDescription>
+                        {item.description}
+                      </CardDescription>
+                    </CardHeader>
+                    {item.href && (
+                      <CardFooter>
                         <Button asChild>
-                          <Link href={item.href || "#"}>
+                          <Link href={item.href}>
                             En savoir plus
                             <ArrowRight data-icon="inline-start" />
                           </Link>
                         </Button>
                       </CardFooter>
-                    </Card>
-                  </Link>
+                    )}
+                  </Card>
                 )}
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
       </div>
+      <Divider />
     </SectionShell>
   );
 };

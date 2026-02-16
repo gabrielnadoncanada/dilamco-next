@@ -95,7 +95,7 @@ const sections: ContentArticleSection[] = [
     content: {
       type: SECTION_TYPES.TEXT,
       intro:
-        "Les Â« zones grises Â» arrivent quand plusieurs parties se partagent le projet : qui ajuste si les murs ne sont pas d'équerre? Qui corrige si le plan doit être adapté sur place? Qui assume un retard si un corps de métier décale l'échéancier? Plus votre projet est complexe, plus la coordination devient un facteur déterminant.",
+        "Les « zones grises » arrivent quand plusieurs parties se partagent le projet : qui ajuste si les murs ne sont pas d'équerre? Qui corrige si le plan doit être adapté sur place? Qui assume un retard si un corps de métier décale l'échéancier? Plus votre projet est complexe, plus la coordination devient un facteur déterminant.",
     },
   },
   {
