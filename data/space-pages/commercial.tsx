@@ -4,37 +4,40 @@ import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import type { SpacePageData } from "@/types/space-page";
 import { ActionButtons } from "@/components/ActionButtons";
 import { Checklist } from "@/components/Checklist";
-import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
+import {
+  FeatureImageText,
+  type FeatureImageTextItem,
+} from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const metadata = createPageMetadata({
   title: "Commercial sur mesure",
   description:
-    "Aménagement commercial sur mesure : mobilier et rangement robustes pour usage intensif. Design, fabrication et installation à Montréal, Laval et sur la Rive-Sud.",
+    "Aménagement commercial sur mesure : mobilier et rangement robustes pour usage intensif. Conception, fabrication et installation à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/commercial/",
-  ogAlt: "Commercial sur mesure Dilamco",
+  ogAlt: "Commercial sur mesure Dilamco — robuste, durable, bien exécuté",
 });
 
 const faqItems = [
   {
     q: "Faites-vous des projets commerciaux de petite taille?",
-    a: "Oui, selon le contexte. Le point clé est la clarté des besoins, des contraintes et du calendrier. Décrivez le type d'espace et l'usage lors de la demande de soumission.",
+    a: "Oui, selon le contexte. Le point clé est la clarté des besoins, des contraintes et du calendrier. Décrivez votre espace, l’usage et vos priorités lors de la demande de soumission.",
   },
   {
     q: "Quels matériaux sont recommandés pour usage intensif?",
-    a: "Le choix dépend de l'environnement (chocs, nettoyage, humidité). La durabilité dépend aussi des chants, de la quincaillerie et de l'installation.",
+    a: "Le choix dépend de l’environnement (chocs, nettoyage, humidité). La durabilité repose aussi sur les chants, la quincaillerie et la précision d’installation — c’est l’ensemble qui fait la différence.",
   },
   {
     q: "Travaillez-vous avec des entrepreneurs ou des architectes?",
-    a: "Oui, selon le projet. Nous pouvons collaborer avec les intervenants en place pour cadrer la fabrication et l'installation.",
+    a: "Oui, selon le projet. Nous pouvons collaborer avec les intervenants en place pour cadrer la fabrication et l’installation, et assurer une exécution cohérente.",
   },
   {
     q: "Quels sont les délais typiques?",
-    a: "Les délais varient selon la complexité et la disponibilité. L'échéance est à préciser lors de la soumission, afin d'aligner le plan et la production.",
+    a: "Les délais varient selon la complexité, la disponibilité et le phasage requis. Lors de la soumission, on confirme une échéance réaliste et on aligne le plan avec la production.",
   },
   {
     q: "Pouvez-vous intervenir dans un espace en opération?",
-    a: "Selon les contraintes, il est parfois possible de planifier l'intervention pour limiter l'impact sur vos opérations (heures, accès, phasage).",
+    a: "Selon les contraintes, il est parfois possible de planifier l’intervention pour limiter l’impact sur vos opérations (heures, accès, phasage).",
   },
 ];
 
@@ -52,7 +55,7 @@ const featureImageTextItems: FeatureImageTextItem[] = [
         <Checklist
           items={[
             "Matériaux adaptés : sélection orientée usage et stabilité.",
-            "Chants & finition : résistance aux impacts et à l'usure.",
+            "Chants & finition : résistance aux impacts, à l’usure et au nettoyage.",
             "Quincaillerie : charnières et coulisses pour usage fréquent.",
             "Entretien : surfaces cohérentes avec le nettoyage régulier.",
           ]}
@@ -88,16 +91,16 @@ const featureImageTextItems: FeatureImageTextItem[] = [
       <>
         <p>
           Un projet commercial impose souvent des contraintes particulières :
-          accès, heures d'intervention, intégration d'équipements, réseaux
-          existants et calendrier. Nous cadrons le projet pour limiter les
-          surprises et livrer un résultat cohérent.
+          accès, heures d’intervention, intégration d’équipements, réseaux
+          existants et calendrier. On cadre le projet pour réduire les surprises
+          et livrer un résultat cohérent.
         </p>
         <Checklist
           items={[
             "Intégration : adaptation aux équipements et contraintes existantes.",
             "Dégagements & accès : circulation, portes, zones de travail et dimensions.",
-            "Phasage : planification pour réduire l'impact sur vos opérations (selon le contexte).",
-            "Coordination : collaboration avec d'autres intervenants lorsque nécessaire.",
+            "Phasage : planification pour réduire l’impact sur vos opérations (selon le contexte).",
+            "Coordination : collaboration avec les autres intervenants lorsque nécessaire.",
           ]}
         />
       </>
@@ -114,12 +117,12 @@ const featureImageTextItems: FeatureImageTextItem[] = [
       <>
         <p>
           Quelques exemples de solutions fréquentes en commercial (adaptées à
-          votre contexte).
+          votre contexte et à votre usage).
         </p>
         <Checklist
           items={[
             "Comptoirs de service : réception, accueil, zones transactionnelles.",
-            "Rangements muraux : optimisation verticale, zones de stockage.",
+            "Rangements muraux : optimisation verticale et zones de stockage.",
             "Mobilier intégré : solutions sur mesure non standardisées.",
             "Arrière-boutique : organisation des produits, accès rapide, durabilité.",
           ]}
@@ -142,14 +145,14 @@ export const pageData: SpacePageData = {
   service: {
     name: "Commercial sur mesure",
     description:
-      "Aménagement commercial sur mesure : mobilier et rangement robustes pour usage intensif.",
+      "Conception, fabrication et installation de mobilier et rangement commerciaux sur mesure : robuste, durable et pensé pour usage intensif.",
     url: SITE.url + "/espaces/commercial/",
     serviceType: "Aménagement commercial sur mesure",
   },
   hero: {
-    heading: "Aménagement commercial sur mesure, mobilier et rangement durables",
+    heading: "Aménagement commercial sur mesure, conçu pour l’usage intensif",
     description:
-      "En commercial, la priorité est la fiabilité : usage intensif, entretien, contraintes du lieu, calendrier et coordination. Dilamco conçoit et réalise du mobilier et du rangement sur mesure pour espaces commerciaux, avec une exécution robuste et un résultat prévisible - principalement à Montréal, Laval et sur la Rive-Sud.",
+      "En commercial, la priorité est la fiabilité : usage intensif, entretien, contraintes du lieu, calendrier et coordination. Dilamco conçoit et réalise du mobilier et du rangement sur mesure, avec une exécution robuste et un résultat prévisible — à Montréal, Laval et sur la Rive-Sud.",
     image: {
       src: "/images/spaces/commercial.webp",
       alt: "Aménagement commercial sur mesure",
@@ -174,27 +177,28 @@ export const pageData: SpacePageData = {
   sections: [
     {
       id: "pour-qui",
-      title: "Types d'espaces commerciaux",
+      title: "Types d’espaces commerciaux",
       content: {
         type: SECTION_TYPES.LIST,
         intro:
-          "Le sur mesure est particulièrement pertinent lorsque l'espace impose des contraintes (accès, équipements, circulation) ou lorsque l'usage est intensif.",
+          "Le sur mesure est particulièrement pertinent lorsque l’espace impose des contraintes (accès, équipements, circulation) ou lorsque l’usage est intensif.",
         items: [
           {
             title: "Bureaux & espaces professionnels",
-            description: "Rangements, mobilier intégré, zones d'accueil.",
+            description: "Rangements, mobilier intégré et zones d’accueil.",
           },
           {
             title: "Commerces de détail",
-            description: "Mobilier de présentation, arrière-boutique, rangements.",
+            description: "Mobilier de présentation, arrière-boutique et stockage.",
           },
           {
             title: "Espaces de services",
-            description: "Mobilier fonctionnel, organisation, durabilité au quotidien.",
+            description:
+              "Mobilier fonctionnel, organisation et durabilité au quotidien.",
           },
           {
             title: "Espaces communs",
-            description: "Comptoirs, rangements muraux, solutions intégrées.",
+            description: "Comptoirs, rangements muraux et solutions intégrées.",
           },
         ],
         variant: "checkmarks",
@@ -213,19 +217,20 @@ export const pageData: SpacePageData = {
               "Usage, contraintes du lieu, circulation, dimensions et accès.",
           },
           {
-            title: "Design fonctionnel",
-            href: "/services/fabrication/",
-            description: "Plan orienté opération et ergonomie.",
+            title: "Conception fonctionnelle",
+            href: "/services/design/",
+            description: "Implantation claire, pensée pour l’opération et l’ergonomie.",
           },
           {
             title: "Fabrication sur mesure",
             href: "/services/fabrication/",
-            description: "Mobilier et rangement adaptés au contexte.",
+            description: "Mobilier et rangement adaptés au contexte et à l’usage.",
           },
           {
             title: "Installation professionnelle",
             href: "/services/installation/",
-            description: "Alignements, ajustements, finition et inspection finale.",
+            description:
+              "Alignements nets, ajustements fins, finition et inspection finale.",
           },
         ],
         columns: 2,
@@ -241,10 +246,10 @@ export const pageData: SpacePageData = {
     },
     {
       id: "projets",
-      title: "Projets commerciaux",
+      title: "Réalisations commerciales",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
-        links: [
+        items: [
           {
             title: "Voir tous les projets commerciaux",
             href: "/projets/commercial/",
@@ -256,10 +261,10 @@ export const pageData: SpacePageData = {
     },
     {
       id: "liens",
-      title: "Liens utiles",
+      title: "Ressources",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
-        links: [
+        items: [
           { title: "Projets", href: "/projets/commercial/" },
           { title: "Matériaux", href: "/materiaux/" },
           { title: "Demander une soumission", href: "/contact/" },
@@ -270,7 +275,7 @@ export const pageData: SpacePageData = {
   ],
   faq: {
     ariaLabelledby: "faq",
-    heading: "FAQ - commercial sur mesure",
+    heading: "FAQ — commercial sur mesure",
     items: faqItems,
   },
 };
@@ -278,10 +283,3 @@ export const pageData: SpacePageData = {
 export default function Commercial() {
   return <SpacePageTemplate data={pageData} />;
 }
-
-
-
-
-
-
-

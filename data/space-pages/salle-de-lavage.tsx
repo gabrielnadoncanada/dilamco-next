@@ -4,64 +4,67 @@ import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import type { SpacePageData } from "@/types/space-page";
 import { ActionButtons } from "@/components/ActionButtons";
 import { Checklist } from "@/components/Checklist";
-import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
+import {
+  FeatureImageText,
+  type FeatureImageTextItem,
+} from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const metadata = createPageMetadata({
   title: "Salle de lavage sur mesure",
   description:
-    "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie. Praticité, durabilité et configuration adaptée à  votre espace à  Montréal, Laval et sur la Rive-Sud.",
+    "Salle de lavage sur mesure : armoires, comptoir de pliage et rangements robustes pour buanderie. Conception durable, adaptée aux contraintes techniques, à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/salle-de-lavage/",
-  ogAlt: "Salle de lavage sur mesure Dilamco",
+  ogAlt: "Salle de lavage sur mesure Dilamco — durable et facile à vivre",
 });
 
 const faqItems = [
   {
     q: "Comment optimiser une petite buanderie?",
-    a: "En structurant des zones (lavage, pliage, rangement) et en exploitant la hauteur. Le sur mesure aide à  éviter les espaces perdus et à  intégrer les contraintes techniques.",
+    a: "En définissant des zones (lavage, pliage, rangement) et en exploitant la hauteur. Le sur mesure aide à éviter les espaces perdus, à préserver la circulation et à intégrer proprement les contraintes techniques.",
   },
   {
     q: "Tiroirs ou portes pour ranger les produits?",
-    a: "Les tiroirs donnent un accà¨s plus simple (surtout en profondeur). Les portes peuvent être utiles pour des items volumineux. Le bon choix dépend de la configuration et de vos habitudes.",
+    a: "Les tiroirs améliorent l’accès (surtout en profondeur) et simplifient l’organisation. Les portes restent utiles pour des items volumineux. Le bon choix dépend de la configuration et de vos habitudes.",
   },
   {
     q: "Quels matériaux tiennent bien avec l'humidité?",
-    a: "Le point clé est la stabilité et la protection des chants. La durabilité dépend aussi de l'assemblage, de la quincaillerie et de la qualité d'installation.",
+    a: "Le point clé, c’est la stabilité et la protection des chants. La durabilité dépend aussi de l’assemblage, de la quincaillerie et de la précision d’installation — c’est l’ensemble qui fait la différence.",
   },
   {
     q: "Est-ce possible dans un placard?",
-    a: "Oui. Le sur mesure est particulià¨rement pertinent dans un placard, car il faut gérer les dégagements, l'ouverture, la circulation et souvent des contraintes techniques.",
+    a: "Oui. Le sur mesure est particulièrement pertinent dans un placard : il faut gérer les dégagements, l’ouverture, la circulation et, souvent, des contraintes techniques (plomberie, ventilation, panneaux).",
   },
   {
     q: "Quels sont les délais typiques?",
-    a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0-3 mois, 3-6 mois, etc.) est un bon point de départ à  préciser lors de la soumission.",
+    a: "Les délais varient selon la complexité du projet, la disponibilité et la période de l’année. Lors de la soumission, on confirme une échéance réaliste et on cadre les étapes pour limiter les imprévus.",
   },
 ];
 
 const featureImageTextItems: FeatureImageTextItem[] = [
   {
     ariaLabelledby: "fonctionnalite",
-    heading: "Fonctionnalité : organiser les zones (lavage, pliage, rangement)",
+    heading: "Fonctionnalité : structurer les zones (lavage, pliage, rangement)",
     content: (
       <>
         <p>
           Une buanderie efficace réduit le désordre. Le sur mesure permet de
-          structurer l'espace selon vos habitudes et la réalité des lieux.
+          structurer l’espace selon vos habitudes et la réalité des lieux.
         </p>
         <Checklist
           items={[
-            "Zone lavage : accà¨s simple à  la laveuse/sécheuse, circulation et dégagements cohérents.",
-            "Zone pliage : comptoir pratique et hauteur confortable.",
-            "Produits ménagers : rangement sécurisé et accessible.",
-            "Rangement vertical : armoires hautes et colonnes pour maximiser l'espace.",
-            "Paniers & linge : organisation logique pour éviter que tout s'accumule.",
+            "Zone lavage : accès simple, circulation claire et dégagements cohérents.",
+            "Zone pliage : comptoir pratique, à une hauteur confortable.",
+            "Produits ménagers : rangement sécurisé et facilement accessible.",
+            "Rangement vertical : armoires hautes et colonnes pour maximiser l’espace.",
+            "Paniers & linge : organisation logique pour éviter l’accumulation.",
           ]}
         />
       </>
     ),
     image: {
       src: "/images/spaces/vanite-salles-de-lavage.webp",
-      alt: "Fonctionnalité d'une salle de lavage sur mesure",
+      alt: "Fonctionnalité d’une salle de lavage sur mesure",
     },
   },
   {
@@ -70,15 +73,14 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     content: (
       <>
         <p>
-          Les problà¨mes d'une salle de lavage viennent souvent de détails :
-          chants exposés à  l'eau, surfaces difficiles à  nettoyer,
-          quincaillerie qui fatigue. Notre approche vise la durabilité dans
-          le temps.
+          Les problèmes en buanderie viennent souvent des détails : chants
+          exposés à l’eau, surfaces difficiles à nettoyer, quincaillerie qui
+          fatigue. Notre approche vise la durabilité, sans compliquer l’usage.
         </p>
         <Checklist
           items={[
             "Humidité & éclaboussures : matériaux adaptés et protection des chants.",
-            "Surfaces faciles à  entretenir : conception pensée pour le nettoyage régulier.",
+            "Surfaces faciles à entretenir : conception pensée pour le nettoyage régulier.",
             "Usage répété : quincaillerie fiable pour ouvertures fréquentes (tiroirs/portes).",
             "Conception autour des contraintes : plomberie, drains, ventilation, éléments techniques.",
           ]}
@@ -87,7 +89,7 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     ),
     image: {
       src: "/images/spaces/vanite-salles-de-lavage.webp",
-      alt: "Contraintes techniques & durabilité d'une salle de lavage sur mesure",
+      alt: "Contraintes techniques & durabilité d’une salle de lavage sur mesure",
     },
     links: [
       {
@@ -112,12 +114,15 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     heading: "Configurations possibles",
     content: (
       <>
-        <p>Le sur mesure s'adapte à  la configuration réelle de votre buanderie.</p>
+        <p>
+          Le sur mesure s’adapte à la configuration réelle de votre buanderie,
+          qu’elle soit ouverte, en corridor ou intégrée dans un placard.
+        </p>
         <Checklist
           items={[
             "Buanderie en corridor : rangement vertical et comptoir de pliage sans bloquer la circulation.",
-            "Buanderie dans un placard : modules adaptés, accà¨s simple, gestion des portes et dégagements.",
-            "à€°vier utilitaire (si applicable) : rangement adapté aux produits et à  l'espace humide.",
+            "Buanderie dans un placard : modules adaptés, accès simple, gestion des portes et dégagements.",
+            "Évier utilitaire (si applicable) : rangement adapté aux produits et aux zones humides.",
             "Empilage laveuse/sécheuse : optimisation de la hauteur et du rangement.",
             "Armoires hautes + colonne : maximiser le rangement pour linge, paniers et accessoires.",
           ]}
@@ -126,7 +131,7 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     ),
     image: {
       src: "/images/spaces/vanite-salles-de-lavage.webp",
-      alt: "Configurations possibles d'une salle de lavage sur mesure",
+      alt: "Configurations possibles d’une salle de lavage sur mesure",
     },
   },
 ];
@@ -143,15 +148,14 @@ export const pageData: SpacePageData = {
   service: {
     name: "Salle de lavage sur mesure",
     description:
-      "Salle de lavage sur mesure : armoires, comptoir et rangement robuste pour buanderie. Praticité et durabilité.",
+      "Conception, fabrication et installation de salles de lavage sur mesure : armoires, comptoir de pliage et rangements robustes. Pratique, durable et adapté aux contraintes techniques.",
     url: SITE.url + "/espaces/salle-de-lavage/",
     serviceType: "Salle de lavage sur mesure",
   },
   hero: {
-    heading:
-      "Salle de lavage sur mesure, armoires et rangement durable pour buanderie",
+    heading: "Salle de lavage sur mesure, pensée pour durer",
     description:
-      "Une buanderie est un espace technique : humidité, plomberie, vibration, produits ménagers et usage fréquent. Dilamco conà§oit et réalise des salles de lavage sur mesure haut de gamme, pensées pour être pratiques et durables - principalement à  Montréal, Laval et sur la Rive-Sud.",
+      "Une buanderie est un espace technique : humidité, plomberie, vibration, produits ménagers et usage fréquent. Dilamco conçoit et réalise des salles de lavage sur mesure haut de gamme, pratiques au quotidien et durables dans le temps — à Montréal, Laval et sur la Rive-Sud.",
     image: {
       src: "/images/spaces/vanite-salles-de-lavage.webp",
       alt: "Salle de lavage sur mesure",
@@ -161,7 +165,7 @@ export const pageData: SpacePageData = {
         className="justify-start"
         buttons={[
           {
-            text: "Demander une soumission",
+            text: "Obtenir une soumission",
             href: "/contact/",
           },
           {
@@ -176,21 +180,24 @@ export const pageData: SpacePageData = {
   sections: [
     {
       id: "pour-qui",
-      title: "À qui s'adresse une salle de lavage sur mesure?",
+      title: "À qui s’adresse une salle de lavage sur mesure?",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
           {
-            title: "Optimisation de l'espace",
-            description: "Vous voulez optimiser un espace restreint (condo, corridor, placard, sous-sol).",
+            title: "Espace restreint ou configuration atypique",
+            description:
+              "Condo, corridor, placard, sous-sol : on optimise sans nuire à la circulation.",
           },
           {
-            title: "Organisation précise",
-            description: "Vous cherchez un espace simple à utiliser au quotidien (pliage, paniers, produits, linge).",
+            title: "Organisation simple au quotidien",
+            description:
+              "Pliage, paniers, produits, linge : un espace clair, fonctionnel et facile à utiliser.",
           },
           {
-            title: "Contraintes à intégrer",
-            description: "Plomberie, drains, chauffe-eau, panneaux, ventilation.",
+            title: "Contraintes techniques à intégrer",
+            description:
+              "Plomberie, drains, chauffe-eau, panneaux, ventilation et dégagements.",
           },
         ],
         variant: "checkmarks",
@@ -203,19 +210,22 @@ export const pageData: SpacePageData = {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
           {
-            title: "Design & planification",
+            title: "Conception & planification",
             href: "/services/design/",
-            description: "Besoins, contraintes, circulation et plan d'organisation.",
+            description:
+              "Contraintes, circulation et plan d’organisation pensé pour votre usage.",
           },
           {
             title: "Fabrication sur mesure",
             href: "/services/fabrication/",
-            description: "Armoires, modules, comptoir de pliage et rangement adapté.",
+            description:
+              "Armoires, modules, comptoir de pliage et rangements adaptés.",
           },
           {
             title: "Installation précise",
             href: "/services/installation/",
-            description: "Alignements, ajustements, finition et inspection finale.",
+            description:
+              "Alignements nets, ajustements fins, finition et inspection finale.",
           },
         ],
         columns: 3,
@@ -231,7 +241,7 @@ export const pageData: SpacePageData = {
     },
     {
       id: "projets",
-      title: "Projets de salles de lavage",
+      title: "Réalisations de salles de lavage",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
@@ -246,13 +256,13 @@ export const pageData: SpacePageData = {
     },
     {
       id: "liens",
-      title: "Liens utiles",
+      title: "Ressources",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
           { title: "Projets", href: "/projets/salle-de-lavage/" },
           { title: "Matériaux", href: "/materiaux/" },
-          { title: "Demander une soumission", href: "/contact/" },
+          { title: "Obtenir une soumission", href: "/contact/" },
         ],
         columns: 3,
       },
@@ -260,7 +270,7 @@ export const pageData: SpacePageData = {
   ],
   faq: {
     ariaLabelledby: "faq",
-    heading: "FAQ - salle de lavage sur mesure",
+    heading: "FAQ — salle de lavage sur mesure",
     items: faqItems,
   },
 };
@@ -268,11 +278,3 @@ export const pageData: SpacePageData = {
 export default function SalleDeLavage() {
   return <SpacePageTemplate data={pageData} />;
 }
-
-
-
-
-
-
-
-

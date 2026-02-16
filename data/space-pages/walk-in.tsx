@@ -4,61 +4,64 @@ import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import type { SpacePageData } from "@/types/space-page";
 import { ActionButtons } from "@/components/ActionButtons";
 import { Checklist } from "@/components/Checklist";
-import { FeatureImageText, type FeatureImageTextItem } from "@/components/sections/FeatureImageText";
+import {
+  FeatureImageText,
+  type FeatureImageTextItem,
+} from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
 
 export const metadata = createPageMetadata({
   title: "Walk-in & rangement sur mesure",
   description:
-    "Walk-in et rangement sur mesure : organisation, modules adaptés, optimisation de l'espace et finition haut de gamme. Design, fabrication et installation à  Montréal, Laval et sur la Rive-Sud.",
+    "Walk-in et rangement sur mesure : organisation, modules adaptés, optimisation de l’espace et finition durable. Conception, fabrication et installation à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/walk-in/",
-  ogAlt: "Walk-in & rangement sur mesure Dilamco",
+  ogAlt: "Walk-in & rangement sur mesure Dilamco — organisation durable",
 });
 
 const faqItems = [
   {
     q: "Walk-in sur mesure vs modulaire : quelle différence?",
-    a: "Le sur mesure s'adapte à  l'espace exact (dimensions, angles, contraintes) et à  vos habitudes. Le modulaire est plus standard et peut laisser des zones perdues ou moins optimisées.",
+    a: "Le sur mesure s’adapte à votre espace réel (dimensions, angles, contraintes) et à vos habitudes. Le modulaire est plus standard et laisse souvent des zones perdues ou une organisation moins cohérente. Le sur mesure maximise le rangement sans sacrifier la circulation.",
   },
   {
     q: "Est-ce possible dans un petit espace?",
-    a: 'Oui. Le sur mesure est particulià¨rement utile dans les espaces serrés, car il permet d\'optimiser la circulation et de maximiser le rangement sans "perdre" des centimà¨tres.',
+    a: "Oui. Le sur mesure est particulièrement utile dans les espaces serrés : il optimise la circulation et le rangement, et évite de perdre des centimètres avec des modules mal adaptés.",
   },
   {
     q: "Quels matériaux sont recommandés pour un walk-in?",
-    a: "Le choix dépend de l'usage, des charges et du niveau de finition. La durabilité dépend aussi de la qualité des chants, de la quincaillerie et de l'installation.",
+    a: "Le choix dépend de l’usage, des charges et du niveau de finition. La durabilité repose aussi sur la qualité des chants, la quincaillerie et la précision de l’installation — c’est l’ensemble qui fait la différence.",
   },
   {
     q: "Quels sont les délais typiques?",
-    a: "Les délais varient selon la complexité et la disponibilité. L'échéance (0-3 mois, 3-6 mois, etc.) est un bon point de départ à  préciser lors de la soumission.",
+    a: "Les délais varient selon la complexité du projet, la disponibilité et la période de l’année. Lors de la soumission, on confirme une échéance réaliste et on cadre les étapes pour limiter les imprévus.",
   },
 ];
 
 const featureImageTextItems: FeatureImageTextItem[] = [
   {
     ariaLabelledby: "organisation",
-    heading: "Organisation & fonctionnalité (le cœur du sur mesure)",
+    heading: "Organisation & fonctionnalité (le vrai avantage du sur mesure)",
     content: (
       <>
         <p>
-          Le sur mesure permet de structurer l'espace selon vos habitudes.
-          L'objectif : rendre le rangement simple, accessible et cohérent,
-          sans "zones mortes" difficiles à  utiliser.
+          Le sur mesure permet de structurer l’espace selon vos habitudes.
+          L’objectif : un rangement simple, accessible et cohérent — sans zones
+          perdues difficiles à utiliser.
         </p>
         <Checklist
           items={[
             "Zones vêtements : sections pour vêtements longs, courts et pliés.",
-            "Chaussures : rangement dédié et accessible.",
-            "Accessoires : tiroirs compartimentés pour optimiser le quotidien.",
-            "à€°tagà¨res : dimensions adaptées, avec possibilité d'ajustement selon le besoin.",
-            "à€°volutivité : organisation pensée pour s'adapter (nouveaux besoins, saisons, etc.).",
+            "Chaussures : rangement dédié, visible et facile d’accès.",
+            "Accessoires : tiroirs compartimentés pour simplifier le quotidien.",
+            "Étagères : dimensions adaptées, ajustables selon vos besoins.",
+            "Évolutivité : organisation pensée pour les saisons et les nouveaux besoins.",
           ]}
         />
       </>
     ),
     image: {
       src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
-      alt: "Organisation & fonctionnalité d'un walk-in sur mesure",
+      alt: "Organisation & fonctionnalité d’un walk-in sur mesure",
     },
   },
   {
@@ -69,13 +72,13 @@ const featureImageTextItems: FeatureImageTextItem[] = [
         <p>
           Un walk-in est utilisé tous les jours. La durabilité dépend des
           matériaux, des chants, de la quincaillerie et de la qualité
-          d'installation.
+          d’installation — pas seulement du look.
         </p>
         <Checklist
           items={[
             "Stabilité : structures adaptées pour limiter les déformations dans le temps.",
-            "Chants & finition : résistance aux impacts et à  l'usure.",
-            "Quincaillerie : coulisses et charnià¨res pour usage répété.",
+            "Chants & finition : résistance aux impacts et à l’usure.",
+            "Quincaillerie : coulisses et charnières pensées pour l’usage répété.",
             "Entretien : finis cohérents avec votre quotidien.",
           ]}
         />
@@ -83,7 +86,7 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     ),
     image: {
       src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
-      alt: "Matériaux & durabilité d'un walk-in sur mesure",
+      alt: "Matériaux & durabilité d’un walk-in sur mesure",
     },
     links: [
       {
@@ -109,22 +112,23 @@ const featureImageTextItems: FeatureImageTextItem[] = [
     content: (
       <>
         <p>
-          Voici quelques configurations fréquentes, adaptées selon l'espace
-          disponible.
+          Voici quelques configurations courantes. On adapte toujours selon
+          l’espace disponible, la circulation et votre façon d’utiliser le
+          rangement.
         </p>
         <Checklist
           items={[
-            "Walk-in en L, en U ou linéaire : selon la circulation et les murs disponibles.",
-            "Garde-robe ouvert ou fermé : rendu minimaliste ou protection accrue.",
-            "Tiroirs intégrés : accessoires, bijoux, ceintures, petits items.",
-            "à€°tagà¨res ajustées : valises, paniers, linge, zones saisonnià¨res.",
+            "Walk-in en L, en U ou linéaire : selon les murs disponibles et la circulation.",
+            "Garde-robe ouvert ou fermé : rendu épuré ou protection accrue.",
+            "Tiroirs intégrés : accessoires, bijoux, ceintures et petits items.",
+            "Étagères ajustées : valises, paniers, linge et zones saisonnières.",
           ]}
         />
       </>
     ),
     image: {
       src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
-      alt: "Configurations possibles d'un walk-in sur mesure",
+      alt: "Configurations possibles d’un walk-in sur mesure",
     },
   },
 ];
@@ -138,15 +142,14 @@ export const pageData: SpacePageData = {
   service: {
     name: "Walk-in & rangement sur mesure",
     description:
-      "Walk-in et rangement sur mesure : organisation, modules adaptés, optimisation de l'espace et finition haut de gamme.",
+      "Conception, fabrication et installation de walk-in et rangements sur mesure : organisation, modules adaptés, optimisation de l’espace et finition durable.",
     url: SITE.url + "/espaces/walk-in/",
     serviceType: "Walk-in sur mesure",
   },
   hero: {
-    heading:
-      "Walk-in & rangement sur mesure,organisation pensée pour votre espace",
+    heading: "Walk-in & rangement sur mesure, pensé pour votre quotidien",
     description:
-      "Un walk-in sur mesure se définit par l'usage : vêtements longs et courts, chaussures, accessoires, circulation et accà¨s. Dilamco conà§oit et réalise des solutions de rangement sur mesure haut de gamme, adaptées à  votre espace réel, avec une finition durable - principalement à  Montréal, Laval et sur la Rive-Sud.",
+      "Un walk-in sur mesure se définit par l’usage : vêtements longs et courts, chaussures, accessoires, circulation et accès. Dilamco conçoit et réalise des solutions de rangement haut de gamme, adaptées à votre espace réel, avec une finition durable — à Montréal, Laval et sur la Rive-Sud.",
     image: {
       src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
       alt: "Walk-in & rangement sur mesure",
@@ -156,7 +159,7 @@ export const pageData: SpacePageData = {
         className="justify-start"
         buttons={[
           {
-            text: "Demander une soumission",
+            text: "Obtenir une soumission",
             href: "/contact/",
           },
           {
@@ -171,21 +174,24 @@ export const pageData: SpacePageData = {
   sections: [
     {
       id: "pour-qui",
-      title: "À qui s'adresse un walk-in sur mesure?",
+      title: "À qui s’adresse un walk-in sur mesure?",
       content: {
         type: SECTION_TYPES.LIST,
         items: [
           {
-            title: "Optimisation de l'espace",
-            description: "Vous voulez optimiser un espace atypique (angles, plafonds bas, niches, condo).",
+            title: "Espace atypique ou serré",
+            description:
+              "Angles, niches, plafonds bas, condo : on optimise chaque centimètre sans nuire à la circulation.",
           },
           {
             title: "Organisation précise",
-            description: "Vous cherchez une organisation précise (tiroirs accessoires, zones vêtements, rangement chaussures).",
+            description:
+              "Zones vêtements, rangement chaussures, tiroirs pour accessoires : une logique claire selon vos habitudes.",
           },
           {
-            title: "Rendu durable",
-            description: "Vous souhaitez un rendu durable et cohérent (matériaux, chants, quincaillerie, finition).",
+            title: "Rendu durable et cohérent",
+            description:
+              "Matériaux, chants, quincaillerie et finition au même niveau, pour un usage quotidien sans souci.",
           },
         ],
         variant: "checkmarks",
@@ -198,19 +204,22 @@ export const pageData: SpacePageData = {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
           {
-            title: "Design & planification",
+            title: "Conception & planification",
             href: "/services/design/",
-            description: "Besoins, contraintes, circulation et plan d'organisation.",
+            description:
+              "Contraintes, circulation, et plan d’organisation pensé pour votre usage.",
           },
           {
             title: "Fabrication sur mesure",
             href: "/services/fabrication/",
-            description: "Modules, étagères, tiroirs et zones adaptées.",
+            description:
+              "Modules, étagères, tiroirs et zones dédiées, adaptés à votre espace.",
           },
           {
             title: "Installation précise",
             href: "/services/installation/",
-            description: "Alignements, ajustements, finition et inspection finale.",
+            description:
+              "Alignements nets, ajustements fins, finition et inspection finale.",
           },
         ],
         columns: 3,
@@ -226,7 +235,7 @@ export const pageData: SpacePageData = {
     },
     {
       id: "projets",
-      title: "Projets de walk-in",
+      title: "Réalisations de walk-in",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
@@ -241,13 +250,13 @@ export const pageData: SpacePageData = {
     },
     {
       id: "liens",
-      title: "Liens utiles",
+      title: "Ressources",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
           { title: "Projets", href: "/projets/walk-in/" },
           { title: "Matériaux", href: "/materiaux/" },
-          { title: "Demander une soumission", href: "/contact/" },
+          { title: "Obtenir une soumission", href: "/contact/" },
         ],
         columns: 3,
       },
@@ -255,7 +264,7 @@ export const pageData: SpacePageData = {
   ],
   faq: {
     ariaLabelledby: "faq",
-    heading: "FAQ - walk-in & rangement sur mesure",
+    heading: "FAQ — walk-in & rangement sur mesure",
     items: faqItems,
   },
 };
@@ -263,11 +272,3 @@ export const pageData: SpacePageData = {
 export default function WalkIn() {
   return <SpacePageTemplate data={pageData} />;
 }
-
-
-
-
-
-
-
-

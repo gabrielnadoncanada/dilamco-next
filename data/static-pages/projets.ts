@@ -3,60 +3,66 @@ import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
 import { SECTION_TYPES } from "@/constants/section-types";
+
 export const metadata: Metadata = createPageMetadata({
   title: "Projets",
   description:
-    "Projets sur mesure réalisés par Dilamco : cuisines, salles de bain, walk-in, salles de lavage et commercial.",
+    "Découvrez nos réalisations sur mesure : cuisines, vanités, walk-in, salles de lavage et projets commerciaux.",
   path: "/projets/",
-  ogAlt: "Projets Dilamco",
+  ogAlt: "Réalisations Dilamco",
 });
+
 export const pageData: ArticlePageData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Projets", url: SITE.url + "/projets/" },
   ],
   hero: {
-    heading: "Projets sur mesure, cuisines, salles de bain et rénovations",
+    heading: "Réalisations sur mesure : cuisines, vanités et espaces intégrés",
     description:
-      "Découvrez des projets réels livrés par Dilamco à Montréal, Laval et sur la Rive-Sud.",
+      "Des projets livrés à Montréal, Laval et sur la Rive-Sud — avec une exécution propre et des finitions soignées.",
     actions: [
-      { text: "Voir les espaces", href: "/espaces/", variant: "outline" },
-      { text: "Parler de votre projet", href: "/contact/" },
+      { text: "Explorer par espace", href: "/espaces/", variant: "outline" },
+      { text: "Obtenir une soumission", href: "/contact/" },
     ],
   },
   sections: [
     {
       id: "categories",
-      title: "Projets par catégorie",
+      title: "Explorer par catégorie",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
         intro:
-          "Filtrez par type d'espace pour voir des configurations proches de votre besoin.",
+          "Parcourez nos projets par type d’espace pour trouver des configurations proches de votre besoin et de votre budget.",
         items: [
           {
             title: "Cuisines sur mesure",
             href: "/projets/cuisine/",
-            description: "Avec ou sans rénovation complète.",
+            description:
+              "Armoires, îlots et rangements — avec ou sans rénovation.",
           },
           {
             title: "Salles de bain & vanités",
             href: "/projets/salle-de-bain/",
-            description: "Matériaux adaptés à l'humidité et finition soignée.",
+            description:
+              "Solutions adaptées à l’humidité, durables et élégantes.",
           },
           {
             title: "Walk-in & rangement",
             href: "/projets/walk-in/",
-            description: "Optimisation de l'espace.",
+            description:
+              "Organisation intelligente : tiroirs, suspendus, accessoires.",
           },
           {
             title: "Salles de lavage",
             href: "/projets/salle-de-lavage/",
-            description: "Aménagements durables et fonctionnels.",
+            description: "Aménagements robustes, faciles à vivre au quotidien.",
           },
           {
             title: "Commercial",
             href: "/projets/commercial/",
-            description: "Mobilier et rangement pour environnements pro.",
+            description:
+              "Mobilier et rangement sur mesure pour environnements pro.",
           },
         ],
         columns: 3,
@@ -64,20 +70,20 @@ export const pageData: ArticlePageData = {
     },
     {
       id: "recent",
-      title: "Projets récents",
+      title: "Dernières réalisations",
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
           {
-            title: "Cuisine sur mesure - Montréal",
+            title: "Cuisine sur mesure — Montréal",
             href: "/projets/cuisine/cuisine-sur-mesure-montreal/",
           },
           {
-            title: "Vanité sur mesure - Laval",
+            title: "Vanité sur mesure — Laval",
             href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
           },
           {
-            title: "Cuisine sur mesure - Rive-Sud",
+            title: "Cuisine sur mesure — Rive-Sud",
             href: "/projets/cuisine/cuisine-sur-mesure-rive-sud/",
           },
         ],
@@ -86,30 +92,35 @@ export const pageData: ArticlePageData = {
     },
     {
       id: "processus",
-      title: "Notre approche projet",
+      title: "Notre démarche de projet",
       content: {
         type: SECTION_TYPES.PROCESS,
-        description: "Une démarche cadrée pour garantir un résultat durable.",
+        description:
+          "Un processus simple et cadré : décisions validées tôt, exécution précise, résultat durable.",
         items: [
           {
             step: "1",
-            title: "Analyse & design",
-            description: "Besoins et contraintes de l'espace.",
+            title: "Analyse & conception",
+            description:
+              "On clarifie vos besoins, contraintes et priorités, puis on valide l’implantation.",
           },
           {
             step: "2",
-            title: "Fabrication",
-            description: "Production sur mesure.",
+            title: "Plans & préparation",
+            description:
+              "Plans détaillés et choix de matériaux/finitions confirmés avant la production.",
           },
           {
             step: "3",
-            title: "Coordination",
-            description: "Travaux connexes si requis.",
+            title: "Fabrication contrôlée",
+            description:
+              "Production sur mesure avec contrôle qualité pour assurer un rendu cohérent.",
           },
           {
             step: "4",
-            title: "Installation",
-            description: "Ajustements et inspection finale.",
+            title: "Installation & finition",
+            description:
+              "Ajustements précis, alignements nets et inspection finale avant livraison.",
           },
         ],
       },
