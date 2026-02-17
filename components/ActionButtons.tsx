@@ -25,7 +25,7 @@ export interface ActionButtonsProps
 export function ActionButtons({ buttons, className, ...props }: ActionButtonsProps) {
   return (
     <div
-      className={cn("flex w-full items-center justify-center gap-2 **:data-[slot=button]:shadow-none", className)}
+      className={cn("flex flex-wrap w-full items-center justify-center gap-2 **:data-[slot=button]:shadow-none", className)}
       {...props}
     >
       {buttons.map((button, index) => {

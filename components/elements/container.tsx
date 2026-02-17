@@ -1,10 +1,10 @@
-import { clsx } from 'clsx/lite'
-import type { ComponentProps } from 'react'
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
 export function Container({ children, className, ...props }: ComponentProps<'div'>) {
   return (
-    <div className={clsx('mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl', className)} {...props}>
+    <div className={cn("mx-auto w-full max-w-2xl px-6 md:max-w-3xl lg:max-w-7xl", className)} {...props}>
       {children}
     </div>
-  )
+  );
 }

@@ -28,6 +28,7 @@ const FAQSection = ({
   return (
     <SectionShell
       className={className}
+      container="narrow"
       title={<SectionTitle heading={heading} />}
       align="center"
       {...props}
@@ -36,10 +37,10 @@ const FAQSection = ({
       <Accordion type="single" collapsible className="w-full">
         {items.map((item, index) => (
           <AccordionItem key={`${item.question}-${index}`} value={`item-${index}`}>
-            <AccordionTrigger className="text-left font-semibold hover:no-underline">
+            <AccordionTrigger className="text-left text-base leading-relaxed font-semibold hover:no-underline md:text-lg">
               {item.question}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground">
+            <AccordionContent className="text-base leading-relaxed text-muted-foreground">
               {item.answer}
             </AccordionContent>
           </AccordionItem>

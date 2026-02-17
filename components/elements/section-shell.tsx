@@ -25,7 +25,7 @@ export interface SectionShellProps extends Omit<React.HTMLAttributes<HTMLElement
 
 const containerClassMap: Record<Exclude<SectionContainer, boolean>, string> = {
   default: "",
-  narrow: "max-w-4xl",
+  narrow: "lg:max-w-4xl",
   wide: "max-w-[90rem]",
   full: "",
 };
@@ -33,8 +33,8 @@ const containerClassMap: Record<Exclude<SectionContainer, boolean>, string> = {
 const paddingClassMap: Record<SectionPadding, string> = {
   none: "pt-0 pb-0",
   small:
-    "pt-4 pb-4",
-  main: "pt-8 pb-8",
+    "py-16",
+  main: "pt-20 pb-28 sm:py-32",
   large:
     "pt-16 pb-16",
   "page-top":
@@ -54,7 +54,7 @@ const actionAlignClassMap: Record<SectionAlign, string> = {
 const SectionShell = ({
   className,
   surface = "default",
-  padding = "none",
+  padding = "main",
   container = "default",
   eyebrow,
   title,
@@ -98,13 +98,13 @@ const SectionShell = ({
             )}
             {intro &&
               (typeof intro === "string" ? (
-                <p data-animate-header-text className="text-foreground max-w-4xl text-base text-balance sm:text-lg">
+                <p data-animate-header-text className="max-w-4xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg">
                   {intro}
                 </p>
               ) : (
                 <div
                   data-animate-header-text
-                  className="text-foreground max-w-4xl text-base text-balance sm:text-lg"
+                  className="max-w-4xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
                 >
                   {intro}
                 </div>

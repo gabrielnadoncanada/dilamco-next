@@ -25,7 +25,7 @@ export const Footer = ({
   bottomLinks = LEGAL_LINKS,
 }: FooterProps) => {
   return (
-    <Section variant="default" className={cn(className, 'py-[var(--_spacing---section-space--small)]')}>
+    <Section padding="small" variant="default" className={cn(className)}>
       <Divider />
       <Container>
         <footer>
@@ -40,12 +40,12 @@ export const Footer = ({
                   />
                 </Logo>
               </div>
-              <p className="mt-4 font-normal">{tagline}</p>
+              <p className="mt-4 text-sm leading-relaxed font-normal text-muted-foreground">{tagline}</p>
             </div>
             {menuItems.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 font-bold">{section.title}</h3>
-                <ul className="space-y-4 text-muted-foreground">
+                <h3 className="mb-4 text-sm leading-6 font-semibold tracking-wide text-foreground">{section.title}</h3>
+                <ul className="space-y-4 text-sm leading-6 text-muted-foreground">
                   {section.links.map((link, linkIdx) => (
                     <li
                       key={linkIdx}

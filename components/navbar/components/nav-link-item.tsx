@@ -15,8 +15,8 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
             <link.icon className="m-auto size-4 group-hover/link:stroke-black" />
           </div>
           <div className="flex flex-col gap-[2px]">
-            <div className="text-sm font-medium">{link.label}</div>
-            <div className="text-xs text-muted-foreground group-hover/link:text-foreground">
+            <div className="text-sm leading-6 font-medium">{link.label}</div>
+            <div className="text-xs leading-5 text-muted-foreground group-hover/link:text-foreground">
               {link.description}
             </div>
           </div>
@@ -28,7 +28,7 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
   return (
     <a
       href={link.url}
-      className="flex h-12 items-center gap-2 rounded-lg px-4 text-muted-foreground transition-colors duration-300 hover:bg-muted hover:text-foreground"
+      className="flex h-12 items-center gap-2 rounded-lg px-4 text-base leading-normal font-medium text-muted-foreground transition-colors duration-300 hover:bg-muted hover:text-foreground"
     >
       <link.icon className="size-4 stroke-muted-foreground" />
       {link.label}

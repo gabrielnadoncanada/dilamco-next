@@ -4,16 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const headingVariants = cva(
-  "tracking-tight",
+  "tracking-tight text-foreground",
   {
     variants: {
       variant: {
-        h1: "text-5xl md:text-7xl tracking-tight text-balance mb-3",
-        h2: "text-2xl/10 tracking-tight text-pretty sm:text-5xl/14  ",
-        h3: "text-2xl/10 tracking-tight",
-        h4: "text-base/8 font-medium",
-        h5: "text-base md:text-lg lg:text-xl",
-        h6: "text-sm md:text-base lg:text-lg",
+        h1: "mb-3 text-4xl leading-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl",
+        h2: "text-3xl leading-tight text-pretty sm:text-4xl lg:text-5xl",
+        h3: "text-2xl leading-snug text-pretty",
+        h4: "text-lg leading-snug font-semibold",
+        h5: "text-base leading-snug font-semibold md:text-lg",
+        h6: "text-sm leading-snug font-semibold md:text-base",
       },
     },
     defaultVariants: {

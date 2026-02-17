@@ -85,10 +85,10 @@ export default function Breadcrumbs() {
   return (
     <nav
       aria-label="Fil d'Ariane"
-      className="border-b border-olive-200/60 bg-gradient-to-b from-olive-50/80 to-olive-100/70 text-olive-700 backdrop-blur-sm dark:border-olive-900/70 dark:from-olive-950/90 dark:to-olive-950/80 dark:text-olive-200"
+      className="border-b border-border/70 bg-muted/30 text-muted-foreground backdrop-blur-sm"
     >
       <Container>
-        <ol className="flex flex-wrap items-center gap-1.5 py-3 text-xs font-medium tracking-[0.02em] sm:text-sm">
+        <ol className="flex flex-wrap items-center gap-1.5 py-3 text-sm leading-6 font-medium">
           {breadcrumbs.map((crumb, index) => {
             const isLast = index === breadcrumbs.length - 1;
             return (
@@ -96,20 +96,20 @@ export default function Breadcrumbs() {
                 {isLast ? (
                   <span
                     aria-current="page"
-                    className="rounded-full bg-olive-200/60 px-2 py-0.5 text-olive-900 dark:bg-olive-800/70 dark:text-olive-50"
+                    className="rounded-full bg-muted px-2 py-0.5 text-foreground"
                   >
                     {crumb.label}
                   </span>
                 ) : (
                   <Link
                     href={crumb.href}
-                    className="rounded-full px-1.5 py-0.5 transition-colors hover:text-olive-900 dark:hover:text-olive-100"
+                    className="rounded-full px-1.5 py-0.5 transition-colors hover:text-foreground"
                   >
                     {crumb.label}
                   </Link>
                 )}
                 {!isLast ? (
-                  <span className="text-olive-400/80 dark:text-olive-500/80">/</span>
+                  <span className="text-muted-foreground/70">/</span>
                 ) : null}
               </li>
             );
