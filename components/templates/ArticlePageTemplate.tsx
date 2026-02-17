@@ -19,7 +19,7 @@ export function ArticlePageTemplate({ data }: { data: ArticlePageData }) {
       ))}
       {validatedData.faq ? <JsonLd data={faqJsonLd(validatedData.faq.items)} /> : null}
 
-      <main id="contenu">
+      <main id="contenu" className="overflow-hidden">
         <HeroSection {...validatedData.hero} />
 
         {validatedData.sections.map((section) => renderSection(section))}

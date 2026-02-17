@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/elements/container";
+import { cn } from "@/lib/utils";
 
 // Mapping des segments de chemin vers des labels français appropriés
 const labelMap: Record<string, string> = {
@@ -53,7 +54,7 @@ function formatLabel(segment: string): string {
   if (labelMap[segment]) {
     return labelMap[segment];
   }
-  
+
   // Sinon, formater automatiquement (remplacer les tirets par des espaces et capitaliser)
   return segment
     .split("-")
@@ -63,7 +64,7 @@ function formatLabel(segment: string): string {
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
-  
+
   // Ignorer la page d'accueil
   if (pathname === "/") {
     return null;
@@ -71,7 +72,7 @@ export default function Breadcrumbs() {
 
   // Diviser le chemin en segments
   const segments = pathname.split("/").filter(Boolean);
-  
+
   // Créer les breadcrumbs
   const breadcrumbs = [
     { label: "Accueil", href: "/" },
@@ -85,7 +86,7 @@ export default function Breadcrumbs() {
   return (
     <nav
       aria-label="Fil d'Ariane"
-      className="border-b border-border/70 bg-muted/30 text-muted-foreground backdrop-blur-sm"
+      className="  text-white  absolute left-0 right-0 z-50 rounded-t-lg "
     >
       <Container>
         <ol className="flex flex-wrap items-center gap-1.5 py-3 text-sm leading-6 font-medium">
@@ -103,13 +104,13 @@ export default function Breadcrumbs() {
                 ) : (
                   <Link
                     href={crumb.href}
-                    className="rounded-full px-1.5 py-0.5 transition-colors hover:text-foreground"
+                    className={cn("rounded-full px-1.5 py-0.5 transition-colors hover:text-foreground", index === 0 ? "pl-0" : "")}
                   >
                     {crumb.label}
                   </Link>
                 )}
                 {!isLast ? (
-                  <span className="text-muted-foreground/70">/</span>
+                  <span className="text-white/70">/</span>
                 ) : null}
               </li>
             );

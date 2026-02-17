@@ -4,7 +4,7 @@ import { Container } from "@/components/elements/container";
 import { Heading } from "@/components/elements/heading";
 import { Badge } from "../ui/badge";
 
-export type SectionSurface = "default" | "muted";
+export type SectionSurface = "default" | "muted" | "tint";
 export type SectionPadding = "none" | "small" | "main" | "large" | "page-top";
 export type SectionAlign = "left" | "center";
 export type SectionContainer = boolean | "default" | "narrow" | "wide" | "full";
@@ -128,7 +128,7 @@ const SectionShell = ({
     <section
       data-surface={surface}
       className={cn(
-        "relative w-full text-foreground data-[surface=default]:bg-background data-[surface=muted]:bg-muted/35",
+        "relative w-full text-foreground",
         paddingClassMap[padding],
         className
       )}

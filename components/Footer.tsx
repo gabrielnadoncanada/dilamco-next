@@ -25,11 +25,17 @@ export const Footer = ({
   bottomLinks = LEGAL_LINKS,
 }: FooterProps) => {
   return (
-    <Section padding="small" variant="default" className={cn(className)}>
+    <Section padding="small" variant="default" className={cn("relative overflow-hidden", className)}>
       <Divider />
       <Container>
         <footer>
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{
+              background: "radial-gradient(circle_at_top_right, var(--footer-glow), transparent 45%)",
+            }}
+          />
+          <div className="relative z-10 grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
               <div className="flex items-center gap-2 lg:justify-start">
                 <Logo url={logo.url}>
@@ -44,7 +50,7 @@ export const Footer = ({
             </div>
             {menuItems.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 text-sm leading-6 font-semibold tracking-wide text-foreground">{section.title}</h3>
+                <h3 className="mb-4 text-sm leading-6 font-semibold tracking-[0.08em] text-foreground/90 uppercase">{section.title}</h3>
                 <ul className="space-y-4 text-sm leading-6 text-muted-foreground">
                   {section.links.map((link, linkIdx) => (
                     <li
@@ -63,7 +69,7 @@ export const Footer = ({
               </div>
             ))}
           </div>
-          <div className="mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
+          <div className="relative z-10 mt-24 flex flex-col justify-between gap-4 border-t border-border/70 pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
             <p>{copyright}</p>
             <ul className="flex flex-wrap gap-4">
               {bottomLinks.map((link, linkIdx) => (

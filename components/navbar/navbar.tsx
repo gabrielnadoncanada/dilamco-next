@@ -28,7 +28,7 @@ export function Navbar({
     <Fragment>
       <section
         className={cn(
-          "pointer-events-auto  flex h-16 w-full items-center justify-center bg-background",
+          "pointer-events-auto flex h-16 w-full items-center justify-center bg-transparent",
           className,
         )}
       >

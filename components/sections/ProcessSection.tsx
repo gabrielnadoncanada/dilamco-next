@@ -56,12 +56,12 @@ const ProcessSection = ({
                   )}
                 />
                 <div className="relative z-0 grid size-11 place-content-center rounded-full border-4 bg-background">
-                  <p className="text-lg font-bold">{getStepValue(step, index)}</p>
+                  <p className="text-lg font-bold text-foreground">{getStepValue(step, index)}</p>
                 </div>
               </div>
               <div className="max-lg:mt-2">
-                <p className="text-lg font-semibold text-black">{step.title}</p>
-                <p className="mt-2 text-muted-foreground">{step.description}</p>
+                <p className="text-lg leading-snug font-semibold text-foreground">{step.title}</p>
+                <p className="mt-2 text-base leading-relaxed text-muted-foreground">{step.description}</p>
               </div>
             </div>
           ))}
@@ -77,7 +77,7 @@ const ProcessSection = ({
                 <CardTitle className="text-xl">{step.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">{step.description}</p>
+                <p className="text-base leading-relaxed text-muted-foreground">{step.description}</p>
               </CardContent>
             </Card>
           ))}

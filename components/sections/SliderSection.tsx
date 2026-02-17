@@ -126,11 +126,16 @@ const SliderSection = ({
                   <Card className="relative w-full max-w-sm overflow-hidden pt-0">
                     {item.image && (
                       <>
-                        <div className="bg-primary absolute inset-0 z-30 aspect-square opacity-50 mix-blend-color" />
+                        <div
+                          className="absolute inset-0 z-30 bg-linear-gradient-1 aspect-square opacity-50"
+                        />
+                        <div
+                          className="absolute inset-0 z-30 bg-radient-gradient-1 bg-radient-gradient-1 aspect-square"
+                        />
                         <img
                           src={item.image.src}
                           alt={item.image.alt}
-                          className="relative z-20 aspect-square w-full object-cover brightness-60 grayscale"
+                          className="relative z-20 aspect-square w-full object-cover "
                         />
                       </>
                     )}

@@ -45,7 +45,7 @@ const FeatureGridSection = ({
       actions={links && links.length > 0 ? <ActionButtons buttons={links} /> : undefined}
 
       align="center"
-      className={cn("relative overflow-hidden bg-accent ", className)}
+      className={cn("relative overflow-hidden ", className)}
       headerClassName="relative  flex flex-col items-center text-center"
       bodyClassName=" grid gap-6 md:grid-cols-3 md:gap-8"
       {...props}

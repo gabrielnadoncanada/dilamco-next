@@ -17,7 +17,7 @@ const CTASection = ({
   heading,
   description,
   actions,
-  variant = "muted",
+  variant = "default",
   className,
   ...props
 }: CTASectionProps) => {

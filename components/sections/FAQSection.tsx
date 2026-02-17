@@ -34,13 +34,13 @@ const FAQSection = ({
       {...props}
     >
 
-      <Accordion type="single" collapsible className="w-full">
+      <Accordion type="single" collapsible className="w-full rounded-2xl border border-border/70 bg-card/70 p-2 shadow-sm backdrop-blur-sm">
         {items.map((item, index) => (
-          <AccordionItem key={`${item.question}-${index}`} value={`item-${index}`}>
-            <AccordionTrigger className="text-left text-base leading-relaxed font-semibold hover:no-underline md:text-lg">
+          <AccordionItem key={`${item.question}-${index}`} value={`item-${index}`} className="rounded-xl px-3 transition-colors hover:bg-muted/50">
+            <AccordionTrigger className="text-left text-base leading-relaxed font-semibold text-foreground hover:no-underline md:text-lg">
               {item.question}
             </AccordionTrigger>
-            <AccordionContent className="text-base leading-relaxed text-muted-foreground">
+            <AccordionContent className="pr-8 text-base leading-relaxed text-muted-foreground">
               {item.answer}
             </AccordionContent>
           </AccordionItem>

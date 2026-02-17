@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <>
       <a href="#contenu" className="sr-only">Aller au contenu principal</a>
-      <header className="sticky top-0 z-50 bg-olive-100 dark:bg-olive-950">
+      <header className="sticky top-0 z-60  bg-background/95 backdrop-blur-sm">
         <Navbar
           logo={BRAND}
           navigation={MAIN_NAV}

@@ -63,7 +63,7 @@ const FeatureImageTextItem = ({
           <Heading variant="h3" className="mb-3 md:mb-4 lg:mb-6">
             {heading}
           </Heading>
-          <div className="text-muted-foreground lg:text-lg space-y-4">
+          <div className="space-y-4 text-base leading-relaxed text-muted-foreground lg:text-lg">
             {content}
           </div>
           {links && links.length > 0 && (

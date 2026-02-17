@@ -23,7 +23,10 @@ const HeroSection = ({
   description,
   actions,
   actionsSlot,
-  image,
+  image = {
+    src: "/images/hero-image.webp",
+    alt: "Hero Image",
+  },
   className,
   ...props
 }: HeroSectionProps) => {
@@ -38,16 +41,20 @@ const HeroSection = ({
       container={false}
       {...props}
     >
-      <Wallpaper className="rounded-t-lg">
-        <div className="-mx-2 sm:px-6 md:px-12 lg:px-0">
-          <Container className="flex flex-col gap-16">
-            <div className="flex gap-x-10 gap-y-16 max-lg:flex-col sm:gap-y-24">
-              <div className="flex shrink-0 z-20 flex-col items-start gap-6 py-16 sm:py-32 lg:basis-5xl lg:py-40">
-                <Heading variant="h1" className="max-w-5xl  text-white">
+      <div className="overflow-hidden rounded-lg border border-border/40 relative h-[calc(100vh-4rem)] max-h-[750px]">
+        <div className="-mx-2 sm:px-6 md:px-12 lg:px-0 h-full">
+          <Container className="flex flex-col gap-16 h-full">
+            <div className="flex gap-x-10 gap-y-16 max-lg:flex-col sm:gap-y-24 h-full">
+              <div className="flex shrink-0 z-40 flex-col items-start gap-6 py-16 sm:py-32 lg:basis-5xl lg:py-40 justify-center">
+                <Heading
+                  variant="h1"
+                  className="max-w-5xl text-[var(--hero-foreground)]"
+                  style={{ textShadow: "var(--hero-title-shadow)" }}
+                >
                   {heading}
                 </Heading>
                 {description && (
-                  <div className="flex max-w-3xl flex-col gap-4 text-lg/8 text-white/100">
+                  <div className="flex max-w-3xl flex-col gap-4 text-base leading-relaxed text-[var(--hero-foreground-muted)] sm:text-lg">
                     {typeof description === "string" ? <p>{description}</p> : description}
                   </div>
                 )}
@@ -61,13 +68,18 @@ const HeroSection = ({
                       alt={image.alt}
                     />
                   </div>
-                  <div className="bg-primary absolute inset-0 z-30 aspect-video opacity-50 mix-blend-color"></div>
+                  <div
+                    className="absolute inset-0 z-30 bg-linear-gradient-1"
+                  />
+                  <div
+                    className="absolute inset-0 z-30 bg-radient-gradient-1 bg-radient-gradient-1"
+                  />
                 </>
               )}
             </div>
           </Container>
         </div>
-      </Wallpaper >
+      </div >
     </SectionShell >
   );
 };
