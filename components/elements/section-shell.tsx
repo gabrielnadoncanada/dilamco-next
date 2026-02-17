@@ -128,7 +128,7 @@ const SectionShell = ({
     <section
       data-surface={surface}
       className={cn(
-        "relative w-full bg-background text-foreground",
+        "relative w-full text-foreground data-[surface=default]:bg-background data-[surface=muted]:bg-muted/35",
         paddingClassMap[padding],
         className
       )}
