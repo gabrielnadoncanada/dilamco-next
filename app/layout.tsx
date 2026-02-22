@@ -6,12 +6,10 @@ import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { SectionHeaderMotion } from "@/components/animations/SectionHeaderMotion";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
-
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
