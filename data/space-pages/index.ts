@@ -1,5 +1,6 @@
 import type { SpaceSlug } from "@/types/page-slugs";
 import type { SpacePageDefinition } from "@/types/page-definitions";
+import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
 import {
   metadata as commercialMetadata,
   pageData as commercialPageData,
@@ -48,6 +49,11 @@ export const SPACE_PAGES: Record<SpaceSlug, SpacePageDefinition> = {
 
 export const SPACE_PAGE_SLUGS = Object.keys(SPACE_PAGES) as SpaceSlug[];
 
-export function getSpacePageBySlug(slug: string) {
-  return SPACE_PAGES[slug as SpaceSlug] ?? null;
+export const PUBLIC_SPACE_PAGE_SLUGS = getPublicKeys(SPACE_PAGES);
+
+export function getSpacePageBySlug(
+  slug: string,
+  options?: { includeDrafts?: boolean },
+) {
+  return getRecordItem(SPACE_PAGES, slug, options);
 }

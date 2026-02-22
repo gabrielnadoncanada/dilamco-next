@@ -1,12 +1,15 @@
 // app/services/[slug]/page.tsx
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { ActionButtons } from "@/components/ActionButtons";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { DEFAULT_CTA } from "@/constants/shared-content";
-import { getServiceBySlug } from "@/data/service-pages/utils";
+import { getPublicServiceSlugs, getServiceBySlug } from "@/data/service-pages/utils";
+import {
+  getAccessibleEntity,
+  requireAccessibleEntity,
+} from "@/lib/page-access";
 import type { ServiceSlug } from "@/types/service-pages";
 import { renderSection } from "@/lib/render-section";
 import { validateContentSections } from "@/lib/section-validation";
@@ -17,12 +20,7 @@ import { SITE } from "@/seo/schema/site";
 type Params = { slug: string };
 
 export function generateStaticParams() {
-  return [
-    { slug: "design" },
-    { slug: "fabrication" },
-    { slug: "installation" },
-    { slug: "renovation" },
-  ];
+  return getPublicServiceSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -31,7 +29,9 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const service = getServiceBySlug(slug as ServiceSlug);
+  const service = await getAccessibleEntity(
+    getServiceBySlug(slug as ServiceSlug, { includeDrafts: true }),
+  );
   if (!service) return {};
 
   return {
@@ -69,8 +69,9 @@ export default async function ServicePage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
-  const service = getServiceBySlug(slug as ServiceSlug);
-  if (!service) notFound();
+  const service = await requireAccessibleEntity(
+    getServiceBySlug(slug as ServiceSlug, { includeDrafts: true }),
+  );
 
   const serviceName = service.metadata.title.replace(" | Dilamco", "");
   const validatedSections = validateContentSections(service.sections);

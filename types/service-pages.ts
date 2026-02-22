@@ -1,5 +1,6 @@
 import type { GenericLink } from "@/types/links";
 import type { ContentSection } from "@/types/sections";
+import type { PageFeatures } from "@/types/page-features";
 
 export type ServiceSlug =
   | "design"
@@ -24,6 +25,7 @@ export type ServiceSection = ContentSection;
 
 export type ServiceData = {
   slug: ServiceSlug;
+  features?: PageFeatures;
   metadata: {
     title: string;
     description: string;
@@ -50,6 +52,7 @@ export type ServiceData = {
 
 export type RenovationSubServiceData = {
   type: RenovationType;
+  features?: PageFeatures;
   metadata: {
     title: string;
     description: string;

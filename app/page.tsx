@@ -1,10 +1,11 @@
-﻿import { Feature57 } from "@/components/feature57";
 import { ArticlePageTemplate } from "@/components/templates/ArticlePageTemplate";
-import { metadata, pageData } from "@/data/static-pages/home";
-
+import { metadata, pageData, features } from "@/data/static-pages/home";
+import { ensurePageAccess } from "@/lib/page-access";
 
 export { metadata };
 
-export default function HomePage() {
-  return <><ArticlePageTemplate data={pageData} /><Feature57 /></>;
+export default async function HomePage() {
+  await ensurePageAccess(features);
+
+  return <ArticlePageTemplate data={pageData} />;
 }

@@ -1,5 +1,6 @@
 import type { GuideSlug } from "@/types/page-slugs";
 import type { GuidePageDefinition } from "@/types/page-definitions";
+import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
 import {
   metadata as commentChoisirMetadata,
   pageData as commentChoisirPageData,
@@ -32,6 +33,11 @@ export const GUIDE_PAGES: Record<GuideSlug, GuidePageDefinition> = {
 
 export const GUIDE_PAGE_SLUGS = Object.keys(GUIDE_PAGES) as GuideSlug[];
 
-export function getGuidePageBySlug(slug: string) {
-  return GUIDE_PAGES[slug as GuideSlug] ?? null;
+export const PUBLIC_GUIDE_PAGE_SLUGS = getPublicKeys(GUIDE_PAGES);
+
+export function getGuidePageBySlug(
+  slug: string,
+  options?: { includeDrafts?: boolean },
+) {
+  return getRecordItem(GUIDE_PAGES, slug, options);
 }

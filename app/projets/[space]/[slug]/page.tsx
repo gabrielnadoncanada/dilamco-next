@@ -3,12 +3,16 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   CORE_HREF,
-  PROJECTS,
+  PUBLIC_PROJECTS,
   SPACE_LABEL,
   type ProjectSpace,
   getProjectByParams,
   getProjectCanonicalUrl,
 } from "@/data/projects";
+import {
+  getAccessibleEntity,
+  requireAccessibleEntity,
+} from "@/lib/page-access";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
@@ -23,7 +27,7 @@ import { ActionButtons } from "@/components/ActionButtons";
 type Params = { space: ProjectSpace; slug: string };
 
 export function generateStaticParams(): Params[] {
-  return PROJECTS.map((p) => ({ space: p.space, slug: p.slug }));
+  return PUBLIC_PROJECTS.map((p) => ({ space: p.space, slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -32,7 +36,9 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { space, slug } = await params;
-  const project = getProjectByParams(space, slug);
+  const project = await getAccessibleEntity(
+    getProjectByParams(space, slug, { includeDrafts: true }),
+  );
   if (!project) return {};
 
   const canonical = getProjectCanonicalUrl(project);
@@ -89,8 +95,9 @@ export default async function ProjectPage({
   params: Promise<{ space: ProjectSpace; slug: string }>;
 }) {
   const { space, slug } = await params;
-  const project = getProjectByParams(space, slug);
-  if (!project) notFound();
+  const project = await requireAccessibleEntity(
+    getProjectByParams(space, slug, { includeDrafts: true }),
+  );
 
   // Safety: ensure route matches project data (avoid accidental duplicates)
   if (project.space !== space) notFound();

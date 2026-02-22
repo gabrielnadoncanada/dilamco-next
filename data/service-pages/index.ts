@@ -26,4 +26,6 @@ export {
   getServiceBySlug,
   getServiceCanonicalUrl,
   getRenovationSubServiceByType,
+  getPublicServiceSlugs,
+  getPublicRenovationSubServiceTypes,
 } from "./utils";

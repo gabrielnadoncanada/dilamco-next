@@ -1,13 +1,18 @@
 // app/services/renovation/[type]/page.tsx
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import { ActionButtons } from "@/components/ActionButtons";
 import { CTASection } from "@/components/sections/CTASection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { DEFAULT_CTA } from "@/constants/shared-content";
-import { getRenovationSubServiceByType } from "@/data/service-pages/utils";
-import { RENOVATION_SUB_SERVICES } from "@/data/service-pages/renovation";
+import {
+  getPublicRenovationSubServiceTypes,
+  getRenovationSubServiceByType,
+} from "@/data/service-pages/utils";
+import {
+  getAccessibleEntity,
+  requireAccessibleEntity,
+} from "@/lib/page-access";
 import { renderSection } from "@/lib/render-section";
 import { validateContentSections } from "@/lib/section-validation";
 import { JsonLd } from "@/seo/JsonLd";
@@ -17,7 +22,7 @@ import { SITE } from "@/seo/schema/site";
 type Params = { type: string };
 
 export function generateStaticParams() {
-  return Object.keys(RENOVATION_SUB_SERVICES).map((type) => ({ type }));
+  return getPublicRenovationSubServiceTypes().map((type) => ({ type }));
 }
 
 export async function generateMetadata({
@@ -26,7 +31,9 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { type } = await params;
-  const subService = getRenovationSubServiceByType(type);
+  const subService = await getAccessibleEntity(
+    getRenovationSubServiceByType(type, { includeDrafts: true }),
+  );
   if (!subService) return {};
 
   return {
@@ -65,8 +72,9 @@ export default async function RenovationSubServicePage({
   params: Promise<Params>;
 }) {
   const { type } = await params;
-  const subService = getRenovationSubServiceByType(type);
-  if (!subService) notFound();
+  const subService = await requireAccessibleEntity(
+    getRenovationSubServiceByType(type, { includeDrafts: true }),
+  );
 
   const serviceName = subService.metadata.title.replace(" | Dilamco", "");
   const validatedSections = validateContentSections(subService.sections);
@@ -146,4 +154,3 @@ export default async function RenovationSubServicePage({
     </>
   );
 }
-

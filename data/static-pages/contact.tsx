@@ -1,3 +1,4 @@
+﻿import type { PageFeatures } from "@/types/page-features";
 import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { SPACE_SLIDER_ITEMS } from "@/constants/shared-content";
@@ -19,6 +20,8 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/elements/heading";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SECTION_TYPES } from "@/constants/section-types";
+
+export const features: PageFeatures = {};
 
 export const metadata: Metadata = createPageMetadata({
   title: "Contact & soumission",

@@ -1,10 +1,13 @@
-﻿import type { Metadata } from "next";
+﻿import type { PageFeatures } from "@/types/page-features";
+import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { ArrowRight, Ruler, Shield, Wrench } from "lucide-react";
 import { createPageMetadata } from "@/lib/metadata";
 import { SPACE_SLIDER_ITEMS } from "@/constants/shared-content";
 import { SITE } from "@/seo/schema/site";
 import { SECTION_TYPES } from "@/constants/section-types";
+export const features: PageFeatures = {};
+
 export const metadata: Metadata = createPageMetadata({
   title: "Cuisines, vanités et armoires sur mesure clé en main à Montréal",
   description:

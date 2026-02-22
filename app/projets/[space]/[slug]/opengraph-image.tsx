@@ -1,6 +1,6 @@
 // app/projets/[space]/[slug]/opengraph-image.tsx
 import { ImageResponse } from "next/og";
-import { PROJECTS, type ProjectSpace, getProjectByParams } from "@/data/projects";
+import { PUBLIC_PROJECTS, type ProjectSpace, getProjectByParams } from "@/data/projects";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -8,7 +8,7 @@ export const contentType = "image/png";
 type Params = { space: string; slug: string };
 
 export function generateStaticParams() {
-  return PROJECTS.map((p) => ({ space: p.space, slug: p.slug }));
+  return PUBLIC_PROJECTS.map((p) => ({ space: p.space, slug: p.slug }));
 }
 
 function isProjectSpace(v: string): v is ProjectSpace {

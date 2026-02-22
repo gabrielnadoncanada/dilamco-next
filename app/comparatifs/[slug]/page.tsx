@@ -1,16 +1,19 @@
-﻿import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { ArticlePageTemplate } from "@/components/templates/ArticlePageTemplate";
 import {
-  COMPARATIF_PAGE_SLUGS,
+  PUBLIC_COMPARATIF_PAGE_SLUGS,
   getComparatifPageBySlug,
   type ComparatifSlug,
 } from "@/data/comparatif-pages";
+import {
+  getAccessibleEntity,
+  requireAccessibleEntity,
+} from "@/lib/page-access";
 
 type Params = { slug: string };
 
 export function generateStaticParams() {
-  return COMPARATIF_PAGE_SLUGS.map((slug) => ({ slug }));
+  return PUBLIC_COMPARATIF_PAGE_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -19,7 +22,9 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const page = getComparatifPageBySlug(slug);
+  const page = await getAccessibleEntity(
+    getComparatifPageBySlug(slug, { includeDrafts: true }),
+  );
   if (!page) return {};
   return page.metadata;
 }
@@ -30,8 +35,9 @@ export default async function ComparatifPage({
   params: Promise<{ slug: ComparatifSlug }>;
 }) {
   const { slug } = await params;
-  const page = getComparatifPageBySlug(slug);
-  if (!page) notFound();
+  const page = await requireAccessibleEntity(
+    getComparatifPageBySlug(slug, { includeDrafts: true }),
+  );
 
   return <ArticlePageTemplate data={page.pageData} />;
 }

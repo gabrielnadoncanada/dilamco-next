@@ -1,12 +1,18 @@
 // app/projets/[space]/page.tsx
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import {
   PROJECTS_BY_SPACE,
   SPACE_LABEL,
   type ProjectSpace,
 } from "@/data/projects";
-import { PROJECT_SPACE_PAGES } from "@/data/project-pages/spaces";
+import {
+  getProjectSpacePageBySlug,
+  PUBLIC_PROJECT_SPACE_SLUGS,
+} from "@/data/project-pages/spaces";
+import {
+  getAccessibleEntity,
+  requireAccessibleEntity,
+} from "@/lib/page-access";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
@@ -20,7 +26,7 @@ import { validateContentSections } from "@/lib/section-validation";
 type Params = { space: ProjectSpace };
 
 export function generateStaticParams(): Params[] {
-  return (Object.keys(PROJECT_SPACE_PAGES) as ProjectSpace[]).map((space) => ({
+  return PUBLIC_PROJECT_SPACE_SLUGS.map((space) => ({
     space,
   }));
 }
@@ -31,7 +37,9 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { space } = await params;
-  const content = PROJECT_SPACE_PAGES[space];
+  const content = await getAccessibleEntity(
+    getProjectSpacePageBySlug(space, { includeDrafts: true }),
+  );
   if (!content) return {};
 
   return {
@@ -70,8 +78,9 @@ export default async function ProjectsSpacePage({
 }) {
   const { space } = await params;
 
-  const content = PROJECT_SPACE_PAGES[space];
-  if (!content) notFound();
+  const content = await requireAccessibleEntity(
+    getProjectSpacePageBySlug(space, { includeDrafts: true }),
+  );
 
   const projects = PROJECTS_BY_SPACE[space] ?? [];
   const validatedSections = validateContentSections(content.sections);
@@ -153,6 +162,3 @@ export default async function ProjectsSpacePage({
     </>
   );
 }
-
-
-

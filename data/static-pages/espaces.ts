@@ -1,9 +1,12 @@
-﻿import type { Metadata } from "next";
+﻿import type { PageFeatures } from "@/types/page-features";
+import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SPACE_SLIDER_ITEMS } from "@/constants/shared-content";
 import { SITE } from "@/seo/schema/site";
 import { SECTION_TYPES } from "@/constants/section-types";
+export const features: PageFeatures = {};
+
 export const metadata: Metadata = createPageMetadata({
   title: "Espaces sur mesure",
   description:

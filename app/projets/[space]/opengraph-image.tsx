@@ -1,7 +1,10 @@
 ﻿// app/projets/[space]/opengraph-image.tsx
 import { ImageResponse } from "next/og";
 import { type ProjectSpace } from "@/data/projects";
-import { PROJECT_SPACE_PAGES } from "@/data/project-pages/spaces";
+import {
+  getProjectSpacePageBySlug,
+  PUBLIC_PROJECT_SPACE_SLUGS,
+} from "@/data/project-pages/spaces";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -9,7 +12,7 @@ export const contentType = "image/png";
 type Params = { space: string };
 
 export function generateStaticParams() {
-  return Object.keys(PROJECT_SPACE_PAGES).map((space) => ({ space }));
+  return PUBLIC_PROJECT_SPACE_SLUGS.map((space) => ({ space }));
 }
 
 function isProjectSpace(v: string): v is ProjectSpace {
@@ -28,7 +31,7 @@ export default async function OpenGraphImage({ params }: { params: Promise<Param
     return new ImageResponse(<div>Not found</div>, size);
   }
 
-  const content = PROJECT_SPACE_PAGES[space];
+  const content = getProjectSpacePageBySlug(space);
 
   const title = content?.metadata?.title ?? "Projets sur mesure | Dilamco";
   const desc = content?.metadata?.description ?? "Réalisations et études de cas » Dilamco.";

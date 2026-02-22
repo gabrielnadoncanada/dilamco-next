@@ -1,5 +1,6 @@
 import type { MaterialSlug } from "@/types/page-slugs";
 import type { MaterialPageDefinition } from "@/types/page-definitions";
+import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
 import {
   metadata as boisMassifMetadata,
   pageData as boisMassifPageData,
@@ -51,6 +52,11 @@ export const MATERIAL_PAGE_SLUGS = Object.keys(
   MATERIAL_PAGES,
 ) as MaterialSlug[];
 
-export function getMaterialPageBySlug(slug: string) {
-  return MATERIAL_PAGES[slug as MaterialSlug] ?? null;
+export const PUBLIC_MATERIAL_PAGE_SLUGS = getPublicKeys(MATERIAL_PAGES);
+
+export function getMaterialPageBySlug(
+  slug: string,
+  options?: { includeDrafts?: boolean },
+) {
+  return getRecordItem(MATERIAL_PAGES, slug, options);
 }

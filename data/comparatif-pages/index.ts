@@ -1,5 +1,6 @@
 import type { ComparatifSlug } from "@/types/page-slugs";
 import type { ComparatifPageDefinition } from "@/types/page-definitions";
+import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
 import {
   metadata as cuisineVsHomeDepotMetadata,
   pageData as cuisineVsHomeDepotPageData,
@@ -37,6 +38,11 @@ export const COMPARATIF_PAGE_SLUGS = Object.keys(
   COMPARATIF_PAGES,
 ) as ComparatifSlug[];
 
-export function getComparatifPageBySlug(slug: string) {
-  return COMPARATIF_PAGES[slug as ComparatifSlug] ?? null;
+export const PUBLIC_COMPARATIF_PAGE_SLUGS = getPublicKeys(COMPARATIF_PAGES);
+
+export function getComparatifPageBySlug(
+  slug: string,
+  options?: { includeDrafts?: boolean },
+) {
+  return getRecordItem(COMPARATIF_PAGES, slug, options);
 }

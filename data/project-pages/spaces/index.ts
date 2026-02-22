@@ -1,5 +1,6 @@
 import type { ProjectSpace } from "@/types/projects";
 import type { SpaceContent } from "@/types/spaces";
+import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
 import { COMMERCIAL_PROJECT_PAGE } from "@/data/project-pages/spaces/commercial";
 import { CUISINE_PROJECT_PAGE } from "@/data/project-pages/spaces/cuisine";
 import { SALLE_DE_BAIN_PROJECT_PAGE } from "@/data/project-pages/spaces/salle-de-bain";
@@ -18,6 +19,11 @@ export const PROJECT_SPACE_SLUGS = Object.keys(
   PROJECT_SPACE_PAGES,
 ) as ProjectSpace[];
 
-export function getProjectSpacePageBySlug(space: string) {
-  return PROJECT_SPACE_PAGES[space as ProjectSpace] ?? null;
+export const PUBLIC_PROJECT_SPACE_SLUGS = getPublicKeys(PROJECT_SPACE_PAGES);
+
+export function getProjectSpacePageBySlug(
+  space: string,
+  options?: { includeDrafts?: boolean },
+) {
+  return getRecordItem(PROJECT_SPACE_PAGES, space, options);
 }

@@ -1,16 +1,19 @@
-﻿import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { ArticlePageTemplate } from "@/components/templates/ArticlePageTemplate";
 import {
-  GUIDE_PAGE_SLUGS,
+  PUBLIC_GUIDE_PAGE_SLUGS,
   getGuidePageBySlug,
   type GuideSlug,
 } from "@/data/guide-pages";
+import {
+  getAccessibleEntity,
+  requireAccessibleEntity,
+} from "@/lib/page-access";
 
 type Params = { slug: string };
 
 export function generateStaticParams() {
-  return GUIDE_PAGE_SLUGS.map((slug) => ({ slug }));
+  return PUBLIC_GUIDE_PAGE_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -19,7 +22,9 @@ export async function generateMetadata({
   params: Promise<Params>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const page = getGuidePageBySlug(slug);
+  const page = await getAccessibleEntity(
+    getGuidePageBySlug(slug, { includeDrafts: true }),
+  );
   if (!page) return {};
   return page.metadata;
 }
@@ -30,8 +35,9 @@ export default async function GuidePage({
   params: Promise<{ slug: GuideSlug }>;
 }) {
   const { slug } = await params;
-  const page = getGuidePageBySlug(slug);
-  if (!page) notFound();
+  const page = await requireAccessibleEntity(
+    getGuidePageBySlug(slug, { includeDrafts: true }),
+  );
 
   return <ArticlePageTemplate data={page.pageData} />;
 }

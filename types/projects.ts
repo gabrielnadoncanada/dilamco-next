@@ -1,4 +1,5 @@
 import type { GenericLink } from "@/types/links";
+import type { PageFeatures } from "@/types/page-features";
 
 export type ProjectSpace =
   | "cuisine"
@@ -17,6 +18,7 @@ export type ProjectArea =
 export type ProjectData = {
   space: ProjectSpace;
   slug: string;
+  features?: PageFeatures;
   canonicalPath?: string;
   title: string;
   metaDescription: string;
