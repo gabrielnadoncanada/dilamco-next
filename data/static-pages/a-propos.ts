@@ -77,9 +77,9 @@ export const pageData: ArticlePageData = {
     {
       id: "processus",
       title: "Une démarche cadrée",
+      intro: "Une méthode structurée pour livrer un résultat durable.",
       content: {
         type: SECTION_TYPES.PROCESS,
-        description: "Une méthode structurée pour livrer un résultat durable.",
         items: [
           {
             step: "1",

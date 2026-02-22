@@ -14,7 +14,7 @@ import { Divider } from "../elements/divider";
 interface ComparisonTableSectionProps
   extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading: string;
-  description?: string;
+  intro?: React.ReactNode;
   columns: string[];
   rows: Array<{
     label?: string;
@@ -27,7 +27,7 @@ interface ComparisonTableSectionProps
 
 const ComparisonTableSection = ({
   heading,
-  description,
+  intro,
   columns,
   rows,
   firstColumnLabel = "Matériau",
@@ -38,7 +38,7 @@ const ComparisonTableSection = ({
     <SectionShell
       className={className}
       title={<Heading variant="h2">{heading}</Heading>}
-      intro={description}
+      intro={intro}
       align="center"
       {...props}
     >

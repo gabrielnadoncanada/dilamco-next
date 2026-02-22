@@ -13,7 +13,7 @@ interface Step {
 
 interface ProcessSectionProps extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
   heading: string;
-  intro?: string;
+  intro?: React.ReactNode;
   items: Step[];
   actions?: React.ReactNode;
   layout?: "cards" | "timeline";

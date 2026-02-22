@@ -31,10 +31,10 @@ export const pageData: ArticlePageData = {
     {
       id: "benefits",
       title: "Des espaces sur mesure, sans compromis",
+      intro:
+        "De la conception à l'installation : décisions claires, exécution précise, résultat durable.",
       content: {
         type: SECTION_TYPES.FEATURE_GRID,
-        description:
-          "De la conception à l'installation : décisions claires, exécution précise, résultat durable.",
         items: [
           {
             title: "Conçu pour votre espace réel",
@@ -61,19 +61,20 @@ export const pageData: ArticlePageData = {
     {
       id: "espaces",
       title: "Choisissez votre espace",
+      intro: "Découvrez nos solutions sur mesure pour chaque espace.",
       content: {
         type: SECTION_TYPES.SLIDER,
-        description: "Découvrez nos solutions sur mesure pour chaque espace.",
         items: SPACE_SLIDER_ITEMS,
       },
     },
     {
       id: "differenciation",
       title: "Ce qui distingue Dilamco",
+      intro:
+        "Le haut de gamme ne se déclare pas. Il se construit à chaque étape.",
       content: {
         type: SECTION_TYPES.PROOF,
-        description:
-          "Le haut de gamme ne se déclare pas. Il se construit à chaque étape.",
+
         items: [
           {
             title: "Conception orientée usage",
@@ -96,10 +97,10 @@ export const pageData: ArticlePageData = {
     {
       id: "processus",
       title: "Une démarche claire. Une exécution maîtrisée.",
+      intro:
+        "Un seul interlocuteur, des étapes simples, des validations avant production.",
       content: {
         type: SECTION_TYPES.PROCESS,
-        description:
-          "Un seul interlocuteur, des étapes simples, des validations avant production.",
         layout: "timeline",
         items: [
           {

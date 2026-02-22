@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
@@ -15,9 +16,10 @@ interface Feature {
 interface FeatureGridSectionProps
   extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
   heading: string;
-  description?: string;
+  intro?: ReactNode;
   eyebrow?: string;
   items: Feature[];
+  columns?: 2 | 3 | 4;
   links?: ActionButton[];
   className?: string;
 }
@@ -30,7 +32,7 @@ const fallbackImages = [
 
 const FeatureGridSection = ({
   heading,
-  description,
+  intro,
   eyebrow,
   items,
   links,
@@ -40,7 +42,7 @@ const FeatureGridSection = ({
   return (
     <SectionShell
       title={heading}
-      intro={description}
+      intro={intro}
       eyebrow={eyebrow}
       actions={links && links.length > 0 ? <ActionButtons buttons={links} /> : undefined}
 

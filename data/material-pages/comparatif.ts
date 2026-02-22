@@ -38,9 +38,9 @@ const sections: ContentArticleSection[] = [
   {
     id: "tableau",
     title: "Tableau comparatif",
+    intro: "Résumé général à adapter à votre contexte réel.",
     content: {
       type: SECTION_TYPES.TABLE,
-      description: "Résumé général à adapter à votre contexte réel.",
       columns: [
         "Usage recommandé",
         "Stabilité",

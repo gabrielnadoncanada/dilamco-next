@@ -258,9 +258,9 @@ export const pageData: ArticlePageData = {
     {
       id: "espaces",
       title: "Choisissez votre espace",
+      intro: "Découvrez nos solutions sur mesure pour chaque espace.",
       content: {
         type: SECTION_TYPES.SLIDER,
-        description: "Découvrez nos solutions sur mesure pour chaque espace.",
         items: SPACE_SLIDER_ITEMS,
       },
     },

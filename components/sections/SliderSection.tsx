@@ -30,7 +30,7 @@ export interface SliderItem {
 
 interface SliderSectionProps extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading?: string;
-  description?: string;
+  intro?: React.ReactNode;
   items: SliderItem[];
   showNavigation?: boolean;
   className?: string;
@@ -38,7 +38,7 @@ interface SliderSectionProps extends Omit<SectionShellProps, "title" | "intro" |
 
 const SliderSection = ({
   heading,
-  description,
+  intro,
   items,
   showNavigation = true,
   className,
@@ -71,7 +71,7 @@ const SliderSection = ({
     <SectionShell
       className={className}
       title={heading ? <Heading variant="h2">{heading}</Heading> : undefined}
-      intro={description}
+      intro={intro}
       headerClassName="flex-row items-end justify-between gap-6"
       actions={showNavigation ? (
         <div className="shrink-0 gap-2 md:flex">

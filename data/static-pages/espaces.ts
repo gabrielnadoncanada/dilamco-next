@@ -32,9 +32,9 @@ export const pageData: ArticlePageData = {
     {
       id: "liste-espaces",
       title: "Choisissez votre espace",
+      intro: "Sélectionnez l'espace correspondant à votre projet.",
       content: {
         type: SECTION_TYPES.SLIDER,
-        description: "Sélectionnez l'espace correspondant à votre projet.",
         items: SPACE_SLIDER_ITEMS,
       },
     },

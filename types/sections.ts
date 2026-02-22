@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { z } from "zod";
 import type { LucideIcon } from "lucide-react";
-import { SECTION_TYPES, type SectionTypeValue } from "@/constants/section-types";
+import { SECTION_TYPES } from "@/constants/section-types";
 import type { ActionButton } from "@/components/ActionButtons";
 
 export type SectionLink = {
@@ -81,7 +81,6 @@ type ListContent = {
 
 type TableContent = {
   type: typeof SECTION_TYPES.TABLE;
-  description?: string;
   columns: string[];
   rows: TableRow[];
   firstColumnLabel?: string;
@@ -106,20 +105,17 @@ type RelatedLinksContent = {
 
 type FeatureGridContent = {
   type: typeof SECTION_TYPES.FEATURE_GRID;
-  description?: string;
   items: FeatureGridItem[];
   columns?: 2 | 3 | 4;
 };
 
 type ProofContent = {
   type: typeof SECTION_TYPES.PROOF;
-  description?: string;
   items: ProofItem[];
 };
 
 type ProcessContent = {
   type: typeof SECTION_TYPES.PROCESS;
-  description?: string;
   items: ProcessItem[];
   layout?: "cards" | "timeline";
   actions?: ReactNode;
@@ -127,7 +123,6 @@ type ProcessContent = {
 
 type SliderContent = {
   type: typeof SECTION_TYPES.SLIDER;
-  description?: string;
   items: SliderSectionItem[];
   showNavigation?: boolean;
 };
@@ -164,37 +159,6 @@ export type ContentSection = {
 };
 
 export type ContentArticleSection = ContentSection;
-
-export type RenderableSection = {
-  id: string;
-  title: string;
-  type: SectionTypeValue;
-  paragraphs?: string[];
-  intro?: ReactNode;
-  description?: string;
-  items?:
-    | ListEntry[]
-    | Array<ListEntry | RelatedLink>
-    | RelatedLink[]
-    | ProcessItem[]
-    | FeatureGridItem[]
-    | ProofItem[]
-    | SliderSectionItem[]
-    | FaqItem[];
-  itemsWithLinks?: SectionItemWithLink[];
-  steps?: string[];
-  links?: SectionLink[];
-  variant?: "bullets" | "checkmarks" | "numbered";
-  relatedLinks?: RelatedLink[];
-  columns?: 2 | 3 | 4;
-  tableColumns?: string[];
-  rows?: TableRow[];
-  firstColumnLabel?: string;
-  layout?: "cards" | "timeline";
-  actions?: ReactNode;
-  showNavigation?: boolean;
-  node?: ReactNode;
-};
 
 const linkSchema = z.object({
   href: z.string().min(1),
@@ -281,7 +245,6 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal(SECTION_TYPES.TABLE),
-    description: z.string().optional(),
     columns: z.array(z.string()),
     rows: z.array(tableRowSchema),
     firstColumnLabel: z.string().optional(),
@@ -310,25 +273,21 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
   }),
   z.object({
     type: z.literal(SECTION_TYPES.FEATURE_GRID),
-    description: z.string().optional(),
     items: z.array(featureGridItemSchema),
     columns: z.union([z.literal(2), z.literal(3), z.literal(4)]).optional(),
   }),
   z.object({
     type: z.literal(SECTION_TYPES.PROOF),
-    description: z.string().optional(),
     items: z.array(proofItemSchema),
   }),
   z.object({
     type: z.literal(SECTION_TYPES.PROCESS),
-    description: z.string().optional(),
     items: z.array(processItemSchema),
     layout: z.enum(["cards", "timeline"]).optional(),
     actions: z.any().optional(),
   }),
   z.object({
     type: z.literal(SECTION_TYPES.SLIDER),
-    description: z.string().optional(),
     items: z.array(sliderItemSchema),
     showNavigation: z.boolean().optional(),
   }),

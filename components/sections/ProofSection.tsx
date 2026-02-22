@@ -12,14 +12,14 @@ interface ProofItem {
 
 interface ProofSectionProps extends Omit<SectionShellProps, "title" | "intro" | "children"> {
   heading: string;
-  description?: string;
+  intro?: React.ReactNode;
   items: ProofItem[];
   className?: string;
 }
 
 const ProofSection = ({
   heading,
-  description,
+  intro,
   items,
   className,
   ...props
@@ -28,7 +28,7 @@ const ProofSection = ({
     <SectionShell
       className={className}
       title={<SectionTitle heading={heading} />}
-      intro={description}
+      intro={intro}
       align="center"
       {...props}
     >

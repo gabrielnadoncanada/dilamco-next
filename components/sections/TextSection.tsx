@@ -4,7 +4,7 @@ import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 import { SectionFooterDivider, SectionTitle } from "@/components/sections/section-helpers";
 interface TextSectionProps extends Omit<SectionShellProps, "title" | "actions" | "children"> {
   heading: string;
-  intro?: string;
+  intro?: React.ReactNode;
   paragraphs: string[];
   links?: ActionButton[];
   className?: string;

@@ -97,10 +97,10 @@ export const pageData: ArticlePageData = {
     {
       id: "processus",
       title: "Notre démarche de projet",
+      intro:
+        "Un processus simple et cadré : décisions validées tôt, exécution précise, résultat durable.",
       content: {
         type: SECTION_TYPES.PROCESS,
-        description:
-          "Un processus simple et cadré : décisions validées tôt, exécution précise, résultat durable.",
         items: [
           {
             step: "1",

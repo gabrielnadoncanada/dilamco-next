@@ -134,9 +134,9 @@ export const pageData: ArticlePageData = {
     {
       id: "comparatif",
       title: "Comparatif rapide",
+      intro: "Pour une lecture complète, consultez la page comparatif.",
       content: {
         type: SECTION_TYPES.TABLE,
-        description: "Pour une lecture complète, consultez la page comparatif.",
         columns: ["Durabilité", "Humidité", "Stabilité", "Usage typique"],
         rows: [
           {

@@ -31,10 +31,9 @@ export const pageData: ArticlePageData = {
     {
       id: "liste",
       title: "Comparatifs disponibles",
+      intro: "Choisissez le comparatif le plus proche de votre situation.",
       content: {
         type: SECTION_TYPES.FEATURE_GRID,
-        description:
-          "Choisissez le comparatif le plus proche de votre situation.",
         items: [
           {
             title: "Cuisine sur mesure vs IKEA",

@@ -7,7 +7,7 @@ import { Heading } from "@/components/elements/heading";
 import { Divider } from "../elements/divider";
 interface ListSectionProps extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
   heading: string;
-  intro?: string;
+  intro?: React.ReactNode;
   items: Array<ListItem | string>;
   links?: ActionButton[];
   variant?: "bullets" | "checkmarks" | "numbered";
