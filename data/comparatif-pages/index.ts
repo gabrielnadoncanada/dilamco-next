@@ -1,6 +1,6 @@
 import type { ComparatifSlug } from "@/types/page-slugs";
-import type { ComparatifPageDefinition } from "@/types/page-definitions";
-import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
+import type { ArticlePageDefinition } from "@/types/page-definitions";
+import { createCollection } from "@/lib/create-collection";
 import {
   metadata as cuisineVsHomeDepotMetadata,
   pageData as cuisineVsHomeDepotPageData,
@@ -14,12 +14,7 @@ import {
   pageData as cuisinisteVsEntrepreneurPageData,
 } from "@/data/comparatif-pages/cuisiniste-vs-entrepreneur-general";
 
-export type { ComparatifSlug } from "@/types/page-slugs";
-
-export const COMPARATIF_PAGES: Record<
-  ComparatifSlug,
-  ComparatifPageDefinition
-> = {
+const collection = createCollection<ComparatifSlug, ArticlePageDefinition>({
   "cuisine-sur-mesure-vs-home-depot": {
     metadata: cuisineVsHomeDepotMetadata,
     pageData: cuisineVsHomeDepotPageData,
@@ -32,17 +27,7 @@ export const COMPARATIF_PAGES: Record<
     metadata: cuisinisteVsEntrepreneurMetadata,
     pageData: cuisinisteVsEntrepreneurPageData,
   },
-};
+});
 
-export const COMPARATIF_PAGE_SLUGS = Object.keys(
-  COMPARATIF_PAGES,
-) as ComparatifSlug[];
-
-export const PUBLIC_COMPARATIF_PAGE_SLUGS = getPublicKeys(COMPARATIF_PAGES);
-
-export function getComparatifPageBySlug(
-  slug: string,
-  options?: { includeDrafts?: boolean },
-) {
-  return getRecordItem(COMPARATIF_PAGES, slug, options);
-}
+export const PUBLIC_COMPARATIF_PAGE_SLUGS = collection.publicSlugs;
+export const getComparatifPageBySlug = collection.getBySlug;

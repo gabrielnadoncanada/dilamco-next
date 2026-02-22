@@ -1,11 +1,6 @@
-import { ArticlePageTemplate } from "@/components/templates/ArticlePageTemplate";
-import { metadata, pageData, features } from "@/data/static-pages/projets";
-import { ensurePageAccess } from "@/lib/page-access";
+import { createStaticPage } from "@/lib/create-static-page";
+import * as data from "@/data/static-pages/projets";
 
+const { metadata, Page } = createStaticPage(data);
 export { metadata };
-
-export default async function ProjetsPage() {
-  await ensurePageAccess(features);
-
-  return <ArticlePageTemplate data={pageData} />;
-}
+export default Page;

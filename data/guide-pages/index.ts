@@ -1,6 +1,6 @@
 import type { GuideSlug } from "@/types/page-slugs";
-import type { GuidePageDefinition } from "@/types/page-definitions";
-import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
+import type { ArticlePageDefinition } from "@/types/page-definitions";
+import { createCollection } from "@/lib/create-collection";
 import {
   metadata as commentChoisirMetadata,
   pageData as commentChoisirPageData,
@@ -14,9 +14,7 @@ import {
   pageData as etapesRenovationPageData,
 } from "@/data/guide-pages/etapes-renovation-cuisine";
 
-export type { GuideSlug } from "@/types/page-slugs";
-
-export const GUIDE_PAGES: Record<GuideSlug, GuidePageDefinition> = {
+const collection = createCollection<GuideSlug, ArticlePageDefinition>({
   "comment-choisir-cuisine-sur-mesure": {
     metadata: commentChoisirMetadata,
     pageData: commentChoisirPageData,
@@ -29,15 +27,7 @@ export const GUIDE_PAGES: Record<GuideSlug, GuidePageDefinition> = {
     metadata: etapesRenovationMetadata,
     pageData: etapesRenovationPageData,
   },
-};
+});
 
-export const GUIDE_PAGE_SLUGS = Object.keys(GUIDE_PAGES) as GuideSlug[];
-
-export const PUBLIC_GUIDE_PAGE_SLUGS = getPublicKeys(GUIDE_PAGES);
-
-export function getGuidePageBySlug(
-  slug: string,
-  options?: { includeDrafts?: boolean },
-) {
-  return getRecordItem(GUIDE_PAGES, slug, options);
-}
+export const PUBLIC_GUIDE_PAGE_SLUGS = collection.publicSlugs;
+export const getGuidePageBySlug = collection.getBySlug;

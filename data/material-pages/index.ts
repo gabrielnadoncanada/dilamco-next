@@ -1,6 +1,6 @@
 import type { MaterialSlug } from "@/types/page-slugs";
-import type { MaterialPageDefinition } from "@/types/page-definitions";
-import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
+import type { ArticlePageDefinition } from "@/types/page-definitions";
+import { createCollection } from "@/lib/create-collection";
 import {
   metadata as boisMassifMetadata,
   pageData as boisMassifPageData,
@@ -30,9 +30,7 @@ import {
   pageData as quincailleriePageData,
 } from "@/data/material-pages/quincaillerie";
 
-export type { MaterialSlug } from "@/types/page-slugs";
-
-export const MATERIAL_PAGES: Record<MaterialSlug, MaterialPageDefinition> = {
+const collection = createCollection<MaterialSlug, ArticlePageDefinition>({
   "bois-massif": { metadata: boisMassifMetadata, pageData: boisMassifPageData },
   comparatif: { metadata: comparatifMetadata, pageData: comparatifPageData },
   contreplaque: {
@@ -46,17 +44,7 @@ export const MATERIAL_PAGES: Record<MaterialSlug, MaterialPageDefinition> = {
     metadata: quincaillerieMetadata,
     pageData: quincailleriePageData,
   },
-};
+});
 
-export const MATERIAL_PAGE_SLUGS = Object.keys(
-  MATERIAL_PAGES,
-) as MaterialSlug[];
-
-export const PUBLIC_MATERIAL_PAGE_SLUGS = getPublicKeys(MATERIAL_PAGES);
-
-export function getMaterialPageBySlug(
-  slug: string,
-  options?: { includeDrafts?: boolean },
-) {
-  return getRecordItem(MATERIAL_PAGES, slug, options);
-}
+export const PUBLIC_MATERIAL_PAGE_SLUGS = collection.publicSlugs;
+export const getMaterialPageBySlug = collection.getBySlug;

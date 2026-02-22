@@ -1,6 +1,5 @@
 export type {
   ArticlePageData,
-  ArticlePageSection,
   ContentArticleSection,
   ContentSection,
   SectionContent,

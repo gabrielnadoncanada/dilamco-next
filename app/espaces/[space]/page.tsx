@@ -1,43 +1,16 @@
-import type { Metadata } from "next";
+import { createCollectionPage } from "@/lib/create-collection-page";
 import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import {
-  getSpacePageBySlug,
   PUBLIC_SPACE_PAGE_SLUGS,
-  type SpaceSlug,
+  getSpacePageBySlug,
 } from "@/data/space-pages";
-import {
-  getAccessibleEntity,
-  requireAccessibleEntity,
-} from "@/lib/page-access";
 
-type Params = { space: string };
+const { generateStaticParams, generateMetadata, Page } = createCollectionPage({
+  publicSlugs: PUBLIC_SPACE_PAGE_SLUGS,
+  getBySlug: getSpacePageBySlug,
+  paramName: "space",
+  Template: SpacePageTemplate,
+});
 
-export function generateStaticParams() {
-  return PUBLIC_SPACE_PAGE_SLUGS.map((space) => ({ space }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}): Promise<Metadata> {
-  const { space } = await params;
-  const page = await getAccessibleEntity(
-    getSpacePageBySlug(space, { includeDrafts: true }),
-  );
-  if (!page) return {};
-  return page.metadata;
-}
-
-export default async function SpacePage({
-  params,
-}: {
-  params: Promise<{ space: SpaceSlug }>;
-}) {
-  const { space } = await params;
-  const page = await requireAccessibleEntity(
-    getSpacePageBySlug(space, { includeDrafts: true }),
-  );
-
-  return <SpacePageTemplate data={page.pageData} />;
-}
+export { generateStaticParams, generateMetadata };
+export default Page;

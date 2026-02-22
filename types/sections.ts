@@ -70,8 +70,6 @@ type TextContent = {
   paragraphs?: string[];
   items?: Array<ListEntry | RelatedLink>;
   links?: SectionLink[];
-  /** @deprecated Use section.intro instead */
-  intro?: string;
 };
 
 type ListContent = {
@@ -79,8 +77,6 @@ type ListContent = {
   items: Array<ListEntry | RelatedLink>;
   links?: SectionLink[];
   variant?: "bullets" | "checkmarks" | "numbered";
-  /** @deprecated Use section.intro instead */
-  intro?: string;
 };
 
 type TableContent = {
@@ -95,23 +91,17 @@ type StepsContent = {
   type: typeof SECTION_TYPES.STEPS;
   steps?: string[];
   links?: SectionLink[];
-  /** @deprecated Use section.intro instead */
-  intro?: string;
 };
 
 type ListWithLinksContent = {
   type: typeof SECTION_TYPES.LIST_WITH_LINKS;
   itemsWithLinks?: SectionItemWithLink[];
-  /** @deprecated Use section.intro instead */
-  intro?: string;
 };
 
 type RelatedLinksContent = {
   type: typeof SECTION_TYPES.RELATED_LINKS;
   items: RelatedLink[];
   columns?: 2 | 3;
-  /** @deprecated Use section.intro instead */
-  intro?: ReactNode;
 };
 
 type FeatureGridContent = {
@@ -145,9 +135,6 @@ type SliderContent = {
 type FaqContent = {
   type: typeof SECTION_TYPES.FAQ;
   items?: FaqItem[];
-  faqItems?: FaqItem[];
-  /** @deprecated Use section.intro instead */
-  intro?: ReactNode;
 };
 
 type CustomContent = {
@@ -177,7 +164,6 @@ export type ContentSection = {
 };
 
 export type ContentArticleSection = ContentSection;
-export type ArticlePageSection = ContentArticleSection;
 
 export type RenderableSection = {
   id: string;
@@ -208,7 +194,6 @@ export type RenderableSection = {
   actions?: ReactNode;
   showNavigation?: boolean;
   node?: ReactNode;
-  faqItems?: FaqItem[];
 };
 
 const linkSchema = z.object({
@@ -287,14 +272,12 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
     paragraphs: z.array(z.string()).optional(),
     items: z.array(z.union([listEntrySchema, relatedLinkSchema])).optional(),
     links: z.array(linkSchema).optional(),
-    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.LIST),
     items: z.array(z.union([listEntrySchema, relatedLinkSchema])),
     links: z.array(linkSchema).optional(),
     variant: z.enum(["bullets", "checkmarks", "numbered"]).optional(),
-    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.TABLE),
@@ -307,7 +290,6 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
     type: z.literal(SECTION_TYPES.STEPS),
     steps: z.array(z.string()).optional(),
     links: z.array(linkSchema).optional(),
-    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.LIST_WITH_LINKS),
@@ -320,13 +302,11 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
         })
       )
       .optional(),
-    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.RELATED_LINKS),
     items: z.array(relatedLinkSchema),
     columns: z.union([z.literal(2), z.literal(3)]).optional(),
-    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
   z.object({
     type: z.literal(SECTION_TYPES.FEATURE_GRID),
@@ -359,8 +339,6 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
   z.object({
     type: z.literal(SECTION_TYPES.FAQ),
     items: z.array(faqItemSchema).optional(),
-    faqItems: z.array(faqItemSchema).optional(),
-    intro: z.union([z.string(), z.any()]).optional(), // deprecated: use section.intro
   }),
 ]);
 

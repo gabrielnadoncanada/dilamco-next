@@ -59,9 +59,7 @@ export function normalizeContentSection(
 ): RenderableSection {
   const dedupeLinkedLabel = options.dedupeLinkedLabel ?? false;
   const { id, title, content } = section;
-  const intro =
-    section.intro ??
-    ("intro" in content && (content as { intro?: string | ReactNode }).intro);
+  const intro = section.intro;
 
   if (content.type === SECTION_TYPES.LIST) {
     return {
@@ -148,7 +146,7 @@ export function normalizeContentSection(
       title,
       type: content.type,
       intro,
-      faqItems: content.items ?? content.faqItems,
+      items: content.items,
     };
   }
 

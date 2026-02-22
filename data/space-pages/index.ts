@@ -1,6 +1,6 @@
 import type { SpaceSlug } from "@/types/page-slugs";
 import type { SpacePageDefinition } from "@/types/page-definitions";
-import { getPublicKeys, getRecordItem } from "@/lib/feature-collections";
+import { createCollection } from "@/lib/create-collection";
 import {
   metadata as commercialMetadata,
   pageData as commercialPageData,
@@ -22,9 +22,7 @@ import {
   pageData as walkInPageData,
 } from "@/data/space-pages/walk-in";
 
-export type { SpaceSlug } from "@/types/page-slugs";
-
-export const SPACE_PAGES: Record<SpaceSlug, SpacePageDefinition> = {
+const collection = createCollection<SpaceSlug, SpacePageDefinition>({
   cuisine: {
     metadata: cuisineMetadata,
     pageData: cuisinePageData,
@@ -45,15 +43,7 @@ export const SPACE_PAGES: Record<SpaceSlug, SpacePageDefinition> = {
     metadata: commercialMetadata,
     pageData: commercialPageData,
   },
-};
+});
 
-export const SPACE_PAGE_SLUGS = Object.keys(SPACE_PAGES) as SpaceSlug[];
-
-export const PUBLIC_SPACE_PAGE_SLUGS = getPublicKeys(SPACE_PAGES);
-
-export function getSpacePageBySlug(
-  slug: string,
-  options?: { includeDrafts?: boolean },
-) {
-  return getRecordItem(SPACE_PAGES, slug, options);
-}
+export const PUBLIC_SPACE_PAGE_SLUGS = collection.publicSlugs;
+export const getSpacePageBySlug = collection.getBySlug;

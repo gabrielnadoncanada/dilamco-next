@@ -15,7 +15,7 @@ import {
   normalizeContentSection,
   toActionButtons,
 } from "@/lib/section-normalizers";
-import type { ContentSection, RenderableSection, SectionContent } from "@/types/sections";
+import type { ContentSection, FaqItem, RenderableSection, SectionContent } from "@/types/sections";
 
 type RenderSectionOptions = {
   dedupeLinkedLabel?: boolean;
@@ -209,7 +209,7 @@ export const sectionRegistry: SectionRegistry = {
         aria-labelledby={section.id}
         heading={section.title}
         intro={section.intro}
-        items={faqItemsToSectionItems(section.faqItems)}
+        items={faqItemsToSectionItems(section.items as FaqItem[] | undefined)}
       />
     ),
   },

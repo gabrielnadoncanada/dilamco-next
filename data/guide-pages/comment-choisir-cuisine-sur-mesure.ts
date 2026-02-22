@@ -3,6 +3,7 @@ import type { ArticlePageData } from "@/types/article-page";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
 import { SECTION_TYPES } from "@/constants/section-types";
+
 export const metadata: Metadata = createPageMetadata({
   title: "Comment choisir une cuisine sur mesure",
   description:
@@ -10,6 +11,7 @@ export const metadata: Metadata = createPageMetadata({
   path: "/guides/comment-choisir-cuisine-sur-mesure/",
   ogAlt: "Guide : Comment choisir une cuisine sur mesure",
 });
+
 const faqItems = [
   {
     q: "Sur mesure vs semi-custom : quelle différence?",
@@ -32,6 +34,7 @@ const faqItems = [
     a: "Clarifier l'usage, les contraintes et l'échéance. Ensuite, le design permet de cadrer la configuration et les choix de matériaux.",
   },
 ];
+
 export const pageData: ArticlePageData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
