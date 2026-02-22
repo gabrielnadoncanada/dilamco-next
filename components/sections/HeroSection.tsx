@@ -41,10 +41,10 @@ const HeroSection = ({
       container={false}
       {...props}
     >
-      <div className="overflow-hidden rounded-lg border border-border/40 relative h-[calc(100vh-4rem)] max-h-[750px]">
+      <div className="overflow-hidden rounded-lg border border-border/40 relative h-[calc(100vh-4rem)] max-h-[450px] md:max-h-[750px]">
         <div className="-mx-2 sm:px-6 md:px-12 lg:px-0 h-full">
           <Container className="flex flex-col gap-16 h-full">
-            <div className="flex gap-x-10 gap-y-16 max-lg:flex-col sm:gap-y-24 h-full">
+            <div className="flex gap-x-10 justify-center gap-y-16 max-lg:flex-col sm:gap-y-24 h-full">
               <div className="flex shrink-0 z-40 flex-col items-start gap-6 py-16 sm:py-32 lg:basis-5xl lg:py-40 justify-center">
                 <Heading
                   variant="h1"

@@ -24,8 +24,9 @@ export type ListEntry = { title: string; description: string } | string;
 export type RelatedLink = {
   title?: string;
   label?: string;
-  href: string;
+  href?: string;
   description?: string;
+  icon?: LucideIcon;
 };
 
 export type TableRow = { label?: string; title?: string; values: string[] };
@@ -101,6 +102,7 @@ type RelatedLinksContent = {
   type: typeof SECTION_TYPES.RELATED_LINKS;
   items: RelatedLink[];
   columns?: 2 | 3;
+  icon?: LucideIcon;
 };
 
 type FeatureGridContent = {
@@ -180,8 +182,9 @@ const listEntrySchema = z.union([
 const relatedLinkSchema = z.object({
   title: z.string().optional(),
   label: z.string().optional(),
-  href: z.string().min(1),
+  href: z.string().min(1).optional(),
   description: z.string().optional(),
+  icon: z.any().optional(),
 });
 
 const tableRowSchema = z.object({
@@ -262,7 +265,7 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
           title: z.string().optional(),
           label: z.string().optional(),
           link: linkSchema.optional(),
-        })
+        }),
       )
       .optional(),
   }),
@@ -321,7 +324,7 @@ export const articlePageSchema = z.object({
     z.object({
       name: z.string(),
       url: z.string(),
-    })
+    }),
   ),
   extraJsonLd: z.array(z.record(z.string(), z.unknown())).optional(),
   hero: z.object({

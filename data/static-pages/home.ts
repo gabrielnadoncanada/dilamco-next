@@ -37,21 +37,21 @@ export const pageData: ArticlePageData = {
         type: SECTION_TYPES.FEATURE_GRID,
         items: [
           {
-            title: "Conçu pour votre espace réel",
+            title: "Pensé pour votre espace et votre quotidien",
             description:
-              "Implantation, ergonomie et rangement adaptés à votre configuration.",
+              "Implantation optimisée, ergonomie soignée et rangements pensés selon votre réalité.",
             icon: Ruler,
           },
           {
-            title: "Matériaux durables, fabrication maîtrisée",
+            title: "Matériaux durables et fabrication maîtrisée",
             description:
-              "Sélection rigoureuse et production contrôlée pour un résultat qui traverse les années.",
+              "Matériaux sélectionnés avec exigence et fabrication suivie pour un rendu impeccable.",
             icon: Shield,
           },
           {
-            title: "Un seul responsable, du plan à la pose",
+            title: "Un seul expert, du concept à l'installation",
             description:
-              "Moins d'intermédiaires, moins d'imprévus, plus de cohérence.",
+              "Un interlocuteur dédié assurant une coordination claire et une exécution cohérente.",
             icon: Wrench,
           },
         ],
@@ -73,7 +73,7 @@ export const pageData: ArticlePageData = {
       intro:
         "Le haut de gamme ne se déclare pas. Il se construit à chaque étape.",
       content: {
-        type: SECTION_TYPES.PROOF,
+        type: SECTION_TYPES.FEATURE_GRID,
 
         items: [
           {
@@ -101,7 +101,6 @@ export const pageData: ArticlePageData = {
         "Un seul interlocuteur, des étapes simples, des validations avant production.",
       content: {
         type: SECTION_TYPES.PROCESS,
-        layout: "timeline",
         items: [
           {
             step: "1",
