@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Circle } from "lucide-react";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
 import { ComparisonTableSection } from "@/components/sections/ComparisonTableSection";
 import { FAQSection } from "@/components/sections/FAQSection";
@@ -34,11 +35,19 @@ function toActionButtons(links?: SectionLink[]): ActionButton[] | undefined {
 function toListEntries(items?: Array<ListEntry | RelatedLink | undefined>): ListEntry[] {
   return (items ?? [])
     .filter((item): item is ListEntry | RelatedLink => item != null)
-    .map((item): ListEntry => {
-      if (typeof item === "string") return item;
-      if ("href" in item) return (item as RelatedLink).title ?? (item as RelatedLink).label ?? (item as RelatedLink).href ?? "";
-      const obj = item as { title?: string; description?: string };
-      return { title: obj.title ?? "", description: obj.description ?? "" };
+    .flatMap((item): ListEntry[] => {
+      if (typeof item === "string") return [item];
+
+      if ("href" in item) {
+        const label = item.title ?? item.label ?? item.href;
+        return label ? [label] : [];
+      }
+
+      if ("title" in item && "description" in item && typeof item.title === "string") {
+        return [item as ListEntry];
+      }
+
+      return [];
     });
 }
 
@@ -152,7 +161,7 @@ export function renderSection(section: ContentSection, options: RenderSectionOpt
           aria-labelledby={id}
           heading={title}
           intro={intro}
-          items={content.items}
+          items={content.items.filter((item) => Boolean(item.href)) as Array<RelatedLink & { href: string }>}
           columns={content.columns}
         />
       );
@@ -164,7 +173,10 @@ export function renderSection(section: ContentSection, options: RenderSectionOpt
           aria-labelledby={id}
           heading={title}
           intro={intro}
-          items={content.items}
+          items={content.items.map((item) => ({
+            ...item,
+            icon: item.icon ?? Circle,
+          }))}
           columns={content.columns}
         />
       );
