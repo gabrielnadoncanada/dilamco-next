@@ -20,10 +20,10 @@ export function MobileMenuItem({ item, index }: MobileMenuItemProps) {
         value={`nav-${index}`}
         className="border-b-0"
       >
-        <AccordionTrigger className="h-[3.75rem] items-center p-0 !px-4 text-base leading-normal font-medium text-muted-foreground hover:bg-muted hover:no-underline">
+        <AccordionTrigger className="h-[3.75rem] items-center p-0 !px-6 text-base leading-normal font-medium text-muted-foreground hover:bg-muted hover:no-underline">
           {item.title}
         </AccordionTrigger>
-        <AccordionContent className="max-h-[60dvh] overflow-x-auto">
+        <AccordionContent className="max-h-[60dvh] overflow-x-auto px-2">
           {item.groups.flatMap((group, groupIndex) =>
             group.links.map((link, linkIndex) => (
               <NavLinkItem
@@ -39,9 +39,9 @@ export function MobileMenuItem({ item, index }: MobileMenuItemProps) {
   }
 
   return (
-      <a
+    <a
       href={item.url}
-      className="flex h-[3.75rem] items-center rounded-md p-0 px-4 text-left text-base leading-normal font-medium text-muted-foreground ring-ring/10 outline-ring/50 transition-all hover:bg-muted focus-visible:ring-4 focus-visible:outline-1 nth-last-1:border-0"
+      className="flex h-[3.75rem] items-center border-b  p-0 px-6 text-left text-base leading-normal font-medium text-muted-foreground ring-ring/10 outline-ring/50 transition-all hover:bg-muted focus-visible:ring-4 focus-visible:outline-1 nth-last-1:border-0"
     >
       {item.title}
     </a>

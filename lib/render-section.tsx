@@ -31,12 +31,15 @@ function toActionButtons(links?: SectionLink[]): ActionButton[] | undefined {
   }));
 }
 
-function toListEntries(items?: Array<ListEntry | RelatedLink>): ListEntry[] {
-  return (items ?? []).map((item) => {
-    if (typeof item === "string") return item;
-    if ("href" in item) return item.title ?? item.label ?? item.href;
-    return item;
-  });
+function toListEntries(items?: Array<ListEntry | RelatedLink | undefined>): ListEntry[] {
+  return (items ?? [])
+    .filter((item): item is ListEntry | RelatedLink => item != null)
+    .map((item): ListEntry => {
+      if (typeof item === "string") return item;
+      if ("href" in item) return (item as RelatedLink).title ?? (item as RelatedLink).label ?? (item as RelatedLink).href ?? "";
+      const obj = item as { title?: string; description?: string };
+      return { title: obj.title ?? "", description: obj.description ?? "" };
+    });
 }
 
 function mapItemsWithLinks(items: SectionItemWithLink[] | undefined, dedupeLinkedLabel: boolean) {

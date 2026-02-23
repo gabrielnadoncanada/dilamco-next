@@ -232,14 +232,29 @@ export const pageData: ArticlePageData = {
       id: "suite",
       title: "À quoi s'attendre aprés l'envoi",
       content: {
-        type: SECTION_TYPES.LIST,
+        type: SECTION_TYPES.PROCESS,
         items: [
-          "Confirmation de réception.",
-          "Questions rapides si des détails manquent.",
-          "Planification selon la portée.",
-          "Soumission avec prochaines étapes.",
+          {
+            step: "1",
+            title: "Confirmation de réception.",
+            description: "Nous vous recontactons pour confirmer la réception de votre demande.",
+          },
+          {
+            step: "2",
+            title: "Questions rapides si des détails manquent.",
+            description: "Nous vous recontactons pour confirmer la réception de votre demande.",
+          },
+          {
+            step: "3",
+            title: "Planification selon la portée.",
+            description: "Nous vous recontactons pour confirmer la réception de votre demande.",
+          },
+          {
+            step: "4",
+            title: "Soumission avec prochaines étapes.",
+            description: "Nous vous recontactons pour confirmer la réception de votre demande.",
+          },
         ],
-        variant: "numbered",
       },
     },
     {

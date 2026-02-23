@@ -10,13 +10,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { SectionFooterDivider, SectionTitle, getGridCols } from "@/components/sections/section-helpers";
-
-interface RelatedLink {
-  title?: string;
-  label?: string;
-  href: string;
-  description?: string;
-}
+import type { RelatedLink } from "@/types/sections";
 
 interface RelatedLinksSectionProps
   extends Omit<SectionShellProps, "title" | "intro" | "children" | "surface"> {
@@ -57,7 +51,7 @@ const RelatedLinksSection = ({
       >
         {items.map((link, index) => (
           <Card
-            key={`${link.href}-${index}`}
+            key={`${link.href ?? link.title ?? link.label ?? index}-${index}`}
             data-animate-card-card
           >
             <CardHeader>

@@ -5,9 +5,9 @@ import { cn } from "@/lib/utils";
 import type { NavAction } from "../navbar.types";
 import { getActionButtonVariant } from "../utils";
 
-interface ActionButtonsProps {
+interface ActionButtonsProps
+  extends React.ComponentPropsWithoutRef<"div"> {
   actions: NavAction[];
-  className?: string;
   size?: "default" | "sm" | "lg" | "icon";
 }
 
@@ -15,24 +15,33 @@ export function ActionButtons({
   actions,
   className,
   size,
+  ...rest
 }: ActionButtonsProps) {
   return (
-    <div className={cn("flex items-center gap-3", className)}>
-      {actions.map((action, index) => (
-        <Button
-          size={size}
-          variant={getActionButtonVariant(action)}
-          className={
-            action.isPrimary
-              ? "text-primary-foreground"
-              : "text-foreground"
-          }
-          asChild
-          key={`navbar-btn-${index}`}
-        >
-          <a href={action.url}>{action.label}</a>
-        </Button>
-      ))}
+    <div
+      className={cn("flex items-center gap-3", className)}
+      {...rest}
+    >
+      {actions.map((action, index) => {
+        const { label, isPrimary, url, buttonProps = {}, linkProps = {} } =
+          action;
+        return (
+          <Button
+            size={size}
+            variant={getActionButtonVariant(action)}
+            className={
+              isPrimary ? "text-primary-foreground" : "text-foreground"
+            }
+            asChild
+            key={`navbar-btn-${index}`}
+            {...buttonProps}
+          >
+            <a href={url} {...linkProps}>
+              {label}
+            </a>
+          </Button>
+        );
+      })}
     </div>
   );
 }

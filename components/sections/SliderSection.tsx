@@ -72,7 +72,7 @@ const SliderSection = ({
       className={className}
       title={heading ? <Heading variant="h2">{heading}</Heading> : undefined}
       intro={intro}
-      headerClassName="flex-row items-end justify-between gap-6"
+      headerClassName="flex-col md:flex-row md:items-end justify-between gap-6"
       actions={showNavigation ? (
         <div className="shrink-0 gap-2 md:flex">
           <Button
@@ -105,9 +105,10 @@ const SliderSection = ({
         <Carousel
           setApi={setCarouselApi}
           opts={{
+            align: "center",
             breakpoints: {
               "(max-width: 768px)": {
-                dragFree: true,
+                dragFree: false,
               },
             },
           }}

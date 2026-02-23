@@ -41,7 +41,7 @@ const HeroSection = ({
       container={false}
       {...props}
     >
-      <div className="overflow-hidden rounded-lg border border-border/40 relative h-[calc(100vh-4rem)] max-h-[450px] md:max-h-[750px]">
+      <div className="overflow-hidden rounded-lg border border-border/40 relative h-[calc(100vh-4rem)] max-h-[550px] md:max-h-[750px]">
         <div className="-mx-2 sm:px-6 md:px-12 lg:px-0 h-full">
           <Container className="flex flex-col gap-16 h-full">
             <div className="flex gap-x-10 justify-center gap-y-16 max-lg:flex-col sm:gap-y-24 h-full">
@@ -54,7 +54,7 @@ const HeroSection = ({
                   {heading}
                 </Heading>
                 {description && (
-                  <div className="flex max-w-3xl flex-col gap-4 text-base leading-relaxed text-[var(--hero-foreground-muted)] sm:text-lg">
+                  <div className="text-[var(--hero-foreground-muted)] [&>p]:line-clamp-4 text-base [&>p]:leading-relaxed [&>p]:sm:text-lg flex max-w-3xl flex-col gap-4">
                     {typeof description === "string" ? <p>{description}</p> : description}
                   </div>
                 )}

@@ -11,23 +11,14 @@ import {
   ItemMedia,
   ItemTitle,
 } from "@/components/ui/item"
-
-type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>
-
-interface Feature {
-  id?: string
-  title: string
-  description: string
-  icon: IconComponent
-  href?: string
-}
+import type { FeatureGridItem } from "@/types/sections"
 
 interface FeatureGridSectionProps
   extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
   heading: string
   intro?: ReactNode
   eyebrow?: string
-  items: Feature[]
+  items: FeatureGridItem[]
   columns?: 2 | 3 | 4
   links?: ActionButton[]
   className?: string
@@ -63,12 +54,12 @@ export function FeatureGridSection({
     >
       <ItemGroup className={cn("flex flex-wrap flex-row  gap-6 md:gap-8", gridColsClass[columns])}>
         {items.map((item) => {
-          const key = item.id ?? item.href ?? item.title
+          const key = item.href ?? item.title
           const Icon = item.icon
 
           const card = (
             <Item variant="outline" className="h-full ">
-              {item.icon && (
+              {Icon && (
                 <ItemMedia variant="icon">
                   <Icon className="size-5" aria-hidden="true" />
                 </ItemMedia>

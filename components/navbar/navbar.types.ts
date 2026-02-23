@@ -1,3 +1,4 @@
+import type { Button } from "@/components/ui/button";
 import { LucideIcon } from "lucide-react";
 
 export interface LogoConfig {
@@ -31,6 +32,16 @@ export interface NavAction {
   label: string;
   isPrimary: boolean;
   url: string;
+  /** Passed to the Button (e.g. size, variant, className) */
+  buttonProps?: Omit<
+    React.ComponentPropsWithoutRef<typeof Button>,
+    "asChild" | "children"
+  >;
+  /** Passed to the underlying <a> (e.g. target, rel, aria-*, data-*) */
+  linkProps?: Omit<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    "href" | "children"
+  >;
 }
 
 export interface NavbarProps {

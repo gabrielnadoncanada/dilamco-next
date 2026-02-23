@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 import type { ArticlePageData } from "@/types/article-page";
 import { ArrowRight, Ruler, Shield, Wrench } from "lucide-react";
 import { createPageMetadata } from "@/lib/metadata";
-import { SPACE_SLIDER_ITEMS } from "@/constants/shared-content";
+import {
+  PROJECT_SLIDER_ITEMS,
+  SPACE_SLIDER_ITEMS,
+} from "@/constants/shared-content";
 import { SITE } from "@/seo/schema/site";
 import { SECTION_TYPES } from "@/constants/section-types";
 export const features: PageFeatures = {};
@@ -25,7 +28,11 @@ export const pageData: ArticlePageData = {
       src: "/images/hero-image.webp",
       alt: "Dilamco, sur mesure haut de gamme, clé en main",
     },
-    actions: [{ text: "Obtenir une soumission", href: "/contact" }],
+
+    actions: [
+      { text: "Obtenir une soumission", href: "/contact" },
+      { text: "Voir nos projets", href: "/projets/", variant: "outline" },
+    ],
   },
   sections: [
     {
@@ -132,17 +139,10 @@ export const pageData: ArticlePageData = {
     {
       id: "preuves",
       title: "Projets récents",
+      intro: "Découvrez nos dernières réalisations pour vous inspirer.",
       content: {
-        type: SECTION_TYPES.RELATED_LINKS,
-        items: [
-          { title: "Voir les projets de cuisines", href: "/projets/cuisine/" },
-          {
-            title: "Voir les projets de salles de bain",
-            href: "/projets/salle-de-bain/",
-          },
-          { title: "Voir tous les projets", href: "/projets/" },
-        ],
-        columns: 3,
+        type: SECTION_TYPES.SLIDER,
+        items: PROJECT_SLIDER_ITEMS,
       },
     },
   ],
