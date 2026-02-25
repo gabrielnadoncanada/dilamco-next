@@ -9,6 +9,7 @@ import {
   type FeatureImageTextItem,
 } from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
+import { Hammer, Ruler, Shield } from "lucide-react";
 
 export const metadata = createPageMetadata({
   title: "Salle de lavage sur mesure",
@@ -183,25 +184,27 @@ export const pageData: SpacePageData = {
       id: "pour-qui",
       title: "À qui s’adresse une salle de lavage sur mesure?",
       content: {
-        type: SECTION_TYPES.LIST,
+        type: SECTION_TYPES.FEATURE_GRID,
         items: [
           {
             title: "Espace restreint ou configuration atypique",
             description:
-              "Condo, corridor, placard, sous-sol : on optimise sans nuire à la circulation.",
+              "Condo, corridor, placard, sous-sol : on optimise sans nuire à la circulation. Notre rôle : créer des solutions durables. ",
+            icon: Ruler,
           },
           {
             title: "Organisation simple au quotidien",
             description:
               "Pliage, paniers, produits, linge : un espace clair, fonctionnel et facile à utiliser.",
+            icon: Shield,
           },
           {
             title: "Contraintes techniques à intégrer",
             description:
               "Plomberie, drains, chauffe-eau, panneaux, ventilation et dégagements.",
+            icon: Hammer,
           },
         ],
-        variant: "checkmarks",
       },
     },
     {

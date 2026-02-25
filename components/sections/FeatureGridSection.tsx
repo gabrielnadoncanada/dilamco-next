@@ -26,7 +26,7 @@ interface FeatureGridSectionProps
 
 const gridColsClass: Record<NonNullable<FeatureGridSectionProps["columns"]>, string> =
 {
-  2: "md:grid-cols-2",
+  2: "md:grid md:grid-cols-2 [&>div]:flex-[1_0_300px]",
   3: "md:grid-cols-3 [&>div]:flex-[1_0_300px]",
   4: "md:grid-cols-4",
 }

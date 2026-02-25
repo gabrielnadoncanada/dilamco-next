@@ -18,6 +18,10 @@ export const INSTALLATION_SERVICE_PAGE: ServiceData = {
       { title: "Demander une soumission", href: "/contact/" },
       { title: "Voir des projets installés", href: "/projets/" },
     ],
+    image: {
+      src: "/images/services/installation-hero.webp",
+      alt: "Plan technique et echantillons de panneaux pour installation sur mesure",
+    },
   },
   sections: [
     {

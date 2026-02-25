@@ -19,8 +19,8 @@ export const DESIGN_SERVICE_PAGE: ServiceData = {
       { title: "Voir nos réalisations", href: "/projets/" },
     ],
     image: {
-      src: "/images/services/design-hero.svg",
-      alt: "Fond abstrait vert pour le service de design",
+      src: "/images/services/design-hero.webp",
+      alt: "Plan de cuisine sur mesure et echantillons de materiaux",
     },
   },
   sections: [

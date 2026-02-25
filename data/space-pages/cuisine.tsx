@@ -9,6 +9,7 @@ import {
   type FeatureImageTextItem,
 } from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
+import { Hammer, Ruler, Shield } from "lucide-react";
 
 export const metadata = createPageMetadata({
   title: "Cuisine sur mesure haut de gamme",
@@ -200,25 +201,27 @@ export const pageData: SpacePageData = {
       id: "pour-qui",
       title: "À qui s’adresse une cuisine sur mesure?",
       content: {
-        type: SECTION_TYPES.LIST,
+        type: SECTION_TYPES.FEATURE_GRID,
         items: [
           {
             title: "Espace atypique ou contraint",
             description:
-              "Condo, murs irréguliers, accès difficile : chaque centimètre doit être optimisé.",
+              "Condo, murs irréguliers, accès difficile : chaque centimètre compte pour une cuisine sur mesure. Notre rôle : créer des solutions durables, fonctionnelles et bien exécutées.",
+            icon: Ruler,
           },
           {
             title: "Investir pour un résultat durable",
             description:
-              "Vous voulez un rendu cohérent et solide : matériaux, quincaillerie et finition au même niveau.",
+              "Vous voulez un rendu cohérent et solide : matériaux, quincaillerie et finition au même niveau. La durabilité est au cœur de nos solutions.",
+            icon: Shield,
           },
           {
             title: "Contraintes techniques à intégrer",
             description:
-              "Plomberie, électroménagers encastrés, îlot, rangements spécifiques et circulation.",
+              "Plomberie, électroménagers encastrés, îlot, rangements spécifiques et circulation. La durabilité est au cœur de nos solutions.",
+            icon: Hammer,
           },
         ],
-        variant: "checkmarks",
       },
     },
     {

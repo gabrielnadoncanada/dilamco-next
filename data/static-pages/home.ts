@@ -87,16 +87,19 @@ export const pageData: ArticlePageData = {
             title: "Conception orientée usage",
             description:
               "Ergonomie réelle, circulation fluide, rangements pensés selon votre quotidien.",
+            icon: Ruler,
           },
           {
             title: "Qualité contrôlée à la source",
             description:
               "Matériaux durables et fabrication supervisée, sans compromis sur la finition.",
+            icon: Shield,
           },
           {
             title: "Installation millimétrée",
             description:
               "Alignements nets, ajustements précis, inspection finale avant livraison.",
+            icon: Wrench,
           },
         ],
       },

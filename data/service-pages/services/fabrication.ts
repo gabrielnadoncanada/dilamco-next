@@ -18,6 +18,10 @@ export const FABRICATION_SERVICE_PAGE: ServiceData = {
       { title: "Parler de votre projet", href: "/contact/" },
       { title: "Voir nos réalisations", href: "/projets/" },
     ],
+    image: {
+      src: "/images/services/fabrication-hero-v2.webp",
+      alt: "Plans techniques et echantillons de materiaux pour fabrication sur mesure",
+    },
   },
   sections: [
     {

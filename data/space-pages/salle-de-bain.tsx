@@ -9,6 +9,7 @@ import {
   type FeatureImageTextItem,
 } from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
+import { Hammer, Ruler, Shield, Wrench } from "lucide-react";
 
 export const metadata = createPageMetadata({
   title: "Salle de bain & vanités sur mesure",
@@ -186,25 +187,27 @@ export const pageData: SpacePageData = {
       id: "pour-qui",
       title: "À qui s’adresse une vanité sur mesure?",
       content: {
-        type: SECTION_TYPES.LIST,
+        type: SECTION_TYPES.FEATURE_GRID,
         items: [
           {
             title: "Espace limité ou configuration atypique",
             description:
-              "Petites salles de bain, contraintes d’accès ou murs irréguliers : on optimise chaque centimètre.",
+              "Petites salles de bain, contraintes d’accès, murs irréguliers : on optimise chaque centimètre.",
+            icon: Ruler,
           },
           {
             title: "Durabilité en milieu humide",
             description:
               "Vous voulez une solution stable et cohérente : matériaux, chants, quincaillerie et finition au même niveau.",
+            icon: Shield,
           },
           {
             title: "Contraintes à intégrer",
             description:
-              "Plomberie, rangement vertical, double lavabo, organisation précise et circulation.",
+              "Plomberie, rangement vertical, double lavabo, organisation précise et circulation. La durabilité en milieu humide est au cœur de nos solutions.",
+            icon: Hammer,
           },
         ],
-        variant: "checkmarks",
       },
     },
     {

@@ -9,6 +9,7 @@ import {
   type FeatureImageTextItem,
 } from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
+import { Building, Hammer, Store } from "lucide-react";
 
 export const metadata = createPageMetadata({
   title: "Commercial sur mesure",
@@ -181,29 +182,33 @@ export const pageData: SpacePageData = {
       intro:
         "Le sur mesure est particulièrement pertinent lorsque l’espace impose des contraintes (accès, équipements, circulation) ou lorsque l’usage est intensif.",
       content: {
-        type: SECTION_TYPES.LIST,
+        type: SECTION_TYPES.FEATURE_GRID,
 
         items: [
           {
             title: "Bureaux & espaces professionnels",
             description: "Rangements, mobilier intégré et zones d’accueil.",
+            icon: Building,
           },
           {
             title: "Commerces de détail",
             description:
               "Mobilier de présentation, arrière-boutique et stockage.",
+            icon: Store,
           },
           {
             title: "Espaces de services",
             description:
               "Mobilier fonctionnel, organisation et durabilité au quotidien.",
+            icon: Hammer,
           },
           {
             title: "Espaces communs",
             description: "Comptoirs, rangements muraux et solutions intégrées.",
+            icon: Building,
           },
         ],
-        variant: "checkmarks",
+        columns: 2,
       },
     },
     {

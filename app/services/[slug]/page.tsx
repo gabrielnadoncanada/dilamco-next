@@ -99,6 +99,7 @@ export default async function ServicePage({
         <HeroSection
           heading={service.hero.h1}
           description={service.hero.intro ?? service.hero.paragraphs?.join(" ") ?? ""}
+          image={service.hero.image}
           actionsSlot={
             <ActionButtons
               className="justify-start"

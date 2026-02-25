@@ -42,20 +42,31 @@ export const pageData: ArticlePageData = {
       id: "differenciation",
       title: "Pourquoi nos espaces sont pensés pour durer",
       content: {
-        type: SECTION_TYPES.PROOF,
+        type: SECTION_TYPES.PROCESS,
         items: [
-          { title: "Sur mesure réel", description: "Adapté à votre espace." },
           {
+            step: "1",
+            title: "Sur mesure réel",
+            description:
+              "Notre rôle : créer des solutions durables, fonctionnelles et bien exécutées.",
+          },
+          {
+            step: "2",
             title: "Matériaux orientés usage",
-            description: "Choix adaptés à la cuisine et à la salle de bain.",
+            description:
+              " Matériaux durables et fabrication supervisée, sans compromis sur la finition.",
           },
           {
+            step: "3",
             title: "Installation précise",
-            description: "Alignements, ajustements et finition.",
+            description:
+              "Alignements nets, ajustements précis, inspection finale avant livraison.",
           },
           {
+            step: "4",
             title: "Approche clé en main",
-            description: "Coordination possible selon le projet.",
+            description:
+              "Un seul interlocuteur, des étapes simples, des validations avant production.",
           },
         ],
       },
