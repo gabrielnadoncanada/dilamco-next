@@ -363,7 +363,8 @@ export interface ArticlePageData {
   breadcrumbs: Array<{ name: string; url: string }>;
   extraJsonLd?: Record<string, unknown>[];
   hero: {
-    heading: string;
+    variant?: "default" | "boxed";
+    heading: string | ReactNode;
     description?: string | ReactNode;
     image?: { src: string; alt: string };
     actions?: ActionButton[];

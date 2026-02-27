@@ -147,9 +147,10 @@ export const pageData: SpacePageData = {
     serviceType: "Walk-in sur mesure",
   },
   hero: {
-    heading: "Walk-in & rangement sur mesure, pensé pour votre quotidien",
+    variant: "boxed",
+    heading: <>Walk-in sur mesure à Montréal<br /> <span>Pensé pour votre quotidien.</span></>,
     description:
-      "Un walk-in sur mesure se définit par l’usage : vêtements longs et courts, chaussures, accessoires, circulation et accès. Dilamco conçoit et réalise des solutions de rangement haut de gamme, adaptées à votre espace réel, avec une finition durable — à Montréal, Laval et sur la Rive-Sud.",
+      "Organisation précise, matériaux durables, installation professionnelle.",
     image: {
       src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
       alt: "Walk-in & rangement sur mesure",
@@ -157,17 +158,19 @@ export const pageData: SpacePageData = {
     actionsSlot: (
       <ActionButtons
         className="justify-start"
-        buttons={[
-          {
-            text: "Obtenir une soumission",
-            href: "/contact/",
-          },
-          {
-            text: "Voir des projets de walk-in",
-            href: "/projets/walk-in/",
-            variant: "outline",
-          },
-        ]}
+        buttons={
+          [
+            {
+              text: "Obtenir une soumission",
+              href: "/contact/",
+            },
+            {
+              text: "Voir des projets de walk-in",
+              href: "/projets/walk-in/",
+              variant: "outline",
+            },
+          ]
+        }
       />
     ),
   },
