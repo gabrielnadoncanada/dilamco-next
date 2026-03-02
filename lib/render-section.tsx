@@ -1,12 +1,18 @@
 import type { ReactNode } from "react";
 import { Circle } from "lucide-react";
 import { ActionButtons, type ActionButton } from "@/components/ActionButtons";
+import { AsymmetricTwoColumnsSection } from "@/components/sections/AsymmetricTwoColumnsSection";
+import { CenteredMinimalSection } from "@/components/sections/CenteredMinimalSection";
 import { ComparisonTableSection } from "@/components/sections/ComparisonTableSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { FeatureGridSection } from "@/components/sections/FeatureGridSection";
+import { HeroSplitPremiumSection } from "@/components/sections/HeroSplitPremiumSection";
+import { IntroductionValueSection } from "@/components/sections/IntroductionValueSection";
 import { ListSection } from "@/components/sections/ListSection";
+import { MaterialsContrastSection } from "@/components/sections/MaterialsContrastSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ProofSection } from "@/components/sections/ProofSection";
+import { ProjectsImmersiveSection } from "@/components/sections/ProjectsImmersiveSection";
 import { RelatedLinksSection } from "@/components/sections/RelatedLinksSection";
 import { SliderSection } from "@/components/sections/SliderSection";
 import { TextSection } from "@/components/sections/TextSection";
@@ -121,6 +127,109 @@ export function renderSection(section: ContentSection, options: RenderSectionOpt
           columns={content.columns}
           rows={content.rows}
           firstColumnLabel={content.firstColumnLabel}
+        />
+      );
+
+    case SECTION_TYPES.ASYMMETRIC_2_COLUMNS:
+      return (
+        <AsymmetricTwoColumnsSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={intro}
+          items={content.items}
+          links={toActionButtons(content.links)}
+          image={content.image}
+          cardTitle={content.cardTitle}
+          cardDescription={content.cardDescription}
+          surface={content.surface}
+        />
+      );
+
+    case SECTION_TYPES.CENTERED_MINIMAL:
+      return (
+        <CenteredMinimalSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={intro}
+          cards={content.cards}
+          links={toActionButtons(content.links)}
+        />
+      );
+
+    case SECTION_TYPES.INTRO_VALUE:
+      return (
+        <IntroductionValueSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={intro}
+          badges={content.badges}
+          cardTitle={content.cardTitle}
+          cardItems={content.cardItems}
+          cardAction={
+            content.cardAction
+              ? {
+                  text: content.cardAction.title ?? content.cardAction.label ?? content.cardAction.text ?? "",
+                  href: content.cardAction.href,
+                  variant: content.cardAction.variant,
+                }
+              : undefined
+          }
+        />
+      );
+
+    case SECTION_TYPES.HERO_SPLIT_PREMIUM:
+      return (
+        <HeroSplitPremiumSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={intro}
+          badges={content.badges}
+          image={content.image}
+          imagePriority={content.imagePriority}
+          actions={content.actions}
+          proofs={content.proofs}
+        />
+      );
+
+    case SECTION_TYPES.MATERIALS_CONTRAST:
+      return (
+        <MaterialsContrastSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={intro}
+          cards={content.cards}
+          links={toActionButtons(content.links)}
+          image={content.image}
+          imageCardTitle={content.imageCardTitle}
+          imageCardDescription={content.imageCardDescription}
+          compareTitle={content.compareTitle}
+          compareRows={content.compareRows}
+          surface={content.surface}
+        />
+      );
+
+    case SECTION_TYPES.PROJECTS_IMMERSIVE:
+      return (
+        <ProjectsImmersiveSection
+          key={id}
+          aria-labelledby={id}
+          heading={title}
+          intro={intro}
+          items={content.items}
+          cta={
+            content.cta
+              ? {
+                  text: content.cta.title ?? content.cta.label ?? content.cta.text ?? "",
+                  href: content.cta.href,
+                  variant: content.cta.variant,
+                }
+              : undefined
+          }
         />
       );
 

@@ -38,6 +38,56 @@ export type ProcessItem = {
   description: string;
 };
 
+export type AsymmetricTwoColumnsItem = {
+  title?: string;
+  description: string;
+};
+
+export type CenteredMinimalCard = {
+  title: string;
+  description: string;
+};
+
+export type IntroValueCardAction = {
+  href: string;
+  title?: string;
+  label?: string;
+  text?: string;
+  variant?: "default" | "outline";
+};
+
+export type HeroSplitPremiumAction = {
+  text: string;
+  href: string;
+  variant?: "default" | "outline" | "secondary" | "ghost" | "link" | "destructive";
+};
+
+export type HeroSplitPremiumProof = {
+  title: string;
+  description: string;
+};
+
+export type MaterialsContrastCard = {
+  title: string;
+  description: string;
+  fullWidth?: boolean;
+};
+
+export type MaterialsContrastCompareRow = {
+  label: string;
+  value: string;
+};
+
+export type ProjectsImmersiveItem = {
+  title: string;
+  location: string;
+  href: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+};
+
 export type FeatureGridItem = {
   title: string;
   description: string;
@@ -85,6 +135,66 @@ type TableContent = {
   columns: string[];
   rows: TableRow[];
   firstColumnLabel?: string;
+};
+
+type AsymmetricTwoColumnsContent = {
+  type: typeof SECTION_TYPES.ASYMMETRIC_2_COLUMNS;
+  items: AsymmetricTwoColumnsItem[];
+  links?: SectionLink[];
+  image: {
+    src: string;
+    alt: string;
+  };
+  cardTitle: string;
+  cardDescription: string;
+  surface?: "default" | "muted";
+};
+
+type CenteredMinimalContent = {
+  type: typeof SECTION_TYPES.CENTERED_MINIMAL;
+  cards: CenteredMinimalCard[];
+  links?: SectionLink[];
+};
+
+type IntroValueContent = {
+  type: typeof SECTION_TYPES.INTRO_VALUE;
+  badges?: string[];
+  cardTitle: string;
+  cardItems: string[];
+  cardAction?: IntroValueCardAction;
+};
+
+type HeroSplitPremiumContent = {
+  type: typeof SECTION_TYPES.HERO_SPLIT_PREMIUM;
+  badges?: string[];
+  image: {
+    src: string;
+    alt: string;
+  };
+  imagePriority?: boolean;
+  actions?: HeroSplitPremiumAction[];
+  proofs?: HeroSplitPremiumProof[];
+};
+
+type MaterialsContrastContent = {
+  type: typeof SECTION_TYPES.MATERIALS_CONTRAST;
+  cards: MaterialsContrastCard[];
+  links?: SectionLink[];
+  image: {
+    src: string;
+    alt: string;
+  };
+  imageCardTitle: string;
+  imageCardDescription: string;
+  compareTitle?: string;
+  compareRows?: MaterialsContrastCompareRow[];
+  surface?: "default" | "muted";
+};
+
+type ProjectsImmersiveContent = {
+  type: typeof SECTION_TYPES.PROJECTS_IMMERSIVE;
+  items: ProjectsImmersiveItem[];
+  cta?: SectionLink;
 };
 
 type StepsContent = {
@@ -143,6 +253,12 @@ export type SectionContent =
   | TextContent
   | ListContent
   | TableContent
+  | AsymmetricTwoColumnsContent
+  | CenteredMinimalContent
+  | IntroValueContent
+  | HeroSplitPremiumContent
+  | MaterialsContrastContent
+  | ProjectsImmersiveContent
   | StepsContent
   | ListWithLinksContent
   | RelatedLinksContent
@@ -191,6 +307,56 @@ const tableRowSchema = z.object({
   label: z.string().optional(),
   title: z.string().optional(),
   values: z.array(z.string()),
+});
+
+const asymmetricTwoColumnsItemSchema = z.object({
+  title: z.string().optional(),
+  description: z.string(),
+});
+
+const centeredMinimalCardSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+});
+
+const introValueCardActionSchema = z.object({
+  href: z.string().min(1),
+  title: z.string().optional(),
+  label: z.string().optional(),
+  text: z.string().optional(),
+  variant: z.enum(["default", "outline"]).optional(),
+});
+
+const heroSplitPremiumActionSchema = z.object({
+  text: z.string(),
+  href: z.string().min(1),
+  variant: z.enum(["default", "outline", "secondary", "ghost", "link", "destructive"]).optional(),
+});
+
+const heroSplitPremiumProofSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+});
+
+const materialsContrastCardSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  fullWidth: z.boolean().optional(),
+});
+
+const materialsContrastCompareRowSchema = z.object({
+  label: z.string(),
+  value: z.string(),
+});
+
+const projectsImmersiveItemSchema = z.object({
+  title: z.string(),
+  location: z.string(),
+  href: z.string().min(1),
+  image: z.object({
+    src: z.string(),
+    alt: z.string(),
+  }),
 });
 
 const processItemSchema = z.object({
@@ -251,6 +417,60 @@ export const sectionContentSchema = z.discriminatedUnion("type", [
     columns: z.array(z.string()),
     rows: z.array(tableRowSchema),
     firstColumnLabel: z.string().optional(),
+  }),
+  z.object({
+    type: z.literal(SECTION_TYPES.ASYMMETRIC_2_COLUMNS),
+    items: z.array(asymmetricTwoColumnsItemSchema),
+    links: z.array(linkSchema).optional(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    cardTitle: z.string(),
+    cardDescription: z.string(),
+    surface: z.enum(["default", "muted"]).optional(),
+  }),
+  z.object({
+    type: z.literal(SECTION_TYPES.CENTERED_MINIMAL),
+    cards: z.array(centeredMinimalCardSchema),
+    links: z.array(linkSchema).optional(),
+  }),
+  z.object({
+    type: z.literal(SECTION_TYPES.INTRO_VALUE),
+    badges: z.array(z.string()).optional(),
+    cardTitle: z.string(),
+    cardItems: z.array(z.string()),
+    cardAction: introValueCardActionSchema.optional(),
+  }),
+  z.object({
+    type: z.literal(SECTION_TYPES.HERO_SPLIT_PREMIUM),
+    badges: z.array(z.string()).optional(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    imagePriority: z.boolean().optional(),
+    actions: z.array(heroSplitPremiumActionSchema).optional(),
+    proofs: z.array(heroSplitPremiumProofSchema).optional(),
+  }),
+  z.object({
+    type: z.literal(SECTION_TYPES.MATERIALS_CONTRAST),
+    cards: z.array(materialsContrastCardSchema),
+    links: z.array(linkSchema).optional(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
+    imageCardTitle: z.string(),
+    imageCardDescription: z.string(),
+    compareTitle: z.string().optional(),
+    compareRows: z.array(materialsContrastCompareRowSchema).optional(),
+    surface: z.enum(["default", "muted"]).optional(),
+  }),
+  z.object({
+    type: z.literal(SECTION_TYPES.PROJECTS_IMMERSIVE),
+    items: z.array(projectsImmersiveItemSchema),
+    cta: linkSchema.optional(),
   }),
   z.object({
     type: z.literal(SECTION_TYPES.STEPS),
@@ -316,7 +536,7 @@ export const contentSectionsSchema = z.array(contentSectionSchema);
 export const actionButtonSchema = z.object({
   text: z.string(),
   href: z.string(),
-  variant: z.enum(["default", "outline"]).optional(),
+  variant: z.enum(["default", "outline", "secondary", "ghost", "link", "destructive"]).optional(),
 });
 
 export const articlePageSchema = z.object({
@@ -328,14 +548,26 @@ export const articlePageSchema = z.object({
   ),
   extraJsonLd: z.array(z.record(z.string(), z.unknown())).optional(),
   hero: z.object({
+    variant: z.enum(["default", "boxed", "split-premium"]).optional(),
     heading: z.string(),
     description: z.any().optional(),
+    list: z.array(z.string()).optional(),
+    badges: z.array(z.string()).optional(),
+    proofs: z
+      .array(
+        z.object({
+          title: z.string(),
+          description: z.string(),
+        }),
+      )
+      .optional(),
     image: z
       .object({
         src: z.string(),
         alt: z.string(),
       })
       .optional(),
+    imagePriority: z.boolean().optional(),
     actions: z.array(actionButtonSchema).optional(),
     actionsSlot: z.any().optional(),
   }),
@@ -363,10 +595,14 @@ export interface ArticlePageData {
   breadcrumbs: Array<{ name: string; url: string }>;
   extraJsonLd?: Record<string, unknown>[];
   hero: {
-    variant?: "default" | "boxed";
+    variant?: "default" | "boxed" | "split-premium";
     heading: string | ReactNode;
     description?: string | ReactNode;
+    list?: string[];
+    badges?: string[];
+    proofs?: Array<{ title: string; description: string }>;
     image?: { src: string; alt: string };
+    imagePriority?: boolean;
     actions?: ActionButton[];
     actionsSlot?: ReactNode;
   };

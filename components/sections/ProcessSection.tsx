@@ -1,9 +1,8 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
+import { type SectionShellProps } from "@/components/elements/section-shell";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heading } from "@/components/elements/heading";
-import { Divider } from "../elements/divider";
+
 interface Step {
   id?: string | number;
   step?: string | number;
@@ -11,7 +10,21 @@ interface Step {
   description: string;
 }
 
-interface ProcessSectionProps extends Omit<SectionShellProps, "title" | "intro" | "actions" | "children"> {
+interface ProcessSectionProps extends Omit<
+  SectionShellProps,
+  | "title"
+  | "intro"
+  | "actions"
+  | "children"
+  | "surface"
+  | "padding"
+  | "container"
+  | "eyebrow"
+  | "align"
+  | "contentClassName"
+  | "headerClassName"
+  | "bodyClassName"
+> {
   heading: string;
   intro?: React.ReactNode;
   items: Step[];
@@ -25,67 +38,58 @@ const ProcessSection = ({
   intro,
   items,
   actions,
-  layout = "cards",
+  layout,
   className,
+  "aria-labelledby": ariaLabelledby,
   ...props
 }: ProcessSectionProps) => {
+  void layout;
+
   if (!items || items.length === 0) {
     return null;
   }
 
   const getStepValue = (step: Step, index: number) => step.step ?? step.id ?? index + 1;
+  const headingId = typeof ariaLabelledby === "string" ? ariaLabelledby : undefined;
 
   return (
-    <SectionShell
-      className={className}
-      title={<Heading variant="h2">{heading}</Heading>}
-      intro={intro}
-      actions={actions}
-      align="center"
+    <section
+      aria-labelledby={ariaLabelledby}
+      className={cn("mx-auto max-w-7xl px-4 py-14 sm:py-16", className)}
       {...props}
     >
-      {layout === "timeline" ? (
-        <div className="grid gap-10 lg:grid-cols-3 lg:gap-6">
+      <div className="flex flex-col gap-3">
+        <h2 id={headingId} className="text-2xl font-semibold tracking-tight sm:text-3xl">
+          {heading}
+        </h2>
+        {typeof intro === "string" ? (
+          <p className="max-w-2xl text-muted-foreground">{intro}</p>
+        ) : intro ? (
+          <div className="max-w-2xl text-muted-foreground">{intro}</div>
+        ) : null}
+      </div>
+
+      <div className="mt-10">
+        <div className="grid gap-6 lg:grid-cols-5">
           {items.map((step, index) => (
-            <div key={typeof step.id === "string" ? step.id : index} className="max-lg:flex max-lg:gap-4">
-              <div className="relative lg:py-6">
-                <div
-                  className={cn(
-                    "absolute h-full w-1 -translate-x-1/2 translate-y-11 bg-muted/50 bg-linear-to-b max-lg:left-1/2 lg:top-1/2 lg:h-1 lg:w-full lg:translate-x-6 lg:-translate-y-1/2 lg:bg-linear-to-r",
-                    index === items.length - 1 && "from-muted/50 to-white"
-                  )}
-                />
-                <div className="relative z-0 grid size-11 place-content-center rounded-full border-4 bg-background">
-                  <p className="text-lg font-bold text-foreground">{getStepValue(step, index)}</p>
+            <Card key={typeof step.id === "string" ? step.id : `${step.title}-${index}`} className="relative">
+              {/* <div className="pointer-events-none absolute left-0 top-6 hidden h-px w-full bg-border lg:block" /> */}
+              <CardHeader className="">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-9 w-9 aspect-square items-center justify-center rounded-full border bg-background text-sm font-semibold">
+                    {getStepValue(step, index)}
+                  </div>
+                  <CardTitle className="text-base">{step.title}</CardTitle>
                 </div>
-              </div>
-              <div className="max-lg:mt-2">
-                <p className="text-lg leading-snug font-semibold text-foreground">{step.title}</p>
-                <p className="mt-2 text-base leading-relaxed text-muted-foreground">{step.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          {items.map((step, index) => (
-            <Card key={typeof step.id === "string" ? step.id : index} className="relative">
-              <CardHeader>
-                <div className="mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10 text-lg font-semibold text-primary">
-                  {getStepValue(step, index)}
-                </div>
-                <CardTitle className="text-xl">{step.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-base leading-relaxed text-muted-foreground">{step.description}</p>
-              </CardContent>
+              <CardContent className="text-sm text-muted-foreground">{step.description}</CardContent>
             </Card>
           ))}
         </div>
-      )}
-      <Divider />
+      </div>
 
-    </SectionShell>
+      {actions ? <div className="mt-8">{actions}</div> : null}
+    </section>
   );
 };
 

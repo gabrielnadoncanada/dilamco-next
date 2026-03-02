@@ -1,53 +1,83 @@
 import React from "react";
-import { SectionShell, type SectionShellProps } from "@/components/elements/section-shell";
+import { cn } from "@/lib/utils";
+import { type SectionShellProps } from "@/components/elements/section-shell";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { SectionFooterDivider, SectionTitle } from "@/components/sections/section-helpers";
 
 interface FAQItem {
   question: string;
   answer: string;
 }
 
-interface FAQSectionProps extends Omit<SectionShellProps, "title" | "children"> {
+interface FAQSectionProps extends Omit<
+  SectionShellProps,
+  | "title"
+  | "intro"
+  | "actions"
+  | "children"
+  | "surface"
+  | "padding"
+  | "container"
+  | "eyebrow"
+  | "align"
+  | "contentClassName"
+  | "headerClassName"
+  | "bodyClassName"
+> {
   heading: string;
+  description?: string;
+  intro?: React.ReactNode;
   items: FAQItem[];
   className?: string;
 }
 
 const FAQSection = ({
   heading,
+  description,
+  intro,
   items,
   className,
+  "aria-labelledby": ariaLabelledby,
   ...props
 }: FAQSectionProps) => {
+  const headingId = typeof ariaLabelledby === "string" ? ariaLabelledby : undefined;
+  const resolvedDescription =
+    description ?? intro ?? "Réponses claires sur les prix, les délais et ce que signifie la livraison clé en main.";
+
   return (
-    <SectionShell
-      className={className}
-      container="narrow"
-      title={<SectionTitle heading={heading} />}
-      align="center"
+    <section
+      aria-labelledby={ariaLabelledby}
+      className={cn("mx-auto max-w-7xl px-4 py-14 sm:py-16", className)}
       {...props}
     >
+      <div className="grid gap-10 lg:grid-cols-12">
+        <div className="lg:col-span-4">
+          <h2 id={headingId} className="text-2xl font-semibold tracking-tight sm:text-3xl">
+            {heading}
+          </h2>
+          {typeof resolvedDescription === "string" ? (
+            <p className="mt-3 text-muted-foreground">{resolvedDescription}</p>
+          ) : resolvedDescription ? (
+            <div className="mt-3 text-muted-foreground">{resolvedDescription}</div>
+          ) : null}
+        </div>
 
-      <Accordion type="single" collapsible className="w-full rounded-2xl border border-border/70 bg-card/70 p-2 shadow-sm backdrop-blur-sm">
-        {items.map((item, index) => (
-          <AccordionItem key={`${item.question}-${index}`} value={`item-${index}`} className="rounded-xl px-3 transition-colors hover:bg-muted/50">
-            <AccordionTrigger className="text-left text-base leading-relaxed font-semibold text-foreground hover:no-underline md:text-lg">
-              {item.question}
-            </AccordionTrigger>
-            <AccordionContent className="pr-8 text-base leading-relaxed text-muted-foreground">
-              {item.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-      <SectionFooterDivider />
-    </SectionShell>
+        <div className="lg:col-span-8">
+          <Accordion type="single" collapsible className="w-full">
+            {items.map((item, index) => (
+              <AccordionItem key={`${item.question}-${index}`} value={`item-${index}`}>
+                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionContent>{item.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
   );
 };
 

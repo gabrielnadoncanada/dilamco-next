@@ -22,7 +22,7 @@ export function SpacePageTemplate({ data }: { data: SpacePageData }) {
       {data.faq ? <JsonLd data={faqJsonLd(data.faq.items)} /> : null}
 
       <main id="contenu">
-        <HeroSection {...data.hero} />
+        <HeroSection {...data.hero} variant={data.hero.variant ?? "split-premium"} />
         {validatedSections.map((section) => renderSection(section))}
 
         {data.faq ? (

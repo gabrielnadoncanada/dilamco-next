@@ -2,142 +2,32 @@
 import { SITE } from "@/seo/schema/site";
 import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import type { SpacePageData } from "@/types/space-page";
-import { ActionButtons } from "@/components/ActionButtons";
-import { Checklist } from "@/components/Checklist";
-import {
-  FeatureImageText,
-  type FeatureImageTextItem,
-} from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
-import { Hammer, Ruler, Shield, Wrench } from "lucide-react";
 
 export const metadata = createPageMetadata({
-  title: "Salle de bain & vanités sur mesure",
+  title: "Vanité salle de bain sur mesure haut de gamme",
   description:
-    "Vanités et rangements de salle de bain sur mesure pensés pour l’humidité : conception, fabrication et installation. Option rénovation clé en main à Montréal, Laval et sur la Rive-Sud.",
+    "Vanité salle de bain sur mesure haut de gamme : design, fabrication contrôlée et installation précise, avec coordination clé en main à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/salle-de-bain/",
-  ogAlt:
-    "Salle de bain & vanités sur mesure Dilamco — durable en milieu humide",
+  ogAlt: "Vanité sur mesure Dilamco — durable, résistante à l’humidité, bien exécutée",
 });
 
 const faqItems = [
   {
-    q: "Quels matériaux sont les plus adaptés en salle de bain?",
-    a: "En salle de bain, le bon matériau dépend du niveau d’humidité, de la stabilité et surtout des détails de finition (chants, joints) et de la qualité d’installation. Une solution durable est toujours un ensemble : matériau + assemblage + quincaillerie + exécution.",
+    q: "Combien coûte une vanité sur mesure à Montréal ?",
+    a: "Le prix dépend des dimensions, des matériaux, des configurations (double lavabo, rangement, etc.) et du niveau de finition. Les projets sur mesure clés en main sont généralement alignés avec une exécution haut de gamme et une durabilité à long terme.",
   },
   {
-    q: "MDF ou mélamine en salle de bain : lequel choisir?",
-    a: "Tout dépend du fini recherché et du contexte d’humidité. Le point critique, c’est la protection des chants et la qualité d’exécution. Un détail mal fini peut compromettre n’importe quel matériau, même sur un projet haut de gamme.",
+    q: "Quelle est la différence vs une vanité standard en grande surface ?",
+    a: "Une solution standard peut convenir à certains projets. Le sur mesure permet d’adapter précisément l’espace, d’utiliser des spécifications structurelles plus solides et d’assurer une exécution mieux contrôlée, particulièrement dans un environnement humide.",
   },
   {
-    q: "Tiroirs ou portes : qu’est-ce qui est le plus pratique?",
-    a: "Les tiroirs améliorent l’accès (surtout en profondeur) et l’organisation. Les portes restent pertinentes selon la plomberie et la configuration. Le sur mesure permet d’optimiser les deux en fonction de votre usage.",
+    q: "Que signifie « clé en main » pour une salle de bain ?",
+    a: "Un seul partenaire responsable coordonne le projet de bout en bout : conception, fabrication, planification et installation. Cela réduit la fragmentation, les délais imprévus et les problèmes de finition.",
   },
   {
-    q: "Quels sont les délais typiques?",
-    a: "Les délais varient selon la complexité du projet, la disponibilité et la période de l’année. Lors de la soumission, on confirme une échéance réaliste et on cadre les étapes pour réduire les imprévus.",
-  },
-];
-
-const featureImageTextItems: FeatureImageTextItem[] = [
-  {
-    ariaLabelledby: "humidite",
-    heading: "Humidité & durabilité : ce qui compte vraiment",
-    content: (
-      <>
-        <p>
-          En salle de bain, les problèmes viennent rarement du style. Ils
-          viennent de l’humidité : chants endommagés, gonflement, quincaillerie
-          qui fatigue. Notre priorité est de réduire ces risques dès la
-          conception.
-        </p>
-        <Checklist
-          items={[
-            "Matériaux adaptés : choix orientés stabilité et usage en milieu humide.",
-            "Protection des chants : un point critique pour limiter l’infiltration d’eau.",
-            "Quincaillerie fiable : charnières et coulisses pensées pour l’usage quotidien.",
-            "Contexte du projet : ventilation et configuration (surtout en rénovation).",
-          ]}
-        />
-      </>
-    ),
-    image: {
-      src: "/images/spaces/vanite-salles-de-bain.webp",
-      alt: "Humidité & durabilité en salle de bain",
-    },
-    links: [
-      {
-        text: "Comparatif des matériaux",
-        href: "/materiaux/comparatif/",
-        variant: "outline",
-      },
-      {
-        text: "Quincaillerie",
-        href: "/materiaux/quincaillerie/",
-        variant: "outline",
-      },
-      {
-        text: "Pourquoi le contreplaqué",
-        href: "/materiaux/contreplaque/",
-        variant: "outline",
-      },
-    ],
-  },
-  {
-    ariaLabelledby: "configurations",
-    heading: "Configurations possibles",
-    content: (
-      <>
-        <p>
-          Le sur mesure permet d’adapter la vanité à votre espace, vos habitudes
-          et vos contraintes — sans sacrifier le rangement.
-        </p>
-        <Checklist
-          items={[
-            "Simple ou double lavabo selon la largeur disponible.",
-            "Tiroirs vs portes selon vos préférences d’organisation.",
-            "Rangement vertical pour maximiser l’espace dans les petites salles de bain.",
-            "Intégration plomberie propre et fonctionnelle, sans perdre du volume inutilement.",
-            "Finition cohérente avec le style (moderne, chaleureux, classique).",
-          ]}
-        />
-      </>
-    ),
-    image: {
-      src: "/images/spaces/vanite-salles-de-bain.webp",
-      alt: "Configurations possibles de vanités sur mesure",
-    },
-    links: [
-      {
-        text: "Couleurs et finis",
-        href: "/materiaux/couleurs/",
-        variant: "outline",
-      },
-    ],
-  },
-  {
-    ariaLabelledby: "renovation",
-    heading: "Rénovation de salle de bain (option clé en main)",
-    content: (
-      <>
-        <p>
-          Si votre projet inclut des travaux connexes (douche/bain, céramique,
-          plomberie, ventilation, électricité), l’option clé en main aide à
-          cadrer le calendrier, prioriser les décisions et réduire les imprévus.
-        </p>
-      </>
-    ),
-    image: {
-      src: "/images/spaces/vanite-salles-de-bain.webp",
-      alt: "Rénovation de salle de bain clé en main",
-    },
-    links: [
-      {
-        text: "Voir la rénovation salle de bain",
-        href: "/services/renovation/salle-de-bain/",
-        variant: "outline",
-      },
-    ],
+    q: "Quels sont les délais typiques ?",
+    a: "Les délais varient selon l’ampleur et la coordination requise. Attendez-vous à un plan structuré établi pendant la phase de conception, avant le début de la fabrication.",
   },
 ];
 
@@ -145,146 +35,280 @@ export const pageData: SpacePageData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
-    {
-      name: "Salle de bain & vanités",
-      url: SITE.url + "/espaces/salle-de-bain/",
-    },
+    { name: "Salle de bain sur mesure", url: SITE.url + "/espaces/salle-de-bain/" },
   ],
   service: {
-    name: "Salle de bain & vanités sur mesure",
+    name: "Salle de bain sur mesure",
     description:
-      "Conception, fabrication et installation de vanités et rangements sur mesure pensés pour l’humidité, avec option rénovation clé en main selon le projet.",
+      "Conception, fabrication contrôlée et installation de vanités sur mesure haut de gamme, avec coordination complète du projet.",
     url: SITE.url + "/espaces/salle-de-bain/",
-    serviceType: "Salle de bain sur mesure",
+    serviceType: "Vanité salle de bain sur mesure",
   },
   hero: {
-    heading: "Salle de bain & vanités sur mesure, pensées pour durer",
+    variant: "split-premium",
+    heading: "Vanité sur mesure, exécution clé en main à Montréal",
     description:
-      "Une salle de bain impose des contraintes spécifiques : humidité, ventilation, éclaboussures et usage quotidien. Dilamco conçoit et réalise des vanités et rangements sur mesure haut de gamme, avec option rénovation complète clé en main lorsque le projet l’exige — à Montréal, Laval et sur la Rive-Sud.",
+      "Conception, fabrication contrôlée et installation précise — avec une coordination complète du projet par un seul partenaire.",
+    badges: ["Sur mesure", "Clé en main", "Montréal"],
     image: {
-      src: "/images/spaces/vanite-salles-de-bain.webp",
-      alt: "Salle de bain & vanités sur mesure",
+      src: "/images/hero/bathroom-hero.webp",
+      alt: "Vanité sur mesure haut de gamme — salle de bain",
     },
-    actionsSlot: (
-      <ActionButtons
-        className="justify-start"
-        buttons={[
-          {
-            text: "Obtenir une soumission",
-            href: "/contact/",
-          },
-          {
-            text: "Voir des projets de salles de bain",
-            href: "/projets/salle-de-bain/",
-            variant: "outline",
-          },
-        ]}
-      />
-    ),
+    imagePriority: true,
+    actions: [
+      {
+        text: "Obtenir une soumission détaillée",
+        href: "/contact/",
+      },
+      {
+        text: "Voir nos projets salle de bain",
+        href: "/projets/salle-de-bain/",
+        variant: "secondary",
+      },
+    ],
+    proofs: [
+      {
+        title: "Conçu pour l’humidité",
+        description: "Spécifications structurelles pensées pour un environnement exigeant.",
+      },
+      {
+        title: "Fabrication contrôlée",
+        description: "Standards définis et qualité reproductible.",
+      },
+      {
+        title: "Coordination clé en main",
+        description: "Un seul partenaire responsable, moins d’imprévus.",
+      },
+    ],
   },
   sections: [
     {
-      id: "pour-qui",
-      title: "À qui s’adresse une vanité sur mesure?",
+      id: "introduction-value",
+      title: "Une salle de bain sur mesure pensée pour durer",
+      intro:
+        "Une salle de bain est un environnement humide. La durabilité dépend surtout de la structure, des matériaux et de la qualité d’exécution — pas seulement du look.",
       content: {
-        type: SECTION_TYPES.FEATURE_GRID,
+        type: SECTION_TYPES.INTRO_VALUE,
+        badges: ["Résistance à l’humidité", "Structure durable", "Finition haut de gamme"],
+        cardTitle: "Vérification rapide d’adéquation au projet",
+        cardItems: [
+          "Projet de résidence principale",
+          "Durabilité à long terme priorisée",
+          "Finition et stabilité importantes",
+          "Budget aligné avec l’exécution premium",
+        ],
+        cardAction: {
+          href: "/contact/",
+          title: "Commencer une demande de soumission",
+        },
+      },
+    },
+
+    {
+      id: "differentiation",
+      title: "Une structure commerciale qui protège la qualité",
+      intro:
+        "Nous ne sommes pas un simple revendeur. Notre opération est conçue autour du contrôle de l’approvisionnement, de standards cohérents et d’une livraison prévisible.",
+      content: {
+        type: SECTION_TYPES.ASYMMETRIC_2_COLUMNS,
         items: [
           {
-            title: "Espace limité ou configuration atypique",
-            description:
-              "Petites salles de bain, contraintes d’accès, murs irréguliers : on optimise chaque centimètre.",
-            icon: Ruler,
+            title: "Présence locale à Montréal",
+            description: "pour réduire les imprévus, mieux coordonner et garder le contrôle.",
           },
           {
-            title: "Durabilité en milieu humide",
-            description:
-              "Vous voulez une solution stable et cohérente : matériaux, chants, quincaillerie et finition au même niveau.",
-            icon: Shield,
+            title: "Approvisionnement direct et standards de fabrication",
+            description: "pour des résultats reproductibles et une qualité stable.",
           },
           {
-            title: "Contraintes à intégrer",
-            description:
-              "Plomberie, rangement vertical, double lavabo, organisation précise et circulation. La durabilité en milieu humide est au cœur de nos solutions.",
-            icon: Hammer,
+            title: "Exécution clé en main",
+            description: "pour éviter la responsabilité fragmentée sur le chantier.",
           },
         ],
-      },
-    },
-    {
-      id: "ce-qui-est-inclus",
-      title: "Ce que comprend une salle de bain sur mesure Dilamco",
-      content: {
-        type: SECTION_TYPES.RELATED_LINKS,
-        items: [
-          {
-            title: "Conception & planification",
-            href: "/services/design/",
-            description:
-              "Contraintes, implantation, ergonomie et choix de matériaux.",
-          },
-          {
-            title: "Fabrication sur mesure",
-            href: "/services/fabrication/",
-            description:
-              "Vanité, rangement et modules adaptés (simple ou double).",
-          },
-          {
-            title: "Installation précise",
-            href: "/services/installation/",
-            description:
-              "Alignements nets, ajustements fins et inspection finale.",
-          },
-          {
-            title: "Option clé en main",
-            description:
-              "Coordination des travaux connexes lors d’une rénovation complète.",
-            href: "/services/renovation/salle-de-bain/",
-          },
-        ],
-        columns: 2,
-      },
-    },
-    {
-      id: "details",
-      title: "",
-      content: {
-        type: SECTION_TYPES.CUSTOM,
-        node: <FeatureImageText items={featureImageTextItems} />,
-      },
-    },
-    {
-      id: "projets",
-      title: "Réalisations de salles de bain",
-      content: {
-        type: SECTION_TYPES.RELATED_LINKS,
-        items: [
-          {
-            title: "Voir tous les projets de salles de bain",
-            href: "/projets/salle-de-bain/",
-          },
-          { title: "Voir tous les projets", href: "/projets/" },
-        ],
-        columns: 2,
-      },
-    },
-    {
-      id: "liens",
-      title: "Ressources",
-      content: {
-        type: SECTION_TYPES.RELATED_LINKS,
-        items: [
-          { title: "Projets", href: "/projets/salle-de-bain/" },
-          { title: "Matériaux", href: "/materiaux/" },
+        links: [
           { title: "Obtenir une soumission", href: "/contact/" },
+          { title: "Voir notre processus", href: "/processus/", variant: "outline" },
         ],
-        columns: 3,
+        image: {
+          src: "/images/sections/bathroom-detail-or-warehouse.jpg",
+          alt: "Détail de finition ou contrôle logistique — Dilamco",
+        },
+        cardTitle: "Ce que cela signifie pour vous",
+        cardDescription:
+          "Une planification plus claire, moins d’inconnues, et une qualité cohérente d’un projet à l’autre.",
+        surface: "muted",
+      },
+    },
+
+    {
+      id: "process",
+      title: "Un processus clé en main clair",
+      intro:
+        "Un seul partenaire responsable de la conception à l’installation — des étapes structurées pour réduire les risques et améliorer les résultats.",
+      content: {
+        type: SECTION_TYPES.PROCESS,
+        items: [
+          {
+            step: "1",
+            title: "Conception & plans",
+            description:
+              "Analyse de l’espace, contraintes plomberie, ergonomie et validation avant fabrication.",
+          },
+          {
+            step: "2",
+            title: "Sélection des matériaux",
+            description:
+              "Choix orienté durabilité et stabilité en environnement humide, sans compromis sur les finitions.",
+          },
+          {
+            step: "3",
+            title: "Fabrication contrôlée",
+            description:
+              "Standards définis et qualité reproductible, sans assemblage improvisé.",
+          },
+          {
+            step: "4",
+            title: "Coordination du chantier",
+            description:
+              "Planification, séquencement et contrôle pour réduire délais et erreurs.",
+          },
+          {
+            step: "5",
+            title: "Installation précise",
+            description:
+              "Ajustement, alignement et finitions vérifiés lors de la livraison.",
+          },
+        ],
+      },
+    },
+
+    {
+      id: "materials",
+      title: "Matériaux adaptés à une salle de bain haut de gamme",
+      intro:
+        "Dans une salle de bain, la solidité et la stabilité dimensionnelle sont critiques. Les détails à l’intérieur comptent plus que la finition en vitrine.",
+      content: {
+        type: SECTION_TYPES.MATERIALS_CONTRAST,
+        cards: [
+          {
+            title: "Structure des tiroirs",
+            description:
+              "Bois massif de bouleau — robuste, stable et durable, adapté aux cuisines et salles de bain.",
+          },
+          {
+            title: "Fond des tiroirs",
+            description:
+              "Contreplaqué de bouleau — stabilité dimensionnelle, résistance au poids et durabilité accrue.",
+          },
+          {
+            title: "Pourquoi ça compte en salle de bain ?",
+            description:
+              "Meilleure tenue dans le temps face à l’humidité, moins de déformation, et une sensation de solidité durable à l’usage quotidien.",
+            fullWidth: true,
+          },
+        ],
+        links: [
+          { title: "Explorer le bois massif", href: "/materiaux/bois-massif/", variant: "outline" },
+          { title: "Explorer le contreplaqué", href: "/materiaux/contreplaque/", variant: "outline" },
+        ],
+        image: {
+          src: "/images/sections/bathroom-material-detail.jpg",
+          alt: "Détail matériau — salle de bain",
+        },
+        imageCardTitle: "Détail technique, avantage concret",
+        imageCardDescription:
+          "La structure (bois massif + contreplaqué de bouleau) améliore la stabilité et la durabilité dans un environnement humide.",
+        compareTitle: "Comparaison rapide",
+        compareRows: [
+          { label: "Standard", value: "Panneaux minces / MDF / mélamine" },
+          { label: "Spécifications Dilamco", value: "Bois massif + contreplaqué de bouleau" },
+        ],
+        surface: "muted",
+      },
+    },
+
+    {
+      id: "projects",
+      title: "Projets réels à Montréal et environs",
+      intro: "Preuve de la qualité d’exécution — pas seulement une galerie.",
+      content: {
+        type: SECTION_TYPES.PROJECTS_IMMERSIVE,
+        cta: {
+          title: "Voir tous les projets salle de bain",
+          href: "/projets/salle-de-bain/",
+          variant: "outline",
+        },
+        items: [
+          {
+            title: "Vanité sur mesure",
+            location: "Laval",
+            href: "/projets/salle-de-bain/vanite-sur-mesure-laval",
+            image: {
+              src: "/images/projects/bathroom-1.jpg",
+              alt: "Projet vanité sur mesure — Laval",
+            },
+          },
+          // Ajoute 2 autres projets quand tu as les slugs/photos
+          {
+            title: "Salle de bain sur mesure",
+            location: "Montréal",
+            href: "/projets/salle-de-bain/",
+            image: {
+              src: "/images/projects/bathroom-2.jpg",
+              alt: "Projet salle de bain sur mesure — Montréal",
+            },
+          },
+          {
+            title: "Salle de bain sur mesure",
+            location: "Rive-Sud",
+            href: "/projets/salle-de-bain/",
+            image: {
+              src: "/images/projects/bathroom-3.jpg",
+              alt: "Projet salle de bain sur mesure — Rive-Sud",
+            },
+          },
+        ],
+      },
+    },
+
+    {
+      id: "fit-filtering",
+      title: "Est-ce le bon choix pour votre projet ?",
+      intro:
+        "Nos vanités sur mesure sont conçues pour la durabilité à long terme et l’exécution cohérente. Si votre priorité est le prix le plus bas à l’avance, une solution standardisée peut être plus appropriée.",
+      content: {
+        type: SECTION_TYPES.CENTERED_MINIMAL,
+        cards: [
+          {
+            title: "Profil idéal",
+            description:
+              "Résidence principale • Investissement long terme • Qualité, stabilité et finition prioritaires.",
+          },
+          {
+            title: "Moins adapté",
+            description:
+              "Projet temporaire • Budget strictement limité • Solution standard privilégiée.",
+          },
+        ],
+        links: [
+          { title: "Demander une soumission", href: "/contact/" },
+          { title: "Voir nos services", href: "/services/", variant: "outline" },
+        ],
       },
     },
   ],
+
   faq: {
     ariaLabelledby: "faq",
-    heading: "FAQ — salle de bain & vanités sur mesure",
+    heading: "FAQ",
     items: faqItems,
+  },
+
+  cta: {
+    heading: "Obtenez une soumission claire et détaillée pour votre salle de bain sur mesure",
+    description:
+      "Une évaluation structurée adaptée à votre espace, vos contraintes et votre niveau de finition.",
+    actions: [{ text: "Démarrer ma demande de soumission", href: "/contact/" }],
   },
 };
 

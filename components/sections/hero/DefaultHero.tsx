@@ -10,6 +10,7 @@ const DefaultHero = ({
   description,
   actions,
   actionsSlot,
+  list,
   image = {
     src: "/images/hero-image.webp",
     alt: "Hero Image",
@@ -31,8 +32,15 @@ const DefaultHero = ({
       <div className="overflow-hidden rounded-lg border border-border/40 relative h-[calc(100vh-4rem)] max-h-[550px] md:max-h-[750px]">
         <div className="-mx-2 sm:px-6 md:px-12 lg:px-0 h-full">
           <Container className="flex flex-col gap-16 h-full">
-            <div className="flex gap-x-10 justify-center gap-y-16 max-lg:flex-col sm:gap-y-24 h-full">
-              <div className="flex z-40 flex-col items-start gap-6 py-16 sm:py-32 lg:basis-5xl lg:py-40 justify-center">
+            <div className="flex gap-x-10 justify-start gap-y-16 max-lg:flex-col sm:gap-y-24 h-full">
+              <div className="flex z-40 flex-col items-start gap-6 py-16 sm:py-32 lg:basis-5xl lg:py-40 justify-center ">
+                {list && (
+                  <ul className="text-[var(--hero-foreground-muted)] text-base [&>li]:leading-relaxed [&>li]:sm:text-lg flex max-w-3xl flex-col gap-4">
+                    {list.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
                 <Heading
                   variant="h1"
                   className="max-w-5xl text-[var(--hero-foreground)]"
@@ -45,6 +53,7 @@ const DefaultHero = ({
                     {typeof description === "string" ? <p>{description}</p> : description}
                   </div>
                 )}
+
                 {renderedActions}
               </div>
               {image && (
