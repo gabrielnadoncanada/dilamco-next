@@ -2,139 +2,32 @@
 import { SITE } from "@/seo/schema/site";
 import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
 import type { SpacePageData } from "@/types/space-page";
-import { ActionButtons } from "@/components/ActionButtons";
-import { Checklist } from "@/components/Checklist";
-import {
-  FeatureImageText,
-  type FeatureImageTextItem,
-} from "@/components/sections/FeatureImageText";
 import { SECTION_TYPES } from "@/constants/section-types";
-import { Hammer, Ruler, Shield } from "lucide-react";
 
 export const metadata = createPageMetadata({
-  title: "Salle de lavage sur mesure",
+  title: "Salle de lavage sur mesure haut de gamme",
   description:
-    "Salle de lavage sur mesure : armoires, comptoir de pliage et rangements robustes pour buanderie. Conception durable, adaptée aux contraintes techniques, à Montréal, Laval et sur la Rive-Sud.",
+    "Salle de lavage sur mesure haut de gamme : conception, fabrication contrôlée et installation précise, avec coordination clé en main à Montréal, Laval et sur la Rive-Sud.",
   path: "/espaces/salle-de-lavage/",
-  ogAlt: "Salle de lavage sur mesure Dilamco — durable et facile à vivre",
+  ogAlt: "Salle de lavage sur mesure Dilamco — durable, technique, bien exécuté",
 });
 
 const faqItems = [
   {
-    q: "Comment optimiser une petite buanderie?",
-    a: "En définissant des zones (lavage, pliage, rangement) et en exploitant la hauteur. Le sur mesure aide à éviter les espaces perdus, à préserver la circulation et à intégrer proprement les contraintes techniques.",
+    q: "Quel est le prix d’une salle de lavage sur mesure à Montréal ?",
+    a: "Le prix dépend de la configuration (machines côte à côte ou superposées), du niveau d’intégration (comptoir, pliage, rangement vertical), des matériaux et des finitions. Une solution sur mesure clé en main est généralement alignée avec une exécution haut de gamme et une durabilité à long terme.",
   },
   {
-    q: "Tiroirs ou portes pour ranger les produits?",
-    a: "Les tiroirs améliorent l’accès (surtout en profondeur) et simplifient l’organisation. Les portes restent utiles pour des items volumineux. Le bon choix dépend de la configuration et de vos habitudes.",
+    q: "Est-ce que vous gérez la rénovation complète si nécessaire ?",
+    a: "Oui. Selon le projet, nous pouvons coordonner l’ensemble : conception, fabrication, planification du chantier et installation, afin de réduire la fragmentation et les imprévus.",
   },
   {
-    q: "Quels matériaux tiennent bien avec l'humidité?",
-    a: "Le point clé, c’est la stabilité et la protection des chants. La durabilité dépend aussi de l’assemblage, de la quincaillerie et de la précision d’installation — c’est l’ensemble qui fait la différence.",
+    q: "Quels matériaux recommandez-vous pour l’humidité ?",
+    a: "Une salle de lavage est un espace technique. Nous privilégions une structure durable et stable (bois massif de bouleau + contreplaqué de bouleau sur les éléments critiques), pour améliorer la tenue dans le temps et limiter les remplacements prématurés.",
   },
   {
-    q: "Est-ce possible dans un placard?",
-    a: "Oui. Le sur mesure est particulièrement pertinent dans un placard : il faut gérer les dégagements, l’ouverture, la circulation et, souvent, des contraintes techniques (plomberie, ventilation, panneaux).",
-  },
-  {
-    q: "Quels sont les délais typiques?",
-    a: "Les délais varient selon la complexité du projet, la disponibilité et la période de l’année. Lors de la soumission, on confirme une échéance réaliste et on cadre les étapes pour limiter les imprévus.",
-  },
-];
-
-const featureImageTextItems: FeatureImageTextItem[] = [
-  {
-    ariaLabelledby: "fonctionnalite",
-    heading:
-      "Fonctionnalité : structurer les zones (lavage, pliage, rangement)",
-    content: (
-      <>
-        <p>
-          Une buanderie efficace réduit le désordre. Le sur mesure permet de
-          structurer l’espace selon vos habitudes et la réalité des lieux.
-        </p>
-        <Checklist
-          items={[
-            "Zone lavage : accès simple, circulation claire et dégagements cohérents.",
-            "Zone pliage : comptoir pratique, à une hauteur confortable.",
-            "Produits ménagers : rangement sécurisé et facilement accessible.",
-            "Rangement vertical : armoires hautes et colonnes pour maximiser l’espace.",
-            "Paniers & linge : organisation logique pour éviter l’accumulation.",
-          ]}
-        />
-      </>
-    ),
-    image: {
-      src: "/images/spaces/vanite-salles-de-lavage.webp",
-      alt: "Fonctionnalité d’une salle de lavage sur mesure",
-    },
-  },
-  {
-    ariaLabelledby: "technique",
-    heading: "Contraintes techniques & durabilité",
-    content: (
-      <>
-        <p>
-          Les problèmes en buanderie viennent souvent des détails : chants
-          exposés à l’eau, surfaces difficiles à nettoyer, quincaillerie qui
-          fatigue. Notre approche vise la durabilité, sans compliquer l’usage.
-        </p>
-        <Checklist
-          items={[
-            "Humidité & éclaboussures : matériaux adaptés et protection des chants.",
-            "Surfaces faciles à entretenir : conception pensée pour le nettoyage régulier.",
-            "Usage répété : quincaillerie fiable pour ouvertures fréquentes (tiroirs/portes).",
-            "Conception autour des contraintes : plomberie, drains, ventilation, éléments techniques.",
-          ]}
-        />
-      </>
-    ),
-    image: {
-      src: "/images/spaces/vanite-salles-de-lavage.webp",
-      alt: "Contraintes techniques & durabilité d’une salle de lavage sur mesure",
-    },
-    links: [
-      {
-        text: "Voir les matériaux",
-        href: "/materiaux/",
-        variant: "outline",
-      },
-      {
-        text: "Comparatif des matériaux",
-        href: "/materiaux/comparatif/",
-        variant: "outline",
-      },
-      {
-        text: "Quincaillerie",
-        href: "/materiaux/quincaillerie/",
-        variant: "outline",
-      },
-    ],
-  },
-  {
-    ariaLabelledby: "configurations",
-    heading: "Configurations possibles",
-    content: (
-      <>
-        <p>
-          Le sur mesure s’adapte à la configuration réelle de votre buanderie,
-          qu’elle soit ouverte, en corridor ou intégrée dans un placard.
-        </p>
-        <Checklist
-          items={[
-            "Buanderie en corridor : rangement vertical et comptoir de pliage sans bloquer la circulation.",
-            "Buanderie dans un placard : modules adaptés, accès simple, gestion des portes et dégagements.",
-            "Évier utilitaire (si applicable) : rangement adapté aux produits et aux zones humides.",
-            "Empilage laveuse/sécheuse : optimisation de la hauteur et du rangement.",
-            "Armoires hautes + colonne : maximiser le rangement pour linge, paniers et accessoires.",
-          ]}
-        />
-      </>
-    ),
-    image: {
-      src: "/images/spaces/vanite-salles-de-lavage.webp",
-      alt: "Configurations possibles d’une salle de lavage sur mesure",
-    },
+    q: "Travaillez-vous à Montréal, Laval et sur la Rive-Sud ?",
+    a: "Oui. Nous desservons Montréal, Laval et la Rive-Sud pour les projets sur mesure clés en main.",
   },
 ];
 
@@ -142,140 +35,260 @@ export const pageData: SpacePageData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
-    {
-      name: "Salle de lavage",
-      url: SITE.url + "/espaces/salle-de-lavage/",
-    },
+    { name: "Salle de lavage sur mesure", url: SITE.url + "/espaces/salle-de-lavage/" },
   ],
+
   service: {
     name: "Salle de lavage sur mesure",
     description:
-      "Conception, fabrication et installation de salles de lavage sur mesure : armoires, comptoir de pliage et rangements robustes. Pratique, durable et adapté aux contraintes techniques.",
+      "Conception, fabrication contrôlée et installation d’armoires de salle de lavage sur mesure haut de gamme, avec coordination complète du projet.",
     url: SITE.url + "/espaces/salle-de-lavage/",
     serviceType: "Salle de lavage sur mesure",
   },
+
   hero: {
-    heading: "Salle de lavage sur mesure, pensée pour durer",
+    variant: "split-premium",
+    heading: "Salle de lavage sur mesure, clé en main à Montréal",
     description:
-      "Une buanderie est un espace technique : humidité, plomberie, vibration, produits ménagers et usage fréquent. Dilamco conçoit et réalise des salles de lavage sur mesure haut de gamme, pratiques au quotidien et durables dans le temps — à Montréal, Laval et sur la Rive-Sud.",
+      "Conception, fabrication contrôlée et installation précise — avec une coordination complète du projet par un seul partenaire.",
+    badges: ["Sur mesure", "Clé en main", "Montréal"],
     image: {
-      src: "/images/spaces/vanite-salles-de-lavage.webp",
-      alt: "Salle de lavage sur mesure",
+      src: "/images/hero/laundry-hero.webp",
+      alt: "Salle de lavage sur mesure haut de gamme",
     },
-    actionsSlot: (
-      <ActionButtons
-        className="justify-start"
-        buttons={[
-          {
-            text: "Obtenir une soumission",
-            href: "/contact/",
-          },
-          {
-            text: "Voir des projets de salle de lavage",
-            href: "/projets/salle-de-lavage/",
-            variant: "outline",
-          },
-        ]}
-      />
-    ),
+    imagePriority: true,
+    actions: [
+      { text: "Obtenir une soumission détaillée", href: "/contact/" },
+      { text: "Voir nos réalisations", href: "/projets/salle-de-lavage/", variant: "secondary" },
+    ],
+    proofs: [
+      { title: "Fabrication contrôlée", description: "Standards définis et qualité reproductible." },
+      { title: "Matériaux durables", description: "Choix orientés stabilité et tenue dans le temps." },
+      { title: "Coordination clé en main", description: "Un seul responsable, moins d’imprévus." },
+    ],
   },
+
   sections: [
     {
-      id: "pour-qui",
-      title: "À qui s’adresse une salle de lavage sur mesure?",
+      id: "introduction-value",
+      title: "Une salle de lavage conçue comme un espace technique",
+      intro:
+        "Une salle de lavage mal pensée devient vite un irritant quotidien : humidité, circulation serrée, rangement inefficace, comptoir insuffisant. Le sur mesure permet d’intégrer vos contraintes réelles et d’obtenir un espace stable, durable et fonctionnel.",
       content: {
-        type: SECTION_TYPES.FEATURE_GRID,
+        type: SECTION_TYPES.INTRO_VALUE,
+        badges: ["Rangement optimisé", "Résistance à l’usage", "Exécution structurée"],
+        cardTitle: "Vérification rapide d’adéquation au projet",
+        cardItems: [
+          "Espace restreint à optimiser",
+          "Besoin de rangement vertical et comptoir pliage",
+          "Priorité à la durabilité (humidité / usage fréquent)",
+          "Budget aligné avec une exécution premium",
+        ],
+        cardAction: {
+          href: "/contact/",
+          title: "Commencer une demande de soumission",
+        },
+      },
+    },
+
+    {
+      id: "differentiation",
+      title: "Une structure commerciale qui protège la qualité",
+      intro:
+        "Nous ne sommes pas un simple revendeur. Notre opération est conçue autour du contrôle de l’approvisionnement, de standards cohérents et d’une livraison prévisible.",
+      content: {
+        type: SECTION_TYPES.ASYMMETRIC_2_COLUMNS,
         items: [
           {
-            title: "Espace restreint ou configuration atypique",
-            description:
-              "Condo, corridor, placard, sous-sol : on optimise sans nuire à la circulation. Notre rôle : créer des solutions durables. ",
-            icon: Ruler,
+            title: "Présence locale à Montréal",
+            description: "pour réduire les imprévus, mieux coordonner et garder le contrôle.",
           },
           {
-            title: "Organisation simple au quotidien",
-            description:
-              "Pliage, paniers, produits, linge : un espace clair, fonctionnel et facile à utiliser.",
-            icon: Shield,
+            title: "Approvisionnement direct et standards de fabrication",
+            description: "pour des résultats reproductibles et une qualité stable.",
           },
           {
-            title: "Contraintes techniques à intégrer",
-            description:
-              "Plomberie, drains, chauffe-eau, panneaux, ventilation et dégagements.",
-            icon: Hammer,
+            title: "Exécution clé en main",
+            description: "pour éviter la responsabilité fragmentée et les finitions inégales.",
           },
         ],
-      },
-    },
-    {
-      id: "ce-qui-est-inclus",
-      title: "Ce que comprend une salle de lavage Dilamco",
-      content: {
-        type: SECTION_TYPES.RELATED_LINKS,
-        items: [
-          {
-            title: "Conception & planification",
-            href: "/services/design/",
-            description:
-              "Contraintes, circulation et plan d’organisation pensé pour votre usage.",
-          },
-          {
-            title: "Fabrication sur mesure",
-            href: "/services/fabrication/",
-            description:
-              "Armoires, modules, comptoir de pliage et rangements adaptés.",
-          },
-          {
-            title: "Installation précise",
-            href: "/services/installation/",
-            description:
-              "Alignements nets, ajustements fins, finition et inspection finale.",
-          },
-        ],
-        columns: 3,
-      },
-    },
-    {
-      id: "details",
-      title: "",
-      content: {
-        type: SECTION_TYPES.CUSTOM,
-        node: <FeatureImageText items={featureImageTextItems} />,
-      },
-    },
-    {
-      id: "projets",
-      title: "Réalisations de salles de lavage",
-      content: {
-        type: SECTION_TYPES.RELATED_LINKS,
-        items: [
-          {
-            title: "Voir tous les projets de salle de lavage",
-            href: "/projets/salle-de-lavage/",
-          },
-          { title: "Voir tous les projets", href: "/projets/" },
-        ],
-        columns: 2,
-      },
-    },
-    {
-      id: "liens",
-      title: "Ressources",
-      content: {
-        type: SECTION_TYPES.RELATED_LINKS,
-        items: [
-          { title: "Projets", href: "/projets/salle-de-lavage/" },
-          { title: "Matériaux", href: "/materiaux/" },
+        links: [
           { title: "Obtenir une soumission", href: "/contact/" },
+          { title: "Voir notre processus", href: "/processus/", variant: "outline" },
         ],
-        columns: 3,
+        image: {
+          src: "/images/sections/laundry-detail-or-warehouse.jpg",
+          alt: "Détail d’armoire ou contrôle logistique — Dilamco",
+        },
+        cardTitle: "Ce que cela change pour vous",
+        cardDescription:
+          "Moins d’inconnues, une planification plus claire et un résultat cohérent d’un projet à l’autre.",
+        surface: "muted",
+      },
+    },
+
+    {
+      id: "process",
+      title: "Un processus clé en main clair",
+      intro:
+        "Un seul partenaire responsable de la conception à l’installation — des étapes structurées pour réduire les risques et améliorer les résultats.",
+      content: {
+        type: SECTION_TYPES.PROCESS,
+        items: [
+          {
+            step: "1",
+            title: "Analyse des contraintes",
+            description: "Plomberie, ventilation, circulation, portes, profondeur disponible et contraintes réelles.",
+          },
+          {
+            step: "2",
+            title: "Conception & validation",
+            description: "Plans et aménagement : rangement vertical, zones panier/produits, comptoir pliage, accès machines.",
+          },
+          {
+            step: "3",
+            title: "Sélection des matériaux",
+            description: "Choix orientés stabilité et tenue dans le temps, adaptés à un espace exposé à l’humidité.",
+          },
+          {
+            step: "4",
+            title: "Fabrication contrôlée",
+            description: "Standards définis et qualité reproductible, sans assemblage improvisé.",
+          },
+          {
+            step: "5",
+            title: "Installation précise",
+            description: "Ajustements, alignements et finitions vérifiés lors de la livraison.",
+          },
+        ],
+      },
+    },
+
+    {
+      id: "materials",
+      title: "Matériaux qui justifient le haut de gamme",
+      intro:
+        "Dans une salle de lavage, la durabilité est structurale. L’humidité et l’usage fréquent punissent rapidement les choix standards.",
+      content: {
+        type: SECTION_TYPES.MATERIALS_CONTRAST,
+        cards: [
+          {
+            title: "Structure des tiroirs",
+            description:
+              "Composants en bois massif de bouleau conçus pour la résistance, la stabilité et la longévité.",
+          },
+          {
+            title: "Fond des tiroirs",
+            description:
+              "Contreplaqué de bouleau pour une meilleure résistance à la charge et une stabilité dimensionnelle.",
+          },
+          {
+            title: "Pourquoi c’est critique en salle de lavage ?",
+            description:
+              "Humidité, détergents, charge (paniers, produits), usage quotidien : une structure stable réduit la déformation et protège la sensation de solidité au fil des années.",
+            fullWidth: true,
+          },
+        ],
+        links: [
+          { title: "Explorer le bois massif", href: "/materiaux/bois-massif/", variant: "outline" },
+          { title: "Explorer le contreplaqué de bouleau", href: "/materiaux/contreplaque/", variant: "outline" },
+        ],
+        image: {
+          src: "/images/sections/laundry-material-detail.jpg",
+          alt: "Détail matériau — salle de lavage sur mesure",
+        },
+        imageCardTitle: "Détail technique, avantage concret",
+        imageCardDescription:
+          "Les bons choix de structure protègent la tenue dans le temps, surtout dans un espace exposé à l’humidité.",
+        compareTitle: "Comparaison rapide",
+        compareRows: [
+          { label: "Standard", value: "Panneaux minces / MDF / mélamine" },
+          { label: "Spécifications Dilamco", value: "Bois massif + contreplaqué de bouleau" },
+        ],
+        surface: "muted",
+      },
+    },
+
+    {
+      id: "projects",
+      title: "Projets réels à Montréal et environs",
+      intro: "Preuve de la qualité d’exécution — pas seulement une galerie.",
+      content: {
+        type: SECTION_TYPES.PROJECTS_IMMERSIVE,
+        cta: {
+          title: "Voir toutes les réalisations salle de lavage",
+          href: "/projets/salle-de-lavage/",
+          variant: "outline",
+        },
+        items: [
+          {
+            title: "Salle de lavage sur mesure",
+            location: "Montréal",
+            href: "/projets/salle-de-lavage/salle-de-lavage-sur-mesure-montreal",
+            image: {
+              src: "/images/projects/laundry-1.jpg",
+              alt: "Projet salle de lavage sur mesure — Montréal",
+            },
+          },
+          {
+            title: "Salle de lavage sur mesure",
+            location: "Laval",
+            href: "/projets/salle-de-lavage/salle-de-lavage-sur-mesure-laval",
+            image: {
+              src: "/images/projects/laundry-2.jpg",
+              alt: "Projet salle de lavage sur mesure — Laval",
+            },
+          },
+          {
+            title: "Salle de lavage sur mesure",
+            location: "Rive-Sud",
+            href: "/projets/salle-de-lavage/salle-de-lavage-sur-mesure-rive-sud",
+            image: {
+              src: "/images/projects/laundry-3.jpg",
+              alt: "Projet salle de lavage sur mesure — Rive-Sud",
+            },
+          },
+        ],
+      },
+    },
+
+    {
+      id: "fit-filtering",
+      title: "Est-ce le bon choix pour votre projet ?",
+      intro:
+        "Nos salles de lavage sur mesure sont conçues pour la durabilité à long terme et l’exécution cohérente. Si votre priorité est le prix le plus bas à l’avance, une solution standardisée peut être plus appropriée.",
+      content: {
+        type: SECTION_TYPES.CENTERED_MINIMAL,
+        cards: [
+          {
+            title: "Profil idéal",
+            description:
+              "Résidence principale • Usage fréquent • Qualité et rangement priorisés • Coordination clé en main.",
+          },
+          {
+            title: "Moins adapté",
+            description:
+              "Projet temporaire • Budget strictement limité • Modules standards privilégiés.",
+          },
+        ],
+        links: [
+          { title: "Demander une soumission", href: "/contact/" },
+          { title: "Voir notre processus", href: "/processus/", variant: "outline" },
+        ],
       },
     },
   ],
+
   faq: {
     ariaLabelledby: "faq",
-    heading: "FAQ — salle de lavage sur mesure",
+    heading: "FAQ",
     items: faqItems,
+  },
+
+  cta: {
+    heading: "Obtenez une soumission claire et détaillée pour votre salle de lavage sur mesure",
+    description: "Une évaluation structurée adaptée à votre espace, vos contraintes techniques et votre niveau de finition.",
+    actions: [{ text: "Démarrer ma demande de soumission", href: "/contact/" }],
   },
 };
 

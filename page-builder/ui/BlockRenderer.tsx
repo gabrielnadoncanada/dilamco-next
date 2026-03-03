@@ -1,0 +1,79 @@
+import type { Block } from "../model/block-types";
+import { blockRegistry } from "../model/block-registry";
+import { BlockFrame } from "./BlockFrame";
+import { UnknownBlock } from "./fallbacks/UnknownBlock";
+import { InvalidBlock } from "./fallbacks/InvalidBlock";
+
+export function BlockRenderer(props: { block: Block; isPreview?: boolean }) {
+  const { block, isPreview } = props;
+
+  const key = `${block.content.type}.${block.content.variant}`;
+  const def = blockRegistry[key];
+  const mergedFrame = {
+    ...(def.defaultFrame ?? {}),
+    ...(block.frame ?? {}),
+  };
+
+  if (!def) {
+    return (
+      <BlockFrame
+        id={block.id}
+        title={block.title}
+        intro={block.intro}
+        frame={mergedFrame}
+      >
+        <UnknownBlock blockKey={key} isPreview={isPreview} />
+      </BlockFrame>
+    );
+  }
+
+  const parsed = def.schema.safeParse(block.content.props);
+
+  if (!parsed.success) {
+    const issues = parsed.error.issues.map((i) => ({
+      path: i.path.join(".") || "(root)",
+      message: i.message,
+    }));
+
+    return (
+      <BlockFrame
+        id={block.id}
+        title={block.title}
+        intro={block.intro}
+        frame={mergedFrame}
+      >
+        <InvalidBlock blockKey={key} issues={issues} isPreview={isPreview} />
+      </BlockFrame>
+    );
+  }
+
+  const Component = def.Component as React.ComponentType<typeof parsed.data>;
+
+  if (typeof parsed.data !== "object" || parsed.data === null || Array.isArray(parsed.data)) {
+    return (
+      <BlockFrame
+        id={block.id}
+        title={block.title}
+        intro={block.intro}
+        frame={mergedFrame}
+      >
+        <InvalidBlock
+          blockKey={key}
+          issues={[{ path: "(root)", message: "Parsed props must be an object." }]}
+          isPreview={isPreview}
+        />
+      </BlockFrame>
+    );
+  }
+
+  return (
+    <BlockFrame
+      id={block.id}
+      title={block.title}
+      intro={block.intro}
+      frame={mergedFrame}
+    >
+      <Component {...(parsed.data as Record<string, unknown>)} />
+    </BlockFrame>
+  );
+}

@@ -6,7 +6,6 @@ import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
@@ -66,7 +65,6 @@ export default function RootLayout({
 
 
           <Header />
-          <Breadcrumbs />
           {children}
           <Footer />
         </ThemeProvider>
