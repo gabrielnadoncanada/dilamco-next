@@ -10,9 +10,9 @@ export function PageRenderer(props: {
 
   return (
     <>
-      {blocks.map((b) => (
+      {blocks.map((b, index) => (
         <BlockRenderer
-          key={b.id}
+          key={b.id + "_" + index}
           block={{
             ...b,
             frame: { ...defaultFrame, ...(b.frame ?? {}) },

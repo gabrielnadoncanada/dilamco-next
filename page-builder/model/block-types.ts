@@ -1,10 +1,11 @@
 import type { z, ZodType } from "zod";
 
 export type Align = "left" | "center";
-export type ContainerSize = "full" | "xl" | "2xl";
-export type Surface = "default" | "muted";
-export type PaddingY = "sm" | "md" | "lg";
+export type ContainerSize = "sm" | "md" | "lg" | "xl" | "2xl" | "full";
+export type Surface = "default" | "muted" | "inverse";
+export type PaddingY = "none" | "sm" | "md" | "lg" | "hero";
 export type HeadingLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type Divider = "none" | "top" | "bottom" | "y";
 
 export type FrameOptions = {
   headerAlign?: Align;
@@ -14,6 +15,7 @@ export type FrameOptions = {
   paddingY?: PaddingY;
   titleAs?: HeadingLevel;
   titleVariant?: HeadingLevel;
+  divider?: Divider;
 };
 
 export type BlockContent<

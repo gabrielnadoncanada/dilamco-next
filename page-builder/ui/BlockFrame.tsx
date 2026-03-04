@@ -10,6 +10,7 @@ const defaultFrame: Required<FrameOptions> = {
   contentAlign: "center",
   container: "2xl",
   surface: "default",
+  divider: "none",
   paddingY: "lg",
   titleAs: "h2",
   titleVariant: "h3",
@@ -18,18 +19,28 @@ const defaultFrame: Required<FrameOptions> = {
 const sectionVariants = cva("", {
   variants: {
     paddingY: {
-      sm: "py-8",
-      md: "py-12",
-      lg: "py-16",
+      sm: "py-10 sm:py-12",
+      md: "py-14 sm:py-16",
+      lg: "py-16 sm:py-20",
+      hero: "py-20 sm:py-28",
+      none: "",
     },
     surface: {
       default: "bg-transparent",
       muted: "bg-muted/40",
+      inverse: "bg-inverse",
+    },
+    divider: {
+      none: "",
+      top: "border-t",
+      bottom: "border-b",
+      y: "border-y",
     },
   },
   defaultVariants: {
     paddingY: "lg",
     surface: "default",
+    divider: "none",
   },
 });
 
@@ -39,6 +50,9 @@ const containerVariants = cva("mx-auto", {
       full: "max-w-none px-4",
       xl: "max-w-screen-xl px-4",
       "2xl": "max-w-screen-2xl px-4",
+      sm: "max-w-screen-sm px-4",
+      md: "max-w-screen-md px-4",
+      lg: "max-w-screen-lg px-4",
     },
   },
   defaultVariants: {
@@ -89,10 +103,11 @@ export function BlockFrame(props: {
   return (
     <section
       id={props.id}
-      className={sectionVariants({
+      className={cn(sectionVariants({
         paddingY: frame.paddingY,
         surface: frame.surface,
-      })}
+        divider: frame.divider,
+      }), 'relative')}
     >
       <div className={containerVariants({ container: frame.container })}>
         {hasHeading && (

@@ -8,16 +8,14 @@ const ActionSchema = z.object({
     .optional(),
 });
 
-export const SplitBadgesChecklistCtaSchema = z.object({
+export const CtaBandSplitActionsSchema = z.object({
   heading: z.string().min(1),
   intro: z.string().min(1),
-  badges: z.array(z.string().min(1)).optional(),
-  cardTitle: z.string().min(1),
-  items: z.array(z.string().min(1)).min(1),
-  // Strict system: use standardized actions
+
   actions: z.array(ActionSchema).min(1).max(2),
+  note: z.string().optional(),
 });
 
-export type SplitBadgesChecklistCtaProps = z.infer<
-  typeof SplitBadgesChecklistCtaSchema
+export type CtaBandSplitActionsProps = z.infer<
+  typeof CtaBandSplitActionsSchema
 >;

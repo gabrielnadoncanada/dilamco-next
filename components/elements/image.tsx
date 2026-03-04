@@ -9,7 +9,7 @@ type AppImageProps = Omit<ImageProps, "src" | "alt" | "onError"> & {
   fallbackSrc?: ImageProps["src"];
 };
 
-export function Image({
+export default function Image({
   src,
   alt,
   fallbackSrc = "/images/placeholder.webp",
