@@ -3,19 +3,28 @@ import type { Block } from "@/page-builder/model/block-types";
 export const blocks: Block[] = [
   {
     id: "hero",
+    frame: {
+      divider: "bottom",
+    },
     content: {
       type: "hero",
-      variant: "split-badges-card-bullets",
+      variant: "split-image-badges",
       props: {
         image: {
           src: "/images/hero/kitchen-hero.webp",
           alt: "Premium custom kitchen",
         },
+        eyebrow: "Dilamco — Espaces",
         overlay: "dark-gradient",
-        badges: ["Sur mesure", "Matériaux premium", "Clé en main"],
-        heading: "Cuisine et armoires sur mesure haut de gamme à Montréal",
+        badges: [
+          "Fabrication contrôlée",
+          "Matériaux durables",
+          "Installation précise",
+          "Coordination complète",
+        ],
+        heading: "Espaces sur mesure haut de gamme à Montréal",
         description:
-          "Fabrication contrôlée, matériaux durables et exécution maîtrisée — pour des projets résidentiels et commerciaux à Montréal, Laval et sur la Rive-Sud.",
+          "Cuisine, salle de bain, salle de lavage, walk-in et commercial — conçus, fabriqués et installés avec une gestion clé en main et des standards de qualité constants.",
         actions: [
           {
             label: "Obtenir une soumission",
@@ -44,6 +53,110 @@ export const blocks: Block[] = [
             },
           ],
         },
+      },
+    },
+  },
+  {
+    id: "quality-pillars",
+    content: {
+      type: "split",
+      variant: "text-divider-cards",
+      props: {
+        heading: "Des espaces conçus pour durer — pas des modules standard",
+        description:
+          "Chaque espace Dilamco suit la même logique : design adapté à votre réalité, fabrication contrôlée, matériaux premium et exécution structurée. L’objectif est simple : un résultat durable, cohérent et maîtrisé, avec un seul responsable du début à la fin.",
+        cards: [
+          {
+            title: "Qualité tangible",
+            description:
+              "Détails de construction, quincaillerie, finitions et durabilité vérifiables.",
+          },
+          {
+            title: "Gestion clé en main",
+            description:
+              "Moins d’intervenants, moins d’imprévus, une coordination claire.",
+          },
+        ],
+        columns: "2",
+      },
+    },
+  },
+  {
+    id: "spaces",
+    content: {
+      type: "grid",
+      variant: "image-cards-slider",
+      props: {
+        heading: "Choisissez votre espace",
+        intro:
+          "Accédez à la page pilier correspondante pour découvrir l’approche, les matériaux, des réalisations et une FAQ adaptée.",
+        items: [
+          {
+            title: "Cuisine",
+            href: "/espaces/cuisine",
+            description:
+              "Armoires sur mesure, ergonomie, durabilité et coordination complète pour un résultat maîtrisé.",
+            image: {
+              src: "/images/spaces/cabinet-cuisines.webp",
+              alt: "Cuisine sur mesure haut de gamme",
+            },
+            badges: ["Sur mesure", "Clé en main", "Haut de gamme"],
+            quickActionLabel: "Voir",
+            footerCtaLabel: "Découvrir cuisine",
+          },
+          {
+            title: "Salle de bain",
+            href: "/espaces/salle-de-bain",
+            description:
+              "Vanités sur mesure, rangement optimisé et finitions résistantes à l’humidité pour durer.",
+            image: {
+              src: "/images/spaces/vanite-salles-de-bain.webp",
+              alt: "Vanité et salle de bain sur mesure",
+            },
+            badges: ["Vanités", "Durable", "Finitions"],
+            quickActionLabel: "Voir",
+            footerCtaLabel: "Découvrir salle de bain",
+          },
+          {
+            title: "Salle de lavage",
+            href: "/espaces/salle-de-lavage",
+            description:
+              "Solutions de rangement et d’organisation pensées pour le quotidien, sans compromis sur la solidité.",
+            image: {
+              src: "/images/spaces/vanite-salles-de-lavage.webp",
+              alt: "Salle de lavage sur mesure",
+            },
+            badges: ["Rangement", "Fonctionnel", "Sur mesure"],
+            quickActionLabel: "Voir",
+            footerCtaLabel: "Découvrir salle de lavage",
+          },
+          {
+            title: "Walk-in",
+            href: "/espaces/walk-in",
+            description:
+              "Organisation personnalisée : tiroirs, penderies, accessoires et configuration adaptée à vos besoins.",
+            image: {
+              src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+              alt: "Walk-in sur mesure",
+            },
+            badges: ["Organisation", "Personnalisé", "Premium"],
+            quickActionLabel: "Voir",
+            footerCtaLabel: "Découvrir walk-in",
+          },
+          {
+            title: "Commercial",
+            href: "/espaces/commercial",
+            description:
+              "Aménagement durable et reproductible : bureaux, espaces clients, rangements et mobilier sur mesure.",
+            image: {
+              src: "/images/spaces/commercial.webp",
+              alt: "Aménagement commercial sur mesure",
+            },
+            badges: ["Commercial", "Durable", "Exécution maîtrisée"],
+            quickActionLabel: "Voir",
+            footerCtaLabel: "Découvrir commercial",
+          },
+        ],
       },
     },
   },
@@ -80,6 +193,7 @@ export const blocks: Block[] = [
       },
     },
   },
+
   {
     id: "cta-plan",
     content: {

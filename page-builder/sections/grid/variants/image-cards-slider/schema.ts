@@ -15,13 +15,10 @@ const ItemSchema = z.object({
   footerCtaLabel: z.string().min(1).optional(),
 });
 
-export const GridImageCardsBadgesCtaSchema = z.object({
+export const GridImageCardsSliderSchema = z.object({
   heading: z.string().min(1),
   intro: z.string().min(1).optional(),
-
   items: z.array(ItemSchema).min(1).max(24),
 });
 
-export type GridImageCardsBadgesCtaProps = z.infer<
-  typeof GridImageCardsBadgesCtaSchema
->;
+export type GridImageCardsSliderProps = z.infer<typeof GridImageCardsSliderSchema>;

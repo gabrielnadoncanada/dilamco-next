@@ -48,7 +48,7 @@ export function HeroSplitImageBadges(props: HeroSplitImageBadgesProps) {
       </div>
 
       {/* Right */}
-      <div className="lg:col-span-5">
+      <div className="lg:col-span-5 max-lg:order-[-1]">
         <div className="relative overflow-hidden rounded-xl border bg-muted/30">
           <div className="relative aspect-[4/3] w-full">
             <Image

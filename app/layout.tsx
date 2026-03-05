@@ -7,6 +7,7 @@ import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { cn } from "@/lib/utils";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -53,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr-CA" suppressHydrationWarning>
-      <body className={plusJakartaSans.className}>
+      <body className={cn(plusJakartaSans.className, 'overflow-x-hidden!')}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

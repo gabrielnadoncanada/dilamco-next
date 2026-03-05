@@ -28,35 +28,33 @@ export function Navbar({
     <Fragment>
       <section
         className={cn(
-          "pointer-events-auto flex h-16 w-full items-center justify-center bg-transparent",
+          "pointer-events-auto flex h-16 w-full items-center justify-center bg-transparent w-full max-w-screen-xl mx-auto",
           className,
         )}
       >
-        <Container>
-          <div className="flex items-center justify-between gap-8">
-            <div className="flex items-center gap-8">
-              <Logo logo={logo} />
-              <DesktopNavigation navigation={navigation} />
-            </div>
-            <div className="hidden items-center gap-3 xl:flex">
-              <ThemeToggle />
-              <ActionButtons actions={actions} size="sm" />
-            </div>
-            <div className="xl:hidden">
-              <Button
-                className="size-11"
-                variant="ghost"
-                onClick={toggle}
-              >
-                {open ? (
-                  <X className="size-5.5 stroke-foreground" />
-                ) : (
-                  <MenuIcon className="size-5.5 stroke-foreground" />
-                )}
-              </Button>
-            </div>
+        <div className="flex items-center justify-between gap-8 w-full px-4">
+          <div className="flex items-center gap-8">
+            <Logo logo={logo} />
+            <DesktopNavigation navigation={navigation} />
           </div>
-        </Container>
+          <div className="hidden items-center gap-3 xl:flex">
+            <ThemeToggle />
+            <ActionButtons actions={actions} size="sm" />
+          </div>
+          <div className="xl:hidden">
+            <Button
+              className="size-11"
+              variant="ghost"
+              onClick={toggle}
+            >
+              {open ? (
+                <X className="size-5.5 stroke-foreground" />
+              ) : (
+                <MenuIcon className="size-5.5 stroke-foreground" />
+              )}
+            </Button>
+          </div>
+        </div>
 
       </section>
       <MobileNavigationMenu

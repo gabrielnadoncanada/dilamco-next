@@ -8,10 +8,11 @@ import type { FrameOptions } from "../model/block-types";
 const defaultFrame: Required<FrameOptions> = {
   headerAlign: "center",
   contentAlign: "center",
-  container: "2xl",
+  container: "xl",
   surface: "default",
   divider: "none",
   paddingY: "lg",
+  className: "",
   titleAs: "h2",
   titleVariant: "h3",
 };
@@ -56,7 +57,7 @@ const containerVariants = cva("mx-auto", {
     },
   },
   defaultVariants: {
-    container: "2xl",
+    container: "xl",
   },
 });
 
@@ -107,7 +108,7 @@ export function BlockFrame(props: {
         paddingY: frame.paddingY,
         surface: frame.surface,
         divider: frame.divider,
-      }), 'relative')}
+      }), "relative", frame.className)}
     >
       <div className={containerVariants({ container: frame.container })}>
         {hasHeading && (

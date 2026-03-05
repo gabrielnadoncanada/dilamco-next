@@ -13,5 +13,6 @@ export const heroSplitImageBadges = defineBlock({
     surface: "default",
     headerAlign: "left",
     contentAlign: "left",
+    className: "sm:pt-0 max-md:pt-0",
   },
 });

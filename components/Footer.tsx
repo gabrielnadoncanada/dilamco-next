@@ -25,15 +25,9 @@ export const Footer = ({
   bottomLinks = LEGAL_LINKS,
 }: FooterProps) => {
   return (
-    <Section padding="small" variant="default" className={cn("relative overflow-hidden", className)}>
-      <Divider />
-      <footer>
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background: "radial-gradient(circle_at_top_right, var(--footer-glow), transparent 45%)",
-          }}
-        />
+
+    <footer className="border-y">
+      <div className="w-full max-w-screen-xl mx-auto px-4 py-10 ">
         <div className="relative z-10 grid grid-cols-2 gap-8 lg:grid-cols-6">
           <div className="col-span-2 mb-8 lg:mb-0">
             <div className="flex items-center gap-2 lg:justify-start">
@@ -83,7 +77,7 @@ export const Footer = ({
             ))}
           </ul>
         </div>
-      </footer>
-    </Section>
+      </div>
+    </footer>
   );
 };
