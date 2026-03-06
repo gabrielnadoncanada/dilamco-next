@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { type SectionShellProps } from "@/components/elements/section-shell";
 import { type ActionButton } from "@/components/ActionButtons";
 import { Button } from "@/components/ui/button";
-import { Image } from "@/components/elements/image";
+import Image from "@/components/elements/image";
 
 interface AsymmetricTwoColumnsItem {
   title?: string;

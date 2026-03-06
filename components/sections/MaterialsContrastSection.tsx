@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { type SectionShellProps } from "@/components/elements/section-shell";
 import { type ActionButton } from "@/components/ActionButtons";
-import { Image } from "@/components/elements/image";
+import Image from "@/components/elements/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
