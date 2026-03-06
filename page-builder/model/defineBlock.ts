@@ -11,6 +11,9 @@ export function defineBlock<
   schema: TSchema;
   Component: React.ComponentType<import("zod").z.infer<TSchema>>;
   defaultFrame?: FrameOptions;
+  getStructuredData?: (
+    props: import("zod").z.infer<TSchema>,
+  ) => import("./block-types").StructuredDataContribution[];
   adapt?: (legacy: unknown) => unknown;
 }): BlockDef<TType, TVariant, TSchema> {
   const key = `${args.type}.${args.variant}` as BlockKey<TType, TVariant>;

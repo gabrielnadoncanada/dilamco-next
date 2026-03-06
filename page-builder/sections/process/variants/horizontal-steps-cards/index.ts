@@ -8,7 +8,6 @@ export const processHorizontalStepsCards = defineBlock({
   schema: ProcessHorizontalStepsCardsSchema,
   Component: ProcessHorizontalStepsCards,
   defaultFrame: {
-    container: "2xl",
     paddingY: "md",
     surface: "default",
     headerAlign: "left",

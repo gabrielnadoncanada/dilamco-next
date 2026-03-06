@@ -1,11 +1,14 @@
-import type { Block } from "../model/block-types";
-import { blockRegistry } from "../model/block-registry";
+import type { Block, Registry } from "../model/block-types";
 import { BlockFrame } from "./BlockFrame";
 import { UnknownBlock } from "./fallbacks/UnknownBlock";
 import { InvalidBlock } from "./fallbacks/InvalidBlock";
 
-export function BlockRenderer(props: { block: Block; isPreview?: boolean }) {
-  const { block, isPreview } = props;
+export function BlockRenderer(props: {
+  block: Block;
+  blockRegistry: Registry;
+  isPreview?: boolean;
+}) {
+  const { block, blockRegistry, isPreview } = props;
 
   const key = `${block.content.type}.${block.content.variant}`;
   const def = blockRegistry[key];

@@ -63,11 +63,7 @@ export default function RootLayout({
         >
           <JsonLd data={organizationJsonLd()} />
           <JsonLd data={localBusinessJsonLd()} />
-
-
-          <Header />
           {children}
-          <Footer />
         </ThemeProvider>
       </body>
     </html>

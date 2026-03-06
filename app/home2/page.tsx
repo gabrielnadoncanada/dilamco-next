@@ -1,10 +1,7 @@
-import { PageRenderer } from "@/page-builder/ui/PageRenderer";
-import { blocks } from "@/app/home2/page.data";
+import { createPageTemplate } from "@/page-builder";
+import { page } from "./page.data";
 
-export default function Home2Page() {
-  return (
-    <PageRenderer
-      blocks={blocks}
-    />
-  )
-}
+const { metadata, Page } = createPageTemplate(page);
+
+export { metadata };
+export default Page;

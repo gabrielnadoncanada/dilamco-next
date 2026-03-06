@@ -1,15 +1,13 @@
-import { createCollectionPage } from "@/lib/create-collection-page";
-import { SpacePageTemplate } from "@/components/templates/SpacePageTemplate";
+import { createPageCollection } from "@/page-builder";
 import {
   PUBLIC_SPACE_PAGE_SLUGS,
   getSpacePageBySlug,
-} from "@/data/space-pages";
+} from "@/data/page-builder/space-pages";
 
-const { generateStaticParams, generateMetadata, Page } = createCollectionPage({
+const { generateStaticParams, generateMetadata, Page } = createPageCollection({
   publicSlugs: PUBLIC_SPACE_PAGE_SLUGS,
   getBySlug: getSpacePageBySlug,
   paramName: "space",
-  Template: SpacePageTemplate,
 });
 
 export { generateStaticParams, generateMetadata };

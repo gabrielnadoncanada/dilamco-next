@@ -7,6 +7,11 @@ export type PaddingY = "none" | "sm" | "md" | "lg" | "hero";
 export type HeadingLevel = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 export type Divider = "none" | "top" | "bottom" | "y";
 
+export type StructuredDataContribution = {
+  type: "faq";
+  items: Array<{ q: string; a: string }>;
+};
+
 export type FrameOptions = {
   headerAlign?: Align;
   contentAlign?: Align;
@@ -57,7 +62,9 @@ export type BlockDef<
   schema: TSchema;
   Component: React.ComponentType<z.infer<TSchema>>;
   defaultFrame?: FrameOptions;
-  // optional legacy adapter later
+  getStructuredData?: (
+    props: z.infer<TSchema>,
+  ) => StructuredDataContribution[];
   adapt?: (legacy: unknown) => unknown;
 };
 

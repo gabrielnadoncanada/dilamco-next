@@ -8,7 +8,6 @@ export const splitListActionsImageCard = defineBlock({
   schema: SplitListActionsImageCardSchema,
   Component: SplitListActionsImageCard,
   defaultFrame: {
-    container: "2xl",
     paddingY: "md",
     surface: "muted",
     headerAlign: "left",

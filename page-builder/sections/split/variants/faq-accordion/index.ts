@@ -14,4 +14,10 @@ export const splitFaqAccordion = defineBlock({
     headerAlign: "left",
     contentAlign: "left",
   },
+  getStructuredData: (props) => [
+    {
+      type: "faq",
+      items: props.items,
+    },
+  ],
 });
