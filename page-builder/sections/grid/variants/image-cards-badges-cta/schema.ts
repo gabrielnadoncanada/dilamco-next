@@ -18,7 +18,8 @@ const ItemSchema = z.object({
 export const GridImageCardsBadgesCtaSchema = z.object({
   heading: z.string().min(1),
   intro: z.string().min(1).optional(),
-
+  ctaLabel: z.string().min(1).optional(),
+  ctaHref: z.string().min(1).optional(),
   items: z.array(ItemSchema).min(1).max(24),
 });
 

@@ -18,11 +18,16 @@ export function GridImageCardsBadgesCta(props: GridImageCardsBadgesCtaProps) {
             <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{props.intro}</p>
           ) : null}
         </div>
+        {props.ctaLabel && props.ctaHref ? (
+          <Button asChild variant="outline" size="sm">
+            <Link href={props.ctaHref}>{props.ctaLabel}</Link>
+          </Button>
+        ) : null}
       </div>
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {props.items.map((item) => {
-          const quickLabel = item.quickActionLabel ?? "Voir";
+          const quickLabel = item.quickActionLabel ?? null;
           const footerLabel = item.footerCtaLabel ?? `Découvrir ${item.title.toLowerCase()}`;
 
           return (
@@ -40,9 +45,11 @@ export function GridImageCardsBadgesCta(props: GridImageCardsBadgesCtaProps) {
               <CardHeader>
                 <CardTitle className="flex items-center justify-between gap-3 text-lg font-semibold leading-snug">
                   <span>{item.title}</span>
-                  <Button asChild variant="ghost" size="sm">
-                    <Link href={item.href}>{quickLabel}</Link>
-                  </Button>
+                  {quickLabel ? (
+                    <Button asChild variant="ghost" size="sm">
+                      <Link href={item.href}>{quickLabel}</Link>
+                    </Button>
+                  ) : null}
                 </CardTitle>
               </CardHeader>
 

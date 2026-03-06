@@ -81,6 +81,7 @@ export const blocks: Block[] = [
       },
     },
   },
+
   {
     id: "spaces",
     content: {
@@ -155,6 +156,99 @@ export const blocks: Block[] = [
             badges: ["Commercial", "Durable", "Exécution maîtrisée"],
             quickActionLabel: "Voir",
             footerCtaLabel: "Découvrir commercial",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "standard",
+    content: {
+      type: "split",
+      variant: "steps-2x2-cta",
+      props: {
+        heading: "Notre standard, peu importe l'espace",
+        description:
+          "Une méthode reproductible pour protéger la qualité, réduire les imprévus et livrer un résultat cohérent.",
+        steps: [
+          {
+            label: "1) Conception",
+            description:
+              "Plans clairs, configuration adaptée et validations avant fabrication.",
+          },
+          {
+            label: "2) Matériaux",
+            description:
+              "Choix durables et détails de construction pensés pour la longévité.",
+          },
+          {
+            label: "3) Fabrication contrôlée",
+            description:
+              "Standards stables, contrôle qualité et cohérence d’un projet à l’autre.",
+          },
+          {
+            label: "4) Installation",
+            description:
+              "Ajustements précis, finitions nettes et coordination structurée sur chantier.",
+          },
+        ],
+        actions: [
+          { label: "Voir nos services", href: "/services", variant: "outline" },
+          {
+            label: "Comprendre nos matériaux",
+            href: "/materiaux",
+            variant: "outline",
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: "spaces",
+    content: {
+      type: "grid",
+      variant: "image-cards-slider",
+      props: {
+        heading: "Projets en vedette",
+        intro: "Découvrez les réalisations récentes de nos espaces sur mesure.",
+        ctaLabel: "Voir tous les projets",
+        ctaHref: "/projets",
+        items: [
+          {
+            title: "Cuisine sur mesure",
+            href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
+            description:
+              "Conception, fabrication contrôlée et installation précise avec finitions soignées.",
+            image: {
+              src: "/images/spaces/cabinet-cuisines.webp",
+              alt: "Cuisine sur mesure haut de gamme",
+            },
+            badges: ["Cuisine", "Montréal", "Plateau-Mont-Royal"],
+            footerCtaLabel: "Voir le projet",
+          },
+          {
+            title: "Vanité sur mesure",
+            href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
+            description:
+              "Rangement optimisé, matériaux durables et exécution nette adaptée à la salle de bain.",
+            image: {
+              src: "/images/spaces/vanite-salles-de-bain.webp",
+              alt: "Vanité et salle de bain sur mesure",
+            },
+            badges: ["Salle de bain", "Laval", "Vanités"],
+            footerCtaLabel: "Voir le projet",
+          },
+          {
+            title: "Aménagement sur mesure",
+            href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal/",
+            description:
+              "Mobilier robuste, lignes épurées et installation planifiée pour minimiser les interruptions.",
+            image: {
+              src: "/images/spaces/vanite-salles-de-lavage.webp",
+              alt: "Salle de lavage sur mesure",
+            },
+            badges: ["Commercial", "Montréal", "Centre-ville"],
+            footerCtaLabel: "Voir le projet",
           },
         ],
       },
