@@ -12,10 +12,6 @@ export function BlockRenderer(props: {
 
   const key = `${block.content.type}.${block.content.variant}`;
   const def = blockRegistry[key];
-  const mergedFrame = {
-    ...(def.defaultFrame ?? {}),
-    ...(block.frame ?? {}),
-  };
 
   if (!def) {
     return (
@@ -23,12 +19,17 @@ export function BlockRenderer(props: {
         id={block.id}
         title={block.title}
         intro={block.intro}
-        frame={mergedFrame}
+        frame={block.frame}
       >
         <UnknownBlock blockKey={key} isPreview={isPreview} />
       </BlockFrame>
     );
   }
+
+  const mergedFrame = {
+    ...(def.defaultFrame ?? {}),
+    ...(block.frame ?? {}),
+  };
 
   const parsed = def.schema.safeParse(block.content.props);
 

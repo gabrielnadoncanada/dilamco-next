@@ -189,8 +189,8 @@ export const designPage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - design",
           intro:

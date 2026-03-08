@@ -13,7 +13,10 @@ export const salleDeBainPage: PageTemplateData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
-    { name: "Salle de bain sur mesure", url: SITE.url + "/espaces/salle-de-bain/" },
+    {
+      name: "Salle de bain sur mesure",
+      url: SITE.url + "/espaces/salle-de-bain/",
+    },
   ],
   service: {
     name: "Salle de bain sur mesure",
@@ -35,7 +38,11 @@ export const salleDeBainPage: PageTemplateData = {
           description:
             "Une salle de bain durable demande des materiaux adaptes a l'humidite, une fabrication stable et une installation precise.",
           actions: [
-            { label: "Obtenir une soumission", href: "/contact/", variant: "default" },
+            {
+              label: "Obtenir une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
             {
               label: "Voir nos projets salle de bain",
               href: "/projets/salle-de-bain/",
@@ -68,8 +75,16 @@ export const salleDeBainPage: PageTemplateData = {
             "Vous cherchez une execution mieux controlee qu'une solution standard.",
           ],
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos services", href: "/services/", variant: "outline" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos services",
+              href: "/services/",
+              variant: "outline",
+            },
           ],
         },
       },
@@ -139,8 +154,16 @@ export const salleDeBainPage: PageTemplateData = {
             },
           ],
           actions: [
-            { label: "Explorer les materiaux", href: "/materiaux/", variant: "outline" },
-            { label: "Voir le processus", href: "/processus/", variant: "outline" },
+            {
+              label: "Explorer les materiaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              label: "Voir le processus",
+              href: "/processus/",
+              variant: "outline",
+            },
           ],
           image: {
             src: "/images/spaces/vanite-salles-de-bain.webp",
@@ -206,8 +229,8 @@ export const salleDeBainPage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - salle de bain sur mesure",
           intro:
@@ -243,7 +266,11 @@ export const salleDeBainPage: PageTemplateData = {
           intro:
             "On vous aide a cadrer un projet durable, adapte a l'espace et bien execute.",
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
             {
               label: "Voir nos projets salle de bain",
               href: "/projets/salle-de-bain/",

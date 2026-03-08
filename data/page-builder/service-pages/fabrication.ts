@@ -13,7 +13,10 @@ export const fabricationPage: PageTemplateData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "Service de fabrication", url: SITE.url + "/services/fabrication/" },
+    {
+      name: "Service de fabrication",
+      url: SITE.url + "/services/fabrication/",
+    },
   ],
   service: {
     name: "Service de fabrication",
@@ -51,7 +54,8 @@ export const fabricationPage: PageTemplateData = {
             src: "/images/services/fabrication-hero-v2.webp",
             alt: "Plans techniques et echantillons de materiaux pour fabrication sur mesure",
           },
-          caption: "Materiaux, assemblage et details qui tiennent dans le temps",
+          caption:
+            "Materiaux, assemblage et details qui tiennent dans le temps",
         },
       },
     },
@@ -177,8 +181,8 @@ export const fabricationPage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - fabrication",
           intro:

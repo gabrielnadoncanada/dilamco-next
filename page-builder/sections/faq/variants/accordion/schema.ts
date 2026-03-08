@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const SplitFaqAccordionSchema = z.object({
+export const AccordionSchema = z.object({
   heading: z.string().min(1),
   intro: z.string().min(1).optional(),
   items: z
@@ -14,4 +14,4 @@ export const SplitFaqAccordionSchema = z.object({
     .max(30),
 });
 
-export type SplitFaqAccordionProps = z.infer<typeof SplitFaqAccordionSchema>;
+export type AccordionProps = z.infer<typeof AccordionSchema>;

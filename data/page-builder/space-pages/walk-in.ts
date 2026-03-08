@@ -35,15 +35,24 @@ export const walkInPage: PageTemplateData = {
           description:
             "Le sur mesure permet d'optimiser l'espace, d'ameliorer l'organisation et d'obtenir un resultat plus stable qu'un systeme standard.",
           actions: [
-            { label: "Obtenir une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos walk-ins", href: "/projets/walk-in/", variant: "outline" },
+            {
+              label: "Obtenir une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos walk-ins",
+              href: "/projets/walk-in/",
+              variant: "outline",
+            },
           ],
           badges: ["Rangement", "Organisation", "Sur mesure"],
           image: {
             src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
             alt: "Walk-in sur mesure haut de gamme",
           },
-          caption: "Organisation personnalisee pour chambres, garde-robes et espaces restreints",
+          caption:
+            "Organisation personnalisee pour chambres, garde-robes et espaces restreints",
         },
       },
     },
@@ -64,8 +73,16 @@ export const walkInPage: PageTemplateData = {
             "Vous cherchez un resultat plus solide et mieux integre.",
           ],
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos services", href: "/services/", variant: "outline" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos services",
+              href: "/services/",
+              variant: "outline",
+            },
           ],
         },
       },
@@ -135,8 +152,16 @@ export const walkInPage: PageTemplateData = {
             },
           ],
           actions: [
-            { label: "Explorer les materiaux", href: "/materiaux/", variant: "outline" },
-            { label: "Voir nos espaces", href: "/espaces/", variant: "outline" },
+            {
+              label: "Explorer les materiaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              label: "Voir nos espaces",
+              href: "/espaces/",
+              variant: "outline",
+            },
           ],
           image: {
             src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
@@ -202,8 +227,8 @@ export const walkInPage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - walk-in sur mesure",
           intro:
@@ -239,8 +264,16 @@ export const walkInPage: PageTemplateData = {
           intro:
             "On vous aide a cadrer un rangement sur mesure qui correspond vraiment a l'espace et a l'usage.",
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos walk-ins", href: "/projets/walk-in/", variant: "outline" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos walk-ins",
+              href: "/projets/walk-in/",
+              variant: "outline",
+            },
           ],
         },
       },

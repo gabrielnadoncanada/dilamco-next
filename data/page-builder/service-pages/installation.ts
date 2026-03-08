@@ -13,7 +13,10 @@ export const installationPage: PageTemplateData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "Service d'installation", url: SITE.url + "/services/installation/" },
+    {
+      name: "Service d'installation",
+      url: SITE.url + "/services/installation/",
+    },
   ],
   service: {
     name: "Service d'installation",
@@ -31,7 +34,8 @@ export const installationPage: PageTemplateData = {
         variant: "split-image-badges",
         props: {
           eyebrow: "Dilamco - Services",
-          heading: "Installation professionnelle, precision, alignement et finition",
+          heading:
+            "Installation professionnelle, precision, alignement et finition",
           description:
             "Une installation de qualite est determinante pour le resultat final : ajustements sur place, alignements precis et finition soignee.",
           actions: [
@@ -102,13 +106,11 @@ export const installationPage: PageTemplateData = {
             },
             {
               title: "Mise a niveau et fixation",
-              description:
-                "Ancrage securitaire et stable des modules.",
+              description: "Ancrage securitaire et stable des modules.",
             },
             {
               title: "Ajustement des portes et tiroirs",
-              description:
-                "Alignement precis et fonctionnement fluide.",
+              description: "Alignement precis et fonctionnement fluide.",
             },
             {
               title: "Inspection finale",
@@ -163,8 +165,7 @@ export const installationPage: PageTemplateData = {
             {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain/",
-              description:
-                "Vanites et protection des chants en milieu humide.",
+              description: "Vanites et protection des chants en milieu humide.",
               image: {
                 src: "/images/spaces/vanite-salles-de-bain.webp",
                 alt: "Salle de bain sur mesure",
@@ -191,8 +192,8 @@ export const installationPage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - installation",
           intro:

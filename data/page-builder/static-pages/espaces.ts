@@ -35,8 +35,16 @@ export const page: PageTemplateData = {
           description:
             "Chaque espace a ses contraintes. Notre role est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien executees.",
           actions: [
-            { label: "Obtenir une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos projets", href: "/projets/", variant: "outline" },
+            {
+              label: "Obtenir une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos projets",
+              href: "/projets/",
+              variant: "outline",
+            },
           ],
           badges: ["Sur mesure", "Durable", "Cle en main"],
           image: {
@@ -153,8 +161,16 @@ export const page: PageTemplateData = {
             },
           ],
           actions: [
-            { label: "Voir nos services", href: "/services/", variant: "outline" },
-            { label: "Voir nos materiaux", href: "/materiaux/", variant: "outline" },
+            {
+              label: "Voir nos services",
+              href: "/services/",
+              variant: "outline",
+            },
+            {
+              label: "Voir nos materiaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
           ],
         },
       },
@@ -215,8 +231,8 @@ export const page: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - espaces sur mesure",
           intro:
@@ -252,8 +268,16 @@ export const page: PageTemplateData = {
           intro:
             "Obtenez une soumission claire et structuree adaptee a votre espace et a votre niveau d'exigence.",
           actions: [
-            { label: "Obtenir une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos services", href: "/services/", variant: "outline" },
+            {
+              label: "Obtenir une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos services",
+              href: "/services/",
+              variant: "outline",
+            },
           ],
           note: "Montreal, Laval et Rive-Sud",
         },

@@ -26,6 +26,7 @@ Always enforce these rules:
 5. Never use switch-case renderers for block rendering.
 6. Always require a Zod schema for each block variant.
 7. Only create a new type when it is structurally justified.
+8. Page-builder page data must live under `data/page-builder`; do not place page data files elsewhere in the app.
 
 If any rule is violated, stop and refuse. Explain the smallest correction needed.
 
@@ -63,5 +64,6 @@ When implementing or recommending a block:
 - choose a UI-only `variant`
 - use standardized prop models
 - generate or reference `schema.ts`, `ui.tsx`, and `index.ts`
+- keep page data files inside `data/page-builder`
 - preserve SEO semantics during migration
 - keep block APIs deterministic and CMS-safe

@@ -1,16 +1,15 @@
-import { ChevronDown, ChevronUp } from "lucide-react";
 
 import {
-  Accordion,
+  Accordion as AccordionComponent,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-import type { SplitFaqAccordionProps } from "./schema";
+import type { AccordionProps } from "./schema";
 import { Heading } from "@/components/elements/heading";
 
-export function SplitFaqAccordion(props: SplitFaqAccordionProps) {
+export function Accordion(props: AccordionProps) {
   return (
     <div className="grid gap-10 lg:grid-cols-12">
       <div className="lg:col-span-4">
@@ -24,15 +23,14 @@ export function SplitFaqAccordion(props: SplitFaqAccordionProps) {
       </div>
 
       <div className="lg:col-span-8">
-        <Accordion type="single" collapsible className="w-full">
+        <AccordionComponent type="single" collapsible className="w-full">
           {props.items.map((item, index) => (
             <AccordionItem key={`${item.q}-${index}`} value={`item-${index}`}>
               <AccordionTrigger>{item.q}</AccordionTrigger>
               <AccordionContent>{item.a}</AccordionContent>
             </AccordionItem>
           ))}
-        </Accordion>
-
+        </AccordionComponent>
       </div>
     </div>
   );

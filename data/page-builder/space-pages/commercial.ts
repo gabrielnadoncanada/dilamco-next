@@ -31,7 +31,8 @@ export const commercialPage: PageTemplateData = {
         variant: "split-image-badges",
         props: {
           eyebrow: "Dilamco - Espaces",
-          heading: "Armoires commerciales sur mesure, execution stable et planifiee",
+          heading:
+            "Armoires commerciales sur mesure, execution stable et planifiee",
           description:
             "En contexte commercial, la qualite se joue sur la durabilite, l'entretien, la logistique et le respect de l'echeancier autant que sur l'apparence.",
           actions: [
@@ -51,7 +52,8 @@ export const commercialPage: PageTemplateData = {
             src: "/images/spaces/commercial.webp",
             alt: "Amenagement commercial sur mesure",
           },
-          caption: "Approche adaptee aux espaces clients, bureaux et environnements de travail",
+          caption:
+            "Approche adaptee aux espaces clients, bureaux et environnements de travail",
         },
       },
     },
@@ -72,8 +74,16 @@ export const commercialPage: PageTemplateData = {
             "Vous voulez reduire les risques lies a une coordination fragmente.",
           ],
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir le processus", href: "/processus/", variant: "outline" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir le processus",
+              href: "/processus/",
+              variant: "outline",
+            },
           ],
         },
       },
@@ -143,8 +153,16 @@ export const commercialPage: PageTemplateData = {
             },
           ],
           actions: [
-            { label: "Explorer les materiaux", href: "/materiaux/", variant: "outline" },
-            { label: "Voir nos services", href: "/services/", variant: "outline" },
+            {
+              label: "Explorer les materiaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              label: "Voir nos services",
+              href: "/services/",
+              variant: "outline",
+            },
           ],
           image: {
             src: "/images/spaces/commercial.webp",
@@ -210,8 +228,8 @@ export const commercialPage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - commercial sur mesure",
           intro:
@@ -247,7 +265,11 @@ export const commercialPage: PageTemplateData = {
           intro:
             "On vous aide a cadrer un projet durable, planifie et mieux execute pour votre espace.",
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
             {
               label: "Voir nos projets commerciaux",
               href: "/projets/commercial/",

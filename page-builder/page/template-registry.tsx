@@ -1,14 +1,9 @@
 import type { Registry } from "../model/block-types";
 import { blockRegistry } from "../model/block-registry";
-import { createRegistry } from "../model/createRegistry";
-import { heroDefs } from "../sections/hero";
-import { splitDefs } from "../sections/split";
-import { ctaDefs } from "../sections/cta";
-import { processDefs } from "../sections/process";
-import { gridDefs } from "../sections/grid";
 import type { BuilderTemplatePage, TemplatePageDefinition } from "./definitions";
 import { BuilderPageTemplate } from "../templates/BuilderPageTemplate";
 import { ServiceBuilderPageTemplate } from "../templates/ServiceBuilderPageTemplate";
+import { validateTemplatePage } from "./validate-template-page";
 
 export type BuilderTemplateDefinition = {
   render: (page: BuilderTemplatePage) => React.ReactNode;
@@ -16,14 +11,6 @@ export type BuilderTemplateDefinition = {
 };
 
 export type PageTemplateRegistry = Record<string, BuilderTemplateDefinition>;
-
-const serviceBlockRegistry = createRegistry([
-  ...heroDefs,
-  ...splitDefs,
-  ...ctaDefs,
-  ...processDefs,
-  ...gridDefs,
-] as const);
 
 export const pageTemplateRegistry: PageTemplateRegistry = {
   default: {
@@ -33,20 +20,20 @@ export const pageTemplateRegistry: PageTemplateRegistry = {
     ),
   },
   spaces: {
-    blockRegistry: serviceBlockRegistry,
+    blockRegistry,
     render: (page) => (
       <ServiceBuilderPageTemplate
         data={page}
-        blockRegistry={serviceBlockRegistry}
+        blockRegistry={blockRegistry}
       />
     ),
   },
   services: {
-    blockRegistry: serviceBlockRegistry,
+    blockRegistry,
     render: (page) => (
       <ServiceBuilderPageTemplate
         data={page}
-        blockRegistry={serviceBlockRegistry}
+        blockRegistry={blockRegistry}
       />
     ),
   },
@@ -67,6 +54,8 @@ export function renderTemplatePage(
   if (!template) {
     throw new Error(`Unknown page template "${page.template}".`);
   }
+
+  validateTemplatePage(page, template.blockRegistry);
 
   return template.render(page);
 }

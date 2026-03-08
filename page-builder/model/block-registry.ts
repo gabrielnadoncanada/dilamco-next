@@ -5,6 +5,7 @@ import { ctaDefs } from "@/page-builder/sections/cta";
 import { processDefs } from "@/page-builder/sections/process";
 import { gridDefs } from "@/page-builder/sections/grid";
 import { comparisonDefs } from "@/page-builder/sections/comparison";
+import { faqDefs } from "@/page-builder/sections/faq";
 
 export const blockRegistry = createRegistry([
   ...heroDefs,
@@ -13,5 +14,5 @@ export const blockRegistry = createRegistry([
   ...processDefs,
   ...gridDefs,
   ...comparisonDefs,
-  // ...processDefs, ...materialsDefs
+  ...faqDefs,
 ] as const);

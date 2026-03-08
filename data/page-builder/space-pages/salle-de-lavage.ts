@@ -13,7 +13,10 @@ export const salleDeLavagePage: PageTemplateData = {
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Espaces", url: SITE.url + "/espaces/" },
-    { name: "Salle de lavage sur mesure", url: SITE.url + "/espaces/salle-de-lavage/" },
+    {
+      name: "Salle de lavage sur mesure",
+      url: SITE.url + "/espaces/salle-de-lavage/",
+    },
   ],
   service: {
     name: "Salle de lavage sur mesure",
@@ -35,7 +38,11 @@ export const salleDeLavagePage: PageTemplateData = {
           description:
             "Une salle de lavage performante repose sur l'organisation, la durabilite et une execution propre adaptee a l'humidite et a l'usage frequent.",
           actions: [
-            { label: "Obtenir une soumission", href: "/contact/", variant: "default" },
+            {
+              label: "Obtenir une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
             {
               label: "Voir nos realisations",
               href: "/projets/salle-de-lavage/",
@@ -47,7 +54,8 @@ export const salleDeLavagePage: PageTemplateData = {
             src: "/images/spaces/vanite-salles-de-lavage.webp",
             alt: "Salle de lavage sur mesure haut de gamme",
           },
-          caption: "Un espace de service concu pour durer et rester simple a utiliser",
+          caption:
+            "Un espace de service concu pour durer et rester simple a utiliser",
         },
       },
     },
@@ -68,8 +76,16 @@ export const salleDeLavagePage: PageTemplateData = {
             "Vous cherchez une solution plus stable qu'un assemblage standard.",
           ],
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir le processus", href: "/processus/", variant: "outline" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir le processus",
+              href: "/processus/",
+              variant: "outline",
+            },
           ],
         },
       },
@@ -139,8 +155,16 @@ export const salleDeLavagePage: PageTemplateData = {
             },
           ],
           actions: [
-            { label: "Explorer les materiaux", href: "/materiaux/", variant: "outline" },
-            { label: "Voir nos espaces", href: "/espaces/", variant: "outline" },
+            {
+              label: "Explorer les materiaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              label: "Voir nos espaces",
+              href: "/espaces/",
+              variant: "outline",
+            },
           ],
           image: {
             src: "/images/spaces/vanite-salles-de-lavage.webp",
@@ -206,8 +230,8 @@ export const salleDeLavagePage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - salle de lavage sur mesure",
           intro:
@@ -243,7 +267,11 @@ export const salleDeLavagePage: PageTemplateData = {
           intro:
             "On vous aide a definir une solution durable, organisee et realiste pour votre espace.",
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
             {
               label: "Voir nos realisations",
               href: "/projets/salle-de-lavage/",

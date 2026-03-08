@@ -41,12 +41,13 @@ export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
         <div className="mt-8">
 
           <CarouselContent>
-            {props.items.map((item) => {
+            {props.items.map((item, index) => {
               const quickLabel = item.quickActionLabel ?? "Voir";
               const footerLabel = item.footerCtaLabel ?? `Decouvrir ${item.title.toLowerCase()}`;
+              const itemKey = `${item.href}-${item.title}-${index}`;
 
               return (
-                <CarouselItem key={item.href} className="basis-full sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={itemKey} className="basis-full sm:basis-1/2 lg:basis-1/3">
                   <Card className={cn("flex h-full flex-col overflow-hidden", item.image ? 'pt-0' : '')}>
                     <div className="relative aspect-[16/10] w-full bg-muted">
                       <Image

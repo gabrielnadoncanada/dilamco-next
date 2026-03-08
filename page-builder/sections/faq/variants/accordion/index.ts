@@ -1,12 +1,12 @@
 import { defineBlock } from "@/page-builder/model/defineBlock";
-import { SplitFaqAccordionSchema } from "./schema";
-import { SplitFaqAccordion } from "./ui";
+import { AccordionSchema } from "./schema";
+import { Accordion } from "./ui";
 
-export const splitFaqAccordion = defineBlock({
-  type: "split",
-  variant: "faq-accordion",
-  schema: SplitFaqAccordionSchema,
-  Component: SplitFaqAccordion,
+export const accordion = defineBlock({
+  type: "faq",
+  variant: "accordion",
+  schema: AccordionSchema,
+  Component: Accordion,
   defaultFrame: {
     container: "xl",
     paddingY: "lg",

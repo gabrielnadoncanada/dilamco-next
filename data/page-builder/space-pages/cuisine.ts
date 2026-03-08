@@ -35,15 +35,24 @@ export const cuisinePage: PageTemplateData = {
           description:
             "Conception, fabrication controlee et installation precise pour un espace durable, bien organise et coherent du plan a la finition.",
           actions: [
-            { label: "Obtenir une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos cuisines", href: "/projets/cuisine/", variant: "outline" },
+            {
+              label: "Obtenir une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos cuisines",
+              href: "/projets/cuisine/",
+              variant: "outline",
+            },
           ],
           badges: ["Sur mesure", "Cle en main", "Montreal"],
           image: {
             src: "/images/hero/kitchen-hero.webp",
             alt: "Cuisine sur mesure haut de gamme",
           },
-          caption: "Residentiel haut de gamme a Montreal, Laval et sur la Rive-Sud",
+          caption:
+            "Residentiel haut de gamme a Montreal, Laval et sur la Rive-Sud",
         },
       },
     },
@@ -64,8 +73,16 @@ export const cuisinePage: PageTemplateData = {
             "Priorite a la stabilite, aux finis et a la coordination.",
           ],
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir le processus", href: "/processus/", variant: "outline" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir le processus",
+              href: "/processus/",
+              variant: "outline",
+            },
           ],
         },
       },
@@ -135,8 +152,16 @@ export const cuisinePage: PageTemplateData = {
             },
           ],
           actions: [
-            { label: "Explorer les materiaux", href: "/materiaux/", variant: "outline" },
-            { label: "Voir nos services", href: "/services/", variant: "outline" },
+            {
+              label: "Explorer les materiaux",
+              href: "/materiaux/",
+              variant: "outline",
+            },
+            {
+              label: "Voir nos services",
+              href: "/services/",
+              variant: "outline",
+            },
           ],
           image: {
             src: "/images/spaces/cabinet-cuisines.webp",
@@ -202,8 +227,8 @@ export const cuisinePage: PageTemplateData = {
       id: "faq",
       frame: { divider: "bottom" },
       content: {
-        type: "split",
-        variant: "faq-accordion",
+        type: "faq",
+        variant: "accordion",
         props: {
           heading: "FAQ - cuisine sur mesure",
           intro:
@@ -239,8 +264,16 @@ export const cuisinePage: PageTemplateData = {
           intro:
             "Obtenez une soumission structuree adaptee a votre espace, vos priorites et votre niveau de finition.",
           actions: [
-            { label: "Demander une soumission", href: "/contact/", variant: "default" },
-            { label: "Voir nos cuisines", href: "/projets/cuisine/", variant: "outline" },
+            {
+              label: "Demander une soumission",
+              href: "/contact/",
+              variant: "default",
+            },
+            {
+              label: "Voir nos cuisines",
+              href: "/projets/cuisine/",
+              variant: "outline",
+            },
           ],
         },
       },
