@@ -29,7 +29,6 @@ const labelMap: Record<string, string> = {
   "bois-massif": "Bois massif",
   "quincaillerie": "Quincaillerie",
   "projets": "Projets",
-  "guides": "Guides",
   "comment-choisir-cuisine-sur-mesure": "Comment choisir une cuisine sur mesure",
   "etapes-renovation-cuisine": "Étapes d'une rénovation de cuisine",
   "erreurs-renovation-cuisine": "Erreurs fréquentes en rénovation de cuisine",

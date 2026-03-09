@@ -143,7 +143,7 @@ export const MAIN_NAV: MenuItem[] = [
         title: "Matériaux & finition",
         links: [
           {
-            label: "Matériaux (hub)",
+            label: "Matériaux",
             url: "/materiaux/",
             icon: LayoutGrid,
             description: "Vue d'ensemble des matériaux et critères.",
@@ -225,8 +225,6 @@ export const FOOTER_NAV: FooterNavSection[] = [
     links: [
       { text: "Projets", url: "/projets/" },
       { text: "Matériaux", url: "/materiaux/" },
-      { text: "Guides", url: "/guides/" },
-      { text: "Comparatifs", url: "/comparatifs/" },
     ],
   },
   {

@@ -144,8 +144,8 @@ export const fabricationPage: PageTemplateData = {
               description:
                 "Modules, ilots, rangement optimise et integration electromenagers.",
               image: {
-                src: "/images/spaces/cabinet-cuisines.webp",
-                alt: "Cuisine sur mesure",
+                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                alt: "Cuisine sur mesure avec fabrication precise",
               },
               badges: ["Cuisine", "Rangement"],
               footerCtaLabel: "Voir cuisine",
@@ -155,8 +155,8 @@ export const fabricationPage: PageTemplateData = {
               href: "/espaces/salle-de-bain/",
               description: "Vanites et rangement adaptes a l'humidite.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
-                alt: "Salle de bain sur mesure",
+                src: "/images/generated/spaces/space-bath-hero-01.png",
+                alt: "Salle de bain sur mesure avec fabrication durable",
               },
               badges: ["Humidite", "Durabilite"],
               footerCtaLabel: "Voir salle de bain",
@@ -167,8 +167,8 @@ export const fabricationPage: PageTemplateData = {
               description:
                 "Usage intensif, durabilite et coherence fonctionnelle.",
               image: {
-                src: "/images/spaces/commercial.webp",
-                alt: "Amenagement commercial sur mesure",
+                src: "/images/generated/spaces/space-commercial-hero-01.png",
+                alt: "Amenagement commercial sur mesure avec fabrication robuste",
               },
               badges: ["Commercial", "Usage intensif"],
               footerCtaLabel: "Voir commercial",

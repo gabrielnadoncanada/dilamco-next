@@ -1,28 +1,23 @@
 // app/services/[slug]/opengraph-image.tsx
 import { ImageResponse } from "next/og";
-import { type ServiceSlug } from "@/data/service-pages";
-import { getPublicServiceSlugs, getServiceBySlug } from "@/data/service-pages/utils";
+import { getServicePageBySlug } from "@/data/page-builder/service-pages";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 type Params = { slug: string };
 
-export function generateStaticParams() {
-  return getPublicServiceSlugs().map((slug) => ({ slug }));
-}
 
-function isServiceSlug(v: string): v is ServiceSlug {
-  return v === "design" || v === "fabrication" || v === "installation" || v === "renovation";
-}
+
+
 
 export default async function OpenGraphImage({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
-  if (!isServiceSlug(slug)) {
+  if (!getServicePageBySlug(slug)) {
     return new ImageResponse(<div>Not found</div>, size);
   }
 
-  const service = getServiceBySlug(slug);
+  const service = getServicePageBySlug(slug);
 
   const title = service?.metadata.title ?? "Service | Dilamco";
   const desc = service?.metadata.description ?? "Services sur mesure — Dilamco.";

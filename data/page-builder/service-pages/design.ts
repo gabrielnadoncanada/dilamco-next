@@ -151,8 +151,8 @@ export const designPage: PageTemplateData = {
               description:
                 "Zones de travail, circulation, ilot, rangement et integration.",
               image: {
-                src: "/images/spaces/cabinet-cuisines.webp",
-                alt: "Cuisine sur mesure",
+                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                alt: "Cuisine sur mesure pensee pour l'usage reel",
               },
               badges: ["Ergonomie", "Rangement"],
               footerCtaLabel: "Voir cuisine",
@@ -163,8 +163,8 @@ export const designPage: PageTemplateData = {
               description:
                 "Contraintes d'humidite, rangement et ergonomie quotidienne.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
-                alt: "Salle de bain sur mesure",
+                src: "/images/generated/spaces/space-bath-hero-01.png",
+                alt: "Salle de bain sur mesure pensee pour l'humidite",
               },
               badges: ["Humidite", "Finitions"],
               footerCtaLabel: "Voir salle de bain",
@@ -175,8 +175,8 @@ export const designPage: PageTemplateData = {
               description:
                 "Organisation par zones, accessibilite et rangement vertical.",
               image: {
-                src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
-                alt: "Walk-in sur mesure",
+                src: "/images/generated/spaces/space-walkin-hero-01.png",
+                alt: "Walk-in sur mesure pense pour l'organisation",
               },
               badges: ["Organisation", "Acces"],
               footerCtaLabel: "Voir walk-in",
