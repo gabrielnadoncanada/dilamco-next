@@ -1,6 +1,6 @@
-import { createStaticPage } from "@/lib/create-static-page";
-import * as data from "@/data/static-pages/materiaux";
+import { createPageTemplate } from "@/features/page-builder";
+import { page } from "@/data/page-builder/static-pages/materiaux";
 
-const { metadata, Page } = createStaticPage(data);
+const { metadata, Page } = createPageTemplate(page);
 export { metadata };
 export default Page;

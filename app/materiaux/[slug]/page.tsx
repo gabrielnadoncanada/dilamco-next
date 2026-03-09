@@ -1,10 +1,10 @@
-import { createCollectionPage } from "@/lib/create-collection-page";
+import { createPageCollection } from "@/features/page-builder";
 import {
   PUBLIC_MATERIAL_PAGE_SLUGS,
   getMaterialPageBySlug,
-} from "@/data/material-pages";
+} from "@/data/page-builder/material-pages";
 
-const { generateStaticParams, generateMetadata, Page } = createCollectionPage({
+const { generateStaticParams, generateMetadata, Page } = createPageCollection({
   publicSlugs: PUBLIC_MATERIAL_PAGE_SLUGS,
   getBySlug: getMaterialPageBySlug,
 });

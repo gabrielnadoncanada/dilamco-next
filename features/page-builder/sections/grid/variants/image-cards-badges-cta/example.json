@@ -1,0 +1,32 @@
+{
+  "heading": "Explorer nos collections",
+  "intro": "Comparez rapidement des options selon le style, la fonctionnalite et le budget.",
+  "ctaLabel": "Voir toutes les collections",
+  "ctaHref": "/collections",
+  "items": [
+    {
+      "title": "Collection Contemporaine",
+      "href": "/collections/contemporaine",
+      "description": "Des lignes epurees et des finis sobres pour un rendu actuel.",
+      "image": {
+        "src": "/images/demo/contemporaine.jpg",
+        "alt": "Cuisine contemporaine"
+      },
+      "badges": ["Populaire", "Sur mesure"],
+      "quickActionLabel": "Comparer",
+      "footerCtaLabel": "Voir la collection"
+    },
+    {
+      "title": "Collection Nature",
+      "href": "/collections/nature",
+      "description": "Des textures chaleureuses et des teintes inspirees du bois.",
+      "image": {
+        "src": "/images/demo/nature.jpg",
+        "alt": "Cuisine en bois naturel"
+      },
+      "badges": ["Bois", "Chaleureux"],
+      "quickActionLabel": "Comparer",
+      "footerCtaLabel": "Voir la collection"
+    }
+  ]
+}

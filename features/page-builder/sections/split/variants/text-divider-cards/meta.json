@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "split",
+  "variant": "text-divider-cards",
+  "title": "Split Text Divider Cards",
+  "description": "Split text layout with supporting cards and configurable card columns.",
+  "propsModel": ["heading", "description", "cards", "columns"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 540,
+    "viewport": "desktop"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "hero",
+  "variant": "image-overlay",
+  "title": "Hero Image Overlay",
+  "description": "Hero with background image overlay, badges, actions, and optional proof points.",
+  "propsModel": ["heading", "description", "badges", "actions", "image", "overlay", "proofs"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 110,
+    "viewport": "desktop"
+  }
+}

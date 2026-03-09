@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "split",
+  "variant": "steps-2x2-cta",
+  "title": "Split Steps 2x2 CTA",
+  "description": "Split section with descriptive copy, 2x2-style step grid, and optional actions.",
+  "propsModel": ["heading", "description", "steps", "actions"],
+  "kitchenSink": {
+    "group": "journey",
+    "order": 530,
+    "viewport": "mobile"
+  }
+}

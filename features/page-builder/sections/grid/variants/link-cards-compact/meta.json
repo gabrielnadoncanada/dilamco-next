@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "link-cards-compact",
+  "title": "Grid Link Cards Compact",
+  "description": "Compact linked card grid with optional descriptions, badges, and CTA labels.",
+  "propsModel": ["heading", "intro", "columns", "items"],
+  "kitchenSink": {
+    "group": "navigation",
+    "order": 340,
+    "viewport": "mobile"
+  }
+}

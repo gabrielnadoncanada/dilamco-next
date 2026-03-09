@@ -1,0 +1,390 @@
+{
+  "generatedAt": "2026-03-08T22:24:33.844Z",
+  "rootDir": ".",
+  "blocksDir": "features/page-builder/sections",
+  "types": {
+    "comparison": {
+      "type": "comparison",
+      "variants": {
+        "table-basic": {
+          "title": "Comparison Table Basic",
+          "description": "Two-column comparison table with heading, optional intro, and labeled rows.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "columns",
+            "rows"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/comparison/variants/table-basic",
+            "schema": "features/page-builder/sections/comparison/variants/table-basic/schema.ts",
+            "ui": "features/page-builder/sections/comparison/variants/table-basic/ui.tsx",
+            "index": "features/page-builder/sections/comparison/variants/table-basic/index.ts",
+            "meta": "features/page-builder/sections/comparison/variants/table-basic/meta.json",
+            "example": "features/page-builder/sections/comparison/variants/table-basic/example.json"
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "cta",
+      "variants": {
+        "band-split-actions": {
+          "title": "CTA Band Split Actions",
+          "description": "Full-width call-to-action band with heading, intro, up to two actions, and optional note.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "actions",
+            "note"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/cta/variants/band-split-actions",
+            "schema": "features/page-builder/sections/cta/variants/band-split-actions/schema.ts",
+            "ui": "features/page-builder/sections/cta/variants/band-split-actions/ui.tsx",
+            "index": "features/page-builder/sections/cta/variants/band-split-actions/index.ts",
+            "meta": "features/page-builder/sections/cta/variants/band-split-actions/meta.json",
+            "example": "features/page-builder/sections/cta/variants/band-split-actions/example.json"
+          }
+        },
+        "centered-links-action": {
+          "title": "CTA Centered Links Action",
+          "description": "Centered call-to-action block with optional badge, supporting links, and a primary action.",
+          "propsModel": [
+            "badge",
+            "heading",
+            "intro",
+            "links",
+            "action"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/cta/variants/centered-links-action",
+            "schema": "features/page-builder/sections/cta/variants/centered-links-action/schema.ts",
+            "ui": "features/page-builder/sections/cta/variants/centered-links-action/ui.tsx",
+            "index": "features/page-builder/sections/cta/variants/centered-links-action/index.ts",
+            "meta": "features/page-builder/sections/cta/variants/centered-links-action/meta.json",
+            "example": "features/page-builder/sections/cta/variants/centered-links-action/example.json"
+          }
+        }
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "variants": {
+        "accordion": {
+          "title": "FAQ Accordion",
+          "description": "Accordion FAQ section with heading, optional intro, and question-answer items.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "items"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/faq/variants/accordion",
+            "schema": "features/page-builder/sections/faq/variants/accordion/schema.ts",
+            "ui": "features/page-builder/sections/faq/variants/accordion/ui.tsx",
+            "index": "features/page-builder/sections/faq/variants/accordion/index.ts",
+            "meta": "features/page-builder/sections/faq/variants/accordion/meta.json",
+            "example": "features/page-builder/sections/faq/variants/accordion/example.json"
+          }
+        }
+      }
+    },
+    "grid": {
+      "type": "grid",
+      "variants": {
+        "icon-cards-bullets": {
+          "title": "Grid Icon Cards Bullets",
+          "description": "Grid of icon-led cards with descriptions and bullet lists.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "columns",
+            "items"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/grid/variants/icon-cards-bullets",
+            "schema": "features/page-builder/sections/grid/variants/icon-cards-bullets/schema.ts",
+            "ui": "features/page-builder/sections/grid/variants/icon-cards-bullets/ui.tsx",
+            "index": "features/page-builder/sections/grid/variants/icon-cards-bullets/index.ts",
+            "meta": "features/page-builder/sections/grid/variants/icon-cards-bullets/meta.json",
+            "example": "features/page-builder/sections/grid/variants/icon-cards-bullets/example.json"
+          }
+        },
+        "image-cards-badges-cta": {
+          "title": "Grid Image Cards Badges CTA",
+          "description": "Image card grid with badges, per-card CTA labels, and optional section CTA.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "ctaLabel",
+            "ctaHref",
+            "items"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/grid/variants/image-cards-badges-cta",
+            "schema": "features/page-builder/sections/grid/variants/image-cards-badges-cta/schema.ts",
+            "ui": "features/page-builder/sections/grid/variants/image-cards-badges-cta/ui.tsx",
+            "index": "features/page-builder/sections/grid/variants/image-cards-badges-cta/index.ts",
+            "meta": "features/page-builder/sections/grid/variants/image-cards-badges-cta/meta.json",
+            "example": "features/page-builder/sections/grid/variants/image-cards-badges-cta/example.json"
+          }
+        },
+        "image-cards-slider": {
+          "title": "Grid Image Cards Slider",
+          "description": "Sliding gallery of image cards with links, descriptions, and optional badges.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "items"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/grid/variants/image-cards-slider",
+            "schema": "features/page-builder/sections/grid/variants/image-cards-slider/schema.ts",
+            "ui": "features/page-builder/sections/grid/variants/image-cards-slider/ui.tsx",
+            "index": "features/page-builder/sections/grid/variants/image-cards-slider/index.ts",
+            "meta": "features/page-builder/sections/grid/variants/image-cards-slider/meta.json",
+            "example": "features/page-builder/sections/grid/variants/image-cards-slider/example.json"
+          }
+        },
+        "link-cards-compact": {
+          "title": "Grid Link Cards Compact",
+          "description": "Compact linked card grid with optional descriptions, badges, and CTA labels.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "columns",
+            "items"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/grid/variants/link-cards-compact",
+            "schema": "features/page-builder/sections/grid/variants/link-cards-compact/schema.ts",
+            "ui": "features/page-builder/sections/grid/variants/link-cards-compact/ui.tsx",
+            "index": "features/page-builder/sections/grid/variants/link-cards-compact/index.ts",
+            "meta": "features/page-builder/sections/grid/variants/link-cards-compact/meta.json",
+            "example": "features/page-builder/sections/grid/variants/link-cards-compact/example.json"
+          }
+        },
+        "link-cards-slider": {
+          "title": "Grid Link Cards Slider",
+          "description": "Sliding set of compact link cards with descriptions, badges, and per-card CTA labels.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "items"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/grid/variants/link-cards-slider",
+            "schema": "features/page-builder/sections/grid/variants/link-cards-slider/schema.ts",
+            "ui": "features/page-builder/sections/grid/variants/link-cards-slider/ui.tsx",
+            "index": "features/page-builder/sections/grid/variants/link-cards-slider/index.ts",
+            "meta": "features/page-builder/sections/grid/variants/link-cards-slider/meta.json",
+            "example": "features/page-builder/sections/grid/variants/link-cards-slider/example.json"
+          }
+        }
+      }
+    },
+    "hero": {
+      "type": "hero",
+      "variants": {
+        "bg-image-overlay": {
+          "title": "Hero Background Image Overlay",
+          "description": "Hero with background image overlay, badges, actions, and optional proof points.",
+          "propsModel": [
+            "heading",
+            "description",
+            "badges",
+            "actions",
+            "image",
+            "overlay",
+            "proofs"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/hero/variants/bg-image-overlay",
+            "schema": "features/page-builder/sections/hero/variants/bg-image-overlay/schema.ts",
+            "ui": "features/page-builder/sections/hero/variants/bg-image-overlay/ui.tsx",
+            "index": "features/page-builder/sections/hero/variants/bg-image-overlay/index.ts",
+            "meta": "features/page-builder/sections/hero/variants/bg-image-overlay/meta.json",
+            "example": "features/page-builder/sections/hero/variants/bg-image-overlay/example.json"
+          }
+        },
+        "centered": {
+          "title": "Hero Centered",
+          "description": "Centered hero with optional badges, description, and up to two actions.",
+          "propsModel": [
+            "badges",
+            "heading",
+            "description",
+            "actions"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/hero/variants/centered",
+            "schema": "features/page-builder/sections/hero/variants/centered/schema.ts",
+            "ui": "features/page-builder/sections/hero/variants/centered/ui.tsx",
+            "index": "features/page-builder/sections/hero/variants/centered/index.ts",
+            "meta": "features/page-builder/sections/hero/variants/centered/meta.json",
+            "example": "features/page-builder/sections/hero/variants/centered/example.json"
+          }
+        },
+        "split-image": {
+          "title": "Hero Split Image",
+          "description": "Split hero with image, badges, actions, and caption.",
+          "propsModel": [
+            "heading",
+            "description",
+            "actions",
+            "badges",
+            "image",
+            "caption"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/hero/variants/split-image",
+            "schema": "features/page-builder/sections/hero/variants/split-image/schema.ts",
+            "ui": "features/page-builder/sections/hero/variants/split-image/ui.tsx",
+            "index": "features/page-builder/sections/hero/variants/split-image/index.ts",
+            "meta": "features/page-builder/sections/hero/variants/split-image/meta.json",
+            "example": "features/page-builder/sections/hero/variants/split-image/example.json"
+          }
+        }
+      }
+    },
+    "process": {
+      "type": "process",
+      "variants": {
+        "horizontal-steps-cards": {
+          "title": "Process Horizontal Steps Cards",
+          "description": "Horizontal process section with heading, optional intro, and numbered step cards.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "steps"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/process/variants/horizontal-steps-cards",
+            "schema": "features/page-builder/sections/process/variants/horizontal-steps-cards/schema.ts",
+            "ui": "features/page-builder/sections/process/variants/horizontal-steps-cards/ui.tsx",
+            "index": "features/page-builder/sections/process/variants/horizontal-steps-cards/index.ts",
+            "meta": "features/page-builder/sections/process/variants/horizontal-steps-cards/meta.json",
+            "example": "features/page-builder/sections/process/variants/horizontal-steps-cards/example.json"
+          }
+        }
+      }
+    },
+    "split": {
+      "type": "split",
+      "variants": {
+        "badges-checklist-cta": {
+          "title": "Split Badges Checklist CTA",
+          "description": "Split layout with badges, checklist card, and supporting actions.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "badges",
+            "cardTitle",
+            "items",
+            "actions"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/split/variants/badges-checklist-cta",
+            "schema": "features/page-builder/sections/split/variants/badges-checklist-cta/schema.ts",
+            "ui": "features/page-builder/sections/split/variants/badges-checklist-cta/ui.tsx",
+            "index": "features/page-builder/sections/split/variants/badges-checklist-cta/index.ts",
+            "meta": "features/page-builder/sections/split/variants/badges-checklist-cta/meta.json",
+            "example": "features/page-builder/sections/split/variants/badges-checklist-cta/example.json"
+          }
+        },
+        "list-actions-image-card": {
+          "title": "Split List Actions Image Card",
+          "description": "Split section with descriptive list, actions, image, and supporting card content.",
+          "propsModel": [
+            "heading",
+            "intro",
+            "items",
+            "actions",
+            "image",
+            "cardTitle",
+            "cardDescription"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/split/variants/list-actions-image-card",
+            "schema": "features/page-builder/sections/split/variants/list-actions-image-card/schema.ts",
+            "ui": "features/page-builder/sections/split/variants/list-actions-image-card/ui.tsx",
+            "index": "features/page-builder/sections/split/variants/list-actions-image-card/index.ts",
+            "meta": "features/page-builder/sections/split/variants/list-actions-image-card/meta.json",
+            "example": "features/page-builder/sections/split/variants/list-actions-image-card/example.json"
+          }
+        },
+        "steps-2x2-cta": {
+          "title": "Split Steps 2x2 CTA",
+          "description": "Split section with descriptive copy, 2x2-style step grid, and optional actions.",
+          "propsModel": [
+            "heading",
+            "description",
+            "steps",
+            "actions"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/split/variants/steps-2x2-cta",
+            "schema": "features/page-builder/sections/split/variants/steps-2x2-cta/schema.ts",
+            "ui": "features/page-builder/sections/split/variants/steps-2x2-cta/ui.tsx",
+            "index": "features/page-builder/sections/split/variants/steps-2x2-cta/index.ts",
+            "meta": "features/page-builder/sections/split/variants/steps-2x2-cta/meta.json",
+            "example": "features/page-builder/sections/split/variants/steps-2x2-cta/example.json"
+          }
+        },
+        "text-divider-cards": {
+          "title": "Split Text Divider Cards",
+          "description": "Split text layout with supporting cards and configurable card columns.",
+          "propsModel": [
+            "heading",
+            "description",
+            "cards",
+            "columns"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/split/variants/text-divider-cards",
+            "schema": "features/page-builder/sections/split/variants/text-divider-cards/schema.ts",
+            "ui": "features/page-builder/sections/split/variants/text-divider-cards/ui.tsx",
+            "index": "features/page-builder/sections/split/variants/text-divider-cards/index.ts",
+            "meta": "features/page-builder/sections/split/variants/text-divider-cards/meta.json",
+            "example": "features/page-builder/sections/split/variants/text-divider-cards/example.json"
+          }
+        }
+      }
+    }
+  }
+}

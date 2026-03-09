@@ -1,4 +1,4 @@
-import { createPageCollection } from "@/page-builder";
+import { createPageCollection } from "@/features/page-builder";
 import {
   PUBLIC_SPACE_PAGE_SLUGS,
   getSpacePageBySlug,

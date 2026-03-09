@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const cuisinePage: PageTemplateData = {
@@ -12,7 +12,6 @@ export const cuisinePage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Espaces", url: SITE.url + "/espaces/" },
     { name: "Cuisine sur mesure", url: SITE.url + "/espaces/cuisine/" },
   ],
   service: {
@@ -28,7 +27,7 @@ export const cuisinePage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
           heading: "Cuisine sur mesure, execution cle en main a Montreal",
@@ -48,7 +47,7 @@ export const cuisinePage: PageTemplateData = {
           ],
           badges: ["Sur mesure", "Cle en main", "Montreal"],
           image: {
-            src: "/images/hero/kitchen-hero.webp",
+            src: "/images/generated/spaces/space-cuisine-hero-01.png",
             alt: "Cuisine sur mesure haut de gamme",
           },
           caption:
@@ -189,7 +188,7 @@ export const cuisinePage: PageTemplateData = {
               description:
                 "Cuisine sur mesure avec implantation precise et finition soignee.",
               image: {
-                src: "/images/projects/cuisine-rive-sud/1.webp",
+                src: "/images/generated/spaces/space-cuisine-project-01.png",
                 alt: "Projet cuisine sur mesure a Montreal",
               },
               badges: ["Montreal", "Cuisine"],
@@ -201,7 +200,7 @@ export const cuisinePage: PageTemplateData = {
               description:
                 "Projet cuisine concu pour un usage quotidien et une durabilite a long terme.",
               image: {
-                src: "/images/projects/cuisine-rive-sud/2.webp",
+                src: "/images/generated/spaces/space-cuisine-project-02.png",
                 alt: "Projet cuisine sur mesure a Laval",
               },
               badges: ["Laval", "Sur mesure"],
@@ -213,7 +212,7 @@ export const cuisinePage: PageTemplateData = {
               description:
                 "Execution complete avec coordination du projet et details maitrises.",
               image: {
-                src: "/images/projects/cuisine-rive-sud/3.webp",
+                src: "/images/generated/spaces/space-cuisine-project-03.png",
                 alt: "Projet cuisine sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Cle en main"],
@@ -225,7 +224,7 @@ export const cuisinePage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

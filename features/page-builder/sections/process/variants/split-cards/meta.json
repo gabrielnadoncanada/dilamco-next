@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "process",
+  "variant": "split-cards",
+  "title": "Split Cards",
+  "description": "Process section with descriptive copy, cards grid, and optional actions.",
+  "propsModel": ["heading", "description", "steps", "actions"],
+  "kitchenSink": {
+    "group": "process",
+    "order": 530,
+    "viewport": "mobile"
+  }
+}

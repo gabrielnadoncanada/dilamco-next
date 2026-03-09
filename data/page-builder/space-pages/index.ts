@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { commercialPage } from "./commercial";
 import { cuisinePage } from "./cuisine";
 import { salleDeBainPage } from "./salle-de-bain";

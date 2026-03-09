@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "link-cards-slider",
+  "title": "Grid Link Cards Slider",
+  "description": "Sliding set of compact link cards with descriptions, badges, and per-card CTA labels.",
+  "propsModel": ["heading", "intro", "items"],
+  "kitchenSink": {
+    "group": "navigation",
+    "order": 350,
+    "viewport": "mobile"
+  }
+}

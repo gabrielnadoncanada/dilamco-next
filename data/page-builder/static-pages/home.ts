@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const page: PageTemplateData = {
@@ -19,56 +19,34 @@ export const page: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: {
-        divider: "bottom",
-      },
+      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
-          image: {
-            src: "/images/hero/kitchen-hero.webp",
-            alt: "Premium custom kitchen",
-          },
           eyebrow: "Dilamco - Espaces",
-          overlay: "dark-gradient",
-          badges: [
-            "Fabrication controlee",
-            "Materiaux durables",
-            "Installation precise",
-            "Coordination complete",
-          ],
-          heading: "Espaces sur mesure haut de gamme a Montreal",
+          heading:
+            "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
           description:
-            "Cuisine, salle de bain, salle de lavage, walk-in et commercial - concus, fabriques et installes avec une gestion cle en main et des standards de qualite constants.",
+            "Chaque espace a ses contraintes. Notre role est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien executees.",
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact",
+              href: "/contact/",
               variant: "default",
             },
-            { label: "Voir nos projets", href: "/projets", variant: "outline" },
+            {
+              label: "Voir nos projets",
+              href: "/projets/",
+              variant: "outline",
+            },
           ],
-          note: "Positionnement premium : ideal pour des projets durables et bien executes.",
-          card: {
-            title: "Pourquoi Dilamco",
-            description: "Un modele structure qui protege la qualite.",
-            items: [
-              {
-                title: "Entrepot a Montreal",
-                description:
-                  "controle des inventaires et reduction des imprevus.",
-              },
-              {
-                title: "Approvisionnement direct",
-                description: "specifications definies, qualite coherente.",
-              },
-              {
-                title: "Gestion cle en main",
-                description: "un responsable du design a l'installation.",
-              },
-            ],
+          badges: ["Sur mesure", "Durable", "Cle en main"],
+          image: {
+            src: "/images/generated/spaces/espaces-hero-overview-01.png",
+            alt: "Espaces sur mesure Dilamco",
           },
+          caption: "Montreal, Laval et Rive-Sud",
         },
       },
     },
@@ -113,7 +91,7 @@ export const page: PageTemplateData = {
               description:
                 "Armoires sur mesure, ergonomie, durabilite et coordination complete pour un resultat maitrise.",
               image: {
-                src: "/images/spaces/cabinet-cuisines.webp",
+                src: "/images/generated/home/home-space-cuisine-card-01.png",
                 alt: "Cuisine sur mesure haut de gamme",
               },
               badges: ["Sur mesure", "Cle en main", "Haut de gamme"],
@@ -126,7 +104,7 @@ export const page: PageTemplateData = {
               description:
                 "Vanites sur mesure, rangement optimise et finitions resistantes a l'humidite pour durer.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
+                src: "/images/generated/home/home-space-bath-card-01.png",
                 alt: "Vanite et salle de bain sur mesure",
               },
               badges: ["Vanites", "Durable", "Finitions"],
@@ -139,7 +117,7 @@ export const page: PageTemplateData = {
               description:
                 "Solutions de rangement et d'organisation pensees pour le quotidien, sans compromis sur la solidite.",
               image: {
-                src: "/images/spaces/vanite-salles-de-lavage.webp",
+                src: "/images/generated/home/home-space-laundry-card-01.png",
                 alt: "Salle de lavage sur mesure",
               },
               badges: ["Rangement", "Fonctionnel", "Sur mesure"],
@@ -152,7 +130,7 @@ export const page: PageTemplateData = {
               description:
                 "Organisation personnalisee : tiroirs, penderies, accessoires et configuration adaptee a vos besoins.",
               image: {
-                src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+                src: "/images/generated/home/home-space-walkin-card-01.png",
                 alt: "Walk-in sur mesure",
               },
               badges: ["Organisation", "Personnalise", "Premium"],
@@ -165,7 +143,7 @@ export const page: PageTemplateData = {
               description:
                 "Amenagement durable et reproductible : bureaux, espaces clients, rangements et mobilier sur mesure.",
               image: {
-                src: "/images/spaces/commercial.webp",
+                src: "/images/generated/home/home-space-commercial-card-01.png",
                 alt: "Amenagement commercial sur mesure",
               },
               badges: ["Commercial", "Durable", "Execution maitrisee"],
@@ -179,30 +157,34 @@ export const page: PageTemplateData = {
     {
       id: "standard",
       content: {
-        type: "split",
-        variant: "steps-2x2-cta",
+        type: "process",
+        variant: "split-cards",
         props: {
           heading: "Notre standard, peu importe l'espace",
           description:
             "Une methode reproductible pour proteger la qualite, reduire les imprevus et livrer un resultat coherent.",
           steps: [
             {
-              label: "1) Conception",
+              number: "1",
+              title: "Conception",
               description:
                 "Plans clairs, configuration adaptee et validations avant fabrication.",
             },
             {
-              label: "2) Materiaux",
+              number: "2",
+              title: "Materiaux",
               description:
                 "Choix durables et details de construction penses pour la longevite.",
             },
             {
-              label: "3) Fabrication controlee",
+              number: "3",
+              title: "Fabrication controlee",
               description:
                 "Standards stables, controle qualite et coherence d'un projet a l'autre.",
             },
             {
-              label: "4) Installation",
+              number: "4",
+              title: "Installation",
               description:
                 "Ajustements precis, finitions nettes et coordination structuree sur chantier.",
             },
@@ -240,7 +222,7 @@ export const page: PageTemplateData = {
               description:
                 "Conception, fabrication controlee et installation precise avec finitions soignees.",
               image: {
-                src: "/images/spaces/cabinet-cuisines.webp",
+                src: "/images/generated/home/home-featured-cuisine-project-01.png",
                 alt: "Cuisine sur mesure haut de gamme",
               },
               badges: ["Cuisine", "Montreal", "Plateau-Mont-Royal"],
@@ -252,7 +234,7 @@ export const page: PageTemplateData = {
               description:
                 "Rangement optimise, materiaux durables et execution nette adaptee a la salle de bain.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
+                src: "/images/generated/home/home-featured-bath-project-01.png",
                 alt: "Vanite et salle de bain sur mesure",
               },
               badges: ["Salle de bain", "Laval", "Vanites"],
@@ -264,7 +246,7 @@ export const page: PageTemplateData = {
               description:
                 "Mobilier robuste, lignes epurees et installation planifiee pour minimiser les interruptions.",
               image: {
-                src: "/images/spaces/vanite-salles-de-lavage.webp",
+                src: "/images/generated/home/home-featured-commercial-project-01.png",
                 alt: "Salle de lavage sur mesure",
               },
               badges: ["Commercial", "Montreal", "Centre-ville"],
@@ -276,9 +258,7 @@ export const page: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: {
-        divider: "bottom",
-      },
+
       content: {
         type: "faq",
         variant: "accordion",
@@ -309,6 +289,7 @@ export const page: PageTemplateData = {
     },
     {
       id: "cta-plan",
+
       content: {
         type: "cta",
         variant: "band-split-actions",

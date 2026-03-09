@@ -42,7 +42,7 @@ export const pageData: ArticlePageData = {
       "Parlez-nous de votre projet de cuisine, vanité ou rangement sur mesure. Selon l'ampleur, nous pouvons aussi prendre en charge une rénovation clé en main.",
     actions: [
       { text: "Voir des projets", href: "/projets/", variant: "outline" },
-      { text: "Voir les espaces", href: "/espaces/", variant: "outline" },
+      { text: "Voir l'accueil", href: "/", variant: "outline" },
     ],
   },
   sections: [

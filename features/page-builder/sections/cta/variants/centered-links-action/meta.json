@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "cta",
+  "variant": "centered-links-action",
+  "title": "CTA Centered Links Action",
+  "description": "Centered call-to-action block with optional badge, supporting links, and a primary action.",
+  "propsModel": ["badge", "heading", "intro", "links", "action"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 220,
+    "viewport": "mobile"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "heading": "Comparer deux options d'armoires",
+  "intro": "Un apercu simple pour evaluer la finition, le delai et la personnalisation.",
+  "columns": ["Collection Signature", "Collection Atelier"],
+  "rows": [
+    {
+      "label": "Finition",
+      "values": ["Laque mate", "Bois naturel"]
+    },
+    {
+      "label": "Delai moyen",
+      "values": ["6 a 8 semaines", "8 a 10 semaines"]
+    },
+    {
+      "label": "Options sur mesure",
+      "values": ["Essentielles", "Etendues"]
+    }
+  ]
+}

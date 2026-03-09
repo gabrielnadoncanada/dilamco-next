@@ -51,6 +51,7 @@ const ProcessSection = ({
 
   const getStepValue = (step: Step, index: number) => step.step ?? step.id ?? index + 1;
   const headingId = typeof ariaLabelledby === "string" ? ariaLabelledby : undefined;
+  const gridClassName = items.length >= 5 ? "lg:grid-cols-5" : "lg:grid-cols-4";
 
   return (
     <section
@@ -70,7 +71,7 @@ const ProcessSection = ({
       </div>
 
       <div className="mt-10">
-        <div className="grid gap-6 lg:grid-cols-5">
+        <div className={cn("grid gap-6", gridClassName)}>
           {items.map((step, index) => (
             <Card key={typeof step.id === "string" ? step.id : `${step.title}-${index}`} className="relative">
               {/* <div className="pointer-events-none absolute left-0 top-6 hidden h-px w-full bg-border lg:block" /> */}

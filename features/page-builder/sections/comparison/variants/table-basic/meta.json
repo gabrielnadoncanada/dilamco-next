@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "comparison",
+  "variant": "table-basic",
+  "title": "Comparison Table Basic",
+  "description": "Two-column comparison table with heading, optional intro, and labeled rows.",
+  "propsModel": ["heading", "intro", "columns", "rows"],
+  "kitchenSink": {
+    "group": "decision",
+    "order": 410,
+    "viewport": "desktop"
+  }
+}

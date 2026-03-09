@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const walkInPage: PageTemplateData = {
@@ -12,7 +12,6 @@ export const walkInPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Espaces", url: SITE.url + "/espaces/" },
     { name: "Walk-in sur mesure", url: SITE.url + "/espaces/walk-in/" },
   ],
   service: {
@@ -28,7 +27,7 @@ export const walkInPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
           heading: "Walk-in sur mesure, rangement pense pour l'usage reel",
@@ -48,7 +47,7 @@ export const walkInPage: PageTemplateData = {
           ],
           badges: ["Rangement", "Organisation", "Sur mesure"],
           image: {
-            src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+            src: "/images/generated/spaces/space-walkin-hero-01.png",
             alt: "Walk-in sur mesure haut de gamme",
           },
           caption:
@@ -159,12 +158,12 @@ export const walkInPage: PageTemplateData = {
             },
             {
               label: "Voir nos espaces",
-              href: "/espaces/",
+              href: "/",
               variant: "outline",
             },
           ],
           image: {
-            src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+            src: "/images/generated/spaces/space-walkin-project-01.png",
             alt: "Detail materiau pour walk-in sur mesure",
           },
           cardTitle: "Avantage concret",
@@ -189,7 +188,7 @@ export const walkInPage: PageTemplateData = {
               description:
                 "Organisation sur mesure avec circulation et rangement adaptes au quotidien.",
               image: {
-                src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+                src: "/images/generated/spaces/space-walkin-project-01.png",
                 alt: "Projet walk-in sur mesure a Montreal",
               },
               badges: ["Montreal", "Organisation"],
@@ -201,7 +200,7 @@ export const walkInPage: PageTemplateData = {
               description:
                 "Walk-in concu pour maximiser l'espace avec un rendu propre et durable.",
               image: {
-                src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+                src: "/images/generated/spaces/space-walkin-project-02.png",
                 alt: "Projet walk-in sur mesure a Laval",
               },
               badges: ["Laval", "Sur mesure"],
@@ -213,7 +212,7 @@ export const walkInPage: PageTemplateData = {
               description:
                 "Rangement personnalise et installation precise pour un usage quotidien.",
               image: {
-                src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+                src: "/images/generated/spaces/space-walkin-project-03.png",
                 alt: "Projet walk-in sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Premium"],
@@ -225,7 +224,7 @@ export const walkInPage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

@@ -1,0 +1,23 @@
+{
+  "heading": "Un cadre simple pour bien choisir",
+  "intro": "Nous vous aidons a prioriser la fonctionnalite, le style et le budget.",
+  "badges": ["Conseil", "Planification"],
+  "cardTitle": "Ce que nous couvrons",
+  "items": [
+    "Analyse des besoins",
+    "Selection de materiaux",
+    "Planification de l'installation"
+  ],
+  "actions": [
+    {
+      "label": "Planifier un appel",
+      "href": "/contact",
+      "variant": "default"
+    },
+    {
+      "label": "Voir les materiaux",
+      "href": "/materiaux",
+      "variant": "outline"
+    }
+  ]
+}

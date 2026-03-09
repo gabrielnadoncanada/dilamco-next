@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "faq",
+  "variant": "accordion",
+  "title": "FAQ Accordion",
+  "description": "Accordion FAQ section with heading, optional intro, and question-answer items.",
+  "propsModel": ["heading", "intro", "items"],
+  "kitchenSink": {
+    "group": "support",
+    "order": 610,
+    "viewport": "desktop"
+  }
+}

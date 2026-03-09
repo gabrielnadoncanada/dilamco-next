@@ -1,5 +1,5 @@
-import { createPageTemplate } from "@/page-builder";
-import { page } from "@/data/page-builder/static-pages/services-renovation";
+import { createPageTemplate } from "@/features/page-builder";
+import { renovationPage as page } from "@/data/page-builder/service-pages/renovation";
 
 const { metadata, Page } = createPageTemplate(page);
 export { metadata };

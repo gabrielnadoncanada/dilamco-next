@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const salleDeBainPage: PageTemplateData = {
@@ -12,7 +12,6 @@ export const salleDeBainPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Espaces", url: SITE.url + "/espaces/" },
     {
       name: "Salle de bain sur mesure",
       url: SITE.url + "/espaces/salle-de-bain/",
@@ -31,7 +30,7 @@ export const salleDeBainPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
           heading: "Vanite sur mesure, execution cle en main a Montreal",
@@ -51,7 +50,7 @@ export const salleDeBainPage: PageTemplateData = {
           ],
           badges: ["Sur mesure", "Humidite", "Montreal"],
           image: {
-            src: "/images/spaces/vanite-salles-de-bain.webp",
+            src: "/images/generated/spaces/space-bath-hero-01.png",
             alt: "Vanite sur mesure haut de gamme",
           },
           caption: "Concu pour un usage quotidien et un environnement humide",
@@ -166,7 +165,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/spaces/vanite-salles-de-bain.webp",
+            src: "/images/generated/spaces/space-bath-project-01.png",
             alt: "Detail materiau pour salle de bain sur mesure",
           },
           cardTitle: "Ce que cela apporte",
@@ -191,7 +190,7 @@ export const salleDeBainPage: PageTemplateData = {
               description:
                 "Rangement optimise et finition precise adaptes a la salle de bain.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
+                src: "/images/generated/spaces/space-bath-project-01.png",
                 alt: "Projet salle de bain sur mesure a Laval",
               },
               badges: ["Laval", "Vanite"],
@@ -203,7 +202,7 @@ export const salleDeBainPage: PageTemplateData = {
               description:
                 "Projet sur mesure pense pour l'usage quotidien et la tenue dans le temps.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
+                src: "/images/generated/spaces/space-bath-project-02.png",
                 alt: "Projet salle de bain sur mesure a Montreal",
               },
               badges: ["Montreal", "Sur mesure"],
@@ -215,7 +214,7 @@ export const salleDeBainPage: PageTemplateData = {
               description:
                 "Execution propre avec materiaux adaptes et alignements soignes.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
+                src: "/images/generated/spaces/space-bath-project-03.png",
                 alt: "Projet salle de bain sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Finition"],
@@ -227,7 +226,7 @@ export const salleDeBainPage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

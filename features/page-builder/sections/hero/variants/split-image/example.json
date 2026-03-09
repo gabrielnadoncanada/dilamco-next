@@ -1,0 +1,17 @@
+{
+  "heading": "Des espaces penses pour le quotidien",
+  "description": "Des solutions elegantes et durables adaptees a votre facon de vivre.",
+  "actions": [
+    {
+      "label": "Obtenir une soumission",
+      "href": "/contact",
+      "variant": "default"
+    }
+  ],
+  "badges": ["Sur mesure", "Installation"],
+  "image": {
+    "src": "/images/demo/hero-split.jpg",
+    "alt": "Amenagement interieur sur mesure"
+  },
+  "caption": "Projet realise a Montreal"
+}

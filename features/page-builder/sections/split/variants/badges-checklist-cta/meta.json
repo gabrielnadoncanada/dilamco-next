@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "split",
+  "variant": "badges-checklist-cta",
+  "title": "Split Badges Checklist CTA",
+  "description": "Split layout with badges, checklist card, and supporting actions.",
+  "propsModel": ["heading", "intro", "badges", "cardTitle", "items", "actions"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 510,
+    "viewport": "desktop"
+  }
+}

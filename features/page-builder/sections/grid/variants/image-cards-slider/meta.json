@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "image-cards-slider",
+  "title": "Grid Image Cards Slider",
+  "description": "Sliding gallery of image cards with links, descriptions, and optional badges.",
+  "propsModel": ["heading", "intro", "items"],
+  "kitchenSink": {
+    "group": "catalog",
+    "order": 330,
+    "viewport": "mobile"
+  }
+}

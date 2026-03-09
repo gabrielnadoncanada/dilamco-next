@@ -1,0 +1,22 @@
+{
+  "badge": "Accompagnement",
+  "heading": "Choisissez la prochaine etape",
+  "intro": "Nous vous aidons a avancer selon votre budget, vos delais et votre priorite.",
+  "links": [
+    {
+      "title": "Planifier un appel",
+      "description": "Discuter du projet avec un conseiller.",
+      "href": "/contact"
+    },
+    {
+      "title": "Explorer les materiaux",
+      "description": "Comparer les options de finition et de durabilite.",
+      "href": "/materiaux"
+    }
+  ],
+  "action": {
+    "label": "Commencer",
+    "href": "/contact",
+    "variant": "default"
+  }
+}

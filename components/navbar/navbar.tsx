@@ -38,7 +38,6 @@ export function Navbar({
             <DesktopNavigation navigation={navigation} />
           </div>
           <div className="hidden items-center gap-3 xl:flex">
-            <ThemeToggle />
             <ActionButtons actions={actions} size="sm" />
           </div>
           <div className="xl:hidden">

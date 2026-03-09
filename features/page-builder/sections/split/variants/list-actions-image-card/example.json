@@ -1,0 +1,27 @@
+{
+  "heading": "Des choix expliques clairement",
+  "intro": "Chaque recommandation est reliee a l'usage, au budget et a la durabilite.",
+  "items": [
+    {
+      "title": "Priorites fonctionnelles",
+      "description": "Organisation du rangement, circulation et entretien."
+    },
+    {
+      "title": "Choix de finition",
+      "description": "Selection selon le rendu, la resistance et l'entretien."
+    }
+  ],
+  "actions": [
+    {
+      "label": "Nous contacter",
+      "href": "/contact",
+      "variant": "default"
+    }
+  ],
+  "image": {
+    "src": "/images/demo/conseil.jpg",
+    "alt": "Discussion de projet avec echantillons"
+  },
+  "cardTitle": "Approche conseil",
+  "cardDescription": "Une lecture simple des options pour accelerer la decision."
+}

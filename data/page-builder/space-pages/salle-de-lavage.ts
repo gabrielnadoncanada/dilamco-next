@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const salleDeLavagePage: PageTemplateData = {
@@ -12,7 +12,6 @@ export const salleDeLavagePage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Espaces", url: SITE.url + "/espaces/" },
     {
       name: "Salle de lavage sur mesure",
       url: SITE.url + "/espaces/salle-de-lavage/",
@@ -31,7 +30,7 @@ export const salleDeLavagePage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
           heading: "Salle de lavage sur mesure, espace technique bien cadre",
@@ -51,7 +50,7 @@ export const salleDeLavagePage: PageTemplateData = {
           ],
           badges: ["Fonctionnel", "Durable", "Sur mesure"],
           image: {
-            src: "/images/spaces/vanite-salles-de-lavage.webp",
+            src: "/images/generated/spaces/space-laundry-hero-01.png",
             alt: "Salle de lavage sur mesure haut de gamme",
           },
           caption:
@@ -162,12 +161,12 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               label: "Voir nos espaces",
-              href: "/espaces/",
+              href: "/",
               variant: "outline",
             },
           ],
           image: {
-            src: "/images/spaces/vanite-salles-de-lavage.webp",
+            src: "/images/generated/spaces/space-laundry-project-01.png",
             alt: "Detail materiau pour salle de lavage sur mesure",
           },
           cardTitle: "Impact concret",
@@ -192,7 +191,7 @@ export const salleDeLavagePage: PageTemplateData = {
               description:
                 "Rangement et surfaces de travail integres dans un espace de service compact.",
               image: {
-                src: "/images/spaces/vanite-salles-de-lavage.webp",
+                src: "/images/generated/spaces/space-laundry-project-01.png",
                 alt: "Projet salle de lavage sur mesure a Montreal",
               },
               badges: ["Montreal", "Fonctionnel"],
@@ -204,7 +203,7 @@ export const salleDeLavagePage: PageTemplateData = {
               description:
                 "Amenagement durable avec rangement vertical et finition propre.",
               image: {
-                src: "/images/spaces/vanite-salles-de-lavage.webp",
+                src: "/images/generated/spaces/space-laundry-project-02.png",
                 alt: "Projet salle de lavage sur mesure a Laval",
               },
               badges: ["Laval", "Durable"],
@@ -216,7 +215,7 @@ export const salleDeLavagePage: PageTemplateData = {
               description:
                 "Projet concu pour simplifier l'usage quotidien sans sacrifier la qualite.",
               image: {
-                src: "/images/spaces/vanite-salles-de-lavage.webp",
+                src: "/images/generated/spaces/space-laundry-project-03.png",
                 alt: "Projet salle de lavage sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Sur mesure"],
@@ -228,7 +227,7 @@ export const salleDeLavagePage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

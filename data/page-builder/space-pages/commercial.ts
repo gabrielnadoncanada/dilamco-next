@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const commercialPage: PageTemplateData = {
@@ -12,7 +12,6 @@ export const commercialPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Espaces", url: SITE.url + "/espaces/" },
     { name: "Commercial", url: SITE.url + "/espaces/commercial/" },
   ],
   service: {
@@ -28,7 +27,7 @@ export const commercialPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
           heading:
@@ -49,7 +48,7 @@ export const commercialPage: PageTemplateData = {
           ],
           badges: ["Commercial", "Durable", "Planifie"],
           image: {
-            src: "/images/spaces/commercial.webp",
+            src: "/images/generated/spaces/space-commercial-hero-01.png",
             alt: "Amenagement commercial sur mesure",
           },
           caption:
@@ -165,7 +164,7 @@ export const commercialPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/spaces/commercial.webp",
+            src: "/images/generated/spaces/space-commercial-project-01.png",
             alt: "Detail materiau pour amenagement commercial",
           },
           cardTitle: "Resultat recherche",
@@ -190,7 +189,7 @@ export const commercialPage: PageTemplateData = {
               description:
                 "Projet commercial concu pour l'usage reel et une execution propre.",
               image: {
-                src: "/images/spaces/commercial.webp",
+                src: "/images/generated/spaces/space-commercial-project-01.png",
                 alt: "Projet commercial a Montreal",
               },
               badges: ["Montreal", "Commercial"],
@@ -202,7 +201,7 @@ export const commercialPage: PageTemplateData = {
               description:
                 "Execution stable et materiaux adaptes a un usage plus intensif.",
               image: {
-                src: "/images/spaces/commercial.webp",
+                src: "/images/generated/spaces/space-commercial-project-02.png",
                 alt: "Projet commercial a Laval",
               },
               badges: ["Laval", "Usage intensif"],
@@ -214,7 +213,7 @@ export const commercialPage: PageTemplateData = {
               description:
                 "Projet sur mesure coordonne pour limiter les imprevus et soigner la finition.",
               image: {
-                src: "/images/spaces/commercial.webp",
+                src: "/images/generated/spaces/space-commercial-project-03.png",
                 alt: "Projet commercial sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Execution"],
@@ -226,7 +225,7 @@ export const commercialPage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

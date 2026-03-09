@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "../components/Header";
-import { Footer } from "../components/Footer";
 import { JsonLd } from "@/seo/JsonLd";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
@@ -55,16 +52,9 @@ export default function RootLayout({
   return (
     <html lang="fr-CA" suppressHydrationWarning>
       <body className={cn(plusJakartaSans.className, 'overflow-x-hidden!')}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <JsonLd data={organizationJsonLd()} />
-          <JsonLd data={localBusinessJsonLd()} />
-          {children}
-        </ThemeProvider>
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={localBusinessJsonLd()} />
+        {children}
       </body>
     </html>
   );

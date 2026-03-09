@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const installationPage: PageTemplateData = {
@@ -31,7 +31,7 @@ export const installationPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Services",
           heading:
@@ -52,7 +52,7 @@ export const installationPage: PageTemplateData = {
           ],
           badges: ["Alignements", "Ajustements", "Finition"],
           image: {
-            src: "/images/services/installation-hero.webp",
+            src: "/images/generated/services/service-installation-hero-01.png",
             alt: "Plan technique et echantillons de panneaux pour installation sur mesure",
           },
           caption: "Une pose propre change la perception de toute la piece",
@@ -144,7 +144,7 @@ export const installationPage: PageTemplateData = {
       id: "projects",
       content: {
         type: "grid",
-        variant: "image-cards-badges-cta",
+        variant: "image-cards-slider",
         props: {
           heading: "Installation par type de projet",
           intro:
@@ -156,8 +156,8 @@ export const installationPage: PageTemplateData = {
               description:
                 "Armoires, ilots et integration des electromenagers.",
               image: {
-                src: "/images/spaces/cabinet-cuisines.webp",
-                alt: "Cuisine sur mesure",
+                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                alt: "Cuisine sur mesure avec installation precise",
               },
               badges: ["Cuisine", "Integration"],
               footerCtaLabel: "Voir cuisine",
@@ -167,8 +167,8 @@ export const installationPage: PageTemplateData = {
               href: "/espaces/salle-de-bain/",
               description: "Vanites et protection des chants en milieu humide.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
-                alt: "Salle de bain sur mesure",
+                src: "/images/generated/spaces/space-bath-hero-01.png",
+                alt: "Salle de bain sur mesure avec finition propre",
               },
               badges: ["Humidite", "Finition"],
               footerCtaLabel: "Voir salle de bain",
@@ -178,8 +178,8 @@ export const installationPage: PageTemplateData = {
               href: "/espaces/commercial/",
               description: "Usage intensif, durabilite et coordination.",
               image: {
-                src: "/images/spaces/commercial.webp",
-                alt: "Amenagement commercial",
+                src: "/images/generated/spaces/space-commercial-hero-01.png",
+                alt: "Amenagement commercial avec installation planifiee",
               },
               badges: ["Commercial", "Coordination"],
               footerCtaLabel: "Voir commercial",
@@ -190,7 +190,7 @@ export const installationPage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

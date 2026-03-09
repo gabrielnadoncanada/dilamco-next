@@ -1,6 +1,5 @@
-import { createPageTemplate } from "@/page-builder";
-import { page } from "@/data/page-builder/static-pages/espaces";
+import { redirect } from "next/navigation";
 
-const { metadata, Page } = createPageTemplate(page);
-export { metadata };
-export default Page;
+export default function EspacesPage() {
+  redirect("/");
+}

@@ -1,0 +1,30 @@
+{
+  "heading": "Inspirations recentes",
+  "intro": "Un survol de configurations pensees pour des usages differents.",
+  "items": [
+    {
+      "title": "Cuisine minimaliste",
+      "href": "/inspirations/cuisine-minimaliste",
+      "description": "Une composition legere avec rangement optimise.",
+      "image": {
+        "src": "/images/demo/minimaliste.jpg",
+        "alt": "Cuisine minimaliste"
+      },
+      "badges": ["Epure", "Compact"],
+      "quickActionLabel": "Enregistrer",
+      "footerCtaLabel": "Voir le projet"
+    },
+    {
+      "title": "Salle de bain spa",
+      "href": "/inspirations/salle-de-bain-spa",
+      "description": "Une ambiance calme avec materiaux faciles d'entretien.",
+      "image": {
+        "src": "/images/demo/spa.jpg",
+        "alt": "Salle de bain spa"
+      },
+      "badges": ["Zen"],
+      "quickActionLabel": "Enregistrer",
+      "footerCtaLabel": "Voir le projet"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "badges": ["Expertise"],
+  "heading": "Concevoir un espace qui fonctionne vraiment",
+  "description": "Nous traduisons vos priorites en une proposition claire, durable et esthetique.",
+  "actions": [
+    {
+      "label": "Parler a un conseiller",
+      "href": "/contact",
+      "variant": "default"
+    },
+    {
+      "label": "Voir les projets",
+      "href": "/realisations",
+      "variant": "outline"
+    }
+  ]
+}

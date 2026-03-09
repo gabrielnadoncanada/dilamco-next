@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "image-cards-badges-cta",
+  "title": "Grid Image Cards Badges CTA",
+  "description": "Image card grid with badges, per-card CTA labels, and optional section CTA.",
+  "propsModel": ["heading", "intro", "ctaLabel", "ctaHref", "items"],
+  "kitchenSink": {
+    "group": "catalog",
+    "order": 320,
+    "viewport": "desktop"
+  }
+}

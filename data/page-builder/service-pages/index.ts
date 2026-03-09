@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { designPage } from "./design";
 import { fabricationPage } from "./fabrication";
 import { installationPage } from "./installation";

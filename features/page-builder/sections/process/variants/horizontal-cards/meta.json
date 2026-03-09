@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "process",
+  "variant": "horizontal-cards",
+  "title": "Process Horizontal Cards",
+  "description": "Horizontal process section with heading, optional intro, and cards.",
+  "propsModel": ["heading", "intro", "steps"],
+  "kitchenSink": {
+    "group": "process",
+    "order": 510,
+    "viewport": "desktop"
+  }
+}

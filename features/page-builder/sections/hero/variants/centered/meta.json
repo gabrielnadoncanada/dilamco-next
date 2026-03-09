@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "hero",
+  "variant": "centered",
+  "title": "Hero Centered",
+  "description": "Centered hero with optional badges, description, and up to two actions.",
+  "propsModel": ["badges", "heading", "description", "actions"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 120,
+    "viewport": "mobile"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "heading": "Des solutions adaptees a differents besoins",
+  "description": "Une organisation simple de l'information pour comparer rapidement plusieurs options.",
+  "cards": [
+    {
+      "title": "Residentiel",
+      "description": "Des configurations pensees pour le confort et l'usage quotidien."
+    },
+    {
+      "title": "Commercial",
+      "description": "Des solutions robustes pour des environnements exigeants."
+    },
+    {
+      "title": "Sur mesure",
+      "description": "Des details ajustes selon les contraintes du projet."
+    }
+  ],
+  "columns": "3"
+}

@@ -1,0 +1,20 @@
+{
+  "heading": "Explorez les pages",
+  "intro": "Chaque carte pointe vers une page utile a consulter ensuite.",
+  "items": [
+    {
+      "title": "Contreplaque",
+      "description": "Structure stable et durable.",
+      "href": "/materiaux/contreplaque/",
+      "badges": ["Structure", "Durabilite"],
+      "ctaLabel": "Voir la page"
+    },
+    {
+      "title": "MDF",
+      "description": "Uniformite et finition peinte.",
+      "href": "/materiaux/mdf/",
+      "badges": ["Finition", "Peinture"],
+      "ctaLabel": "Voir la page"
+    }
+  ]
+}

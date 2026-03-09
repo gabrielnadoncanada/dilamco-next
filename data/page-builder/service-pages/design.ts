@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const designPage: PageTemplateData = {
@@ -28,7 +28,7 @@ export const designPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Services",
           heading: "Service de design, structurer le projet avant de fabriquer",
@@ -48,7 +48,7 @@ export const designPage: PageTemplateData = {
           ],
           badges: ["Usage reel", "Planification", "Execution"],
           image: {
-            src: "/images/services/design-hero.webp",
+            src: "/images/generated/services/service-design-hero-01.png",
             alt: "Plan de cuisine sur mesure et echantillons de materiaux",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -81,7 +81,7 @@ export const designPage: PageTemplateData = {
                 "Materiaux, finition, calendrier et niveau de complexite restes coherents.",
             },
           ],
-          columns: "3",
+          columns: "1",
         },
       },
     },
@@ -139,7 +139,7 @@ export const designPage: PageTemplateData = {
       id: "types",
       content: {
         type: "grid",
-        variant: "image-cards-badges-cta",
+        variant: "image-cards-slider",
         props: {
           heading: "Design par type de projet",
           intro:
@@ -187,7 +187,7 @@ export const designPage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

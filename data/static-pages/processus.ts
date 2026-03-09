@@ -177,7 +177,7 @@ export const pageData: ArticlePageData = {
       content: {
         type: SECTION_TYPES.RELATED_LINKS,
         items: [
-          { title: "Espaces", href: "/espaces/" },
+          { title: "Accueil", href: "/" },
           { title: "Services", href: "/services/" },
           { title: "Projets", href: "/projets/" },
           { title: "Matériaux", href: "/materiaux/" },

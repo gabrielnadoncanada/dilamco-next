@@ -1,0 +1,25 @@
+{
+  "heading": "Ce qui distingue notre approche",
+  "intro": "Des choix pensés pour simplifier la prise de decision et maintenir un haut niveau de finition.",
+  "columns": "3",
+  "items": [
+    {
+      "title": "Conception guidee",
+      "description": "Une structure claire des priorites du projet.",
+      "icon": "ruler",
+      "bullets": ["Analyse des besoins", "Planification des options", "Validation rapide"]
+    },
+    {
+      "title": "Materiaux fiables",
+      "description": "Des produits selectionnes pour leur durabilite.",
+      "icon": "shield-check",
+      "bullets": ["Surfaces resistantes", "Assemblage solide", "Entretien simple"]
+    },
+    {
+      "title": "Installation soignee",
+      "description": "Une execution propre et coordonnee sur place.",
+      "icon": "hammer",
+      "bullets": ["Delais confirmes", "Finitions controlees", "Suivi apres pose"]
+    }
+  ]
+}

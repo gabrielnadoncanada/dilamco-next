@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "images:list": "node scripts/generate-images.mjs --list",
+    "images:generate": "node scripts/generate-images.mjs",
+    "images:apply": "node scripts/apply-image-manifest.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
@@ -21,6 +24,7 @@
     "lucide-react": "^0.564.0",
     "next": "16.1.6",
     "next-themes": "^0.4.6",
+    "openai": "^6.5.0",
     "radix-ui": "^1.4.3",
     "react": "19.2.3",
     "react-day-picker": "^9.13.2",

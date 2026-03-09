@@ -1,0 +1,29 @@
+{
+  "heading": "Une demarche en etapes claires",
+  "description": "Avancez avec une vue d'ensemble simple et un accompagnement adapte.",
+  "steps": [
+    {
+      "label": "Decouvrir",
+      "description": "Comprendre les besoins et le contexte."
+    },
+    {
+      "label": "Comparer",
+      "description": "Evaluer les options de configuration et de finition."
+    },
+    {
+      "label": "Valider",
+      "description": "Confirmer les choix et le calendrier."
+    },
+    {
+      "label": "Realiser",
+      "description": "Passer a l'execution avec suivi."
+    }
+  ],
+  "actions": [
+    {
+      "label": "Parler a un conseiller",
+      "href": "/contact",
+      "variant": "default"
+    }
+  ]
+}

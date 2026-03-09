@@ -1,0 +1,26 @@
+{
+  "heading": "Acces rapides",
+  "intro": "Retrouvez les contenus les plus consultes en quelques clics.",
+  "columns": "3",
+  "items": [
+    {
+      "title": "Prendre rendez-vous",
+      "description": "Choisir un moment pour discuter du projet.",
+      "href": "/contact",
+      "badges": ["Rapide"],
+      "ctaLabel": "Reserver"
+    },
+    {
+      "title": "Comparer les materiaux",
+      "description": "Evaluer les finis et niveaux de durabilite.",
+      "href": "/materiaux",
+      "badges": ["Guide"],
+      "ctaLabel": "Comparer"
+    },
+    {
+      "title": "Voir les realisations",
+      "href": "/realisations",
+      "ctaLabel": "Explorer"
+    }
+  ]
+}

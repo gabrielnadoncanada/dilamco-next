@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const fabricationPage: PageTemplateData = {
@@ -31,7 +31,7 @@ export const fabricationPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Services",
           heading: "Fabrication sur mesure, precision, constance et durabilite",
@@ -51,7 +51,7 @@ export const fabricationPage: PageTemplateData = {
           ],
           badges: ["Precision", "Durabilite", "Sur mesure"],
           image: {
-            src: "/images/services/fabrication-hero-v2.webp",
+            src: "/images/generated/services/service-fabrication-hero-01.png",
             alt: "Plans techniques et echantillons de materiaux pour fabrication sur mesure",
           },
           caption:
@@ -132,7 +132,7 @@ export const fabricationPage: PageTemplateData = {
       id: "types",
       content: {
         type: "grid",
-        variant: "image-cards-badges-cta",
+        variant: "image-cards-slider",
         props: {
           heading: "Fabrication par type de projet",
           intro:
@@ -179,7 +179,7 @@ export const fabricationPage: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",

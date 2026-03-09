@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "hero",
+  "variant": "split-image",
+  "title": "Hero Split Image",
+  "description": "Split hero with image, badges, actions, and caption.",
+  "propsModel": ["heading", "description", "actions", "badges", "image", "caption"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 140,
+    "viewport": "desktop"
+  }
+}

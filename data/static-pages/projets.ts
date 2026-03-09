@@ -25,7 +25,7 @@ export const pageData: ArticlePageData = {
     description:
       "Des projets livrés à Montréal, Laval et sur la Rive-Sud — avec une exécution propre et des finitions soignées.",
     actions: [
-      { text: "Explorer par espace", href: "/espaces/", variant: "outline" },
+      { text: "Voir l'accueil", href: "/", variant: "outline" },
       { text: "Obtenir une soumission", href: "/contact/" },
     ],
   },

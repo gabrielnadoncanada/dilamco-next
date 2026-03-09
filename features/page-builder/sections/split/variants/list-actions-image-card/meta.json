@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "split",
+  "variant": "list-actions-image-card",
+  "title": "Split List Actions Image Card",
+  "description": "Split section with descriptive list, actions, image, and supporting card content.",
+  "propsModel": ["heading", "intro", "items", "actions", "image", "cardTitle", "cardDescription"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 520,
+    "viewport": "desktop"
+  }
+}

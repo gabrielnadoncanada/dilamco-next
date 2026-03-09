@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const page: PageTemplateData = {
@@ -28,7 +28,7 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Services",
           heading: "Renovation cle en main",
@@ -91,7 +91,7 @@ export const page: PageTemplateData = {
       id: "subservices",
       content: {
         type: "grid",
-        variant: "image-cards-badges-cta",
+        variant: "image-cards-slider",
         props: {
           heading: "Types de renovation",
           intro:

@@ -1,0 +1,21 @@
+{
+  "heading": "Notre processus",
+  "intro": "Une methode simple pour garder le projet clair a chaque etape.",
+  "steps": [
+    {
+      "number": "1",
+      "title": "Discussion initiale",
+      "description": "Nous cadrons les besoins, les contraintes et les objectifs."
+    },
+    {
+      "number": "2",
+      "title": "Proposition",
+      "description": "Nous preparons une orientation concrete et adaptee."
+    },
+    {
+      "number": "3",
+      "title": "Realisation",
+      "description": "Nous coordonnons la mise en oeuvre avec un suivi rigoureux."
+    }
+  ]
+}

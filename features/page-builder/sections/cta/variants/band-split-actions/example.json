@@ -1,0 +1,17 @@
+{
+  "heading": "Parlons de votre projet",
+  "intro": "Obtenez des recommandations claires et une soumission adaptee a vos besoins.",
+  "actions": [
+    {
+      "label": "Obtenir une soumission",
+      "href": "/contact",
+      "variant": "default"
+    },
+    {
+      "label": "Voir les realisations",
+      "href": "/realisations",
+      "variant": "outline"
+    }
+  ],
+  "note": "Reponse rapide du lundi au vendredi."
+}

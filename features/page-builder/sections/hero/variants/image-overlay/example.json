@@ -1,0 +1,32 @@
+{
+  "heading": "Des projets concus pour durer",
+  "description": "Un accompagnement rigoureux, des materiaux solides et une execution soignee du debut a la fin.",
+  "badges": ["Sur mesure", "Installation incluse"],
+  "actions": [
+    {
+      "label": "Obtenir une soumission",
+      "href": "/contact",
+      "variant": "default"
+    },
+    {
+      "label": "Voir les realisations",
+      "href": "/realisations",
+      "variant": "outline"
+    }
+  ],
+  "image": {
+    "src": "/images/demo/hero-projet.jpg",
+    "alt": "Projet residentiel haut de gamme"
+  },
+  "overlay": "dark-gradient",
+  "proofs": [
+    {
+      "title": "Conception claire",
+      "description": "Des choix structures des le depart."
+    },
+    {
+      "title": "Materiaux fiables",
+      "description": "Des solutions pensees pour durer."
+    }
+  ]
+}

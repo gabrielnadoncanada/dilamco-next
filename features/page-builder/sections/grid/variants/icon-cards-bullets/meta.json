@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "icon-cards-bullets",
+  "title": "Grid Icon Cards Bullets",
+  "description": "Grid of icon-led cards with descriptions and bullet lists.",
+  "propsModel": ["heading", "intro", "columns", "items"],
+  "kitchenSink": {
+    "group": "catalog",
+    "order": 310,
+    "viewport": "desktop"
+  }
+}

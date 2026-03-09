@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "cta",
+  "variant": "band-split-actions",
+  "title": "CTA Band Split Actions",
+  "description": "Full-width call-to-action band with heading, intro, up to two actions, and optional note.",
+  "propsModel": ["heading", "intro", "actions", "note"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 210,
+    "viewport": "desktop"
+  }
+}

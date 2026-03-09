@@ -48,61 +48,48 @@
 }
 
 :root {
-  /* Core surfaces (warmer, more “material”) */
-  --background: #f6f4ef;
+  --background: #fafaf8;
+  --foreground: #1a1f1c;
 
-  --foreground: #1f2321;            /* charcoal-green ink */
+  --card: #ffffff;
+  --popover: #ffffff;
+  --popover-foreground: #1a1f1c;
 
-  --card: #fbfaf7;                  /* soft warm white */
-  --card-foreground: #1f2321;
+  --primary: #253b2f;
+  --primary-foreground: #f8f6f1;
 
-  --popover: #fbfaf7;
-  --popover-foreground: #1f2321;
+  --secondary: #f2f1ec;
+  --secondary-foreground: #222825;
 
-  /* Brand (deeper, more architectural) */
-  --primary: #243c35;               /* forest-architect green */
-  --primary-foreground: #f7f3ec;
+  --muted: #f5f4ef;
+  --muted-foreground: #5f6762;
 
-  /* Supporting surfaces */
-  --secondary: #e7e1d6;             /* warm greige */
-  --secondary-foreground: #232826;
-
-  --muted: #efe9df;                 /* warm muted */
-  --muted-foreground: #5c645f;      /* readable, not washed */
-
-  /* Accent = brass (premium highlight) */
-  --accent: #b89c6b;                /* subtle brass */
-  --accent-foreground: #141614;     /* near-black */
+  --accent: #c4a574;
+  --accent-foreground: #161816;
 
   --destructive: oklch(0.58 0.22 27);
 
-  /* Borders / inputs (warmer, softer) */
-  --border: #d8d1c5;
-  --input: #d8d1c5;
+  --border: #e5e1d8;
+  --input: #e5e1d8;
+  --ring: #253b2f;
 
-  /* Ring uses brand green */
-  --ring: #243c35;
-
-  /* Surfaces system */
   --surface-default-bg: var(--background);
-  --surface-muted-bg: #ede6da;      /* slightly deeper than muted */
-  --surface-tint-bg: #e9e2d6;       /* warm tint */
-  --surface-tint-glow: rgb(36 60 53 / 8%);
-  --surface-separator: rgb(31 35 33 / 8%);
+  --surface-muted-bg: #f5f4ef;
+  --surface-tint-bg: #f2f0ea;
+  --surface-tint-glow: rgb(37 59 47 / 6%);
+  --surface-separator: rgb(26 31 28 / 7%);
 
-  /* Hero (less green wash, more cinematic) */
-  --hero-foreground: #f7f3ec;
-  --hero-foreground-muted: rgb(247 243 236 / 90%);
-  --hero-overlay-start: rgb(10 12 11 / 58%);
-  --hero-overlay-middle: rgb(36 60 53 / 32%);
-  --hero-overlay-end: rgb(10 12 11 / 38%);
-  --hero-overlay-glow: rgb(184 156 107 / 16%);
-  --hero-title-shadow: 0 2px 14px rgb(0 0 0 / 22%);
+  --hero-foreground: #f8f6f1;
+  --hero-foreground-muted: rgb(248 246 241 / 88%);
+  --hero-overlay-start: rgb(10 12 11 / 56%);
+  --hero-overlay-middle: rgb(37 59 47 / 28%);
+  --hero-overlay-end: rgb(10 12 11 / 34%);
+  --hero-overlay-glow: rgb(196 165 116 / 14%);
+  --hero-title-shadow: 0 2px 14px rgb(0 0 0 / 20%);
 
-  --footer-glow: rgb(36 60 53 / 12%);
+  --footer-glow: rgb(37 59 47 / 10%);
   --elevation-1-shadow: 0 1px 2px rgb(0 0 0 / 4%);
 
-  /* Keep your charts or tweak later */
   --chart-1: oklch(0.871 0.15 154.449);
   --chart-2: oklch(0.723 0.219 149.579);
   --chart-3: oklch(0.627 0.194 149.214);
@@ -111,62 +98,14 @@
 
   --radius: 0.625rem;
 
-  /* Sidebar (leave as-is if you don’t use it heavily) */
-  --sidebar: #fbfaf7;
-  --sidebar-foreground: #1f2321;
-  --sidebar-primary: #243c35;
-  --sidebar-primary-foreground: #f7f3ec;
-  --sidebar-accent: #efe9df;
-  --sidebar-accent-foreground: #1f2321;
-  --sidebar-border: #e3dccf;
-  --sidebar-ring: rgb(36 60 53 / 28%);
-}
-.dark {
-  --background: #141916;
-  --foreground: #eef1ec;
-  --card: #1b231e;
-  --card-foreground: #eef1ec;
-  --popover: #1b231e;
-  --popover-foreground: #eef1ec;
-  --primary: #1f3a2c;
-  --primary-foreground: #eef1ec;
-  --secondary: #2a332d;
-  --secondary-foreground: #eef1ec;
-  --muted: #222a25;
-  --muted-foreground: #b0b8b2;
-  --accent: #273129;
-  --accent-foreground: #eef1ec;
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: rgb(238 241 236 / 14%);
-  --input: rgb(238 241 236 / 18%);
-  --ring: #7ea58f;
-  --surface-default-bg: var(--background);
-  --surface-muted-bg: #1b231e;
-  --surface-tint-bg: #1f2822;
-  --surface-tint-glow: rgb(31 58 44 / 16%);
-  --surface-separator: rgb(238 241 236 / 12%);
-  --hero-foreground: #eef1ec;
-  --hero-foreground-muted: rgb(238 241 236 / 88%);
-  --hero-overlay-start: rgb(0 0 0 / 52%);
-  --hero-overlay-middle: rgb(31 58 44 / 40%);
-  --hero-overlay-end: rgb(0 0 0 / 34%);
-  --hero-overlay-glow: rgb(238 241 236 / 12%);
-  --hero-title-shadow: 0 2px 10px rgb(0 0 0 / 32%);
-  --footer-glow: rgb(31 58 44 / 16%);
-  --elevation-1-shadow: 0 1px 2px rgb(0 0 0 / 24%);
-  --chart-1: oklch(0.871 0.15 154.449);
-  --chart-2: oklch(0.723 0.219 149.579);
-  --chart-3: oklch(0.627 0.194 149.214);
-  --chart-4: oklch(0.527 0.154 150.069);
-  --chart-5: oklch(0.448 0.119 151.328);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.768 0.233 130.85);
-  --sidebar-primary-foreground: oklch(0.986 0.031 120.757);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1f1c;
+  --sidebar-primary: #253b2f;
+  --sidebar-primary-foreground: #f8f6f1;
+  --sidebar-accent: #f5f4ef;
+  --sidebar-accent-foreground: #1a1f1c;
+  --sidebar-border: #e7e3da;
+  --sidebar-ring: rgb(37 59 47 / 24%);
 }
 
 @layer base {
@@ -176,26 +115,6 @@
   body {
     @apply bg-background text-foreground antialiased;
     text-rendering: optimizeLegibility;
-  }
-
-  section[data-surface] {
-    background-color: var(--surface-default-bg);
-  }
-
-  section[data-surface] + section[data-surface] {
-    border-top: 1px solid var(--surface-separator);
-  }
-
-  section[data-surface="muted"] {
-    background-color: var(--surface-muted-bg);
-    box-shadow: inset 0 1px 0 var(--surface-separator), inset 0 -1px 0 var(--surface-separator);
-  }
-
-  section[data-surface="tint"] {
-    background:
-      radial-gradient(120% 90% at 100% 0%, var(--surface-tint-glow), transparent 56%),
-      var(--surface-tint-bg);
-    box-shadow: inset 0 1px 0 var(--surface-separator), inset 0 -1px 0 var(--surface-separator);
   }
 
   p {
@@ -222,5 +141,20 @@
   
   .bg-radient-gradient-1 {
     background: radial-gradient(circle at 85% 20%,var(--hero-overlay-glow),transparent 42%);
+  }
+
+  .pb-preview-root {
+    all: revert;
+    display: block;
+  }
+
+  .pb-preview-root,
+  .pb-preview-root * {
+    box-sizing: border-box;
+  }
+
+  .pb-preview-root :where(img, picture, video, canvas, svg) {
+    display: block;
+    max-width: 100%;
   }
 }

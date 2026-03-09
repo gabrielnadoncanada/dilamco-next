@@ -1,4 +1,4 @@
-import type { PageTemplateData } from "@/page-builder";
+import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
 
 export const page: PageTemplateData = {
@@ -27,7 +27,7 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image-badges",
+        variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
           heading:
@@ -48,7 +48,7 @@ export const page: PageTemplateData = {
           ],
           badges: ["Sur mesure", "Durable", "Cle en main"],
           image: {
-            src: "/images/spaces/spaces.png",
+            src: "/images/generated/spaces/espaces-hero-overview-01.png",
             alt: "Espaces sur mesure Dilamco",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -71,7 +71,7 @@ export const page: PageTemplateData = {
               description:
                 "Cuisine sur mesure avec coordination, materiaux durables et execution stable.",
               image: {
-                src: "/images/spaces/cabinet-cuisines.webp",
+                src: "/images/generated/spaces/espaces-card-cuisine-01.png",
                 alt: "Cuisine sur mesure haut de gamme",
               },
               badges: ["Cuisine", "Sur mesure"],
@@ -83,7 +83,7 @@ export const page: PageTemplateData = {
               description:
                 "Vanites et rangement sur mesure adaptes a l'humidite et a l'usage quotidien.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
+                src: "/images/generated/spaces/espaces-card-bath-01.png",
                 alt: "Salle de bain sur mesure",
               },
               badges: ["Salle de bain", "Humidite"],
@@ -95,7 +95,7 @@ export const page: PageTemplateData = {
               description:
                 "Configuration fonctionnelle et durable pour un espace de service bien organise.",
               image: {
-                src: "/images/spaces/vanite-salles-de-lavage.webp",
+                src: "/images/generated/spaces/espaces-card-laundry-01.png",
                 alt: "Salle de lavage sur mesure",
               },
               badges: ["Salle de lavage", "Fonctionnel"],
@@ -107,7 +107,7 @@ export const page: PageTemplateData = {
               description:
                 "Organisation sur mesure pour optimiser l'espace et le rangement.",
               image: {
-                src: "/images/spaces/vanite-garde-robes-et-walk-ins.webp",
+                src: "/images/generated/spaces/espaces-card-walkin-01.png",
                 alt: "Walk-in sur mesure",
               },
               badges: ["Walk-in", "Organisation"],
@@ -119,7 +119,7 @@ export const page: PageTemplateData = {
               description:
                 "Amenagement commercial durable, planifie et adapte a l'usage reel.",
               image: {
-                src: "/images/spaces/commercial.webp",
+                src: "/images/generated/spaces/espaces-card-commercial-01.png",
                 alt: "Amenagement commercial sur mesure",
               },
               badges: ["Commercial", "Durable"],
@@ -193,7 +193,7 @@ export const page: PageTemplateData = {
               description:
                 "Cuisine sur mesure avec details soignes, implantation claire et execution stable.",
               image: {
-                src: "/images/spaces/cabinet-cuisines.webp",
+                src: "/images/generated/spaces/espaces-featured-cuisine-project-01.png",
                 alt: "Projet cuisine sur mesure",
               },
               badges: ["Cuisine", "Montreal"],
@@ -205,7 +205,7 @@ export const page: PageTemplateData = {
               description:
                 "Salle de bain sur mesure avec rangement optimise et finition propre.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
+                src: "/images/generated/spaces/espaces-featured-bath-project-01.png",
                 alt: "Projet salle de bain sur mesure",
               },
               badges: ["Salle de bain", "Laval"],
@@ -217,7 +217,7 @@ export const page: PageTemplateData = {
               description:
                 "Projet commercial sur mesure pense pour l'usage, la logistique et la durabilite.",
               image: {
-                src: "/images/spaces/commercial.webp",
+                src: "/images/generated/spaces/espaces-featured-commercial-project-01.png",
                 alt: "Projet commercial sur mesure",
               },
               badges: ["Commercial", "Montreal"],
@@ -229,7 +229,7 @@ export const page: PageTemplateData = {
     },
     {
       id: "faq",
-      frame: { divider: "bottom" },
+
       content: {
         type: "faq",
         variant: "accordion",
