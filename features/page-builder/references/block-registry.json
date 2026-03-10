@@ -205,7 +205,7 @@
     "hero": {
       "type": "hero",
       "variants": {
-        "bg-image-overlay": {
+        "image-overlay": {
           "title": "Hero Background Image Overlay",
           "description": "Hero with background image overlay, badges, actions, and optional proof points.",
           "propsModel": [
@@ -220,12 +220,12 @@
           "tags": [],
           "notes": [],
           "paths": {
-            "dir": "features/page-builder/sections/hero/variants/bg-image-overlay",
-            "schema": "features/page-builder/sections/hero/variants/bg-image-overlay/schema.ts",
-            "ui": "features/page-builder/sections/hero/variants/bg-image-overlay/ui.tsx",
-            "index": "features/page-builder/sections/hero/variants/bg-image-overlay/index.ts",
-            "meta": "features/page-builder/sections/hero/variants/bg-image-overlay/meta.json",
-            "example": "features/page-builder/sections/hero/variants/bg-image-overlay/example.json"
+            "dir": "features/page-builder/sections/hero/variants/image-overlay",
+            "schema": "features/page-builder/sections/hero/variants/image-overlay/schema.ts",
+            "ui": "features/page-builder/sections/hero/variants/image-overlay/ui.tsx",
+            "index": "features/page-builder/sections/hero/variants/image-overlay/index.ts",
+            "meta": "features/page-builder/sections/hero/variants/image-overlay/meta.json",
+            "example": "features/page-builder/sections/hero/variants/image-overlay/example.json"
           }
         },
         "centered": {
@@ -268,6 +268,27 @@
             "index": "features/page-builder/sections/hero/variants/split-image/index.ts",
             "meta": "features/page-builder/sections/hero/variants/split-image/meta.json",
             "example": "features/page-builder/sections/hero/variants/split-image/example.json"
+          }
+        },
+        "feature-list-image": {
+          "title": "Hero Feature List Image",
+          "description": "Hero with lead copy, action row, supporting feature list, and a large image panel.",
+          "propsModel": [
+            "heading",
+            "description",
+            "actions",
+            "features",
+            "image"
+          ],
+          "tags": [],
+          "notes": [],
+          "paths": {
+            "dir": "features/page-builder/sections/hero/variants/feature-list-image",
+            "schema": "features/page-builder/sections/hero/variants/feature-list-image/schema.ts",
+            "ui": "features/page-builder/sections/hero/variants/feature-list-image/ui.tsx",
+            "index": "features/page-builder/sections/hero/variants/feature-list-image/index.ts",
+            "meta": "features/page-builder/sections/hero/variants/feature-list-image/meta.json",
+            "example": "features/page-builder/sections/hero/variants/feature-list-image/example.json"
           }
         }
       }

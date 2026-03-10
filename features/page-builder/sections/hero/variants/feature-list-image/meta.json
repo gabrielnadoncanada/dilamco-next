@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "hero",
+  "variant": "feature-list-image",
+  "title": "Hero Feature List Image",
+  "description": "Hero with lead copy, action row, supporting feature list, and a large image panel.",
+  "propsModel": ["heading", "description", "actions", "features", "image"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 150,
+    "viewport": "desktop"
+  }
+}

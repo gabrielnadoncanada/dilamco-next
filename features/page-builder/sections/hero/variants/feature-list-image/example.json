@@ -1,0 +1,42 @@
+{
+  "heading": "Construire plus vite avec un systeme clair",
+  "description": "Une introduction nette, des points forts visibles et un visuel qui porte la section sans bricolage cote template.",
+  "actions": [
+    {
+      "label": "Commencer",
+      "href": "/contact",
+      "variant": "default"
+    },
+    {
+      "label": "Voir les services",
+      "href": "/services",
+      "variant": "outline"
+    }
+  ],
+  "features": [
+    {
+      "title": "Flux adaptes",
+      "description": "Structure tes etapes et ton contenu dans un modele stable.",
+      "icon": "circle-dot"
+    },
+    {
+      "title": "Travail transverse",
+      "description": "Coordonne plusieurs equipes sans casser la composition.",
+      "icon": "blend"
+    },
+    {
+      "title": "Jalons clairs",
+      "description": "Decoupe chaque progression en points concrets et lisibles.",
+      "icon": "diamond"
+    },
+    {
+      "title": "Vue d'ensemble",
+      "description": "Expose l'avancement et les priorites avec une lecture simple.",
+      "icon": "chart-no-axes-column"
+    }
+  ],
+  "image": {
+    "src": "/images/generated/home/home-hero-premium-kitchen-01.png",
+    "alt": "Apercu d'un espace amenage haut de gamme"
+  }
+}

@@ -153,12 +153,17 @@ async function buildRegistry(
     "Missing blocks directory",
   );
 
+  const IGNORED_TYPE_NAMES = new Set(["shared"]);
+
   for (const typeEntry of typeEntries) {
     if (!typeEntry.isDirectory()) {
       continue;
     }
 
     const typeName = typeEntry.name;
+    if (IGNORED_TYPE_NAMES.has(typeName)) {
+      continue;
+    }
     validateTypeName(typeName, issues);
 
     const typeDir = path.join(BLOCKS_DIR, typeName);
