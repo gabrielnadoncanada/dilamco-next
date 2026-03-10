@@ -7,6 +7,7 @@ Use this file to enforce ownership of the outer layout shell.
 ## Core rule
 
 `BlockFrame` is the only place that controls:
+
 - container width
 - vertical padding
 - surface
@@ -50,7 +51,7 @@ Variants must not duplicate this shell behavior.
 
 - `paddingY: "sm"` -> `py-8 sm:py-10`
 - `paddingY: "md"` -> `py-12 sm:py-14`
-- `paddingY: "lg"` -> `py-14 sm:py-16`
+- `paddingY: "lg"` -> `py-10 sm:py-16 lg:py-20`
 
 - `surface: "default"` -> `bg-background`
 - `surface: "muted"` -> `bg-muted/40`
@@ -58,6 +59,7 @@ Variants must not duplicate this shell behavior.
 ## Forbidden in variant root
 
 Do not use these at the outermost block variant root:
+
 - `max-w-*`
 - `container`
 - shell-level `mx-auto`

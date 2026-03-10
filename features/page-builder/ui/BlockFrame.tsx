@@ -13,6 +13,7 @@ const defaultFrame: Required<FrameOptions> = {
   divider: "none",
   paddingY: "lg",
   className: "",
+  headingLevel: "h2",
   titleAs: "h2",
   titleVariant: "h3",
 };
@@ -21,8 +22,8 @@ const sectionVariants = cva("", {
   variants: {
     paddingY: {
       sm: "py-10 sm:py-12",
-      md: "py-14 sm:py-16",
-      lg: "py-16 sm:py-20",
+      md: "py-10 sm:py-16 lg:py-20",
+      lg: "py-10 sm:py-16 lg:py-20",
       hero: "py-20 sm:py-28",
       none: "",
     },
@@ -94,6 +95,7 @@ export function BlockFrame(props: {
   const frame = { ...defaultFrame, ...(props.frame ?? {}) };
   const hasHeading = Boolean(props.title || props.intro);
   const hasCustomTitleVariant = props.frame?.titleVariant !== undefined;
+  const headingLevel = frame.headingLevel ?? frame.titleAs;
 
   return (
     <section
@@ -109,7 +111,7 @@ export function BlockFrame(props: {
           <header className={headerVariants({ headerAlign: frame.headerAlign })}>
             {props.title ? (
               <Heading
-                as={frame.titleAs}
+                as={headingLevel}
                 variant={frame.titleVariant}
                 className={cn("font-semibold", !hasCustomTitleVariant && "sm:text-3xl")}
               >

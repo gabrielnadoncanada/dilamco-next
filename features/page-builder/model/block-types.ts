@@ -19,6 +19,7 @@ export type FrameOptions = {
   surface?: Surface;
   paddingY?: PaddingY;
   className?: string;
+  headingLevel?: HeadingLevel;
   titleAs?: HeadingLevel;
   titleVariant?: HeadingLevel;
   divider?: Divider;

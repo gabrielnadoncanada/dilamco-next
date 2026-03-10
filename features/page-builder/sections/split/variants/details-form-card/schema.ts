@@ -4,6 +4,9 @@ const ContactDetailSchema = z.object({
   title: z.string().min(1),
   description: z.string().min(1),
   icon: z.enum(["mail", "phone", "map-pin", "clock"]),
+  href: z.string().min(1).optional(),
+  target: z.enum(["_blank", "_self", "_parent", "_top"]).optional(),
+  rel: z.enum(["noopener", "noreferrer", "noopener noreferrer"]).optional(),
 });
 
 const FormOptionSchema = z.object({
@@ -42,17 +45,17 @@ const FormFieldSchema = z.discriminatedUnion("kind", [
 
 const FormGroupSchema = z.object({
   legend: z.string().min(1),
-  fields: z.array(FormFieldSchema).min(1).max(8),
+  fields: z.array(FormFieldSchema).min(1).max(15),
 });
 
 export const SplitDetailsFormCardSchema = z.object({
   heading: z.string().min(1),
-  intro: z.string().min(1),
-  detailsTitle: z.string().min(1),
+  intro: z.string().min(1).optional(),
+  detailsTitle: z.string().min(1).optional(),
   detailsIntro: z.string().min(1).optional(),
   details: z.array(ContactDetailSchema).min(1).max(6),
   note: z.string().min(1).optional(),
-  formTitle: z.string().min(1),
+  formTitle: z.string().min(1).optional(),
   formIntro: z.string().min(1).optional(),
   formAction: z.string().min(1),
   formMethod: z.enum(["get", "post"]).optional(),
