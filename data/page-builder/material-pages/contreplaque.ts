@@ -9,6 +9,12 @@ export const contreplaquePage: PageTemplateData = {
       "Contreplaque : stabilite, tenue des vis et durabilite pour la structure d'armoires sur mesure.",
     path: "/materiaux/contreplaque/",
     ogAlt: "Contreplaque - Materiaux sur mesure",
+    ogImage: {
+      url: "/images/generated/materials/material-plywood-hero-01.webp",
+      alt: "Contreplaque - Materiaux sur mesure",
+      width: 1200,
+      height: 630,
+    },
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },

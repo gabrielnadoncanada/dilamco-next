@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { JsonLd } from "@/seo/JsonLd";
+import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { Plus_Jakarta_Sans } from "next/font/google";
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     locale: "fr_CA",
     images: [
       {
-        url: "/opengraph-image",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
         alt: "Dilamco — Sur mesure, durable, bien exécuté",
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    images: ["/opengraph-image"],
+    images: [DEFAULT_OG_IMAGE],
   },
 
   alternates: {
