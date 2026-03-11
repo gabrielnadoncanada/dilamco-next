@@ -13,5 +13,6 @@ export const gridImageCardsSlider = defineBlock({
     surface: "default",
     headerAlign: "left",
     contentAlign: "left",
+    className: "overflow-hidden",
   },
 });

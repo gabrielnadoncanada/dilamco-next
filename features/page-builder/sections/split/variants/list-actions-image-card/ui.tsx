@@ -11,7 +11,7 @@ export function SplitListActionsImageCard(props: SplitListActionsImageCardProps)
   const secondary = props.actions[1];
 
   return (
-    <div className="grid gap-y8 lg:grid-cols-12 lg:items-center">
+    <div className="grid gap-y-8 lg:grid-cols-12 lg:items-center">
       {/* Left */}
       <div className="lg:col-span-5">
         <Heading as="h2" variant="h2">{props.heading}</Heading>

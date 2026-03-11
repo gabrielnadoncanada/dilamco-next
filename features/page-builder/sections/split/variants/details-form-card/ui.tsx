@@ -1,5 +1,6 @@
 "use client";
 
+import { submitContactLead, type ContactFormState } from "@/app/contact/actions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -14,8 +15,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Heading } from "@/components/elements/heading";
+import { useActionState } from "react";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import { useFormStatus } from "react-dom";
 
 import type { SplitDetailsFormCardProps } from "./schema";
 import { cn } from "@/lib/utils";
@@ -27,9 +30,26 @@ const iconMap = {
   clock: Clock3,
 } as const;
 
+const initialContactFormState: ContactFormState = {
+  status: "idle",
+};
+
+function SubmitButton({ label }: { label: string }) {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button type="submit" size="lg" className="w-full" disabled={pending}>
+      {pending ? "Envoi en cours..." : label}
+    </Button>
+  );
+}
+
 function renderField(
   field: SplitDetailsFormCardProps["groups"][number]["fields"][number],
+  error?: string,
 ) {
+  const requiredClassName = field.required ? "required" : undefined;
+
   if (field.kind === "textarea") {
     return (
       <Textarea
@@ -38,6 +58,8 @@ function renderField(
         rows={field.rows ?? 6}
         placeholder={field.placeholder}
         required={field.required}
+        aria-invalid={Boolean(error)}
+        className={requiredClassName}
       />
     );
   }
@@ -52,6 +74,8 @@ function renderField(
         <ComboboxInput
           id={field.name}
           placeholder={field.placeholder ?? "Selectionner..."}
+          aria-invalid={Boolean(error)}
+          className={requiredClassName}
         />
         <ComboboxContent>
           <ComboboxEmpty>Aucun resultat.</ComboboxEmpty>
@@ -75,11 +99,20 @@ function renderField(
       autoComplete={field.autoComplete}
       placeholder={field.placeholder}
       required={field.required}
+      aria-invalid={Boolean(error)}
+      className={requiredClassName}
     />
   );
 }
 
 export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
+  const [formState, contactFormAction] = useActionState(
+    submitContactLead,
+    initialContactFormState,
+  );
+  const isContactSubmission =
+    props.formAction === "/contact/" && (props.formMethod ?? "post") === "post";
+
   return (
     <div className="grid gap-y-8 lg:grid-cols-12 lg:items-start lg:gap-x-8 xl:gap-x-12">
       <div className="contents lg:col-span-5 lg:block lg:space-y-8">
@@ -155,8 +188,8 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
           ) : null}
           <CardContent>
             <form
-              action={props.formAction}
-              method={props.formMethod ?? "post"}
+              action={isContactSubmission ? contactFormAction : props.formAction}
+              method={isContactSubmission ? undefined : (props.formMethod ?? "post")}
               className="space-y-6"
             >
               {props.honeypotName ? (
@@ -178,26 +211,52 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
 
 
                   <div className="grid gap-4 md:grid-cols-2">
-                    {group.fields.map((field) => (
-                      <div key={field.name} className={cn("space-y-2", field.kind === "textarea" && "md:col-span-2")}>
-                        <Label htmlFor={field.name}>
-                          {field.label}
-                        </Label>
-                        {renderField(field)}
-                        {field.helper ? (
-                          <p className="text-xs text-muted-foreground">
-                            {field.helper}
-                          </p>
-                        ) : null}
-                      </div>
-                    ))}
+                    {group.fields.map((field) => {
+                      const fieldError =
+                        isContactSubmission ? formState.fieldErrors?.[field.name] : undefined;
+
+                      return (
+                        <div
+                          key={field.name}
+                          className={cn(
+                            "space-y-2",
+                            field.kind === "textarea" && "md:col-span-2",
+                            field.required && "required",
+                          )}
+                        >
+                          <Label htmlFor={field.name}>
+                            {field.label}
+                          </Label>
+                          {renderField(field, fieldError)}
+                          {fieldError ? (
+                            <p className="text-xs text-destructive">{fieldError}</p>
+                          ) : null}
+                          {field.helper ? (
+                            <p className="text-xs text-muted-foreground">
+                              {field.helper}
+                            </p>
+                          ) : null}
+                        </div>
+                      );
+                    })}
                   </div>
                 </fieldset>
               ))}
 
-              <Button type="submit" size="lg" className="w-full">
-                {props.submitLabel}
-              </Button>
+              {isContactSubmission && formState.status !== "idle" ? (
+                <p
+                  className={cn(
+                    "text-sm",
+                    formState.status === "success"
+                      ? "text-green-700"
+                      : "text-destructive",
+                  )}
+                >
+                  {formState.message}
+                </p>
+              ) : null}
+
+              <SubmitButton label={props.submitLabel} />
             </form>
           </CardContent>
         </Card>
