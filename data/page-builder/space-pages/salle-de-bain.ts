@@ -44,13 +44,13 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets salle de bain",
-              href: "/projets/salle-de-bain/",
+              href: "/projets/",
               variant: "outline",
             },
           ],
           badges: ["Sur mesure", "Humidite", "Montreal"],
           image: {
-            src: "/images/generated/spaces/space-bath-hero-01.png",
+            src: "/images/generated/spaces/space-bath-hero-01.webp",
             alt: "Vanite sur mesure haut de gamme",
           },
           caption: "Concu pour un usage quotidien et un environnement humide",
@@ -165,7 +165,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-bath-project-01.png",
+            src: "/images/generated/spaces/space-bath-project-01.webp",
             alt: "Detail materiau pour salle de bain sur mesure",
           },
           cardTitle: "Ce que cela apporte",
@@ -186,11 +186,11 @@ export const salleDeBainPage: PageTemplateData = {
           items: [
             {
               title: "Vanite sur mesure",
-              href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
+              href: "/projets/",
               description:
                 "Rangement optimise et finition precise adaptes a la salle de bain.",
               image: {
-                src: "/images/generated/spaces/space-bath-project-01.png",
+                src: "/images/generated/spaces/space-bath-project-01.webp",
                 alt: "Projet salle de bain sur mesure a Laval",
               },
               badges: ["Laval", "Vanite"],
@@ -198,11 +198,11 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               title: "Salle de bain sur mesure",
-              href: "/projets/salle-de-bain/",
+              href: "/projets/",
               description:
                 "Projet sur mesure pense pour l'usage quotidien et la tenue dans le temps.",
               image: {
-                src: "/images/generated/spaces/space-bath-project-02.png",
+                src: "/images/generated/spaces/space-bath-project-02.webp",
                 alt: "Projet salle de bain sur mesure a Montreal",
               },
               badges: ["Montreal", "Sur mesure"],
@@ -210,11 +210,11 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               title: "Salle de bain sur mesure",
-              href: "/projets/salle-de-bain/",
+              href: "/projets/",
               description:
                 "Execution propre avec materiaux adaptes et alignements soignes.",
               image: {
-                src: "/images/generated/spaces/space-bath-project-03.png",
+                src: "/images/generated/spaces/space-bath-project-03.webp",
                 alt: "Projet salle de bain sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Finition"],
@@ -272,7 +272,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets salle de bain",
-              href: "/projets/salle-de-bain/",
+              href: "/projets/",
               variant: "outline",
             },
           ],

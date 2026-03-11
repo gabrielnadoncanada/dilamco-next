@@ -43,7 +43,7 @@ export const page: PageTemplateData = {
           ],
           badges: ["Sur mesure", "Durable", "Cle en main"],
           image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.png",
+            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Espaces sur mesure Dilamco",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -91,7 +91,7 @@ export const page: PageTemplateData = {
               description:
                 "Armoires sur mesure, ergonomie, durabilite et coordination complete pour un resultat maitrise.",
               image: {
-                src: "/images/generated/home/home-space-cuisine-card-01.png",
+                src: "/images/generated/home/home-space-cuisine-card-01.webp",
                 alt: "Cuisine sur mesure haut de gamme",
               },
               badges: ["Sur mesure", "Cle en main", "Haut de gamme"],
@@ -104,7 +104,7 @@ export const page: PageTemplateData = {
               description:
                 "Vanites sur mesure, rangement optimise et finitions resistantes a l'humidite pour durer.",
               image: {
-                src: "/images/generated/home/home-space-bath-card-01.png",
+                src: "/images/generated/home/home-space-bath-card-01.webp",
                 alt: "Vanite et salle de bain sur mesure",
               },
               badges: ["Vanites", "Durable", "Finitions"],
@@ -117,7 +117,7 @@ export const page: PageTemplateData = {
               description:
                 "Solutions de rangement et d'organisation pensees pour le quotidien, sans compromis sur la solidite.",
               image: {
-                src: "/images/generated/home/home-space-laundry-card-01.png",
+                src: "/images/generated/home/home-space-laundry-card-01.webp",
                 alt: "Salle de lavage sur mesure",
               },
               badges: ["Rangement", "Fonctionnel", "Sur mesure"],
@@ -130,7 +130,7 @@ export const page: PageTemplateData = {
               description:
                 "Organisation personnalisee : tiroirs, penderies, accessoires et configuration adaptee a vos besoins.",
               image: {
-                src: "/images/generated/home/home-space-walkin-card-01.png",
+                src: "/images/generated/home/home-space-walkin-card-01.webp",
                 alt: "Walk-in sur mesure",
               },
               badges: ["Organisation", "Personnalise", "Premium"],
@@ -143,7 +143,7 @@ export const page: PageTemplateData = {
               description:
                 "Amenagement durable et reproductible : bureaux, espaces clients, rangements et mobilier sur mesure.",
               image: {
-                src: "/images/generated/home/home-space-commercial-card-01.png",
+                src: "/images/generated/home/home-space-commercial-card-01.webp",
                 alt: "Amenagement commercial sur mesure",
               },
               badges: ["Commercial", "Durable", "Execution maitrisee"],
@@ -204,58 +204,7 @@ export const page: PageTemplateData = {
         },
       },
     },
-    // {
-    //   id: "projects",
-    //   content: {
-    //     type: "grid",
-    //     variant: "image-cards-slider",
-    //     props: {
-    //       heading: "Projets en vedette",
-    //       intro:
-    //         "Decouvrez les realisations recentes de nos espaces sur mesure.",
-    //       ctaLabel: "Voir tous les projets",
-    //       ctaHref: "/projets",
-    //       items: [
-    //         {
-    //           title: "Cuisine sur mesure",
-    //           href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
-    //           description:
-    //             "Conception, fabrication controlee et installation precise avec finitions soignees.",
-    //           image: {
-    //             src: "/images/generated/home/home-featured-cuisine-project-01.png",
-    //             alt: "Cuisine sur mesure haut de gamme",
-    //           },
-    //           badges: ["Cuisine", "Montreal", "Plateau-Mont-Royal"],
-    //           footerCtaLabel: "Voir le projet",
-    //         },
-    //         {
-    //           title: "Vanite sur mesure",
-    //           href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
-    //           description:
-    //             "Rangement optimise, materiaux durables et execution nette adaptee a la salle de bain.",
-    //           image: {
-    //             src: "/images/generated/home/home-featured-bath-project-01.png",
-    //             alt: "Vanite et salle de bain sur mesure",
-    //           },
-    //           badges: ["Salle de bain", "Laval", "Vanites"],
-    //           footerCtaLabel: "Voir le projet",
-    //         },
-    //         {
-    //           title: "Amenagement sur mesure",
-    //           href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal/",
-    //           description:
-    //             "Mobilier robuste, lignes epurees et installation planifiee pour minimiser les interruptions.",
-    //           image: {
-    //             src: "/images/generated/home/home-featured-commercial-project-01.png",
-    //             alt: "Salle de lavage sur mesure",
-    //           },
-    //           badges: ["Commercial", "Montreal", "Centre-ville"],
-    //           footerCtaLabel: "Voir le projet",
-    //         },
-    //       ],
-    //     },
-    //   },
-    // },
+
     {
       id: "faq",
 

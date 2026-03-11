@@ -49,7 +49,7 @@ export const renovationPage: PageTemplateData = {
           ],
           badges: ["Cle en main", "Coordination", "Montreal"],
           image: {
-            src: "/images/generated/services/service-renovation-hero-01.png",
+            src: "/images/generated/services/service-renovation-hero-01.webp",
             alt: "Projet de renovation sur mesure",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -226,11 +226,11 @@ export const renovationPage: PageTemplateData = {
           items: [
             {
               title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
+              href: "/projets",
               description:
                 "Projet residentiel avec implantation precise, decisions techniques mieux cadrees et finition propre.",
               image: {
-                src: "/images/generated/services/service-renovation-project-01.png",
+                src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Projet de renovation de cuisine a Montreal",
               },
               badges: ["Montreal", "Cuisine"],
@@ -238,11 +238,11 @@ export const renovationPage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-montreal/",
+              href: "/projets",
               description:
                 "Renovation pensee pour l'usage quotidien avec meilleure coherence entre fabrication, chantier et installation.",
               image: {
-                src: "/images/generated/services/service-renovation-project-02.png",
+                src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Projet de renovation residentielle a Laval",
               },
               badges: ["Laval", "Coordination"],
@@ -250,11 +250,11 @@ export const renovationPage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-rive-sud/",
+              href: "/projets",
               description:
                 "Projet complet avec gestion plus propre de la sequence, des ajustements et des details de finition.",
               image: {
-                src: "/images/generated/services/service-renovation-project-03.png",
+                src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Projet de renovation sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Cle en main"],
@@ -282,7 +282,7 @@ export const renovationPage: PageTemplateData = {
               description:
                 "Cuisine complete avec sequence de chantier, integration des armoires et coordination des travaux connexes.",
               image: {
-                src: "/images/generated/renovation/renovation-cuisine-hero-01.png",
+                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
                 alt: "Renovation de cuisine cle en main",
               },
               badges: ["Cuisine", "Coordination"],
@@ -294,7 +294,7 @@ export const renovationPage: PageTemplateData = {
               description:
                 "Salle de bain mieux cadree pour humidite, plomberie, rangement et finition durable.",
               image: {
-                src: "/images/generated/renovation/renovation-bath-hero-01.png",
+                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
                 alt: "Renovation de salle de bain cle en main",
               },
               badges: ["Salle de bain", "Humidite"],
@@ -306,7 +306,7 @@ export const renovationPage: PageTemplateData = {
               description:
                 "Plancher integre dans le bon ordre pour gerer niveaux, transitions et finition sans reprises inutiles.",
               image: {
-                src: "/images/generated/renovation/renovation-plancher-hero-01.png",
+                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
                 alt: "Renovation de plancher integree a un projet residentiel",
               },
               badges: ["Plancher", "Transitions"],
@@ -318,7 +318,7 @@ export const renovationPage: PageTemplateData = {
               description:
                 "Extension residentielle avec faisabilite, raccords et execution mieux coordonnees avec l'existant.",
               image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.png",
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement de maison cle en main",
               },
               badges: ["Agrandissement", "Execution"],

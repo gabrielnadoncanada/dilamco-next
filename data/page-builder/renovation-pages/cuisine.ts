@@ -47,13 +47,13 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               label: "Voir les projets cuisine",
-              href: "/projets/cuisine/",
+              href: "/projets",
               variant: "outline",
             },
           ],
           badges: ["Cuisine", "Cle en main", "Montreal"],
           image: {
-            src: "/images/generated/renovation/renovation-cuisine-hero-01.png",
+            src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
             alt: "Renovation de cuisine sur mesure",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -134,7 +134,7 @@ export const renovationCuisinePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/renovation/renovation-cuisine-approach-01.png",
+            src: "/images/generated/renovation/renovation-cuisine-approach-01.webp",
             alt: "Planification d'une renovation de cuisine",
           },
           cardTitle: "Ce qu'on cherche a proteger",
@@ -264,7 +264,7 @@ export const renovationCuisinePage: PageTemplateData = {
               description:
                 "La page pilier principale pour voir le niveau de finition, les materiaux, les projets et le positionnement global.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
                 alt: "Cuisine sur mesure haut de gamme",
               },
               badges: ["Page pilier", "Cuisine"],
@@ -276,7 +276,7 @@ export const renovationCuisinePage: PageTemplateData = {
               description:
                 "Pour comprendre ce qui rend les armoires plus stables, plus constantes et plus credibles a long terme.",
               image: {
-                src: "/images/generated/services/service-fabrication-hero-01.png",
+                src: "/images/generated/services/service-fabrication-hero-01.webp",
                 alt: "Fabrication sur mesure et details techniques",
               },
               badges: ["Fabrication", "Durabilite"],
@@ -288,7 +288,7 @@ export const renovationCuisinePage: PageTemplateData = {
               description:
                 "Pour voir comment la pose, les ajustements sur place et les alignements protegent le rendu final.",
               image: {
-                src: "/images/generated/services/service-installation-hero-01.png",
+                src: "/images/generated/services/service-installation-hero-01.webp",
                 alt: "Installation sur mesure avec ajustements precis",
               },
               badges: ["Installation", "Finition"],

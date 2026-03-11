@@ -41,7 +41,7 @@ export const couleursPage: PageTemplateData = {
           ],
           badges: ["Lumiere", "Entretien", "Cohesion visuelle"],
           image: {
-            src: "/images/generated/materials/material-finish-samples-01.png",
+            src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Choix de couleurs et finis pour projet sur mesure",
           },
           caption:
@@ -98,7 +98,7 @@ export const couleursPage: PageTemplateData = {
               href: "/services/design/",
               description: "Intemporels, lumineux et faciles a integrer.",
               image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.png",
+                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
                 alt: "Palette de finis neutres pour mobilier sur mesure",
               },
               badges: ["Intemporel"],
@@ -109,7 +109,7 @@ export const couleursPage: PageTemplateData = {
               href: "/services/design/",
               description: "Fort impact visuel, demandent une bonne lumiere.",
               image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.png",
+                src: "/images/generated/spaces/space-commercial-hero-01.webp",
                 alt: "Mobilier sur mesure aux tons fonces",
               },
               badges: ["Accent"],
@@ -120,7 +120,7 @@ export const couleursPage: PageTemplateData = {
               href: "/materiaux/bois-massif/",
               description: "Apportent chaleur et variations naturelles.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.png",
+                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Texture de bois massif naturel",
               },
               badges: ["Naturel"],
@@ -132,7 +132,7 @@ export const couleursPage: PageTemplateData = {
               description:
                 "Coordonner comptoir, dosseret, plancher et entretien.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
                 alt: "Cuisine sur mesure avec palette de finis coherente",
               },
               badges: ["Cuisine"],
@@ -144,7 +144,7 @@ export const couleursPage: PageTemplateData = {
               description:
                 "Humidite, nettoyage frequent et ventilation comptent.",
               image: {
-                src: "/images/generated/spaces/space-bath-hero-01.png",
+                src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure avec finis adaptes",
               },
               badges: ["Salle de bain"],
@@ -155,7 +155,7 @@ export const couleursPage: PageTemplateData = {
               href: "/materiaux/",
               description: "Le fini final depend aussi du support choisi.",
               image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.png",
+                src: "/images/generated/materials/comparatif-materiaux-01.webp",
                 alt: "Comparatif visuel de materiaux et finis",
               },
               badges: ["Support"],
@@ -236,7 +236,7 @@ export const couleursPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-color-finish-lifestyle-01.png",
+            src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
             alt: "Choix de finis et echantillons de couleurs",
           },
           cardTitle: "Erreur frequente",

@@ -53,7 +53,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
           ],
           badges: ["Faisabilite", "Coordination", "Integration"],
           image: {
-            src: "/images/generated/renovation/renovation-extension-hero-01.png",
+            src: "/images/generated/renovation/renovation-extension-hero-01.webp",
             alt: "Projet residentiel de renovation et d'agrandissement",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -134,7 +134,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/renovation/renovation-extension-approach-01.png",
+            src: "/images/generated/renovation/renovation-extension-approach-01.webp",
             alt: "Planification d'un projet d'agrandissement residentiel",
           },
           cardTitle: "Ce qu'on cherche a eviter",
@@ -257,7 +257,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
               description:
                 "Quand l'agrandissement sert surtout une cuisine plus fonctionnelle, l'enjeu devient la circulation, l'ilot et l'integration des equipements.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
                 alt: "Cuisine sur mesure integree a un agrandissement",
               },
               badges: ["Cuisine", "Circulation"],
@@ -269,7 +269,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
               description:
                 "Une extension peut permettre d'ajouter ou d'agrandir une salle de bain avec meilleure gestion de l'humidite, de la plomberie et du rangement.",
               image: {
-                src: "/images/generated/spaces/space-bath-hero-01.png",
+                src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure integree a un agrandissement",
               },
               badges: ["Humidite", "Plomberie"],
@@ -281,7 +281,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
               description:
                 "Plusieurs agrandissements servent a creer une suite plus complete avec rangement adapte et organisation plus claire.",
               image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.png",
+                src: "/images/generated/spaces/space-walkin-hero-01.webp",
                 alt: "Walk-in sur mesure dans une extension residentielle",
               },
               badges: ["Rangement", "Suite"],

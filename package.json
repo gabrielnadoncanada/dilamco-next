@@ -10,7 +10,8 @@
     "test": "vitest run",
     "images:list": "node scripts/generate-images.mjs --list",
     "images:generate": "node scripts/generate-images.mjs",
-    "images:apply": "node scripts/apply-image-manifest.mjs"
+    "images:apply": "node scripts/apply-image-manifest.mjs",
+    "images:webp": "node scripts/convert-images-to-webp.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
@@ -48,6 +49,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "next-sitemap": "^4.2.3",
+    "sharp": "^0.34.4",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite-tsconfig-paths": "^6.1.1",

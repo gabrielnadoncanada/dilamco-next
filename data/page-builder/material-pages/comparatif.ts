@@ -41,7 +41,7 @@ export const comparatifPage: PageTemplateData = {
           ],
           badges: ["Structure", "Humidite", "Finition"],
           image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.png",
+            src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Comparatif de materiaux pour cuisine sur mesure",
           },
           caption: "Le bon choix depend toujours du contexte reel",
@@ -96,7 +96,7 @@ export const comparatifPage: PageTemplateData = {
               href: "/materiaux/contreplaque/",
               description: "Stabilite et tenue structurelle.",
               image: {
-                src: "/images/generated/materials/material-plywood-hero-01.png",
+                src: "/images/generated/materials/material-plywood-hero-01.webp",
                 alt: "Detail de contreplaque pour armoires sur mesure",
               },
               badges: ["Structure"],
@@ -107,7 +107,7 @@ export const comparatifPage: PageTemplateData = {
               href: "/materiaux/mdf/",
               description: "Uniformite et finition peinte.",
               image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.png",
+                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
               },
               badges: ["Peinture"],
@@ -118,7 +118,7 @@ export const comparatifPage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Finis decoratifs et cout maitrise.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.png",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de melamine pour mobilier sur mesure",
               },
               badges: ["Decor"],
@@ -129,7 +129,7 @@ export const comparatifPage: PageTemplateData = {
               href: "/materiaux/bois-massif/",
               description: "Texture naturelle et caractere.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.png",
+                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Finition en bois massif naturel",
               },
               badges: ["Naturel"],

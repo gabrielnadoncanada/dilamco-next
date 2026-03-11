@@ -12,6 +12,8 @@ import Lightbox, {
   useLightboxState,
   type SlideImage,
 } from "yet-another-react-lightbox";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 
 import { Heading } from "@/components/elements/heading";
 import { Badge } from "@/components/ui/badge";
@@ -80,6 +82,7 @@ export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
   const lightboxSlides: SlideImage[] = props.items.map((item) => ({
     src: item.image.src,
     alt: item.image.alt,
+    thumbnail: item.image.src,
   }));
 
   const openLightbox = (index: number) => {
@@ -95,6 +98,15 @@ export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
           close={() => setLightboxOpen(false)}
           index={lightboxIndex}
           slides={lightboxSlides}
+          plugins={[Thumbnails, Slideshow]}
+          thumbnails={{
+            position: "bottom",
+            showToggle: false,
+          }}
+          slideshow={{
+            autoplay: false,
+            delay: 3000,
+          }}
           render={{ slide: GridSliderLightboxImage }}
         />
       ) : null}

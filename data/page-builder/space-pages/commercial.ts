@@ -42,13 +42,13 @@ export const commercialPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets commerciaux",
-              href: "/projets/commercial/",
+              href: "/projets/",
               variant: "outline",
             },
           ],
           badges: ["Commercial", "Durable", "Planifie"],
           image: {
-            src: "/images/generated/spaces/space-commercial-hero-01.png",
+            src: "/images/generated/spaces/space-commercial-hero-01.webp",
             alt: "Amenagement commercial sur mesure",
           },
           caption:
@@ -164,7 +164,7 @@ export const commercialPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-commercial-project-01.png",
+            src: "/images/generated/spaces/space-commercial-project-01.webp",
             alt: "Detail materiau pour amenagement commercial",
           },
           cardTitle: "Resultat recherche",
@@ -185,11 +185,11 @@ export const commercialPage: PageTemplateData = {
           items: [
             {
               title: "Amenagement commercial",
-              href: "/projets/commercial/amenagement-commercial-montreal/",
+              href: "/projets/",
               description:
                 "Projet commercial concu pour l'usage reel et une execution propre.",
               image: {
-                src: "/images/generated/spaces/space-commercial-project-01.png",
+                src: "/images/generated/spaces/space-commercial-project-01.webp",
                 alt: "Projet commercial a Montreal",
               },
               badges: ["Montreal", "Commercial"],
@@ -197,11 +197,11 @@ export const commercialPage: PageTemplateData = {
             },
             {
               title: "Armoires commerciales sur mesure",
-              href: "/projets/commercial/armoires-commerciales-sur-mesure-laval/",
+              href: "/projets/",
               description:
                 "Execution stable et materiaux adaptes a un usage plus intensif.",
               image: {
-                src: "/images/generated/spaces/space-commercial-project-02.png",
+                src: "/images/generated/spaces/space-commercial-project-02.webp",
                 alt: "Projet commercial a Laval",
               },
               badges: ["Laval", "Usage intensif"],
@@ -209,11 +209,11 @@ export const commercialPage: PageTemplateData = {
             },
             {
               title: "Mobilier commercial",
-              href: "/projets/commercial/mobilier-commercial-rive-sud/",
+              href: "/projets/",
               description:
                 "Projet sur mesure coordonne pour limiter les imprevus et soigner la finition.",
               image: {
-                src: "/images/generated/spaces/space-commercial-project-03.png",
+                src: "/images/generated/spaces/space-commercial-project-03.webp",
                 alt: "Projet commercial sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Execution"],
@@ -271,7 +271,7 @@ export const commercialPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets commerciaux",
-              href: "/projets/commercial/",
+              href: "/projets/",
               variant: "outline",
             },
           ],

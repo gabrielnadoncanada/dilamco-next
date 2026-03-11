@@ -52,7 +52,7 @@ export const installationPage: PageTemplateData = {
           ],
           badges: ["Alignements", "Ajustements", "Finition"],
           image: {
-            src: "/images/generated/services/service-installation-hero-01.png",
+            src: "/images/generated/services/service-installation-hero-01.webp",
             alt: "Plan technique et echantillons de panneaux pour installation sur mesure",
           },
           caption: "Une pose propre change la perception de toute la piece",
@@ -156,7 +156,7 @@ export const installationPage: PageTemplateData = {
               description:
                 "Armoires, ilots et integration des electromenagers.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
                 alt: "Cuisine sur mesure avec installation precise",
               },
               badges: ["Cuisine", "Integration"],
@@ -167,7 +167,7 @@ export const installationPage: PageTemplateData = {
               href: "/espaces/salle-de-bain/",
               description: "Vanites et protection des chants en milieu humide.",
               image: {
-                src: "/images/generated/spaces/space-bath-hero-01.png",
+                src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure avec finition propre",
               },
               badges: ["Humidite", "Finition"],
@@ -178,7 +178,7 @@ export const installationPage: PageTemplateData = {
               href: "/espaces/commercial/",
               description: "Usage intensif, durabilite et coordination.",
               image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.png",
+                src: "/images/generated/spaces/space-commercial-hero-01.webp",
                 alt: "Amenagement commercial avec installation planifiee",
               },
               badges: ["Commercial", "Coordination"],

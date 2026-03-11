@@ -41,13 +41,13 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               label: "Voir nos cuisines",
-              href: "/projets/cuisine/",
+              href: "/projets/",
               variant: "outline",
             },
           ],
           badges: ["Sur mesure", "Cle en main", "Montreal"],
           image: {
-            src: "/images/generated/spaces/space-cuisine-hero-01.png",
+            src: "/images/generated/spaces/space-cuisine-hero-01.webp",
             alt: "Cuisine sur mesure haut de gamme",
           },
           caption:
@@ -184,11 +184,11 @@ export const cuisinePage: PageTemplateData = {
           items: [
             {
               title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
+              href: "/projets/",
               description:
                 "Cuisine sur mesure avec implantation precise et finition soignee.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-project-01.png",
+                src: "/images/generated/spaces/space-cuisine-project-01.webp",
                 alt: "Projet cuisine sur mesure a Montreal",
               },
               badges: ["Montreal", "Cuisine"],
@@ -196,11 +196,11 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-montreal/",
+              href: "/projets/",
               description:
                 "Projet cuisine concu pour un usage quotidien et une durabilite a long terme.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-project-02.png",
+                src: "/images/generated/spaces/space-cuisine-project-02.webp",
                 alt: "Projet cuisine sur mesure a Laval",
               },
               badges: ["Laval", "Sur mesure"],
@@ -208,11 +208,11 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-rive-sud/",
+              href: "/projets/",
               description:
                 "Execution complete avec coordination du projet et details maitrises.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-project-03.png",
+                src: "/images/generated/spaces/space-cuisine-project-03.webp",
                 alt: "Projet cuisine sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Cle en main"],
@@ -270,7 +270,7 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               label: "Voir nos cuisines",
-              href: "/projets/cuisine/",
+              href: "/projets/",
               variant: "outline",
             },
           ],

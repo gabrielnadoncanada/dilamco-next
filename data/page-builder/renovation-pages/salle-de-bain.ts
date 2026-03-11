@@ -47,13 +47,13 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             },
             {
               label: "Voir les projets salle de bain",
-              href: "/projets/salle-de-bain/",
+              href: "/projets/",
               variant: "outline",
             },
           ],
           badges: ["Humidite", "Coordination", "Montreal"],
           image: {
-            src: "/images/generated/renovation/renovation-bath-hero-01.png",
+            src: "/images/generated/renovation/renovation-bath-hero-01.webp",
             alt: "Renovation de salle de bain sur mesure",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -166,7 +166,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/renovation/renovation-bath-approach-01.png",
+            src: "/images/generated/renovation/renovation-bath-approach-01.webp",
             alt: "Planification d'une renovation de salle de bain",
           },
           cardTitle: "Ce qu'on cherche a eviter",
@@ -296,7 +296,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               description:
                 "La page pilier principale pour voir le niveau de finition, les materiaux, les projets et la logique de rangement.",
               image: {
-                src: "/images/generated/spaces/space-bath-hero-01.png",
+                src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure haut de gamme",
               },
               badges: ["Page pilier", "Salle de bain"],
@@ -308,7 +308,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               description:
                 "Pour comprendre ce qui rend la vanite plus stable, plus durable et mieux executee dans le temps.",
               image: {
-                src: "/images/generated/services/service-fabrication-hero-01.png",
+                src: "/images/generated/services/service-fabrication-hero-01.webp",
                 alt: "Fabrication sur mesure et details techniques",
               },
               badges: ["Fabrication", "Durabilite"],
@@ -320,7 +320,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               description:
                 "Pour voir comment la pose, les ajustements et les alignements protegent un rendu plus propre en fin de chantier.",
               image: {
-                src: "/images/generated/services/service-installation-hero-01.png",
+                src: "/images/generated/services/service-installation-hero-01.webp",
                 alt: "Installation sur mesure avec ajustements precis",
               },
               badges: ["Installation", "Finition"],

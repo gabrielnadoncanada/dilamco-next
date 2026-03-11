@@ -48,7 +48,7 @@ export const designPage: PageTemplateData = {
           ],
           badges: ["Usage reel", "Planification", "Execution"],
           image: {
-            src: "/images/generated/services/service-design-hero-01.png",
+            src: "/images/generated/services/service-design-hero-01.webp",
             alt: "Plan de cuisine sur mesure et echantillons de materiaux",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -151,7 +151,7 @@ export const designPage: PageTemplateData = {
               description:
                 "Zones de travail, circulation, ilot, rangement et integration.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
                 alt: "Cuisine sur mesure pensee pour l'usage reel",
               },
               badges: ["Ergonomie", "Rangement"],
@@ -163,7 +163,7 @@ export const designPage: PageTemplateData = {
               description:
                 "Contraintes d'humidite, rangement et ergonomie quotidienne.",
               image: {
-                src: "/images/generated/spaces/space-bath-hero-01.png",
+                src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure pensee pour l'humidite",
               },
               badges: ["Humidite", "Finitions"],
@@ -175,7 +175,7 @@ export const designPage: PageTemplateData = {
               description:
                 "Organisation par zones, accessibilite et rangement vertical.",
               image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.png",
+                src: "/images/generated/spaces/space-walkin-hero-01.webp",
                 alt: "Walk-in sur mesure pense pour l'organisation",
               },
               badges: ["Organisation", "Acces"],

@@ -45,7 +45,7 @@ export const quincailleriePage: PageTemplateData = {
           ],
           badges: ["Materiaux", "Durabilite", "Qualite percue"],
           image: {
-            src: "/images/generated/materials/material-hardware-hero-01.png",
+            src: "/images/generated/materials/material-hardware-hero-01.webp",
             alt: "Cuisine sur mesure mettant en valeur la qualite de la quincaillerie",
           },
           caption:
@@ -223,7 +223,7 @@ export const quincailleriePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-birch-drawer-detail-01.png",
+            src: "/images/generated/materials/material-birch-drawer-detail-01.webp",
             alt: "Detail de cuisine sur mesure illustrant un tiroir durable",
           },
           cardTitle: "Exemple de structure durable",
@@ -320,7 +320,7 @@ export const quincailleriePage: PageTemplateData = {
               description:
                 "Comprendre son role dans la solidite des armoires et des tiroirs.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-card-01.png",
+                src: "/images/generated/materials/material-solid-wood-card-01.webp",
                 alt: "Bois massif pour armoires sur mesure",
               },
               badges: ["Materiaux", "Structure"],
@@ -332,7 +332,7 @@ export const quincailleriePage: PageTemplateData = {
               description:
                 "Pourquoi il ameliore la stabilite et la durabilite dans les elements critiques.",
               image: {
-                src: "/images/generated/materials/material-plywood-card-01.png",
+                src: "/images/generated/materials/material-plywood-card-01.webp",
                 alt: "Contreplaque utilise dans une cuisine sur mesure",
               },
               badges: ["Materiaux", "Stabilite"],
@@ -344,7 +344,7 @@ export const quincailleriePage: PageTemplateData = {
               description:
                 "Voir comment ces choix s'integrent dans un projet complet.",
               image: {
-                src: "/images/generated/materials/material-kitchen-durability-card-01.png",
+                src: "/images/generated/materials/material-kitchen-durability-card-01.webp",
                 alt: "Cuisine sur mesure haut de gamme",
               },
               badges: ["Espaces", "Cuisine"],
@@ -356,7 +356,7 @@ export const quincailleriePage: PageTemplateData = {
               description:
                 "Explorer les memes principes appliques a un environnement plus humide.",
               image: {
-                src: "/images/generated/materials/material-hardware-detail-01.png",
+                src: "/images/generated/materials/material-hardware-detail-01.webp",
                 alt: "Vanite sur mesure pour salle de bain",
               },
               badges: ["Espaces", "Salle de bain"],

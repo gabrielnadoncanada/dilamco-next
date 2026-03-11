@@ -45,7 +45,7 @@ export const contreplaquePage: PageTemplateData = {
           ],
           badges: ["Structure", "Stabilite", "Durabilite"],
           image: {
-            src: "/images/generated/materials/material-plywood-hero-01.png",
+            src: "/images/generated/materials/material-plywood-hero-01.webp",
             alt: "Cuisine sur mesure avec structure durable",
           },
           caption:
@@ -157,7 +157,7 @@ export const contreplaquePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-plywood-detail-01.png",
+            src: "/images/generated/materials/material-plywood-detail-01.webp",
             alt: "Detail de cuisine sur mesure en contreplaque",
           },
           cardTitle: "A retenir",
@@ -181,7 +181,7 @@ export const contreplaquePage: PageTemplateData = {
               description:
                 "Comparer contreplaque, MDF, melamine et bois massif.",
               image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.png",
+                src: "/images/generated/materials/comparatif-materiaux-01.webp",
                 alt: "Comparatif visuel de plusieurs materiaux d'armoires",
               },
               badges: ["Comparatif"],
@@ -192,7 +192,7 @@ export const contreplaquePage: PageTemplateData = {
               href: "/materiaux/mdf/",
               description: "Plus oriente finition peinte.",
               image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.png",
+                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
               },
               badges: ["Peinture"],
@@ -203,7 +203,7 @@ export const contreplaquePage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Plus orientee decor et budget.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.png",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de melamine pour mobilier sur mesure",
               },
               badges: ["Decor"],
@@ -214,7 +214,7 @@ export const contreplaquePage: PageTemplateData = {
               href: "/materiaux/bois-massif/",
               description: "Plus pertinent sur les elements visibles.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.png",
+                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Finition en bois massif naturel",
               },
               badges: ["Naturel"],

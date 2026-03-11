@@ -40,7 +40,7 @@ export const page: PageTemplateData = {
           ],
           badges: ["Sur mesure", "Execution", "Durabilite", "Cle en main"],
           image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.png",
+            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Equipe et approche Dilamco pour les projets sur mesure",
           },
           caption:

@@ -44,13 +44,13 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               label: "Voir nos realisations",
-              href: "/projets/salle-de-lavage/",
+              href: "/projets/",
               variant: "outline",
             },
           ],
           badges: ["Fonctionnel", "Durable", "Sur mesure"],
           image: {
-            src: "/images/generated/spaces/space-laundry-hero-01.png",
+            src: "/images/generated/spaces/space-laundry-hero-01.webp",
             alt: "Salle de lavage sur mesure haut de gamme",
           },
           caption:
@@ -166,7 +166,7 @@ export const salleDeLavagePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-laundry-project-01.png",
+            src: "/images/generated/spaces/space-laundry-project-01.webp",
             alt: "Detail materiau pour salle de lavage sur mesure",
           },
           cardTitle: "Impact concret",
@@ -187,11 +187,11 @@ export const salleDeLavagePage: PageTemplateData = {
           items: [
             {
               title: "Salle de lavage sur mesure",
-              href: "/projets/salle-de-lavage/salle-de-lavage-sur-mesure-montreal/",
+              href: "/projets/",
               description:
                 "Rangement et surfaces de travail integres dans un espace de service compact.",
               image: {
-                src: "/images/generated/spaces/space-laundry-project-01.png",
+                src: "/images/generated/spaces/space-laundry-project-01.webp",
                 alt: "Projet salle de lavage sur mesure a Montreal",
               },
               badges: ["Montreal", "Fonctionnel"],
@@ -199,11 +199,11 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               title: "Salle de lavage sur mesure",
-              href: "/projets/salle-de-lavage/salle-de-lavage-sur-mesure-laval/",
+              href: "/projets/",
               description:
                 "Amenagement durable avec rangement vertical et finition propre.",
               image: {
-                src: "/images/generated/spaces/space-laundry-project-02.png",
+                src: "/images/generated/spaces/space-laundry-project-02.webp",
                 alt: "Projet salle de lavage sur mesure a Laval",
               },
               badges: ["Laval", "Durable"],
@@ -211,11 +211,11 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               title: "Salle de lavage sur mesure",
-              href: "/projets/salle-de-lavage/salle-de-lavage-sur-mesure-rive-sud/",
+              href: "/projets/",
               description:
                 "Projet concu pour simplifier l'usage quotidien sans sacrifier la qualite.",
               image: {
-                src: "/images/generated/spaces/space-laundry-project-03.png",
+                src: "/images/generated/spaces/space-laundry-project-03.webp",
                 alt: "Projet salle de lavage sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Sur mesure"],
@@ -273,7 +273,7 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               label: "Voir nos realisations",
-              href: "/projets/salle-de-lavage/",
+              href: "/projets/",
               variant: "outline",
             },
           ],

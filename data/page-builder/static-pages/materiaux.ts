@@ -40,7 +40,7 @@ export const page: PageTemplateData = {
           ],
           badges: ["Contreplaque", "MDF", "Melamine", "Quincaillerie"],
           image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.png",
+            src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Comparatif visuel de materiaux pour armoires sur mesure",
           },
           caption:
@@ -99,7 +99,7 @@ export const page: PageTemplateData = {
               description: "Structure stable et durable.",
               href: "/materiaux/contreplaque/",
               image: {
-                src: "/images/generated/materials/material-plywood-hero-01.png",
+                src: "/images/generated/materials/material-plywood-hero-01.webp",
                 alt: "Detail de contreplaque pour armoires sur mesure",
               },
               badges: ["Structure", "Durabilite"],
@@ -110,7 +110,7 @@ export const page: PageTemplateData = {
               description: "Uniformite et finition peinte.",
               href: "/materiaux/mdf/",
               image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.png",
+                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
               },
               badges: ["Finition", "Peinture"],
@@ -121,7 +121,7 @@ export const page: PageTemplateData = {
               description: "Decor et cout maitrise.",
               href: "/materiaux/melamine/",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.png",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de melamine pour mobilier sur mesure",
               },
               badges: ["Decor", "Budget"],
@@ -132,7 +132,7 @@ export const page: PageTemplateData = {
               description: "Texture naturelle et caractere.",
               href: "/materiaux/bois-massif/",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.png",
+                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Finition en bois massif naturel",
               },
               badges: ["Naturel", "Visible"],
@@ -143,7 +143,7 @@ export const page: PageTemplateData = {
               description: "Confort, precision et longevite.",
               href: "/materiaux/quincaillerie/",
               image: {
-                src: "/images/generated/materials/material-hardware-hero-01.png",
+                src: "/images/generated/materials/material-hardware-hero-01.webp",
                 alt: "Quincaillerie premium pour armoires et tiroirs",
               },
               badges: ["Usage", "Durabilite"],
@@ -154,7 +154,7 @@ export const page: PageTemplateData = {
               description: "Cohesion visuelle et entretien.",
               href: "/materiaux/couleurs/",
               image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.png",
+                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
                 alt: "Echantillons de couleurs et finis pour cuisine sur mesure",
               },
               badges: ["Style", "Entretien"],
@@ -165,7 +165,7 @@ export const page: PageTemplateData = {
               description: "Vue d'ensemble rapide pour cadrer le choix.",
               href: "/materiaux/comparatif/",
               image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.png",
+                src: "/images/generated/materials/comparatif-materiaux-01.webp",
                 alt: "Comparatif visuel de plusieurs materiaux d'armoires",
               },
               badges: ["Comparatif", "Decision"],

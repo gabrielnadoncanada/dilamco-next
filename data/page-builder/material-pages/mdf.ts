@@ -41,7 +41,7 @@ export const mdfPage: PageTemplateData = {
           ],
           badges: ["Peinture", "Uniformite", "Facades"],
           image: {
-            src: "/images/generated/materials/material-finish-samples-01.png",
+            src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Echantillons et surface peinte uniforme",
           },
           caption:
@@ -154,7 +154,7 @@ export const mdfPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-mdf-painted-panel-01.png",
+            src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
             alt: "Finition peinte uniforme sur panneau MDF",
           },
           cardTitle: "Approche recommandee",
@@ -177,7 +177,7 @@ export const mdfPage: PageTemplateData = {
               href: "/materiaux/comparatif/",
               description: "Vue d'ensemble par usage.",
               image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.png",
+                src: "/images/generated/materials/comparatif-materiaux-01.webp",
                 alt: "Comparatif visuel de plusieurs materiaux d'armoires",
               },
               badges: ["Comparatif"],
@@ -188,7 +188,7 @@ export const mdfPage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Decor et cout plus maitrise.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.png",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de melamine pour mobilier sur mesure",
               },
               badges: ["Decor"],
@@ -199,7 +199,7 @@ export const mdfPage: PageTemplateData = {
               href: "/materiaux/contreplaque/",
               description: "Plus oriente structure.",
               image: {
-                src: "/images/generated/materials/material-plywood-hero-01.png",
+                src: "/images/generated/materials/material-plywood-hero-01.webp",
                 alt: "Detail de contreplaque pour armoires sur mesure",
               },
               badges: ["Structure"],
@@ -210,7 +210,7 @@ export const mdfPage: PageTemplateData = {
               href: "/materiaux/couleurs/",
               description: "Le fini choisi change beaucoup la perception.",
               image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.png",
+                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
                 alt: "Echantillons de couleurs et finis pour mobilier sur mesure",
               },
               badges: ["Finition"],

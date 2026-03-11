@@ -42,7 +42,7 @@ export const boisMassifPage: PageTemplateData = {
           ],
           badges: ["Naturel", "Premium", "Elements visibles"],
           image: {
-            src: "/images/generated/materials/material-birch-drawer-detail-01.png",
+            src: "/images/generated/materials/material-birch-drawer-detail-01.webp",
             alt: "Cuisine sur mesure avec details en bois massif",
           },
           caption:
@@ -156,7 +156,7 @@ export const boisMassifPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-solid-wood-finish-detail-01.png",
+            src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
             alt: "Detail de finition en bois massif",
           },
           cardTitle: "Approche recommandee",
@@ -179,7 +179,7 @@ export const boisMassifPage: PageTemplateData = {
               href: "/materiaux/contreplaque/",
               description: "Plus oriente structure.",
               image: {
-                src: "/images/generated/materials/material-plywood-hero-01.png",
+                src: "/images/generated/materials/material-plywood-hero-01.webp",
                 alt: "Detail de contreplaque pour armoires sur mesure",
               },
               badges: ["Structure"],
@@ -190,7 +190,7 @@ export const boisMassifPage: PageTemplateData = {
               href: "/materiaux/mdf/",
               description: "Plus adapte aux finis peints uniformes.",
               image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.png",
+                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
               },
               badges: ["Peinture"],
@@ -201,7 +201,7 @@ export const boisMassifPage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Decor et cout plus maitrise.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.png",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de melamine pour mobilier sur mesure",
               },
               badges: ["Decor"],
@@ -212,7 +212,7 @@ export const boisMassifPage: PageTemplateData = {
               href: "/materiaux/couleurs/",
               description: "Choisir le bon rendu visuel.",
               image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.png",
+                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
                 alt: "Echantillons de couleurs et finis pour mobilier sur mesure",
               },
               badges: ["Finition"],

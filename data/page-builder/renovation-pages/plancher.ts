@@ -53,7 +53,7 @@ export const renovationPlancherPage: PageTemplateData = {
           ],
           badges: ["Transitions", "Niveaux", "Sequence"],
           image: {
-            src: "/images/generated/renovation/renovation-plancher-hero-01.png",
+            src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
             alt: "Renovation de plancher",
           },
           caption: "Montreal, Laval et Rive-Sud",
@@ -136,7 +136,7 @@ export const renovationPlancherPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/renovation/renovation-plancher-approach-01.png",
+            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
             alt: "Coordination du plancher dans une renovation",
           },
           cardTitle: "Ce qu'on cherche a eviter",
@@ -266,7 +266,7 @@ export const renovationPlancherPage: PageTemplateData = {
               description:
                 "La page principale pour comprendre comment sequence, coordination et travaux connexes s'alignent dans un projet plus large.",
               image: {
-                src: "/images/generated/services/service-renovation-hero-01.png",
+                src: "/images/generated/services/service-renovation-hero-01.webp",
                 alt: "Renovation cle en main mieux coordonnee",
               },
               badges: ["Page principale", "Coordination"],
@@ -278,7 +278,7 @@ export const renovationPlancherPage: PageTemplateData = {
               description:
                 "Quand le plancher influence les niveaux, l'ilot, les armoires et la lecture generale de la cuisine.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.png",
+                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
                 alt: "Cuisine sur mesure avec integration propre du plancher",
               },
               badges: ["Cuisine", "Niveaux"],
@@ -290,7 +290,7 @@ export const renovationPlancherPage: PageTemplateData = {
               description:
                 "Quand les transitions, l'humidite et la finition du sol doivent soutenir le reste de la piece sans faiblesse visible.",
               image: {
-                src: "/images/generated/spaces/space-bath-hero-01.png",
+                src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure avec finition de plancher propre",
               },
               badges: ["Salle de bain", "Finition"],

@@ -51,7 +51,7 @@ export const page: PageTemplateData = {
           ],
           badges: ["Design", "Fabrication", "Installation", "Coordination"],
           image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.png",
+            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Processus Dilamco pour un projet sur mesure",
           },
           caption:

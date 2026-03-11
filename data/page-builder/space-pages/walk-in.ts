@@ -41,13 +41,13 @@ export const walkInPage: PageTemplateData = {
             },
             {
               label: "Voir nos walk-ins",
-              href: "/projets/walk-in/",
+              href: "/projets/",
               variant: "outline",
             },
           ],
           badges: ["Rangement", "Organisation", "Sur mesure"],
           image: {
-            src: "/images/generated/spaces/space-walkin-hero-01.png",
+            src: "/images/generated/spaces/space-walkin-hero-01.webp",
             alt: "Walk-in sur mesure haut de gamme",
           },
           caption:
@@ -163,7 +163,7 @@ export const walkInPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-walkin-project-01.png",
+            src: "/images/generated/spaces/space-walkin-project-01.webp",
             alt: "Detail materiau pour walk-in sur mesure",
           },
           cardTitle: "Avantage concret",
@@ -184,11 +184,11 @@ export const walkInPage: PageTemplateData = {
           items: [
             {
               title: "Walk-in sur mesure",
-              href: "/projets/walk-in/walk-in-sur-mesure-montreal/",
+              href: "/projets/",
               description:
                 "Organisation sur mesure avec circulation et rangement adaptes au quotidien.",
               image: {
-                src: "/images/generated/spaces/space-walkin-project-01.png",
+                src: "/images/generated/spaces/space-walkin-project-01.webp",
                 alt: "Projet walk-in sur mesure a Montreal",
               },
               badges: ["Montreal", "Organisation"],
@@ -196,11 +196,11 @@ export const walkInPage: PageTemplateData = {
             },
             {
               title: "Walk-in sur mesure",
-              href: "/projets/walk-in/walk-in-sur-mesure-laval/",
+              href: "/projets/",
               description:
                 "Walk-in concu pour maximiser l'espace avec un rendu propre et durable.",
               image: {
-                src: "/images/generated/spaces/space-walkin-project-02.png",
+                src: "/images/generated/spaces/space-walkin-project-02.webp",
                 alt: "Projet walk-in sur mesure a Laval",
               },
               badges: ["Laval", "Sur mesure"],
@@ -208,11 +208,11 @@ export const walkInPage: PageTemplateData = {
             },
             {
               title: "Walk-in sur mesure",
-              href: "/projets/walk-in/walk-in-sur-mesure-rive-sud/",
+              href: "/projets/",
               description:
                 "Rangement personnalise et installation precise pour un usage quotidien.",
               image: {
-                src: "/images/generated/spaces/space-walkin-project-03.png",
+                src: "/images/generated/spaces/space-walkin-project-03.webp",
                 alt: "Projet walk-in sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "Premium"],
@@ -270,7 +270,7 @@ export const walkInPage: PageTemplateData = {
             },
             {
               label: "Voir nos walk-ins",
-              href: "/projets/walk-in/",
+              href: "/projets/",
               variant: "outline",
             },
           ],
