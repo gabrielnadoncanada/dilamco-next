@@ -1,4 +1,4 @@
-import Image from "@/components/elements/image";
+import Image from "next/image";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { HeroContent } from "@/features/page-builder/sections/hero/shared/ui/HeroContent";

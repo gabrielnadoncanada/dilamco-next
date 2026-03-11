@@ -6,7 +6,7 @@ import {
   Diamond,
 } from "lucide-react";
 
-import Image from "@/components/elements/image";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 

@@ -1,21 +1,22 @@
 "use client";
 
 import { Accordion } from "@/components/ui/accordion";
-import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 import type { MenuItem, NavAction } from "../navbar.types";
 import { MOBILE_BUTTONS, NAVIGATION } from "../navbar.constants";
 import { ActionButtons } from "./action-buttons";
 import { MobileMenuItem } from "./mobile-menu-item";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 interface MobileNavigationMenuProps {
   open: boolean;
+  onOpenChange: (open: boolean) => void;
   navigation?: MenuItem[];
   mobileActions?: NavAction[];
 }
 
 export function MobileNavigationMenu({
   open,
+  onOpenChange,
   navigation,
   mobileActions
 }: MobileNavigationMenuProps) {
@@ -23,7 +24,7 @@ export function MobileNavigationMenu({
   const actions = mobileActions || MOBILE_BUTTONS;
 
   return (
-    <Sheet open={open}>
+    <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent
         aria-describedby={undefined}
         side="top"

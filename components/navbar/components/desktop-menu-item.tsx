@@ -48,7 +48,7 @@ export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
       key={`desktop-menu-item-${index}`}
       value={`${index}`}
     >
-        <NavigationMenuLink
+      <NavigationMenuLink
         href={item.url}
         className={`${navigationMenuTriggerStyle()} h-fit bg-transparent px-2.5 text-sm leading-6 font-medium text-muted-foreground`}
       >

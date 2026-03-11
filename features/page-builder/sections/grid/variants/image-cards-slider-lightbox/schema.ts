@@ -11,12 +11,12 @@ const ItemSchema = z.object({
   footerCtaLabel: z.string().min(1).optional(),
 });
 
-export const GridImageCardsSliderSchema = z.object({
+export const GridImageCardsSliderLightboxSchema = z.object({
   heading: z.string().min(1).optional(),
   intro: z.string().min(1).optional(),
   items: z.array(ItemSchema).min(1).max(24),
 });
 
-export type GridImageCardsSliderProps = z.infer<
-  typeof GridImageCardsSliderSchema
+export type GridImageCardsSliderLightboxProps = z.infer<
+  typeof GridImageCardsSliderLightboxSchema
 >;

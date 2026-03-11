@@ -55,12 +55,11 @@ export const page: PageTemplateData = {
       frame: { surface: "muted" },
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "image-cards-slider-lightbox",
         props: {
           heading: "Explorer les projets",
           intro:
             "Choisissez l'univers de projet le plus proche de votre realite pour voir des references mieux ciblees.",
-          lightbox: true,
           items: [
             {
               image: {
