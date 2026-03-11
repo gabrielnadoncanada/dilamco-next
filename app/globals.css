@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
+@import "yet-another-react-lightbox/styles.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -129,6 +130,8 @@
     letter-spacing: 0.01em;
   }
 
+
+
   .container-wrapper {
     width: 100%;
     padding-inline: calc(var(--spacing) * 2);
@@ -157,4 +160,22 @@
     display: block;
     max-width: 100%;
   }
+
+
+  [data-surface="secondary"] {
+    @apply bg-secondary/50;
+  }
+
+  .bg-linear-1 {	
+    @apply from-secondary/50 bg-linear-to-b via-20% via-muted to-muted/80;
+  }
+
+  /* [data-surface="muted"] {
+    @apply from-secondary/50 bg-linear-to-b via-20% via-muted to-muted/80;
+  }
+
+
+  body > header {
+    @apply from-secondary/50 bg-linear-to-b via-20% via-muted to-muted/80
+  } */
 }

@@ -10,7 +10,7 @@ export function Logo({ logo }: LogoProps) {
 
   return (
     <a
-      href={logoConfig.url}
+      href="/"
       className="flex max-h-8 items-center gap-2 text-lg font-semibold tracking-tighter"
     >
       <img

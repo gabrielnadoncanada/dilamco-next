@@ -10,7 +10,7 @@ export const heroSplitImage = defineBlock({
   defaultFrame: {
     container: "xl",
     paddingY: "lg",
-    surface: "default",
+    surface: "muted",
     headerAlign: "left",
     contentAlign: "left",
     className: "max-lg:pt-0!",

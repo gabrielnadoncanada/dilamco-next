@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr-CA" suppressHydrationWarning>
-      <body className={cn(plusJakartaSans.className, 'overflow-x-hidden!')}>
+      <body className={cn(plusJakartaSans.className, 'overflow-x-hidden! ')}>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localBusinessJsonLd()} />
         {children}

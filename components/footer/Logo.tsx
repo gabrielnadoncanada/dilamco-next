@@ -9,7 +9,7 @@ interface LogoProps {
 
 export function Logo({ url, children, className }: LogoProps) {
   return (
-    <SmartLink href={url} className={cn("flex items-center gap-2", className)}>
+    <SmartLink href="/" className={cn("flex items-center gap-2", className)}>
       {children}
     </SmartLink>
   );

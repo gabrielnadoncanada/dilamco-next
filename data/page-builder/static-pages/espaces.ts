@@ -175,58 +175,58 @@ export const page: PageTemplateData = {
         },
       },
     },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-badges-cta",
-        props: {
-          heading: "Projets en vedette",
-          intro:
-            "Quelques realisations pour illustrer la qualite d'execution sur differents types d'espaces.",
-          ctaLabel: "Voir tous les projets",
-          ctaHref: "/projets/",
-          items: [
-            {
-              title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
-              description:
-                "Cuisine sur mesure avec details soignes, implantation claire et execution stable.",
-              image: {
-                src: "/images/generated/spaces/espaces-featured-cuisine-project-01.png",
-                alt: "Projet cuisine sur mesure",
-              },
-              badges: ["Cuisine", "Montreal"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Vanite sur mesure",
-              href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
-              description:
-                "Salle de bain sur mesure avec rangement optimise et finition propre.",
-              image: {
-                src: "/images/generated/spaces/espaces-featured-bath-project-01.png",
-                alt: "Projet salle de bain sur mesure",
-              },
-              badges: ["Salle de bain", "Laval"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Amenagement commercial",
-              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal/",
-              description:
-                "Projet commercial sur mesure pense pour l'usage, la logistique et la durabilite.",
-              image: {
-                src: "/images/generated/spaces/espaces-featured-commercial-project-01.png",
-                alt: "Projet commercial sur mesure",
-              },
-              badges: ["Commercial", "Montreal"],
-              footerCtaLabel: "Voir le projet",
-            },
-          ],
-        },
-      },
-    },
+    // {
+    //   id: "projects",
+    //   content: {
+    //     type: "grid",
+    //     variant: "image-cards-badges-cta",
+    //     props: {
+    //       heading: "Projets en vedette",
+    //       intro:
+    //         "Quelques realisations pour illustrer la qualite d'execution sur differents types d'espaces.",
+    //       ctaLabel: "Voir tous les projets",
+    //       ctaHref: "/projets/",
+    //       items: [
+    //         {
+    //           title: "Cuisine sur mesure",
+    //           href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
+    //           description:
+    //             "Cuisine sur mesure avec details soignes, implantation claire et execution stable.",
+    //           image: {
+    //             src: "/images/generated/spaces/espaces-featured-cuisine-project-01.png",
+    //             alt: "Projet cuisine sur mesure",
+    //           },
+    //           badges: ["Cuisine", "Montreal"],
+    //           footerCtaLabel: "Voir le projet",
+    //         },
+    //         {
+    //           title: "Vanite sur mesure",
+    //           href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
+    //           description:
+    //             "Salle de bain sur mesure avec rangement optimise et finition propre.",
+    //           image: {
+    //             src: "/images/generated/spaces/espaces-featured-bath-project-01.png",
+    //             alt: "Projet salle de bain sur mesure",
+    //           },
+    //           badges: ["Salle de bain", "Laval"],
+    //           footerCtaLabel: "Voir le projet",
+    //         },
+    //         {
+    //           title: "Amenagement commercial",
+    //           href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal/",
+    //           description:
+    //             "Projet commercial sur mesure pense pour l'usage, la logistique et la durabilite.",
+    //           image: {
+    //             src: "/images/generated/spaces/espaces-featured-commercial-project-01.png",
+    //             alt: "Projet commercial sur mesure",
+    //           },
+    //           badges: ["Commercial", "Montreal"],
+    //           footerCtaLabel: "Voir le projet",
+    //         },
+    //       ],
+    //     },
+    //   },
+    // },
     {
       id: "faq",
 

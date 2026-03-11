@@ -204,58 +204,58 @@ export const page: PageTemplateData = {
         },
       },
     },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Projets en vedette",
-          intro:
-            "Decouvrez les realisations recentes de nos espaces sur mesure.",
-          ctaLabel: "Voir tous les projets",
-          ctaHref: "/projets",
-          items: [
-            {
-              title: "Cuisine sur mesure",
-              href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
-              description:
-                "Conception, fabrication controlee et installation precise avec finitions soignees.",
-              image: {
-                src: "/images/generated/home/home-featured-cuisine-project-01.png",
-                alt: "Cuisine sur mesure haut de gamme",
-              },
-              badges: ["Cuisine", "Montreal", "Plateau-Mont-Royal"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Vanite sur mesure",
-              href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
-              description:
-                "Rangement optimise, materiaux durables et execution nette adaptee a la salle de bain.",
-              image: {
-                src: "/images/generated/home/home-featured-bath-project-01.png",
-                alt: "Vanite et salle de bain sur mesure",
-              },
-              badges: ["Salle de bain", "Laval", "Vanites"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Amenagement sur mesure",
-              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal/",
-              description:
-                "Mobilier robuste, lignes epurees et installation planifiee pour minimiser les interruptions.",
-              image: {
-                src: "/images/generated/home/home-featured-commercial-project-01.png",
-                alt: "Salle de lavage sur mesure",
-              },
-              badges: ["Commercial", "Montreal", "Centre-ville"],
-              footerCtaLabel: "Voir le projet",
-            },
-          ],
-        },
-      },
-    },
+    // {
+    //   id: "projects",
+    //   content: {
+    //     type: "grid",
+    //     variant: "image-cards-slider",
+    //     props: {
+    //       heading: "Projets en vedette",
+    //       intro:
+    //         "Decouvrez les realisations recentes de nos espaces sur mesure.",
+    //       ctaLabel: "Voir tous les projets",
+    //       ctaHref: "/projets",
+    //       items: [
+    //         {
+    //           title: "Cuisine sur mesure",
+    //           href: "/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal/",
+    //           description:
+    //             "Conception, fabrication controlee et installation precise avec finitions soignees.",
+    //           image: {
+    //             src: "/images/generated/home/home-featured-cuisine-project-01.png",
+    //             alt: "Cuisine sur mesure haut de gamme",
+    //           },
+    //           badges: ["Cuisine", "Montreal", "Plateau-Mont-Royal"],
+    //           footerCtaLabel: "Voir le projet",
+    //         },
+    //         {
+    //           title: "Vanite sur mesure",
+    //           href: "/projets/salle-de-bain/vanite-sur-mesure-laval/",
+    //           description:
+    //             "Rangement optimise, materiaux durables et execution nette adaptee a la salle de bain.",
+    //           image: {
+    //             src: "/images/generated/home/home-featured-bath-project-01.png",
+    //             alt: "Vanite et salle de bain sur mesure",
+    //           },
+    //           badges: ["Salle de bain", "Laval", "Vanites"],
+    //           footerCtaLabel: "Voir le projet",
+    //         },
+    //         {
+    //           title: "Amenagement sur mesure",
+    //           href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal/",
+    //           description:
+    //             "Mobilier robuste, lignes epurees et installation planifiee pour minimiser les interruptions.",
+    //           image: {
+    //             src: "/images/generated/home/home-featured-commercial-project-01.png",
+    //             alt: "Salle de lavage sur mesure",
+    //           },
+    //           badges: ["Commercial", "Montreal", "Centre-ville"],
+    //           footerCtaLabel: "Voir le projet",
+    //         },
+    //       ],
+    //     },
+    //   },
+    // },
     {
       id: "faq",
 
