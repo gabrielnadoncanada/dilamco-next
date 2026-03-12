@@ -4,27 +4,27 @@ import { SITE } from "@/seo/schema/site";
 export const renovationCuisinePage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Renovation de cuisine",
+    title: "Rénovation de cuisine",
     description:
-      "Renovation de cuisine cle en main : faisabilite, coordination, fabrication et installation d'armoires sur mesure a Montreal.",
+      "Rénovation de cuisine clé en main : faisabilité, coordination, fabrication et installation d'armoires sur mesure à Montréal.",
     path: "/services/renovation/cuisine/",
-    ogAlt: "Renovation de cuisine Dilamco",
+    ogAlt: "Rénovation de cuisine Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "Renovation", url: SITE.url + "/services/renovation/" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
     {
-      name: "Renovation de cuisine",
+      name: "Rénovation de cuisine",
       url: SITE.url + "/services/renovation/cuisine/",
     },
   ],
   service: {
-    name: "Renovation de cuisine",
+    name: "Rénovation de cuisine",
     description:
-      "Design, coordination, fabrication et installation d'armoires sur mesure dans une approche cle en main pour projets de cuisine.",
+      "Design, coordination, fabrication et installation d'armoires sur mesure dans une approche clé en main pour projets de cuisine.",
     url: SITE.url + "/services/renovation/cuisine/",
-    serviceType: "Renovation de cuisine",
+    serviceType: "Rénovation de cuisine",
   },
   blocks: [
     {
@@ -34,11 +34,11 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
+          eyebrow: "Dilamco - Rénovation",
           heading:
-            "Renovation de cuisine cle en main a Montreal, cadrer la cuisine avant d'ouvrir le chantier",
+            "Rénovation de cuisine clé en main à Montréal, cadrer la cuisine avant d'ouvrir le chantier",
           description:
-            "Une renovation de cuisine reussie depend autant de la coordination que du resultat final. Il faut clarifier la portee, la sequence, les raccords techniques et les choix de fabrication pour reduire les imprevus et livrer un resultat coherent.",
+            "Une rénovation de cuisine réussie dépend autant de la coordination que du résultat final. Il faut clarifier la portée, la séquence, les raccords techniques et les choix de fabrication pour réduire les imprévus et livrer un résultat cohérent.",
           actions: [
             {
               label: "Demander une soumission",
@@ -51,12 +51,12 @@ export const renovationCuisinePage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Cuisine", "Cle en main", "Montreal"],
+          badges: ["Cuisine", "clé en main", "Montréal"],
           image: {
             src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-            alt: "Renovation de cuisine sur mesure",
+            alt: "Rénovation de cuisine sur mesure",
           },
-          caption: "Montreal, Laval et Rive-Sud",
+          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
@@ -66,24 +66,24 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Ce qui complique vraiment une renovation de cuisine",
+          heading: "Ce qui complique vraiment une rénovation de cuisine",
           description:
-            "Le probleme n'est pas seulement de choisir des armoires. Une cuisine concentre circulation, plomberie, electricite, electromenagers, rangement et finition dans un espace qui doit rester fonctionnel tous les jours.",
+            "Le problème n'est pas seulement de choisir des armoires. Une cuisine concentre circulation, plomberie, électricité, électroménagers, rangement et finition dans un espace qui doit rester fonctionnel tous les jours.",
           cards: [
             {
-              title: "Portee mal cadree",
+              title: "Portée mal cadrée",
               description:
-                "Quand la sequence n'est pas claire, le chantier accumule les reprises, les retards et les compromis visibles.",
+                "Quand la séquence n'est pas claire, le chantier accumule les reprises, les retards et les compromis visibles.",
             },
             {
               title: "Contraintes techniques",
               description:
-                "Prises, plomberie, ventilation, niveaux et acces aux appareils influencent directement les decisions de design.",
+                "Prises, plomberie, ventilation, niveaux et accès aux appareils influencent directement les décisions de design.",
             },
             {
-              title: "Coordination fragmentee",
+              title: "Coordination fragmentée",
               description:
-                "Plus il y a d'intervenants non alignes, plus la qualite finale depend d'ajustements tardifs et couteux.",
+                "Plus il y a d'intervenants non alignés, plus la qualité finale dépend d'ajustements tardifs et coûteux.",
             },
           ],
           columns: "1",
@@ -96,29 +96,29 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Notre approche pour mieux cadrer une renovation de cuisine",
+          heading: "Notre approche pour mieux cadrer une rénovation de cuisine",
           intro:
-            "L'objectif est d'eviter qu'une cuisine se decide morceau par morceau. Le projet doit etre pense comme un ensemble ou design, fabrication, chantier et pose se soutiennent mutuellement.",
+            "L'objectif est d'éviter qu'une cuisine se décide morceau par morceau. Le projet doit être pensé comme un ensemble où design, fabrication, chantier et pose se soutiennent mutuellement.",
           items: [
             {
               title: "Lecture de l'espace existant",
               description:
-                "On part des contraintes reelles de la piece, pas d'un plan idealise deconnecte du chantier.",
+                "On part des contraintes réelles de la pièce, pas d'un plan idéalisé déconnecté du chantier.",
             },
             {
-              title: "Hierarchie des decisions",
+              title: "Hiérarchie des décisions",
               description:
-                "Circulation, ilot, rangement, appareils et points techniques sont clarifies avant la fabrication.",
+                "Circulation, îlot, rangement, appareils et points techniques sont clarifiés avant la fabrication.",
             },
             {
-              title: "Sequence de travaux",
+              title: "Séquence de travaux",
               description:
-                "Le chantier est structure pour mieux gerer les etapes connexes et limiter les retours en arriere.",
+                "Le chantier est structuré pour mieux gérer les étapes connexes et limiter les retours en arrière.",
             },
             {
-              title: "Controle du rendu final",
+              title: "Contrôle du rendu final",
               description:
-                "Les alignements, les finitions et l'integration des equipements sont penses des le debut, pas corriges a la fin.",
+                "Les alignements, les finitions et l'intégration des équipements sont pensés dès le début, pas corrigés à la fin.",
             },
           ],
           actions: [
@@ -135,11 +135,11 @@ export const renovationCuisinePage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/renovation/renovation-cuisine-approach-01.webp",
-            alt: "Planification d'une renovation de cuisine",
+            alt: "Planification d'une rénovation de cuisine",
           },
-          cardTitle: "Ce qu'on cherche a proteger",
+          cardTitle: "Ce qu'on cherche à protéger",
           cardDescription:
-            "Une cuisine mal sequencee coute rarement moins cher au final. Elle coute surtout plus de temps, plus de corrections et souvent un resultat moins propre.",
+            "Une cuisine mal séquencée coûte rarement moins cher au final. Elle coûte surtout plus de temps, plus de corrections et souvent un résultat moins propre.",
         },
       },
     },
@@ -149,39 +149,39 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Sequence type d'une renovation de cuisine",
+          heading: "Séquence type d'une rénovation de cuisine",
           intro:
-            "La portee exacte est confirmee lors de la soumission, mais la logique generale reste la meme: clarifier, fabriquer, coordonner puis installer proprement.",
+            "La portée exacte est confirmée lors de la soumission, mais la logique générale reste la même: clarifier, fabriquer, coordonner puis installer proprement.",
           steps: [
             {
               number: "1",
               title: "Cadrage",
               description:
-                "Analyse de la cuisine existante, de la portee et des contraintes visibles.",
+                "Analyse de la cuisine existante, de la portée et des contraintes visibles.",
             },
             {
               number: "2",
               title: "Design",
               description:
-                "Organisation de l'espace, ergonomie, ilot, rangement et decisions techniques principales.",
+                "Organisation de l'espace, ergonomie, îlot, rangement et décisions techniques principales.",
             },
             {
               number: "3",
               title: "Fabrication",
               description:
-                "Armoires, ilot et rangement sur mesure prepares selon les choix valides.",
+                "Armoires, îlot et rangement sur mesure préparés selon les choix validés.",
             },
             {
               number: "4",
               title: "Coordination",
               description:
-                "Travaux connexes sequences proprement selon la portee retenue.",
+                "Travaux connexes séquencés proprement selon la portée retenue.",
             },
             {
               number: "5",
               title: "Installation",
               description:
-                "Alignements, ajustements et finition soignee pour une cuisine lisible et coherente.",
+                "Alignements, ajustements et finition soignée pour une cuisine lisible et cohérente.",
             },
           ],
         },
@@ -194,53 +194,53 @@ export const renovationCuisinePage: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading:
-            "Points techniques qui changent la qualite d'une cuisine renovee",
+            "Points techniques qui changent la qualité d'une cuisine rénovée",
           intro:
-            "Le rendu final depend d'une serie de decisions techniques qui semblent secondaires sur papier mais deviennent critiques au chantier.",
+            "Le rendu final dépend d'une série de décisions techniques qui semblent secondaires sur papier mais deviennent critiques au chantier.",
           columns: "2",
           items: [
             {
               title: "Structure des armoires",
               description:
-                "La qualite se joue aussi dans les composantes invisibles.",
+                "La qualité se joue aussi dans les composantes invisibles.",
               icon: "package2",
               bullets: [
                 "Bois massif de bouleau pour les tiroirs.",
-                "Contreplaque de bouleau pour mieux supporter la charge.",
-                "Choix plus credibles pour un usage quotidien intensif.",
+                "Contreplaqué de bouleau pour mieux supporter la charge.",
+                "Choix plus crédibles pour un usage quotidien intensif.",
               ],
             },
             {
-              title: "Integration des appareils",
+              title: "Intégration des appareils",
               description:
-                "Une cuisine se lit mal quand les equipements sont traites trop tard.",
+                "Une cuisine se lit mal quand les équipements sont traités trop tard.",
               icon: "doorOpen",
               bullets: [
-                "Refrigerateur, hotte et lave-vaisselle influences par le design.",
-                "Degagements et alignements valides en amont.",
+                "Réfrigérateur, hotte et lave-vaisselle influencés par le design.",
+                "Dégagements et alignements validés en amont.",
                 "Moins de compromis visibles en fin de chantier.",
               ],
             },
             {
               title: "Ergonomie et circulation",
               description:
-                "Le confort quotidien depend de la facon dont la piece fonctionne.",
+                "Le confort quotidien dépend de la façon dont la pièce fonctionne.",
               icon: "slidersHorizontal",
               bullets: [
                 "Distances de travail plus logiques.",
-                "Ilot et rangement mieux proportionnes a l'espace.",
+                "Îlot et rangement mieux proportionnés à l'espace.",
                 "Moins de friction dans l'usage quotidien.",
               ],
             },
             {
               title: "Coordination chantier",
               description:
-                "La pose propre depend d'un chantier prepare correctement.",
+                "La pose propre dépend d'un chantier préparé correctement.",
               icon: "wrench",
               bullets: [
-                "Ordre des etapes mieux cadre.",
+                "Ordre des étapes mieux cadrées.",
                 "Moins de reprises entre fabrication et installation.",
-                "Finition plus stable jusqu'a la livraison.",
+                "Finition plus stable jusqu'à la livraison.",
               ],
             },
           ],
@@ -248,7 +248,7 @@ export const renovationCuisinePage: PageTemplateData = {
       },
     },
     {
-      id: "integration",
+      id: "intégration",
       content: {
         type: "grid",
         variant: "image-cards-slider",
@@ -256,13 +256,13 @@ export const renovationCuisinePage: PageTemplateData = {
           heading:
             "Cette page service soutient surtout votre projet de cuisine sur mesure",
           intro:
-            "La renovation de cuisine rassure sur la methode et la coordination. Pour la vision complete du resultat, des materiaux et des realisations, la page pilier cuisine reste la destination principale.",
+            "La rénovation de cuisine rassure sur la méthode et la coordination. Pour la vision complète du résultat, des matériaux et des réalisations, la page pilier cuisine reste la destination principale.",
           items: [
             {
               title: "Cuisine sur mesure",
               href: "/espaces/cuisine/",
               description:
-                "La page pilier principale pour voir le niveau de finition, les materiaux, les projets et le positionnement global.",
+                "La page pilier principale pour voir le niveau de finition, les matériaux, les projets et le positionnement global.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
                 alt: "Cuisine sur mesure haut de gamme",
@@ -274,22 +274,22 @@ export const renovationCuisinePage: PageTemplateData = {
               title: "Service de fabrication",
               href: "/services/fabrication/",
               description:
-                "Pour comprendre ce qui rend les armoires plus stables, plus constantes et plus credibles a long terme.",
+                "Pour comprendre ce qui rend les armoires plus stables, plus constantes et plus crédibles à long terme.",
               image: {
                 src: "/images/generated/services/service-fabrication-hero-01.webp",
-                alt: "Fabrication sur mesure et details techniques",
+                alt: "Fabrication sur mesure et détails techniques",
               },
-              badges: ["Fabrication", "Durabilite"],
+              badges: ["Fabrication", "Durabilité"],
               footerCtaLabel: "Voir fabrication",
             },
             {
               title: "Service d'installation",
               href: "/services/installation/",
               description:
-                "Pour voir comment la pose, les ajustements sur place et les alignements protegent le rendu final.",
+                "Pour voir comment la pose, les ajustements sur place et les alignements protègent le rendu final.",
               image: {
                 src: "/images/generated/services/service-installation-hero-01.webp",
-                alt: "Installation sur mesure avec ajustements precis",
+                alt: "Installation sur mesure avec ajustements précis",
               },
               badges: ["Installation", "Finition"],
               footerCtaLabel: "Voir installation",
@@ -304,24 +304,24 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Ce qu'une renovation de cuisine bien cadree doit produire",
+          heading: "Ce qu'une rénovation de cuisine bien cadrée doit produire",
           description:
-            "La preuve de competence ne tient pas seulement dans une belle photo. Elle se voit dans la fluidite d'usage, la lecture des alignements et la facon dont les decisions techniques disparaissent au profit d'une cuisine simple a vivre.",
+            "La preuve de compétence ne tient pas seulement dans une belle photo. Elle se voit dans la fluidité d'usage, la lecture des alignements et la façon dont les décisions techniques disparaissent au profit d'une cuisine simple à vivre.",
           cards: [
             {
               title: "Chantier plus lisible",
               description:
-                "Moins de flottement sur la sequence, les responsabilites et les ajustements de derniere minute.",
+                "Moins de flottement sur la séquence, les responsabilités et les ajustements de dernière minute.",
             },
             {
-              title: "Cuisine plus coherente",
+              title: "Cuisine plus cohérente",
               description:
-                "Ilot, rangement, appareils et circulation fonctionnent comme un ensemble au lieu de se concurrencer.",
+                "Îlot, rangement, appareils et circulation fonctionnent comme un ensemble au lieu de se concurrencer.",
             },
             {
               title: "Finition plus nette",
               description:
-                "Alignements, joints et integration des equipements soutiennent une perception plus premium.",
+                "Alignements, joints et intégration des équipements soutiennent une perception plus premium.",
             },
           ],
           columns: "1",
@@ -335,33 +335,33 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - renovation de cuisine",
+          heading: "FAQ - rénovation de cuisine",
           intro:
-            "Reponses claires sur delais, condo, coordination et portee du projet.",
+            "Réponses claires sur délais, condo, coordination et portée du projet.",
           items: [
             {
-              q: "Combien de temps dure une renovation de cuisine?",
-              a: "La duree varie selon la portee, les contraintes du lieu et la coordination requise.",
+              q: "Combien de temps dure une rénovation de cuisine?",
+              a: "La durée varie selon la portée, les contraintes du lieu et la coordination requise.",
             },
             {
               q: "Travaillez-vous avec d'autres intervenants sur le chantier?",
-              a: "Oui, lorsque la portee le demande. L'objectif est justement d'ordonner les interventions pour eviter les conflits et proteger la qualite du resultat final.",
+              a: "Oui, lorsque la portée le demande. L'objectif est justement d'ordonner les interventions pour éviter les conflits et protéger la qualité du résultat final.",
             },
             {
               q: "Est-ce possible en condo?",
-              a: "Oui. L'acces, les horaires et certaines contraintes techniques doivent etre cadres tot.",
+              a: "Oui. L'accès, les horaires et certaines contraintes techniques doivent être cadrés tôt.",
             },
             {
               q: "Dois-je quitter le logement pendant les travaux?",
-              a: "Cela depend de la portee. Pour une renovation complete, certaines periodes peuvent etre moins confortables.",
+              a: "Cela dépend de la portée. Pour une rénovation complète, certaines périodes peuvent être moins confortables.",
             },
             {
-              q: "Puis-je faire une renovation partielle?",
-              a: "Oui. Certains projets visent surtout l'armoire, l'ilot et l'installation, d'autres incluent plus de travaux.",
+              q: "Puis-je faire une rénovation partielle?",
+              a: "Oui. Certains projets visent surtout l'armoire, l'îlot et l'installation, d'autres incluent plus de travaux.",
             },
             {
-              q: "Ou voir l'approche complete pour une cuisine sur mesure?",
-              a: "La page renovation de cuisine explique surtout la logique de coordination et de chantier. Pour la vision complete du produit, des materiaux et des realisations, la page cuisine sur mesure est la reference principale.",
+              q: "Où voir l'approche complète pour une cuisine sur mesure?",
+              a: "La page rénovation de cuisine explique surtout la logique de coordination et de chantier. Pour la vision complète du produit, des matériaux et des réalisations, la page cuisine sur mesure est la référence principale.",
             },
           ],
         },
@@ -374,9 +374,9 @@ export const renovationCuisinePage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading:
-            "Vous voulez cadrer une renovation de cuisine correctement ?",
+            "Vous voulez cadrer une rénovation de cuisine correctement ?",
           intro:
-            "On vous aide a definir la bonne sequence et le bon niveau de coordination, puis a vous rediriger vers la page pilier cuisine pour la vision complete du projet.",
+            "On vous aide à définir la bonne séquence et le bon niveau de coordination, puis à vous rediriger vers la page pilier cuisine pour la vision complète du projet.",
           actions: [
             {
               label: "Demander une soumission",
@@ -389,7 +389,7 @@ export const renovationCuisinePage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Cuisine sur mesure, ilot, rangement et renovation integree",
+          note: "Cuisine sur mesure, îlot, rangement et rénovation intégrée",
         },
       },
     },

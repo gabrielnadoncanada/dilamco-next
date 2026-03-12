@@ -4,23 +4,23 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Renovation cle en main",
+    title: "Rénovation clé en main",
     description:
-      "Renovation cle en main : coordination et execution quand le projet implique plusieurs corps de metier.",
+      "Rénovation clé en main : coordination et exécution quand le projet implique plusieurs corps de métier.",
     path: "/services/renovation/",
-    ogAlt: "Renovation cle en main Dilamco",
+    ogAlt: "Rénovation clé en main Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "Renovation cle en main", url: SITE.url + "/services/renovation/" },
+    { name: "Rénovation clé en main", url: SITE.url + "/services/renovation/" },
   ],
   service: {
-    name: "Renovation cle en main",
+    name: "Rénovation clé en main",
     description:
-      "Coordination et execution lorsque le projet implique plusieurs corps de metier.",
+      "Coordination et exécution lorsque le projet implique plusieurs corps de métier.",
     url: SITE.url + "/services/renovation/",
-    serviceType: "Renovation",
+    serviceType: "Rénovation",
   },
   blocks: [
     {
@@ -31,9 +31,9 @@ export const page: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Services",
-          heading: "Renovation cle en main",
+          heading: "Rénovation clé en main",
           description:
-            "Coordination des travaux connexes au besoin pour reduire les imprevus et livrer un resultat coherent du debut a la fin.",
+            "Coordination des travaux connexes au besoin pour réduire les imprévus et livrer un résultat cohérent du début à la fin.",
           actions: [
             {
               label: "Demander une soumission",
@@ -46,13 +46,13 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Coordination", "Execution", "Cohesion"],
+          badges: ["Coordination", "Exécution", "Cohésion"],
           image: {
             src: "/images/hero/kitchen-hero.webp",
-            alt: "Projet de renovation sur mesure",
+            alt: "Projet de rénovation sur mesure",
           },
           caption:
-            "Quand plusieurs corps de metier doivent avancer proprement ensemble",
+            "Quand plusieurs corps de métier doivent avancer proprement ensemble",
         },
       },
     },
@@ -62,15 +62,15 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Quand la renovation cle en main est pertinente",
+          heading: "Quand la rénovation clé en main est pertinente",
           intro:
-            "Cette approche devient pertinente quand le projet depasse la seule fabrication et installation d'armoires.",
-          badges: ["Plomberie", "Electricite", "Plancher", "Coordination"],
-          cardTitle: "Ce que ca apporte",
+            "Cette approche devient pertinente quand le projet dépasse la seule fabrication et installation d'armoires.",
+          badges: ["Plomberie", "Électricité", "Plancher", "Coordination"],
+          cardTitle: "Ce que ça apporte",
           items: [
             "Moins de fragmentation entre intervenants.",
-            "Un calendrier mieux cadre des le depart.",
-            "Une execution plus coherente sur le chantier.",
+            "Un calendrier mieux cadré dès le départ.",
+            "Une exécution plus cohérente sur le chantier.",
           ],
           actions: [
             {
@@ -93,42 +93,42 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Types de renovation",
+          heading: "Types de rénovation",
           intro:
-            "Accedez a la page adaptee selon la nature des travaux a coordonner.",
+            "Accédez à la page adaptée selon la nature des travaux à coordonner.",
           items: [
             {
-              title: "Renovation de cuisine",
+              title: "Rénovation de cuisine",
               href: "/services/renovation/cuisine",
               description:
                 "Coordination de cuisine avec fabrication, pose et travaux connexes.",
               image: {
                 src: "/images/spaces/cabinet-cuisines.webp",
-                alt: "Renovation de cuisine",
+                alt: "Rénovation de cuisine",
               },
               badges: ["Cuisine", "Coordination"],
               footerCtaLabel: "Voir cuisine",
             },
             {
-              title: "Renovation de salle de bain",
+              title: "Rénovation de salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Gestion des contraintes d'humidite, plomberie et finition.",
+                "Gestion des contraintes d'humidité, plomberie et finition.",
               image: {
-                src: "/images/spaces/vanite-salles-de-bain.webp",
-                alt: "Renovation de salle de bain",
+                src: "/images/spaces/vanité-salles-de-bain.webp",
+                alt: "Rénovation de salle de bain",
               },
-              badges: ["Salle de bain", "Humidite"],
+              badges: ["Salle de bain", "Humidité"],
               footerCtaLabel: "Voir salle de bain",
             },
             {
-              title: "Renovation de plancher",
+              title: "Rénovation de plancher",
               href: "/services/renovation/plancher",
               description:
-                "Integration du plancher dans la sequence globale de renovation.",
+                "Intégration du plancher dans la séquence globale de rénovation.",
               image: {
                 src: "/images/spaces/commercial.webp",
-                alt: "Renovation de plancher",
+                alt: "Rénovation de plancher",
               },
               badges: ["Plancher", "Transitions"],
               footerCtaLabel: "Voir plancher",
@@ -142,7 +142,7 @@ export const page: PageTemplateData = {
                 src: "/images/spaces/commercial.webp",
                 alt: "Agrandissement de maison",
               },
-              badges: ["Agrandissement", "Execution"],
+              badges: ["Agrandissement", "Exécution"],
               footerCtaLabel: "Voir agrandissement",
             },
           ],
@@ -155,9 +155,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous avez un projet avec plusieurs etapes a coordonner ?",
+          heading: "Vous avez un projet avec plusieurs étapes à coordonner ?",
           intro:
-            "On vous aide a cadrer un projet de renovation plus propre, plus previsible et mieux execute.",
+            "On vous aide à cadrer un projet de rénovation plus propre, plus prévisible et mieux exécuté.",
           actions: [
             {
               label: "Demander une soumission",
@@ -165,12 +165,12 @@ export const page: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir les types de renovation",
+              label: "Voir les types de rénovation",
               href: "/services/renovation/",
               variant: "outline",
             },
           ],
-          note: "Residentiel et projets complexes",
+          note: "Résidentiel et projets complexes",
         },
       },
     },

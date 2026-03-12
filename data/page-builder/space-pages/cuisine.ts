@@ -6,7 +6,7 @@ export const cuisinePage: PageTemplateData = {
   metadata: {
     title: "Cuisine sur mesure haut de gamme",
     description:
-      "Cuisine sur mesure haut de gamme : conception, fabrication controlee et installation precise a Montreal, Laval et sur la Rive-Sud.",
+      "Cuisine sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
     path: "/espaces/cuisine/",
     ogAlt: "Cuisine sur mesure Dilamco",
   },
@@ -17,7 +17,7 @@ export const cuisinePage: PageTemplateData = {
   service: {
     name: "Cuisine sur mesure",
     description:
-      "Conception, fabrication controlee et installation de cuisines sur mesure haut de gamme.",
+      "Conception, fabrication contrôlée et installation de cuisines sur mesure haut de gamme.",
     url: SITE.url + "/espaces/cuisine/",
     serviceType: "Cuisine sur mesure",
   },
@@ -30,9 +30,9 @@ export const cuisinePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
-          heading: "Cuisine sur mesure, execution cle en main a Montreal",
+          heading: "Cuisine sur mesure, exécution clé en main à Montréal",
           description:
-            "Conception, fabrication controlee et installation precise pour un espace durable, bien organise et coherent du plan a la finition.",
+            "Conception, fabrication contrôlée et installation précise pour un espace durable, bien organisé et cohérent du plan à la finition.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -45,13 +45,13 @@ export const cuisinePage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Sur mesure", "Cle en main", "Montreal"],
+          badges: ["Sur mesure", "clé en main", "Montréal"],
           image: {
             src: "/images/generated/spaces/space-cuisine-hero-01.webp",
             alt: "Cuisine sur mesure haut de gamme",
           },
           caption:
-            "Residentiel haut de gamme a Montreal, Laval et sur la Rive-Sud",
+            "Résidentiel haut de gamme à Montréal, Laval et sur la Rive-Sud",
         },
       },
     },
@@ -61,15 +61,15 @@ export const cuisinePage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Une cuisine sur mesure pensee pour durer",
+          heading: "Une cuisine sur mesure pensée pour durer",
           intro:
-            "La valeur d'une cuisine se joue sur la structure, l'ergonomie et la qualite d'execution, pas seulement sur le look final.",
-          badges: ["Durabilite", "Ergonomie", "Coordination"],
+            "La valeur d'une cuisine se joue sur la structure, l'ergonomie et la qualité d'exécution, pas seulement sur le look final.",
+          badges: ["Durabilité", "Ergonomie", "Coordination"],
           cardTitle: "Bon fit pour ce type de projet",
           items: [
-            "Residence principale ou projet long terme.",
-            "Besoin d'un amenagement adapte a l'espace reel.",
-            "Priorite a la stabilite, aux finis et a la coordination.",
+            "Résidence principale ou projet long terme.",
+            "Besoin d'un aménagement adapté à l'espace réel.",
+            "Priorité à la stabilité, aux finis et à la coordination.",
           ],
           actions: [
             {
@@ -92,9 +92,9 @@ export const cuisinePage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Un processus clair du design a l'installation",
+          heading: "Un processus clair du design à l'installation",
           intro:
-            "Un seul partenaire permet de mieux cadrer les decisions et de reduire la fragmentation sur le chantier.",
+            "Un seul partenaire permet de mieux cadrer les décisions et de réduire la fragmentation sur le chantier.",
           steps: [
             {
               number: "1",
@@ -104,21 +104,21 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               number: "2",
-              title: "Materiaux",
+              title: "Matériaux",
               description:
-                "Selection de composants et finis adaptes a la durabilite et a l'usage quotidien.",
+                "Sélection de composants et finis adaptés à la durabilité et à l'usage quotidien.",
             },
             {
               number: "3",
               title: "Fabrication",
               description:
-                "Production controlee avec standards stables et qualite reproductible.",
+                "Production contrôlée avec standards stables et qualité reproductible.",
             },
             {
               number: "4",
               title: "Installation",
               description:
-                "Ajustements precis, alignements nets et finitions verifiees sur place.",
+                "Ajustements précis, alignements nets et finitions vérifiées sur place.",
             },
           ],
         },
@@ -130,29 +130,29 @@ export const cuisinePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Des choix de materiaux qui justifient le haut de gamme",
+          heading: "Des choix de matériaux qui justifient le haut de gamme",
           intro:
-            "La durabilite reelle est structurelle. Les composantes invisibles comptent autant que les surfaces.",
+            "La durabilité réelle est structurelle. Les composantes invisibles comptent autant que les surfaces.",
           items: [
             {
               title: "Structure des tiroirs",
               description:
-                "Bois massif de bouleau pour une meilleure resistance et une sensation de solidite durable.",
+                "Bois massif de bouleau pour une meilleure résistance et une sensation de solidité durable.",
             },
             {
               title: "Fond des tiroirs",
               description:
-                "Contreplaque de bouleau pour mieux supporter la charge et garder sa stabilite.",
+                "Contreplaqué de bouleau pour mieux supporter la charge et garder sa stabilité.",
             },
             {
-              title: "Finition coherente",
+              title: "Finition cohérente",
               description:
-                "Choix alignes avec l'entretien, la longevite et l'usage reel de la cuisine.",
+                "Choix alignés avec l'entretien, la longévité et l'usage réel de la cuisine.",
             },
           ],
           actions: [
             {
-              label: "Explorer les materiaux",
+              label: "Explorer les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -164,11 +164,11 @@ export const cuisinePage: PageTemplateData = {
           ],
           image: {
             src: "/images/spaces/cabinet-cuisines.webp",
-            alt: "Detail de materiaux pour cuisine sur mesure",
+            alt: "Détail de matériaux pour cuisine sur mesure",
           },
-          cardTitle: "Pourquoi ca compte",
+          cardTitle: "Pourquoi ça compte",
           cardDescription:
-            "Une bonne structure reduit les remplacements prematures et protege la qualite d'usage sur plusieurs annees.",
+            "Une bonne structure réduit les remplacements prématurés et protège la qualité d'usage sur plusieurs années.",
         },
       },
     },
@@ -180,28 +180,28 @@ export const cuisinePage: PageTemplateData = {
         props: {
           heading: "Projets cuisines en vedette",
           intro:
-            "Quelques realisations qui montrent le niveau d'execution, pas seulement l'esthetique.",
+            "Quelques réalisations qui montrent le niveau d'exécution, pas seulement l'esthétique.",
           items: [
             {
               title: "Cuisine sur mesure",
               href: "/projets/",
               description:
-                "Cuisine sur mesure avec implantation precise et finition soignee.",
+                "Cuisine sur mesure avec implantation précise et finition soignée.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-project-01.webp",
-                alt: "Projet cuisine sur mesure a Montreal",
+                alt: "Projet cuisine sur mesure à Montréal",
               },
-              badges: ["Montreal", "Cuisine"],
+              badges: ["Montréal", "Cuisine"],
               footerCtaLabel: "Voir le projet",
             },
             {
               title: "Cuisine sur mesure",
               href: "/projets/",
               description:
-                "Projet cuisine concu pour un usage quotidien et une durabilite a long terme.",
+                "Projet cuisine conçu pour un usage quotidien et une durabilité à long terme.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-project-02.webp",
-                alt: "Projet cuisine sur mesure a Laval",
+                alt: "Projet cuisine sur mesure à Laval",
               },
               badges: ["Laval", "Sur mesure"],
               footerCtaLabel: "Voir le projet",
@@ -210,12 +210,12 @@ export const cuisinePage: PageTemplateData = {
               title: "Cuisine sur mesure",
               href: "/projets/",
               description:
-                "Execution complete avec coordination du projet et details maitrises.",
+                "Exécution complète avec coordination du projet et détails maîtrisés.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-project-03.webp",
                 alt: "Projet cuisine sur mesure sur la Rive-Sud",
               },
-              badges: ["Rive-Sud", "Cle en main"],
+              badges: ["Rive-Sud", "clé en main"],
               footerCtaLabel: "Voir le projet",
             },
           ],
@@ -231,23 +231,23 @@ export const cuisinePage: PageTemplateData = {
         props: {
           heading: "FAQ - cuisine sur mesure",
           intro:
-            "Reponses claires aux questions les plus frequentes avant de lancer un projet.",
+            "Réponses claires aux questions les plus fréquentes avant de lancer un projet.",
           items: [
             {
-              q: "Combien coute une cuisine sur mesure ?",
-              a: "Le prix depend de l'amenagement, des materiaux, des dimensions et du niveau de coordination requis.",
+              q: "Combien coûte une cuisine sur mesure ?",
+              a: "Le prix dépend de l'aménagement, des matériaux, des dimensions et du niveau de coordination requis.",
             },
             {
-              q: "Quelle est la difference avec une solution standard ?",
-              a: "Le sur mesure permet d'adapter l'espace, d'ameliorer la structure et de mieux controler le resultat final.",
+              q: "Quelle est la différence avec une solution standard ?",
+              a: "Le sur mesure permet d'adapter l'espace, d'améliorer la structure et de mieux contrôler le résultat final.",
             },
             {
               q: "Est-ce que vous faites aussi l'installation ?",
-              a: "Oui. L'objectif est justement d'assurer une execution coherente du design a la pose.",
+              a: "Oui. L'objectif est justement d'assurer une exécution cohérente du design à la pose.",
             },
             {
-              q: "Travaillez-vous a Montreal et autour ?",
-              a: "Oui. Nous desservons Montreal, Laval et la Rive-Sud.",
+              q: "Travaillez-vous à Montréal et autour ?",
+              a: "Oui. Nous desservons Montréal, Laval et la Rive-Sud.",
             },
           ],
         },
@@ -261,7 +261,7 @@ export const cuisinePage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet de cuisine",
           intro:
-            "Obtenez une soumission structuree adaptee a votre espace, vos priorites et votre niveau de finition.",
+            "Obtenez une soumission structurée adaptée à votre espace, vos priorités et votre niveau de finition.",
           actions: [
             {
               label: "Demander une soumission",

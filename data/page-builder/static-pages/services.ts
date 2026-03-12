@@ -6,7 +6,7 @@ export const page: PageTemplateData = {
   metadata: {
     title: "Services",
     description:
-      "Services Dilamco : design, fabrication sur mesure, installation et renovation cle en main.",
+      "Services Dilamco : design, fabrication sur mesure, installation et rénovation clé en main.",
     path: "/services/",
     ogAlt: "Services Dilamco",
   },
@@ -17,7 +17,7 @@ export const page: PageTemplateData = {
   service: {
     name: "Services Dilamco",
     description:
-      "Design, fabrication sur mesure, installation et renovation cle en main selon la portee du projet.",
+      "Design, fabrication sur mesure, installation et rénovation clé en main selon la portée du projet.",
     url: SITE.url + "/services/",
     serviceType: "Services sur mesure",
   },
@@ -30,9 +30,9 @@ export const page: PageTemplateData = {
         variant: "split-image",
         props: {
           heading:
-            "Services : design, fabrication, installation et renovation cle en main",
+            "Services : design, fabrication, installation et rénovation clé en main",
           description:
-            "Selon le projet, nous prenons en charge l'ensemble du plan a la finition.",
+            "Selon le projet, nous prenons en charge l'ensemble du plan à la finition.",
           actions: [
             {
               label: "Demander une soumission",
@@ -40,7 +40,7 @@ export const page: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir nos realisations",
+              label: "Voir nos réalisations",
               href: "/projets/",
               variant: "outline",
             },
@@ -50,7 +50,7 @@ export const page: PageTemplateData = {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Vue d'ensemble des services Dilamco",
           },
-          caption: "De la planification a l'installation selon la portee",
+          caption: "De la planification à l'installation selon la portée",
         },
       },
     },
@@ -61,36 +61,36 @@ export const page: PageTemplateData = {
         variant: "link-cards-compact",
         props: {
           heading: "Nos services principaux",
-          intro: "Choisissez le service qui correspond a votre etape.",
+          intro: "Choisissez le service qui correspond à votre étape.",
           columns: "2",
           items: [
             {
               title: "Design",
-              description: "Cadrage du plan, ergonomie et choix de materiaux.",
+              description: "Cadrage du plan, ergonomie et choix de matériaux.",
               href: "/services/design/",
               badges: ["Planification", "Usage"],
               ctaLabel: "Voir le design",
             },
             {
               title: "Fabrication",
-              description: "Production sur mesure orientee durabilite.",
+              description: "Production sur mesure orientée durabilité.",
               href: "/services/fabrication/",
-              badges: ["Sur mesure", "Durabilite"],
+              badges: ["Sur mesure", "Durabilité"],
               ctaLabel: "Voir la fabrication",
             },
             {
               title: "Installation",
               description: "Ajustements et finition sur place.",
               href: "/services/installation/",
-              badges: ["Pose", "Precision"],
+              badges: ["Pose", "Précision"],
               ctaLabel: "Voir l'installation",
             },
             {
-              title: "Renovation cle en main",
+              title: "Rénovation clé en main",
               description: "Coordination des travaux connexes selon le projet.",
               href: "/services/renovation/",
-              badges: ["Coordination", "Execution"],
-              ctaLabel: "Voir la renovation",
+              badges: ["Coordination", "Exécution"],
+              ctaLabel: "Voir la rénovation",
             },
           ],
         },
@@ -102,23 +102,23 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Renovation par type",
+          heading: "Rénovation par type",
           columns: "2",
           items: [
             {
-              title: "Renovation de cuisine",
+              title: "Rénovation de cuisine",
               href: "/services/renovation/cuisine/",
               badges: ["Cuisine", "Coordination"],
               ctaLabel: "Voir cuisine",
             },
             {
-              title: "Renovation salle de bain",
+              title: "Rénovation salle de bain",
               href: "/services/renovation/salle-de-bain/",
-              badges: ["Humidite", "Technique"],
+              badges: ["Humidité", "Technique"],
               ctaLabel: "Voir salle de bain",
             },
             {
-              title: "Renovation de plancher",
+              title: "Rénovation de plancher",
               href: "/services/renovation/plancher/",
               badges: ["Transitions", "Finition"],
               ctaLabel: "Voir plancher",
@@ -126,7 +126,7 @@ export const page: PageTemplateData = {
             {
               title: "Agrandissement de maison",
               href: "/services/renovation/agrandissement-de-maison/",
-              badges: ["Portee", "Coordination"],
+              badges: ["Portée", "Coordination"],
               ctaLabel: "Voir l'agrandissement",
             },
           ],
@@ -140,19 +140,19 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Quand choisir une approche cle en main",
+          heading: "Quand choisir une approche clé en main",
           intro:
-            "Cette approche devient pertinente quand le projet depasse la seule fabrication et installation d'armoires.",
+            "Cette approche devient pertinente quand le projet dépasse la seule fabrication et installation d'armoires.",
           badges: ["Cuisine", "Salle de bain", "Coordination"],
-          cardTitle: "Situations ou l'approche est pertinente",
+          cardTitle: "Situations où l'approche est pertinente",
           items: [
-            "Renovation complete de cuisine.",
+            "Rénovation complète de cuisine.",
             "Salle de bain avec contraintes techniques.",
             "Projet multi-intervenants.",
           ],
           actions: [
             {
-              label: "Voir la renovation",
+              label: "Voir la rénovation",
               href: "/services/renovation/",
               variant: "outline",
             },
@@ -171,34 +171,34 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Qualite et durabilite",
+          heading: "Qualité et durabilité",
           intro:
-            "Le haut de gamme repose sur un systeme coherent : materiaux, assemblage, quincaillerie et installation.",
+            "Le haut de gamme repose sur un système cohérent : matériaux, assemblage, quincaillerie et installation.",
           columns: "3",
           items: [
             {
-              title: "Pourquoi le contreplaque",
+              title: "Pourquoi le contreplaqué",
               description:
-                "Voir pourquoi la structure du panneau change la stabilite et la longevite.",
+                "Voir pourquoi la structure du panneau change la stabilité et la longévité.",
               href: "/materiaux/contreplaque/",
-              badges: ["Structure", "Durabilite"],
-              ctaLabel: "Voir le contreplaque",
+              badges: ["Structure", "Durabilité"],
+              ctaLabel: "Voir le contreplaqué",
             },
             {
               title: "Quincaillerie",
               description:
-                "Comprendre l'impact des mecanismes sur le confort d'usage et l'usure.",
+                "Comprendre l'impact des mécanismes sur le confort d'usage et l'usure.",
               href: "/materiaux/quincaillerie/",
-              badges: ["Usage", "Precision"],
+              badges: ["Usage", "Précision"],
               ctaLabel: "Voir la quincaillerie",
             },
             {
-              title: "Tous les materiaux",
+              title: "Tous les matériaux",
               description:
-                "Comparer les options selon l'espace, l'humidite et la finition attendue.",
+                "Comparer les options selon l'espace, l'humidité et la finition attendue.",
               href: "/materiaux/",
               badges: ["Comparatif", "Choix techniques"],
-              ctaLabel: "Voir les materiaux",
+              ctaLabel: "Voir les matériaux",
             },
           ],
         },

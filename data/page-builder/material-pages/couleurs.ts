@@ -6,13 +6,13 @@ export const couleursPage: PageTemplateData = {
   metadata: {
     title: "Couleurs et finis",
     description:
-      "Couleurs et finis pour cuisines, vanites et armoires sur mesure : choisir selon la lumiere, l'usage et les materiaux.",
+      "Couleurs et finis pour cuisines, vanités et armoires sur mesure : choisir selon la lumière, l'usage et les matériaux.",
     path: "/materiaux/couleurs/",
-    ogAlt: "Couleurs et finis - Materiaux sur mesure",
+    ogAlt: "Couleurs et finis - Matériaux sur mesure",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Materiaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
     { name: "Couleurs et finis", url: SITE.url + "/materiaux/couleurs/" },
   ],
   blocks: [
@@ -23,13 +23,13 @@ export const couleursPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materiaux",
-          heading: "Couleurs et finis : style, lumiere et entretien",
+          eyebrow: "Dilamco - Matériaux",
+          heading: "Couleurs et finitions : style, lumière et entretien",
           description:
-            "La couleur influence la lumiere, la perception de l'espace et l'entretien. Le bon choix depend du materiau, de l'usage et du contexte reel.",
+            "La couleur influence la lumière, la perception de l'espace et l'entretien. Le bon choix dépend du matériau, de l'usage et du contexte réel.",
           actions: [
             {
-              label: "Parler design et finis",
+              label: "Parler design et finitions",
               href: "/services/design/",
               variant: "default",
             },
@@ -39,13 +39,13 @@ export const couleursPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Lumiere", "Entretien", "Cohesion visuelle"],
+          badges: ["Lumière", "Entretien", "Cohésion visuelle"],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Choix de couleurs et finis pour projet sur mesure",
           },
           caption:
-            "Un bon fini doit etre beau aujourd'hui et simple a vivre demain",
+            "Un bon fini doit être beau aujourd'hui et simple à vivre demain",
         },
       },
     },
@@ -55,14 +55,14 @@ export const couleursPage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Methode simple pour choisir",
+          heading: "Méthode simple pour choisir",
           description:
-            "Structurer les choix des la phase design evite les erreurs de rendu. Il faut regarder la lumiere, le volume, l'entretien, le type de materiau et le contexte d'usage avant de valider une palette.",
+            "Structurer les choix dès la phase design évite les erreurs de rendu. Il faut regarder la lumière, le volume, l'entretien, le type de matériau et le contexte d'usage avant de valider une palette.",
           cards: [
             {
-              title: "Lumiere",
+              title: "Lumière",
               description:
-                "Une couleur ne reagit pas pareil selon l'orientation et les sources lumineuses.",
+                "Une couleur ne réagit pas pareil selon l'orientation et les sources lumineuses.",
             },
             {
               title: "Volume",
@@ -75,9 +75,9 @@ export const couleursPage: PageTemplateData = {
                 "Cuisine et salle de bain demandent des choix pragmatiques.",
             },
             {
-              title: "Materiau et fini",
+              title: "Matériau et fini",
               description:
-                "MDF, melamine et bois ne produisent pas le meme rendu.",
+                "MDF, mélamine et bois ne produisent pas le même rendu.",
             },
           ],
           columns: "2",
@@ -91,28 +91,28 @@ export const couleursPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Grandes familles de choix",
+          heading: "Grandes familles de finitions",
           items: [
             {
               title: "Neutres",
               href: "/services/design/",
-              description: "Intemporels, lumineux et faciles a integrer.",
+              description: "Intemporelles, lumineuses et faciles à intégrer.",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
                 alt: "Palette de finis neutres pour mobilier sur mesure",
               },
-              badges: ["Intemporel"],
+              badges: ["Intemporelle"],
               footerCtaLabel: "Voir la page",
             },
             {
-              title: "Tons fonces",
+              title: "Tons foncés",
               href: "/services/design/",
-              description: "Fort impact visuel, demandent une bonne lumiere.",
+              description: "Fort impact visuel, demandent une bonne lumière.",
               image: {
                 src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Mobilier sur mesure aux tons fonces",
+                alt: "Mobilier sur mesure aux tons foncés",
               },
-              badges: ["Accent"],
+              badges: ["Accentué"],
               footerCtaLabel: "Voir la page",
             },
             {
@@ -120,8 +120,8 @@ export const couleursPage: PageTemplateData = {
               href: "/materiaux/bois-massif/",
               description: "Apportent chaleur et variations naturelles.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Texture de bois massif naturel",
+                src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
+                alt: "Texture de bois massif naturelle",
               },
               badges: ["Naturel"],
               footerCtaLabel: "Voir la page",
@@ -133,7 +133,7 @@ export const couleursPage: PageTemplateData = {
                 "Coordonner comptoir, dosseret, plancher et entretien.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec palette de finis coherente",
+                alt: "Cuisine sur mesure avec palette de finitions cohérentes",
               },
               badges: ["Cuisine"],
               footerCtaLabel: "Voir la page",
@@ -142,21 +142,21 @@ export const couleursPage: PageTemplateData = {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain/",
               description:
-                "Humidite, nettoyage frequent et ventilation comptent.",
+                "Humidité, nettoyage fréquent et ventilation comptent.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure avec finis adaptes",
+                alt: "Salle de bain sur mesure avec finitions adaptées",
               },
               badges: ["Salle de bain"],
               footerCtaLabel: "Voir la page",
             },
             {
-              title: "Materiaux",
+              title: "Matériaux",
               href: "/materiaux/",
-              description: "Le fini final depend aussi du support choisi.",
+              description: "La finition finale dépend aussi du support choisi.",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de materiaux et finis",
+                alt: "Comparatif visuel de matériaux et finitions",
               },
               badges: ["Support"],
               footerCtaLabel: "Voir la page",
@@ -171,16 +171,16 @@ export const couleursPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Couleur et materiau : impact reel",
+          heading: "Couleur et matériau : impact réel sur le rendu",
           intro:
-            "Le rendu ne vient pas seulement de la couleur. Il depend aussi de la texture, de la regularite du support et de la finition retenue.",
-          badges: ["MDF", "Bois", "Melamine"],
-          cardTitle: "Repere rapide",
+            "Le rendu ne vient pas seulement de la couleur. Il dépend aussi de la texture, de la régularité du support et de la finition retenue.",
+          badges: ["MDF", "Bois", "Mélamine"],
+          cardTitle: "Repère rapide",
           items: [
-            "MDF : plus homogene pour la peinture",
+            "MDF : plus homogène pour la peinture",
             "Bois : texture et variation naturelles",
-            "Melamine : grande variete de decors",
-            "Le meme ton change selon le support",
+            "Mélamine : grande variété de décors",
+            "Le même ton change selon le support",
           ],
           actions: [
             {
@@ -189,7 +189,7 @@ export const couleursPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir les materiaux",
+              label: "Voir les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -205,15 +205,15 @@ export const couleursPage: PageTemplateData = {
         props: {
           heading: "Finitions et entretien",
           intro:
-            "Le bon fini n'est pas seulement celui qui parait bien a l'echantillon. Il faut aussi penser aux traces, au nettoyage et a la tolerance du quotidien.",
+            "Le bon fini n'est pas seulement celui qui paraît bien à l'échantillon. Il faut aussi penser aux traces, au nettoyage et à la tolérance du quotidien.",
           items: [
             {
               title: "Mat.",
               description:
-                "Tres elegant, mais parfois plus exigeant a l'entretien.",
+                "Très élégant, mais parfois plus exigeant à l'entretien.",
             },
             {
-              title: "Satine.",
+              title: "Satiné.",
               description:
                 "Souvent un bon compromis entre rendu et maintenance.",
             },
@@ -237,11 +237,11 @@ export const couleursPage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-            alt: "Choix de finis et echantillons de couleurs",
+            alt: "Choix de finis et échantillons de couleurs",
           },
-          cardTitle: "Erreur frequente",
+          cardTitle: "Erreur fréquente",
           cardDescription:
-            "Choisir une inspiration sans la recontextualiser a la vraie lumiere, aux vrais volumes et au vrai usage du projet.",
+            "Choisir une inspiration sans la recontextualiser à la vraie lumière, aux vrais volumes et au vrai usage du projet.",
         },
       },
     },
@@ -252,22 +252,22 @@ export const couleursPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - couleurs et finis",
+          heading: "FAQ - Couleurs et finitions",
           items: [
             {
-              q: "Mat ou satine ?",
-              a: "Le satine est souvent un bon compromis entretien-rendu, surtout en cuisine.",
+              q: "Mat ou satiné ?",
+              a: "Le satiné est souvent un bon compromis entre entretien et rendu, surtout en cuisine.",
             },
             {
-              q: "Les couleurs foncees sont-elles risquees ?",
-              a: "Pas avec une bonne lumiere et un fini adapte.",
+              q: "Les couleurs foncées sont-elles risquées ?",
+              a: "Pas avec une bonne lumière et un fini adapté.",
             },
             {
               q: "Peut-on changer la couleur plus tard ?",
-              a: "Parfois, selon le materiau et le fini choisi.",
+              a: "Parfois, selon le matériau et la finition choisie.",
             },
             {
-              q: "Comment eviter un rendu date ?",
+              q: "Comment éviter un rendu daté ?",
               a: "En gardant une base intemporelle et des accents plus flexibles.",
             },
           ],
@@ -282,7 +282,7 @@ export const couleursPage: PageTemplateData = {
         props: {
           heading: "Besoin d'aide pour cadrer vos choix de finis ?",
           intro:
-            "On vous aide a choisir une palette plus durable visuellement, plus simple a vivre et coherente avec les materiaux retenus.",
+            "On vous aide à choisir une palette plus durable visuellement, plus simple à vivre et cohérente avec les matériaux retenus.",
           actions: [
             {
               label: "Parler design",

@@ -6,7 +6,7 @@ export const commercialPage: PageTemplateData = {
   metadata: {
     title: "Armoires commerciales sur mesure haut de gamme",
     description:
-      "Armoires commerciales sur mesure : conception, fabrication controlee et installation precise a Montreal, Laval et sur la Rive-Sud.",
+      "Armoires commerciales sur mesure : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
     path: "/espaces/commercial/",
     ogAlt: "Commercial sur mesure Dilamco",
   },
@@ -17,7 +17,7 @@ export const commercialPage: PageTemplateData = {
   service: {
     name: "Commercial",
     description:
-      "Conception, fabrication controlee et installation d'armoires commerciales sur mesure.",
+      "Conception, fabrication contrôlée et installation d'armoires commerciales sur mesure.",
     url: SITE.url + "/espaces/commercial/",
     serviceType: "Armoires commerciales sur mesure",
   },
@@ -31,9 +31,9 @@ export const commercialPage: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Espaces",
           heading:
-            "Armoires commerciales sur mesure, execution stable et planifiee",
+            "Armoires commerciales sur mesure, exécution stable et planifiée",
           description:
-            "En contexte commercial, la qualite se joue sur la durabilite, l'entretien, la logistique et le respect de l'echeancier autant que sur l'apparence.",
+            "En contexte commercial, la qualité se joue sur la durabilité, l'entretien, la logistique et le respect de l'échéancier autant que sur l'apparence.",
           actions: [
             {
               label: "Obtenir une soumission commerciale",
@@ -46,13 +46,13 @@ export const commercialPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Commercial", "Durable", "Planifie"],
+          badges: ["Commercial", "Durable", "Planifié"],
           image: {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
-            alt: "Amenagement commercial sur mesure",
+            alt: "Aménagement commercial sur mesure",
           },
           caption:
-            "Approche adaptee aux espaces clients, bureaux et environnements de travail",
+            "Approche adaptée aux espaces clients, bureaux et environnements de travail",
         },
       },
     },
@@ -62,15 +62,15 @@ export const commercialPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Une approche adaptee a l'usage intensif",
+          heading: "Une approche adaptée à l'usage intensif",
           intro:
-            "Les projets commerciaux demandent une execution plus previsible, des materiaux qui tiennent et une meilleure coordination.",
+            "Les projets commerciaux demandent une exécution plus prévisible, des matériaux qui tiennent et une meilleure coordination.",
           badges: ["Usage intensif", "Entretien", "Coordination"],
           cardTitle: "Quand cette approche est pertinente",
           items: [
-            "Vous cherchez une solution durable et coherente avec votre image.",
-            "L'echeancier et la fenetre d'installation comptent vraiment.",
-            "Vous voulez reduire les risques lies a une coordination fragmente.",
+            "Vous cherchez une solution durable et cohérente avec votre image.",
+            "L'échéancier et la fenêtre d'installation comptent vraiment.",
+            "Vous voulez réduire les risques liés à une coordination fragmentée.",
           ],
           actions: [
             {
@@ -93,9 +93,9 @@ export const commercialPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Une sequence plus previsible pour le commercial",
+          heading: "Une séquence plus prévisible pour le commercial",
           intro:
-            "Le projet est cadre pour mieux gerer besoins, delais, fabrication et installation.",
+            "Le projet est cadré pour mieux gérer besoins, délais, fabrication et installation.",
           steps: [
             {
               number: "1",
@@ -107,19 +107,19 @@ export const commercialPage: PageTemplateData = {
               number: "2",
               title: "Validation",
               description:
-                "Plans, dimensions et decisions verrouilles avant production.",
+                "Plans, dimensions et décisions verrouillées avant production.",
             },
             {
               number: "3",
               title: "Fabrication",
               description:
-                "Standards stables et execution mieux controlee pour limiter les ecarts.",
+                "Standards stables et exécution mieux contrôlée pour limiter les écarts.",
             },
             {
               number: "4",
               title: "Installation",
               description:
-                "Logistique et pose planifiees pour reduire les perturbations sur place.",
+                "Logistique et pose planifiées pour réduire les perturbations sur place.",
             },
           ],
         },
@@ -131,29 +131,29 @@ export const commercialPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Des specifications pensees pour la tenue dans le temps",
+          heading: "Des spécifications pensées pour la tenue dans le temps",
           intro:
-            "En commercial, le premium veut dire durabilite, entretien et stabilite, pas seulement apparence.",
+            "En commercial, le premium veut dire durabilité, entretien et stabilité, pas seulement apparence.",
           items: [
             {
               title: "Structure robuste",
               description:
-                "Materiaux et details de fabrication choisis pour supporter un usage plus intense.",
+                "Matériaux et détails de fabrication choisis pour supporter un usage plus intense.",
             },
             {
-              title: "Entretien simplifie",
+              title: "Entretien simplifié",
               description:
-                "Choix de surfaces et de finitions alignes avec la realite du lieu.",
+                "Choix de surfaces et de finitions alignés avec la réalité du lieu.",
             },
             {
-              title: "Execution plus stable",
+              title: "Exécution plus stable",
               description:
-                "Specifications coherentes pour mieux reproduire la qualite d'un projet a l'autre.",
+                "Spécifications cohérentes pour mieux reproduire la qualité d'un projet à l'autre.",
             },
           ],
           actions: [
             {
-              label: "Explorer les materiaux",
+              label: "Explorer les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -165,11 +165,11 @@ export const commercialPage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/spaces/space-commercial-project-01.webp",
-            alt: "Detail materiau pour amenagement commercial",
+            alt: "Détail matériau pour aménagement commercial",
           },
-          cardTitle: "Resultat recherche",
+          cardTitle: "Résultat recherché",
           cardDescription:
-            "Moins de faiblesse structurelle, moins d'entretien correctif et une meilleure coherence dans le temps.",
+            "Moins de faiblesse structurelle, moins d'entretien correctif et une meilleure cohérence dans le temps.",
         },
       },
     },
@@ -181,28 +181,28 @@ export const commercialPage: PageTemplateData = {
         props: {
           heading: "Projets commerciaux en vedette",
           intro:
-            "Quelques references qui montrent la qualite d'execution et le niveau de coordination.",
+            "Quelques références qui montrent la qualité d'exécution et le niveau de coordination.",
           items: [
             {
-              title: "Amenagement commercial",
+              title: "Aménagement commercial",
               href: "/projets/",
               description:
-                "Projet commercial concu pour l'usage reel et une execution propre.",
+                "Projet commercial conçu pour l'usage réel et une exécution propre.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-01.webp",
-                alt: "Projet commercial a Montreal",
+                alt: "Projet commercial à Montréal",
               },
-              badges: ["Montreal", "Commercial"],
+              badges: ["Montréal", "Commercial"],
               footerCtaLabel: "Voir le projet",
             },
             {
               title: "Armoires commerciales sur mesure",
               href: "/projets/",
               description:
-                "Execution stable et materiaux adaptes a un usage plus intensif.",
+                "Exécution stable et matériaux adaptés à un usage plus intensif.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
-                alt: "Projet commercial a Laval",
+                alt: "Projet commercial à Laval",
               },
               badges: ["Laval", "Usage intensif"],
               footerCtaLabel: "Voir le projet",
@@ -211,12 +211,12 @@ export const commercialPage: PageTemplateData = {
               title: "Mobilier commercial",
               href: "/projets/",
               description:
-                "Projet sur mesure coordonne pour limiter les imprevus et soigner la finition.",
+                "Projet sur mesure coordonné pour limiter les imprévus et soigner la finition.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
                 alt: "Projet commercial sur la Rive-Sud",
               },
-              badges: ["Rive-Sud", "Execution"],
+              badges: ["Rive-Sud", "Exécution"],
               footerCtaLabel: "Voir le projet",
             },
           ],
@@ -235,20 +235,20 @@ export const commercialPage: PageTemplateData = {
             "Les questions les plus utiles avant de cadrer un projet commercial.",
           items: [
             {
-              q: "Quels types de projets commerciaux realisez-vous ?",
-              a: "Des amenagements et armoires sur mesure pour des espaces ou la durabilite, l'entretien et la coherence d'execution sont importants.",
+              q: "Quels types de projets commerciaux réalisez-vous ?",
+              a: "Des aménagements et armoires sur mesure pour des espaces où la durabilité, l'entretien et la cohérence d'exécution sont importants.",
             },
             {
-              q: "Pouvez-vous respecter des fenetres d'installation ?",
-              a: "Oui, lorsque le projet est bien planifie des la conception et que la sequence est cadree tot.",
+              q: "Pouvez-vous respecter des fenêtres d'installation ?",
+              a: "Oui, lorsque le projet est bien planifié dès la conception et que la séquence est cadrée tôt.",
             },
             {
-              q: "Faites-vous la coordination cle en main ?",
-              a: "Oui, selon la portee du projet, pour reduire la responsabilite fragmente et les finitions inegales.",
+              q: "Faites-vous la coordination clé en main ?",
+              a: "Oui, selon la portée du projet, pour réduire la responsabilité fragmentée et les finitions inégales.",
             },
             {
-              q: "Travaillez-vous a Montreal et autour ?",
-              a: "Oui. Montreal, Laval et la Rive-Sud font partie de notre secteur.",
+              q: "Travaillez-vous à Montréal et autour ?",
+              a: "Oui. Montréal, Laval et la Rive-Sud font partie de notre secteur.",
             },
           ],
         },
@@ -262,7 +262,7 @@ export const commercialPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet commercial",
           intro:
-            "On vous aide a cadrer un projet durable, planifie et mieux execute pour votre espace.",
+            "On vous aide à cadrer un projet durable, planifié et mieux exécuté pour votre espace.",
           actions: [
             {
               label: "Demander une soumission",

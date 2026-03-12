@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const salleDeBainPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Vanite salle de bain sur mesure haut de gamme",
+    title: "Vanité salle de bain sur mesure haut de gamme",
     description:
-      "Vanite salle de bain sur mesure : design, fabrication controlee et installation precise a Montreal, Laval et sur la Rive-Sud.",
+      "Vanité salle de bain sur mesure : design, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
     path: "/espaces/salle-de-bain/",
     ogAlt: "Salle de bain sur mesure Dilamco",
   },
@@ -20,9 +20,9 @@ export const salleDeBainPage: PageTemplateData = {
   service: {
     name: "Salle de bain sur mesure",
     description:
-      "Conception, fabrication controlee et installation de vanites sur mesure haut de gamme.",
+      "Conception, fabrication contrôlée et installation de vanités sur mesure haut de gamme.",
     url: SITE.url + "/espaces/salle-de-bain/",
-    serviceType: "Vanite salle de bain sur mesure",
+    serviceType: "Vanité salle de bain sur mesure",
   },
   blocks: [
     {
@@ -33,9 +33,9 @@ export const salleDeBainPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
-          heading: "Vanite sur mesure, execution cle en main a Montreal",
+          heading: "Vanité sur mesure, exécution clé en main à Montréal",
           description:
-            "Une salle de bain durable demande des materiaux adaptes a l'humidite, une fabrication stable et une installation precise.",
+            "Une salle de bain durable demande des matériaux adaptés à l'humidité, une fabrication stable et une installation précise.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -48,12 +48,12 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Sur mesure", "Humidite", "Montreal"],
+          badges: ["Sur mesure", "Humidité", "Montréal"],
           image: {
             src: "/images/generated/spaces/space-bath-hero-01.webp",
-            alt: "Vanite sur mesure haut de gamme",
+            alt: "Vanité sur mesure haut de gamme",
           },
-          caption: "Concu pour un usage quotidien et un environnement humide",
+          caption: "Conçu pour un usage quotidien et un environnement humide",
         },
       },
     },
@@ -63,15 +63,15 @@ export const salleDeBainPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Une salle de bain sur mesure pensee pour durer",
+          heading: "Une salle de bain sur mesure pensée pour durer",
           intro:
             "Dans une salle de bain, la structure et la tenue dans le temps comptent autant que le design.",
-          badges: ["Stabilite", "Humidite", "Finition"],
+          badges: ["Stabilité", "Humidité", "Finition"],
           cardTitle: "Quand le sur mesure est pertinent",
           items: [
-            "Vous voulez optimiser un espace reellement contraint.",
-            "La durabilite et la stabilite sont prioritaires.",
-            "Vous cherchez une execution mieux controlee qu'une solution standard.",
+            "Vous voulez optimiser un espace réellement contraint.",
+            "La durabilité et la stabilité sont prioritaires.",
+            "Vous cherchez une exécution mieux contrôlée qu'une solution standard.",
           ],
           actions: [
             {
@@ -94,9 +94,9 @@ export const salleDeBainPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Du plan a la pose, sans improvisation",
+          heading: "Du plan à la pose, sans improvisation",
           intro:
-            "Le projet est cadre tot pour mieux gerer plomberie, rangement, ergonomie et finition.",
+            "Le projet est cadré tôt pour mieux gérer plomberie, rangement, ergonomie et finition.",
           steps: [
             {
               number: "1",
@@ -114,13 +114,13 @@ export const salleDeBainPage: PageTemplateData = {
               number: "3",
               title: "Fabrication",
               description:
-                "Production controlee avec des standards adaptes a un environnement exigeant.",
+                "Production contrôlée avec des standards adaptés à un environnement exigeant.",
             },
             {
               number: "4",
               title: "Installation",
               description:
-                "Ajustements, alignements et finitions verifies lors de la livraison.",
+                "Ajustements, alignements et finitions vérifiés lors de la livraison.",
             },
           ],
         },
@@ -132,29 +132,29 @@ export const salleDeBainPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Des materiaux adaptes a l'humidite",
+          heading: "Des matériaux adaptés à l'humidité",
           intro:
-            "Une salle de bain premium repose sur une structure stable, des composants durables et des choix simples a entretenir.",
+            "Une salle de bain premium repose sur une structure stable, des composants durables et des choix simples à entretenir.",
           items: [
             {
               title: "Bois massif de bouleau",
               description:
-                "Utilise sur les elements critiques pour sa resistance et sa stabilite.",
+                "Utilisé sur les éléments critiques pour sa résistance et sa stabilité.",
             },
             {
-              title: "Contreplaque de bouleau",
+              title: "Contreplaqué de bouleau",
               description:
-                "Meilleure tenue dimensionnelle et meilleure resistance a la charge.",
+                "Meilleure tenue dimensionnelle et meilleure résistance à la charge.",
             },
             {
               title: "Choix de finis",
               description:
-                "Selection alignes avec l'entretien, l'usage et l'environnement humide.",
+                "Sélection alignée avec l'entretien, l'usage et l'environnement humide.",
             },
           ],
           actions: [
             {
-              label: "Explorer les materiaux",
+              label: "Explorer les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -166,11 +166,11 @@ export const salleDeBainPage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/spaces/space-bath-project-01.webp",
-            alt: "Detail materiau pour salle de bain sur mesure",
+            alt: "Détail matériau pour salle de bain sur mesure",
           },
           cardTitle: "Ce que cela apporte",
           cardDescription:
-            "Moins de deformation, une meilleure tenue dans le temps et une sensation de solidite plus durable.",
+            "Moins de déformation, une meilleure tenue dans le temps et une sensation de solidité plus durable.",
         },
       },
     },
@@ -182,37 +182,37 @@ export const salleDeBainPage: PageTemplateData = {
         props: {
           heading: "Projets salle de bain en vedette",
           intro:
-            "Quelques realisations qui montrent le niveau de finition et la qualite d'execution.",
+            "Quelques réalisations qui montrent le niveau de finition et la qualité d'exécution.",
           items: [
             {
-              title: "Vanite sur mesure",
+              title: "Vanité sur mesure",
               href: "/projets/",
               description:
-                "Rangement optimise et finition precise adaptes a la salle de bain.",
+                "Rangement optimisé et finition précise adaptés à la salle de bain.",
               image: {
                 src: "/images/generated/spaces/space-bath-project-01.webp",
-                alt: "Projet salle de bain sur mesure a Laval",
+                alt: "Projet salle de bain sur mesure à Laval",
               },
-              badges: ["Laval", "Vanite"],
+              badges: ["Laval", "Vanité"],
               footerCtaLabel: "Voir le projet",
             },
             {
               title: "Salle de bain sur mesure",
               href: "/projets/",
               description:
-                "Projet sur mesure pense pour l'usage quotidien et la tenue dans le temps.",
+                "Projet sur mesure pensé pour l'usage quotidien et la tenue dans le temps.",
               image: {
                 src: "/images/generated/spaces/space-bath-project-02.webp",
-                alt: "Projet salle de bain sur mesure a Montreal",
+                alt: "Projet salle de bain sur mesure à Montréal",
               },
-              badges: ["Montreal", "Sur mesure"],
+              badges: ["Montréal", "Sur mesure"],
               footerCtaLabel: "Voir les projets",
             },
             {
               title: "Salle de bain sur mesure",
               href: "/projets/",
               description:
-                "Execution propre avec materiaux adaptes et alignements soignes.",
+                "Exécution propre avec matériaux adaptés et alignements soignés.",
               image: {
                 src: "/images/generated/spaces/space-bath-project-03.webp",
                 alt: "Projet salle de bain sur mesure sur la Rive-Sud",
@@ -236,20 +236,20 @@ export const salleDeBainPage: PageTemplateData = {
             "Les points qu'on clarifie le plus souvent avant de lancer le projet.",
           items: [
             {
-              q: "Combien coute une vanite sur mesure ?",
-              a: "Le prix varie selon les dimensions, les materiaux, le rangement et le niveau de finition.",
+              q: "Combien coûte une vanité sur mesure ?",
+              a: "Le prix varie selon les dimensions, les matériaux, le rangement et le niveau de finition.",
             },
             {
-              q: "Quelle est la difference avec une vanite standard ?",
-              a: "Le sur mesure permet d'adapter precisement l'espace et d'utiliser une structure mieux dimensionnee pour l'usage reel.",
+              q: "Quelle est la différence avec une vanité standard ?",
+              a: "Le sur mesure permet d'adapter précisément l'espace et d'utiliser une structure mieux dimensionnée pour l'usage réel.",
             },
             {
-              q: "Est-ce que l'humidite change vos choix ?",
-              a: "Oui. Les materiaux et les details de construction sont selectionnes en fonction de cet environnement.",
+              q: "Est-ce que l'humidité change vos choix ?",
+              a: "Oui. Les matériaux et les détails de construction sont sélectionnés en fonction de cet environnement.",
             },
             {
-              q: "Travaillez-vous a Montreal et autour ?",
-              a: "Oui. Montreal, Laval et la Rive-Sud font partie de notre territoire.",
+              q: "Travaillez-vous à Montréal et autour ?",
+              a: "Oui. Montréal, Laval et la Rive-Sud font partie de notre territoire.",
             },
           ],
         },
@@ -263,7 +263,7 @@ export const salleDeBainPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre salle de bain",
           intro:
-            "On vous aide a cadrer un projet durable, adapte a l'espace et bien execute.",
+            "On vous aide à cadrer un projet durable, adapté à l'espace et bien exécuté.",
           actions: [
             {
               label: "Demander une soumission",

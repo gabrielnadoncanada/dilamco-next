@@ -6,13 +6,13 @@ export const mdfPage: PageTemplateData = {
   metadata: {
     title: "MDF",
     description:
-      "MDF : avantages, limites et usages recommandes pour armoires, vanites et projets sur mesure.",
+      "MDF : avantages, limites et usages recommandés pour armoires, vanités et projets sur mesure.",
     path: "/materiaux/mdf/",
-    ogAlt: "MDF - Materiaux sur mesure",
+    ogAlt: "MDF - Matériaux sur mesure",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Materiaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
     { name: "MDF", url: SITE.url + "/materiaux/mdf/" },
   ],
   blocks: [
@@ -23,10 +23,10 @@ export const mdfPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materiaux",
+          eyebrow: "Dilamco - Matériaux",
           heading: "MDF : quand et pourquoi l'utiliser en sur mesure",
           description:
-            "Le MDF est souvent choisi pour obtenir une surface tres uniforme, ideale pour des portes peintes. Ce n'est pas un materiau universel : le contexte d'usage et la protection des chants determinent sa pertinence.",
+            "Le MDF est souvent choisi pour obtenir une surface très uniforme, idéale pour des portes peintes. Ce n'est pas un matériau universel : le contexte d'usage et la protection des chants déterminent sa pertinence.",
           actions: [
             {
               label: "Demander une soumission",
@@ -39,13 +39,13 @@ export const mdfPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Peinture", "Uniformite", "Facades"],
+          badges: ["Peinture", "Uniformité", "Façades"],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Echantillons et surface peinte uniforme",
+            alt: "Échantillons et surface peinte uniforme",
           },
           caption:
-            "Tres utile pour certains rendus, moins universel qu'on le croit",
+            "Très utile pour certains rendus, moins universel qu'on le croit",
         },
       },
     },
@@ -57,24 +57,24 @@ export const mdfPage: PageTemplateData = {
         props: {
           heading: "Ce que le MDF fait bien",
           description:
-            "Compose de fibres compressees, le MDF offre une densite uniforme qui favorise les finis peints et un rendu regulier. Il devient interessant quand la qualite visuelle de la surface est prioritaire.",
+            "Composé de fibres compressées, le MDF offre une densité uniforme qui favorise les finitions peintes et un rendu régulier. Il devient intéressant quand la qualité visuelle de la surface est prioritaire.",
           cards: [
             {
               title: "Surface uniforme",
-              description: "Particulierement utile pour les finis peints.",
+              description: "Particulièrement utile pour les finitions peintes.",
             },
             {
-              title: "Rendu regulier",
+              title: "Rendu régulier",
               description:
-                "Permet une lecture visuelle plus propre sur certaines facades.",
+                "Permet une lecture visuelle plus propre sur certaines façades.",
             },
             {
               title: "Bon fit pour certaines portes",
               description:
-                "Quand le projet vise avant tout une esthetique peinte.",
+                "Quand le projet vise avant tout une esthétique peinte.",
             },
             {
-              title: "Sensibilite a l'humidite",
+              title: "Sensibilité à l'humidité",
               description:
                 "La protection des chants et le contexte restent critiques.",
             },
@@ -89,16 +89,16 @@ export const mdfPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Ou le MDF peut etre pertinent",
+          heading: "Où le MDF peut être pertinent",
           intro:
-            "Le MDF est surtout pertinent quand la finition peinte uniforme est une priorite et que le projet gere correctement les zones plus sensibles.",
-          badges: ["Portes peintes", "Facades", "Design"],
+            "Le MDF est surtout pertinent quand la finition peinte uniforme est une priorité et que le projet gère correctement les zones plus sensibles.",
+          badges: ["Portes peintes", "Façades", "Design"],
           cardTitle: "Bon usage du MDF",
           items: [
-            "Portes et facades peintes",
-            "Projets ou l'uniformite visuelle compte beaucoup",
-            "Zones bien executees et bien protegees",
-            "Configurations combinees avec d'autres materiaux plus stables",
+            "Portes et façades peintes",
+            "Projets où l'uniformité visuelle compte beaucoup",
+            "Zones bien exécutées et bien protégées",
+            "Configurations combinées avec d'autres matériaux plus stables",
           ],
           actions: [
             {
@@ -107,7 +107,7 @@ export const mdfPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir tous les materiaux",
+              label: "Voir tous les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -121,24 +121,24 @@ export const mdfPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Limites et precautions",
+          heading: "Limites et précautions",
           intro:
-            "Le MDF peut reagir a l'eau si la protection est insuffisante, surtout aux chants. C'est la ou les details d'execution deviennent decisifs.",
+            "Le MDF peut réagir à l'eau si la protection est insuffisante, surtout aux chants. C'est là où les détails d'exécution deviennent décisifs.",
           items: [
             {
-              title: "Humidite.",
+              title: "Humidité.",
               description:
-                "Le risque augmente si les chants ou zones sensibles sont mal proteges.",
+                "Le risque augmente si les chants ou zones sensibles sont mal protégés.",
             },
             {
               title: "Chants critiques.",
               description:
-                "Ils determinent une grande partie du comportement a long terme.",
+                "Ils déterminent une grande partie du comportement à long terme.",
             },
             {
-              title: "Pas ideal partout.",
+              title: "Pas idéal partout.",
               description:
-                "Certaines zones structurelles ou tres exposees seront mieux servies autrement.",
+                "Certaines zones structurelles ou très exposées seront mieux servies autrement.",
             },
           ],
           actions: [
@@ -148,7 +148,7 @@ export const mdfPage: PageTemplateData = {
               variant: "outline",
             },
             {
-              label: "Comparer avec la melamine",
+              label: "Comparer avec la mélamine",
               href: "/materiaux/melamine/",
               variant: "outline",
             },
@@ -157,9 +157,9 @@ export const mdfPage: PageTemplateData = {
             src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
             alt: "Finition peinte uniforme sur panneau MDF",
           },
-          cardTitle: "Approche recommandee",
+          cardTitle: "Approche recommandée",
           cardDescription:
-            "Le MDF fonctionne mieux quand on l'utilise la ou il est fort, puis qu'on combine avec d'autres materiaux la ou l'usage demande plus de robustesse.",
+            "Le MDF fonctionne mieux quand on l'utilise là où il est fort, puis qu'on combine avec d'autres matériaux là où l'usage demande plus de robustesse.",
         },
       },
     },
@@ -178,29 +178,29 @@ export const mdfPage: PageTemplateData = {
               description: "Vue d'ensemble par usage.",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs materiaux d'armoires",
+                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
               },
               badges: ["Comparatif"],
               footerCtaLabel: "Voir la page",
             },
             {
-              title: "Melamine",
+              title: "Mélamine",
               href: "/materiaux/melamine/",
-              description: "Decor et cout plus maitrise.",
+              description: "Décor et coût plus maîtrisé.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de melamine pour mobilier sur mesure",
+                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                alt: "Panneau de mélamine pour mobilier sur mesure",
               },
-              badges: ["Decor"],
+              badges: ["Décor"],
               footerCtaLabel: "Voir la page",
             },
             {
-              title: "Contreplaque",
+              title: "Contreplaqué",
               href: "/materiaux/contreplaque/",
-              description: "Plus oriente structure.",
+              description: "Plus orienté structure.",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Detail de contreplaque pour armoires sur mesure",
+                alt: "Détail de contreplaqué pour armoires sur mesure",
               },
               badges: ["Structure"],
               footerCtaLabel: "Voir la page",
@@ -211,7 +211,7 @@ export const mdfPage: PageTemplateData = {
               description: "Le fini choisi change beaucoup la perception.",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Echantillons de couleurs et finis pour mobilier sur mesure",
+                alt: "Échantillons de couleurs et finis pour mobilier sur mesure",
               },
               badges: ["Finition"],
               footerCtaLabel: "Voir la page",
@@ -231,19 +231,19 @@ export const mdfPage: PageTemplateData = {
           items: [
             {
               q: "Le MDF est-il bas de gamme ?",
-              a: "Non. Il peut etre excellent pour certaines applications, surtout les portes peintes, si l'execution est soignee.",
+              a: "Non. Il peut être excellent pour certaines applications, surtout les portes peintes, si l'exécution est soignée.",
             },
             {
-              q: "Le MDF gonfle-t-il avec l'humidite ?",
-              a: "Il peut reagir a l'eau si la protection est insuffisante, surtout aux chants.",
+              q: "Le MDF gonfle-t-il avec l'humidité ?",
+              a: "Il peut réagir à l'eau si la protection est insuffisante, surtout aux chants.",
             },
             {
-              q: "MDF ou melamine ?",
-              a: "Le MDF sert souvent la peinture uniforme; la melamine sert plutot un decor et un cout maitrise.",
+              q: "MDF ou mélamine ?",
+              a: "Le MDF sert souvent la peinture uniforme; la mélamine sert plutôt un décor et un coût maîtrisé.",
             },
             {
-              q: "Le MDF est-il adapte a la salle de bain ?",
-              a: "Selon ventilation, usage et protection. Dans certains contextes, d'autres materiaux seront preferables.",
+              q: "Le MDF est-il adapté à la salle de bain ?",
+              a: "Selon ventilation, usage et protection. Dans certains contextes, d'autres matériaux seront préférables.",
             },
           ],
         },
@@ -255,9 +255,9 @@ export const mdfPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous hesitez entre MDF et autres options ?",
+          heading: "Vous hésitez entre MDF et autres options ?",
           intro:
-            "On vous aide a voir si le MDF est coherent pour votre niveau de finition, votre espace et votre usage reel.",
+            "On vous aide à voir si le MDF est cohérent pour votre niveau de finition, votre espace et votre usage réel.",
           actions: [
             {
               label: "Demander une soumission",

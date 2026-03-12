@@ -6,14 +6,14 @@ export const agrandissementMaisonPage: PageTemplateData = {
   metadata: {
     title: "Agrandissement de maison",
     description:
-      "Agrandissement de maison cle en main : faisabilite, sequence de travaux, coordination et integration propre a l'existant.",
+      "Agrandissement de maison clé en main : faisabilité, séquence de travaux, coordination et intégration propre à l'existant.",
     path: "/services/renovation/agrandissement-de-maison/",
     ogAlt: "Agrandissement de maison Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "Renovation", url: SITE.url + "/services/renovation/" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
     {
       name: "Agrandissement de maison",
       url: SITE.url + "/services/renovation/agrandissement-de-maison/",
@@ -22,7 +22,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
   service: {
     name: "Agrandissement de maison",
     description:
-      "Planification, faisabilite, coordination et execution complete pour des projets d'agrandissement residentiel.",
+      "Planification, faisabilité, coordination et exécution complète pour des projets d'agrandissement résidentiel.",
     url: SITE.url + "/services/renovation/agrandissement-de-maison/",
     serviceType: "Agrandissement de maison",
   },
@@ -34,11 +34,11 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
+          eyebrow: "Dilamco - Rénovation",
           heading:
-            "Agrandissement de maison cle en main, planifier l'extension sans fragiliser l'existant",
+            "Agrandissement de maison clé en main, planifier l'extension sans fragiliser l'existant",
           description:
-            "Un agrandissement residentiel ne se resume pas a ajouter des pieds carres. Il faut cadrer la faisabilite, la structure, l'enveloppe, les raccords interieurs et la sequence de chantier pour livrer un resultat coherent et habitable.",
+            "Un agrandissement résidentiel ne se résume pas à ajouter des pieds carrés. Il faut cadrer la faisabilité, la structure, l'enveloppe, les raccords intérieurs et la séquence de chantier pour livrer un résultat cohérent et habitable.",
           actions: [
             {
               label: "Demander une soumission",
@@ -46,17 +46,17 @@ export const agrandissementMaisonPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir la renovation cle en main",
+              label: "Voir la rénovation clé en main",
               href: "/services/renovation/",
               variant: "outline",
             },
           ],
-          badges: ["Faisabilite", "Coordination", "Integration"],
+          badges: ["Faisabilité", "Coordination", "Intégration"],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-            alt: "Projet residentiel de renovation et d'agrandissement",
+            alt: "Projet résidentiel de rénovation et d'agrandissement",
           },
-          caption: "Montreal, Laval et Rive-Sud",
+          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
@@ -68,22 +68,22 @@ export const agrandissementMaisonPage: PageTemplateData = {
         props: {
           heading: "Pourquoi un agrandissement devient vite complexe",
           description:
-            "Le risque n'est pas seulement le cout des travaux. La vraie difficulte est d'integrer une nouvelle partie a une maison existante sans generer de zones grises entre structure, enveloppe, circulation et finition.",
+            "Le risque n'est pas seulement le coût des travaux. La vraie difficulté est d'intégrer une nouvelle partie à une maison existante sans générer de zones grises entre structure, enveloppe, circulation et finition.",
           cards: [
             {
               title: "Maison existante",
               description:
-                "Niveaux, structure, ouvertures et contraintes cachees doivent etre valides avant de projeter l'agrandissement.",
+                "Niveaux, structure, ouvertures et contraintes cachées doivent être validés avant de projeter l'agrandissement.",
             },
             {
-              title: "Sequence de chantier",
+              title: "Séquence de chantier",
               description:
-                "Demolition, structure, fermeture de l'enveloppe et finition doivent s'enchainer proprement pour limiter les reprises.",
+                "Démolition, structure, fermeture de l'enveloppe et finition doivent s'enchaîner proprement pour limiter les reprises.",
             },
             {
               title: "Coordination des intervenants",
               description:
-                "Plus le projet touche d'elements, plus la coordination determine la qualite finale et la prevision des delais.",
+                "Plus le projet touche d'éléments, plus la coordination détermine la qualité finale et la prévision des délais.",
             },
           ],
           columns: "1",
@@ -96,29 +96,29 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Notre approche pour cadrer un agrandissement residentiel",
+          heading: "Notre approche pour cadrer un agrandissement résidentiel",
           intro:
-            "L'objectif n'est pas seulement d'ajouter une piece. Il faut confirmer ce qui est realiste, structurer les decisions et preparer une execution qui s'integre a la maison actuelle.",
+            "L'objectif n'est pas seulement d'ajouter une pièce. Il faut confirmer ce qui est réaliste, structurer les décisions et préparer une exécution qui s'intègre à la maison actuelle.",
           items: [
             {
-              title: "Analyse de la portee",
+              title: "Analyse de la portée",
               description:
-                "On clarifie l'usage recherche, la superficie visee, les contraintes du site et le niveau d'intervention sur l'existant.",
+                "On clarifie l'usage recherché, la superficie visée, les contraintes du site et le niveau d'intervention sur l'existant.",
             },
             {
               title: "Validation technique",
               description:
-                "On cadre les points sensibles comme la structure, les raccords, l'acces au chantier et la logique generale des travaux.",
+                "On cadre les points sensibles comme la structure, les raccords, l'accès au chantier et la logique générale des travaux.",
             },
             {
-              title: "Sequence de realisation",
+              title: "Séquence de réalisation",
               description:
-                "Les etapes sont ordonnees pour limiter les interruptions, les reprises et les conflits entre corps de metier.",
+                "Les étapes sont ordonnées pour limiter les interruptions, les reprises et les conflits entre corps de métier.",
             },
             {
-              title: "Controle du resultat final",
+              title: "Contrôle du résultat final",
               description:
-                "L'agrandissement doit sembler appartenir a la maison, pas fonctionner comme un ajout mal raccorde.",
+                "L'agrandissement doit sembler appartenir à la maison, pas fonctionner comme un ajout mal raccordé.",
             },
           ],
           actions: [
@@ -128,18 +128,18 @@ export const agrandissementMaisonPage: PageTemplateData = {
               variant: "outline",
             },
             {
-              label: "Voir la renovation cle en main",
+              label: "Voir la rénovation clé en main",
               href: "/services/renovation/",
               variant: "outline",
             },
           ],
           image: {
             src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-            alt: "Planification d'un projet d'agrandissement residentiel",
+            alt: "Planification d'un projet d'agrandissement résidentiel",
           },
-          cardTitle: "Ce qu'on cherche a eviter",
+          cardTitle: "Ce qu'on cherche à éviter",
           cardDescription:
-            "Les projets qui avancent sans sequence claire finissent souvent avec des ajustements couteux, des finitions compromises ou une integration visuelle faible.",
+            "Les projets qui avancent sans séquence claire finissent souvent avec des ajustements coûteux, des finitions compromises ou une intégration visuelle faible.",
         },
       },
     },
@@ -149,31 +149,31 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Sequence type d'un projet d'agrandissement",
+          heading: "Séquence type d'un projet d'agrandissement",
           intro:
-            "Chaque projet varie, mais la logique reste la meme : cadrer avant d'ouvrir, coordonner avant d'accelerer et finir seulement quand l'integration est propre.",
+            "Chaque projet varie, mais la logique reste la même : cadrer avant d'ouvrir, coordonner avant d'accélérer et finir seulement quand l'intégration est propre.",
           steps: [
             {
               number: "1",
               title: "Cadrage",
               description:
-                "Besoins, faisabilite, contraintes du site et niveau d'intervention sur la maison existante.",
+                "Besoins, faisabilité, contraintes du site et niveau d'intervention sur la maison existante.",
             },
             {
               number: "2",
               title: "Conception",
               description:
-                "Organisation des volumes, raccords, circulation, ouvertures et decisions techniques principales.",
+                "Organisation des volumes, raccords, circulation, ouvertures et décisions techniques principales.",
             },
             {
               number: "3",
-              title: "Execution",
+              title: "Exécution",
               description:
-                "Travaux structures et connexes coordonnes selon une sequence qui protege l'avancement du chantier.",
+                "Travaux structurels et connexes coordonnés selon une séquence qui protège l'avancement du chantier.",
             },
             {
               number: "4",
-              title: "Integration",
+              title: "Intégration",
               description:
                 "Finitions, ajustements et raccords pour que l'agrandissement fonctionne avec le reste de la maison.",
             },
@@ -189,7 +189,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
         props: {
           heading: "Points techniques qui influencent vraiment le projet",
           intro:
-            "Un agrandissement reussi depend d'une serie de decisions techniques prises assez tot pour eviter les blocages et les compromis visibles.",
+            "Un agrandissement réussi dépend d'une série de décisions techniques prises assez tôt pour éviter les blocages et les compromis visibles.",
           columns: "2",
           items: [
             {
@@ -198,41 +198,41 @@ export const agrandissementMaisonPage: PageTemplateData = {
                 "Liaison entre le nouveau volume et la maison existante.",
               icon: "package2",
               bullets: [
-                "Verification de la structure a modifier avant les travaux.",
-                "Ouvertures et portees pensees selon l'usage reel.",
-                "Impact sur les murs, niveaux et circulation interieure.",
+                "Vérification de la structure à modifier avant les travaux.",
+                "Ouvertures et portées pensées selon l'usage réel.",
+                "Impact sur les murs, niveaux et circulation intérieure.",
               ],
             },
             {
               title: "Enveloppe et raccords",
               description:
-                "Le raccord visible et invisible influence la durabilite autant que l'apparence.",
+                "Le raccord visible et invisible influence la durabilité autant que l'apparence.",
               icon: "doorOpen",
               bullets: [
                 "Jonction propre entre ancien et nouveau.",
-                "Gestion des transitions interieures et exterieures.",
-                "Attention aux details qui trahissent un ajout mal integre.",
+                "Gestion des transitions intérieures et extérieures.",
+                "Attention aux détails qui trahissent un ajout mal intégré.",
               ],
             },
             {
-              title: "Organisation interieure",
+              title: "Organisation intérieure",
               description:
-                "L'agrandissement doit ameliorer la maison, pas juste ajouter une surface.",
+                "L'agrandissement doit améliorer la maison, pas juste ajouter une surface.",
               icon: "slidersHorizontal",
               bullets: [
                 "Circulation plus fluide entre les zones de vie.",
-                "Rangement, mobilier et ouvertures prevus des le depart.",
-                "Integration possible de cuisine, salle de bain ou walk-in.",
+                "Rangement, mobilier et ouvertures prévus dès le départ.",
+                "Intégration possible de cuisine, salle de bain ou walk-in.",
               ],
             },
             {
               title: "Coordination chantier",
               description:
-                "Le niveau de controle determine la prevision des delais et la qualite de finition.",
+                "Le niveau de contrôle détermine la prévision des délais et la qualité de finition.",
               icon: "wrench",
               bullets: [
-                "Ordre des interventions clarifie avant demarrage.",
-                "Moins de chevauchement improductif entre equipes.",
+                "Ordre des interventions clarifié avant démarrage.",
+                "Moins de chevauchement improductif entre équipes.",
                 "Moins de corrections de fin de chantier.",
               ],
             },
@@ -241,13 +241,13 @@ export const agrandissementMaisonPage: PageTemplateData = {
       },
     },
     {
-      id: "integration",
+      id: "intégration",
       content: {
         type: "grid",
         variant: "image-cards-slider",
         props: {
           heading:
-            "Comment l'agrandissement s'integre aux espaces de la maison",
+            "Comment l'agrandissement s'intègre aux espaces de la maison",
           intro:
             "Un agrandissement prend souvent tout son sens lorsqu'il supporte mieux la cuisine, la salle de bain ou les zones de rangement. Ces pages piliers restent les principales destinations de conversion.",
           items: [
@@ -255,10 +255,10 @@ export const agrandissementMaisonPage: PageTemplateData = {
               title: "Cuisine sur mesure",
               href: "/espaces/cuisine/",
               description:
-                "Quand l'agrandissement sert surtout une cuisine plus fonctionnelle, l'enjeu devient la circulation, l'ilot et l'integration des equipements.",
+                "Quand l'agrandissement sert surtout une cuisine plus fonctionnelle, l'enjeu devient la circulation, l'îlot et l'intégration des équipements.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure integree a un agrandissement",
+                alt: "Cuisine sur mesure intégrée à un agrandissement",
               },
               badges: ["Cuisine", "Circulation"],
               footerCtaLabel: "Voir la page cuisine",
@@ -267,22 +267,22 @@ export const agrandissementMaisonPage: PageTemplateData = {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain/",
               description:
-                "Une extension peut permettre d'ajouter ou d'agrandir une salle de bain avec meilleure gestion de l'humidite, de la plomberie et du rangement.",
+                "Une extension peut permettre d'ajouter ou d'agrandir une salle de bain avec meilleure gestion de l'humidité, de la plomberie et du rangement.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure integree a un agrandissement",
+                alt: "Salle de bain sur mesure intégrée à un agrandissement",
               },
-              badges: ["Humidite", "Plomberie"],
+              badges: ["Humidité", "Plomberie"],
               footerCtaLabel: "Voir la page salle de bain",
             },
             {
               title: "Walk-in et rangement",
               href: "/espaces/walk-in/",
               description:
-                "Plusieurs agrandissements servent a creer une suite plus complete avec rangement adapte et organisation plus claire.",
+                "Plusieurs agrandissements servent à créer une suite plus complète avec rangement adapté et organisation plus claire.",
               image: {
                 src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Walk-in sur mesure dans une extension residentielle",
+                alt: "Walk-in sur mesure dans une extension résidentielle",
               },
               badges: ["Rangement", "Suite"],
               footerCtaLabel: "Voir la page walk-in",
@@ -299,22 +299,22 @@ export const agrandissementMaisonPage: PageTemplateData = {
         props: {
           heading: "Ce qu'un bon agrandissement doit livrer au final",
           description:
-            "La preuve de maitrise ne tient pas seulement dans le volume ajoute. Elle se voit dans la facon dont la maison fonctionne apres les travaux et dans la qualite des raccords visibles au quotidien.",
+            "La preuve de maîtrise ne tient pas seulement dans le volume ajouté. Elle se voit dans la façon dont la maison fonctionne après les travaux et dans la qualité des raccords visibles au quotidien.",
           cards: [
             {
               title: "Lecture claire",
               description:
-                "La nouvelle section doit sembler coherente avec la maison plutot que paraitre ajoutee a la hate.",
+                "La nouvelle section doit sembler cohérente avec la maison plutôt que paraître ajoutée à la hâte.",
             },
             {
-              title: "Usage ameliore",
+              title: "Usage amélioré",
               description:
-                "La circulation, la luminosite, le rangement ou la capacite d'accueil doivent etre reellement meilleurs.",
+                "La circulation, la luminosité, le rangement ou la capacité d'accueil doivent être réellement meilleurs.",
             },
             {
               title: "Finition propre",
               description:
-                "Les transitions, alignements et details de finition doivent soutenir la perception d'un projet maitrise.",
+                "Les transitions, alignements et détails de finition doivent soutenir la perception d'un projet maîtrisé.",
             },
           ],
           columns: "1",
@@ -330,27 +330,27 @@ export const agrandissementMaisonPage: PageTemplateData = {
         props: {
           heading: "FAQ - agrandissement de maison",
           intro:
-            "Reponses claires sur faisabilite, coordination, delais et integration a l'existant.",
+            "Réponses claires sur faisabilité, coordination, délais et intégration à l'existant.",
           items: [
             {
               q: "Est-ce que Dilamco prend en charge un agrandissement complet?",
-              a: "Oui, selon la portee confirmee. L'objectif est de cadrer clairement ce qui est inclus, le niveau de coordination requis et la sequence generale avant le demarrage.",
+              a: "Oui, selon la portée confirmée. L'objectif est de cadrer clairement ce qui est inclus, le niveau de coordination requis et la séquence générale avant le démarrage.",
             },
             {
               q: "Est-ce que tous les agrandissements sont faisables?",
-              a: "Non. La faisabilite depend de la maison existante, du site, de la structure, des acces et des reglements applicables. C'est pour cela que l'analyse de depart est essentielle.",
+              a: "Non. La faisabilité dépend de la maison existante, du site, de la structure, des accès et des règlements applicables. C'est pour cela que l'analyse de départ est essentielle.",
             },
             {
-              q: "Comment gerer les imprevus dans ce type de chantier?",
-              a: "On ne elimine pas tous les imprevus, mais une bonne sequence et une meilleure lecture de l'existant reduisent fortement les corrections tardives et les conflits entre interventions.",
+              q: "Comment gérer les imprévus dans ce type de chantier?",
+              a: "On n'élimine pas tous les imprévus, mais une bonne séquence et une meilleure lecture de l'existant réduisent fortement les corrections tardives et les conflits entre interventions.",
             },
             {
               q: "Combien de temps dure un agrandissement de maison?",
-              a: "La duree varie selon la superficie, la complexite, le niveau d'intervention sur l'existant et les travaux connexes. Un echeancier realiste est etabli une fois la portee mieux definie.",
+              a: "La durée varie selon la superficie, la complexité, le niveau d'intervention sur l'existant et les travaux connexes. Un échéancier réaliste est établi une fois la portée mieux définie.",
             },
             {
-              q: "Est-ce pertinent si l'objectif principal est d'ameliorer la cuisine ou une suite parentale?",
-              a: "Oui. Plusieurs projets d'agrandissement existent pour mieux loger une cuisine, une salle de bain ou un espace de rangement. Dans ce cas, l'agrandissement sert la page pilier correspondante plutot qu'il ne la remplace.",
+              q: "Est-ce pertinent si l'objectif principal est d'améliorer la cuisine ou une suite parentale?",
+              a: "Oui. Plusieurs projets d'agrandissement existent pour mieux loger une cuisine, une salle de bain ou un espace de rangement. Dans ce cas, l'agrandissement sert la page pilier correspondante plutôt qu'il ne la remplace.",
             },
           ],
         },
@@ -362,9 +362,9 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous planifiez un agrandissement residentiel ?",
+          heading: "Vous planifiez un agrandissement résidentiel ?",
           intro:
-            "On vous aide a cadrer la faisabilite, la sequence de travaux et l'integration a l'existant pour partir sur une base plus maitrisable.",
+            "On vous aide à cadrer la faisabilité, la séquence de travaux et l'intégration à l'existant pour partir sur une base plus maîtrisable.",
           actions: [
             {
               label: "Demander une soumission",
@@ -372,12 +372,12 @@ export const agrandissementMaisonPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir la renovation cle en main",
+              label: "Voir la rénovation clé en main",
               href: "/services/renovation/",
               variant: "outline",
             },
           ],
-          note: "Agrandissement, reconfiguration et renovation integree",
+          note: "Agrandissement, reconfiguration et rénovation intégrée",
         },
       },
     },

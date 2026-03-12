@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Cuisines, vanites et armoires sur mesure cle en main a Montreal",
+    title: "Cuisines, vanités et armoires sur mesure clé en main à Montréal",
     description:
-      "Dilamco concoit et realise des cuisines, vanites et armoires sur mesure haut de gamme.",
+      "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme.",
     path: "/",
-    ogAlt: "Dilamco, sur mesure, durable, bien execute",
+    ogAlt: "Dilamco, sur mesure, durable, bien exécuté",
   },
   breadcrumbs: [
     {
@@ -28,7 +28,7 @@ export const page: PageTemplateData = {
           heading:
             "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
           description:
-            "Chaque espace a ses contraintes. Notre role est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien executees.",
+            "Chaque espace a ses contraintes. Notre rôle est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien exécutées.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -41,12 +41,12 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Sur mesure", "Durable", "Cle en main"],
+          badges: ["Sur mesure", "Durable", "Clé en main"],
           image: {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Espaces sur mesure Dilamco",
           },
-          caption: "Montreal, Laval et Rive-Sud",
+          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
@@ -56,19 +56,19 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Des espaces concus pour durer - pas des modules standard",
+          heading: "Des espaces conçus pour durer - pas des modules standard",
           description:
-            "Chaque espace Dilamco suit la meme logique : design adapte a votre realite, fabrication controlee, materiaux premium et execution structuree. L'objectif est simple : un resultat durable, coherent et maitrise, avec un seul responsable du debut a la fin.",
+            "Chaque espace Dilamco suit la même logique : design adapté à votre réalité, fabrication contrôlée, matériaux premium et exécution structurée. L'objectif est simple : un résultat durable, cohérent et maîtrisé, avec un seul responsable du début à la fin.",
           cards: [
             {
-              title: "Qualite tangible",
+              title: "Qualité tangible",
               description:
-                "Details de construction, quincaillerie, finitions et durabilite verifiables.",
+                "Détails de construction, quincaillerie, finitions et durabilité vérifiables.",
             },
             {
-              title: "Gestion cle en main",
+              title: "Gestion clé en main",
               description:
-                "Moins d'intervenants, moins d'imprevus, une coordination claire.",
+                "Moins d'intervenants, moins d'imprévus, une coordination claire.",
             },
           ],
           columns: "2",
@@ -83,72 +83,72 @@ export const page: PageTemplateData = {
         props: {
           heading: "Choisissez votre espace",
           intro:
-            "Accedez a la page pilier correspondante pour decouvrir l'approche, les materiaux, des realisations et une FAQ adaptee.",
+            "Accédez à la page pilier correspondante pour découvrir l'approche, les matériaux, des réalisations et une FAQ adaptée.",
           items: [
             {
               title: "Cuisine",
               href: "/espaces/cuisine",
               description:
-                "Armoires sur mesure, ergonomie, durabilite et coordination complete pour un resultat maitrise.",
+                "Armoires sur mesure, ergonomie, durabilité et coordination complète pour un résultat maîtrisé.",
               image: {
                 src: "/images/generated/home/home-space-cuisine-card-01.webp",
                 alt: "Cuisine sur mesure haut de gamme",
               },
-              badges: ["Sur mesure", "Cle en main", "Haut de gamme"],
+              badges: ["Sur mesure", "Clé en main", "Haut de gamme"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Decouvrir cuisine",
+              footerCtaLabel: "Découvrir cuisine",
             },
             {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain",
               description:
-                "Vanites sur mesure, rangement optimise et finitions resistantes a l'humidite pour durer.",
+                "Vanités sur mesure, rangement optimisé et finitions résistantes à l'humidité pour durer.",
               image: {
                 src: "/images/generated/home/home-space-bath-card-01.webp",
-                alt: "Vanite et salle de bain sur mesure",
+                alt: "Vanité et salle de bain sur mesure",
               },
-              badges: ["Vanites", "Durable", "Finitions"],
+              badges: ["Vanités", "Durable", "Finitions"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Decouvrir salle de bain",
+              footerCtaLabel: "Découvrir salle de bain",
             },
             {
               title: "Salle de lavage",
               href: "/espaces/salle-de-lavage",
               description:
-                "Solutions de rangement et d'organisation pensees pour le quotidien, sans compromis sur la solidite.",
+                "Solutions de rangement et d'organisation pensées pour le quotidien, sans compromis sur la solidité.",
               image: {
                 src: "/images/generated/home/home-space-laundry-card-01.webp",
                 alt: "Salle de lavage sur mesure",
               },
               badges: ["Rangement", "Fonctionnel", "Sur mesure"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Decouvrir salle de lavage",
+              footerCtaLabel: "Découvrir salle de lavage",
             },
             {
               title: "Walk-in",
               href: "/espaces/walk-in",
               description:
-                "Organisation personnalisee : tiroirs, penderies, accessoires et configuration adaptee a vos besoins.",
+                "Organisation personnalisée : tiroirs, penderies, accessoires et configuration adaptée à vos besoins.",
               image: {
                 src: "/images/generated/home/home-space-walkin-card-01.webp",
                 alt: "Walk-in sur mesure",
               },
-              badges: ["Organisation", "Personnalise", "Premium"],
+              badges: ["Organisation", "Personnalisé", "Premium"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Decouvrir walk-in",
+              footerCtaLabel: "Découvrir walk-in",
             },
             {
               title: "Commercial",
               href: "/espaces/commercial",
               description:
-                "Amenagement durable et reproductible : bureaux, espaces clients, rangements et mobilier sur mesure.",
+                "Aménagement durable et reproductible : bureaux, espaces clients, rangements et mobilier sur mesure.",
               image: {
                 src: "/images/generated/home/home-space-commercial-card-01.webp",
-                alt: "Amenagement commercial sur mesure",
+                alt: "Aménagement commercial sur mesure",
               },
-              badges: ["Commercial", "Durable", "Execution maitrisee"],
+              badges: ["Commercial", "Durable", "Exécution maîtrisée"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Decouvrir commercial",
+              footerCtaLabel: "Découvrir commercial",
             },
           ],
         },
@@ -162,31 +162,31 @@ export const page: PageTemplateData = {
         props: {
           heading: "Notre standard, peu importe l'espace",
           description:
-            "Une methode reproductible pour proteger la qualite, reduire les imprevus et livrer un resultat coherent.",
+            "Une méthode reproductible pour protéger la qualité, réduire les imprévus et livrer un résultat cohérent.",
           steps: [
             {
               number: "1",
               title: "Conception",
               description:
-                "Plans clairs, configuration adaptee et validations avant fabrication.",
+                "Plans clairs, configuration adaptée et validations avant fabrication.",
             },
             {
               number: "2",
-              title: "Materiaux",
+              title: "Matériaux",
               description:
-                "Choix durables et details de construction penses pour la longevite.",
+                "Choix durables et détails de construction pensés pour la longévité.",
             },
             {
               number: "3",
-              title: "Fabrication controlee",
+              title: "Fabrication contrôlée",
               description:
-                "Standards stables, controle qualite et coherence d'un projet a l'autre.",
+                "Standards stables, contrôle qualité et cohérence d'un projet à l'autre.",
             },
             {
               number: "4",
               title: "Installation",
               description:
-                "Ajustements precis, finitions nettes et coordination structuree sur chantier.",
+                "Ajustements précis, finitions nettes et coordination structurée sur chantier.",
             },
           ],
           actions: [
@@ -196,7 +196,7 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
             {
-              label: "Comprendre nos materiaux",
+              label: "Comprendre nos matériaux",
               href: "/materiaux",
               variant: "outline",
             },
@@ -214,23 +214,23 @@ export const page: PageTemplateData = {
         props: {
           heading: "FAQ",
           intro:
-            "Reponses claires aux questions qui bloquent le plus souvent la decision.",
+            "Réponses claires aux questions qui bloquent le plus souvent la décision.",
           items: [
             {
-              q: "Quel budget prevoir pour une cuisine sur mesure ?",
-              a: "Le budget depend des dimensions, de l'amenagement (tiroirs, accessoires, ilot), des materiaux et de la coordination. Pour une approche sur mesure et cle en main, il faut s'attendre a un investissement aligne avec une execution premium et durable.",
+              q: "Quel budget prévoir pour une cuisine sur mesure ?",
+              a: "Le budget dépend des dimensions, de l'aménagement (tiroirs, accessoires, îlot), des matériaux et de la coordination. Pour une approche sur mesure et clé en main, il faut s'attendre à un investissement aligné avec une exécution premium et durable.",
             },
             {
-              q: "Quelle est la difference avec IKEA / grandes surfaces ?",
-              a: "Les solutions standardisees peuvent convenir a certains contexts. Le sur mesure vise une personnalisation complete, une structure plus robuste, et une execution mieux controlee - particulierement important dans une residence principale.",
+              q: "Quelle est la différence avec IKEA / grandes surfaces ?",
+              a: "Les solutions standardisées peuvent convenir à certains contextes. Le sur mesure vise une personnalisation complète, une structure plus robuste, et une exécution mieux contrôlée - particulièrement important dans une résidence principale.",
             },
             {
-              q: "Quels sont les delais typiques ?",
-              a: "Les delais varient selon la complexite et la charge de production. Un processus structure (validation avant fabrication + coordination installation) permet une planification plus previsible et moins d'imprevus.",
+              q: "Quels sont les délais typiques ?",
+              a: "Les délais varient selon la complexité et la charge de production. Un processus structuré (validation avant fabrication + coordination installation) permet une planification plus prévisible et moins d'imprévus.",
             },
             {
-              q: "Gerez-vous la renovation complete ?",
-              a: "Oui, lorsque requis : coordination des etapes cles et integration avec le design, la fabrication et l'installation. L'objectif est de reduire la fragmentation et d'assurer une execution coherente.",
+              q: "Gérez-vous la rénovation complète ?",
+              a: "Oui, lorsque requis : coordination des étapes clés et intégration avec le design, la fabrication et l'installation. L'objectif est de réduire la fragmentation et d'assurer une exécution cohérente.",
             },
           ],
         },
@@ -243,9 +243,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Pret a cadrer votre projet correctement ?",
+          heading: "Prêt à cadrer votre projet correctement ?",
           intro:
-            "Obtenez une soumission claire et structuree, adaptee a un projet durable et maitrise.",
+            "Obtenez une soumission claire et structurée, adaptée à un projet durable et maîtrisé.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -258,7 +258,7 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Montreal • Laval • Rive-Sud - residentiel & commercial",
+          note: "Montréal • Laval • Rive-Sud - résidentiel & commercial",
         },
       },
     },

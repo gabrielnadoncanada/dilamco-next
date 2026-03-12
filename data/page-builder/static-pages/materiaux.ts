@@ -4,15 +4,15 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Materiaux",
+    title: "Matériaux",
     description:
-      "Materiaux et comparatifs pour cuisines, vanites et armoires sur mesure : contreplaque, MDF, melamine, bois massif, quincaillerie et finis.",
+      "Matériaux et comparatifs pour cuisines, vanités et armoires sur mesure : contreplaqué, MDF, mélamine, bois massif, quincaillerie et finis.",
     path: "/materiaux/",
-    ogAlt: "Materiaux Dilamco",
+    ogAlt: "Matériaux Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Materiaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
   ],
   blocks: [
     {
@@ -22,10 +22,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materiaux",
-          heading: "Materiaux, durabilite, finition et performance",
+          eyebrow: "Dilamco - Matériaux",
+          heading: "Matériaux, durabilité, finition et performance",
           description:
-            "Le bon materiau depend de l'usage reel. Nous priorisons la coherence entre structure, quincaillerie, finition et installation pour obtenir un resultat plus durable.",
+            "Le bon matériau dépend de l'usage réel. Nous priorisons la cohérence entre structure, quincaillerie, finition et installation pour obtenir un résultat plus durable.",
           actions: [
             {
               label: "Demander une soumission",
@@ -38,13 +38,13 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Contreplaque", "MDF", "Melamine", "Quincaillerie"],
+          badges: ["Contreplaqué", "MDF", "Mélamine", "Quincaillerie"],
           image: {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
-            alt: "Comparatif visuel de materiaux pour armoires sur mesure",
+            alt: "Comparatif visuel de matériaux pour armoires sur mesure",
           },
           caption:
-            "Une page materiaux doit montrer la matiere, pas une cuisine generique",
+            "Une page matériaux doit montrer la matière, pas une cuisine générique",
         },
       },
     },
@@ -54,29 +54,29 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Comment nous choisissons les materiaux",
+          heading: "Comment nous choisissons les matériaux",
           description:
-            "La performance ne depend pas uniquement du panneau choisi. Elle depend aussi de l'humidite, des charges d'usage, de la resistance aux impacts, de la stabilite dans le temps et des details d'assemblage.",
+            "La performance ne dépend pas uniquement du panneau choisi. Elle dépend aussi de l'humidité, des charges d'usage, de la résistance aux impacts, de la stabilité dans le temps et des détails d'assemblage.",
           cards: [
             {
-              title: "Humidite",
+              title: "Humidité",
               description:
-                "Cuisine, salle de bain et salle de lavage n'imposent pas les memes contraintes.",
+                "Cuisine, salle de bain et salle de lavage n'imposent pas les mêmes contraintes.",
             },
             {
               title: "Charges et usage",
               description:
-                "Tiroirs, caissons et portes ne demandent pas tous le meme niveau de robustesse.",
+                "Tiroirs, caissons et portes ne demandent pas tous le même niveau de robustesse.",
             },
             {
               title: "Finition attendue",
               description:
-                "Un fini peint uniforme ne se traite pas comme un decor melamine ou un rendu bois naturel.",
+                "Un fini peint uniforme ne se traite pas comme un décor mélamine ou un rendu bois naturel.",
             },
             {
-              title: "Execution finale",
+              title: "Exécution finale",
               description:
-                "Les chants, la quincaillerie et l'installation ont un impact direct sur la durabilite.",
+                "Les chants, la quincaillerie et l'installation ont un impact direct sur la durabilité.",
             },
           ],
           columns: "2",
@@ -90,24 +90,24 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Explorez les pages materiaux",
+          heading: "Explorez les pages matériaux",
           intro:
             "Chaque page explique les compromis, usages et limites du sujet.",
           items: [
             {
-              title: "Pourquoi le contreplaque",
+              title: "Pourquoi le contreplaqué",
               description: "Structure stable et durable.",
               href: "/materiaux/contreplaque/",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Detail de contreplaque pour armoires sur mesure",
+                alt: "Détail de contreplaqué pour armoires sur mesure",
               },
-              badges: ["Structure", "Durabilite"],
-              footerCtaLabel: "Voir le contreplaque",
+              badges: ["Structure", "Durabilité"],
+              footerCtaLabel: "Voir le contreplaqué",
             },
             {
               title: "MDF",
-              description: "Uniformite et finition peinte.",
+              description: "Uniformité et finition peinte.",
               href: "/materiaux/mdf/",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
@@ -117,22 +117,22 @@ export const page: PageTemplateData = {
               footerCtaLabel: "Voir le MDF",
             },
             {
-              title: "Melamine",
-              description: "Decor et cout maitrise.",
+              title: "Mélamine",
+              description: "Décor et coût maîtrisé.",
               href: "/materiaux/melamine/",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de melamine pour mobilier sur mesure",
+                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                alt: "Panneau de mélamine pour mobilier sur mesure",
               },
-              badges: ["Decor", "Budget"],
-              footerCtaLabel: "Voir la melamine",
+              badges: ["Décor", "Budget"],
+              footerCtaLabel: "Voir la mélamine",
             },
             {
               title: "Bois massif",
-              description: "Texture naturelle et caractere.",
+              description: "Texture naturelle et caractère.",
               href: "/materiaux/bois-massif/",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
+                src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
                 alt: "Finition en bois massif naturel",
               },
               badges: ["Naturel", "Visible"],
@@ -140,35 +140,35 @@ export const page: PageTemplateData = {
             },
             {
               title: "Quincaillerie",
-              description: "Confort, precision et longevite.",
+              description: "Confort, précision et longévité.",
               href: "/materiaux/quincaillerie/",
               image: {
                 src: "/images/generated/materials/material-hardware-hero-01.webp",
                 alt: "Quincaillerie premium pour armoires et tiroirs",
               },
-              badges: ["Usage", "Durabilite"],
+              badges: ["Usage", "Durabilité"],
               footerCtaLabel: "Voir la quincaillerie",
             },
             {
               title: "Couleurs et finis",
-              description: "Cohesion visuelle et entretien.",
+              description: "Cohésion visuelle et entretien.",
               href: "/materiaux/couleurs/",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Echantillons de couleurs et finis pour cuisine sur mesure",
+                alt: "Échantillons de couleurs et finis pour cuisine sur mesure",
               },
               badges: ["Style", "Entretien"],
               footerCtaLabel: "Voir les couleurs et finis",
             },
             {
-              title: "Comparatif des materiaux",
+              title: "Comparatif des matériaux",
               description: "Vue d'ensemble rapide pour cadrer le choix.",
               href: "/materiaux/comparatif/",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs materiaux d'armoires",
+                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
               },
-              badges: ["Comparatif", "Decision"],
+              badges: ["Comparatif", "Décision"],
               footerCtaLabel: "Voir le comparatif",
             },
           ],
@@ -183,11 +183,11 @@ export const page: PageTemplateData = {
         props: {
           heading: "Comparatif rapide",
           intro:
-            "Pour une lecture complete, consultez ensuite le comparatif detaille.",
-          columns: ["Performance generale", "Usage typique"],
+            "Pour une lecture complète, consultez ensuite le comparatif détaillé.",
+          columns: ["Performance générale", "Usage typique"],
           rows: [
             {
-              label: "Contreplaque",
+              label: "Contreplaqué",
               values: [
                 "Structure stable et durable",
                 "Caissons et structures exigeantes",
@@ -196,29 +196,29 @@ export const page: PageTemplateData = {
             {
               label: "MDF",
               values: [
-                "Uniformite et rendu peint",
-                "Portes et facades peintes",
+                "Uniformité et rendu peint",
+                "Portes et façades peintes",
               ],
             },
             {
-              label: "Melamine",
+              label: "Mélamine",
               values: [
-                "Decor varie et cout maitrise",
-                "Interieurs et applications ciblees",
+                "Décor varié et coût maîtrisé",
+                "Intérieurs et applications ciblées",
               ],
             },
             {
               label: "Bois massif",
               values: [
-                "Valeur percue et texture naturelle",
-                "Elements visibles et details premium",
+                "Valeur perçue et texture naturelle",
+                "Éléments visibles et détails premium",
               ],
             },
             {
               label: "Quincaillerie",
               values: [
-                "Confort et precision d'usage",
-                "Portes, tiroirs et mecanismes",
+                "Confort et précision d'usage",
+                "Portes, tiroirs et mécanismes",
               ],
             },
           ],
@@ -233,14 +233,14 @@ export const page: PageTemplateData = {
         props: {
           heading: "Ce qui fait vraiment haut de gamme",
           intro:
-            "Le rendu premium vient d'un systeme coherent : bons materiaux au bon endroit, quincaillerie fiable, details de fabrication solides et ajustements propres a l'installation.",
+            "Le rendu premium vient d'un système cohérent : bons matériaux au bon endroit, quincaillerie fiable, détails de fabrication solides et ajustements propres à l'installation.",
           badges: ["Structure", "Quincaillerie", "Installation"],
-          cardTitle: "Points qui changent vraiment le resultat",
+          cardTitle: "Points qui changent vraiment le résultat",
           items: [
-            "Structures stables et adaptees a l'usage",
-            "Quincaillerie fiable et bien reglee",
-            "Protection des chants et details de finition",
-            "Installation et ajustements precis",
+            "Structures stables et adaptées à l'usage",
+            "Quincaillerie fiable et bien réglée",
+            "Protection des chants et détails de finition",
+            "Installation et ajustements précis",
           ],
           actions: [
             {
@@ -264,23 +264,23 @@ export const page: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ materiaux",
+          heading: "FAQ matériaux",
           items: [
             {
-              q: "Contreplaque ou MDF ?",
-              a: "Le choix depend du role de la piece, de l'humidite et de la durabilite visee.",
+              q: "Contreplaqué ou MDF ?",
+              a: "Le choix dépend du rôle de la pièce, de l'humidité et de la durabilité visée.",
             },
             {
-              q: "La melamine est-elle un bon choix ?",
-              a: "Oui dans certains contextes, avec une attention particuliere aux chants et a l'installation.",
+              q: "La mélamine est-elle un bon choix ?",
+              a: "Oui dans certains contextes, avec une attention particulière aux chants et à l'installation.",
             },
             {
               q: "La quincaillerie soft-close vaut-elle la peine ?",
-              a: "Oui, si le systeme est fiable et bien installe.",
+              a: "Oui, si le système est fiable et bien installé.",
             },
             {
-              q: "Quels materiaux eviter en salle de bain ?",
-              a: "Ceux mal proteges contre l'humidite ou mal adaptes au contexte reel.",
+              q: "Quels matériaux éviter en salle de bain ?",
+              a: "Ceux mal protégés contre l'humidité ou mal adaptés au contexte réel.",
             },
           ],
         },
@@ -294,7 +294,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Besoin d'un avis sur les bons choix techniques ?",
           intro:
-            "On vous aide a choisir une combinaison materiaux, quincaillerie et finition coherente avec votre espace et vos priorites.",
+            "On vous aide à choisir une combinaison matériaux, quincaillerie et finition cohérente avec votre espace et vos priorités.",
           actions: [
             {
               label: "Demander une soumission",

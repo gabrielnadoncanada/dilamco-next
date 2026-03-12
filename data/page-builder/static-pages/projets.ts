@@ -6,9 +6,9 @@ export const page: PageTemplateData = {
   metadata: {
     title: "Projets",
     description:
-      "Decouvrez nos realisations sur mesure : cuisines, vanites, walk-in, salles de lavage et projets commerciaux.",
+      "Découvrez nos réalisations sur mesure : cuisines, vanités, walk-in, salles de lavage et projets commerciaux.",
     path: "/projets/",
-    ogAlt: "Realisations Dilamco",
+    ogAlt: "Réalisations Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -24,9 +24,9 @@ export const page: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Projets",
           heading:
-            "Realisations sur mesure : cuisines, vanites, rangement et commercial",
+            "Réalisations sur mesure : cuisines, vanités, rangement et commercial",
           description:
-            "Cette page sert a montrer des cas reels, pas une galerie vide. Vous y trouvez des projets qui aident a juger le niveau d'execution, le type de contraintes traitees et la qualite de finition attendue.",
+            "Cette page sert à montrer des cas réels, pas une galerie vide. Vous y trouvez des projets qui aident à juger le niveau d'exécution, le type de contraintes traitées et la qualité de finition attendue.",
           actions: [
             {
               label: "Demander une soumission",
@@ -39,13 +39,13 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Cas reels", "Montreal", "Laval", "Rive-Sud"],
+          badges: ["Cas réels", "Montréal", "Laval", "Rive-Sud"],
           image: {
             src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "Realisation sur mesure Dilamco",
+            alt: "Réalisation sur mesure Dilamco",
           },
           caption:
-            "Des projets qui servent a se projeter et a verifier la qualite d'execution",
+            "Des projets qui servent à se projeter et à vérifier la qualité d'exécution",
         },
       },
     },
@@ -59,36 +59,36 @@ export const page: PageTemplateData = {
         props: {
           heading: "Explorer les projets",
           intro:
-            "Choisissez l'univers de projet le plus proche de votre realite pour voir des references mieux ciblees.",
+            "Choisissez l'univers de projet le plus proche de votre réalité pour voir des références mieux ciblées.",
           items: [
             {
               image: {
                 src: "/images/projects/chene-moderne.webp",
-                alt: "Categorie projets cuisine sur mesure",
+                alt: "Catégorie projets cuisine sur mesure",
               },
             },
             {
               image: {
                 src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-                alt: "Categorie projets salle de bain",
+                alt: "Catégorie projets salle de bain",
               },
             },
             {
               image: {
                 src: "/images/projects/Signature-Bouleau.webp",
-                alt: "Categorie projets walk-in et rangement",
+                alt: "Catégorie projets walk-in et rangement",
               },
             },
             {
               image: {
                 src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
-                alt: "Categorie projets salle de lavage",
+                alt: "Catégorie projets salle de lavage",
               },
             },
             {
               image: {
                 src: "/images/projects/project11.webp",
-                alt: "Categorie projets commerciaux",
+                alt: "Catégorie projets commerciaux",
               },
             },
           ],
@@ -103,33 +103,33 @@ export const page: PageTemplateData = {
         type: "process",
         variant: "split-cards",
         props: {
-          heading: "La logique de projet derriere le resultat final",
+          heading: "La logique de projet derrière le résultat final",
           description:
-            "Les bonnes realisations viennent rarement d'un coup de chance. Elles viennent d'une methode qui clarifie les decisions en amont et protege l'execution jusqu'a la pose.",
+            "Les bonnes réalisations viennent rarement d'un coup de chance. Elles viennent d'une méthode qui clarifie les décisions en amont et protège l'exécution jusqu'à la pose.",
           steps: [
             {
               number: "1",
               title: "Cadrage",
               description:
-                "Comprendre les besoins, les contraintes du lieu et la portee reelle du projet.",
+                "Comprendre les besoins, les contraintes du lieu et la portée réelle du projet.",
             },
             {
               number: "2",
               title: "Conception et validations",
               description:
-                "Structurer l'implantation, confirmer les choix et fermer les decisions qui influencent la fabrication.",
+                "Structurer l'implantation, confirmer les choix et fermer les décisions qui influencent la fabrication.",
             },
             {
               number: "3",
               title: "Fabrication",
               description:
-                "Produire sur une base stable avec des choix materiaux et techniques deja alignes.",
+                "Produire sur une base stable avec des choix matériaux et techniques déjà alignés.",
             },
             {
               number: "4",
               title: "Installation et finition",
               description:
-                "Ajuster, aligner et livrer un resultat propre, coherent et durable.",
+                "Ajuster, aligner et livrer un résultat propre, cohérent et durable.",
             },
           ],
           actions: [
@@ -156,7 +156,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Vous avez un projet similaire ?",
           intro:
-            "Si une realisation ressemble a votre contexte, on peut vous aider a cadrer la portee, les choix et la meilleure suite.",
+            "Si une réalisation ressemble à votre contexte, on peut vous aider à cadrer la portée, les choix et la meilleure suite.",
           actions: [
             {
               label: "Demander une soumission",
@@ -169,7 +169,7 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Residentiel et commercial - Montreal, Laval, Rive-Sud",
+          note: "Résidentiel et commercial - Montréal, Laval, Rive-Sud",
         },
       },
     },

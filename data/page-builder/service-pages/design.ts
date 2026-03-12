@@ -6,7 +6,7 @@ export const designPage: PageTemplateData = {
   metadata: {
     title: "Service de design",
     description:
-      "Service de design : optimisation de l'espace, planification et choix des materiaux pour cuisines, vanites, walk-in et projets commerciaux.",
+      "Service de design : optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux.",
     path: "/services/design/",
     ogAlt: "Service de design Dilamco",
   },
@@ -18,7 +18,7 @@ export const designPage: PageTemplateData = {
   service: {
     name: "Service de design",
     description:
-      "Optimisation de l'espace, planification et choix des materiaux pour cuisines, vanites, walk-in et projets commerciaux.",
+      "Optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux.",
     url: SITE.url + "/services/design/",
     serviceType: "Design",
   },
@@ -33,7 +33,7 @@ export const designPage: PageTemplateData = {
           eyebrow: "Dilamco - Services",
           heading: "Service de design, structurer le projet avant de fabriquer",
           description:
-            "Le design sert a cadrer l'usage, organiser l'espace, integrer les contraintes et prendre les bonnes decisions avant la fabrication et l'installation.",
+            "Le design sert à cadrer l'usage, organiser l'espace, intégrer les contraintes et prendre les bonnes décisions avant la fabrication et l'installation.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -41,44 +41,44 @@ export const designPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir nos realisations",
+              label: "Voir nos réalisations",
               href: "/projets/",
               variant: "outline",
             },
           ],
-          badges: ["Usage reel", "Planification", "Execution"],
+          badges: ["Usage réel", "Planification", "Exécution"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
-            alt: "Plan de cuisine sur mesure et echantillons de materiaux",
+            alt: "Plan de cuisine sur mesure et échantillons de matériaux",
           },
-          caption: "Montreal, Laval et Rive-Sud",
+          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
     {
-      id: "role",
+      id: "rôle",
       content: {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Le role du design dans un projet sur mesure",
+          heading: "Le rôle du design dans un projet sur mesure",
           description:
-            "Un bon design rend le projet clair et executable. Il permet d'anticiper les contraintes et d'eviter les reprises en fabrication ou les compromis visibles a la fin.",
+            "Un bon design rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles à la fin.",
           cards: [
             {
               title: "Optimiser l'espace",
               description:
-                "Circulation, zones de travail, degagements et hauteurs adaptees a votre usage.",
+                "Circulation, zones de travail, dégagements et hauteurs adaptées à votre usage.",
             },
             {
               title: "Structurer le rangement",
               description:
-                "Acces, organisation et priorites definies avant la production.",
+                "Accès, organisation et priorités définies avant la production.",
             },
             {
-              title: "Aligner les decisions",
+              title: "Aligner les décisions",
               description:
-                "Materiaux, finition, calendrier et niveau de complexite restes coherents.",
+                "Matériaux, finition, calendrier et niveau de complexité restent cohérents.",
             },
           ],
           columns: "1",
@@ -93,24 +93,24 @@ export const designPage: PageTemplateData = {
         props: {
           heading: "Ce que comprend le service de design",
           intro:
-            "Le design Dilamco est oriente usage et execution, pas inspiration deconnectee du chantier.",
+            "Le design Dilamco est orienté usage et exécution, pas inspiration déconnectée du chantier.",
           items: [
             {
               title: "Analyse des besoins",
-              description: "Vos priorites, votre usage et vos contraintes.",
+              description: "Vos priorités, votre usage et vos contraintes.",
             },
             {
               title: "Organisation fonctionnelle",
               description: "Plan d'espace et logique de rangement.",
             },
             {
-              title: "Choix materiaux et finis",
-              description: "Decisions coherentes avec durabilite et entretien.",
+              title: "Choix matériaux et finis",
+              description: "Décisions cohérentes avec durabilité et entretien.",
             },
             {
-              title: "Preparation a l'execution",
+              title: "Préparation à l'exécution",
               description:
-                "Un design pense pour etre fabrique et pose proprement.",
+                "Un design pensé pour être fabriqué et posé proprement.",
             },
           ],
           actions: [
@@ -131,7 +131,7 @@ export const designPage: PageTemplateData = {
           },
           cardTitle: "Pourquoi c'est utile",
           cardDescription:
-            "Plus les decisions sont prises tot, plus le projet est previsible et executable.",
+            "Plus les décisions sont prises tôt, plus le projet est prévisible et exécutable.",
         },
       },
     },
@@ -149,10 +149,10 @@ export const designPage: PageTemplateData = {
               title: "Cuisine",
               href: "/espaces/cuisine/",
               description:
-                "Zones de travail, circulation, ilot, rangement et integration.",
+                "Zones de travail, circulation, îlot, rangement et intégration.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure pensee pour l'usage reel",
+                alt: "Cuisine sur mesure pensée pour l'usage réel",
               },
               badges: ["Ergonomie", "Rangement"],
               footerCtaLabel: "Voir cuisine",
@@ -161,24 +161,24 @@ export const designPage: PageTemplateData = {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain/",
               description:
-                "Contraintes d'humidite, rangement et ergonomie quotidienne.",
+                "Contraintes d'humidité, rangement et ergonomie quotidienne.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure pensee pour l'humidite",
+                alt: "Salle de bain sur mesure pensée pour l'humidité",
               },
-              badges: ["Humidite", "Finitions"],
+              badges: ["Humidité", "Finitions"],
               footerCtaLabel: "Voir salle de bain",
             },
             {
               title: "Walk-in",
               href: "/espaces/walk-in/",
               description:
-                "Organisation par zones, accessibilite et rangement vertical.",
+                "Organisation par zones, accessibilité et rangement vertical.",
               image: {
                 src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Walk-in sur mesure pense pour l'organisation",
+                alt: "Walk-in sur mesure pensé pour l'organisation",
               },
-              badges: ["Organisation", "Acces"],
+              badges: ["Organisation", "Accès"],
               footerCtaLabel: "Voir walk-in",
             },
           ],
@@ -194,23 +194,23 @@ export const designPage: PageTemplateData = {
         props: {
           heading: "FAQ - design",
           intro:
-            "Reponses claires sur le role du design dans un projet sur mesure.",
+            "Réponses claires sur le rôle du design dans un projet sur mesure.",
           items: [
             {
               q: "Le design est-il obligatoire?",
-              a: "Dans un projet sur mesure, il sert a cadrer les decisions avant la fabrication et a reduire les compromis tardifs.",
+              a: "Dans un projet sur mesure, il sert à cadrer les décisions avant la fabrication et à réduire les compromis tardifs.",
             },
             {
-              q: "Peut-on passer directement a la fabrication?",
-              a: "Seulement si les contraintes, l'organisation et les dimensions sont deja clarifiees de facon fiable.",
+              q: "Peut-on passer directement à la fabrication?",
+              a: "Seulement si les contraintes, l'organisation et les dimensions sont déjà clarifiées de façon fiable.",
             },
             {
-              q: "Est-ce que ca fonctionne en condo?",
-              a: "Oui. Le design est particulierement utile en condo pour gerer l'acces, l'espace et l'integration des equipements.",
+              q: "Est-ce que ça fonctionne en condo?",
+              a: "Oui. Le design est particulièrement utile en condo pour gérer l'accès, l'espace et l'intégration des équipements.",
             },
             {
               q: "Quand intervient le design dans le projet?",
-              a: "Au debut, avant la fabrication, pour valider la logique d'espace, les choix de materiaux et les contraintes techniques.",
+              a: "Au début, avant la fabrication, pour valider la logique d'espace, les choix de matériaux et les contraintes techniques.",
             },
           ],
         },
@@ -224,7 +224,7 @@ export const designPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet",
           intro:
-            "Dites-nous votre espace, votre secteur et votre echeance. On vous aide a cadrer un projet realiste et executable.",
+            "Dites-nous votre espace, votre secteur et votre échéance. On vous aide à cadrer un projet réaliste et exécutable.",
           actions: [
             {
               label: "Demander une soumission",
@@ -237,7 +237,7 @@ export const designPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Reponse generalement sous 24-48 h.",
+          note: "Réponse généralement sous 24-48 h.",
         },
       },
     },

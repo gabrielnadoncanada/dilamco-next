@@ -4,16 +4,16 @@ import { SITE } from "@/seo/schema/site";
 export const melaminePage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Melamine",
+    title: "Mélamine",
     description:
-      "Melamine : avantages, limites et usages recommandes pour armoires et projets sur mesure.",
+      "Mélamine : avantages, limites et usages recommandés pour armoires et projets sur mesure.",
     path: "/materiaux/melamine/",
-    ogAlt: "Melamine - Materiaux sur mesure",
+    ogAlt: "Mélamine - Matériaux sur mesure",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Materiaux", url: SITE.url + "/materiaux/" },
-    { name: "Melamine", url: SITE.url + "/materiaux/melamine/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
+    { name: "Mélamine", url: SITE.url + "/materiaux/melamine/" },
   ],
   blocks: [
     {
@@ -23,10 +23,10 @@ export const melaminePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materiaux",
-          heading: "Melamine : usages, limites et alternatives",
+          eyebrow: "Dilamco - Matériaux",
+          heading: "Mélamine : usages, limites et alternatives",
           description:
-            "La melamine est populaire pour sa variete de finis et un cout souvent plus maitrise. Sa durabilite depend surtout des chants, de l'usage reel et de la qualite d'installation.",
+            "La mélamine est populaire pour sa variété de finis et un coût souvent plus maîtrisé. Sa durabilité dépend surtout des chants, de l'usage réel et de la qualité d'installation.",
           actions: [
             {
               label: "Demander une soumission",
@@ -39,10 +39,10 @@ export const melaminePage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Decor", "Entretien", "Cout maitrise"],
+          badges: ["Décor", "Entretien", "Coût maîtrisé"],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Finis decoratifs de type melamine",
+            alt: "Finis décoratifs de type mélamine",
           },
           caption:
             "Pertinente dans certains contextes, moins pardonnante dans d'autres",
@@ -55,13 +55,13 @@ export const melaminePage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Ce que la melamine apporte",
+          heading: "Ce que la mélamine apporte",
           description:
-            "La melamine est un panneau recouvert d'un revetement decoratif. Elle peut etre tres pertinente pour certains projets grace a sa variete de decors et son entretien simple.",
+            "La mélamine est un panneau recouvert d'un revêtement décoratif. Elle peut être très pertinente pour certains projets grâce à sa variété de décors et son entretien simple.",
           cards: [
             {
-              title: "Grande variete de finis",
-              description: "Bois, unis, textures et autres decors disponibles.",
+              title: "Grande variété de finis",
+              description: "Bois, unis, textures et autres décors disponibles.",
             },
             {
               title: "Entretien simple",
@@ -69,14 +69,14 @@ export const melaminePage: PageTemplateData = {
                 "Un avantage concret dans plusieurs usages quotidiens.",
             },
             {
-              title: "Cout souvent maitrise",
+              title: "Coût souvent maîtrisé",
               description:
-                "Interesse particulierement certains budgets et portees de projet.",
+                "Intéresse particulièrement certains budgets et portées de projet.",
             },
             {
-              title: "Sensibilite des chants",
+              title: "Sensibilité des chants",
               description:
-                "Les impacts et infiltrations y sont souvent decisifs.",
+                "Les impacts et infiltrations y sont souvent décisifs.",
             },
           ],
           columns: "2",
@@ -89,20 +89,20 @@ export const melaminePage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Quand la melamine est un bon choix",
+          heading: "Quand la mélamine est un bon choix",
           intro:
-            "La melamine devient pertinente quand le projet valorise surtout le decor, l'entretien et un cout mieux cadre, tout en gardant une execution rigoureuse.",
-          badges: ["Decor", "Interieurs", "Budget"],
-          cardTitle: "Bon usage de la melamine",
+            "La mélamine devient pertinente quand le projet valorise surtout le décor, l'entretien et un coût mieux cadré, tout en gardant une exécution rigoureuse.",
+          badges: ["Décor", "Intérieurs", "Budget"],
+          cardTitle: "Bon usage de la mélamine",
           items: [
-            "Composantes ou interieurs cibles",
-            "Projets orientes decor et rationalisation",
-            "Configurations ou les chants sont bien traites",
-            "Choix combines avec d'autres materiaux pour les zones critiques",
+            "Composantes ou intérieurs cibles",
+            "Projets orientés décor et rationalisation",
+            "Configurations où les chants sont bien traités",
+            "Choix combinés avec d'autres matériaux pour les zones critiques",
           ],
           actions: [
             {
-              label: "Voir tous les materiaux",
+              label: "Voir tous les matériaux",
               href: "/materiaux/",
               variant: "default",
             },
@@ -121,23 +121,23 @@ export const melaminePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Limites a surveiller",
+          heading: "Limites à surveiller",
           intro:
-            "La melamine peut se degrader si l'humidite s'infiltre, surtout via les chants. L'execution et le contexte d'usage comptent donc beaucoup.",
+            "La mélamine peut se dégrader si l'humidité s'infiltre, surtout via les chants. L'exécution et le contexte d'usage comptent donc beaucoup.",
           items: [
             {
               title: "Chants sensibles.",
-              description: "Ils doivent etre bien choisis et bien executes.",
+              description: "Ils doivent être bien choisis et bien exécutés.",
             },
             {
-              title: "Humidite a gerer.",
+              title: "Humidité à gérer.",
               description:
-                "Les zones d'eau demandent une attention particuliere.",
+                "Les zones d'eau demandent une attention particulière.",
             },
             {
-              title: "Reparations moins discretes.",
+              title: "Réparations moins discrètes.",
               description:
-                "Les dommages sont souvent plus difficiles a invisibiliser.",
+                "Les dommages sont souvent plus difficiles à invisibiliser.",
             },
           ],
           actions: [
@@ -153,12 +153,12 @@ export const melaminePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-            alt: "Panneaux melamine decoratifs",
+            src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+            alt: "Panneaux mélamine décoratifs",
           },
-          cardTitle: "Approche recommandee",
+          cardTitle: "Approche recommandée",
           cardDescription:
-            "La melamine fonctionne mieux lorsqu'elle est utilisee de facon ciblee, avec une logique claire sur les zones sensibles.",
+            "La mélamine fonctionne mieux lorsqu'elle est utilisée de façon ciblée, avec une logique claire sur les zones sensibles.",
         },
       },
     },
@@ -177,7 +177,7 @@ export const melaminePage: PageTemplateData = {
               description: "Comprendre le bon usage de chaque option.",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs materiaux d'armoires",
+                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
               },
               badges: ["Comparatif"],
               footerCtaLabel: "Voir la page",
@@ -185,7 +185,7 @@ export const melaminePage: PageTemplateData = {
             {
               title: "MDF",
               href: "/materiaux/mdf/",
-              description: "Plus oriente finition peinte.",
+              description: "Plus orienté finition peinte.",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
@@ -194,12 +194,12 @@ export const melaminePage: PageTemplateData = {
               footerCtaLabel: "Voir la page",
             },
             {
-              title: "Contreplaque",
+              title: "Contreplaqué",
               href: "/materiaux/contreplaque/",
-              description: "Plus oriente structure durable.",
+              description: "Plus orienté structure durable.",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Detail de contreplaque pour armoires sur mesure",
+                alt: "Détail de contreplaqué pour armoires sur mesure",
               },
               badges: ["Structure"],
               footerCtaLabel: "Voir la page",
@@ -207,10 +207,10 @@ export const melaminePage: PageTemplateData = {
             {
               title: "Couleurs et finis",
               href: "/materiaux/couleurs/",
-              description: "Le decor doit rester coherent avec l'usage.",
+              description: "Le décor doit rester cohérent avec l'usage.",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Echantillons de couleurs et finis pour mobilier sur mesure",
+                alt: "Échantillons de couleurs et finis pour mobilier sur mesure",
               },
               badges: ["Finition"],
               footerCtaLabel: "Voir la page",
@@ -226,23 +226,23 @@ export const melaminePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - melamine",
+          heading: "FAQ - mélamine",
           items: [
             {
-              q: "La melamine est-elle bas de gamme ?",
-              a: "Pas forcement. Elle peut etre pertinente selon le projet et l'usage reel.",
+              q: "La mélamine est-elle bas de gamme ?",
+              a: "Pas forcément. Elle peut être pertinente selon le projet et l'usage réel.",
             },
             {
-              q: "La melamine gonfle-t-elle ?",
-              a: "Elle peut se degrader si l'humidite s'infiltre, surtout via les chants.",
+              q: "La mélamine gonfle-t-elle ?",
+              a: "Elle peut se dégrader si l'humidité s'infiltre, surtout via les chants.",
             },
             {
-              q: "Melamine ou MDF ?",
-              a: "Le MDF est souvent choisi pour peinture uniforme; la melamine pour les finis decoratifs et un cout plus maitrise.",
+              q: "Mélamine ou MDF ?",
+              a: "Le MDF est souvent choisi pour peinture uniforme; la mélamine pour les finis décoratifs et un coût plus maîtrisé.",
             },
             {
-              q: "Est-ce recommande en salle de bain ?",
-              a: "Selon le contexte. La ventilation et la qualite d'execution y sont critiques.",
+              q: "Est-ce recommandé en salle de bain ?",
+              a: "Selon le contexte. La ventilation et la qualité d'exécution y sont critiques.",
             },
           ],
         },
@@ -254,9 +254,9 @@ export const melaminePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez savoir si la melamine est pertinente ici ?",
+          heading: "Vous voulez savoir si la mélamine est pertinente ici ?",
           intro:
-            "On vous aide a voir si elle est coherente pour votre espace, ou si une autre combinaison sera plus durable.",
+            "On vous aide à voir si elle est cohérente pour votre espace, ou si une autre combinaison sera plus durable.",
           actions: [
             {
               label: "Demander une soumission",

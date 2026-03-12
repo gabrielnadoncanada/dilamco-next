@@ -6,7 +6,7 @@ export const installationPage: PageTemplateData = {
   metadata: {
     title: "Service d'installation",
     description:
-      "Service d'installation professionnelle : alignements precis, ajustements sur place et finition soignee.",
+      "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée.",
     path: "/services/installation/",
     ogAlt: "Service d'installation Dilamco",
   },
@@ -21,7 +21,7 @@ export const installationPage: PageTemplateData = {
   service: {
     name: "Service d'installation",
     description:
-      "Alignements precis, ajustements sur place et finition soignee pour cuisines, salles de bain, walk-in et commercial.",
+      "Alignements précis, ajustements sur place et finition soignée pour cuisines, salles de bain, walk-in et commercial.",
     url: SITE.url + "/services/installation/",
     serviceType: "Installation",
   },
@@ -35,9 +35,9 @@ export const installationPage: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Services",
           heading:
-            "Installation professionnelle, precision, alignement et finition",
+            "Installation professionnelle, précision, alignement et finition",
           description:
-            "Une installation de qualite est determinante pour le resultat final : ajustements sur place, alignements precis et finition soignee.",
+            "Une installation de qualité est déterminante pour le résultat final : ajustements sur place, alignements précis et finition soignée.",
           actions: [
             {
               label: "Demander une soumission",
@@ -45,7 +45,7 @@ export const installationPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir des projets installes",
+              label: "Voir des projets installés",
               href: "/projets/",
               variant: "outline",
             },
@@ -53,36 +53,36 @@ export const installationPage: PageTemplateData = {
           badges: ["Alignements", "Ajustements", "Finition"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
-            alt: "Plan technique et echantillons de panneaux pour installation sur mesure",
+            alt: "Plan technique et échantillons de panneaux pour installation sur mesure",
           },
-          caption: "Une pose propre change la perception de toute la piece",
+          caption: "Une pose propre change la perception de toute la pièce",
         },
       },
     },
     {
-      id: "difference",
+      id: "différence",
       content: {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Pourquoi l'installation fait toute la difference",
+          heading: "Pourquoi l'installation fait toute la différence",
           description:
-            "Les murs, planchers et plafonds ne sont jamais parfaitement droits. Une installation professionnelle absorbe cette realite pour livrer un resultat propre et durable.",
+            "Les murs, planchers et plafonds ne sont jamais parfaitement droits. Une installation professionnelle absorbe cette réalité pour livrer un résultat propre et durable.",
           cards: [
             {
               title: "Alignements",
               description:
-                "Portes, tiroirs et modules droits malgre les irregularites du site.",
+                "Portes, tiroirs et modules droits malgré les irrégularités du site.",
             },
             {
               title: "Ajustements",
               description:
-                "Reglages fins sur place pour un rendu uniforme et stable.",
+                "Réglages fins sur place pour un rendu uniforme et stable.",
             },
             {
-              title: "Durabilite",
+              title: "Durabilité",
               description:
-                "Une bonne installation reduit l'usure prematuree et les defauts visibles.",
+                "Une bonne installation réduit l'usure prématurée et les défauts visibles.",
             },
           ],
           columns: "3",
@@ -97,25 +97,25 @@ export const installationPage: PageTemplateData = {
         props: {
           heading: "Ce qui est inclus dans l'installation Dilamco",
           intro:
-            "L'installation ne se limite pas a fixer des modules. Elle comprend la preparation, l'ajustement et la verification finale.",
+            "L'installation ne se limite pas à fixer des modules. Elle comprend la préparation, l'ajustement et la vérification finale.",
           items: [
             {
-              title: "Preparation du site",
+              title: "Préparation du site",
               description:
-                "Verification des murs, planchers, niveaux et contraintes visibles.",
+                "Vérification des murs, planchers, niveaux et contraintes visibles.",
             },
             {
-              title: "Mise a niveau et fixation",
-              description: "Ancrage securitaire et stable des modules.",
+              title: "Mise à niveau et fixation",
+              description: "Ancrage sécuritaire et stable des modules.",
             },
             {
               title: "Ajustement des portes et tiroirs",
-              description: "Alignement precis et fonctionnement fluide.",
+              description: "Alignement précis et fonctionnement fluide.",
             },
             {
               title: "Inspection finale",
               description:
-                "Verification et ajustements avant la livraison du projet.",
+                "Vérification et ajustements avant la livraison du projet.",
             },
           ],
           actions: [
@@ -136,7 +136,7 @@ export const installationPage: PageTemplateData = {
           },
           cardTitle: "Coordination sur site",
           cardDescription:
-            "Une pose propre depend autant de la preparation que des ajustements sur place.",
+            "Une pose propre dépend autant de la préparation que des ajustements sur place.",
         },
       },
     },
@@ -148,38 +148,38 @@ export const installationPage: PageTemplateData = {
         props: {
           heading: "Installation par type de projet",
           intro:
-            "La logique de pose change selon l'espace, l'acces et le niveau d'usage.",
+            "La logique de pose change selon l'espace, l'accès et le niveau d'usage.",
           items: [
             {
               title: "Cuisine",
               href: "/espaces/cuisine/",
               description:
-                "Armoires, ilots et integration des electromenagers.",
+                "Armoires, îlots et intégration des électroménagers.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec installation precise",
+                alt: "Cuisine sur mesure avec installation précise",
               },
-              badges: ["Cuisine", "Integration"],
+              badges: ["Cuisine", "Intégration"],
               footerCtaLabel: "Voir cuisine",
             },
             {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain/",
-              description: "Vanites et protection des chants en milieu humide.",
+              description: "Vanités et protection des chants en milieu humide.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure avec finition propre",
               },
-              badges: ["Humidite", "Finition"],
+              badges: ["Humidité", "Finition"],
               footerCtaLabel: "Voir salle de bain",
             },
             {
               title: "Commercial",
               href: "/espaces/commercial/",
-              description: "Usage intensif, durabilite et coordination.",
+              description: "Usage intensif, durabilité et coordination.",
               image: {
                 src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Amenagement commercial avec installation planifiee",
+                alt: "Aménagement commercial avec installation planifiée",
               },
               badges: ["Commercial", "Coordination"],
               footerCtaLabel: "Voir commercial",
@@ -197,11 +197,11 @@ export const installationPage: PageTemplateData = {
         props: {
           heading: "FAQ - installation",
           intro:
-            "Reponses claires sur la pose, les ajustements et le deroulement du chantier.",
+            "Réponses claires sur la pose, les ajustements et le déroulement du chantier.",
           items: [
             {
               q: "Combien de temps dure une installation?",
-              a: "Cela depend du type de projet et de sa complexite. Une cuisine complete demande plus de temps qu'une vanite ou un walk-in.",
+              a: "Cela dépend du type de projet et de sa complexité. Une cuisine complète demande plus de temps qu'une vanité ou un walk-in.",
             },
             {
               q: "Des ajustements sont-ils normaux?",
@@ -209,11 +209,11 @@ export const installationPage: PageTemplateData = {
             },
             {
               q: "Installez-vous seulement vos propres armoires?",
-              a: "Oui. Nous installons les elements que nous fabriquons pour garantir la coherence du resultat.",
+              a: "Oui. Nous installons les éléments que nous fabriquons pour garantir la cohérence du résultat.",
             },
             {
               q: "Travaillez-vous en condo ou en commercial?",
-              a: "Oui. Nous adaptons l'installation aux contraintes d'acces, d'horaire et d'usage de chaque environnement.",
+              a: "Oui. Nous adaptons l'installation aux contraintes d'accès, d'horaire et d'usage de chaque environnement.",
             },
           ],
         },
@@ -225,9 +225,9 @@ export const installationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'une installation propre et maitrisee ?",
+          heading: "Besoin d'une installation propre et maîtrisée ?",
           intro:
-            "On cadre la pose, les ajustements et la coordination pour livrer un resultat net et durable.",
+            "On cadre la pose, les ajustements et la coordination pour livrer un résultat net et durable.",
           actions: [
             {
               label: "Demander une soumission",
@@ -240,7 +240,7 @@ export const installationPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Installation residentielle et commerciale",
+          note: "Installation résidentielle et commerciale",
         },
       },
     },

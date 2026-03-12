@@ -6,7 +6,7 @@ export const fabricationPage: PageTemplateData = {
   metadata: {
     title: "Service de fabrication",
     description:
-      "Fabrication sur mesure : durabilite, precision et finition haut de gamme pour un resultat coherent et durable.",
+      "Fabrication sur mesure : durabilité, précision et finition haut de gamme pour un résultat cohérent et durable.",
     path: "/services/fabrication/",
     ogAlt: "Service de fabrication Dilamco",
   },
@@ -21,7 +21,7 @@ export const fabricationPage: PageTemplateData = {
   service: {
     name: "Service de fabrication",
     description:
-      "Fabrication sur mesure : durabilite, precision et finition haut de gamme.",
+      "Fabrication sur mesure : durabilité, précision et finition haut de gamme.",
     url: SITE.url + "/services/fabrication/",
     serviceType: "Fabrication",
   },
@@ -34,9 +34,9 @@ export const fabricationPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Services",
-          heading: "Fabrication sur mesure, precision, constance et durabilite",
+          heading: "Fabrication sur mesure, précision, constance et durabilité",
           description:
-            "La fabrication determine la solidite, la stabilite et la longevite du projet. L'objectif est un resultat coherent, durable et propre a installer.",
+            "La fabrication détermine la solidité, la stabilité et la longévité du projet. L'objectif est un résultat cohérent, durable et propre à installer.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -44,18 +44,18 @@ export const fabricationPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir nos realisations",
+              label: "Voir nos réalisations",
               href: "/projets/",
               variant: "outline",
             },
           ],
-          badges: ["Precision", "Durabilite", "Sur mesure"],
+          badges: ["Précision", "Durabilité", "Sur mesure"],
           image: {
             src: "/images/generated/services/service-fabrication-hero-01.webp",
-            alt: "Plans techniques et echantillons de materiaux pour fabrication sur mesure",
+            alt: "Plans techniques et échantillons de matériaux pour fabrication sur mesure",
           },
           caption:
-            "Materiaux, assemblage et details qui tiennent dans le temps",
+            "Matériaux, assemblage et détails qui tiennent dans le temps",
         },
       },
     },
@@ -67,17 +67,17 @@ export const fabricationPage: PageTemplateData = {
         props: {
           heading: "Ce que signifie vraiment fabrication sur mesure",
           intro:
-            "Le sur mesure vise une adaptation reelle a l'espace et a l'usage, pas seulement une coupe a la bonne largeur.",
-          badges: ["Dimensions reelles", "Assemblage coherent", "Usage reel"],
-          cardTitle: "Ce qui fait la difference",
+            "Le sur mesure vise une adaptation réelle à l'espace et à l'usage, pas seulement une coupe à la bonne largeur.",
+          badges: ["Dimensions réelles", "Assemblage cohérent", "Usage réel"],
+          cardTitle: "Ce qui fait la différence",
           items: [
-            "Adaptation a l'espace et aux contraintes reelles.",
-            "Alignements et proportions maitrises entre modules.",
-            "Choix de materiaux et quincaillerie selon l'usage.",
+            "Adaptation à l'espace et aux contraintes réelles.",
+            "Alignements et proportions maîtrisées entre modules.",
+            "Choix de matériaux et quincaillerie selon l'usage.",
           ],
           actions: [
             {
-              label: "Voir les materiaux",
+              label: "Voir les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -98,31 +98,31 @@ export const fabricationPage: PageTemplateData = {
         props: {
           heading: "Processus de fabrication",
           intro:
-            "Chaque etape prepare la suivante pour reduire les reprises et faciliter une installation propre.",
+            "Chaque étape prépare la suivante pour réduire les reprises et faciliter une installation propre.",
           steps: [
             {
               number: "1",
               title: "Validation",
               description:
-                "Design, mesures et contraintes clarifies avant production.",
+                "Design, mesures et contraintes clarifiés avant production.",
             },
             {
               number: "2",
-              title: "Selection",
+              title: "Sélection",
               description:
-                "Materiaux choisis selon durabilite, humidite et entretien.",
+                "Matériaux choisis selon durabilité, humidité et entretien.",
             },
             {
               number: "3",
               title: "Assemblage",
               description:
-                "Modules, portes et tiroirs fabriques avec coherence et precision.",
+                "Modules, portes et tiroirs fabriqués avec cohérence et précision.",
             },
             {
               number: "4",
-              title: "Preparation",
+              title: "Préparation",
               description:
-                "Controle final et mise en condition pour une pose precise.",
+                "Contrôle final et mise en condition pour une pose précise.",
             },
           ],
         },
@@ -136,16 +136,16 @@ export const fabricationPage: PageTemplateData = {
         props: {
           heading: "Fabrication par type de projet",
           intro:
-            "Le niveau d'usage et les contraintes changent selon l'espace, mais le standard d'execution reste eleve.",
+            "Le niveau d'usage et les contraintes changent selon l'espace, mais le standard d'exécution reste élevé.",
           items: [
             {
               title: "Cuisine",
               href: "/espaces/cuisine/",
               description:
-                "Modules, ilots, rangement optimise et integration electromenagers.",
+                "Modules, îlots, rangement optimisé et intégration électroménagers.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec fabrication precise",
+                alt: "Cuisine sur mesure avec fabrication précise",
               },
               badges: ["Cuisine", "Rangement"],
               footerCtaLabel: "Voir cuisine",
@@ -153,22 +153,22 @@ export const fabricationPage: PageTemplateData = {
             {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain/",
-              description: "Vanites et rangement adaptes a l'humidite.",
+              description: "Vanités et rangement adaptés à l'humidité.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure avec fabrication durable",
               },
-              badges: ["Humidite", "Durabilite"],
+              badges: ["Humidité", "Durabilité"],
               footerCtaLabel: "Voir salle de bain",
             },
             {
               title: "Commercial",
               href: "/espaces/commercial/",
               description:
-                "Usage intensif, durabilite et coherence fonctionnelle.",
+                "Usage intensif, durabilité et cohérence fonctionnelle.",
               image: {
                 src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Amenagement commercial sur mesure avec fabrication robuste",
+                alt: "Aménagement commercial sur mesure avec fabrication robuste",
               },
               badges: ["Commercial", "Usage intensif"],
               footerCtaLabel: "Voir commercial",
@@ -186,23 +186,23 @@ export const fabricationPage: PageTemplateData = {
         props: {
           heading: "FAQ - fabrication",
           intro:
-            "Reponses claires sur la fabrication sur mesure et ses implications.",
+            "Réponses claires sur la fabrication sur mesure et ses implications.",
           items: [
             {
-              q: "Quelle est la difference entre sur mesure et semi-custom?",
-              a: "Le sur mesure s'adapte a l'espace exact alors que le semi-custom part de modules predefinis avec certaines variations.",
+              q: "Quelle est la différence entre sur mesure et semi-custom?",
+              a: "Le sur mesure s'adapte à l'espace exact alors que le semi-custom part de modules prédéfinis avec certaines variations.",
             },
             {
-              q: "Quels materiaux vieillissent le mieux?",
-              a: "Cela depend de l'espace, de l'humidite, de l'entretien, des chants, de la quincaillerie et de l'installation.",
+              q: "Quels matériaux vieillissent le mieux?",
+              a: "Cela dépend de l'espace, de l'humidité, de l'entretien, des chants, de la quincaillerie et de l'installation.",
             },
             {
-              q: "Est-ce personnalisable a 100 %?",
-              a: "L'objectif est d'adapter le projet a l'espace et a l'usage, dans les limites des contraintes techniques reelles.",
+              q: "Est-ce personnalisable à 100 %?",
+              a: "L'objectif est d'adapter le projet à l'espace et à l'usage, dans les limites des contraintes techniques réelles.",
             },
             {
-              q: "Quels sont les delais de fabrication?",
-              a: "Ils varient selon la complexite, la disponibilite et la coordination avec l'installation.",
+              q: "Quels sont les délais de fabrication?",
+              a: "Ils varient selon la complexité, la disponibilité et la coordination avec l'installation.",
             },
           ],
         },
@@ -214,9 +214,9 @@ export const fabricationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez un projet fabrique pour durer ?",
+          heading: "Vous voulez un projet fabriqué pour durer ?",
           intro:
-            "On vous aide a cadrer les bons choix techniques, materiaux et details d'execution avant la production.",
+            "On vous aide à cadrer les bons choix techniques, matériaux et détails d'exécution avant la production.",
           actions: [
             {
               label: "Demander une soumission",
@@ -224,12 +224,12 @@ export const fabricationPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir les materiaux",
+              label: "Voir les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
           ],
-          note: "Montreal, Laval et Rive-Sud",
+          note: "Montréal, Laval et Rive-Sud",
         },
       },
     },

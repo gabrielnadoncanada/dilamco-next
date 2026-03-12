@@ -4,23 +4,23 @@ import { SITE } from "@/seo/schema/site";
 export const contreplaquePage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Pourquoi le contreplaque",
+    title: "Pourquoi le contreplaqué",
     description:
-      "Contreplaque : stabilite, tenue des vis et durabilite pour la structure d'armoires sur mesure.",
+      "Contreplaqué : stabilité, tenue des vis et durabilité pour la structure d'armoires sur mesure.",
     path: "/materiaux/contreplaque/",
-    ogAlt: "Contreplaque - Materiaux sur mesure",
+    ogAlt: "Contreplaqué - Matériaux sur mesure",
     ogImage: {
       url: "/images/generated/materials/material-plywood-hero-01.webp",
-      alt: "Contreplaque - Materiaux sur mesure",
+      alt: "Contreplaqué - Matériaux sur mesure",
       width: 1200,
       height: 630,
     },
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Materiaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
     {
-      name: "Pourquoi le contreplaque",
+      name: "Pourquoi le contreplaqué",
       url: SITE.url + "/materiaux/contreplaque/",
     },
   ],
@@ -32,11 +32,11 @@ export const contreplaquePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materiaux",
+          eyebrow: "Dilamco - Matériaux",
           heading:
-            "Contreplaque : stabilite, durabilite et structure intelligente",
+            "Contreplaqué : stabilité, durabilité et structure intelligente",
           description:
-            "Le contreplaque est souvent privilegie en sur mesure pour la structure des armoires. Sa composition en plis croises lui donne un comportement plus stable et plus previsible.",
+            "Le contreplaqué est souvent privilégié en sur mesure pour la structure des armoires. Sa composition en plis croisés lui donne un comportement plus stable et plus prévisible.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -44,12 +44,12 @@ export const contreplaquePage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir nos realisations",
+              label: "Voir nos réalisations",
               href: "/projets/",
               variant: "outline",
             },
           ],
-          badges: ["Structure", "Stabilite", "Durabilite"],
+          badges: ["Structure", "Stabilité", "Durabilité"],
           image: {
             src: "/images/generated/materials/material-plywood-hero-01.webp",
             alt: "Cuisine sur mesure avec structure durable",
@@ -67,22 +67,22 @@ export const contreplaquePage: PageTemplateData = {
         props: {
           heading: "Pourquoi il est souvent choisi pour la structure",
           description:
-            "Le contreplaque est constitue de plis de bois colles avec fibres croisees. Cette logique constructive ameliore la stabilite dimensionnelle, la resistance mecanique et la tenue des fixations.",
+            "Le contreplaqué est constitué de plis de bois collés avec fibres croisées. Cette logique constructive améliore la stabilité dimensionnelle, la résistance mécanique et la tenue des fixations.",
           cards: [
             {
-              title: "Plis croises",
+              title: "Plis croisés",
               description:
                 "Ils limitent les mouvements et rendent le panneau plus stable.",
             },
             {
               title: "Bonne tenue des vis",
               description:
-                "Utile pour des armoires, tiroirs et modules soumis a l'usage.",
+                "Utile pour des armoires, tiroirs et modules soumis à l'usage.",
             },
             {
               title: "Structure robuste",
               description:
-                "Particulierement pertinente dans des projets residentiels long terme.",
+                "Particulièrement pertinente dans des projets résidentiels long terme.",
             },
             {
               title: "Polyvalence",
@@ -99,16 +99,16 @@ export const contreplaquePage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Ou le contreplaque est le plus pertinent",
+          heading: "Où le contreplaqué est le plus pertinent",
           intro:
-            "Ce materiau prend de la valeur quand la structure, la charge et la stabilite importent plus que le rendu decoratif seul.",
+            "Ce matériau prend de la valeur quand la structure, la charge et la stabilité importent plus que le rendu décoratif seul.",
           badges: ["Caissons", "Tiroirs", "Long terme"],
           cardTitle: "Applications typiques",
           items: [
             "Caissons d'armoires",
             "Composantes internes porteuses",
             "Tiroirs et modules soumis aux charges",
-            "Projets orientes durabilite a long terme",
+            "Projets orientés durabilité à long terme",
           ],
           actions: [
             {
@@ -131,44 +131,44 @@ export const contreplaquePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Humidite, limites et points a surveiller",
+          heading: "Humidité, limites et points à surveiller",
           intro:
-            "Le contreplaque n'est pas impermeable. Les chants, l'assemblage, le grade et la finition restent decisifs pour le resultat final.",
+            "Le contreplaqué n'est pas imperméable. Les chants, l'assemblage, le grade et la finition restent décisifs pour le résultat final.",
           items: [
             {
-              title: "Qualite variable selon le grade.",
-              description: "Tous les contreplaques ne se valent pas.",
+              title: "Qualité variable selon le grade.",
+              description: "Tous les contreplaqués ne se valent pas.",
             },
             {
-              title: "Cout souvent plus eleve.",
+              title: "Coût souvent plus élevé.",
               description:
-                "Le gain se joue surtout sur la structure et la longevite.",
+                "Le gain se joue surtout sur la structure et la longévité.",
             },
             {
-              title: "Execution finale critique.",
+              title: "Exécution finale critique.",
               description:
-                "Chants visibles, humidite et pose influencent fortement le rendu.",
+                "Chants visibles, humidité et pose influencent fortement le rendu.",
             },
           ],
           actions: [
             {
-              label: "Comparer les materiaux",
+              label: "Comparer les matériaux",
               href: "/materiaux/comparatif/",
               variant: "outline",
             },
             {
-              label: "Voir tous les materiaux",
+              label: "Voir tous les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
           ],
           image: {
-            src: "/images/generated/materials/material-plywood-detail-01.webp",
-            alt: "Detail de cuisine sur mesure en contreplaque",
+            src: "/images/generated/materials/material-plywood-détail-01.webp",
+            alt: "Détail de cuisine sur mesure en contreplaqué",
           },
-          cardTitle: "A retenir",
+          cardTitle: "À retenir",
           cardDescription:
-            "Le contreplaque est souvent un excellent choix structurel, mais sa vraie performance depend aussi des details d'execution.",
+              "Le contreplaqué est souvent un excellent choix structurel, mais sa vraie performance dépend aussi des détails d'exécution.",
         },
       },
     },
@@ -185,10 +185,10 @@ export const contreplaquePage: PageTemplateData = {
               title: "Comparatif complet",
               href: "/materiaux/comparatif/",
               description:
-                "Comparer contreplaque, MDF, melamine et bois massif.",
+                "Comparer contreplaqué, MDF, mélamine et bois massif.",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs materiaux d'armoires",
+                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
               },
               badges: ["Comparatif"],
               footerCtaLabel: "Voir la page",
@@ -196,7 +196,7 @@ export const contreplaquePage: PageTemplateData = {
             {
               title: "MDF",
               href: "/materiaux/mdf/",
-              description: "Plus oriente finition peinte.",
+              description: "Plus orienté finition peinte.",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
@@ -205,22 +205,22 @@ export const contreplaquePage: PageTemplateData = {
               footerCtaLabel: "Voir la page",
             },
             {
-              title: "Melamine",
+              title: "Mélamine",
               href: "/materiaux/melamine/",
-              description: "Plus orientee decor et budget.",
+              description: "Plus orientée décor et budget.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de melamine pour mobilier sur mesure",
+                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                alt: "Panneau de mélamine pour mobilier sur mesure",
               },
-              badges: ["Decor"],
+              badges: ["Décor"],
               footerCtaLabel: "Voir la page",
             },
             {
               title: "Bois massif",
               href: "/materiaux/bois-massif/",
-              description: "Plus pertinent sur les elements visibles.",
+              description: "Plus pertinent sur les éléments visibles.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
+                src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
                 alt: "Finition en bois massif naturel",
               },
               badges: ["Naturel"],
@@ -237,37 +237,37 @@ export const contreplaquePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - contreplaque",
+          heading: "FAQ - Contreplaqué",
           items: [
             {
-              q: "Le contreplaque est-il toujours meilleur que le MDF ?",
-              a: "Pas necessairement. Le contreplaque est souvent tres pertinent pour la structure; le MDF peut mieux convenir a certaines facades et finis.",
+              q: "Le contreplaqué est-il toujours meilleur que le MDF ?",
+              a: "Pas nécessairement. Le contreplaqué est souvent très pertinent pour la structure; le MDF peut mieux convenir à certaines façades et finitions.",
             },
             {
-              q: "Le contreplaque est-il adapte a la salle de bain ?",
-              a: "Selon le contexte, oui. Les details de protection et d'installation restent determinants.",
+              q: "Le contreplaqué est-il adapté à la salle de bain ?",
+              a: "Selon le contexte, oui. Les détails de protection et d'installation restent déterminants.",
             },
             {
               q: "Est-ce plus cher ?",
-              a: "Souvent oui, en echange d'une meilleure qualite structurelle selon l'usage.",
+              a: "Souvent oui, en échange d'une meilleure qualité structurelle selon l'usage.",
             },
             {
-              q: "Est-ce visible une fois installe ?",
-              a: "Generalement non, sauf choix design specifique avec tranches visibles.",
+              q: "Est-ce visible une fois installé ?",
+              a: "Généralement non, sauf choix design spécifique avec tranches visibles.",
             },
           ],
         },
+        },
       },
-    },
     {
       id: "cta",
       content: {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez privilegier une structure plus durable ?",
+          heading: "Vous voulez privilégier une structure plus durable ?",
           intro:
-            "On vous aide a voir si le contreplaque est pertinent pour votre projet, ou si une combinaison sera plus coherente.",
+            "On vous aide à voir si le contreplaqué est pertinent pour votre projet, ou si une combinaison de matériaux sera plus cohérente.",
           actions: [
             {
               label: "Demander une soumission",
@@ -275,7 +275,7 @@ export const contreplaquePage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Comparer les materiaux",
+              label: "Comparer les matériaux",
               href: "/materiaux/comparatif/",
               variant: "outline",
             },

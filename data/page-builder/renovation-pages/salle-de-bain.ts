@@ -4,27 +4,27 @@ import { SITE } from "@/seo/schema/site";
 export const renovationSalleDeBainPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Renovation salle de bain",
+    title: "Rénovation salle de bain",
     description:
-      "Renovation de salle de bain cle en main : coordination, controle de l'humidite, vanites sur mesure et finition durable a Montreal.",
+      "Rénovation de salle de bain clé en main : coordination, contrôle de l'humidité, vanités sur mesure et finition durable à Montréal.",
     path: "/services/renovation/salle-de-bain/",
-    ogAlt: "Renovation salle de bain Dilamco",
+    ogAlt: "Rénovation salle de bain Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "Renovation", url: SITE.url + "/services/renovation/" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
     {
-      name: "Renovation salle de bain",
+      name: "Rénovation salle de bain",
       url: SITE.url + "/services/renovation/salle-de-bain/",
     },
   ],
   service: {
-    name: "Renovation salle de bain",
+    name: "Rénovation salle de bain",
     description:
-      "Design, coordination, vanites sur mesure et finition durable adaptes aux contraintes d'humidite et de plomberie.",
+      "Design, coordination, vanités sur mesure et finition durable adaptés aux contraintes d'humidité et de plomberie.",
     url: SITE.url + "/services/renovation/salle-de-bain/",
-    serviceType: "Renovation de salle de bain",
+    serviceType: "Rénovation de salle de bain",
   },
   blocks: [
     {
@@ -34,11 +34,11 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
+          eyebrow: "Dilamco - Rénovation",
           heading:
-            "Renovation de salle de bain cle en main a Montreal, mieux gerer l'humidite, la plomberie et la finition",
+            "Rénovation de salle de bain clé en main à Montréal, mieux gérer l'humidité, la plomberie et la finition",
           description:
-            "En salle de bain, la qualite finale depend autant de la coordination que des materiaux, de l'humidite, de la plomberie et des details d'installation. Le chantier doit etre mieux sequence pour proteger la durabilite a long terme.",
+            "En salle de bain, la qualité finale dépend autant de la coordination que des matériaux, de l'humidité, de la plomberie et des détails d'installation. Le chantier doit être mieux séquencé pour protéger la durabilité à long terme.",
           actions: [
             {
               label: "Demander une soumission",
@@ -51,12 +51,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Humidite", "Coordination", "Montreal"],
+          badges: ["Humidité", "Coordination", "Montréal"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Renovation de salle de bain sur mesure",
+            alt: "Rénovation de salle de bain sur mesure",
           },
-          caption: "Montreal, Laval et Rive-Sud",
+          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
@@ -69,22 +69,22 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           heading:
             "Ce qui rend une salle de bain plus exigeante qu'elle en a l'air",
           description:
-            "Une salle de bain concentre eau, humidite, plomberie, ventilation, rangement et finition dans un espace souvent plus compact. Le projet vieillit mal quand ces elements sont traites separement ou trop tard.",
+            "Une salle de bain concentre eau, humidité, plomberie, ventilation, rangement et finition dans un espace souvent plus compact. Le projet vieillit mal quand ces éléments sont traités séparément ou trop tard.",
           cards: [
             {
-              title: "Risque d'eau et d'humidite",
+              title: "Risque d'eau et d'humidité",
               description:
-                "Les mauvais arbitrages techniques se paient plus cher ici qu'ailleurs parce qu'ils affectent directement la durabilite.",
+                "Les mauvais arbitrages techniques se paient plus cher ici qu'ailleurs parce qu'ils affectent directement la durabilité.",
             },
             {
               title: "Contraintes d'espace",
               description:
-                "Circulation, degagements, rangement et acces doivent etre penses finement dans une piece limitee.",
+                "Circulation, dégagements, rangement et accès doivent être pensés finement dans une pièce limitée.",
             },
             {
               title: "Coordination sensible",
               description:
-                "Plomberie, ventilation, finition et mobilier doivent s'aligner pour eviter les reprises et les details mal resolus.",
+                "Plomberie, ventilation, finition et mobilier doivent s'aligner pour éviter les reprises et les détails mal résolus.",
             },
           ],
           columns: "1",
@@ -97,19 +97,19 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Les priorites d'une renovation de salle de bain",
+          heading: "Les priorités d'une rénovation de salle de bain",
           intro:
-            "Le projet doit proteger contre l'eau, integrer la plomberie et livrer une finition durable.",
+            "Le projet doit protéger contre l'eau, intégrer la plomberie et livrer une finition durable.",
           badges: ["Ventilation", "Plomberie", "Protection", "Finitions"],
-          cardTitle: "Ce qu'on cherche a proteger",
+          cardTitle: "Ce qu'on cherche à protéger",
           items: [
-            "Reduire les risques lies a l'eau avec une planification claire.",
-            "Obtenir un resultat durable en milieu humide.",
-            "Eviter les zones grises entre intervenants et finitions.",
+            "Réduire les risques liés à l'eau avec une planification claire.",
+            "Obtenir un résultat durable en milieu humide.",
+            "Éviter les zones grises entre intervenants et finitions.",
           ],
           actions: [
             {
-              label: "Voir les materiaux",
+              label: "Voir les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -130,27 +130,27 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         props: {
           heading: "Notre approche pour cadrer une salle de bain plus durable",
           intro:
-            "L'objectif est de ne pas separer les decisions de design des realites du chantier. Une salle de bain doit etre pensee comme un ensemble ou humidite, rangement, plomberie et finition se tiennent.",
+            "L'objectif est de ne pas séparer les décisions de design des réalités du chantier. Une salle de bain doit être pensée comme un ensemble où humidité, rangement, plomberie et finition se tiennent.",
           items: [
             {
-              title: "Analyse du contexte reel",
+              title: "Analyse du contexte réel",
               description:
-                "On lit les contraintes d'espace, d'acces, de plomberie et de ventilation avant d'avancer des solutions.",
+                "On lit les contraintes d'espace, d'accès, de plomberie et de ventilation avant d'avancer des solutions.",
             },
             {
-              title: "Hierarchie des choix",
+              title: "Hiérarchie des choix",
               description:
-                "Les decisions structurelles et techniques passent avant les details purement esthetiques.",
+                "Les décisions structurelles et techniques passent avant les détails purement esthétiques.",
             },
             {
-              title: "Sequence des interventions",
+              title: "Séquence des interventions",
               description:
-                "Le chantier est organise pour mieux proteger les etapes sensibles et reduire les retouches.",
+                "Le chantier est organisé pour mieux protéger les étapes sensibles et réduire les retouches.",
             },
             {
-              title: "Qualite du rendu final",
+              title: "Qualité du rendu final",
               description:
-                "Vanite, rangement, transitions et finition doivent donner une lecture propre et durable de la piece.",
+                "Vanité, rangement, transitions et finition doivent donner une lecture propre et durable de la pièce.",
             },
           ],
           actions: [
@@ -167,11 +167,11 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/renovation/renovation-bath-approach-01.webp",
-            alt: "Planification d'une renovation de salle de bain",
+            alt: "Planification d'une rénovation de salle de bain",
           },
-          cardTitle: "Ce qu'on cherche a eviter",
+          cardTitle: "Ce qu'on cherche à éviter",
           cardDescription:
-            "Les salles de bain qui vieillissent mal ont souvent ete decidees sans assez de clarte sur l'eau, l'usage quotidien et la qualite des raccords.",
+            "Les salles de bain qui vieillissent mal ont souvent été décidées sans assez de clarté sur l'eau, l'usage quotidien et la qualité des raccords.",
         },
       },
     },
@@ -181,33 +181,33 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Sequence type d'une renovation de salle de bain",
+          heading: "Séquence type d'une rénovation de salle de bain",
           intro:
-            "La logique reste la meme: clarifier les contraintes, valider les choix sensibles puis executer proprement dans un milieu humide.",
+            "La logique reste la même: clarifier les contraintes, valider les choix sensibles puis exécuter proprement dans un milieu humide.",
           steps: [
             {
               number: "1",
               title: "Cadrage",
               description:
-                "Portee, contraintes du lieu, acces, plomberie et niveau d'intervention a confirmer.",
+                "Portée, contraintes du lieu, accès, plomberie et niveau d'intervention à confirmer.",
             },
             {
               number: "2",
               title: "Design",
               description:
-                "Vanite, rangement, circulation, degagements et decisions de finition.",
+                "Vanité, rangement, circulation, dégagements et décisions de finition.",
             },
             {
               number: "3",
-              title: "Materiaux",
+              title: "Matériaux",
               description:
-                "Choix de composantes adaptes a l'humidite, a l'entretien et a la durabilite attendue.",
+                "Choix de composantes adaptés à l'humidité, à l'entretien et à la durabilité attendue.",
             },
             {
               number: "4",
               title: "Coordination",
               description:
-                "Travaux connexes sequences pour mieux proteger les details sensibles et la finition.",
+                "Travaux connexes séquencés pour mieux protéger les détails sensibles et la finition.",
             },
             {
               number: "5",
@@ -228,51 +228,51 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           heading:
             "Points techniques qui comptent vraiment dans une salle de bain",
           intro:
-            "La durabilite d'une salle de bain ne depend pas d'un seul produit. Elle depend d'un ensemble de decisions techniques bien alignees.",
+            "La durabilité d'une salle de bain ne dépend pas d'un seul produit. Elle dépend d'un ensemble de décisions techniques bien alignées.",
           columns: "2",
           items: [
             {
-              title: "Gestion de l'humidite",
+              title: "Gestion de l'humidité",
               description:
-                "Le milieu humide exige des choix plus rigoureux qu'une autre piece.",
+                "Le milieu humide exige des choix plus rigoureux qu'une autre pièce.",
               icon: "doorOpen",
               bullets: [
-                "Materiaux et finis adaptes a l'environnement.",
-                "Details de construction penses pour durer.",
-                "Moins de risques visibles a moyen terme.",
+                "Matériaux et finis adaptés à l'environnement.",
+                "Détails de construction pensés pour durer.",
+                "Moins de risques visibles à moyen terme.",
               ],
             },
             {
-              title: "Structure de la vanite",
+              title: "Structure de la vanité",
               description:
                 "Les composantes invisibles influencent directement la tenue dans le temps.",
               icon: "package2",
               bullets: [
-                "Bois massif de bouleau pour les elements critiques.",
-                "Contreplaque de bouleau pour mieux resister a la charge.",
-                "Meilleure sensation de solidite a l'usage.",
+                "Bois massif de bouleau pour les éléments critiques.",
+                "Contreplaqué de bouleau pour mieux résister à la charge.",
+                "Meilleure sensation de solidité à l'usage.",
               ],
             },
             {
               title: "Ergonomie et rangement",
               description:
-                "La piece doit rester simple a utiliser meme quand elle est compacte.",
+                "La pièce doit rester simple à utiliser même quand elle est compacte.",
               icon: "slidersHorizontal",
               bullets: [
-                "Degagements penses selon l'espace reel.",
-                "Rangement adapte aux habitudes quotidiennes.",
+                "Dégagements pensés selon l'espace réel.",
+                "Rangement adapté aux habitudes quotidiennes.",
                 "Moins de friction dans l'usage.",
               ],
             },
             {
-              title: "Execution sur chantier",
+              title: "Exécution sur chantier",
               description:
-                "La finition depend de l'ordre des interventions et de la qualite des ajustements.",
+                "La finition dépend de l'ordre des interventions et de la qualité des ajustements.",
               icon: "wrench",
               bullets: [
                 "Moins de conflits entre interventions.",
                 "Moins de reprises de fin de chantier.",
-                "Finition plus nette a la livraison.",
+                "Finition plus nette à la livraison.",
               ],
             },
           ],
@@ -280,7 +280,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
       },
     },
     {
-      id: "integration",
+      id: "intégration",
       content: {
         type: "grid",
         variant: "image-cards-slider",
@@ -288,13 +288,13 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           heading:
             "Cette page service soutient surtout votre projet de salle de bain sur mesure",
           intro:
-            "La renovation de salle de bain explique surtout la methode, les risques et la coordination. Pour la vision complete du produit, des materiaux et des realisations, la page pilier salle de bain reste la destination principale.",
+            "La rénovation de salle de bain explique surtout la méthode, les risques et la coordination. Pour la vision complète du produit, des matériaux et des réalisations, la page pilier salle de bain reste la destination principale.",
           items: [
             {
               title: "Salle de bain sur mesure",
               href: "/espaces/salle-de-bain/",
               description:
-                "La page pilier principale pour voir le niveau de finition, les materiaux, les projets et la logique de rangement.",
+                "La page pilier principale pour voir le niveau de finition, les matériaux, les projets et la logique de rangement.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure haut de gamme",
@@ -306,22 +306,22 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               title: "Service de fabrication",
               href: "/services/fabrication/",
               description:
-                "Pour comprendre ce qui rend la vanite plus stable, plus durable et mieux executee dans le temps.",
+                "Pour comprendre ce qui rend la vanité plus stable, plus durable et mieux exécutée dans le temps.",
               image: {
                 src: "/images/generated/services/service-fabrication-hero-01.webp",
-                alt: "Fabrication sur mesure et details techniques",
+                alt: "Fabrication sur mesure et détails techniques",
               },
-              badges: ["Fabrication", "Durabilite"],
+              badges: ["Fabrication", "Durabilité"],
               footerCtaLabel: "Voir fabrication",
             },
             {
               title: "Service d'installation",
               href: "/services/installation/",
               description:
-                "Pour voir comment la pose, les ajustements et les alignements protegent un rendu plus propre en fin de chantier.",
+                "Pour voir comment la pose, les ajustements et les alignements protègent un rendu plus propre en fin de chantier.",
               image: {
                 src: "/images/generated/services/service-installation-hero-01.webp",
-                alt: "Installation sur mesure avec ajustements precis",
+                alt: "Installation sur mesure avec ajustements précis",
               },
               badges: ["Installation", "Finition"],
               footerCtaLabel: "Voir installation",
@@ -337,24 +337,24 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         variant: "text-divider-cards",
         props: {
           heading:
-            "Ce qu'une renovation de salle de bain bien maitrisee doit livrer",
+            "Ce qu'une rénovation de salle de bain bien maîtrisée doit livrer",
           description:
-            "La preuve de competence ne tient pas seulement a l'apparence. Elle se voit dans la facon dont la piece vieillit, se nettoie et fonctionne au quotidien sans faiblesse visible.",
+            "La preuve de compétence ne tient pas seulement à l'apparence. Elle se voit dans la façon dont la pièce vieillit, se nettoie et fonctionne au quotidien sans faiblesse visible.",
           cards: [
             {
-              title: "Piece plus durable",
+              title: "Pièce plus durable",
               description:
-                "Les choix techniques soutiennent mieux l'humidite, la charge et l'usage quotidien.",
+                "Les choix techniques soutiennent mieux l'humidité, la charge et l'usage quotidien.",
             },
             {
               title: "Usage plus simple",
               description:
-                "Rangement, circulation et degagements donnent une salle de bain plus agreable a utiliser.",
+                "Rangement, circulation et dégagements donnent une salle de bain plus agréable à utiliser.",
             },
             {
-              title: "Finition plus credible",
+              title: "Finition plus crédible",
               description:
-                "Les raccords, alignements et details de pose soutiennent un rendu plus propre et plus premium.",
+                "Les raccords, alignements et détails de pose soutiennent un rendu plus propre et plus premium.",
             },
           ],
           columns: "1",
@@ -368,33 +368,33 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - renovation de salle de bain",
+          heading: "FAQ - rénovation de salle de bain",
           intro:
-            "Reponses claires sur delais, humidite, coordination et portee du projet.",
+            "Réponses claires sur délais, humidité, coordination et portée du projet.",
           items: [
             {
-              q: "Combien de temps dure une renovation de salle de bain?",
-              a: "La duree depend de la portee, des contraintes du lieu et des travaux connexes.",
+              q: "Combien de temps dure une rénovation de salle de bain?",
+              a: "La durée dépend de la portée, des contraintes du lieu et des travaux connexes.",
             },
             {
-              q: "Est-ce risque au niveau des degats d'eau?",
-              a: "Une execution rigoureuse et des choix adaptes a l'humidite reduisent fortement les risques a long terme.",
+              q: "Est-ce risqué au niveau des dégâts d'eau?",
+              a: "Une exécution rigoureuse et des choix adaptés à l'humidité réduisent fortement les risques à long terme.",
             },
             {
               q: "Travaillez-vous avec d'autres intervenants sur ce type de chantier?",
-              a: "Oui, lorsque la portee l'exige. La coordination sert justement a mieux ordonner plomberie, ventilation, finition et pose pour eviter les zones grises.",
+              a: "Oui, lorsque la portée l'exige. La coordination sert justement à mieux ordonner plomberie, ventilation, finition et pose pour éviter les zones grises.",
             },
             {
               q: "Est-ce possible en condo?",
-              a: "Oui. L'acces, les horaires et les contraintes de batiment sont cadres des le depart.",
+              a: "Oui. L'accès, les horaires et les contraintes de bâtiment sont cadrés dès le départ.",
             },
             {
-              q: "Puis-je faire une renovation partielle?",
-              a: "Oui. Certains projets visent surtout la vanite et le rangement, d'autres sont plus complets.",
+              q: "Puis-je faire une rénovation partielle?",
+              a: "Oui. Certains projets visent surtout la vanité et le rangement, d'autres sont plus complets.",
             },
             {
-              q: "Ou voir l'approche complete pour une salle de bain sur mesure?",
-              a: "La page renovation de salle de bain sert surtout a expliquer la logique de chantier et de coordination. Pour la vision complete du produit, des materiaux et des projets, la page salle de bain sur mesure reste la reference principale.",
+              q: "Où voir l'approche complète pour une salle de bain sur mesure?",
+              a: "La page rénovation de salle de bain sert surtout à expliquer la logique de chantier et de coordination. Pour la vision complète du produit, des matériaux et des projets, la page salle de bain sur mesure reste la référence principale.",
             },
           ],
         },
@@ -406,9 +406,9 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'une renovation de salle de bain bien cadree ?",
+          heading: "Besoin d'une rénovation de salle de bain bien cadrée ?",
           intro:
-            "On vous aide a structurer le projet, la sequence et les bons choix pour un environnement humide, puis a vous orienter vers la page pilier salle de bain pour la vision complete.",
+            "On vous aide à structurer le projet, la séquence et les bons choix pour un environnement humide, puis à vous orienter vers la page pilier salle de bain pour la vision complète.",
           actions: [
             {
               label: "Demander une soumission",
@@ -421,7 +421,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Salle de bain, vanite sur mesure, rangement et environnement humide",
+          note: "Salle de bain, vanité sur mesure, rangement et environnement humide",
         },
       },
     },

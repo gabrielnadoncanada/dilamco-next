@@ -4,15 +4,15 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "A propos",
+    title: "À propos",
     description:
-      "A propos de Dilamco : sur mesure, fabrication controlee, installation soignee et vision long terme pour des projets durables.",
+      "À propos de Dilamco : sur mesure, fabrication contrôlée, installation soignée et vision long terme pour des projets durables.",
     path: "/a-propos/",
-    ogAlt: "A propos de Dilamco",
+    ogAlt: "À propos de Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "A propos", url: SITE.url + "/a-propos/" },
+    { name: "À propos", url: SITE.url + "/a-propos/" },
   ],
   blocks: [
     {
@@ -22,10 +22,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - A propos",
-          heading: "Une entreprise de sur mesure construite pour mieux controler l'execution",
+          eyebrow: "Dilamco - À propos",
+          heading: "Une entreprise de sur mesure construite pour mieux contrôler l'exécution",
           description:
-            "Dilamco ne se positionne pas comme un simple vendeur d'armoires. Notre approche relie design, fabrication, installation et coordination quand le projet l'exige, pour obtenir un resultat plus coherent et plus durable.",
+            "Dilamco ne se positionne pas comme un simple vendeur d'armoires. Notre approche relie design, fabrication, installation et coordination quand le projet l'exige, pour obtenir un résultat plus cohérent et plus durable.",
           actions: [
             {
               label: "Demander une soumission",
@@ -38,13 +38,13 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Sur mesure", "Execution", "Durabilite", "Cle en main"],
+          badges: ["Sur mesure", "Exécution", "Durabilité", "clé en main"],
           image: {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Equipe et approche Dilamco pour les projets sur mesure",
+            alt: "Équipe et approche Dilamco pour les projets sur mesure",
           },
           caption:
-            "Notre valeur ne vient pas d'un discours premium. Elle vient du niveau de controle sur le resultat final.",
+            "Notre valeur ne vient pas d'un discours premium. Elle vient du niveau de contrôle sur le résultat final.",
         },
       },
     },
@@ -54,24 +54,24 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "L'avantage structurel que nous cherchons a proteger",
+          heading: "L'avantage structurel que nous cherchons à protéger",
           description:
-            "Une entreprise de sur mesure solide ne depend pas seulement du style. Elle depend de sa capacite a garder le controle entre les decisions de design, la qualite de fabrication, le choix des materiaux et la pose sur le terrain.",
+            "Une entreprise de sur mesure solide ne dépend pas seulement du style. Elle dépend de sa capacité à garder le contrôle entre les décisions de design, la qualité de fabrication, le choix des matériaux et la pose sur le terrain.",
           cards: [
             {
               title: "Moins de fragmentation",
               description:
-                "Moins il y a de ruptures entre conception, production et installation, plus le projet reste lisible et executable.",
+                "Moins il y a de ruptures entre conception, production et installation, plus le projet reste lisible et exécutable.",
             },
             {
-              title: "Qualite plus tangible",
+              title: "Qualité plus tangible",
               description:
-                "La valeur se voit dans les details : structure, quincaillerie, finitions, ajustements et constance d'execution.",
+                "La valeur se voit dans les détails : structure, quincaillerie, finitions, ajustements et constance d'exécution.",
             },
             {
-              title: "Responsabilite plus claire",
+              title: "Responsabilité plus claire",
               description:
-                "Le client avance mieux quand il sait qui cadre les decisions et qui porte le resultat jusqu'a la fin.",
+                "Le client avance mieux quand il sait qui cadre les décisions et qui porte le résultat jusqu'à la fin.",
             },
           ],
           columns: "1",
@@ -85,33 +85,33 @@ export const page: PageTemplateData = {
         type: "process",
         variant: "split-cards",
         props: {
-          heading: "Comment l'entreprise s'est structuree",
+          heading: "Comment l'entreprise s'est structurée",
           description:
-            "Notre trajectoire a suivi une logique simple : reduire les faiblesses qui nuisent a la qualite finale et renforcer les etapes qui stabilisent vraiment un projet.",
+            "Notre trajectoire a suivi une logique simple : réduire les faiblesses qui nuisent à la qualité finale et renforcer les étapes qui stabilisent vraiment un projet.",
           steps: [
             {
               number: "1",
-              title: "Comprendre les contraintes reelles",
+              title: "Comprendre les contraintes réelles",
               description:
-                "Les projets sur mesure demandent plus qu'un bon visuel. Ils demandent une lecture serieuse de l'espace, de l'usage et des limites du chantier.",
+                "Les projets sur mesure demandent plus qu'un bon visuel. Ils demandent une lecture sérieuse de l'espace, de l'usage et des limites du chantier.",
             },
             {
               number: "2",
-              title: "Mieux relier design et execution",
+              title: "Mieux relier design et exécution",
               description:
-                "La structure de l'entreprise s'est construite autour d'une meilleure continuite entre les choix en amont et la realite de fabrication et d'installation.",
+                "La structure de l'entreprise s'est construite autour d'une meilleure continuité entre les choix en amont et la réalité de fabrication et d'installation.",
             },
             {
               number: "3",
               title: "Standardiser sans banaliser",
               description:
-                "L'objectif n'a jamais ete de faire du standard. L'objectif est d'avoir une methode reproductible pour livrer du vrai sur mesure avec plus de constance.",
+                "L'objectif n'a jamais été de faire du standard. L'objectif est d'avoir une méthode reproductible pour livrer du vrai sur mesure avec plus de constance.",
             },
             {
               number: "4",
               title: "Viser une relation long terme",
               description:
-                "Nous preferons une croissance basee sur la reputation, la qualite percue et des projets bien executes plutot que sur le volume a tout prix.",
+                "Nous préférons une croissance basée sur la réputation, la qualité perçue et des projets bien exécutés plutôt que sur le volume à tout prix.",
             },
           ],
           actions: [
@@ -135,53 +135,53 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Les principes qui guident nos decisions",
+          heading: "Les principes qui guident nos décisions",
           intro:
-            "Le bon projet n'est pas seulement beau au moment de la livraison. Il doit rester coherent dans le temps, dans l'usage et dans la qualite percue.",
+            "Le bon projet n'est pas seulement beau au moment de la livraison. Il doit rester cohérent dans le temps, dans l'usage et dans la qualité perçue.",
           columns: "2",
           items: [
             {
               title: "Usage avant effet",
               description:
-                "Le design sert d'abord a rendre l'espace plus juste, plus fluide et plus durable.",
+                "Le design sert d'abord à rendre l'espace plus juste, plus fluide et plus durable.",
               icon: "doorOpen",
               bullets: [
-                "Ergonomie pensee selon le quotidien",
-                "Configurations adaptees a l'espace reel",
+                "Ergonomie pensée selon le quotidien",
+                "Configurations adaptées à l'espace réel",
                 "Choix qui servent la fonction avant la mode",
               ],
             },
             {
-              title: "Durabilite concrete",
+              title: "Durabilité concrète",
               description:
-                "Le premium doit se verifier dans les composants et dans la maniere de les integrer.",
+                "Le premium doit se vérifier dans les composants et dans la manière de les intégrer.",
               icon: "package2",
               bullets: [
-                "Materiaux choisis selon l'usage",
-                "Quincaillerie et details coherents",
+                "Matériaux choisis selon l'usage",
+                "Quincaillerie et détails cohérents",
                 "Moins de compromis invisibles",
               ],
             },
             {
-              title: "Execution maitrisee",
+              title: "Exécution maîtrisée",
               description:
-                "La qualite finale depend autant de la sequence que du produit lui-meme.",
+                "La qualité finale dépend autant de la séquence que du produit lui-même.",
               icon: "wrench",
               bullets: [
                 "Validation avant production",
-                "Fabrication mieux cadree",
-                "Installation et ajustements precis",
+                "Fabrication mieux cadrée",
+                "Installation et ajustements précis",
               ],
             },
             {
               title: "Vision long terme",
               description:
-                "On cherche a batir une marque qui tient par la repetition d'un bon standard, pas par des promesses vagues.",
+                "On cherche à bâtir une marque qui tient par la répétition d'un bon standard, pas par des promesses vagues.",
               icon: "slidersHorizontal",
               bullets: [
-                "Positionnement premium assume",
-                "Croissance basee sur la confiance",
-                "Reputation soutenue par le resultat",
+                "Positionnement premium assumé",
+                "Croissance basée sur la confiance",
+                "Réputation soutenue par le résultat",
               ],
             },
           ],
@@ -196,39 +196,39 @@ export const page: PageTemplateData = {
         props: {
           heading: "Explorer l'entreprise par angle",
           intro:
-            "Selon ce que vous cherchez a valider, vous pouvez approfondir la methode, les services, les materiaux ou les realisations.",
+            "Selon ce que vous cherchez à valider, vous pouvez approfondir la méthode, les services, les matériaux ou les réalisations.",
           columns: "2",
           items: [
             {
               title: "Notre processus",
               description:
-                "Pour voir comment un projet avance du cadrage a l'installation.",
+                "Pour voir comment un projet avance du cadrage à l'installation.",
               href: "/processus/",
-              badges: ["Methode", "Etapes"],
+              badges: ["Méthode", "Étapes"],
               ctaLabel: "Voir le processus",
             },
             {
               title: "Nos services",
               description:
-                "Pour comprendre le role du design, de la fabrication, de l'installation et de la renovation.",
+                "Pour comprendre le rôle du design, de la fabrication, de l'installation et de la rénovation.",
               href: "/services/",
               badges: ["Design", "Installation"],
               ctaLabel: "Voir les services",
             },
             {
-              title: "Nos materiaux",
+              title: "Nos matériaux",
               description:
-                "Pour comprendre les choix techniques qui soutiennent la durabilite et la finition.",
+                "Pour comprendre les choix techniques qui soutiennent la durabilité et la finition.",
               href: "/materiaux/",
               badges: ["Panneaux", "Quincaillerie"],
-              ctaLabel: "Voir les materiaux",
+              ctaLabel: "Voir les matériaux",
             },
             {
               title: "Nos projets",
               description:
-                "Pour voir des exemples concrets du niveau d'execution recherche.",
+                "Pour voir des exemples concrets du niveau d'exécution recherché.",
               href: "/projets/",
-              badges: ["References", "Realisations"],
+              badges: ["Références", "Réalisations"],
               ctaLabel: "Voir les projets",
             },
           ],
@@ -243,7 +243,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Vous voulez valider si Dilamco est le bon fit pour votre projet ?",
           intro:
-            "Le plus simple est de cadrer la portee, les priorites et le niveau d'exigence attendu. On vous dira clairement comment on peut intervenir.",
+            "Le plus simple est de cadrer la portée, les priorités et le niveau d'exigence attendu. On vous dira clairement comment on peut intervenir.",
           actions: [
             {
               label: "Demander une soumission",
@@ -256,7 +256,7 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Montreal, Laval et Rive-Sud",
+          note: "Montréal, Laval et Rive-Sud",
         },
       },
     },

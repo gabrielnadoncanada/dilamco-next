@@ -7,7 +7,7 @@ export const page: PageTemplateData = {
   metadata: {
     title: "Processus",
     description:
-      "Processus Dilamco : cadrage, design, fabrication, installation et, selon le projet, coordination de renovation cle en main.",
+      "Processus Dilamco : cadrage, design, fabrication, installation et, selon le projet, coordination de rénovation clé en main.",
     path: "/processus/",
     ogAlt: "Processus Dilamco",
   },
@@ -19,10 +19,10 @@ export const page: PageTemplateData = {
     serviceJsonLd({
       name: "Processus Dilamco",
       description:
-        "Processus structure pour projets sur mesure : cadrage, design, selections, fabrication, installation et coordination selon la portee.",
+        "Processus structuré pour projets sur mesure : cadrage, design, sélections, fabrication, installation et coordination selon la portée.",
       url: SITE.url + "/processus/",
       serviceType: "Processus de projet sur mesure",
-      areaServed: ["Montreal", "Laval", "Rive-Sud", "Quebec"],
+      areaServed: ["Montréal", "Laval", "Rive-Sud", "Québec"],
     }),
   ],
   blocks: [
@@ -34,9 +34,9 @@ export const page: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Processus",
-          heading: "Un processus clair, du cadrage a l'installation",
+          heading: "Un processus clair, du cadrage à l'installation",
           description:
-            "Chaque projet avance avec une sequence definie pour reduire les zones grises, valider les decisions au bon moment et proteger la qualite finale.",
+            "Chaque projet avance avec une séquence définie pour réduire les zones grises, valider les décisions au bon moment et protéger la qualité finale.",
           actions: [
             {
               label: "Demander une soumission",
@@ -55,7 +55,7 @@ export const page: PageTemplateData = {
             alt: "Processus Dilamco pour un projet sur mesure",
           },
           caption:
-            "Une seule logique de travail pour mieux cadrer les decisions et l'execution",
+            "Une seule logique de travail pour mieux cadrer les décisions et l'exécution",
         },
       },
     },
@@ -65,52 +65,52 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que le processus protege concretement",
+          heading: "Ce que le processus protège concrètement",
           intro:
-            "Le but n'est pas d'ajouter des etapes. Le but est de garder le projet lisible, executable et coherent du debut a la fin.",
+            "Le but n'est pas d'ajouter des étapes. Le but est de garder le projet lisible, exécutable et cohérent du début à la fin.",
           columns: "2",
           items: [
             {
-              title: "Portee plus claire",
+              title: "Portée plus claire",
               description:
-                "On clarifie ce qui est inclus, ce qui doit etre valide et ce qui peut ralentir le projet.",
+                "On clarifie ce qui est inclus, ce qui doit être validé et ce qui peut ralentir le projet.",
               icon: "slidersHorizontal",
               bullets: [
-                "Contraintes identifiees plus tot",
-                "Priorites mieux classees",
+                "Contraintes identifiées plus tôt",
+                "Priorités mieux classées",
                 "Moins de zones grises en cours de route",
               ],
             },
             {
-              title: "Choix mieux verrouilles",
+              title: "Choix mieux verrouillés",
               description:
-                "Les decisions structurantes se prennent avant la fabrication, pas en reaction.",
+                "Les décisions structurantes se prennent avant la fabrication, pas en réaction.",
               icon: "doorOpen",
               bullets: [
-                "Plans et configuration valides",
-                "Materiaux et finis confirmes",
+                "Plans et configuration validés",
+                "Matériaux et finis confirmés",
                 "Arbitrages faits avant production",
               ],
             },
             {
               title: "Fabrication plus stable",
               description:
-                "Une production bien lancee depend d'informations stables et d'un cadrage propre.",
+                "Une production bien lancée dépend d'informations stables et d'un cadrage propre.",
               icon: "package2",
               bullets: [
-                "Moins de reprises evitables",
-                "Execution plus previsible",
-                "Meilleure coherence entre pieces",
+                "Moins de reprises évitables",
+                "Exécution plus prévisible",
+                "Meilleure cohérence entre pièces",
               ],
             },
             {
-              title: "Installation mieux controlee",
+              title: "Installation mieux contrôlée",
               description:
-                "La pose se passe mieux quand la sequence du projet a ete preparee correctement.",
+                "La pose se passe mieux quand la séquence du projet a été préparée correctement.",
               icon: "wrench",
               bullets: [
                 "Coordination plus nette sur place",
-                "Ajustements plus precis",
+                "Ajustements plus précis",
                 "Inspection finale plus simple",
               ],
             },
@@ -125,45 +125,45 @@ export const page: PageTemplateData = {
         type: "process",
         variant: "split-cards",
         props: {
-          heading: "Les grandes etapes d'un projet Dilamco",
+          heading: "Les grandes étapes d'un projet Dilamco",
           description:
-            "La portee varie selon le projet, mais la logique reste la meme : cadrer, valider, produire, installer.",
+            "La portée varie selon le projet, mais la logique reste la même : cadrer, valider, produire, installer.",
           steps: [
             {
               number: "1",
               title: "Cadrage initial",
               description:
-                "On comprend l'espace, la portee, les contraintes du site, le niveau d'exigence et l'echeance visee.",
+                "On comprend l'espace, la portée, les contraintes du site, le niveau d'exigence et l'échéance visée.",
             },
             {
               number: "2",
               title: "Design et configuration",
               description:
-                "On structure l'implantation, les fonctions, les dimensions et les choix qui influencent le resultat final.",
+                "On structure l'implantation, les fonctions, les dimensions et les choix qui influencent le résultat final.",
             },
             {
               number: "3",
-              title: "Selection des materiaux",
+              title: "Sélection des matériaux",
               description:
-                "On confirme panneaux, quincaillerie, finis et details selon l'usage reel et la durabilite recherchee.",
+                "On confirme panneaux, quincaillerie, finis et détails selon l'usage réel et la durabilité recherchée.",
             },
             {
               number: "4",
               title: "Validation avant production",
               description:
-                "Les decisions essentielles sont fermees avant de lancer la fabrication pour reduire les reprises.",
+                "Les décisions essentielles sont fermées avant de lancer la fabrication pour réduire les reprises.",
             },
             {
               number: "5",
               title: "Fabrication",
               description:
-                "La production sur mesure demarre avec une base stable, ce qui protege la constance et la precision.",
+                "La production sur mesure démarre avec une base stable, ce qui protège la constance et la précision.",
             },
             {
               number: "6",
               title: "Installation et finition",
               description:
-                "La pose, les ajustements et l'inspection finale servent a livrer un resultat propre et coherent.",
+                "La pose, les ajustements et l'inspection finale servent à livrer un résultat propre et cohérent.",
             },
           ],
           actions: [
@@ -189,15 +189,15 @@ export const page: PageTemplateData = {
         props: {
           heading: "Ce qu'il faut pour avancer plus vite",
           intro:
-            "Un bon depart accelere surtout les validations. Quelques informations simples suffisent pour cadrer la discussion correctement.",
-          badges: ["Secteur", "Type d'espace", "Portee", "Priorites"],
-          cardTitle: "Informations utiles des le premier echange",
+            "Un bon départ accélère surtout les validations. Quelques informations simples suffisent pour cadrer la discussion correctement.",
+          badges: ["Secteur", "Type d'espace", "Portée", "Priorités"],
+          cardTitle: "Informations utiles dès le premier échange",
           items: [
             "Le type d'espace et la localisation du projet",
-            "La portee reelle : design seul, sur mesure, renovation ou coordination",
-            "Les priorites : delai, rangement, durabilite, esthetique ou budget",
+            "La portée réelle : design seul, sur mesure, rénovation ou coordination",
+            "Les priorités : délai, rangement, durabilité, esthétique ou budget",
             "Des photos, mesures de base ou inspirations si disponibles",
-            "Les contraintes du batiment ou du chantier quand elles existent",
+            "Les contraintes du bâtiment ou du chantier quand elles existent",
           ],
           actions: [
             {
@@ -222,7 +222,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Pages utiles pour approfondir",
           intro:
-            "Selon l'etape ou vous en etes, ces pages aident a mieux comprendre la methode, les services et les choix techniques.",
+            "Selon l'étape où vous en êtes, ces pages aident à mieux comprendre la méthode, les services et les choix techniques.",
           columns: "3",
           items: [
             {
@@ -236,7 +236,7 @@ export const page: PageTemplateData = {
             {
               title: "Service fabrication",
               description:
-                "Pour voir comment la production s'insere dans le projet global.",
+                "Pour voir comment la production s'insère dans le projet global.",
               href: "/services/fabrication/",
               badges: ["Production", "Sur mesure"],
               ctaLabel: "Voir la fabrication",
@@ -250,27 +250,27 @@ export const page: PageTemplateData = {
               ctaLabel: "Voir l'installation",
             },
             {
-              title: "Renovation cle en main",
+              title: "Rénovation clé en main",
               description:
                 "Quand le projet demande de coordonner plus que les armoires.",
               href: "/services/renovation/",
               badges: ["Coordination", "Travaux connexes"],
-              ctaLabel: "Voir la renovation",
+              ctaLabel: "Voir la rénovation",
             },
             {
-              title: "Materiaux",
+              title: "Matériaux",
               description:
-                "Pour comparer les options et comprendre ce qui change vraiment la durabilite.",
+                "Pour comparer les options et comprendre ce qui change vraiment la durabilité.",
               href: "/materiaux/",
               badges: ["Panneaux", "Quincaillerie"],
-              ctaLabel: "Voir les materiaux",
+              ctaLabel: "Voir les matériaux",
             },
             {
               title: "Projets",
               description:
-                "Pour voir des realisations concretes et le niveau de finition attendu.",
+                "Pour voir des réalisations concrètes et le niveau de finition attendu.",
               href: "/projets/",
-              badges: ["References", "Execution"],
+              badges: ["Références", "Exécution"],
               ctaLabel: "Voir les projets",
             },
           ],
@@ -285,23 +285,23 @@ export const page: PageTemplateData = {
         props: {
           heading: "FAQ - processus",
           intro:
-            "Reponses rapides aux questions qui reviennent le plus souvent avant de demarrer.",
+            "Réponses rapides aux questions qui reviennent le plus souvent avant de démarrer.",
           items: [
             {
-              q: "Tous les projets suivent-ils exactement les memes etapes ?",
-              a: "La logique reste similaire, mais la portee change selon qu'il s'agit d'un mandat de design, d'un projet sur mesure complet ou d'une renovation avec coordination.",
+              q: "Tous les projets suivent-ils exactement les mêmes étapes ?",
+              a: "La logique reste similaire, mais la portée change selon qu'il s'agit d'un mandat de design, d'un projet sur mesure complet ou d'une rénovation avec coordination.",
             },
             {
               q: "Quand la fabrication commence-t-elle ?",
-              a: "Une fois que les decisions structurantes sont validees : configuration, dimensions, materiaux, finis et elements qui influencent directement la production.",
+              a: "Une fois que les décisions structurantes sont validées : configuration, dimensions, matériaux, finis et éléments qui influencent directement la production.",
             },
             {
               q: "Faites-vous aussi l'installation ?",
-              a: "Oui. L'installation, les ajustements et l'inspection finale font partie de la logique d'execution quand le mandat le prevoit.",
+              a: "Oui. L'installation, les ajustements et l'inspection finale font partie de la logique d'exécution quand le mandat le prévoit.",
             },
             {
               q: "Le processus fonctionne-t-il aussi en condo ou dans des contextes contraints ?",
-              a: "Oui. Le processus sert justement a identifier les contraintes d'acces, de calendrier ou de coordination assez tot pour mieux les integrer.",
+              a: "Oui. Le processus sert justement à identifier les contraintes d'accès, de calendrier ou de coordination assez tôt pour mieux les intégrer.",
             },
           ],
         },
@@ -315,7 +315,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Besoin de cadrer un projet proprement avant d'avancer ?",
           intro:
-            "On vous aide a clarifier la portee, les priorites et la meilleure sequence pour lancer un projet sur mesure avec moins d'imprevus.",
+            "On vous aide à clarifier la portée, les priorités et la meilleure séquence pour lancer un projet sur mesure avec moins d'imprévus.",
           actions: [
             {
               label: "Demander une soumission",
@@ -328,7 +328,7 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Montreal, Laval et Rive-Sud",
+          note: "Montréal, Laval et Rive-Sud",
         },
       },
     },

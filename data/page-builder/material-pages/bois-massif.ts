@@ -6,13 +6,13 @@ export const boisMassifPage: PageTemplateData = {
   metadata: {
     title: "Bois massif",
     description:
-      "Bois massif : avantages, limites et usages recommandes pour armoires, portes et mobilier sur mesure.",
+      "Bois massif : avantages, limites et usages recommandés pour armoires, portes et mobilier sur mesure.",
     path: "/materiaux/bois-massif/",
-    ogAlt: "Bois massif - Materiaux sur mesure",
+    ogAlt: "Bois massif - Matériaux sur mesure",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Materiaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
     { name: "Bois massif", url: SITE.url + "/materiaux/bois-massif/" },
   ],
   blocks: [
@@ -23,11 +23,11 @@ export const boisMassifPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materiaux",
+          eyebrow: "Dilamco - Matériaux",
           heading:
-            "Bois massif : authenticite, caractere et limites a connaitre",
+            "Bois massif : authenticité, caractère et limites à connaître",
           description:
-            "Le bois massif est recherche pour son grain, sa profondeur visuelle et sa valeur percue. C'est aussi un materiau vivant : son comportement depend du contexte, du fini et de l'endroit ou il est utilise.",
+            "Le bois massif est recherché pour son grain, sa profondeur visuelle et sa valeur perçue. C'est aussi un matériau vivant : son comportement dépend du contexte, du fini et de l'endroit où il est utilisé.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -35,18 +35,18 @@ export const boisMassifPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir nos realisations",
+              label: "Voir nos réalisations",
               href: "/projets/",
               variant: "outline",
             },
           ],
-          badges: ["Naturel", "Premium", "Elements visibles"],
+          badges: ["Naturel", "Premium", "Éléments visibles"],
           image: {
             src: "/images/generated/materials/material-birch-drawer-detail-01.webp",
-            alt: "Cuisine sur mesure avec details en bois massif",
+            alt: "Cuisine sur mesure avec détails en bois massif",
           },
           caption:
-            "Le bon sujet n'est pas bois massif partout, mais bois massif au bon endroit",
+            "Le bon sujet n'est pas le bois massif partout, mais le bois massif au bon endroit",
         },
       },
     },
@@ -58,27 +58,27 @@ export const boisMassifPage: PageTemplateData = {
         props: {
           heading: "Ce que le bois massif apporte vraiment",
           description:
-            "Le bois massif se distingue du MDF, de la melamine, du contreplaque et du placage par sa matiere pleine et ses variations naturelles. Il apporte chaleur, relief et valeur percue, mais demande une conception plus attentive.",
+            "Le bois massif se distingue du MDF, de la mélamine, du contreplaqué et du placage par sa matière pleine et ses variations naturelles. Il apporte chaleur, relief et valeur perçue, mais demande une conception plus attentive.",
           cards: [
             {
-              title: "Esthetique naturelle",
+              title: "Esthétique naturelle",
               description:
                 "Grain, teinte et texture donnent un rendu plus vivant.",
             },
             {
-              title: "Valeur percue elevee",
+              title: "Valeur perçue élevée",
               description:
-                "Il renforce la sensation haut de gamme sur les elements visibles.",
+                "Il renforce la sensation haut de gamme sur les éléments visibles.",
             },
             {
-              title: "Reparabilite possible",
+              title: "Réparabilité possible",
               description:
-                "Certaines marques peuvent etre reprises selon le fini choisi.",
+                "Certaines marques peuvent être reprises selon le fini choisi.",
             },
             {
-              title: "Contrainte de stabilite",
+              title: "Contrainte de stabilité",
               description:
-                "Le comportement varie avec l'humidite, la temperature et la conception.",
+                "Le comportement varie avec l'humidité, la température et la conception.",
             },
           ],
           columns: "2",
@@ -91,16 +91,16 @@ export const boisMassifPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Ou le bois massif est le plus pertinent",
+          heading: "Où le bois massif est le plus pertinent",
           intro:
-            "Le bois massif est souvent optimal sur les elements visibles ou le rendu, le toucher et la perception de qualite comptent le plus.",
-          badges: ["Portes", "Facades", "Details"],
-          cardTitle: "Bon fit pour ce materiau",
+            "Le bois massif est souvent optimal sur les éléments visibles où le rendu, le toucher et la perception de qualité comptent le plus.",
+          badges: ["Portes", "Façades", "Détails"],
+          cardTitle: "Bon fit pour ce matériau",
           items: [
-            "Portes et facades",
-            "Details decoratifs",
-            "Pieces selectionnees a forte valeur visuelle",
-            "Projets ou le caractere naturel est recherche",
+            "Portes et façades",
+            "Détails décoratifs",
+            "Pièces sélectionnées à forte valeur visuelle",
+            "Projets où le caractère naturel est recherché",
           ],
           actions: [
             {
@@ -123,19 +123,19 @@ export const boisMassifPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Limites et points a surveiller",
+          heading: "Limites et points à surveiller",
           intro:
-            "La durabilite ne vient pas du materiau seul. Elle depend aussi de la finition, de la quincaillerie et de l'installation.",
+            "La durabilité ne vient pas du matériau seul. Elle dépend aussi de la finition, de la quincaillerie et de l'installation.",
           items: [
             {
               title: "Mouvement naturel.",
               description:
-                "Le bois peut reagir a l'humidite et a la temperature.",
+                "Le bois peut réagir à l'humidité et à la température.",
             },
             {
-              title: "Grandes surfaces a evaluer.",
+              title: "Grandes surfaces à évaluer.",
               description:
-                "Certaines zones demandent plus de stabilite qu'un bois plein.",
+                "Certaines zones demandent plus de stabilité qu'un bois plein.",
             },
             {
               title: "Entretien selon le fini.",
@@ -150,16 +150,16 @@ export const boisMassifPage: PageTemplateData = {
               variant: "outline",
             },
             {
-              label: "Explorer les materiaux",
+              label: "Explorer les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
           ],
           image: {
-            src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-            alt: "Detail de finition en bois massif",
+            src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
+            alt: "Détail de finition en bois massif",
           },
-          cardTitle: "Approche recommandee",
+          cardTitle: "Approche recommandée",
           cardDescription:
             "Le bois massif est souvent meilleur en combinaison avec des panneaux plus stables sur certaines structures.",
         },
@@ -175,12 +175,12 @@ export const boisMassifPage: PageTemplateData = {
           heading: "Alternatives et pages connexes",
           items: [
             {
-              title: "Contreplaque",
+              title: "Contreplaqué",
               href: "/materiaux/contreplaque/",
-              description: "Plus oriente structure.",
+              description: "Plus orienté structure.",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Detail de contreplaque pour armoires sur mesure",
+                alt: "Détail de contreplaqué pour armoires sur mesure",
               },
               badges: ["Structure"],
               footerCtaLabel: "Voir la page",
@@ -188,7 +188,7 @@ export const boisMassifPage: PageTemplateData = {
             {
               title: "MDF",
               href: "/materiaux/mdf/",
-              description: "Plus adapte aux finis peints uniformes.",
+              description: "Plus adapté aux finitions peintes uniformes.",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
@@ -197,14 +197,14 @@ export const boisMassifPage: PageTemplateData = {
               footerCtaLabel: "Voir la page",
             },
             {
-              title: "Melamine",
+              title: "Mélamine",
               href: "/materiaux/melamine/",
-              description: "Decor et cout plus maitrise.",
+              description: "Décor et coût plus maîtrisé.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de melamine pour mobilier sur mesure",
+                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                alt: "Panneau de mélamine pour mobilier sur mesure",
               },
-              badges: ["Decor"],
+              badges: ["Décor"],
               footerCtaLabel: "Voir la page",
             },
             {
@@ -213,7 +213,7 @@ export const boisMassifPage: PageTemplateData = {
               description: "Choisir le bon rendu visuel.",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Echantillons de couleurs et finis pour mobilier sur mesure",
+                alt: "Échantillons de couleurs et finitions pour mobilier sur mesure",
               },
               badges: ["Finition"],
               footerCtaLabel: "Voir la page",
@@ -229,23 +229,23 @@ export const boisMassifPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - bois massif",
+          heading: "FAQ - Bois massif",
           items: [
             {
               q: "Le bois massif est-il toujours meilleur ?",
-              a: "Non. Il est excellent pour l'esthetique et certaines applications, mais des panneaux techniques peuvent etre plus stables selon les contraintes.",
+              a: "Non. Il est excellent pour l'esthétique et certaines applications, mais des panneaux techniques peuvent être plus stables selon les contraintes.",
             },
             {
-              q: "Est-ce recommande en cuisine ?",
-              a: "Oui, souvent pour les portes et elements visibles. Le choix depend du fini, de l'entretien et de l'environnement.",
+              q: "Est-ce recommandé en cuisine ?",
+              a: "Oui, souvent pour les portes et éléments visibles. Le choix dépend du fini, de l'entretien et de l'environnement.",
             },
             {
-              q: "Comment reagit-il a l'humidite ?",
-              a: "Le bois peut bouger avec l'humidite. La conception, la finition et le bon usage limitent ces effets.",
+              q: "Comment réagit-il à l'humidité ?",
+              a: "Le bois peut bouger avec l'humidité. La conception, la finition et le bon usage limitent ces effets.",
             },
             {
-              q: "Peut-on combiner bois massif et autres materiaux ?",
-              a: "Oui. C'est souvent l'approche la plus coherente : bois massif sur le visible, panneaux plus stables sur certaines structures.",
+              q: "Peut-on combiner bois massif et autres matériaux ?",
+              a: "Oui. C'est souvent l'approche la plus cohérente : bois massif sur les éléments visibles, panneaux plus stables sur certaines structures.",
             },
           ],
         },
@@ -257,9 +257,9 @@ export const boisMassifPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez integrer du bois massif correctement ?",
+          heading: "Vous voulez intégrer du bois massif correctement ?",
           intro:
-            "On vous aide a choisir ou il apporte une vraie valeur, et ou d'autres materiaux seront plus coherents techniquement.",
+            "On vous aide à choisir où il apporte une vraie valeur, et où d'autres matériaux seront plus cohérents techniquement.",
           actions: [
             {
               label: "Demander une soumission",

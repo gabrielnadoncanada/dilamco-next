@@ -6,7 +6,7 @@ export const page: PageTemplateData = {
   metadata: {
     title: "Espaces sur mesure",
     description:
-      "Decouvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial.",
+      "Découvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial.",
     path: "/espaces/",
     ogAlt: "Espaces sur mesure Dilamco",
   },
@@ -33,7 +33,7 @@ export const page: PageTemplateData = {
           heading:
             "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
           description:
-            "Chaque espace a ses contraintes. Notre role est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien executees.",
+            "Chaque espace a ses contraintes. Notre rôle est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien exécutées.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -46,12 +46,12 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Sur mesure", "Durable", "Cle en main"],
+          badges: ["Sur mesure", "Durable", "clé en main"],
           image: {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Espaces sur mesure Dilamco",
           },
-          caption: "Montreal, Laval et Rive-Sud",
+          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
@@ -63,13 +63,13 @@ export const page: PageTemplateData = {
         props: {
           heading: "Choisissez votre espace",
           intro:
-            "Accedez a la page pilier adaptee a votre type de projet pour voir l'approche, les materiaux et des references.",
+            "Accédez à la page pilier adaptée à votre type de projet pour voir l'approche, les matériaux et des références.",
           items: [
             {
               title: "Cuisine",
               href: "/espaces/cuisine/",
               description:
-                "Cuisine sur mesure avec coordination, materiaux durables et execution stable.",
+                "Cuisine sur mesure avec coordination, matériaux durables et exécution stable.",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Cuisine sur mesure haut de gamme",
@@ -81,19 +81,19 @@ export const page: PageTemplateData = {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain/",
               description:
-                "Vanites et rangement sur mesure adaptes a l'humidite et a l'usage quotidien.",
+                "Vanités et rangement sur mesure adaptés à l'humidité et à l'usage quotidien.",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Salle de bain sur mesure",
               },
-              badges: ["Salle de bain", "Humidite"],
+              badges: ["Salle de bain", "Humidité"],
               footerCtaLabel: "Voir salle de bain",
             },
             {
               title: "Salle de lavage",
               href: "/espaces/salle-de-lavage/",
               description:
-                "Configuration fonctionnelle et durable pour un espace de service bien organise.",
+                "Configuration fonctionnelle et durable pour un espace de service bien organisé.",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Salle de lavage sur mesure",
@@ -117,10 +117,10 @@ export const page: PageTemplateData = {
               title: "Commercial",
               href: "/espaces/commercial/",
               description:
-                "Amenagement commercial durable, planifie et adapte a l'usage reel.",
+                "Aménagement commercial durable, planifié et adapté à l'usage réel.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
-                alt: "Amenagement commercial sur mesure",
+                alt: "Aménagement commercial sur mesure",
               },
               badges: ["Commercial", "Durable"],
               footerCtaLabel: "Voir commercial",
@@ -137,27 +137,27 @@ export const page: PageTemplateData = {
         props: {
           heading: "Notre standard, peu importe l'espace",
           description:
-            "Une methode reproductible pour proteger la qualite, reduire les imprevus et garder une execution coherente.",
+            "Une méthode reproductible pour protéger la qualité, réduire les imprévus et garder une exécution cohérente.",
           steps: [
             {
               label: "1) Conception",
               description:
-                "Plans clairs, configuration adaptee et validations avant fabrication.",
+                "Plans clairs, configuration adaptée et validations avant fabrication.",
             },
             {
-              label: "2) Materiaux",
+              label: "2) Matériaux",
               description:
-                "Choix durables et details de construction penses pour la longevite.",
+                "Choix durables et détails de construction pensés pour la longévité.",
             },
             {
               label: "3) Fabrication",
               description:
-                "Standards stables et controle qualite pour une meilleure constance.",
+                "Standards stables et contrôle qualité pour une meilleure constance.",
             },
             {
               label: "4) Installation",
               description:
-                "Ajustements precis, finitions nettes et coordination propre sur chantier.",
+                "Ajustements précis, finitions nettes et coordination propre sur chantier.",
             },
           ],
           actions: [
@@ -167,7 +167,7 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
             {
-              label: "Voir nos materiaux",
+              label: "Voir nos matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -185,23 +185,23 @@ export const page: PageTemplateData = {
         props: {
           heading: "FAQ - espaces sur mesure",
           intro:
-            "Quelques reponses rapides avant d'approfondir votre type de projet.",
+            "Quelques réponses rapides avant d'approfondir votre type de projet.",
           items: [
             {
               q: "Quels espaces faites-vous ?",
               a: "Cuisine, salle de bain, salle de lavage, walk-in et projets commerciaux.",
             },
             {
-              q: "Travaillez-vous seulement a Montreal ?",
-              a: "Nous desservons Montreal, Laval et la Rive-Sud.",
+              q: "Travaillez-vous seulement à Montréal ?",
+              a: "Nous desservons Montréal, Laval et la Rive-Sud.",
             },
             {
-              q: "Quelle est la difference avec une solution standard ?",
-              a: "Le sur mesure permet une meilleure adaptation a l'espace, une structure plus solide et une execution mieux controlee.",
+              q: "Quelle est la différence avec une solution standard ?",
+              a: "Le sur mesure permet une meilleure adaptation à l'espace, une structure plus solide et une exécution mieux contrôlée.",
             },
             {
               q: "Faites-vous aussi l'installation ?",
-              a: "Oui. L'objectif est justement d'assurer une execution coherente du design a la pose.",
+              a: "Oui. L'objectif est justement d'assurer une exécution cohérente du design à la pose.",
             },
           ],
         },
@@ -213,9 +213,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Pret a cadrer votre projet correctement ?",
+          heading: "Prêt à cadrer votre projet correctement ?",
           intro:
-            "Obtenez une soumission claire et structuree adaptee a votre espace et a votre niveau d'exigence.",
+            "Obtenez une soumission claire et structurée adaptée à votre espace et à votre niveau d'exigence.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -228,7 +228,7 @@ export const page: PageTemplateData = {
               variant: "outline",
             },
           ],
-          note: "Montreal, Laval et Rive-Sud",
+          note: "Montréal, Laval et Rive-Sud",
         },
       },
     },

@@ -23,10 +23,10 @@ export const page: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet",
           intro:
-            "Demandez une soumission pour un projet de cuisine, vanite, rangement sur mesure ou renovation avec coordination.",
+            "Demandez une soumission pour un projet de cuisine, vanité, rangement sur mesure ou rénovation avec coordination.",
           detailsTitle: "Nous joindre",
           detailsIntro:
-            "Nous accompagnons principalement des projets residentiels et commerciaux qui recherchent une solution durable, bien construite et bien planifiee.",
+            "Nous accompagnons principalement des projets résidentiels et commerciaux qui recherchent une solution durable, bien construite et bien planifiée.",
           details: [
             {
               title: "Courriel",
@@ -37,7 +37,7 @@ export const page: PageTemplateData = {
               rel: "noopener noreferrer",
             },
             {
-              title: "Telephone",
+              title: "Téléphone",
               description: "(514) 820-0773",
               icon: "phone",
               href: "tel:+15148200773",
@@ -46,13 +46,13 @@ export const page: PageTemplateData = {
             },
             {
               title: "Zones desservies",
-              description: "Montreal, Laval et Rive-Sud",
+              description: "Montréal, Laval et Rive-Sud",
               icon: "map-pin",
             },
             {
-              title: "Delai de retour vise",
+              title: "Délai de retour visé",
               description:
-                "Retour initial sous 24 a 48 heures ouvrables pour valider la demande et confirmer les informations utiles.",
+                "Retour initial sous 24 à 48 heures ouvrables pour valider la demande et confirmer les informations utiles.",
               icon: "clock",
             },
           ],
@@ -79,8 +79,8 @@ export const page: PageTemplateData = {
                 },
                 {
                   kind: "tel",
-                  name: "telephone",
-                  label: "Telephone",
+                  name: "téléphone",
+                  label: "Téléphone",
                   autoComplete: "tel",
                   required: true,
                 },
@@ -89,18 +89,18 @@ export const page: PageTemplateData = {
                   name: "ville",
                   label: "Ville / secteur",
                   autoComplete: "address-level2",
-                  placeholder: "Montreal, Laval, Rive-Sud",
+                  placeholder: "Montréal, Laval, Rive-Sud",
                   required: true,
                 },
                 {
                   kind: "select",
                   name: "espace",
                   label: "Type d'espace",
-                  placeholder: "Selectionner...",
+                  placeholder: "Sélectionner...",
                   required: true,
                   options: [
                     { label: "Cuisine", value: "cuisine" },
-                    { label: "Salle de bain / vanite", value: "salle-de-bain" },
+                    { label: "Salle de bain / vanité", value: "salle-de-bain" },
                     { label: "Walk-in / rangement", value: "walk-in" },
                     { label: "Salle de lavage", value: "salle-de-lavage" },
                     { label: "Commercial", value: "commercial" },
@@ -110,7 +110,7 @@ export const page: PageTemplateData = {
                   kind: "select",
                   name: "type_projet",
                   label: "Nature du projet",
-                  placeholder: "Selectionner...",
+                  placeholder: "Sélectionner...",
                   required: true,
                   options: [
                     {
@@ -118,12 +118,12 @@ export const page: PageTemplateData = {
                       value: "sur-mesure",
                     },
                     {
-                      label: "Renovation avec coordination",
-                      value: "renovation",
+                      label: "Rénovation avec coordination",
+                      value: "rénovation",
                     },
                     {
-                      label: "A determiner / besoin de conseils",
-                      value: "a-determiner",
+                      label: "À déterminer / besoin de conseils",
+                      value: "a-déterminer",
                     },
                   ],
                 },
@@ -131,22 +131,22 @@ export const page: PageTemplateData = {
                   kind: "select",
                   name: "budget",
                   label: "Budget approximatif",
-                  placeholder: "Selectionner...",
+                  placeholder: "Sélectionner...",
                   required: true,
                   options: [
                     { label: "Moins de 15 000 $", value: "moins-15000" },
-                    { label: "15 000 $ a 25 000 $", value: "15000-25000" },
-                    { label: "25 000 $ a 40 000 $", value: "25000-40000" },
-                    { label: "40 000 $ a 60 000 $", value: "40000-60000" },
+                    { label: "15 000 $ à 25 000 $", value: "15000-25000" },
+                    { label: "25 000 $ à 40 000 $", value: "25000-40000" },
+                    { label: "40 000 $ à 60 000 $", value: "40000-60000" },
                     { label: "60 000 $ et plus", value: "60000-plus" },
-                    { label: "A discuter", value: "a-discuter" },
+                    { label: "À discuter", value: "a-discuter" },
                   ],
                 },
                 {
                   kind: "select",
-                  name: "echeance",
-                  label: "Calendrier souhaite",
-                  placeholder: "Selectionner...",
+                  name: "échéance",
+                  label: "Calendrier souhaité",
+                  placeholder: "Sélectionner...",
                   required: true,
                   options: [
                     { label: "0-3 mois", value: "0-3" },
@@ -158,11 +158,11 @@ export const page: PageTemplateData = {
                 {
                   kind: "textarea",
                   name: "message",
-                  label: "Decrivez votre projet",
+                  label: "Décrivez votre projet",
                   rows: 8,
                   required: true,
                   placeholder:
-                    "Ex. type de piece, dimensions approximatives, etat actuel, besoins de rangement, materiaux souhaites, contraintes d'acces ou echeancier.",
+                    "Ex. type de pièce, dimensions approximatives, état actuel, besoins de rangement, matériaux souhaités, contraintes d'accès ou échéancier.",
                 },
               ],
             },

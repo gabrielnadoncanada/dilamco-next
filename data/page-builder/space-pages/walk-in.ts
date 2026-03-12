@@ -6,7 +6,7 @@ export const walkInPage: PageTemplateData = {
   metadata: {
     title: "Walk-in sur mesure haut de gamme",
     description:
-      "Walk-in sur mesure haut de gamme : conception, fabrication controlee et installation precise a Montreal, Laval et sur la Rive-Sud.",
+      "Walk-in sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
     path: "/espaces/walk-in/",
     ogAlt: "Walk-in sur mesure Dilamco",
   },
@@ -17,7 +17,7 @@ export const walkInPage: PageTemplateData = {
   service: {
     name: "Walk-in sur mesure",
     description:
-      "Conception, fabrication controlee et installation de walk-ins sur mesure haut de gamme.",
+      "Conception, fabrication contrôlée et installation de walk-ins sur mesure haut de gamme.",
     url: SITE.url + "/espaces/walk-in/",
     serviceType: "Walk-in sur mesure",
   },
@@ -30,9 +30,9 @@ export const walkInPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
-          heading: "Walk-in sur mesure, rangement pense pour l'usage reel",
+          heading: "Walk-in sur mesure, rangement pensé pour l'usage réel",
           description:
-            "Le sur mesure permet d'optimiser l'espace, d'ameliorer l'organisation et d'obtenir un resultat plus stable qu'un systeme standard.",
+            "Le sur mesure permet d'optimiser l'espace, d'améliorer l'organisation et d'obtenir un résultat plus stable qu'un système standard.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -51,7 +51,7 @@ export const walkInPage: PageTemplateData = {
             alt: "Walk-in sur mesure haut de gamme",
           },
           caption:
-            "Organisation personnalisee pour chambres, garde-robes et espaces restreints",
+            "Organisation personnalisée pour chambres, garde-robes et espaces restreints",
         },
       },
     },
@@ -61,15 +61,15 @@ export const walkInPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Un walk-in concu pour l'usage quotidien",
+          heading: "Un walk-in conçu pour l'usage quotidien",
           intro:
-            "Ce type de projet sert a mieux organiser les zones, les acces et les volumes plutot qu'a empiler des tablettes standard.",
-          badges: ["Optimisation", "Acces", "Durabilite"],
+            "Ce type de projet sert à mieux organiser les zones, les accès et les volumes plutôt qu'à empiler des tablettes standard.",
+          badges: ["Optimisation", "Accès", "Durabilité"],
           cardTitle: "Quand c'est un bon fit",
           items: [
             "Vous voulez maximiser un espace contraint.",
-            "Le rangement doit suivre vos habitudes reelles.",
-            "Vous cherchez un resultat plus solide et mieux integre.",
+            "Le rangement doit suivre vos habitudes réelles.",
+            "Vous cherchez un résultat plus solide et mieux intégré.",
           ],
           actions: [
             {
@@ -92,15 +92,15 @@ export const walkInPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Une methode simple pour un rangement mieux pense",
+          heading: "Une méthode simple pour un rangement mieux pensé",
           intro:
-            "Le projet est structure autour des usages, des acces et des zones de rangement reelles.",
+            "Le projet est structuré autour des usages, des accès et des zones de rangement réelles.",
           steps: [
             {
               number: "1",
               title: "Analyse",
               description:
-                "Besoins de penderie, tiroirs, accessoires et volumes a organiser.",
+                "Besoins de penderie, tiroirs, accessoires et volumes à organiser.",
             },
             {
               number: "2",
@@ -112,13 +112,13 @@ export const walkInPage: PageTemplateData = {
               number: "3",
               title: "Fabrication",
               description:
-                "Production controlee avec des specifications stables et un rendu coherent.",
+                "Production contrôlée avec des spécifications stables et un rendu cohérent.",
             },
             {
               number: "4",
               title: "Installation",
               description:
-                "Ajustements et finitions verifies pour un resultat net et durable.",
+                "Ajustements et finitions vérifiés pour un résultat net et durable.",
             },
           ],
         },
@@ -130,9 +130,9 @@ export const walkInPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Des details de construction qui changent l'usage",
+          heading: "Des détails de construction qui changent l'usage",
           intro:
-            "Le premium ne se limite pas a l'esthetique. Il se voit dans la tenue des tiroirs, la stabilite et la qualite de fabrication.",
+            "Le premium ne se limite pas à l'esthétique. Il se voit dans la tenue des tiroirs, la stabilité et la qualité de fabrication.",
           items: [
             {
               title: "Tiroirs robustes",
@@ -142,17 +142,17 @@ export const walkInPage: PageTemplateData = {
             {
               title: "Structure stable",
               description:
-                "Contreplaque de bouleau pour garder un meilleur comportement dans le temps.",
+                "Contreplaqué de bouleau pour garder un meilleur comportement dans le temps.",
             },
             {
-              title: "Configuration adaptee",
+              title: "Configuration adaptée",
               description:
-                "Organisation pensee pour chaussures, vetements, accessoires et circulation.",
+                "Organisation pensée pour chaussures, vêtements, accessoires et circulation.",
             },
           ],
           actions: [
             {
-              label: "Explorer les materiaux",
+              label: "Explorer les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -164,11 +164,11 @@ export const walkInPage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/spaces/space-walkin-project-01.webp",
-            alt: "Detail materiau pour walk-in sur mesure",
+            alt: "Détail matériau pour walk-in sur mesure",
           },
           cardTitle: "Avantage concret",
           cardDescription:
-            "Une meilleure organisation et une meilleure tenue dans le temps rendent le walk-in plus agreable a utiliser chaque jour.",
+            "Une meilleure organisation et une meilleure tenue dans le temps rendent le walk-in plus agréable à utiliser chaque jour.",
         },
       },
     },
@@ -180,28 +180,28 @@ export const walkInPage: PageTemplateData = {
         props: {
           heading: "Projets walk-in en vedette",
           intro:
-            "Quelques realisations recentes pour illustrer l'organisation et le niveau de finition.",
+            "Quelques réalisations récentes pour illustrer l'organisation et le niveau de finition.",
           items: [
             {
               title: "Walk-in sur mesure",
               href: "/projets/",
               description:
-                "Organisation sur mesure avec circulation et rangement adaptes au quotidien.",
+                "Organisation sur mesure avec circulation et rangement adaptés au quotidien.",
               image: {
                 src: "/images/generated/spaces/space-walkin-project-01.webp",
-                alt: "Projet walk-in sur mesure a Montreal",
+                alt: "Projet walk-in sur mesure à Montréal",
               },
-              badges: ["Montreal", "Organisation"],
+              badges: ["Montréal", "Organisation"],
               footerCtaLabel: "Voir le projet",
             },
             {
               title: "Walk-in sur mesure",
               href: "/projets/",
               description:
-                "Walk-in concu pour maximiser l'espace avec un rendu propre et durable.",
+                "Walk-in conçu pour maximiser l'espace avec un rendu propre et durable.",
               image: {
                 src: "/images/generated/spaces/space-walkin-project-02.webp",
-                alt: "Projet walk-in sur mesure a Laval",
+                alt: "Projet walk-in sur mesure à Laval",
               },
               badges: ["Laval", "Sur mesure"],
               footerCtaLabel: "Voir le projet",
@@ -210,7 +210,7 @@ export const walkInPage: PageTemplateData = {
               title: "Walk-in sur mesure",
               href: "/projets/",
               description:
-                "Rangement personnalise et installation precise pour un usage quotidien.",
+                "Rangement personnalisé et installation précise pour un usage quotidien.",
               image: {
                 src: "/images/generated/spaces/space-walkin-project-03.webp",
                 alt: "Projet walk-in sur mesure sur la Rive-Sud",
@@ -231,23 +231,23 @@ export const walkInPage: PageTemplateData = {
         props: {
           heading: "FAQ - walk-in sur mesure",
           intro:
-            "Les questions qui reviennent le plus souvent avant de demarrer un projet de rangement sur mesure.",
+            "Les questions qui reviennent le plus souvent avant de démarrer un projet de rangement sur mesure.",
           items: [
             {
-              q: "Combien coute un walk-in sur mesure ?",
-              a: "Le prix varie selon les dimensions, le niveau d'amenagement et les materiaux choisis.",
+              q: "Combien coûte un walk-in sur mesure ?",
+              a: "Le prix varie selon les dimensions, le niveau d'aménagement et les matériaux choisis.",
             },
             {
               q: "Est-ce utile dans un petit espace ?",
               a: "Oui. Le sur mesure est justement pertinent quand il faut optimiser niches, angles et hauteurs disponibles.",
             },
             {
-              q: "Quelle est la difference avec un systeme modulaire ?",
-              a: "Le sur mesure permet une organisation plus adaptee, une meilleure integration et une structure souvent plus robuste.",
+              q: "Quelle est la différence avec un système modulaire ?",
+              a: "Le sur mesure permet une organisation plus adaptée, une meilleure intégration et une structure souvent plus robuste.",
             },
             {
-              q: "Travaillez-vous a Montreal et autour ?",
-              a: "Oui. Nous desservons Montreal, Laval et la Rive-Sud.",
+              q: "Travaillez-vous à Montréal et autour ?",
+              a: "Oui. Nous desservons Montréal, Laval et la Rive-Sud.",
             },
           ],
         },
@@ -261,7 +261,7 @@ export const walkInPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet de walk-in",
           intro:
-            "On vous aide a cadrer un rangement sur mesure qui correspond vraiment a l'espace et a l'usage.",
+            "On vous aide à cadrer un rangement sur mesure qui correspond vraiment à l'espace et à l'usage.",
           actions: [
             {
               label: "Demander une soumission",

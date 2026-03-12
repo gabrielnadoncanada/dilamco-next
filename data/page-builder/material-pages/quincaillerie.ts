@@ -6,13 +6,13 @@ export const quincailleriePage: PageTemplateData = {
   metadata: {
     title: "Quincaillerie d'armoires haut de gamme | Dilamco",
     description:
-      "Decouvrez pourquoi la quincaillerie joue un role central dans la durabilite, la fluidite et la qualite percue d'une cuisine ou d'une vanite haut de gamme.",
+      "Découvrez pourquoi la quincaillerie joue un rôle central dans la durabilité, la fluidité et la qualité perçue d'une cuisine ou d'une vanité haut de gamme.",
     path: "/materiaux/quincaillerie/",
     ogAlt: "Quincaillerie d'armoires haut de gamme Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Materiaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux/" },
     {
       name: "Quincaillerie",
       url: SITE.url + "/materiaux/quincaillerie/",
@@ -26,30 +26,30 @@ export const quincailleriePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materiaux",
+          eyebrow: "Dilamco - Matériaux",
           heading:
-            "Quincaillerie d'armoires : un element cle de la durabilite d'une cuisine",
+            "Quincaillerie d'armoires : un élément clé de la durabilité d'une cuisine",
           description:
-            "La qualite d'une cuisine ou d'une vanite ne depend pas seulement des materiaux visibles. Les mecanismes qui ouvrent, ferment et supportent portes et tiroirs jouent un role central dans la durabilite, la fluidite et le confort d'utilisation.",
+            "La qualité d'une cuisine ou d'une vanité ne dépend pas seulement des matériaux visibles. Les mécanismes qui ouvrent, ferment et supportent portes et tiroirs jouent un rôle central dans la durabilité, la fluidité et le confort d'utilisation.",
           actions: [
             {
-              label: "Decouvrir nos cuisines sur mesure",
+              label: "Découvrir nos cuisines sur mesure",
               href: "/espaces/cuisine/",
               variant: "default",
             },
             {
-              label: "Voir notre approche cle en main",
+              label: "Voir notre approche clé en main",
               href: "/services/renovation/",
               variant: "outline",
             },
           ],
-          badges: ["Materiaux", "Durabilite", "Qualite percue"],
+          badges: ["Matériaux", "Durabilité", "Qualité perçue"],
           image: {
             src: "/images/generated/materials/material-hardware-hero-01.webp",
-            alt: "Cuisine sur mesure mettant en valeur la qualite de la quincaillerie",
+            alt: "Cuisine sur mesure mettant en valeur la qualité de la quincaillerie",
           },
           caption:
-            "Charnieres, coulisses et mecanismes influencent directement l'experience quotidienne",
+            "Charnières, coulisses et mécanismes influencent directement l'expérience quotidienne",
         },
       },
     },
@@ -61,27 +61,27 @@ export const quincailleriePage: PageTemplateData = {
         props: {
           heading: "Pourquoi la quincaillerie est-elle si importante ?",
           description:
-            "La quincaillerie regroupe l'ensemble des mecanismes qui rendent les armoires fonctionnelles : charnieres, coulisses, systemes d'ouverture et mecanismes de fermeture. Ces composants influencent directement la stabilite des portes, la fluidite des tiroirs, le niveau de bruit, la resistance a l'usure et la qualite percue du mobilier dans le temps. Dans un projet durable, ce n'est pas un detail. C'est une partie integrante de la qualite globale.",
+            "La quincaillerie regroupe l'ensemble des mécanismes qui rendent les armoires fonctionnelles : charnières, coulisses, systèmes d'ouverture et mécanismes de fermeture. Ces composants influencent directement la stabilité des portes, la fluidité des tiroirs, le niveau de bruit, la résistance à l'usure et la qualité perçue du mobilier dans le temps. Dans un projet durable, ce n'est pas un détail. C'est une partie intégrante de la qualité globale.",
           cards: [
             {
               title: "Tiroirs plus solides et stables",
               description:
-                "Une bonne base mecanique garde le mouvement net meme sous charge et dans l'usage frequent.",
+                "Une bonne base mécanique garde le mouvement net même sous charge et dans l'usage fréquent.",
             },
             {
               title: "Ouverture plus fluide et silencieuse",
               description:
-                "La fermeture amortie et l'extension complete changent concretement le confort quotidien.",
+                "La fermeture amortie et l'extension complète changent concrètement le confort quotidien.",
             },
             {
-              title: "Moins d'usure et moins de reparations",
+              title: "Moins d'usure et moins de réparations",
               description:
-                "Des mecanismes robustes reduisent les chocs, les desalignements et l'usure prematuree.",
+                "Des mécanismes robustes réduisent les chocs, les désalignements et l'usure prématurée.",
             },
             {
-              title: "Durabilite globale mieux protegee",
+              title: "Durabilité globale mieux protégée",
               description:
-                "La quincaillerie soutient la sensation de qualite et la longevite du mobilier.",
+                "La quincaillerie soutient la sensation de qualité et la longévité du mobilier.",
             },
           ],
           columns: "2",
@@ -96,52 +96,52 @@ export const quincailleriePage: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading:
-            "Les differents types de quincaillerie utilises dans les armoires",
+            "Les différents types de quincaillerie utilisés dans les armoires",
           intro:
-            "Une cuisine haut de gamme repose sur plusieurs mecanismes, chacun ayant un impact concret sur la durabilite et l'experience d'utilisation.",
+            "Une cuisine haut de gamme repose sur plusieurs mécanismes, chacun ayant un impact concret sur la durabilité et l'expérience d'utilisation.",
           columns: "2",
           items: [
             {
-              title: "Charnieres d'armoires",
+              title: "Charnières d'armoires",
               description:
-                "Elles permettent l'ouverture et la fermeture precises des portes, avec reglages fins et fermeture amortie.",
+                "Elles permettent l'ouverture et la fermeture précises des portes, avec réglages fins et fermeture amortie.",
               icon: "doorOpen",
               bullets: [
-                "Alignement precis des portes",
-                "Reglage tridimensionnel",
+                "Alignement précis des portes",
+                "Réglage tridimensionnel",
                 "Fermeture douce et silencieuse",
               ],
             },
             {
               title: "Coulisses de tiroirs",
               description:
-                "Elles assurent la fluidite du mouvement, la stabilite du tiroir et l'acces complet au rangement.",
+                "Elles assurent la fluidité du mouvement, la stabilité du tiroir et l'accès complet au rangement.",
               icon: "slidersHorizontal",
               bullets: [
-                "Extension complete",
+                "Extension complète",
                 "Fermeture amortie (soft-close)",
-                "Stabilite meme sous charge",
+                "Stabilité même sous charge",
               ],
             },
             {
-              title: "Systemes de tiroirs",
+              title: "Systèmes de tiroirs",
               description:
-                "L'ensemble structure plus mecanisme doit rester coherent pour offrir une utilisation durable.",
+                "L'ensemble structure plus mécanisme doit rester cohérent pour offrir une utilisation durable.",
               icon: "package2",
               bullets: [
                 "Supporte un usage quotidien intensif",
-                "Ameliore la perception de qualite",
-                "Reduit l'usure prematuree",
+                "Améliore la perception de qualité",
+                "Réduit l'usure prématurée",
               ],
             },
             {
-              title: "Mecanismes specialises",
+              title: "Mécanismes spécialisés",
               description:
-                "Solutions pour armoires hautes, systemes sans poignees ou rangements plus techniques.",
+                "Solutions pour armoires hautes, systèmes sans poignées ou rangements plus techniques.",
               icon: "wrench",
               bullets: [
                 "Ouverture plus fluide",
-                "Design plus epure",
+                "Design plus épuré",
                 "Meilleure ergonomie",
               ],
             },
@@ -155,29 +155,29 @@ export const quincailleriePage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Comment reconnaitre une quincaillerie de qualite",
+          heading: "Comment reconnaître une quincaillerie de qualité",
           description:
-            "Plusieurs criteres permettent d'evaluer la robustesse et la pertinence d'un mecanisme. On regarde sa capacite a supporter la charge, la qualite du mouvement, la precision des ajustements et sa tenue apres de nombreux cycles d'utilisation.",
+            "Plusieurs critères permettent d'évaluer la robustesse et la pertinence d'un mécanisme. On regarde sa capacité à supporter la charge, la qualité du mouvement, la précision des ajustements et sa tenue après de nombreux cycles d'utilisation.",
           cards: [
             {
-              title: "Capacite de charge",
+              title: "Capacité de charge",
               description:
-                "Le mecanisme doit supporter un poids important sans deformation ni jeu excessif.",
+                "Le mécanisme doit supporter un poids important sans déformation ni jeu excessif.",
             },
             {
-              title: "Extension complete",
+              title: "Extension complète",
               description:
-                "Le tiroir s'ouvre entierement pour un acces plus simple et une meilleure utilisation de l'espace.",
+                "Le tiroir s'ouvre entièrement pour un accès plus simple et une meilleure utilisation de l'espace.",
             },
             {
               title: "Fermeture amortie",
               description:
-                "Le systeme ralentit la fermeture, limite les chocs, le bruit et l'usure.",
+                "Le système ralentit la fermeture, limite les chocs, le bruit et l'usure.",
             },
             {
-              title: "Precision des ajustements",
+              title: "Précision des ajustements",
               description:
-                "Des reglages precis gardent les portes alignees et le mobilier stable dans le temps.",
+                "Des réglages précis gardent les portes alignées et le mobilier stable dans le temps.",
             },
           ],
           columns: "2",
@@ -190,29 +190,29 @@ export const quincailleriePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Application concrete dans un tiroir durable",
+          heading: "Application concrète dans un tiroir durable",
           intro:
-            "La performance d'un tiroir depend a la fois de sa construction et de la qualite de ses mecanismes. Structure et quincaillerie doivent fonctionner ensemble.",
+            "La performance d'un tiroir dépend à la fois de sa construction et de la qualité de ses mécanismes. Structure et quincaillerie doivent fonctionner ensemble.",
           items: [
             {
               title: "Structure en bois massif de bouleau.",
               description:
-                "Elle renforce la solidite generale et soutient mieux les cycles repetes d'ouverture.",
+                "Elle renforce la solidité générale et soutient mieux les cycles répétés d'ouverture.",
             },
             {
-              title: "Fond en contreplaque de bouleau.",
+              title: "Fond en contreplaqué de bouleau.",
               description:
-                "Il aide a garder la stabilite et a mieux supporter le poids du contenu.",
+                "Il aide à garder la stabilité et à mieux supporter le poids du contenu.",
             },
             {
-              title: "Coulisses robustes a extension complete.",
+              title: "Coulisses robustes à extension complète.",
               description:
-                "Avec fermeture amortie, elles ameliorent la fluidite tout en reduisant l'usure a long terme.",
+                "Avec fermeture amortie, elles améliorent la fluidité tout en réduisant l'usure à long terme.",
             },
           ],
           actions: [
             {
-              label: "Explorer les materiaux",
+              label: "Explorer les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
@@ -224,11 +224,11 @@ export const quincailleriePage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/materials/material-birch-drawer-detail-01.webp",
-            alt: "Detail de cuisine sur mesure illustrant un tiroir durable",
+            alt: "Détail de cuisine sur mesure illustrant un tiroir durable",
           },
           cardTitle: "Exemple de structure durable",
           cardDescription:
-            "Cette combinaison ameliore la stabilite, la resistance au poids et la fluidite du tiroir, tout en reduisant l'usure prematuree.",
+            "Cette combinaison améliore la stabilité, la résistance au poids et la fluidité du tiroir, tout en réduisant l'usure prématurée.",
         },
       },
     },
@@ -241,24 +241,24 @@ export const quincailleriePage: PageTemplateData = {
         props: {
           heading: "Quincaillerie standard vs quincaillerie haut de gamme",
           intro:
-            "Les differences deviennent rapidement visibles dans un usage quotidien.",
+            "Les différences deviennent rapidement visibles dans un usage quotidien.",
           columns: ["Quincaillerie standard", "Quincaillerie haut de gamme"],
           rows: [
             {
               label: "Extension du tiroir",
-              values: ["Partielle", "Extension complete"],
+              values: ["Partielle", "Extension complète"],
             },
             {
               label: "Fermeture",
               values: ["Sans amortisseur", "Douce et amortie"],
             },
             {
-              label: "Capacite de charge",
-              values: ["Plus faible", "Elevee"],
+              label: "Capacité de charge",
+              values: ["Plus faible", "Élevée"],
             },
             {
-              label: "Durabilite",
-              values: ["Moyenne", "Concue pour durer"],
+              label: "Durabilité",
+              values: ["Moyenne", "Conçue pour durer"],
             },
             {
               label: "Confort",
@@ -276,16 +276,16 @@ export const quincailleriePage: PageTemplateData = {
         props: {
           heading: "Pourquoi c'est essentiel dans une cuisine haut de gamme",
           intro:
-            "Dans une cuisine premium, la qualite ne depend pas uniquement des materiaux visibles. Les mecanismes influencent directement la fluidite des mouvements, le silence d'utilisation et la sensation de solidite. Une quincaillerie robuste aide a maintenir l'alignement des portes, la stabilite des tiroirs et une experience coherente pendant des annees.",
-          badges: ["Fluidite", "Silence", "Durabilite"],
+            "Dans une cuisine premium, la qualité ne dépend pas uniquement des matériaux visibles. Les mécanismes influencent directement la fluidité des mouvements, le silence d'utilisation et la sensation de solidité. Une quincaillerie robuste aide à maintenir l'alignement des portes, la stabilité des tiroirs et une expérience cohérente pendant des années.",
+          badges: ["Fluidité", "Silence", "Durabilité"],
           cardTitle: "Ce qu'une bonne quincaillerie apporte",
           items: [
             "Tiroirs plus solides et plus stables",
             "Ouverture et fermeture plus fluides",
-            "Reduction du bruit au quotidien",
-            "Moins de chocs mecaniques",
-            "Moins de reparations a long terme",
-            "Meilleure durabilite globale du mobilier",
+            "Réduction du bruit au quotidien",
+            "Moins de chocs mécaniques",
+            "Moins de réparations à long terme",
+            "Meilleure durabilité globale du mobilier",
           ],
           actions: [
             {
@@ -310,39 +310,39 @@ export const quincailleriePage: PageTemplateData = {
         variant: "image-cards-slider",
         props: {
           heading:
-            "Explorez les autres elements qui influencent la durabilite d'un projet sur mesure",
+            "Explorez les autres éléments qui influencent la durabilité d'un projet sur mesure",
           intro:
-            "La quincaillerie est un maillon important, mais elle s'integre toujours a une logique plus large de conception, de structure et de materiaux.",
+            "La quincaillerie est un maillon important, mais elle s'intègre toujours à une logique plus large de conception, de structure et de matériaux.",
           items: [
             {
               title: "Bois massif",
               href: "/materiaux/bois-massif/",
               description:
-                "Comprendre son role dans la solidite des armoires et des tiroirs.",
+                "Comprendre son rôle dans la solidité des armoires et des tiroirs.",
               image: {
                 src: "/images/generated/materials/material-solid-wood-card-01.webp",
                 alt: "Bois massif pour armoires sur mesure",
               },
-              badges: ["Materiaux", "Structure"],
+              badges: ["Matériaux", "Structure"],
               footerCtaLabel: "Voir le bois massif",
             },
             {
-              title: "Contreplaque",
+              title: "Contreplaqué",
               href: "/materiaux/contreplaque/",
               description:
-                "Pourquoi il ameliore la stabilite et la durabilite dans les elements critiques.",
+                "Pourquoi il améliore la stabilité et la durabilité dans les éléments critiques.",
               image: {
                 src: "/images/generated/materials/material-plywood-card-01.webp",
-                alt: "Contreplaque utilise dans une cuisine sur mesure",
+                alt: "Contreplaqué utilisé dans une cuisine sur mesure",
               },
-              badges: ["Materiaux", "Stabilite"],
-              footerCtaLabel: "Voir le contreplaque",
+              badges: ["Matériaux", "Stabilité"],
+              footerCtaLabel: "Voir le contreplaqué",
             },
             {
               title: "Cuisine sur mesure",
               href: "/espaces/cuisine/",
               description:
-                "Voir comment ces choix s'integrent dans un projet complet.",
+                "Voir comment ces choix s'intègrent dans un projet complet.",
               image: {
                 src: "/images/generated/materials/material-kitchen-durability-card-01.webp",
                 alt: "Cuisine sur mesure haut de gamme",
@@ -351,13 +351,13 @@ export const quincailleriePage: PageTemplateData = {
               footerCtaLabel: "Voir les cuisines",
             },
             {
-              title: "Vanite salle de bain",
+              title: "Vanité salle de bain",
               href: "/espaces/salle-de-bain/",
               description:
-                "Explorer les memes principes appliques a un environnement plus humide.",
+                "Explorer les mêmes principes appliqués à un environnement plus humide.",
               image: {
-                src: "/images/generated/materials/material-hardware-detail-01.webp",
-                alt: "Vanite sur mesure pour salle de bain",
+                src: "/images/generated/materials/material-hardware-détail-01.webp",
+                alt: "Vanité sur mesure pour salle de bain",
               },
               badges: ["Espaces", "Salle de bain"],
               footerCtaLabel: "Voir la salle de bain",
@@ -375,23 +375,23 @@ export const quincailleriePage: PageTemplateData = {
         props: {
           heading: "FAQ",
           intro:
-            "Reponses aux questions frequentes sur la quincaillerie d'armoires.",
+            "Réponses aux questions fréquentes sur la quincaillerie d'armoires.",
           items: [
             {
-              q: "Quelle est la difference entre une coulisse standard et une coulisse a extension complete ?",
-              a: "Une coulisse standard n'ouvre pas completement le tiroir. Une coulisse a extension complete donne acces a toute la profondeur du tiroir, ce qui ameliore l'usage quotidien et l'organisation.",
+              q: "Quelle est la différence entre une coulisse standard et une coulisse à extension complète ?",
+              a: "Une coulisse standard n'ouvre pas complètement le tiroir. Une coulisse à extension complète donne accès à toute la profondeur du tiroir, ce qui améliore l'usage quotidien et l'organisation.",
             },
             {
               q: "Pourquoi la fermeture amortie est-elle importante ?",
-              a: "Elle reduit les chocs lors de la fermeture, ameliore le confort d'utilisation, diminue le bruit et contribue a prolonger la duree de vie du mecanisme.",
+              a: "Elle réduit les chocs lors de la fermeture, améliore le confort d'utilisation, diminue le bruit et contribue à prolonger la durée de vie du mécanisme.",
             },
             {
-              q: "La quincaillerie influence-t-elle reellement la durabilite d'une cuisine ?",
-              a: "Oui. Les portes et tiroirs sont utilises tres frequemment. Une quincaillerie robuste et bien concue permet de conserver la stabilite, l'alignement et la fluidite pendant de nombreuses annees.",
+              q: "La quincaillerie influence-t-elle réellement la durabilité d'une cuisine ?",
+              a: "Oui. Les portes et tiroirs sont utilisés très fréquemment. Une quincaillerie robuste et bien conçue permet de conserver la stabilité, l'alignement et la fluidité pendant de nombreuses années.",
             },
             {
-              q: "La quincaillerie haut de gamme change-t-elle seulement le confort ou aussi la qualite globale ?",
-              a: "Les deux. Elle ameliore le confort au quotidien, mais elle participe aussi a la qualite percue, a la resistance a l'usure et a la coherence d'un mobilier concu pour durer.",
+              q: "La quincaillerie haut de gamme change-t-elle seulement le confort ou aussi la qualité globale ?",
+              a: "Les deux. Elle améliore le confort au quotidien, mais elle participe aussi à la qualité perçue, à la résistance à l'usure et à la cohérence d'un mobilier conçu pour durer.",
             },
           ],
         },
@@ -405,7 +405,7 @@ export const quincailleriePage: PageTemplateData = {
         props: {
           heading: "Obtenez une soumission pour un projet durable",
           intro:
-            "On vous aide a cadrer les bons choix de materiaux, de quincaillerie et de fabrication pour un resultat plus stable a long terme.",
+            "On vous aide à cadrer les bons choix de matériaux, de quincaillerie et de fabrication pour un résultat plus stable à long terme.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -413,12 +413,12 @@ export const quincailleriePage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir tous les materiaux",
+              label: "Voir tous les matériaux",
               href: "/materiaux/",
               variant: "outline",
             },
           ],
-          note: "Montreal, Laval et Rive-Sud",
+          note: "Montréal, Laval et Rive-Sud",
         },
       },
     },

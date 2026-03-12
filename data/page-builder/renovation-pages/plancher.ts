@@ -4,27 +4,27 @@ import { SITE } from "@/seo/schema/site";
 export const renovationPlancherPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Renovation de plancher",
+    title: "Rénovation de plancher",
     description:
-      "Renovation de plancher : sequence de chantier, niveaux, transitions et integration propre dans un projet plus large.",
+      "Rénovation de plancher : séquence de chantier, niveaux, transitions et intégration propre dans un projet plus large.",
     path: "/services/renovation/plancher/",
-    ogAlt: "Renovation de plancher Dilamco",
+    ogAlt: "Rénovation de plancher Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services/" },
-    { name: "Renovation", url: SITE.url + "/services/renovation/" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
     {
-      name: "Renovation de plancher",
+      name: "Rénovation de plancher",
       url: SITE.url + "/services/renovation/plancher/",
     },
   ],
   service: {
-    name: "Renovation de plancher",
+    name: "Rénovation de plancher",
     description:
-      "Planification, coordination et finition soignee quand le plancher s'integre a une renovation plus large avec armoires, installation ou reconfiguration.",
+      "Planification, coordination et finition soignée quand le plancher s'intègre à une rénovation plus large avec armoires, installation ou reconfiguration.",
     url: SITE.url + "/services/renovation/plancher/",
-    serviceType: "Renovation de plancher",
+    serviceType: "Rénovation de plancher",
   },
   blocks: [
     {
@@ -34,11 +34,11 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
+          eyebrow: "Dilamco - Rénovation",
           heading:
-            "Renovation de plancher, mieux gerer niveaux, transitions et sequence de chantier",
+            "Rénovation de plancher, mieux gérer niveaux, transitions et séquence de chantier",
           description:
-            "Le plancher influence les niveaux, les transitions, l'installation des armoires et la qualite percue du projet. Il doit etre pense dans la sequence globale du chantier, pas traite comme une decision isolee.",
+            "Le plancher influence les niveaux, les transitions, l'installation des armoires et la qualité perçue du projet. Il doit être pensé dans la séquence globale du chantier, pas traité comme une décision isolée.",
           actions: [
             {
               label: "Demander une soumission",
@@ -46,17 +46,17 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir la renovation cle en main",
+              label: "Voir la rénovation clé en main",
               href: "/services/renovation/",
               variant: "outline",
             },
           ],
-          badges: ["Transitions", "Niveaux", "Sequence"],
+          badges: ["Transitions", "Niveaux", "Séquence"],
           image: {
             src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-            alt: "Renovation de plancher",
+            alt: "Rénovation de plancher",
           },
-          caption: "Montreal, Laval et Rive-Sud",
+          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
@@ -67,24 +67,24 @@ export const renovationPlancherPage: PageTemplateData = {
         variant: "text-divider-cards",
         props: {
           heading:
-            "Pourquoi le plancher cree souvent des problemes a retardement",
+            "Pourquoi le plancher crée souvent des problèmes à retardement",
           description:
-            "Le plancher semble simple tant qu'on ne le relie pas au reste du chantier. En realite, il influence les hauteurs, les transitions, les ajustements sur place et parfois la logique complete d'installation.",
+            "Le plancher semble simple tant qu'on ne le relie pas au reste du chantier. En réalité, il influence les hauteurs, les transitions, les ajustements sur place et parfois la logique complète d'installation.",
           cards: [
             {
-              title: "Niveaux et planeite",
+              title: "Niveaux et planéité",
               description:
-                "Les variations du support se repercutent directement sur la pose, les alignements et le rendu final.",
+                "Les variations du support se répercutent directement sur la pose, les alignements et le rendu final.",
             },
             {
               title: "Mauvais ordre des travaux",
               description:
-                "Quand le plancher est traite trop tard ou trop tot, il force souvent des reprises ou des protections supplementaires.",
+                "Quand le plancher est traité trop tard ou trop tôt, il force souvent des reprises ou des protections supplémentaires.",
             },
             {
               title: "Raccords visibles",
               description:
-                "Les transitions mal pensees entre zones, pieces ou materiaux diminuent vite la perception de qualite.",
+                "Les transitions mal pensées entre zones, pièces ou matériaux diminuent vite la perception de qualité.",
             },
           ],
           columns: "1",
@@ -98,29 +98,29 @@ export const renovationPlancherPage: PageTemplateData = {
         variant: "list-actions-image-card",
         props: {
           heading:
-            "Notre approche pour integrer le plancher sans nuire au reste du projet",
+            "Notre approche pour intégrer le plancher sans nuire au reste du projet",
           intro:
-            "L'objectif n'est pas seulement de remplacer une surface. Il faut s'assurer que le plancher s'integre correctement aux armoires, aux niveaux, aux transitions et a la sequence generale du chantier.",
+            "L'objectif n'est pas seulement de remplacer une surface. Il faut s'assurer que le plancher s'intègre correctement aux armoires, aux niveaux, aux transitions et à la séquence générale du chantier.",
           items: [
             {
               title: "Lecture de l'existant",
               description:
-                "On clarifie les niveaux, les irrregularites visibles, les transitions et la relation avec les autres zones du projet.",
+                "On clarifie les niveaux, les irrégularités visibles, les transitions et la relation avec les autres zones du projet.",
             },
             {
-              title: "Ordre des etapes",
+              title: "Ordre des étapes",
               description:
-                "Le plancher est positionne dans la bonne sequence pour reduire les reprises et proteger la finition.",
+                "Le plancher est positionné dans la bonne séquence pour réduire les reprises et protéger la finition.",
             },
             {
               title: "Coordination avec l'installation",
               description:
-                "Les armoires, les ajustements sur place et les raccords doivent etre penses ensemble.",
+                "Les armoires, les ajustements sur place et les raccords doivent être pensés ensemble.",
             },
             {
-              title: "Controle du rendu final",
+              title: "Contrôle du rendu final",
               description:
-                "Les joints, les lignes de transition et la lecture des surfaces doivent rester propres apres les travaux.",
+                "Les joints, les lignes de transition et la lecture des surfaces doivent rester propres après les travaux.",
             },
           ],
           actions: [
@@ -130,18 +130,18 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "outline",
             },
             {
-              label: "Voir la renovation cle en main",
+              label: "Voir la rénovation clé en main",
               href: "/services/renovation/",
               variant: "outline",
             },
           ],
           image: {
             src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Coordination du plancher dans une renovation",
+            alt: "Coordination du plancher dans une rénovation",
           },
-          cardTitle: "Ce qu'on cherche a eviter",
+          cardTitle: "Ce qu'on cherche à éviter",
           cardDescription:
-            "Un plancher mal integre peut obliger des corrections en cascade sur la pose, les niveaux et les transitions alors que le probleme venait surtout d'une mauvaise sequence.",
+            "Un plancher mal intégré peut obliger des corrections en cascade sur la pose, les niveaux et les transitions alors que le problème venait surtout d'une mauvaise séquence.",
         },
       },
     },
@@ -152,9 +152,9 @@ export const renovationPlancherPage: PageTemplateData = {
         variant: "horizontal-steps-cards",
         props: {
           heading:
-            "Sequence type pour integrer un plancher dans une renovation",
+            "Séquence type pour intégrer un plancher dans une rénovation",
           intro:
-            "La logique reste simple: comprendre le support, verifier les impacts sur les autres elements, puis executer dans le bon ordre.",
+            "La logique reste simple: comprendre le support, vérifier les impacts sur les autres éléments, puis exécuter dans le bon ordre.",
           steps: [
             {
               number: "1",
@@ -164,27 +164,27 @@ export const renovationPlancherPage: PageTemplateData = {
             },
             {
               number: "2",
-              title: "Decision",
+              title: "Décision",
               description:
-                "Choix du materiau, des raccords et de la sequence selon la portee reelle du projet.",
+                "Choix du matériau, des raccords et de la séquence selon la portée réelle du projet.",
             },
             {
               number: "3",
-              title: "Preparation",
+              title: "Préparation",
               description:
-                "Mise en condition du chantier pour proteger les prochaines etapes et limiter les reprises.",
+                "Mise en condition du chantier pour protéger les prochaines étapes et limiter les reprises.",
             },
             {
               number: "4",
               title: "Coordination",
               description:
-                "Integration avec armoires, installation, transitions et ajustements necessaires.",
+                "Intégration avec armoires, installation, transitions et ajustements nécessaires.",
             },
             {
               number: "5",
               title: "Finition",
               description:
-                "Verification des joints, des lignes et du rendu final dans l'ensemble de l'espace.",
+                "Vérification des joints, des lignes et du rendu final dans l'ensemble de l'espace.",
             },
           ],
         },
@@ -199,29 +199,29 @@ export const renovationPlancherPage: PageTemplateData = {
           heading:
             "Points techniques qui influencent vraiment un projet de plancher",
           intro:
-            "Le plancher est rarement un simple choix esthetique. Ce sont les details techniques autour qui influencent le plus la qualite finale.",
+            "Le plancher est rarement un simple choix esthétique. Ce sont les détails techniques autour qui influencent le plus la qualité finale.",
           columns: "2",
           items: [
             {
-              title: "Planeite du support",
+              title: "Planéité du support",
               description:
-                "La base conditionne directement le resultat visuel et fonctionnel.",
+                "La base conditionne directement le résultat visuel et fonctionnel.",
               icon: "slidersHorizontal",
               bullets: [
-                "Les variations de niveau se repercutent sur l'installation.",
-                "Un support mal lu cree des corrections plus tard.",
-                "Le rendu final depend souvent de ce travail preparatoire.",
+                "Les variations de niveau se répercutent sur l'installation.",
+                "Un support mal lu crée des corrections plus tard.",
+                "Le rendu final dépend souvent de ce travail préparatoire.",
               ],
             },
             {
               title: "Transitions entre zones",
               description:
-                "Les raccords visibles comptent autant que la surface elle-meme.",
+                "Les raccords visibles comptent autant que la surface elle-même.",
               icon: "doorOpen",
               bullets: [
-                "Jonctions propres entre pieces ou materiaux.",
-                "Transitions pensees selon circulation et hauteur.",
-                "Moins d'effets de seuil mal resolus.",
+                "Jonctions propres entre pièces ou matériaux.",
+                "Transitions pensées selon circulation et hauteur.",
+                "Moins d'effets de seuil mal résolus.",
               ],
             },
             {
@@ -231,14 +231,14 @@ export const renovationPlancherPage: PageTemplateData = {
               icon: "package2",
               bullets: [
                 "Impact direct sur alignements et hauteurs.",
-                "Besoin de sequence claire avec installation.",
+                "Besoin de séquence claire avec installation.",
                 "Moins de reprises sur joints et ajustements.",
               ],
             },
             {
-              title: "Execution chantier",
+              title: "Exécution chantier",
               description:
-                "La qualite du rendu depend aussi de l'ordre des interventions.",
+                "La qualité du rendu dépend aussi de l'ordre des interventions.",
               icon: "wrench",
               bullets: [
                 "Protection des surfaces au bon moment.",
@@ -251,35 +251,35 @@ export const renovationPlancherPage: PageTemplateData = {
       },
     },
     {
-      id: "integration",
+      id: "intégration",
       content: {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Le plancher s'integre surtout a un projet plus large",
+          heading: "Le plancher s'intègre surtout à un projet plus large",
           intro:
-            "Cette page service sert a expliquer la logique de coordination. Dans la plupart des cas, le plancher soutient surtout un projet de cuisine, de salle de bain ou de renovation cle en main plus globale.",
+            "Cette page service sert à expliquer la logique de coordination. Dans la plupart des cas, le plancher soutient surtout un projet de cuisine, de salle de bain ou de rénovation clé en main plus globale.",
           items: [
             {
-              title: "Renovation cle en main",
+              title: "Rénovation clé en main",
               href: "/services/renovation/",
               description:
-                "La page principale pour comprendre comment sequence, coordination et travaux connexes s'alignent dans un projet plus large.",
+                "La page principale pour comprendre comment séquence, coordination et travaux connexes s'alignent dans un projet plus large.",
               image: {
                 src: "/images/generated/services/service-renovation-hero-01.webp",
-                alt: "Renovation cle en main mieux coordonnee",
+                alt: "Rénovation clé en main mieux coordonnée",
               },
               badges: ["Page principale", "Coordination"],
-              footerCtaLabel: "Voir renovation",
+              footerCtaLabel: "Voir rénovation",
             },
             {
               title: "Cuisine sur mesure",
               href: "/espaces/cuisine/",
               description:
-                "Quand le plancher influence les niveaux, l'ilot, les armoires et la lecture generale de la cuisine.",
+                "Quand le plancher influence les niveaux, l'îlot, les armoires et la lecture générale de la cuisine.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec integration propre du plancher",
+                alt: "Cuisine sur mesure avec intégration propre du plancher",
               },
               badges: ["Cuisine", "Niveaux"],
               footerCtaLabel: "Voir la page cuisine",
@@ -288,7 +288,7 @@ export const renovationPlancherPage: PageTemplateData = {
               title: "Salle de bain sur mesure",
               href: "/espaces/salle-de-bain/",
               description:
-                "Quand les transitions, l'humidite et la finition du sol doivent soutenir le reste de la piece sans faiblesse visible.",
+                "Quand les transitions, l'humidité et la finition du sol doivent soutenir le reste de la pièce sans faiblesse visible.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain sur mesure avec finition de plancher propre",
@@ -306,24 +306,24 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Ce qu'un plancher bien integre doit apporter au projet",
+          heading: "Ce qu'un plancher bien intégré doit apporter au projet",
           description:
-            "La preuve de competence ne tient pas seulement dans la surface choisie. Elle se voit dans les niveaux, les transitions et la facon dont le plancher soutient le reste de l'amenagement sans attirer l'attention pour les mauvaises raisons.",
+            "La preuve de compétence ne tient pas seulement dans la surface choisie. Elle se voit dans les niveaux, les transitions et la façon dont le plancher soutient le reste de l'aménagement sans attirer l'attention pour les mauvaises raisons.",
           cards: [
             {
               title: "Lecture plus propre",
               description:
-                "Les lignes et raccords restent discrets au lieu de casser la coherence de l'espace.",
+                "Les lignes et raccords restent discrets au lieu de casser la cohérence de l'espace.",
             },
             {
               title: "Installation plus stable",
               description:
-                "Les autres elements du projet s'ajustent mieux quand le support et la sequence sont bien cadres.",
+                "Les autres éléments du projet s'ajustent mieux quand le support et la séquence sont bien cadrés.",
             },
             {
-              title: "Finition plus credible",
+              title: "Finition plus crédible",
               description:
-                "Le resultat final parait mieux maitrise parce que les details techniques ne ressortent pas.",
+                "Le résultat final paraît mieux maîtrisé parce que les détails techniques ne ressortent pas.",
             },
           ],
           columns: "1",
@@ -337,33 +337,33 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - renovation de plancher",
+          heading: "FAQ - rénovation de plancher",
           intro:
-            "Reponses claires sur sequence, niveaux, condo et integration au reste du chantier.",
+            "Réponses claires sur séquence, niveaux, condo et intégration au reste du chantier.",
           items: [
             {
               q: "Est-ce que je peux refaire uniquement le plancher?",
-              a: "Oui, mais des qu'il y a des armoires ou une renovation plus large, la coordination devient determinante.",
+              a: "Oui, mais dès qu'il y a des armoires ou une rénovation plus large, la coordination devient déterminante.",
             },
             {
               q: "Dans quel ordre faut-il faire les travaux?",
-              a: "L'ordre depend de la portee, mais l'objectif reste d'eviter les reprises et proteger le resultat final.",
+              a: "L'ordre dépend de la portée, mais l'objectif reste d'éviter les reprises et protéger le résultat final.",
             },
             {
               q: "Travaillez-vous avec d'autres intervenants pour ce type de projet?",
-              a: "Oui, lorsque le plancher s'integre a une renovation plus large. La coordination sert justement a clarifier l'ordre des interventions et a proteger la finition.",
+              a: "Oui, lorsque le plancher s'intègre à une rénovation plus large. La coordination sert justement à clarifier l'ordre des interventions et à protéger la finition.",
             },
             {
               q: "Est-ce possible en condo?",
-              a: "Oui. Les contraintes d'acces, d'horaires et parfois d'acoustique doivent etre cadres au debut.",
+              a: "Oui. Les contraintes d'accès, d'horaires et parfois d'acoustique doivent être cadrées au début.",
             },
             {
               q: "Est-ce que le plancher influence l'installation des armoires?",
-              a: "Oui. Les niveaux et la planeite influencent directement l'alignement, les joints et les transitions.",
+              a: "Oui. Les niveaux et la planéité influencent directement l'alignement, les joints et les transitions.",
             },
             {
-              q: "Ou voir l'approche complete pour un projet plus global?",
-              a: "La page renovation de plancher explique surtout la logique de sequence et de coordination. Pour la vision complete d'un projet plus large, la page renovation cle en main reste la reference principale.",
+              q: "Où voir l'approche complète pour un projet plus global?",
+              a: "La page rénovation de plancher explique surtout la logique de séquence et de coordination. Pour la vision complète d'un projet plus large, la page rénovation clé en main reste la référence principale.",
             },
           ],
         },
@@ -376,9 +376,9 @@ export const renovationPlancherPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading:
-            "Besoin d'integrer le plancher dans une renovation plus large ?",
+            "Besoin d'intégrer le plancher dans une rénovation plus large ?",
           intro:
-            "On vous aide a cadrer la bonne sequence et les bons raccords pour proteger le resultat final, puis a vous orienter vers la page renovation principale si le projet depasse le seul plancher.",
+            "On vous aide à cadrer la bonne séquence et les bons raccords pour protéger le résultat final, puis à vous orienter vers la page rénovation principale si le projet dépasse le seul plancher.",
           actions: [
             {
               label: "Demander une soumission",
@@ -386,7 +386,7 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "default",
             },
             {
-              label: "Voir la renovation cle en main",
+              label: "Voir la rénovation clé en main",
               href: "/services/renovation/",
               variant: "outline",
             },
