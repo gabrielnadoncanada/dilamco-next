@@ -188,7 +188,7 @@ export const mdfPage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Décor et coût plus maîtrisé.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de mélamine pour mobilier sur mesure",
               },
               badges: ["Décor"],

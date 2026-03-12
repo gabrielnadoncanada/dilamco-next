@@ -120,7 +120,7 @@ export const couleursPage: PageTemplateData = {
               href: "/materiaux/bois-massif/",
               description: "Apportent chaleur et variations naturelles.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
+                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Texture de bois massif naturelle",
               },
               badges: ["Naturel"],

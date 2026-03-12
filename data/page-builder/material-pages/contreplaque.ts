@@ -163,12 +163,12 @@ export const contreplaquePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-plywood-détail-01.webp",
+            src: "/images/generated/materials/material-plywood-detail-01.webp",
             alt: "Détail de cuisine sur mesure en contreplaqué",
           },
           cardTitle: "À retenir",
           cardDescription:
-              "Le contreplaqué est souvent un excellent choix structurel, mais sa vraie performance dépend aussi des détails d'exécution.",
+            "Le contreplaqué est souvent un excellent choix structurel, mais sa vraie performance dépend aussi des détails d'exécution.",
         },
       },
     },
@@ -209,7 +209,7 @@ export const contreplaquePage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Plus orientée décor et budget.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de mélamine pour mobilier sur mesure",
               },
               badges: ["Décor"],
@@ -220,7 +220,7 @@ export const contreplaquePage: PageTemplateData = {
               href: "/materiaux/bois-massif/",
               description: "Plus pertinent sur les éléments visibles.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
+                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Finition en bois massif naturel",
               },
               badges: ["Naturel"],
@@ -257,8 +257,8 @@ export const contreplaquePage: PageTemplateData = {
             },
           ],
         },
-        },
       },
+    },
     {
       id: "cta",
       content: {

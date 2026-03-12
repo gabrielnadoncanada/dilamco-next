@@ -356,7 +356,7 @@ export const quincailleriePage: PageTemplateData = {
               description:
                 "Explorer les mêmes principes appliqués à un environnement plus humide.",
               image: {
-                src: "/images/generated/materials/material-hardware-détail-01.webp",
+                src: "/images/generated/materials/material-hardware-detail-01.webp",
                 alt: "Vanité sur mesure pour salle de bain",
               },
               badges: ["Espaces", "Salle de bain"],

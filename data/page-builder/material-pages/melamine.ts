@@ -153,7 +153,7 @@ export const melaminePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+            src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
             alt: "Panneaux mélamine décoratifs",
           },
           cardTitle: "Approche recommandée",

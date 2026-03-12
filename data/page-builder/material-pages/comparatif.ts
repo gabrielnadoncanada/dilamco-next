@@ -118,7 +118,7 @@ export const comparatifPage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Finis décoratifs et coût maîtrisé.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de mélamine pour mobilier sur mesure",
               },
               badges: ["Décor"],
@@ -129,7 +129,7 @@ export const comparatifPage: PageTemplateData = {
               href: "/materiaux/bois-massif/",
               description: "Texture naturelle et caractère.",
               image: {
-                src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
+                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Finition en bois massif naturel",
               },
               badges: ["Naturel"],

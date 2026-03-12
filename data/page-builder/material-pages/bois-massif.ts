@@ -156,7 +156,7 @@ export const boisMassifPage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/materials/material-solid-wood-finish-détail-01.webp",
+            src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
             alt: "Détail de finition en bois massif",
           },
           cardTitle: "Approche recommandée",
@@ -201,7 +201,7 @@ export const boisMassifPage: PageTemplateData = {
               href: "/materiaux/melamine/",
               description: "Décor et coût plus maîtrisé.",
               image: {
-                src: "/images/generated/materials/material-melamine-panel-détail-01.webp",
+                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de mélamine pour mobilier sur mesure",
               },
               badges: ["Décor"],
