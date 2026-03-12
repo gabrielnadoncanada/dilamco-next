@@ -51,8 +51,7 @@ export const page: PageTemplateData = {
             },
             {
               title: "Délai de retour visé",
-              description:
-                "Retour initial sous 24 à 48 heures ouvrables pour valider la demande et confirmer les informations utiles.",
+              description: "Retour initial sous 24 à 48 heures ouvrables.",
               icon: "clock",
             },
           ],
