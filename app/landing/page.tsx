@@ -92,28 +92,28 @@ const differentiators = [
   },
 ] as const;
 
+
 const materialProofItems = [
-  "Structure de tiroirs en bois massif de bouleau",
-  "Fond de tiroirs en contreplaqué de bouleau",
-  "Résistance supérieure au poids et à l'humidité",
-  "Meilleure stabilité dimensionnelle dans le temps",
-  "Un investissement durable, pas une solution temporaire",
+  "Structure plus rigide et plus stable",
+  "Meilleure tenue des vis et des charnières",
+  "Résiste mieux à l’humidité",
+  "Finition intérieure solide et durable",
 ] as const;
+
 
 const materialProofItems2 = [
-  "Structure de tiroirs en bois massif de bouleau",
-  "Fond de tiroirs en contreplaqué de bouleau",
-  "Excellente tenue face au poids, à l’usage répété et à l’humidité",
-  "Tiroirs plus stables, mieux alignés et durables dans le temps",
-  "Moins de gonflement, moins d’usure prématurée, moins de compromis",
+  "Tiroirs qui glissent bien, sans affaissement",
+  "Portes qui restent bien alignées",
+  "Surfaces plus résistantes aux chocs et aux dommages",
+  "Des armoires qui gardent leur apparence pendant des années",
 ] as const;
 
+
 const materialProofItems3 = [
-  "Structure de tiroirs en bois massif de bouleau",
-  "Fond de tiroirs en contreplaqué de bouleau",
-  "Excellente tenue face au poids, à l’usage répété et à l’humidité",
-  "Tiroirs plus stables, mieux alignés et durables dans le temps",
-  "Moins de gonflement, moins d’usure prématurée, moins de compromis",
+  "Panneaux en mélamine qui gonflent ou s’écaillent",
+  "Armoires fragiles qui perdent leur forme",
+  "Vis et charnières qui se desserrent avec le temps",
+  "Finitions qui s’usent trop rapidement",
 ] as const;
 
 const processSteps = [
@@ -518,23 +518,14 @@ export default function DilamcoLandingPage() {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/*  MATERIAL PROOF                                                    */}
+      {/*  WHY CONTREPLACQUÉ                                                    */}
       {/* ------------------------------------------------------------------ */}
-      <section className="py-24">
+      <section className="pt-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div className="flex flex-col justify-center">
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Qualité tangible
-            </p>
-
             <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-              Ce qui distingue une cuisine conçue pour durer
+              Pourquoi le contreplaqué ?
             </h2>
-
-            <p className="mt-6 leading-7 text-muted-foreground">
-              La majorité des cuisines standards utilisent des structures en mélamine ou en MDF dans les zones les plus sollicitées. Chez Dilamco, chaque matériau est sélectionné pour sa solidité afin d’offrir des armoires plus robustes, plus stables et conçues pour durer.
-            </p>
-
             <ul className="mt-8 space-y-4">
               {materialProofItems.map((item) => (
                 <li key={item} className="flex gap-3">
@@ -544,11 +535,10 @@ export default function DilamcoLandingPage() {
               ))}
             </ul>
           </div>
-
-          <div className="relative">
+          <div className="relative max-lg:order-first">
             <div className="relative min-h-[420px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
               <Image
-                src="/images/projects/Signature-Bouleau.webp"
+                src="/images/contreplaque1.jpg"
                 alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
                 fill
                 className="object-cover"
@@ -560,16 +550,14 @@ export default function DilamcoLandingPage() {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/*  MATERIAL PROOF                                                    */}
+      {/*  WHAT YOU GAIN                                                      */}
       {/* ------------------------------------------------------------------ */}
-      <section className="py-24">
+      <section className="pt-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-
-
           <div className="relative">
             <div className="relative min-h-[420px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
               <Image
-                src="/images/projects/Signature-Bouleau.webp"
+                src="/images/contreplaque2.jpg"
                 alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
                 fill
                 className="object-cover"
@@ -578,18 +566,9 @@ export default function DilamcoLandingPage() {
             </div>
           </div>
           <div className="flex flex-col justify-center">
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Qualité tangible
-            </p>
-
             <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-              Des matériaux choisis pour durer, pas pour économiser
+              Ce que vous gagnez
             </h2>
-
-            <p className="mt-6 leading-7 text-muted-foreground">
-              Dans une cuisine, les zones les plus sollicitées ne pardonnent pas les matériaux moyens. C’est pourquoi Dilamco privilégie une structure de tiroirs en bois massif de bouleau et des fonds en contreplaqué de bouleau, reconnus pour leur solidité, leur stabilité et leur résistance à l’humidité. Résultat : des armoires plus fiables au quotidien, qui conservent leur performance et leur apparence pendant des années.
-            </p>
-
             <ul className="mt-8 space-y-4">
               {materialProofItems2.map((item) => (
                 <li key={item} className="flex gap-3">
@@ -603,25 +582,16 @@ export default function DilamcoLandingPage() {
       </section>
 
       {/* ------------------------------------------------------------------ */}
-      {/*  MATERIAL PROOF                                                    */}
+      {/*  WHAT YOU AVOID                                                      */}
       {/* ------------------------------------------------------------------ */}
       <section className="py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
           <div className="flex flex-col justify-center">
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              Qualité tangible
-            </p>
-
             <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-              Ce qui distingue une cuisine conçue pour durer
+              Ce que vous évitez
             </h2>
-
-            <p className="mt-6 leading-7 text-muted-foreground">
-              La majorité des cuisines standards utilisent des structures en mélamine ou en MDF dans les zones les plus sollicitées. Chez Dilamco, chaque matériau est sélectionné pour sa solidité afin d’offrir des armoires plus robustes, plus stables et conçues pour durer.
-            </p>
-
             <ul className="mt-8 space-y-4">
-              {materialProofItems.map((item) => (
+              {materialProofItems3.map((item) => (
                 <li key={item} className="flex gap-3">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/60" />
                   <span className="leading-7">{item}</span>
@@ -630,10 +600,10 @@ export default function DilamcoLandingPage() {
             </ul>
           </div>
 
-          <div className="relative">
+          <div className="relative max-lg:order-first">
             <div className="relative min-h-[420px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
               <Image
-                src="/images/projects/Signature-Bouleau.webp"
+                src="/images/contreplaque3.jpg"
                 alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
                 fill
                 className="object-cover"
