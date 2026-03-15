@@ -1,0 +1,100 @@
+[     609ms] [WARNING] Image with src "http://localhost:3000/images/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:2297
+[   98628ms] Error: Image with src "/images/logo.svg" is missing required "height" property.
+    at getImgProps (http://localhost:3000/_next/static/chunks/node_modules__pnpm_8f184c40._.js:682:49)
+    at http://localhost:3000/_next/static/chunks/node_modules__pnpm_8f184c40._.js:3181:82
+    at Object.react_stack_bottom_frame (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:14826:24)
+    at renderWithHooks (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:4651:24)
+    at updateForwardRef (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:5939:21)
+    at beginWork (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:6783:24)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:965:74)
+    at performUnitOfWork (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:9562:97)
+    at workLoopSync (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:9456:40)
+    at renderRootSync (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:9440:13)
+    at performWorkOnRoot (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:9105:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-dom_5f22191b._.js:10230:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_0362aaf0._.js:2647:64)
+[  102255ms] [WARNING] Image with src "http://localhost:3000/images/logo.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:2297
+[  178310ms] [ERROR] ./app/landing/page.tsx:279:18
+Parsing ecmascript source code failed
+  277 |             </Link>
+  278 |             <div><a href="tel:+15148200773">(514) 820-0773</a></div>
+> 279 |           </Link>
+      |                  ^
+> 280 |
+      | ^
+> 281 |           <Button asChild size="sm" className="rounded-full px-5">
+      | ^^^^^^^^^^^
+  282 |             <a href="#formulaire">Demander une estimation</a>
+  283 |           </Button>
+  284 |         </div>
+
+Expected '</', got 'jsx text' @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:3127
+[  183225ms] [ERROR] ./app/landing/page.tsx:279:20
+Parsing ecmascript source code failed
+  277 |               </Link>
+  278 |               <div><a href="tel:+15148200773">(514) 820-0773</a></div>
+> 279 |             </Link>
+      |                    ^
+> 280 |
+      | ^
+> 281 |             <Button asChild size="sm" className="rounded-full px-5">
+      | ^^^^^^^^^^^^^
+  282 |               <a href="#formulaire">Demander une estimation</a>
+  283 |             </Button>
+  284 |           </div>
+
+Expected '</', got 'jsx text' @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:3127
+[  184630ms] [ERROR] In HTML, %s cannot be a descendant of <%s>.
+This will cause a hydration error.%s <a> a 
+
+  ...
+    <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+      <LoadingBoundary name="landing/" loading={Promise}>
+        <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+          <RedirectBoundary>
+            <RedirectErrorBoundary router={{...}}>
+              <InnerLayoutRouter url="/landing" tree={[...]} params={{}} cacheNode={{rsc:Promise, ...}} ...>
+                <SegmentViewNode type="page" pagePath="landing/pa...">
+                  <SegmentTrieNode>
+                  <DilamcoLandingPage>
+                    <main className="min-h-scre...">
+                      <header className="sticky top...">
+                        <div className="mx-auto fl...">
+                          <LinkComponent>
+                          <div className="hidden ite...">
+                            <LinkComponent>
+                              <LinkComponent href="tel:+15140..." className="inline-fle...">
+>                               <a
+>                                 className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground ..."
+>                                 ref={function}
+>                                 onClick={function onClick}
+>                                 onMouseEnter={function onMouseEnter}
+>                                 onTouchStart={function onTouchStart}
+>                                 href="tel:+15140000000"
+>                               >
+                                  <svg>
+                                  <div>
+>                                   <a href="tel:+15148200773">
+                            ...
+                          ...
+                      ...
+                ...
+              ...
+ @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:3127
+[  184631ms] [ERROR] <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. a <a> @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:3127
+[  186035ms] [ERROR] ./app/landing/page.tsx:277:66
+Parsing ecmascript source code failed
+  275 |             >
+  276 |               <Phone className="h-4 w-4" />
+> 277 |               <a href="tel:+15148200773">(514) 820-0773</a></div>
+      |                                                                  ^
+> 278 |             </Link>
+      | ^^^^^^^^^^^^^
+  279 |
+  280 |             <Button asChild size="sm" className="rounded-full px-5">
+  281 |               <a href="#formulaire">Demander une estimation</a>
+
+Expected '</', got 'jsx text' @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:3127
+[  319712ms] [WARNING] Image with src "/images/projects/cuisine-blanche-sur-mesure-brossard.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:2297
