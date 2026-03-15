@@ -100,6 +100,22 @@ const materialProofItems = [
   "Un investissement durable, pas une solution temporaire",
 ] as const;
 
+const materialProofItems2 = [
+  "Structure de tiroirs en bois massif de bouleau",
+  "Fond de tiroirs en contreplaqué de bouleau",
+  "Excellente tenue face au poids, à l’usage répété et à l’humidité",
+  "Tiroirs plus stables, mieux alignés et durables dans le temps",
+  "Moins de gonflement, moins d’usure prématurée, moins de compromis",
+] as const;
+
+const materialProofItems3 = [
+  "Structure de tiroirs en bois massif de bouleau",
+  "Fond de tiroirs en contreplaqué de bouleau",
+  "Excellente tenue face au poids, à l’usage répété et à l’humidité",
+  "Tiroirs plus stables, mieux alignés et durables dans le temps",
+  "Moins de gonflement, moins d’usure prématurée, moins de compromis",
+] as const;
+
 const processSteps = [
   {
     step: "01",
@@ -481,7 +497,7 @@ export default function DilamcoLandingPage() {
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 px-4 text-center">
           <div>
             <p className="text-xl font-semibold sm:text-2xl">
-              Vous avez un projet en tête ?
+              Besoin d’une estimation claire et rapide ?
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               Recevez une première estimation en moins de 24 heures. Sans
@@ -516,11 +532,92 @@ export default function DilamcoLandingPage() {
             </h2>
 
             <p className="mt-6 leading-7 text-muted-foreground">
-              La majorité des cuisines standards utilisent des structures en
-              mélamine ou en MDF sur les zones les plus sollicitées. Chez
-              Dilamco, chaque tiroir repose sur une structure en bois massif de
-              bouleau avec un fond en contreplaqué de bouleau, pour une
-              robustesse, une stabilité et une longévité supérieures.
+              La majorité des cuisines standards utilisent des structures en mélamine ou en MDF dans les zones les plus sollicitées. Chez Dilamco, chaque matériau est sélectionné pour sa solidité afin d’offrir des armoires plus robustes, plus stables et conçues pour durer.
+            </p>
+
+            <ul className="mt-8 space-y-4">
+              {materialProofItems.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/60" />
+                  <span className="leading-7">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative">
+            <div className="relative min-h-[420px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
+              <Image
+                src="/images/projects/Signature-Bouleau.webp"
+                alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------ */}
+      {/*  MATERIAL PROOF                                                    */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+
+
+          <div className="relative">
+            <div className="relative min-h-[420px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
+              <Image
+                src="/images/projects/Signature-Bouleau.webp"
+                alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              Qualité tangible
+            </p>
+
+            <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+              Des matériaux choisis pour durer, pas pour économiser
+            </h2>
+
+            <p className="mt-6 leading-7 text-muted-foreground">
+              Dans une cuisine, les zones les plus sollicitées ne pardonnent pas les matériaux moyens. C’est pourquoi Dilamco privilégie une structure de tiroirs en bois massif de bouleau et des fonds en contreplaqué de bouleau, reconnus pour leur solidité, leur stabilité et leur résistance à l’humidité. Résultat : des armoires plus fiables au quotidien, qui conservent leur performance et leur apparence pendant des années.
+            </p>
+
+            <ul className="mt-8 space-y-4">
+              {materialProofItems2.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/60" />
+                  <span className="leading-7">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------ */}
+      {/*  MATERIAL PROOF                                                    */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+          <div className="flex flex-col justify-center">
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              Qualité tangible
+            </p>
+
+            <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+              Ce qui distingue une cuisine conçue pour durer
+            </h2>
+
+            <p className="mt-6 leading-7 text-muted-foreground">
+              La majorité des cuisines standards utilisent des structures en mélamine ou en MDF dans les zones les plus sollicitées. Chez Dilamco, chaque matériau est sélectionné pour sa solidité afin d’offrir des armoires plus robustes, plus stables et conçues pour durer.
             </p>
 
             <ul className="mt-8 space-y-4">
