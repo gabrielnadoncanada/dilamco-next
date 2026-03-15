@@ -189,12 +189,12 @@ const testimonials = [
 ] as const;
 
 const fitItems = [
-  "Vous rénovez votre résidence principale et visez un résultat durable",
-  "Vous préférez un projet structuré et clé en main",
-  "Vous avez déjà vécu une rénovation mal coordonnée",
-  "La qualité des matériaux compte autant que le design",
-  "Vous voulez un interlocuteur unique tout au long du projet",
-  "Votre budget se situe à 20 000 $ ou plus",
+  "Vous rénovez votre résidence et visez un résultat durable.",
+  "Vous préférez un projet structuré et clé en main.",
+  "Vous avez déjà vécu une rénovation mal coordonnée.",
+  "La qualité des matériaux compte autant que le design.",
+  "Vous voulez un interlocuteur unique tout au long du projet.",
+  "Votre budget se situe à 20 000 $ ou plus.",
 ] as const;
 
 const faqItems = [
@@ -670,7 +670,32 @@ export default function DilamcoLandingPage() {
           </div>
         </div>
       </section>
-
+      {/* ------------------------------------------------------------------ */}
+      {/*  MID-PAGE CTA                                                      */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="border-b bg-muted/50 py-14">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 px-4 text-center">
+          <div>
+            <p className="text-xl font-semibold sm:text-2xl">
+              Obtenez une estimation claire
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground text-balance">
+              Que ce soit pour rénover, construire ou agrandir, nous vous répondons
+              rapidement avec une estimation adaptée à vos besoins.
+            </p>
+          </div>
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-primary px-8 text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90"
+          >
+            <a href="#formulaire">
+              Demander une estimation gratuite
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+      </section>
       {/* ------------------------------------------------------------------ */}
       {/*  TESTIMONIALS                                                      */}
       {/* ------------------------------------------------------------------ */}
