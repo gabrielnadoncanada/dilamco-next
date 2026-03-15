@@ -30,57 +30,59 @@ import { Textarea } from "@/components/ui/textarea";
 
 const galleryImages = [
   {
+    src: "/images/projects/chene-moderne.webp",
+    title: "Cuisine chêne moderne, Montréal",
+    alt: "Cuisine moderne en chêne sur mesure à Montréal",
+  },
+  {
     src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
-    title: "Cuisine sur mesure — Brossard",
+    title: "Cuisine sur mesure, Brossard",
     alt: "Cuisine blanche sur mesure haut de gamme livrée à Brossard",
   },
   {
     src: "/images/projects/cuisine-haut-de-gamme-blanche-laval-1.webp",
-    title: "Cuisine haut de gamme — Laval",
+    title: "Cuisine haut de gamme, Laval",
     alt: "Cuisine blanche haut de gamme sur mesure réalisée à Laval",
   },
-  {
-    src: "/images/projects/chene-moderne.webp",
-    title: "Cuisine chêne moderne — Montréal",
-    alt: "Cuisine moderne en chêne sur mesure à Montréal",
-  },
+
   {
     src: "/images/projects/project11.webp",
-    title: "Réalisation sur mesure — Rive-Sud",
+    title: "Réalisation sur mesure, Rive-Sud",
     alt: "Projet cuisine sur mesure haut de gamme sur la Rive-Sud",
   },
 ] as const;
 
+
 const risks = [
-  "Trop d'intervenants, aucun vrai responsable",
-  "Délais qui dérapent sans préavis",
-  "Structures fragiles sur les zones les plus sollicitées",
-  "Budget final au-dessus du devis initial",
-  "Qualité difficile à évaluer avant d'avoir payé",
-  "Projet mal cadré dès le départ",
+  "Trop de monde sur le projet, personne responsable",
+  "Délais qui s’allongent",
+  "Des armoires qui ne tiennent pas dans le temps",
+  "Budget qui dépasse la soumission initiale",
+  "Difficile de juger la qualité avant de payer",
+  "Un projet mal planifié dès le départ",
 ] as const;
 
 const answers = [
-  "Un seul responsable du design à l'installation",
-  "Processus structuré avec échéancier défini",
-  "Bois massif de bouleau et contreplaqué vérifié",
-  "Budget clarifié dès la consultation initiale",
-  "Matériaux tangibles et vérifiables",
-  "Cadrage rigoureux avant tout engagement",
+  "Un seul responsable du début à la fin",
+  "Un échéancier clair et respecté",
+  "Caisson de qualité en contreplaqué",
+  "Budget clair dès le départ",
+  "Matériaux réels que vous pouvez voir",
+  "Projet bien planifié avant de commencer",
 ] as const;
 
 const differentiators = [
   {
     icon: Warehouse,
-    title: "Entrepôt local à Montréal",
+    title: "Experts depuis plus de 20 ans",
     description:
-      "Plus de 20 ans de présence locale. Contrôle des inventaires, réduction des imprévus et suivi rigoureux de chaque projet.",
+      "Basé à Montréal, Dilamco a réalisé des centaines de projets résidentiels. Une expérience concrète qui permet d’éviter les erreurs et de livrer des projets solides et bien exécutés.",
   },
   {
     icon: ShieldCheck,
-    title: "Fabrication contrôlée",
+    title: "Matériaux de qualité",
     description:
-      "Relation exclusive avec notre usine. Spécifications définies, standards haut de gamme, qualité constante et reproductible.",
+      "Caissons en contreplaqué, l’un des matériaux les plus durables pour des armoires conçues pour durer des décennies.",
   },
   {
     icon: Wrench,
@@ -135,17 +137,17 @@ const testimonials = [
   {
     quote:
       "Très impressionnés par la qualité de finition et la gestion du projet. Tout a été plus clair que ce qu'on avait connu auparavant.",
-    author: "Client — Montréal",
+    author: "Client, Montréal",
   },
   {
     quote:
       "Le processus a été structuré du début à la fin. On sent qu'il y a une vraie maîtrise du projet.",
-    author: "Client — Laval",
+    author: "Client, Laval",
   },
   {
     quote:
       "Les matériaux, la coordination et le résultat final justifient complètement le positionnement haut de gamme.",
-    author: "Client — Rive-Sud",
+    author: "Client, Rive-Sud",
   },
 ] as const;
 
@@ -167,7 +169,7 @@ const faqItems = [
   {
     question: "Gérez-vous l'ensemble de la rénovation ?",
     answer:
-      "Oui. Selon le projet, notre équipe coordonne l'ensemble du mandat — du design à l'installation — afin de limiter les frictions et de mieux maîtriser l'exécution.",
+      "Oui. Selon le projet, notre équipe coordonne l'ensemble du mandat, du design à l'installation, afin de limiter les frictions et de mieux maîtriser l'exécution.",
   },
   {
     question: "Dans quelles zones intervenez-vous ?",
@@ -233,22 +235,21 @@ export default function DilamcoLandingPage() {
         {/* Content */}
         <div className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/90 backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white/85 backdrop-blur-sm">
               <MapPin className="h-3.5 w-3.5 text-white/70" />
-              Montréal, Laval, Rive-Sud
+              Grand Montréal et les environs
             </div>
 
             <h1
-              className="mt-7 text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl"
+              className="mt-7 text-4xl font-semibold leading-[1.1] tracking-tight text-white text-balance sm:text-5xl lg:text-6xl"
               style={{ textShadow: "0 2px 14px rgba(0,0,0,0.20)" }}
             >
-              Votre cuisine sur mesure.{" "}
-              <span className="text-white">Conçue pour durer.</span>
+              Les cuisines sur mesure les plus durables du marché.
+
             </h1>
 
-            <p className="mt-6 max-w-lg text-lg leading-8 text-white/75">
-              Design personnalisé, matériaux premium et gestion complète — un
-              seul interlocuteur du premier appel à l&apos;installation finale.
+            <p className="mt-6 max-w-lg text-lg leading-8 text-white/85">
+              Entrepreneur général de +20 ans d’expérience qui gère l’ensemble du projet, de la conception à l’installation, incluant la coordination de tous les travaux de rénovation requis.
             </p>
 
 
@@ -257,7 +258,7 @@ export default function DilamcoLandingPage() {
               <Button
                 asChild
                 size="lg"
-                className="rounded-full bg-white px-8 text-base font-semibold text-foreground shadow-lg transition-all hover:bg-white/90"
+                className="rounded-full px-8 text-base font-semibold shadow-lg transition-all "
               >
                 <a href="#formulaire">
                   Demander une estimation gratuite
@@ -274,17 +275,14 @@ export default function DilamcoLandingPage() {
               </Button>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/50">
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-white/85">
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-3.5 w-3.5 text-white" />
-                Sans engagement
+                <CheckCircle2 className="h-3.5 w-3.5 text-white/85" />
+                Soumission gratuire en moins de 24h
               </span>
+
               <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-3.5 w-3.5 text-white" />
-                Réponse en moins de 24h
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="h-3.5 w-3.5 text-white" />
+                <CheckCircle2 className="h-3.5 w-3.5 text-white/85" />
                 Projets à partir de 20 000 $
               </span>
             </div>
@@ -300,11 +298,11 @@ export default function DilamcoLandingPage() {
           {[
             "Entrepôt local à Montréal",
             "Relation directe usine",
-            "Fabrication contrôlée",
-            "Réponse en 24h",
+            "Fabrication sur mesure",
+            "Soumission gratuite en 24h",
           ].map((item) => (
             <div key={item} className="flex items-center gap-2.5 text-sm">
-              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/30" />
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
               <span className="font-medium">{item}</span>
             </div>
           ))}
@@ -325,7 +323,7 @@ export default function DilamcoLandingPage() {
           <div className="mt-14 grid gap-6 lg:grid-cols-2">
             {/* Risks card */}
             <Card className="rounded-3xl border shadow-none">
-              <CardContent className="p-8">
+              <CardContent className="p-8 pt-4">
                 <h3 className="text-xl font-semibold">
                   Les risques les plus fréquents
                 </h3>
@@ -344,12 +342,12 @@ export default function DilamcoLandingPage() {
 
             {/* Solution card */}
             <Card className="rounded-3xl border shadow-none">
-              <CardContent className="p-8">
+              <CardContent className="p-8 pt-4">
                 <h3 className="text-xl font-semibold">L&apos;approche Dilamco</h3>
                 <ul className="mt-6 space-y-4">
                   {answers.map((item) => (
                     <li key={item} className="flex gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/40" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/60" />
                       <span className="leading-7 text-muted-foreground">
                         {item}
                       </span>
@@ -398,6 +396,33 @@ export default function DilamcoLandingPage() {
       </section>
 
       {/* ------------------------------------------------------------------ */}
+      {/*  MID-PAGE CTA                                                      */}
+      {/* ------------------------------------------------------------------ */}
+      <section className="border-b bg-muted/50 py-14">
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 px-4 text-center">
+          <div>
+            <p className="text-xl font-semibold sm:text-2xl">
+              Discutons de votre projet
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground text-balance">
+              Rénovation, construction ou agrandissement : obtenez une estimation
+              claire et rapide pour planifier votre projet en toute confiance.
+            </p>
+          </div>
+          <Button
+            asChild
+            size="lg"
+            className="rounded-full bg-primary px-8 text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90"
+          >
+            <a href="#formulaire">
+              Demander une estimation gratuite
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------------ */}
       {/*  GALLERY — Dark background for dramatic contrast                   */}
       {/* ------------------------------------------------------------------ */}
       <section id="realisations" className="border-y py-24">
@@ -407,10 +432,11 @@ export default function DilamcoLandingPage() {
               Nos réalisations
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-              Quelques projets récents
+              Cuisines sur mesure, signé Dilamco
+
             </h2>
             <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg">
-              Cuisines sur mesure livrées à Montréal, Laval et sur la Rive-Sud.
+              Des projets conçus pour durer et adaptés à chaque espace.
             </p>
           </div>
 
@@ -421,7 +447,7 @@ export default function DilamcoLandingPage() {
                 className={`group relative overflow-hidden rounded-2xl ring-1 ring-border transition-all duration-500 hover:ring-foreground/20 ${index === 0
                   ? "sm:col-span-2 min-h-[420px]"
                   : index === 3
-                    ? "sm:col-span-2 lg:col-span-1 min-h-[300px]"
+                    ? "sm:col-span-2 lg:col-span-2 min-h-[300px]"
                     : "min-h-[300px]"
                   }`}
               >
@@ -493,14 +519,14 @@ export default function DilamcoLandingPage() {
               La majorité des cuisines standards utilisent des structures en
               mélamine ou en MDF sur les zones les plus sollicitées. Chez
               Dilamco, chaque tiroir repose sur une structure en bois massif de
-              bouleau avec un fond en contreplaqué de bouleau — pour une
+              bouleau avec un fond en contreplaqué de bouleau, pour une
               robustesse, une stabilité et une longévité supérieures.
             </p>
 
             <ul className="mt-8 space-y-4">
               {materialProofItems.map((item) => (
                 <li key={item} className="flex gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/40" />
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/60" />
                   <span className="leading-7">{item}</span>
                 </li>
               ))}
@@ -511,7 +537,7 @@ export default function DilamcoLandingPage() {
             <div className="relative min-h-[420px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
               <Image
                 src="/images/projects/Signature-Bouleau.webp"
-                alt="Structure de tiroir en bois massif de bouleau — qualité Dilamco"
+                alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -625,7 +651,7 @@ export default function DilamcoLandingPage() {
                 <ul className="grid gap-5 sm:grid-cols-2">
                   {fitItems.map((item) => (
                     <li key={item} className="flex gap-3">
-                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/40" />
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-foreground/60" />
                       <span className="leading-7">{item}</span>
                     </li>
                   ))}
@@ -635,7 +661,7 @@ export default function DilamcoLandingPage() {
                   <p className="text-sm leading-6 text-muted-foreground">
                     Si votre priorité est le prix le plus bas ou une solution
                     temporaire, notre approche n&apos;est probablement pas la mieux
-                    adaptée. Nous concevons des cuisines durables — et cette
+                    adaptée. Nous concevons des cuisines durables, et cette
                     qualité a un coût justifié.
                   </p>
                 </div>
@@ -709,7 +735,7 @@ export default function DilamcoLandingPage() {
                   key={item}
                   className="flex items-center gap-2.5 text-sm text-muted-foreground"
                 >
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-foreground/40" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-foreground/60" />
                   {item}
                 </div>
               ))}
@@ -811,28 +837,6 @@ export default function DilamcoLandingPage() {
         </div>
       </section>
 
-      {/* ------------------------------------------------------------------ */}
-      {/*  FINAL CTA                                                         */}
-      {/* ------------------------------------------------------------------ */}
-      <section className="py-20">
-        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
-          <div className="mx-auto mb-6 h-px w-16 bg-foreground/20" />
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
-            Prêt à démarrer votre projet ?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-muted-foreground">
-            Notre équipe analyse votre projet et vous revient en moins de 24
-            heures avec une estimation claire et les prochaines étapes.
-          </p>
-          <Button
-            asChild
-            size="lg"
-            className="mt-8 rounded-full bg-primary px-8 text-base font-semibold text-primary-foreground shadow-sm hover:bg-primary/90"
-          >
-            <a href="#formulaire">Demander mon estimation gratuite</a>
-          </Button>
-        </div>
-      </section>
 
       {/* ------------------------------------------------------------------ */}
       {/*  FOOTER                                                            */}
@@ -840,16 +844,16 @@ export default function DilamcoLandingPage() {
       <footer className="border-t">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 py-8 text-sm text-muted-foreground sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
           <div className="font-semibold text-foreground">Dilamco</div>
-          <div>(514) 820-0773</div>
-          <div>Montréal, Laval, Rive-Sud</div>
-          <div>Licence RBQ | Politique de confidentialité</div>
+          <div> <a href="tel:+15148200773">(514) 820-0773</a></div>
+          <div>Grand Montréal et les environs</div>
+          <div>Licence RBQ : 8306-0806-27 </div>
         </div>
       </footer>
 
       {/* ------------------------------------------------------------------ */}
       {/*  MOBILE STICKY CTA                                                 */}
       {/* ------------------------------------------------------------------ */}
-      <div className="fixed inset-x-0 bottom-4 z-50 px-4 sm:hidden">
+      <div className="fixed inset-x-0 bottom-0 py-4 bg-white border-t z-50 px-4 sm:hidden">
         <Button
           asChild
           size="lg"
