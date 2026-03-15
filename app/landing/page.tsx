@@ -601,18 +601,18 @@ export default function DilamcoLandingPage() {
             description="Un processus clair et structuré pour un résultat sans mauvaises surprises."
           />
 
-          <div className="mx-auto mt-12 max-w-4xl">
-            <div className="grid gap-6 md:grid-cols-5">
+          <div className="mx-auto mt-12 max-w-6xl">
+            <div className="grid gap-6 lg:grid-cols-5">
               {processSteps.map((item, index) => (
                 <div key={item.step} className="relative text-center">
                   {index < processSteps.length - 1 && (
-                    <div className="absolute top-5 left-[calc(50%+24px)] right-[calc(-50%+24px)] hidden h-px bg-border md:block" />
+                    <div className="absolute top-5 left-[calc(50%+24px)] right-[calc(-50%+24px)] hidden h-px bg-border lg:block" />
                   )}
                   <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-foreground text-sm font-semibold text-background">
                     {item.step}
                   </div>
                   <h3 className="mt-4 text-sm font-semibold">{item.title}</h3>
-                  <p className="mt-2 text-xs leading-5 text-muted-foreground">
+                  <p className="mt-2 text-xs leading-5 text-muted-foreground text-balance">
                     {item.description}
                   </p>
                 </div>
