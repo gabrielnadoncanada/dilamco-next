@@ -335,7 +335,7 @@ export default function DilamcoLandingPage() {
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-5 sm:px-6 md:grid-cols-4 lg:px-8">
           {[
             "Entrepôt local à Montréal",
-            "Relation directe usine",
+            "Qualité et durabilité garanties",
             "Fabrication sur mesure",
             "Soumission gratuite en 24h",
           ].map((item) => (
