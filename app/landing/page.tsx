@@ -639,7 +639,7 @@ export default function DilamcoLandingPage() {
       {/* ------------------------------------------------------------------ */}
       {/*  PROCESS                                                           */}
       {/* ------------------------------------------------------------------ */}
-      <section className="border-y bg-[var(--surface-tint-bg)] py-24">
+      <section className="border-y bg-[var(--surface-tint-bg)] py-24 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
@@ -969,18 +969,6 @@ export default function DilamcoLandingPage() {
         </div>
       </footer>
 
-      {/* ------------------------------------------------------------------ */}
-      {/*  MOBILE STICKY CTA                                                 */}
-      {/* ------------------------------------------------------------------ */}
-      <div className="fixed inset-x-0 bottom-0 py-4 bg-white border-t z-50 px-4 sm:hidden">
-        <Button
-          asChild
-          size="lg"
-          className="h-12 w-full rounded-full bg-primary font-semibold text-primary-foreground shadow-2xl hover:bg-primary/90"
-        >
-          <a href="#formulaire">Obtenir ma soumission</a>
-        </Button>
-      </div>
     </main>
   );
 }
