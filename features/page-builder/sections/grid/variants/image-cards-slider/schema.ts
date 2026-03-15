@@ -15,6 +15,7 @@ export const GridImageCardsSliderSchema = z.object({
   heading: z.string().min(1).optional(),
   intro: z.string().min(1).optional(),
   items: z.array(ItemSchema).min(1).max(24),
+  hasNavigation: z.boolean().optional(),
 });
 
 export type GridImageCardsSliderProps = z.infer<

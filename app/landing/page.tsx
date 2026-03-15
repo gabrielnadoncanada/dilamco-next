@@ -23,6 +23,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { GridImageCardsSlider } from "@/features/page-builder/sections/grid/variants/image-cards-slider/ui";
 
 /* -------------------------------------------------------------------------- */
 /*  DATA                                                                      */
@@ -35,7 +36,7 @@ const galleryImages = [
     alt: "Cuisine moderne en chêne sur mesure à Montréal",
   },
   {
-    src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
+    src: "/images/projects/Signature-Bouleau.webp",
     title: "Cuisine sur mesure, Brossard",
     alt: "Cuisine blanche sur mesure haut de gamme livrée à Brossard",
   },
@@ -122,30 +123,50 @@ const processSteps = [
     title: "Consultation initiale",
     description:
       "Nous échangeons sur votre projet, vos objectifs, votre budget et votre échéancier.",
+    image: {
+      src: "/images/process1.jpg",
+      alt: "Consultation initiale",
+    },
   },
   {
     step: "02",
     title: "Design et sélection",
     description:
       "Configuration, matériaux et finitions adaptés à votre espace et à votre mode de vie.",
+    image: {
+      src: "/images/process2.jpg",
+      alt: "Design et sélection",
+    },
   },
   {
     step: "03",
-    title: "Fabrication contrôlée",
+    title: "Fabrication sur mesure",
     description:
       "Votre cuisine est fabriquée selon des spécifications précises, avec un contrôle qualité rigoureux.",
+    image: {
+      src: "/images/process3.jpg",
+      alt: "Fabrication sur mesure",
+    },
   },
   {
     step: "04",
-    title: "Coordination et installation",
+    title: "Démolition et rénovation",
     description:
-      "Installation organisée avec une logique claire. Un seul responsable, moins d'imprévus.",
+      "Retrait des anciens cabinets et travaux connexes (plomberie, électricité, structure, plancher, etc.)",
+    image: {
+      src: "/images/process4.jpg",
+      alt: "Démolition et rénovation",
+    },
   },
   {
     step: "05",
-    title: "Inspection finale",
+    title: "Installation et finition",
     description:
       "Validation complète du résultat et de la cohérence globale du projet avant clôture.",
+    image: {
+      src: "/images/process5.jpg",
+      alt: "Inspection finale",
+    },
   },
 ] as const;
 
@@ -190,7 +211,7 @@ const faqItems = [
   {
     question: "Dans quelles zones intervenez-vous ?",
     answer:
-      "Nous intervenons principalement à Montréal, Laval, sur la Rive-Sud et dans les environs, selon la nature et l'envergure du projet.",
+      "Nous réalisons des projets dans tout le Grand Montréal, notamment à Montréal, Laval, Longueuil, Brossard, Boucherville, Saint-Bruno, Terrebonne, Repentigny, Vaudreuil-Dorion, et plus encore!",
   },
   {
     question: "Combien de temps dure un projet typique ?",
@@ -214,9 +235,10 @@ const projectTypes = [
 ] as const;
 
 const budgetOptions = [
-  { value: "30k-50k", label: "20 000 $ – 50 000 $" },
-  { value: "50k-70k", label: "50 000 $ – 70 000 $" },
-  { value: "70k-100k", label: "70 000 $ – 100 000 $" },
+  { value: "20k-40k", label: "20 000 $ – 40 000 $" },
+  { value: "40k-60k", label: "40 000 $ – 60 000 $" },
+  { value: "60k-80k", label: "60 000 $ – 80 000 $" },
+  { value: "80k-100k", label: "80 000 $ – 100 000 $" },
   { value: "100k+", label: "100 000 $ et plus" },
 ] as const;
 
@@ -557,7 +579,7 @@ export default function DilamcoLandingPage() {
           <div className="relative">
             <div className="relative min-h-[420px] overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
               <Image
-                src="/images/contreplaque2.jpg"
+                src="/images/contreplaque.jpg"
                 alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
                 fill
                 className="object-cover"
@@ -632,25 +654,19 @@ export default function DilamcoLandingPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-16 max-w-5xl">
-            <div className="grid gap-8 md:grid-cols-5">
-              {processSteps.map((item, index) => (
-                <div key={item.step} className="relative text-center">
-                  {index < processSteps.length - 1 && (
-                    <div className="absolute top-6 left-[calc(50%+28px)] right-[calc(-50%+28px)] hidden h-px bg-border md:block" />
-                  )}
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border bg-background text-sm font-bold text-foreground">
-                    {item.step}
-                  </div>
-                  <h3 className="mt-5 text-sm font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-xs leading-5 text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="mx-auto mt-6 max-w-5xl">
+            <GridImageCardsSlider
+              hasNavigation={false}
+              items={processSteps.map((item) => ({
+                title: item.title,
+                description: item.description,
+                image: {
+                  src: item.image.src,
+                  alt: item.image.alt,
+                },
+              }))}
+            >
+            </GridImageCardsSlider>
           </div>
         </div>
       </section>
@@ -666,7 +682,7 @@ export default function DilamcoLandingPage() {
             </h2>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {testimonials.map((item) => (
               <Card
                 key={item.author}
@@ -712,9 +728,9 @@ export default function DilamcoLandingPage() {
             </h2>
           </div>
 
-          <div className="mx-auto mt-14 max-w-5xl">
-            <Card className="rounded-3xl border bg-background shadow-sm">
-              <CardContent className="p-8 sm:p-10">
+          <div className="mx-auto mt-14 max-w-7xl grid gap-6 lg:grid-cols-12">
+            <Card className="rounded-3xl border bg-background shadow-sm col-span-12 lg:col-span-7">
+              <CardContent className="px-8 pt-8  sm:p-10 sm:px-10">
                 <ul className="grid gap-5 sm:grid-cols-2">
                   {fitItems.map((item) => (
                     <li key={item} className="flex gap-3">
@@ -724,7 +740,7 @@ export default function DilamcoLandingPage() {
                   ))}
                 </ul>
 
-                <div className="mt-10 rounded-2xl border border-border/60 bg-muted/40 p-6">
+                <div className="mt-6 rounded-2xl border border-border/60 bg-muted/40 p-6">
                   <p className="text-sm leading-6 text-muted-foreground">
                     Si votre priorité est le prix le plus bas ou une solution
                     temporaire, notre approche n&apos;est probablement pas la mieux
@@ -734,6 +750,18 @@ export default function DilamcoLandingPage() {
                 </div>
               </CardContent>
             </Card>
+
+            <div className="relative col-span-12 lg:col-span-5">
+              <div className="relative max-lg:aspect-video min-h-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-border">
+                <Image
+                  src="/images/generated/home/home-featured-cuisine-project-01.webp"
+                  alt="Structure de tiroir en bois massif de bouleau, qualité Dilamco"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -795,7 +823,6 @@ export default function DilamcoLandingPage() {
               {[
                 "Une première estimation budgétaire réaliste",
                 "Une validation de la faisabilité",
-                "Des recommandations sur les matériaux adaptés",
                 "Les prochaines étapes claires et sans pression",
               ].map((item) => (
                 <div
@@ -889,7 +916,7 @@ export default function DilamcoLandingPage() {
                     size="lg"
                     className="w-full rounded-full bg-primary text-base font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 hover:shadow-xl"
                   >
-                    Envoyer ma demande
+                    Obtenir ma soumission
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
 
@@ -910,8 +937,8 @@ export default function DilamcoLandingPage() {
       {/* ------------------------------------------------------------------ */}
       <footer className="border-t">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 py-8 text-sm text-muted-foreground sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
-          <div className="font-semibold text-foreground">Dilamco</div>
           <div> <a href="tel:+15148200773">(514) 820-0773</a></div>
+          <div> <a href="mailto:ventes@dilamco.com">ventes@dilamco.com</a></div>
           <div>Grand Montréal et les environs</div>
           <div>Licence RBQ : 8306-0806-27 </div>
         </div>
@@ -926,7 +953,7 @@ export default function DilamcoLandingPage() {
           size="lg"
           className="h-12 w-full rounded-full bg-primary font-semibold text-primary-foreground shadow-2xl hover:bg-primary/90"
         >
-          <a href="#formulaire">Demander une estimation gratuite</a>
+          <a href="#formulaire">Obtenir ma soumission</a>
         </Button>
       </div>
     </main>

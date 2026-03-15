@@ -17,6 +17,8 @@ import type { GridImageCardsSliderProps } from "./schema";
 import { cn } from "@/lib/utils";
 
 export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
+  const hasNavigation = props.hasNavigation ?? true;
+
   return (
     <Carousel
       opts={{
@@ -32,10 +34,12 @@ export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
               <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{props.intro}</p>
             ) : null}
           </div>
-          <div className="mt-6 flex justify-end gap-2">
-            <CarouselPrevious className="static translate-y-0" />
-            <CarouselNext className="static translate-y-0" />
-          </div>
+          {hasNavigation ? (
+            <div className="mt-6 flex justify-end gap-2">
+              <CarouselPrevious className="static translate-y-0" />
+              <CarouselNext className="static translate-y-0" />
+            </div>
+          ) : null}
         </div>
 
         <div className="mt-8">

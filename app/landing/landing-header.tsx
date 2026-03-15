@@ -25,7 +25,7 @@ export function LandingHeader() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
-          href="/"
+          href="/landing"
           aria-label="Accueil Dilamco"
           className={`text-xl font-semibold tracking-tight transition-colors duration-300 ${scrolled ? "text-foreground" : "text-white"
             }`}
@@ -57,7 +57,7 @@ export function LandingHeader() {
 
               }`}
           >
-            <a href="#formulaire">Demander une estimation</a>
+            <a href="#formulaire">Obtenir ma soumission</a>
           </Button>
         </div>
 
