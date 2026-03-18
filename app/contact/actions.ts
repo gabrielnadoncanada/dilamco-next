@@ -12,43 +12,42 @@ export type ContactFormState = {
 const contactFormSchema = z.object({
   nom: z.string().trim().min(2, "Entrez votre nom.").max(120),
   courriel: z.email("Entrez un courriel valide.").max(160),
-  telephone: z.string().trim().min(7, "Entrez un numero de telephone valide.").max(40),
+  telephone: z
+    .string()
+    .trim()
+    .min(7, "Entrez un numero de telephone valide.")
+    .max(40),
   ville: z.string().trim().min(2, "Entrez votre ville ou secteur.").max(120),
-  espace: z.enum([
-    "cuisine",
-    "salle-de-bain",
-    "walk-in",
-    "salle-de-lavage",
-    "commercial",
-  ], {
-    error: () => ({ message: "Selectionnez un type d'espace." }),
-  }),
-  type_projet: z.enum([
-    "sur-mesure",
-    "renovation",
-    "a-determiner",
-  ], {
+  espace: z.enum(
+    ["cuisine", "salle-de-bain", "walk-in", "salle-de-lavage", "commercial"],
+    {
+      error: () => ({ message: "Selectionnez un type d'espace." }),
+    },
+  ),
+  type_projet: z.enum(["sur-mesure", "renovation", "a-determiner"], {
     error: () => ({ message: "Selectionnez la nature du projet." }),
   }),
-  budget: z.enum([
-    "moins-15000",
-    "15000-25000",
-    "25000-40000",
-    "40000-60000",
-    "60000-plus",
-    "a-discuter",
-  ], {
-    error: () => ({ message: "Selectionnez un budget approximatif." }),
-  }),
-  echeance: z.enum([
-    "0-3",
-    "3-6",
-    "6-12",
-    "flexible",
-  ], {
+  budget: z.enum(
+    [
+      "moins-15000",
+      "15000-25000",
+      "25000-40000",
+      "40000-60000",
+      "60000-plus",
+      "a-discuter",
+    ],
+    {
+      error: () => ({ message: "Selectionnez un budget approximatif." }),
+    },
+  ),
+  echeance: z.enum(["0-3", "3-6", "6-12", "flexible"], {
     error: () => ({ message: "Selectionnez un calendrier souhaite." }),
   }),
-  message: z.string().trim().min(20, "Ajoutez quelques details sur votre projet.").max(4000),
+  message: z
+    .string()
+    .trim()
+    .min(20, "Ajoutez quelques details sur votre projet.")
+    .max(4000),
 });
 
 const labelMap = {
@@ -97,12 +96,12 @@ export async function submitContactLead(
   _previousState: ContactFormState,
   formData: FormData,
 ): Promise<ContactFormState> {
-  if (getStringValue(formData, "website")) {
-    return {
-      status: "success",
-      message: "Votre demande a ete envoyee.",
-    };
-  }
+  // if (getStringValue(formData, "website")) {
+  //   return {
+  //     status: "success",
+  //     message: "Votre demande a ete envoyee.",
+  //   };
+  // }
 
   const parsed = contactFormSchema.safeParse({
     nom: getStringValue(formData, "nom"),
@@ -202,7 +201,8 @@ export async function submitContactLead(
   if (error) {
     return {
       status: "error",
-      message: "Impossible d'envoyer votre demande pour le moment. Reessayez sous peu.",
+      message:
+        "Impossible d'envoyer votre demande pour le moment. Reessayez sous peu.",
     };
   }
 

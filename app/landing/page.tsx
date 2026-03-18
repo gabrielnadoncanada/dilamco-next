@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   ArrowRight,
   CheckCircle2,
@@ -20,10 +19,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { GridImageCardsSlider } from "@/features/page-builder/sections/grid/variants/image-cards-slider/ui";
+import { LandingLeadForm } from "./LandingLeadForm";
 
 /* -------------------------------------------------------------------------- */
 /*  DATA                                                                      */
@@ -224,22 +221,6 @@ const faqItems = [
     answer:
       "Une solution standard peut convenir à certains contextes. Mais un projet sur mesure bien exécuté offre une meilleure durabilité, une meilleure cohérence avec votre espace et des matériaux pensés pour le long terme.",
   },
-] as const;
-
-const projectTypes = [
-  "Cuisine sur mesure",
-  "Rénovation de cuisine",
-  "Salle de bain",
-  "Walk-in / Rangement",
-  "Autre projet",
-] as const;
-
-const budgetOptions = [
-  { value: "20k-40k", label: "20 000 $ – 40 000 $" },
-  { value: "40k-60k", label: "40 000 $ – 60 000 $" },
-  { value: "60k-80k", label: "60 000 $ – 80 000 $" },
-  { value: "80k-100k", label: "80 000 $ – 100 000 $" },
-  { value: "100k+", label: "100 000 $ et plus" },
 ] as const;
 
 /* -------------------------------------------------------------------------- */
@@ -863,94 +844,7 @@ export default function DilamcoLandingPage() {
 
           <Card className="rounded-3xl border bg-background shadow-lg">
             <CardContent className="p-6 sm:p-8">
-              <form className="grid gap-5 md:grid-cols-2">
-                <div className="grid gap-2">
-                  <Label htmlFor="name">Nom complet</Label>
-                  <Input id="name" placeholder="Votre nom" className="rounded-xl" />
-                </div>
-
-                <div className="grid gap-2">
-                  <Label htmlFor="phone">Téléphone</Label>
-                  <Input id="phone" placeholder="(514) 000-0000" className="rounded-xl" />
-                </div>
-
-                <div className="grid gap-2">
-                  <Label htmlFor="email">Courriel</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="vous@exemple.com"
-                    className="rounded-xl"
-                  />
-                </div>
-
-                <div className="grid gap-2">
-                  <Label htmlFor="city">Ville</Label>
-                  <Input id="city" placeholder="Montréal, Laval, Brossard..." className="rounded-xl" />
-                </div>
-
-                <div className="grid gap-2">
-                  <Label htmlFor="project-type">Type de projet</Label>
-                  <select
-                    id="project-type"
-                    className="flex h-10 w-full rounded-xl border bg-background px-3 py-2 text-sm"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Sélectionnez un type
-                    </option>
-                    {projectTypes.map((item) => (
-                      <option key={item} value={item}>
-                        {item}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="grid gap-2">
-                  <Label htmlFor="budget">Budget estimé</Label>
-                  <select
-                    id="budget"
-                    className="flex h-10 w-full rounded-xl border bg-background px-3 py-2 text-sm"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Sélectionnez une fourchette
-                    </option>
-                    {budgetOptions.map((item) => (
-                      <option key={item.value} value={item.value}>
-                        {item.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="grid gap-2 md:col-span-2">
-                  <Label htmlFor="description">
-                    Décrivez brièvement votre projet
-                  </Label>
-                  <Textarea
-                    id="description"
-                    placeholder="Vos objectifs, votre échéancier, toute information utile..."
-                    className="min-h-[110px] rounded-xl"
-                  />
-                </div>
-
-                <div className="md:col-span-2">
-                  <Button
-                    size="lg"
-                    className="w-full rounded-full bg-primary text-base font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 hover:shadow-xl"
-                  >
-                    Obtenir ma soumission
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-
-                  <p className="mt-3 text-center text-xs leading-5 text-muted-foreground">
-                    En soumettant ce formulaire, vous acceptez d&apos;être contacté au
-                    sujet de votre projet. Sans engagement.
-                  </p>
-                </div>
-              </form>
+              <LandingLeadForm />
             </CardContent>
           </Card>
         </div>

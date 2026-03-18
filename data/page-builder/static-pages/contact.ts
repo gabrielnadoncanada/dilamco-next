@@ -78,7 +78,7 @@ export const page: PageTemplateData = {
                 },
                 {
                   kind: "tel",
-                  name: "téléphone",
+                  name: "telephone",
                   label: "Téléphone",
                   autoComplete: "tel",
                   required: true,
@@ -118,11 +118,11 @@ export const page: PageTemplateData = {
                     },
                     {
                       label: "Rénovation avec coordination",
-                      value: "rénovation",
+                      value: "renovation",
                     },
                     {
                       label: "À déterminer / besoin de conseils",
-                      value: "a-déterminer",
+                      value: "a-determiner",
                     },
                   ],
                 },
@@ -143,7 +143,7 @@ export const page: PageTemplateData = {
                 },
                 {
                   kind: "select",
-                  name: "échéance",
+                  name: "echeance",
                   label: "Calendrier souhaité",
                   placeholder: "Sélectionner...",
                   required: true,
