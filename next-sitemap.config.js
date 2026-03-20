@@ -7,9 +7,12 @@ module.exports = {
   exclude: [
     "/api/*",
     "/admin/*",
+    "/landing/*",
     "/_next/*",
+    "/page-builder",
     "**/opengraph-image",
     "**/opengraph-image/*",
+    "/projets/*/*",
   ],
 
   robotsTxtOptions: {
@@ -19,55 +22,55 @@ module.exports = {
   },
 
   transform: async (config, path) => {
-    // Exclure les images Open Graph (pas des pages HTML)
-    if (path.includes("/opengraph-image")) {
-      return null; // Exclure du sitemap
+    if (
+      path.includes("/opengraph-image") ||
+      path.startsWith("/api/") ||
+      path.startsWith("/admin/") ||
+      path.startsWith("/_next/") ||
+      path.startsWith("/landing/")
+    ) {
+      return null;
     }
 
     let priority = 0.7;
     let changefreq = "weekly";
 
-    // Pages money (priorité maximale)
-    if (path.startsWith("/espaces/")) {
-      priority = 0.9;
-      changefreq = "monthly";
-    }
-    // Services (très importantes)
-    else if (path.startsWith("/services/")) {
-      priority = 0.85;
-      changefreq = "monthly";
-    }
-    // Projets (contenu riche)
-    else if (path.startsWith("/projets/")) {
-      priority = 0.8;
-      changefreq = "weekly";
-    }
-    // Pages locales (SEO local)
-    else if (path.startsWith("/montreal/") || path.startsWith("/laval/") || path.startsWith("/rive-sud/")) {
-      priority = 0.75;
-      changefreq = "monthly";
-    }
-    // Guides (contenu éducatif)
-    else if (path.startsWith("/guides/")) {
-      priority = 0.6;
-      changefreq = "monthly";
-    }
-    // Page d'accueil
-    else if (path === "/") {
+    if (path === "/") {
       priority = 1.0;
       changefreq = "weekly";
-    }
-    // Pages secondaires
-    else if (path.startsWith("/comparatifs/") || path.startsWith("/materiaux/")) {
+    } else if (path.startsWith("/espaces/")) {
+      priority = 0.9;
+      changefreq = "monthly";
+    } else if (path === "/espaces") {
+      priority = 0.8;
+      changefreq = "weekly";
+    } else if (path.startsWith("/services/")) {
+      priority = 0.85;
+      changefreq = "monthly";
+    } else if (path === "/services") {
+      priority = 0.8;
+      changefreq = "weekly";
+    } else if (path === "/projets") {
+      priority = 0.75;
+      changefreq = "weekly";
+    } else if (path === "/guides") {
+      priority = 0.7;
+      changefreq = "weekly";
+    } else if (path.startsWith("/materiaux/")) {
       priority = 0.65;
       changefreq = "monthly";
+    } else if (path === "/materiaux") {
+      priority = 0.7;
+      changefreq = "weekly";
+    } else if (path === "/contact" || path === "/a-propos" || path === "/processus") {
+      priority = 0.7;
+      changefreq = "weekly";
     }
 
     return {
       loc: path,
       changefreq,
       priority,
-      lastmod: new Date().toISOString(),
     };
   },
 };
