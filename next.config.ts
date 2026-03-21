@@ -146,6 +146,20 @@ const redirectRules = [
     source: "/montreal/residential-construction.aspx",
     destination: "/services/renovation",
   },
+
+  {
+    source: "/realisation/signature-bouleau/",
+    destination: "/projets",
+  },
+  {
+    source: "/realisation/blanc-urbain/",
+    destination: "/projets",
+  },
+  {
+    source: "/realisation/purete-doree/",
+    destination: "/projets",
+  },
+
 ];
 
 function expandRedirects(rules: typeof redirectRules) {
