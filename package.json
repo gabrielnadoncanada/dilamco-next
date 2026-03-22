@@ -12,10 +12,11 @@
     "images:generate": "node scripts/generate-images.mjs",
     "images:apply": "node scripts/apply-image-manifest.mjs",
     "images:webp": "node scripts/convert-images-to-webp.mjs",
-     "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
+    "@next/third-parties": "^16.2.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -24,7 +25,7 @@
     "gsap": "^3.14.2",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.564.0",
-    "next": "16.1.6",
+    "next": "16.2.1",
     "next-themes": "^0.4.6",
     "openai": "^6.5.0",
     "radix-ui": "^1.4.3",

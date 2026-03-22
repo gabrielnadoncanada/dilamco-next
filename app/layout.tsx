@@ -6,6 +6,8 @@ import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { GoogleTagManager } from '@next/third-parties/google'
+
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -52,6 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr-CA" suppressHydrationWarning>
+      <GoogleTagManager gtmId="GTM-K36WBQW" />
       <body className={cn(plusJakartaSans.className, 'overflow-x-hidden! ')}>
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localBusinessJsonLd()} />
