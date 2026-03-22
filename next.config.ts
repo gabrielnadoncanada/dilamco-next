@@ -159,7 +159,30 @@ const redirectRules = [
     source: "/realisation/purete-doree/",
     destination: "/projets",
   },
-
+  {
+    source: "/realisations",
+    destination: "/projets",
+  },
+  {
+    source: "/spaces",
+    destination: "/espaces/cuisine",
+  },
+  {
+    source: "/realisation/harmonie-blanche",
+    destination: "/projets",
+  },
+  {
+    source: "/realisation/elegance-classique",
+    destination: "/projets",
+  },
+  {
+    source: "/space/salles-de-bain",
+    destination: "/espaces/salle-de-bain",
+  },
+  {
+    source: "/space/garde-robes-et-walk-ins",
+    destination: "/espaces/walk-in",
+  },
 ];
 
 function expandRedirects(rules: typeof redirectRules) {

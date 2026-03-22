@@ -1,9 +1,10 @@
 # *
 User-agent: *
 Allow: /
-
+Disallow: /landing
 # Host
 Host: https://dilamco.com
 
 # Sitemaps
 Sitemap: https://dilamco.com/sitemap.xml
+
