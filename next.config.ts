@@ -183,6 +183,10 @@ const redirectRules = [
     source: "/space/garde-robes-et-walk-ins",
     destination: "/espaces/walk-in",
   },
+  {
+    source: '/wp-content/uploads/2025/09/Outlook-A-close-up.png',
+    destination: '/images/Outlook-A-close-up.png',
+  },
 ];
 
 function expandRedirects(rules: typeof redirectRules) {
