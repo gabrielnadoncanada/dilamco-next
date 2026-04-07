@@ -4,7 +4,13 @@ import Link from "next/link";
 import { Heading } from "@/components/elements/heading";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -16,8 +22,11 @@ import {
 import type { GridImageCardsSliderProps } from "./schema";
 import { cn } from "@/lib/utils";
 
-export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
-  const hasNavigation = props.hasNavigation ?? true;
+export function GridImageCardsSlider({
+  hasNavigation = true,
+  itemClass,
+  ...props
+}: GridImageCardsSliderProps) {
 
   return (
     <Carousel
@@ -29,9 +38,13 @@ export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
       <div>
         <div className="flex items-end justify-between gap-4">
           <div>
-            <Heading as="h2" variant="h2">{props.heading}</Heading>
+            <Heading as="h2" variant="h2">
+              {props.heading}
+            </Heading>
             {props.intro ? (
-              <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{props.intro}</p>
+              <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
+                {props.intro}
+              </p>
             ) : null}
           </div>
           {hasNavigation ? (
@@ -45,14 +58,29 @@ export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
         <div className="mt-8">
           <CarouselContent>
             {props.items.map((item, index) => {
-              const footerLabel = item.footerCtaLabel ?? `Decouvrir ${item.title?.toLowerCase()}`;
+              const footerLabel =
+                item.footerCtaLabel ?? `Decouvrir ${item.title?.toLowerCase()}`;
               const itemKey = `${item.href ?? "no-href"}-${item.title}-${index}`;
-              const href = typeof item.href === "string" && item.href.length > 0 ? item.href : null;
+              const href =
+                typeof item.href === "string" && item.href.length > 0
+                  ? item.href
+                  : null;
               const canLink = href !== null;
 
               return (
-                <CarouselItem key={itemKey} className="basis-full sm:basis-1/2 lg:basis-1/3">
-                  <Card className={cn("flex h-full flex-col overflow-hidden", item.image ? "pt-0" : "")}>
+                <CarouselItem
+                  key={itemKey}
+                  className={cn(
+                    "basis-full sm:basis-1/2 lg:basis-1/3",
+                    itemClass,
+                  )}
+                >
+                  <Card
+                    className={cn(
+                      "flex h-full flex-col overflow-hidden",
+                      item.image ? "pt-0" : "",
+                    )}
+                  >
                     {canLink ? (
                       <Link
                         href={href}
@@ -89,12 +117,17 @@ export function GridImageCardsSlider(props: GridImageCardsSliderProps) {
 
                     {item.description ? (
                       <CardContent>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.description}
+                        </p>
 
                         {item.badges && item.badges.length > 0 ? (
                           <div className="mt-4 flex flex-wrap gap-2">
                             {item.badges.map((badge, idx) => (
-                              <Badge key={`${badge}-${idx}`} variant="secondary">
+                              <Badge
+                                key={`${badge}-${idx}`}
+                                variant="secondary"
+                              >
                                 {badge}
                               </Badge>
                             ))}

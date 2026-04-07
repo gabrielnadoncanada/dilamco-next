@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(find /c/laragon/www/dilamco-next -maxdepth 1 -name \"*.json\" -o -name \"*.config.*\" 2>/dev/null | head -10)"
-    ]
-  }
-}

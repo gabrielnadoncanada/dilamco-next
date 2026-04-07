@@ -3,8 +3,11 @@
 import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 
-import { submitContactLead, type ContactFormState } from "@/app/contact/actions";
-import { Button } from "@/components/ui/button";
+import {
+  submitContactLead,
+  type ContactFormState,
+} from "@/app/contact/actions";
+import { Button } from "./button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,12 +16,6 @@ import { cn } from "@/lib/utils";
 const initialState: ContactFormState = {
   status: "idle",
 };
-
-const projectTypeOptions = [
-  { value: "sur-mesure", label: "Cuisine sur mesure" },
-  { value: "renovation", label: "Renovation de cuisine" },
-  { value: "a-determiner", label: "A determiner avec vous" },
-] as const;
 
 const budgetOptions = [
   { value: "moins-15000", label: "Moins de 15 000 $" },
@@ -43,7 +40,7 @@ function SubmitButton() {
     <Button
       type="submit"
       size="lg"
-      className="w-full rounded-full bg-primary text-base font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 hover:shadow-xl"
+      className="w-full bg-primary text-base font-semibold text-primary-foreground shadow-lg hover:bg-primary/90 hover:shadow-xl"
       disabled={pending}
     >
       {pending ? "Envoi en cours..." : "Obtenir ma soumission"}
@@ -60,7 +57,10 @@ function FieldError({ error }: { error?: string }) {
 }
 
 export function LandingLeadForm() {
-  const [formState, formAction] = useActionState(submitContactLead, initialState);
+  const [formState, formAction] = useActionState(
+    submitContactLead,
+    initialState,
+  );
 
   return (
     <form action={formAction} className="grid gap-5 md:grid-cols-2">
@@ -133,31 +133,6 @@ export function LandingLeadForm() {
       </div>
 
       <div className="grid gap-2">
-        <Label htmlFor="landing-type-projet">Type de projet</Label>
-        <select
-          id="landing-type-projet"
-          name="type_projet"
-          required
-          defaultValue=""
-          aria-invalid={Boolean(formState.fieldErrors?.type_projet)}
-          className={cn(
-            "flex h-10 w-full rounded-xl border bg-background px-3 py-2 text-sm",
-            formState.fieldErrors?.type_projet && "border-destructive",
-          )}
-        >
-          <option value="" disabled>
-            Selectionnez un type
-          </option>
-          {projectTypeOptions.map((item) => (
-            <option key={item.value} value={item.value}>
-              {item.label}
-            </option>
-          ))}
-        </select>
-        <FieldError error={formState.fieldErrors?.type_projet} />
-      </div>
-
-      <div className="grid gap-2">
         <Label htmlFor="landing-budget">Budget estime</Label>
         <select
           id="landing-budget"
@@ -182,7 +157,7 @@ export function LandingLeadForm() {
         <FieldError error={formState.fieldErrors?.budget} />
       </div>
 
-      <div className="grid gap-2 md:col-span-2">
+      <div className="grid gap-2 ">
         <Label htmlFor="landing-echeance">Echeancier souhaite</Label>
         <select
           id="landing-echeance"
@@ -208,7 +183,9 @@ export function LandingLeadForm() {
       </div>
 
       <div className="grid gap-2 md:col-span-2">
-        <Label htmlFor="landing-message">Decrivez brievement votre projet</Label>
+        <Label htmlFor="landing-message">
+          Decrivez brievement votre projet
+        </Label>
         <Textarea
           id="landing-message"
           name="message"
@@ -224,7 +201,9 @@ export function LandingLeadForm() {
         <p
           className={cn(
             "text-sm md:col-span-2",
-            formState.status === "success" ? "text-green-700" : "text-destructive",
+            formState.status === "success"
+              ? "text-green-700"
+              : "text-destructive",
           )}
         >
           {formState.message}
@@ -235,8 +214,8 @@ export function LandingLeadForm() {
         <SubmitButton />
 
         <p className="mt-3 text-center text-xs leading-5 text-muted-foreground">
-          En soumettant ce formulaire, vous acceptez d&apos;etre contacte au sujet
-          de votre projet. Sans engagement.
+          En soumettant ce formulaire, vous acceptez d&apos;etre contacte au
+          sujet de votre projet. Sans engagement.
         </p>
       </div>
     </form>

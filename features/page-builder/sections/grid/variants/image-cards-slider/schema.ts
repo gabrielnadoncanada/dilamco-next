@@ -16,6 +16,8 @@ export const GridImageCardsSliderSchema = z.object({
   intro: z.string().min(1).optional(),
   items: z.array(ItemSchema).min(1).max(24),
   hasNavigation: z.boolean().optional(),
+  /** Extra classes for each carousel slide (e.g. responsive basis). */
+  itemClass: z.string().optional(),
 });
 
 export type GridImageCardsSliderProps = z.infer<
