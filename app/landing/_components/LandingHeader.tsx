@@ -48,9 +48,10 @@ export function LandingHeader() {
           />
         </Link>
 
-        <div className="hidden items-center gap-5 sm:flex">
+        <div className="flex items-center gap-3 sm:gap-5">
           <Link
             href="tel:+15148200773"
+            aria-label="Appeler Dilamco"
             className={`inline-flex items-center gap-2 text-sm font-medium transition-colors duration-300 ${
               scrolled
                 ? "text-muted-foreground hover:text-foreground"
@@ -58,31 +59,20 @@ export function LandingHeader() {
             }`}
           >
             <Phone className="h-4 w-4" aria-hidden />
-            <span>(514) 820-0773</span>
+            <span className="hidden sm:inline">(514) 820-0773</span>
           </Link>
 
           <Button
             asChild
             size="sm"
-            className={` px-6 font-semibold transition-all duration-300 ${
-              scrolled
-            }`}
+            className="px-4 font-semibold transition-all duration-300 sm:px-6"
           >
-            <a href="#formulaire">Obtenir ma soumission</a>
+            <a href="#formulaire">
+              <span className="hidden sm:inline">Obtenir ma soumission</span>
+              <span className="sm:hidden">Soumission</span>
+            </a>
           </Button>
         </div>
-
-        <Button
-          asChild
-          size="sm"
-          className={` px-4 font-semibold transition-all duration-300 sm:hidden ${
-            scrolled
-              ? "bg-primary text-primary-foreground hover:bg-primary/90"
-              : "bg-white  hover:bg-white/90"
-          }`}
-        >
-          <a href="#formulaire">Estimation</a>
-        </Button>
       </div>
     </header>
   );

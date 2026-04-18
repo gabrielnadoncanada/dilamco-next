@@ -1,56 +1,100 @@
-import { ShieldCheck, Warehouse, Wrench } from "lucide-react";
+import { Factory, TreePine, UserCheck } from "lucide-react";
 
-import { Card, CardContent } from "@/components/ui/card";
+import { Reveal } from "./Reveal";
 
 const differentiators = [
   {
-    icon: Warehouse,
-    title: "Experts depuis plus de 20 ans",
+    number: "01",
+    kicker: "Supply chain",
+    icon: Factory,
+    title: "Une structure réelle derrière chaque projet",
     description:
-      "Basé à Montréal, Dilamco a réalisé des centaines de projets résidentiels. Une expérience concrète qui permet d’éviter les erreurs et de livrer des projets solides et bien exécutés.",
+      "Entrepôt à Montréal depuis plus de 20 ans, relation directe avec notre usine. Pas d'intermédiaire, pas d'aléas d'approvisionnement — un projet planifié et livré dans les délais.",
+    metric: "20+",
+    metricLabel: "Années d'opération",
   },
   {
-    icon: ShieldCheck,
-    title: "Matériaux de qualité",
+    number: "02",
+    kicker: "Matériaux",
+    icon: TreePine,
+    title: "Du bois massif, pas du panneau pressé",
     description:
-      "Caissons en contreplaqué, l’un des matériaux les plus durables pour des armoires conçues pour durer des décennies.",
+      "Structures en bois massif de bouleau, fonds en contreplaqué de bouleau. Une finition qui ne s'écaille pas, des tiroirs qui ne gonflent pas, une structure conçue pour durer 20 ans et plus.",
+    metric: "20 ans+",
+    metricLabel: "Durabilité visée",
   },
   {
-    icon: Wrench,
-    title: "Gestion complète du projet",
+    number: "03",
+    kicker: "Gestion",
+    icon: UserCheck,
+    title: "Un seul responsable, du design à l'installation",
     description:
-      "Un seul interlocuteur du design à l'installation. Moins de friction, moins d'erreurs, un résultat cohérent avec ce qui a été convenu.",
+      "Design, fabrication, rénovation, installation : tout est coordonné par la même équipe. Moins d'intervenants, zéro coordination de votre côté, un résultat cohérent avec ce qui a été convenu.",
+    metric: "1",
+    metricLabel: "Équipe, tout le projet",
   },
 ] as const;
 
 export function LandingDifferentiators() {
   return (
-    <section className="border-y bg-[var(--surface-tint-bg)] py-12 md:py-24">
+    <section id="pourquoi" className="bg-[var(--surface-tint-bg)] py-16 md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-            Trois raisons concrètes de choisir Dilamco
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+            § 01 · Pourquoi Dilamco
+          </p>
+          <h2 className="font-display text-3xl font-medium tracking-[-0.02em] text-balance sm:text-4xl lg:text-5xl">
+            Une structure réelle, pas une promesse marketing
           </h2>
-        </div>
+          <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">
+            Trois avantages concrets qui expliquent pourquoi nos projets
+            tiennent dans le temps.
+          </p>
+        </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {differentiators.map((item) => {
+        <div className="mt-16 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:mt-20 md:grid-cols-3">
+          {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (
-              <Card
-                key={item.title}
-                className="group rounded-3xl border border-border/60 bg-background shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              <Reveal
+                key={item.number}
+                delay={index * 120}
+                as="article"
+                className="group relative flex flex-col bg-[var(--surface-tint-bg)] p-8 transition-colors duration-500 hover:bg-background sm:p-10"
               >
-                <CardContent className="p-8">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-foreground/[0.04] transition-colors duration-300 group-hover:bg-foreground/[0.07]">
-                    <Icon className="h-7 w-7 text-foreground/50" />
+                {/* Top row: number + kicker */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-baseline gap-3">
+                    <span className="font-mono text-xs font-semibold tracking-[0.2em] text-foreground">
+                      {item.number}
+                    </span>
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                      {item.kicker}
+                    </span>
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 leading-7 text-muted-foreground">
-                    {item.description}
-                  </p>
-                </CardContent>
-              </Card>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background/80 transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:border-foreground/30">
+                    <Icon className="h-4 w-4 text-foreground/70" strokeWidth={1.5} />
+                  </span>
+                </div>
+
+                <h3 className="mt-8 font-display text-2xl font-medium leading-[1.2] tracking-[-0.015em] sm:text-[28px]">
+                  {item.title}
+                </h3>
+
+                <p className="mt-5 flex-1 text-[15px] leading-[1.7] text-muted-foreground">
+                  {item.description}
+                </p>
+
+                {/* Footer metric */}
+                <div className="mt-8 flex items-baseline gap-3 border-t border-border pt-5">
+                  <span className="font-display text-2xl font-medium tracking-[-0.02em] text-foreground">
+                    {item.metric}
+                  </span>
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                    {item.metricLabel}
+                  </span>
+                </div>
+              </Reveal>
             );
           })}
         </div>

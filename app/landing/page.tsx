@@ -1,4 +1,5 @@
 import {
+  LandingAnchorNav,
   LandingCtaBand,
   LandingHeader,
   LandingDifferentiators,
@@ -7,15 +8,13 @@ import {
   LandingFormSection,
   LandingGallery,
   LandingHero,
-  LandingPainSolution,
+  LandingMaterials,
   LandingProcess,
   LandingQualification,
+  LandingStickyCta,
   LandingTestimonials,
   LandingTrustBar,
   LandingWhatYouAvoid,
-  LandingWhatYouGain,
-  LandingWhyContreplaque,
-  LandingLeadForm,
 } from "./_components";
 
 export default function DilamcoLandingPage() {
@@ -25,25 +24,15 @@ export default function DilamcoLandingPage() {
 
       <LandingHero />
       <LandingTrustBar />
+      <LandingAnchorNav />
+
+      <LandingDifferentiators />
       <LandingWhatYouAvoid />
       <LandingQualification />
-      {/* <LandingPainSolution /> */}
-      {/* <LandingDifferentiators /> */}
 
-      {/* <LandingCtaBand
-        title="Discutons de votre projet"
-        description="Rénovation, construction ou agrandissement : obtenez une estimation claire et rapide pour planifier votre projet en toute confiance."
-      /> */}
+      <LandingMaterials />
 
       <LandingGallery />
-
-      {/* <LandingCtaBand
-        title="Besoin d’une estimation claire et rapide ?"
-        description="Recevez une première estimation en moins de 24 heures. Sans engagement."
-      /> */}
-
-      {/* <LandingWhyContreplaque />
-      <LandingWhatYouGain /> */}
 
       <LandingProcess />
 
@@ -57,6 +46,8 @@ export default function DilamcoLandingPage() {
       <LandingFaq />
       <LandingFormSection />
       <LandingFooter />
+
+      <LandingStickyCta />
     </main>
   );
 }

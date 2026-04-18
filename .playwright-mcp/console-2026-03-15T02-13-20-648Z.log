@@ -1,8 +1,0 @@
-[   50777ms] ReferenceError: Phone is not defined
-    at DilamcoLandingPage (about://React/Server/C:%5Claragon%5Cwww%5Cdilamco-next%5C.next%5Cdev%5Cserver%5Cchunks%5Cssr%5C%5Broot-of-the-server%5D__4bca1df1._.js?434:551:404)
-    at resolveErrorDev (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-server-dom-turbopack_b8724abc._.js:1894:106)
-    at processFullStringRow (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-server-dom-turbopack_b8724abc._.js:2402:29)
-    at processFullBinaryRow (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-server-dom-turbopack_b8724abc._.js:2361:9)
-    at processBinaryChunk (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-server-dom-turbopack_b8724abc._.js:2470:221)
-    at progress (http://localhost:3000/_next/static/chunks/32861_next_dist_compiled_react-server-dom-turbopack_b8724abc._.js:2640:13)
-[   58211ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/32861_next_dist_add8f917._.js:2297

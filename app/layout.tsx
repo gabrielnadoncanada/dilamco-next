@@ -4,12 +4,21 @@ import { JsonLd } from "@/seo/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
 import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { GoogleTagManager } from '@next/third-parties/google'
 
 
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  axes: ["opsz", "SOFT"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -55,7 +64,13 @@ export default function RootLayout({
   return (
     <html lang="fr-CA" suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-K36WBQW" />
-      <body className={cn(plusJakartaSans.className, 'overflow-x-hidden! ')}>
+      <body
+        className={cn(
+          plusJakartaSans.variable,
+          fraunces.variable,
+          "font-sans overflow-x-hidden!",
+        )}
+      >
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={localBusinessJsonLd()} />
         {children}

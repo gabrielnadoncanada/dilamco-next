@@ -46,8 +46,10 @@ const contactFormSchema = z.object({
   message: z
     .string()
     .trim()
-    .min(20, "Ajoutez quelques details sur votre projet.")
-    .max(4000),
+    .max(4000)
+    .optional()
+    .or(z.literal(""))
+    .transform((v) => v ?? ""),
 });
 
 const labelMap = {

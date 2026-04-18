@@ -15,3 +15,7 @@ export { LandingWhatYouGain } from "./LandingWhatYouGain";
 export { LandingWhyContreplaque } from "./LandingWhyContreplaque";
 export { LandingLeadForm } from "./LandingLeadForm";
 export { LandingHeader } from "./LandingHeader";
+export { LandingMaterials } from "./LandingMaterials";
+export { LandingAnchorNav } from "./LandingAnchorNav";
+export { LandingStickyCta } from "./LandingStickyCta";
+export { Reveal } from "./Reveal";
