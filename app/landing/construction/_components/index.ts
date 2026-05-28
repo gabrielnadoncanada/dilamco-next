@@ -8,3 +8,4 @@ export { ConstructionWhy } from "./ConstructionWhy";
 export { ConstructionProcess } from "./ConstructionProcess";
 export { ConstructionGallery } from "./ConstructionGallery";
 export { ConstructionCtaBand } from "./ConstructionCtaBand";
+export { ConstructionGuarantees } from "./ConstructionGuarantees";
