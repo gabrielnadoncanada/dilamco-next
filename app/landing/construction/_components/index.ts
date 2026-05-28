@@ -10,3 +10,7 @@ export { ConstructionGallery } from "./ConstructionGallery";
 export { ConstructionCtaBand } from "./ConstructionCtaBand";
 export { ConstructionGuarantees } from "./ConstructionGuarantees";
 export { ConstructionFaq } from "./ConstructionFaq";
+export { ConstructionLeadForm } from "./ConstructionLeadForm";
+export { ConstructionFormSection } from "./ConstructionFormSection";
+export { ConstructionFooter } from "./ConstructionFooter";
+export { ConstructionStickyCta } from "./ConstructionStickyCta";

@@ -1,5 +1,23 @@
 import type { Metadata } from "next";
 
+import {
+  ConstructionHeader,
+  ConstructionHero,
+  ConstructionTrustBar,
+  ConstructionAnchorNav,
+  ConstructionPainSolution,
+  ConstructionServices,
+  ConstructionWhy,
+  ConstructionProcess,
+  ConstructionGallery,
+  ConstructionCtaBand,
+  ConstructionGuarantees,
+  ConstructionFaq,
+  ConstructionFormSection,
+  ConstructionFooter,
+  ConstructionStickyCta,
+} from "./_components";
+
 export const metadata: Metadata = {
   title: "Rénovation et construction clé en main au Grand Montréal | Dilamco",
   description:
@@ -11,7 +29,28 @@ export const metadata: Metadata = {
 export default function ConstructionLandingPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      {/* Sections ajoutées dans les tâches suivantes (Task 18 finalise l'ordre) */}
+      <ConstructionHeader />
+
+      <ConstructionHero />
+      <ConstructionTrustBar />
+      <ConstructionAnchorNav />
+
+      <ConstructionPainSolution />
+      <ConstructionServices />
+      <ConstructionWhy />
+      <ConstructionProcess />
+
+      <ConstructionGallery />
+
+      <ConstructionCtaBand />
+
+      <ConstructionGuarantees />
+      <ConstructionFaq />
+
+      <ConstructionFormSection />
+      <ConstructionFooter />
+
+      <ConstructionStickyCta />
     </main>
   );
 }
