@@ -7,3 +7,4 @@ export { ConstructionServices } from "./ConstructionServices";
 export { ConstructionWhy } from "./ConstructionWhy";
 export { ConstructionProcess } from "./ConstructionProcess";
 export { ConstructionGallery } from "./ConstructionGallery";
+export { ConstructionCtaBand } from "./ConstructionCtaBand";
