@@ -213,7 +213,18 @@ function expandRedirects(rules: typeof redirectRules) {
 
 const nextConfig = {
   async redirects() {
-    return expandRedirects(redirectRules);
+    return [
+      // Canonicalisation : force www.dilamco.com -> dilamco.com (non-www, https)
+      // 308 permanent. Redondant avec le réglage "primary domain" de Vercel,
+      // mais garde le fix dans le repo et le rend résilient si le dashboard change.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.dilamco.com" }],
+        destination: "https://dilamco.com/:path*",
+        permanent: true,
+      },
+      ...expandRedirects(redirectRules),
+    ];
   },
 };
 
