@@ -7,6 +7,7 @@ module.exports = {
   exclude: [
     "/api/*",
     "/admin/*",
+    "/landing",
     "/landing/*",
     "/_next/*",
     "/page-builder",
@@ -27,6 +28,7 @@ module.exports = {
       path.startsWith("/api/") ||
       path.startsWith("/admin/") ||
       path.startsWith("/_next/") ||
+      path === "/landing" ||
       path.startsWith("/landing/")
     ) {
       return null;
