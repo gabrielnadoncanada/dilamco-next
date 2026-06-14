@@ -12,18 +12,18 @@ export const renovationCuisinePage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
-    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
+    { name: "Services", url: SITE.url + "/services" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation" },
     {
       name: "Rénovation de cuisine",
-      url: SITE.url + "/services/renovation/cuisine/",
+      url: SITE.url + "/services/renovation/cuisine",
     },
   ],
   service: {
     name: "Rénovation de cuisine",
     description:
       "Design, coordination, fabrication et installation d'armoires sur mesure dans une approche clé en main pour projets de cuisine.",
-    url: SITE.url + "/services/renovation/cuisine/",
+    url: SITE.url + "/services/renovation/cuisine",
     serviceType: "Rénovation de cuisine",
   },
   blocks: [

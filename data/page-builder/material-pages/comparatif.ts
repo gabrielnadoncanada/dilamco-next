@@ -12,8 +12,8 @@ export const comparatifPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Matériaux", url: SITE.url + "/materiaux/" },
-    { name: "Comparatif", url: SITE.url + "/materiaux/comparatif/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux" },
+    { name: "Comparatif", url: SITE.url + "/materiaux/comparatif" },
   ],
   blocks: [
     {

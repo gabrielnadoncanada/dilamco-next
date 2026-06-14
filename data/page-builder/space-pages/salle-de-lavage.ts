@@ -14,14 +14,14 @@ export const salleDeLavagePage: PageTemplateData = {
     { name: "Accueil", url: SITE.url + "/" },
     {
       name: "Salle de lavage sur mesure",
-      url: SITE.url + "/espaces/salle-de-lavage/",
+      url: SITE.url + "/espaces/salle-de-lavage",
     },
   ],
   service: {
     name: "Salle de lavage sur mesure",
     description:
       "Conception, fabrication contrôlée et installation d'armoires de salle de lavage sur mesure.",
-    url: SITE.url + "/espaces/salle-de-lavage/",
+    url: SITE.url + "/espaces/salle-de-lavage",
     serviceType: "Salle de lavage sur mesure",
   },
   blocks: [

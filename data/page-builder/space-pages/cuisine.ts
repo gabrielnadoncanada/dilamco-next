@@ -12,13 +12,13 @@ export const cuisinePage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Cuisine sur mesure", url: SITE.url + "/espaces/cuisine/" },
+    { name: "Cuisine sur mesure", url: SITE.url + "/espaces/cuisine" },
   ],
   service: {
     name: "Cuisine sur mesure",
     description:
       "Conception, fabrication contrôlée et installation de cuisines sur mesure haut de gamme.",
-    url: SITE.url + "/espaces/cuisine/",
+    url: SITE.url + "/espaces/cuisine",
     serviceType: "Cuisine sur mesure",
   },
   blocks: [

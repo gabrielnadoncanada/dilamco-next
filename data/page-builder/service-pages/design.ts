@@ -12,14 +12,14 @@ export const designPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
-    { name: "Service de design", url: SITE.url + "/services/design/" },
+    { name: "Services", url: SITE.url + "/services" },
+    { name: "Service de design", url: SITE.url + "/services/design" },
   ],
   service: {
     name: "Service de design",
     description:
       "Optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux.",
-    url: SITE.url + "/services/design/",
+    url: SITE.url + "/services/design",
     serviceType: "Design",
   },
   blocks: [

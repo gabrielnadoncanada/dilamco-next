@@ -12,8 +12,8 @@ export const melaminePage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Matériaux", url: SITE.url + "/materiaux/" },
-    { name: "Mélamine", url: SITE.url + "/materiaux/melamine/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux" },
+    { name: "Mélamine", url: SITE.url + "/materiaux/melamine" },
   ],
   blocks: [
     {

@@ -12,18 +12,18 @@ export const renovationSalleDeBainPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
-    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
+    { name: "Services", url: SITE.url + "/services" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation" },
     {
       name: "Rénovation salle de bain",
-      url: SITE.url + "/services/renovation/salle-de-bain/",
+      url: SITE.url + "/services/renovation/salle-de-bain",
     },
   ],
   service: {
     name: "Rénovation salle de bain",
     description:
       "Design, coordination, vanités sur mesure et finition durable adaptés aux contraintes d'humidité et de plomberie.",
-    url: SITE.url + "/services/renovation/salle-de-bain/",
+    url: SITE.url + "/services/renovation/salle-de-bain",
     serviceType: "Rénovation de salle de bain",
   },
   blocks: [

@@ -12,8 +12,8 @@ export const couleursPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Matériaux", url: SITE.url + "/materiaux/" },
-    { name: "Couleurs et finis", url: SITE.url + "/materiaux/couleurs/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux" },
+    { name: "Couleurs et finis", url: SITE.url + "/materiaux/couleurs" },
   ],
   blocks: [
     {

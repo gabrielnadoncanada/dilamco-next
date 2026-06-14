@@ -12,8 +12,8 @@ export const mdfPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Matériaux", url: SITE.url + "/materiaux/" },
-    { name: "MDF", url: SITE.url + "/materiaux/mdf/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux" },
+    { name: "MDF", url: SITE.url + "/materiaux/mdf" },
   ],
   blocks: [
     {

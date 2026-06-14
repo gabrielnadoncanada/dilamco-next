@@ -12,14 +12,14 @@ export const page: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
-    { name: "Rénovation clé en main", url: SITE.url + "/services/renovation/" },
+    { name: "Services", url: SITE.url + "/services" },
+    { name: "Rénovation clé en main", url: SITE.url + "/services/renovation" },
   ],
   service: {
     name: "Rénovation clé en main",
     description:
       "Coordination et exécution lorsque le projet implique plusieurs corps de métier.",
-    url: SITE.url + "/services/renovation/",
+    url: SITE.url + "/services/renovation",
     serviceType: "Rénovation",
   },
   blocks: [

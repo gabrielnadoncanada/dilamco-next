@@ -18,10 +18,10 @@ export const contreplaquePage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Matériaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux" },
     {
       name: "Pourquoi le contreplaqué",
-      url: SITE.url + "/materiaux/contreplaque/",
+      url: SITE.url + "/materiaux/contreplaque",
     },
   ],
   blocks: [

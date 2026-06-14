@@ -12,8 +12,8 @@ export const boisMassifPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Matériaux", url: SITE.url + "/materiaux/" },
-    { name: "Bois massif", url: SITE.url + "/materiaux/bois-massif/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux" },
+    { name: "Bois massif", url: SITE.url + "/materiaux/bois-massif" },
   ],
   blocks: [
     {

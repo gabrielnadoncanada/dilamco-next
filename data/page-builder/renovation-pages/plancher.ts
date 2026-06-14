@@ -12,18 +12,18 @@ export const renovationPlancherPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
-    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
+    { name: "Services", url: SITE.url + "/services" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation" },
     {
       name: "Rénovation de plancher",
-      url: SITE.url + "/services/renovation/plancher/",
+      url: SITE.url + "/services/renovation/plancher",
     },
   ],
   service: {
     name: "Rénovation de plancher",
     description:
       "Planification, coordination et finition soignée quand le plancher s'intègre à une rénovation plus large avec armoires, installation ou reconfiguration.",
-    url: SITE.url + "/services/renovation/plancher/",
+    url: SITE.url + "/services/renovation/plancher",
     serviceType: "Rénovation de plancher",
   },
   blocks: [

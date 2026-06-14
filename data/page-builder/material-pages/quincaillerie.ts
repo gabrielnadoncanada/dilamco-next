@@ -12,10 +12,10 @@ export const quincailleriePage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Matériaux", url: SITE.url + "/materiaux/" },
+    { name: "Matériaux", url: SITE.url + "/materiaux" },
     {
       name: "Quincaillerie",
-      url: SITE.url + "/materiaux/quincaillerie/",
+      url: SITE.url + "/materiaux/quincaillerie",
     },
   ],
   blocks: [

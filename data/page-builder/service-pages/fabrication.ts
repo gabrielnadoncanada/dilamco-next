@@ -12,17 +12,17 @@ export const fabricationPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
+    { name: "Services", url: SITE.url + "/services" },
     {
       name: "Service de fabrication",
-      url: SITE.url + "/services/fabrication/",
+      url: SITE.url + "/services/fabrication",
     },
   ],
   service: {
     name: "Service de fabrication",
     description:
       "Fabrication sur mesure : durabilité, précision et finition haut de gamme.",
-    url: SITE.url + "/services/fabrication/",
+    url: SITE.url + "/services/fabrication",
     serviceType: "Fabrication",
   },
   blocks: [

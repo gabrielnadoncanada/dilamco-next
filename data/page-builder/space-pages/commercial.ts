@@ -12,13 +12,13 @@ export const commercialPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Commercial", url: SITE.url + "/espaces/commercial/" },
+    { name: "Commercial", url: SITE.url + "/espaces/commercial" },
   ],
   service: {
     name: "Commercial",
     description:
       "Conception, fabrication contrôlée et installation d'armoires commerciales sur mesure.",
-    url: SITE.url + "/espaces/commercial/",
+    url: SITE.url + "/espaces/commercial",
     serviceType: "Armoires commerciales sur mesure",
   },
   blocks: [

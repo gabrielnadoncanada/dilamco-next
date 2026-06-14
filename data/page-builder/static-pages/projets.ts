@@ -12,7 +12,7 @@ export const page: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Projets", url: SITE.url + "/projets/" },
+    { name: "Projets", url: SITE.url + "/projets" },
   ],
   blocks: [
     {

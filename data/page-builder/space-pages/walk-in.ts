@@ -12,13 +12,13 @@ export const walkInPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Walk-in sur mesure", url: SITE.url + "/espaces/walk-in/" },
+    { name: "Walk-in sur mesure", url: SITE.url + "/espaces/walk-in" },
   ],
   service: {
     name: "Walk-in sur mesure",
     description:
       "Conception, fabrication contrôlée et installation de walk-ins sur mesure haut de gamme.",
-    url: SITE.url + "/espaces/walk-in/",
+    url: SITE.url + "/espaces/walk-in",
     serviceType: "Walk-in sur mesure",
   },
   blocks: [

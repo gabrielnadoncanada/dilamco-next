@@ -12,17 +12,17 @@ export const installationPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
+    { name: "Services", url: SITE.url + "/services" },
     {
       name: "Service d'installation",
-      url: SITE.url + "/services/installation/",
+      url: SITE.url + "/services/installation",
     },
   ],
   service: {
     name: "Service d'installation",
     description:
       "Alignements précis, ajustements sur place et finition soignée pour cuisines, salles de bain, walk-in et commercial.",
-    url: SITE.url + "/services/installation/",
+    url: SITE.url + "/services/installation",
     serviceType: "Installation",
   },
   blocks: [

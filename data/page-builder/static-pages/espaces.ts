@@ -12,13 +12,13 @@ export const page: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Espaces", url: SITE.url + "/espaces/" },
+    { name: "Espaces", url: SITE.url + "/espaces" },
   ],
   service: {
     name: "Espaces sur mesure",
     description:
       "Pages piliers pour cuisines, salles de bain, walk-ins, salles de lavage et projets commerciaux.",
-    url: SITE.url + "/espaces/",
+    url: SITE.url + "/espaces",
     serviceType: "Espaces sur mesure",
   },
   blocks: [

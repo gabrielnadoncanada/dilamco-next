@@ -4,25 +4,25 @@ import { SITE } from "@/seo/schema/site";
 export const salleDeBainPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Vanité salle de bain sur mesure haut de gamme",
+    title: "Vanité de salle de bain sur mesure à Laval et Montréal",
     description:
-      "Vanité salle de bain sur mesure : design, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
+      "Vanité de salle de bain sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval, sur la Rive-Nord et la Rive-Sud.",
     path: "/espaces/salle-de-bain",
-    ogAlt: "Salle de bain sur mesure Dilamco",
+    ogAlt: "Vanité de salle de bain sur mesure Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     {
       name: "Salle de bain sur mesure",
-      url: SITE.url + "/espaces/salle-de-bain/",
+      url: SITE.url + "/espaces/salle-de-bain",
     },
   ],
   service: {
-    name: "Salle de bain sur mesure",
+    name: "Vanité de salle de bain sur mesure",
     description:
-      "Conception, fabrication contrôlée et installation de vanités sur mesure haut de gamme.",
-    url: SITE.url + "/espaces/salle-de-bain/",
-    serviceType: "Vanité salle de bain sur mesure",
+      "Conception, fabrication contrôlée et installation de vanités de salle de bain sur mesure haut de gamme à Montréal, Laval, sur la Rive-Nord et la Rive-Sud.",
+    url: SITE.url + "/espaces/salle-de-bain",
+    serviceType: "Vanité de salle de bain sur mesure",
   },
   blocks: [
     {
@@ -33,9 +33,10 @@ export const salleDeBainPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
-          heading: "Vanité sur mesure, exécution clé en main à Montréal",
+          heading:
+            "Vanité de salle de bain sur mesure à Laval et dans le Grand Montréal",
           description:
-            "Une salle de bain durable demande des matériaux adaptés à l'humidité, une fabrication stable et une installation précise.",
+            "Une vanité durable demande des matériaux adaptés à l'humidité, une fabrication stable et une installation précise. On conçoit, fabrique et installe partout dans le Grand Montréal : Montréal, Laval, Rive-Nord et Rive-Sud.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -48,7 +49,7 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "outline",
             },
           ],
-          badges: ["Sur mesure", "Humidité", "Montréal"],
+          badges: ["Sur mesure", "Grand Montréal", "Humidité"],
           image: {
             src: "/images/generated/spaces/space-bath-hero-01.webp",
             alt: "Vanité sur mesure haut de gamme",
@@ -225,6 +226,38 @@ export const salleDeBainPage: PageTemplateData = {
       },
     },
     {
+      id: "zones",
+      content: {
+        type: "split",
+        variant: "badges-checklist-cta",
+        props: {
+          heading: "Vanités sur mesure dans tout le Grand Montréal",
+          intro:
+            "On conçoit, fabrique et installe des vanités de salle de bain sur mesure des deux côtés du fleuve : de l'ouest de l'île jusqu'à Laval, la Rive-Nord et la Rive-Sud.",
+          badges: ["Montréal", "Laval", "Rive-Nord", "Rive-Sud"],
+          cardTitle: "Zones desservies",
+          items: [
+            "Montréal et l'ouest de l'île",
+            "Laval et la Rive-Nord",
+            "Rive-Sud et couronne sud",
+            "Conception, fabrication et installation incluses",
+          ],
+          actions: [
+            {
+              label: "Demander une soumission",
+              href: "/contact",
+              variant: "default",
+            },
+            {
+              label: "Voir nos projets salle de bain",
+              href: "/projets",
+              variant: "outline",
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "faq",
 
       content: {
@@ -236,20 +269,24 @@ export const salleDeBainPage: PageTemplateData = {
             "Les points qu'on clarifie le plus souvent avant de lancer le projet.",
           items: [
             {
-              q: "Combien coûte une vanité sur mesure ?",
-              a: "Le prix varie selon les dimensions, les matériaux, le rangement et le niveau de finition.",
+              q: "Combien coûte une vanité de salle de bain sur mesure ?",
+              a: "Le prix varie selon les dimensions, les matériaux, le rangement et le niveau de finition. On vous donne une estimation claire une fois le projet cadré.",
             },
             {
-              q: "Quelle est la différence avec une vanité standard ?",
-              a: "Le sur mesure permet d'adapter précisément l'espace et d'utiliser une structure mieux dimensionnée pour l'usage réel.",
+              q: "Faites-vous des vanités sur mesure à Laval et sur la Rive-Nord ?",
+              a: "Oui. On conçoit, fabrique et installe des vanités de salle de bain sur mesure à Laval, sur la Rive-Nord, à Montréal et sur la Rive-Sud.",
             },
             {
-              q: "Est-ce que l'humidité change vos choix ?",
-              a: "Oui. Les matériaux et les détails de construction sont sélectionnés en fonction de cet environnement.",
+              q: "Quelle est la différence avec une vanité de salle de bain standard ?",
+              a: "Le sur mesure permet d'adapter précisément l'espace disponible et d'utiliser une structure mieux dimensionnée pour l'usage réel et l'humidité de la pièce.",
             },
             {
-              q: "Travaillez-vous à Montréal et autour ?",
-              a: "Oui. Montréal, Laval et la Rive-Sud font partie de notre territoire.",
+              q: "Est-ce que l'humidité change vos choix de matériaux ?",
+              a: "Oui. Les matériaux et les détails de construction sont sélectionnés en fonction de cet environnement humide, pour la stabilité et la tenue dans le temps.",
+            },
+            {
+              q: "Quel est le délai pour une vanité sur mesure ?",
+              a: "Le délai dépend de la complexité, des finis et du calendrier de fabrication. On le confirme dès la phase de conception.",
             },
           ],
         },

@@ -12,18 +12,18 @@ export const agrandissementMaisonPage: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
-    { name: "Rénovation", url: SITE.url + "/services/renovation/" },
+    { name: "Services", url: SITE.url + "/services" },
+    { name: "Rénovation", url: SITE.url + "/services/renovation" },
     {
       name: "Agrandissement de maison",
-      url: SITE.url + "/services/renovation/agrandissement-de-maison/",
+      url: SITE.url + "/services/renovation/agrandissement-de-maison",
     },
   ],
   service: {
     name: "Agrandissement de maison",
     description:
       "Planification, faisabilité, coordination et exécution complète pour des projets d'agrandissement résidentiel.",
-    url: SITE.url + "/services/renovation/agrandissement-de-maison/",
+    url: SITE.url + "/services/renovation/agrandissement-de-maison",
     serviceType: "Agrandissement de maison",
   },
   blocks: [

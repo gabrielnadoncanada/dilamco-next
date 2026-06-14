@@ -12,13 +12,13 @@ export const page: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Services", url: SITE.url + "/services/" },
+    { name: "Services", url: SITE.url + "/services" },
   ],
   service: {
     name: "Services Dilamco",
     description:
       "Design, fabrication sur mesure, installation et rénovation clé en main selon la portée du projet.",
-    url: SITE.url + "/services/",
+    url: SITE.url + "/services",
     serviceType: "Services sur mesure",
   },
   blocks: [

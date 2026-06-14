@@ -13,14 +13,14 @@ export const page: PageTemplateData = {
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Processus", url: SITE.url + "/processus/" },
+    { name: "Processus", url: SITE.url + "/processus" },
   ],
   extraJsonLd: [
     serviceJsonLd({
       name: "Processus Dilamco",
       description:
         "Processus structuré pour projets sur mesure : cadrage, design, sélections, fabrication, installation et coordination selon la portée.",
-      url: SITE.url + "/processus/",
+      url: SITE.url + "/processus",
       serviceType: "Processus de projet sur mesure",
       areaServed: ["Montréal", "Laval", "Rive-Sud", "Québec"],
     }),
