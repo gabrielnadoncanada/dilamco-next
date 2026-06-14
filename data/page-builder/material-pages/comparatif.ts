@@ -7,7 +7,7 @@ export const comparatifPage: PageTemplateData = {
     title: "Comparatif des matériaux",
     description:
       "Comparatif des matériaux pour cuisines, vanités et armoires sur mesure : MDF, mélamine, contreplaqué et bois massif.",
-    path: "/materiaux/comparatif/",
+    path: "/materiaux/comparatif",
     ogAlt: "Comparatif des matériaux sur mesure",
   },
   breadcrumbs: [
@@ -30,12 +30,12 @@ export const comparatifPage: PageTemplateData = {
           actions: [
             {
               label: "Parler de votre projet",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir tous les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],
@@ -93,7 +93,7 @@ export const comparatifPage: PageTemplateData = {
           items: [
             {
               title: "Pourquoi le contreplaqué",
-              href: "/materiaux/contreplaque/",
+              href: "/materiaux/contreplaque",
               description: "Stabilité et tenue structurelle.",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
@@ -104,7 +104,7 @@ export const comparatifPage: PageTemplateData = {
             },
             {
               title: "MDF",
-              href: "/materiaux/mdf/",
+              href: "/materiaux/mdf",
               description: "Uniformité et finition peinte.",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
@@ -115,7 +115,7 @@ export const comparatifPage: PageTemplateData = {
             },
             {
               title: "Mélamine",
-              href: "/materiaux/melamine/",
+              href: "/materiaux/melamine",
               description: "Finis décoratifs et coût maîtrisé.",
               image: {
                 src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
@@ -126,7 +126,7 @@ export const comparatifPage: PageTemplateData = {
             },
             {
               title: "Bois massif",
-              href: "/materiaux/bois-massif/",
+              href: "/materiaux/bois-massif",
               description: "Texture naturelle et caractère.",
               image: {
                 src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
@@ -193,12 +193,12 @@ export const comparatifPage: PageTemplateData = {
           actions: [
             {
               label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie/",
+              href: "/materiaux/quincaillerie",
               variant: "default",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -246,12 +246,12 @@ export const comparatifPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir tous les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],

@@ -7,7 +7,7 @@ export const salleDeBainPage: PageTemplateData = {
     title: "Vanité salle de bain sur mesure haut de gamme",
     description:
       "Vanité salle de bain sur mesure : design, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
-    path: "/espaces/salle-de-bain/",
+    path: "/espaces/salle-de-bain",
     ogAlt: "Salle de bain sur mesure Dilamco",
   },
   breadcrumbs: [
@@ -39,12 +39,12 @@ export const salleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets salle de bain",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -76,12 +76,12 @@ export const salleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],
@@ -155,12 +155,12 @@ export const salleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Explorer les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
               label: "Voir le processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
           ],
@@ -186,7 +186,7 @@ export const salleDeBainPage: PageTemplateData = {
           items: [
             {
               title: "Vanité sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Rangement optimisé et finition précise adaptés à la salle de bain.",
               image: {
@@ -198,7 +198,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               title: "Salle de bain sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Projet sur mesure pensé pour l'usage quotidien et la tenue dans le temps.",
               image: {
@@ -210,7 +210,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               title: "Salle de bain sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Exécution propre avec matériaux adaptés et alignements soignés.",
               image: {
@@ -267,12 +267,12 @@ export const salleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets salle de bain",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

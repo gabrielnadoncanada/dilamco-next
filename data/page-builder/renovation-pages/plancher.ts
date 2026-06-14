@@ -7,7 +7,7 @@ export const renovationPlancherPage: PageTemplateData = {
     title: "Rénovation de plancher",
     description:
       "Rénovation de plancher : séquence de chantier, niveaux, transitions et intégration propre dans un projet plus large.",
-    path: "/services/renovation/plancher/",
+    path: "/services/renovation/plancher",
     ogAlt: "Rénovation de plancher Dilamco",
   },
   breadcrumbs: [
@@ -42,12 +42,12 @@ export const renovationPlancherPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir la rénovation clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],
@@ -126,12 +126,12 @@ export const renovationPlancherPage: PageTemplateData = {
           actions: [
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
             {
               label: "Voir la rénovation clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],
@@ -262,7 +262,7 @@ export const renovationPlancherPage: PageTemplateData = {
           items: [
             {
               title: "Rénovation clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               description:
                 "La page principale pour comprendre comment séquence, coordination et travaux connexes s'alignent dans un projet plus large.",
               image: {
@@ -274,7 +274,7 @@ export const renovationPlancherPage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Quand le plancher influence les niveaux, l'îlot, les armoires et la lecture générale de la cuisine.",
               image: {
@@ -286,7 +286,7 @@ export const renovationPlancherPage: PageTemplateData = {
             },
             {
               title: "Salle de bain sur mesure",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description:
                 "Quand les transitions, l'humidité et la finition du sol doivent soutenir le reste de la pièce sans faiblesse visible.",
               image: {
@@ -382,12 +382,12 @@ export const renovationPlancherPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir la rénovation clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],

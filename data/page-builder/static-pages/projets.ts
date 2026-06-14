@@ -7,7 +7,7 @@ export const page: PageTemplateData = {
     title: "Projets",
     description:
       "Découvrez nos réalisations sur mesure : cuisines, vanités, walk-in, salles de lavage et projets commerciaux.",
-    path: "/projets/",
+    path: "/projets",
     ogAlt: "Réalisations Dilamco",
   },
   breadcrumbs: [
@@ -30,12 +30,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir notre processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
           ],
@@ -135,12 +135,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Voir le processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
             {
               label: "Voir les services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],
@@ -160,12 +160,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos espaces",
-              href: "/espaces/",
+              href: "/espaces",
               variant: "outline",
             },
           ],

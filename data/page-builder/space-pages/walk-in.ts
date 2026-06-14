@@ -7,7 +7,7 @@ export const walkInPage: PageTemplateData = {
     title: "Walk-in sur mesure haut de gamme",
     description:
       "Walk-in sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
-    path: "/espaces/walk-in/",
+    path: "/espaces/walk-in",
     ogAlt: "Walk-in sur mesure Dilamco",
   },
   breadcrumbs: [
@@ -36,12 +36,12 @@ export const walkInPage: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos walk-ins",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -74,12 +74,12 @@ export const walkInPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],
@@ -153,7 +153,7 @@ export const walkInPage: PageTemplateData = {
           actions: [
             {
               label: "Explorer les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
@@ -184,7 +184,7 @@ export const walkInPage: PageTemplateData = {
           items: [
             {
               title: "Walk-in sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Organisation sur mesure avec circulation et rangement adaptés au quotidien.",
               image: {
@@ -196,7 +196,7 @@ export const walkInPage: PageTemplateData = {
             },
             {
               title: "Walk-in sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Walk-in conçu pour maximiser l'espace avec un rendu propre et durable.",
               image: {
@@ -208,7 +208,7 @@ export const walkInPage: PageTemplateData = {
             },
             {
               title: "Walk-in sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Rangement personnalisé et installation précise pour un usage quotidien.",
               image: {
@@ -265,12 +265,12 @@ export const walkInPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos walk-ins",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

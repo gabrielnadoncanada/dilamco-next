@@ -7,7 +7,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
     title: "Agrandissement de maison",
     description:
       "Agrandissement de maison clé en main : faisabilité, séquence de travaux, coordination et intégration propre à l'existant.",
-    path: "/services/renovation/agrandissement-de-maison/",
+    path: "/services/renovation/agrandissement-de-maison",
     ogAlt: "Agrandissement de maison Dilamco",
   },
   breadcrumbs: [
@@ -42,12 +42,12 @@ export const agrandissementMaisonPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir la rénovation clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],
@@ -124,12 +124,12 @@ export const agrandissementMaisonPage: PageTemplateData = {
           actions: [
             {
               label: "Voir le service de design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "outline",
             },
             {
               label: "Voir la rénovation clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],
@@ -253,7 +253,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
           items: [
             {
               title: "Cuisine sur mesure",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Quand l'agrandissement sert surtout une cuisine plus fonctionnelle, l'enjeu devient la circulation, l'îlot et l'intégration des équipements.",
               image: {
@@ -265,7 +265,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
             {
               title: "Salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description:
                 "Une extension peut permettre d'ajouter ou d'agrandir une salle de bain avec meilleure gestion de l'humidité, de la plomberie et du rangement.",
               image: {
@@ -277,7 +277,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
             {
               title: "Walk-in et rangement",
-              href: "/espaces/walk-in/",
+              href: "/espaces/walk-in",
               description:
                 "Plusieurs agrandissements servent à créer une suite plus complète avec rangement adapté et organisation plus claire.",
               image: {
@@ -368,12 +368,12 @@ export const agrandissementMaisonPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir la rénovation clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],

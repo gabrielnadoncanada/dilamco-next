@@ -7,7 +7,7 @@ export const contreplaquePage: PageTemplateData = {
     title: "Pourquoi le contreplaqué",
     description:
       "Contreplaqué : stabilité, tenue des vis et durabilité pour la structure d'armoires sur mesure.",
-    path: "/materiaux/contreplaque/",
+    path: "/materiaux/contreplaque",
     ogAlt: "Contreplaqué - Matériaux sur mesure",
     ogImage: {
       url: "/images/generated/materials/material-plywood-hero-01.webp",
@@ -40,12 +40,12 @@ export const contreplaquePage: PageTemplateData = {
           actions: [
             {
               label: "Parler de votre projet",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -113,12 +113,12 @@ export const contreplaquePage: PageTemplateData = {
           actions: [
             {
               label: "Voir la fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               variant: "default",
             },
             {
               label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie/",
+              href: "/materiaux/quincaillerie",
               variant: "outline",
             },
           ],
@@ -153,12 +153,12 @@ export const contreplaquePage: PageTemplateData = {
           actions: [
             {
               label: "Comparer les matériaux",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               variant: "outline",
             },
             {
               label: "Voir tous les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],
@@ -183,7 +183,7 @@ export const contreplaquePage: PageTemplateData = {
           items: [
             {
               title: "Comparatif complet",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               description:
                 "Comparer contreplaqué, MDF, mélamine et bois massif.",
               image: {
@@ -195,7 +195,7 @@ export const contreplaquePage: PageTemplateData = {
             },
             {
               title: "MDF",
-              href: "/materiaux/mdf/",
+              href: "/materiaux/mdf",
               description: "Plus orienté finition peinte.",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
@@ -206,7 +206,7 @@ export const contreplaquePage: PageTemplateData = {
             },
             {
               title: "Mélamine",
-              href: "/materiaux/melamine/",
+              href: "/materiaux/melamine",
               description: "Plus orientée décor et budget.",
               image: {
                 src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
@@ -217,7 +217,7 @@ export const contreplaquePage: PageTemplateData = {
             },
             {
               title: "Bois massif",
-              href: "/materiaux/bois-massif/",
+              href: "/materiaux/bois-massif",
               description: "Plus pertinent sur les éléments visibles.",
               image: {
                 src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
@@ -271,12 +271,12 @@ export const contreplaquePage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Comparer les matériaux",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               variant: "outline",
             },
           ],

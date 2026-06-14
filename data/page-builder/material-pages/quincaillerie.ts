@@ -7,7 +7,7 @@ export const quincailleriePage: PageTemplateData = {
     title: "Quincaillerie d'armoires haut de gamme | Dilamco",
     description:
       "Découvrez pourquoi la quincaillerie joue un rôle central dans la durabilité, la fluidité et la qualité perçue d'une cuisine ou d'une vanité haut de gamme.",
-    path: "/materiaux/quincaillerie/",
+    path: "/materiaux/quincaillerie",
     ogAlt: "Quincaillerie d'armoires haut de gamme Dilamco",
   },
   breadcrumbs: [
@@ -34,12 +34,12 @@ export const quincailleriePage: PageTemplateData = {
           actions: [
             {
               label: "Découvrir nos cuisines sur mesure",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               variant: "default",
             },
             {
               label: "Voir notre approche clé en main",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],
@@ -213,12 +213,12 @@ export const quincailleriePage: PageTemplateData = {
           actions: [
             {
               label: "Explorer les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
               label: "Voir nos cuisines",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               variant: "outline",
             },
           ],
@@ -290,12 +290,12 @@ export const quincailleriePage: PageTemplateData = {
           actions: [
             {
               label: "Voir nos cuisines sur mesure",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               variant: "default",
             },
             {
               label: "Comprendre notre fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               variant: "outline",
             },
           ],
@@ -316,7 +316,7 @@ export const quincailleriePage: PageTemplateData = {
           items: [
             {
               title: "Bois massif",
-              href: "/materiaux/bois-massif/",
+              href: "/materiaux/bois-massif",
               description:
                 "Comprendre son rôle dans la solidité des armoires et des tiroirs.",
               image: {
@@ -328,7 +328,7 @@ export const quincailleriePage: PageTemplateData = {
             },
             {
               title: "Contreplaqué",
-              href: "/materiaux/contreplaque/",
+              href: "/materiaux/contreplaque",
               description:
                 "Pourquoi il améliore la stabilité et la durabilité dans les éléments critiques.",
               image: {
@@ -340,7 +340,7 @@ export const quincailleriePage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Voir comment ces choix s'intègrent dans un projet complet.",
               image: {
@@ -352,7 +352,7 @@ export const quincailleriePage: PageTemplateData = {
             },
             {
               title: "Vanité salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description:
                 "Explorer les mêmes principes appliqués à un environnement plus humide.",
               image: {
@@ -409,12 +409,12 @@ export const quincailleriePage: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir tous les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],

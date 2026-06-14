@@ -8,7 +8,7 @@ export const page: PageTemplateData = {
     title: "Processus",
     description:
       "Processus Dilamco : cadrage, design, fabrication, installation et, selon le projet, coordination de rénovation clé en main.",
-    path: "/processus/",
+    path: "/processus",
     ogAlt: "Processus Dilamco",
   },
   breadcrumbs: [
@@ -40,12 +40,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],
@@ -169,12 +169,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Voir le service design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "outline",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -202,12 +202,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -229,7 +229,7 @@ export const page: PageTemplateData = {
               title: "Service design",
               description:
                 "Pour comprendre comment on structure les choix avant fabrication.",
-              href: "/services/design/",
+              href: "/services/design",
               badges: ["Plans", "Configuration"],
               ctaLabel: "Voir le design",
             },
@@ -237,7 +237,7 @@ export const page: PageTemplateData = {
               title: "Service fabrication",
               description:
                 "Pour voir comment la production s'insère dans le projet global.",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               badges: ["Production", "Sur mesure"],
               ctaLabel: "Voir la fabrication",
             },
@@ -245,7 +245,7 @@ export const page: PageTemplateData = {
               title: "Service installation",
               description:
                 "Pour comprendre la pose, les ajustements et la finition sur place.",
-              href: "/services/installation/",
+              href: "/services/installation",
               badges: ["Pose", "Ajustements"],
               ctaLabel: "Voir l'installation",
             },
@@ -253,7 +253,7 @@ export const page: PageTemplateData = {
               title: "Rénovation clé en main",
               description:
                 "Quand le projet demande de coordonner plus que les armoires.",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               badges: ["Coordination", "Travaux connexes"],
               ctaLabel: "Voir la rénovation",
             },
@@ -261,7 +261,7 @@ export const page: PageTemplateData = {
               title: "Matériaux",
               description:
                 "Pour comparer les options et comprendre ce qui change vraiment la durabilité.",
-              href: "/materiaux/",
+              href: "/materiaux",
               badges: ["Panneaux", "Quincaillerie"],
               ctaLabel: "Voir les matériaux",
             },
@@ -269,7 +269,7 @@ export const page: PageTemplateData = {
               title: "Projets",
               description:
                 "Pour voir des réalisations concrètes et le niveau de finition attendu.",
-              href: "/projets/",
+              href: "/projets",
               badges: ["Références", "Exécution"],
               ctaLabel: "Voir les projets",
             },
@@ -319,12 +319,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],

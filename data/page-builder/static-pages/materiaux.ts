@@ -7,7 +7,7 @@ export const page: PageTemplateData = {
     title: "Matériaux",
     description:
       "Matériaux et comparatifs pour cuisines, vanités et armoires sur mesure : contreplaqué, MDF, mélamine, bois massif, quincaillerie et finis.",
-    path: "/materiaux/",
+    path: "/materiaux",
     ogAlt: "Matériaux Dilamco",
   },
   breadcrumbs: [
@@ -29,12 +29,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos cuisines",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               variant: "outline",
             },
           ],
@@ -97,7 +97,7 @@ export const page: PageTemplateData = {
             {
               title: "Pourquoi le contreplaqué",
               description: "Structure stable et durable.",
-              href: "/materiaux/contreplaque/",
+              href: "/materiaux/contreplaque",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
                 alt: "Détail de contreplaqué pour armoires sur mesure",
@@ -108,7 +108,7 @@ export const page: PageTemplateData = {
             {
               title: "MDF",
               description: "Uniformité et finition peinte.",
-              href: "/materiaux/mdf/",
+              href: "/materiaux/mdf",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
                 alt: "Panneau MDF avec finition peinte",
@@ -119,7 +119,7 @@ export const page: PageTemplateData = {
             {
               title: "Mélamine",
               description: "Décor et coût maîtrisé.",
-              href: "/materiaux/melamine/",
+              href: "/materiaux/melamine",
               image: {
                 src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
                 alt: "Panneau de mélamine pour mobilier sur mesure",
@@ -130,7 +130,7 @@ export const page: PageTemplateData = {
             {
               title: "Bois massif",
               description: "Texture naturelle et caractère.",
-              href: "/materiaux/bois-massif/",
+              href: "/materiaux/bois-massif",
               image: {
                 src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
                 alt: "Finition en bois massif naturel",
@@ -141,7 +141,7 @@ export const page: PageTemplateData = {
             {
               title: "Quincaillerie",
               description: "Confort, précision et longévité.",
-              href: "/materiaux/quincaillerie/",
+              href: "/materiaux/quincaillerie",
               image: {
                 src: "/images/generated/materials/material-hardware-hero-01.webp",
                 alt: "Quincaillerie premium pour armoires et tiroirs",
@@ -152,7 +152,7 @@ export const page: PageTemplateData = {
             {
               title: "Couleurs et finis",
               description: "Cohésion visuelle et entretien.",
-              href: "/materiaux/couleurs/",
+              href: "/materiaux/couleurs",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
                 alt: "Échantillons de couleurs et finis pour cuisine sur mesure",
@@ -163,7 +163,7 @@ export const page: PageTemplateData = {
             {
               title: "Comparatif des matériaux",
               description: "Vue d'ensemble rapide pour cadrer le choix.",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
                 alt: "Comparatif visuel de plusieurs matériaux d'armoires",
@@ -245,12 +245,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie/",
+              href: "/materiaux/quincaillerie",
               variant: "default",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -298,12 +298,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir le comparatif",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               variant: "outline",
             },
           ],

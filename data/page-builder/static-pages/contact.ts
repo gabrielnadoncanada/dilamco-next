@@ -7,7 +7,7 @@ export const page: PageTemplateData = {
     title: "Contact et soumission",
     description:
       "Contactez Dilamco pour une soumission de cuisine, salle de bain, rangement ou projet commercial sur mesure.",
-    path: "/contact/",
+    path: "/contact",
     ogAlt: "Contact Dilamco",
   },
   breadcrumbs: [

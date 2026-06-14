@@ -7,7 +7,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
     title: "Rénovation salle de bain",
     description:
       "Rénovation de salle de bain clé en main : coordination, contrôle de l'humidité, vanités sur mesure et finition durable à Montréal.",
-    path: "/services/renovation/salle-de-bain/",
+    path: "/services/renovation/salle-de-bain",
     ogAlt: "Rénovation salle de bain Dilamco",
   },
   breadcrumbs: [
@@ -42,12 +42,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir les projets salle de bain",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -110,12 +110,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Voir les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
               label: "Quincaillerie",
-              href: "/materiaux/quincaillerie/",
+              href: "/materiaux/quincaillerie",
               variant: "outline",
             },
           ],
@@ -156,12 +156,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Voir la page salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               variant: "outline",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -292,7 +292,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           items: [
             {
               title: "Salle de bain sur mesure",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description:
                 "La page pilier principale pour voir le niveau de finition, les matériaux, les projets et la logique de rangement.",
               image: {
@@ -304,7 +304,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             },
             {
               title: "Service de fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               description:
                 "Pour comprendre ce qui rend la vanité plus stable, plus durable et mieux exécutée dans le temps.",
               image: {
@@ -316,7 +316,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             },
             {
               title: "Service d'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               description:
                 "Pour voir comment la pose, les ajustements et les alignements protègent un rendu plus propre en fin de chantier.",
               image: {
@@ -412,12 +412,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir la page salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               variant: "outline",
             },
           ],

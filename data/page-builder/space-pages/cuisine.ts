@@ -7,7 +7,7 @@ export const cuisinePage: PageTemplateData = {
     title: "Cuisine sur mesure haut de gamme",
     description:
       "Cuisine sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
-    path: "/espaces/cuisine/",
+    path: "/espaces/cuisine",
     ogAlt: "Cuisine sur mesure Dilamco",
   },
   breadcrumbs: [
@@ -36,12 +36,12 @@ export const cuisinePage: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos cuisines",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -74,12 +74,12 @@ export const cuisinePage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir le processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
           ],
@@ -153,12 +153,12 @@ export const cuisinePage: PageTemplateData = {
           actions: [
             {
               label: "Explorer les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],
@@ -184,7 +184,7 @@ export const cuisinePage: PageTemplateData = {
           items: [
             {
               title: "Cuisine sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Cuisine sur mesure avec implantation précise et finition soignée.",
               image: {
@@ -196,7 +196,7 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Projet cuisine conçu pour un usage quotidien et une durabilité à long terme.",
               image: {
@@ -208,7 +208,7 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               title: "Cuisine sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Exécution complète avec coordination du projet et détails maîtrisés.",
               image: {
@@ -265,12 +265,12 @@ export const cuisinePage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos cuisines",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

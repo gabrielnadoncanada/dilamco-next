@@ -7,7 +7,7 @@ export const renovationCuisinePage: PageTemplateData = {
     title: "Rénovation de cuisine",
     description:
       "Rénovation de cuisine clé en main : faisabilité, coordination, fabrication et installation d'armoires sur mesure à Montréal.",
-    path: "/services/renovation/cuisine/",
+    path: "/services/renovation/cuisine",
     ogAlt: "Rénovation de cuisine Dilamco",
   },
   breadcrumbs: [
@@ -42,7 +42,7 @@ export const renovationCuisinePage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
@@ -124,12 +124,12 @@ export const renovationCuisinePage: PageTemplateData = {
           actions: [
             {
               label: "Voir le service de design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "outline",
             },
             {
               label: "Voir la page cuisine",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               variant: "outline",
             },
           ],
@@ -260,7 +260,7 @@ export const renovationCuisinePage: PageTemplateData = {
           items: [
             {
               title: "Cuisine sur mesure",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "La page pilier principale pour voir le niveau de finition, les matériaux, les projets et le positionnement global.",
               image: {
@@ -272,7 +272,7 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               title: "Service de fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               description:
                 "Pour comprendre ce qui rend les armoires plus stables, plus constantes et plus crédibles à long terme.",
               image: {
@@ -284,7 +284,7 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               title: "Service d'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               description:
                 "Pour voir comment la pose, les ajustements sur place et les alignements protègent le rendu final.",
               image: {
@@ -380,12 +380,12 @@ export const renovationCuisinePage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir la page cuisine",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               variant: "outline",
             },
           ],

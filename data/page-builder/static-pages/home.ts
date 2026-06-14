@@ -32,12 +32,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -254,7 +254,7 @@ export const page: PageTemplateData = {
             },
             {
               label: "Cuisine sur mesure",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               variant: "outline",
             },
           ],

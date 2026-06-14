@@ -7,7 +7,7 @@ export const couleursPage: PageTemplateData = {
     title: "Couleurs et finis",
     description:
       "Couleurs et finis pour cuisines, vanités et armoires sur mesure : choisir selon la lumière, l'usage et les matériaux.",
-    path: "/materiaux/couleurs/",
+    path: "/materiaux/couleurs",
     ogAlt: "Couleurs et finis - Matériaux sur mesure",
   },
   breadcrumbs: [
@@ -30,12 +30,12 @@ export const couleursPage: PageTemplateData = {
           actions: [
             {
               label: "Parler design et finitions",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "default",
             },
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "outline",
             },
           ],
@@ -95,7 +95,7 @@ export const couleursPage: PageTemplateData = {
           items: [
             {
               title: "Neutres",
-              href: "/services/design/",
+              href: "/services/design",
               description: "Intemporelles, lumineuses et faciles à intégrer.",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
@@ -106,7 +106,7 @@ export const couleursPage: PageTemplateData = {
             },
             {
               title: "Tons foncés",
-              href: "/services/design/",
+              href: "/services/design",
               description: "Fort impact visuel, demandent une bonne lumière.",
               image: {
                 src: "/images/generated/spaces/space-commercial-hero-01.webp",
@@ -117,7 +117,7 @@ export const couleursPage: PageTemplateData = {
             },
             {
               title: "Bois et textures",
-              href: "/materiaux/bois-massif/",
+              href: "/materiaux/bois-massif",
               description: "Apportent chaleur et variations naturelles.",
               image: {
                 src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
@@ -128,7 +128,7 @@ export const couleursPage: PageTemplateData = {
             },
             {
               title: "Cuisine",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Coordonner comptoir, dosseret, plancher et entretien.",
               image: {
@@ -140,7 +140,7 @@ export const couleursPage: PageTemplateData = {
             },
             {
               title: "Salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description:
                 "Humidité, nettoyage fréquent et ventilation comptent.",
               image: {
@@ -152,7 +152,7 @@ export const couleursPage: PageTemplateData = {
             },
             {
               title: "Matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               description: "La finition finale dépend aussi du support choisi.",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
@@ -185,12 +185,12 @@ export const couleursPage: PageTemplateData = {
           actions: [
             {
               label: "Voir le design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "default",
             },
             {
               label: "Voir les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],
@@ -226,12 +226,12 @@ export const couleursPage: PageTemplateData = {
           actions: [
             {
               label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie/",
+              href: "/materiaux/quincaillerie",
               variant: "outline",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -286,12 +286,12 @@ export const couleursPage: PageTemplateData = {
           actions: [
             {
               label: "Parler design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "default",
             },
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "outline",
             },
           ],

@@ -7,7 +7,7 @@ export const boisMassifPage: PageTemplateData = {
     title: "Bois massif",
     description:
       "Bois massif : avantages, limites et usages recommandés pour armoires, portes et mobilier sur mesure.",
-    path: "/materiaux/bois-massif/",
+    path: "/materiaux/bois-massif",
     ogAlt: "Bois massif - Matériaux sur mesure",
   },
   breadcrumbs: [
@@ -31,12 +31,12 @@ export const boisMassifPage: PageTemplateData = {
           actions: [
             {
               label: "Parler de votre projet",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -105,12 +105,12 @@ export const boisMassifPage: PageTemplateData = {
           actions: [
             {
               label: "Voir le design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "default",
             },
             {
               label: "Voir la fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               variant: "outline",
             },
           ],
@@ -146,12 +146,12 @@ export const boisMassifPage: PageTemplateData = {
           actions: [
             {
               label: "Voir le comparatif",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               variant: "outline",
             },
             {
               label: "Explorer les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],
@@ -176,7 +176,7 @@ export const boisMassifPage: PageTemplateData = {
           items: [
             {
               title: "Contreplaqué",
-              href: "/materiaux/contreplaque/",
+              href: "/materiaux/contreplaque",
               description: "Plus orienté structure.",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
@@ -187,7 +187,7 @@ export const boisMassifPage: PageTemplateData = {
             },
             {
               title: "MDF",
-              href: "/materiaux/mdf/",
+              href: "/materiaux/mdf",
               description: "Plus adapté aux finitions peintes uniformes.",
               image: {
                 src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
@@ -198,7 +198,7 @@ export const boisMassifPage: PageTemplateData = {
             },
             {
               title: "Mélamine",
-              href: "/materiaux/melamine/",
+              href: "/materiaux/melamine",
               description: "Décor et coût plus maîtrisé.",
               image: {
                 src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
@@ -209,7 +209,7 @@ export const boisMassifPage: PageTemplateData = {
             },
             {
               title: "Couleurs et finis",
-              href: "/materiaux/couleurs/",
+              href: "/materiaux/couleurs",
               description: "Choisir le bon rendu visuel.",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
@@ -263,12 +263,12 @@ export const boisMassifPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir le comparatif",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               variant: "outline",
             },
           ],

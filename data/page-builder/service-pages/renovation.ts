@@ -7,7 +7,7 @@ export const renovationPage: PageTemplateData = {
     title: "Rénovation clé en main",
     description:
       "Rénovation clé en main à Montréal : design, coordination, fabrication, installation et séquence de chantier mieux maîtrisée.",
-    path: "/services/renovation/",
+    path: "/services/renovation",
     ogAlt: "Rénovation clé en main Dilamco",
   },
   breadcrumbs: [
@@ -38,12 +38,12 @@ export const renovationPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -106,11 +106,11 @@ export const renovationPage: PageTemplateData = {
           actions: [
             {
               label: "Voir le design",
-              href: "/services/design/",
+              href: "/services/design",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -195,12 +195,12 @@ export const renovationPage: PageTemplateData = {
           actions: [
             {
               label: "Voir les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
               label: "Voir la fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               variant: "outline",
             },
           ],
@@ -374,12 +374,12 @@ export const renovationPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

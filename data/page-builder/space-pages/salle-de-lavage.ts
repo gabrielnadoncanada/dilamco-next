@@ -7,7 +7,7 @@ export const salleDeLavagePage: PageTemplateData = {
     title: "Salle de lavage sur mesure haut de gamme",
     description:
       "Salle de lavage sur mesure : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
-    path: "/espaces/salle-de-lavage/",
+    path: "/espaces/salle-de-lavage",
     ogAlt: "Salle de lavage sur mesure Dilamco",
   },
   breadcrumbs: [
@@ -39,12 +39,12 @@ export const salleDeLavagePage: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -77,12 +77,12 @@ export const salleDeLavagePage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir le processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
           ],
@@ -156,7 +156,7 @@ export const salleDeLavagePage: PageTemplateData = {
           actions: [
             {
               label: "Explorer les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
@@ -187,7 +187,7 @@ export const salleDeLavagePage: PageTemplateData = {
           items: [
             {
               title: "Salle de lavage sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Rangement et surfaces de travail intégrés dans un espace de service compact.",
               image: {
@@ -199,7 +199,7 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               title: "Salle de lavage sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Aménagement durable avec rangement vertical et finition propre.",
               image: {
@@ -211,7 +211,7 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               title: "Salle de lavage sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Projet conçu pour simplifier l'usage quotidien sans sacrifier la qualité.",
               image: {
@@ -268,12 +268,12 @@ export const salleDeLavagePage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

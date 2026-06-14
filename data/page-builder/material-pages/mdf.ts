@@ -7,7 +7,7 @@ export const mdfPage: PageTemplateData = {
     title: "MDF",
     description:
       "MDF : avantages, limites et usages recommandés pour armoires, vanités et projets sur mesure.",
-    path: "/materiaux/mdf/",
+    path: "/materiaux/mdf",
     ogAlt: "MDF - Matériaux sur mesure",
   },
   breadcrumbs: [
@@ -30,12 +30,12 @@ export const mdfPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir le comparatif",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               variant: "outline",
             },
           ],
@@ -103,12 +103,12 @@ export const mdfPage: PageTemplateData = {
           actions: [
             {
               label: "Voir le design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "default",
             },
             {
               label: "Voir tous les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],
@@ -144,12 +144,12 @@ export const mdfPage: PageTemplateData = {
           actions: [
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
             {
               label: "Comparer avec la mélamine",
-              href: "/materiaux/melamine/",
+              href: "/materiaux/melamine",
               variant: "outline",
             },
           ],
@@ -174,7 +174,7 @@ export const mdfPage: PageTemplateData = {
           items: [
             {
               title: "Comparatif complet",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               description: "Vue d'ensemble par usage.",
               image: {
                 src: "/images/generated/materials/comparatif-materiaux-01.webp",
@@ -185,7 +185,7 @@ export const mdfPage: PageTemplateData = {
             },
             {
               title: "Mélamine",
-              href: "/materiaux/melamine/",
+              href: "/materiaux/melamine",
               description: "Décor et coût plus maîtrisé.",
               image: {
                 src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
@@ -196,7 +196,7 @@ export const mdfPage: PageTemplateData = {
             },
             {
               title: "Contreplaqué",
-              href: "/materiaux/contreplaque/",
+              href: "/materiaux/contreplaque",
               description: "Plus orienté structure.",
               image: {
                 src: "/images/generated/materials/material-plywood-hero-01.webp",
@@ -207,7 +207,7 @@ export const mdfPage: PageTemplateData = {
             },
             {
               title: "Couleurs et finis",
-              href: "/materiaux/couleurs/",
+              href: "/materiaux/couleurs",
               description: "Le fini choisi change beaucoup la perception.",
               image: {
                 src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
@@ -261,12 +261,12 @@ export const mdfPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir le comparatif",
-              href: "/materiaux/comparatif/",
+              href: "/materiaux/comparatif",
               variant: "outline",
             },
           ],

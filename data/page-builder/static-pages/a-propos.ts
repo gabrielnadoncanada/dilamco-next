@@ -7,7 +7,7 @@ export const page: PageTemplateData = {
     title: "À propos",
     description:
       "À propos de Dilamco : sur mesure, fabrication contrôlée, installation soignée et vision long terme pour des projets durables.",
-    path: "/a-propos/",
+    path: "/a-propos",
     ogAlt: "À propos de Dilamco",
   },
   breadcrumbs: [
@@ -29,12 +29,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -117,12 +117,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Voir notre processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
             {
               label: "Voir les services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],
@@ -203,7 +203,7 @@ export const page: PageTemplateData = {
               title: "Notre processus",
               description:
                 "Pour voir comment un projet avance du cadrage à l'installation.",
-              href: "/processus/",
+              href: "/processus",
               badges: ["Méthode", "Étapes"],
               ctaLabel: "Voir le processus",
             },
@@ -211,7 +211,7 @@ export const page: PageTemplateData = {
               title: "Nos services",
               description:
                 "Pour comprendre le rôle du design, de la fabrication, de l'installation et de la rénovation.",
-              href: "/services/",
+              href: "/services",
               badges: ["Design", "Installation"],
               ctaLabel: "Voir les services",
             },
@@ -219,7 +219,7 @@ export const page: PageTemplateData = {
               title: "Nos matériaux",
               description:
                 "Pour comprendre les choix techniques qui soutiennent la durabilité et la finition.",
-              href: "/materiaux/",
+              href: "/materiaux",
               badges: ["Panneaux", "Quincaillerie"],
               ctaLabel: "Voir les matériaux",
             },
@@ -227,7 +227,7 @@ export const page: PageTemplateData = {
               title: "Nos projets",
               description:
                 "Pour voir des exemples concrets du niveau d'exécution recherché.",
-              href: "/projets/",
+              href: "/projets",
               badges: ["Références", "Réalisations"],
               ctaLabel: "Voir les projets",
             },
@@ -247,12 +247,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

@@ -7,7 +7,7 @@ export const designPage: PageTemplateData = {
     title: "Service de design",
     description:
       "Service de design : optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux.",
-    path: "/services/design/",
+    path: "/services/design",
     ogAlt: "Service de design Dilamco",
   },
   breadcrumbs: [
@@ -37,12 +37,12 @@ export const designPage: PageTemplateData = {
           actions: [
             {
               label: "Parler de votre projet",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -116,12 +116,12 @@ export const designPage: PageTemplateData = {
           actions: [
             {
               label: "Voir la fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               variant: "outline",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -147,7 +147,7 @@ export const designPage: PageTemplateData = {
           items: [
             {
               title: "Cuisine",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Zones de travail, circulation, îlot, rangement et intégration.",
               image: {
@@ -159,7 +159,7 @@ export const designPage: PageTemplateData = {
             },
             {
               title: "Salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description:
                 "Contraintes d'humidité, rangement et ergonomie quotidienne.",
               image: {
@@ -171,7 +171,7 @@ export const designPage: PageTemplateData = {
             },
             {
               title: "Walk-in",
-              href: "/espaces/walk-in/",
+              href: "/espaces/walk-in",
               description:
                 "Organisation par zones, accessibilité et rangement vertical.",
               image: {
@@ -228,12 +228,12 @@ export const designPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

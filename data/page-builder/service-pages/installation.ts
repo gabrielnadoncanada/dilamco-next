@@ -7,7 +7,7 @@ export const installationPage: PageTemplateData = {
     title: "Service d'installation",
     description:
       "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée.",
-    path: "/services/installation/",
+    path: "/services/installation",
     ogAlt: "Service d'installation Dilamco",
   },
   breadcrumbs: [
@@ -41,12 +41,12 @@ export const installationPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir des projets installés",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -121,12 +121,12 @@ export const installationPage: PageTemplateData = {
           actions: [
             {
               label: "Voir le processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
             {
               label: "Voir la fabrication",
-              href: "/services/fabrication/",
+              href: "/services/fabrication",
               variant: "outline",
             },
           ],
@@ -152,7 +152,7 @@ export const installationPage: PageTemplateData = {
           items: [
             {
               title: "Cuisine",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Armoires, îlots et intégration des électroménagers.",
               image: {
@@ -164,7 +164,7 @@ export const installationPage: PageTemplateData = {
             },
             {
               title: "Salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description: "Vanités et protection des chants en milieu humide.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
@@ -175,7 +175,7 @@ export const installationPage: PageTemplateData = {
             },
             {
               title: "Commercial",
-              href: "/espaces/commercial/",
+              href: "/espaces/commercial",
               description: "Usage intensif, durabilité et coordination.",
               image: {
                 src: "/images/generated/spaces/space-commercial-hero-01.webp",
@@ -231,12 +231,12 @@ export const installationPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

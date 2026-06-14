@@ -7,7 +7,7 @@ export const page: PageTemplateData = {
     title: "Rénovation clé en main",
     description:
       "Rénovation clé en main : coordination et exécution quand le projet implique plusieurs corps de métier.",
-    path: "/services/renovation/",
+    path: "/services/renovation",
     ogAlt: "Rénovation clé en main Dilamco",
   },
   breadcrumbs: [
@@ -37,12 +37,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -75,12 +75,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Voir le design",
-              href: "/services/design/",
+              href: "/services/design",
               variant: "outline",
             },
             {
               label: "Voir l'installation",
-              href: "/services/installation/",
+              href: "/services/installation",
               variant: "outline",
             },
           ],
@@ -161,12 +161,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir les types de rénovation",
-              href: "/services/renovation/",
+              href: "/services/renovation",
               variant: "outline",
             },
           ],

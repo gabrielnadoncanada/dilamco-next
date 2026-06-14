@@ -7,7 +7,7 @@ export const commercialPage: PageTemplateData = {
     title: "Armoires commerciales sur mesure haut de gamme",
     description:
       "Armoires commerciales sur mesure : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
-    path: "/espaces/commercial/",
+    path: "/espaces/commercial",
     ogAlt: "Commercial sur mesure Dilamco",
   },
   breadcrumbs: [
@@ -37,12 +37,12 @@ export const commercialPage: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission commerciale",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets commerciaux",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -75,12 +75,12 @@ export const commercialPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir le processus",
-              href: "/processus/",
+              href: "/processus",
               variant: "outline",
             },
           ],
@@ -154,12 +154,12 @@ export const commercialPage: PageTemplateData = {
           actions: [
             {
               label: "Explorer les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],
@@ -185,7 +185,7 @@ export const commercialPage: PageTemplateData = {
           items: [
             {
               title: "Aménagement commercial",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Projet commercial conçu pour l'usage réel et une exécution propre.",
               image: {
@@ -197,7 +197,7 @@ export const commercialPage: PageTemplateData = {
             },
             {
               title: "Armoires commerciales sur mesure",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Exécution stable et matériaux adaptés à un usage plus intensif.",
               image: {
@@ -209,7 +209,7 @@ export const commercialPage: PageTemplateData = {
             },
             {
               title: "Mobilier commercial",
-              href: "/projets/",
+              href: "/projets",
               description:
                 "Projet sur mesure coordonné pour limiter les imprévus et soigner la finition.",
               image: {
@@ -266,12 +266,12 @@ export const commercialPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets commerciaux",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],

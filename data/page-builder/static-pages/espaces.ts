@@ -7,7 +7,7 @@ export const page: PageTemplateData = {
     title: "Espaces sur mesure",
     description:
       "Découvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial.",
-    path: "/espaces/",
+    path: "/espaces",
     ogAlt: "Espaces sur mesure Dilamco",
   },
   breadcrumbs: [
@@ -37,12 +37,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos projets",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -67,7 +67,7 @@ export const page: PageTemplateData = {
           items: [
             {
               title: "Cuisine",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Cuisine sur mesure avec coordination, matériaux durables et exécution stable.",
               image: {
@@ -79,7 +79,7 @@ export const page: PageTemplateData = {
             },
             {
               title: "Salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description:
                 "Vanités et rangement sur mesure adaptés à l'humidité et à l'usage quotidien.",
               image: {
@@ -91,7 +91,7 @@ export const page: PageTemplateData = {
             },
             {
               title: "Salle de lavage",
-              href: "/espaces/salle-de-lavage/",
+              href: "/espaces/salle-de-lavage",
               description:
                 "Configuration fonctionnelle et durable pour un espace de service bien organisé.",
               image: {
@@ -103,7 +103,7 @@ export const page: PageTemplateData = {
             },
             {
               title: "Walk-in",
-              href: "/espaces/walk-in/",
+              href: "/espaces/walk-in",
               description:
                 "Organisation sur mesure pour optimiser l'espace et le rangement.",
               image: {
@@ -115,7 +115,7 @@ export const page: PageTemplateData = {
             },
             {
               title: "Commercial",
-              href: "/espaces/commercial/",
+              href: "/espaces/commercial",
               description:
                 "Aménagement commercial durable, planifié et adapté à l'usage réel.",
               image: {
@@ -163,12 +163,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
             {
               label: "Voir nos matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],
@@ -219,12 +219,12 @@ export const page: PageTemplateData = {
           actions: [
             {
               label: "Obtenir une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos services",
-              href: "/services/",
+              href: "/services",
               variant: "outline",
             },
           ],

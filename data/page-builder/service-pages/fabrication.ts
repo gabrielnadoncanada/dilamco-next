@@ -7,7 +7,7 @@ export const fabricationPage: PageTemplateData = {
     title: "Service de fabrication",
     description:
       "Fabrication sur mesure : durabilité, précision et finition haut de gamme pour un résultat cohérent et durable.",
-    path: "/services/fabrication/",
+    path: "/services/fabrication",
     ogAlt: "Service de fabrication Dilamco",
   },
   breadcrumbs: [
@@ -40,12 +40,12 @@ export const fabricationPage: PageTemplateData = {
           actions: [
             {
               label: "Parler de votre projet",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets/",
+              href: "/projets",
               variant: "outline",
             },
           ],
@@ -78,12 +78,12 @@ export const fabricationPage: PageTemplateData = {
           actions: [
             {
               label: "Voir les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
             {
               label: "Quincaillerie",
-              href: "/materiaux/quincaillerie/",
+              href: "/materiaux/quincaillerie",
               variant: "outline",
             },
           ],
@@ -140,7 +140,7 @@ export const fabricationPage: PageTemplateData = {
           items: [
             {
               title: "Cuisine",
-              href: "/espaces/cuisine/",
+              href: "/espaces/cuisine",
               description:
                 "Modules, îlots, rangement optimisé et intégration électroménagers.",
               image: {
@@ -152,7 +152,7 @@ export const fabricationPage: PageTemplateData = {
             },
             {
               title: "Salle de bain",
-              href: "/espaces/salle-de-bain/",
+              href: "/espaces/salle-de-bain",
               description: "Vanités et rangement adaptés à l'humidité.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
@@ -163,7 +163,7 @@ export const fabricationPage: PageTemplateData = {
             },
             {
               title: "Commercial",
-              href: "/espaces/commercial/",
+              href: "/espaces/commercial",
               description:
                 "Usage intensif, durabilité et cohérence fonctionnelle.",
               image: {
@@ -220,12 +220,12 @@ export const fabricationPage: PageTemplateData = {
           actions: [
             {
               label: "Demander une soumission",
-              href: "/contact/",
+              href: "/contact",
               variant: "default",
             },
             {
               label: "Voir les matériaux",
-              href: "/materiaux/",
+              href: "/materiaux",
               variant: "outline",
             },
           ],
