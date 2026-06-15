@@ -245,10 +245,8 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
   },
 ];
 
-export const LEGAL_LINKS_EN: LegalLink[] = [
-  { text: "Privacy policy", url: "/politique-de-confidentialite/" },
-  { text: "Terms of use", url: "/conditions-dutilisation/" },
-];
+// Pages légales pas encore créées -> aucun lien (évite les 404).
+export const LEGAL_LINKS_EN: LegalLink[] = [];
 
 export const COPYRIGHT_TEXT_EN = `© ${new Date().getFullYear()} Dilamco. All rights reserved.`;
 

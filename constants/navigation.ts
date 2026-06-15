@@ -245,12 +245,8 @@ export const FOOTER_NAV: FooterNavSection[] = [
   },
 ];
 
-export const LEGAL_LINKS: LegalLink[] = [
-  {
-    text: "Politique de confidentialité",
-    url: "/politique-de-confidentialite/",
-  },
-  { text: "Conditions d'utilisation", url: "/conditions-dutilisation/" },
-];
+// Pages légales pas encore créées -> aucun lien (évite les 404).
+// Réajouter ici quand /politique-de-confidentialite et /conditions-dutilisation existeront.
+export const LEGAL_LINKS: LegalLink[] = [];
 
 export const COPYRIGHT_TEXT = `© ${new Date().getFullYear()} Dilamco. Tous droits réservés.`;
