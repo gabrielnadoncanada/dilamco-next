@@ -717,6 +717,88 @@ export const imageManifest = [
     ],
     size: "1024x1024",
   }),
+
+  // --- Aménagement de sous-sol (espaces haut de gamme) ---
+  asset({
+    id: "space-sous-sol-hero-01",
+    output: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+    promptText:
+      "Wide hero image of a finished high-end basement living space in a Montreal home, custom millwork media wall with integrated TV and warm wood storage, recessed lighting, cozy seating, low-ceiling realistic basement proportions, calm confident atmosphere, generous negative space for overlaid text, believable Quebec renovation result.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
+  asset({
+    id: "space-sous-sol-materials-01",
+    output: "/images/generated/spaces/space-sous-sol-materials-01.webp",
+    promptText:
+      "Close-up detail of custom basement millwork, birch plywood and solid wood cabinet construction, concealed hardware and cable management, humidity-aware finishes, neutral palette, soft natural light, editorial material-focused interior photograph.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
+  asset({
+    id: "espaces-card-sous-sol-01",
+    output: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
+    promptText:
+      "Medium-wide card image of a custom-furnished Montreal basement, built-in bookshelves and a small bar area visible, warm wood tones, realistic basement scale, tidy and inviting, editorial interior photograph.",
+    pages: ["/espaces"],
+    targets: [],
+  }),
+  asset({
+    id: "home-space-sous-sol-card-01",
+    output: "/images/generated/home/home-space-sous-sol-card-01.webp",
+    promptText:
+      "Premium finished basement in a Montreal family home, integrated media wall and storage, warm neutral palette, soft layered lighting, believable residential basement proportions, editorial interior photograph.",
+    pages: ["/"],
+    targets: [],
+  }),
+  asset({
+    id: "space-sous-sol-cinema-01",
+    output: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
+    promptText:
+      "Custom home cinema room in a Montreal basement, tiered seating platform built in wood, acoustic wall panels, concealed equipment cabinet, large screen, dimmed ambient lighting, realistic residential scale, not a commercial theater, editorial interior photograph.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
+  asset({
+    id: "space-sous-sol-bar-01",
+    output: "/images/generated/spaces/space-sous-sol-bar-01.webp",
+    promptText:
+      "Custom basement bar in a Montreal home, wood and stone counter, integrated bottle and glass storage, bar fridge built in, warm under-cabinet lighting, believable residential proportions, editorial interior photograph.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
+  asset({
+    id: "space-sous-sol-cave-vin-01",
+    output: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
+    promptText:
+      "Custom residential wine cellar in a Montreal basement, wood and glass enclosure with climate door, neatly organized bottle racks, focused accent lighting, refined but practical, not a wine shop, editorial interior photograph.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
+  asset({
+    id: "space-sous-sol-bibliotheque-bureau-01",
+    output: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
+    promptText:
+      "Custom floor-to-ceiling bookcase wall with an integrated desk nook in a Montreal basement, warm wood shelving, books and a few objects, soft reading light, tidy and believable home office corner, editorial interior photograph.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
+  asset({
+    id: "space-sous-sol-salle-jeux-01",
+    output: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
+    promptText:
+      "Custom family game room in a Montreal basement, built-in media and storage unit, open play area, durable warm finishes, organized and uncluttered, realistic basement proportions, editorial interior photograph.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
+  asset({
+    id: "space-sous-sol-rangement-01",
+    output: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
+    promptText:
+      "Custom closed storage cabinetry along a Montreal basement wall, clean flat-panel doors hiding mechanical access, neutral palette, well-lit, very tidy, practical and believable, editorial interior photograph.",
+    pages: ["/espaces/sous-sol"],
+    targets: [],
+  }),
 ];
 
 export default imageManifest;

@@ -3,6 +3,7 @@ import { commercialPage } from "./commercial";
 import { cuisinePage } from "./cuisine";
 import { salleDeBainPage } from "./salle-de-bain";
 import { salleDeLavagePage } from "./salle-de-lavage";
+import { sousSolPage } from "./sous-sol";
 import { walkInPage } from "./walk-in";
 
 const spacePages = {
@@ -10,6 +11,7 @@ const spacePages = {
   "salle-de-bain": salleDeBainPage,
   "salle-de-lavage": salleDeLavagePage,
   "walk-in": walkInPage,
+  "sous-sol": sousSolPage,
   commercial: commercialPage,
 } satisfies Record<string, PageTemplateData>;
 

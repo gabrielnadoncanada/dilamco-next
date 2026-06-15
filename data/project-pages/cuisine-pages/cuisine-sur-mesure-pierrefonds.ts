@@ -18,7 +18,7 @@ export const PROJECT_CUISINE_SUR_MESURE_PIERREFONDS: ProjectData = {
   neighborhood: "Pierrefonds-Roxboro",
   images: [
     {
-      src: "/images/projects/chene-moderne.webp",
+      src: "/images/projects/cuisine-sur-mesure-pierrefonds.webp",
       alt: "Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l'Île",
     },
   ],

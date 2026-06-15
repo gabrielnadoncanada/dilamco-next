@@ -138,6 +138,19 @@ export const page: PageTemplateData = {
               footerCtaLabel: "Découvrir walk-in",
             },
             {
+              title: "Aménagement de sous-sol",
+              href: "/espaces/sous-sol",
+              description:
+                "Salle de cinéma maison, bar, cave à vin et bibliothèque sur mesure pour transformer le sous-sol en pièce de vie.",
+              image: {
+                src: "/images/generated/home/home-space-sous-sol-card-01.webp",
+                alt: "Aménagement de sous-sol sur mesure",
+              },
+              badges: ["Sous-sol", "Cinéma maison", "Sur mesure"],
+              quickActionLabel: "Voir",
+              footerCtaLabel: "Découvrir l'aménagement de sous-sol",
+            },
+            {
               title: "Commercial",
               href: "/espaces/commercial",
               description:
