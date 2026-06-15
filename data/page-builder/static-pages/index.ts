@@ -11,6 +11,16 @@ import { page as projets } from "./projets";
 import { page as services } from "./services";
 import { renovationPage as servicesRenovation } from "@/data/page-builder/service-pages/renovation";
 
+// --- Traductions EN ---
+import { pageEn as homeEn } from "./home.en";
+import { pageEn as aProposEn } from "./a-propos.en";
+import { pageEn as contactEn } from "./contact.en";
+import { pageEn as materiauxEn } from "./materiaux.en";
+import { pageEn as processusEn } from "./processus.en";
+import { pageEn as projetsEn } from "./projets.en";
+import { pageEn as servicesEn } from "./services.en";
+import { renovationPageEn as servicesRenovationEn } from "@/data/page-builder/service-pages/renovation.en";
+
 const fr = {
   home,
   "a-propos": aPropos,
@@ -22,8 +32,16 @@ const fr = {
   "services-renovation": servicesRenovation,
 } satisfies Record<string, PageTemplateData>;
 
-// --- Traductions EN (remplies incrémentalement par l'IA, fallback FR) ---
-const en: Partial<Record<keyof typeof fr, PageTemplateData>> = {};
+const en: Partial<Record<keyof typeof fr, PageTemplateData>> = {
+  home: homeEn,
+  "a-propos": aProposEn,
+  contact: contactEn,
+  materiaux: materiauxEn,
+  processus: processusEn,
+  projets: projetsEn,
+  services: servicesEn,
+  "services-renovation": servicesRenovationEn,
+};
 
 export type StaticPageKey = keyof typeof fr;
 

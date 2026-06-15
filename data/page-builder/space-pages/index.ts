@@ -7,6 +7,11 @@ import { salleDeLavagePage } from "./salle-de-lavage";
 import { sousSolPage } from "./sous-sol";
 import { walkInPage } from "./walk-in";
 import { cuisinePageEn } from "./cuisine.en";
+import { salleDeBainPageEn } from "./salle-de-bain.en";
+import { salleDeLavagePageEn } from "./salle-de-lavage.en";
+import { walkInPageEn } from "./walk-in.en";
+import { sousSolPageEn } from "./sous-sol.en";
+import { commercialPageEn } from "./commercial.en";
 
 const spacePages = {
   cuisine: cuisinePage,
@@ -21,6 +26,11 @@ const spacePages = {
 const spacePagesEn: Partial<Record<keyof typeof spacePages, PageTemplateData>> =
   {
     cuisine: cuisinePageEn,
+    "salle-de-bain": salleDeBainPageEn,
+    "salle-de-lavage": salleDeLavagePageEn,
+    "walk-in": walkInPageEn,
+    "sous-sol": sousSolPageEn,
+    commercial: commercialPageEn,
   };
 
 export const PUBLIC_SPACE_PAGE_SLUGS = Object.keys(spacePages);

@@ -4,6 +4,10 @@ import { designPage } from "./design";
 import { fabricationPage } from "./fabrication";
 import { installationPage } from "./installation";
 import { renovationPage } from "./renovation";
+import { designPageEn } from "./design.en";
+import { fabricationPageEn } from "./fabrication.en";
+import { installationPageEn } from "./installation.en";
+import { renovationPageEn } from "./renovation.en";
 
 const servicePages = {
   design: designPage,
@@ -13,7 +17,12 @@ const servicePages = {
 } satisfies Record<string, PageTemplateData>;
 
 const servicePagesEn: Partial<Record<keyof typeof servicePages, PageTemplateData>> =
-  {};
+  {
+    design: designPageEn,
+    fabrication: fabricationPageEn,
+    installation: installationPageEn,
+    renovation: renovationPageEn,
+  };
 
 export const PUBLIC_SERVICE_PAGE_SLUGS = Object.keys(servicePages);
 

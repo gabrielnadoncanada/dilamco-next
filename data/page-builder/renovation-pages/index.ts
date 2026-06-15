@@ -4,6 +4,10 @@ import { agrandissementMaisonPage } from "./agrandissement-de-maison";
 import { renovationCuisinePage } from "./cuisine";
 import { renovationPlancherPage } from "./plancher";
 import { renovationSalleDeBainPage } from "./salle-de-bain";
+import { agrandissementMaisonPageEn } from "./agrandissement-de-maison.en";
+import { renovationCuisinePageEn } from "./cuisine.en";
+import { renovationPlancherPageEn } from "./plancher.en";
+import { renovationSalleDeBainPageEn } from "./salle-de-bain.en";
 
 const renovationPages = {
   cuisine: renovationCuisinePage,
@@ -14,7 +18,12 @@ const renovationPages = {
 
 const renovationPagesEn: Partial<
   Record<keyof typeof renovationPages, PageTemplateData>
-> = {};
+> = {
+  cuisine: renovationCuisinePageEn,
+  "salle-de-bain": renovationSalleDeBainPageEn,
+  plancher: renovationPlancherPageEn,
+  "agrandissement-de-maison": agrandissementMaisonPageEn,
+};
 
 export const PUBLIC_RENOVATION_PAGE_TYPES = Object.keys(renovationPages);
 
