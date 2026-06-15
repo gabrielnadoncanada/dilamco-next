@@ -86,30 +86,30 @@ export const page: PageTemplateData = {
             "Accédez à la page pilier correspondante pour découvrir l'approche, les matériaux, des réalisations et une FAQ adaptée.",
           items: [
             {
-              title: "Cuisine",
+              title: "Armoires & cuisines sur mesure",
               href: "/espaces/cuisine",
               description:
-                "Armoires sur mesure, ergonomie, durabilité et coordination complète pour un résultat maîtrisé.",
+                "Armoires de cuisine sur mesure : ergonomie, durabilité et coordination complète pour un résultat maîtrisé.",
               image: {
                 src: "/images/generated/home/home-space-cuisine-card-01.webp",
-                alt: "Cuisine sur mesure haut de gamme",
+                alt: "Armoires de cuisine sur mesure haut de gamme",
               },
               badges: ["Sur mesure", "Clé en main", "Haut de gamme"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Découvrir cuisine",
+              footerCtaLabel: "Voir les cuisines sur mesure",
             },
             {
-              title: "Salle de bain",
+              title: "Vanités & salles de bain sur mesure",
               href: "/espaces/salle-de-bain",
               description:
-                "Vanités sur mesure, rangement optimisé et finitions résistantes à l'humidité pour durer.",
+                "Vanités de salle de bain sur mesure, rangement optimisé et finitions résistantes à l'humidité pour durer.",
               image: {
                 src: "/images/generated/home/home-space-bath-card-01.webp",
-                alt: "Vanité et salle de bain sur mesure",
+                alt: "Vanité de salle de bain sur mesure",
               },
               badges: ["Vanités", "Durable", "Finitions"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Découvrir salle de bain",
+              footerCtaLabel: "Voir les vanités sur mesure",
             },
             {
               title: "Salle de lavage",

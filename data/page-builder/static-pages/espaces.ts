@@ -66,28 +66,28 @@ export const page: PageTemplateData = {
             "Accédez à la page pilier adaptée à votre type de projet pour voir l'approche, les matériaux et des références.",
           items: [
             {
-              title: "Cuisine",
+              title: "Armoires & cuisines sur mesure",
               href: "/espaces/cuisine",
               description:
-                "Cuisine sur mesure avec coordination, matériaux durables et exécution stable.",
+                "Armoires de cuisine sur mesure avec coordination, matériaux durables et exécution stable.",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
-                alt: "Cuisine sur mesure haut de gamme",
+                alt: "Armoires de cuisine sur mesure haut de gamme",
               },
               badges: ["Cuisine", "Sur mesure"],
-              footerCtaLabel: "Voir cuisine",
+              footerCtaLabel: "Voir les cuisines sur mesure",
             },
             {
-              title: "Salle de bain",
+              title: "Vanités & salles de bain sur mesure",
               href: "/espaces/salle-de-bain",
               description:
-                "Vanités et rangement sur mesure adaptés à l'humidité et à l'usage quotidien.",
+                "Vanités de salle de bain sur mesure adaptées à l'humidité et à l'usage quotidien.",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
-                alt: "Salle de bain sur mesure",
+                alt: "Vanité de salle de bain sur mesure",
               },
               badges: ["Salle de bain", "Humidité"],
-              footerCtaLabel: "Voir salle de bain",
+              footerCtaLabel: "Voir les vanités sur mesure",
             },
             {
               title: "Salle de lavage",
