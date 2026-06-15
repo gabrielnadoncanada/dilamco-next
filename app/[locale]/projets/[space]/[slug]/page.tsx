@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, Check, MapPin } from "lucide-react";
 
 import {
@@ -11,7 +11,7 @@ import {
   getProjectByParams,
   getProjectCanonicalUrl,
 } from "@/data/projects";
-import { SPACE_LABEL } from "@/constants/projects";
+import { getSpaceLabel } from "@/constants/projects";
 import type { ProjectData, ProjectSpace } from "@/types/projects";
 import type { GenericLink } from "@/types/links";
 import { createPageMetadata } from "@/lib/metadata";
@@ -60,12 +60,7 @@ export async function generateMetadata({
   );
 }
 
-const COLUMNS = [
-  { key: "scope", label: "Portée du projet" },
-  { key: "constraints", label: "Contraintes" },
-  { key: "solution", label: "Notre solution" },
-  { key: "results", label: "Résultats" },
-] as const;
+const COLUMN_KEYS = ["scope", "constraints", "solution", "results"] as const;
 
 function LinkList({ heading, items }: { heading: string; items: GenericLink[] }) {
   if (!items.length) return null;
@@ -97,20 +92,24 @@ export default async function ProjectDetailPage({
   params: Promise<Params>;
 }) {
   const resolved = await params;
-  setRequestLocale(asLocale(resolved.locale));
+  const locale = asLocale(resolved.locale);
+  setRequestLocale(locale);
   const project = getProject(resolved);
   if (!project) notFound();
 
-  const spaceLabel = SPACE_LABEL[project.space];
-  const canonical = getProjectCanonicalUrl(project, asLocale(resolved.locale));
+  const t = await getTranslations("projectDetail");
+  const tc = await getTranslations("common");
+  const spaceLabel = getSpaceLabel(project.space, locale);
+  const labelLower = locale === "en" ? spaceLabel : spaceLabel.toLowerCase();
+  const canonical = getProjectCanonicalUrl(project, locale);
   const hero = project.images?.[0];
   const related = (PROJECTS_BY_SPACE[project.space] ?? [])
     .filter((p) => p.slug !== project.slug)
     .slice(0, 3);
 
   const breadcrumbs = [
-    { name: "Accueil", url: SITE.url + "/" },
-    { name: "Projets", url: SITE.url + "/projets" },
+    { name: t("breadcrumbHome"), url: SITE.url + "/" },
+    { name: t("breadcrumbProjects"), url: SITE.url + "/projets" },
     { name: spaceLabel, url: SITE.url + `/projets/${project.space}` },
     { name: project.title, url: canonical },
   ];
@@ -123,7 +122,10 @@ export default async function ProjectDetailPage({
           name: project.title,
           description: project.metaDescription,
           url: canonical,
-          serviceType: `${spaceLabel} sur mesure`,
+          serviceType:
+            locale === "en"
+              ? `Custom ${spaceLabel}`
+              : `${spaceLabel} sur mesure`,
           areaServed: [project.city],
         })}
       />
@@ -140,7 +142,7 @@ export default async function ProjectDetailPage({
                 className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
               >
                 <Link href="/projets" className="hover:text-foreground">
-                  Projets
+                  {t("breadcrumbProjects")}
                 </Link>
                 <span aria-hidden>/</span>
                 <Link
@@ -152,7 +154,7 @@ export default async function ProjectDetailPage({
               </nav>
 
               <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-                Projet — {spaceLabel}
+                {t("eyebrow")} — {spaceLabel}
               </p>
               <Heading as="h1" variant="h1" className="mt-3 md:text-5xl">
                 {project.title}
@@ -169,13 +171,13 @@ export default async function ProjectDetailPage({
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="gap-2">
                   <Link href={project.requiredLinks.contactHref}>
-                    Demander une soumission
+                    {tc("requestQuote")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
                   <Link href={project.requiredLinks.spaceHref}>
-                    Voir l&apos;espace {spaceLabel.toLowerCase()}
+                    {t("viewSpace", { label: labelLower })}
                   </Link>
                 </Button>
               </div>
@@ -200,13 +202,13 @@ export default async function ProjectDetailPage({
         <section className="border-b border-border bg-secondary/30">
           <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {COLUMNS.map((col) => {
-                const items = project[col.key];
+              {COLUMN_KEYS.map((key) => {
+                const items = project[key];
                 if (!items?.length) return null;
                 return (
-                  <div key={col.key}>
+                  <div key={key}>
                     <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground/70">
-                      {col.label}
+                      {t(key)}
                     </h2>
                     <ul className="mt-4 space-y-3">
                       {items.map((it) => (
@@ -229,8 +231,8 @@ export default async function ProjectDetailPage({
         {/* Matériaux & services */}
         <section className="border-b border-border">
           <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8">
-            <LinkList heading="Matériaux" items={project.materials} />
-            <LinkList heading="Services liés" items={project.services} />
+            <LinkList heading={t("materials")} items={project.materials} />
+            <LinkList heading={t("relatedServices")} items={project.services} />
           </div>
         </section>
 
@@ -239,7 +241,7 @@ export default async function ProjectDetailPage({
           <section className="border-b border-border">
             <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
               <Heading as="h2" variant="h2">
-                Autres projets {spaceLabel.toLowerCase()}
+                {t("otherProjectsSpace", { label: labelLower })}
               </Heading>
               <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {related.map((p) => (
@@ -267,7 +269,7 @@ export default async function ProjectDetailPage({
                         {p.title}
                       </h3>
                       <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
-                        Voir le projet
+                        {t("viewProject")}
                         <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                       </span>
                     </div>
@@ -284,16 +286,15 @@ export default async function ProjectDetailPage({
             <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-border bg-secondary/40 p-8 md:flex-row md:items-center md:p-12">
               <div className="max-w-xl">
                 <Heading as="h2" variant="h2">
-                  Un projet similaire en tête ?
+                  {t("similarProject")}
                 </Heading>
                 <p className="mt-3 text-muted-foreground">
-                  On vous aide à cadrer un projet sur mesure, durable et bien
-                  exécuté à {project.city} et dans le Grand Montréal.
+                  {t("ctaText", { city: project.city })}
                 </p>
               </div>
               <Button asChild size="lg" className="gap-2">
                 <Link href={project.requiredLinks.contactHref}>
-                  Demander une soumission
+                  {tc("requestQuote")}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>

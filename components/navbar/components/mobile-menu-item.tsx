@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { Link } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import type { MenuItem } from "../navbar.types";
 import { NavLinkItem } from "./nav-link-item";
 

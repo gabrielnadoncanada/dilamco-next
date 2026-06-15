@@ -26,13 +26,30 @@ async function walkHtml(dir) {
   return out;
 }
 
+// Traduction du premier segment pour l'EN (synchronisé avec i18n/routing.ts).
+const EN_SEGMENT = {
+  espaces: "spaces",
+  projets: "projects",
+  materiaux: "materials",
+  "a-propos": "about",
+  processus: "process",
+  "politique-de-confidentialite": "privacy-policy",
+  "conditions-dutilisation": "terms-of-use",
+};
+
 function fileToRoute(fp) {
   let r = fp.slice(APP_DIR.length).replace(/\\/g, "/").replace(/\.html$/, "");
   if (r.endsWith("/index")) r = r.slice(0, -"/index".length);
-  // Sous [locale] : FR à la racine (on retire /fr), EN garde /en.
+  // FR à la racine (on retire /fr).
   if (r === "/fr") return "/";
   if (r.startsWith("/fr/")) return r.slice(3);
-  if (r === "/en/index") return "/en";
+  // EN : on traduit le premier segment interne -> externe.
+  if (r === "/en" || r === "/en/index") return "/en";
+  if (r.startsWith("/en/")) {
+    const segs = r.slice(4).split("/");
+    segs[0] = EN_SEGMENT[segs[0]] ?? segs[0];
+    return `/en/${segs.join("/")}`;
+  }
   return r || "/";
 }
 

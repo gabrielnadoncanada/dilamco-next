@@ -10,10 +10,24 @@ function splitLocale(path) {
   return { locale: "fr", slug: path };
 }
 
-// FR à la racine (jamais /fr), EN sous /en.
+// Traduction du premier segment pour l'EN (synchronisé avec i18n/routing.ts).
+const EN_SEGMENT = {
+  espaces: "spaces",
+  projets: "projects",
+  materiaux: "materials",
+  "a-propos": "about",
+  processus: "process",
+  "politique-de-confidentialite": "privacy-policy",
+  "conditions-dutilisation": "terms-of-use",
+};
+
+// FR à la racine (jamais /fr), EN sous /en avec premier segment traduit.
 function localizedUrl(slug, locale) {
-  if (locale === "en") return `${SITE}/en${slug === "/" ? "" : slug}`;
-  return `${SITE}${slug === "/" ? "" : slug}`;
+  if (locale !== "en") return `${SITE}${slug === "/" ? "" : slug}`;
+  if (slug === "/") return `${SITE}/en`;
+  const segs = slug.replace(/^\/+/, "").split("/");
+  segs[0] = EN_SEGMENT[segs[0]] ?? segs[0];
+  return `${SITE}/en/${segs.join("/")}`;
 }
 
 module.exports = {

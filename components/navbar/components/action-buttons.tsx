@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import { cn } from "@/lib/utils";
 import type { NavAction } from "../navbar.types";
 import { getActionButtonVariant } from "../utils";

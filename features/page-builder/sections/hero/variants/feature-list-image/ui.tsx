@@ -8,6 +8,7 @@ import {
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { AppLink } from "@/components/AppLink";
 import { cn } from "@/lib/utils";
 
 import type { HeroFeatureListImageProps } from "./schema";
@@ -79,10 +80,10 @@ export function HeroFeatureListImage(props: HeroFeatureListImageProps) {
                 asChild
                 variant={action.variant ?? (index === 0 ? "default" : "outline")}
               >
-                <a href={action.href}>
+                <AppLink href={action.href}>
                   {action.label}
                   {index === 1 ? <ArrowRight className="size-4 stroke-2.5" /> : null}
-                </a>
+                </AppLink>
               </Button>
             ))}
           </div>

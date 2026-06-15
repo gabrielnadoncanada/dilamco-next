@@ -86,7 +86,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/a-propos</loc>
+    <loc>https://dilamco.com/en/about</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
       <image:caption>Dilamco team and approach for custom projects</image:caption>
@@ -94,165 +94,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/espaces/commercial</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
-      <image:caption>Custom commercial fit-out in Montréal and Greater Montréal</image:caption>
-      <image:title>Custom commercial fit-out in Montréal and Greater Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-01.webp</image:loc>
-      <image:caption>Material detail for a commercial fit-out</image:caption>
-      <image:title>Material detail for a commercial fit-out</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-02.webp</image:loc>
-      <image:caption>Commercial project in Laval</image:caption>
-      <image:title>Commercial project in Laval</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-03.webp</image:loc>
-      <image:caption>Commercial project on the South Shore</image:caption>
-      <image:title>Commercial project on the South Shore</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/espaces/cuisine</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
-      <image:caption>High-end custom kitchen cabinets in Pierrefonds</image:caption>
-      <image:title>High-end custom kitchen cabinets in Pierrefonds</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/spaces/cabinet-cuisines.webp</image:loc>
-      <image:caption>Material detail for a custom kitchen</image:caption>
-      <image:title>Material detail for a custom kitchen</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
-      <image:caption>Custom kitchen cabinet project in Pierrefonds</image:caption>
-      <image:title>Custom kitchen cabinet project in Pierrefonds</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
-      <image:caption>Custom kitchen project on the South Shore</image:caption>
-      <image:title>Custom kitchen project on the South Shore</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/espaces/salle-de-bain</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Custom bathroom vanity in Pierrefonds and Greater Montréal</image:caption>
-      <image:title>Custom bathroom vanity in Pierrefonds and Greater Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
-      <image:caption>Material detail for a custom bathroom</image:caption>
-      <image:title>Material detail for a custom bathroom</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-02.webp</image:loc>
-      <image:caption>Custom bathroom project in Montréal</image:caption>
-      <image:title>Custom bathroom project in Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-03.webp</image:loc>
-      <image:caption>Custom bathroom project on the South Shore</image:caption>
-      <image:title>Custom bathroom project on the South Shore</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/espaces/salle-de-lavage</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-hero-01.webp</image:loc>
-      <image:caption>Custom laundry room in Pierrefonds and Greater Montréal</image:caption>
-      <image:title>Custom laundry room in Pierrefonds and Greater Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-01.webp</image:loc>
-      <image:caption>Material detail for a custom laundry room</image:caption>
-      <image:title>Material detail for a custom laundry room</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-02.webp</image:loc>
-      <image:caption>Custom laundry room project in Laval</image:caption>
-      <image:title>Custom laundry room project in Laval</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-03.webp</image:loc>
-      <image:caption>Custom laundry room project on the South Shore</image:caption>
-      <image:title>Custom laundry room project on the South Shore</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/espaces/sous-sol</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>High-end custom basement finishing in Pierrefonds</image:caption>
-      <image:title>High-end custom basement finishing in Pierrefonds</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
-      <image:caption>Custom home theatre room in a basement</image:caption>
-      <image:title>Custom home theatre room in a basement</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
-      <image:caption>Custom basement bar</image:caption>
-      <image:title>Custom basement bar</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cave-vin-01.webp</image:loc>
-      <image:caption>Custom wine cellar in a basement</image:caption>
-      <image:title>Custom wine cellar in a basement</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp</image:loc>
-      <image:caption>Custom wall-mounted library and built-in office</image:caption>
-      <image:title>Custom wall-mounted library and built-in office</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
-      <image:caption>Custom game room and wall unit in a basement</image:caption>
-      <image:title>Custom game room and wall unit in a basement</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-rangement-01.webp</image:loc>
-      <image:caption>Custom closed storage along a basement wall</image:caption>
-      <image:title>Custom closed storage along a basement wall</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Custom cabinetry detail for basement finishing</image:caption>
-      <image:title>Custom cabinetry detail for basement finishing</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/espaces/walk-in</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
-      <image:caption>High-end custom walk-in closet in Pierrefonds and Greater Montréal</image:caption>
-      <image:title>High-end custom walk-in closet in Pierrefonds and Greater Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
-      <image:caption>Material detail for a custom walk-in closet</image:caption>
-      <image:title>Material detail for a custom walk-in closet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-02.webp</image:loc>
-      <image:caption>Custom walk-in closet project in Laval</image:caption>
-      <image:title>Custom walk-in closet project in Laval</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-03.webp</image:loc>
-      <image:caption>Custom walk-in closet project on the South Shore</image:caption>
-      <image:title>Custom walk-in closet project on the South Shore</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/materiaux</loc>
+    <loc>https://dilamco.com/en/materials</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
       <image:caption>Visual comparison of materials for custom cabinets</image:caption>
@@ -290,7 +132,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materiaux/bois-massif</loc>
+    <loc>https://dilamco.com/en/materials/bois-massif</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
       <image:caption>Custom kitchen with solid wood details</image:caption>
@@ -323,7 +165,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materiaux/comparatif</loc>
+    <loc>https://dilamco.com/en/materials/comparatif</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
       <image:caption>Materials comparison for a custom kitchen</image:caption>
@@ -351,7 +193,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materiaux/contreplaque</loc>
+    <loc>https://dilamco.com/en/materials/contreplaque</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
       <image:caption>Custom kitchen with a durable structure</image:caption>
@@ -384,7 +226,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materiaux/couleurs</loc>
+    <loc>https://dilamco.com/en/materials/couleurs</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
       <image:caption>Colour and finish choices for a custom project</image:caption>
@@ -422,7 +264,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materiaux/mdf</loc>
+    <loc>https://dilamco.com/en/materials/mdf</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
       <image:caption>Samples and uniform painted surface</image:caption>
@@ -455,7 +297,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materiaux/melamine</loc>
+    <loc>https://dilamco.com/en/materials/melamine</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
       <image:caption>Melamine-type decorative finishes</image:caption>
@@ -488,7 +330,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materiaux/quincaillerie</loc>
+    <loc>https://dilamco.com/en/materials/quincaillerie</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-hardware-hero-01.webp</image:loc>
       <image:caption>Custom kitchen highlighting the quality of the hardware</image:caption>
@@ -521,7 +363,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/processus</loc>
+    <loc>https://dilamco.com/en/process</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
       <image:caption>Dilamco process for a custom project</image:caption>
@@ -529,7 +371,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets</loc>
+    <loc>https://dilamco.com/en/projects</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
       <image:caption>Dilamco custom project</image:caption>
@@ -562,7 +404,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/commercial</loc>
+    <loc>https://dilamco.com/en/projects/commercial</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
       <image:caption>Aménagement de bureau sur mesure au centre-ville de Montréal</image:caption>
@@ -570,7 +412,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal</loc>
+    <loc>https://dilamco.com/en/projects/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
       <image:caption>Custom office fit-out in downtown Montréal</image:caption>
@@ -578,7 +420,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/cuisine</loc>
+    <loc>https://dilamco.com/en/projects/cuisine</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
       <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
@@ -601,7 +443,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-montreal</loc>
+    <loc>https://dilamco.com/en/projects/cuisine/cuisine-sur-mesure-montreal</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
       <image:caption>High-end custom kitchen in Montréal</image:caption>
@@ -624,7 +466,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-pierrefonds</loc>
+    <loc>https://dilamco.com/en/projects/cuisine/cuisine-sur-mesure-pierrefonds</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
       <image:caption>Custom kitchen cabinets in Pierrefonds, West Island</image:caption>
@@ -647,7 +489,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal</loc>
+    <loc>https://dilamco.com/en/projects/cuisine/cuisine-sur-mesure-plateau-mont-royal</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
       <image:caption>Custom kitchen in Plateau-Mont-Royal, Montréal</image:caption>
@@ -670,7 +512,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-rive-sud</loc>
+    <loc>https://dilamco.com/en/projects/cuisine/cuisine-sur-mesure-rive-sud</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
       <image:caption>White custom kitchen in Brossard, South Shore</image:caption>
@@ -693,7 +535,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/salle-de-bain</loc>
+    <loc>https://dilamco.com/en/projects/salle-de-bain</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
       <image:caption>Vanité de salle de bain sur mesure à Laval</image:caption>
@@ -701,7 +543,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/projets/salle-de-bain/vanite-sur-mesure-laval</loc>
+    <loc>https://dilamco.com/en/projects/salle-de-bain/vanite-sur-mesure-laval</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
       <image:caption>Custom bathroom vanity in Laval</image:caption>
@@ -953,6 +795,164 @@
       <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
       <image:caption>Custom installation with precise adjustments</image:caption>
       <image:title>Custom installation with precise adjustments</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/spaces/commercial</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
+      <image:caption>Custom commercial fit-out in Montréal and Greater Montréal</image:caption>
+      <image:title>Custom commercial fit-out in Montréal and Greater Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-01.webp</image:loc>
+      <image:caption>Material detail for a commercial fit-out</image:caption>
+      <image:title>Material detail for a commercial fit-out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-02.webp</image:loc>
+      <image:caption>Commercial project in Laval</image:caption>
+      <image:title>Commercial project in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-03.webp</image:loc>
+      <image:caption>Commercial project on the South Shore</image:caption>
+      <image:title>Commercial project on the South Shore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/spaces/cuisine</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>High-end custom kitchen cabinets in Pierrefonds</image:caption>
+      <image:title>High-end custom kitchen cabinets in Pierrefonds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/spaces/cabinet-cuisines.webp</image:loc>
+      <image:caption>Material detail for a custom kitchen</image:caption>
+      <image:title>Material detail for a custom kitchen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Custom kitchen cabinet project in Pierrefonds</image:caption>
+      <image:title>Custom kitchen cabinet project in Pierrefonds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
+      <image:caption>Custom kitchen project on the South Shore</image:caption>
+      <image:title>Custom kitchen project on the South Shore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/spaces/salle-de-bain</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Custom bathroom vanity in Pierrefonds and Greater Montréal</image:caption>
+      <image:title>Custom bathroom vanity in Pierrefonds and Greater Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
+      <image:caption>Material detail for a custom bathroom</image:caption>
+      <image:title>Material detail for a custom bathroom</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-02.webp</image:loc>
+      <image:caption>Custom bathroom project in Montréal</image:caption>
+      <image:title>Custom bathroom project in Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-03.webp</image:loc>
+      <image:caption>Custom bathroom project on the South Shore</image:caption>
+      <image:title>Custom bathroom project on the South Shore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/spaces/salle-de-lavage</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-hero-01.webp</image:loc>
+      <image:caption>Custom laundry room in Pierrefonds and Greater Montréal</image:caption>
+      <image:title>Custom laundry room in Pierrefonds and Greater Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-01.webp</image:loc>
+      <image:caption>Material detail for a custom laundry room</image:caption>
+      <image:title>Material detail for a custom laundry room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-02.webp</image:loc>
+      <image:caption>Custom laundry room project in Laval</image:caption>
+      <image:title>Custom laundry room project in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-03.webp</image:loc>
+      <image:caption>Custom laundry room project on the South Shore</image:caption>
+      <image:title>Custom laundry room project on the South Shore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/spaces/sous-sol</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>High-end custom basement finishing in Pierrefonds</image:caption>
+      <image:title>High-end custom basement finishing in Pierrefonds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
+      <image:caption>Custom home theatre room in a basement</image:caption>
+      <image:title>Custom home theatre room in a basement</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
+      <image:caption>Custom basement bar</image:caption>
+      <image:title>Custom basement bar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cave-vin-01.webp</image:loc>
+      <image:caption>Custom wine cellar in a basement</image:caption>
+      <image:title>Custom wine cellar in a basement</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp</image:loc>
+      <image:caption>Custom wall-mounted library and built-in office</image:caption>
+      <image:title>Custom wall-mounted library and built-in office</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Custom game room and wall unit in a basement</image:caption>
+      <image:title>Custom game room and wall unit in a basement</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-rangement-01.webp</image:loc>
+      <image:caption>Custom closed storage along a basement wall</image:caption>
+      <image:title>Custom closed storage along a basement wall</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
+      <image:caption>Custom cabinetry detail for basement finishing</image:caption>
+      <image:title>Custom cabinetry detail for basement finishing</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/spaces/walk-in</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
+      <image:caption>High-end custom walk-in closet in Pierrefonds and Greater Montréal</image:caption>
+      <image:title>High-end custom walk-in closet in Pierrefonds and Greater Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
+      <image:caption>Material detail for a custom walk-in closet</image:caption>
+      <image:title>Material detail for a custom walk-in closet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-02.webp</image:loc>
+      <image:caption>Custom walk-in closet project in Laval</image:caption>
+      <image:title>Custom walk-in closet project in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-03.webp</image:loc>
+      <image:caption>Custom walk-in closet project on the South Shore</image:caption>
+      <image:title>Custom walk-in closet project on the South Shore</image:title>
     </image:image>
   </url>
   <url>

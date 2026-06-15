@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import type { LogoConfig } from "../navbar.types";
 import { LOGO } from "../navbar.constants";
 

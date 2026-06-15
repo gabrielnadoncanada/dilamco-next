@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 
 import { Button } from "@/components/ui/button";
 import type { SplitListActionsImageCardProps } from "./schema";

@@ -43,8 +43,17 @@
     "materials": "Materials",
     "relatedServices": "Related services",
     "otherProjects": "Other projects",
+    "otherProjectsSpace": "Other {label} projects",
     "similarProject": "Have a similar project in mind?",
-    "viewProject": "View project"
+    "viewProject": "View project",
+    "eyebrow": "Project",
+    "viewSpace": "View {label} space",
+    "ctaText": "We help you scope a custom, durable and well-executed project in {city} and across Greater Montréal.",
+    "listingHeading": "Custom {label} projects",
+    "listingIntro": "A few custom {label} projects — design, controlled fabrication and careful installation, in Montréal, Laval and across Greater Montréal.",
+    "comingSoon": "Our {label} projects are coming soon.",
+    "discussProject": "Discuss your project",
+    "allProjects": "All projects"
   },
   "cta": {
     "heading": "Tell us about your project",

@@ -7,7 +7,7 @@ import {
   NavigationMenuContent,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Link } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import type { DesktopMenuItemProps } from "../navbar.types";
 import { NavLinkItem } from "./nav-link-item";
 import { DESKTOP_GROUP_WIDTH } from "../navbar.constants";

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { Link } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { DESKTOP_BUTTONS } from "./navbar.constants";
 import { Logo } from "./components/logo";

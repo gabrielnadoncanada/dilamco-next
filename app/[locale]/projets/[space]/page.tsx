@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 
 import { PROJECTS_BY_SPACE } from "@/data/projects";
-import { SPACE_LABEL } from "@/constants/projects";
+import { SPACE_LABEL, getSpaceLabel } from "@/constants/projects";
 import type { ProjectSpace } from "@/types/projects";
 import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
@@ -38,14 +38,22 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, space } = await params;
   if (!isSpace(space)) return {};
-  const label = SPACE_LABEL[space];
+  const loc = asLocale(locale);
+  const label = getSpaceLabel(space, loc);
+  const ll = loc === "en" ? label : label.toLowerCase();
   return createPageMetadata(
     {
-      title: `Projets ${label.toLowerCase()} sur mesure`,
-      description: `Réalisations de ${label.toLowerCase()} sur mesure par Dilamco : conception, fabrication et installation à Montréal, Laval et dans le Grand Montréal.`,
+      title:
+        loc === "en"
+          ? `Custom ${ll} projects`
+          : `Projets ${ll} sur mesure`,
+      description:
+        loc === "en"
+          ? `Custom ${ll} projects by Dilamco: design, fabrication and installation in Montréal, Laval and across Greater Montréal.`
+          : `Réalisations de ${ll} sur mesure par Dilamco : conception, fabrication et installation à Montréal, Laval et dans le Grand Montréal.`,
       path: `/projets/${space}`,
     },
-    asLocale(locale),
+    loc,
   );
 }
 
@@ -55,15 +63,18 @@ export default async function ProjectsSpacePage({
   params: Promise<Params>;
 }) {
   const { locale, space } = await params;
-  setRequestLocale(asLocale(locale));
+  const loc = asLocale(locale);
+  setRequestLocale(loc);
   if (!isSpace(space)) notFound();
 
-  const label = SPACE_LABEL[space];
+  const t = await getTranslations("projectDetail");
+  const label = getSpaceLabel(space, loc);
+  const ll = loc === "en" ? label : label.toLowerCase();
   const projects = PROJECTS_BY_SPACE[space] ?? [];
 
   const breadcrumbs = [
-    { name: "Accueil", url: SITE.url + "/" },
-    { name: "Projets", url: SITE.url + "/projets" },
+    { name: t("breadcrumbHome"), url: SITE.url + "/" },
+    { name: t("breadcrumbProjects"), url: SITE.url + "/projets" },
     { name: label, url: SITE.url + `/projets/${space}` },
   ];
 
@@ -81,19 +92,17 @@ export default async function ProjectsSpacePage({
               className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
             >
               <Link href="/projets" className="hover:text-foreground">
-                Projets
+                {t("breadcrumbProjects")}
               </Link>
               <span aria-hidden>/</span>
               <span className="text-foreground/70">{label}</span>
             </nav>
 
             <Heading as="h1" variant="h1" className="mt-6 max-w-3xl md:text-5xl">
-              Projets {label.toLowerCase()} sur mesure
+              {t("listingHeading", { label: ll })}
             </Heading>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Quelques réalisations de {label.toLowerCase()} sur mesure — design,
-              fabrication contrôlée et installation soignée, à Montréal, Laval et
-              dans le Grand Montréal.
+              {t("listingIntro", { label: ll })}
             </p>
           </div>
         </section>
@@ -103,10 +112,10 @@ export default async function ProjectsSpacePage({
             {projects.length === 0 ? (
               <div className="rounded-2xl border border-dashed border-border bg-secondary/30 p-10 text-center">
                 <p className="text-muted-foreground">
-                  Nos réalisations {label.toLowerCase()} arrivent bientôt.
+                  {t("comingSoon", { label: ll })}
                 </p>
                 <Button asChild size="lg" className="mt-6 gap-2">
-                  <Link href="/contact">Discuter de votre projet</Link>
+                  <Link href="/contact">{t("discussProject")}</Link>
                 </Button>
               </div>
             ) : (
@@ -140,7 +149,7 @@ export default async function ProjectsSpacePage({
                         {p.summary}
                       </p>
                       <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
-                        Voir le projet
+                        {t("viewProject")}
                         <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                       </span>
                     </div>
@@ -151,7 +160,7 @@ export default async function ProjectsSpacePage({
 
             <div className="mt-12">
               <Button asChild size="lg" variant="outline">
-                <Link href="/projets">Tous les projets</Link>
+                <Link href="/projets">{t("allProjects")}</Link>
               </Button>
             </div>
           </div>

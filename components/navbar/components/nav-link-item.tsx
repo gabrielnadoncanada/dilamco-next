@@ -1,7 +1,7 @@
 "use client";
 
 import { NavigationMenuLink } from "@/components/ui/navigation-menu";
-import { Link } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import type { NavLinkItemProps } from "../navbar.types";
 
 export function NavLinkItem({ link, variant }: NavLinkItemProps) {

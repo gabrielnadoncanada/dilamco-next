@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
 import { SITE } from "@/seo/schema/site";
 import type { PageMetadataOptions } from "@/types/metadata";
+import { localizePath } from "@/seo/i18n-path";
 
 export const DEFAULT_OG_IMAGE = "/images/generated/spaces/espaces-hero-overview-01.webp";
 
 type MetaLocale = "fr" | "en";
 const OG_LOCALE: Record<MetaLocale, string> = { fr: "fr_CA", en: "en_CA" };
 
-/** Préfixe /en uniquement pour l'anglais ; le FR reste à la racine. */
-export function localizedPath(path: string, locale: MetaLocale): string {
-  if (locale === "fr") return path;
-  return `/en${path === "/" ? "" : path}`;
-}
-
 export function createPageMetadata(
   { title, description, path, ogAlt, ogImage }: PageMetadataOptions,
   locale: MetaLocale = "fr",
 ): Metadata {
-  const frUrl = `${SITE.url}${localizedPath(path, "fr")}`;
-  const enUrl = `${SITE.url}${localizedPath(path, "en")}`;
+  const frUrl = `${SITE.url}${localizePath(path, "fr")}`;
+  const enUrl = `${SITE.url}${localizePath(path, "en")}`;
   const url = locale === "fr" ? frUrl : enUrl;
   const alt = ogAlt ?? `${title} | ${SITE.name}`;
   const defaultImage = {

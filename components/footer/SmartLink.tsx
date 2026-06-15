@@ -1,4 +1,4 @@
-import { Link } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import { cn } from "@/lib/utils";
 
 interface SmartLinkProps {

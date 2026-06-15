@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 
 import { Heading } from "@/components/elements/heading";
 import { Badge } from "@/components/ui/badge";

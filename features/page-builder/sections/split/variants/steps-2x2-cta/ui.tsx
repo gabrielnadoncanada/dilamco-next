@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 import { Button } from "@/components/ui/button";
 import type { SplitSteps2x2CtaProps } from "./schema";
 import { Heading } from "@/components/elements/heading";

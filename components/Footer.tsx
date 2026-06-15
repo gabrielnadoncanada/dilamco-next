@@ -1,5 +1,12 @@
+import { getLocale } from "next-intl/server";
 import { cn } from "@/lib/utils";
 import { BRAND, FOOTER_NAV, LEGAL_LINKS, COPYRIGHT_TEXT } from "@/constants/navigation";
+import {
+  BRAND_EN,
+  FOOTER_NAV_EN,
+  LEGAL_LINKS_EN,
+  COPYRIGHT_TEXT_EN,
+} from "@/constants/navigation.en";
 import { Logo, LogoImage } from "./footer/Logo";
 import { SmartLink } from "./footer/SmartLink";
 import { Section } from "./elements/section";
@@ -16,14 +23,20 @@ interface FooterProps {
   bottomLinks?: LegalLink[];
 }
 
-export const Footer = ({
+export const Footer = async ({
   className,
-  logo = BRAND,
-  tagline = BRAND.tagline,
-  menuItems = FOOTER_NAV,
-  copyright = COPYRIGHT_TEXT,
-  bottomLinks = LEGAL_LINKS,
+  logo,
+  tagline,
+  menuItems,
+  copyright,
+  bottomLinks,
 }: FooterProps) => {
+  const isEn = (await getLocale()) === "en";
+  logo = logo ?? (isEn ? BRAND_EN : BRAND);
+  tagline = tagline ?? (isEn ? BRAND_EN.tagline : BRAND.tagline);
+  menuItems = menuItems ?? (isEn ? FOOTER_NAV_EN : FOOTER_NAV);
+  copyright = copyright ?? (isEn ? COPYRIGHT_TEXT_EN : COPYRIGHT_TEXT);
+  bottomLinks = bottomLinks ?? (isEn ? LEGAL_LINKS_EN : LEGAL_LINKS);
   return (
 
     <footer className="border-y">

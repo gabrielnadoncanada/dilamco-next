@@ -43,8 +43,17 @@
     "materials": "Matériaux",
     "relatedServices": "Services liés",
     "otherProjects": "Autres projets",
+    "otherProjectsSpace": "Autres projets {label}",
     "similarProject": "Un projet similaire en tête ?",
-    "viewProject": "Voir le projet"
+    "viewProject": "Voir le projet",
+    "eyebrow": "Projet",
+    "viewSpace": "Voir l'espace {label}",
+    "ctaText": "On vous aide à cadrer un projet sur mesure, durable et bien exécuté à {city} et dans le Grand Montréal.",
+    "listingHeading": "Projets {label} sur mesure",
+    "listingIntro": "Quelques réalisations de {label} sur mesure — design, fabrication contrôlée et installation soignée, à Montréal, Laval et dans le Grand Montréal.",
+    "comingSoon": "Nos réalisations {label} arrivent bientôt.",
+    "discussProject": "Discuter de votre projet",
+    "allProjects": "Tous les projets"
   },
   "cta": {
     "heading": "Parlez-nous de votre projet",

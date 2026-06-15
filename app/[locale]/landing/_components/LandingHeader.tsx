@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 import { Phone } from "lucide-react";
 import { Button } from "./button";
 import Image from "next/image";

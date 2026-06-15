@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { AppLink } from "@/components/AppLink";
 import { type LucideIcon } from "lucide-react";
 import { type HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
@@ -38,10 +39,10 @@ export function ActionButtons({ buttons, className, ...props }: ActionButtonsPro
             className="h-9 w-full px-4 sm:w-auto"
             {...buttonProps}
           >
-            <a href={href}>
+            <AppLink href={href}>
               {text}
               {Icon && <Icon className="size-4" />}
-            </a>
+            </AppLink>
           </Button>
         );
       })}

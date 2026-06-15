@@ -17,7 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Heading } from "@/components/elements/heading";
 import { useActionState } from "react";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 import { useFormStatus } from "react-dom";
 
 import type { SplitDetailsFormCardProps } from "./schema";

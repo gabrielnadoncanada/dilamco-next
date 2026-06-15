@@ -1,7 +1,8 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
+import { AppLink as Link } from "@/components/AppLink";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { AppLink as Link } from "@/components/AppLink";
 import { ArrowRight } from "lucide-react";
 
 import { Heading } from "@/components/elements/heading";

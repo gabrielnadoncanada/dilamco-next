@@ -8,6 +8,18 @@ export const SPACE_LABEL: Record<ProjectSpace, string> = {
   commercial: "Commercial",
 };
 
+export const SPACE_LABEL_EN: Record<ProjectSpace, string> = {
+  cuisine: "Kitchen",
+  "salle-de-bain": "Bathroom",
+  "walk-in": "Walk-in",
+  "salle-de-lavage": "Laundry room",
+  commercial: "Commercial",
+};
+
+export function getSpaceLabel(space: ProjectSpace, locale: "fr" | "en" = "fr") {
+  return (locale === "en" ? SPACE_LABEL_EN : SPACE_LABEL)[space];
+}
+
 export const SPACE_HREF: Record<ProjectSpace, string> = {
   cuisine: "/espaces/cuisine",
   "salle-de-bain": "/espaces/salle-de-bain",
