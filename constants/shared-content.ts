@@ -58,6 +58,17 @@ export const SPACE_SLIDER_ITEMS = [
     },
   },
   {
+    id: "sous-sol",
+    title: "Aménagement de sous-sol",
+    href: "/espaces/sous-sol/",
+    description:
+      "Transformez votre sous-sol en pièce de vie : salle de cinéma maison, bar, cave à vin et bibliothèque sur mesure.",
+    image: {
+      src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
+      alt: "Aménagement de sous-sol sur mesure",
+    },
+  },
+  {
     id: "commercial",
     title: "Commercial",
     href: "/espaces/commercial/",
@@ -113,6 +124,17 @@ export const PROJECT_SLIDER_ITEMS = [
     image: {
       src: "/images/spaces/vanite-salles-de-lavage.webp",
       alt: "Custom laundry room cabinets",
+    },
+  },
+  {
+    id: "sous-sol",
+    title: "Aménagement de sous-sol",
+    href: "/espaces/sous-sol/",
+    description:
+      "Transformez votre sous-sol en pièce de vie : salle de cinéma maison, bar, cave à vin et bibliothèque sur mesure.",
+    image: {
+      src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
+      alt: "Aménagement de sous-sol sur mesure",
     },
   },
   {

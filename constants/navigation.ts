@@ -9,6 +9,7 @@ import {
   Bath,
   ChefHat,
   Shirt,
+  Sofa,
   Briefcase,
   HardHat,
   ScanSearch,
@@ -58,6 +59,12 @@ export const MAIN_NAV: MenuItem[] = [
             url: "/espaces/salle-de-lavage/",
             icon: Shirt,
             description: "Organisation et rangement adaptés au quotidien.",
+          },
+          {
+            label: "Aménagement de sous-sol",
+            url: "/espaces/sous-sol/",
+            icon: Sofa,
+            description: "Cinéma maison, bar, cave à vin et bibliothèque sur mesure.",
           },
           {
             label: "Commercial",
@@ -208,6 +215,7 @@ export const FOOTER_NAV: FooterNavSection[] = [
       { text: "Salle de bain & vanités", url: "/espaces/salle-de-bain/" },
       { text: "Walk-in & rangement", url: "/espaces/walk-in/" },
       { text: "Salle de lavage", url: "/espaces/salle-de-lavage/" },
+      { text: "Aménagement de sous-sol", url: "/espaces/sous-sol/" },
       { text: "Commercial", url: "/espaces/commercial/" },
     ],
   },
