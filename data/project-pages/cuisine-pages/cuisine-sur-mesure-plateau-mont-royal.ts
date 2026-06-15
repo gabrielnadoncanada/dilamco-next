@@ -16,6 +16,20 @@ export const PROJECT_CUISINE_SUR_MESURE_PLATEAU_MONT_ROYAL: ProjectData = {
   area: "montreal",
   city: "Montréal",
   neighborhood: "Plateau-Mont-Royal",
+  images: [
+    {
+      src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
+      alt: "Cuisine sur mesure blanche haut de gamme — Plateau-Mont-Royal, Montréal",
+    },
+    {
+      src: "/images/projects/cuisine-haut-de-gamme-blanche-laval-1.webp",
+      alt: "Cuisine sur mesure — détail des armoires",
+    },
+    {
+      src: "/images/generated/spaces/space-cuisine-project-03.webp",
+      alt: "Cuisine sur mesure au Plateau-Mont-Royal — finition",
+    },
+  ],
   scope: [
     "Cadrage et validation des besoins",
     "Design et planification",

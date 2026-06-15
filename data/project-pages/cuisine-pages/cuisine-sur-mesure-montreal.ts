@@ -15,6 +15,20 @@ export const PROJECT_CUISINE_SUR_MESURE_MONTREAL: ProjectData = {
     "Cuisine sur mesure réalisée à Montréal : optimisation du rangement, choix de matériaux durables et installation avec alignements propres.",
   area: "montreal",
   city: "Montréal",
+  images: [
+    {
+      src: "/images/generated/spaces/space-cuisine-hero-01.webp",
+      alt: "Cuisine sur mesure à Montréal — vue d'ensemble",
+    },
+    {
+      src: "/images/generated/spaces/space-cuisine-project-01.webp",
+      alt: "Cuisine sur mesure à Montréal — rangements optimisés",
+    },
+    {
+      src: "/images/generated/spaces/space-cuisine-project-02.webp",
+      alt: "Cuisine sur mesure à Montréal — finition soignée",
+    },
+  ],
   scope: [
     "Cadrage et validation des besoins",
     "Design et planification",

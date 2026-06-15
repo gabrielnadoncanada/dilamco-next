@@ -15,6 +15,20 @@ export const PROJECT_VANITE_SUR_MESURE_LAVAL: ProjectData = {
     "Vanité sur mesure conçue pour un environnement humide : matériaux adaptés, quincaillerie fiable, et installation précise.",
   area: "laval",
   city: "Laval",
+  images: [
+    {
+      src: "/images/generated/spaces/space-bath-hero-01.webp",
+      alt: "Vanité de salle de bain sur mesure à Laval — vue d'ensemble",
+    },
+    {
+      src: "/images/generated/spaces/space-bath-project-01.webp",
+      alt: "Vanité sur mesure à Laval — rangement fonctionnel",
+    },
+    {
+      src: "/images/generated/spaces/space-bath-project-02.webp",
+      alt: "Vanité sur mesure à Laval — finition résistante à l'humidité",
+    },
+  ],
   scope: ["Cadrage", "Design", "Fabrication sur mesure", "Installation"],
   constraints: [
     "Humidité et entretien",

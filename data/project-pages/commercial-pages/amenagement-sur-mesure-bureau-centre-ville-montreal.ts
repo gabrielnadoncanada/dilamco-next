@@ -17,6 +17,20 @@ export const PROJECT_AMENAGEMENT_SUR_MESURE_BUREAU_CENTRE_VILLE_MONTREAL: Projec
     area: "montreal",
     city: "Montréal",
     neighborhood: "Centre-ville",
+    images: [
+      {
+        src: "/images/generated/spaces/space-commercial-hero-01.webp",
+        alt: "Aménagement de bureau sur mesure au centre-ville de Montréal — vue d'ensemble",
+      },
+      {
+        src: "/images/generated/spaces/space-commercial-project-01.webp",
+        alt: "Aménagement commercial sur mesure — modules robustes",
+      },
+      {
+        src: "/images/generated/spaces/space-commercial-project-02.webp",
+        alt: "Aménagement de bureau sur mesure — finition en zone visible",
+      },
+    ],
     scope: [
       "Cadrage du mandat (usage, contraintes, échéance)",
       "Planification et validation des dimensions",

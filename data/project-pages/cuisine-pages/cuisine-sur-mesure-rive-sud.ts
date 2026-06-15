@@ -17,16 +17,16 @@ export const PROJECT_CUISINE_SUR_MESURE_RIVE_SUD: ProjectData = {
   city: "Rive-Sud",
   images: [
     {
-      src: "/images/projects/cuisine-rive-sud/1.webp",
-      alt: "Cuisine sur mesure, Rive-Sud",
+      src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
+      alt: "Cuisine sur mesure blanche à Brossard, Rive-Sud",
     },
     {
-      src: "/images/projects/cuisine-rive-sud/2.webp",
-      alt: "Cuisine sur mesure, Rive-Sud",
+      src: "/images/generated/spaces/space-cuisine-project-02.webp",
+      alt: "Cuisine sur mesure sur la Rive-Sud — rangement optimisé",
     },
     {
-      src: "/images/projects/cuisine-rive-sud/3.webp",
-      alt: "Cuisine sur mesure, Rive-Sud",
+      src: "/images/generated/spaces/space-cuisine-project-03.webp",
+      alt: "Cuisine sur mesure sur la Rive-Sud — finition soignée",
     },
   ],
   scope: [
