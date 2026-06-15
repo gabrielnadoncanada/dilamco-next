@@ -183,6 +183,21 @@ const redirectRules = [
     source: "/space/garde-robes-et-walk-ins",
     destination: "/espaces/walk-in",
   },
+  // Anciennes catégories /space/* encore vues dans Search Console
+  {
+    source: "/space/cuisines",
+    destination: "/espaces/cuisine",
+  },
+  {
+    source: "/space/salles-de-lavage",
+    destination: "/espaces/salle-de-lavage",
+  },
+  // Filet de sécurité : toute ancienne fiche /realisation/* -> hub projets
+  // (couvre chene-moderne et tout slug non listé explicitement)
+  {
+    source: "/realisation/:slug*",
+    destination: "/projets",
+  },
   {
     source: '/wp-content/uploads/2025/09/Outlook-A-close-up.png',
     destination: '/images/Outlook-A-close-up.png',
