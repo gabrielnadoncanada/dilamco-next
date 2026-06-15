@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { DESKTOP_BUTTONS } from "./navbar.constants";
 import { Logo } from "./components/logo";
 import { DesktopNavigation } from "./components/desktop-navigation";
@@ -29,6 +31,7 @@ export function Navbar({
             <DesktopNavigation />
           </div>
           <div className="hidden items-center gap-3 xl:flex">
+            <LocaleSwitcher />
             {actions.map((action, index) => (
               <Button
                 key={`navbar-btn-${index}`}
@@ -40,9 +43,9 @@ export function Navbar({
                 asChild
                 {...action.buttonProps}
               >
-                <a href={action.url} {...action.linkProps}>
+                <Link href={action.url} {...action.linkProps}>
                   {action.label}
-                </a>
+                </Link>
               </Button>
             ))}
           </div>

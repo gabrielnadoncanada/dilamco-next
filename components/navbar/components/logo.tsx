@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import type { LogoConfig } from "../navbar.types";
 import { LOGO } from "../navbar.constants";
 
@@ -9,7 +10,7 @@ export function Logo({ logo }: LogoProps) {
   const logoConfig = logo || LOGO;
 
   return (
-    <a
+    <Link
       href="/"
       className="flex max-h-8 items-center gap-2 text-lg font-semibold tracking-tighter"
     >
@@ -19,6 +20,6 @@ export function Logo({ logo }: LogoProps) {
         className="inline-block w-30"
       />
       <span className="sr-only">{logoConfig.title}</span>
-    </a>
+    </Link>
   );
 }

@@ -36,17 +36,27 @@ export const PROJECTS_BY_SPACE: Record<ProjectSpace, ProjectData[]> = {
   commercial: PUBLIC_PROJECTS.filter((p) => p.space === "commercial"),
 };
 
+// Traductions EN des projets (remplies incrémentalement par l'IA, fallback FR).
+// Clé = `${space}/${slug}`.
+const PROJECTS_EN: Record<string, ProjectData> = {};
+
 export function getProjectByParams(
   space: ProjectSpace,
   slug: string,
+  locale: "fr" | "en" = "fr",
   options?: { includeDrafts?: boolean },
 ): ProjectData | undefined {
-  const project = PROJECTS.find((p) => p.space === space && p.slug === slug);
+  const fr = PROJECTS.find((p) => p.space === space && p.slug === slug);
+  const project = locale === "en" ? (PROJECTS_EN[`${space}/${slug}`] ?? fr) : fr;
   return getVisibleItem(project, options);
 }
 
-export function getProjectCanonicalUrl(project: ProjectData): string {
+export function getProjectCanonicalUrl(
+  project: ProjectData,
+  locale: "fr" | "en" = "fr",
+): string {
   const path =
     project.canonicalPath ?? `/projets/${project.space}/${project.slug}`;
-  return `${SITE_URL}${path}`;
+  const prefix = locale === "en" ? "/en" : "";
+  return `${SITE_URL}${prefix}${path}`;
 }

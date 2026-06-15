@@ -1,6 +1,7 @@
 "use client";
 
 import { NavigationMenuLink } from "@/components/ui/navigation-menu";
+import { Link } from "@/i18n/navigation";
 import type { NavLinkItemProps } from "../navbar.types";
 
 export function NavLinkItem({ link, variant }: NavLinkItemProps) {
@@ -10,7 +11,7 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
         asChild
         className="group/link flex-row gap-2 px-3 py-2 transition-colors duration-200"
       >
-        <a href={link.url}>
+        <Link href={link.url}>
           <div className="flex size-8 shrink-0 rounded-lg border border-border bg-background/70 duration-300 group-hover/link:bg-primary">
             <link.icon className="m-auto size-4 text-muted-foreground transition-colors group-hover/link:text-white" />
           </div>
@@ -20,18 +21,18 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
               {link.description}
             </div>
           </div>
-        </a>
+        </Link>
       </NavigationMenuLink>
     );
   }
 
   return (
-    <a
+    <Link
       href={link.url}
       className="flex h-12 items-center gap-2 rounded-lg px-4 text-base leading-normal font-medium text-muted-foreground transition-colors duration-300 hover:bg-muted hover:text-foreground"
     >
       <link.icon className="size-4 stroke-muted-foreground" />
       {link.label}
-    </a>
+    </Link>
   );
 }

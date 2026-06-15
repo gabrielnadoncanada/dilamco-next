@@ -11,6 +11,7 @@ const ROBOTS = path.join(process.cwd(), "public", "robots.txt");
 
 const SKIP_ROUTE = (r) =>
   r.startsWith("/landing") ||
+  r.startsWith("/en/landing") ||
   r.includes("_not-found") ||
   r.includes("_global-error") ||
   r.includes("opengraph-image");
@@ -27,8 +28,11 @@ async function walkHtml(dir) {
 
 function fileToRoute(fp) {
   let r = fp.slice(APP_DIR.length).replace(/\\/g, "/").replace(/\.html$/, "");
-  if (r === "/index") return "/";
   if (r.endsWith("/index")) r = r.slice(0, -"/index".length);
+  // Sous [locale] : FR à la racine (on retire /fr), EN garde /en.
+  if (r === "/fr") return "/";
+  if (r.startsWith("/fr/")) return r.slice(3);
+  if (r === "/en/index") return "/en";
   return r || "/";
 }
 

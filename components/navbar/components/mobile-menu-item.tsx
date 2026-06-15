@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { Link } from "@/i18n/navigation";
 import type { MenuItem } from "../navbar.types";
 import { NavLinkItem } from "./nav-link-item";
 
@@ -39,11 +40,11 @@ export function MobileMenuItem({ item, index }: MobileMenuItemProps) {
   }
 
   return (
-    <a
-      href={item.url}
+    <Link
+      href={item.url ?? "/"}
       className="flex h-[3.75rem] items-center border-b  p-0 px-6 text-left text-base leading-normal font-medium text-muted-foreground ring-ring/10 outline-ring/50 transition-all hover:bg-muted focus-visible:ring-4 focus-visible:outline-1 nth-last-1:border-0"
     >
       {item.title}
-    </a>
+    </Link>
   );
 }

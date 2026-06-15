@@ -1,6 +1,6 @@
 "use client";
 
-import { submitContactLead, type ContactFormState } from "@/app/contact/actions";
+import { submitContactLead, type ContactFormState } from "@/lib/contact-actions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {

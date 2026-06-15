@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import type { NavAction } from "../navbar.types";
 import { getActionButtonVariant } from "../utils";
@@ -36,9 +37,9 @@ export function ActionButtons({
             key={`navbar-btn-${index}`}
             {...buttonProps}
           >
-            <a href={url} {...linkProps}>
+            <Link href={url} {...linkProps}>
               {label}
-            </a>
+            </Link>
           </Button>
         );
       })}

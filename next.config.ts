@@ -2,31 +2,31 @@
 
 const redirectRules = [
   // Legacy language / home pages
-  { source: "/en/home", destination: "/" },
-  { source: "/en", destination: "/" },
+  // NB: pas de règle "/en" -> "/" : /en est désormais la vraie home anglaise.
+  { source: "/en/home", destination: "/en" },
   { source: "/fr", destination: "/" },
-  { source: "/en/accueil-english", destination: "/" },
+  { source: "/en/accueil-english", destination: "/en" },
 
   // Contact / about
-  { source: "/en/contact-us", destination: "/contact" },
+  { source: "/en/contact-us", destination: "/en/contact" },
   { source: "/about-us", destination: "/a-propos" },
-  { source: "/en/about-us", destination: "/a-propos" },
-  { source: "/en/about-us.aspx", destination: "/a-propos" },
+  { source: "/en/about-us", destination: "/en/a-propos" },
+  { source: "/en/about-us.aspx", destination: "/en/a-propos" },
   { source: "/fr/a-propos", destination: "/a-propos" },
 
   // Main projects / portfolio
   { source: "/projects", destination: "/projets" },
-  { source: "/en/past-projects.aspx", destination: "/projets" },
+  { source: "/en/past-projects.aspx", destination: "/en/projets" },
   { source: "/fr/projets-accomplis.aspx", destination: "/projets" },
 
   // Project category: wardrobes / walk-ins
   {
     source: "/en/projects/category/wardrobes-and-walk-ins",
-    destination: "/espaces/walk-in",
+    destination: "/en/espaces/walk-in",
   },
   {
     source: "/en/projects/category/wardrobes-and-walk-ins/feed",
-    destination: "/espaces/walk-in",
+    destination: "/en/espaces/walk-in",
   },
 
   // Old project detail pages -> closest current hub
@@ -46,7 +46,7 @@ const redirectRules = [
   },
   {
     source: "/en/custom-cabinets-closets",
-    destination: "/espaces/walk-in",
+    destination: "/en/espaces/walk-in",
   },
   {
     source: "/fr/armoires-placards-sur-mesure",
@@ -64,7 +64,7 @@ const redirectRules = [
   },
   {
     source: "/en/residential-construction-renovation",
-    destination: "/services/renovation",
+    destination: "/en/services/renovation",
   },
   {
     source: "/fr/construction-renovation-residentielle",
@@ -72,7 +72,7 @@ const redirectRules = [
   },
   {
     source: "/en/residential.aspx",
-    destination: "/services/renovation",
+    destination: "/en/services/renovation",
   },
 
   // Residential sub-services
@@ -90,7 +90,7 @@ const redirectRules = [
   },
   {
     source: "/en/residential/flooring-installation",
-    destination: "/services/renovation/plancher",
+    destination: "/en/services/renovation/plancher",
   },
   {
     source: "/fr/residentiel/installation-planchers",
@@ -102,7 +102,7 @@ const redirectRules = [
   },
   {
     source: "/en/residential/kitchen-bathroom-renovations",
-    destination: "/services/renovation/cuisine",
+    destination: "/en/services/renovation/cuisine",
   },
   {
     source: "/fr/residentiel/renovations-cuisine-salle-de-bain",
@@ -116,7 +116,7 @@ const redirectRules = [
   },
   {
     source: "/en/residential/doors-windows",
-    destination: "/services/renovation",
+    destination: "/en/services/renovation",
   },
   {
     source: "/fr/residentiel/portes-fenetres",
@@ -130,11 +130,11 @@ const redirectRules = [
   },
   {
     source: "/en/commercial-construction-renovation",
-    destination: "/espaces/commercial",
+    destination: "/en/espaces/commercial",
   },
   {
     source: "/en/commercial.aspx",
-    destination: "/espaces/commercial",
+    destination: "/en/espaces/commercial",
   },
   {
     source: "/fr/construction-renovation-commerciale",
@@ -243,4 +243,7 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+const createNextIntlPlugin = require("next-intl/plugin");
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
+module.exports = withNextIntl(nextConfig);

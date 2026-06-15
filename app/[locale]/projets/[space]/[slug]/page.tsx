@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import { ArrowRight, Check, MapPin } from "lucide-react";
 
 import {
@@ -22,14 +23,20 @@ import { Footer } from "@/components/Footer";
 import { Heading } from "@/components/elements/heading";
 import { Button } from "@/components/ui/button";
 
-type Params = { space: string; slug: string };
+type Params = { locale: string; space: string; slug: string };
+
+const asLocale = (l: string): "fr" | "en" => (l === "en" ? "en" : "fr");
 
 export function generateStaticParams() {
   return PUBLIC_PROJECTS.map((p) => ({ space: p.space, slug: p.slug }));
 }
 
 function getProject(params: Params): ProjectData | undefined {
-  return getProjectByParams(params.space as ProjectSpace, params.slug);
+  return getProjectByParams(
+    params.space as ProjectSpace,
+    params.slug,
+    asLocale(params.locale),
+  );
 }
 
 export async function generateMetadata({
@@ -37,16 +44,20 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const project = getProject(await params);
+  const resolved = await params;
+  const project = getProject(resolved);
   if (!project) return {};
-  return createPageMetadata({
-    title: project.title,
-    description: project.metaDescription,
-    path: `/projets/${project.space}/${project.slug}`,
-    ogImage: project.images?.[0]
-      ? { url: project.images[0].src, alt: project.images[0].alt }
-      : undefined,
-  });
+  return createPageMetadata(
+    {
+      title: project.title,
+      description: project.metaDescription,
+      path: `/projets/${project.space}/${project.slug}`,
+      ogImage: project.images?.[0]
+        ? { url: project.images[0].src, alt: project.images[0].alt }
+        : undefined,
+    },
+    asLocale(resolved.locale),
+  );
 }
 
 const COLUMNS = [
@@ -85,11 +96,13 @@ export default async function ProjectDetailPage({
 }: {
   params: Promise<Params>;
 }) {
-  const project = getProject(await params);
+  const resolved = await params;
+  setRequestLocale(asLocale(resolved.locale));
+  const project = getProject(resolved);
   if (!project) notFound();
 
   const spaceLabel = SPACE_LABEL[project.space];
-  const canonical = getProjectCanonicalUrl(project);
+  const canonical = getProjectCanonicalUrl(project, asLocale(resolved.locale));
   const hero = project.images?.[0];
   const related = (PROJECTS_BY_SPACE[project.space] ?? [])
     .filter((p) => p.slug !== project.slug)

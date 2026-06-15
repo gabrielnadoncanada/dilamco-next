@@ -5,6 +5,9 @@ export type JsonLd = Record<string, unknown>;
 const ORG_ID = `${SITE.url}/#organization`;
 const LOCALBUSINESS_ID = `${SITE.url}/#localbusiness`;
 
+const BCP47 = { fr: "fr-CA", en: "en-CA" } as const;
+type SchemaLocale = keyof typeof BCP47;
+
 /**
  * JSON-LD ImageObject pour le SEO Google Images. `src` doit être un chemin
  * absolu de l'app (ex. "/images/...") — converti en URL absolue.
@@ -36,7 +39,7 @@ export function imageObjectJsonLd(args: {
   return data;
 }
 
-export function organizationJsonLd(): JsonLd {
+export function organizationJsonLd(locale?: SchemaLocale): JsonLd {
   const data: JsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -49,13 +52,14 @@ export function organizationJsonLd(): JsonLd {
     sameAs: SITE.sameAs,
   };
 
+  if (locale) data.inLanguage = BCP47[locale];
   if (SITE.telephone) data.telephone = SITE.telephone;
   if (SITE.email) data.email = SITE.email;
 
   return data;
 }
 
-export function localBusinessJsonLd(): JsonLd {
+export function localBusinessJsonLd(locale?: SchemaLocale): JsonLd {
   const data: JsonLd = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
@@ -66,6 +70,8 @@ export function localBusinessJsonLd(): JsonLd {
     priceRange: "$$$", // haut de gamme
     areaServed: SITE.areasServed.map((a) => ({ "@type": "Place", name: a })),
   };
+
+  if (locale) data.inLanguage = BCP47[locale];
 
   if (SITE.telephone) data.telephone = SITE.telephone;
   if (SITE.email) data.email = SITE.email;

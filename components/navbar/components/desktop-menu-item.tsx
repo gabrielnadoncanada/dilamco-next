@@ -7,6 +7,7 @@ import {
   NavigationMenuContent,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Link } from "@/i18n/navigation";
 import type { DesktopMenuItemProps } from "../navbar.types";
 import { NavLinkItem } from "./nav-link-item";
 import { DESKTOP_GROUP_WIDTH } from "../navbar.constants";
@@ -72,10 +73,10 @@ export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
       value={`${index}`}
     >
       <NavigationMenuLink
-        href={item.url}
+        asChild
         className={`${navigationMenuTriggerStyle()} h-fit bg-transparent px-2.5 text-sm leading-6 font-medium text-muted-foreground`}
       >
-        {item.title}
+        <Link href={item.url ?? "/"}>{item.title}</Link>
       </NavigationMenuLink>
     </NavigationMenuItem>
   );

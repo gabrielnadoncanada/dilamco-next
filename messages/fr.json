@@ -1,0 +1,53 @@
+{
+  "common": {
+    "requestQuote": "Demander une soumission",
+    "getQuote": "Obtenir une soumission",
+    "seeProjects": "Voir nos projets",
+    "seeServices": "Voir nos services",
+    "see": "Voir",
+    "skipToContent": "Aller au contenu principal"
+  },
+  "localeSwitcher": {
+    "label": "Langue",
+    "fr": "FR",
+    "en": "EN",
+    "frLong": "Français",
+    "enLong": "English"
+  },
+  "header": {
+    "brandTagline": "Armoires & vanités sur mesure, Design - Fabrication - Installation - Rénovation"
+  },
+  "nav": {
+    "espaces": "Espaces",
+    "services": "Services",
+    "projets": "Projets",
+    "materiaux": "Matériaux",
+    "aPropos": "À propos"
+  },
+  "footer": {
+    "espaces": "ESPACES",
+    "services": "SERVICES",
+    "ressources": "RESSOURCES",
+    "aPropos": "À PROPOS",
+    "copyright": "© 2026 Dilamco. Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation"
+  },
+  "projectDetail": {
+    "breadcrumbHome": "Accueil",
+    "breadcrumbProjects": "Projets",
+    "scope": "Portée du projet",
+    "constraints": "Contraintes",
+    "solution": "Notre solution",
+    "results": "Résultats",
+    "materials": "Matériaux",
+    "relatedServices": "Services liés",
+    "otherProjects": "Autres projets",
+    "similarProject": "Un projet similaire en tête ?",
+    "viewProject": "Voir le projet"
+  },
+  "cta": {
+    "heading": "Parlez-nous de votre projet",
+    "description": "Dites-nous votre espace, votre secteur et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+  }
+}

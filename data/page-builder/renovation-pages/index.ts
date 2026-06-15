@@ -1,3 +1,5 @@
+import type { PageTemplateData } from "@/features/page-builder";
+import type { AppLocale } from "@/i18n/routing";
 import { agrandissementMaisonPage } from "./agrandissement-de-maison";
 import { renovationCuisinePage } from "./cuisine";
 import { renovationPlancherPage } from "./plancher";
@@ -10,8 +12,15 @@ const renovationPages = {
   "agrandissement-de-maison": agrandissementMaisonPage,
 };
 
+const renovationPagesEn: Partial<
+  Record<keyof typeof renovationPages, PageTemplateData>
+> = {};
+
 export const PUBLIC_RENOVATION_PAGE_TYPES = Object.keys(renovationPages);
 
-export function getRenovationPageByType(type: string) {
-  return renovationPages[type as keyof typeof renovationPages] ?? null;
+export function getRenovationPageByType(type: string, locale: AppLocale = "fr") {
+  const key = type as keyof typeof renovationPages;
+  if (locale === "en")
+    return renovationPagesEn[key] ?? renovationPages[key] ?? null;
+  return renovationPages[key] ?? null;
 }

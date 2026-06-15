@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { constructionLeadSchema } from "@/app/landing/construction/actions";
+import { constructionLeadSchema } from "@/app/[locale]/landing/construction/actions";
 
 const valid = {
   nom: "Jean Tremblay",

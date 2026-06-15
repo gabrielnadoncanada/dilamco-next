@@ -7,7 +7,7 @@ import { ArrowRight, Loader2 } from "lucide-react";
 import {
   submitContactLead,
   type ContactFormState,
-} from "@/app/contact/actions";
+} from "@/lib/contact-actions";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 

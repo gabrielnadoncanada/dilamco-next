@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 
 import { PROJECTS_BY_SPACE } from "@/data/projects";
@@ -16,9 +17,11 @@ import { Footer } from "@/components/Footer";
 import { Heading } from "@/components/elements/heading";
 import { Button } from "@/components/ui/button";
 
-type Params = { space: string };
+type Params = { locale: string; space: string };
 
 const SPACES = Object.keys(SPACE_LABEL) as ProjectSpace[];
+
+const asLocale = (l: string): "fr" | "en" => (l === "en" ? "en" : "fr");
 
 export function generateStaticParams() {
   return SPACES.map((space) => ({ space }));
@@ -33,14 +36,17 @@ export async function generateMetadata({
 }: {
   params: Promise<Params>;
 }): Promise<Metadata> {
-  const { space } = await params;
+  const { locale, space } = await params;
   if (!isSpace(space)) return {};
   const label = SPACE_LABEL[space];
-  return createPageMetadata({
-    title: `Projets ${label.toLowerCase()} sur mesure`,
-    description: `Réalisations de ${label.toLowerCase()} sur mesure par Dilamco : conception, fabrication et installation à Montréal, Laval et dans le Grand Montréal.`,
-    path: `/projets/${space}`,
-  });
+  return createPageMetadata(
+    {
+      title: `Projets ${label.toLowerCase()} sur mesure`,
+      description: `Réalisations de ${label.toLowerCase()} sur mesure par Dilamco : conception, fabrication et installation à Montréal, Laval et dans le Grand Montréal.`,
+      path: `/projets/${space}`,
+    },
+    asLocale(locale),
+  );
 }
 
 export default async function ProjectsSpacePage({
@@ -48,7 +54,8 @@ export default async function ProjectsSpacePage({
 }: {
   params: Promise<Params>;
 }) {
-  const { space } = await params;
+  const { locale, space } = await params;
+  setRequestLocale(asLocale(locale));
   if (!isSpace(space)) notFound();
 
   const label = SPACE_LABEL[space];

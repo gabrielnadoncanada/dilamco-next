@@ -1,0 +1,53 @@
+{
+  "common": {
+    "requestQuote": "Request a quote",
+    "getQuote": "Get a quote",
+    "seeProjects": "View our projects",
+    "seeServices": "View our services",
+    "see": "View",
+    "skipToContent": "Skip to main content"
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN",
+    "frLong": "Français",
+    "enLong": "English"
+  },
+  "header": {
+    "brandTagline": "Custom cabinetry & vanities — Design, Fabrication, Installation, Renovation"
+  },
+  "nav": {
+    "espaces": "Spaces",
+    "services": "Services",
+    "projets": "Projects",
+    "materiaux": "Materials",
+    "aPropos": "About"
+  },
+  "footer": {
+    "espaces": "SPACES",
+    "services": "SERVICES",
+    "ressources": "RESOURCES",
+    "aPropos": "ABOUT",
+    "copyright": "© 2026 Dilamco. All rights reserved.",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use"
+  },
+  "projectDetail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbProjects": "Projects",
+    "scope": "Project scope",
+    "constraints": "Constraints",
+    "solution": "Our solution",
+    "results": "Results",
+    "materials": "Materials",
+    "relatedServices": "Related services",
+    "otherProjects": "Other projects",
+    "similarProject": "Have a similar project in mind?",
+    "viewProject": "View project"
+  },
+  "cta": {
+    "heading": "Tell us about your project",
+    "description": "Tell us your space, your area and your timeline. We'll recommend a coherent setup (materials + hardware + installation) for a durable result."
+  }
+}

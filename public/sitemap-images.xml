@@ -48,6 +48,914 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dilamco.com/en</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Espaces sur mesure Dilamco</image:caption>
+      <image:title>Espaces sur mesure Dilamco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-space-cuisine-card-01.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure haut de gamme</image:caption>
+      <image:title>Armoires de cuisine sur mesure haut de gamme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-space-bath-card-01.webp</image:loc>
+      <image:caption>Vanité de salle de bain sur mesure</image:caption>
+      <image:title>Vanité de salle de bain sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-space-laundry-card-01.webp</image:loc>
+      <image:caption>Salle de lavage sur mesure</image:caption>
+      <image:title>Salle de lavage sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-space-walkin-card-01.webp</image:loc>
+      <image:caption>Walk-in sur mesure</image:caption>
+      <image:title>Walk-in sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-space-sous-sol-card-01.webp</image:loc>
+      <image:caption>Aménagement de sous-sol sur mesure</image:caption>
+      <image:title>Aménagement de sous-sol sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-space-commercial-card-01.webp</image:loc>
+      <image:caption>Aménagement commercial sur mesure</image:caption>
+      <image:title>Aménagement commercial sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/a-propos</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Équipe et approche Dilamco pour les projets sur mesure</image:caption>
+      <image:title>Équipe et approche Dilamco pour les projets sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/espaces/commercial</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
+      <image:caption>Aménagement commercial sur mesure à Montréal et dans le Grand Montréal</image:caption>
+      <image:title>Aménagement commercial sur mesure à Montréal et dans le Grand Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-01.webp</image:loc>
+      <image:caption>Détail matériau pour aménagement commercial</image:caption>
+      <image:title>Détail matériau pour aménagement commercial</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-02.webp</image:loc>
+      <image:caption>Projet commercial à Laval</image:caption>
+      <image:title>Projet commercial à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-03.webp</image:loc>
+      <image:caption>Projet commercial sur la Rive-Sud</image:caption>
+      <image:title>Projet commercial sur la Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/espaces/cuisine</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>High-end custom kitchen cabinets in Pierrefonds</image:caption>
+      <image:title>High-end custom kitchen cabinets in Pierrefonds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/spaces/cabinet-cuisines.webp</image:loc>
+      <image:caption>Material detail for a custom kitchen</image:caption>
+      <image:title>Material detail for a custom kitchen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Custom kitchen cabinet project in Pierrefonds</image:caption>
+      <image:title>Custom kitchen cabinet project in Pierrefonds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
+      <image:caption>Custom kitchen project on the South Shore</image:caption>
+      <image:title>Custom kitchen project on the South Shore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/espaces/salle-de-bain</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Vanité de salle de bain sur mesure à Pierrefonds et dans le Grand Montréal</image:caption>
+      <image:title>Vanité de salle de bain sur mesure à Pierrefonds et dans le Grand Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
+      <image:caption>Détail matériau pour salle de bain sur mesure</image:caption>
+      <image:title>Détail matériau pour salle de bain sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-02.webp</image:loc>
+      <image:caption>Projet salle de bain sur mesure à Montréal</image:caption>
+      <image:title>Projet salle de bain sur mesure à Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-03.webp</image:loc>
+      <image:caption>Projet salle de bain sur mesure sur la Rive-Sud</image:caption>
+      <image:title>Projet salle de bain sur mesure sur la Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/espaces/salle-de-lavage</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-hero-01.webp</image:loc>
+      <image:caption>Salle de lavage sur mesure à Pierrefonds et dans le Grand Montréal</image:caption>
+      <image:title>Salle de lavage sur mesure à Pierrefonds et dans le Grand Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-01.webp</image:loc>
+      <image:caption>Détail matériau pour salle de lavage sur mesure</image:caption>
+      <image:title>Détail matériau pour salle de lavage sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-02.webp</image:loc>
+      <image:caption>Projet salle de lavage sur mesure à Laval</image:caption>
+      <image:title>Projet salle de lavage sur mesure à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-03.webp</image:loc>
+      <image:caption>Projet salle de lavage sur mesure sur la Rive-Sud</image:caption>
+      <image:title>Projet salle de lavage sur mesure sur la Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/espaces/sous-sol</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Aménagement de sous-sol sur mesure haut de gamme à Pierrefonds</image:caption>
+      <image:title>Aménagement de sous-sol sur mesure haut de gamme à Pierrefonds</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
+      <image:caption>Salle de cinéma maison sur mesure dans un sous-sol</image:caption>
+      <image:title>Salle de cinéma maison sur mesure dans un sous-sol</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
+      <image:caption>Bar de sous-sol sur mesure</image:caption>
+      <image:title>Bar de sous-sol sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cave-vin-01.webp</image:loc>
+      <image:caption>Cave à vin / cellier sur mesure au sous-sol</image:caption>
+      <image:title>Cave à vin / cellier sur mesure au sous-sol</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp</image:loc>
+      <image:caption>Bibliothèque murale et bureau intégré sur mesure</image:caption>
+      <image:title>Bibliothèque murale et bureau intégré sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Salle de jeux et unité murale sur mesure au sous-sol</image:caption>
+      <image:title>Salle de jeux et unité murale sur mesure au sous-sol</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-rangement-01.webp</image:loc>
+      <image:caption>Rangement fermé sur mesure le long d&amp;#x27;un mur de sous-sol</image:caption>
+      <image:title>Rangement fermé sur mesure le long d&amp;#x27;un mur de sous-sol</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
+      <image:caption>Détail d&amp;#x27;ébénisterie sur mesure pour aménagement de sous-sol</image:caption>
+      <image:title>Détail d&amp;#x27;ébénisterie sur mesure pour aménagement de sous-sol</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/espaces/walk-in</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
+      <image:caption>Walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:caption>
+      <image:title>Walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
+      <image:caption>Détail matériau pour walk-in sur mesure</image:caption>
+      <image:title>Détail matériau pour walk-in sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-02.webp</image:loc>
+      <image:caption>Projet walk-in sur mesure à Laval</image:caption>
+      <image:title>Projet walk-in sur mesure à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-03.webp</image:loc>
+      <image:caption>Projet walk-in sur mesure sur la Rive-Sud</image:caption>
+      <image:title>Projet walk-in sur mesure sur la Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Comparatif visuel de matériaux pour armoires sur mesure</image:caption>
+      <image:title>Comparatif visuel de matériaux pour armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Détail de contreplaqué pour armoires sur mesure</image:caption>
+      <image:title>Détail de contreplaqué pour armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>Panneau MDF avec finition peinte</image:caption>
+      <image:title>Panneau MDF avec finition peinte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Panneau de mélamine pour mobilier sur mesure</image:caption>
+      <image:title>Panneau de mélamine pour mobilier sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Finition en bois massif naturel</image:caption>
+      <image:title>Finition en bois massif naturel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-hero-01.webp</image:loc>
+      <image:caption>Quincaillerie premium pour armoires et tiroirs</image:caption>
+      <image:title>Quincaillerie premium pour armoires et tiroirs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Échantillons de couleurs et finis pour cuisine sur mesure</image:caption>
+      <image:title>Échantillons de couleurs et finis pour cuisine sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux/bois-massif</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure avec détails en bois massif</image:caption>
+      <image:title>Cuisine sur mesure avec détails en bois massif</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Détail de finition en bois massif</image:caption>
+      <image:title>Détail de finition en bois massif</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Détail de contreplaqué pour armoires sur mesure</image:caption>
+      <image:title>Détail de contreplaqué pour armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>Panneau MDF avec finition peinte</image:caption>
+      <image:title>Panneau MDF avec finition peinte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Panneau de mélamine pour mobilier sur mesure</image:caption>
+      <image:title>Panneau de mélamine pour mobilier sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Échantillons de couleurs et finitions pour mobilier sur mesure</image:caption>
+      <image:title>Échantillons de couleurs et finitions pour mobilier sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux/comparatif</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Comparatif de matériaux pour cuisine sur mesure</image:caption>
+      <image:title>Comparatif de matériaux pour cuisine sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Détail de contreplaqué pour armoires sur mesure</image:caption>
+      <image:title>Détail de contreplaqué pour armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>Panneau MDF avec finition peinte</image:caption>
+      <image:title>Panneau MDF avec finition peinte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Panneau de mélamine pour mobilier sur mesure</image:caption>
+      <image:title>Panneau de mélamine pour mobilier sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Finition en bois massif naturel</image:caption>
+      <image:title>Finition en bois massif naturel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux/contreplaque</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure avec structure durable</image:caption>
+      <image:title>Cuisine sur mesure avec structure durable</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-detail-01.webp</image:loc>
+      <image:caption>Détail de cuisine sur mesure en contreplaqué</image:caption>
+      <image:title>Détail de cuisine sur mesure en contreplaqué</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Comparatif visuel de plusieurs matériaux d&amp;#x27;armoires</image:caption>
+      <image:title>Comparatif visuel de plusieurs matériaux d&amp;#x27;armoires</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>Panneau MDF avec finition peinte</image:caption>
+      <image:title>Panneau MDF avec finition peinte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Panneau de mélamine pour mobilier sur mesure</image:caption>
+      <image:title>Panneau de mélamine pour mobilier sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Finition en bois massif naturel</image:caption>
+      <image:title>Finition en bois massif naturel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux/couleurs</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
+      <image:caption>Choix de couleurs et finis pour projet sur mesure</image:caption>
+      <image:title>Choix de couleurs et finis pour projet sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Palette de finis neutres pour mobilier sur mesure</image:caption>
+      <image:title>Palette de finis neutres pour mobilier sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
+      <image:caption>Mobilier sur mesure aux tons foncés</image:caption>
+      <image:title>Mobilier sur mesure aux tons foncés</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Texture de bois massif naturelle</image:caption>
+      <image:title>Texture de bois massif naturelle</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure avec palette de finitions cohérentes</image:caption>
+      <image:title>Cuisine sur mesure avec palette de finitions cohérentes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain sur mesure avec finitions adaptées</image:caption>
+      <image:title>Salle de bain sur mesure avec finitions adaptées</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Comparatif visuel de matériaux et finitions</image:caption>
+      <image:title>Comparatif visuel de matériaux et finitions</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux/mdf</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
+      <image:caption>Échantillons et surface peinte uniforme</image:caption>
+      <image:title>Échantillons et surface peinte uniforme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>Finition peinte uniforme sur panneau MDF</image:caption>
+      <image:title>Finition peinte uniforme sur panneau MDF</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Comparatif visuel de plusieurs matériaux d&amp;#x27;armoires</image:caption>
+      <image:title>Comparatif visuel de plusieurs matériaux d&amp;#x27;armoires</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Panneau de mélamine pour mobilier sur mesure</image:caption>
+      <image:title>Panneau de mélamine pour mobilier sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Détail de contreplaqué pour armoires sur mesure</image:caption>
+      <image:title>Détail de contreplaqué pour armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Échantillons de couleurs et finis pour mobilier sur mesure</image:caption>
+      <image:title>Échantillons de couleurs et finis pour mobilier sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux/melamine</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
+      <image:caption>Finis décoratifs de type mélamine</image:caption>
+      <image:title>Finis décoratifs de type mélamine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Panneaux mélamine décoratifs</image:caption>
+      <image:title>Panneaux mélamine décoratifs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Comparatif visuel de plusieurs matériaux d&amp;#x27;armoires</image:caption>
+      <image:title>Comparatif visuel de plusieurs matériaux d&amp;#x27;armoires</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>Panneau MDF avec finition peinte</image:caption>
+      <image:title>Panneau MDF avec finition peinte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Détail de contreplaqué pour armoires sur mesure</image:caption>
+      <image:title>Détail de contreplaqué pour armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Échantillons de couleurs et finis pour mobilier sur mesure</image:caption>
+      <image:title>Échantillons de couleurs et finis pour mobilier sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materiaux/quincaillerie</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure mettant en valeur la qualité de la quincaillerie</image:caption>
+      <image:title>Cuisine sur mesure mettant en valeur la qualité de la quincaillerie</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
+      <image:caption>Détail de cuisine sur mesure illustrant un tiroir durable</image:caption>
+      <image:title>Détail de cuisine sur mesure illustrant un tiroir durable</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-card-01.webp</image:loc>
+      <image:caption>Bois massif pour armoires sur mesure</image:caption>
+      <image:title>Bois massif pour armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-card-01.webp</image:loc>
+      <image:caption>Contreplaqué utilisé dans une cuisine sur mesure</image:caption>
+      <image:title>Contreplaqué utilisé dans une cuisine sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-kitchen-durability-card-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-detail-01.webp</image:loc>
+      <image:caption>Vanité sur mesure pour salle de bain</image:caption>
+      <image:title>Vanité sur mesure pour salle de bain</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/processus</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Processus Dilamco pour un projet sur mesure</image:caption>
+      <image:title>Processus Dilamco pour un projet sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Réalisation sur mesure Dilamco</image:caption>
+      <image:title>Réalisation sur mesure Dilamco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
+      <image:caption>Projets de cuisine sur mesure</image:caption>
+      <image:title>Projets de cuisine sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-bath-01.webp</image:loc>
+      <image:caption>Projets de vanité de salle de bain sur mesure</image:caption>
+      <image:title>Projets de vanité de salle de bain sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-walkin-01.webp</image:loc>
+      <image:caption>Projets de walk-in et rangement sur mesure</image:caption>
+      <image:title>Projets de walk-in et rangement sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-laundry-01.webp</image:loc>
+      <image:caption>Projets de salle de lavage sur mesure</image:caption>
+      <image:title>Projets de salle de lavage sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
+      <image:caption>Projets commerciaux sur mesure</image:caption>
+      <image:title>Projets commerciaux sur mesure</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/commercial</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
+      <image:caption>Aménagement de bureau sur mesure au centre-ville de Montréal</image:caption>
+      <image:title>Aménagement de bureau sur mesure au centre-ville de Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
+      <image:caption>Aménagement de bureau sur mesure au centre-ville de Montréal</image:caption>
+      <image:title>Aménagement de bureau sur mesure au centre-ville de Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/cuisine</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
+      <image:caption>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:caption>
+      <image:title>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-montreal</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
+      <image:caption>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:caption>
+      <image:title>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-pierrefonds</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
+      <image:caption>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:caption>
+      <image:title>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
+      <image:caption>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:caption>
+      <image:title>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/cuisine/cuisine-sur-mesure-rive-sud</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
+      <image:caption>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:caption>
+      <image:title>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/salle-de-bain</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Vanité de salle de bain sur mesure à Laval</image:caption>
+      <image:title>Vanité de salle de bain sur mesure à Laval</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projets/salle-de-bain/vanite-sur-mesure-laval</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Vanité de salle de bain sur mesure à Laval</image:caption>
+      <image:title>Vanité de salle de bain sur mesure à Laval</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Vue d&amp;#x27;ensemble des services Dilamco</image:caption>
+      <image:title>Vue d&amp;#x27;ensemble des services Dilamco</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/design</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-design-hero-01.webp</image:loc>
+      <image:caption>Plan de cuisine sur mesure et échantillons de matériaux</image:caption>
+      <image:title>Plan de cuisine sur mesure et échantillons de matériaux</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/services/design-hero.webp</image:loc>
+      <image:caption>Design sur mesure en cours de planification</image:caption>
+      <image:title>Design sur mesure en cours de planification</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure pensée pour l&amp;#x27;usage réel</image:caption>
+      <image:title>Cuisine sur mesure pensée pour l&amp;#x27;usage réel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain sur mesure pensée pour l&amp;#x27;humidité</image:caption>
+      <image:title>Salle de bain sur mesure pensée pour l&amp;#x27;humidité</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
+      <image:caption>Walk-in sur mesure pensé pour l&amp;#x27;organisation</image:caption>
+      <image:title>Walk-in sur mesure pensé pour l&amp;#x27;organisation</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/fabrication</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
+      <image:caption>Plans techniques et échantillons de matériaux pour fabrication sur mesure</image:caption>
+      <image:title>Plans techniques et échantillons de matériaux pour fabrication sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure avec fabrication précise</image:caption>
+      <image:title>Cuisine sur mesure avec fabrication précise</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain sur mesure avec fabrication durable</image:caption>
+      <image:title>Salle de bain sur mesure avec fabrication durable</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
+      <image:caption>Aménagement commercial sur mesure avec fabrication robuste</image:caption>
+      <image:title>Aménagement commercial sur mesure avec fabrication robuste</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/installation</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
+      <image:caption>Plan technique et échantillons de panneaux pour installation sur mesure</image:caption>
+      <image:title>Plan technique et échantillons de panneaux pour installation sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/services/installation-hero.webp</image:loc>
+      <image:caption>Installation sur mesure en cours</image:caption>
+      <image:title>Installation sur mesure en cours</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure avec installation précise</image:caption>
+      <image:title>Cuisine sur mesure avec installation précise</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain sur mesure avec finition propre</image:caption>
+      <image:title>Salle de bain sur mesure avec finition propre</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
+      <image:caption>Aménagement commercial avec installation planifiée</image:caption>
+      <image:title>Aménagement commercial avec installation planifiée</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/renovation</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
+      <image:caption>Projet de rénovation sur mesure</image:caption>
+      <image:title>Projet de rénovation sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/spaces/cabinet-cuisines.webp</image:loc>
+      <image:caption>Détails de matériaux pour rénovation sur mesure</image:caption>
+      <image:title>Détails de matériaux pour rénovation sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
+      <image:caption>Projet de rénovation de cuisine à Montréal</image:caption>
+      <image:title>Projet de rénovation de cuisine à Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Projet de rénovation résidentielle à Laval</image:caption>
+      <image:title>Projet de rénovation résidentielle à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Projet de rénovation sur la Rive-Sud</image:caption>
+      <image:title>Projet de rénovation sur la Rive-Sud</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
+      <image:caption>Rénovation de cuisine clé en main</image:caption>
+      <image:title>Rénovation de cuisine clé en main</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
+      <image:caption>Rénovation de salle de bain clé en main</image:caption>
+      <image:title>Rénovation de salle de bain clé en main</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-hero-01.webp</image:loc>
+      <image:caption>Rénovation de plancher intégrée à un projet résidentiel</image:caption>
+      <image:title>Rénovation de plancher intégrée à un projet résidentiel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
+      <image:caption>Agrandissement de maison clé en main</image:caption>
+      <image:title>Agrandissement de maison clé en main</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/renovation/agrandissement-de-maison</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
+      <image:caption>Projet résidentiel de rénovation et d&amp;#x27;agrandissement</image:caption>
+      <image:title>Projet résidentiel de rénovation et d&amp;#x27;agrandissement</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
+      <image:caption>Planification d&amp;#x27;un projet d&amp;#x27;agrandissement résidentiel</image:caption>
+      <image:title>Planification d&amp;#x27;un projet d&amp;#x27;agrandissement résidentiel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure intégrée à un agrandissement</image:caption>
+      <image:title>Cuisine sur mesure intégrée à un agrandissement</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain sur mesure intégrée à un agrandissement</image:caption>
+      <image:title>Salle de bain sur mesure intégrée à un agrandissement</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
+      <image:caption>Walk-in sur mesure dans une extension résidentielle</image:caption>
+      <image:title>Walk-in sur mesure dans une extension résidentielle</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/renovation/cuisine</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
+      <image:caption>Rénovation de cuisine sur mesure</image:caption>
+      <image:title>Rénovation de cuisine sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-approach-01.webp</image:loc>
+      <image:caption>Planification d&amp;#x27;une rénovation de cuisine</image:caption>
+      <image:title>Planification d&amp;#x27;une rénovation de cuisine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
+      <image:caption>Fabrication sur mesure et détails techniques</image:caption>
+      <image:title>Fabrication sur mesure et détails techniques</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
+      <image:caption>Installation sur mesure avec ajustements précis</image:caption>
+      <image:title>Installation sur mesure avec ajustements précis</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/renovation/plancher</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-hero-01.webp</image:loc>
+      <image:caption>Rénovation de plancher</image:caption>
+      <image:title>Rénovation de plancher</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
+      <image:caption>Coordination du plancher dans une rénovation</image:caption>
+      <image:title>Coordination du plancher dans une rénovation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
+      <image:caption>Rénovation clé en main mieux coordonnée</image:caption>
+      <image:title>Rénovation clé en main mieux coordonnée</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure avec intégration propre du plancher</image:caption>
+      <image:title>Cuisine sur mesure avec intégration propre du plancher</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain sur mesure avec finition de plancher propre</image:caption>
+      <image:title>Salle de bain sur mesure avec finition de plancher propre</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/renovation/salle-de-bain</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
+      <image:caption>Rénovation de salle de bain sur mesure</image:caption>
+      <image:title>Rénovation de salle de bain sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-approach-01.webp</image:loc>
+      <image:caption>Planification d&amp;#x27;une rénovation de salle de bain</image:caption>
+      <image:title>Planification d&amp;#x27;une rénovation de salle de bain</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain sur mesure haut de gamme</image:caption>
+      <image:title>Salle de bain sur mesure haut de gamme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
+      <image:caption>Fabrication sur mesure et détails techniques</image:caption>
+      <image:title>Fabrication sur mesure et détails techniques</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
+      <image:caption>Installation sur mesure avec ajustements précis</image:caption>
+      <image:title>Installation sur mesure avec ajustements précis</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dilamco.com/espaces/commercial</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
