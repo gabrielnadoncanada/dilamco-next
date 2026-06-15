@@ -19,6 +19,16 @@
 <url><loc>https://dilamco.com/materiaux/quincaillerie</loc><changefreq>monthly</changefreq><priority>0.65</priority></url>
 <url><loc>https://dilamco.com/processus</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://dilamco.com/projets</loc><changefreq>weekly</changefreq><priority>0.75</priority></url>
+<url><loc>https://dilamco.com/projets/commercial</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/cuisine</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-montreal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-plateau-mont-royal</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-rive-sud</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/salle-de-bain</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/salle-de-bain/vanite-sur-mesure-laval</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/salle-de-lavage</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://dilamco.com/projets/walk-in</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://dilamco.com/services</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://dilamco.com/services/design</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 <url><loc>https://dilamco.com/services/fabrication</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>

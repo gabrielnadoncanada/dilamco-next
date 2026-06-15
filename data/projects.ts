@@ -47,6 +47,6 @@ export function getProjectByParams(
 
 export function getProjectCanonicalUrl(project: ProjectData): string {
   const path =
-    project.canonicalPath ?? `/projets/${project.space}/${project.slug}/`;
+    project.canonicalPath ?? `/projets/${project.space}/${project.slug}`;
   return `${SITE_URL}${path}`;
 }

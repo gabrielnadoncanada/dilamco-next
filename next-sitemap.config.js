@@ -13,7 +13,6 @@ module.exports = {
     "/page-builder",
     "**/opengraph-image",
     "**/opengraph-image/*",
-    "/projets/*/*",
   ],
 
   robotsTxtOptions: {
