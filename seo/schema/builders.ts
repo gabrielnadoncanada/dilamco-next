@@ -5,6 +5,37 @@ export type JsonLd = Record<string, unknown>;
 const ORG_ID = `${SITE.url}/#organization`;
 const LOCALBUSINESS_ID = `${SITE.url}/#localbusiness`;
 
+/**
+ * JSON-LD ImageObject pour le SEO Google Images. `src` doit être un chemin
+ * absolu de l'app (ex. "/images/...") — converti en URL absolue.
+ */
+export function imageObjectJsonLd(args: {
+  src: string;
+  caption?: string;
+  pageUrl?: string;
+  representativeOfPage?: boolean;
+}): JsonLd {
+  const contentUrl = args.src.startsWith("http")
+    ? args.src
+    : `${SITE.url}${args.src}`;
+  const data: JsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    contentUrl,
+    url: contentUrl,
+    creator: { "@type": "Organization", "@id": ORG_ID },
+    creditText: SITE.name,
+  };
+  if (args.caption) {
+    data.caption = args.caption;
+    data.name = args.caption;
+    data.description = args.caption;
+  }
+  if (args.pageUrl) data.isPartOf = args.pageUrl;
+  if (args.representativeOfPage) data.representativeOfPage = true;
+  return data;
+}
+
 export function organizationJsonLd(): JsonLd {
   const data: JsonLd = {
     "@context": "https://schema.org",

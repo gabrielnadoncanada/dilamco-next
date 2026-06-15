@@ -51,7 +51,7 @@ export const salleDeLavagePage: PageTemplateData = {
           badges: ["Fonctionnel", "Durable", "Sur mesure"],
           image: {
             src: "/images/generated/spaces/space-laundry-hero-01.webp",
-            alt: "Salle de lavage sur mesure haut de gamme",
+            alt: "Salle de lavage sur mesure à Pierrefonds et dans le Grand Montréal",
           },
           caption:
             "Un espace de service conçu pour durer et rester simple à utiliser",

@@ -49,7 +49,7 @@ export const commercialPage: PageTemplateData = {
           badges: ["Commercial", "Durable", "Planifié"],
           image: {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
-            alt: "Aménagement commercial sur mesure",
+            alt: "Aménagement commercial sur mesure à Montréal et dans le Grand Montréal",
           },
           caption:
             "Approche adaptée aux espaces clients, bureaux et environnements de travail",

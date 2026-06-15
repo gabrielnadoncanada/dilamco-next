@@ -48,7 +48,7 @@ export const walkInPage: PageTemplateData = {
           badges: ["Rangement", "Organisation", "Sur mesure"],
           image: {
             src: "/images/generated/spaces/space-walkin-hero-01.webp",
-            alt: "Walk-in sur mesure haut de gamme",
+            alt: "Walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal",
           },
           caption:
             "Organisation personnalisée pour chambres, garde-robes et espaces restreints",

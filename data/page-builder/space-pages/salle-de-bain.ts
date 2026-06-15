@@ -52,7 +52,7 @@ export const salleDeBainPage: PageTemplateData = {
           badges: ["Sur mesure", "Grand Montréal", "Humidité"],
           image: {
             src: "/images/generated/spaces/space-bath-hero-01.webp",
-            alt: "Vanité sur mesure haut de gamme",
+            alt: "Vanité de salle de bain sur mesure à Pierrefonds et dans le Grand Montréal",
           },
           caption: "Conçu pour un usage quotidien et un environnement humide",
         },
