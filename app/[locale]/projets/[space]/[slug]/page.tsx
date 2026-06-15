@@ -7,7 +7,7 @@ import { ArrowRight, Check, MapPin } from "lucide-react";
 
 import {
   PUBLIC_PROJECTS,
-  PROJECTS_BY_SPACE,
+  getProjectsBySpace,
   getProjectByParams,
   getProjectCanonicalUrl,
 } from "@/data/projects";
@@ -103,7 +103,7 @@ export default async function ProjectDetailPage({
   const labelLower = locale === "en" ? spaceLabel : spaceLabel.toLowerCase();
   const canonical = getProjectCanonicalUrl(project, locale);
   const hero = project.images?.[0];
-  const related = (PROJECTS_BY_SPACE[project.space] ?? [])
+  const related = getProjectsBySpace(project.space, locale)
     .filter((p) => p.slug !== project.slug)
     .slice(0, 3);
 

@@ -55,6 +55,16 @@ const PROJECTS_EN: Record<string, ProjectData> = Object.fromEntries(
   ].map((p) => [`${p.space}/${p.slug}`, p]),
 );
 
+/** Projets publics d'un espace, résolus dans la locale (fallback FR). */
+export function getProjectsBySpace(
+  space: ProjectSpace,
+  locale: "fr" | "en" = "fr",
+): ProjectData[] {
+  const list = PROJECTS_BY_SPACE[space] ?? [];
+  if (locale === "fr") return list;
+  return list.map((p) => PROJECTS_EN[`${p.space}/${p.slug}`] ?? p);
+}
+
 export function getProjectByParams(
   space: ProjectSpace,
   slug: string,

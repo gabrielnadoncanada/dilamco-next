@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 
-import { PROJECTS_BY_SPACE } from "@/data/projects";
+import { getProjectsBySpace } from "@/data/projects";
 import { SPACE_LABEL, getSpaceLabel } from "@/constants/projects";
 import type { ProjectSpace } from "@/types/projects";
 import { createPageMetadata } from "@/lib/metadata";
@@ -70,7 +70,7 @@ export default async function ProjectsSpacePage({
   const t = await getTranslations("projectDetail");
   const label = getSpaceLabel(space, loc);
   const ll = loc === "en" ? label : label.toLowerCase();
-  const projects = PROJECTS_BY_SPACE[space] ?? [];
+  const projects = getProjectsBySpace(space, loc);
 
   const breadcrumbs = [
     { name: t("breadcrumbHome"), url: SITE.url + "/" },
