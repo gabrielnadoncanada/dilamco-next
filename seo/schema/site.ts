@@ -13,7 +13,14 @@ export const SITE = {
     postalCode: "H9K 1P1",
     addressCountry: "CA",
   },
-  areasServed: ["Montréal", "Laval", "Rive-Sud"],
+  areasServed: [
+    "Montréal",
+    "Pierrefonds-Roxboro",
+    "Ouest-de-l'Île",
+    "Laval",
+    "Rive-Nord",
+    "Rive-Sud",
+  ],
   sameAs: [
     "https://www.google.com/maps/place/Dilamco+Construction/@45.4536963,-73.892443,624m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4cc93ba3f4382f91:0x1045c40def446823!8m2!3d45.4536963!4d-73.892443!16s%2Fg%2F11ghnfzc26",
     "https://www.facebook.com/dilamco",

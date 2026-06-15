@@ -4,22 +4,22 @@ import { SITE } from "@/seo/schema/site";
 export const cuisinePage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Cuisine sur mesure haut de gamme",
+    title: "Armoires de cuisine sur mesure à Pierrefonds et Montréal",
     description:
-      "Cuisine sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
+      "Armoires et cuisines sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
     path: "/espaces/cuisine",
-    ogAlt: "Cuisine sur mesure Dilamco",
+    ogAlt: "Armoires de cuisine sur mesure Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Cuisine sur mesure", url: SITE.url + "/espaces/cuisine" },
   ],
   service: {
-    name: "Cuisine sur mesure",
+    name: "Armoires et cuisines sur mesure",
     description:
-      "Conception, fabrication contrôlée et installation de cuisines sur mesure haut de gamme.",
+      "Conception, fabrication contrôlée et installation d'armoires et de cuisines sur mesure haut de gamme à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
     url: SITE.url + "/espaces/cuisine",
-    serviceType: "Cuisine sur mesure",
+    serviceType: "Armoires de cuisine sur mesure",
   },
   blocks: [
     {
@@ -30,9 +30,10 @@ export const cuisinePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
-          heading: "Cuisine sur mesure, exécution clé en main à Montréal",
+          heading:
+            "Armoires et cuisines sur mesure à Pierrefonds et dans le Grand Montréal",
           description:
-            "Conception, fabrication contrôlée et installation précise pour un espace durable, bien organisé et cohérent du plan à la finition.",
+            "Conception, fabrication contrôlée et installation précise d'armoires de cuisine sur mesure. Un espace durable et bien organisé, du plan à la finition — à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île et partout dans le Grand Montréal.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -41,17 +42,17 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               label: "Voir nos cuisines",
-              href: "/projets",
+              href: "/projets/cuisine",
               variant: "outline",
             },
           ],
-          badges: ["Sur mesure", "clé en main", "Montréal"],
+          badges: ["Armoires sur mesure", "Pierrefonds", "Ouest-de-l'Île"],
           image: {
-            src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-            alt: "Cuisine sur mesure haut de gamme",
+            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
+            alt: "Armoires de cuisine sur mesure haut de gamme à Pierrefonds",
           },
           caption:
-            "Résidentiel haut de gamme à Montréal, Laval et sur la Rive-Sud",
+            "Résidentiel haut de gamme à Pierrefonds, dans l'Ouest-de-l'Île et le Grand Montréal",
         },
       },
     },
@@ -183,40 +184,79 @@ export const cuisinePage: PageTemplateData = {
             "Quelques réalisations qui montrent le niveau d'exécution, pas seulement l'esthétique.",
           items: [
             {
-              title: "Cuisine sur mesure",
-              href: "/projets",
+              title: "Cuisine sur mesure, Pierrefonds",
+              href: "/projets/cuisine/cuisine-sur-mesure-pierrefonds",
               description:
-                "Cuisine sur mesure avec implantation précise et finition soignée.",
+                "Armoires de cuisine sur mesure dans l'Ouest-de-l'Île : implantation précise et finition soignée.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-project-01.webp",
-                alt: "Projet cuisine sur mesure à Montréal",
+                src: "/images/projects/chene-moderne.webp",
+                alt: "Projet d'armoires de cuisine sur mesure à Pierrefonds",
               },
-              badges: ["Montréal", "Cuisine"],
+              badges: ["Pierrefonds", "Armoires"],
               footerCtaLabel: "Voir le projet",
             },
             {
-              title: "Cuisine sur mesure",
-              href: "/projets",
+              title: "Cuisine sur mesure, Montréal",
+              href: "/projets/cuisine/cuisine-sur-mesure-montreal",
               description:
-                "Projet cuisine conçu pour un usage quotidien et une durabilité à long terme.",
+                "Cuisine conçue pour un usage quotidien et une durabilité à long terme.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-project-02.webp",
-                alt: "Projet cuisine sur mesure à Laval",
+                src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
+                alt: "Projet de cuisine sur mesure à Montréal",
               },
-              badges: ["Laval", "Sur mesure"],
+              badges: ["Montréal", "Sur mesure"],
               footerCtaLabel: "Voir le projet",
             },
             {
-              title: "Cuisine sur mesure",
-              href: "/projets",
+              title: "Cuisine sur mesure, Rive-Sud",
+              href: "/projets/cuisine/cuisine-sur-mesure-rive-sud",
               description:
                 "Exécution complète avec coordination du projet et détails maîtrisés.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-project-03.webp",
-                alt: "Projet cuisine sur mesure sur la Rive-Sud",
+                src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
+                alt: "Projet de cuisine sur mesure sur la Rive-Sud",
               },
               badges: ["Rive-Sud", "clé en main"],
               footerCtaLabel: "Voir le projet",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "zones",
+      content: {
+        type: "split",
+        variant: "badges-checklist-cta",
+        props: {
+          heading: "Armoires de cuisine sur mesure dans tout le Grand Montréal",
+          intro:
+            "Basés à Pierrefonds-Roxboro, on conçoit, fabrique et installe des armoires et cuisines sur mesure dans l'Ouest-de-l'Île et partout dans le Grand Montréal.",
+          badges: [
+            "Pierrefonds-Roxboro",
+            "Ouest-de-l'Île",
+            "Montréal",
+            "Laval",
+            "Rive-Nord",
+            "Rive-Sud",
+          ],
+          cardTitle: "Zones desservies",
+          items: [
+            "Pierrefonds-Roxboro et l'Ouest-de-l'Île",
+            "Montréal et les quartiers centraux",
+            "Laval et la Rive-Nord",
+            "Rive-Sud et couronne sud",
+          ],
+          actions: [
+            {
+              label: "Demander une soumission",
+              href: "/contact",
+              variant: "default",
+            },
+            {
+              label: "Voir nos cuisines",
+              href: "/projets/cuisine",
+              variant: "outline",
             },
           ],
         },
@@ -234,20 +274,20 @@ export const cuisinePage: PageTemplateData = {
             "Réponses claires aux questions les plus fréquentes avant de lancer un projet.",
           items: [
             {
-              q: "Combien coûte une cuisine sur mesure ?",
-              a: "Le prix dépend de l'aménagement, des matériaux, des dimensions et du niveau de coordination requis.",
+              q: "Combien coûte une cuisine ou des armoires sur mesure ?",
+              a: "Le prix dépend de l'aménagement, des matériaux, des dimensions et du niveau de coordination requis. On vous donne une estimation claire après avoir cadré le projet.",
             },
             {
-              q: "Quelle est la différence avec une solution standard ?",
-              a: "Le sur mesure permet d'adapter l'espace, d'améliorer la structure et de mieux contrôler le résultat final.",
+              q: "Faites-vous des armoires de cuisine sur mesure à Pierrefonds et dans l'Ouest-de-l'Île ?",
+              a: "Oui. Nous sommes basés à Pierrefonds-Roxboro et installons des armoires et cuisines sur mesure dans tout l'Ouest-de-l'Île, à Montréal, à Laval et dans le Grand Montréal.",
+            },
+            {
+              q: "Quelle est la différence avec des armoires standard ?",
+              a: "Le sur mesure permet d'adapter précisément l'espace, d'améliorer la structure (bois massif, contreplaqué de bouleau) et de mieux contrôler le résultat final.",
             },
             {
               q: "Est-ce que vous faites aussi l'installation ?",
-              a: "Oui. L'objectif est justement d'assurer une exécution cohérente du design à la pose.",
-            },
-            {
-              q: "Travaillez-vous à Montréal et autour ?",
-              a: "Oui. Nous desservons Montréal, Laval et la Rive-Sud.",
+              a: "Oui. L'objectif est d'assurer une exécution cohérente du design à la pose, par la même équipe.",
             },
           ],
         },
