@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, MapPin } from "lucide-react";
 
 import {
   PUBLIC_PROJECTS,
@@ -16,8 +17,10 @@ import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd, serviceJsonLd } from "@/seo/schema/builders";
+import Header from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Heading } from "@/components/elements/heading";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 type Params = { space: string; slug: string };
 
@@ -40,6 +43,9 @@ export async function generateMetadata({
     title: project.title,
     description: project.metaDescription,
     path: `/projets/${project.space}/${project.slug}`,
+    ogImage: project.images?.[0]
+      ? { url: project.images[0].src, alt: project.images[0].alt }
+      : undefined,
   });
 }
 
@@ -50,20 +56,14 @@ const COLUMNS = [
   { key: "results", label: "Résultats" },
 ] as const;
 
-function LinkList({
-  heading,
-  items,
-}: {
-  heading: string;
-  items: GenericLink[];
-}) {
+function LinkList({ heading, items }: { heading: string; items: GenericLink[] }) {
   if (!items.length) return null;
   return (
     <div>
-      <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+      <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
         {heading}
       </h3>
-      <ul className="mt-4 space-y-2">
+      <ul className="mt-4 space-y-2.5">
         {items.map((it) => (
           <li key={it.href + (it.title ?? it.label ?? "")}>
             <Link
@@ -85,12 +85,12 @@ export default async function ProjectDetailPage({
 }: {
   params: Promise<Params>;
 }) {
-  const resolved = await params;
-  const project = getProject(resolved);
+  const project = getProject(await params);
   if (!project) notFound();
 
   const spaceLabel = SPACE_LABEL[project.space];
   const canonical = getProjectCanonicalUrl(project);
+  const hero = project.images?.[0];
   const related = (PROJECTS_BY_SPACE[project.space] ?? [])
     .filter((p) => p.slug !== project.slug)
     .slice(0, 3);
@@ -103,7 +103,7 @@ export default async function ProjectDetailPage({
   ];
 
   return (
-    <main className="bg-background text-foreground">
+    <>
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
       <JsonLd
         data={serviceJsonLd({
@@ -115,169 +115,181 @@ export default async function ProjectDetailPage({
         })}
       />
 
-      {/* Hero */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-          <nav
-            aria-label="Fil d'Ariane"
-            className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
-          >
-            <Link href="/projets" className="hover:text-foreground">
-              Projets
-            </Link>
-            <span aria-hidden>/</span>
-            <Link
-              href={`/projets/${project.space}`}
-              className="hover:text-foreground"
-            >
-              {spaceLabel}
-            </Link>
-          </nav>
+      <Header />
 
-          <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-            Projet — {spaceLabel}
-          </p>
-          <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-            {project.title}
-          </h1>
-          <p className="mt-2 text-sm font-medium text-foreground/60">
-            {project.neighborhood ? `${project.neighborhood}, ` : ""}
-            {project.city}
-          </p>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            {project.summary}
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild size="lg" className="gap-2">
-              <Link href={project.requiredLinks.contactHref}>
-                Demander une soumission
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href={project.requiredLinks.spaceHref}>
-                Voir l&apos;espace {spaceLabel.toLowerCase()}
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery (si images) */}
-      {project.images && project.images.length > 0 && (
+      <main id="contenu" className="bg-background text-foreground">
+        {/* Hero split */}
         <section className="border-b border-border">
-          <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {project.images.map((img, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={img.src + i}
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className={cn(
-                    "aspect-[4/3] w-full rounded-xl border border-border object-cover",
-                    i === 0 && "sm:col-span-2 sm:aspect-[16/9] lg:col-span-2",
-                  )}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Détail du projet */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            {COLUMNS.map((col) => {
-              const items = project[col.key];
-              if (!items?.length) return null;
-              return (
-                <div key={col.key}>
-                  <h2 className="text-sm font-semibold uppercase tracking-[0.18em] text-foreground/70">
-                    {col.label}
-                  </h2>
-                  <ul className="mt-4 space-y-3">
-                    {items.map((it) => (
-                      <li key={it} className="flex gap-2.5 text-sm text-muted-foreground">
-                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-foreground/50" />
-                        <span>{it}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Matériaux & services */}
-      <section className="border-b border-border">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 lg:px-8">
-          <LinkList heading="Matériaux" items={project.materials} />
-          <LinkList heading="Services liés" items={project.services} />
-        </div>
-      </section>
-
-      {/* Projets liés */}
-      {related.length > 0 && (
-        <section className="border-b border-border">
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-            <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-              Autres projets {spaceLabel.toLowerCase()}
-            </h2>
-            <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((p) => (
-                <Link
-                  key={p.slug}
-                  href={`/projets/${p.space}/${p.slug}`}
-                  className="group rounded-2xl border border-border bg-background p-6 transition-all hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                    {p.city}
-                  </p>
-                  <h3 className="mt-2 text-lg font-semibold text-foreground">
-                    {p.title}
-                  </h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">
-                    {p.summary}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
-                    Voir le projet
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                  </span>
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-20 lg:px-8">
+            <div>
+              <nav
+                aria-label="Fil d'Ariane"
+                className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
+              >
+                <Link href="/projets" className="hover:text-foreground">
+                  Projets
                 </Link>
-              ))}
+                <span aria-hidden>/</span>
+                <Link
+                  href={`/projets/${project.space}`}
+                  className="hover:text-foreground"
+                >
+                  {spaceLabel}
+                </Link>
+              </nav>
+
+              <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                Projet — {spaceLabel}
+              </p>
+              <Heading as="h1" variant="h1" className="mt-3 md:text-5xl">
+                {project.title}
+              </Heading>
+              <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground/60">
+                <MapPin className="h-4 w-4 text-foreground/40" />
+                {project.neighborhood ? `${project.neighborhood}, ` : ""}
+                {project.city}
+              </p>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
+                {project.summary}
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild size="lg" className="gap-2">
+                  <Link href={project.requiredLinks.contactHref}>
+                    Demander une soumission
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href={project.requiredLinks.spaceHref}>
+                    Voir l&apos;espace {spaceLabel.toLowerCase()}
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {hero ? (
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted">
+                <Image
+                  src={hero.src}
+                  alt={hero.alt}
+                  fill
+                  priority
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            ) : null}
+          </div>
+        </section>
+
+        {/* Détail */}
+        <section className="border-b border-border bg-secondary/30">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+              {COLUMNS.map((col) => {
+                const items = project[col.key];
+                if (!items?.length) return null;
+                return (
+                  <div key={col.key}>
+                    <h2 className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground/70">
+                      {col.label}
+                    </h2>
+                    <ul className="mt-4 space-y-3">
+                      {items.map((it) => (
+                        <li
+                          key={it}
+                          className="flex gap-2.5 text-sm text-muted-foreground"
+                        >
+                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-foreground/50" />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
-      )}
 
-      {/* CTA */}
-      <section>
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-          <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-border bg-secondary/40 p-8 md:flex-row md:items-center md:p-12">
-            <div className="max-w-xl">
-              <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                Un projet similaire en tête ?
-              </h2>
-              <p className="mt-3 text-muted-foreground">
-                On vous aide à cadrer un projet sur mesure, durable et bien
-                exécuté à {project.city} et dans le Grand Montréal.
-              </p>
-            </div>
-            <Button asChild size="lg" className="gap-2">
-              <Link href={project.requiredLinks.contactHref}>
-                Demander une soumission
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
+        {/* Matériaux & services */}
+        <section className="border-b border-border">
+          <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8">
+            <LinkList heading="Matériaux" items={project.materials} />
+            <LinkList heading="Services liés" items={project.services} />
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        {/* Projets liés */}
+        {related.length > 0 && (
+          <section className="border-b border-border">
+            <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+              <Heading as="h2" variant="h2">
+                Autres projets {spaceLabel.toLowerCase()}
+              </Heading>
+              <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {related.map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/projets/${p.space}/${p.slug}`}
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background transition-all hover:-translate-y-0.5 hover:shadow-md"
+                  >
+                    {p.images?.[0] ? (
+                      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                        <Image
+                          src={p.images[0].src}
+                          alt={p.images[0].alt}
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                    ) : null}
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        {p.city}
+                      </p>
+                      <h3 className="mt-1.5 text-base font-semibold text-foreground">
+                        {p.title}
+                      </h3>
+                      <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
+                        Voir le projet
+                        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* CTA */}
+        <section>
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+            <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-border bg-secondary/40 p-8 md:flex-row md:items-center md:p-12">
+              <div className="max-w-xl">
+                <Heading as="h2" variant="h2">
+                  Un projet similaire en tête ?
+                </Heading>
+                <p className="mt-3 text-muted-foreground">
+                  On vous aide à cadrer un projet sur mesure, durable et bien
+                  exécuté à {project.city} et dans le Grand Montréal.
+                </p>
+              </div>
+              <Button asChild size="lg" className="gap-2">
+                <Link href={project.requiredLinks.contactHref}>
+                  Demander une soumission
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }

@@ -17,16 +17,8 @@ export const PROJECT_CUISINE_SUR_MESURE_MONTREAL: ProjectData = {
   city: "Montréal",
   images: [
     {
-      src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-      alt: "Cuisine sur mesure à Montréal — vue d'ensemble",
-    },
-    {
-      src: "/images/generated/spaces/space-cuisine-project-01.webp",
-      alt: "Cuisine sur mesure à Montréal — rangements optimisés",
-    },
-    {
-      src: "/images/generated/spaces/space-cuisine-project-02.webp",
-      alt: "Cuisine sur mesure à Montréal — finition soignée",
+      src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
+      alt: "Cuisine sur mesure haut de gamme à Montréal",
     },
   ],
   scope: [

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 
@@ -10,6 +11,9 @@ import { createPageMetadata } from "@/lib/metadata";
 import { SITE } from "@/seo/schema/site";
 import { JsonLd } from "@/seo/JsonLd";
 import { breadcrumbJsonLd } from "@/seo/schema/builders";
+import Header from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Heading } from "@/components/elements/heading";
 import { Button } from "@/components/ui/button";
 
 type Params = { space: string };
@@ -57,72 +61,97 @@ export default async function ProjectsSpacePage({
   ];
 
   return (
-    <main className="bg-background text-foreground">
+    <>
       <JsonLd data={breadcrumbJsonLd(breadcrumbs)} />
 
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-24 lg:px-8">
-          <nav
-            aria-label="Fil d'Ariane"
-            className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
-          >
-            <Link href="/projets" className="hover:text-foreground">
-              Projets
-            </Link>
-            <span aria-hidden>/</span>
-            <span className="text-foreground/70">{label}</span>
-          </nav>
+      <Header />
 
-          <h1 className="mt-6 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-            Projets {label.toLowerCase()} sur mesure
-          </h1>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
-            Quelques réalisations de {label.toLowerCase()} sur mesure — design,
-            fabrication contrôlée et installation soignée, à Montréal, Laval et
-            dans le Grand Montréal.
-          </p>
-        </div>
-      </section>
+      <main id="contenu" className="bg-background text-foreground">
+        <section className="border-b border-border">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+            <nav
+              aria-label="Fil d'Ariane"
+              className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
+            >
+              <Link href="/projets" className="hover:text-foreground">
+                Projets
+              </Link>
+              <span aria-hidden>/</span>
+              <span className="text-foreground/70">{label}</span>
+            </nav>
 
-      <section>
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-          {projects.length === 0 ? (
-            <p className="text-muted-foreground">
-              Nos réalisations {label.toLowerCase()} arrivent bientôt.
+            <Heading as="h1" variant="h1" className="mt-6 max-w-3xl md:text-5xl">
+              Projets {label.toLowerCase()} sur mesure
+            </Heading>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Quelques réalisations de {label.toLowerCase()} sur mesure — design,
+              fabrication contrôlée et installation soignée, à Montréal, Laval et
+              dans le Grand Montréal.
             </p>
-          ) : (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {projects.map((p) => (
-                <Link
-                  key={p.slug}
-                  href={`/projets/${p.space}/${p.slug}`}
-                  className="group flex flex-col rounded-2xl border border-border bg-background p-6 transition-all hover:-translate-y-0.5 hover:shadow-md"
-                >
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                    {p.city}
-                  </p>
-                  <h2 className="mt-2 text-lg font-semibold text-foreground">
-                    {p.title}
-                  </h2>
-                  <p className="mt-2 line-clamp-3 flex-1 text-sm text-muted-foreground">
-                    {p.summary}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
-                    Voir le projet
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                  </span>
-                </Link>
-              ))}
-            </div>
-          )}
-
-          <div className="mt-12">
-            <Button asChild size="lg" variant="outline">
-              <Link href="/projets">Tous les projets</Link>
-            </Button>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        <section>
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+            {projects.length === 0 ? (
+              <div className="rounded-2xl border border-dashed border-border bg-secondary/30 p-10 text-center">
+                <p className="text-muted-foreground">
+                  Nos réalisations {label.toLowerCase()} arrivent bientôt.
+                </p>
+                <Button asChild size="lg" className="mt-6 gap-2">
+                  <Link href="/contact">Discuter de votre projet</Link>
+                </Button>
+              </div>
+            ) : (
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {projects.map((p) => (
+                  <Link
+                    key={p.slug}
+                    href={`/projets/${p.space}/${p.slug}`}
+                    className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-background transition-all hover:-translate-y-0.5 hover:shadow-md"
+                  >
+                    {p.images?.[0] ? (
+                      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                        <Image
+                          src={p.images[0].src}
+                          alt={p.images[0].alt}
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                        />
+                      </div>
+                    ) : null}
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        {p.neighborhood ? `${p.neighborhood}, ` : ""}
+                        {p.city}
+                      </p>
+                      <h2 className="mt-1.5 text-lg font-semibold text-foreground">
+                        {p.title}
+                      </h2>
+                      <p className="mt-2 line-clamp-2 flex-1 text-sm text-muted-foreground">
+                        {p.summary}
+                      </p>
+                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-foreground">
+                        Voir le projet
+                        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            <div className="mt-12">
+              <Button asChild size="lg" variant="outline">
+                <Link href="/projets">Tous les projets</Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }

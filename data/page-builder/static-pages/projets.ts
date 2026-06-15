@@ -62,33 +62,56 @@ export const page: PageTemplateData = {
             "Choisissez l'univers de projet le plus proche de votre réalité pour voir des références mieux ciblées.",
           items: [
             {
+              title: "Cuisines",
+              href: "/projets/cuisine",
+              description:
+                "Cuisines sur mesure : rangement optimisé et finition précise.",
+              footerCtaLabel: "Voir les projets cuisine",
               image: {
-                src: "/images/projects/chene-moderne.webp",
-                alt: "Catégorie projets cuisine sur mesure",
+                src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
+                alt: "Projets de cuisine sur mesure",
               },
             },
             {
+              title: "Salles de bain & vanités",
+              href: "/projets/salle-de-bain",
+              description:
+                "Vanités sur mesure durables, adaptées à l'humidité.",
+              footerCtaLabel: "Voir les projets salle de bain",
               image: {
-                src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-                alt: "Catégorie projets salle de bain",
+                src: "/images/generated/spaces/espaces-card-bath-01.webp",
+                alt: "Projets de vanité de salle de bain sur mesure",
               },
             },
             {
+              title: "Walk-in & rangement",
+              href: "/projets/walk-in",
+              description: "Rangement sur mesure, optimisé et fonctionnel.",
+              footerCtaLabel: "Voir les projets walk-in",
               image: {
-                src: "/images/projects/Signature-Bouleau.webp",
-                alt: "Catégorie projets walk-in et rangement",
+                src: "/images/generated/spaces/espaces-card-walkin-01.webp",
+                alt: "Projets de walk-in et rangement sur mesure",
               },
             },
             {
+              title: "Salles de lavage",
+              href: "/projets/salle-de-lavage",
+              description: "Salles de lavage organisées et durables.",
+              footerCtaLabel: "Voir les projets salle de lavage",
               image: {
-                src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
-                alt: "Catégorie projets salle de lavage",
+                src: "/images/generated/spaces/espaces-card-laundry-01.webp",
+                alt: "Projets de salle de lavage sur mesure",
               },
             },
             {
+              title: "Commercial",
+              href: "/projets/commercial",
+              description:
+                "Aménagements commerciaux pensés pour l'usage intensif.",
+              footerCtaLabel: "Voir les projets commerciaux",
               image: {
-                src: "/images/projects/project11.webp",
-                alt: "Catégorie projets commerciaux",
+                src: "/images/generated/spaces/espaces-card-commercial-01.webp",
+                alt: "Projets commerciaux sur mesure",
               },
             },
           ],
