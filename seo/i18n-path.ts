@@ -11,6 +11,19 @@ const EN_SEGMENT: Record<string, string> = {
   "conditions-dutilisation": "terms-of-use",
 };
 
+// Valeurs d'espace traduites (interne FR -> externe EN). Enum borné (6).
+export const SPACE_EN: Record<string, string> = {
+  cuisine: "kitchen",
+  "salle-de-bain": "bathroom",
+  "walk-in": "walk-in",
+  "salle-de-lavage": "laundry-room",
+  "sous-sol": "basement",
+  commercial: "commercial",
+};
+
+// Les espaces apparaissent comme 2e segment sous /espaces et /projets.
+const SPACE_PARENTS = new Set(["espaces", "projets"]);
+
 /**
  * Convertit un chemin interne (ex. "/espaces/cuisine") en URL externe localisée.
  * FR : inchangé (racine). EN : premier segment traduit + préfixe /en.
@@ -19,6 +32,11 @@ export function localizePath(path: string, locale: "fr" | "en"): string {
   if (locale === "fr") return path;
   if (!path || path === "/") return "/en";
   const segs = path.replace(/^\/+/, "").split("/");
-  segs[0] = EN_SEGMENT[segs[0]] ?? segs[0];
+  const head = segs[0];
+  // Traduit la valeur d'espace (2e segment) sous /espaces et /projets.
+  if (SPACE_PARENTS.has(head) && segs[1]) {
+    segs[1] = SPACE_EN[segs[1]] ?? segs[1];
+  }
+  segs[0] = EN_SEGMENT[head] ?? head;
   return `/en/${segs.join("/")}`;
 }

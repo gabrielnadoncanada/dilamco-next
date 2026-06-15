@@ -2,16 +2,22 @@
 
 import type { ComponentProps, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
+import { SPACE_EN } from "@/seo/i18n-path";
+
+// Templates explicites par espace (valeur traduite via routing.ts).
+const SPACE_TEMPLATES = Object.keys(SPACE_EN).flatMap((s) => [
+  `/espaces/${s}`,
+  `/projets/${s}`,
+  `/projets/${s}/[slug]`,
+]);
 
 // Pathnames internes connus (doivent rester synchronisés avec i18n/routing.ts).
-// Ordre indifférent : on matche par nombre de segments + littéraux/params.
+// Les plus spécifiques (espaces) en premier pour gagner le match.
 const TEMPLATES = [
   "/",
+  ...SPACE_TEMPLATES,
   "/espaces",
-  "/espaces/[space]",
   "/projets",
-  "/projets/[space]",
-  "/projets/[space]/[slug]",
   "/materiaux",
   "/materiaux/[slug]",
   "/services",

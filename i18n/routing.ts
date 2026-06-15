@@ -1,4 +1,19 @@
 import { defineRouting } from "next-intl/routing";
+import { SPACE_EN } from "@/seo/i18n-path";
+
+// Pathnames explicites par espace : la VALEUR du slug est traduite
+// (/projets/cuisine -> /en/projects/kitchen). next-intl gère alors liens,
+// routing et redirections de façon cohérente.
+const spacePathnames = Object.fromEntries(
+  Object.entries(SPACE_EN).flatMap(([fr, en]) => [
+    [`/espaces/${fr}`, { fr: `/espaces/${fr}`, en: `/spaces/${en}` }],
+    [`/projets/${fr}`, { fr: `/projets/${fr}`, en: `/projects/${en}` }],
+    [
+      `/projets/${fr}/[slug]`,
+      { fr: `/projets/${fr}/[slug]`, en: `/projects/${en}/[slug]` },
+    ],
+  ]),
+);
 
 export const routing = defineRouting({
   locales: ["fr", "en"],
@@ -15,13 +30,8 @@ export const routing = defineRouting({
   pathnames: {
     "/": "/",
     "/espaces": { fr: "/espaces", en: "/spaces" },
-    "/espaces/[space]": { fr: "/espaces/[space]", en: "/spaces/[space]" },
     "/projets": { fr: "/projets", en: "/projects" },
-    "/projets/[space]": { fr: "/projets/[space]", en: "/projects/[space]" },
-    "/projets/[space]/[slug]": {
-      fr: "/projets/[space]/[slug]",
-      en: "/projects/[space]/[slug]",
-    },
+    ...spacePathnames,
     "/materiaux": { fr: "/materiaux", en: "/materials" },
     "/materiaux/[slug]": { fr: "/materiaux/[slug]", en: "/materials/[slug]" },
     "/services": "/services",

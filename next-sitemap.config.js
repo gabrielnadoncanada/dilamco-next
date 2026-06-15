@@ -10,7 +10,7 @@ function splitLocale(path) {
   return { locale: "fr", slug: path };
 }
 
-// Traduction du premier segment pour l'EN (synchronisé avec i18n/routing.ts).
+// Traduction des segments pour l'EN (synchronisé avec i18n/routing.ts).
 const EN_SEGMENT = {
   espaces: "spaces",
   projets: "projects",
@@ -20,13 +20,25 @@ const EN_SEGMENT = {
   "politique-de-confidentialite": "privacy-policy",
   "conditions-dutilisation": "terms-of-use",
 };
+const SPACE_EN = {
+  cuisine: "kitchen",
+  "salle-de-bain": "bathroom",
+  "walk-in": "walk-in",
+  "salle-de-lavage": "laundry-room",
+  "sous-sol": "basement",
+  commercial: "commercial",
+};
 
-// FR à la racine (jamais /fr), EN sous /en avec premier segment traduit.
+// FR à la racine (jamais /fr), EN sous /en avec segments + valeur d'espace traduits.
 function localizedUrl(slug, locale) {
   if (locale !== "en") return `${SITE}${slug === "/" ? "" : slug}`;
   if (slug === "/") return `${SITE}/en`;
   const segs = slug.replace(/^\/+/, "").split("/");
-  segs[0] = EN_SEGMENT[segs[0]] ?? segs[0];
+  const head = segs[0];
+  if ((head === "espaces" || head === "projets") && segs[1]) {
+    segs[1] = SPACE_EN[segs[1]] ?? segs[1];
+  }
+  segs[0] = EN_SEGMENT[head] ?? head;
   return `${SITE}/en/${segs.join("/")}`;
 }
 

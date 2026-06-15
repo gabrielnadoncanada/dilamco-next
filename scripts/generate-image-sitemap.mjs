@@ -26,7 +26,7 @@ async function walkHtml(dir) {
   return out;
 }
 
-// Traduction du premier segment pour l'EN (synchronisé avec i18n/routing.ts).
+// Traduction des segments pour l'EN (synchronisé avec i18n/routing.ts).
 const EN_SEGMENT = {
   espaces: "spaces",
   projets: "projects",
@@ -36,6 +36,14 @@ const EN_SEGMENT = {
   "politique-de-confidentialite": "privacy-policy",
   "conditions-dutilisation": "terms-of-use",
 };
+const SPACE_EN = {
+  cuisine: "kitchen",
+  "salle-de-bain": "bathroom",
+  "walk-in": "walk-in",
+  "salle-de-lavage": "laundry-room",
+  "sous-sol": "basement",
+  commercial: "commercial",
+};
 
 function fileToRoute(fp) {
   let r = fp.slice(APP_DIR.length).replace(/\\/g, "/").replace(/\.html$/, "");
@@ -43,11 +51,15 @@ function fileToRoute(fp) {
   // FR à la racine (on retire /fr).
   if (r === "/fr") return "/";
   if (r.startsWith("/fr/")) return r.slice(3);
-  // EN : on traduit le premier segment interne -> externe.
+  // EN : on traduit le premier segment + la valeur d'espace.
   if (r === "/en" || r === "/en/index") return "/en";
   if (r.startsWith("/en/")) {
     const segs = r.slice(4).split("/");
-    segs[0] = EN_SEGMENT[segs[0]] ?? segs[0];
+    const head = segs[0];
+    if ((head === "espaces" || head === "projets") && segs[1]) {
+      segs[1] = SPACE_EN[segs[1]] ?? segs[1];
+    }
+    segs[0] = EN_SEGMENT[head] ?? head;
     return `/en/${segs.join("/")}`;
   }
   return r || "/";
