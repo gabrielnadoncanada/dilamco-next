@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# symlink vers l'app voisine dilamco_store (référence locale, pas à committer)
+/dilamco_store
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

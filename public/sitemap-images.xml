@@ -798,6 +798,44 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dilamco.com/en/spaces</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Dilamco custom spaces</image:caption>
+      <image:title>Dilamco custom spaces</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
+      <image:caption>High-end custom kitchen cabinets</image:caption>
+      <image:title>High-end custom kitchen cabinets</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-bath-01.webp</image:loc>
+      <image:caption>Custom bathroom vanity</image:caption>
+      <image:title>Custom bathroom vanity</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-laundry-01.webp</image:loc>
+      <image:caption>Custom laundry room</image:caption>
+      <image:title>Custom laundry room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-walkin-01.webp</image:loc>
+      <image:caption>Custom walk-in closet</image:caption>
+      <image:title>Custom walk-in closet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-sous-sol-01.webp</image:loc>
+      <image:caption>Custom basement finishing</image:caption>
+      <image:title>Custom basement finishing</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
+      <image:caption>Custom commercial fit-out</image:caption>
+      <image:title>Custom commercial fit-out</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dilamco.com/en/spaces/basement</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
@@ -953,6 +991,44 @@
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-03.webp</image:loc>
       <image:caption>Custom walk-in closet project on the South Shore</image:caption>
       <image:title>Custom walk-in closet project on the South Shore</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/espaces</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Espaces sur mesure Dilamco</image:caption>
+      <image:title>Espaces sur mesure Dilamco</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure haut de gamme</image:caption>
+      <image:title>Armoires de cuisine sur mesure haut de gamme</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-bath-01.webp</image:loc>
+      <image:caption>Vanité de salle de bain sur mesure</image:caption>
+      <image:title>Vanité de salle de bain sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-laundry-01.webp</image:loc>
+      <image:caption>Salle de lavage sur mesure</image:caption>
+      <image:title>Salle de lavage sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-walkin-01.webp</image:loc>
+      <image:caption>Walk-in sur mesure</image:caption>
+      <image:title>Walk-in sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-sous-sol-01.webp</image:loc>
+      <image:caption>Aménagement de sous-sol sur mesure</image:caption>
+      <image:title>Aménagement de sous-sol sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
+      <image:caption>Aménagement commercial sur mesure</image:caption>
+      <image:title>Aménagement commercial sur mesure</image:title>
     </image:image>
   </url>
   <url>

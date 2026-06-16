@@ -1,10 +1,6 @@
-import { redirect } from "next/navigation";
+import { createStaticPage } from "@/features/page-builder";
 
-export default async function EspacesPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  redirect(locale === "en" ? "/en" : "/");
-}
+const { generateMetadata, Page } = createStaticPage("espaces");
+
+export { generateMetadata };
+export default Page;

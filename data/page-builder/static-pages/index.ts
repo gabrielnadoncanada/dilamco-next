@@ -3,6 +3,7 @@ import type { AppLocale } from "@/i18n/routing";
 
 // --- Sources FR (existantes) ---
 import { page as home } from "./home";
+import { page as espaces } from "./espaces";
 import { page as aPropos } from "./a-propos";
 import { page as contact } from "./contact";
 import { page as materiaux } from "./materiaux";
@@ -13,6 +14,7 @@ import { renovationPage as servicesRenovation } from "@/data/page-builder/servic
 
 // --- Traductions EN ---
 import { pageEn as homeEn } from "./home.en";
+import { pageEn as espacesEn } from "./espaces.en";
 import { pageEn as aProposEn } from "./a-propos.en";
 import { pageEn as contactEn } from "./contact.en";
 import { pageEn as materiauxEn } from "./materiaux.en";
@@ -23,6 +25,7 @@ import { renovationPageEn as servicesRenovationEn } from "@/data/page-builder/se
 
 const fr = {
   home,
+  espaces,
   "a-propos": aPropos,
   contact,
   materiaux,
@@ -34,6 +37,7 @@ const fr = {
 
 const en: Partial<Record<keyof typeof fr, PageTemplateData>> = {
   home: homeEn,
+  espaces: espacesEn,
   "a-propos": aProposEn,
   contact: contactEn,
   materiaux: materiauxEn,
