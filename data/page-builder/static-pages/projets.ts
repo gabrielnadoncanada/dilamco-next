@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Projets",
+    title: "Réalisations de cuisines & armoires sur mesure",
     description:
       "Découvrez nos réalisations sur mesure : cuisines, vanités, walk-in, salles de lavage et projets commerciaux.",
     path: "/projets",

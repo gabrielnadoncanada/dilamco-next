@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const melaminePageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Melamine",
+    title: "Melamine for cabinets: benefits and uses",
     description:
       "Melamine: advantages, limits and recommended uses for cabinets and custom projects.",
     path: "/materiaux/melamine",

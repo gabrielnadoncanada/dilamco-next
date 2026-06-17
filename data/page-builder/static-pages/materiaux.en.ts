@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Materials",
+    title: "Materials for custom kitchens & cabinetry",
     description:
       "Materials and comparisons for custom kitchens, vanities and cabinets: plywood, MDF, melamine, solid wood, hardware and finishes.",
     path: "/materiaux",

@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Cuisines, vanités et armoires sur mesure clé en main à Montréal",
+    title: "Cuisines, vanités et armoires sur mesure à Montréal | Dilamco",
     description:
       "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme.",
     path: "/",

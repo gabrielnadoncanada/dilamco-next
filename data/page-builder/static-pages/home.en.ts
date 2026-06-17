@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Custom turnkey kitchens, vanities and cabinets in Montréal",
+    title: "Custom kitchens, vanities & cabinets in Montréal | Dilamco",
     description:
       "Dilamco designs and builds high-end custom kitchens, vanities and cabinets.",
     path: "/",

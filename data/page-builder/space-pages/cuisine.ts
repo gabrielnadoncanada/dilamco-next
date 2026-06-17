@@ -6,7 +6,7 @@ export const cuisinePage: PageTemplateData = {
   metadata: {
     title: "Armoires de cuisine sur mesure à Pierrefonds et Montréal",
     description:
-      "Armoires et cuisines sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
+      "Armoires et cuisines sur mesure haut de gamme : conception, fabrication contrôlée et pose précise à Pierrefonds, Montréal, Laval et le Grand Montréal.",
     path: "/espaces/cuisine",
     ogAlt: "Armoires de cuisine sur mesure Dilamco",
   },

@@ -6,7 +6,7 @@ export const sousSolPage: PageTemplateData = {
   metadata: {
     title: "Aménagement de sous-sol sur mesure à Pierrefonds et Montréal",
     description:
-      "Aménagement de sous-sol haut de gamme : salle de cinéma maison, bar, cave à vin, bibliothèque et rangement sur mesure. Conception, fabrication et installation à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
+      "Aménagement de sous-sol sur mesure : cinéma maison, bar, cave à vin, bibliothèque et rangement. Conception et installation à Montréal et le Grand Montréal.",
     path: "/espaces/sous-sol",
     ogAlt: "Aménagement de sous-sol sur mesure Dilamco",
   },

@@ -6,7 +6,7 @@ export const cuisinePageEn: PageTemplateData = {
   metadata: {
     title: "Custom kitchen cabinets in Pierrefonds and Montréal",
     description:
-      "High-end custom kitchen cabinetry: design, controlled fabrication and precise installation in Pierrefonds-Roxboro, the West Island, Montréal, Laval and Greater Montréal.",
+      "High-end custom kitchen cabinetry: design, controlled fabrication and precise installation in Pierrefonds, Montréal, Laval and Greater Montréal.",
     path: "/espaces/cuisine",
     ogAlt: "Dilamco custom kitchen cabinets",
   },

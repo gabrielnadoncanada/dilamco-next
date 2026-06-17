@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const melaminePage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Mélamine",
+    title: "Mélamine pour armoires : avantages et usages",
     description:
       "Mélamine : avantages, limites et usages recommandés pour armoires et projets sur mesure.",
     path: "/materiaux/melamine",

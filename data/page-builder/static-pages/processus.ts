@@ -5,7 +5,7 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Processus",
+    title: "Notre processus, du design à l'installation",
     description:
       "Processus Dilamco : cadrage, design, fabrication, installation et, selon le projet, coordination de rénovation clé en main.",
     path: "/processus",

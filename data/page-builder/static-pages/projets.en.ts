@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Projects",
+    title: "Custom kitchen & cabinetry projects",
     description:
       "Explore our custom projects: kitchens, vanities, walk-in closets, laundry rooms and commercial work.",
     path: "/projets",

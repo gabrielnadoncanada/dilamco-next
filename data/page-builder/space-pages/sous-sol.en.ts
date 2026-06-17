@@ -6,7 +6,7 @@ export const sousSolPageEn: PageTemplateData = {
   metadata: {
     title: "Custom basement finishing in Pierrefonds and Montréal",
     description:
-      "High-end basement finishing: home theatre, bar, wine cellar, library and custom storage. Design, fabrication and installation in Pierrefonds-Roxboro, the West Island, Montréal, Laval and Greater Montréal.",
+      "High-end custom basement finishing: home theatre, bar, wine cellar, library and storage. Design and installation in Montréal and Greater Montréal.",
     path: "/espaces/sous-sol",
     ogAlt: "Dilamco custom basement finishing",
   },

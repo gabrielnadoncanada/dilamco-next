@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Matériaux",
+    title: "Matériaux pour cuisines & armoires sur mesure",
     description:
       "Matériaux et comparatifs pour cuisines, vanités et armoires sur mesure : contreplaqué, MDF, mélamine, bois massif, quincaillerie et finis.",
     path: "/materiaux",

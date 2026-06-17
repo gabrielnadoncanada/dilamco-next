@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "About",
+    title: "About — custom cabinetry maker in Montréal",
     description:
       "About Dilamco: custom work, controlled fabrication, careful installation and a long-term vision for durable projects.",
     path: "/a-propos",
