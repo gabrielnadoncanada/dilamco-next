@@ -21,6 +21,14 @@ export const SPACE_EN: Record<string, string> = {
   commercial: "commercial",
 };
 
+// Valeurs de type de rénovation traduites (interne FR -> externe EN). Enum borné (4).
+export const RENOVATION_EN: Record<string, string> = {
+  cuisine: "kitchen",
+  "salle-de-bain": "bathroom",
+  plancher: "flooring",
+  "agrandissement-de-maison": "home-extension",
+};
+
 // Les espaces apparaissent comme 2e segment sous /espaces et /projets.
 const SPACE_PARENTS = new Set(["espaces", "projets"]);
 
@@ -36,6 +44,10 @@ export function localizePath(path: string, locale: "fr" | "en"): string {
   // Traduit la valeur d'espace (2e segment) sous /espaces et /projets.
   if (SPACE_PARENTS.has(head) && segs[1]) {
     segs[1] = SPACE_EN[segs[1]] ?? segs[1];
+  }
+  // Traduit le type de rénovation (3e segment) sous /services/renovation.
+  if (head === "services" && segs[1] === "renovation" && segs[2]) {
+    segs[2] = RENOVATION_EN[segs[2]] ?? segs[2];
   }
   segs[0] = EN_SEGMENT[head] ?? head;
   return `/en/${segs.join("/")}`;

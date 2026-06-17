@@ -28,6 +28,12 @@ const SPACE_EN = {
   "sous-sol": "basement",
   commercial: "commercial",
 };
+const RENOVATION_EN = {
+  cuisine: "kitchen",
+  "salle-de-bain": "bathroom",
+  plancher: "flooring",
+  "agrandissement-de-maison": "home-extension",
+};
 
 // FR à la racine (jamais /fr), EN sous /en avec segments + valeur d'espace traduits.
 function localizedUrl(slug, locale) {
@@ -37,6 +43,9 @@ function localizedUrl(slug, locale) {
   const head = segs[0];
   if ((head === "espaces" || head === "projets") && segs[1]) {
     segs[1] = SPACE_EN[segs[1]] ?? segs[1];
+  }
+  if (head === "services" && segs[1] === "renovation" && segs[2]) {
+    segs[2] = RENOVATION_EN[segs[2]] ?? segs[2];
   }
   segs[0] = EN_SEGMENT[head] ?? head;
   return `${SITE}/en/${segs.join("/")}`;

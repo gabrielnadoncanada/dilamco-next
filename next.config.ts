@@ -90,7 +90,7 @@ const redirectRules = [
   },
   {
     source: "/en/residential/flooring-installation",
-    destination: "/en/services/renovation/plancher",
+    destination: "/en/services/renovation/flooring",
   },
   {
     source: "/fr/residentiel/installation-planchers",
@@ -102,11 +102,29 @@ const redirectRules = [
   },
   {
     source: "/en/residential/kitchen-bathroom-renovations",
-    destination: "/en/services/renovation/cuisine",
+    destination: "/en/services/renovation/kitchen",
   },
   {
     source: "/fr/residentiel/renovations-cuisine-salle-de-bain",
     destination: "/services/renovation/salle-de-bain",
+  },
+
+  // Anciennes URLs EN avec slug FR -> nouveau slug EN traduit (cuisine->kitchen…)
+  {
+    source: "/en/services/renovation/cuisine",
+    destination: "/en/services/renovation/kitchen",
+  },
+  {
+    source: "/en/services/renovation/salle-de-bain",
+    destination: "/en/services/renovation/bathroom",
+  },
+  {
+    source: "/en/services/renovation/plancher",
+    destination: "/en/services/renovation/flooring",
+  },
+  {
+    source: "/en/services/renovation/agrandissement-de-maison",
+    destination: "/en/services/renovation/home-extension",
   },
 
   // Doors / windows -> no exact page in new sitemap, closest renovation hub
