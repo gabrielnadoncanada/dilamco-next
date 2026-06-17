@@ -686,49 +686,21 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/services/renovation/agrandissement-de-maison</loc>
+    <loc>https://dilamco.com/en/services/renovation/bathroom</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Residential renovation and addition project</image:caption>
-      <image:title>Residential renovation and addition project</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
+      <image:caption>Custom bathroom renovation</image:caption>
+      <image:title>Custom bathroom renovation</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planning a residential addition project</image:caption>
-      <image:title>Planning a residential addition project</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen integrated into an addition</image:caption>
-      <image:title>Custom kitchen integrated into an addition</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-approach-01.webp</image:loc>
+      <image:caption>Planning a bathroom renovation</image:caption>
+      <image:title>Planning a bathroom renovation</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Custom bathroom integrated into an addition</image:caption>
-      <image:title>Custom bathroom integrated into an addition</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
-      <image:caption>Custom walk-in in a residential extension</image:caption>
-      <image:title>Custom walk-in in a residential extension</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/services/renovation/cuisine</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen renovation</image:caption>
-      <image:title>Custom kitchen renovation</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-approach-01.webp</image:loc>
-      <image:caption>Planning a kitchen renovation</image:caption>
-      <image:title>Planning a kitchen renovation</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
-      <image:caption>High-end custom kitchen</image:caption>
-      <image:title>High-end custom kitchen</image:title>
+      <image:caption>High-end custom bathroom</image:caption>
+      <image:title>High-end custom bathroom</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
@@ -742,7 +714,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/services/renovation/plancher</loc>
+    <loc>https://dilamco.com/en/services/renovation/flooring</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-hero-01.webp</image:loc>
       <image:caption>Flooring renovation</image:caption>
@@ -770,21 +742,49 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/services/renovation/salle-de-bain</loc>
+    <loc>https://dilamco.com/en/services/renovation/home-extension</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
-      <image:caption>Custom bathroom renovation</image:caption>
-      <image:title>Custom bathroom renovation</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
+      <image:caption>Residential renovation and addition project</image:caption>
+      <image:title>Residential renovation and addition project</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-approach-01.webp</image:loc>
-      <image:caption>Planning a bathroom renovation</image:caption>
-      <image:title>Planning a bathroom renovation</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
+      <image:caption>Planning a residential addition project</image:caption>
+      <image:title>Planning a residential addition project</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Custom kitchen integrated into an addition</image:caption>
+      <image:title>Custom kitchen integrated into an addition</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>High-end custom bathroom</image:caption>
-      <image:title>High-end custom bathroom</image:title>
+      <image:caption>Custom bathroom integrated into an addition</image:caption>
+      <image:title>Custom bathroom integrated into an addition</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
+      <image:caption>Custom walk-in in a residential extension</image:caption>
+      <image:title>Custom walk-in in a residential extension</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/renovation/kitchen</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
+      <image:caption>Custom kitchen renovation</image:caption>
+      <image:title>Custom kitchen renovation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-approach-01.webp</image:loc>
+      <image:caption>Planning a kitchen renovation</image:caption>
+      <image:title>Planning a kitchen renovation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>High-end custom kitchen</image:caption>
+      <image:title>High-end custom kitchen</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
