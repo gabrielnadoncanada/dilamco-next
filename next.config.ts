@@ -127,6 +127,29 @@ const redirectRules = [
     destination: "/en/services/renovation/home-extension",
   },
 
+  // Anciennes URLs EN matériaux avec slug FR -> nouveau slug EN traduit
+  // (contreplaque->plywood…). mdf et melamine inchangés (pas de redirect).
+  {
+    source: "/en/materials/contreplaque",
+    destination: "/en/materials/plywood",
+  },
+  {
+    source: "/en/materials/bois-massif",
+    destination: "/en/materials/solid-wood",
+  },
+  {
+    source: "/en/materials/comparatif",
+    destination: "/en/materials/comparison",
+  },
+  {
+    source: "/en/materials/couleurs",
+    destination: "/en/materials/colours",
+  },
+  {
+    source: "/en/materials/quincaillerie",
+    destination: "/en/materials/hardware",
+  },
+
   // Doors / windows -> no exact page in new sitemap, closest renovation hub
   {
     source: "/residential/doors-windows",

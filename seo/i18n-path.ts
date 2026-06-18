@@ -29,6 +29,17 @@ export const RENOVATION_EN: Record<string, string> = {
   "agrandissement-de-maison": "home-extension",
 };
 
+// Valeurs de slug matériau traduites (interne FR -> externe EN). Enum borné (7).
+export const MATERIAL_EN: Record<string, string> = {
+  contreplaque: "plywood",
+  "bois-massif": "solid-wood",
+  comparatif: "comparison",
+  couleurs: "colours",
+  quincaillerie: "hardware",
+  mdf: "mdf",
+  melamine: "melamine",
+};
+
 // Les espaces apparaissent comme 2e segment sous /espaces et /projets.
 const SPACE_PARENTS = new Set(["espaces", "projets"]);
 
@@ -48,6 +59,10 @@ export function localizePath(path: string, locale: "fr" | "en"): string {
   // Traduit le type de rénovation (3e segment) sous /services/renovation.
   if (head === "services" && segs[1] === "renovation" && segs[2]) {
     segs[2] = RENOVATION_EN[segs[2]] ?? segs[2];
+  }
+  // Traduit le slug matériau (2e segment) sous /materiaux.
+  if (head === "materiaux" && segs[1]) {
+    segs[1] = MATERIAL_EN[segs[1]] ?? segs[1];
   }
   segs[0] = EN_SEGMENT[head] ?? head;
   return `/en/${segs.join("/")}`;

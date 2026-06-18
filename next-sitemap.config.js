@@ -34,6 +34,15 @@ const RENOVATION_EN = {
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
 };
+const MATERIAL_EN = {
+  contreplaque: "plywood",
+  "bois-massif": "solid-wood",
+  comparatif: "comparison",
+  couleurs: "colours",
+  quincaillerie: "hardware",
+  mdf: "mdf",
+  melamine: "melamine",
+};
 
 // FR à la racine (jamais /fr), EN sous /en avec segments + valeur d'espace traduits.
 function localizedUrl(slug, locale) {
@@ -46,6 +55,9 @@ function localizedUrl(slug, locale) {
   }
   if (head === "services" && segs[1] === "renovation" && segs[2]) {
     segs[2] = RENOVATION_EN[segs[2]] ?? segs[2];
+  }
+  if (head === "materiaux" && segs[1]) {
+    segs[1] = MATERIAL_EN[segs[1]] ?? segs[1];
   }
   segs[0] = EN_SEGMENT[head] ?? head;
   return `${SITE}/en/${segs.join("/")}`;

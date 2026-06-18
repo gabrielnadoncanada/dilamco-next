@@ -2,7 +2,7 @@
 
 import type { ComponentProps, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
-import { SPACE_EN } from "@/seo/i18n-path";
+import { SPACE_EN, MATERIAL_EN, RENOVATION_EN } from "@/seo/i18n-path";
 
 // Templates explicites par espace (valeur traduite via routing.ts).
 const SPACE_TEMPLATES = Object.keys(SPACE_EN).flatMap((s) => [
@@ -10,6 +10,17 @@ const SPACE_TEMPLATES = Object.keys(SPACE_EN).flatMap((s) => [
   `/projets/${s}`,
   `/projets/${s}/[slug]`,
 ]);
+
+// Templates littéraux par matériau (slug traduit via routing.ts) : doivent
+// gagner le match avant un éventuel générique, comme les espaces.
+const MATERIAL_TEMPLATES = Object.keys(MATERIAL_EN).map((m) => `/materiaux/${m}`);
+
+// Templates littéraux par type de rénovation (slug traduit via routing.ts).
+// Énumérés (pas de générique [type]) car routing.ts ne déclare que les valeurs
+// littérales : un template dynamique ne serait pas résolu par next-intl.
+const RENOVATION_TEMPLATES = Object.keys(RENOVATION_EN).map(
+  (r) => `/services/renovation/${r}`,
+);
 
 // Pathnames internes connus (doivent rester synchronisés avec i18n/routing.ts).
 // Les plus spécifiques (espaces) en premier pour gagner le match.
@@ -19,11 +30,11 @@ const TEMPLATES = [
   "/espaces",
   "/projets",
   "/materiaux",
-  "/materiaux/[slug]",
+  ...MATERIAL_TEMPLATES,
   "/services",
   "/services/[slug]",
   "/services/renovation",
-  "/services/renovation/[type]",
+  ...RENOVATION_TEMPLATES,
   "/a-propos",
   "/contact",
   "/processus",

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
@@ -132,101 +133,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materials/bois-massif</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
-      <image:caption>Custom kitchen with solid wood details</image:caption>
-      <image:title>Custom kitchen with solid wood details</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
-      <image:caption>Solid wood finish detail</image:caption>
-      <image:title>Solid wood finish detail</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
-      <image:caption>Plywood detail for custom cabinets</image:caption>
-      <image:title>Plywood detail for custom cabinets</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
-      <image:caption>MDF panel with painted finish</image:caption>
-      <image:title>MDF panel with painted finish</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
-      <image:caption>Melamine panel for custom furniture</image:caption>
-      <image:title>Melamine panel for custom furniture</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
-      <image:caption>Colour and finish samples for custom furniture</image:caption>
-      <image:title>Colour and finish samples for custom furniture</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/materials/comparatif</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
-      <image:caption>Materials comparison for a custom kitchen</image:caption>
-      <image:title>Materials comparison for a custom kitchen</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
-      <image:caption>Plywood detail for custom cabinets</image:caption>
-      <image:title>Plywood detail for custom cabinets</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
-      <image:caption>MDF panel with a painted finish</image:caption>
-      <image:title>MDF panel with a painted finish</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
-      <image:caption>Melamine panel for custom furniture</image:caption>
-      <image:title>Melamine panel for custom furniture</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
-      <image:caption>Natural solid wood finish</image:caption>
-      <image:title>Natural solid wood finish</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/materials/contreplaque</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen with a durable structure</image:caption>
-      <image:title>Custom kitchen with a durable structure</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-detail-01.webp</image:loc>
-      <image:caption>Detail of a custom kitchen in plywood</image:caption>
-      <image:title>Detail of a custom kitchen in plywood</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
-      <image:caption>Visual comparison of several cabinet materials</image:caption>
-      <image:title>Visual comparison of several cabinet materials</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
-      <image:caption>MDF panel with a painted finish</image:caption>
-      <image:title>MDF panel with a painted finish</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
-      <image:caption>Melamine panel for custom furniture</image:caption>
-      <image:title>Melamine panel for custom furniture</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
-      <image:caption>Natural solid wood finish</image:caption>
-      <image:title>Natural solid wood finish</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://dilamco.com/en/materials/couleurs</loc>
+    <loc>https://dilamco.com/en/materials/colours</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
       <image:caption>Colour and finish choices for a custom project</image:caption>
@@ -261,6 +168,67 @@
       <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
       <image:caption>Visual comparison of materials and finishes</image:caption>
       <image:title>Visual comparison of materials and finishes</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materials/comparison</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Materials comparison for a custom kitchen</image:caption>
+      <image:title>Materials comparison for a custom kitchen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Plywood detail for custom cabinets</image:caption>
+      <image:title>Plywood detail for custom cabinets</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>MDF panel with a painted finish</image:caption>
+      <image:title>MDF panel with a painted finish</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Melamine panel for custom furniture</image:caption>
+      <image:title>Melamine panel for custom furniture</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Natural solid wood finish</image:caption>
+      <image:title>Natural solid wood finish</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materials/hardware</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-hero-01.webp</image:loc>
+      <image:caption>Custom kitchen highlighting the quality of the hardware</image:caption>
+      <image:title>Custom kitchen highlighting the quality of the hardware</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
+      <image:caption>Custom kitchen detail showing a durable drawer</image:caption>
+      <image:title>Custom kitchen detail showing a durable drawer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-card-01.webp</image:loc>
+      <image:caption>Solid wood for custom cabinets</image:caption>
+      <image:title>Solid wood for custom cabinets</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-card-01.webp</image:loc>
+      <image:caption>Plywood used in a custom kitchen</image:caption>
+      <image:title>Plywood used in a custom kitchen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-kitchen-durability-card-01.webp</image:loc>
+      <image:caption>High-end custom kitchen</image:caption>
+      <image:title>High-end custom kitchen</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-detail-01.webp</image:loc>
+      <image:caption>Custom bathroom vanity</image:caption>
+      <image:title>Custom bathroom vanity</image:title>
     </image:image>
   </url>
   <url>
@@ -330,36 +298,69 @@
     </image:image>
   </url>
   <url>
-    <loc>https://dilamco.com/en/materials/quincaillerie</loc>
+    <loc>https://dilamco.com/en/materials/plywood</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen highlighting the quality of the hardware</image:caption>
-      <image:title>Custom kitchen highlighting the quality of the hardware</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Custom kitchen with a durable structure</image:caption>
+      <image:title>Custom kitchen with a durable structure</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-detail-01.webp</image:loc>
+      <image:caption>Detail of a custom kitchen in plywood</image:caption>
+      <image:title>Detail of a custom kitchen in plywood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
+      <image:caption>Visual comparison of several cabinet materials</image:caption>
+      <image:title>Visual comparison of several cabinet materials</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>MDF panel with a painted finish</image:caption>
+      <image:title>MDF panel with a painted finish</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Melamine panel for custom furniture</image:caption>
+      <image:title>Melamine panel for custom furniture</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Natural solid wood finish</image:caption>
+      <image:title>Natural solid wood finish</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/materials/solid-wood</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
-      <image:caption>Custom kitchen detail showing a durable drawer</image:caption>
-      <image:title>Custom kitchen detail showing a durable drawer</image:title>
+      <image:caption>Custom kitchen with solid wood details</image:caption>
+      <image:title>Custom kitchen with solid wood details</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-card-01.webp</image:loc>
-      <image:caption>Solid wood for custom cabinets</image:caption>
-      <image:title>Solid wood for custom cabinets</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
+      <image:caption>Solid wood finish detail</image:caption>
+      <image:title>Solid wood finish detail</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-card-01.webp</image:loc>
-      <image:caption>Plywood used in a custom kitchen</image:caption>
-      <image:title>Plywood used in a custom kitchen</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
+      <image:caption>Plywood detail for custom cabinets</image:caption>
+      <image:title>Plywood detail for custom cabinets</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-kitchen-durability-card-01.webp</image:loc>
-      <image:caption>High-end custom kitchen</image:caption>
-      <image:title>High-end custom kitchen</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>MDF panel with painted finish</image:caption>
+      <image:title>MDF panel with painted finish</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-detail-01.webp</image:loc>
-      <image:caption>Custom bathroom vanity</image:caption>
-      <image:title>Custom bathroom vanity</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
+      <image:caption>Melamine panel for custom furniture</image:caption>
+      <image:title>Melamine panel for custom furniture</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Colour and finish samples for custom furniture</image:caption>
+      <image:title>Colour and finish samples for custom furniture</image:title>
     </image:image>
   </url>
   <url>

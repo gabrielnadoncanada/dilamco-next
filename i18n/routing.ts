@@ -1,5 +1,5 @@
 import { defineRouting } from "next-intl/routing";
-import { SPACE_EN, RENOVATION_EN } from "@/seo/i18n-path";
+import { SPACE_EN, RENOVATION_EN, MATERIAL_EN } from "@/seo/i18n-path";
 
 // Pathnames explicites par espace : la VALEUR du slug est traduite
 // (/projets/cuisine -> /en/projects/kitchen). next-intl gère alors liens,
@@ -21,6 +21,17 @@ const renovationPathnames = Object.fromEntries(
   Object.entries(RENOVATION_EN).map(([fr, en]) => [
     `/services/renovation/${fr}`,
     { fr: `/services/renovation/${fr}`, en: `/services/renovation/${en}` },
+  ]),
+);
+
+// Pathnames explicites par matériau : la VALEUR du slug est traduite
+// (/materiaux/contreplaque -> /en/materials/plywood). On énumère chaque
+// matériau au lieu d'un générique [slug], car next-intl ne traduit pas les
+// segments dynamiques (ils passent tels quels).
+const materialPathnames = Object.fromEntries(
+  Object.entries(MATERIAL_EN).map(([fr, en]) => [
+    `/materiaux/${fr}`,
+    { fr: `/materiaux/${fr}`, en: `/materials/${en}` },
   ]),
 );
 
@@ -46,7 +57,7 @@ export const routing = defineRouting({
     "/projets": { fr: "/projets", en: "/projects" },
     ...spacePathnames,
     "/materiaux": { fr: "/materiaux", en: "/materials" },
-    "/materiaux/[slug]": { fr: "/materiaux/[slug]", en: "/materials/[slug]" },
+    ...materialPathnames,
     "/services": "/services",
     "/services/[slug]": "/services/[slug]",
     "/services/renovation": {

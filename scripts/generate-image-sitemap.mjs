@@ -50,6 +50,15 @@ const RENOVATION_EN = {
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
 };
+const MATERIAL_EN = {
+  contreplaque: "plywood",
+  "bois-massif": "solid-wood",
+  comparatif: "comparison",
+  couleurs: "colours",
+  quincaillerie: "hardware",
+  mdf: "mdf",
+  melamine: "melamine",
+};
 
 function fileToRoute(fp) {
   let r = fp.slice(APP_DIR.length).replace(/\\/g, "/").replace(/\.html$/, "");
@@ -67,6 +76,9 @@ function fileToRoute(fp) {
     }
     if (head === "services" && segs[1] === "renovation" && segs[2]) {
       segs[2] = RENOVATION_EN[segs[2]] ?? segs[2];
+    }
+    if (head === "materiaux" && segs[1]) {
+      segs[1] = MATERIAL_EN[segs[1]] ?? segs[1];
     }
     segs[0] = EN_SEGMENT[head] ?? head;
     return `/en/${segs.join("/")}`;

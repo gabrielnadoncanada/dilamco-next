@@ -12,7 +12,7 @@
     "images:generate": "node scripts/generate-images.mjs",
     "images:apply": "node scripts/apply-image-manifest.mjs",
     "images:webp": "node scripts/convert-images-to-webp.mjs",
-    "postbuild": "next-sitemap && node scripts/generate-image-sitemap.mjs"
+    "postbuild": "next-sitemap && node scripts/generate-image-sitemap.mjs && node scripts/style-sitemaps.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
