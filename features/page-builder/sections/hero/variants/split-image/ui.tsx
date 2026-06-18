@@ -24,6 +24,8 @@ export function HeroSplitImage(props: HeroSplitImageProps) {
               src={props.image.src}
               alt={props.image.alt}
               fill
+              priority
+              fetchPriority="high"
               className="object-cover"
               sizes="(min-width: 1024px) 40vw, 100vw"
             />

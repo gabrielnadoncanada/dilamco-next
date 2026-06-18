@@ -121,6 +121,8 @@ export function HeroFeatureListImage(props: HeroFeatureListImageProps) {
             src={props.image.src}
             alt={props.image.alt}
             fill
+            priority
+            fetchPriority="high"
             className="object-cover object-left-top"
             sizes="(min-width: 1024px) 1200px, 100vw"
           />

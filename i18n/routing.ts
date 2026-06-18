@@ -33,6 +33,10 @@ export const routing = defineRouting({
   // On ne redirige JAMAIS automatiquement selon la langue du navigateur :
   // un visiteur anglophone sur une URL FR garde l'URL FR canonique.
   localeDetection: false,
+  // Pas de header HTTP `Link` hreflang (next-intl l'émet en codes "fr"/"en",
+  // incohérents avec le hreflang HTML + sitemap en "fr-CA"/"en-CA").
+  // Le hreflang est porté par les balises <link> du <head> et le sitemap.
+  alternateLinks: false,
   // URLs localisées : clé = pathname interne (= structure de dossiers, FR),
   // valeur = URL externe par locale. FR identique (zéro régression), EN traduit.
   // Les valeurs de segments dynamiques (cuisine, slug…) passent telles quelles.

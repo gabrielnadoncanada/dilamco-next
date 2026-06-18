@@ -13,6 +13,28 @@ export const SITE = {
     postalCode: "H9K 1P1",
     addressCountry: "CA",
   },
+  // Coordonnées de l'atelier (cohérentes avec le GBP / sameAs Google Maps).
+  geo: {
+    latitude: 45.4536963,
+    longitude: -73.892443,
+  },
+  // Heures d'ouverture (atelier sur rendez-vous). Format Schema.org dayOfWeek.
+  openingHours: [
+    {
+      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "08:00",
+      closes: "17:00",
+    },
+  ],
+  // URL de la fiche Google Maps (pour hasMap).
+  mapUrl:
+    "https://www.google.com/maps/place/Dilamco+Construction/@45.4536963,-73.892443,624m/data=!3m2!1e3!4b1!4m6!3m5!1s0x4cc93ba3f4382f91:0x1045c40def446823!8m2!3d45.4536963!4d-73.892443!16s%2Fg%2F11ghnfzc26",
+  // Dimensions du logo (pour ImageObject dans le schema).
+  logo: {
+    url: "https://dilamco.com/logo.png",
+    width: 512,
+    height: 512,
+  },
   areasServed: [
     "Montréal",
     "Pierrefonds-Roxboro",

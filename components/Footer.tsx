@@ -13,6 +13,10 @@ import { Section } from "./elements/section";
 import { Container } from "./elements/container";
 import { Divider } from "./elements/divider";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
+import { SITE } from "@/seo/schema/site";
+
+// Téléphone affichable (sans indicatif pays) dérivé de SITE.telephone.
+const PHONE_DISPLAY = SITE.telephone.replace(/^\+1-?/, "");
 
 interface FooterProps {
   className?: string;
@@ -53,6 +57,23 @@ export const Footer = async ({
               </Logo>
             </div>
             <p className="mt-4 text-sm leading-relaxed font-normal text-muted-foreground">{tagline}</p>
+            <address className="mt-4 not-italic text-sm leading-6 text-muted-foreground">
+              <a
+                href={`tel:${SITE.telephone.replace(/[^+\d]/g, "")}`}
+                className="font-medium transition-colors hover:text-primary"
+              >
+                {PHONE_DISPLAY}
+              </a>
+              <br />
+              <a
+                href={`mailto:${SITE.email}`}
+                className="transition-colors hover:text-primary"
+              >
+                {SITE.email}
+              </a>
+              <br />
+              {SITE.address.streetAddress}, {SITE.address.addressLocality} ({SITE.address.addressRegion})
+            </address>
           </div>
           {menuItems.map((section, sectionIdx) => (
             <div key={sectionIdx}>

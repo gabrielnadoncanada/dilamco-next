@@ -21,6 +21,17 @@ export function imageObjectJsonLd(args: {
   const contentUrl = args.src.startsWith("http")
     ? args.src
     : `${SITE.url}${args.src}`;
+  const ext = contentUrl.split("?")[0].split(".").pop()?.toLowerCase();
+  const encodingFormat =
+    ext === "webp"
+      ? "image/webp"
+      : ext === "avif"
+        ? "image/avif"
+        : ext === "png"
+          ? "image/png"
+          : ext === "jpg" || ext === "jpeg"
+            ? "image/jpeg"
+            : undefined;
   const data: JsonLd = {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -29,6 +40,7 @@ export function imageObjectJsonLd(args: {
     creator: { "@type": "Organization", "@id": ORG_ID },
     creditText: SITE.name,
   };
+  if (encodingFormat) data.encodingFormat = encodingFormat;
   if (args.caption) {
     data.caption = args.caption;
     data.name = args.caption;
@@ -47,7 +59,13 @@ export function organizationJsonLd(locale?: SchemaLocale): JsonLd {
     name: SITE.name,
     url: SITE.url,
     legalName: SITE.legalName,
-    logo: SITE.logoUrl,
+    // Logo en ImageObject (avec dimensions) recommandé pour le Knowledge Panel.
+    logo: {
+      "@type": "ImageObject",
+      url: SITE.logo.url,
+      width: SITE.logo.width,
+      height: SITE.logo.height,
+    },
     image: SITE.imageUrl,
     sameAs: SITE.sameAs,
   };
@@ -67,8 +85,25 @@ export function localBusinessJsonLd(locale?: SchemaLocale): JsonLd {
     name: SITE.name,
     url: SITE.url,
     image: SITE.imageUrl,
+    logo: SITE.logo.url,
     priceRange: "$$$", // haut de gamme
     areaServed: SITE.areasServed.map((a) => ({ "@type": "Place", name: a })),
+    // sameAs dupliqué sur le LocalBusiness (Google recommande le cross-référencement GBP).
+    sameAs: SITE.sameAs,
+    // Coordonnées géo : requis pour le Local Pack / Knowledge Panel.
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: SITE.geo.latitude,
+      longitude: SITE.geo.longitude,
+    },
+    hasMap: SITE.mapUrl,
+    // Heures d'ouverture structurées.
+    openingHoursSpecification: SITE.openingHours.map((o) => ({
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: o.days,
+      opens: o.opens,
+      closes: o.closes,
+    })),
   };
 
   if (locale) data.inLanguage = BCP47[locale];
@@ -129,6 +164,8 @@ export function serviceJsonLd(args: {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
+    // ✅ @id pour pouvoir référencer ce Service depuis d'autres nœuds.
+    "@id": `${args.url}#service`,
     name: args.name,
     description: args.description,
     serviceType: args.serviceType,
@@ -144,5 +181,31 @@ export function serviceJsonLd(args: {
       "@type": "Place",
       name: a,
     })),
+
+    // ✅ offers : signal de devis sur mesure (pas de prix fixe ; sur soumission).
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "CAD",
+      availability: "https://schema.org/InStock",
+      url: args.url,
+      businessFunction: "http://purl.org/goodrelations/v1#Sell",
+    },
   };
+}
+
+/**
+ * WebSite + SearchAction (Sitelinks Searchbox) — renforce l'entité de marque
+ * sur les requêtes "dilamco". Une seule instance, à rendre sur la home.
+ */
+export function websiteJsonLd(locale?: SchemaLocale): JsonLd {
+  const data: JsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE.url}/#website`,
+    url: SITE.url,
+    name: SITE.name,
+    publisher: { "@id": ORG_ID },
+  };
+  if (locale) data.inLanguage = BCP47[locale];
+  return data;
 }

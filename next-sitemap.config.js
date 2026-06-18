@@ -119,6 +119,7 @@ module.exports = {
       loc: localizedUrl(slug, locale),
       changefreq,
       priority,
+      lastmod: new Date().toISOString(),
       alternateRefs: [
         {
           href: localizedUrl(slug, "fr"),

@@ -7,7 +7,11 @@ import "../globals.css";
 import { fontBodyClassName } from "../fonts";
 import { JsonLd } from "@/seo/JsonLd";
 import { DEFAULT_OG_IMAGE } from "@/lib/metadata";
-import { localBusinessJsonLd, organizationJsonLd } from "@/seo/schema/builders";
+import {
+  localBusinessJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/seo/schema/builders";
 import { SITE } from "@/seo/schema/site";
 import { routing, type AppLocale } from "@/i18n/routing";
 
@@ -82,6 +86,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <JsonLd data={organizationJsonLd(locale as AppLocale)} />
           <JsonLd data={localBusinessJsonLd(locale as AppLocale)} />
+          <JsonLd data={websiteJsonLd(locale as AppLocale)} />
           {children}
         </NextIntlClientProvider>
       </body>
