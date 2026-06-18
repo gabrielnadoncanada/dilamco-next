@@ -14,6 +14,7 @@ import { Container } from "./elements/container";
 import { Divider } from "./elements/divider";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
 import { SITE } from "@/seo/schema/site";
+import GoogleReviews from "./GoogleReviews";
 
 // Téléphone affichable (sans indicatif pays) dérivé de SITE.telephone.
 const PHONE_DISPLAY = SITE.telephone.replace(/^\+1-?/, "");
@@ -42,7 +43,8 @@ export const Footer = async ({
   copyright = copyright ?? (isEn ? COPYRIGHT_TEXT_EN : COPYRIGHT_TEXT);
   bottomLinks = bottomLinks ?? (isEn ? LEGAL_LINKS_EN : LEGAL_LINKS);
   return (
-
+    <>
+    <GoogleReviews />
     <footer className="border-y">
       <div className="w-full max-w-screen-xl mx-auto px-4 py-10 ">
         <div className="relative z-10 grid grid-cols-2 gap-8 lg:grid-cols-6">
@@ -113,5 +115,6 @@ export const Footer = async ({
         </div>
       </div>
     </footer>
+    </>
   );
 };

@@ -48,4 +48,25 @@ export const SITE = {
     "https://www.facebook.com/dilamco",
     "https://www.linkedin.com/company/dilamco-inc-/",
   ],
+  // Avis Google réels (fiche GBP Dilamco). Lien public vers la fiche.
+  googleReviewsUrl: "https://www.google.com/maps?cid=1172558842127738915",
+  reviews: {
+    ratingValue: 5,
+    reviewCount: 11,
+    // Avis avec texte affichés sur le site (extraits de la fiche Google).
+    items: [
+      {
+        author: "Mélina Desbiens",
+        rating: 5,
+        datePublished: "2025-12-15",
+        body: "Excellent contracteur. Ils ont fait mes planchers et autres projets et nous sommes très satisfaites. Je recommande 100%.",
+      },
+      {
+        author: "Jean-Philippe Hébert",
+        rating: 5,
+        datePublished: "2026-03-15",
+        body: "L'expérience client au cœur des services de Dilamco Construction !",
+      },
+    ],
+  },
 } as const;

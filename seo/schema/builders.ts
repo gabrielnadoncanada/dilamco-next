@@ -111,6 +111,31 @@ export function localBusinessJsonLd(locale?: SchemaLocale): JsonLd {
   if (SITE.telephone) data.telephone = SITE.telephone;
   if (SITE.email) data.email = SITE.email;
 
+  // Avis : aggregateRating + reviews affichés sur le site (cf. GoogleReviews).
+  // NB : Google ne génère pas d'étoiles SERP pour les LocalBusiness self-serving,
+  // mais le markup aide la résolution d'entité et la citation par les IA.
+  if (SITE.reviews && SITE.reviews.reviewCount > 0) {
+    data.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: SITE.reviews.ratingValue,
+      reviewCount: SITE.reviews.reviewCount,
+      bestRating: 5,
+      worstRating: 1,
+    };
+    data.review = SITE.reviews.items.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.author },
+      datePublished: r.datePublished,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: r.rating,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      reviewBody: r.body,
+    }));
+  }
+
   // Address only if you have real address data
   const addr = SITE.address;
   const hasAddress = !!addr.streetAddress || !!addr.postalCode;
