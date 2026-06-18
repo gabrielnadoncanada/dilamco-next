@@ -59,6 +59,17 @@ const MATERIAL_EN = {
   mdf: "mdf",
   melamine: "melamine",
 };
+// Slugs de projets traduits. Clé = `${espace FR}/${slug FR}`.
+const PROJECT_SLUG_EN = {
+  "salle-de-bain/vanite-sur-mesure-laval": "custom-vanity-laval",
+  "cuisine/cuisine-sur-mesure-montreal": "custom-kitchen-montreal",
+  "cuisine/cuisine-sur-mesure-pierrefonds": "custom-kitchen-pierrefonds",
+  "cuisine/cuisine-sur-mesure-plateau-mont-royal":
+    "custom-kitchen-plateau-mont-royal",
+  "cuisine/cuisine-sur-mesure-rive-sud": "custom-kitchen-south-shore",
+  "commercial/amenagement-sur-mesure-bureau-centre-ville-montreal":
+    "custom-office-downtown-montreal",
+};
 
 function fileToRoute(fp) {
   let r = fp.slice(APP_DIR.length).replace(/\\/g, "/").replace(/\.html$/, "");
@@ -72,6 +83,10 @@ function fileToRoute(fp) {
     const segs = r.slice(4).split("/");
     const head = segs[0];
     if ((head === "espaces" || head === "projets") && segs[1]) {
+      // Slug de projet (3e segment) traduit AVANT l'espace (clé = espace FR).
+      if (head === "projets" && segs[2]) {
+        segs[2] = PROJECT_SLUG_EN[`${segs[1]}/${segs[2]}`] ?? segs[2];
+      }
       segs[1] = SPACE_EN[segs[1]] ?? segs[1];
     }
     if (head === "services" && segs[1] === "renovation" && segs[2]) {

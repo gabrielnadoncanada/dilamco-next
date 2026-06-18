@@ -40,6 +40,19 @@ export const MATERIAL_EN: Record<string, string> = {
   melamine: "melamine",
 };
 
+// Slugs de projets traduits. Clé = `${espace FR}/${slug FR}` (le slug interne
+// reste FR ; seule l'URL EN est traduite). Enum borné (1 par projet publié).
+export const PROJECT_SLUG_EN: Record<string, string> = {
+  "salle-de-bain/vanite-sur-mesure-laval": "custom-vanity-laval",
+  "cuisine/cuisine-sur-mesure-montreal": "custom-kitchen-montreal",
+  "cuisine/cuisine-sur-mesure-pierrefonds": "custom-kitchen-pierrefonds",
+  "cuisine/cuisine-sur-mesure-plateau-mont-royal":
+    "custom-kitchen-plateau-mont-royal",
+  "cuisine/cuisine-sur-mesure-rive-sud": "custom-kitchen-south-shore",
+  "commercial/amenagement-sur-mesure-bureau-centre-ville-montreal":
+    "custom-office-downtown-montreal",
+};
+
 // Les espaces apparaissent comme 2e segment sous /espaces et /projets.
 const SPACE_PARENTS = new Set(["espaces", "projets"]);
 
@@ -52,6 +65,11 @@ export function localizePath(path: string, locale: "fr" | "en"): string {
   if (!path || path === "/") return "/en";
   const segs = path.replace(/^\/+/, "").split("/");
   const head = segs[0];
+  // Traduit le slug de projet (3e segment) sous /projets — AVANT l'espace,
+  // car la clé utilise l'espace FR (segs[1] encore non traduit).
+  if (head === "projets" && segs[1] && segs[2]) {
+    segs[2] = PROJECT_SLUG_EN[`${segs[1]}/${segs[2]}`] ?? segs[2];
+  }
   // Traduit la valeur d'espace (2e segment) sous /espaces et /projets.
   if (SPACE_PARENTS.has(head) && segs[1]) {
     segs[1] = SPACE_EN[segs[1]] ?? segs[1];

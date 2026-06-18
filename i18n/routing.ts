@@ -1,5 +1,10 @@
 import { defineRouting } from "next-intl/routing";
-import { SPACE_EN, RENOVATION_EN, MATERIAL_EN } from "@/seo/i18n-path";
+import {
+  SPACE_EN,
+  RENOVATION_EN,
+  MATERIAL_EN,
+  PROJECT_SLUG_EN,
+} from "@/seo/i18n-path";
 
 // Pathnames explicites par espace : la VALEUR du slug est traduite
 // (/projets/cuisine -> /en/projects/kitchen). next-intl gère alors liens,
@@ -8,11 +13,25 @@ const spacePathnames = Object.fromEntries(
   Object.entries(SPACE_EN).flatMap(([fr, en]) => [
     [`/espaces/${fr}`, { fr: `/espaces/${fr}`, en: `/spaces/${en}` }],
     [`/projets/${fr}`, { fr: `/projets/${fr}`, en: `/projects/${en}` }],
-    [
-      `/projets/${fr}/[slug]`,
-      { fr: `/projets/${fr}/[slug]`, en: `/projects/${en}/[slug]` },
-    ],
   ]),
+);
+
+// Pathnames explicites par projet : le slug du projet est traduit
+// (/projets/salle-de-bain/vanite-sur-mesure-laval ->
+//  /en/projects/bathroom/custom-vanity-laval). Énumérés (pas de [slug])
+// car next-intl ne traduit pas les segments dynamiques.
+const projectPathnames = Object.fromEntries(
+  Object.entries(PROJECT_SLUG_EN).map(([frKey, enSlug]) => {
+    const [frSpace, frSlug] = frKey.split("/");
+    const enSpace = SPACE_EN[frSpace] ?? frSpace;
+    return [
+      `/projets/${frSpace}/${frSlug}`,
+      {
+        fr: `/projets/${frSpace}/${frSlug}`,
+        en: `/projects/${enSpace}/${enSlug}`,
+      },
+    ];
+  }),
 );
 
 // Pathnames explicites par type de rénovation : le slug est traduit
@@ -56,6 +75,7 @@ export const routing = defineRouting({
     "/espaces": { fr: "/espaces", en: "/spaces" },
     "/projets": { fr: "/projets", en: "/projects" },
     ...spacePathnames,
+    ...projectPathnames,
     "/materiaux": { fr: "/materiaux", en: "/materials" },
     ...materialPathnames,
     "/services": "/services",

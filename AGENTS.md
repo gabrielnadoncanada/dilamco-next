@@ -17,7 +17,9 @@
 ### Traduction des slugs d'URL (FR = source, EN = /en traduit)
 
 FR est la source interne. Les segments d'URL traduits en EN vivent dans
-`seo/i18n-path.ts` (`SPACE_EN`, `RENOVATION_EN`, `MATERIAL_EN` + `localizePath`).
+`seo/i18n-path.ts` (`SPACE_EN`, `RENOVATION_EN`, `MATERIAL_EN`, `PROJECT_SLUG_EN`
++ `localizePath`). Les slugs internes restent **toujours FR** (espaces, matériaux,
+rénovations, projets) ; seule l'URL EN est traduite au niveau routing.
 ⚠️ Pour ajouter/modifier un slug traduisible, mettre à jour **5 endroits** :
 
 1. `seo/i18n-path.ts` — map + `localizePath` (source des canonical/hreflang)

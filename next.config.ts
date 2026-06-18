@@ -150,6 +150,33 @@ const redirectRules = [
     destination: "/en/materials/hardware",
   },
 
+  // Anciennes URLs EN projets avec slug FR -> nouveau slug EN traduit.
+  {
+    source: "/en/projects/bathroom/vanite-sur-mesure-laval",
+    destination: "/en/projects/bathroom/custom-vanity-laval",
+  },
+  {
+    source: "/en/projects/kitchen/cuisine-sur-mesure-montreal",
+    destination: "/en/projects/kitchen/custom-kitchen-montreal",
+  },
+  {
+    source: "/en/projects/kitchen/cuisine-sur-mesure-pierrefonds",
+    destination: "/en/projects/kitchen/custom-kitchen-pierrefonds",
+  },
+  {
+    source: "/en/projects/kitchen/cuisine-sur-mesure-plateau-mont-royal",
+    destination: "/en/projects/kitchen/custom-kitchen-plateau-mont-royal",
+  },
+  {
+    source: "/en/projects/kitchen/cuisine-sur-mesure-rive-sud",
+    destination: "/en/projects/kitchen/custom-kitchen-south-shore",
+  },
+  {
+    source:
+      "/en/projects/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
+    destination: "/en/projects/commercial/custom-office-downtown-montreal",
+  },
+
   // Doors / windows -> no exact page in new sitemap, closest renovation hub
   {
     source: "/residential/doors-windows",

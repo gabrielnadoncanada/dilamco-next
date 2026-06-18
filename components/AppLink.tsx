@@ -2,14 +2,23 @@
 
 import type { ComponentProps, ReactNode } from "react";
 import { Link } from "@/i18n/navigation";
-import { SPACE_EN, MATERIAL_EN, RENOVATION_EN } from "@/seo/i18n-path";
+import {
+  SPACE_EN,
+  MATERIAL_EN,
+  RENOVATION_EN,
+  PROJECT_SLUG_EN,
+} from "@/seo/i18n-path";
 
 // Templates explicites par espace (valeur traduite via routing.ts).
 const SPACE_TEMPLATES = Object.keys(SPACE_EN).flatMap((s) => [
   `/espaces/${s}`,
   `/projets/${s}`,
-  `/projets/${s}/[slug]`,
 ]);
+
+// Templates littéraux par projet (slug traduit via routing.ts). Énumérés car
+// routing.ts ne déclare que les valeurs littérales : un [slug] générique ne
+// serait pas résolu par next-intl. Clé = `${espace FR}/${slug FR}`.
+const PROJECT_TEMPLATES = Object.keys(PROJECT_SLUG_EN).map((k) => `/projets/${k}`);
 
 // Templates littéraux par matériau (slug traduit via routing.ts) : doivent
 // gagner le match avant un éventuel générique, comme les espaces.
@@ -26,6 +35,7 @@ const RENOVATION_TEMPLATES = Object.keys(RENOVATION_EN).map(
 // Les plus spécifiques (espaces) en premier pour gagner le match.
 const TEMPLATES = [
   "/",
+  ...PROJECT_TEMPLATES,
   ...SPACE_TEMPLATES,
   "/espaces",
   "/projets",
