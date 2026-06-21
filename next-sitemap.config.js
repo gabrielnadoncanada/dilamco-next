@@ -19,6 +19,7 @@ const EN_SEGMENT = {
   processus: "process",
   "politique-de-confidentialite": "privacy-policy",
   "conditions-dutilisation": "terms-of-use",
+  boutique: "shop",
 };
 const SPACE_EN = {
   cuisine: "kitchen",

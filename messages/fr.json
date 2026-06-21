@@ -58,5 +58,549 @@
   "cta": {
     "heading": "Parlez-nous de votre projet",
     "description": "Dites-nous votre espace, votre secteur et votre échéance. On vous recommande un choix cohérent (matériaux + quincaillerie + installation) pour un résultat durable."
+  },
+  "shop": {
+    "meta": {
+      "layoutTitle": "Boutique d’armoires sur mesure | Dilamco",
+      "layoutTitleTemplate": "%s | Boutique Dilamco",
+      "layoutDescription": "Armoires de cuisine et modules sur mesure en contreplaqué et bouleau massif, finition Shaker. Configurez votre projet et demandez une soumission."
+    },
+    "home": {
+      "hero": {
+        "titleLead": "Armoires de cuisine en stock,",
+        "titleEm": "abordables et durables.",
+        "subtitle": "Voyez les prix instantanément et montez votre cuisine en ligne. Validation rapide par notre équipe avant votre commande.",
+        "bullets": {
+          "0": "— 200+ modules en stock, prêts à être livrés.",
+          "1": "— Armoires en contreplaqué et HDF, qualité inégalée.",
+          "2": "— Livraison rapide depuis Montréal."
+        },
+        "ctaPrimary": "Créer ma cuisine",
+        "ctaSecondary": "Demander une soumission",
+        "imageAlt": "Cuisine équipée d'armoires Dilamco"
+      },
+      "marquee": {
+        "0": "Salle de montre - Montréal",
+        "1": "Armoires en contreplaqué - HDF",
+        "2": "Soumission en ligne"
+      },
+      "pillars": {
+        "eyebrow": "Soumission d'armoires en ligne",
+        "title": "Obtenez votre cuisine en 4 étapes.",
+        "stepLabel": "ÉTAPE",
+        "items": {
+          "0": {
+            "title": "Parcourez notre catalogue.",
+            "body": "Découvrez nos modules, dimensions et prix en quelques clics."
+          },
+          "1": {
+            "title": "Ajoutez vos armoires au panier.",
+            "body": "Créez votre cuisine en sélectionnant les modules adaptés à votre espace."
+          },
+          "2": {
+            "title": "Envoyez votre soumission.",
+            "body": "Soumettez votre panier pour validation et ajustements au besoin."
+          },
+          "3": {
+            "title": "Validation rapide et livraison.",
+            "body": "Nous validons votre projet rapidement avant de préparer et livrer votre commande."
+          }
+        }
+      },
+      "categories": {
+        "eyebrow": "Les collections",
+        "title": "Parcourez nos armoires par catégorie.",
+        "browseAll": "Tout parcourir",
+        "viewPrices": "Voir les prix",
+        "quoteCta": "Demander une soumission",
+        "items": {
+          "wall": "Armoires murales",
+          "base": "Armoires de bas",
+          "pantry": "Garde-manger",
+          "corner": "Modules de coin",
+          "aboveFridge": "Au-dessus du frigo"
+        }
+      },
+      "starterKitchens": {
+        "eyebrow": "Par où commencer",
+        "title": "Deux cuisines types, chiffrées au module près.",
+        "intro": "Préchargez une composition dans votre projet, puis ajustez chaque module à vos mesures. Les prix affichés couvrent les modules — panneaux, fillers et installation sont chiffrés à la soumission.",
+        "moduleCount": "{count} modules",
+        "modulesOnly": "Modules seulement",
+        "preloadCta": "Précharger ce projet",
+        "quoteCta": "Demander une soumission",
+        "kitchens": {
+          "0": {
+            "name": "Cuisine en L · 10 × 10 pi",
+            "blurb": "La configuration la plus demandée : coin dînette, évier farmhouse, rangée de tiroirs et garde-manger."
+          },
+          "1": {
+            "name": "Cuisine condo · 8 pi",
+            "blurb": "Un seul mur, zéro espace perdu : évier, tiroirs, micro-ondes intégré et rangement en hauteur."
+          }
+        }
+      },
+      "process": {
+        "eyebrow": "Le processus",
+        "title": "Quatre étapes. Aucun intermédiaire. Un seul chef de projet pour vous accompagner.",
+        "stepLabel": "ÉTAPE",
+        "steps": {
+          "0": {
+            "title": "Premier appel",
+            "body": "20 minutes pour cerner votre projet, votre budget, vos contraintes. Aucun engagement."
+          },
+          "1": {
+            "title": "Mesures + dessins",
+            "body": "Visite à domicile, plans 2D + rendus 3D, choix des modules et finis Shaker."
+          },
+          "2": {
+            "title": "Soumission ferme",
+            "body": "Prix final sous 48h, incluant panneaux, fillers, livraison et installation."
+          },
+          "3": {
+            "title": "Pose en 1 à 3 jours",
+            "body": "Notre équipe d'installation, jamais sous-traitée. Garantie 10 ans sur les caissons."
+          }
+        }
+      },
+      "testimonial": {
+        "quote": "« On a visité la salle de montre, on est tombé en amour avec les armoires. Commande rapide, installation solide, et aujourd'hui tout est parfaitement en place. Honnêtement, la qualité est au-dessus de la compétition. »",
+        "author": "Annie · Estrie · Cuisine, salle de bain et walkin"
+      },
+      "trust": {
+        "eyebrow": "L'offre derrière le produit",
+        "title": "Une offre simple, basée sur du concret.",
+        "body": "Nous misons sur des standards simples : qualité des matériaux, disponibilité des modules et rapidité d'exécution.",
+        "cta": "Créer ma cuisine",
+        "stats": {
+          "0": {
+            "label": "Années d'expérience"
+          },
+          "1": {
+            "label": "Modules en stock, prix affichés en ligne"
+          },
+          "2": {
+            "label": "Délai garanti pour une soumission ferme"
+          },
+          "3": {
+            "value": "10 ans",
+            "label": "Garantie complète sur les modules"
+          }
+        }
+      }
+    },
+    "product": {
+      "addToCart": "Ajouter",
+      "addReassurance": "Sans engagement · Soumission ferme sous 48 h",
+      "quantity": "Quantité",
+      "standardCeiling": "Plafond standard",
+      "doorMolding": "Moulure de porte",
+      "finish": "Finition",
+      "width": "Largeur",
+      "samePrice": "même prix",
+      "selected": "sélectionné",
+      "sku": "SKU",
+      "configuration": "Configuration",
+      "moldingProfile": {
+        "slim": "Profil épuré, contemporain",
+        "wide": "Profil large, classique éditorial"
+      },
+      "notFound": {
+        "title": "Module introuvable.",
+        "back": "Retour aux collections"
+      },
+      "breadcrumb": {
+        "home": "Accueil",
+        "collections": "Collections",
+        "shop": "Boutique"
+      },
+      "related": {
+        "title": "De la même famille"
+      },
+      "gallery": {
+        "viewLabel": "Voir {label}",
+        "zoomLabel": "Agrandir {label}"
+      },
+      "insitu": {
+        "eyebrow": "En situation",
+        "title": "Le module, hors-catalogue.",
+        "caption1": "Cuisine complète, Outremont",
+        "caption2": "Détail moulure Shaker",
+        "caption3": "Atelier — vérification finition",
+        "fallbackAlt": "Vue en situation {n}"
+      },
+      "description": {
+        "doorPanel": "Porte de remplacement assortie au fini et au profil des caissons de la collection. Idéale pour remplacer une porte abîmée ou habiller un module modifié. Charnières vendues séparément.",
+        "flatPart": "Pièce de finition assortie aux caissons de la collection : même matériau et même fini que vos modules. Se coupe et s'ajuste sur place pour un résultat intégré, sans raccord visible.",
+        "oak": "Caisson en contreplaqué, finition intérieure en placage de bouleau. Porte et façades en mélamine chêne blanc, profil plat (slab). Quincaillerie Blum à fermeture amortie.",
+        "standard": "Caisson en contreplaqué, finition intérieure en placage de bouleau. Porte HDF avec moulure massive en bouleau. Quincaillerie Blum à fermeture amortie. Fini extérieur catalysé, assorti à la couleur sélectionnée."
+      },
+      "howToGet": {
+        "delivery": {
+          "title": "Livraison au Québec",
+          "status": "Disponible — chiffrée à la soumission"
+        },
+        "pickup": {
+          "title": "Cueillette — entrepôt à Montréal",
+          "status": "En stock"
+        },
+        "showroom": {
+          "title": "Salle de montre — 275 rue Beaubien O.",
+          "hours": "Lun – ven · 9 h à 17 h"
+        }
+      },
+      "accordion": {
+        "specs": {
+          "title": "Spécifications techniques"
+        },
+        "delivery": {
+          "title": "Livraison et délais",
+          "body": "Modules en stock dans notre entrepôt de Montréal. Soumission ferme sous 48 h, incluant livraison et installation si désirée. Pose en 1 à 3 jours par notre équipe."
+        },
+        "warranty": {
+          "title": "Garantie 10 ans",
+          "body": "Caisson et quincaillerie garantis 10 ans. Charnières et coulisses Blum à fermeture amortie. Un seul chef de projet pour tout suivi après l'installation."
+        },
+        "questions": {
+          "title": "Une question avant de commander ?",
+          "callUs": "Appelez-nous au",
+          "orEmail": "ou écrivez à",
+          "showroom": "Salle de montre au 275 rue Beaubien Ouest — voyez et touchez les modules avant de décider."
+        }
+      },
+      "specs": {
+        "width": "Largeur",
+        "depth": "Profondeur",
+        "height": "Hauteur",
+        "ceiling": "Plafond",
+        "doors": "Portes",
+        "drawers": "Tiroirs",
+        "configuration": "Configuration",
+        "straight": "Droite",
+        "cabinet": "Caisson",
+        "cabinetValue": "Contreplaqué 5/8″ · placage bouleau intérieur",
+        "door": "Porte",
+        "doorOak": "Mélamine chêne blanc, profil slab",
+        "doorPainted": "HDF + moulure bouleau massif",
+        "hardware": "Quincaillerie",
+        "hardwareValue": "Blum, fermeture amortie",
+        "material": "Matériau",
+        "materialValue": "Assorti au fini des caissons",
+        "installation": "Installation",
+        "installationValue": "Coupe et ajustement sur place",
+        "warranty": "Garantie",
+        "warrantyValue": "10 ans caisson + quincaillerie"
+      },
+      "quality": {
+        "title": "Construction et qualité",
+        "point1": {
+          "title": "Structure intérieure durable",
+          "body": "Caisson stable et rigide, intérieur propre, tablettes ajustables, assemblages précis."
+        },
+        "point2": {
+          "title": "Tiroirs en bouleau massif",
+          "body": "Côtés, façade et arrière en bois massif de bouleau — robuste, grain fin, finition haut de gamme."
+        },
+        "point3": {
+          "title": "Assemblage en queue d'aronde",
+          "body": "Jonctions renforcées sans fixations visibles : des modules stables et mieux alignés."
+        },
+        "point4": {
+          "title": "Entrepôt local à Montréal",
+          "body": "Inventaire contrôlé sur place : disponibilité réelle et délais prévisibles."
+        }
+      },
+      "metaDescription": "{name} — module {family}{dims}, en stock chez Dilamco. Livraison et installation d’armoires au Grand Montréal.",
+      "notFoundTitle": "Module introuvable · Dilamco",
+      "card": {
+        "addAria": "Ajouter {name} au projet",
+        "addShort": "+ Projet",
+        "inStock": "En stock — entrepôt à Montréal",
+        "deliveryAvailable": "Livraison et installation disponibles",
+        "otherOptions": "{count, plural, one {Offert en # autre option} other {Offert en # autres options}}"
+      }
+    },
+    "collections": {
+      "indexEyebrow": "Catalogue technique",
+      "indexTitle": "Armoires de cuisine",
+      "indexIntro": "Composez votre cuisine module par module : caissons du bas, armoires murales, garde-manger et pièces de finition, offerts en Blanc Pur et Chêne blanc. Tous les prix sont affichés — ajoutez vos modules au projet et obtenez une soumission ferme sous 48 h.",
+      "breadcrumbRoot": "Collections",
+      "categoryEyebrow": "Collection",
+      "moduleCount": "{count, plural, one {# module} other {# modules}}",
+      "moduleCountOf": "{count, plural, one {# module} other {# modules}} sur {total}",
+      "subcategoryCount": "{count, plural, one {# sous-catégorie} other {# sous-catégories}}",
+      "noResults": "Aucun module ne correspond à ces filtres.",
+      "loadingProgress": "{shown} sur {total} modules",
+      "filterLabel": "Filtrer",
+      "clearFilters": "Effacer les filtres",
+      "clear": "Effacer",
+      "searchPlaceholder": "Nom ou code (ex. B18)…",
+      "searchAria": "Rechercher un module",
+      "sortGroup": "Trier",
+      "sort": {
+        "family": "Famille",
+        "price-asc": "Prix croissant",
+        "price-desc": "Prix décroissant",
+        "width": "Largeur"
+      },
+      "categoriesGroup": "Catégories",
+      "finishGroup": "Finition",
+      "widthGroup": "Largeur",
+      "widthValue": "{width} po",
+      "viewResults": "Voir {count, plural, one {# module} other {# modules}}",
+      "metaTitle": "Collections · Dilamco"
+    },
+    "finishes": {
+      "heroEyebrow": "Finitions 2026",
+      "heroTitleLead": "Choisissez votre",
+      "heroTitleEmphasis": "finition.",
+      "heroIntro": "Trois styles, même modules, même prix.",
+      "featureImageAlt": "Finition {name}",
+      "featureCodeSuffix": "FINITION",
+      "specMaterial": "Matière",
+      "specReference": "Référence",
+      "specGrain": "Veinage",
+      "featurePrimaryCta": "Voir les {name}",
+      "featureSecondaryCta": "Demander un échantillon",
+      "compareEyebrow": "Comparer",
+      "compareTitle": "Lequel pour votre projet ?",
+      "compareRows": [
+        [
+          "Cuisine entière",
+          "Recommandé",
+          "Bon en îlot",
+          "À éviter"
+        ],
+        [
+          "Bicolore",
+          "Hauts",
+          "Îlot",
+          "Bas"
+        ],
+        [
+          "Plafond 8 pi",
+          "✓",
+          "✓",
+          "✓ avec haut clair"
+        ],
+        [
+          "Plafond 9 pi",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "Lumière nordique",
+          "★",
+          "★",
+          "★"
+        ],
+        [
+          "Sud / chaud",
+          "★",
+          "★",
+          "○ (bleu vire mat)"
+        ],
+        [
+          "Comptoir bois",
+          "★",
+          "○",
+          "★"
+        ],
+        [
+          "Comptoir marbre",
+          "★",
+          "★",
+          "★"
+        ]
+      ],
+      "metaTitle": "Finitions · Dilamco",
+      "items": {
+        "blanc-pur": {
+          "nom": "Blanc Pur",
+          "taglines": [
+            "Classique et lumineux"
+          ],
+          "desc": "Plus de la moitié des projets Dilamco partent du Blanc Pur. Il s'efface au profit de la lumière, du comptoir, de la pièce. Un blanc neutre légèrement chaud, catalysé deux couches.",
+          "specs": [
+            {
+              "label": "Caisson",
+              "value": "Contreplaqué"
+            },
+            {
+              "label": "Porte",
+              "value": "HDF laqué + Bouleau"
+            },
+            {
+              "label": "Moulure",
+              "value": "1 et 3 pouces disponible"
+            }
+          ],
+          "primaryCta": "Voir les Blanc Pur",
+          "secondaryCtaLabel": "Voir la salle de montre",
+          "percentLabel": "des projets 2024"
+        },
+        "chene-blanc": {
+          "nom": "Chêne blanc",
+          "taglines": [
+            "Plus chaleureux, style bois"
+          ],
+          "desc": "Placage bouleau teinté chêne. Le veinage horizontal, l'élégance qu'on demande sans pouvoir la nommer. Idéal en îlot ou mur d'accent.",
+          "specs": [
+            {
+              "label": "Caisson",
+              "value": "Contreplaqué"
+            },
+            {
+              "label": "Porte",
+              "value": "Placage bouleau teinté chêne · Vernis mat · Veinage horizontal"
+            },
+            {
+              "label": "Moulure",
+              "value": "1 et 3 pouces disponible"
+            }
+          ],
+          "primaryCta": "Voir le Chêne blanc",
+          "secondaryCtaLabel": "Voir la salle de montre",
+          "percentLabel": "des projets 2024"
+        },
+        "bleu-marin": {
+          "nom": "Bleu marin",
+          "taglines": [
+            "Plus audacieux, accent moderne"
+          ],
+          "desc": "Un bleu profond catalysé. Pour les projets qui assument une couleur — souvent en bas, jumelé avec un haut Blanc Pur. Tient son ton sous lumière chaude comme froide.",
+          "specs": [
+            {
+              "label": "Caisson",
+              "value": "Contreplaqué"
+            },
+            {
+              "label": "Porte",
+              "value": "HDF laqué catalysé · Sheen 25% · 4 couches"
+            },
+            {
+              "label": "Moulure",
+              "value": "1 et 3 pouces disponible"
+            }
+          ],
+          "primaryCta": "Voir le Bleu marin",
+          "secondaryCtaLabel": "Voir la salle de montre",
+          "percentLabel": "des projets 2024"
+        }
+      }
+    },
+    "chrome": {
+      "nav": {
+        "collections": "Collections",
+        "finishes": "Finitions",
+        "quote": "Demander une soumission"
+      },
+      "announcement": "Entrepôt à Montréal · 20+ ans d'expérience · Soumission en ligne",
+      "homeAria": "Dilamco accueil",
+      "myProject": "Mon projet",
+      "project": "Projet",
+      "menu": "Menu",
+      "catalogue": "Catalogue",
+      "allCollections": "Toutes les collections",
+      "showroomLine": "Salle de montre · 275 Beaubien O",
+      "footer": {
+        "tagline": "Armoires de cuisine en stock, à prix accessibles. Parcourez le catalogue, voyez les prix et montez votre cuisine en ligne.",
+        "catalogue": "Catalogue",
+        "navWall": "Armoires murales",
+        "navBase": "Armoires du bas",
+        "navUtility": "Armoires utilitaires",
+        "navFillers": "Fillers, panneaux & moulures",
+        "home": "Maison",
+        "navFinishes": "Finitions",
+        "navQuote": "Demander une soumission",
+        "contact": "Contact",
+        "rights": "© 2026 Dilamco inc. — Tous droits réservés"
+      },
+      "showroomCta": {
+        "eyebrow": "Showroom Montréal",
+        "headlineLine1": "Voir, toucher,",
+        "headlineLine2": "ouvrir, fermer.",
+        "body": "5 200 pi² d'exposition au cœur du Mile-Ex. Trois cuisines complètes en démonstration, échantillons de tous les finis, tablette de mesure d'angle pour planifier votre projet en 90 minutes.",
+        "addressLabel": "Adresse",
+        "byAppointment": "Sur rendez-vous",
+        "hours": "Lun – Ven · 9h à 17h",
+        "cta": "Prendre rendez-vous"
+      },
+      "sidebar": {
+        "nav": "Navigation des collections",
+        "collapse": "Réduire",
+        "expand": "Développer"
+      },
+      "cart": {
+        "moduleCount": "{count, plural, one {# module} other {# modules}}",
+        "close": "Fermer",
+        "emptyTitle": "Votre projet est vide.",
+        "emptyBody": "Ajoutez des modules depuis le catalogue pour bâtir votre estimation.",
+        "browse": "Parcourir les collections",
+        "estimate": "Estimation",
+        "requestQuote": "Demander la soumission",
+        "reassurance": "Sans engagement · livraison et installation incluses au prix final · soumission ferme sous 48 h",
+        "remove": "retirer"
+      }
+    },
+    "quote": {
+      "intro": {
+        "eyebrow": "Demande de soumission",
+        "title": "Votre projet, chiffré sous 48h.",
+        "description": "Soumettez votre liste de modules et votre contexte. Un chef de projet vous contacte sous 24h pour planifier la prise de mesures, et vous recevez une soumission ferme, incluant panneaux, fillers, livraison et installation, sous 48h."
+      },
+      "form": {
+        "section1": "01 — Vos coordonnées",
+        "section2": "02 — Le projet",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Courriel",
+        "phone": "Téléphone",
+        "phoneHint": "— pour planifier la prise de mesures",
+        "postalCode": "Code postal de l'installation",
+        "projectType": "Type de projet",
+        "timeline": "Échéancier souhaité",
+        "budget": "Budget approximatif",
+        "notes": "Notes complémentaires",
+        "notesOptional": "— optionnel",
+        "notesPlaceholder": "Ex. cuisine en L, plafond 9 pi, projet de rénovation totale incluant îlot et garde-manger…",
+        "honeypot": "Ne pas remplir",
+        "submit": "Recevoir ma soumission ferme sous 48 h",
+        "submitPending": "Envoi en cours…",
+        "reassurance": "Sans engagement. Un chef de projet vous contacte sous 24 h — aucune relance commerciale, vos coordonnées ne sont jamais partagées.",
+        "typeProjet": {
+          "cuisine": "Cuisine complète",
+          "renovation": "Rénovation partielle",
+          "rangement": "Rangement sur mesure",
+          "commercial": "Projet commercial"
+        },
+        "timelineOptions": {
+          "urgent": "Sous 1 mois",
+          "1-3mois": "1 à 3 mois",
+          "3-6mois": "3 à 6 mois",
+          "6mois+": "Plus de 6 mois"
+        }
+      },
+      "success": {
+        "eyebrow": "Demande reçue",
+        "title": "Votre soumission est en préparation.",
+        "body": "Un chef de projet Dilamco vous rappelle au {tel} dans les 24 prochaines heures pour valider les dimensions. Vous recevrez votre soumission ferme par courriel sous 48h.",
+        "telFallback": "numéro fourni",
+        "backHome": "Retour à l'accueil"
+      },
+      "summary": {
+        "eyebrow": "Votre projet",
+        "selectedModules": "{count, plural, one {# module sélectionné} other {# modules sélectionnés}}",
+        "emptyHint": "Vous pouvez soumettre la demande sans avoir encore choisi de modules : un chef de projet vous accompagnera dans la sélection.",
+        "browse": "Parcourir les collections",
+        "subtotal": "Sous-total catalogue",
+        "panelsFillers": "Panneaux + fillers (est.)",
+        "quoted": "chiffrés",
+        "deliveryInstall": "Livraison + installation",
+        "modulesEstimate": "Estimation modules",
+        "disclaimer": "Estimation indicative basée sur le catalogue technique. La soumission ferme inclut tous les éléments de finition, livraison et pose."
+      }
+    }
   }
 }

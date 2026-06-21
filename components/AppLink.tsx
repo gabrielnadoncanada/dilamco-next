@@ -52,6 +52,15 @@ const TEMPLATES = [
   "/conditions-dutilisation",
   "/landing",
   "/landing/construction",
+  // Boutique (synchronisé avec i18n/routing.ts). Les templates les plus
+  // spécifiques (sous-collections) avant les plus courts.
+  "/boutique/collections/[slug]/[sub]",
+  "/boutique/collections/[slug]",
+  "/boutique/collections",
+  "/boutique/produit/[id]",
+  "/boutique/finitions",
+  "/boutique/soumission",
+  "/boutique",
 ] as const;
 
 type IntlHref = ComponentProps<typeof Link>["href"];

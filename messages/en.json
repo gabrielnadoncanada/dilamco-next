@@ -58,5 +58,549 @@
   "cta": {
     "heading": "Tell us about your project",
     "description": "Tell us your space, your area and your timeline. We'll recommend a coherent setup (materials + hardware + installation) for a durable result."
+  },
+  "shop": {
+    "meta": {
+      "layoutTitle": "Custom Cabinet Shop | Dilamco",
+      "layoutTitleTemplate": "%s | Dilamco Shop",
+      "layoutDescription": "Custom kitchen cabinets and modules in plywood and solid birch with a Shaker finish. Configure your project and request a quote."
+    },
+    "home": {
+      "hero": {
+        "titleLead": "In-stock kitchen cabinets,",
+        "titleEm": "affordable and built to last.",
+        "subtitle": "See prices instantly and build your kitchen online. Quick review by our team before you order.",
+        "bullets": {
+          "0": "— 200+ in-stock modules, ready to ship.",
+          "1": "— Plywood and HDF cabinets, unmatched quality.",
+          "2": "— Fast delivery from Montreal."
+        },
+        "ctaPrimary": "Build my kitchen",
+        "ctaSecondary": "Request a quote",
+        "imageAlt": "Kitchen fitted with Dilamco cabinets"
+      },
+      "marquee": {
+        "0": "Showroom - Montreal",
+        "1": "Plywood - HDF cabinets",
+        "2": "Online quote"
+      },
+      "pillars": {
+        "eyebrow": "Online cabinet quotes",
+        "title": "Get your kitchen in 4 steps.",
+        "stepLabel": "STEP",
+        "items": {
+          "0": {
+            "title": "Browse our catalogue.",
+            "body": "Explore our modules, dimensions and prices in just a few clicks."
+          },
+          "1": {
+            "title": "Add your cabinets to the cart.",
+            "body": "Build your kitchen by selecting the modules that fit your space."
+          },
+          "2": {
+            "title": "Send your quote request.",
+            "body": "Submit your cart for review and adjustments as needed."
+          },
+          "3": {
+            "title": "Fast approval and delivery.",
+            "body": "We review your project quickly before preparing and delivering your order."
+          }
+        }
+      },
+      "categories": {
+        "eyebrow": "The collections",
+        "title": "Browse our cabinets by category.",
+        "browseAll": "Browse all",
+        "viewPrices": "View prices",
+        "quoteCta": "Request a quote",
+        "items": {
+          "wall": "Wall cabinets",
+          "base": "Base cabinets",
+          "pantry": "Pantry cabinets",
+          "corner": "Corner modules",
+          "aboveFridge": "Above the fridge"
+        }
+      },
+      "starterKitchens": {
+        "eyebrow": "Where to start",
+        "title": "Two sample kitchens, priced down to the module.",
+        "intro": "Preload a layout into your project, then adjust each module to your measurements. The prices shown cover the modules — panels, fillers and installation are quoted separately.",
+        "moduleCount": "{count} modules",
+        "modulesOnly": "Modules only",
+        "preloadCta": "Preload this project",
+        "quoteCta": "Request a quote",
+        "kitchens": {
+          "0": {
+            "name": "L-shaped kitchen · 10 × 10 ft",
+            "blurb": "The most requested layout: dining nook, farmhouse sink, a bank of drawers and a pantry."
+          },
+          "1": {
+            "name": "Condo kitchen · 8 ft",
+            "blurb": "A single wall, zero wasted space: sink, drawers, built-in microwave and tall storage."
+          }
+        }
+      },
+      "process": {
+        "eyebrow": "The process",
+        "title": "Four steps. No middlemen. A single project manager to guide you through.",
+        "stepLabel": "STEP",
+        "steps": {
+          "0": {
+            "title": "First call",
+            "body": "20 minutes to scope out your project, your budget and your constraints. No commitment."
+          },
+          "1": {
+            "title": "Measurements + drawings",
+            "body": "On-site visit, 2D plans + 3D renderings, selection of modules and Shaker finishes."
+          },
+          "2": {
+            "title": "Firm quote",
+            "body": "Final price within 48h, including panels, fillers, delivery and installation."
+          },
+          "3": {
+            "title": "Installation in 1 to 3 days",
+            "body": "Our own installation crew, never subcontracted. 10-year warranty on the cabinet boxes."
+          }
+        }
+      },
+      "testimonial": {
+        "quote": "“We visited the showroom and fell in love with the cabinets. Quick order, solid installation, and today everything sits perfectly in place. Honestly, the quality is a cut above the competition.”",
+        "author": "Annie · Estrie · Kitchen, bathroom and walk-in"
+      },
+      "trust": {
+        "eyebrow": "The offer behind the product",
+        "title": "A simple offer, grounded in the essentials.",
+        "body": "We focus on simple standards: quality materials, module availability and quick turnaround.",
+        "cta": "Build my kitchen",
+        "stats": {
+          "0": {
+            "label": "Years of experience"
+          },
+          "1": {
+            "label": "In-stock modules, prices shown online"
+          },
+          "2": {
+            "label": "Guaranteed turnaround for a firm quote"
+          },
+          "3": {
+            "value": "10 years",
+            "label": "Full warranty on the modules"
+          }
+        }
+      }
+    },
+    "product": {
+      "addToCart": "Add",
+      "addReassurance": "No commitment · Firm quote within 48 h",
+      "quantity": "Quantity",
+      "standardCeiling": "Standard ceiling",
+      "doorMolding": "Door molding",
+      "finish": "Finish",
+      "width": "Width",
+      "samePrice": "same price",
+      "selected": "selected",
+      "sku": "SKU",
+      "configuration": "Configuration",
+      "moldingProfile": {
+        "slim": "Clean, contemporary profile",
+        "wide": "Wide, editorial classic profile"
+      },
+      "notFound": {
+        "title": "Module not found.",
+        "back": "Back to collections"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "collections": "Collections",
+        "shop": "Shop"
+      },
+      "related": {
+        "title": "From the same family"
+      },
+      "gallery": {
+        "viewLabel": "View {label}",
+        "zoomLabel": "Enlarge {label}"
+      },
+      "insitu": {
+        "eyebrow": "In situ",
+        "title": "The module, beyond the catalogue.",
+        "caption1": "Complete kitchen, Outremont",
+        "caption2": "Shaker molding detail",
+        "caption3": "Workshop — finish inspection",
+        "fallbackAlt": "In-situ view {n}"
+      },
+      "description": {
+        "doorPanel": "Replacement door matched to the finish and profile of the collection's cabinets. Ideal for replacing a damaged door or dressing a modified module. Hinges sold separately.",
+        "flatPart": "Finishing piece matched to the collection's cabinets: same material and same finish as your modules. Cut and fitted on site for a seamless, integrated result.",
+        "oak": "Plywood cabinet with a birch-veneer interior. White-oak melamine door and fronts, flat (slab) profile. Soft-close Blum hardware.",
+        "standard": "Plywood cabinet with a birch-veneer interior. HDF door with a solid birch molding. Soft-close Blum hardware. Catalyzed exterior finish matched to the selected colour."
+      },
+      "howToGet": {
+        "delivery": {
+          "title": "Delivery across Quebec",
+          "status": "Available — priced at quote"
+        },
+        "pickup": {
+          "title": "Pickup — Montreal warehouse",
+          "status": "In stock"
+        },
+        "showroom": {
+          "title": "Showroom — 275 Beaubien St. W.",
+          "hours": "Mon – Fri · 9 a.m. to 5 p.m."
+        }
+      },
+      "accordion": {
+        "specs": {
+          "title": "Technical specifications"
+        },
+        "delivery": {
+          "title": "Delivery and lead times",
+          "body": "Modules in stock at our Montreal warehouse. Firm quote within 48 h, including delivery and installation if desired. Installation in 1 to 3 days by our team."
+        },
+        "warranty": {
+          "title": "10-year warranty",
+          "body": "Cabinet and hardware guaranteed for 10 years. Soft-close Blum hinges and slides. A single project lead for all follow-up after installation."
+        },
+        "questions": {
+          "title": "A question before ordering?",
+          "callUs": "Call us at",
+          "orEmail": "or write to",
+          "showroom": "Showroom at 275 Beaubien Street West — see and touch the modules before you decide."
+        }
+      },
+      "specs": {
+        "width": "Width",
+        "depth": "Depth",
+        "height": "Height",
+        "ceiling": "Ceiling",
+        "doors": "Doors",
+        "drawers": "Drawers",
+        "configuration": "Configuration",
+        "straight": "Straight",
+        "cabinet": "Cabinet",
+        "cabinetValue": "5/8″ plywood · interior birch veneer",
+        "door": "Door",
+        "doorOak": "White-oak melamine, slab profile",
+        "doorPainted": "HDF + solid birch molding",
+        "hardware": "Hardware",
+        "hardwareValue": "Blum, soft-close",
+        "material": "Material",
+        "materialValue": "Matched to the cabinet finish",
+        "installation": "Installation",
+        "installationValue": "Cut and fitted on site",
+        "warranty": "Warranty",
+        "warrantyValue": "10 years cabinet + hardware"
+      },
+      "quality": {
+        "title": "Construction and quality",
+        "point1": {
+          "title": "Durable interior structure",
+          "body": "Stable, rigid cabinet, clean interior, adjustable shelves, precise joinery."
+        },
+        "point2": {
+          "title": "Solid birch drawers",
+          "body": "Sides, front and back in solid birch — robust, fine grain, premium finish."
+        },
+        "point3": {
+          "title": "Dovetail joinery",
+          "body": "Reinforced joints with no visible fasteners: stable, better-aligned modules."
+        },
+        "point4": {
+          "title": "Local warehouse in Montreal",
+          "body": "Inventory controlled on site: real availability and predictable lead times."
+        }
+      },
+      "metaDescription": "{name} — {family} module{dims}, in stock at Dilamco. Cabinet delivery and installation across Greater Montreal.",
+      "notFoundTitle": "Module not found · Dilamco",
+      "card": {
+        "addAria": "Add {name} to project",
+        "addShort": "+ Project",
+        "inStock": "In stock — Montreal warehouse",
+        "deliveryAvailable": "Delivery and installation available",
+        "otherOptions": "{count, plural, one {Available in # other option} other {Available in # other options}}"
+      }
+    },
+    "collections": {
+      "indexEyebrow": "Technical catalogue",
+      "indexTitle": "Kitchen cabinetry",
+      "indexIntro": "Build your kitchen module by module: base cabinets, wall cabinets, pantries and finishing pieces, offered in Pure White and White Oak. Every price is shown — add your modules to the project and receive a firm quote within 48 hours.",
+      "breadcrumbRoot": "Collections",
+      "categoryEyebrow": "Collection",
+      "moduleCount": "{count, plural, one {# module} other {# modules}}",
+      "moduleCountOf": "{count, plural, one {# module} other {# modules}} of {total}",
+      "subcategoryCount": "{count, plural, one {# subcategory} other {# subcategories}}",
+      "noResults": "No module matches these filters.",
+      "loadingProgress": "{shown} of {total} modules",
+      "filterLabel": "Filter",
+      "clearFilters": "Clear filters",
+      "clear": "Clear",
+      "searchPlaceholder": "Name or code (e.g. B18)…",
+      "searchAria": "Search for a module",
+      "sortGroup": "Sort",
+      "sort": {
+        "family": "Family",
+        "price-asc": "Price, low to high",
+        "price-desc": "Price, high to low",
+        "width": "Width"
+      },
+      "categoriesGroup": "Categories",
+      "finishGroup": "Finish",
+      "widthGroup": "Width",
+      "widthValue": "{width} in.",
+      "viewResults": "View {count, plural, one {# module} other {# modules}}",
+      "metaTitle": "Collections · Dilamco"
+    },
+    "finishes": {
+      "heroEyebrow": "2026 Finishes",
+      "heroTitleLead": "Choose your",
+      "heroTitleEmphasis": "finish.",
+      "heroIntro": "Three styles, same modules, same price.",
+      "featureImageAlt": "{name} finish",
+      "featureCodeSuffix": "FINISH",
+      "specMaterial": "Material",
+      "specReference": "Reference",
+      "specGrain": "Grain",
+      "featurePrimaryCta": "View the {name}",
+      "featureSecondaryCta": "Request a sample",
+      "compareEyebrow": "Compare",
+      "compareTitle": "Which one for your project?",
+      "compareRows": [
+        [
+          "Full kitchen",
+          "Recommended",
+          "Good on an island",
+          "Avoid"
+        ],
+        [
+          "Two-tone",
+          "Uppers",
+          "Island",
+          "Lowers"
+        ],
+        [
+          "8 ft ceiling",
+          "✓",
+          "✓",
+          "✓ with light uppers"
+        ],
+        [
+          "9 ft ceiling",
+          "✓",
+          "✓",
+          "✓"
+        ],
+        [
+          "Nordic light",
+          "★",
+          "★",
+          "★"
+        ],
+        [
+          "South / warm",
+          "★",
+          "★",
+          "○ (blue reads matte)"
+        ],
+        [
+          "Wood countertop",
+          "★",
+          "○",
+          "★"
+        ],
+        [
+          "Marble countertop",
+          "★",
+          "★",
+          "★"
+        ]
+      ],
+      "metaTitle": "Finishes · Dilamco",
+      "items": {
+        "blanc-pur": {
+          "nom": "Pure White",
+          "taglines": [
+            "Classic and bright"
+          ],
+          "desc": "More than half of Dilamco projects start with Pure White. It steps back in favour of the light, the countertop, the room. A neutral, slightly warm white, two-coat catalyzed.",
+          "specs": [
+            {
+              "label": "Cabinet",
+              "value": "Plywood"
+            },
+            {
+              "label": "Door",
+              "value": "Lacquered HDF + Birch"
+            },
+            {
+              "label": "Molding",
+              "value": "1 and 3 inches available"
+            }
+          ],
+          "primaryCta": "View the Pure White",
+          "secondaryCtaLabel": "Visit the showroom",
+          "percentLabel": "of 2024 projects"
+        },
+        "chene-blanc": {
+          "nom": "White Oak",
+          "taglines": [
+            "Warmer, wood look"
+          ],
+          "desc": "Oak-stained birch veneer. The horizontal grain — the elegance you ask for without being able to name it. Ideal on an island or accent wall.",
+          "specs": [
+            {
+              "label": "Cabinet",
+              "value": "Plywood"
+            },
+            {
+              "label": "Door",
+              "value": "Oak-stained birch veneer · Matte varnish · Horizontal grain"
+            },
+            {
+              "label": "Molding",
+              "value": "1 and 3 inches available"
+            }
+          ],
+          "primaryCta": "View the White Oak",
+          "secondaryCtaLabel": "Visit the showroom",
+          "percentLabel": "of 2024 projects"
+        },
+        "bleu-marin": {
+          "nom": "Navy Blue",
+          "taglines": [
+            "Bolder, modern accent"
+          ],
+          "desc": "A deep catalyzed blue. For projects that commit to a colour — often on the lowers, paired with Pure White uppers. Holds its tone under warm and cool light alike.",
+          "specs": [
+            {
+              "label": "Cabinet",
+              "value": "Plywood"
+            },
+            {
+              "label": "Door",
+              "value": "Catalyzed lacquered HDF · 25% sheen · 4 coats"
+            },
+            {
+              "label": "Molding",
+              "value": "1 and 3 inches available"
+            }
+          ],
+          "primaryCta": "View the Navy Blue",
+          "secondaryCtaLabel": "Visit the showroom",
+          "percentLabel": "of 2024 projects"
+        }
+      }
+    },
+    "chrome": {
+      "nav": {
+        "collections": "Collections",
+        "finishes": "Finishes",
+        "quote": "Request a quote"
+      },
+      "announcement": "Warehouse in Montreal · 20+ years of experience · Online quotes",
+      "homeAria": "Dilamco home",
+      "myProject": "My project",
+      "project": "Project",
+      "menu": "Menu",
+      "catalogue": "Catalogue",
+      "allCollections": "All collections",
+      "showroomLine": "Showroom · 275 Beaubien W",
+      "footer": {
+        "tagline": "In-stock kitchen cabinets at accessible prices. Browse the catalogue, see prices and build your kitchen online.",
+        "catalogue": "Catalogue",
+        "navWall": "Wall cabinets",
+        "navBase": "Base cabinets",
+        "navUtility": "Utility cabinets",
+        "navFillers": "Fillers, panels & moldings",
+        "home": "Home",
+        "navFinishes": "Finishes",
+        "navQuote": "Request a quote",
+        "contact": "Contact",
+        "rights": "© 2026 Dilamco inc. — All rights reserved"
+      },
+      "showroomCta": {
+        "eyebrow": "Montreal Showroom",
+        "headlineLine1": "See, touch,",
+        "headlineLine2": "open, close.",
+        "body": "5,200 sq. ft. of display space in the heart of Mile-Ex. Three complete kitchens on show, samples of every finish, and a corner-measuring tablet to plan your project in 90 minutes.",
+        "addressLabel": "Address",
+        "byAppointment": "By appointment",
+        "hours": "Mon – Fri · 9 a.m. to 5 p.m.",
+        "cta": "Book an appointment"
+      },
+      "sidebar": {
+        "nav": "Collections navigation",
+        "collapse": "Collapse",
+        "expand": "Expand"
+      },
+      "cart": {
+        "moduleCount": "{count, plural, one {# module} other {# modules}}",
+        "close": "Close",
+        "emptyTitle": "Your project is empty.",
+        "emptyBody": "Add modules from the catalogue to build your estimate.",
+        "browse": "Browse the collections",
+        "estimate": "Estimate",
+        "requestQuote": "Request the quote",
+        "reassurance": "No commitment · delivery and installation included in the final price · firm quote within 48 h",
+        "remove": "remove"
+      }
+    },
+    "quote": {
+      "intro": {
+        "eyebrow": "Quote request",
+        "title": "Your project, priced within 48 h.",
+        "description": "Submit your module list and your context. A project manager contacts you within 24 h to schedule the measurements, and you receive a firm quote — including panels, fillers, delivery and installation — within 48 h."
+      },
+      "form": {
+        "section1": "01 — Your details",
+        "section2": "02 — The project",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "phoneHint": "— to schedule the measurements",
+        "postalCode": "Installation postal code",
+        "projectType": "Project type",
+        "timeline": "Desired timeline",
+        "budget": "Approximate budget",
+        "notes": "Additional notes",
+        "notesOptional": "— optional",
+        "notesPlaceholder": "E.g. L-shaped kitchen, 9 ft ceiling, full renovation including island and pantry…",
+        "honeypot": "Do not fill in",
+        "submit": "Get my firm quote within 48 h",
+        "submitPending": "Sending…",
+        "reassurance": "No commitment. A project manager contacts you within 24 h — no sales follow-up, your details are never shared.",
+        "typeProjet": {
+          "cuisine": "Complete kitchen",
+          "renovation": "Partial renovation",
+          "rangement": "Custom storage",
+          "commercial": "Commercial project"
+        },
+        "timelineOptions": {
+          "urgent": "Within 1 month",
+          "1-3mois": "1 to 3 months",
+          "3-6mois": "3 to 6 months",
+          "6mois+": "More than 6 months"
+        }
+      },
+      "success": {
+        "eyebrow": "Request received",
+        "title": "Your quote is being prepared.",
+        "body": "A Dilamco project manager will call you at {tel} within the next 24 hours to confirm the dimensions. You will receive your firm quote by email within 48 h.",
+        "telFallback": "the number provided",
+        "backHome": "Back to home"
+      },
+      "summary": {
+        "eyebrow": "Your project",
+        "selectedModules": "{count, plural, one {# module selected} other {# modules selected}}",
+        "emptyHint": "You can submit the request before choosing any modules — a project manager will guide you through the selection.",
+        "browse": "Browse the collections",
+        "subtotal": "Catalogue subtotal",
+        "panelsFillers": "Panels + fillers (est.)",
+        "quoted": "quoted",
+        "deliveryInstall": "Delivery + installation",
+        "modulesEstimate": "Modules estimate",
+        "disclaimer": "Indicative estimate based on the technical catalogue. The firm quote includes all finishing elements, delivery and installation."
+      }
+    }
   }
 }

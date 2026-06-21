@@ -98,6 +98,32 @@ export const routing = defineRouting({
     },
     "/landing": "/landing",
     "/landing/construction": "/landing/construction",
+    // Boutique : seul le 1er segment se traduit (boutique -> shop). Les slugs
+    // de catégorie sont déjà identiques FR/EN (données bilingues), et les
+    // segments produit/finitions/soumission restent inchangés. Synchronisé
+    // avec AppLink TEMPLATES, seo/i18n-path.ts et next-sitemap.config.js.
+    "/boutique": { fr: "/boutique", en: "/shop" },
+    "/boutique/collections": {
+      fr: "/boutique/collections",
+      en: "/shop/collections",
+    },
+    "/boutique/collections/[slug]": {
+      fr: "/boutique/collections/[slug]",
+      en: "/shop/collections/[slug]",
+    },
+    "/boutique/collections/[slug]/[sub]": {
+      fr: "/boutique/collections/[slug]/[sub]",
+      en: "/shop/collections/[slug]/[sub]",
+    },
+    "/boutique/produit/[id]": {
+      fr: "/boutique/produit/[id]",
+      en: "/shop/produit/[id]",
+    },
+    "/boutique/finitions": { fr: "/boutique/finitions", en: "/shop/finitions" },
+    "/boutique/soumission": {
+      fr: "/boutique/soumission",
+      en: "/shop/soumission",
+    },
   },
 });
 

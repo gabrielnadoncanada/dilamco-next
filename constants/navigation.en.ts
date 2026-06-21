@@ -205,6 +205,10 @@ export const MAIN_NAV_EN: MenuItem[] = [
       },
     ],
   },
+  {
+    title: "Shop",
+    url: "/boutique",
+  },
 ];
 
 export const FOOTER_NAV_EN: FooterNavSection[] = [
@@ -231,6 +235,7 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
   {
     title: "Resources",
     links: [
+      { text: "Shop", url: "/boutique" },
       { text: "Projects", url: "/projets/" },
       { text: "Materials", url: "/materiaux/" },
     ],

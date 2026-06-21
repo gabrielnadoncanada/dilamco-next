@@ -1,0 +1,550 @@
+{
+  "source": "catalog.xlsx (feuille Categories)",
+  "categories": [
+    {
+      "slug": "base-cabinet-corner",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Coin",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-coin",
+      "path": [
+        "base-cabinet",
+        "base-cabinet-corner"
+      ]
+    },
+    {
+      "slug": "base-cabinet-drawer",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Tiroir",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-tiroir",
+      "path": [
+        "base-cabinet",
+        "base-cabinet-drawer"
+      ]
+    },
+    {
+      "slug": "base-cabinet-farmhouse-sink",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Évier farmhouse",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-evier-farmhouse",
+      "path": [
+        "base-cabinet",
+        "base-cabinet-farmhouse-sink"
+      ]
+    },
+    {
+      "slug": "base-cabinet-garbage-pull-out",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Tiroir à déchets",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-tiroir-a-dechets",
+      "path": [
+        "base-cabinet",
+        "base-cabinet-garbage-pull-out"
+      ]
+    },
+    {
+      "slug": "base-cabinet-spice-rack-pull-out",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Range-épices coulissant",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-range-epices-coulissant",
+      "path": [
+        "base-cabinet",
+        "base-cabinet-spice-rack-pull-out"
+      ]
+    },
+    {
+      "slug": "base-cabinet-standard",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Standard",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-standard",
+      "path": [
+        "base-cabinet",
+        "base-cabinet-standard"
+      ]
+    },
+    {
+      "slug": "base-cabinet-standard-pull-out",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Standard coulissant",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-standard-coulissant",
+      "path": [
+        "base-cabinet",
+        "base-cabinet-standard-pull-out"
+      ]
+    },
+    {
+      "slug": "base-microwave-cabinet",
+      "parent": "base-cabinet",
+      "name": {
+        "fr": "Micro-ondes",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas-micro-ondes",
+      "path": [
+        "base-cabinet",
+        "base-microwave-cabinet"
+      ]
+    },
+    {
+      "slug": "bathroom-base-cabinet-drawer",
+      "parent": "bathroom-base-cabinet",
+      "name": {
+        "fr": "Tiroir",
+        "en": null
+      },
+      "slugFr": "armoire-de-salle-de-bain-tiroir",
+      "path": [
+        "bathroom-base-cabinet",
+        "bathroom-base-cabinet-drawer"
+      ]
+    },
+    {
+      "slug": "bathroom-base-cabinet-sink",
+      "parent": "bathroom-base-cabinet",
+      "name": {
+        "fr": "Évier",
+        "en": null
+      },
+      "slugFr": "armoire-de-salle-de-bain-evier",
+      "path": [
+        "bathroom-base-cabinet",
+        "bathroom-base-cabinet-sink"
+      ]
+    },
+    {
+      "slug": "dummy-door",
+      "parent": "fillers-panels-moldings",
+      "name": {
+        "fr": "Fausse porte",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures-fausse-porte",
+      "path": [
+        "fillers-panels-moldings",
+        "dummy-door"
+      ]
+    },
+    {
+      "slug": "fillers-base-wall-tall",
+      "parent": "fillers-panels-moldings",
+      "name": {
+        "fr": "Fillers bas/mural/haut",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures-fillers-bas-mural-haut",
+      "path": [
+        "fillers-panels-moldings",
+        "fillers-base-wall-tall"
+      ]
+    },
+    {
+      "slug": "moldings",
+      "parent": "fillers-panels-moldings",
+      "name": {
+        "fr": "Moulures",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures-moulures",
+      "path": [
+        "fillers-panels-moldings",
+        "moldings"
+      ]
+    },
+    {
+      "slug": "panels",
+      "parent": "fillers-panels-moldings",
+      "name": {
+        "fr": "Panneaux",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures-panneaux",
+      "path": [
+        "fillers-panels-moldings",
+        "panels"
+      ]
+    },
+    {
+      "slug": "return-panels-appliance",
+      "parent": "fillers-panels-moldings",
+      "name": {
+        "fr": "Panneau latéral pour électros",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures-panneau-lateral-pour-electros",
+      "path": [
+        "fillers-panels-moldings",
+        "return-panels-appliance"
+      ]
+    },
+    {
+      "slug": "oven",
+      "parent": "utility-cabinet",
+      "name": {
+        "fr": "Four",
+        "en": null
+      },
+      "slugFr": "armoire-utilitaire-four",
+      "path": [
+        "utility-cabinet",
+        "oven"
+      ]
+    },
+    {
+      "slug": "pantry",
+      "parent": "utility-cabinet",
+      "name": {
+        "fr": "Garde-manger",
+        "en": null
+      },
+      "slugFr": "armoire-utilitaire-garde-manger",
+      "path": [
+        "utility-cabinet",
+        "pantry"
+      ]
+    },
+    {
+      "slug": "corner",
+      "parent": "wall-cabinet",
+      "name": {
+        "fr": "Coin",
+        "en": null
+      },
+      "slugFr": "armoire-murale-coin",
+      "path": [
+        "wall-cabinet",
+        "corner"
+      ]
+    },
+    {
+      "slug": "standard",
+      "parent": "wall-cabinet",
+      "name": {
+        "fr": "Standard",
+        "en": null
+      },
+      "slugFr": "armoire-murale-standard",
+      "path": [
+        "wall-cabinet",
+        "standard"
+      ]
+    },
+    {
+      "slug": "upper-refrigerator",
+      "parent": "wall-cabinet",
+      "name": {
+        "fr": "Dessus du réfrigérateur",
+        "en": null
+      },
+      "slugFr": "armoire-murale-dessus-du-refrigerateur",
+      "path": [
+        "wall-cabinet",
+        "upper-refrigerator"
+      ]
+    },
+    {
+      "slug": "microwave",
+      "parent": "wall-cabinet",
+      "name": {
+        "fr": "Micro-ondes",
+        "en": null
+      },
+      "slugFr": "armoire-murale-micro-ondes",
+      "path": [
+        "wall-cabinet",
+        "microwave"
+      ]
+    },
+    {
+      "slug": "garbage-bin",
+      "parent": "accessories",
+      "name": {
+        "fr": "Poubelle",
+        "en": null
+      },
+      "slugFr": "accessoires-poubelle",
+      "path": [
+        "accessories",
+        "garbage-bin"
+      ]
+    },
+    {
+      "slug": "roll-out-drawer",
+      "parent": "accessories",
+      "name": {
+        "fr": "Tiroir coulissant",
+        "en": null
+      },
+      "slugFr": "accessoires-tiroir-coulissant",
+      "path": [
+        "accessories",
+        "roll-out-drawer"
+      ]
+    },
+    {
+      "slug": "accessories",
+      "parent": null,
+      "name": {
+        "fr": "Accessoires",
+        "en": null
+      },
+      "slugFr": "accessoires",
+      "path": [
+        "accessories"
+      ]
+    },
+    {
+      "slug": "american-style-hinge",
+      "parent": null,
+      "name": {
+        "fr": "Charnière style américain",
+        "en": null
+      },
+      "slugFr": "charniere-style-americain",
+      "path": [
+        "american-style-hinge"
+      ]
+    },
+    {
+      "slug": "base-cabinet",
+      "parent": null,
+      "name": {
+        "fr": "Armoire du bas",
+        "en": null
+      },
+      "slugFr": "armoire-du-bas",
+      "path": [
+        "base-cabinet"
+      ]
+    },
+    {
+      "slug": "bathroom-base-cabinet",
+      "parent": null,
+      "name": {
+        "fr": "Armoire de salle de bain",
+        "en": null
+      },
+      "slugFr": "armoire-de-salle-de-bain",
+      "path": [
+        "bathroom-base-cabinet"
+      ]
+    },
+    {
+      "slug": "drawer-bottom-side",
+      "parent": null,
+      "name": {
+        "fr": "Côté dessous tiroir",
+        "en": null
+      },
+      "slugFr": "cote-dessous-tiroir",
+      "path": [
+        "drawer-bottom-side"
+      ]
+    },
+    {
+      "slug": "fillers-panels-moldings",
+      "parent": null,
+      "name": {
+        "fr": "Fillers, panneaux & moulures",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures",
+      "path": [
+        "fillers-panels-moldings"
+      ]
+    },
+    {
+      "slug": "island-back-panel",
+      "parent": "fillers-panels-moldings",
+      "name": {
+        "fr": "Panneau arrière d'îlot",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures-panneau-arriere-d-ilot",
+      "path": [
+        "fillers-panels-moldings",
+        "island-back-panel"
+      ]
+    },
+    {
+      "slug": "island-side-panel",
+      "parent": "fillers-panels-moldings",
+      "name": {
+        "fr": "Panneau de côté d'îlot",
+        "en": null
+      },
+      "slugFr": "fillers-panneaux-moulures-panneau-de-cote-d-ilot",
+      "path": [
+        "fillers-panels-moldings",
+        "island-side-panel"
+      ]
+    },
+    {
+      "slug": "wall-end-panel",
+      "parent": null,
+      "name": {
+        "fr": "Panneau d'extrémité mural",
+        "en": null
+      },
+      "slugFr": "panneau-d-extremite-mural",
+      "path": [
+        "wall-end-panel"
+      ]
+    },
+    {
+      "slug": "utility-cabinet",
+      "parent": null,
+      "name": {
+        "fr": "Armoire utilitaire",
+        "en": null
+      },
+      "slugFr": "armoire-utilitaire",
+      "path": [
+        "utility-cabinet"
+      ]
+    },
+    {
+      "slug": "wall-blind-corner",
+      "parent": null,
+      "name": {
+        "fr": "Coin aveugle mural",
+        "en": null
+      },
+      "slugFr": "coin-aveugle-mural",
+      "path": [
+        "wall-blind-corner"
+      ]
+    },
+    {
+      "slug": "wall-blind-corner-tall",
+      "parent": null,
+      "name": {
+        "fr": "Coin aveugle mural haut",
+        "en": null
+      },
+      "slugFr": "coin-aveugle-mural-haut",
+      "path": [
+        "wall-blind-corner-tall"
+      ]
+    },
+    {
+      "slug": "wall-blind-left",
+      "parent": null,
+      "name": {
+        "fr": "Coin aveugle gauche",
+        "en": null
+      },
+      "slugFr": "coin-aveugle-gauche",
+      "path": [
+        "wall-blind-left"
+      ]
+    },
+    {
+      "slug": "wall-cabinet",
+      "parent": null,
+      "name": {
+        "fr": "Armoire murale",
+        "en": null
+      },
+      "slugFr": "armoire-murale",
+      "path": [
+        "wall-cabinet"
+      ]
+    },
+    {
+      "slug": "wall-dummy-door",
+      "parent": null,
+      "name": {
+        "fr": "Fausse porte murale",
+        "en": null
+      },
+      "slugFr": "fausse-porte-murale",
+      "path": [
+        "wall-dummy-door"
+      ]
+    },
+    {
+      "slug": "wall-pantry-dummy-door",
+      "parent": null,
+      "name": {
+        "fr": "Fausse porte murale/garde-manger",
+        "en": null
+      },
+      "slugFr": "fausse-porte-murale-garde-manger",
+      "path": [
+        "wall-pantry-dummy-door"
+      ]
+    },
+    {
+      "slug": "utility-cabinet-oven",
+      "parent": "utility-cabinet",
+      "name": {
+        "fr": "utility-cabinet-oven",
+        "en": null
+      },
+      "slugFr": "armoire-utilitaire-utility-cabinet-oven",
+      "path": [
+        "utility-cabinet",
+        "utility-cabinet-oven"
+      ]
+    },
+    {
+      "slug": "wall-cabinet-standard",
+      "parent": "wall-cabinet",
+      "name": {
+        "fr": "wall-cabinet-standard",
+        "en": null
+      },
+      "slugFr": "armoire-murale-wall-cabinet-standard",
+      "path": [
+        "wall-cabinet",
+        "wall-cabinet-standard"
+      ]
+    },
+    {
+      "slug": "wall-cabinet-corner-45deg",
+      "parent": "wall-cabinet",
+      "name": {
+        "fr": "wall-cabinet-corner-45deg",
+        "en": null
+      },
+      "slugFr": "armoire-murale-wall-cabinet-corner-45deg",
+      "path": [
+        "wall-cabinet",
+        "wall-cabinet-corner-45deg"
+      ]
+    },
+    {
+      "slug": "utility-cabinet-pantry",
+      "parent": "utility-cabinet",
+      "name": {
+        "fr": "utility-cabinet-pantry",
+        "en": null
+      },
+      "slugFr": "armoire-utilitaire-utility-cabinet-pantry",
+      "path": [
+        "utility-cabinet",
+        "utility-cabinet-pantry"
+      ]
+    }
+  ]
+}

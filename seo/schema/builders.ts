@@ -164,6 +164,71 @@ export function breadcrumbJsonLd(
   };
 }
 
+/**
+ * Product + Offer pour les fiches boutique (modules d'armoire en stock).
+ * Prix en CAD ; dimensions exprimées en pouces (unitCode INH).
+ * `brand`/`seller` référencent les entités Organization/LocalBusiness du site.
+ */
+export function productJsonLd(args: {
+  name: string;
+  description?: string;
+  sku?: string;
+  category?: string;
+  image: string | string[];
+  price: number;
+  availability: boolean;
+  url: string;
+  width?: number;
+  height?: number;
+  depth?: number;
+}): JsonLd {
+  const images = (Array.isArray(args.image) ? args.image : [args.image])
+    .filter(Boolean)
+    .map((src) => (src.startsWith("http") ? src : `${SITE.url}${src}`));
+
+  const data: JsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${args.url}#product`,
+    name: args.name,
+    image: images,
+    url: args.url,
+    brand: { "@type": "Organization", "@id": ORG_ID },
+  };
+
+  if (args.description) data.description = args.description;
+  if (args.sku) data.sku = args.sku;
+  if (args.category) data.category = args.category;
+
+  const dim = (v?: number) =>
+    typeof v === "number" && v > 0
+      ? { "@type": "QuantitativeValue", value: v, unitCode: "INH" }
+      : undefined;
+  const width = dim(args.width);
+  const height = dim(args.height);
+  const depth = dim(args.depth);
+  if (width) data.width = width;
+  if (height) data.height = height;
+  if (depth) data.depth = depth;
+
+  // Offer uniquement si un prix est renseigné (Google exige `price` dans Offer).
+  if (args.price > 0) {
+    data.offers = {
+      "@type": "Offer",
+      price: args.price,
+      priceCurrency: "CAD",
+      availability: args.availability
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      url: args.url,
+      seller: { "@id": LOCALBUSINESS_ID },
+      businessFunction: "http://purl.org/goodrelations/v1#Sell",
+    };
+  }
+
+  return data;
+}
+
 export function faqJsonLd(items: Array<{ q: string; a: string }>): JsonLd {
   return {
     "@context": "https://schema.org",

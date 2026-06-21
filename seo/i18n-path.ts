@@ -9,6 +9,7 @@ const EN_SEGMENT: Record<string, string> = {
   processus: "process",
   "politique-de-confidentialite": "privacy-policy",
   "conditions-dutilisation": "terms-of-use",
+  boutique: "shop",
 };
 
 // Valeurs d'espace traduites (interne FR -> externe EN). Enum borné (6).

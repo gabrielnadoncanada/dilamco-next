@@ -10,6 +10,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* Tokens additionnels utilisés par la boutique (/boutique). Additif : sans
+     effet sur la vitrine, qui ne référence pas ces utilitaires. */
+  --color-soft-foreground: var(--soft-foreground);
+  --color-border-strong: var(--border-strong);
+  --color-highlight: var(--highlight);
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
   --font-mono: var(--font-geist-mono);
@@ -54,6 +59,9 @@
 :root {
   --background: #fafaf8;
   --foreground: #1a1f1c;
+  --soft-foreground: #2a3330;
+  --border-strong: #b6ab93;
+  --highlight: #c8b890;
 
   --card: #ffffff;
   --popover: #ffffff;
@@ -133,8 +141,6 @@
     letter-spacing: 0.01em;
   }
 
-
-
   .container-wrapper {
     width: 100%;
     padding-inline: calc(var(--spacing) * 2);
@@ -142,11 +148,20 @@
   }
 
   .bg-linear-gradient-1 {
-    background: linear-gradient(to right, var(--hero-overlay-start), var(--hero-overlay-middle), var(--hero-overlay-end))
+    background: linear-gradient(
+      to right,
+      var(--hero-overlay-start),
+      var(--hero-overlay-middle),
+      var(--hero-overlay-end)
+    );
   }
 
   .bg-radient-gradient-1 {
-    background: radial-gradient(circle at 85% 20%,var(--hero-overlay-glow),transparent 42%);
+    background: radial-gradient(
+      circle at 85% 20%,
+      var(--hero-overlay-glow),
+      transparent 42%
+    );
   }
 
   @keyframes hero-reveal {
@@ -249,12 +264,11 @@
     max-width: 100%;
   }
 
-
   [data-surface="secondary"] {
     @apply bg-secondary/50;
   }
 
-  .bg-linear-1 {	
+  .bg-linear-1 {
     @apply from-secondary/50 bg-linear-to-b via-20% via-muted to-muted/80;
   }
 

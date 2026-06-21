@@ -1,0 +1,191 @@
+{
+  "summary": {
+    "health_score": 54,
+    "business_type": "Local Service / Hybride (ébénisterie & rénovation sur mesure, atelier Pierrefonds-Roxboro + zone desservie Grand Montréal), bilingue FR/EN",
+    "audit_date": "2026-06-17",
+    "site": "https://dilamco.com",
+    "pages_in_sitemap": 80,
+    "real_data": {
+      "ga4_28d": {
+        "organic_sessions": 38,
+        "direct_sessions": 72,
+        "referral_sessions": 12,
+        "organic_social_sessions": 9,
+        "key_events": 0,
+        "note": "0 événement clé tous canaux confondus — generate_lead non marqué comme événement clé"
+      },
+      "gsc_28d": {
+        "total_clicks_approx": 16,
+        "branded_clicks": 13,
+        "note": "Seule la requête 'dilamco' (marque, pos 1.5) génère des clics. Plusieurs requêtes locales commerciales en pos 1-5 avec 0 clic."
+      }
+    },
+    "top_findings": [
+      "Tracking de conversion cassé : 0 événement clé dans GA4 (generate_lead non promu en Key Event) — impossible de mesurer le ROI SEO.",
+      "Le site se classe (pos 1-5) sur des requêtes locales commerciales mais récolte ~0 clic hors marque : Map Pack non gagné (0 avis, GBP sous-optimisé, pas d'AggregateRating).",
+      "Canonicalisation d'URL fragmentée (http/https, www/non-www, trailing-slash) : Google indexe des doublons et passe outre les canoniques déclarées.",
+      "Thin content sur les pages piliers (/espaces/*, /materiaux/*) : certaines non indexées, non citables par l'IA, faible conversion.",
+      "hreflang livré seulement via header HTTP (fr/en) + sitemap (fr-CA/en-CA) — codes incohérents, rien dans le HTML."
+    ],
+    "quick_wins": [
+      "Promouvoir generate_lead en événement clé dans GA4 (15 min).",
+      "Corriger le double nom de marque dans og:title ('… | Dilamco | Dilamco').",
+      "Ajouter priority sur l'image hero Next.js (LCP -0.8 à -1.5s).",
+      "Ajouter geo + openingHours + sameAs au schema HomeAndConstructionBusiness.",
+      "Ajouter un lien tel: cliquable dans le header/footer de toutes les pages.",
+      "Publier /llms.txt."
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 60,
+      "what_works": [
+        "SSR complet (X-Nextjs-Prerender), contenu indépendant du JS",
+        "Canonicals présents sur toutes les pages testées",
+        "Redirects HTTP->HTTPS et www->non-www en 308",
+        "robots.txt ouvert, 3 sitemaps valides (GSC: 0 erreur)",
+        "Fonts WOFF2 préchargées, viewport mobile correct"
+      ],
+      "findings": [
+        {"title": "Canonicalisation d'URL fragmentée (http/https/www/trailing-slash)", "severity": "High", "description": "GSC indexe des variantes www. et http://, et des doublons avec/sans slash final (/espaces/cuisine ET /espaces/cuisine/, salle-de-bain les deux). Gestion du slash incohérente entre routes : /materiaux/mdf/ -> 308, mais /espaces/salle-de-bain/ sert un 200. Google a choisi la version /salle-de-bain/ contre la canonique déclarée sans slash.", "recommendation": "Uniformiser la stratégie trailing-slash (next.config trailingSlash + middleware), forcer 308 vers la forme canonique unique sur toutes les routes, et soumettre une property http+www en GSC pour surveiller le legacy."},
+        {"title": "hreflang seulement en header HTTP + sitemap, codes incohérents", "severity": "High", "description": "Aucune balise hreflang dans le HTML. Header Link = fr/en/x-default ; sitemap = fr-CA/en-CA/x-default. Les deux signaux divergent sur les codes de langue.", "recommendation": "Aligner sur fr-CA/en-CA partout et ajouter les balises <link rel=alternate hreflang> dans le <head> via next-intl pour la robustesse."},
+        {"title": "5 headers de sécurité manquants", "severity": "High", "description": "X-Content-Type-Options, X-Frame-Options, Content-Security-Policy, Permissions-Policy, Referrer-Policy absents. HSTS présent mais sans includeSubDomains; preload.", "recommendation": "Ajouter les 5 headers dans next.config.ts headers() et compléter HSTS."},
+        {"title": "Double nom de marque dans og:title / twitter:title", "severity": "High", "description": "og:title = '... | Dilamco | Dilamco' (template + title qui contient déjà la marque). FR et EN.", "recommendation": "Une seule source de vérité pour le suffixe de marque."},
+        {"title": "IndexNow non implémenté", "severity": "Medium", "description": "Aucune clé, indexation passive Bing/Yandex uniquement.", "recommendation": "Fichier {uuid}.txt dans /public + ping au déploiement."},
+        {"title": "Sitemaps sans lastmod", "severity": "Medium", "description": "Aucune date de modification sur les 80 URLs.", "recommendation": "Générer lastmod réels (git/build)."},
+        {"title": "sitemap-images.xml absent du sitemap index", "severity": "Medium", "description": "Le sitemap index ne référence que sitemap-0.xml.", "recommendation": "Ajouter sitemap-images.xml à l'index."},
+        {"title": "Slugs EN non traduits dans /en/materials/*", "severity": "Medium", "description": "bois-massif, contreplaque, quincaillerie, couleurs restent en français.", "recommendation": "Traduire les slugs (solid-wood, plywood, hardware, colours) + 301 + maj hreflang."}
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 42,
+      "what_works": ["Adresse + téléphone + courriel présents", "Structure cohérente", "/services/renovation et /a-propos passent le seuil de mots"],
+      "findings": [
+        {"title": "Thin content systématique sur les pages piliers", "severity": "Critical", "description": "Comptage net : home FR ~487 mots, /espaces/cuisine 578, /materiaux/mdf 478 — tous sous les seuils de leur type. Pages /espaces/* et /materiaux/* = coquilles semi-remplies.", "recommendation": "Ajouter 400-600 mots éditoriaux par page pilier : données techniques, FAQ chiffrée, cas d'usage."},
+        {"title": "Zéro signal d'expérience first-hand (E-E-A-T)", "severity": "High", "description": "/a-propos ne nomme ni fondateur, ni année de fondation, ni nombre de projets, ni témoignage. Abstraction corporate.", "recommendation": "Nommer fondateur, année, nb de projets, 2-3 témoignages nominatifs (prénom + ville + projet)."},
+        {"title": "FAQ sans aucune donnée chiffrée", "severity": "High", "description": "Réponses 28-38 mots, aucune fourchette de prix ni délai. Non citable par l'IA, faible valeur SERP.", "recommendation": "Réponses 100-150 mots avec prix (ex. 25 000-80 000 $) et délais (ex. 8-14 semaines)."},
+        {"title": "EN = traduction machine non révisée", "severity": "Medium", "description": "Articles définis manquants, home EN 50 mots sous la FR.", "recommendation": "Révision humaine de toutes les pages EN."},
+        {"title": "Aucun fournisseur/association nommé", "severity": "Medium", "description": "Pas de Blum/Häfele/Uniboard ni APCHQ/ARQ.", "recommendation": "Nommer 2 fournisseurs clés + associations pro."},
+        {"title": "Aucun signal de fraîcheur", "severity": "Medium", "description": "Pas de dateModified, pas de blog/actualités.", "recommendation": "Ajouter dateModified + section projets datés ou blog."}
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 60,
+      "what_works": ["Title home optimisé (cuisines/vanités/armoires + Montréal + marque)", "Meta description présente sur la home", "H1 ciblés sur certaines pages (salle-de-bain Laval)"],
+      "findings": [
+        {"title": "H1 home générique (tagline UX, pas de mot-clé transactionnel)", "severity": "Medium", "description": "H1 = 'Espaces sur mesure : cuisine, salle de bain, rangement et commercial'.", "recommendation": "H1 type 'Armoires et cuisines sur mesure à Montréal — ébénisterie haut de gamme'."},
+        {"title": "Champ lexical 'ébéniste/ébénisterie' absent", "severity": "Medium", "description": "Requête 'ébéniste cuisine sur mesure Montréal' (compétition modérée) non couverte ; mot absent des pages.", "recommendation": "Intégrer le champ lexical artisanal (H2 + corps + méta), envisager une page /ebenisterie."},
+        {"title": "Méta descriptions à vérifier/optimiser sur les pages internes", "severity": "Low", "description": "Format [service] + [localisation] + [USP] à généraliser.", "recommendation": "Audit + réécriture des méta descriptions des pages principales."}
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 64,
+      "what_works": ["11 blocs JSON-LD server-rendered sur la home", "Organization + HomeAndConstructionBusiness + BreadcrumbList + Service + ImageObject bien liés par @id", "Architecture centralisée (builders.ts / site.ts)"],
+      "findings": [
+        {"title": "LocalBusiness sans geo, openingHours, sameAs", "severity": "Critical", "description": "geo (GeoCoordinates) et openingHours requis pour Local Pack / Knowledge Panel ; sameAs seulement sur Organization.", "recommendation": "Ajouter geo + openingHours + sameAs dans builders.ts/site.ts (1 commit site-wide)."},
+        {"title": "Organization.logo = string nue", "severity": "Critical", "description": "Google recommande un ImageObject avec width/height.", "recommendation": "Convertir logo en ImageObject."},
+        {"title": "Service sans @id ni offers", "severity": "High", "description": "Non référençable ; pas de signal de prix.", "recommendation": "Ajouter @id + offers stub (priceCurrency CAD)."},
+        {"title": "BreadcrumbList incohérents (saut du hub /espaces ; root EN pointe /)", "severity": "High", "description": "Fil d'Ariane tronqué sur pages espaces ; sur /en la racine pointe vers l'URL FR.", "recommendation": "Insérer le crumb /espaces ; corriger la racine EN -> /en."},
+        {"title": "Pas d'AggregateRating", "severity": "High", "description": "Plus haute valeur de rich result (étoiles) pour un contracteur local — absent.", "recommendation": "Implémenter AggregateRating dès collecte d'avis Google réels (ne pas hardcoder)."},
+        {"title": "FAQPage présent — Info, conserver", "severity": "Info", "description": "Google a retiré les rich results FAQ le 7 mai 2026 ; markup conservé pour citation IA/LLM.", "recommendation": "Ne pas retirer ; ne pas en ajouter pour un bénéfice SERP Google ; améliorer les réponses (voir Content)."}
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 52,
+      "what_works": ["Vercel CDN, cache HIT, TTFB faible", "Assets immutable 1 an", "Fonts self-hosted font-display swap"],
+      "findings": [
+        {"title": "Image hero en loading=lazy sans priority/fetchpriority (LCP)", "severity": "Critical", "description": "preload_check.py: preload_lcp_candidate=false, fetchpriority_high=0 ; c'est le logo SVG qui est préchargé. LCP lab estimé ~2.8-3.5s.", "recommendation": "priority sur le <Image> hero (active fetchpriority=high + eager + preload) ; retirer le preload du logo."},
+        {"title": "CSS bundle 214KB (Tailwind possiblement non purgé)", "severity": "Medium", "description": "CSS synchrone render-blocking, cible <30KB compressé.", "recommendation": "Vérifier content[] Tailwind / purge."},
+        {"title": "GTM préchargé comme script dans <head>", "severity": "Medium", "description": "Exécution sur le main thread pendant la phase critique (INP).", "recommendation": "next/script strategy=afterInteractive."},
+        {"title": "Bundle JS ~992KB brut / 15 chunks (INP hydration)", "severity": "Medium", "description": "Chunks de 180-220KB ; long tasks possibles sur mobile.", "recommendation": "bundle-analyzer + next/dynamic sur composants non critiques."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "score": 47,
+      "what_works": ["SSR complet", "Crawlers IA autorisés (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)", "LocalBusiness + zones desservies"],
+      "findings": [
+        {"title": "Contenu non citable (FAQ et corps sans données)", "severity": "High", "description": "Fenêtre de citation IA optimale 134-167 mots ; réponses 4-5x trop courtes, aucune donnée factuelle.", "recommendation": "Enrichir FAQ et corps avec chiffres concrets."},
+        {"title": "llms.txt absent (404)", "severity": "Low", "description": "Signal différenciant croissant.", "recommendation": "Publier /public/llms.txt."},
+        {"title": "Pas de présence YouTube dans sameAs", "severity": "Medium", "description": "YouTube = corrélation la plus forte (~0.737) avec les citations IA.", "recommendation": "Créer 3-5 vidéos de réalisations + URL dans sameAs + VideoObject."},
+        {"title": "Pas de dateModified", "severity": "Medium", "description": "Signal de fraîcheur modéré pour les moteurs IA.", "recommendation": "Ajouter dateModified aux schemas."}
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 50,
+      "what_works": ["Alt text présent", "Format WebP via next/image", "ImageObject schema bien formés", "sitemap-images valide (74 URLs)"],
+      "findings": [
+        {"title": "Seulement 4 vraies photos de projets (toutes cuisine)", "severity": "High", "description": "Sur 334 entrées image, 4 photos réelles ; bathroom/walk-in/commercial/sous-sol reposent sur du générique/stock.", "recommendation": "Photographier de vrais projets par catégorie + ajouter au sitemap-images."},
+        {"title": "Home absente du sitemap-images.xml", "severity": "Medium", "description": "7 pages sans entrée image dont la home FR.", "recommendation": "Ajouter la home + pages manquantes."}
+      ]
+    },
+    {
+      "name": "Local SEO",
+      "score": 47,
+      "what_works": ["Atelier physique (18625 Rue Larocque, Pierrefonds-Roxboro)", "areaServed (Montréal, Laval, Rive-Nord/Sud, Ouest-de-l'Île)", "Pages services dédiées", "tel: présent sur /contact"],
+      "findings": [
+        {"title": "0 avis / pas d'AggregateRating — Map Pack non gagné", "severity": "Critical", "description": "Aucun avis on-site, aucun widget, aucune note. 68% des consommateurs n'utilisent que les 4+ étoiles. Explique les rankings organiques pos 1-5 avec 0 clic (le Map Pack capte les clics).", "recommendation": "Programme d'avis Google post-installation + AggregateRating dès 5+ avis."},
+        {"title": "Téléphone non cliquable hors /contact", "severity": "High", "description": "0 lien tel: sur la home ; numéro 514-820-0773 seulement dans le DOM JS.", "recommendation": "Ajouter <a href=tel:+15148200773> dans header/footer global."},
+        {"title": "Incohérence de nom GBP probable (Dilamco vs 'Dilamco Construction')", "severity": "High", "description": "sameAs pointe vers /place/Dilamco+Construction/ alors que les schemas disent 'Dilamco'.", "recommendation": "Aligner le nom GBP avec le schema (vérifier le tableau de bord GBP)."},
+        {"title": "Pas de pages de zones dédiées", "severity": "Medium", "description": "/projets/montreal -> 404 ; ciblage géo repose sur méta + JSON-LD seulement.", "recommendation": "Créer /zones/montreal, /zones/laval, /zones/rive-sud avec contenu unique."},
+        {"title": "Bing Places / Apple Business Connect absents", "severity": "Medium", "description": "Bing = source primaire des recommandations locales de ChatGPT.", "recommendation": "Inscrire avec NAP identique."},
+        {"title": "Pas d'iframe Google Maps ni hasMap", "severity": "Low", "description": "/contact sans carte ni lien itinéraire.", "recommendation": "Ajouter iframe Maps + hasMap au schema."}
+      ]
+    },
+    {
+      "name": "SXO / Search Experience",
+      "score": 54,
+      "what_works": ["salle-de-bain Laval présente au SERP (~pos 7)", "Pages services structurées"],
+      "findings": [
+        {"title": "Persona B2B (designers/architectes) sans point d'entrée", "severity": "High", "description": "Aucune page dédiée, aucun portfolio commercial, aucun formulaire de brief pro.", "recommendation": "Créer /designers ou /b2b avec portfolio commercial + brief pro."},
+        {"title": "Profondeur insuffisante vs SERP sur /espaces/cuisine", "severity": "High", "description": "~1300 mots vs 1800-2500 chez les concurrents (Grifon, Ateliers Jacob) ; pas de styles, pas de tableau matériaux, pas de témoignages, pas de prix.", "recommendation": "Porter à 2000+ mots : styles, matériaux, témoignages, prix indicatifs, schema Service."},
+        {"title": "Manque de social proof bloque le passage en top 3", "severity": "Medium", "description": "0 témoignage sur tout le site ; freine le passage de pos 7 -> 3 sur vanité Laval.", "recommendation": "3 témoignages par page service + avis Google."}
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {"name": "Phase 1 : Mesure & Critiques", "timeframe": "Semaine 1", "items": [
+        "Promouvoir generate_lead en événement clé dans GA4 (tracking de conversion).",
+        "Ajouter geo + openingHours + sameAs au schema HomeAndConstructionBusiness.",
+        "Corriger le double nom de marque og:title/twitter:title.",
+        "priority sur l'image hero (LCP).",
+        "Lancer un programme d'avis Google (objectif 5+ avis sous 30j) pour attaquer le Map Pack."
+      ]},
+      {"name": "Phase 2 : Canonicalisation & Local", "timeframe": "Semaines 2-3", "items": [
+        "Uniformiser la stratégie trailing-slash + forcer une seule forme canonique (308) sur toutes les routes.",
+        "Ajouter tel: cliquable global + iframe Maps + hasMap.",
+        "Aligner le nom GBP avec le schema ; vérifier la catégorie GBP primaire.",
+        "Aligner hreflang sur fr-CA/en-CA (header + sitemap) + ajouter dans le HTML.",
+        "Ajouter les 5 headers de sécurité + compléter HSTS.",
+        "AggregateRating dès les premiers avis collectés."
+      ]},
+      {"name": "Phase 3 : Contenu & Autorité", "timeframe": "Mois 2", "items": [
+        "Enrichir /espaces/* et /materiaux/* (+400-600 mots, données techniques, FAQ chiffrée).",
+        "Réécrire les FAQ avec prix et délais réels (SERP + citation IA).",
+        "Enrichir /a-propos (fondateur, année, nb projets, témoignages).",
+        "Révision humaine des pages EN.",
+        "Créer une page B2B/designers + pages de zones.",
+        "Photographier de vrais projets (bathroom, walk-in, commercial, sous-sol)."
+      ]},
+      {"name": "Phase 4 : Surveillance & Itération", "timeframe": "Continu", "items": [
+        "IndexNow + lastmod dans les sitemaps.",
+        "llms.txt + présence YouTube (sameAs + VideoObject).",
+        "Surveiller dans GSC : CTR des requêtes locales (pierrefonds, plateau-mont-royal) et présence Map Pack.",
+        "Noindex/améliorer les coquilles projet non indexées (ex. /projets/salle-de-lavage).",
+        "Suivre l'évolution des conversions GA4 une fois generate_lead promu."
+      ]}
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "report": "FULL-AUDIT-REPORT.md",
+    "action_plan": "ACTION-PLAN.md"
+  }
+}

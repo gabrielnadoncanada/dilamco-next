@@ -315,6 +315,18 @@ const nextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  images: {
+    // AVIF d'abord (≈20-30 % plus léger que WebP), WebP en repli — le
+    // navigateur ne reçoit jamais le PNG/JPG source.
+    formats: ["image/avif", "image/webp"],
+    // Les renders catalogue sont immuables (régénérés sous le même nom
+    // seulement si le produit change) : cache CDN/navigateur 1 an.
+    minimumCacheTTL: 31536000,
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+    ],
+  },
+
   async redirects() {
     return [
       // Canonicalisation : force www.dilamco.com -> dilamco.com (non-www, https)
