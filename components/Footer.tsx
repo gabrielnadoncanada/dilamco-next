@@ -99,7 +99,18 @@ export const Footer = async ({
           ))}
         </div>
         <div className="relative z-10 mt-24 flex flex-col justify-between gap-4 border-t border-border/70 pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
-          <p>{copyright}</p>
+          <p>
+            {copyright}
+            {" · "}
+            <a
+              href="https://gabrielnadon.com/"
+              target="_blank"
+              rel="noopener"
+              className="transition-colors hover:text-primary"
+            >
+              {isEn ? "Designed by Gabriel Nadon" : "Conçu par Gabriel Nadon"}
+            </a>
+          </p>
           <ul className="flex flex-wrap gap-4">
             {bottomLinks.map((link, linkIdx) => (
               <li key={linkIdx}>
