@@ -31,12 +31,12 @@ export const comparatifPageEn: PageTemplateData = {
             {
               label: "Discuss your project",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View all materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Structure", "Humidity", "Finish"],
@@ -194,12 +194,12 @@ export const comparatifPageEn: PageTemplateData = {
             {
               label: "View hardware",
               href: "/materiaux/quincaillerie",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -247,12 +247,12 @@ export const comparatifPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View all materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

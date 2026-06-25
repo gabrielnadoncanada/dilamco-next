@@ -2,6 +2,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/navbar";
 import { MAIN_NAV, BRAND } from "@/constants/navigation";
 import { MAIN_NAV_EN, BRAND_EN } from "@/constants/navigation.en";
+import { HeaderBanner } from "./HeaderBanner";
 
 export default async function Header() {
   const locale = await getLocale();
@@ -14,7 +15,8 @@ export default async function Header() {
       <a href="#contenu" className="sr-only">
         {t("skipToContent")}
       </a>
-      <header className="sticky top-0 z-999  bg-background/95 backdrop-blur-sm">
+      <header className="sticky top-0 z-999  border-b border-border backdrop-blur-md bg-background">
+        <HeaderBanner />
         <Navbar
           logo={isEn ? BRAND_EN : BRAND}
           navigation={isEn ? MAIN_NAV_EN : MAIN_NAV}
@@ -24,7 +26,7 @@ export default async function Header() {
               label: quote,
               url: "/contact/",
               isPrimary: true,
-              buttonProps: { className: "w-full h-15", size: "lg" },
+              buttonProps: { className: "w-full", size: "default" },
             },
           ]}
         />
@@ -32,4 +34,3 @@ export default async function Header() {
     </>
   );
 }
-

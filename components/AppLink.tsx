@@ -7,6 +7,7 @@ import {
   MATERIAL_EN,
   RENOVATION_EN,
   PROJECT_SLUG_EN,
+  BOUTIQUE_TAXON_EN,
 } from "@/seo/i18n-path";
 
 // Templates explicites par espace (valeur traduite via routing.ts).
@@ -31,6 +32,13 @@ const RENOVATION_TEMPLATES = Object.keys(RENOVATION_EN).map(
   (r) => `/services/renovation/${r}`,
 );
 
+// Templates des collections boutique (slug mot-clé traduit via routing.ts),
+// dérivés de la map légère BOUTIQUE_TAXON_EN → auto-synchronisés avec
+// lib/shop/collections.ts (garde-fou build-time). Plus profond d'abord.
+const BOUTIQUE_COLLECTION_TEMPLATES = Object.keys(BOUTIQUE_TAXON_EN)
+  .sort((a, b) => b.split("/").length - a.split("/").length)
+  .map((sub) => `/boutique/${sub}`);
+
 // Pathnames internes connus (doivent rester synchronisés avec i18n/routing.ts).
 // Les plus spécifiques (espaces) en premier pour gagner le match.
 const TEMPLATES = [
@@ -52,11 +60,9 @@ const TEMPLATES = [
   "/conditions-dutilisation",
   "/landing",
   "/landing/construction",
-  // Boutique (synchronisé avec i18n/routing.ts). Les templates les plus
-  // spécifiques (sous-collections) avant les plus courts.
-  "/boutique/collections/[slug]/[sub]",
-  "/boutique/collections/[slug]",
-  "/boutique/collections",
+  // Boutique : collections (dérivées de BOUTIQUE_TAXON_EN, sous-collections
+  // d'abord) puis routes fixes. Synchronisé avec i18n/routing.ts.
+  ...BOUTIQUE_COLLECTION_TEMPLATES,
   "/boutique/produit/[id]",
   "/boutique/finitions",
   "/boutique/soumission",
@@ -72,6 +78,14 @@ function toIntlHref(path: string): IntlHref | null {
   const clean = (path.split(/[?#]/)[0] || "/").replace(/\/+$/, "") || "/";
   const segs = clean === "/" ? [] : clean.slice(1).split("/");
 
+  // Préserve le query string (ex. ?couleur=chene) : sinon il serait perdu en
+  // reconstruisant le href typé next-intl.
+  const qIndex = path.indexOf("?");
+  const queryString = qIndex >= 0 ? path.slice(qIndex + 1).split("#")[0] : "";
+  const query = queryString
+    ? Object.fromEntries(new URLSearchParams(queryString))
+    : undefined;
+
   for (const tpl of TEMPLATES) {
     const tsegs = tpl === "/" ? [] : tpl.slice(1).split("/");
     if (tsegs.length !== segs.length) continue;
@@ -86,11 +100,12 @@ function toIntlHref(path: string): IntlHref | null {
       }
     }
     if (!ok) continue;
-    return (
-      Object.keys(params).length
-        ? { pathname: tpl, params }
-        : tpl
-    ) as IntlHref;
+    const hasParams = Object.keys(params).length > 0;
+    if (!hasParams && !query) return tpl as IntlHref;
+    const href: Record<string, unknown> = { pathname: tpl };
+    if (hasParams) href.params = params;
+    if (query) href.query = query;
+    return href as IntlHref;
   }
   return null;
 }

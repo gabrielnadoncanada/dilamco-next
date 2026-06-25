@@ -46,7 +46,7 @@ export function CtaCenteredLinksAction(props: CtaCenteredLinksActionProps) {
       </div>
 
       <div className="mt-8">
-        <Button asChild size="lg" variant={props.action.variant ?? "default"}>
+        <Button asChild size="default" variant={props.action.variant ?? "primary"}>
           <Link href={props.action.href}>
             {props.action.label}
             <ArrowRight className="ml-2 size-4" />

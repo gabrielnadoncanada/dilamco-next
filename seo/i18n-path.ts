@@ -41,6 +41,36 @@ export const MATERIAL_EN: Record<string, string> = {
   melamine: "melamine",
 };
 
+// Collections boutique : sous-chemin FR (après /boutique/) -> sous-chemin EN
+// (après /shop/). Map LÉGÈRE (pas d'import du catalogue, pour ne pas alourdir le
+// middleware edge) ; DOIT rester synchronisée avec COLLECTIONS (lib/shop/collections.ts)
+// — une assertion build-time le garantit dans ce fichier de collections — et avec
+// next-sitemap.config.js (CJS, ne peut pas importer ce module TS).
+export const BOUTIQUE_TAXON_EN: Record<string, string> = {
+  "armoires-cuisine": "kitchen-cabinets",
+  "armoires-cuisine/bois": "kitchen-cabinets/wood",
+  // Armoires du bas (base-cabinet) + types
+  "armoires-cuisine/du-bas": "kitchen-cabinets/base",
+  "armoires-cuisine/du-bas/standard": "kitchen-cabinets/base/standard",
+  "armoires-cuisine/du-bas/tiroirs": "kitchen-cabinets/base/drawers",
+  "armoires-cuisine/du-bas/coin": "kitchen-cabinets/base/corner",
+  "armoires-cuisine/du-bas/micro-ondes": "kitchen-cabinets/base/microwave",
+  "armoires-cuisine/du-bas/range-epices": "kitchen-cabinets/base/spice-rack",
+  "armoires-cuisine/du-bas/tiroir-dechets": "kitchen-cabinets/base/waste-drawer",
+  "armoires-cuisine/du-bas/evier-farmhouse": "kitchen-cabinets/base/farmhouse-sink",
+  // Armoires murales (wall-cabinet) + types
+  "armoires-cuisine/murales": "kitchen-cabinets/wall",
+  "armoires-cuisine/murales/standard": "kitchen-cabinets/wall/standard",
+  "armoires-cuisine/murales/coin": "kitchen-cabinets/wall/corner",
+  "armoires-cuisine/murales/micro-ondes": "kitchen-cabinets/wall/microwave",
+  "armoires-cuisine/murales/dessus-frigo": "kitchen-cabinets/wall/above-fridge",
+  "garde-manger": "pantry",
+  vanites: "bathroom-vanities",
+  "vanites/24-pouces": "bathroom-vanities/24-inch",
+  "vanites/30-pouces": "bathroom-vanities/30-inch",
+  liquidation: "clearance",
+};
+
 // Slugs de projets traduits. Clé = `${espace FR}/${slug FR}` (le slug interne
 // reste FR ; seule l'URL EN est traduite). Enum borné (1 par projet publié).
 export const PROJECT_SLUG_EN: Record<string, string> = {
@@ -66,6 +96,12 @@ export function localizePath(path: string, locale: "fr" | "en"): string {
   if (!path || path === "/") return "/en";
   const segs = path.replace(/^\/+/, "").split("/");
   const head = segs[0];
+  // Taxonomie boutique : sous-chemin FR -> EN (armoires-cuisine -> kitchen-cabinets).
+  if (head === "boutique" && segs.length > 1) {
+    const sub = segs.slice(1).join("/");
+    const enSub = BOUTIQUE_TAXON_EN[sub];
+    if (enSub) return `/en/shop/${enSub}`;
+  }
   // Traduit le slug de projet (3e segment) sous /projets — AVANT l'espace,
   // car la clé utilise l'espace FR (segs[1] encore non traduit).
   if (head === "projets" && segs[1] && segs[2]) {

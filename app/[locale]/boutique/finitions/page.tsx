@@ -2,19 +2,37 @@ import type { Metadata } from "next";
 import { Container, Eyebrow, Headline, Body } from "@/components/shop/ds";
 import { COLLECTIONS } from "./_components/data";
 import { CollectionFeature } from "./_components/collection-feature";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/metadata";
+import { routes } from "@/lib/shop/routes";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale: "fr" | "en" }>;
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "shop.finishes" });
-  return { title: t("metaTitle") };
+  const meta = createPageMetadata(
+    { title: t("metaTitle"), description: t("heroIntro"), path: routes.finishes },
+    locale,
+  );
+  // canonical auto-référent + hreflang FR/EN (absents auparavant).
+  return {
+    title: t("metaTitle"),
+    alternates: meta.alternates,
+    openGraph: meta.openGraph,
+    twitter: meta.twitter,
+  };
 }
 
-export default async function FinitionsPage() {
+export default async function FinitionsPage({
+  params,
+}: {
+  params: Promise<{ locale: "fr" | "en" }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations("shop.finishes");
   return (
     <Container padded className="max-[700px]:pb-[60px]">

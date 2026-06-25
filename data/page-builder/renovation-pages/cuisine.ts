@@ -43,12 +43,12 @@ export const renovationCuisinePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir les projets cuisine",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Cuisine", "clé en main", "Montréal"],
@@ -125,12 +125,12 @@ export const renovationCuisinePage: PageTemplateData = {
             {
               label: "Voir le service de design",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir la page cuisine",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -381,12 +381,12 @@ export const renovationCuisinePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir la page cuisine",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Cuisine sur mesure, îlot, rangement et rénovation intégrée",

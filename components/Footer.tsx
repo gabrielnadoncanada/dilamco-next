@@ -26,6 +26,8 @@ interface FooterProps {
   menuItems?: FooterNavSection[];
   copyright?: string;
   bottomLinks?: LegalLink[];
+  /** Affiche la section avis Google au-dessus du footer. Off sur la boutique. */
+  showReviews?: boolean;
 }
 
 export const Footer = async ({
@@ -35,6 +37,7 @@ export const Footer = async ({
   menuItems,
   copyright,
   bottomLinks,
+  showReviews = true,
 }: FooterProps) => {
   const isEn = (await getLocale()) === "en";
   logo = logo ?? (isEn ? BRAND_EN : BRAND);
@@ -44,9 +47,10 @@ export const Footer = async ({
   bottomLinks = bottomLinks ?? (isEn ? LEGAL_LINKS_EN : LEGAL_LINKS);
   return (
     <>
-    <GoogleReviews />
-    <footer className="border-y">
-      <div className="w-full max-w-screen-xl mx-auto px-4 py-10 ">
+    {showReviews && <GoogleReviews />}
+    {/* Footer UNIFIÉ (vitrine + boutique) : fond vert de marque, logo blanc. */}
+    <footer className="bg-foreground text-background">
+      <div className="w-full max-w-screen-xl mx-auto px-4 py-14">
         <div className="relative z-10 grid grid-cols-2 gap-8 lg:grid-cols-6">
           <div className="col-span-2 mb-8 lg:mb-0">
             <div className="flex items-center gap-2 lg:justify-start">
@@ -55,21 +59,22 @@ export const Footer = async ({
                   src={logo.src}
                   alt={logo.alt}
                   title={logo.title}
+                  className="[filter:brightness(0)_invert(1)]"
                 />
               </Logo>
             </div>
-            <p className="mt-4 text-sm leading-relaxed font-normal text-muted-foreground">{tagline}</p>
-            <address className="mt-4 not-italic text-sm leading-6 text-muted-foreground">
+            <p className="mt-4 max-w-xs text-sm font-normal leading-relaxed text-background/65">{tagline}</p>
+            <address className="mt-4 not-italic text-sm leading-6 text-background/65">
               <a
                 href={`tel:${SITE.telephone.replace(/[^+\d]/g, "")}`}
-                className="font-medium transition-colors hover:text-primary"
+                className="font-medium transition-colors hover:text-background"
               >
                 {PHONE_DISPLAY}
               </a>
               <br />
               <a
                 href={`mailto:${SITE.email}`}
-                className="transition-colors hover:text-primary"
+                className="transition-colors hover:text-background"
               >
                 {SITE.email}
               </a>
@@ -79,12 +84,12 @@ export const Footer = async ({
           </div>
           {menuItems.map((section, sectionIdx) => (
             <div key={sectionIdx}>
-              <h3 className="mb-4 text-sm leading-6 font-semibold tracking-[0.08em] text-foreground/90 uppercase">{section.title}</h3>
-              <ul className="space-y-4 text-sm leading-6 text-muted-foreground">
+              <h3 className="mb-4 text-sm font-semibold uppercase leading-6 tracking-[0.08em] text-background">{section.title}</h3>
+              <ul className="space-y-3.5 text-sm leading-6 text-background/75">
                 {section.links.map((link, linkIdx) => (
                   <li
                     key={linkIdx}
-                    className="font-medium transition-colors hover:text-primary focus-within:text-primary"
+                    className="font-medium transition-colors hover:text-background focus-within:text-background"
                   >
                     <SmartLink
                       href={link.url}
@@ -98,25 +103,14 @@ export const Footer = async ({
             </div>
           ))}
         </div>
-        <div className="relative z-10 mt-24 flex flex-col justify-between gap-4 border-t border-border/70 pt-8 text-sm font-medium text-muted-foreground md:flex-row md:items-center">
-          <p>
-            {copyright}
-            {" · "}
-            <a
-              href="https://gabrielnadon.com/"
-              target="_blank"
-              rel="noopener"
-              className="transition-colors hover:text-primary"
-            >
-              {isEn ? "Designed by Gabriel Nadon" : "Conçu par Gabriel Nadon"}
-            </a>
-          </p>
+        <div className="relative z-10 mt-16 flex flex-col justify-between gap-4 border-t border-background/15 pt-8 text-sm font-medium text-background/55 md:flex-row md:items-center">
+          <p>{copyright}</p>
           <ul className="flex flex-wrap gap-4">
             {bottomLinks.map((link, linkIdx) => (
               <li key={linkIdx}>
                 <SmartLink
                   href={link.url}
-                  className="underline transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                  className="underline transition-colors hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
                 >
                   {link.text}
                 </SmartLink>

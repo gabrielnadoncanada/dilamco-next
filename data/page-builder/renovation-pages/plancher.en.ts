@@ -43,12 +43,12 @@ export const renovationPlancherPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View turnkey renovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Transitions", "Levels", "Sequencing"],
@@ -127,12 +127,12 @@ export const renovationPlancherPageEn: PageTemplateData = {
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View turnkey renovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -383,12 +383,12 @@ export const renovationPlancherPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View turnkey renovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Flooring, transitions, levels and site coordination",

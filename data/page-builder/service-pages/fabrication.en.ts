@@ -41,12 +41,12 @@ export const fabricationPageEn: PageTemplateData = {
             {
               label: "Discuss your project",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Precision", "Durability", "Custom"],
@@ -79,12 +79,12 @@ export const fabricationPageEn: PageTemplateData = {
             {
               label: "View materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Hardware",
               href: "/materiaux/quincaillerie",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -221,12 +221,12 @@ export const fabricationPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal, Laval and the South Shore",

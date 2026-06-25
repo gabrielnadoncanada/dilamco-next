@@ -3,11 +3,8 @@
 import { useTranslations, useLocale } from "next-intl";
 import { AppLink as Link } from "@/components/AppLink";
 import { useCart } from "@/components/shop/cart-provider";
-import {
-  localizeProductLabel,
-  type ShopLocale,
-} from "@/lib/shop/catalog-i18n";
-import { Button, ButtonArrow } from "@/components/shop/ui/button";
+import { localizeProductLabel, type ShopLocale } from "@/lib/shop/catalog-i18n";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import {
   Section,
   Container,
@@ -117,7 +114,10 @@ export function StarterKitchens() {
                 </Body>
                 <ul className="flex flex-col gap-1.5 border-y border-border py-4 text-xs text-soft-foreground">
                   {items.map(({ product, qty }) => (
-                    <li key={product.code} className="flex justify-between gap-4">
+                    <li
+                      key={product.code}
+                      className="flex justify-between gap-4"
+                    >
                       <span className="truncate">
                         {qty} ×{" "}
                         {localizeProductLabel(

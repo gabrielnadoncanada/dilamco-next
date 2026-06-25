@@ -16,6 +16,7 @@ import {
   Palette,
   Settings2,
   Info,
+  Boxes,
 } from "lucide-react";
 import type { MenuItem } from "@/components/navbar/navbar.types";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
@@ -207,7 +208,43 @@ export const MAIN_NAV: MenuItem[] = [
   },
   {
     title: "Boutique",
-    url: "/boutique",
+    groups: [
+      {
+        title: "Boutique en ligne",
+        links: [
+          {
+            label: "Armoires de cuisine",
+            url: "/boutique/armoires-cuisine",
+            icon: ChefHat,
+            description: "Caissons en stock, prêts à installer.",
+          },
+          {
+            label: "Garde-manger",
+            url: "/boutique/garde-manger",
+            icon: Boxes,
+            description: "Rangement pleine hauteur, en stock.",
+          },
+          {
+            label: "Vanités de salle de bain",
+            url: "/boutique/vanites",
+            icon: Bath,
+            description: "Meubles-lavabos en stock, 24 et 30 pouces.",
+          },
+          {
+            label: "Finitions",
+            url: "/boutique/finitions",
+            icon: Palette,
+            description: "Blanc Pur et Chêne blanc.",
+          },
+          {
+            label: "Demander une soumission",
+            url: "/boutique/soumission",
+            icon: ScanSearch,
+            description: "Soumission ferme sous 48 h sur votre sélection.",
+          },
+        ],
+      },
+    ],
   },
 ];
 

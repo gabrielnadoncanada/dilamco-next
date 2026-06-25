@@ -42,7 +42,7 @@ export function GridLinkCardsCompact(props: GridLinkCardsCompactProps) {
             ) : null}
 
             <CardFooter>
-              <Button asChild variant="outline" className="w-full">
+              <Button asChild variant="ghost" block>
                 <Link href={item.href}>{item.ctaLabel ?? "Voir la page"}</Link>
               </Button>
             </CardFooter>

@@ -42,3 +42,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# résidus locaux & sauvegardes (ne pas committer)
+*.bak
+~$*
+*.log

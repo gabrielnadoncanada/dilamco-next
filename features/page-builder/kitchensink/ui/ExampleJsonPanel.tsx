@@ -38,8 +38,8 @@ export function ExampleJsonPanel(props: ExampleJsonPanelProps) {
     <div className="bg-black text-white relative ">
       <Button
         type="button"
-        variant="outline"
-        size="sm"
+        variant="ghost"
+        size="small"
         onClick={handleCopy}
         disabled={!exampleSource}
         className="border-white/15 bg-white/5 text-white hover:bg-white/10 hover:text-white absolute top-4 right-4"

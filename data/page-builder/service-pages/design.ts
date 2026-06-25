@@ -38,12 +38,12 @@ export const designPage: PageTemplateData = {
             {
               label: "Parler de votre projet",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos réalisations",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Usage réel", "Planification", "Exécution"],
@@ -117,12 +117,12 @@ export const designPage: PageTemplateData = {
             {
               label: "Voir la fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -229,12 +229,12 @@ export const designPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Réponse généralement sous 24-48 h.",

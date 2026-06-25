@@ -18,7 +18,7 @@ export function HeroSplitImage(props: HeroSplitImageProps) {
 
       {/* Right */}
       <div className="lg:col-[7/13]  max-lg:order-[-1]">
-        <div className="relative overflow-hidden rounded-xl border bg-muted/30">
+        <div className="relative overflow-hidden rounded-none border bg-muted/30">
           <div className="relative aspect-[4/3] w-full">
             <Image
               src={props.image.src}

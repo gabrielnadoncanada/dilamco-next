@@ -35,12 +35,12 @@ export const quincailleriePageEn: PageTemplateData = {
             {
               label: "Discover our custom kitchens",
               href: "/espaces/cuisine",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "See our turnkey approach",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Materials", "Durability", "Perceived quality"],
@@ -214,12 +214,12 @@ export const quincailleriePageEn: PageTemplateData = {
             {
               label: "Explore materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View our kitchens",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -291,12 +291,12 @@ export const quincailleriePageEn: PageTemplateData = {
             {
               label: "See our custom kitchens",
               href: "/espaces/cuisine",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Understand our fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -410,12 +410,12 @@ export const quincailleriePageEn: PageTemplateData = {
             {
               label: "Get a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View all materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal, Laval and the South Shore",

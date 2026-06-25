@@ -10,11 +10,11 @@ import {
   localizeMolding,
   type ShopLocale,
 } from "@/lib/shop/catalog-i18n";
-import { Button } from "@/components/shop/ui/button";
+import { Button } from "@/components/ui/button";
 import { Eyebrow, Headline } from "@/components/shop/ds";
 import { routes } from "@/lib/shop/routes";
 import { findProduct } from "@/lib/shop/products";
-import { photoForProduct } from "@/lib/shop/photos";
+import { photoForProduct, PLACEHOLDER_PRODUCT_SRC } from "@/lib/shop/photos";
 import { Price } from "@/components/shop/price";
 
 export function SoumissionSummary() {
@@ -33,7 +33,7 @@ export function SoumissionSummary() {
           {t("emptyHint")}
           <div className="mt-4">
             <Button asChild variant="ghost" size="small">
-              <Link href={routes.collections}>{t("browse")}</Link>
+              <Link href={routes.catalogue}>{t("browse")}</Link>
             </Button>
           </div>
         </div>
@@ -48,15 +48,18 @@ export function SoumissionSummary() {
                 <span className="relative block aspect-square border border-border bg-card">
                   {(() => {
                     const product = findProduct(it.productId);
-                    return product ? (
+                    const src = product
+                      ? photoForProduct(product, it.color)
+                      : PLACEHOLDER_PRODUCT_SRC;
+                    return (
                       <Image
-                        src={photoForProduct(product, it.color)}
+                        src={src}
                         alt={it.name}
                         fill
                         sizes="40px"
                         className="object-cover"
                       />
-                    ) : null;
+                    );
                   })()}
                   <span className="absolute -right-1.5 -top-1.5 flex min-w-[18px] items-center justify-center rounded-full bg-foreground px-1 font-mono text-[10px] leading-[18px] text-background">
                     {it.qty}

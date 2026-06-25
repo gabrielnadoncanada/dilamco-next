@@ -33,12 +33,12 @@ export const page: PageTemplateData = {
             {
               label: "Obtenir une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Sur mesure", "Durable", "Clé en main"],
@@ -206,12 +206,12 @@ export const page: PageTemplateData = {
             {
               label: "Voir nos services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Comprendre nos matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -263,12 +263,12 @@ export const page: PageTemplateData = {
             {
               label: "Obtenir une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Cuisine sur mesure",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal • Laval • Rive-Sud - résidentiel & commercial",

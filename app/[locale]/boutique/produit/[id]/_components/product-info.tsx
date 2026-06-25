@@ -9,28 +9,35 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/shop/ui/accordion";
-import { Button, ButtonArrow } from "@/components/shop/ui/button";
+} from "@/components/ui/accordion";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import { Headline, Body } from "@/components/shop/ds";
 import { photoForProduct } from "@/lib/shop/photos";
 import { Price } from "@/components/shop/price";
 import { AvailabilityDot } from "@/components/shop/availability-dot";
 import { ProductSpecs } from "./product-specs";
 import {
-  finishSibling,
+  findProduct,
   isDoorPanel,
   isFlatPart,
   widthSiblings,
 } from "@/lib/shop/products";
+import {
+  IN_PAGE_AXES,
+  isAxisValueAvailable,
+  modelForVariantCode,
+  selectAxisValue,
+  variantById,
+} from "@/lib/shop/models";
+import { productDescription } from "@/lib/shop/product-description";
 import { routes } from "@/lib/shop/routes";
-import type { ColorName, Molding, Product } from "@/lib/shop/types";
+import type { Product, ProductModel } from "@/lib/shop/types";
 import { cn } from "@/lib/shop/utils";
 import { formatPrice } from "@/lib/shop/format";
 import {
   localizeProductLabel,
   localizeColor,
   localizeFamily,
-  localizeMolding,
   dimUnit,
   type ShopLocale,
 } from "@/lib/shop/catalog-i18n";
@@ -49,11 +56,6 @@ function SectionLabel({ label, value }: { label: string; value?: string }) {
   );
 }
 
-/** Porte à cadre shaker : caissons en finition peinte seulement (les -muf sont en slab). */
-function hasShakerlDoor(p: Product): boolean {
-  return !isFlatPart(p) && !isDoorPanel(p) && !p.code.endsWith("-muf");
-}
-
 function descriptionKey(p: Product): string {
   if (isDoorPanel(p)) return "description.doorPanel";
   if (isFlatPart(p)) return "description.flatPart";
@@ -62,9 +64,11 @@ function descriptionKey(p: Product): string {
 }
 
 interface Props {
+  /** Produit de la VARIANTE active (prix/SKU/render/specs). */
   product: Product;
-  molding: Molding;
-  setMolding: (m: Molding) => void;
+  model: ProductModel;
+  activeVariantId: string;
+  onSelectVariant: (id: string) => void;
   qty: number;
   setQty: (fn: (q: number) => number) => void;
   onAdd: () => void;
@@ -72,71 +76,40 @@ interface Props {
 
 export function ProductInfo({
   product,
-  molding,
-  setMolding,
+  model,
+  activeVariantId,
+  onSelectVariant,
   qty,
   setQty,
   onAdd,
 }: Props) {
   const t = useTranslations("shop.product");
   const locale = useLocale() as ShopLocale;
+  // Les largeurs sont des fiches séparées : on ancre le sélecteur de largeur
+  // sur le code canonique du modèle pour que les liens pointent les URLs canoniques.
+  const widthAnchor = findProduct(model.id) ?? product;
   return (
     <div className="flex flex-col gap-7 pt-2 max-[700px]:gap-5">
       {/* Hiérarchie : une seule dominante — le prix. Le titre reste serif
           mais plus discret ; l'eyebrow et le SKU sont tertiaires. */}
       <div className="flex flex-col">
-        <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-muted-foreground">
-          {localizeFamily(product.family, locale)} ·{" "}
-          {product.ceiling || t("standardCeiling")}
-        </span>
         <Headline
           level="headline2"
           as="h1"
-          className="mt-2 !text-[26px] !leading-[1.2] text-foreground/90 max-[700px]:!text-[20px]"
+          className="!text-[26px] !leading-[1.2] text-foreground/90 max-[700px]:!text-[20px]"
         >
           {localizeProductLabel(product.name, locale)}
         </Headline>
         <Price amount={product.price} size="lg" className="mt-3" />
       </div>
 
-      <FinishSelector product={product} />
+      <VariantAxes
+        model={model}
+        activeId={activeVariantId}
+        onSelect={onSelectVariant}
+      />
 
-      <WidthSelector product={product} />
-
-      {hasShakerlDoor(product) && (
-        <div className="flex flex-col gap-3">
-          <SectionLabel
-            label={t("doorMolding")}
-            value={`Shaker ${localizeMolding(molding, locale)}`}
-          />
-          <div
-            className={cn(
-              "grid gap-2",
-              product.moldings.length === 1 ? "grid-cols-1" : "grid-cols-2",
-            )}
-          >
-            {product.moldings.map((m) => (
-              <button
-                key={m}
-                className={cn(
-                  "flex cursor-pointer flex-col items-start gap-1 border border-border-strong bg-card px-4 py-3.5 text-left transition-colors hover:border-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
-                  molding === m && "border-2 border-foreground bg-secondary",
-                )}
-                onClick={() => setMolding(m)}
-              >
-                <strong className="font-serif text-base font-normal text-foreground">
-                  Shaker {localizeMolding(m, locale)}
-                </strong>
-                <span className="text-[11px] leading-[1.4] text-muted-foreground">
-                  {m === "1 po"
-                    ? t("moldingProfile.slim")
-                    : t("moldingProfile.wide")}
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
+      <WidthSelector product={widthAnchor} />
 
       <HowToGetIt />
 
@@ -170,7 +143,8 @@ export function ProductInfo({
             className="flex-1 whitespace-nowrap text-[13px] font-semibold max-[700px]:text-[12px]"
             onClick={onAdd}
           >
-            {t("addToCart")} — {formatPrice(product.price * qty)} <ButtonArrow />
+            {t("addToCart")} — {formatPrice(product.price * qty)}{" "}
+            <ButtonArrow />
           </Button>
         </div>
         <span className="text-center text-[10.5px] tracking-[0.02em] text-muted-foreground">
@@ -188,6 +162,13 @@ export function ProductInfo({
  */
 export function ProductDetails({ product }: { product: Product }) {
   const t = useTranslations("shop.product");
+  const locale = useLocale() as ShopLocale;
+  // Description UNIQUE générée depuis les specs du modèle (anti duplicate-content).
+  // Repli sur le texte i18n partagé pour les rares produits hors modèle (panneaux).
+  const model = modelForVariantCode(product.code);
+  const description = model
+    ? productDescription(model, locale)
+    : t(descriptionKey(product));
   return (
     <div className="flex flex-col gap-5 border-t border-border pt-7">
       <Body
@@ -195,7 +176,7 @@ export function ProductDetails({ product }: { product: Product }) {
         tone="soft"
         className="max-w-[560px] leading-[1.65] max-[700px]:text-sm"
       >
-        {t(descriptionKey(product))}
+        {description}
       </Body>
       <div className="-mt-2.5 font-mono text-[11px] tracking-[0.04em] text-muted-foreground">
         {t("sku")} · {product.id}
@@ -258,76 +239,122 @@ function ProductReassurance({ product }: { product: Product }) {
 }
 
 /**
- * Finitions = SKU distincts (F9-B12 blanc / F9-B12-muf chêne), présentés en
- * vignettes du produit rendu (pattern IKEA « Choose front ») : on voit le
- * caisson changer, pas juste un nom de couleur.
+ * Sélecteurs d'axes IN-PAGE (profil de porte, couleur) — pattern IKEA « Choose
+ * front » : le caisson rendu change sans changer d'URL. Chaque combinaison a
+ * son prix/SKU propres (variante). Un axe à une seule valeur est masqué.
  */
-function FinishSelector({ product }: { product: Product }) {
-  const t = useTranslations("shop.product");
+function VariantAxes({
+  model,
+  activeId,
+  onSelect,
+}: {
+  model: ProductModel;
+  activeId: string;
+  onSelect: (id: string) => void;
+}) {
   const locale = useLocale() as ShopLocale;
-  const sibling = finishSibling(product);
-  const current = product.colors[0] || "Blanc Pur";
-  const variants = [
-    { p: product, color: current, active: true },
-    ...(sibling
-      ? [
-          {
-            p: sibling,
-            color: sibling.colors[0] || "Chêne blanc",
-            active: false,
-          },
-        ]
-      : []),
-  ].sort(
-    (a, b) =>
-      (a.color === "Blanc Pur" ? -1 : 1) - (b.color === "Blanc Pur" ? -1 : 1),
+  const active = variantById(model, activeId);
+  const inPage = model.axes.filter(
+    (a) =>
+      (IN_PAGE_AXES as readonly string[]).includes(a.key) &&
+      a.values.length > 1,
   );
+  if (inPage.length === 0) return null;
+
+  const labelOf = (axisKey: string, raw: string) =>
+    axisKey === "couleur" ? localizeColor(raw, locale) : raw;
 
   return (
-    <div className="flex flex-col gap-3">
-      <SectionLabel label={t("finish")} value={localizeColor(current, locale)} />
-      <div className="flex flex-wrap gap-2.5">
-        {variants.map(({ p, color, active }) => {
-          const tile = (
-            <>
-              <span className="relative block size-[86px] overflow-hidden bg-secondary max-[700px]:size-[72px]">
-                <Image
-                  src={photoForProduct(p, color as ColorName)}
-                  alt={localizeColor(color, locale)}
-                  fill
-                  sizes="86px"
-                  className="object-cover"
-                />
-              </span>
-              <span className="block px-1.5 pb-1.5 pt-1 text-center">
-                <span className="block text-[12px] leading-[1.3] text-foreground">
-                  {localizeColor(color, locale)}
-                </span>
-                <span className="block font-mono text-[11px] text-soft-foreground group-data-[show-prices=false]/body:hidden">
-                  {formatPrice(p.price)}
-                </span>
-              </span>
-            </>
-          );
-          return active ? (
-            <span
-              key={p.code}
-              aria-current="true"
-              className="block border-2 border-foreground bg-card"
-            >
-              {tile}
-            </span>
-          ) : (
-            <Link
-              key={p.code}
-              href={routes.product(p.id)}
-              className="block border border-border-strong bg-card no-underline transition-colors hover:border-foreground"
-            >
-              {tile}
-            </Link>
-          );
-        })}
-      </div>
+    <div className="flex flex-col gap-6">
+      {inPage.map((axis) => {
+        const activeValueId = active.options[axis.key];
+        const activeLabel =
+          axis.values.find((v) => v.id === activeValueId)?.label ?? "";
+        return (
+          <div key={axis.key} className="flex flex-col gap-3">
+            <SectionLabel
+              label={axis.label}
+              value={labelOf(axis.key, activeLabel)}
+            />
+            <div className="flex flex-wrap gap-2.5">
+              {axis.values.map((val) => {
+                // Sélection interdépendante : cliquer cette valeur garantit
+                // qu'on atterrit sur une variante RÉELLE (prix/render exacts),
+                // en « snapant » l'autre axe si besoin.
+                const target = selectAxisValue(
+                  model,
+                  active.options,
+                  axis.key,
+                  val.id,
+                );
+                const targetProduct = findProduct(target.code);
+                const isActive = val.id === activeValueId;
+                // Disponible « ensemble » avec la sélection courante des autres axes.
+                const available = isAxisValueAvailable(
+                  model,
+                  active.options,
+                  axis.key,
+                  val.id,
+                );
+                const label = labelOf(axis.key, val.label);
+                const tile = (
+                  <>
+                    <span className="relative block size-[86px] overflow-hidden bg-secondary max-[700px]:size-[72px]">
+                      {targetProduct && (
+                        <Image
+                          src={photoForProduct(targetProduct)}
+                          alt={label}
+                          fill
+                          sizes="86px"
+                          className="object-cover"
+                        />
+                      )}
+                    </span>
+                    <span className="block px-1.5 pb-1.5 pt-1 text-center">
+                      <span className="block text-[12px] leading-[1.3] text-foreground">
+                        {label}
+                      </span>
+                      <span className="block font-mono text-[11px] text-soft-foreground group-data-[show-prices=false]/body:hidden">
+                        {formatPrice(target.price)}
+                      </span>
+                    </span>
+                  </>
+                );
+                return isActive ? (
+                  <span
+                    key={val.id}
+                    aria-current="true"
+                    className="block border-2 border-foreground bg-card"
+                  >
+                    {tile}
+                  </span>
+                ) : (
+                  <button
+                    key={val.id}
+                    type="button"
+                    onClick={() => onSelect(target.id)}
+                    title={
+                      available
+                        ? undefined
+                        : `${label} · ${formatPrice(target.price)}`
+                    }
+                    className={cn(
+                      "block cursor-pointer border bg-card transition-colors hover:border-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary",
+                      available
+                        ? "border-border-strong"
+                        : // Combinaison qui n'existe pas avec la sélection courante :
+                          // atténuée, mais cliquable (elle ajustera l'autre axe).
+                          "border-border opacity-55",
+                    )}
+                  >
+                    {tile}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }

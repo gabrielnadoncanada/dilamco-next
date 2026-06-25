@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { AppLink as Link } from "@/components/AppLink";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { CartButton } from "@/components/shop/cart-button";
 import { DESKTOP_BUTTONS } from "./navbar.constants";
 import { Logo } from "./components/logo";
 import { DesktopNavigation } from "./components/desktop-navigation";
@@ -13,7 +13,7 @@ export function Navbar({
   className,
   logo,
   desktopActions,
-  mobileActions
+  mobileActions,
 }: NavbarProps) {
   const actions = desktopActions || DESKTOP_BUTTONS;
 
@@ -21,24 +21,27 @@ export function Navbar({
     <>
       <section
         className={cn(
-          "pointer-events-auto flex h-16 w-full items-center justify-center bg-transparent w-full max-w-screen-xl mx-auto",
+          "pointer-events-auto flex  w-full items-center justify-center bg-transparent",
           className,
         )}
       >
-        <div className="flex items-center justify-between gap-8 w-full px-4">
+        <div className="relative flex items-center justify-between gap-8 w-full px-4 py-3.5 md:py-[22px]">
           <div className="flex items-center gap-8">
             <Logo logo={logo} />
+          </div>
+          <div className="absolute left-1/2 hidden -translate-x-1/2 xl:flex">
             <DesktopNavigation />
           </div>
           <div className="hidden items-center gap-3 xl:flex">
-            <LocaleSwitcher />
             {actions.map((action, index) => (
               <Button
                 key={`navbar-btn-${index}`}
-                size="sm"
+                size="small"
                 variant={getActionButtonVariant(action)}
                 className={
-                  action.isPrimary ? "text-primary-foreground" : "text-foreground"
+                  action.isPrimary
+                    ? "text-primary-foreground"
+                    : "text-foreground"
                 }
                 asChild
                 {...action.buttonProps}
@@ -48,12 +51,14 @@ export function Navbar({
                 </Link>
               </Button>
             ))}
+            {/* Panier (boutique uniquement — null sur la vitrine). */}
+            <CartButton />
           </div>
-          <div className="xl:hidden">
+          <div className="flex items-center gap-1 xl:hidden">
+            <CartButton />
             <MobileNavbarClient mobileActions={mobileActions} />
           </div>
         </div>
-
       </section>
     </>
   );

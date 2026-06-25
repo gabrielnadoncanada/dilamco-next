@@ -43,12 +43,12 @@ export const renovationPlancherPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir la rénovation clé en main",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Transitions", "Niveaux", "Séquence"],
@@ -127,12 +127,12 @@ export const renovationPlancherPage: PageTemplateData = {
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir la rénovation clé en main",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -383,12 +383,12 @@ export const renovationPlancherPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir la rénovation clé en main",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Plancher, transitions, niveaux et coordination chantier",

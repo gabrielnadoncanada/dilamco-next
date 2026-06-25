@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { AppLink as Link } from "@/components/AppLink";
-import { Button, ButtonArrow } from "@/components/shop/ui/button";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import { Headline, Body, ButtonGroup } from "@/components/shop/ds";
 import type { Collection } from "./data";
 import { cn } from "@/lib/shop/utils";

@@ -37,12 +37,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos réalisations",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Design", "Fabrication", "Installation", "Coordination"],
@@ -154,12 +154,12 @@ export const page: PageTemplateData = {
             {
               label: "Voir la rénovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Parler de votre projet",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
           ],
         },

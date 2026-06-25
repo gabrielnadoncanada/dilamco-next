@@ -182,8 +182,29 @@ function galleryFor(code: string): ProductGalleryEntry[] | undefined {
   return entries;
 }
 
+/**
+ * Catégories désactivées de la boutique (non vendues en ligne pour l'instant) :
+ * accessoires, charnières, fillers/panneaux/moulures, panneaux d'extrémité
+ * muraux. Traitées comme `visible: false` — exclues de la grille, des fiches,
+ * du sitemap, des params et de la nav. Réactiver = retirer le slug ici.
+ */
+export const DEACTIVATED_TOP_CATEGORIES = [
+  "accessories",
+  "american-style-hinge",
+  "fillers-panels-moldings",
+  "wall-end-panel",
+] as const;
+const deactivatedCategorySlugs = new Set(
+  DEACTIVATED_TOP_CATEGORIES.flatMap((slug) => getDescendantSlugs(slug)),
+);
+
+/** Vrai si la catégorie (ou un ancêtre) n'est pas désactivée. */
+export function isActiveCategory(slug: string): boolean {
+  return !deactivatedCategorySlugs.has(slug);
+}
+
 export const products: Product[] = raw
-  .filter((p) => p.visible)
+  .filter((p) => p.visible && isActiveCategory(p.category))
   .map<Product>((p) => ({
     id: p.code,
     code: p.code,

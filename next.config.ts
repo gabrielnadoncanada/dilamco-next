@@ -260,6 +260,25 @@ const redirectRules = [
     source: "/space/salles-de-lavage",
     destination: "/espaces/salle-de-lavage",
   },
+  // Anciennes pages boutique /collections (supprimées : remplacées par les
+  // collections unifiées /armoires-cuisine, /vanites…) -> pilier cuisine.
+  {
+    source: "/boutique/collections",
+    destination: "/boutique/armoires-cuisine",
+  },
+  {
+    source: "/boutique/collections/:slug*",
+    destination: "/boutique/armoires-cuisine",
+  },
+  {
+    source: "/en/shop/collections",
+    destination: "/en/shop/kitchen-cabinets",
+  },
+  {
+    source: "/en/shop/collections/:slug*",
+    destination: "/en/shop/kitchen-cabinets",
+  },
+
   // Filet de sécurité : toute ancienne fiche /realisation/* -> hub projets
   // (couvre chene-moderne et tout slug non listé explicitement)
   {

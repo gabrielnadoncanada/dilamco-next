@@ -10,15 +10,15 @@ import {
   localizeMolding,
   type ShopLocale,
 } from "@/lib/shop/catalog-i18n";
-import { Button, ButtonArrow } from "./ui/button";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerTitle,
-} from "./ui/drawer";
+} from "@/components/ui/drawer";
 import { findProduct } from "@/lib/shop/products";
-import { photoForProduct } from "@/lib/shop/photos";
+import { photoForProduct, PLACEHOLDER_PRODUCT_SRC } from "@/lib/shop/photos";
 import { Price } from "./price";
 import { routes } from "@/lib/shop/routes";
 import type { CartItem } from "@/lib/shop/types";
@@ -47,8 +47,7 @@ export function CartDrawer() {
       >
         <div className="px-7 py-5 flex justify-between items-center border-b border-border max-[700px]:px-5 max-[700px]:py-4">
           <DrawerTitle className="font-serif text-xl tracking-[-0.01em] text-foreground font-normal">
-            {t("myProject")} ·{" "}
-            {t("cart.moduleCount", { count: cart.totalQty })}
+            {t("myProject")} · {t("cart.moduleCount", { count: cart.totalQty })}
           </DrawerTitle>
           <DrawerClose
             aria-label={t("cart.close")}
@@ -70,7 +69,7 @@ export function CartDrawer() {
                 variant="ghost"
                 size="small"
                 className="mt-6"
-                onClick={() => goto(routes.collections)}
+                onClick={() => goto(routes.catalogue)}
               >
                 {t("cart.browse")}
               </Button>
@@ -111,15 +110,13 @@ function LineItem({ item }: { item: CartItem }) {
   return (
     <div className="grid grid-cols-[70px_1fr_auto] gap-3 border-b border-border py-4 last:border-b-0 max-[700px]:grid-cols-[56px_1fr_auto] max-[700px]:gap-2.5 max-[700px]:py-3.5">
       <div className="relative aspect-square overflow-hidden border border-border bg-secondary">
-        {product && (
-          <Image
-            src={photoForProduct(product, item.color)}
-            alt={item.name}
-            fill
-            sizes="70px"
-            className="object-cover"
-          />
-        )}
+        <Image
+          src={product ? photoForProduct(product, item.color) : PLACEHOLDER_PRODUCT_SRC}
+          alt={item.name}
+          fill
+          sizes="70px"
+          className="object-cover"
+        />
       </div>
       <div className="flex min-w-0 flex-col gap-1.5">
         <span className="line-clamp-2 font-serif text-base leading-[1.2] tracking-[-0.01em] text-foreground">
@@ -136,7 +133,9 @@ function LineItem({ item }: { item: CartItem }) {
           >
             −
           </button>
-          <span className="min-w-6 text-center font-mono text-xs">{item.qty}</span>
+          <span className="min-w-6 text-center font-mono text-xs">
+            {item.qty}
+          </span>
           <button
             className="size-[26px] cursor-pointer border border-border-strong text-foreground hover:border-foreground"
             onClick={() => cart.updateQty(item.key, item.qty + 1)}

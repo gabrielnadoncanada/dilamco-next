@@ -49,6 +49,75 @@ export interface Product {
   gallery?: ProductGalleryEntry[];
 }
 
+/* ------------------------------------------------------------------ *
+ * Modèle de variantes (multi-axes) — voir lib/shop/models.ts.
+ *
+ * Un `ProductModel` est l'entité SEO : 1 fiche = 1 URL = 1 entrée sitemap.
+ * Il ne porte AUCUN prix. Toute la variance vendable (prix, SKU, render)
+ * vit sur le `Variant`. Les axes (`OptionAxis`) sont de la donnée, pas du
+ * code : ajouter un profil/une couleur = ajouter des valeurs + variantes,
+ * sans toucher aux composants.
+ * ------------------------------------------------------------------ */
+
+/** Une valeur possible d'un axe (ex. profil « slab », couleur « chene »). */
+export interface OptionValue {
+  /** Clé machine stable (sert d'URL/état, jamais affichée telle quelle). */
+  id: string;
+  /** Libellé FR ; localisé à l'affichage (voir catalog-i18n). */
+  label: string;
+}
+
+/** Un axe de variation in-page (ex. « Profil de porte », « Couleur »). */
+export interface OptionAxis {
+  key: string;
+  label: string;
+  values: OptionValue[];
+}
+
+/** Une combinaison concrète vendable. Prix + SKU + render sont ICI. */
+export interface Variant {
+  /** Identifiant UNIQUE de la variante (`code__profil`) — une couleur peut
+   *  exister en plusieurs profils qui partagent le même code catalogue. */
+  id: string;
+  /** Code catalogue réel (ex. « S8-DB12-muf ») — porte le SKU, le render, le panier. */
+  code: string;
+  sku?: string;
+  /** Coordonnées dans la matrice d'axes : { profil: "shaker-1", couleur: "chene" }. */
+  options: Record<string, string>;
+  /** PRIX SPÉCIFIQUE À LA VARIANTE (le chêne ≠ le blanc ; +éventuel supplément profil). */
+  price: number;
+  /** Couleurs (conservé pour panier/photo). */
+  colors: ColorName[];
+  gallery?: ProductGalleryEntry[];
+  w: number;
+  h: number;
+  d: number;
+  available: boolean;
+}
+
+/** Entité SEO (1 fiche/URL). Aucun prix propre — voir `fromPrice` (min variantes). */
+export interface ProductModel {
+  /** Slug de la fiche = code de la variante par défaut (non-muf si la paire existe). */
+  id: string;
+  name: string;
+  shortName?: string;
+  family: Family;
+  category: string;
+  w: number;
+  h: number;
+  d: number;
+  doors: number;
+  drawers?: number;
+  /** Axes qui varient réellement pour CE modèle (≥2 valeurs ⇒ sélecteur affiché). */
+  axes: OptionAxis[];
+  /** Liste explicite des combos qui existent (catalogue creux, pas de produit cartésien). */
+  variants: Variant[];
+  /** Id de la variante par défaut (couleur canonique + profil de base). */
+  defaultVariantId: string;
+  /** Prix « à partir de » = min des prix variantes. */
+  fromPrice: number;
+}
+
 export interface CartItem {
   key: string;
   productId: string;

@@ -38,12 +38,12 @@ export const designPageEn: PageTemplateData = {
             {
               label: "Discuss your project",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Real usage", "Planning", "Execution"],
@@ -117,12 +117,12 @@ export const designPageEn: PageTemplateData = {
             {
               label: "View fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -229,12 +229,12 @@ export const designPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Reply usually within 24-48 h.",

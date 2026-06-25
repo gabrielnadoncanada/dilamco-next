@@ -37,12 +37,12 @@ export const walkInPageEn: PageTemplateData = {
             {
               label: "Get a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our walk-ins",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Storage", "Organization", "Custom"],
@@ -75,12 +75,12 @@ export const walkInPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -154,12 +154,12 @@ export const walkInPageEn: PageTemplateData = {
             {
               label: "Explore materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View our spaces",
               href: "/",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -266,12 +266,12 @@ export const walkInPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our walk-ins",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

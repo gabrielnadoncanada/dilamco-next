@@ -16,7 +16,11 @@
   --color-border-strong: var(--border-strong);
   --color-highlight: var(--highlight);
   --font-sans: var(--font-sans);
-  --font-display: var(--font-display);
+  /* Police de marque pour les titres éditoriaux (vitrine + boutique) : Georgia
+     (système, comme avant) — plus de chargement de Fraunces. `font-serif` et
+     `font-display` pointent tous deux dessus pour une typo cohérente. */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-serif: Georgia, "Times New Roman", serif;
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);

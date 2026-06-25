@@ -38,12 +38,12 @@ export const commercialPage: PageTemplateData = {
             {
               label: "Obtenir une soumission commerciale",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets commerciaux",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Commercial", "Durable", "Planifié"],
@@ -76,12 +76,12 @@ export const commercialPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le processus",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -155,12 +155,12 @@ export const commercialPage: PageTemplateData = {
             {
               label: "Explorer les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir nos services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -267,12 +267,12 @@ export const commercialPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets commerciaux",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

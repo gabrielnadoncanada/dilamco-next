@@ -31,12 +31,12 @@ export const couleursPageEn: PageTemplateData = {
             {
               label: "Talk design and finishes",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Light", "Maintenance", "Visual consistency"],
@@ -186,12 +186,12 @@ export const couleursPageEn: PageTemplateData = {
             {
               label: "View design",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -227,12 +227,12 @@ export const couleursPageEn: PageTemplateData = {
             {
               label: "View hardware",
               href: "/materiaux/quincaillerie",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -287,12 +287,12 @@ export const couleursPageEn: PageTemplateData = {
             {
               label: "Talk design",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

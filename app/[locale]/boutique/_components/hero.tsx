@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { AppLink as Link } from "@/components/AppLink";
-import { Button, ButtonArrow } from "@/components/shop/ui/button";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import { Headline, Body, ButtonGroup } from "@/components/shop/ds";
 import { routes } from "@/lib/shop/routes";
 
@@ -16,24 +16,22 @@ export async function Hero() {
           {t("hero.titleLead")} <em>{t("hero.titleEm")}</em>
         </Headline>
         <div>
-          <Body size="lead" tone="soft" className="max-w-[480px] leading-[1.55]">
+          <Body
+            size="lead"
+            tone="soft"
+            className="max-w-[480px] leading-[1.55]"
+          >
             {t("hero.subtitle")}
           </Body>
           <ul className="mt-6 flex flex-col gap-2">
-            <li className="text-sm tracking-[0.06em]">
-              {t("hero.bullets.0")}
-            </li>
-            <li className="text-sm tracking-[0.06em]">
-              {t("hero.bullets.1")}
-            </li>
-            <li className="text-sm tracking-[0.06em]">
-              {t("hero.bullets.2")}
-            </li>
+            <li className="text-sm tracking-[0.06em]">{t("hero.bullets.0")}</li>
+            <li className="text-sm tracking-[0.06em]">{t("hero.bullets.1")}</li>
+            <li className="text-sm tracking-[0.06em]">{t("hero.bullets.2")}</li>
           </ul>
         </div>
         <ButtonGroup>
           <Button asChild>
-            <Link href={routes.collections}>
+            <Link href={routes.catalogue}>
               {t("hero.ctaPrimary")} <ButtonArrow />
             </Link>
           </Button>

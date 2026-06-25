@@ -37,12 +37,12 @@ export const walkInPage: PageTemplateData = {
             {
               label: "Obtenir une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos walk-ins",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Rangement", "Organisation", "Sur mesure"],
@@ -75,12 +75,12 @@ export const walkInPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -154,12 +154,12 @@ export const walkInPage: PageTemplateData = {
             {
               label: "Explorer les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir nos espaces",
               href: "/",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -266,12 +266,12 @@ export const walkInPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos walk-ins",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

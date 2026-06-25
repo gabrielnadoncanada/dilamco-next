@@ -47,10 +47,7 @@ export default async function GoogleReviews() {
   const { reviews, googleReviewsUrl } = SITE;
 
   return (
-    <section
-      aria-label={t.heading}
-      className="border-t bg-muted/20"
-    >
+    <section aria-label={t.heading} className="border-t bg-muted/20">
       <Container>
         <div className="py-12 md:py-16">
           <div className="flex flex-col items-start gap-2">
@@ -67,7 +64,7 @@ export default async function GoogleReviews() {
             {reviews.items.map((r) => (
               <li
                 key={r.author}
-                className="rounded-2xl border bg-background p-6 shadow-sm"
+                className="rounded-none border bg-background p-6"
               >
                 <Stars rating={r.rating} />
                 <blockquote className="mt-3 text-base leading-relaxed text-foreground">

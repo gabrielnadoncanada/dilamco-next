@@ -8,21 +8,21 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/shop/ui/accordion";
+} from "@/components/ui/accordion";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/shop/ui/drawer";
-import { CategorySidebar } from "@/components/shop/category-sidebar";
+} from "@/components/ui/drawer";
 import { type CatalogScope, FINISH_VALUES } from "./filtering";
 import {
   FacetOption,
   FINISH_LABELS,
   useCatalogFacets,
 } from "./sidebar-filters";
+import { CollectionNav } from "../../_collection/collection-nav";
 
 interface Props {
   scope?: CatalogScope;
@@ -93,11 +93,10 @@ function MobileFiltersDrawerInner({ scope, activeSlug }: Props) {
               <AccordionTrigger className="py-4 text-[14px] hover:no-underline">
                 <span className="flex w-full items-baseline justify-between pr-3">
                   {t("categoriesGroup")}
-                  <span className="font-mono text-[11px] font-normal text-muted-foreground" />
                 </span>
               </AccordionTrigger>
               <AccordionContent>
-                <CategorySidebar activeSlug={activeSlug} />
+                <CollectionNav activeSlug={activeSlug} />
               </AccordionContent>
             </AccordionItem>
 

@@ -41,12 +41,12 @@ export const salleDeBainPage: PageTemplateData = {
             {
               label: "Obtenir une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets salle de bain",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Sur mesure", "Grand Montréal", "Humidité"],
@@ -78,12 +78,12 @@ export const salleDeBainPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -157,12 +157,12 @@ export const salleDeBainPage: PageTemplateData = {
             {
               label: "Explorer les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "outline",
+              label: "Vanités en stock",
+              href: "/boutique/vanites",
+              variant: "ghost",
             },
           ],
           image: {
@@ -246,12 +246,12 @@ export const salleDeBainPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets salle de bain",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -305,12 +305,12 @@ export const salleDeBainPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets salle de bain",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

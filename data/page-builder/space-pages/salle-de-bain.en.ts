@@ -41,12 +41,12 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               label: "Get a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our bathroom projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Custom", "Greater Montréal", "Moisture"],
@@ -78,12 +78,12 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -157,12 +157,12 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               label: "Explore materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
-              label: "See our process",
-              href: "/processus",
-              variant: "outline",
+              label: "In-stock vanities",
+              href: "/boutique/vanites",
+              variant: "ghost",
             },
           ],
           image: {
@@ -246,12 +246,12 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our bathroom projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -305,12 +305,12 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our bathroom projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

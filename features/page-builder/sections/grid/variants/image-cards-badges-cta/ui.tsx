@@ -19,7 +19,7 @@ export function GridImageCardsBadgesCta(props: GridImageCardsBadgesCtaProps) {
           ) : null}
         </div>
         {props.ctaLabel && props.ctaHref ? (
-          <Button asChild variant="outline" size="sm">
+          <Button asChild variant="ghost" size="small">
             <Link href={props.ctaHref}>{props.ctaLabel}</Link>
           </Button>
         ) : null}
@@ -43,10 +43,10 @@ export function GridImageCardsBadgesCta(props: GridImageCardsBadgesCtaProps) {
               </div>
 
               <CardHeader>
-                <CardTitle className="flex items-center justify-between gap-3 text-lg font-semibold leading-snug">
+                <CardTitle className="flex items-center justify-between gap-3 text-lg leading-snug">
                   <span>{item.title}</span>
                   {quickLabel ? (
-                    <Button asChild variant="ghost" size="sm">
+                    <Button asChild variant="ghost" size="small">
                       <Link href={item.href}>{quickLabel}</Link>
                     </Button>
                   ) : null}
@@ -68,7 +68,7 @@ export function GridImageCardsBadgesCta(props: GridImageCardsBadgesCtaProps) {
               </CardContent>
 
               <CardFooter className="mt-auto bg-muted/50">
-                <Button asChild variant="outline" size="sm">
+                <Button asChild variant="ghost" size="small">
                   <Link href={item.href}>{footerLabel}</Link>
                 </Button>
               </CardFooter>

@@ -42,12 +42,12 @@ export const installationPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir des projets installés",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Alignements", "Ajustements", "Finition"],
@@ -122,12 +122,12 @@ export const installationPage: PageTemplateData = {
             {
               label: "Voir le processus",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir la fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -232,12 +232,12 @@ export const installationPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Installation résidentielle et commerciale",

@@ -41,12 +41,12 @@ export const fabricationPage: PageTemplateData = {
             {
               label: "Parler de votre projet",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos réalisations",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Précision", "Durabilité", "Sur mesure"],
@@ -79,12 +79,12 @@ export const fabricationPage: PageTemplateData = {
             {
               label: "Voir les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Quincaillerie",
               href: "/materiaux/quincaillerie",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -221,12 +221,12 @@ export const fabricationPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal, Laval et Rive-Sud",

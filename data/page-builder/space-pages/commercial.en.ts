@@ -38,12 +38,12 @@ export const commercialPageEn: PageTemplateData = {
             {
               label: "Get a commercial quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our commercial projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Commercial", "Durable", "Planned"],
@@ -76,12 +76,12 @@ export const commercialPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "See our process",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -155,12 +155,12 @@ export const commercialPageEn: PageTemplateData = {
             {
               label: "Explore materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View our services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -267,12 +267,12 @@ export const commercialPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our commercial projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

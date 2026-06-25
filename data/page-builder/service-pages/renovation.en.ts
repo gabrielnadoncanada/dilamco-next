@@ -39,12 +39,12 @@ export const renovationPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Turnkey", "Coordination", "Montréal"],
@@ -111,7 +111,7 @@ export const renovationPageEn: PageTemplateData = {
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -196,12 +196,12 @@ export const renovationPageEn: PageTemplateData = {
             {
               label: "View materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -375,12 +375,12 @@ export const renovationPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Residential, kitchen, bathroom, flooring and extension",

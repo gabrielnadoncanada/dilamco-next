@@ -3,7 +3,7 @@
 import { useCart } from "@/components/shop/cart-provider";
 import { useTranslations } from "next-intl";
 import { AppLink as Link } from "@/components/AppLink";
-import { Button } from "@/components/shop/ui/button";
+import { Button } from "@/components/ui/button";
 import { Eyebrow, Headline, Body } from "@/components/shop/ds";
 import { routes } from "@/lib/shop/routes";
 

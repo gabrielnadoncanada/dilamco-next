@@ -5,9 +5,16 @@ import { useTranslations } from "next-intl";
 import { useCart } from "@/components/shop/cart-provider";
 import Image from "next/image";
 import { AppLink as Link } from "@/components/AppLink";
-import { Button } from "@/components/shop/ui/button";
+import { Button } from "@/components/ui/button";
 import { Container, Headline } from "@/components/shop/ds";
-import { findProduct, products as ALL_PRODUCTS } from "@/lib/shop/products";
+import { findProduct } from "@/lib/shop/products";
+import { useSearchParams } from "next/navigation";
+import {
+  findModel,
+  models,
+  resolveVariant,
+  variantById,
+} from "@/lib/shop/models";
 import { productGalleryViews } from "@/lib/shop/photos";
 import { routes } from "@/lib/shop/routes";
 import type { ColorName, Molding } from "@/lib/shop/types";
@@ -80,33 +87,56 @@ function QualityHighlights() {
 
 export default function ProduitClient({ id }: { id: string }) {
   const t = useTranslations("shop.product");
-  const product = findProduct(id);
   const cart = useCart();
-  const [color] = useState<ColorName>(
-    (product?.colors[0] as ColorName) || "Blanc Pur",
-  );
-  const [molding, setMolding] = useState<Molding>(
-    (product?.moldings[0] as Molding) || "1 po",
-  );
+  const model = findModel(id);
+  // Couleur pré-sélectionnée via l'URL (ex. clic d'une pastille sur une carte :
+  // /produit/S8-DB30?couleur=chene).
+  const searchParams = useSearchParams();
+  // Variante active = combinaison profil/couleur choisie ; tout (prix, SKU,
+  // render, specs, panier) en découle. Pas de changement d'URL.
+  const [activeVariantId, setActiveVariantId] = useState(() => {
+    const couleur = searchParams.get("couleur");
+    if (model && couleur) return resolveVariant(model, { couleur }).id;
+    return model?.defaultVariantId ?? id;
+  });
   const [qty, setQty] = useState(1);
   const [view, setView] = useState(0);
 
-  if (!product) {
+  const activeVariant = model ? variantById(model, activeVariantId) : undefined;
+  const product =
+    (activeVariant && findProduct(activeVariant.code)) ??
+    (model ? findProduct(model.id) : undefined);
+
+  if (!model || !product || !activeVariant) {
     return (
       <Container className="py-20 text-center">
         <Headline level="title" as="h2">
           {t("notFound.title")}
         </Headline>
         <Button asChild variant="ghost" className="mt-6">
-          <Link href={routes.collections}>{t("notFound.back")}</Link>
+          <Link href={routes.catalogue}>{t("notFound.back")}</Link>
         </Button>
       </Container>
     );
   }
 
-  const related = ALL_PRODUCTS.filter(
-    (p) => p.family === product.family && p.id !== product.id,
-  );
+  const color = (product.colors[0] as ColorName) || "Blanc Pur";
+  // Profil de porte choisi → reporté dans le panier comme moulure (1 po / 3 po).
+  const molding: Molding =
+    activeVariant.options.profil === "shaker-3" ? "3 po" : "1 po";
+
+  // Changer de variante remet la galerie sur la première vue (chaque variante a
+  // son propre render).
+  const selectVariant = (variantId: string) => {
+    setActiveVariantId(variantId);
+    setView(0);
+  };
+
+  // « Produits liés » : un par modèle de la même famille (pas de doublon de finition).
+  const related = models
+    .filter((m) => m.family === model.family && m.id !== model.id)
+    .map((m) => findProduct(m.id))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   const views: GalleryView[] = productGalleryViews(product);
 
@@ -134,8 +164,9 @@ export default function ProduitClient({ id }: { id: string }) {
         <div className="sticky top-[110px] max-[1000px]:static">
           <ProductInfo
             product={product}
-            molding={molding}
-            setMolding={setMolding}
+            model={model}
+            activeVariantId={activeVariantId}
+            onSelectVariant={selectVariant}
             qty={qty}
             setQty={setQty}
             onAdd={() => cart.addItem(product, { color, molding, qty })}

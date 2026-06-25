@@ -1,0 +1,70 @@
+[project]
+name = "worker"
+version = "0.1.0"
+description = "Blender headless render worker for Dilamco kitchen specs"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.0",
+    "kitchen-spec",
+    "kitchen-validator",
+    "kitchen-dsl",
+    "numpy>=2.0",  # render quality stats + PNG arrays (ADR-014)
+    "pillow>=10.0",  # PNG read/write + metadata embedding (ADR-013)
+]
+
+[project.optional-dependencies]
+queue = [
+    "rq>=1.16",
+    "redis>=5.0",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "pytest-mock>=3.12",
+]
+
+[project.scripts]
+worker = "worker.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/worker"]
+
+[tool.uv.sources]
+kitchen-spec = { workspace = true }
+kitchen-validator = { workspace = true }
+kitchen-dsl = { workspace = true }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+markers = [
+    "blender: requires real Blender + bpy (slow, headless integration)",
+    "snapshot: PNG snapshot regression test",
+    "fuzz: adversarial fuzz test",
+]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+]
+
+[tool.coverage.run]
+source = ["src/worker"]
+omit = [
+    "src/worker/__main__.py",
+]
+
+[tool.coverage.report]
+fail_under = 80
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+show_missing = true
+skip_covered = false

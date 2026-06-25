@@ -41,12 +41,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Design", "Fabrication", "Installation", "Coordination"],
@@ -170,12 +170,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "View the design service",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -203,12 +203,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -320,12 +320,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal, Laval and South Shore",

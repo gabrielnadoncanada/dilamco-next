@@ -41,12 +41,12 @@ export const contreplaquePage: PageTemplateData = {
             {
               label: "Parler de votre projet",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos réalisations",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Structure", "Stabilité", "Durabilité"],
@@ -114,12 +114,12 @@ export const contreplaquePage: PageTemplateData = {
             {
               label: "Voir la fabrication",
               href: "/services/fabrication",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir la quincaillerie",
               href: "/materiaux/quincaillerie",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -154,12 +154,12 @@ export const contreplaquePage: PageTemplateData = {
             {
               label: "Comparer les matériaux",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir tous les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -272,12 +272,12 @@ export const contreplaquePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Comparer les matériaux",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

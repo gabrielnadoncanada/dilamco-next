@@ -24,7 +24,7 @@ export function ExampleJsonDialog(props: ExampleJsonDialogProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button type="button" variant="outline" size="sm" className="gap-2">
+        <Button type="button" variant="ghost" size="small" className="gap-2">
           <FileJson className="size-4" />
           Example JSON
         </Button>

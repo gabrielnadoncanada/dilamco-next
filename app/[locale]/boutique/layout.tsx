@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CartProvider } from "@/components/shop/cart-provider";
-import { Topbar } from "@/components/shop/topbar";
-import { Footer } from "@/components/shop/footer";
+import Header from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { CartDrawer } from "@/components/shop/cart-drawer";
 import { HelpButton } from "@/components/shop/help-button";
 
@@ -40,9 +40,9 @@ export default async function BoutiqueLayout({
     <NuqsAdapter>
       <CartProvider>
         <div className="flex min-h-screen flex-col">
-          <Topbar />
+          <Header />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer showReviews={false} />
           <CartDrawer />
           <HelpButton />
         </div>

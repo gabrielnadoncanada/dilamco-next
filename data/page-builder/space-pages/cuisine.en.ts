@@ -38,12 +38,12 @@ export const cuisinePageEn: PageTemplateData = {
             {
               label: "Get a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our kitchens",
               href: "/projets/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Custom cabinets", "Pierrefonds", "West Island"],
@@ -76,12 +76,12 @@ export const cuisinePageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "See our process",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -155,12 +155,12 @@ export const cuisinePageEn: PageTemplateData = {
             {
               label: "Explore materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
-              label: "View our services",
-              href: "/services",
-              variant: "outline",
+              label: "In-stock kitchen cabinets",
+              href: "/boutique/armoires-cuisine",
+              variant: "ghost",
             },
           ],
           image: {
@@ -251,12 +251,12 @@ export const cuisinePageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our kitchens",
               href: "/projets/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -306,12 +306,12 @@ export const cuisinePageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our kitchens",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

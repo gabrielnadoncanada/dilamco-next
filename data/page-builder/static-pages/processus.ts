@@ -41,12 +41,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Design", "Fabrication", "Installation", "Coordination"],
@@ -170,12 +170,12 @@ export const page: PageTemplateData = {
             {
               label: "Voir le service design",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -203,12 +203,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -320,12 +320,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal, Laval et Rive-Sud",

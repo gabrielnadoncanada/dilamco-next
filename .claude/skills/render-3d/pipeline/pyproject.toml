@@ -1,0 +1,8 @@
+# Env minimal pour le LANCEUR (uv run python scripts/...). Le lanceur n'a besoin
+# que de Pillow (post-process ombre + conversion webp). bpy/kitchen_spec/worker
+# tournent dans Blender, pas dans ce venv.
+[project]
+name = "dilamco-render-3d"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = ["pillow>=10"]

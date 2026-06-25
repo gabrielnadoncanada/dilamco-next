@@ -3,9 +3,9 @@
 import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import { cn } from "@/lib/shop/utils";
-import { AspectRatio } from "@/components/shop/ui/aspect-ratio";
-import { Badge } from "@/components/shop/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/shop/ui/tabs";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Eyebrow } from "./eyebrow";
 import { Headline } from "./headline";
 import { Body } from "./body";

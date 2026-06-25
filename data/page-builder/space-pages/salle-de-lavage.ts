@@ -40,12 +40,12 @@ export const salleDeLavagePage: PageTemplateData = {
             {
               label: "Obtenir une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos réalisations",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Fonctionnel", "Durable", "Sur mesure"],
@@ -78,12 +78,12 @@ export const salleDeLavagePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le processus",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -157,12 +157,12 @@ export const salleDeLavagePage: PageTemplateData = {
             {
               label: "Explorer les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir nos espaces",
               href: "/",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -269,12 +269,12 @@ export const salleDeLavagePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos réalisations",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

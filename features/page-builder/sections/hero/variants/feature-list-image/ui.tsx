@@ -78,7 +78,7 @@ export function HeroFeatureListImage(props: HeroFeatureListImageProps) {
               <Button
                 key={`${action.href}-${action.label}`}
                 asChild
-                variant={action.variant ?? (index === 0 ? "default" : "outline")}
+                variant={action.variant ?? (index === 0 ? "primary" : "ghost")}
               >
                 <AppLink href={action.href}>
                   {action.label}

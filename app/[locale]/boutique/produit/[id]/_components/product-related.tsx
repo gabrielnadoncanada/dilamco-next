@@ -9,7 +9,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/shop/ui/carousel";
+} from "@/components/ui/carousel";
 import type { Product } from "@/lib/shop/types";
 
 export function ProductRelated({ products }: { products: Product[] }) {

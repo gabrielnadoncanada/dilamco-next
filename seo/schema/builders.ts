@@ -181,6 +181,22 @@ export function productJsonLd(args: {
   width?: number;
   height?: number;
   depth?: number;
+  /**
+   * Variantes vendables (profil/couleur), chacune son prix/SKU. Rend un
+   * tableau d'`Offer` au lieu d'une offre unique — modélise le « 1 Product,
+   * N Offers » au lieu de deux fiches qui se cannibalisent.
+   */
+  offers?: Array<{
+    price: number;
+    sku?: string;
+    availability: boolean;
+    url?: string;
+    name?: string;
+  }>;
+  /** Date ISO jusqu'à laquelle le prix est valide (rich results / free listings). */
+  priceValidUntil?: string;
+  /** Attributs structurés (PropertyValue) : portes, tiroirs, couleurs, moulure… */
+  additionalProperties?: Array<{ name: string; value: string }>;
 }): JsonLd {
   const images = (Array.isArray(args.image) ? args.image : [args.image])
     .filter(Boolean)
@@ -211,22 +227,87 @@ export function productJsonLd(args: {
   if (height) data.height = height;
   if (depth) data.depth = depth;
 
-  // Offer uniquement si un prix est renseigné (Google exige `price` dans Offer).
-  if (args.price > 0) {
-    data.offers = {
+  const toOffer = (o: {
+    price: number;
+    sku?: string;
+    availability: boolean;
+    url?: string;
+    name?: string;
+  }): JsonLd => {
+    const offer: JsonLd = {
       "@type": "Offer",
-      price: args.price,
+      price: o.price,
       priceCurrency: "CAD",
-      availability: args.availability
+      availability: o.availability
         ? "https://schema.org/InStock"
         : "https://schema.org/OutOfStock",
-      url: args.url,
+      // En stock = produit neuf (différenciateur vs reconditionné).
+      itemCondition: "https://schema.org/NewCondition",
+      url: o.url ?? args.url,
       seller: { "@id": LOCALBUSINESS_ID },
       businessFunction: "http://purl.org/goodrelations/v1#Sell",
     };
+    if (o.sku) offer.sku = o.sku;
+    if (o.name) offer.name = o.name;
+    if (args.priceValidUntil) offer.priceValidUntil = args.priceValidUntil;
+    return offer;
+  };
+
+  // 1 Product, N Offers : une offre par variante (prix/SKU propres). Repli sur
+  // l'offre unique si aucune variante explicite n'est fournie.
+  const offerList = (args.offers ?? []).filter((o) => o.price > 0);
+  if (offerList.length > 1) {
+    data.offers = offerList.map(toOffer);
+  } else if (offerList.length === 1) {
+    data.offers = toOffer(offerList[0]);
+  } else if (args.price > 0) {
+    data.offers = toOffer({
+      price: args.price,
+      sku: args.sku,
+      availability: args.availability,
+      url: args.url,
+    });
+  }
+
+  // Attributs structurés (dimensions lisibles, portes, tiroirs, couleurs, moulure)
+  // — enrichit le Product pour les rich results et les AI Overviews.
+  const props = (args.additionalProperties ?? []).filter(
+    (p) => p.name && p.value,
+  );
+  if (props.length) {
+    data.additionalProperty = props.map((p) => ({
+      "@type": "PropertyValue",
+      name: p.name,
+      value: p.value,
+    }));
   }
 
   return data;
+}
+
+/**
+ * ItemList pour les pages collection/taxonomie : liste ordonnée des fiches
+ * produit. Signale à Google la structure de catégorie (et nourrit les carrousels
+ * de produits / AI Overviews). `items` = URLs absolues des fiches.
+ */
+export function itemListJsonLd(args: {
+  name: string;
+  url: string;
+  items: Array<{ url: string; name: string }>;
+}): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${args.url}#itemlist`,
+    name: args.name,
+    numberOfItems: args.items.length,
+    itemListElement: args.items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: it.url,
+      name: it.name,
+    })),
+  };
 }
 
 export function faqJsonLd(items: Array<{ q: string; a: string }>): JsonLd {

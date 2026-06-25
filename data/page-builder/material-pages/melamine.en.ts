@@ -31,12 +31,12 @@ export const melaminePageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View the comparison",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Decor", "Maintenance", "Controlled cost"],
@@ -104,12 +104,12 @@ export const melaminePageEn: PageTemplateData = {
             {
               label: "View all materials",
               href: "/materiaux",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View design",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -144,12 +144,12 @@ export const melaminePageEn: PageTemplateData = {
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Compare with MDF",
               href: "/materiaux/mdf",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -261,12 +261,12 @@ export const melaminePageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View the comparison",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

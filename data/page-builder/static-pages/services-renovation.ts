@@ -38,12 +38,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Coordination", "Exécution", "Cohésion"],
@@ -76,12 +76,12 @@ export const page: PageTemplateData = {
             {
               label: "Voir le design",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -162,12 +162,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir les types de rénovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Résidentiel et projets complexes",

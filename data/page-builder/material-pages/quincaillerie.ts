@@ -35,12 +35,12 @@ export const quincailleriePage: PageTemplateData = {
             {
               label: "Découvrir nos cuisines sur mesure",
               href: "/espaces/cuisine",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir notre approche clé en main",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Matériaux", "Durabilité", "Qualité perçue"],
@@ -214,12 +214,12 @@ export const quincailleriePage: PageTemplateData = {
             {
               label: "Explorer les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir nos cuisines",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -291,12 +291,12 @@ export const quincailleriePage: PageTemplateData = {
             {
               label: "Voir nos cuisines sur mesure",
               href: "/espaces/cuisine",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Comprendre notre fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -410,12 +410,12 @@ export const quincailleriePage: PageTemplateData = {
             {
               label: "Obtenir une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir tous les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal, Laval et Rive-Sud",

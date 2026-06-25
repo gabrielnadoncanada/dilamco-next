@@ -43,12 +43,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir les projets salle de bain",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Humidité", "Coordination", "Montréal"],
@@ -111,12 +111,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             {
               label: "Voir les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Quincaillerie",
               href: "/materiaux/quincaillerie",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -157,12 +157,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             {
               label: "Voir la page salle de bain",
               href: "/espaces/salle-de-bain",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -413,12 +413,12 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir la page salle de bain",
               href: "/espaces/salle-de-bain",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Salle de bain, vanité sur mesure, rangement et environnement humide",

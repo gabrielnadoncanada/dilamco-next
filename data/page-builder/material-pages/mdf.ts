@@ -31,12 +31,12 @@ export const mdfPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le comparatif",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Peinture", "Uniformité", "Façades"],
@@ -104,12 +104,12 @@ export const mdfPage: PageTemplateData = {
             {
               label: "Voir le design",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir tous les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -145,12 +145,12 @@ export const mdfPage: PageTemplateData = {
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Comparer avec la mélamine",
               href: "/materiaux/melamine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -262,12 +262,12 @@ export const mdfPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le comparatif",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

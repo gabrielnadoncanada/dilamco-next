@@ -1,5 +1,4 @@
 import { Container } from "@/components/shop/ds";
-import { CategorySidebar } from "@/components/shop/category-sidebar";
 import { MobileFiltersDrawer } from "./mobile-filters-drawer";
 import type { ReactNode } from "react";
 

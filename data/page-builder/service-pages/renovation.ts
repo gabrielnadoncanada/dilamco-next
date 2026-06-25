@@ -39,12 +39,12 @@ export const renovationPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["clé en main", "Coordination", "Montréal"],
@@ -111,7 +111,7 @@ export const renovationPage: PageTemplateData = {
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -196,12 +196,12 @@ export const renovationPage: PageTemplateData = {
             {
               label: "Voir les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir la fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -375,12 +375,12 @@ export const renovationPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Résidentiel, cuisine, salle de bain, plancher et agrandissement",

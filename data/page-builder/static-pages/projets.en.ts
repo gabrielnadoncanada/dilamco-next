@@ -31,12 +31,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "See our process",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Real cases", "Montréal", "Laval", "South Shore"],
@@ -159,12 +159,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "See the process",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -184,12 +184,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our spaces",
               href: "/espaces",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Residential and commercial - Montréal, Laval, South Shore",

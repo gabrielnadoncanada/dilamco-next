@@ -13,6 +13,7 @@ import {
   applyFilters,
   baseProducts,
   FINISH_VALUES,
+  productHasFinish,
   type CatalogScope,
   type FinishKey,
 } from "./filtering";
@@ -55,8 +56,10 @@ export function useCatalogFacets(scope?: CatalogScope) {
 
   const finishOptions = useMemo(() => {
     const pool = applyFilters(base, state, "finish");
-    const blanc = pool.filter((p) => !p.code.endsWith("-muf")).length;
-    const chene = pool.length - blanc;
+    // Model-aware : un meuble compte pour « chêne » s'il a une variante chêne
+    // (la grille est dédupliquée au modèle, le code canonique est non-muf).
+    const blanc = pool.filter((p) => productHasFinish(p, "blanc")).length;
+    const chene = pool.filter((p) => productHasFinish(p, "chene")).length;
     return { blanc, chene };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [base, q, width]);

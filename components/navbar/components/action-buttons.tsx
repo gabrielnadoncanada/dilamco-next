@@ -9,7 +9,7 @@ import { getActionButtonVariant } from "../utils";
 interface ActionButtonsProps
   extends React.ComponentPropsWithoutRef<"div"> {
   actions: NavAction[];
-  size?: "default" | "sm" | "lg" | "icon";
+  size?: "default" | "small" | "xl" | "icon" | "icon-xs";
 }
 
 export function ActionButtons({

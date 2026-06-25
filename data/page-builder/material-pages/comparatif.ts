@@ -31,12 +31,12 @@ export const comparatifPage: PageTemplateData = {
             {
               label: "Parler de votre projet",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir tous les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Structure", "Humidité", "Finition"],
@@ -194,12 +194,12 @@ export const comparatifPage: PageTemplateData = {
             {
               label: "Voir la quincaillerie",
               href: "/materiaux/quincaillerie",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -247,12 +247,12 @@ export const comparatifPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir tous les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

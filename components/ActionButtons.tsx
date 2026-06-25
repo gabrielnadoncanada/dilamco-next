@@ -7,13 +7,7 @@ import { cn } from "@/lib/utils";
 export interface ActionButton {
   text: string;
   href: string;
-  variant?:
-  | "default"
-  | "outline"
-  | "secondary"
-  | "ghost"
-  | "link"
-  | "destructive";
+  variant?: "primary" | "ghost" | "paper" | "ghost-light";
   icon?: LucideIcon;
   [key: string]: unknown;
 }
@@ -35,8 +29,8 @@ export function ActionButtons({ buttons, className, ...props }: ActionButtonsPro
           <Button
             key={index}
             asChild
-            variant={variant ?? "default"}
-            className="h-9 w-full px-4 sm:w-auto"
+            variant={variant ?? "primary"}
+            className="w-full sm:w-auto"
             {...buttonProps}
           >
             <AppLink href={href}>

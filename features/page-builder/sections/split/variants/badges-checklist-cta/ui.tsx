@@ -45,12 +45,12 @@ export function SplitBadgesChecklistCta(props: SplitBadgesChecklistCtaProps) {
 
           <CardFooter className="border-t">
             <div className="w-full space-y-2">
-              <Button asChild className="w-full" variant={primaryAction.variant ?? "default"}>
+              <Button asChild block variant={primaryAction.variant ?? "primary"}>
                 <Link href={primaryAction.href}>{primaryAction.label}</Link>
               </Button>
 
               {secondaryAction ? (
-                <Button asChild className="w-full" variant={secondaryAction.variant ?? "outline"}>
+                <Button asChild block variant={secondaryAction.variant ?? "ghost"}>
                   <Link href={secondaryAction.href}>{secondaryAction.label}</Link>
                 </Button>
               ) : null}

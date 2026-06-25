@@ -4,9 +4,16 @@ import { AppLink as Link } from "@/components/AppLink";
 import { Button } from "@/components/ui/button";
 import type { SplitListActionsImageCardProps } from "./schema";
 import { Heading } from "@/components/elements/heading";
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-export function SplitListActionsImageCard(props: SplitListActionsImageCardProps) {
+export function SplitListActionsImageCard(
+  props: SplitListActionsImageCardProps,
+) {
   const primary = props.actions[0];
   const secondary = props.actions[1];
 
@@ -14,7 +21,9 @@ export function SplitListActionsImageCard(props: SplitListActionsImageCardProps)
     <div className="grid gap-y-8 lg:grid-cols-12 lg:items-center">
       {/* Left */}
       <div className="lg:col-span-5">
-        <Heading as="h2" variant="h2">{props.heading}</Heading>
+        <Heading as="h2" variant="h2">
+          {props.heading}
+        </Heading>
 
         <p className="mt-4 text-muted-foreground">{props.intro}</p>
 
@@ -24,19 +33,18 @@ export function SplitListActionsImageCard(props: SplitListActionsImageCardProps)
               <span className="flex flex-col">
                 <span className="font-semibold">{it.title}</span>{" "}
                 <span className="text-muted-foreground">{it.description}</span>
-
               </span>
             </li>
           ))}
         </ul>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button asChild variant={primary.variant ?? "outline"}>
+          <Button asChild variant={primary.variant ?? "ghost"}>
             <Link href={primary.href}>{primary.label}</Link>
           </Button>
 
           {secondary ? (
-            <Button asChild variant={secondary.variant ?? "outline"}>
+            <Button asChild variant={secondary.variant ?? "ghost"}>
               <Link href={secondary.href}>{secondary.label}</Link>
             </Button>
           ) : null}
@@ -45,7 +53,7 @@ export function SplitListActionsImageCard(props: SplitListActionsImageCardProps)
 
       {/* Right */}
       <div className="lg:col-[7/13]">
-        <div className="relative overflow-hidden rounded-xl border bg-background">
+        <div className="relative overflow-hidden rounded-none border bg-background">
           <Card className="pt-0">
             <div className="relative aspect-[4/3]">
               <Image
@@ -62,11 +70,8 @@ export function SplitListActionsImageCard(props: SplitListActionsImageCardProps)
               <CardDescription> {props.cardDescription} </CardDescription>
             </CardHeader>
           </Card>
-
-
-
         </div>
       </div>
-    </div >
+    </div>
   );
 }

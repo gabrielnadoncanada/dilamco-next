@@ -1,0 +1,4 @@
+# venv recréé par `uv run` à la volée
+.venv/
+__pycache__/
+*.pyc

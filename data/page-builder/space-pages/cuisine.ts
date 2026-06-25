@@ -38,12 +38,12 @@ export const cuisinePage: PageTemplateData = {
             {
               label: "Obtenir une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos cuisines",
               href: "/projets/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Armoires sur mesure", "Pierrefonds", "Ouest-de-l'Île"],
@@ -76,12 +76,12 @@ export const cuisinePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le processus",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -155,12 +155,12 @@ export const cuisinePage: PageTemplateData = {
             {
               label: "Explorer les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
-              label: "Voir nos services",
-              href: "/services",
-              variant: "outline",
+              label: "Armoires de cuisine en stock",
+              href: "/boutique/armoires-cuisine",
+              variant: "ghost",
             },
           ],
           image: {
@@ -251,12 +251,12 @@ export const cuisinePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos cuisines",
               href: "/projets/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -306,12 +306,12 @@ export const cuisinePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos cuisines",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

@@ -4,6 +4,7 @@ import {
   RENOVATION_EN,
   MATERIAL_EN,
   PROJECT_SLUG_EN,
+  BOUTIQUE_TAXON_EN,
 } from "@/seo/i18n-path";
 
 // Pathnames explicites par espace : la VALEUR du slug est traduite
@@ -51,6 +52,15 @@ const materialPathnames = Object.fromEntries(
   Object.entries(MATERIAL_EN).map(([fr, en]) => [
     `/materiaux/${fr}`,
     { fr: `/materiaux/${fr}`, en: `/materials/${en}` },
+  ]),
+);
+
+// Pathnames explicites de la taxonomie boutique (slugs FR mot-clé traduits :
+// /boutique/armoires-cuisine -> /en/shop/kitchen-cabinets).
+const boutiqueTaxonPathnames = Object.fromEntries(
+  Object.entries(BOUTIQUE_TAXON_EN).map(([fr, en]) => [
+    `/boutique/${fr}`,
+    { fr: `/boutique/${fr}`, en: `/shop/${en}` },
   ]),
 );
 
@@ -103,18 +113,7 @@ export const routing = defineRouting({
     // segments produit/finitions/soumission restent inchangés. Synchronisé
     // avec AppLink TEMPLATES, seo/i18n-path.ts et next-sitemap.config.js.
     "/boutique": { fr: "/boutique", en: "/shop" },
-    "/boutique/collections": {
-      fr: "/boutique/collections",
-      en: "/shop/collections",
-    },
-    "/boutique/collections/[slug]": {
-      fr: "/boutique/collections/[slug]",
-      en: "/shop/collections/[slug]",
-    },
-    "/boutique/collections/[slug]/[sub]": {
-      fr: "/boutique/collections/[slug]/[sub]",
-      en: "/shop/collections/[slug]/[sub]",
-    },
+    ...boutiqueTaxonPathnames,
     "/boutique/produit/[id]": {
       fr: "/boutique/produit/[id]",
       en: "/shop/produit/[id]",

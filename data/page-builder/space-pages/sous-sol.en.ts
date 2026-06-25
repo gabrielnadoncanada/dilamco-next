@@ -38,12 +38,12 @@ export const sousSolPageEn: PageTemplateData = {
             {
               label: "Get a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Custom", "Turnkey", "West Island"],
@@ -76,12 +76,12 @@ export const sousSolPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "See our process",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -229,12 +229,12 @@ export const sousSolPageEn: PageTemplateData = {
             {
               label: "Explore materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View our services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -275,12 +275,12 @@ export const sousSolPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -329,12 +329,12 @@ export const sousSolPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

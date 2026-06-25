@@ -16,6 +16,7 @@ import {
   Palette,
   Settings2,
   Info,
+  Boxes,
 } from "lucide-react";
 import type { MenuItem } from "@/components/navbar/navbar.types";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
@@ -207,7 +208,43 @@ export const MAIN_NAV_EN: MenuItem[] = [
   },
   {
     title: "Shop",
-    url: "/boutique",
+    groups: [
+      {
+        title: "Online shop",
+        links: [
+          {
+            label: "Kitchen cabinets",
+            url: "/boutique/armoires-cuisine",
+            icon: ChefHat,
+            description: "In-stock cabinets, ready to install.",
+          },
+          {
+            label: "Pantry",
+            url: "/boutique/garde-manger",
+            icon: Boxes,
+            description: "Full-height storage, in stock.",
+          },
+          {
+            label: "Bathroom vanities",
+            url: "/boutique/vanites",
+            icon: Bath,
+            description: "In-stock vanity cabinets, 24 and 30 inch.",
+          },
+          {
+            label: "Finishes",
+            url: "/boutique/finitions",
+            icon: Palette,
+            description: "Pure White and White Oak.",
+          },
+          {
+            label: "Request a quote",
+            url: "/boutique/soumission",
+            icon: ScanSearch,
+            description: "Firm quote within 48 h on your selection.",
+          },
+        ],
+      },
+    ],
   },
 ];
 

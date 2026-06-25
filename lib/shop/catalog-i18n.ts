@@ -10,7 +10,18 @@
  * chaîne affichée se traduit ici.
  */
 
+import labelsData from "./catalog-labels-en.json";
+
 export type ShopLocale = "fr" | "en";
+
+/**
+ * Source PRIMAIRE de traduction : libellés FR -> EN générés depuis les colonnes
+ * *_en de catalog.xlsx (via `pnpm run sync:catalog`). Pour ajouter/corriger une
+ * traduction : éditer le xlsx, pas le code. Les glossaires ci-dessous ne servent
+ * plus que de fallback pour les libellés générés en code (deriveNames).
+ */
+const DATA_PRODUCT_EN = labelsData.products as Record<string, string>;
+const DATA_FAMILY_EN = labelsData.families as Record<string, string>;
 
 /** Bases de noms/shortNames produit (FR -> EN), sans la dimension finale. */
 const PRODUCT_BASE_EN: Record<string, string> = {
@@ -152,6 +163,10 @@ const MOLDING_EN: Record<string, string> = {
  */
 export function localizeProductLabel(s: string, locale: ShopLocale): string {
   if (locale === "fr" || !s) return s;
+  // Source primaire : données du catalogue (colonnes *_en du xlsx).
+  const fromData = DATA_PRODUCT_EN[s];
+  if (fromData) return fromData;
+  // Fallback : glossaire (traduit la base, conserve la dimension entre parenthèses).
   const m = s.match(/^(.*?)(\s*\([^)]*\))\s*$/);
   const base = (m ? m[1] : s).trim();
   const suffix = m ? m[2] : "";
@@ -165,7 +180,8 @@ export function localizeColor(c: string, locale: ShopLocale): string {
 
 /** Famille produit (= nom de catégorie top-parent) FR -> EN. */
 export function localizeFamily(f: string, locale: ShopLocale): string {
-  return locale === "en" ? (CATEGORY_EN[f] ?? f) : f;
+  if (locale !== "en") return f;
+  return DATA_FAMILY_EN[f] ?? CATEGORY_EN[f] ?? f;
 }
 
 export function localizeFinish(f: string, locale: ShopLocale): string {

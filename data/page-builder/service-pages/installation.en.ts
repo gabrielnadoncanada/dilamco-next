@@ -42,12 +42,12 @@ export const installationPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View installed projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Alignments", "Adjustments", "Finish"],
@@ -122,12 +122,12 @@ export const installationPageEn: PageTemplateData = {
             {
               label: "See the process",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -232,12 +232,12 @@ export const installationPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Residential and commercial installation",

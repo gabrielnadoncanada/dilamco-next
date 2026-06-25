@@ -32,12 +32,12 @@ export const boisMassifPageEn: PageTemplateData = {
             {
               label: "Discuss your project",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Natural", "Premium", "Visible elements"],
@@ -106,12 +106,12 @@ export const boisMassifPageEn: PageTemplateData = {
             {
               label: "View design",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View fabrication",
               href: "/services/fabrication",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -147,12 +147,12 @@ export const boisMassifPageEn: PageTemplateData = {
             {
               label: "View the comparison",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Explore materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -264,12 +264,12 @@ export const boisMassifPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View the comparison",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

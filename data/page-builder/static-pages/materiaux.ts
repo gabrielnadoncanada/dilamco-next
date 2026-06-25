@@ -30,12 +30,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos cuisines",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Contreplaqué", "MDF", "Mélamine", "Quincaillerie"],
@@ -246,12 +246,12 @@ export const page: PageTemplateData = {
             {
               label: "Voir la quincaillerie",
               href: "/materiaux/quincaillerie",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -299,12 +299,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le comparatif",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

@@ -34,7 +34,7 @@ export function SplitSteps2x2Cta(props: SplitSteps2x2CtaProps) {
               <Button
                 key={`${a.href}-${a.label}`}
                 asChild
-                variant={a.variant === "default" ? "default" : a.variant}
+                variant={a.variant ?? "primary"}
               >
                 <Link href={a.href}>{a.label}</Link>
               </Button>

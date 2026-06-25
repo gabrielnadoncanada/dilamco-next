@@ -31,12 +31,12 @@ export const melaminePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le comparatif",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Décor", "Entretien", "Coût maîtrisé"],
@@ -104,12 +104,12 @@ export const melaminePage: PageTemplateData = {
             {
               label: "Voir tous les matériaux",
               href: "/materiaux",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le design",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -144,12 +144,12 @@ export const melaminePage: PageTemplateData = {
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Comparer avec le MDF",
               href: "/materiaux/mdf",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -261,12 +261,12 @@ export const melaminePage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir le comparatif",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

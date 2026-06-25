@@ -1,73 +1,77 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
-import { Slot } from "radix-ui"
+import type { ComponentProps, HTMLAttributes } from "react";
+import { Slot } from "radix-ui";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:aria-invalid:border-destructive/50 rounded-lg border border-transparent bg-clip-padding text-sm leading-none font-medium shadow-xs focus-visible:ring-3 aria-invalid:ring-3 [&_svg:not([class*='size-'])]:size-4 inline-flex items-center justify-center whitespace-nowrap transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0 outline-none group/button select-none",
+  "group inline-flex items-center justify-center gap-2.5 border border-transparent font-medium uppercase tracking-[0.08em] transition-all duration-[180ms] cursor-pointer disabled:opacity-50 disabled:pointer-events-none",
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground hover:bg-primary/90",
-        outline:
-          "border-border bg-background hover:bg-secondary hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 aria-expanded:bg-accent aria-expanded:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground border border-border hover:bg-[#e9e7e0] hover:border-[#d8d3c8] aria-expanded:bg-[#e9e7e0] aria-expanded:text-secondary-foreground",
+        primary: "bg-primary text-primary-foreground hover:bg-primary/90",
         ghost:
-          "hover:bg-muted hover:text-foreground dark:hover:bg-muted/50 aria-expanded:bg-muted aria-expanded:text-foreground",
-        destructive:
-          "bg-destructive/10 hover:bg-destructive/20 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/20 text-destructive focus-visible:border-destructive/40 dark:hover:bg-destructive/30",
-        link:
-          "text-primary underline-offset-4 hover:underline",
+          "bg-transparent border-foreground text-foreground hover:bg-foreground hover:text-background",
+        paper: "bg-background text-primary hover:bg-secondary",
+        "ghost-light":
+          "bg-transparent border-background/40 text-background hover:bg-background hover:text-primary hover:border-background",
       },
       size: {
-        default:
-          "h-9 gap-1.5 px-4 has-data-[icon=inline-end]:pr-3 has-data-[icon=inline-start]:pl-3",
-        xs:
-          "h-6 gap-1 rounded-[min(var(--radius-md),10px)] px-2 text-xs in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3",
-        sm:
-          "h-8 gap-1 rounded-[min(var(--radius-md),12px)] px-3 text-[0.84rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 [&_svg:not([class*='size-'])]:size-3.5",
-        lg:
-          "h-10 gap-1.5 px-5 has-data-[icon=inline-end]:pr-4 has-data-[icon=inline-start]:pl-4",
-        icon: "size-8",
-        "icon-xs":
-          "size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3",
-        "icon-sm":
-          "size-7 rounded-[min(var(--radius-md),12px)] in-data-[slot=button-group]:rounded-lg",
-        "icon-lg":
-          "size-9",
+        default: "px-7 py-3.5 text-[13px]",
+        small: "px-[18px] py-2.5 text-[11px]",
+        xl: "px-8 py-[18px] text-[13px]",
+        icon: "size-9 p-0",
+        "icon-xs": "size-5 p-0 [&_svg]:size-3",
+      },
+      block: {
+        true: "w-full",
+        false: "",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "primary",
       size: "default",
+      block: false,
     },
-  }
-)
+  },
+);
+
+interface ButtonProps
+  extends ComponentProps<"button">, VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
+}
 
 function Button({
   className,
-  variant = "default",
-  size = "default",
+  variant,
+  size,
+  block,
   asChild = false,
   ...props
-}: React.ComponentProps<"button"> &
-  VariantProps<typeof buttonVariants> & {
-    asChild?: boolean
-  }) {
-  const Comp = asChild ? Slot.Root : "button"
-
+}: ButtonProps) {
+  const Comp = asChild ? Slot.Root : "button";
   return (
     <Comp
       data-slot="button"
-      data-variant={variant}
-      data-size={size}
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, block, className }))}
       {...props}
     />
-  )
+  );
 }
 
-export { Button, buttonVariants }
+function ButtonArrow({ className, ...props }: HTMLAttributes<HTMLSpanElement>) {
+  return (
+    <span
+      aria-hidden
+      className={cn(
+        "inline-block transition-transform duration-200 group-hover:translate-x-[3px]",
+        className,
+      )}
+      {...props}
+    >
+      →
+    </span>
+  );
+}
+
+export { Button, ButtonArrow, buttonVariants };

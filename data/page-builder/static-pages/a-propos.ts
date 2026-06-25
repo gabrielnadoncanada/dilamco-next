@@ -30,12 +30,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Sur mesure", "Exécution", "Durabilité", "clé en main"],
@@ -118,12 +118,12 @@ export const page: PageTemplateData = {
             {
               label: "Voir notre processus",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir les services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -248,12 +248,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos projets",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Montréal, Laval et Rive-Sud",

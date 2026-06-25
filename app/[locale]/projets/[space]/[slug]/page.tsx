@@ -169,13 +169,13 @@ export default async function ProjectDetailPage({
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="gap-2">
+                <Button asChild className="gap-2">
                   <Link href={project.requiredLinks.contactHref}>
                     {tc("requestQuote")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline">
+                <Button asChild variant="ghost">
                   <Link href={project.requiredLinks.spaceHref}>
                     {t("viewSpace", { label: labelLower })}
                   </Link>
@@ -292,7 +292,7 @@ export default async function ProjectDetailPage({
                   {t("ctaText", { city: project.city })}
                 </p>
               </div>
-              <Button asChild size="lg" className="gap-2">
+              <Button asChild className="gap-2">
                 <Link href={project.requiredLinks.contactHref}>
                   {tc("requestQuote")}
                   <ArrowRight className="h-4 w-4" />

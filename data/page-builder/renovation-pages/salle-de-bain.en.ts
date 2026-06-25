@@ -43,12 +43,12 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View bathroom projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Moisture", "Coordination", "Montréal"],
@@ -111,12 +111,12 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             {
               label: "View materials",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Hardware",
               href: "/materiaux/quincaillerie",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -157,12 +157,12 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             {
               label: "View the bathroom page",
               href: "/espaces/salle-de-bain",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -413,12 +413,12 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View the bathroom page",
               href: "/espaces/salle-de-bain",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Bathroom, custom vanity, storage and humid environment",

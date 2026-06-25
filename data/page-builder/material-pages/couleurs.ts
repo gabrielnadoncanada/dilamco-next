@@ -31,12 +31,12 @@ export const couleursPage: PageTemplateData = {
             {
               label: "Parler design et finitions",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Lumière", "Entretien", "Cohésion visuelle"],
@@ -186,12 +186,12 @@ export const couleursPage: PageTemplateData = {
             {
               label: "Voir le design",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir les matériaux",
               href: "/materiaux",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -227,12 +227,12 @@ export const couleursPage: PageTemplateData = {
             {
               label: "Voir la quincaillerie",
               href: "/materiaux/quincaillerie",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir l'installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -287,12 +287,12 @@ export const couleursPage: PageTemplateData = {
             {
               label: "Parler design",
               href: "/services/design",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

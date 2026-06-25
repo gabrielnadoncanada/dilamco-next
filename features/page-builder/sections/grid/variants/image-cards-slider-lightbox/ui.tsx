@@ -103,7 +103,7 @@ export function GridImageCardsSliderLightbox(
 
                       {item.title ? (
                         <CardHeader>
-                          <CardTitle className="flex items-center justify-between gap-3 text-lg font-semibold leading-snug">
+                          <CardTitle className="flex items-center justify-between gap-3 text-lg leading-snug">
                             {item.title}
                           </CardTitle>
                         </CardHeader>
@@ -127,7 +127,7 @@ export function GridImageCardsSliderLightbox(
 
                       {canLink ? (
                         <CardFooter className="mt-auto">
-                          <Button asChild variant="outline" size="sm">
+                          <Button asChild variant="ghost" size="small">
                             <Link href={href}>{footerLabel}</Link>
                           </Button>
                         </CardFooter>

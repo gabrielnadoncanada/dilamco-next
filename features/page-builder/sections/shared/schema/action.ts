@@ -1,12 +1,10 @@
 import { z } from "zod";
 
 export const ActionVariantSchema = z.enum([
-  "default",
-  "secondary",
-  "outline",
-  "destructive",
+  "primary",
   "ghost",
-  "link",
+  "paper",
+  "ghost-light",
 ]);
 
 export const ActionSchema = z.object({

@@ -31,6 +31,12 @@ interface CartValue {
 
 const CartContext = createContext<CartValue | null>(null);
 
+const CART_KEY = "dilamco-cart";
+// Bumpé quand le schéma d'article ou les codes catalogue changent : un panier
+// d'une version antérieure (codes périmés → vignettes vides, vieux noms) est
+// purgé au lieu d'afficher des lignes cassées.
+const CART_VERSION = 2;
+
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -38,15 +44,24 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      const raw = localStorage.getItem("dilamco-cart");
-      if (raw) setItems(JSON.parse(raw));
+      const raw = localStorage.getItem(CART_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        // Format courant : { v, items }. Tout autre format (ancien tableau brut,
+        // version périmée) est ignoré → le panier repart vide.
+        if (parsed?.v === CART_VERSION && Array.isArray(parsed.items)) {
+          setItems(parsed.items);
+        } else {
+          localStorage.removeItem(CART_KEY);
+        }
+      }
     } catch {}
     setHydrated(true);
   }, []);
 
   useEffect(() => {
     if (!hydrated) return;
-    localStorage.setItem("dilamco-cart", JSON.stringify(items));
+    localStorage.setItem(CART_KEY, JSON.stringify({ v: CART_VERSION, items }));
   }, [items, hydrated]);
 
   const addItem = useCallback((product: Product, opts: AddOpts) => {
@@ -119,4 +134,10 @@ export function useCart(): CartValue {
   const ctx = useContext(CartContext);
   if (!ctx) throw new Error("useCart must be used within CartProvider");
   return ctx;
+}
+
+/** Variante NON-throwante : null hors CartProvider (header global rendu aussi
+ *  sur la vitrine, qui n'a pas de panier). */
+export function useCartOptional(): CartValue | null {
+  return useContext(CartContext);
 }

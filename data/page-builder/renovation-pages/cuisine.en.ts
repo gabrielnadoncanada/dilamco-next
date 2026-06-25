@@ -43,12 +43,12 @@ export const renovationCuisinePageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View kitchen projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Kitchen", "turnkey", "Montréal"],
@@ -125,12 +125,12 @@ export const renovationCuisinePageEn: PageTemplateData = {
             {
               label: "See the design service",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "See the kitchen page",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -381,12 +381,12 @@ export const renovationCuisinePageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "See the kitchen page",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Custom kitchen, island, storage and integrated renovation",

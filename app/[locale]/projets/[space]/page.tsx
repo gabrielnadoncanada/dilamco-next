@@ -114,7 +114,7 @@ export default async function ProjectsSpacePage({
                 <p className="text-muted-foreground">
                   {t("comingSoon", { label: ll })}
                 </p>
-                <Button asChild size="lg" className="mt-6 gap-2">
+                <Button asChild className="mt-6 gap-2">
                   <Link href="/contact">{t("discussProject")}</Link>
                 </Button>
               </div>
@@ -159,7 +159,7 @@ export default async function ProjectsSpacePage({
             )}
 
             <div className="mt-12">
-              <Button asChild size="lg" variant="outline">
+              <Button asChild variant="ghost">
                 <Link href="/projets">{t("allProjects")}</Link>
               </Button>
             </div>

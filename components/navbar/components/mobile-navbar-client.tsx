@@ -1,11 +1,8 @@
 "use client";
 
 import { MenuIcon, X } from "lucide-react";
-
 import { useLocale } from "next-intl";
 
-import { Button } from "@/components/ui/button";
-import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { MAIN_NAV } from "@/constants/navigation";
 import { MAIN_NAV_EN } from "@/constants/navigation.en";
 
@@ -27,22 +24,16 @@ export function MobileNavbarClient({
 
   return (
     <>
-      <div className="flex items-center gap-1">
-        <LocaleSwitcher />
-        <Button
-          className="size-11"
-          variant="ghost"
-          onClick={toggle}
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          aria-expanded={open}
-        >
-          {open ? (
-            <X className="size-5.5 stroke-foreground" />
-          ) : (
-            <MenuIcon className="size-5.5 stroke-foreground" />
-          )}
-        </Button>
-      </div>
+      {/* Bouton-icône propre (pas de bordure ni padding qui écraserait l'icône). */}
+      <button
+        type="button"
+        onClick={toggle}
+        aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+        aria-expanded={open}
+        className="inline-flex size-10 shrink-0 cursor-pointer items-center justify-center border-0 bg-transparent text-foreground transition-colors hover:text-primary"
+      >
+        {open ? <X className="size-6" /> : <MenuIcon className="size-6" />}
+      </button>
       <MobileNavigationMenu
         open={open}
         onOpenChange={setOpen}

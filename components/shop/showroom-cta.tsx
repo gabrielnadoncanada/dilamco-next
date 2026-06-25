@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { AppLink as Link } from "@/components/AppLink";
-import { Button, ButtonArrow } from "@/components/shop/ui/button";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import { SplitMediaCta } from "@/components/shop/ds";
 import { routes } from "@/lib/shop/routes";
 

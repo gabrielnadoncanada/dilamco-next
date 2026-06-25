@@ -8,13 +8,7 @@ import { cn } from "@/lib/utils";
 type HeroAction = {
   label: string;
   href: string;
-  variant?:
-    | "default"
-    | "secondary"
-    | "outline"
-    | "destructive"
-    | "ghost"
-    | "link";
+  variant?: "primary" | "ghost" | "paper" | "ghost-light";
 };
 
 type HeroContentProps = {
@@ -37,7 +31,7 @@ export function HeroContent({
   align = "left",
   tone = "default",
   badgeStyle = tone === "inverse" ? "inverse" : "secondary",
-  secondaryActionVariant = "outline",
+  secondaryActionVariant = "ghost",
   fillActionsOnMobile = false,
 }: HeroContentProps) {
   const primary = actions?.[0];
@@ -49,10 +43,7 @@ export function HeroContent({
     <div className={cn(isCentered && "text-center")}>
       {badges?.length ? (
         <div
-          className={cn(
-            "flex flex-wrap gap-2",
-            isCentered && "justify-center"
-          )}
+          className={cn("flex flex-wrap gap-2", isCentered && "justify-center")}
         >
           {badges.map((badge) => (
             <Badge
@@ -60,7 +51,7 @@ export function HeroContent({
               variant={badgeStyle === "outline" ? "outline" : "secondary"}
               className={cn(
                 badgeStyle === "inverse" &&
-                  "bg-white/10 text-white hover:bg-white/10"
+                  "bg-white/10 text-white hover:bg-white/10",
               )}
             >
               {badge}
@@ -72,7 +63,11 @@ export function HeroContent({
       <Heading
         as="h1"
         variant="h1"
-        className={cn("mt-6", isInverse && "text-white", isCentered && "text-balance")}
+        className={cn(
+          "mt-6",
+          isInverse && "text-white",
+          isCentered && "text-balance",
+        )}
       >
         {heading}
       </Heading>
@@ -81,8 +76,10 @@ export function HeroContent({
         <p
           className={cn(
             "mt-4",
-            isInverse ? "text-base text-white/85 sm:text-lg" : "text-muted-foreground",
-            isCentered && "text-lg"
+            isInverse
+              ? "text-base text-white/85 sm:text-lg"
+              : "text-muted-foreground",
+            isCentered && "text-lg",
           )}
         >
           {description}
@@ -94,14 +91,13 @@ export function HeroContent({
           className={cn(
             "mt-6 flex flex-col gap-3 sm:flex-row",
             isCentered && "items-center justify-center",
-            !isCentered && "sm:items-center"
+            !isCentered && "sm:items-center",
           )}
         >
           <Button
             asChild
-            size="lg"
             className={cn(fillActionsOnMobile && "w-full sm:w-auto")}
-            variant={primary?.variant ?? "default"}
+            variant={primary?.variant ?? "primary"}
           >
             <Link href={primary?.href ?? "#"}>{primary?.label ?? ""}</Link>
           </Button>
@@ -109,7 +105,6 @@ export function HeroContent({
           {secondary ? (
             <Button
               asChild
-              size="lg"
               className={cn(fillActionsOnMobile && "w-full sm:w-auto")}
               variant={secondary.variant ?? secondaryActionVariant}
             >

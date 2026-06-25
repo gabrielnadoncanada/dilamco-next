@@ -38,7 +38,7 @@ function SubmitButton({ label }: { label: string }) {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" size="lg" className="w-full" disabled={pending}>
+    <Button type="submit" block disabled={pending}>
       {pending ? "Envoi en cours..." : label}
     </Button>
   );

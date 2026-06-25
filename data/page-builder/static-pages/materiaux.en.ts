@@ -30,12 +30,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our kitchens",
               href: "/espaces/cuisine",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Plywood", "MDF", "Melamine", "Hardware"],
@@ -246,12 +246,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "View hardware",
               href: "/materiaux/quincaillerie",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View installation",
               href: "/services/installation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -299,12 +299,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View the comparison",
               href: "/materiaux/comparatif",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },

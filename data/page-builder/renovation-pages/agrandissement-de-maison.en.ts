@@ -43,12 +43,12 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View turnkey renovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Feasibility", "Coordination", "Integration"],
@@ -125,12 +125,12 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             {
               label: "View the design service",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "View turnkey renovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -369,12 +369,12 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View turnkey renovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Addition, reconfiguration and integrated renovation",

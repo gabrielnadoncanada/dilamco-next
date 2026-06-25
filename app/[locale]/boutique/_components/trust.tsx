@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { AppLink as Link } from "@/components/AppLink";
-import { Button, ButtonArrow } from "@/components/shop/ui/button";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import {
   Section,
   Container,
@@ -42,7 +42,7 @@ export async function Trust() {
               variant="paper"
               className="mt-8 uppercase tracking-wider"
             >
-              <Link href={routes.collections}>
+              <Link href={routes.catalogue}>
                 {t("trust.cta")} <ButtonArrow />
               </Link>
             </Button>

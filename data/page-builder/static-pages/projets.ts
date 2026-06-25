@@ -31,12 +31,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir notre processus",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Cas réels", "Montréal", "Laval", "Rive-Sud"],
@@ -159,12 +159,12 @@ export const page: PageTemplateData = {
             {
               label: "Voir le processus",
               href: "/processus",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir les services",
               href: "/services",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
         },
@@ -184,12 +184,12 @@ export const page: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir nos espaces",
               href: "/espaces",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Résidentiel et commercial - Montréal, Laval, Rive-Sud",

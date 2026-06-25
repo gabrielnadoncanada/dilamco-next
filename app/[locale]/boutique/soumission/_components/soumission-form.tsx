@@ -2,18 +2,18 @@
 
 import { useState, useTransition } from "react";
 import { useTranslations } from "next-intl";
-import { Button, ButtonArrow } from "@/components/shop/ui/button";
-import { Input } from "@/components/shop/ui/input";
-import { Label } from "@/components/shop/ui/label";
-import { Textarea } from "@/components/shop/ui/textarea";
-import { RadioGroup, RadioGroupItem } from "@/components/shop/ui/radio-group";
+import { Button, ButtonArrow } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/shop/ui/select";
+} from "@/components/ui/select";
 import { useCart } from "@/components/shop/cart-provider";
 import {
   submitSoumission,
@@ -90,7 +90,9 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
         </div>
         <div className="mb-4 grid grid-cols-2 gap-4 max-[700px]:grid-cols-1 max-[700px]:gap-3">
           <div className="flex flex-col gap-1.5">
-            <Label htmlFor="prenom" className={fieldLabel}>{t("firstName")}</Label>
+            <Label htmlFor="prenom" className={fieldLabel}>
+              {t("firstName")}
+            </Label>
             <Input
               id="prenom"
               required
@@ -99,11 +101,15 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
               className={fieldControl}
             />
             {fieldError("prenom") ? (
-              <span className="text-[11px] text-destructive">{fieldError("prenom")}</span>
+              <span className="text-[11px] text-destructive">
+                {fieldError("prenom")}
+              </span>
             ) : null}
           </div>
           <div className="flex flex-col gap-1.5">
-            <Label htmlFor="nom" className={fieldLabel}>{t("lastName")}</Label>
+            <Label htmlFor="nom" className={fieldLabel}>
+              {t("lastName")}
+            </Label>
             <Input
               id="nom"
               required
@@ -112,13 +118,17 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
               className={fieldControl}
             />
             {fieldError("nom") ? (
-              <span className="text-[11px] text-destructive">{fieldError("nom")}</span>
+              <span className="text-[11px] text-destructive">
+                {fieldError("nom")}
+              </span>
             ) : null}
           </div>
         </div>
         <div className="mb-4 grid grid-cols-2 gap-4 max-[700px]:grid-cols-1 max-[700px]:gap-3">
           <div className="flex flex-col gap-1.5">
-            <Label htmlFor="email" className={fieldLabel}>{t("email")}</Label>
+            <Label htmlFor="email" className={fieldLabel}>
+              {t("email")}
+            </Label>
             <Input
               id="email"
               required
@@ -128,7 +138,9 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
               className={fieldControl}
             />
             {fieldError("email") ? (
-              <span className="text-[11px] text-destructive">{fieldError("email")}</span>
+              <span className="text-[11px] text-destructive">
+                {fieldError("email")}
+              </span>
             ) : null}
           </div>
           <div className="flex flex-col gap-1.5">
@@ -148,7 +160,9 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
               className={fieldControl}
             />
             {fieldError("tel") ? (
-              <span className="text-[11px] text-destructive">{fieldError("tel")}</span>
+              <span className="text-[11px] text-destructive">
+                {fieldError("tel")}
+              </span>
             ) : null}
           </div>
         </div>
@@ -166,7 +180,9 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
               className={fieldControl}
             />
             {fieldError("code_postal") ? (
-              <span className="text-[11px] text-destructive">{fieldError("code_postal")}</span>
+              <span className="text-[11px] text-destructive">
+                {fieldError("code_postal")}
+              </span>
             ) : null}
           </div>
         </div>
@@ -183,7 +199,9 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
               value={form.type_projet}
               onValueChange={(v) => update("type_projet", v)}
             >
-              <SelectTrigger className={`${fieldControl} w-full data-[size=default]:h-auto`}>
+              <SelectTrigger
+                className={`${fieldControl} w-full data-[size=default]:h-auto`}
+              >
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="">
@@ -201,7 +219,9 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
               value={form.timeline}
               onValueChange={(v) => update("timeline", v)}
             >
-              <SelectTrigger className={`${fieldControl} w-full data-[size=default]:h-auto`}>
+              <SelectTrigger
+                className={`${fieldControl} w-full data-[size=default]:h-auto`}
+              >
                 <SelectValue />
               </SelectTrigger>
               <SelectContent className="">
@@ -259,7 +279,10 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
       </section>
 
       {/* Honeypot anti-spam : champ invisible que seuls les bots remplissent. */}
-      <div aria-hidden className="absolute left-[-9999px] h-0 w-0 overflow-hidden">
+      <div
+        aria-hidden
+        className="absolute left-[-9999px] h-0 w-0 overflow-hidden"
+      >
         <label htmlFor="website">{t("honeypot")}</label>
         <input
           id="website"

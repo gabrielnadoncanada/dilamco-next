@@ -31,7 +31,7 @@ export function HeroImageOverlay(props: HeroImageOverlayProps) {
             description={props.description}
             fillActionsOnMobile
             heading={props.heading}
-            secondaryActionVariant="secondary"
+            secondaryActionVariant="ghost-light"
             tone="inverse"
           />
 

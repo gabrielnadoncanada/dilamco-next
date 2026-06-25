@@ -43,12 +43,12 @@ export const agrandissementMaisonPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir la rénovation clé en main",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Faisabilité", "Coordination", "Intégration"],
@@ -125,12 +125,12 @@ export const agrandissementMaisonPage: PageTemplateData = {
             {
               label: "Voir le service de design",
               href: "/services/design",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Voir la rénovation clé en main",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           image: {
@@ -369,12 +369,12 @@ export const agrandissementMaisonPage: PageTemplateData = {
             {
               label: "Demander une soumission",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "Voir la rénovation clé en main",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           note: "Agrandissement, reconfiguration et rénovation intégrée",

@@ -37,12 +37,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "Request a quote",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
             {
               label: "View our projects",
               href: "/projets",
-              variant: "outline",
+              variant: "ghost",
             },
           ],
           badges: ["Design", "Fabrication", "Installation", "Coordination"],
@@ -154,12 +154,12 @@ export const pageEn: PageTemplateData = {
             {
               label: "View renovation",
               href: "/services/renovation",
-              variant: "outline",
+              variant: "ghost",
             },
             {
               label: "Talk about your project",
               href: "/contact",
-              variant: "default",
+              variant: "primary",
             },
           ],
         },

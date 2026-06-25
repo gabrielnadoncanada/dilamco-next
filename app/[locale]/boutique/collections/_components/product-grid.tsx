@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, Suspense, useMemo } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import {
   parseAsInteger,
@@ -17,8 +17,6 @@ import {
   FINISH_VALUES,
   type CatalogScope,
 } from "./filtering";
-
-const PAGE_SIZE = 60;
 
 interface Props {
   scope?: CatalogScope;
@@ -43,7 +41,6 @@ function ProductGridInner({ scope, groupByFamily = false }: Props) {
   const [q] = useQueryState("q", parseAsString.withDefault(""));
   const [width] = useQueryState("largeur", parseAsInteger);
   const [finish] = useQueryState("fini", parseAsStringLiteral(FINISH_VALUES));
-  const [pageCount, setPageCount] = useState(1);
   const t = useTranslations("shop.collections");
   const locale = useLocale() as "fr" | "en";
 
@@ -63,26 +60,10 @@ function ProductGridInner({ scope, groupByFamily = false }: Props) {
     });
   }, [base, q, width, finish, sort]);
 
-  const visible = sorted.slice(0, pageCount * PAGE_SIZE);
-  const hasMore = visible.length < sorted.length;
+  // Tous les produits sont rendus d'emblée : chaque fiche est un lien dans le
+  // HTML initial (crawlable + indexable sans scroll), pas d'infinite-scroll.
+  const visible = sorted;
 
-  // Infinite scroll : le sentinel déclenche la page suivante ~600 px avant
-  // d'arriver au bas de la grille.
-  const sentinelRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el || !hasMore) return;
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setPageCount((c) => c + 1);
-        }
-      },
-      { rootMargin: "600px 0px" },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [hasMore, visible.length]);
   const familyTotals = useMemo(() => {
     const totals = new Map<string, number>();
     for (const p of sorted) {
@@ -124,7 +105,7 @@ function ProductGridInner({ scope, groupByFamily = false }: Props) {
                 </span>
               </h2>
               {items.map((p) => (
-                <PCard key={p.code} product={p} />
+                <PCard key={p.code} product={p} finish={finish ?? scope?.couleur} />
               ))}
             </Fragment>
           ))}
@@ -132,21 +113,8 @@ function ProductGridInner({ scope, groupByFamily = false }: Props) {
       ) : (
         <div className="grid grid-cols-3 gap-x-5 gap-y-7 min-[1440px]:grid-cols-4 max-[1100px]:grid-cols-2 max-[700px]:!grid-cols-2 max-[700px]:gap-x-3 max-[700px]:gap-y-[18px] max-[380px]:!grid-cols-1">
           {visible.map((p) => (
-            <PCard key={p.code} product={p} />
+            <PCard key={p.code} product={p} finish={finish ?? scope?.couleur} />
           ))}
-        </div>
-      )}
-
-      {hasMore && (
-        <div
-          ref={sentinelRef}
-          aria-hidden
-          className="mt-10 flex flex-col items-center gap-2 py-6"
-        >
-          <span className="size-5 animate-spin rounded-full border-2 border-border-strong border-t-foreground" />
-          <span className="font-mono text-[11px] tracking-[0.04em] text-muted-foreground">
-            {t("loadingProgress", { shown: visible.length, total: sorted.length })}
-          </span>
         </div>
       )}
     </div>

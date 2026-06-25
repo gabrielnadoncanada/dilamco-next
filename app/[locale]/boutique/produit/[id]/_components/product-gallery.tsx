@@ -14,7 +14,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/shop/ui/carousel";
+} from "@/components/ui/carousel";
 import { ModuleRender } from "@/components/shop/module-render";
 import type { ColorName, Molding, Product } from "@/lib/shop/types";
 import { cn } from "@/lib/shop/utils";
