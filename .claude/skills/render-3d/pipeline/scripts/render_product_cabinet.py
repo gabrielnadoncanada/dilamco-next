@@ -1172,6 +1172,61 @@ def add_shaker_frame_to_pullouts(cabinet):
         log("Shaker frame overlay added on " + front.name)
 
 
+def fit_pulls_to_fronts(cabinet):
+    # Les poignées HB ont une LONGUEUR FIXE (taille du modèle de quincaillerie),
+    # indépendante de la largeur du caisson. Sur une façade étroite (range-épices
+    # 6"), la barre déborde sur les montants du cadre shaker. On la rétrécit pour
+    # qu'elle tienne dans le panneau intérieur (largeur façade - 2 bandes).
+    #
+    # Render-only : on opère sur le mesh BAKÉ de la poignée en coordonnées MONDE.
+    # Cela survit aux rotations et n'affecte QUE les poignées qui débordent
+    # vraiment (garde `pull_w > max_len`) — les caissons larges et les poignées
+    # VERTICALES des portes (faible extent X) restent intacts.
+    deps = bpy.context.evaluated_depsgraph_get()
+    pulls = [
+        o for o in cabinet.children_recursive
+        if o.type == "MESH" and o.get("IS_CABINET_PULL") and o.data
+    ]
+    for pull in pulls:
+        front = pull.parent
+        if front is None:
+            continue
+        # Bande occupée de chaque côté : 1 po pour le cadre shaker du pullout
+        # (cf. add_shaker_frame_to_pullouts), ~2 1/4 po pour une porte/tiroir
+        # 5 pièces.
+        frame = 0.0254 if front.get("IS_PULLOUT_FRONT") else 0.0572
+        fev = front.evaluated_get(deps)
+        try:
+            fme = fev.to_mesh()
+        except Exception:
+            continue
+        if not fme.vertices:
+            fev.to_mesh_clear()
+            continue
+        fxs = [(front.matrix_world @ v.co).x for v in fme.vertices]
+        fev.to_mesh_clear()
+        front_w = max(fxs) - min(fxs)
+        max_len = front_w - 2.0 * frame - 0.012  # marge ~6 mm de chaque côté
+        if max_len <= 0.02:
+            max_len = front_w * 0.5
+        pxs = [(pull.matrix_world @ v.co).x for v in pull.data.vertices]
+        if not pxs:
+            continue
+        pull_w = max(pxs) - min(pxs)
+        if pull_w <= max_len + 1e-4:
+            continue  # tient déjà : ne pas toucher
+        ratio = max_len / pull_w
+        cx = (max(pxs) + min(pxs)) / 2.0
+        mw = pull.matrix_world
+        minv = mw.inverted()
+        for v in pull.data.vertices:
+            w = mw @ v.co
+            w.x = cx + (w.x - cx) * ratio
+            v.co = minv @ w
+        pull.data.update()
+        log("pull rétréci " + pull.name + " " + str(round(pull_w, 3)) + "->" + str(round(max_len, 3)) + "m")
+
+
 def build_blind_corner_cabinet():
     # Coin mort (blind corner) : UNE porte shaker sur la section ouvrante (gauche),
     # le RESTE OUVERT (pas de panneau) montrant l'intérieur. Carcasse pleine
@@ -1318,6 +1373,7 @@ def run_one(main_scene):
     except Exception as exc:
         log("run_calc_fix (final) failed: " + str(exc))
     add_shaker_frame_to_pullouts(cabinet)
+    fit_pulls_to_fronts(cabinet)
     setup_shadow_catcher_floor(cabinet)
     setup_lighting()
     setup_camera(cabinet)

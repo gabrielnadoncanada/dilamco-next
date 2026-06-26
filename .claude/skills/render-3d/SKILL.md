@@ -64,7 +64,10 @@ uv run python scripts/render_product_cabinet.py --product-code S8-DB12 \
 - `--quality` : `fast`(24) `preview`(32) `standard`(64) `final`(256) samples. Pour le
   blanc/chêne, **preview suffit** (denoiser + adaptive). Le script applique l'ombre
   plancher atténuée et convertit en `.webp`.
-- Puis (si PNG produit) : `cd C:/laragon/www/dilamco-next && npm run images:webp` (si ce script existe ; sinon le batch convertit déjà en .webp).
+- Puis (si PNG produit) : convertir en `.webp` (PIL), PUIS **cache-bust** —
+  `uv run python scripts/stamp_manifest_hashes.py` regrave `?v=<hash-contenu>` sur
+  chaque URL du manifest (sinon le navigateur ressert la vieille image en cache ;
+  le nom de fichier ne change PAS). Le batch (B) fait ce stamping automatiquement.
 
 ## B. Batch parallèle (catalogue complet ou sous-ensemble) — PRÉFÉRÉ
 ```
@@ -103,6 +106,9 @@ HDRI studio `brown_photostudio_02_2k.exr` (strength 0.9, rot 235°) ; key dédou
 (ombre 3× plus pâle) ; caméra 85 mm, 15° de lacet, sous le dessus du caisson ; view
 transform **Khronos PBR Neutral** (AgX délave les albédos) ; GPU OptiX + adaptive 0.01 ;
 fond transparent (RGBA + film_transparent) + shadow catcher, ombre atténuée en post (PIL).
+`fit_pulls_to_fronts` (après le cadre shaker) rétrécit toute poignée HB (longueur FIXE)
+qui déborde la bande shaker d'une façade étroite — ex. range-épices 6" ; ne touche que
+les poignées qui débordent vraiment (caissons larges + poignées verticales intacts).
 
 ## E. Ajouter un nouveau type de caisson à HB5 (apparaît dans la library)
 4 points (détaillés dans la mémoire `hb5-add-cabinet-type`) — fichiers sous

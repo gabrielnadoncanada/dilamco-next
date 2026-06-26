@@ -149,6 +149,12 @@ def rebuild_manifest(catalog: dict, out_dir: Path, manifest_path: Path) -> int:
         json.dumps(manifest, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+    # Cache-busting : grave `?v=<hash-contenu>` sur chaque URL (cf.
+    # stamp_manifest_hashes). Le bloc ci-dessus a réécrit des URLs « nues »,
+    # donc on (re)hashe ici à partir des .webp fraîchement produits.
+    from stamp_manifest_hashes import stamp_manifest
+    stamped = stamp_manifest(manifest_path, out_dir)
+    print(f"[parallel] cache-bust : {stamped} URL(s) hashée(s) (?v=)", flush=True)
     return mapped
 
 
