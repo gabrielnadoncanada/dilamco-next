@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const mdfPage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "MDF",
+    title: "Armoires en MDF : finition, durabilité et usages",
     description:
       "MDF : avantages, limites et usages recommandés pour armoires, vanités et projets sur mesure.",
     path: "/materiaux/mdf",

@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const walkInPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Walk-in sur mesure haut de gamme",
+    title: "Walk-in et garde-robe sur mesure à Montréal",
     description:
       "Walk-in sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
     path: "/espaces/walk-in",

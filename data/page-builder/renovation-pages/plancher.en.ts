@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const renovationPlancherPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Flooring renovation",
+    title: "Flooring renovation in Montreal",
     description:
       "Flooring renovation: site sequencing, levels, transitions and clean integration within a larger project.",
     path: "/services/renovation/plancher",

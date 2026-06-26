@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const boisMassifPage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Bois massif",
+    title: "Armoires en bois massif sur mesure",
     description:
       "Bois massif : avantages, limites et usages recommandés pour armoires, portes et mobilier sur mesure.",
     path: "/materiaux/bois-massif",

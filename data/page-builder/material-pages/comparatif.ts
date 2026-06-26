@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const comparatifPage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Comparatif des matériaux",
+    title: "Comparatif des matériaux d'armoires : mélamine, MDF, bois",
     description:
       "Comparatif des matériaux pour cuisines, vanités et armoires sur mesure : MDF, mélamine, contreplaqué et bois massif.",
     path: "/materiaux/comparatif",

@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const mdfPageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "MDF",
+    title: "MDF cabinets: finish, durability and uses",
     description:
       "MDF: advantages, limitations and recommended uses for cabinets, vanities and custom projects.",
     path: "/materiaux/mdf",

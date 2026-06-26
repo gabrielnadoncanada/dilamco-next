@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const couleursPage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Couleurs et finis",
+    title: "Couleurs et finis d'armoires sur mesure",
     description:
       "Couleurs et finis pour cuisines, vanités et armoires sur mesure : choisir selon la lumière, l'usage et les matériaux.",
     path: "/materiaux/couleurs",

@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const designPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Design service",
+    title: "Custom kitchen & cabinetry design",
     description:
       "Design service: space optimization, planning and material selection for kitchens, vanities, walk-ins and commercial projects.",
     path: "/services/design",

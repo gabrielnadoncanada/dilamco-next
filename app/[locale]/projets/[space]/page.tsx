@@ -40,7 +40,14 @@ export async function generateMetadata({
   if (!isSpace(space)) return {};
   const loc = asLocale(locale);
   const label = getSpaceLabel(space, loc);
-  const ll = loc === "en" ? label : label.toLowerCase();
+  // « commercial » est un adjectif → accord pluriel avec « Projets » (commerciaux) ;
+  // les autres espaces sont des noms (cuisine, salle de bain) employés tels quels.
+  const ll =
+    loc === "en"
+      ? label
+      : space === "commercial"
+        ? "commerciaux"
+        : label.toLowerCase();
   return createPageMetadata(
     {
       title:
@@ -69,7 +76,14 @@ export default async function ProjectsSpacePage({
 
   const t = await getTranslations("projectDetail");
   const label = getSpaceLabel(space, loc);
-  const ll = loc === "en" ? label : label.toLowerCase();
+  // « commercial » est un adjectif → accord pluriel avec « Projets » (commerciaux) ;
+  // les autres espaces sont des noms (cuisine, salle de bain) employés tels quels.
+  const ll =
+    loc === "en"
+      ? label
+      : space === "commercial"
+        ? "commerciaux"
+        : label.toLowerCase();
   const projects = getProjectsBySpace(space, loc);
 
   const breadcrumbs = [

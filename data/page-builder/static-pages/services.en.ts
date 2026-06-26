@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Services",
+    title: "Custom cabinetry in Montreal: design, fabrication, installation",
     description:
       "Dilamco services: design, custom fabrication, installation and turnkey renovation.",
     path: "/services",

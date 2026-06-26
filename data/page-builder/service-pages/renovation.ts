@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const renovationPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Rénovation clé en main",
+    title: "Rénovation clé en main à Montréal : cuisine et salle de bain",
     description:
       "Rénovation clé en main à Montréal : design, coordination, fabrication, installation et séquence de chantier mieux maîtrisée.",
     path: "/services/renovation",

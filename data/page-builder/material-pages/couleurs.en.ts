@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const couleursPageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Colours and finishes",
+    title: "Custom cabinet colours and finishes",
     description:
       "Colours and finishes for custom kitchens, vanities and cabinets: choosing based on light, use and materials.",
     path: "/materiaux/couleurs",

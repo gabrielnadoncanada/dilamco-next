@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const comparatifPageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Materials comparison",
+    title: "Cabinet materials comparison: melamine, MDF, wood",
     description:
       "Materials comparison for custom kitchens, vanities and cabinets: MDF, melamine, plywood and solid wood.",
     path: "/materiaux/comparatif",

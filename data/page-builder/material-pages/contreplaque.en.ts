@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const contreplaquePageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Why plywood",
+    title: "Plywood cabinets: stability and durability",
     description:
       "Plywood: stability, screw-holding strength and durability for the structure of custom cabinets.",
     path: "/materiaux/contreplaque",

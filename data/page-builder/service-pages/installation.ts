@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const installationPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Service d'installation",
+    title: "Installation d'armoires et de cuisines sur mesure",
     description:
       "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée.",
     path: "/services/installation",

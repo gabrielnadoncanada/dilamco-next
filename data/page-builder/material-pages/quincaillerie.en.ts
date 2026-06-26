@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const quincailleriePageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "High-end cabinet hardware | Dilamco",
+    title: "High-end cabinet hardware",
     description:
       "Discover why hardware plays a central role in the durability, smooth operation and perceived quality of a high-end kitchen or vanity.",
     path: "/materiaux/quincaillerie",

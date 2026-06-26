@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const quincailleriePage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Quincaillerie d'armoires haut de gamme | Dilamco",
+    title: "Quincaillerie d'armoires haut de gamme",
     description:
       "Découvrez pourquoi la quincaillerie joue un rôle central dans la durabilité, la fluidité et la qualité perçue d'une cuisine ou d'une vanité haut de gamme.",
     path: "/materiaux/quincaillerie",

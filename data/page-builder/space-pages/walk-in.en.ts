@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const walkInPageEn: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "High-end custom walk-in closet",
+    title: "Custom walk-in closets in Montreal",
     description:
       "High-end custom walk-in closet: design, controlled fabrication and precise installation in Montréal, Laval and on the South Shore.",
     path: "/espaces/walk-in",

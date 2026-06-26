@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const agrandissementMaisonPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Agrandissement de maison",
+    title: "Agrandissement de maison clé en main à Montréal",
     description:
       "Agrandissement de maison clé en main : faisabilité, séquence de travaux, coordination et intégration propre à l'existant.",
     path: "/services/renovation/agrandissement-de-maison",

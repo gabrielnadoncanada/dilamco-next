@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const renovationSalleDeBainPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Rénovation salle de bain",
+    title: "Rénovation de salle de bain à Montréal — clé en main",
     description:
       "Rénovation de salle de bain clé en main : coordination, contrôle de l'humidité, vanités sur mesure et finition durable à Montréal.",
     path: "/services/renovation/salle-de-bain",

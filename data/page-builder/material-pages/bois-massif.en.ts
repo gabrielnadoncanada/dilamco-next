@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const boisMassifPageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Solid wood",
+    title: "Solid wood cabinets, custom-made",
     description:
       "Solid wood: benefits, limits and recommended uses for custom cabinets, doors and furniture.",
     path: "/materiaux/bois-massif",

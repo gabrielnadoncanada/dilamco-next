@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const contreplaquePage: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Pourquoi le contreplaqué",
+    title: "Armoires en contreplaqué : stabilité et durabilité",
     description:
       "Contreplaqué : stabilité, tenue des vis et durabilité pour la structure d'armoires sur mesure.",
     path: "/materiaux/contreplaque",

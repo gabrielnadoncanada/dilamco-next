@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const fabricationPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Fabrication service",
+    title: "Custom cabinetry fabrication in Montreal",
     description:
       "Custom fabrication: durability, precision and high-end finish for a consistent, long-lasting result.",
     path: "/services/fabrication",

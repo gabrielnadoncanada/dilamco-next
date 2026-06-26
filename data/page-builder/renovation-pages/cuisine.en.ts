@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const renovationCuisinePageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Kitchen renovation",
+    title: "Kitchen renovation in Montreal — turnkey",
     description:
       "Turnkey kitchen renovation: feasibility, coordination, fabrication and installation of custom cabinets in Montréal.",
     path: "/services/renovation/cuisine",

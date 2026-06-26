@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const renovationSalleDeBainPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Bathroom renovation",
+    title: "Bathroom renovation in Montreal — turnkey",
     description:
       "Turnkey bathroom renovation: coordination, moisture control, custom vanities and durable finishes in Montréal.",
     path: "/services/renovation/salle-de-bain",
