@@ -335,6 +335,12 @@ const nextConfig = {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
   images: {
+    // BYPASS de l'Image Optimization Vercel (quota payant → 402
+    // OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED qui cassait toutes les images).
+    // `next/image` sert désormais les fichiers tels quels (déjà en WebP). Les
+    // options ci-dessous (formats/cache/patterns) deviennent inertes tant que
+    // `unoptimized` est vrai ; gardées pour réactivation si on change de loader.
+    unoptimized: true,
     // AVIF d'abord (≈20-30 % plus léger que WebP), WebP en repli — le
     // navigateur ne reçoit jamais le PNG/JPG source.
     formats: ["image/avif", "image/webp"],
