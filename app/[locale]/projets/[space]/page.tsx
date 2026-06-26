@@ -86,7 +86,7 @@ export default async function ProjectsSpacePage({
 
       <main id="contenu" className="bg-background text-foreground">
         <section className="border-b border-border">
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+          <div className="mx-auto max-w-[1440px] px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px] py-14 md:py-20">
             <nav
               aria-label="Fil d'Ariane"
               className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
@@ -108,7 +108,7 @@ export default async function ProjectsSpacePage({
         </section>
 
         <section>
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+          <div className="mx-auto max-w-[1440px] px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px] py-14 md:py-20">
             {projects.length === 0 ? (
               <div className="rounded-2xl border border-dashed border-border bg-secondary/30 p-10 text-center">
                 <p className="text-muted-foreground">

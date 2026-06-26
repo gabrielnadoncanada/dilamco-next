@@ -106,7 +106,7 @@ export function StarterKitchens() {
                 <Eyebrow tone="muted">
                   {t("starterKitchens.moduleCount", { count: moduleCount })}
                 </Eyebrow>
-                <h3 className="font-serif text-[26px] leading-[1.15] tracking-[-0.01em] text-foreground">
+                <h3 className="font-serif text-[26px] max-[700px]:text-[20px] leading-[1.15] tracking-[-0.01em] text-foreground">
                   {t(`starterKitchens.kitchens.${kitchen.index}.name`)}
                 </h3>
                 <Body size="sm" tone="soft" className="leading-[1.6]">

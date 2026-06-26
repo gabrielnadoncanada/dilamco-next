@@ -8,17 +8,18 @@ const headlineVariants = cva(
   {
     variants: {
       level: {
-        hero: "text-[clamp(48px,5vw,110px)] max-[700px]:!text-[clamp(36px,9vw,52px)] leading-[0.98] tracking-[-0.025em]",
+        hero: "text-[length:var(--title-1)] leading-[0.98] tracking-[-0.025em]",
         display:
-          "text-[clamp(40px,5.5vw,88px)] max-[700px]:!text-[36px] leading-[1] tracking-[-0.025em]",
+          "text-[length:var(--title-2)] leading-[1] tracking-[-0.025em]",
         headline:
-          "text-[clamp(34px,4.5vw,62px)] leading-[1.02] tracking-[-0.02em]",
+          "text-[length:var(--title-3)] leading-[1.02] tracking-[-0.02em]",
         headline2:
-          "text-[clamp(20px,3vw,28px)] leading-[1.1] tracking-[-0.02em]",
+          "text-[length:var(--title-5)] leading-[1.1] tracking-[-0.02em]",
         subhead:
-          "text-[clamp(28px,3.5vw,48px)] leading-[1.1] tracking-[-0.02em]",
-        title: "text-[28px] leading-[1.05] tracking-[-0.02em]",
-        subtitle: "text-[22px] leading-[1.15] tracking-[-0.01em]",
+          "text-[length:var(--title-4)] leading-[1.1] tracking-[-0.02em]",
+        title: "text-[length:var(--title-5)] leading-[1.05] tracking-[-0.02em]",
+        subtitle:
+          "text-[length:var(--title-6)] leading-[1.15] tracking-[-0.01em]",
       },
     },
     defaultVariants: {

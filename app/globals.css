@@ -64,8 +64,11 @@
   --background: #fafaf8;
   --foreground: #1a1f1c;
   --soft-foreground: #2a3330;
-  --border-strong: #b6ab93;
-  --highlight: #c8b890;
+  /* Bordure "forte" : neutre chaud assombri (aucun reflet doré). */
+  --border-strong: #c9c3b4;
+  /* Accent éditorial : vert primaire de marque (remplace l'ancien doré, banni
+     de toute UI visible). */
+  --highlight: #253b2f;
 
   --card: #ffffff;
   --popover: #ffffff;
@@ -80,14 +83,32 @@
   --muted: #f5f4ef;
   --muted-foreground: #5f6762;
 
-  --accent: #c4a574;
-  --accent-foreground: #161816;
+  /* `accent` = surface de survol/focus subtile (sémantique shadcn standard).
+     Neutre chaud — l'ancien doré #c4a574 est banni de l'UI visible. */
+  --accent: #efece4;
+  --accent-foreground: #1a1f1c;
 
   --destructive: oklch(0.58 0.22 27);
 
   --border: #e5e1d8;
   --input: #e5e1d8;
   --ring: #253b2f;
+
+  /* Rythme vertical de section — SOURCE UNIQUE partagée vitrine + boutique.
+     Tout padding vertical de section pointe ici pour un espacement homogène. */
+  --section-py: clamp(56px, 8vw, 112px);
+  --section-py-compact: clamp(40px, 6vw, 72px);
+  --section-py-spacious: clamp(72px, 10vw, 140px);
+
+  /* Échelle typographique des titres serif — SOURCE UNIQUE vitrine + boutique.
+     Le composant Heading (vitrine) et Headline (boutique) pointent tous deux
+     ici, pour une seule échelle de titres cohérente sur tout le site. */
+  --title-1: clamp(40px, 6.5vw, 88px); /* hero / display */
+  --title-2: clamp(32px, 5vw, 64px); /* h1 */
+  --title-3: clamp(28px, 4vw, 48px); /* h2 / headline (titre de section) */
+  --title-4: clamp(23px, 3vw, 34px); /* h3 / subhead */
+  --title-5: clamp(20px, 2.4vw, 28px); /* headline2 / title */
+  --title-6: clamp(18px, 2vw, 22px); /* subtitle */
 
   --surface-default-bg: var(--background);
   --surface-muted-bg: #f5f4ef;
@@ -100,7 +121,7 @@
   --hero-overlay-start: rgb(10 12 11 / 56%);
   --hero-overlay-middle: rgb(37 59 47 / 28%);
   --hero-overlay-end: rgb(10 12 11 / 34%);
-  --hero-overlay-glow: rgb(196 165 116 / 14%);
+  --hero-overlay-glow: rgb(37 59 47 / 14%);
   --hero-title-shadow: 0 2px 14px rgb(0 0 0 / 20%);
 
   --footer-glow: rgb(37 59 47 / 10%);
@@ -112,7 +133,11 @@
   --chart-4: oklch(0.527 0.154 150.069);
   --chart-5: oklch(0.448 0.119 151.328);
 
-  --radius: 0.625rem;
+  /* Identité « angles vifs » : Card, boutons et images sont déjà à radius 0.
+     On aligne les primitives shadcn restées arrondies (input, select, dialog,
+     textarea, accordion, tabs, tooltip…) en mettant le radius de base à 0.
+     Les pastilles (badge rounded-4xl, points rounded-full) restent rondes. */
+  --radius: 0rem;
 
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1f1c;

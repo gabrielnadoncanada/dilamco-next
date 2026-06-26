@@ -105,7 +105,7 @@ export function PCard({
               molding: defaultMolding,
             })
           }
-          className="absolute bottom-3 right-3 z-10 cursor-pointer bg-primary px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-primary-foreground opacity-0 shadow-[0_2px_10px_rgba(0,0,0,0.15)] transition-opacity duration-200 hover:bg-foreground focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary group-hover:opacity-100 max-[700px]:px-3 max-[700px]:opacity-100"
+          className="absolute bottom-3 right-3 z-10 cursor-pointer bg-primary px-4 py-2.5 text-[11px] uppercase tracking-[0.1em] text-primary-foreground opacity-0 transition-opacity duration-200 hover:bg-foreground focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary group-hover:opacity-100 max-[700px]:px-3 max-[700px]:opacity-100"
         >
           {t("addShort")}
         </button>

@@ -32,13 +32,10 @@ const containerClassMap: Record<Exclude<SectionContainer, boolean>, string> = {
 
 const paddingClassMap: Record<SectionPadding, string> = {
   none: "pt-0 pb-0",
-  small:
-    "py-16",
-  main: "pt-20 pb-28 sm:py-32",
-  large:
-    "pt-16 pb-16",
-  "page-top":
-    "pt-32 pb-32",
+  small: "py-[var(--section-py-compact)]",
+  main: "py-[var(--section-py)]",
+  large: "py-[var(--section-py)]",
+  "page-top": "py-[var(--section-py-spacious)]",
 };
 
 const titleAlignClassMap: Record<SectionAlign, string> = {

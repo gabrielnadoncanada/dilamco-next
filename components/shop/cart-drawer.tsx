@@ -59,7 +59,7 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-7 py-2 max-[700px]:px-5">
           {cart.items.length === 0 ? (
             <div className="py-[60px] text-center">
-              <span className="font-serif text-[22px] tracking-[-0.01em] text-foreground block">
+              <span className="font-serif text-[22px] max-[700px]:text-[19px] tracking-[-0.01em] text-foreground block">
                 {t("cart.emptyTitle")}
               </span>
               <p className="text-[13px] text-muted-foreground mt-3 leading-[1.5]">

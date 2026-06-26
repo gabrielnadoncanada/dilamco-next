@@ -12,9 +12,9 @@ const headingVariants = cva(
   {
     variants: {
       variant: {
-        h1: "font-serif font-normal text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.02] tracking-[-0.025em]",
-        h2: "font-serif font-normal text-[clamp(1.9rem,3.5vw,3rem)] leading-[1.06] tracking-[-0.02em]",
-        h3: "font-serif font-normal text-[clamp(1.4rem,2.2vw,1.9rem)] leading-[1.12] tracking-[-0.015em] text-pretty",
+        h1: "font-serif font-normal text-[length:var(--title-2)] leading-[1.04] tracking-[-0.025em]",
+        h2: "font-serif font-normal text-[length:var(--title-3)] leading-[1.08] tracking-[-0.02em]",
+        h3: "font-serif font-normal text-[length:var(--title-5)] leading-[1.12] tracking-[-0.015em] text-pretty",
         h4: "text-lg font-semibold leading-snug tracking-tight md:text-xl",
         h5: "text-base font-semibold leading-snug tracking-tight md:text-lg",
         h6: "text-sm font-semibold leading-snug tracking-tight md:text-base",

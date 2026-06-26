@@ -341,6 +341,15 @@ const nextConfig = {
     // Les renders catalogue sont immuables (régénérés sous le même nom
     // seulement si le produit change) : cache CDN/navigateur 1 an.
     minimumCacheTTL: 31536000,
+    // Next 16 refuse par défaut les images locales avec query string. Les
+    // renders catalogue portent un cache-buster `?v=<hash>` (voir
+    // lib/shop/render-manifest.json) : on autorise explicitement ces chemins
+    // locaux, query comprise.
+    localPatterns: [
+      { pathname: "/assets/**", search: "" },
+      { pathname: "/assets/products/renders/**" },
+      { pathname: "/images/**" },
+    ],
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
     ],

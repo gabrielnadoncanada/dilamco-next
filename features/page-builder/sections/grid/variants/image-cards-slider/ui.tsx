@@ -91,7 +91,7 @@ export function GridImageCardsSlider({
                           src={item.image.src}
                           alt={item.image.alt}
                           fill
-                          className="object-cover transition-transform duration-300 hover:scale-[1.02]"
+                          className="object-cover"
                           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         />
                       </Link>

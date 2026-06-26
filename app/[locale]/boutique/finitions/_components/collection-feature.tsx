@@ -57,7 +57,7 @@ export async function CollectionFeature({ collection: c, reverse }: Props) {
         <Headline level="display" as="h2">
           {copy.nom}
         </Headline>
-        <ul className="-mt-2 list-none space-y-1 font-serif text-[22px] italic tracking-[-0.01em] text-primary">
+        <ul className="-mt-2 list-none space-y-1 font-serif text-[22px] max-[700px]:text-[18px] italic tracking-[-0.01em] text-primary">
           {copy.taglines.map((line) => (
             <li key={line} className="flex gap-2.5">
               <span>{line}</span>
@@ -78,7 +78,7 @@ export async function CollectionFeature({ collection: c, reverse }: Props) {
         </div>
 
         <div className="flex items-baseline gap-4">
-          <span className="font-serif text-[64px] leading-none tracking-[-0.03em] text-primary">
+          <span className="font-serif text-[64px] max-[700px]:text-[44px] leading-none tracking-[-0.03em] text-primary">
             {c.pourcentage}
           </span>
           <span className="font-mono text-[11px] uppercase tracking-[0.06em] text-muted-foreground">

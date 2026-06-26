@@ -36,7 +36,7 @@ function SubmitButton() {
     <Button
       type="submit"
       size="lg"
-      className="group w-full gap-2 text-base font-semibold shadow-lg transition-all hover:-translate-y-0.5 hover:shadow-xl"
+      className="group w-full gap-2 text-sm font-semibold"
       disabled={pending}
     >
       {pending ? (
@@ -88,7 +88,7 @@ function FloatField({
         placeholder=" "
         aria-invalid={invalid}
         className={cn(
-          "peer block w-full rounded-xl border bg-background px-4 pb-2 pt-6 text-sm text-foreground outline-none transition-all",
+          "peer block w-full rounded-none border bg-background px-4 pb-2 pt-6 text-sm text-foreground outline-none transition-all",
           "border-border focus:border-foreground/60 focus:ring-2 focus:ring-foreground/10",
           invalid && "border-destructive focus:border-destructive focus:ring-destructive/15",
         )}
@@ -143,7 +143,7 @@ function FloatSelect({
         defaultValue=""
         aria-invalid={invalid}
         className={cn(
-          "block h-14 w-full rounded-xl border bg-background px-4 pb-1 pt-6 text-sm text-foreground outline-none transition-all appearance-none",
+          "block h-14 w-full rounded-none border bg-background px-4 pb-1 pt-6 text-sm text-foreground outline-none transition-all appearance-none",
           "border-border focus:border-foreground/60 focus:ring-2 focus:ring-foreground/10",
           invalid && "border-destructive focus:border-destructive focus:ring-destructive/15",
         )}
@@ -274,7 +274,7 @@ export function LandingLeadForm() {
             placeholder=" "
             aria-invalid={Boolean(err.message)}
             className={cn(
-              "peer block min-h-[120px] w-full rounded-xl border bg-background px-4 pb-3 pt-7 text-sm text-foreground outline-none transition-all",
+              "peer block min-h-[120px] w-full rounded-none border bg-background px-4 pb-3 pt-7 text-sm text-foreground outline-none transition-all",
               "border-border focus:border-foreground/60 focus:ring-2 focus:ring-foreground/10",
               err.message && "border-destructive",
             )}

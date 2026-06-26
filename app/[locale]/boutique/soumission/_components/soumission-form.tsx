@@ -306,8 +306,9 @@ export function SoumissionForm({ form, setForm, onSubmit }: Props) {
         ) : null}
         <Button
           type="submit"
+          size="xl"
           disabled={isPending}
-          className="px-9 py-[18px] text-sm font-semibold max-[700px]:w-full"
+          className="max-[700px]:w-full"
         >
           {isPending ? t("submitPending") : t("submit")} <ButtonArrow />
         </Button>

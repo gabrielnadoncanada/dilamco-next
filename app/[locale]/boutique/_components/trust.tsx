@@ -54,7 +54,7 @@ export async function Trust() {
                 surface="primary"
                 className="p-8 max-[700px]:p-[22px]"
               >
-                <div className="font-serif text-[64px] leading-none tracking-[-0.02em] text-highlight max-[700px]:text-[44px]">
+                <div className="font-serif text-[64px] leading-none tracking-[-0.02em] text-primary-foreground max-[700px]:text-[44px]">
                   {num}
                 </div>
                 <Body

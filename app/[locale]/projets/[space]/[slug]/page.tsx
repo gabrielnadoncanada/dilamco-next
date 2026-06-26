@@ -135,7 +135,7 @@ export default async function ProjectDetailPage({
       <main id="contenu" className="bg-background text-foreground">
         {/* Hero split */}
         <section className="border-b border-border">
-          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-20 lg:px-8">
+          <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-20 lg:px-8">
             <div>
               <nav
                 aria-label="Fil d'Ariane"
@@ -200,7 +200,7 @@ export default async function ProjectDetailPage({
 
         {/* Détail */}
         <section className="border-b border-border bg-secondary/30">
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+          <div className="mx-auto max-w-[1440px] px-4 py-14 sm:px-6 md:py-20 lg:px-8">
             <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
               {COLUMN_KEYS.map((key) => {
                 const items = project[key];
@@ -230,7 +230,7 @@ export default async function ProjectDetailPage({
 
         {/* Matériaux & services */}
         <section className="border-b border-border">
-          <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8">
+          <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:px-8">
             <LinkList heading={t("materials")} items={project.materials} />
             <LinkList heading={t("relatedServices")} items={project.services} />
           </div>
@@ -239,7 +239,7 @@ export default async function ProjectDetailPage({
         {/* Projets liés */}
         {related.length > 0 && (
           <section className="border-b border-border">
-            <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+            <div className="mx-auto max-w-[1440px] px-4 py-14 sm:px-6 md:py-20 lg:px-8">
               <Heading as="h2" variant="h2">
                 {t("otherProjectsSpace", { label: labelLower })}
               </Heading>
@@ -282,7 +282,7 @@ export default async function ProjectDetailPage({
 
         {/* CTA */}
         <section>
-          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 md:py-20 lg:px-8">
+          <div className="mx-auto max-w-[1440px] px-4 py-14 sm:px-6 md:py-20 lg:px-8">
             <div className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-border bg-secondary/40 p-8 md:flex-row md:items-center md:p-12">
               <div className="max-w-xl">
                 <Heading as="h2" variant="h2">

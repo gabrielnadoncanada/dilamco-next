@@ -64,7 +64,7 @@ function MobileFiltersDrawerInner({ scope, activeSlug }: Props) {
 
   return (
     <Drawer>
-      <DrawerTrigger className="fixed bottom-5 left-1/2 z-40 hidden -translate-x-1/2 cursor-pointer items-center gap-2 rounded-full bg-foreground px-5 py-3 text-[12px] uppercase tracking-[0.1em] text-background shadow-[0_4px_18px_rgba(0,0,0,0.25)] max-[1100px]:flex">
+      <DrawerTrigger className="fixed bottom-5 left-1/2 z-40 hidden -translate-x-1/2 cursor-pointer items-center gap-2 rounded-full bg-foreground px-5 py-3 text-[12px] uppercase tracking-[0.1em] text-background max-[1100px]:flex">
         <SlidersHorizontal className="size-4" />
         {t("filterLabel")}
         {activeCount > 0 && (

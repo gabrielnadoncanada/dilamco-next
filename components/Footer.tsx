@@ -50,7 +50,7 @@ export const Footer = async ({
     {showReviews && <GoogleReviews />}
     {/* Footer UNIFIÉ (vitrine + boutique) : fond vert de marque, logo blanc. */}
     <footer className="bg-foreground text-background">
-      <div className="w-full max-w-screen-xl mx-auto px-4 py-14">
+      <div className="w-full max-w-[1440px] mx-auto px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px] py-14">
         <div className="relative z-10 grid grid-cols-2 gap-8 lg:grid-cols-6">
           <div className="col-span-2 mb-8 lg:mb-0">
             <div className="flex items-center gap-2 lg:justify-start">

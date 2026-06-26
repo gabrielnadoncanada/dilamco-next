@@ -21,10 +21,10 @@ const defaultFrame: Required<FrameOptions> = {
 const sectionVariants = cva("", {
   variants: {
     paddingY: {
-      sm: "py-10 sm:py-12",
-      md: "py-10 sm:py-16 lg:py-20",
-      lg: "py-10 sm:py-16 lg:py-20",
-      hero: "py-20 sm:py-28",
+      sm: "py-[var(--section-py-compact)]",
+      md: "py-[var(--section-py)]",
+      lg: "py-[var(--section-py)]",
+      hero: "py-[var(--section-py-spacious)]",
       none: "",
     },
     divider: {
@@ -40,21 +40,26 @@ const sectionVariants = cva("", {
   },
 });
 
-const containerVariants = cva("mx-auto", {
-  variants: {
-    container: {
-      full: "max-w-none px-4",
-      xl: "max-w-screen-xl px-4",
-      "2xl": "max-w-screen-2xl px-4",
-      sm: "max-w-screen-sm px-4",
-      md: "max-w-screen-md px-4",
-      lg: "max-w-screen-lg px-4",
+// Gutter horizontal unifié avec la boutique (référence « un seul produit »).
+const containerVariants = cva(
+  "mx-auto px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px]",
+  {
+    variants: {
+      container: {
+        full: "max-w-none",
+        // Largeur de contenu canonique du site : 1440px (alignée boutique).
+        xl: "max-w-[1440px]",
+        "2xl": "max-w-[1440px]",
+        sm: "max-w-screen-sm",
+        md: "max-w-screen-md",
+        lg: "max-w-screen-lg",
+      },
+    },
+    defaultVariants: {
+      container: "xl",
     },
   },
-  defaultVariants: {
-    container: "xl",
-  },
-});
+);
 
 const headerVariants = cva("", {
   variants: {

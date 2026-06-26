@@ -25,7 +25,7 @@ export function Navbar({
           className,
         )}
       >
-        <div className="relative flex items-center justify-between gap-8 w-full px-4 py-3.5 md:py-[22px]">
+        <div className="relative flex items-center justify-between gap-8 w-full mx-auto max-w-[1440px] px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px] py-3.5 md:py-[22px]">
           <div className="flex items-center gap-8">
             <Logo logo={logo} />
           </div>
