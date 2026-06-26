@@ -7,7 +7,7 @@ import { useCart } from "./cart-provider";
 import { Swatch } from "./swatch";
 import { photoForProduct } from "@/lib/shop/photos";
 import { findProduct, widthSiblings } from "@/lib/shop/products";
-import { findModel, resolveVariant } from "@/lib/shop/models";
+import { findModel, resolveVariant, slugForCode } from "@/lib/shop/models";
 import { routes } from "@/lib/shop/routes";
 import type { Product } from "@/lib/shop/types";
 import { formatDim } from "@/lib/shop/format";
@@ -60,11 +60,13 @@ export function PCard({
     ? previewVariant?.price ?? product.price
     : model?.fromPrice ?? product.price;
 
+  // URL fiche = slug mot-clé localisé (FR/EN), pas le code SKU.
+  const productSlugPath = routes.product(slugForCode(product.id, locale));
   // Si une finition est filtrée (ex. page « chêne blanc »), le clic mène à la
   // fiche AVEC cette couleur pré-sélectionnée (?couleur=chene).
   const productHref = finishActive
-    ? `${routes.product(product.id)}?couleur=${activeColorId}`
-    : routes.product(product.id);
+    ? `${productSlugPath}?couleur=${activeColorId}`
+    : productSlugPath;
 
   const label = localizeProductLabel(
     product.shortName || product.name,
@@ -137,7 +139,7 @@ export function PCard({
                 return (
                   <Link
                     key={c.id}
-                    href={`${routes.product(product.id)}?couleur=${c.id}`}
+                    href={`${productSlugPath}?couleur=${c.id}`}
                     title={cLabel}
                     aria-label={cLabel}
                     className={
@@ -177,7 +179,7 @@ export function PCard({
               {shownVariants.map((v) => (
                 <Link
                   key={v.code}
-                  href={routes.product(v.id)}
+                  href={routes.product(slugForCode(v.id, locale))}
                   title={`${localizeProductLabel(v.shortName || v.name, locale)} · ${localizeColor(v.colors[0] || "", locale)}`}
                   className="relative block size-[42px] overflow-hidden border border-border bg-secondary transition-colors hover:border-foreground max-[700px]:size-[34px]"
                 >
@@ -192,7 +194,7 @@ export function PCard({
               ))}
               {extraCount > 0 && (
                 <Link
-                  href={routes.product(product.id)}
+                  href={productSlugPath}
                   className="px-1 font-mono text-[11px] text-foreground underline underline-offset-2 hover:text-primary"
                 >
                   +{extraCount}

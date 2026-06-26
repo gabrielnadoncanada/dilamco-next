@@ -18,6 +18,8 @@
  */
 
 import { products } from "./products";
+import { localizeProductLabel } from "./catalog-i18n";
+import { productSlug } from "./slug";
 import type {
   OptionAxis,
   OptionValue,
@@ -138,6 +140,24 @@ function axesFromVariants(variants: Variant[]): OptionAxis[] {
   return axes;
 }
 
+/** Discriminant stable (issu du SKU) pour départager deux slugs identiques. */
+function skuKey(code: string): string {
+  return code.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+}
+
+/** Garantit l'unicité d'un slug dans sa locale ; collision → suffixe SKU stable. */
+function uniqueSlug(base: string, seen: Set<string>, key: string): string {
+  if (!seen.has(base)) {
+    seen.add(base);
+    return base;
+  }
+  let candidate = `${base}-${key}`;
+  let i = 2;
+  while (seen.has(candidate)) candidate = `${base}-${key}-${i++}`;
+  seen.add(candidate);
+  return candidate;
+}
+
 /** Regroupe les produits plats en modèles (1 par code de base). */
 function buildModels(list: Product[]): ProductModel[] {
   const groups = new Map<string, Product[]>();
@@ -149,6 +169,9 @@ function buildModels(list: Product[]): ProductModel[] {
   }
 
   const models: ProductModel[] = [];
+  // Unicité des slugs par locale (URLs permanentes) ; ordre de groupes stable.
+  const seenFr = new Set<string>();
+  const seenEn = new Set<string>();
   for (const [key, group] of groups) {
     // Variante par défaut = le code non-muf (la fiche canonique) s'il existe,
     // sinon l'unique membre (produit vendu seulement en chêne).
@@ -160,8 +183,18 @@ function buildModels(list: Product[]): ProductModel[] {
     );
     const variants = expandVariants(ordered);
 
+    const key2 = skuKey(primary.code);
+    const slug = uniqueSlug(productSlug(primary.name, "fr"), seenFr, key2);
+    const slugEn = uniqueSlug(
+      productSlug(localizeProductLabel(primary.name, "en"), "en"),
+      seenEn,
+      key2,
+    );
+
     models.push({
       id: primary.code,
+      slug,
+      slugEn,
       name: primary.name,
       shortName: primary.shortName,
       family: primary.family,
@@ -189,10 +222,32 @@ const modelByVariantCode = new Map<string, ProductModel>();
 for (const m of models) {
   for (const v of m.variants) modelByVariantCode.set(v.code, m);
 }
+/** Index slug (FR + EN) → modèle (résolution d'URL canonique bilingue). */
+const modelBySlug = new Map<string, ProductModel>();
+for (const m of models) {
+  modelBySlug.set(m.slug, m);
+  modelBySlug.set(m.slugEn, m);
+}
 
-/** Modèle par son id (= slug d'URL canonique). */
+/** Modèle par sa clé INTERNE (code SKU). Ne pas utiliser pour résoudre une URL. */
 export function findModel(id: string): ProductModel | undefined {
   return modelById.get(id);
+}
+
+/** Modèle par son slug d'URL (FR ou EN). */
+export function findModelBySlug(slug: string): ProductModel | undefined {
+  return modelBySlug.get(slug);
+}
+
+/** Slug d'URL localisé d'un modèle. */
+export function modelSlug(m: ProductModel, locale: "fr" | "en"): string {
+  return locale === "en" ? m.slugEn : m.slug;
+}
+
+/** Slug d'URL localisé pour un code catalogue (variante ou base). Repli : le code. */
+export function slugForCode(code: string, locale: "fr" | "en"): string {
+  const m = modelByVariantCode.get(code) ?? modelById.get(baseCode(code));
+  return m ? modelSlug(m, locale) : code;
 }
 
 /** Modèle contenant un code de variante donné (sert aux redirections d'anciennes URLs). */

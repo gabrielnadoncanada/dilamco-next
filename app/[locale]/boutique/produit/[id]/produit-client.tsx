@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useCart } from "@/components/shop/cart-provider";
 import Image from "next/image";
 import { AppLink as Link } from "@/components/AppLink";
@@ -16,6 +16,7 @@ import {
   variantById,
 } from "@/lib/shop/models";
 import { productGalleryViews } from "@/lib/shop/photos";
+import { localizeProductLabel, localizeColor } from "@/lib/shop/catalog-i18n";
 import { routes } from "@/lib/shop/routes";
 import type { ColorName, Molding } from "@/lib/shop/types";
 import { ProductBreadcrumb } from "./_components/product-breadcrumb";
@@ -87,6 +88,7 @@ function QualityHighlights() {
 
 export default function ProduitClient({ id }: { id: string }) {
   const t = useTranslations("shop.product");
+  const locale = useLocale() as "fr" | "en";
   const cart = useCart();
   const model = findModel(id);
   // Couleur pré-sélectionnée via l'URL (ex. clic d'une pastille sur une carte :
@@ -138,7 +140,18 @@ export default function ProduitClient({ id }: { id: string }) {
     .map((m) => findProduct(m.id))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
-  const views: GalleryView[] = productGalleryViews(product);
+  // Alt descriptif (SEO image) : nom produit localisé + couleur, distinct de la
+  // légende UI décorative (« Produit », « Dessin technique »). La vue technique
+  // reçoit un qualificatif explicite.
+  const localName = localizeProductLabel(product.name, locale);
+  const localColor = localizeColor(color, locale);
+  const baseAlt = localColor ? `${localName} — ${localColor}` : localName;
+  const technicalSuffix =
+    locale === "en" ? " (technical drawing)" : " (dessin technique)";
+  const views: GalleryView[] = productGalleryViews(product).map((v) => ({
+    ...v,
+    alt: /techni|dessin/i.test(v.label) ? `${baseAlt}${technicalSuffix}` : baseAlt,
+  }));
 
   return (
     <Container

@@ -2,4 +2,6 @@
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <sitemap><loc>https://dilamco.com/sitemap-0.xml</loc></sitemap>
+<sitemap><loc>https://dilamco.com/sitemap-images.xml</loc></sitemap>
+<sitemap><loc>https://dilamco.com/sitemap-products.xml</loc></sitemap>
 </sitemapindex>

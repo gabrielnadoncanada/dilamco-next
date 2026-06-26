@@ -8,3 +8,4 @@ Host: https://dilamco.com
 # Sitemaps
 Sitemap: https://dilamco.com/sitemap.xml
 Sitemap: https://dilamco.com/sitemap-images.xml
+Sitemap: https://dilamco.com/sitemap-products.xml

@@ -154,6 +154,11 @@ module.exports = {
 
     const { locale, slug } = splitLocale(path);
 
+    // Fiches produit : slug mot-clé TRADUIT (FR≠EN) que next-sitemap ne sait pas
+    // apparier (il échange la locale en gardant le slug → hreflang croisés faux).
+    // Émises séparément avec hreflang corrects par scripts/generate-image-sitemap.mjs.
+    if (slug.startsWith("/boutique/produit/")) return null;
+
     // Landings : noindex, hors sitemap (toutes locales).
     if (slug === "/landing" || slug.startsWith("/landing/")) return null;
 

@@ -3,7 +3,13 @@ import { Suspense } from "react";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { findProduct } from "@/lib/shop/products";
-import { models, findModel, modelForVariantCode } from "@/lib/shop/models";
+import {
+  models,
+  findModel,
+  findModelBySlug,
+  modelForVariantCode,
+  modelSlug,
+} from "@/lib/shop/models";
 import { photoForProduct } from "@/lib/shop/photos";
 import { routes } from "@/lib/shop/routes";
 import { pillarForCategory, collectionContent } from "@/lib/shop/collections";
@@ -23,14 +29,18 @@ import ProduitClient from "./produit-client";
 type MetaLocale = "fr" | "en";
 
 /**
- * Fiches prérendues (SSG) : une par ProductModel (≈197), pas par variante. Les
- * codes contenant des caractères interdits dans un nom de fichier (ex.
- * `S8-BDD37.5*36`) cassent l'export sur Windows : rendus à la demande.
+ * Fiches prérendues (SSG) : une par ProductModel (≈197), par locale. Le param
+ * `[id]` = le slug mot-clé LOCALISÉ (FR sous /boutique, EN sous /shop). Les
+ * slugs sont propres (`[a-z0-9-]`) donc tous prérendables (≠ codes SKU avec
+ * caractères interdits sur Windows).
  */
-export function generateStaticParams() {
-  return models
-    .filter((m) => !/[*?"<>|:\\]/.test(m.id))
-    .map((m) => ({ id: m.id }));
+export function generateStaticParams({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const locale: MetaLocale = params.locale === "en" ? "en" : "fr";
+  return models.map((m) => ({ id: modelSlug(m, locale) }));
 }
 
 function dimsLabel(w?: number, h?: number, d?: number) {
@@ -47,8 +57,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, id } = await params;
   const t = await getTranslations({ locale, namespace: "shop.product" });
-  // Tolère une vieille URL de variante (`-muf`) : on émet le canonical du modèle.
-  const model = findModel(id) ?? modelForVariantCode(id);
+  // Résout par slug (FR/EN), puis tolère une vieille URL SKU/`-muf` : le
+  // canonical pointe toujours vers le slug localisé du modèle.
+  const model =
+    findModelBySlug(id) ?? findModel(id) ?? modelForVariantCode(id);
   if (!model) return { title: t("notFoundTitle") };
 
   const product = findProduct(model.id);
@@ -67,7 +79,12 @@ export async function generateMetadata({
     {
       title: localName,
       description,
-      path: routes.product(model.id),
+      path: routes.product(modelSlug(model, locale)),
+      // Slug traduit (FR≠EN) : hreflang/canonical explicites, non dérivables de `path`.
+      localizedPaths: {
+        fr: routes.product(model.slug),
+        en: localizePath(routes.product(model.slugEn), "en"),
+      },
       ogImage: image ? { url: image } : undefined,
     },
     locale,
@@ -83,20 +100,23 @@ export default async function ProduitPage({
 }) {
   const { locale, id } = await params;
   const t = await getTranslations({ locale, namespace: "shop.product" });
-  const model = findModel(id) ?? modelForVariantCode(id);
-
-  // Ancienne URL de variante (ex. `S8-DB12-muf`) → 308 vers la fiche canonique.
-  if (model && model.id !== id) {
-    permanentRedirect(localizePath(routes.product(model.id), locale));
-  }
+  const model =
+    findModelBySlug(id) ?? findModel(id) ?? modelForVariantCode(id);
 
   // Produit inconnu ou désactivé (catégorie non vendue en ligne) → 404.
   if (!model) {
     notFound();
   }
 
+  // Vieille URL (code SKU, `-muf`) ou slug d'une autre locale → 308 vers le slug
+  // canonique localisé.
+  const canonicalSlug = modelSlug(model, locale);
+  if (id !== canonicalSlug) {
+    permanentRedirect(localizePath(routes.product(canonicalSlug), locale));
+  }
+
   const product = findProduct(model.id)!;
-  const productUrl = `${SITE.url}${localizePath(routes.product(model.id), locale)}`;
+  const productUrl = `${SITE.url}${localizePath(routes.product(canonicalSlug), locale)}`;
   const localName = localizeProductLabel(product.name, locale);
   const localFamily = localizeFamily(product.family, locale);
 

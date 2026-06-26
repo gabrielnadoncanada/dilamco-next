@@ -22,7 +22,11 @@ import { cn } from "@/lib/shop/utils";
 export interface GalleryView {
   type: "photo" | "svg";
   src?: string;
+  /** Légende UI courte (vignette / zoom) : « Produit », « Dessin technique »… */
   label: string;
+  /** Texte alternatif descriptif (nom produit + couleur) pour le SEO image.
+   *  Distinct du `label` décoratif ; retombe sur `label` si absent. */
+  alt?: string;
 }
 
 interface Props {
@@ -111,7 +115,7 @@ export function ProductGallery({
               {v.type === "photo" && v.src ? (
                 <Image
                   src={v.src}
-                  alt={v.label}
+                  alt={v.alt ?? v.label}
                   fill
                   sizes="76px"
                   className="object-cover"
@@ -202,7 +206,7 @@ function GallerySlide({
       >
         <Image
           src={view.src}
-          alt={view.label}
+          alt={view.alt ?? view.label}
           fill
           sizes="(max-width: 1000px) 100vw, 50vw"
           className="object-contain transition-transform duration-500 hover:scale-[1.02]"

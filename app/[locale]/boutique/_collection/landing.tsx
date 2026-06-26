@@ -10,6 +10,7 @@ import {
 import { SITE } from "@/seo/schema/site";
 import { localizePath } from "@/seo/i18n-path";
 import { routes } from "@/lib/shop/routes";
+import { slugForCode } from "@/lib/shop/models";
 import { localizeProductLabel } from "@/lib/shop/catalog-i18n";
 import {
   ancestorsOf,
@@ -81,7 +82,7 @@ export async function CollectionLanding({
           name: content.h1,
           url: pageUrl,
           items: products.slice(0, 50).map((m) => ({
-            url: url(routes.product(m.code)),
+            url: url(routes.product(slugForCode(m.code, locale))),
             name: localizeProductLabel(m.name, locale),
           })),
         })}

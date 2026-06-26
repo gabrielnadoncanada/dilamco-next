@@ -9,11 +9,11 @@ type MetaLocale = "fr" | "en";
 const OG_LOCALE: Record<MetaLocale, string> = { fr: "fr_CA", en: "en_CA" };
 
 export function createPageMetadata(
-  { title, description, path, ogAlt, ogImage }: PageMetadataOptions,
+  { title, description, path, localizedPaths, ogAlt, ogImage }: PageMetadataOptions,
   locale: MetaLocale = "fr",
 ): Metadata {
-  const frUrl = `${SITE.url}${localizePath(path, "fr")}`;
-  const enUrl = `${SITE.url}${localizePath(path, "en")}`;
+  const frUrl = `${SITE.url}${localizedPaths?.fr ?? localizePath(path, "fr")}`;
+  const enUrl = `${SITE.url}${localizedPaths?.en ?? localizePath(path, "en")}`;
   const url = locale === "fr" ? frUrl : enUrl;
   const alt = ogAlt ?? `${title} | ${SITE.name}`;
   const defaultImage = {

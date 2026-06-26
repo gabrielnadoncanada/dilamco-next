@@ -97,8 +97,13 @@ export interface Variant {
 
 /** Entité SEO (1 fiche/URL). Aucun prix propre — voir `fromPrice` (min variantes). */
 export interface ProductModel {
-  /** Slug de la fiche = code de la variante par défaut (non-muf si la paire existe). */
+  /** Clé INTERNE stable = code catalogue (SKU) de la variante par défaut. Sert
+   *  d'index (findModel), de seed de description et de panier — JAMAIS d'URL. */
   id: string;
+  /** Slug d'URL mot-clé FR (`/boutique/produit/<slug>`). Unique, stable. */
+  slug: string;
+  /** Slug d'URL mot-clé EN (`/en/shop/produit/<slugEn>`). Unique, stable. */
+  slugEn: string;
   name: string;
   shortName?: string;
   family: Family;

@@ -27,6 +27,7 @@ import {
   isAxisValueAvailable,
   modelForVariantCode,
   selectAxisValue,
+  slugForCode,
   variantById,
 } from "@/lib/shop/models";
 import { productDescription } from "@/lib/shop/product-description";
@@ -397,7 +398,7 @@ function WidthSelector({ product }: { product: Product }) {
           ) : (
             <Link
               key={s.code}
-              href={routes.product(s.id)}
+              href={routes.product(slugForCode(s.id, locale))}
               className="flex flex-col items-center gap-0.5 border border-border-strong bg-card px-4 py-2 text-center no-underline transition-colors hover:border-foreground"
             >
               <span className="font-mono text-[13px] text-soft-foreground">
