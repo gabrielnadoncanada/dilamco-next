@@ -6,7 +6,7 @@ import { Hero } from "./_components/hero";
 import { Pillars } from "./_components/pillars";
 import { Categories } from "./_components/categories";
 import { Process } from "./_components/process";
-import { StarterKitchens } from "./_components/starter-kitchens";
+// import { StarterKitchens } from "./_components/starter-kitchens"; // section masquée
 import { Testimonial } from "./_components/testimonial";
 import { Trust } from "./_components/trust";
 
@@ -53,7 +53,9 @@ export default async function HomePage({
       <Hero />
       <Pillars />
       <Categories />
-      <StarterKitchens />
+      {/* Section « cuisines types » masquée (prix à 0 / non finalisée).
+          Réactiver en décommentant ici + l'import ci-dessus. */}
+      {/* <StarterKitchens /> */}
       <Process />
       <Testimonial />
       <Trust />
