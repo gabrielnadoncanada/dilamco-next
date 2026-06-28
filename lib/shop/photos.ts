@@ -27,14 +27,13 @@ export function inSituFor(_product: Product): string[] {
 
 /** Vues carousel / lightbox : `product.gallery` si renseigné, sinon une seule
  *  vue placeholder « image à venir ». */
-export function productGalleryViews(product: Product): Array<{
+export function galleryViews(gallery: ProductGalleryEntry[] | undefined): Array<{
   type: "photo";
   src: string;
   label: string;
 }> {
-  const custom = product.gallery;
-  if (custom?.length) {
-    return custom.map((entry, i) => ({
+  if (gallery?.length) {
+    return gallery.map((entry, i) => ({
       type: "photo" as const,
       src: gallerySrc(entry),
       label: galleryLabel(entry, i),
@@ -43,4 +42,8 @@ export function productGalleryViews(product: Product): Array<{
   return [
     { type: "photo" as const, src: PLACEHOLDER_PRODUCT_SRC, label: "Image à venir" },
   ];
+}
+
+export function productGalleryViews(product: Product) {
+  return galleryViews(product.gallery);
 }

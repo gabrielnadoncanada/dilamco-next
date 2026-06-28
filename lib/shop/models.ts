@@ -17,7 +17,7 @@
  *     changer `modelKey()` (et retirer la largeur des fiches séparées).
  */
 
-import { products } from "./products";
+import { products, galleryFor } from "./products";
 import { localizeProductLabel } from "./catalog-i18n";
 import { productSlug } from "./slug";
 import type {
@@ -105,7 +105,10 @@ function expandVariants(group: Product[]): Variant[] {
         options: { profil: pr.id, couleur: colour },
         price: p.price + (pr.priceDelta ?? 0),
         colors: p.colors,
-        gallery: p.gallery,
+        // Galerie PROPRE au profil : shaker-3 pointe sur son rendu dédié
+        // (`face@shaker-3`), shaker-1 sur la `face`. Repli sur la face par défaut
+        // si le rendu du profil n'existe pas encore.
+        gallery: galleryFor(p.code, pr.id) ?? p.gallery,
         w: p.w,
         h: p.h,
         d: p.d,

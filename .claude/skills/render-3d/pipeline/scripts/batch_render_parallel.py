@@ -27,6 +27,8 @@ import time
 from pathlib import Path
 
 from render_product_cabinet import (
+    DEFAULT_PROFILE,
+    DOOR_PROFILES,
     FLAT_CATEGORIES,
     QUALITY_SAMPLES,
     RENDERABLE_CATEGORIES,
@@ -61,13 +63,13 @@ def is_renderable(p: dict) -> bool:
 
 
 def texture_paths() -> dict:
-    hdri = REPO_ROOT / "hdris" / "brown_photostudio_02_2k.exr"
+    hdri = REPO_ROOT / "hdris" / "studio_kontrast_03_2k.exr"
     if not hdri.is_file():
-        hdri = REPO_ROOT / "hdris" / "kloppenheim_02_puresky_2k.exr"
+        hdri = REPO_ROOT / "hdris" / "brown_photostudio_02_2k.exr"
     white_nor = REPO_ROOT / "textures" / "laminate_floor_02_nor_gl_2k.jpg"
     return {
         "hdri": str(hdri) if hdri.is_file() else "",
-        "hdri_strength": 0.9,
+        "hdri_strength": 1.0,
         "hdri_rotation_deg": 235.0,
         "oak_diff": str(REPO_ROOT / "textures" / "oak_veneer_01_diff_2k.jpg"),
         "oak_rough": str(REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"),
@@ -98,7 +100,7 @@ def run_worker(idx: int, configs: list[dict], blender: Path, out_dir: Path, stat
             line = line.strip()
             if "BATCH_OK " in line:
                 code = line.split("BATCH_OK ", 1)[1].strip()
-                png = out_dir / f"{slugify_code(code)}_face.png"
+                png = out_dir / f"{slugify_code(code)}{state['suffix']}_face.png"
                 if png.is_file():
                     try:
                         apply_shadow_postprocess(png, png.with_suffix(".webp"))
@@ -140,9 +142,28 @@ def rebuild_manifest(catalog: dict, out_dir: Path, manifest_path: Path) -> int:
                 pruned += 1
             continue
         slug = slugify_code(code)
-        if (out_dir / f"{slug}_face.webp").is_file():
-            products[code] = {"face": f"/assets/products/renders/{slug}_face.webp"}
+        # Reconstruit les vues depuis les fichiers présents, PAR PROFIL : le défaut
+        # (shaker-1) -> `face` ; les autres -> `face@<profil>` (lu par la couche
+        # variantes du site). On préserve les vues d'autres profils déjà mappées
+        # (un batch shaker-3 ne doit pas effacer le `face` shaker-1, et vice versa)
+        # ainsi que la vue `technique` si elle existe.
+        entry = products.get(code, {})
+        had_any = False
+        for prof, spec in DOOR_PROFILES.items():
+            view = spec["manifest_view"]
+            webp = out_dir / f"{slug}{spec['slug_suffix']}_face.webp"
+            if webp.is_file():
+                entry[view] = f"/assets/products/renders/{slug}{spec['slug_suffix']}_face.webp"
+                had_any = True
+            elif view in entry:
+                # Fichier disparu pour ce profil : retirer la vue obsolète.
+                del entry[view]
+        if had_any:
+            products[code] = entry
             mapped += 1
+        elif code in products:
+            del products[code]
+            pruned += 1
     if pruned:
         print(f"[parallel] {pruned} entrées élaguées (non-rendables -> placeholder)", flush=True)
     manifest_path.write_text(
@@ -169,10 +190,25 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--only", type=str, default="")
     ap.add_argument("--force", action="store_true", help="re-rendre même si le .webp existe")
+    ap.add_argument(
+        "--profile",
+        choices=sorted(DOOR_PROFILES),
+        default=DEFAULT_PROFILE,
+        help="profil de porte : shaker-1 (1 po, défaut) ou shaker-3 (3 po). "
+        "Les profils non-défaut ne s'appliquent qu'au Blanc Pur (codes non -muf).",
+    )
     args = ap.parse_args(argv)
+
+    profile = args.profile
+    spec = DOOR_PROFILES[profile]
+    suffix = spec["slug_suffix"]
 
     catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
     products = [p for p in catalog.get("products", []) if is_renderable(p)]
+    if profile != DEFAULT_PROFILE:
+        # Seul le Blanc Pur a des profils alternatifs (le Chêne = -muf, shaker-1
+        # uniquement). On ne rend donc le profil alternatif que pour le blanc.
+        products = [p for p in products if not p["code"].endswith("-muf")]
     if args.only:
         wanted = {c.strip() for c in args.only.split(",") if c.strip()}
         products = [p for p in products if p["code"] in wanted]
@@ -184,12 +220,14 @@ def main(argv: list[str] | None = None) -> int:
     pending: list[dict] = []
     for p in products:
         slug = slugify_code(p["code"])
-        if not args.force and (args.out_dir / f"{slug}_face.webp").is_file():
+        if not args.force and (args.out_dir / f"{slug}{suffix}_face.webp").is_file():
             continue
         cfg = infer_hb_config(p)
         cfg.update(
             {
-                "output": str(args.out_dir / f"{slug}_face.png"),
+                "output": str(args.out_dir / f"{slug}{suffix}_face.png"),
+                "door_profile": profile,
+                "shaker_rail_m": spec["rail_m"],
                 "samples": samples,
                 "resolution": [args.resolution, args.resolution],
                 **tex,
@@ -217,7 +255,7 @@ def main(argv: list[str] | None = None) -> int:
         slices = [s for s in slices if s]
 
         blender = find_blender()
-        state = {"done": 0, "failed": 0, "total": len(pending), "t0": time.time()}
+        state = {"done": 0, "failed": 0, "total": len(pending), "t0": time.time(), "suffix": suffix}
         lock = threading.Lock()
         threads = [
             threading.Thread(target=run_worker, args=(i, s, blender, args.out_dir, state, lock))

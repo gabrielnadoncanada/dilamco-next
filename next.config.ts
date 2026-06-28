@@ -14,6 +14,19 @@ const redirectRules = [
   { source: "/en/about-us.aspx", destination: "/en/a-propos" },
   { source: "/fr/a-propos", destination: "/a-propos" },
 
+  // Récupération de backlinks — anciennes pages .aspx encore liées mais en 404.
+  // Audit backlinks DataForSEO 2026-06-28 : ~68 backlinks pointaient vers ces
+  // pages mortes (le jus de lien était perdu). 301 vers la page existante la
+  // plus pertinente. (/fr/residentiel.aspx, /en/about-us.aspx, /en/residential
+  // .aspx, /en/commercial.aspx sont déjà couverts plus bas/ailleurs.)
+  { source: "/en/contact.aspx", destination: "/en/contact" },
+  { source: "/fr/nous-joindre.aspx", destination: "/contact" },
+  { source: "/en/faqs.aspx", destination: "/en/contact" },
+  { source: "/fr/faqs.aspx", destination: "/contact" },
+  { source: "/en/news.aspx", destination: "/en" },
+  { source: "/fr/disaster-recovery.aspx", destination: "/services/renovation" },
+  { source: "/fr/commercial.aspx", destination: "/espaces/commercial" },
+
   // Main projects / portfolio
   { source: "/projects", destination: "/projets" },
   { source: "/en/past-projects.aspx", destination: "/en/projets" },
@@ -370,6 +383,25 @@ const nextConfig = {
         source: "/:path*",
         has: [{ type: "host", value: "www.dilamco.com" }],
         destination: "https://dilamco.com/:path*",
+        permanent: true,
+      },
+      // Site frère retiré : entrepreneurgeneralmontreal.com fondu dans dilamco.
+      // Audit backlinks 2026-06-28 : il portait 146 liens de navigation sitewide
+      // (concentration anormale) sans valeur propre (36 backlinks, spam score 50).
+      // Tout le domaine -> home dilamco (301). S'active dès que le domaine (apex +
+      // www) est rattaché au projet dilamco-next sur Vercel — le DNS pointe déjà
+      // vers Vercel, donc aucune modif DNS requise. Pas de :path* : on envoie tout
+      // vers la home pour éviter de créer des 404 (les chemins ne correspondent pas).
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "entrepreneurgeneralmontreal.com" }],
+        destination: "https://dilamco.com/",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.entrepreneurgeneralmontreal.com" }],
+        destination: "https://dilamco.com/",
         permanent: true,
       },
       ...expandRedirects(redirectRules),

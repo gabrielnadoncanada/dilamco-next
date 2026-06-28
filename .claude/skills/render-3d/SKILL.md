@@ -85,6 +85,28 @@ du projet — chemins `STORE_ROOT` absolus dans le script.)
   **élague** les entrées des produits visibles non-rendables (→ placeholder côté site).
 - Conversion `.webp` faite dans le driver. Pas besoin de `npm run images:webp` ensuite.
 
+### B.1 Profils de porte (style shaker) — `--profile`
+Le style de porte (largeur du rail shaker) est paramétrable via le registre
+`DOOR_PROFILES` (dans `render_product_cabinet.py`) : `shaker-1` (rail 1 po, DÉFAUT)
+et `shaker-3` (rail 3 po). Ajouter un style = une ligne dans `DOOR_PROFILES`
+(`rail_m`, `slug_suffix`, `manifest_view`). Le rail est threadé partout : style HB
+(`shaker_rail_width`), overlay shaker des pullouts, et géométrie custom
+(`_shaker_door`/`build_flat_panel`).
+```
+# tous les caissons BLANC en shaker 3 po (le chêne -muf reste shaker-1 only) :
+uv run python scripts/batch_render_parallel.py --profile shaker-3 --workers 3
+# rendu unique : render_product_cabinet.py --product-code S8-DB12 --profile shaker-3 --output ...
+```
+- Profil ≠ défaut → **fichiers suffixés** (`<slug>_s3_face.webp`), le défaut garde le
+  slug nu : les rendus shaker-1 existants ne bougent pas.
+- Manifest : défaut → `face` ; profil alt → **`face@<profil>`** (ex. `face@shaker-3`).
+  `rebuild_manifest` est multi-profil (ne se clobbe pas entre profils ; préserve `technique`).
+- Côté site : `galleryFor(code, profil)` (products.ts) lit `face@<profil>` avec repli
+  sur `face` ; la couche variantes (`models.ts`) donne sa galerie propre à chaque
+  variante profil ; la fiche (`produit-client`) affiche la galerie de la variante active
+  → cliquer « Shaker 1 po ↔ 3 po » bascule l'image. Dispo des profils par couleur =
+  `PROFIL_BY_COLOR` (models.ts) : blanc = 1+3 po, chêne = 1 po.
+
 ## C. Mapping catalogue → caisson (`infer_hb_config` dans `render_product_cabinet.py`)
 - **Caissons HB** (place_cabinet_script) : `cabinet_type` BASE/UPPER/TALL + `front_layout`.
   - Muraux : `wall-cabinet*`, `upper-*` (dessus-frigo), `microwave`, `standard` (si nom

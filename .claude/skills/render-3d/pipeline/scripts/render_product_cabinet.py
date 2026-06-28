@@ -48,6 +48,17 @@ QUALITY_SAMPLES = {
     "final": 256,
 }
 
+#: Profils de porte (style) rendables. `rail_m` = largeur du montant/traverse
+#: shaker (mètres) ; `slug_suffix` = suffixe de fichier (le défaut shaker-1 garde
+#: le slug nu, donc les rendus existants ne bougent pas) ; `manifest_view` = clé
+#: dans le manifest (le défaut s'écrit sur `face`, les autres sur `face@<id>` lu
+#: par la couche variantes du site). Ajouter un style = une ligne ici.
+DOOR_PROFILES = {
+    "shaker-1": {"rail_m": 0.0254, "slug_suffix": "", "manifest_view": "face"},
+    "shaker-3": {"rail_m": 0.0762, "slug_suffix": "_s3", "manifest_view": "face@shaker-3"},
+}
+DEFAULT_PROFILE = "shaker-1"
+
 
 def find_blender() -> Path:
     env = os.environ.get("BLENDER")
@@ -498,7 +509,7 @@ def apply_hb_style(main_scene, cabinet):
             door_overlay_type="FULL",
             door_style="Door Style 1",
             door_type="5_PIECE",
-            shaker_rail_width=0.0254,
+            shaker_rail_width=CONFIG.get("shaker_rail_m", 0.0254),
             pull_finish="MATTE_BLACK",
         )
     else:
@@ -511,7 +522,7 @@ def apply_hb_style(main_scene, cabinet):
             door_overlay_type="FULL",
             door_style="Door Style 1",
             door_type="5_PIECE",
-            shaker_rail_width=0.0254,
+            shaker_rail_width=CONFIG.get("shaker_rail_m", 0.0254),
             pull_finish="MATTE_BLACK",
         )
     summary = StyleBuilder().apply(style, bpy_module=bpy)
@@ -829,7 +840,8 @@ def setup_camera(cabinet):
     distance = (extent / 2.0) / half_fov_tan
     # Vue à 15° de lacet : la façade domine, le côté donne le volume. Caméra
     # sous le dessus du caisson pour cacher la carcasse ouverte des modules du bas.
-    direction = Vector((0.415, -1.55, 0.14)).normalized()
+    # Angle de vue surchargeable (showcase multi-angles) ; défaut = 3/4 avant-droit.
+    direction = Vector(CONFIG.get("cam_dir", (0.415, -1.55, 0.14))).normalized()
     loc = target + direction * distance
 
     bpy.ops.object.camera_add(location=loc)
@@ -866,7 +878,9 @@ def setup_lighting():
         nt.links.new(texco.outputs["Generated"], mapping.inputs["Vector"])
         nt.links.new(mapping.outputs["Vector"], env.inputs["Vector"])
         nt.links.new(env.outputs["Color"], bg.inputs["Color"])
-        bg.inputs["Strength"].default_value = float(CONFIG.get("hdri_strength", 0.9))
+        # HDRI studio = source PRINCIPALE (softboxes → reflets propres + modelé sur
+        # le blanc). Pleine force ; les lampes ci-dessous ne font que l'appoint.
+        bg.inputs["Strength"].default_value = float(CONFIG.get("hdri_strength", 1.0))
         log("World HDRI: " + hdri_path)
     else:
         bg.inputs["Color"].default_value = (0.82, 0.82, 0.80, 1)
@@ -883,11 +897,11 @@ def setup_lighting():
         direction = Vector(target) - light.location
         light.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()
 
-    # Le HDRI studio fournit l'ambiance et les dégradés. La key est dédoublée
-    # au même endroit : seule une fraction de son énergie projette l'ombre —
-    # même éclairage total, ombre de contact ~3x plus discrète.
-    area("Product_Key_Shadow", (-0.5, -1.3, 2.5), 40, 2.4)
-    area("Product_Key_Fill", (-0.5, -1.3, 2.5), 90, 2.4, cast_shadow=False)
+    # Appoint léger par-dessus le HDRI studio : key douce pour un peu de modelé +
+    # rim arrière pour détacher les arêtes. Volontairement faibles : le HDRI fait
+    # l'essentiel (sinon on retombe dans le « flat » ou le sur-éclairé).
+    area("Key_Soft", (-1.5, -1.1, 2.3), 35, 1.8, target=(0.0, 0.0, 0.50), cast_shadow=False)
+    area("Rim_Edge", (1.5, 1.3, 2.5), 70, 0.9, target=(0.1, 0.0, 0.60), cast_shadow=False)
 
 
 def configure_render():
@@ -931,11 +945,9 @@ def configure_render():
     scene.render.film_transparent = True
     scene.render.filepath = CONFIG["output"]
 
-    # Khronos PBR Neutral : conçu pour les packshots e-commerce — préserve la
-    # fidélité des couleurs (AgX désature fortement les albédos sous éclairage
-    # studio : un chêne brun devient crème). NB : l'enum RNA statique ne liste
-    # pas les view transforms OCIO (même piège que le moteur CYCLES) — assigner
-    # directement et rattraper l'erreur.
+    # Khronos PBR Neutral : garde le BLANC propre (AgX grise/désature les albédos
+    # → look « gris terne »). Conçu pour les packshots e-commerce. NB : l'enum RNA
+    # statique ne liste pas les view transforms OCIO — assigner et rattraper.
     for view_transform in ("Khronos PBR Neutral", "AgX"):
         try:
             scene.view_settings.view_transform = view_transform
@@ -944,7 +956,7 @@ def configure_render():
             log("view_transform " + view_transform + " indisponible: " + str(exc))
     log("View transform: " + scene.view_settings.view_transform)
     scene.view_settings.look = "None"
-    scene.view_settings.exposure = -0.18
+    scene.view_settings.exposure = float(CONFIG.get("exposure", -0.1))
 
 
 def hard_reset_scene():
@@ -979,7 +991,7 @@ def _shaker_door(width, height, thickness, center, mat, parent=None):
     # Porte shaker 5 pièces centrée sur `center`, face dans le plan X-Z,
     # épaisseur le long de Y (front du caisson = -Y).
     cx, cy, cz = center
-    rw = min(0.0572, width / 3.0, height / 3.0)
+    rw = min(CONFIG.get("shaker_rail_m", 0.0254), width / 3.0, height / 3.0)
     root = _flat_box("Door_Stile_L", (rw, thickness, height), (cx - width / 2.0 + rw / 2.0, cy, cz), mat, parent=parent)
     _flat_box("Door_Stile_R", (rw, thickness, height), (cx + width / 2.0 - rw / 2.0, cy, cz), mat, parent=root)
     inner = width - 2.0 * rw
@@ -1064,11 +1076,26 @@ def build_microwave_cabinet():
         dw = (W - 3.0 * reveal) / 2.0
         lx = -(dw / 2.0 + gap / 2.0)
         rx = dw / 2.0 + gap / 2.0
-        _shaker_door(dw, dh, door_t, (lx, dcy, dcz), finish, parent=root)
+        ldoor = _shaker_door(dw, dh, door_t, (lx, dcy, dcz), finish, parent=root)
         _shaker_door(dw, dh, door_t, (rx, dcy, dcz), finish, parent=root)
         # Poignées verticales près du joint central (look caisson mural 2 portes).
-        _bar_pull((lx + dw / 2.0 - 0.02, pull_y, pull_z), pull_len, black, horizontal=False, parent=root)
+        lpull = _bar_pull((lx + dw / 2.0 - 0.02, pull_y, pull_z), pull_len, black, horizontal=False, parent=root)
         _bar_pull((rx - dw / 2.0 + 0.02, pull_y, pull_z), pull_len, black, horizontal=False, parent=root)
+        # Porte gauche ouverte (showcase) : pivot vertical sur la charnière (bord
+        # gauche extérieur), la porte + sa poignée s'ouvrent vers l'avant (-Y).
+        open_deg = float(CONFIG.get("open_door_deg", 0) or 0)
+        if open_deg:
+            hinge_x = lx - dw / 2.0
+            bpy.ops.object.empty_add(location=(hinge_x, dcy + door_t / 2.0, dcz))
+            piv = bpy.context.object
+            piv.name = "MW_DoorPivot"
+            piv.parent = root
+            piv.matrix_parent_inverse = root.matrix_world.inverted()
+            for o in (ldoor, lpull):
+                o.parent = piv
+                o.matrix_parent_inverse = piv.matrix_world.inverted()
+            piv.rotation_euler.z = math.radians(-open_deg)  # +deg = ouvre vers l'avant
+            bpy.context.view_layer.update()
     return root
 
 
@@ -1086,7 +1113,7 @@ def build_flat_panel():
 
     if CONFIG.get("flat_style") == "shaker":
         # Porte shaker 5 pièces : 2 montants + 2 traverses + panneau encastré.
-        rw = 0.0572  # montants/traverses 2 1/4 po
+        rw = CONFIG.get("shaker_rail_m", 0.0254)  # largeur du rail selon le profil
         rw = min(rw, width / 3.0, height / 3.0)
         root = _flat_box(
             "Dilamco_Door_Stile_L",
@@ -1161,7 +1188,7 @@ def add_shaker_frame_to_pullouts(cabinet):
         h = zmax - zmin
         cx = (xmin + xmax) / 2.0
         cz = (zmin + zmax) / 2.0
-        rw = min(0.0254, w / 3.0, h / 3.0)  # cadre 1 po
+        rw = min(CONFIG.get("shaker_rail_m", 0.0254), w / 3.0, h / 3.0)  # cadre shaker (profil)
         t = 0.008                            # proéminence du cadre (panneau recessé)
         ry = ymin - t / 2.0                  # devant la face avant (front = -Y)
         _flat_box("PO_Shaker_StileL", (rw, t, h), (xmin + rw / 2.0, ry, cz), finish_mat, parent=cabinet)
@@ -1447,6 +1474,20 @@ def build_parser() -> argparse.ArgumentParser:
         default="preview",
     )
     parser.add_argument("--resolution", type=int, default=1400)
+    parser.add_argument(
+        "--profile",
+        choices=sorted(DOOR_PROFILES),
+        default=DEFAULT_PROFILE,
+        help="profil de porte (largeur du rail shaker) : shaker-1 (1 po) ou shaker-3 (3 po)",
+    )
+    parser.add_argument(
+        "--hdri",
+        type=str,
+        default="studio_kontrast_03_2k.exr",
+        help="nom du fichier HDRI dans pipeline/hdris/ (défaut: studio_kontrast_03)",
+    )
+    parser.add_argument("--hdri-strength", type=float, default=1.0)
+    parser.add_argument("--exposure", type=float, default=-0.1)
     return parser
 
 
@@ -1454,9 +1495,9 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     product = load_product(args.catalog, args.product_code)
     hb_config = infer_hb_config(product)
-    hdri = REPO_ROOT / "hdris" / "brown_photostudio_02_2k.exr"
+    hdri = REPO_ROOT / "hdris" / args.hdri
     if not hdri.is_file():
-        hdri = REPO_ROOT / "hdris" / "kloppenheim_02_puresky_2k.exr"
+        hdri = REPO_ROOT / "hdris" / "brown_photostudio_02_2k.exr"
     oak_diff = REPO_ROOT / "textures" / "oak_veneer_01_diff_2k.jpg"
     oak_rough = REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"
     white_rough = REPO_ROOT / "textures" / "laminate_floor_02_rough_2k.jpg"
@@ -1464,11 +1505,14 @@ def main(argv: list[str] | None = None) -> int:
     hb_config.update(
         {
             "output": str(args.output),
+            "door_profile": args.profile,
+            "shaker_rail_m": DOOR_PROFILES[args.profile]["rail_m"],
             "samples": QUALITY_SAMPLES[args.quality],
             "resolution": [args.resolution, args.resolution],
             "hdri": str(hdri) if hdri.is_file() else "",
-            "hdri_strength": 0.9,
+            "hdri_strength": args.hdri_strength,
             "hdri_rotation_deg": 235.0,
+            "exposure": args.exposure,
             "oak_diff": str(oak_diff),
             "oak_rough": str(oak_rough),
             "white_rough": str(white_rough),

@@ -15,7 +15,7 @@ import {
   resolveVariant,
   variantById,
 } from "@/lib/shop/models";
-import { productGalleryViews } from "@/lib/shop/photos";
+import { galleryViews } from "@/lib/shop/photos";
 import { localizeProductLabel, localizeColor } from "@/lib/shop/catalog-i18n";
 import { routes } from "@/lib/shop/routes";
 import type { ColorName, Molding } from "@/lib/shop/types";
@@ -148,7 +148,12 @@ export default function ProduitClient({ id }: { id: string }) {
   const baseAlt = localColor ? `${localName} — ${localColor}` : localName;
   const technicalSuffix =
     locale === "en" ? " (technical drawing)" : " (dessin technique)";
-  const views: GalleryView[] = productGalleryViews(product).map((v) => ({
+  // Galerie de la VARIANTE active (profil de porte) : changer Shaker 1↔3 po
+  // bascule sur le rendu dédié. Repli sur la galerie du produit si la variante
+  // n'a pas de galerie propre.
+  const views: GalleryView[] = galleryViews(
+    activeVariant.gallery ?? product.gallery,
+  ).map((v) => ({
     ...v,
     alt: /techni|dessin/i.test(v.label) ? `${baseAlt}${technicalSuffix}` : baseAlt,
   }));

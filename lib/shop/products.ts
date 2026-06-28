@@ -154,28 +154,40 @@ function deriveNames(p: RawProduct): { name: string; shortName?: string } {
   }
 }
 
-/** Rendus Blender (généré par dilamco_render/scripts/batch_render_catalog.py). */
+/** Rendus Blender (généré par .claude/skills/render-3d/pipeline). Une entrée = un
+ *  code → ses vues. La vue `face` est le rendu shaker-1 (défaut) ; les profils de
+ *  porte alternatifs vivent sur `face@<profil>` (ex. `face@shaker-3`). */
+type RenderViews = Record<string, string | undefined>;
 const rendersByCode = (
-  renderManifest as {
-    products: Record<string, { face?: string; technique?: string }>;
-  }
+  renderManifest as { products: Record<string, RenderViews> }
 ).products;
+
+/** Clé de vue manifest pour un profil de porte (défaut shaker-1 = `face`). */
+function viewKeyForProfil(profil?: string): string {
+  return profil && profil !== "shaker-1" ? `face@${profil}` : "face";
+}
 
 /** Retire le préfixe fournisseur (`F9-`, `S8-`, …) : le rendu d'un meuble est le même
  *  quel que soit le fournisseur, et le manifeste reste indexé sur l'ancien préfixe. */
 const stripVendorPrefix = (code: string) => code.replace(/^[A-Z]\d+-/, "");
 
-const rendersBySuffix = new Map<string, { face?: string; technique?: string }>();
+const rendersBySuffix = new Map<string, RenderViews>();
 for (const [k, v] of Object.entries(rendersByCode)) {
   rendersBySuffix.set(stripVendorPrefix(k), v);
 }
 
-function galleryFor(code: string): ProductGalleryEntry[] | undefined {
+/** Galerie d'un code pour un profil de porte donné. Le profil sélectionne la vue
+ *  `face@<profil>` ; si elle n'existe pas (rendu pas encore généré), on retombe
+ *  proprement sur la `face` shaker-1. */
+export function galleryFor(
+  code: string,
+  profil?: string,
+): ProductGalleryEntry[] | undefined {
   const render = rendersByCode[code] ?? rendersBySuffix.get(stripVendorPrefix(code));
-  if (!render?.face) return undefined;
-  const entries: ProductGalleryEntry[] = [
-    { src: render.face, label: "Produit" },
-  ];
+  if (!render) return undefined;
+  const face = render[viewKeyForProfil(profil)] ?? render.face;
+  if (!face) return undefined;
+  const entries: ProductGalleryEntry[] = [{ src: face, label: "Produit" }];
   if (render.technique) {
     entries.push({ src: render.technique, label: "Dessin technique" });
   }
