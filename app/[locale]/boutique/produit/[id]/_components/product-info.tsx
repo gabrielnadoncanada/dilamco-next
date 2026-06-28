@@ -225,12 +225,12 @@ function ProductReassurance({ product }: { product: Product }) {
         </AccordionTrigger>
         <AccordionContent className="text-xs leading-[1.6] text-soft-foreground">
           {t("accordion.questions.callUs")}{" "}
-          <a className="text-primary underline" href="tel:+15142225300">
-            514-222-5300
+          <a className="text-primary underline" href="tel:+15148200773">
+            514-820-0773
           </a>{" "}
           {t("accordion.questions.orEmail")}{" "}
-          <a className="text-primary underline" href="mailto:ventes@dilamco.ca">
-            ventes@dilamco.ca
+          <a className="text-primary underline" href="mailto:ventes@dilamco.com">
+            ventes@dilamco.com
           </a>
           . {t("accordion.questions.showroom")}
         </AccordionContent>

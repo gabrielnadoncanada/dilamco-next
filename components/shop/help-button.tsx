@@ -43,18 +43,18 @@ export function HelpButton() {
           <ul className="mt-4 flex flex-col gap-3 text-[13px]">
             <li>
               <a
-                href="tel:+15142225300"
+                href="tel:+15148200773"
                 className="flex items-center gap-2.5 text-foreground hover:text-primary"
               >
-                <Phone className="size-4 text-primary" /> 514-222-5300
+                <Phone className="size-4 text-primary" /> 514-820-0773
               </a>
             </li>
             <li>
               <a
-                href="mailto:ventes@dilamco.ca"
+                href="mailto:ventes@dilamco.com"
                 className="flex items-center gap-2.5 text-foreground hover:text-primary"
               >
-                <Mail className="size-4 text-primary" /> ventes@dilamco.ca
+                <Mail className="size-4 text-primary" /> ventes@dilamco.com
               </a>
             </li>
             <li className="flex items-start gap-2.5 text-soft-foreground">

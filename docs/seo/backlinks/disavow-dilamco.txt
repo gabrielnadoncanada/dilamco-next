@@ -1,0 +1,21 @@
+# Fichier disavow Dilamco — généré 2026-06-28 (audit backlinks DataForSEO)
+# À téléverser dans Google Search Console > Outil de désaveu :
+# https://search.google.com/search-console/disavow-links
+# NB : Google déconseille le disavow sauf action manuelle. Ces domaines sont
+# du spam évident (score >= 60), quasi tous nofollow/1 lien donc faible impact.
+# Désaveu PRÉVENTIF uniquement. Réviser avant envoi.
+
+domain:what-happens-next.xyz
+domain:australianwebdirectory.shop
+domain:australianwebdirectory.pro
+domain:smartwebdirectory.com
+domain:browseallexpireddomains.us
+domain:thebestbacklinksavailable.click
+domain:mundotecnologia.info
+domain:snn.gr
+domain:read.org.in
+domain:sergechel.info
+domain:musweb.org
+domain:globalecommerce.org
+domain:booksreadr.org
+domain:businessvocal.com
