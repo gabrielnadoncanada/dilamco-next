@@ -36,4 +36,4 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 ## 🙋 Actions HORS-CODE en attente (Gabriel)
 - [ ] **GA4** : marquer `generate_lead` comme événement clé (sinon 0 conversion mesurée). — *critique*
 - [ ] **GBP** : avis + photos + posts pour gagner le Local Pack (Pierrefonds). Levier des « 0 clic en pos #1 ».
-- [ ] **Après déploiement** : demander l'indexation des nouvelles URLs dans GSC (Inspection d'URL) — pages sinistre surtout (fenêtre post-inondation).
+- [x] **Indexation soumise (2026-06-29)** via Indexing API (compte de service, HTTP 200) pour les 3 URLs : apres-sinistre, water-damage, /espaces/cuisine. Les 2 pages sinistre étaient « inconnues de Google » avant. **→ Recontrôler le coverageState vers le 2026-07-02 (48-72 h)** : doit passer à « Submitted and indexed ». Si non, demander l'indexation manuellement dans l'UI GSC.
