@@ -1,10 +1,12 @@
 import type { PageTemplateData } from "@/features/page-builder";
 import type { AppLocale } from "@/i18n/routing";
 import { agrandissementMaisonPage } from "./agrandissement-de-maison";
+import { renovationApresSinistrePage } from "./apres-sinistre";
 import { renovationCuisinePage } from "./cuisine";
 import { renovationPlancherPage } from "./plancher";
 import { renovationSalleDeBainPage } from "./salle-de-bain";
 import { agrandissementMaisonPageEn } from "./agrandissement-de-maison.en";
+import { renovationApresSinistrePageEn } from "./apres-sinistre.en";
 import { renovationCuisinePageEn } from "./cuisine.en";
 import { renovationPlancherPageEn } from "./plancher.en";
 import { renovationSalleDeBainPageEn } from "./salle-de-bain.en";
@@ -14,6 +16,7 @@ const renovationPages = {
   "salle-de-bain": renovationSalleDeBainPage,
   plancher: renovationPlancherPage,
   "agrandissement-de-maison": agrandissementMaisonPage,
+  "apres-sinistre": renovationApresSinistrePage,
 };
 
 const renovationPagesEn: Partial<
@@ -23,6 +26,7 @@ const renovationPagesEn: Partial<
   "salle-de-bain": renovationSalleDeBainPageEn,
   plancher: renovationPlancherPageEn,
   "agrandissement-de-maison": agrandissementMaisonPageEn,
+  "apres-sinistre": renovationApresSinistrePageEn,
 };
 
 export const PUBLIC_RENOVATION_PAGE_TYPES = Object.keys(renovationPages);

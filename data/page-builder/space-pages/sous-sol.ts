@@ -232,8 +232,8 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Voir nos services",
-              href: "/services",
+              label: "Reconstruction après dégât d'eau",
+              href: "/services/renovation/apres-sinistre",
               variant: "ghost",
             },
           ],

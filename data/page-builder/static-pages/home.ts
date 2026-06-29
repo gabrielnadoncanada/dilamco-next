@@ -86,10 +86,10 @@ export const page: PageTemplateData = {
             "Accédez à la page pilier correspondante pour découvrir l'approche, les matériaux, des réalisations et une FAQ adaptée.",
           items: [
             {
-              title: "Armoires & cuisines sur mesure",
+              title: "Cuisine sur mesure et armoires",
               href: "/espaces/cuisine",
               description:
-                "Armoires de cuisine sur mesure : ergonomie, durabilité et coordination complète pour un résultat maîtrisé.",
+                "Cuisine sur mesure et armoires de cuisine sur mesure : îlot, ergonomie, durabilité et coordination complète pour un résultat maîtrisé.",
               image: {
                 src: "/images/generated/home/home-space-cuisine-card-01.webp",
                 alt: "Armoires de cuisine sur mesure haut de gamme",

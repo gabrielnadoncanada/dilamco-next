@@ -22,12 +22,13 @@ export const SPACE_EN: Record<string, string> = {
   commercial: "commercial",
 };
 
-// Valeurs de type de rénovation traduites (interne FR -> externe EN). Enum borné (4).
+// Valeurs de type de rénovation traduites (interne FR -> externe EN). Enum borné (5).
 export const RENOVATION_EN: Record<string, string> = {
   cuisine: "kitchen",
   "salle-de-bain": "bathroom",
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
+  "apres-sinistre": "water-damage",
 };
 
 // Valeurs de slug matériau traduites (interne FR -> externe EN). Enum borné (7).

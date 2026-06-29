@@ -4,22 +4,22 @@ import { SITE } from "@/seo/schema/site";
 export const cuisinePage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Armoires de cuisine sur mesure à Pierrefonds et Montréal",
+    title: "Cuisine sur mesure et armoires de cuisine | Pierrefonds, Montréal",
     description:
-      "Armoires et cuisines sur mesure haut de gamme : conception, fabrication contrôlée et pose précise à Pierrefonds, Montréal, Laval et le Grand Montréal.",
+      "Cuisine sur mesure et armoires de cuisine sur mesure haut de gamme : conception, îlot, fabrication contrôlée et pose précise à Pierrefonds, Montréal, Laval et le Grand Montréal.",
     path: "/espaces/cuisine",
-    ogAlt: "Armoires de cuisine sur mesure Dilamco",
+    ogAlt: "Cuisine sur mesure et armoires de cuisine Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Cuisine sur mesure", url: SITE.url + "/espaces/cuisine" },
   ],
   service: {
-    name: "Armoires et cuisines sur mesure",
+    name: "Cuisine sur mesure et armoires de cuisine",
     description:
-      "Conception, fabrication contrôlée et installation d'armoires et de cuisines sur mesure haut de gamme à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
+      "Conception, fabrication contrôlée et installation de cuisines sur mesure et d'armoires de cuisine sur mesure haut de gamme à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
     url: SITE.url + "/espaces/cuisine",
-    serviceType: "Armoires de cuisine sur mesure",
+    serviceType: "Cuisine sur mesure",
   },
   blocks: [
     {
@@ -31,9 +31,9 @@ export const cuisinePage: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Espaces",
           heading:
-            "Armoires et cuisines sur mesure à Pierrefonds et dans le Grand Montréal",
+            "Cuisine sur mesure et armoires de cuisine sur mesure à Pierrefonds et dans le Grand Montréal",
           description:
-            "Conception, fabrication contrôlée et installation précise d'armoires de cuisine sur mesure. Un espace durable et bien organisé, du plan à la finition — à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île et partout dans le Grand Montréal.",
+            "Conception, fabrication contrôlée et installation précise de cuisines sur mesure et d'armoires de cuisine sur mesure. Un espace durable et bien organisé, du plan à la finition — à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île et partout dans le Grand Montréal.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -82,6 +82,65 @@ export const cuisinePage: PageTemplateData = {
               label: "Voir le processus",
               href: "/processus",
               variant: "ghost",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "composition",
+      content: {
+        type: "grid",
+        variant: "icon-cards-bullets",
+        props: {
+          heading: "Ce qu'on conçoit dans une cuisine sur mesure",
+          intro:
+            "Une cuisine sur mesure ne se résume pas aux armoires. C'est un ensemble — îlot, rangement, hauteurs et zones de travail — pensé pour votre espace réel, en tant que fabricant et installateur.",
+          columns: "2",
+          items: [
+            {
+              title: "Îlot de cuisine sur mesure",
+              description:
+                "Pièce centrale, ajustée à la circulation et aux dimensions réelles.",
+              icon: "package2",
+              bullets: [
+                "Proportions et débord adaptés à l'espace.",
+                "Rangement, prises et coin repas intégrés au besoin.",
+                "Alignement net avec le reste de la cuisine.",
+              ],
+            },
+            {
+              title: "Rangement et garde-manger",
+              description:
+                "Un rangement pensé pour l'usage quotidien, pas ajouté après coup.",
+              icon: "doorOpen",
+              bullets: [
+                "Garde-manger, tiroirs profonds et espaces dédiés.",
+                "Accès logique aux zones de cuisson et de lavage.",
+                "Moins d'espace perdu, plus de fonctionnalité.",
+              ],
+            },
+            {
+              title: "Armoires hautes et finition au plafond",
+              description:
+                "Des armoires de cuisine sur mesure qui exploitent toute la hauteur.",
+              icon: "slidersHorizontal",
+              bullets: [
+                "Hauteurs ajustées jusqu'au plafond.",
+                "Moins de poussière, plus de rangement.",
+                "Lecture verticale propre et cohérente.",
+              ],
+            },
+            {
+              title: "Conception, fabrication et installation",
+              description:
+                "Un seul fabricant d'armoires de cuisine, du plan à la pose.",
+              icon: "wrench",
+              bullets: [
+                "Décisions cadrées tôt avec une seule équipe.",
+                "Fabrication contrôlée en atelier.",
+                "Pose et ajustements précis sur place.",
+              ],
             },
           ],
         },
@@ -284,6 +343,10 @@ export const cuisinePage: PageTemplateData = {
             {
               q: "Quelle est la différence avec des armoires standard ?",
               a: "Le sur mesure permet d'adapter précisément l'espace, d'améliorer la structure (bois massif, contreplaqué de bouleau) et de mieux contrôler le résultat final.",
+            },
+            {
+              q: "Concevez-vous des îlots de cuisine sur mesure ?",
+              a: "Oui. L'îlot est conçu avec la cuisine, pas ajouté après coup : proportions, débord, rangement intégré, prises et coin repas ajustés à la circulation et aux dimensions réelles de la pièce.",
             },
             {
               q: "Est-ce que vous faites aussi l'installation ?",

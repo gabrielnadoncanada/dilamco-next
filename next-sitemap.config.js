@@ -34,6 +34,7 @@ const RENOVATION_EN = {
   "salle-de-bain": "bathroom",
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
+  "apres-sinistre": "water-damage",
 };
 const MATERIAL_EN = {
   contreplaque: "plywood",

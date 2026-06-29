@@ -687,6 +687,29 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dilamco.com/en/services/renovation/apres-sinistre</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Basement rebuilt after water damage</image:caption>
+      <image:title>Basement rebuilt after water damage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
+      <image:caption>Floor rebuilt after water damage</image:caption>
+      <image:title>Floor rebuilt after water damage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
+      <image:caption>Kitchen rebuilt after water damage</image:caption>
+      <image:title>Kitchen rebuilt after water damage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-hero-01.webp</image:loc>
+      <image:caption>Flooring rebuilt after water damage</image:caption>
+      <image:title>Flooring rebuilt after water damage</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dilamco.com/en/services/renovation/bathroom</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
@@ -1811,6 +1834,29 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dilamco.com/services/renovation/apres-sinistre</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Sous-sol reconstruit après un dégât d&amp;#x27;eau</image:caption>
+      <image:title>Sous-sol reconstruit après un dégât d&amp;#x27;eau</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
+      <image:caption>Reconstruction d&amp;#x27;un plancher après dégât d&amp;#x27;eau</image:caption>
+      <image:title>Reconstruction d&amp;#x27;un plancher après dégât d&amp;#x27;eau</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
+      <image:caption>Reconstruction de cuisine après sinistre</image:caption>
+      <image:title>Reconstruction de cuisine après sinistre</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-hero-01.webp</image:loc>
+      <image:caption>Reconstruction de plancher après dégât d&amp;#x27;eau</image:caption>
+      <image:title>Reconstruction de plancher après dégât d&amp;#x27;eau</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dilamco.com/services/renovation/cuisine</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
@@ -2137,7 +2183,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-90-33-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=6885c6d4</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=5ca996b2</image:loc>
       <image:caption>Armoire de cuisine du bas coin 90º (33&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin 90º (33&quot;)</image:title>
     </image:image>
@@ -2145,7 +2191,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-90-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=99794407</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=3ea1adf4</image:loc>
       <image:caption>Armoire de cuisine du bas coin 90º (36&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin 90º (36&quot;)</image:title>
     </image:image>
@@ -2153,7 +2199,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-mort-42-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=fac2ef24</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=9525a96e</image:loc>
       <image:caption>Armoire de cuisine du bas coin mort (42&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin mort (42&quot;)</image:title>
     </image:image>
@@ -2161,7 +2207,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-mort-45-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=89cc587d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=c9f3798f</image:loc>
       <image:caption>Armoire de cuisine du bas coin mort (45&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin mort (45&quot;)</image:title>
     </image:image>
@@ -2169,7 +2215,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-mort-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=c90650ee</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=aa4df53a</image:loc>
       <image:caption>Armoire de cuisine du bas coin mort (48&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin mort (48&quot;)</image:title>
     </image:image>
@@ -2889,7 +2935,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-45-24-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=c3453ae7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=f83610ec</image:loc>
       <image:caption>Armoire de cuisine du haut coin 45º (24&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin 45º (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2897,7 +2943,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-45-24-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=1bdf1169</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=7a148b50</image:loc>
       <image:caption>Armoire de cuisine du haut coin 45º (24&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin 45º (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2905,7 +2951,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-45-24-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=6dde13c0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=68ff56cc</image:loc>
       <image:caption>Armoire de cuisine du haut coin 45º (24&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin 45º (24&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2913,7 +2959,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-30-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=98bc1107</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=44feffd4</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (30&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (30&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2921,7 +2967,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-30-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=a9b81b95</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=45d4d361</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (30&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (30&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2929,7 +2975,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-33-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=2f156579</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=f5a2ed32</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (33&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (33&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2937,7 +2983,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-33-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=61d311bb</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=7e21f674</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (33&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (33&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2945,7 +2991,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-36-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=053f1b29</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=7b1521c3</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (36&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (36&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2953,7 +2999,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-36-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=67fa3506</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=6c458f4d</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (36&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (36&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2961,7 +3007,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-24-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=649dfdf8</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=7a31745b</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2969,7 +3015,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-24-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=32e2f8d9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=c1543202</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2977,7 +3023,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-27-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=a730b067</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=20f4d34b</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2985,7 +3031,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-27-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=48bfee48</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=1ab429d7</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2993,7 +3039,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-27-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=80081c66</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=2346d8d9</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3041,7 +3087,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-blind-corner-cabinet-42-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=fac2ef24</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=9525a96e</image:loc>
       <image:caption>Base kitchen blind-corner cabinet (42&quot;)</image:caption>
       <image:title>Base kitchen blind-corner cabinet (42&quot;)</image:title>
     </image:image>
@@ -3049,7 +3095,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-blind-corner-cabinet-45-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=89cc587d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=c9f3798f</image:loc>
       <image:caption>Base kitchen blind-corner cabinet (45&quot;)</image:caption>
       <image:title>Base kitchen blind-corner cabinet (45&quot;)</image:title>
     </image:image>
@@ -3057,7 +3103,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-blind-corner-cabinet-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=c90650ee</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=aa4df53a</image:loc>
       <image:caption>Base kitchen blind-corner cabinet (48&quot;)</image:caption>
       <image:title>Base kitchen blind-corner cabinet (48&quot;)</image:title>
     </image:image>
@@ -3361,7 +3407,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-corner-cabinet-90-33-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=6885c6d4</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=5ca996b2</image:loc>
       <image:caption>Base kitchen corner cabinet 90º (33&quot;)</image:caption>
       <image:title>Base kitchen corner cabinet 90º (33&quot;)</image:title>
     </image:image>
@@ -3369,7 +3415,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-corner-cabinet-90-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=99794407</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=3ea1adf4</image:loc>
       <image:caption>Base kitchen corner cabinet 90º (36&quot;)</image:caption>
       <image:title>Base kitchen corner cabinet 90º (36&quot;)</image:title>
     </image:image>
@@ -3577,7 +3623,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-30-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=98bc1107</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=44feffd4</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (30&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (30&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3585,7 +3631,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-30-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=a9b81b95</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=45d4d361</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (30&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (30&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3593,7 +3639,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-33-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=2f156579</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=f5a2ed32</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (33&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (33&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3601,7 +3647,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-33-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=61d311bb</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=7e21f674</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (33&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (33&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3609,7 +3655,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-36-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=053f1b29</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=7b1521c3</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (36&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (36&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3617,7 +3663,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-36-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=67fa3506</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=6c458f4d</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (36&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (36&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4121,7 +4167,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-24-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=649dfdf8</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=7a31745b</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4129,7 +4175,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-24-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=32e2f8d9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=c1543202</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4137,7 +4183,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-27-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=a730b067</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=20f4d34b</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4145,7 +4191,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-27-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=48bfee48</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=1ab429d7</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4153,7 +4199,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-27-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=80081c66</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=2346d8d9</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 48&quot;)</image:title>
     </image:image>
@@ -4161,7 +4207,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=c3453ae7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=f83610ec</image:loc>
       <image:caption>Wall kitchen corner cabinet 45º (24&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen corner cabinet 45º (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4169,7 +4215,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=1bdf1169</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=7a148b50</image:loc>
       <image:caption>Wall kitchen corner cabinet 45º (24&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen corner cabinet 45º (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4177,7 +4223,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=6dde13c0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=68ff56cc</image:loc>
       <image:caption>Wall kitchen corner cabinet 45º (24&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen corner cabinet 45º (24&quot; x 48&quot;)</image:title>
     </image:image>

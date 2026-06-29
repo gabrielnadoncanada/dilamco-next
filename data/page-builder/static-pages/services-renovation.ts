@@ -145,6 +145,18 @@ export const page: PageTemplateData = {
               badges: ["Agrandissement", "Exécution"],
               footerCtaLabel: "Voir agrandissement",
             },
+            {
+              title: "Rénovation après sinistre",
+              href: "/services/renovation/apres-sinistre",
+              description:
+                "Reconstruction après dégât d'eau ou inondation, avec accompagnement de la réclamation d'assurance.",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Rénovation après sinistre",
+              },
+              badges: ["Après dégât d'eau", "Reconstruction"],
+              footerCtaLabel: "Voir après sinistre",
+            },
           ],
         },
       },
