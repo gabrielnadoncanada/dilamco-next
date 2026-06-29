@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Cuisines, vanités et armoires sur mesure à Montréal | Dilamco",
+    title: "Cuisiniste à Montréal — cuisines et armoires sur mesure | Dilamco",
     description:
-      "Dilamco conçoit et réalise des cuisines, vanités et armoires sur mesure haut de gamme.",
+      "Dilamco, cuisiniste à Pierrefonds et Montréal : conception, fabrication et installation de cuisines, armoires, vanités et rangements sur mesure haut de gamme. Demandez une soumission.",
     path: "/",
     ogAlt: "Dilamco, sur mesure, durable, bien exécuté",
   },
@@ -26,9 +26,9 @@ export const page: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Espaces",
           heading:
-            "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
+            "Cuisiniste et ébéniste sur mesure à Montréal : cuisine, salle de bain, rangement et commercial",
           description:
-            "Chaque espace a ses contraintes. Notre rôle est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien exécutées.",
+            "Cuisiniste basé à Pierrefonds-Roxboro, on conçoit, fabrique et installe cuisines, armoires, vanités et rangements sur mesure. Chaque espace a ses contraintes : notre rôle est de livrer des solutions durables, fonctionnelles et bien exécutées.",
           actions: [
             {
               label: "Obtenir une soumission",

@@ -12,15 +12,19 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 ## ⏳ Positions à surveiller (effet des actions — recontrôler chaque semaine)
 | Mot-clé | Vol Qc | KD | Pos départ | Page | Action / date | Cible |
 |---|---|---|---|---|---|---|
+| **cuisiniste** | **14 800** | **17** | absent (pas de page ciblée) | Home | Home optimisée 2026-06-29 (title/H1/desc) + catégorie GBP cuisiniste | top 10 — gros volume transactionnel |
 | cuisine sur mesure | 320 | 14 | **absent top 30** (2026-06-29) | /espaces/cuisine | Porte élargie 2026-06-29 | top 10 |
 | armoire(s) de cuisine sur mesure | 420 | 5 | ~p.2 (pos ~20) | /espaces/cuisine | Élargissement + profondeur 2026-06-29 | p.1 |
 | renovation cuisine pierrefonds-roxboro | 78 imp | — | pos 21 / 0 clic | /services/renovation/apres-sinistre | Page créée 2026-06-29 | indexation + top 10 |
-| rénovation de cuisine | 210 | 1 | à mesurer | /services/renovation/cuisine | (backlog) | top 5 |
+| rénovation de cuisine | 210 | 1 | **absent top 20** (2026-06-29) | /services/renovation/cuisine | Section prix + FAQ prix/étapes ajoutées 2026-06-29 (intent informationnel) | top 10 |
 | armoires de cuisine laval | 140 | 15 | à mesurer | (pas de page) | (backlog) | créer page géo |
 
 ## ✅ Actions réalisées
 
 ### 2026-06-29
+- **Analyse concurrents (Cuisines Action) + volumes/KD vérifiés** : découverte « cuisiniste » = 14 800/mois Qc, **KD 17**, intent transactionnel — meilleur ROI du marché. Concurrents captent sur termes métier génériques (cuisiniste, cuisine, armoires de cuisine, comptoir), pas sur géo-local. Confirmé : tous les « X pierrefonds/quartier » = ~0 volume (impressions GSC = bruit).
+- **`/services/renovation/cuisine` optimisée pour l'intention** : SERP « rénovation de cuisine » = informationnel/prix (PAA tous sur le prix, top = guides/prix). Title déjà bon → vrai blocage = intent mismatch. Ajout section « Combien coûte une rénovation de cuisine au Québec » (fourchettes marché) + 2 FAQ prix/étapes. Build vert. KD 1 → gagnable.
+- **Home optimisée pour « cuisiniste »** — `static-pages/home.ts` : title « Cuisiniste à Montréal — cuisines et armoires sur mesure », H1 « Cuisiniste et ébéniste sur mesure à Montréal… », description. Build vert. (EN non touché : terme FR.)
 - **Page rénovation après sinistre (FR + EN)** créée — `data/page-builder/renovation-pages/apres-sinistre.ts` + `.en.ts`. URLs `/services/renovation/apres-sinistre` (FR) et `/en/services/renovation/water-damage` (EN). Slug ajouté à `RENOVATION_EN` (i18n-path.ts + next-sitemap.config.js). Maillage : hub renovation + page sous-sol. Angle reconstruction + assurance, local Pierrefonds. Build vert, au sitemap + hreflang.
 - **Porte « cuisine sur mesure »** — `/espaces/cuisine` élargie (title/H1/schema), nouveau bloc profondeur (îlot KD 12, garde-manger, armoires hautes, fabricant), FAQ îlot, ancre home renforcée. Build vert.
 - **Analyse KW ROI** vérifiée DataForSEO → `docs/seo/keyword-opportunities-2026-06-29.md` + mémoire `keyword-opportunities-cuisine-2026-06-29`.
@@ -29,11 +33,20 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 ## 📋 Backlog priorisé (ROI)
 1. Quick win **`rénovation de cuisine`** (KD 1, page existe) — optimiser title/H1.
 2. **Page géo Laval** « armoires de cuisine laval » (140, KD 15).
+2 bis. **Pousser `/espaces/walk-in`** : « garde-robe sur mesure » = 320/mois (autant que cuisine sur mesure), page existe.
+2 ter. **Créer page « meuble de chambre sur mesure »** (aucune page ; Dilamco fait meubles de chambre + cellier). Vérifier volumes/KD d'abord.
 3. **Espaces haut de gamme** restants : walk-in pantry, cellier, bibliothèque (mémoire `seo-espaces-haut-de-gamme`).
 4. **Boutique (long terme)** : enrichir `/boutique/armoires-cuisine` + `/boutique/vanites` pour les gros volumes produit (8 100 / 12 100).
 5. **Link building local** (mémoire `backlinks-link-gap-cibles-2026-06-28`) — nécessaire pour passer p.1 sur « cuisine sur mesure ».
 
 ## 🙋 Actions HORS-CODE en attente (Gabriel)
 - [ ] **GA4** : marquer `generate_lead` comme événement clé (sinon 0 conversion mesurée). — *critique*
-- [ ] **GBP** : avis + photos + posts pour gagner le Local Pack (Pierrefonds). Levier des « 0 clic en pos #1 ».
+- [x] **GBP catégorie principale changée (2026-06-29)** : « Entreprise de construction » → **« Entreprise de réaménagement de cuisine »** (Kitchen remodeler, = #1 Local Pack Tendances Concept). Fait via Chrome, soumis, **en attente d'examen Google (~10 min à qq jours)**. → Vérifier que c'est appliqué + que le Local Pack bouge sur « cuisine/armoires sur mesure ».
+- [x] **GBP services (2026-06-29)** : ajoutés via Chrome — Fabrication de placards de cuisine personnalisés, Conception de cuisines, Conception de placards, Pose de placards, Montage de meubles.
+- [x] **GBP post (2026-06-29)** : 1er post publié « cuisine sur mesure » + bouton En savoir plus → /espaces/cuisine.
+- [ ] **GBP photos** : PAS fait — besoin de savoir quelles photos uploader (docs/media a des fichiers à noms ambigus ; ne pas uploader au hasard sur fiche publique). Gabriel choisit / uploade.
+- [ ] **GBP Q&R** : NON faisable en desktop (section absente de la recherche Google ET de Maps pour cette catégorie). → à faire via **app mobile Google Maps** (fiche → Questions et réponses → Poser une question, puis y répondre en tant que propriétaire). Liste de 5 Q/R prête dans `gbp-plan-2026-06-29.md`.
+- [ ] **GBP secondaires** : « Entreprise de réaménagement de salle de bain » (vanités) + « Ébéniste » (meubles/garde-robes). Dropdown autocomplete sort de l'écran en automation → manuel (30 s).
+- [ ] **GBP description** : laissée telle quelle (refus utilisateur). Nouvelle version dispo dans le plan si besoin.
+- Fiche : 5,0/11 avis, place_id `ChIJkS849KM7yUwRI2hE7w3ERRA`. Système d'avis = lien direct + templates dans le plan.
 - [x] **Indexation soumise (2026-06-29)** via Indexing API (compte de service, HTTP 200) pour les 3 URLs : apres-sinistre, water-damage, /espaces/cuisine. Les 2 pages sinistre étaient « inconnues de Google » avant. **→ Recontrôler le coverageState vers le 2026-07-02 (48-72 h)** : doit passer à « Submitted and indexed ». Si non, demander l'indexation manuellement dans l'UI GSC.

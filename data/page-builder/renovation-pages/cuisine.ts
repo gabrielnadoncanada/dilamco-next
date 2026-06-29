@@ -188,6 +188,36 @@ export const renovationCuisinePage: PageTemplateData = {
       },
     },
     {
+      id: "prix",
+      content: {
+        type: "split",
+        variant: "text-divider-cards",
+        props: {
+          heading: "Combien coûte une rénovation de cuisine au Québec ?",
+          description:
+            "Le prix d'une rénovation de cuisine dépend surtout de la portée des travaux, des matériaux, des dimensions et de la coordination requise. À titre indicatif pour le marché québécois en 2026 — la soumission précise vient après le cadrage du projet :",
+          cards: [
+            {
+              title: "Entrée de gamme — à partir d'environ 20 000 $",
+              description:
+                "Rafraîchissement : surfaces, portes, comptoir, sans modifier l'agencement ni la plomberie.",
+            },
+            {
+              title: "Rénovation sur mesure — 35 000 $ à 50 000 $ et +",
+              description:
+                "Armoires et îlot sur mesure, matériaux durables (bois massif, contreplaqué de bouleau), agencement revu et coordination complète. Le créneau de Dilamco.",
+            },
+            {
+              title: "Ce qui fait varier le prix",
+              description:
+                "Dimensions de la pièce, déplacement de plomberie ou d'électricité, électroménagers intégrés, niveau de finition et complexité de la coordination.",
+            },
+          ],
+          columns: "1",
+        },
+      },
+    },
+    {
       id: "technical",
       content: {
         type: "grid",
@@ -339,6 +369,14 @@ export const renovationCuisinePage: PageTemplateData = {
           intro:
             "Réponses claires sur délais, condo, coordination et portée du projet.",
           items: [
+            {
+              q: "Quel est le prix moyen d'une rénovation de cuisine au Québec?",
+              a: "En 2026, une rénovation de cuisine complète se situe souvent autour de 35 000 $ à 40 000 $. L'entrée de gamme (rafraîchissement) démarre vers 20 000 $, tandis qu'une cuisine sur mesure haut de gamme dépasse fréquemment 45 000 $. Le prix dépend surtout de l'agencement, des matériaux et de la coordination.",
+            },
+            {
+              q: "Par où commencer une rénovation de cuisine?",
+              a: "Par le cadrage : clarifier la portée, les contraintes techniques, le budget et la séquence des travaux. C'est cette étape qui évite les reprises et les mauvaises surprises. Viennent ensuite le design, la fabrication des armoires sur mesure, la coordination et l'installation.",
+            },
             {
               q: "Combien de temps dure une rénovation de cuisine?",
               a: "La durée varie selon la portée, les contraintes du lieu et la coordination requise.",
