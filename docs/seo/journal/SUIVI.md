@@ -16,7 +16,7 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 | cuisine sur mesure | 320 | 14 | **absent top 30** (2026-06-29) | /espaces/cuisine | Porte élargie 2026-06-29 | top 10 |
 | armoire(s) de cuisine sur mesure | 420 | 5 | ~p.2 (pos ~20) | /espaces/cuisine | Élargissement + profondeur 2026-06-29 | p.1 |
 | **garde-robe sur mesure** | 320 | — | **pos 37** (1 imp — page cible « walk-in » pas « garde-robe ») | /espaces/walk-in | Reciblé « garde-robe sur mesure » 2026-07-01 (title/H1/FAQ + ancre home) | p.1 |
-| vanité sur mesure | 140 | — | ~pos 20 (p.2) | /espaces/salle-de-bain | (backlog — même reciblage à faire) | p.1 |
+| vanité sur mesure | 140 | — | ~pos 20 (p.2) | /espaces/salle-de-bain | Profondeur ajoutée 2026-07-01 (bloc « types de vanités ») ; ciblage/ancre home déjà bons | p.1 |
 | renovation cuisine pierrefonds-roxboro | 78 imp | — | pos 21 / 0 clic | /services/renovation/apres-sinistre | Page créée 2026-06-29 | indexation + top 10 |
 | rénovation de cuisine | 210 | 1 | **absent top 20** (2026-06-29) | /services/renovation/cuisine | Section prix + FAQ prix/étapes ajoutées 2026-06-29 (intent informationnel) | top 10 |
 | armoires de cuisine laval | 140 | 15 | à mesurer | (pas de page) | (backlog) | créer page géo |

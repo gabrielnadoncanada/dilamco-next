@@ -90,6 +90,65 @@ export const salleDeBainPage: PageTemplateData = {
       },
     },
     {
+      id: "types",
+      content: {
+        type: "grid",
+        variant: "icon-cards-bullets",
+        props: {
+          heading: "Les types de vanités sur mesure qu'on fabrique",
+          intro:
+            "Une vanité sur mesure s'adapte à votre pièce, à votre plomberie et à vos besoins de rangement — pas l'inverse. Voici les configurations les plus fréquentes.",
+          columns: "2",
+          items: [
+            {
+              title: "Vanité simple lavabo",
+              description:
+                "Pour les salles de bain compactes et les salles d'eau.",
+              icon: "package2",
+              bullets: [
+                "Largeur ajustée au mur disponible.",
+                "Rangement optimisé sous le lavabo.",
+                "Idéale pour petites surfaces.",
+              ],
+            },
+            {
+              title: "Vanité double lavabo",
+              description:
+                "Pour les salles de bain principales partagées.",
+              icon: "slidersHorizontal",
+              bullets: [
+                "Deux lavabos et plans de travail dédiés.",
+                "Colonne ou tiroirs centraux au besoin.",
+                "Ergonomie pensée pour deux personnes.",
+              ],
+            },
+            {
+              title: "Vanité suspendue (murale)",
+              description:
+                "Look épuré et entretien du plancher facilité.",
+              icon: "doorOpen",
+              bullets: [
+                "Fixation murale robuste.",
+                "Sensation d'espace dans les petites pièces.",
+                "Hauteur ajustée à votre usage.",
+              ],
+            },
+            {
+              title: "Vanité avec rangement",
+              description:
+                "Tiroirs profonds, colonne et organisation intégrée.",
+              icon: "wrench",
+              bullets: [
+                "Tiroirs en bois massif de bouleau.",
+                "Rangement adapté aux produits et serviettes.",
+                "Accès logique et finition cohérente.",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "process",
       content: {
         type: "process",
