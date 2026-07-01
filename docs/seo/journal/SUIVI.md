@@ -23,6 +23,10 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 
 ## ✅ Actions réalisées
 
+### 2026-07-01
+- **Passe maillage interne** : constaté que home→piliers (ancres OK) et projets→piliers (`requiredLinks.spaceHref`) existent déjà. Ajout des liens **croisés piliers↔piliers** manquants avec ancres à mots-clés : cuisine→salle-de-bain (« vanité de salle de bain sur mesure »), salle-de-bain→cuisine (« cuisine sur mesure »), walk-in→cuisine. NB : blocs `list-actions-image-card` limités à 2 actions (Zod) → liens boutique retirés des piliers (accessibles ailleurs). Maillage croisé complet via bloc dédié `link-cards` = amélioration future.
+- **Profondeur** : /espaces/salle-de-bain bloc « types de vanités » ; /espaces/walk-in reciblé « garde-robe sur mesure ».
+
 ### 2026-06-29
 - **Analyse concurrents (Cuisines Action) + volumes/KD vérifiés** : découverte « cuisiniste » = 14 800/mois Qc, **KD 17**, intent transactionnel — meilleur ROI du marché. Concurrents captent sur termes métier génériques (cuisiniste, cuisine, armoires de cuisine, comptoir), pas sur géo-local. Confirmé : tous les « X pierrefonds/quartier » = ~0 volume (impressions GSC = bruit).
 - **`/services/renovation/cuisine` optimisée pour l'intention** : SERP « rénovation de cuisine » = informationnel/prix (PAA tous sur le prix, top = guides/prix). Title déjà bon → vrai blocage = intent mismatch. Ajout section « Combien coûte une rénovation de cuisine au Québec » (fourchettes marché) + 2 FAQ prix/étapes. Build vert. KD 1 → gagnable.

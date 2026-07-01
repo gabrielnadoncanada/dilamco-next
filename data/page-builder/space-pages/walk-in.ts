@@ -158,8 +158,8 @@ export const walkInPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Voir nos espaces",
-              href: "/",
+              label: "Cuisine sur mesure",
+              href: "/espaces/cuisine",
               variant: "ghost",
             },
           ],

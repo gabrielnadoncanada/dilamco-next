@@ -219,8 +219,8 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Vanités en stock",
-              href: "/boutique/vanites",
+              label: "Cuisine sur mesure",
+              href: "/espaces/cuisine",
               variant: "ghost",
             },
           ],
