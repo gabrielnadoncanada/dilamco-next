@@ -71,6 +71,7 @@ def texture_paths() -> dict:
         "hdri": str(hdri) if hdri.is_file() else "",
         "hdri_strength": 1.0,
         "hdri_rotation_deg": 235.0,
+        "material_lib": str(REPO_ROOT / "materials" / "dilamco_materials.blend"),
         "oak_diff": str(REPO_ROOT / "textures" / "oak_veneer_01_diff_2k.jpg"),
         "oak_rough": str(REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"),
         "white_rough": str(REPO_ROOT / "textures" / "laminate_floor_02_rough_2k.jpg"),

@@ -586,13 +586,26 @@ def build_white_material():
 
 
 def build_oak_material():
-    # Mélamine Chêne blanc à partir des textures PBR Polyhaven (oak_veneer_01).
-    # Projection box sur coordonnées objet : pas besoin d'UVs sur les meshes
-    # générés par geonodes, et le grain reste vertical sur les façades.
+    # Chêne blanc. PRIORITÉ : si une librairie de matériaux existe (réglée À LA
+    # MAIN dans Blender par Gabriel), on charge SON matériau « Dilamco_Oak_Melamine »
+    # tel quel — c'est la source de vérité. Sinon, fallback procédural ci-dessous.
     name = "Dilamco_Oak_Melamine"
     mat = bpy.data.materials.get(name)
     if mat:
         return mat
+    libpath = CONFIG.get("material_lib") or ""
+    if libpath and Path(libpath).is_file():
+        try:
+            with bpy.data.libraries.load(libpath, link=False) as (src, dst):
+                if name in src.materials:
+                    dst.materials = [name]
+            m = bpy.data.materials.get(name)
+            if m:
+                log("Chêne: matériau chargé depuis la librairie " + libpath)
+                return m
+            log("Chêne: '" + name + "' absent de la librairie, fallback procédural")
+        except Exception as exc:
+            log("Chêne: échec chargement librairie (" + str(exc) + "), fallback procédural")
     mat = bpy.data.materials.new(name)
     mat.use_nodes = True
     nt = mat.node_tree
@@ -602,24 +615,63 @@ def build_oak_material():
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
     texco = nt.nodes.new("ShaderNodeTexCoord")
     mapping = nt.nodes.new("ShaderNodeMapping")
-    mapping.inputs["Scale"].default_value = (0.8, 0.8, 0.8)
-
-    diff = nt.nodes.new("ShaderNodeTexImage")
-    diff.image = bpy.data.images.load(CONFIG["oak_diff"], check_existing=True)
-    diff.projection = "BOX"
-    diff.projection_blend = 0.25
-
-    rough = nt.nodes.new("ShaderNodeTexImage")
-    rough.image = bpy.data.images.load(CONFIG["oak_rough"], check_existing=True)
-    rough.image.colorspace_settings.name = "Non-Color"
-    rough.projection = "BOX"
-    rough.projection_blend = 0.25
-
+    scale = float(CONFIG.get("oak_scale", 2.2))
+    mapping.inputs["Scale"].default_value = (scale, scale, scale)
     nt.links.new(texco.outputs["Object"], mapping.inputs["Vector"])
-    nt.links.new(mapping.outputs["Vector"], diff.inputs["Vector"])
-    nt.links.new(mapping.outputs["Vector"], rough.inputs["Vector"])
-    nt.links.new(diff.outputs["Color"], bsdf.inputs["Base Color"])
+
+    def box_img(path, non_color):
+        n = nt.nodes.new("ShaderNodeTexImage")
+        n.image = bpy.data.images.load(path, check_existing=True)
+        if non_color:
+            n.image.colorspace_settings.name = "Non-Color"
+        n.projection = "BOX"
+        n.projection_blend = 0.12  # couture box plus nette (évite les « chips » de coin)
+        nt.links.new(mapping.outputs["Vector"], n.inputs["Vector"])
+        return n
+
+    # ALBEDO (vrai PBR ambientCG). Teinte optionnelle (multiply) pour accorder le
+    # placage à la teinte exacte du Chêne blanc Dilamco sans perdre le grain.
+    diff = box_img(CONFIG["oak_diff"], False)
+    color_out = diff.outputs["Color"]
+    # HSV : désaturer / éclaircir le placage vers le ton exact du Chêne blanc.
+    hsv = nt.nodes.new("ShaderNodeHueSaturation")
+    hsv.inputs["Hue"].default_value = float(CONFIG.get("oak_hue", 0.5))
+    hsv.inputs["Saturation"].default_value = float(CONFIG.get("oak_sat", 1.0))
+    hsv.inputs["Value"].default_value = float(CONFIG.get("oak_val", 1.0))
+    nt.links.new(color_out, hsv.inputs["Color"])
+    color_out = hsv.outputs["Color"]
+    tint = CONFIG.get("oak_tint")
+    if tint:
+        mix = nt.nodes.new("ShaderNodeMixRGB")
+        mix.blend_type = "MULTIPLY"
+        mix.inputs["Fac"].default_value = 1.0
+        mix.inputs["Color2"].default_value = (tint[0], tint[1], tint[2], 1.0)
+        nt.links.new(color_out, mix.inputs["Color1"])
+        color_out = mix.outputs["Color"]
+    nt.links.new(color_out, bsdf.inputs["Base Color"])
+
+    # ROUGHNESS
+    rough = box_img(CONFIG["oak_rough"], True)
     nt.links.new(rough.outputs["Color"], bsdf.inputs["Roughness"])
+
+    # RELIEF du grain (sort du « sticker plat »). Si on a une vraie normal map PBR
+    # on l'utilise ; sinon (swatch photo) on dérive un Bump de la luminance de
+    # l'albedo → le grain devient du relief réel, calé sur CE grain.
+    nor_path = CONFIG.get("oak_normal") or ""
+    if nor_path and Path(nor_path).is_file():
+        nor = box_img(nor_path, True)
+        nmap = nt.nodes.new("ShaderNodeNormalMap")
+        nmap.inputs["Strength"].default_value = float(CONFIG.get("oak_normal_strength", 0.6))
+        nt.links.new(nor.outputs["Color"], nmap.inputs["Color"])
+        nt.links.new(nmap.outputs["Normal"], bsdf.inputs["Normal"])
+    else:
+        bump = nt.nodes.new("ShaderNodeBump")
+        bump.inputs["Strength"].default_value = float(CONFIG.get("oak_bump_strength", 0.30))
+        bump.inputs["Distance"].default_value = 0.0015
+        bump.invert = True  # grain foncé = creux
+        nt.links.new(diff.outputs["Color"], bump.inputs["Height"])
+        nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
     if "Specular IOR Level" in bsdf.inputs:
         bsdf.inputs["Specular IOR Level"].default_value = 0.3
     nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
@@ -646,6 +698,29 @@ def material(name, color, roughness=0.5, metallic=0.0, coat=0.0, specular=None):
         bsdf.inputs["Specular IOR Level"].default_value = specular
     mat.node_tree.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
     return mat
+
+
+def build_maple_interior():
+    # Érable/bouleau INTÉRIEUR (boîtes de tiroir, fonds, coins, niches). PRIORITÉ :
+    # le matériau réglé À LA MAIN par Gabriel dans la librairie .blend (texture
+    # réelle + relief) ; sinon, aplat de secours (ancien comportement).
+    name = "Dilamco_Product_Maple_Interior"
+    mat = bpy.data.materials.get(name)
+    if mat:
+        return mat
+    libpath = CONFIG.get("material_lib") or ""
+    if libpath and Path(libpath).is_file():
+        try:
+            with bpy.data.libraries.load(libpath, link=False) as (src, dst):
+                if name in src.materials:
+                    dst.materials = [name]
+            m = bpy.data.materials.get(name)
+            if m:
+                log("Érable: matériau chargé depuis la librairie")
+                return m
+        except Exception as exc:
+            log("Érable: échec chargement librairie (" + str(exc) + "), aplat")
+    return material(name, (0.74, 0.66, 0.50, 1), 0.55)
 
 
 def assign_material(obj, mat):
@@ -693,11 +768,13 @@ def normalize_product_materials(cabinet):
     # should never render.
     white = material("Dilamco_Product_White_Satin", (0.78, 0.775, 0.745, 1), 0.34, coat=0.10)
     # Érable clair (blonde), peu saturé — évite le rebond chaud sur le toe-kick.
-    maple = material("Dilamco_Product_Maple_Interior", (0.74, 0.66, 0.50, 1), 0.55)
+    maple = build_maple_interior()
     black = material("Dilamco_Product_Matte_Black_Pull", (0.015, 0.015, 0.015, 1), 0.80, 0.0, specular=0.05)
-    # Intérieur : BLANC pour un caisson blanc (mélamine blanche), érable clair pour
-    # le chêne. Un caisson blanc n'a pas d'intérieur bois (sinon rebond beige).
-    interior_mat = maple if CONFIG.get("finish_type") == "oak" else white
+    # Intérieur = TOUJOURS érable/bouleau naturel — c'est la réalité Dilamco :
+    # extérieur blanc OU chêne, mais intérieur en contreplaqué naturel (confirmé
+    # par les photos showroom). (Avant : on mettait du blanc pour les caissons
+    # blancs — faux.)
+    interior_mat = maple
 
     # HB's pull finish materials use metallic=1.0, which mirrors the HDRI sky
     # and reads as stainless instead of matte black. Tame the existing material
@@ -1050,6 +1127,10 @@ def build_microwave_cabinet():
     H = float(CONFIG["height_m"])
     D = float(CONFIG["depth_m"])
     finish = build_oak_material() if CONFIG.get("finish_type") == "oak" else build_white_material()
+    # INTÉRIEUR = contreplaqué NATUREL érable/bouleau (matériau réglé en librairie),
+    # même pour un caisson blanc — réalité Dilamco. On pose un « liner » bois sur
+    # les faces intérieures visibles.
+    interior = build_maple_interior()
     black = material("Dilamco_Product_Matte_Black_Pull", (0.015, 0.015, 0.015, 1), 0.80, 0.0, specular=0.05)
     t = 0.0175
     open_h = min(0.4064, H * 0.45)  # niche micro-ondes ~16 po en bas
@@ -1058,7 +1139,17 @@ def build_microwave_cabinet():
     _flat_box("MW_Left", (t, D, H), (-W / 2.0 + t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("MW_Right", (t, D, H), (W / 2.0 - t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("MW_Back", (W - 2.0 * t, t, H), (0.0, D / 2.0 - t / 2.0, H / 2.0), finish, parent=root)
-    _flat_box("MW_Shelf", (W - 2.0 * t, D - t, t), (0.0, -t / 2.0, open_h), finish, parent=root)
+    _flat_box("MW_Shelf", (W - 2.0 * t, D - t, t), (0.0, -t / 2.0, open_h), interior, parent=root)
+    # Liner bois sur fond, côtés, plancher et plafond intérieurs.
+    lt = 0.003
+    yi = -t / 2.0
+    di = D - t
+    hi = H - 2.0 * t
+    _flat_box("MW_LinerBack", (W - 2.0 * t, lt, hi), (0.0, D / 2.0 - t - lt / 2.0, H / 2.0), interior, parent=root)
+    _flat_box("MW_LinerLeft", (lt, di, hi), (-W / 2.0 + t + lt / 2.0, yi, H / 2.0), interior, parent=root)
+    _flat_box("MW_LinerRight", (lt, di, hi), (W / 2.0 - t - lt / 2.0, yi, H / 2.0), interior, parent=root)
+    _flat_box("MW_LinerFloor", (W - 2.0 * t, di, lt), (0.0, yi, t + lt / 2.0), interior, parent=root)
+    _flat_box("MW_LinerCeil", (W - 2.0 * t, di, lt), (0.0, yi, H - t - lt / 2.0), interior, parent=root)
     door_t = 0.019
     reveal = 0.003
     zone_h = H - open_h
@@ -1263,11 +1354,8 @@ def build_blind_corner_cabinet():
     D = float(CONFIG["depth_m"])
     is_base = CONFIG.get("cabinet_type") == "BASE"
     finish = build_oak_material() if CONFIG.get("finish_type") == "oak" else build_white_material()
-    # Intérieur : blanc pour caisson blanc, érable clair pour chêne (pas de rebond chaud).
-    if CONFIG.get("finish_type") == "oak":
-        interior_mat = material("Dilamco_Product_Maple_Interior", (0.74, 0.66, 0.50, 1), 0.55)
-    else:
-        interior_mat = build_white_material()
+    # Intérieur = TOUJOURS érable/bouleau naturel (réalité Dilamco, blanc ET chêne).
+    interior_mat = build_maple_interior()
     black = material("Dilamco_Product_Matte_Black_Pull", (0.015, 0.015, 0.015, 1), 0.80, 0.0, specular=0.05)
     t = 0.0175
     tkh = 0.1143 if is_base else 0.0
@@ -1488,6 +1576,14 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--hdri-strength", type=float, default=1.0)
     parser.add_argument("--exposure", type=float, default=-0.1)
+    parser.add_argument("--oak-set", type=str, default="real",
+                        help="'real' = swatch photo Chêne blanc Dilamco ; sinon dossier PBR ambientCG (Wood050, Wood095)")
+    parser.add_argument("--oak-scale", type=float, default=2.2)
+    parser.add_argument("--oak-sat", type=float, default=1.0, help="saturation du placage (1=natif)")
+    parser.add_argument("--oak-val", type=float, default=1.0, help="luminosité du placage")
+    parser.add_argument("--oak-hue", type=float, default=0.5, help="teinte (0.5=neutre)")
+    parser.add_argument("--oak-tint", type=float, nargs=3, default=None,
+                        help="multiplicateur RGB du placage (recolorisation, ex. 0.58 0.46 0.33)")
     return parser
 
 
@@ -1498,8 +1594,22 @@ def main(argv: list[str] | None = None) -> int:
     hdri = REPO_ROOT / "hdris" / args.hdri
     if not hdri.is_file():
         hdri = REPO_ROOT / "hdris" / "brown_photostudio_02_2k.exr"
-    oak_diff = REPO_ROOT / "textures" / "oak_veneer_01_diff_2k.jpg"
-    oak_rough = REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"
+    # « Chêne blanc » : par défaut le SWATCH PHOTO RÉEL Dilamco (couleur exacte),
+    # avec relief dérivé du grain (Bump). Sinon un set PBR ambientCG (--oak-set Wood0XX).
+    if args.oak_set == "real":
+        oak_diff = REPO_ROOT / "textures" / "chene_blanc_real.jpg"
+        oak_normal = None
+        oak_rough = REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"
+    else:
+        oak_dir = REPO_ROOT / "textures" / f"{args.oak_set}_acg"
+        oak_pref = f"{args.oak_set}_2K-JPG"
+        oak_diff = oak_dir / f"{oak_pref}_Color.jpg"
+        oak_normal = oak_dir / f"{oak_pref}_NormalGL.jpg"
+        oak_rough = oak_dir / f"{oak_pref}_Roughness.jpg"
+    if not oak_diff.is_file():
+        oak_diff = REPO_ROOT / "textures" / "oak_veneer_01_diff_2k.jpg"
+        oak_normal = None
+        oak_rough = REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"
     white_rough = REPO_ROOT / "textures" / "laminate_floor_02_rough_2k.jpg"
     white_nor = REPO_ROOT / "textures" / "laminate_floor_02_nor_gl_2k.jpg"
     hb_config.update(
@@ -1515,6 +1625,13 @@ def main(argv: list[str] | None = None) -> int:
             "exposure": args.exposure,
             "oak_diff": str(oak_diff),
             "oak_rough": str(oak_rough),
+            "oak_normal": str(oak_normal) if oak_normal else "",
+            "oak_scale": args.oak_scale,
+            "oak_sat": args.oak_sat,
+            "oak_val": args.oak_val,
+            "oak_hue": args.oak_hue,
+            "oak_tint": list(args.oak_tint) if args.oak_tint else None,
+            "material_lib": str(REPO_ROOT / "materials" / "dilamco_materials.blend"),
             "white_rough": str(white_rough),
             "white_nor": str(white_nor) if white_nor.is_file() else "",
         }
