@@ -158,7 +158,7 @@ export const walkInPageEn: PageTemplateData = {
             },
             {
               label: "View our spaces",
-              href: "/",
+              href: "/espaces",
               variant: "ghost",
             },
           ],

@@ -246,7 +246,7 @@ export const salleDeBainPage: PageTemplateData = {
           items: [
             {
               title: "Vanité sur mesure",
-              href: "/projets",
+              href: "/projets/salle-de-bain/vanite-sur-mesure-laval",
               description:
                 "Rangement optimisé et finition précise adaptés à la salle de bain.",
               image: {

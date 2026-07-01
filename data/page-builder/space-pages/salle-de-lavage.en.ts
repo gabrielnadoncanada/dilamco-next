@@ -161,7 +161,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
             },
             {
               label: "View our spaces",
-              href: "/",
+              href: "/espaces",
               variant: "ghost",
             },
           ],

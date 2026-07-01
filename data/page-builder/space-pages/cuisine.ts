@@ -373,7 +373,7 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               label: "Voir nos cuisines",
-              href: "/projets",
+              href: "/projets/cuisine",
               variant: "ghost",
             },
           ],

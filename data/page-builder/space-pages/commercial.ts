@@ -185,7 +185,7 @@ export const commercialPage: PageTemplateData = {
           items: [
             {
               title: "Aménagement commercial",
-              href: "/projets",
+              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
               description:
                 "Projet commercial conçu pour l'usage réel et une exécution propre.",
               image: {
