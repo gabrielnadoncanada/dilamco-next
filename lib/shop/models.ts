@@ -60,18 +60,16 @@ interface ProfilOption {
  * DISPONIBILITÉ DES PROFILS DE PORTE PAR COULEUR (config éditable — c'est la
  * « donnée » tant que le xlsx ne fournit pas de SKU par profil).
  *
- * Réalité actuelle : le Blanc Pur existe en Shaker 1 po ET 3 po ; le Chêne
- * blanc seulement en Shaker 1 po. Le profil 1po/3po est une option par-dessus
- * le MÊME caisson (même code catalogue / render) — d'où des variantes qui
- * partagent un `code` mais ont un `id` distinct. `priceDelta` = supplément
- * (0 pour l'instant : le 3 po est au même prix que le 1 po, à ajuster quand le
- * vrai tarif sera connu).
+ * Réalité actuelle : tout se vend en Shaker 1 po uniquement (le 3 po est
+ * retiré de la vente depuis 2026-07 — pour le réactiver, remettre
+ * `{ id: "shaker-3", label: "Shaker 3 po" }` sur les couleurs concernées ;
+ * ses renders `face@shaker-3` existent toujours dans le manifest). Le profil
+ * est une option par-dessus le MÊME caisson (même code catalogue / render) —
+ * d'où des variantes qui partagent un `code` mais ont un `id` distinct.
+ * `priceDelta` = supplément vs le prix catalogue de la couleur.
  */
 const PROFIL_BY_COLOR: Record<string, ProfilOption[]> = {
-  blanc: [
-    { id: "shaker-1", label: "Shaker 1 po" },
-    { id: "shaker-3", label: "Shaker 3 po" },
-  ],
+  blanc: [{ id: "shaker-1", label: "Shaker 1 po" }],
   chene: [{ id: "shaker-1", label: "Shaker 1 po" }],
 };
 const DEFAULT_PROFILS: ProfilOption[] = [{ id: "shaker-1", label: "Shaker 1 po" }];

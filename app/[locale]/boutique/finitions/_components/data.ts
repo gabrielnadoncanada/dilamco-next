@@ -37,7 +37,7 @@ export const COLLECTIONS: Collection[] = [
     specs: [
       { label: "Caisson", value: "Contreplaqué" },
       { label: "Porte", value: "HDF laqué + Bouleau" },
-      { label: "Moulure", value: "1 et 3 pouces disponible" },
+      { label: "Moulure", value: "1 pouce" },
     ],
     usage: "",
     primaryCta: "Voir les Blanc Pur",
@@ -70,7 +70,7 @@ export const COLLECTIONS: Collection[] = [
         label: "Porte",
         value: "Placage bouleau teinté chêne · Vernis mat · Veinage horizontal",
       },
-      { label: "Moulure", value: "1 et 3 pouces disponible" },
+      { label: "Moulure", value: "1 pouce" },
     ],
     usage: "",
     primaryCta: "Voir le Chêne blanc",
@@ -100,7 +100,7 @@ export const COLLECTIONS: Collection[] = [
     specs: [
       { label: "Caisson", value: "Contreplaqué" },
       { label: "Porte", value: "HDF laqué catalysé · Sheen 25% · 4 couches" },
-      { label: "Moulure", value: "1 et 3 pouces disponible" },
+      { label: "Moulure", value: "1 pouce" },
     ],
     usage: "",
     primaryCta: "Voir le Bleu marin",
