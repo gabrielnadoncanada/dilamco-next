@@ -104,8 +104,9 @@ uv run python scripts/batch_render_parallel.py --profile shaker-3 --workers 3
 - Côté site : `galleryFor(code, profil)` (products.ts) lit `face@<profil>` avec repli
   sur `face` ; la couche variantes (`models.ts`) donne sa galerie propre à chaque
   variante profil ; la fiche (`produit-client`) affiche la galerie de la variante active
-  → cliquer « Shaker 1 po ↔ 3 po » bascule l'image. Dispo des profils par couleur =
-  `PROFIL_BY_COLOR` (models.ts) : blanc = 1+3 po, chêne = 1 po.
+  → changer de profil bascule l'image. Dispo des profils par couleur =
+  `PROFIL_BY_COLOR` (models.ts) : shaker-1 seulement depuis 2026-07 (le 3 po est
+  retiré de la vente ; ses renders `face@shaker-3` restent dans le manifest).
 
 ## C. Mapping catalogue → caisson (`infer_hb_config` dans `render_product_cabinet.py`)
 - **Caissons HB** (place_cabinet_script) : `cabinet_type` BASE/UPPER/TALL + `front_layout`.
