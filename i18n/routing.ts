@@ -5,6 +5,7 @@ import {
   MATERIAL_EN,
   PROJECT_SLUG_EN,
   BOUTIQUE_TAXON_EN,
+  ZONE_EN,
 } from "@/seo/i18n-path";
 
 // Pathnames explicites par espace : la VALEUR du slug est traduite
@@ -41,6 +42,15 @@ const renovationPathnames = Object.fromEntries(
   Object.entries(RENOVATION_EN).map(([fr, en]) => [
     `/services/renovation/${fr}`,
     { fr: `/services/renovation/${fr}`, en: `/services/renovation/${en}` },
+  ]),
+);
+
+// Pathnames explicites par zone desservie (/zones/laval -> /en/areas/laval).
+// Slug de ville identique FR/EN ; seul le 1er segment se traduit.
+const zonePathnames = Object.fromEntries(
+  Object.entries(ZONE_EN).map(([fr, en]) => [
+    `/zones/${fr}`,
+    { fr: `/zones/${fr}`, en: `/areas/${en}` },
   ]),
 );
 
@@ -95,6 +105,7 @@ export const routing = defineRouting({
       en: "/services/renovation",
     },
     ...renovationPathnames,
+    ...zonePathnames,
     "/a-propos": { fr: "/a-propos", en: "/about" },
     "/contact": "/contact",
     "/processus": { fr: "/processus", en: "/process" },

@@ -10,6 +10,7 @@ const EN_SEGMENT: Record<string, string> = {
   "politique-de-confidentialite": "privacy-policy",
   "conditions-dutilisation": "terms-of-use",
   boutique: "shop",
+  zones: "areas",
 };
 
 // Valeurs d'espace traduites (interne FR -> externe EN). Enum borné (6).
@@ -29,6 +30,12 @@ export const RENOVATION_EN: Record<string, string> = {
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
   "apres-sinistre": "water-damage",
+};
+
+// Zones desservies (pages géo SEO local). Valeur de slug identique FR/EN
+// (noms de villes) ; seule la map borne l'énumération pour routing/AppLink.
+export const ZONE_EN: Record<string, string> = {
+  laval: "laval",
 };
 
 // Valeurs de slug matériau traduites (interne FR -> externe EN). Enum borné (7).

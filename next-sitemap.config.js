@@ -20,6 +20,7 @@ const EN_SEGMENT = {
   "politique-de-confidentialite": "privacy-policy",
   "conditions-dutilisation": "terms-of-use",
   boutique: "shop",
+  zones: "areas",
 };
 const SPACE_EN = {
   cuisine: "kitchen",
@@ -189,6 +190,9 @@ module.exports = {
     } else if (slug === "/espaces") {
       priority = 0.8;
     } else if (slug.startsWith("/services/")) {
+      priority = 0.85;
+      changefreq = "monthly";
+    } else if (slug.startsWith("/zones/")) {
       priority = 0.85;
       changefreq = "monthly";
     } else if (slug === "/services") {

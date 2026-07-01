@@ -26,8 +26,8 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/home/home-space-walkin-card-01.webp</image:loc>
-      <image:caption>Walk-in sur mesure</image:caption>
-      <image:title>Walk-in sur mesure</image:title>
+      <image:caption>Garde-robe et walk-in sur mesure</image:caption>
+      <image:title>Garde-robe et walk-in sur mesure</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/home/home-space-sous-sol-card-01.webp</image:loc>
@@ -1018,6 +1018,24 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dilamco.com/en/zones/laval</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>High-end white custom kitchen completed in Laval</image:caption>
+      <image:title>High-end white custom kitchen completed in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Custom bathroom vanity installed in Laval</image:caption>
+      <image:title>Custom bathroom vanity installed in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Custom kitchen built in our workshop</image:caption>
+      <image:title>Custom kitchen built in our workshop</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dilamco.com/espaces</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
@@ -1194,8 +1212,8 @@
     <loc>https://dilamco.com/espaces/walk-in</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
-      <image:caption>Walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:caption>
-      <image:title>Walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:title>
+      <image:caption>Garde-robe et walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:caption>
+      <image:title>Garde-robe et walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
@@ -1938,6 +1956,24 @@
       <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
       <image:caption>Installation sur mesure avec ajustements précis</image:caption>
       <image:title>Installation sur mesure avec ajustements précis</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/zones/laval</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine haut de gamme blanche sur mesure réalisée à Laval</image:caption>
+      <image:title>Cuisine haut de gamme blanche sur mesure réalisée à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Vanité de salle de bain sur mesure installée à Laval</image:caption>
+      <image:title>Vanité de salle de bain sur mesure installée à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure fabriquée en atelier</image:caption>
+      <image:title>Cuisine sur mesure fabriquée en atelier</image:title>
     </image:image>
   </url>
   <url>

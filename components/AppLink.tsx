@@ -8,6 +8,7 @@ import {
   RENOVATION_EN,
   PROJECT_SLUG_EN,
   BOUTIQUE_TAXON_EN,
+  ZONE_EN,
 } from "@/seo/i18n-path";
 
 // Templates explicites par espace (valeur traduite via routing.ts).
@@ -32,6 +33,9 @@ const RENOVATION_TEMPLATES = Object.keys(RENOVATION_EN).map(
   (r) => `/services/renovation/${r}`,
 );
 
+// Templates littéraux par zone desservie (segment zones -> areas via routing.ts).
+const ZONE_TEMPLATES = Object.keys(ZONE_EN).map((z) => `/zones/${z}`);
+
 // Templates des collections boutique (slug mot-clé traduit via routing.ts),
 // dérivés de la map légère BOUTIQUE_TAXON_EN → auto-synchronisés avec
 // lib/shop/collections.ts (garde-fou build-time). Plus profond d'abord.
@@ -53,6 +57,7 @@ const TEMPLATES = [
   "/services/[slug]",
   "/services/renovation",
   ...RENOVATION_TEMPLATES,
+  ...ZONE_TEMPLATES,
   "/a-propos",
   "/contact",
   "/processus",

@@ -19,11 +19,15 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 | vanité sur mesure | 140 | — | ~pos 20 (p.2) | /espaces/salle-de-bain | Profondeur ajoutée 2026-07-01 (bloc « types de vanités ») ; ciblage/ancre home déjà bons | p.1 |
 | renovation cuisine pierrefonds-roxboro | 78 imp | — | pos 21 / 0 clic | /services/renovation/apres-sinistre | Page créée 2026-06-29 | indexation + top 10 |
 | rénovation de cuisine | 210 | 1 | **absent top 20** (2026-06-29) | /services/renovation/cuisine | Section prix + FAQ prix/étapes ajoutées 2026-06-29 (intent informationnel) | top 10 |
-| armoires de cuisine laval | 140 | 15 | à mesurer | (pas de page) | (backlog) | créer page géo |
+| armoires de cuisine laval | 140 | 15 | absent top 13 (SERP live 2026-07-01) | **/zones/laval** | Page géo créée 2026-07-01 + lien footer sitewide | top 10 (macucina y arrive avec rank 20 < nous) |
+| vanité de salle de bain sur mesure laval | 166 imp GSC | — | pos 20,2 / 0 clic (requête #1 du site en imp.) | /zones/laval (+ /espaces/salle-de-bain) | Page géo Laval 2026-07-01 couvre vanités | top 10 |
+| ébéniste laval | 210 | — | à mesurer | /zones/laval | Page géo 2026-07-01 (H1 « ébéniste ») | p.1 |
 
 ## ✅ Actions réalisées
 
-### 2026-07-01 (bis) — Correctifs maillage incohérent
+### 2026-07-01 (ter) — Page géo Laval + diagnostic reach organique
+- **Diagnostic chiffré** (demande Gabriel « on a 1 visite/jour ») : 16/43 clics = marque « dilamco » → **~27 clics non-marque/mois**. Impressions ×14 en un mois (10→140/jour) mais pos 15-35 → pas de clics. 3 goulots : ① Local Pack/avis GBP (11 avis vs 58-103 concurrents), ② autorité (46 RD vs 125-438), ③ pages géo manquantes. Détail + décomposition du profil backlinks de cuisinesaction.com (374 RD dont ~moitié = bruit ; moteur réel = partenariats fournisseurs/métiers) : `live-data-2026-07-01.md`.
+- **Page `/zones/laval` créée (FR + EN `/en/areas/laval`)** — NOUVELLE collection `zone-pages` (data/page-builder/zone-pages/) + route `app/[locale]/zones/[zone]` + `ZONE_EN` (i18n-path.ts, routing.ts, next-sitemap.config.js — les DEUX, AppLink). Cible : cluster Laval ~600/mois (ébéniste 210, armoires 140, cuisiniste 90, garde-robe 70, vanité 50) + 166 imp GSC existantes. Justification data : macucina.ca (rank 20 < dilamco 24) prend pos 2 organique avec sa page géo dédiée → réplicable à notre autorité. Maillage : **lien footer sitewide** (FR+EN, section Services) + liens internes vers projet vanité Laval, /espaces/cuisine, /projets. Build vert, sitemap + hreflang OK. Extensible : prochaine zone = ajouter `<slug>.ts` + entrée ZONE_EN (2 fichiers config).
 - **« Voir nos espaces » pointait la HOME (`/`)** → corrigé vers `/espaces` (salle-de-lavage FR+EN, walk-in EN).
 - **Cartes projet → `/projets` générique** alors qu'une vraie page projet existe → corrigé : carte « Vanité sur mesure » → `/projets/salle-de-bain/vanite-sur-mesure-laval` ; carte « Aménagement commercial » → page projet commerciale.
 - **Incohérence cuisine** : CTA final « Voir nos cuisines » pointait `/projets` (les 2 autres pointent `/projets/cuisine`) → harmonisé.
@@ -43,8 +47,8 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 - **Skill `seo-daily`** + ce registre créés. Routine doc : `docs/seo/routine-quotidienne-seo.md`.
 
 ## 📋 Backlog priorisé (ROI)
-1. Quick win **`rénovation de cuisine`** (KD 1, page existe) — optimiser title/H1.
-2. **Page géo Laval** « armoires de cuisine laval » (140, KD 15).
+1. ~~Page géo Laval~~ ✅ 2026-07-01. **Prochaines zones** (même infra, ~1 h chacune) : Ouest-de-l'Île/Pierrefonds (impressions GSC déjà là), Rive-Sud/Brossard (projet existe). Vérifier volumes d'abord.
+1 bis. **Kit citations copier-coller pour Gabriel** (NAP + descriptions FR/EN + liste ordonnée threebestrated/opendi/ameublements/PagesJaunes/Houzz/Yelp) — débloquer le goulot autorité.
 2 bis. **Pousser `/espaces/walk-in`** : « garde-robe sur mesure » = 320/mois (autant que cuisine sur mesure), page existe.
 2 ter. **Créer page « meuble de chambre sur mesure »** (aucune page ; Dilamco fait meubles de chambre + cellier). Vérifier volumes/KD d'abord.
 3. **Espaces haut de gamme** restants : walk-in pantry, cellier, bibliothèque (mémoire `seo-espaces-haut-de-gamme`).

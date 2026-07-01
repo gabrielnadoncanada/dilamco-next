@@ -267,6 +267,7 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
       { text: "Fabrication", url: "/services/fabrication/" },
       { text: "Installation", url: "/services/installation/" },
       { text: "Turnkey renovation", url: "/services/renovation/" },
+      { text: "Kitchen cabinets in Laval", url: "/zones/laval" },
     ],
   },
   {
