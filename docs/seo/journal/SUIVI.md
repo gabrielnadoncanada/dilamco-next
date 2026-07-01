@@ -15,6 +15,8 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 | **cuisiniste** | **14 800** | **17** | absent (pas de page ciblée) | Home | Home optimisée 2026-06-29 (title/H1/desc) + catégorie GBP cuisiniste | top 10 — gros volume transactionnel |
 | cuisine sur mesure | 320 | 14 | **absent top 30** (2026-06-29) | /espaces/cuisine | Porte élargie 2026-06-29 | top 10 |
 | armoire(s) de cuisine sur mesure | 420 | 5 | ~p.2 (pos ~20) | /espaces/cuisine | Élargissement + profondeur 2026-06-29 | p.1 |
+| **garde-robe sur mesure** | 320 | — | **pos 37** (1 imp — page cible « walk-in » pas « garde-robe ») | /espaces/walk-in | Reciblé « garde-robe sur mesure » 2026-07-01 (title/H1/FAQ + ancre home) | p.1 |
+| vanité sur mesure | 140 | — | ~pos 20 (p.2) | /espaces/salle-de-bain | (backlog — même reciblage à faire) | p.1 |
 | renovation cuisine pierrefonds-roxboro | 78 imp | — | pos 21 / 0 clic | /services/renovation/apres-sinistre | Page créée 2026-06-29 | indexation + top 10 |
 | rénovation de cuisine | 210 | 1 | **absent top 20** (2026-06-29) | /services/renovation/cuisine | Section prix + FAQ prix/étapes ajoutées 2026-06-29 (intent informationnel) | top 10 |
 | armoires de cuisine laval | 140 | 15 | à mesurer | (pas de page) | (backlog) | créer page géo |
@@ -37,7 +39,7 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 2 ter. **Créer page « meuble de chambre sur mesure »** (aucune page ; Dilamco fait meubles de chambre + cellier). Vérifier volumes/KD d'abord.
 3. **Espaces haut de gamme** restants : walk-in pantry, cellier, bibliothèque (mémoire `seo-espaces-haut-de-gamme`).
 4. **Boutique (long terme)** : enrichir `/boutique/armoires-cuisine` + `/boutique/vanites` pour les gros volumes produit (8 100 / 12 100).
-5. **Link building local** (mémoire `backlinks-link-gap-cibles-2026-06-28`) — nécessaire pour passer p.1 sur « cuisine sur mesure ».
+5. **Link building local** — plan prêt dans `docs/seo/link-building-plan-2026-06-29.md` (cibles réelles de Cuisines Action, priorisées). HORS-CODE (Gabriel). Ordre : citations Tier 1 (gratuit, +Local Pack) → partenaires → médias déco. Cible 15-20 RD thématiques en 2-3 mois. Nécessaire pour consolider « cuisiniste » / « cuisine sur mesure ».
 
 ## 🙋 Actions HORS-CODE en attente (Gabriel)
 - [ ] **GA4** : marquer `generate_lead` comme événement clé (sinon 0 conversion mesurée). — *critique*
@@ -49,4 +51,5 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 - [ ] **GBP secondaires** : « Entreprise de réaménagement de salle de bain » (vanités) + « Ébéniste » (meubles/garde-robes). Dropdown autocomplete sort de l'écran en automation → manuel (30 s).
 - [ ] **GBP description** : laissée telle quelle (refus utilisateur). Nouvelle version dispo dans le plan si besoin.
 - Fiche : 5,0/11 avis, place_id `ChIJkS849KM7yUwRI2hE7w3ERRA`. Système d'avis = lien direct + templates dans le plan.
-- [x] **Indexation soumise (2026-06-29)** via Indexing API (compte de service, HTTP 200) pour les 3 URLs : apres-sinistre, water-damage, /espaces/cuisine. Les 2 pages sinistre étaient « inconnues de Google » avant. **→ Recontrôler le coverageState vers le 2026-07-02 (48-72 h)** : doit passer à « Submitted and indexed ». Si non, demander l'indexation manuellement dans l'UI GSC.
+- [x] **Indexation soumise (2026-06-29)** via Indexing API pour apres-sinistre, water-damage, /espaces/cuisine.
+- [ ] **Contrôle 2026-07-01 (GSC MCP)** : pages sinistre TOUJOURS « URL is unknown to Google », jamais crawlées → l'Indexing API n'a PAS suffi (normal hors JobPosting) + crawl lent (faible autorité). Sitemap.xml **resoumis** le 2026-07-01. → **Gabriel : GSC UI → Inspection d'URL → coller les 2 URLs sinistre → « Demander l'indexation »** (seul moyen fiable, l'API inspect est lecture seule).

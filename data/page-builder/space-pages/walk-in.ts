@@ -4,22 +4,22 @@ import { SITE } from "@/seo/schema/site";
 export const walkInPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Walk-in et garde-robe sur mesure à Montréal",
+    title: "Garde-robe et walk-in sur mesure à Montréal",
     description:
-      "Walk-in sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
+      "Garde-robe et walk-in sur mesure haut de gamme : conception, fabrication contrôlée et installation à Pierrefonds, Montréal, Laval et le Grand Montréal.",
     path: "/espaces/walk-in",
-    ogAlt: "Walk-in sur mesure Dilamco",
+    ogAlt: "Garde-robe et walk-in sur mesure Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
-    { name: "Walk-in sur mesure", url: SITE.url + "/espaces/walk-in" },
+    { name: "Garde-robe sur mesure", url: SITE.url + "/espaces/walk-in" },
   ],
   service: {
-    name: "Walk-in sur mesure",
+    name: "Garde-robe et walk-in sur mesure",
     description:
-      "Conception, fabrication contrôlée et installation de walk-ins sur mesure haut de gamme.",
+      "Conception, fabrication contrôlée et installation de garde-robes et walk-ins sur mesure haut de gamme à Pierrefonds, dans l'Ouest-de-l'Île et le Grand Montréal.",
     url: SITE.url + "/espaces/walk-in",
-    serviceType: "Walk-in sur mesure",
+    serviceType: "Garde-robe sur mesure",
   },
   blocks: [
     {
@@ -30,9 +30,10 @@ export const walkInPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Espaces",
-          heading: "Walk-in sur mesure, rangement pensé pour l'usage réel",
+          heading:
+            "Garde-robe et walk-in sur mesure à Pierrefonds et dans le Grand Montréal",
           description:
-            "Le sur mesure permet d'optimiser l'espace, d'améliorer l'organisation et d'obtenir un résultat plus stable qu'un système standard.",
+            "Une garde-robe sur mesure (ou walk-in) permet d'optimiser l'espace, d'améliorer l'organisation et d'obtenir un résultat plus stable et durable qu'un système standard — conception, fabrication et installation par une seule équipe.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -45,13 +46,13 @@ export const walkInPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Rangement", "Organisation", "Sur mesure"],
+          badges: ["Garde-robe", "Walk-in", "Sur mesure"],
           image: {
             src: "/images/generated/spaces/space-walkin-hero-01.webp",
-            alt: "Walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal",
+            alt: "Garde-robe et walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal",
           },
           caption:
-            "Organisation personnalisée pour chambres, garde-robes et espaces restreints",
+            "Garde-robes, walk-ins et rangements sur mesure pour chambres et espaces restreints",
         },
       },
     },
@@ -61,9 +62,9 @@ export const walkInPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Un walk-in conçu pour l'usage quotidien",
+          heading: "Une garde-robe sur mesure conçue pour l'usage quotidien",
           intro:
-            "Ce type de projet sert à mieux organiser les zones, les accès et les volumes plutôt qu'à empiler des tablettes standard.",
+            "Une garde-robe ou un walk-in sur mesure sert à mieux organiser les zones, les accès et les volumes plutôt qu'à empiler des tablettes standard.",
           badges: ["Optimisation", "Accès", "Durabilité"],
           cardTitle: "Quand c'est un bon fit",
           items: [
@@ -229,13 +230,17 @@ export const walkInPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - walk-in sur mesure",
+          heading: "FAQ - garde-robe et walk-in sur mesure",
           intro:
-            "Les questions qui reviennent le plus souvent avant de démarrer un projet de rangement sur mesure.",
+            "Les questions qui reviennent le plus souvent avant de démarrer un projet de garde-robe sur mesure.",
           items: [
             {
-              q: "Combien coûte un walk-in sur mesure ?",
-              a: "Le prix varie selon les dimensions, le niveau d'aménagement et les matériaux choisis.",
+              q: "Quelle est la différence entre une garde-robe et un walk-in sur mesure ?",
+              a: "Un walk-in est une garde-robe dans laquelle on entre (une petite pièce dédiée), alors qu'une garde-robe sur mesure classique s'intègre le long d'un mur. Dans les deux cas, on conçoit l'aménagement — penderie, tiroirs, tablettes, accessoires — selon vos vêtements et votre espace réel.",
+            },
+            {
+              q: "Combien coûte une garde-robe ou un walk-in sur mesure ?",
+              a: "Le prix varie selon les dimensions, le niveau d'aménagement (penderie, tiroirs, îlot, éclairage) et les matériaux choisis. On vous donne une estimation claire après avoir cadré le projet.",
             },
             {
               q: "Est-ce utile dans un petit espace ?",
@@ -259,9 +264,9 @@ export const walkInPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Parlez-nous de votre projet de walk-in",
+          heading: "Parlez-nous de votre projet de garde-robe ou de walk-in",
           intro:
-            "On vous aide à cadrer un rangement sur mesure qui correspond vraiment à l'espace et à l'usage.",
+            "On vous aide à cadrer une garde-robe sur mesure qui correspond vraiment à l'espace et à l'usage.",
           actions: [
             {
               label: "Demander une soumission",

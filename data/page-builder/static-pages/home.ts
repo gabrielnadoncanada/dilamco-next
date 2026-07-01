@@ -125,17 +125,17 @@ export const page: PageTemplateData = {
               footerCtaLabel: "Découvrir salle de lavage",
             },
             {
-              title: "Walk-in",
+              title: "Garde-robe et walk-in sur mesure",
               href: "/espaces/walk-in",
               description:
-                "Organisation personnalisée : tiroirs, penderies, accessoires et configuration adaptée à vos besoins.",
+                "Garde-robe sur mesure et walk-in : penderies, tiroirs, accessoires et configuration adaptée à vos besoins.",
               image: {
                 src: "/images/generated/home/home-space-walkin-card-01.webp",
-                alt: "Walk-in sur mesure",
+                alt: "Garde-robe et walk-in sur mesure",
               },
-              badges: ["Organisation", "Personnalisé", "Premium"],
+              badges: ["Garde-robe", "Personnalisé", "Premium"],
               quickActionLabel: "Voir",
-              footerCtaLabel: "Découvrir walk-in",
+              footerCtaLabel: "Découvrir garde-robe et walk-in",
             },
             {
               title: "Aménagement de sous-sol",
