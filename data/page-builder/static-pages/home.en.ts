@@ -168,6 +168,46 @@ export const pageEn: PageTemplateData = {
       },
     },
     {
+      id: "boutique-stock",
+      content: {
+        type: "grid",
+        variant: "image-cards-badges-cta",
+        props: {
+          heading: "In-stock cabinets, ready to install",
+          intro:
+            "No production lead time: a selection of in-stock cabinets and vanities, ready to install. Pick your cabinets and get a firm quote within 48 h.",
+          ctaLabel: "Browse the shop",
+          ctaHref: "/boutique",
+          items: [
+            {
+              title: "In-stock kitchen cabinets",
+              href: "/boutique/armoires-cuisine",
+              description:
+                "Standard kitchen cabinets - bases, wall units and tall cabinets - in stock and ready to install, with no production wait.",
+              image: {
+                src: "/images/generated/home/home-featured-cuisine-project-01.webp",
+                alt: "In-stock kitchen cabinets ready to install",
+              },
+              badges: ["In stock", "Ready to install"],
+              footerCtaLabel: "View kitchen cabinets",
+            },
+            {
+              title: "In-stock bathroom vanities",
+              href: "/boutique/vanites",
+              description:
+                "24 and 30 inch vanities in stock, with durable moisture-resistant finishes, ready to install.",
+              image: {
+                src: "/images/generated/home/home-featured-bath-project-01.webp",
+                alt: "In-stock bathroom vanities, 24 and 30 inch",
+              },
+              badges: ["24 & 30 in", "In stock"],
+              footerCtaLabel: "View vanities",
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "standard",
       content: {
         type: "process",

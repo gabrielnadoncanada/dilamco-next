@@ -168,6 +168,46 @@ export const page: PageTemplateData = {
       },
     },
     {
+      id: "boutique-stock",
+      content: {
+        type: "grid",
+        variant: "image-cards-badges-cta",
+        props: {
+          heading: "Nos caissons en stock, prêts à installer",
+          intro:
+            "Pas de délai de fabrication : une sélection d'armoires et de vanités en stock, prêtes à installer. Choisissez vos caissons et obtenez une soumission ferme sous 48 h.",
+          ctaLabel: "Voir toute la boutique",
+          ctaHref: "/boutique",
+          items: [
+            {
+              title: "Armoires de cuisine en stock",
+              href: "/boutique/armoires-cuisine",
+              description:
+                "Caissons de cuisine en stock - bases, armoires murales et colonnes - prêts à installer, sans attente de production.",
+              image: {
+                src: "/images/generated/home/home-featured-cuisine-project-01.webp",
+                alt: "Armoires de cuisine en stock prêtes à installer",
+              },
+              badges: ["En stock", "Prêt à installer"],
+              footerCtaLabel: "Voir les armoires de cuisine",
+            },
+            {
+              title: "Vanités de salle de bain en stock",
+              href: "/boutique/vanites",
+              description:
+                "Meubles-lavabos 24 et 30 pouces en stock, finitions durables résistantes à l'humidité, prêts à installer.",
+              image: {
+                src: "/images/generated/home/home-featured-bath-project-01.webp",
+                alt: "Vanités de salle de bain en stock, 24 et 30 pouces",
+              },
+              badges: ["24 & 30 po", "En stock"],
+              footerCtaLabel: "Voir les vanités",
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "standard",
       content: {
         type: "process",
