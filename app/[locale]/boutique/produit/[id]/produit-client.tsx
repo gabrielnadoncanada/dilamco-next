@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { useCart } from "@/components/shop/cart-provider";
 import Image from "next/image";
@@ -8,7 +8,6 @@ import { AppLink as Link } from "@/components/AppLink";
 import { Button } from "@/components/ui/button";
 import { Container, Headline } from "@/components/shop/ds";
 import { findProduct } from "@/lib/shop/products";
-import { useSearchParams } from "next/navigation";
 import {
   findModel,
   models,
@@ -91,16 +90,21 @@ export default function ProduitClient({ id }: { id: string }) {
   const locale = useLocale() as "fr" | "en";
   const cart = useCart();
   const model = findModel(id);
-  // Couleur pré-sélectionnée via l'URL (ex. clic d'une pastille sur une carte :
-  // /produit/S8-DB30?couleur=chene).
-  const searchParams = useSearchParams();
   // Variante active = combinaison profil/couleur choisie ; tout (prix, SKU,
   // render, specs, panier) en découle. Pas de changement d'URL.
-  const [activeVariantId, setActiveVariantId] = useState(() => {
-    const couleur = searchParams.get("couleur");
-    if (model && couleur) return resolveVariant(model, { couleur }).id;
-    return model?.defaultVariantId ?? id;
-  });
+  const [activeVariantId, setActiveVariantId] = useState(
+    model?.defaultVariantId ?? id,
+  );
+  // Couleur pré-sélectionnée via ?couleur= (deep-link depuis une pastille de
+  // carte). Lue APRÈS montage plutôt que via useSearchParams : ce dernier
+  // forçait tout le sous-arbre en rendu client (HTML serveur vide → fiche non
+  // indexée). En useEffect, la fiche se rend côté serveur et la pré-sélection
+  // s'applique à l'hydratation.
+  useEffect(() => {
+    if (!model) return;
+    const couleur = new URLSearchParams(window.location.search).get("couleur");
+    if (couleur) setActiveVariantId(resolveVariant(model, { couleur }).id);
+  }, [model]);
   const [qty, setQty] = useState(1);
   const [view, setView] = useState(0);
 
