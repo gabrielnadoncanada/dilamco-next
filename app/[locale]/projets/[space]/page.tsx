@@ -51,9 +51,7 @@ export async function generateMetadata({
   return createPageMetadata(
     {
       title:
-        loc === "en"
-          ? `Custom ${ll} projects`
-          : `Projets ${ll} sur mesure`,
+        loc === "en" ? `Custom ${ll} projects` : `Projets ${ll} sur mesure`,
       description:
         loc === "en"
           ? `Custom ${ll} projects by Dilamco: design, fabrication and installation in Montréal, Laval and across Greater Montréal.`
@@ -100,7 +98,7 @@ export default async function ProjectsSpacePage({
 
       <main id="contenu" className="bg-background text-foreground">
         <section className="border-b border-border">
-          <div className="mx-auto max-w-[1440px] px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px] py-14 md:py-20">
+          <div className="mx-auto max-w-[1440px] px-[clamp(20px,1rem,56px)] max-[700px]:px-[18px] py-14 md:py-20">
             <nav
               aria-label="Fil d'Ariane"
               className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground"
@@ -112,7 +110,11 @@ export default async function ProjectsSpacePage({
               <span className="text-foreground/70">{label}</span>
             </nav>
 
-            <Heading as="h1" variant="h1" className="mt-6 max-w-3xl md:text-5xl">
+            <Heading
+              as="h1"
+              variant="h1"
+              className="mt-6 max-w-3xl md:text-5xl"
+            >
               {t("listingHeading", { label: ll })}
             </Heading>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
@@ -122,7 +124,7 @@ export default async function ProjectsSpacePage({
         </section>
 
         <section>
-          <div className="mx-auto max-w-[1440px] px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px] py-14 md:py-20">
+          <div className="mx-auto max-w-[1440px] px-[clamp(20px,1rem,56px)] max-[700px]:px-[18px] py-14 md:py-20">
             {projects.length === 0 ? (
               <div className="rounded-2xl border border-dashed border-border bg-secondary/30 p-10 text-center">
                 <p className="text-muted-foreground">

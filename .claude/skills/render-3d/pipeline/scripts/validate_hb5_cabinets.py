@@ -55,6 +55,8 @@ try:
           "grille library contient 'Base Spice Rack'")
     check('"Base Garbage Pull-Out"' in src or "'Base Garbage Pull-Out'" in src,
           "grille library contient 'Base Garbage Pull-Out'")
+    check('"Base Sink"' in src or "'Base Sink'" in src,
+          "grille library contient 'Base Sink'")
 except Exception as exc:
     check(False, f"introspection grille library: {exc}")
 
@@ -155,9 +157,24 @@ cab = build("Base Drawer", 0.45)
 if check(cab is not None, "Base Drawer se construit"):
     check(len(fronts(cab)) == 3, f"3 tiroirs (trouvé {len(fronts(cab))})")
 
+# --- (2/3) Base Sink : tablier d'évier EN HAUT + 2 portes DESSOUS ------------
+print("\n[Base Sink]", flush=True)
+cab = build("Base Sink", 0.8382)  # 33 po
+if check(cab is not None, "Base Sink se construit"):
+    fr = fronts(cab)
+    check(len(fr) == 2, f"exactement 2 portes (trouvé {len(fr)})")
+    check(all("Door" in o.name for o in fr), f"les façades sont des portes ('{[o.name for o in fr]}')")
+    aprons = [o for o in cab.children_recursive
+              if "Sink Apron" in o.name and not o.hide_render]
+    if check(len(aprons) == 1, f"tablier d'évier visible (trouvé {len(aprons)})"):
+        za = zc(aprons[0]) or 0
+        zdoor = max((zc(o) or 0) for o in fr) if fr else 0
+        check(za > 0.6 * H, f"tablier EN HAUT (z={za:.3f} > {0.6*H:.3f})")
+        check(za > zdoor, f"tablier AU-DESSUS des portes (z_tablier={za:.3f} > z_porte={zdoor:.3f})")
+
 # --- (4) thumbnails existent -------------------------------------------------
 print("\n[Thumbnails]", flush=True)
-for nm in ("Base Microwave", "Base Spice Rack", "Base Garbage Pull-Out"):
+for nm in ("Base Microwave", "Base Spice Rack", "Base Garbage Pull-Out", "Sink Cabinet"):
     p = os.path.join(THUMB_DIR, nm + ".png")
     check(os.path.exists(p) and os.path.getsize(p) > 1000, f"miniature '{nm}.png' présente")
 

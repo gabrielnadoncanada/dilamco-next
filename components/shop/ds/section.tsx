@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/shop/utils";
 
-const sectionVariants = cva("px-[clamp(20px,4vw,56px)]", {
+const sectionVariants = cva("px-[clamp(20px,1rem,56px)]", {
   variants: {
     surface: {
       background: "bg-background",

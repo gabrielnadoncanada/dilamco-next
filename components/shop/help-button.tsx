@@ -31,7 +31,10 @@ export function HelpButton() {
   }, [open]);
 
   return (
-    <div ref={panelRef} className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3 max-[700px]:bottom-[104px] max-[700px]:right-3">
+    <div
+      ref={panelRef}
+      className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3 max-[700px]:bottom-[104px] max-[700px]:right-3"
+    >
       {open && (
         <div className="w-[300px] border border-border bg-background p-5">
           <p className="font-serif text-lg leading-[1.25] text-foreground">
@@ -57,14 +60,14 @@ export function HelpButton() {
                 <Mail className="size-4 text-primary" /> ventes@dilamco.com
               </a>
             </li>
-            <li className="flex items-start gap-2.5 text-soft-foreground">
+            {/* <li className="flex items-start gap-2.5 text-soft-foreground">
               <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
               <span>
                 Salle de montre — 275 rue Beaubien Ouest, Montréal
                 <br />
                 Lun – ven · 9h à 17h
               </span>
-            </li>
+            </li> */}
           </ul>
         </div>
       )}

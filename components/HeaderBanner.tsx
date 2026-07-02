@@ -7,7 +7,7 @@ export async function HeaderBanner() {
     // Bandeau unifié : téléphone (gauche) · mention non-cliquable (centre) ·
     // sélecteur de langue (droite).
     <div className="bg-primary text-primary-foreground">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-[clamp(20px,4vw,56px)] py-1.5 max-[700px]:px-[18px] md:py-2">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between gap-3 px-[clamp(20px,1rem,56px)] py-1.5 max-[700px]:px-[18px] md:py-2">
         <a
           href="tel:+15148200773"
           className="shrink-0 font-mono text-[11px] tracking-[0.06em] hover:underline max-[380px]:text-[10px]"

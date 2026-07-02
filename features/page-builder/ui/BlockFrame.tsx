@@ -42,7 +42,7 @@ const sectionVariants = cva("", {
 
 // Gutter horizontal unifié avec la boutique (référence « un seul produit »).
 const containerVariants = cva(
-  "mx-auto px-[clamp(20px,4vw,56px)] max-[700px]:px-[18px]",
+  "mx-auto px-[clamp(20px,1rem,56px)] max-[700px]:px-[18px]",
   {
     variants: {
       container: {
@@ -106,19 +106,28 @@ export function BlockFrame(props: {
     <section
       id={props.id}
       data-surface={frame.surface}
-      className={cn(sectionVariants({
-        paddingY: frame.paddingY,
-        divider: frame.divider,
-      }), "relative", frame.className)}
+      className={cn(
+        sectionVariants({
+          paddingY: frame.paddingY,
+          divider: frame.divider,
+        }),
+        "relative",
+        frame.className,
+      )}
     >
       <div className={containerVariants({ container: frame.container })}>
         {hasHeading && (
-          <header className={headerVariants({ headerAlign: frame.headerAlign })}>
+          <header
+            className={headerVariants({ headerAlign: frame.headerAlign })}
+          >
             {props.title ? (
               <Heading
                 as={headingLevel}
                 variant={frame.titleVariant}
-                className={cn("font-semibold", !hasCustomTitleVariant && "sm:text-3xl")}
+                className={cn(
+                  "font-semibold",
+                  !hasCustomTitleVariant && "sm:text-3xl",
+                )}
               >
                 {props.title}
               </Heading>

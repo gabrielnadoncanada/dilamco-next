@@ -211,14 +211,6 @@ function ProductReassurance({ product }: { product: Product }) {
           {t("accordion.delivery.body")}
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="garantie" className="border-border">
-        <AccordionTrigger className="py-4 text-[14px] font-medium tracking-[0.01em] hover:no-underline">
-          {t("accordion.warranty.title")}
-        </AccordionTrigger>
-        <AccordionContent className="text-xs leading-[1.6] text-soft-foreground">
-          {t("accordion.warranty.body")}
-        </AccordionContent>
-      </AccordionItem>
       <AccordionItem value="questions" className="border-border">
         <AccordionTrigger className="py-4 text-[14px] font-medium tracking-[0.01em] hover:no-underline">
           {t("accordion.questions.title")}
@@ -229,10 +221,13 @@ function ProductReassurance({ product }: { product: Product }) {
             514-820-0773
           </a>{" "}
           {t("accordion.questions.orEmail")}{" "}
-          <a className="text-primary underline" href="mailto:ventes@dilamco.com">
+          <a
+            className="text-primary underline"
+            href="mailto:ventes@dilamco.com"
+          >
             ventes@dilamco.com
           </a>
-          . {t("accordion.questions.showroom")}
+          {/* . {t("accordion.questions.showroom")} */}
         </AccordionContent>
       </AccordionItem>
     </Accordion>
@@ -450,7 +445,7 @@ function HowToGetIt() {
           </span>
         </div>
       </div>
-      <div className="flex items-start gap-3 px-4 py-3.5">
+      {/* <div className="flex items-start gap-3 px-4 py-3.5">
         <Store className="mt-0.5 size-[18px] shrink-0 text-foreground" />
         <div className="flex flex-col gap-0.5">
           <span className="text-[13px] font-medium text-foreground">
@@ -464,7 +459,7 @@ function HowToGetIt() {
             {t("howToGet.showroom.hours")}
           </span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

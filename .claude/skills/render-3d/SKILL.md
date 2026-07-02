@@ -120,9 +120,13 @@ uv run python scripts/batch_render_parallel.py --profile shaker-3 --workers 3
   illisibles → placeholder). Dims manquantes → placeholder.
 - **Géométrie custom** (hors HB, `render_mode`) : `*-pull-out` → porte coulissante,
   poignée barre HORIZONTALE en haut ; `microwave` → niche ouverte + portes.
-- **Finitions** : défaut = Blanc Pur (porte shaker 5 pièces) ; SKU `-muf` ou finish
-  « Chêne blanc » = mélamine chêne (porte slab), matériau PBR Polyhaven injecté dans les
-  geonodes (le shader CabinetWood de HB ne marche pas en headless).
+- **Évier de ferme** (`base-cabinet-farmhouse-sink`) : caisson HB dédié `Base Sink`
+  (cabinet_name), `front_layout="NONE"` (la classe `BaseSinkCabinet` bâtit ses façades) :
+  tablier d'évier apparent en haut (Base Top Construction=Sink) + 2 portes shaker DESSOUS.
+- **Finitions** : défaut = Blanc Pur ; SKU `-muf` ou finish « Chêne blanc » =
+  mélamine chêne, matériau PBR Polyhaven injecté dans les geonodes (le shader
+  CabinetWood de HB ne marche pas en headless). Dans les DEUX cas la porte est
+  **shaker 5 pièces, rail 1 po** (préférence Gabriel : jamais de slab).
 
 ## D. Réglages de rendu (déjà dans le script — ne pas régresser)
 HDRI studio `brown_photostudio_02_2k.exr` (strength 0.9, rot 235°) ; key dédoublée
@@ -147,8 +151,11 @@ Déjà ajoutés : **Base Microwave** (niche haut + tiroir bas), **Base Spice Rac
 étroit 6", 3 plateaux), **Base Garbage Pull-Out** (tiroir utilitaire en haut + Pullout
 pleine largeur en bas pour les bacs, `default_exterior="Garbage Pullout"`, 18" ; catégorie
 catalogue `base-cabinet-garbage-pull-out` routée AVANT le pull-out générique dans
-`infer_hb_config`). **Redémarrer Blender** après modif (jamais juste re-enable/Reload
-Scripts → structs RNA fantômes).
+`infer_hb_config`). **Base Sink** (évier de ferme, `BaseSinkCabinet(BaseCabinet)`,
+33" ; `add_properties_base_top` force Base Top Construction=Sink → tablier apparent,
+`add_doors` réserve `inch(5.9)` en haut du bay (open) et met les portes dessous ;
+miniature `Sink Cabinet.png` déjà présente). **Redémarrer Blender** après modif
+(jamais juste re-enable/Reload Scripts → structs RNA fantômes).
 
 ## F. Générer une miniature library HB5 (headless)
 Script type (cf. ce qu'on a fait pour Microwave/Spice Rack) :
@@ -179,6 +186,12 @@ contrôle live et à la validation visuelle dans le Blender de l'utilisateur.
 - Matériaux des CABINET_PART passent par les inputs geonode (pas les slots) ; ne jamais
   baker ces parts. Pulls = geonode `GeoNodeHardware` → `modifier_apply` requis.
 - Moteur : assigner `scene.render.engine="CYCLES"` directement (enum RNA statique).
+- **Géométrie custom (`_flat_box`) — staleness `matrix_world`** : en headless, `parent.matrix_world`
+  n'est PAS rafraîchi après avoir posé la scale du parent. Or `matrix_parent_inverse =
+  parent.matrix_world.inverted()` est STOCKÉ → un mpi périmé persiste jusqu'au rendu (bug
+  observé : `Door_Panel` de la 2e porte du micro-ondes mural ressortait en cube de 1 m). Fix :
+  `bpy.context.view_layer.update()` AVANT de lire `parent.matrix_world` dans `_flat_box`. Poser
+  aussi la taille via `box.scale` (cube unité) plutôt que `box.dimensions` (dépend du bound_box).
 - WebP : `public/assets` est 100 % WebP ; `npm run images:webp` ou conversion dans le batch.
 
 ## Validation (rappel) — exécuter et LIRE avant de conclure

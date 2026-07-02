@@ -5,9 +5,11 @@
 ## 🎯 Objectif courant
 Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Priorité aux requêtes **sur-mesure + géo** (difficulté basse, lead à forte valeur), pas aux gros volumes produit génériques.
 
-## 📈 Référence santé (28 j au 2026-06-28)
-- GSC : **43 clics / 1 196 impressions / CTR 3,6 % / pos moy. 19,8** (+330 % clics vs 28 j préc.)
-- GA4 : **92 sessions organiques** (+163 %) ; Direct 127. Tendance saine (effets de l'audit du 2026-06-18).
+## 📈 Référence santé (28 j au 2026-07-02)
+- GSC : **44 clics / 1 545 impressions / CTR 2,85 % / pos moy. 19,0** — impressions ×10 en un mois (7-20/j → 112-142/j), clics stagnants. Marque = 16/44 clics.
+- GA4 : **95 sessions organiques** (+228 % vs préc.) mais seulement **22 users** (~4,3 sessions/user — reach réel ≈ 22 personnes/mois). Direct 138.
+- Conversions : `generate_lead` = 1 / 28 j (toujours pas événement clé — action Gabriel).
+- (Réf. précédente 2026-06-28 : 43 clics / 1 196 imp / CTR 3,6 % / pos 19,8.)
 
 ## ⏳ Positions à surveiller (effet des actions — recontrôler chaque semaine)
 | Mot-clé | Vol Qc | KD | Pos départ | Page | Action / date | Cible |
@@ -24,6 +26,11 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 | ébéniste laval | 210 | — | à mesurer | /zones/laval | Page géo 2026-07-01 (H1 « ébéniste ») | p.1 |
 
 ## ✅ Actions réalisées
+
+### 2026-07-02 — Compte rendu (report seul, pas d'action code)
+- Mesures complètes → `live-data-2026-07-02.md`. Faits saillants : projet Plateau monte (**pos 2,2** sur « cuisine sur mesure plateau-mont-royal », 1er clic) ; premières impressions « garde robe sur mesure montréal/westmount » (pos 20-29) 24 h après le reciblage walk-in ; « armoires cuisine sur mesure pierrefonds » pos 1,6 / 80 imp / **0 clic** (Local Pack).
+- ⚠️ **Cannibalisation confirmée** sur « vanité de salle de bain sur mesure laval » : impressions réparties sur 3 pages (/espaces/salle-de-bain 116 imp pos 19,4 ; /projets/.../vanite-sur-mesure-laval 68 imp pos 21,3 ; variante trailing slash 50 imp pos 33). /zones/laval doit consolider — pas encore indexée.
+- ❌ **Contrôle indexation** : les 4 URLs clés (apres-sinistre, water-damage, /zones/laval, /en/areas/laval) = « URL is unknown to Google », jamais crawlées. → Demande d'indexation manuelle GSC UI par Gabriel = bloquant.
 
 ### 2026-07-01 (ter) — Page géo Laval + diagnostic reach organique
 - **Diagnostic chiffré** (demande Gabriel « on a 1 visite/jour ») : 16/43 clics = marque « dilamco » → **~27 clics non-marque/mois**. Impressions ×14 en un mois (10→140/jour) mais pos 15-35 → pas de clics. 3 goulots : ① Local Pack/avis GBP (11 avis vs 58-103 concurrents), ② autorité (46 RD vs 125-438), ③ pages géo manquantes. Détail + décomposition du profil backlinks de cuisinesaction.com (374 RD dont ~moitié = bruit ; moteur réel = partenariats fournisseurs/métiers) : `live-data-2026-07-01.md`.
@@ -56,7 +63,7 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 5. **Link building local** — plan prêt dans `docs/seo/link-building-plan-2026-06-29.md` (cibles réelles de Cuisines Action, priorisées). HORS-CODE (Gabriel). Ordre : citations Tier 1 (gratuit, +Local Pack) → partenaires → médias déco. Cible 15-20 RD thématiques en 2-3 mois. Nécessaire pour consolider « cuisiniste » / « cuisine sur mesure ».
 
 ## 🙋 Actions HORS-CODE en attente (Gabriel)
-- [ ] **GA4** : marquer `generate_lead` comme événement clé (sinon 0 conversion mesurée). — *critique*
+- [x] **GA4** : `generate_lead` marqué événement clé (fait 2026-07-02 par Gabriel).
 - [x] **GBP catégorie principale changée (2026-06-29)** : « Entreprise de construction » → **« Entreprise de réaménagement de cuisine »** (Kitchen remodeler, = #1 Local Pack Tendances Concept). Fait via Chrome, soumis, **en attente d'examen Google (~10 min à qq jours)**. → Vérifier que c'est appliqué + que le Local Pack bouge sur « cuisine/armoires sur mesure ».
 - [x] **GBP services (2026-06-29)** : ajoutés via Chrome — Fabrication de placards de cuisine personnalisés, Conception de cuisines, Conception de placards, Pose de placards, Montage de meubles.
 - [x] **GBP post (2026-06-29)** : 1er post publié « cuisine sur mesure » + bouton En savoir plus → /espaces/cuisine.
@@ -66,4 +73,4 @@ Augmenter le **trafic ORGANIQUE** (la majorité des visites vient du Direct). Pr
 - [ ] **GBP description** : laissée telle quelle (refus utilisateur). Nouvelle version dispo dans le plan si besoin.
 - Fiche : 5,0/11 avis, place_id `ChIJkS849KM7yUwRI2hE7w3ERRA`. Système d'avis = lien direct + templates dans le plan.
 - [x] **Indexation soumise (2026-06-29)** via Indexing API pour apres-sinistre, water-damage, /espaces/cuisine.
-- [ ] **Contrôle 2026-07-01 (GSC MCP)** : pages sinistre TOUJOURS « URL is unknown to Google », jamais crawlées → l'Indexing API n'a PAS suffi (normal hors JobPosting) + crawl lent (faible autorité). Sitemap.xml **resoumis** le 2026-07-01. → **Gabriel : GSC UI → Inspection d'URL → coller les 2 URLs sinistre → « Demander l'indexation »** (seul moyen fiable, l'API inspect est lecture seule).
+- [x] **Demande d'indexation manuelle GSC UI faite (2026-07-02 par Gabriel)** pour les 4 URLs : apres-sinistre, water-damage, /zones/laval, /en/areas/laval. Historique : l'Indexing API (2026-06-29) + resoumission sitemap (2026-07-01) n'avaient PAS suffi (« URL is unknown to Google »). → **Recontrôler l'indexation vers le 2026-07-05** (batch_url_inspection).

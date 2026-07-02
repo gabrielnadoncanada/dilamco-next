@@ -5,7 +5,6 @@ import { isDoorPanel, isFlatPart } from "@/lib/shop/products";
 import type { Product } from "@/lib/shop/types";
 import {
   dimUnit,
-  localizeCeiling,
   localizeCorner,
   type ShopLocale,
 } from "@/lib/shop/catalog-i18n";
@@ -24,8 +23,6 @@ export function ProductSpecs({ product }: { product: Product }) {
         <dd>{product.d} {u}</dd>
         <dt>{t("specs.height")}</dt>
         <dd>{product.h} {u}</dd>
-        <dt>{t("specs.ceiling")}</dt>
-        <dd>{product.ceiling ? localizeCeiling(product.ceiling, locale) : "—"}</dd>
         {!flat ? (
           <>
             <dt>{t("specs.doors")}</dt>
@@ -42,8 +39,6 @@ export function ProductSpecs({ product }: { product: Product }) {
             <dd>{t("specs.cabinetValue")}</dd>
             <dt>{t("specs.door")}</dt>
             <dd>{oak ? t("specs.doorOak") : t("specs.doorPainted")}</dd>
-            <dt>{t("specs.hardware")}</dt>
-            <dd>{t("specs.hardwareValue")}</dd>
           </>
         ) : (
           <>

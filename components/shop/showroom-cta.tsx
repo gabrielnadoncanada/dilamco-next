@@ -22,7 +22,7 @@ export function ShowroomCta() {
       body={t("body")}
     >
       <div className="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-6 max-[700px]:grid-cols-1 max-[700px]:gap-3.5">
-        <div>
+        {/* <div>
           <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-muted-foreground">
             {t("addressLabel")}
           </span>
@@ -30,7 +30,7 @@ export function ShowroomCta() {
           <strong className="font-serif text-base font-normal text-foreground">
             275 rue Beaubien Ouest, Montréal H2T 1S2
           </strong>
-        </div>
+        </div> */}
         <div>
           <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-muted-foreground">
             {t("byAppointment")}

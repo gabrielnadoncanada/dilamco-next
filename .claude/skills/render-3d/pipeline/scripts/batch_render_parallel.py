@@ -76,6 +76,16 @@ def texture_paths() -> dict:
         "oak_rough": str(REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"),
         "white_rough": str(REPO_ROOT / "textures" / "laminate_floor_02_rough_2k.jpg"),
         "white_nor": str(white_nor) if white_nor.is_file() else "",
+        # Intérieur = contreplaqué bouleau PÂLE (Wood021, grain fin) désaturé +
+        # ajusté pour matcher le contreplaqué réel Dilamco (photo salle de montre).
+        # Wood095 (ancien) sortait trop ambré/orangé. Garder aligné avec les
+        # défauts --shelf-* de render_product_cabinet.build_parser.
+        "shelf_diff": str(REPO_ROOT / "textures" / "Wood021_acg" / "Wood021_2K-JPG_Color.jpg"),
+        "shelf_rough": str(REPO_ROOT / "textures" / "Wood021_acg" / "Wood021_2K-JPG_Roughness.jpg"),
+        "shelf_normal": str(REPO_ROOT / "textures" / "Wood021_acg" / "Wood021_2K-JPG_NormalGL.jpg"),
+        "shelf_sat": 0.82,
+        "shelf_val": 0.98,
+        "shelf_hue": 0.5,
     }
 
 

@@ -104,7 +104,7 @@
      Le composant Heading (vitrine) et Headline (boutique) pointent tous deux
      ici, pour une seule échelle de titres cohérente sur tout le site. */
   --title-1: clamp(40px, 6.5vw, 88px); /* hero / display */
-  --title-2: clamp(32px, 5vw, 64px); /* h1 */
+  --title-2: clamp(32px, 5vw, 54px); /* h1 */
   --title-3: clamp(28px, 4vw, 48px); /* h2 / headline (titre de section) */
   --title-4: clamp(23px, 3vw, 34px); /* h3 / subhead */
   --title-5: clamp(20px, 2.4vw, 28px); /* headline2 / title */
