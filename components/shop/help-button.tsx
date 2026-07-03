@@ -63,7 +63,7 @@ export function HelpButton() {
             {/* <li className="flex items-start gap-2.5 text-soft-foreground">
               <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
               <span>
-                Salle de montre — 275 rue Beaubien Ouest, Montréal
+                Salle de montre — Dorval (sur rendez-vous)
                 <br />
                 Lun – ven · 9h à 17h
               </span>

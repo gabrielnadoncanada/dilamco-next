@@ -28,7 +28,7 @@ export function ShowroomCta() {
           </span>
           <br />
           <strong className="font-serif text-base font-normal text-foreground">
-            275 rue Beaubien Ouest, Montréal H2T 1S2
+            Salle de montre — Dorval (adresse exacte à confirmer)
           </strong>
         </div> */}
         <div>

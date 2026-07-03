@@ -80,7 +80,7 @@
         "imageAlt": "Kitchen fitted with Dilamco cabinets"
       },
       "marquee": {
-        "0": "Showroom - Montreal",
+        "0": "Showroom - Dorval",
         "1": "Plywood - HDF cabinets",
         "2": "Online quote"
       },
@@ -241,11 +241,11 @@
           "status": "Available — priced at quote"
         },
         "pickup": {
-          "title": "Pickup — Montreal warehouse",
+          "title": "Pickup — Rigaud warehouse",
           "status": "In stock"
         },
         "showroom": {
-          "title": "Showroom — 275 Beaubien St. W.",
+          "title": "Showroom — Dorval",
           "hours": "Mon – Fri · 9 a.m. to 5 p.m."
         }
       },
@@ -255,7 +255,7 @@
         },
         "delivery": {
           "title": "Delivery and lead times",
-          "body": "Modules in stock at our Montreal warehouse. Firm quote within 48 h, including delivery and installation if desired. Installation in 1 to 3 days by our team."
+          "body": "Modules in stock at our Rigaud warehouse. Firm quote within 48 h, including delivery and installation if desired. Installation in 1 to 3 days by our team."
         },
         "warranty": {
           "title": "10-year warranty",
@@ -265,7 +265,7 @@
           "title": "A question before ordering?",
           "callUs": "Call us at",
           "orEmail": "or write to",
-          "showroom": "Showroom at 275 Beaubien Street West — see and touch the modules before you decide."
+          "showroom": "Showroom in Dorval — see and touch the modules before you decide."
         }
       },
       "specs": {
@@ -306,7 +306,7 @@
           "body": "Reinforced joints with no visible fasteners: stable, better-aligned modules."
         },
         "point4": {
-          "title": "Local warehouse in Montreal",
+          "title": "Our own warehouse",
           "body": "Inventory controlled on site: real availability and predictable lead times."
         }
       },
@@ -315,7 +315,7 @@
       "card": {
         "addAria": "Add {name} to project",
         "addShort": "+ Project",
-        "inStock": "In stock — Montreal warehouse",
+        "inStock": "In stock — fast delivery",
         "deliveryAvailable": "Delivery and installation available",
         "otherOptions": "{count, plural, one {Available in # other option} other {Available in # other options}}"
       }
@@ -496,14 +496,14 @@
         "finishes": "Finishes",
         "quote": "Request a quote"
       },
-      "announcement": "Warehouse in Montreal · 20+ years of experience · Online quotes",
+      "announcement": "In stock in Quebec · 20+ years of experience · Online quotes",
       "homeAria": "Dilamco home",
       "myProject": "My project",
       "project": "Project",
       "menu": "Menu",
       "catalogue": "Catalogue",
       "allCollections": "All collections",
-      "showroomLine": "Showroom · 275 Beaubien W",
+      "showroomLine": "Showroom · Dorval",
       "footer": {
         "tagline": "In-stock kitchen cabinets at accessible prices. Browse the catalogue, see prices and build your kitchen online.",
         "catalogue": "Catalogue",
@@ -518,10 +518,10 @@
         "rights": "© 2026 Dilamco inc. — All rights reserved"
       },
       "showroomCta": {
-        "eyebrow": "Montreal Showroom",
+        "eyebrow": "Dorval Showroom",
         "headlineLine1": "See, touch,",
         "headlineLine2": "open, close.",
-        "body": "5,200 sq. ft. of display space in the heart of Mile-Ex. Three complete kitchens on show, samples of every finish, and a corner-measuring tablet to plan your project in 90 minutes.",
+        "body": "Our Dorval showroom welcomes you by appointment: open cabinets, samples of every finish and advice to plan your project.",
         "addressLabel": "Address",
         "byAppointment": "By appointment",
         "hours": "Mon – Fri · 9 a.m. to 5 p.m.",

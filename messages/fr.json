@@ -80,7 +80,7 @@
         "imageAlt": "Cuisine équipée d'armoires Dilamco"
       },
       "marquee": {
-        "0": "Salle de montre - Montréal",
+        "0": "Salle de montre - Dorval",
         "1": "Armoires en contreplaqué - HDF",
         "2": "Soumission en ligne"
       },
@@ -241,12 +241,12 @@
           "status": "Disponible — chiffrée à la soumission"
         },
         "pickup": {
-          "title": "Cueillette — entrepôt à Montréal",
+          "title": "Cueillette — entrepôt de Rigaud",
           "status": "En stock"
         },
         "showroom": {
-          "title": "Salle de montre — 275 rue Beaubien O.",
-          "hours": "Lun – ven · 9 h à 17 h"
+          "title": "Salle de montre — Dorval",
+          "hours": "Sur rendez-vous"
         }
       },
       "accordion": {
@@ -255,7 +255,7 @@
         },
         "delivery": {
           "title": "Livraison et délais",
-          "body": "Modules en stock dans notre entrepôt de Montréal. Soumission ferme sous 48 h, incluant livraison et installation si désirée. Pose en 1 à 3 jours par notre équipe."
+          "body": "Modules en stock dans notre entrepôt de Rigaud. Soumission ferme sous 48 h, incluant livraison et installation si désirée. Pose en 1 à 3 jours par notre équipe."
         },
         "warranty": {
           "title": "Garantie 10 ans",
@@ -265,7 +265,7 @@
           "title": "Une question avant de commander ?",
           "callUs": "Appelez-nous au",
           "orEmail": "ou écrivez à",
-          "showroom": "Salle de montre au 275 rue Beaubien Ouest — voyez et touchez les modules avant de décider."
+          "showroom": "Salle de montre à Dorval — voyez et touchez les modules avant de décider."
         }
       },
       "specs": {
@@ -306,7 +306,7 @@
           "body": "Jonctions renforcées sans fixations visibles : des modules stables et mieux alignés."
         },
         "point4": {
-          "title": "Entrepôt local",
+          "title": "Notre propre entrepôt",
           "body": "Inventaire contrôlé sur place : disponibilité réelle et délais prévisibles."
         }
       },
@@ -315,7 +315,7 @@
       "card": {
         "addAria": "Ajouter {name} au projet",
         "addShort": "+ Projet",
-        "inStock": "En stock — entrepôt local",
+        "inStock": "En stock — livraison rapide",
         "deliveryAvailable": "Livraison et installation disponibles",
         "otherOptions": "{count, plural, one {Offert en # autre option} other {Offert en # autres options}}"
       }
@@ -496,14 +496,14 @@
         "finishes": "Finitions",
         "quote": "Demander une soumission"
       },
-      "announcement": "Entrepôt à Montréal · 20+ ans d'expérience · Soumission en ligne",
+      "announcement": "En stock au Québec · 20+ ans d'expérience · Soumission en ligne",
       "homeAria": "Dilamco accueil",
       "myProject": "Mon projet",
       "project": "Projet",
       "menu": "Menu",
       "catalogue": "Catalogue",
       "allCollections": "Toutes les collections",
-      "showroomLine": "Salle de montre · 275 Beaubien O",
+      "showroomLine": "Salle de montre · Dorval",
       "footer": {
         "tagline": "Armoires de cuisine en stock, à prix accessibles. Parcourez le catalogue, voyez les prix et montez votre cuisine en ligne.",
         "catalogue": "Catalogue",
@@ -518,10 +518,10 @@
         "rights": "© 2026 Dilamco inc. — Tous droits réservés"
       },
       "showroomCta": {
-        "eyebrow": "Showroom Montréal",
+        "eyebrow": "Showroom Dorval",
         "headlineLine1": "Voir, toucher,",
         "headlineLine2": "ouvrir, fermer.",
-        "body": "5 200 pi² d'exposition au cœur du Mile-Ex. Trois cuisines complètes en démonstration, échantillons de tous les finis, tablette de mesure d'angle pour planifier votre projet en 90 minutes.",
+        "body": "Notre salle de montre de Dorval vous accueille sur rendez-vous : caissons ouverts, échantillons de tous les finis et conseils pour planifier votre projet.",
         "addressLabel": "Adresse",
         "byAppointment": "Sur rendez-vous",
         "hours": "Lun – Ven · 9h à 17h",
