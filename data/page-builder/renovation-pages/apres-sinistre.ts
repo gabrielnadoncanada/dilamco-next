@@ -118,7 +118,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
             {
               title: "Fabrication et pose sur mesure",
               description:
-                "Armoires, rangements et finitions fabriqués et installés avec la même exigence que nos projets réguliers.",
+                "Armoires, rangements et finitions fournis et installés avec la même exigence que nos projets réguliers.",
             },
           ],
           actions: [
@@ -151,7 +151,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
         props: {
           heading: "Séquence type d'une reconstruction après sinistre",
           intro:
-            "La portée exacte est confirmée après l'évaluation et selon votre couverture d'assurance, mais la logique reste la même : constater, documenter, fabriquer, coordonner puis installer proprement.",
+            "La portée exacte est confirmée après l'évaluation et selon votre couverture d'assurance, mais la logique reste la même : constater, documenter, préparer, coordonner puis installer proprement.",
           steps: [
             {
               number: "1",
@@ -175,7 +175,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
               number: "4",
               title: "Fabrication",
               description:
-                "Armoires, rangements et finitions sur mesure préparés en atelier.",
+                "Armoires, rangements et finitions sur mesure préparés avant le chantier.",
             },
             {
               number: "5",
@@ -228,7 +228,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
               bullets: [
                 "Bois massif de bouleau pour les tiroirs.",
                 "Contreplaqué de bouleau pour mieux supporter la charge.",
-                "Fabrication contrôlée en atelier, pas d'assemblage improvisé.",
+                "Fabrication contrôlée chez notre usine partenaire, pas d'assemblage improvisé.",
               ],
             },
             {

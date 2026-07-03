@@ -364,13 +364,13 @@ function configPhrase(model: ProductModel, loc: Loc): string {
 }
 
 const CLOSES_FR = [
-  "En stock à notre entrepôt de Pierrefonds, livraison et installation dans le Grand Montréal.",
-  "Tenu en stock à Pierrefonds, prêt à partir — livraison et installation dans le Grand Montréal.",
+  "En stock à notre entrepôt de Rigaud, livraison et installation dans le Grand Montréal.",
+  "Tenu en stock à Rigaud, prêt à partir — livraison et installation dans le Grand Montréal.",
   "Disponible en stock, livré et installé dans le Grand Montréal.",
 ];
 const CLOSES_EN = [
-  "In stock at our Pierrefonds warehouse, with delivery and installation across Greater Montreal.",
-  "Held in stock in Pierrefonds, ready to go — delivery and installation across Greater Montreal.",
+  "In stock at our Rigaud warehouse, with delivery and installation across Greater Montreal.",
+  "Held in stock in Rigaud, ready to go — delivery and installation across Greater Montreal.",
   "Available in stock, delivered and installed across Greater Montreal.",
 ];
 

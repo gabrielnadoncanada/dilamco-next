@@ -36,7 +36,7 @@ export const salleDeBainPage: PageTemplateData = {
           heading:
             "Vanité de salle de bain sur mesure à Laval et dans le Grand Montréal",
           description:
-            "Une vanité durable demande des matériaux adaptés à l'humidité, une fabrication stable et une installation précise. On conçoit, fabrique et installe partout dans le Grand Montréal : Montréal, Laval, Rive-Nord et Rive-Sud.",
+            "Une vanité durable demande des matériaux adaptés à l'humidité, une fabrication stable et une installation précise. On conçoit, fournit et installe partout dans le Grand Montréal : Montréal, Laval, Rive-Nord et Rive-Sud.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -95,7 +95,7 @@ export const salleDeBainPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Les types de vanités sur mesure qu'on fabrique",
+          heading: "Les types de vanités sur mesure qu'on offre",
           intro:
             "Une vanité sur mesure s'adapte à votre pièce, à votre plomberie et à vos besoins de rangement — pas l'inverse. Voici les configurations les plus fréquentes.",
           columns: "2",
@@ -292,7 +292,7 @@ export const salleDeBainPage: PageTemplateData = {
         props: {
           heading: "Vanités sur mesure dans tout le Grand Montréal",
           intro:
-            "On conçoit, fabrique et installe des vanités de salle de bain sur mesure des deux côtés du fleuve : de l'ouest de l'île jusqu'à Laval, la Rive-Nord et la Rive-Sud.",
+            "On conçoit, fournit et installe des vanités de salle de bain sur mesure des deux côtés du fleuve : de l'ouest de l'île jusqu'à Laval, la Rive-Nord et la Rive-Sud.",
           badges: ["Montréal", "Laval", "Rive-Nord", "Rive-Sud"],
           cardTitle: "Zones desservies",
           items: [
@@ -333,7 +333,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               q: "Faites-vous des vanités sur mesure à Laval et sur la Rive-Nord ?",
-              a: "Oui. On conçoit, fabrique et installe des vanités de salle de bain sur mesure à Laval, sur la Rive-Nord, à Montréal et sur la Rive-Sud.",
+              a: "Oui. On conçoit, fournit et installe des vanités de salle de bain sur mesure à Laval, sur la Rive-Nord, à Montréal et sur la Rive-Sud.",
             },
             {
               q: "Quelle est la différence avec une vanité de salle de bain standard ?",

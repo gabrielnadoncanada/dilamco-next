@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Ébéniste et fabricant d'armoires sur mesure à Montréal",
+    title: "Spécialiste des armoires sur mesure à Montréal — À propos",
     description:
       "À propos de Dilamco : sur mesure, fabrication contrôlée, installation soignée et vision long terme pour des projets durables.",
     path: "/a-propos",

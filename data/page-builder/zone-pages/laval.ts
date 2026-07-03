@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneLavalPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Armoires de cuisine sur mesure à Laval | Ébéniste Dilamco",
+    title: "Armoires de cuisine sur mesure à Laval | Dilamco",
     description:
-      "Armoires de cuisine, vanités et garde-robes sur mesure à Laval : fabrication en atelier par un ébéniste-cuisiniste, prise de mesures à domicile et installation dans tous les quartiers — Chomedey, Sainte-Rose, Fabreville, Vimont, Duvernay.",
+      "Armoires de cuisine, vanités et garde-robes sur mesure à Laval : prise de mesures à domicile, armoires directes de notre usine partenaire et installation par notre équipe, partout à Laval.",
     path: "/zones/laval",
     ogAlt: "Armoires de cuisine sur mesure à Laval — Dilamco",
   },
@@ -17,7 +17,7 @@ export const zoneLavalPage: PageTemplateData = {
   service: {
     name: "Armoires de cuisine sur mesure à Laval",
     description:
-      "Conception, fabrication et installation d'armoires de cuisine, de vanités de salle de bain et de garde-robes sur mesure à Laval, par un ébéniste-cuisiniste établi dans le Grand Montréal.",
+      "Conception, fourniture et installation d'armoires de cuisine, de vanités de salle de bain et de garde-robes sur mesure à Laval, par Dilamco, concepteur-installateur d'armoires établi dans le Grand Montréal.",
     url: SITE.url + "/zones/laval",
     serviceType: "Armoires de cuisine sur mesure",
   },
@@ -31,9 +31,9 @@ export const zoneLavalPage: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Laval",
           heading:
-            "Armoires de cuisine sur mesure à Laval, fabriquées par un ébéniste d'ici",
+            "Armoires de cuisine sur mesure à Laval, conçues et installées par Dilamco",
           description:
-            "Cuisines, vanités de salle de bain et garde-robes sur mesure, conçues avec vous et fabriquées dans notre atelier du Grand Montréal, à une vingtaine de minutes de Laval. Prise de mesures à domicile, fabrication contrôlée en atelier et installation soignée, dans tous les quartiers de Laval.",
+            "Cuisines, vanités de salle de bain et garde-robes sur mesure, conçues avec vous à partir de votre espace réel, fabriquées exclusivement pour Dilamco par notre usine partenaire et installées par notre équipe. Prise de mesures à domicile partout à Laval, et salle de montre à Dorval pour voir matériaux et finitions.",
           actions: [
             {
               label: "Demander une soumission",
@@ -46,13 +46,12 @@ export const zoneLavalPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Ébéniste-cuisiniste", "Fabrication en atelier", "Laval"],
+          badges: ["Direct de l'usine", "Salle de montre à Dorval", "Laval"],
           image: {
             src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
             alt: "Cuisine haut de gamme blanche sur mesure réalisée à Laval",
           },
-          caption:
-            "Chomedey, Sainte-Rose, Fabreville, Vimont, Duvernay, Sainte-Dorothée et tout Laval",
+          caption: "Prise de mesures à domicile, partout à Laval",
         },
       },
     },
@@ -63,14 +62,14 @@ export const zoneLavalPage: PageTemplateData = {
         variant: "text-divider-cards",
         props: {
           heading:
-            "Pourquoi des clients de Laval choisissent un ébéniste plutôt qu'une grande surface",
+            "Pourquoi des clients de Laval choisissent le direct usine plutôt qu'une grande surface",
           description:
-            "À Laval, l'offre en armoires de cuisine est dominée par les salles de montre et les modules standard. Le sur-mesure d'atelier répond à un autre besoin : des espaces aux dimensions réelles de votre maison, des matériaux choisis, et un seul responsable du design à l'installation.",
+            "À Laval, l'offre en armoires de cuisine est dominée par les salles de montre et les modules standard. Le vrai sur-mesure répond à un autre besoin : des espaces aux dimensions réelles de votre maison, des matériaux choisis, et un seul responsable du design à l'installation.",
           cards: [
             {
-              title: "Fabricant, pas revendeur",
+              title: "Direct de l'usine, sans intermédiaire",
               description:
-                "Vos armoires sont fabriquées dans notre atelier, pas commandées d'un catalogue. Chaque caisson est ajusté à votre espace, pas l'inverse.",
+                "Nos armoires sont fabriquées exclusivement pour Dilamco par notre usine partenaire, selon nos standards. Chaque caisson est ajusté à votre espace, pas l'inverse.",
             },
             {
               title: "Un seul interlocuteur",
@@ -93,9 +92,9 @@ export const zoneLavalPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce qu'on fabrique sur mesure pour Laval",
+          heading: "Ce qu'on fait sur mesure pour Laval",
           intro:
-            "Le même savoir-faire d'ébénisterie s'applique à toutes les pièces de la maison : cuisine, salle de bain, chambre et rangements.",
+            "Le même savoir-faire s'applique à toutes les pièces de la maison : cuisine, salle de bain, chambre et rangements.",
           columns: "2",
           items: [
             {
@@ -132,7 +131,7 @@ export const zoneLavalPage: PageTemplateData = {
               ],
             },
             {
-              title: "Ébénisterie sur mesure",
+              title: "Meubles intégrés sur mesure",
               description:
                 "Meubles intégrés, bibliothèques, unités murales et aménagements que les catalogues n'offrent pas.",
               icon: "wrench",
@@ -154,7 +153,7 @@ export const zoneLavalPage: PageTemplateData = {
         props: {
           heading: "Un projet à Laval, étape par étape",
           intro:
-            "Pas besoin de vous déplacer : on vient prendre les mesures chez vous, et l'atelier est à une vingtaine de minutes pour ceux qui veulent voir la fabrication.",
+            "Pas besoin de vous déplacer : on vient prendre les mesures chez vous. Et si vous voulez voir matériaux, caissons et finitions, notre salle de montre de Dorval est à une demi-heure de Laval.",
           steps: [
             {
               number: "1",
@@ -176,9 +175,9 @@ export const zoneLavalPage: PageTemplateData = {
             },
             {
               number: "4",
-              title: "Fabrication en atelier",
+              title: "Fabrication",
               description:
-                "Vos armoires sont fabriquées dans notre atelier du Grand Montréal.",
+                "Vos armoires sont fabriquées par notre usine partenaire selon nos plans, avec contrôle qualité avant l'installation.",
             },
             {
               number: "5",
@@ -198,7 +197,7 @@ export const zoneLavalPage: PageTemplateData = {
         props: {
           heading: "Réalisations livrées à Laval et dans le Grand Montréal",
           intro:
-            "Des projets concrets, du même atelier et de la même équipe qui s'occuperaient du vôtre.",
+            "Des projets concrets, de la même équipe qui s'occuperait du vôtre.",
           items: [
             {
               title: "Vanité sur mesure à Laval",
@@ -207,7 +206,7 @@ export const zoneLavalPage: PageTemplateData = {
                 "Vanité de salle de bain fabriquée et installée pour une résidence de Laval.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Vanité de salle de bain sur mesure installée à Laval",
+                alt: "Illustration 3D d'une vanité de salle de bain sur mesure",
               },
               badges: ["Laval", "Salle de bain"],
               footerCtaLabel: "Voir le projet",
@@ -231,7 +230,7 @@ export const zoneLavalPage: PageTemplateData = {
                 "Notre approche complète de la cuisine sur mesure : agencement, matériaux, fabrication.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure fabriquée en atelier",
+                alt: "Illustration 3D d'un aménagement de cuisine sur mesure",
               },
               badges: ["Cuisine", "Sur mesure"],
               footerCtaLabel: "Voir l'espace cuisine",
@@ -256,23 +255,23 @@ export const zoneLavalPage: PageTemplateData = {
             },
             {
               q: "Avez-vous une salle de montre à Laval?",
-              a: "Non — et c'est voulu. Nous sommes un atelier de fabrication, pas une salle de montre : vous rencontrez directement les gens qui fabriquent vos armoires. L'atelier est dans le Grand Montréal, à une vingtaine de minutes de Laval, et se visite sur rendez-vous.",
+              a: "Pas à Laval, mais tout près : notre salle de montre est à Dorval, à environ une demi-heure. Venez voir les caissons, les portes, les finitions et la quincaillerie sur rendez-vous. La prise de mesures, elle, se fait chez vous.",
             },
             {
               q: "Combien coûtent des armoires de cuisine sur mesure à Laval?",
-              a: "Une cuisine complète sur mesure se situe généralement entre 20 000 $ (rafraîchissement, agencement simple) et 35 000 $ à 50 000 $ et plus pour un projet complet haut de gamme. Le prix dépend du nombre de caissons, des matériaux et de la complexité de l'agencement. La soumission détaillée est gratuite.",
+              a: "Une cuisine complète sur mesure se situe généralement entre 30 000 $ et 65 000 $, selon le nombre de caissons, les matériaux et la complexité de l'agencement. La soumission détaillée est gratuite.",
             },
             {
               q: "Faites-vous aussi les vanités et les garde-robes?",
-              a: "Oui. En plus des armoires de cuisine, nous fabriquons des vanités de salle de bain, des garde-robes sur mesure, des walk-in et des meubles intégrés. Nous avons d'ailleurs déjà livré des vanités sur mesure à Laval.",
+              a: "Oui. En plus des armoires de cuisine, nous faisons des vanités de salle de bain, des garde-robes sur mesure, des walk-in et des meubles intégrés. Nous avons d'ailleurs déjà livré des vanités sur mesure à Laval.",
             },
             {
               q: "Quel est le délai pour une cuisine sur mesure?",
-              a: "Comptez généralement de 6 à 10 semaines entre l'approbation des plans et l'installation, selon la période et la complexité du projet. La fabrication en atelier nous donne un contrôle direct sur l'échéancier.",
+              a: "Pour du sur mesure, comptez environ 9 à 15 semaines entre l'approbation des plans et l'installation, selon la période et la complexité du projet. Pour un projet à partir de nos armoires en stock, la livraison se fait en quelques jours.",
             },
             {
-              q: "Êtes-vous fabricant ou revendeur?",
-              a: "Fabricant. Dilamco est un atelier d'ébénisterie : vos armoires sont conçues, fabriquées et installées par la même équipe. Aucun intermédiaire entre vous et la fabrication.",
+              q: "D'où viennent vos armoires?",
+              a: "Elles sont fabriquées exclusivement pour Dilamco par notre usine partenaire, sans intermédiaire. Le design, la gestion de projet et l'installation sont faits par notre équipe locale, et le stock est tenu dans notre entrepôt de Rigaud.",
             },
           ],
         },

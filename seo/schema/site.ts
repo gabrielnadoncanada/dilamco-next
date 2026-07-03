@@ -13,12 +13,13 @@ export const SITE = {
     postalCode: "H9K 1P1",
     addressCountry: "CA",
   },
-  // Coordonnées de l'atelier (cohérentes avec le GBP / sameAs Google Maps).
+  // Coordonnées de l'adresse d'affaires (cohérentes avec le GBP / sameAs Google Maps).
+  // NB : showroom à Dorval, entrepôt à Rigaud — pas d'atelier de fabrication local.
   geo: {
     latitude: 45.4536963,
     longitude: -73.892443,
   },
-  // Heures d'ouverture (atelier sur rendez-vous). Format Schema.org dayOfWeek.
+  // Heures d'ouverture (sur rendez-vous). Format Schema.org dayOfWeek.
   openingHours: [
     {
       days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],

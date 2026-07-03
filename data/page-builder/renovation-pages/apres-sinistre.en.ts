@@ -175,7 +175,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               number: "4",
               title: "Fabrication",
               description:
-                "Custom cabinets, storage and finishes prepared in the workshop.",
+                "Custom cabinets, storage and finishes prepared ahead of the worksite.",
             },
             {
               number: "5",
@@ -228,7 +228,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               bullets: [
                 "Solid birch wood for drawers.",
                 "Birch plywood to better carry the load.",
-                "Controlled workshop fabrication, no improvised assembly.",
+                "Controlled fabrication at our partner factory, no improvised assembly.",
               ],
             },
             {

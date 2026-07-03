@@ -9,7 +9,7 @@ const differentiators = [
     icon: Factory,
     title: "Une structure réelle derrière chaque projet",
     description:
-      "Entrepôt à Montréal depuis plus de 20 ans, relation directe avec notre usine. Pas d'intermédiaire, pas d'aléas d'approvisionnement — un projet planifié et livré dans les délais.",
+      "Établis dans le Grand Montréal depuis plus de 20 ans, relation directe avec notre usine partenaire. Pas d'intermédiaire, pas d'aléas d'approvisionnement — un projet planifié et livré dans les délais.",
     metric: "20+",
     metricLabel: "Années d'opération",
   },

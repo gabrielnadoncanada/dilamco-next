@@ -64,7 +64,7 @@ export const sousSolPage: PageTemplateData = {
         props: {
           heading: "Un sous-sol pensé comme une vraie pièce de vie",
           intro:
-            "Un sous-sol gagne en valeur quand l'ébénisterie est intégrée dès le départ : rangements, unité murale, bar ou cinéma planifiés avec la pièce, pas ajoutés après coup.",
+            "Un sous-sol gagne en valeur quand le mobilier intégré est pensé dès le départ : rangements, unité murale, bar ou cinéma planifiés avec la pièce, pas ajoutés après coup.",
           badges: ["Sur mesure", "Durabilité", "Clé en main"],
           cardTitle: "Bon fit pour ce type de projet",
           items: [
@@ -95,7 +95,7 @@ export const sousSolPage: PageTemplateData = {
         props: {
           heading: "Ce qu'on aménage dans un sous-sol",
           intro:
-            "Chaque sous-sol combine quelques-uns de ces espaces. On conçoit l'ébénisterie sur mesure pour qu'ils s'intègrent à la pièce et restent fonctionnels au quotidien.",
+            "Chaque sous-sol combine quelques-uns de ces espaces. On conçoit le mobilier intégré sur mesure pour qu'ils s'intègrent à la pièce et restent fonctionnels au quotidien.",
           items: [
             {
               title: "Salle de cinéma maison",
@@ -239,7 +239,7 @@ export const sousSolPage: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-            alt: "Détail d'ébénisterie sur mesure pour aménagement de sous-sol",
+            alt: "Détail de mobilier intégré sur mesure pour aménagement de sous-sol",
           },
           cardTitle: "Pourquoi ça compte",
           cardDescription:
@@ -255,7 +255,7 @@ export const sousSolPage: PageTemplateData = {
         props: {
           heading: "Aménagement de sous-sol partout dans le Grand Montréal",
           intro:
-            "Basés à Pierrefonds-Roxboro, on conçoit, fabrique et installe des aménagements de sous-sol sur mesure dans l'Ouest-de-l'Île et partout dans le Grand Montréal.",
+            "Basés dans le Grand Montréal, on conçoit et installe des aménagements de sous-sol sur mesure dans l'Ouest-de-l'Île et partout dans la région.",
           badges: [
             "Pierrefonds-Roxboro",
             "Ouest-de-l'Île",
@@ -302,7 +302,7 @@ export const sousSolPage: PageTemplateData = {
             },
             {
               q: "Quelle est la différence entre une « salle de cinéma maison » et un « cinéma maison » ?",
-              a: "Un « cinéma maison » désigne souvent l'équipement audio-vidéo (haut-parleurs, récepteur). Une salle de cinéma maison sur mesure, c'est l'aménagement de la pièce : estrade, panneaux, rangement d'équipement et ébénisterie intégrée. C'est ce qu'on conçoit et fabrique.",
+              a: "Un « cinéma maison » désigne souvent l'équipement audio-vidéo (haut-parleurs, récepteur). Une salle de cinéma maison sur mesure, c'est l'aménagement de la pièce : estrade, panneaux, rangement d'équipement et mobilier intégré. C'est ce qu'on conçoit et installe.",
             },
             {
               q: "Faites-vous l'aménagement de sous-sol à Pierrefonds et dans l'Ouest-de-l'Île ?",

@@ -1,6 +1,6 @@
 import type { Product, ColorName, ProductGalleryEntry } from "./types";
 
-const DEFAULT_GALLERY_LABELS = ["Atelier", "Ambiance", "Détail · Moulure"] as const;
+const DEFAULT_GALLERY_LABELS = ["Fabrication", "Ambiance", "Détail · Moulure"] as const;
 
 /** Placeholder neutre « image à venir » : affiché tel quel pour les produits
  *  sans rendu Blender, plutôt qu'une photo d'un autre meuble (qui trompe). */

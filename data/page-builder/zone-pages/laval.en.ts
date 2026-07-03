@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneLavalPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Custom Kitchen Cabinets in Laval | Dilamco Cabinetmaker",
+    title: "Custom Kitchen Cabinets in Laval | Dilamco",
     description:
-      "Custom kitchen cabinets, bathroom vanities and closets in Laval: built in our workshop by a cabinetmaker, with in-home measurements and installation across every Laval neighbourhood — Chomedey, Sainte-Rose, Fabreville, Vimont, Duvernay.",
+      "Custom kitchen cabinets, bathroom vanities and closets in Laval: in-home measurements, cabinets sourced directly from our partner factory and installation by our own team, anywhere in Laval.",
     path: "/zones/laval",
     ogAlt: "Custom kitchen cabinets in Laval — Dilamco",
   },
@@ -17,7 +17,7 @@ export const zoneLavalPageEn: PageTemplateData = {
   service: {
     name: "Custom kitchen cabinets in Laval",
     description:
-      "Design, fabrication and installation of custom kitchen cabinets, bathroom vanities and closets in Laval, by a cabinetmaker based in Greater Montreal.",
+      "Design, supply and installation of custom kitchen cabinets, bathroom vanities and closets in Laval, by Dilamco, a cabinet design and installation company based in Greater Montreal.",
     url: SITE.url + "/en/areas/laval",
     serviceType: "Custom kitchen cabinets",
   },
@@ -31,9 +31,9 @@ export const zoneLavalPageEn: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Laval",
           heading:
-            "Custom kitchen cabinets in Laval, built by a local cabinetmaker",
+            "Custom kitchen cabinets in Laval, designed and installed by Dilamco",
           description:
-            "Kitchens, bathroom vanities and custom closets, designed with you and built in our Greater Montreal workshop, about twenty minutes from Laval. In-home measurements, workshop-controlled fabrication and clean installation, in every Laval neighbourhood.",
+            "Kitchens, bathroom vanities and custom closets, designed with you around your actual space, made exclusively for Dilamco by our partner factory and installed by our own team. In-home measurements anywhere in Laval, and a Dorval showroom to see materials and finishes.",
           actions: [
             {
               label: "Request a quote",
@@ -46,13 +46,12 @@ export const zoneLavalPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Cabinetmaker", "Workshop-built", "Laval"],
+          badges: ["Factory-direct", "Dorval showroom", "Laval"],
           image: {
             src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
             alt: "High-end white custom kitchen completed in Laval",
           },
-          caption:
-            "Chomedey, Sainte-Rose, Fabreville, Vimont, Duvernay, Sainte-Dorothée and all of Laval",
+          caption: "In-home measurements, anywhere in Laval",
         },
       },
     },
@@ -63,14 +62,14 @@ export const zoneLavalPageEn: PageTemplateData = {
         variant: "text-divider-cards",
         props: {
           heading:
-            "Why Laval homeowners choose a cabinetmaker over a big-box store",
+            "Why Laval homeowners choose factory-direct over a big-box store",
           description:
-            "In Laval, kitchen cabinets mostly mean showrooms and standard modules. Workshop custom work answers a different need: cabinetry built to your home's real dimensions, materials you actually choose, and one team accountable from design to installation.",
+            "In Laval, kitchen cabinets mostly mean showrooms and standard modules. True custom work answers a different need: cabinetry built to your home's real dimensions, materials you actually choose, and one team accountable from design to installation.",
           cards: [
             {
-              title: "Manufacturer, not reseller",
+              title: "Factory-direct, no middleman",
               description:
-                "Your cabinets are built in our workshop, not ordered from a catalogue. Every cabinet is fitted to your space, not the other way around.",
+                "Our cabinets are made exclusively for Dilamco by our partner factory, to our standards. Every cabinet is fitted to your space, not the other way around.",
             },
             {
               title: "One point of contact",
@@ -93,9 +92,9 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What we build for Laval homes",
+          heading: "What we do for Laval homes",
           intro:
-            "The same cabinetmaking know-how applies to every room of the house: kitchen, bathroom, bedrooms and storage.",
+            "The same know-how applies to every room of the house: kitchen, bathroom, bedrooms and storage.",
           columns: "2",
           items: [
             {
@@ -132,7 +131,7 @@ export const zoneLavalPageEn: PageTemplateData = {
               ],
             },
             {
-              title: "Custom cabinetry",
+              title: "Custom built-ins",
               description:
                 "Built-in furniture, bookcases, wall units and layouts catalogues don't offer.",
               icon: "wrench",
@@ -154,7 +153,7 @@ export const zoneLavalPageEn: PageTemplateData = {
         props: {
           heading: "A Laval project, step by step",
           intro:
-            "No need to travel: we take measurements at your home, and the workshop is about twenty minutes away if you want to see fabrication first-hand.",
+            "No need to travel: we take measurements at your home. And if you want to see materials, cabinets and finishes in person, our Dorval showroom is about thirty minutes from Laval.",
           steps: [
             {
               number: "1",
@@ -175,9 +174,9 @@ export const zoneLavalPageEn: PageTemplateData = {
             },
             {
               number: "4",
-              title: "Workshop fabrication",
+              title: "Fabrication",
               description:
-                "Your cabinets are built in our Greater Montreal workshop.",
+                "Your cabinets are made by our partner factory to our plans, with quality control before installation.",
             },
             {
               number: "5",
@@ -197,7 +196,7 @@ export const zoneLavalPageEn: PageTemplateData = {
         props: {
           heading: "Projects delivered in Laval and Greater Montreal",
           intro:
-            "Real projects, from the same workshop and the same team that would handle yours.",
+            "Real projects, from the same team that would handle yours.",
           items: [
             {
               title: "Custom vanity in Laval",
@@ -206,7 +205,7 @@ export const zoneLavalPageEn: PageTemplateData = {
                 "Bathroom vanity built and installed for a Laval residence.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom vanity installed in Laval",
+                alt: "3D rendering of a custom bathroom vanity",
               },
               badges: ["Laval", "Bathroom"],
               footerCtaLabel: "See the project",
@@ -230,7 +229,7 @@ export const zoneLavalPageEn: PageTemplateData = {
                 "Our complete approach to the custom kitchen: layout, materials, fabrication.",
               image: {
                 src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen built in our workshop",
+                alt: "3D rendering of a custom kitchen layout",
               },
               badges: ["Kitchen", "Custom"],
               footerCtaLabel: "See the kitchen page",
@@ -254,23 +253,23 @@ export const zoneLavalPageEn: PageTemplateData = {
             },
             {
               q: "Do you have a showroom in Laval?",
-              a: "No — by design. We're a fabrication workshop, not a showroom: you deal directly with the people who build your cabinets. The workshop is in Greater Montreal, about twenty minutes from Laval, and can be visited by appointment.",
+              a: "Not in Laval, but close by: our showroom is in Dorval, about thirty minutes away. Come see cabinets, doors, finishes and hardware by appointment. Measurements, on the other hand, are taken at your home.",
             },
             {
               q: "How much do custom kitchen cabinets cost in Laval?",
-              a: "A complete custom kitchen generally runs from $20,000 (refresh, simple layout) to $35,000–$50,000+ for a full high-end project. The price depends on the number of cabinets, materials and layout complexity. The detailed quote is free.",
+              a: "A complete custom kitchen generally runs from $30,000 to $65,000, depending on the number of cabinets, materials and layout complexity. The detailed quote is free.",
             },
             {
-              q: "Do you also build vanities and closets?",
-              a: "Yes. Beyond kitchen cabinets, we build bathroom vanities, custom closets, walk-ins and built-in furniture. We've already delivered custom vanities in Laval.",
+              q: "Do you also do vanities and closets?",
+              a: "Yes. Beyond kitchen cabinets, we do bathroom vanities, custom closets, walk-ins and built-in furniture. We've already delivered custom vanities in Laval.",
             },
             {
               q: "What's the lead time for a custom kitchen?",
-              a: "Generally 6 to 10 weeks between plan approval and installation, depending on the season and project complexity. Building in our own workshop gives us direct control over the schedule.",
+              a: "For custom work, allow roughly 9 to 15 weeks between plan approval and installation, depending on the season and project complexity. For a project built from our in-stock cabinets, delivery takes just a few days.",
             },
             {
-              q: "Are you a manufacturer or a reseller?",
-              a: "A manufacturer. Dilamco is a cabinetmaking workshop: your cabinets are designed, built and installed by the same team. No middleman between you and fabrication.",
+              q: "Where do your cabinets come from?",
+              a: "They are made exclusively for Dilamco by our partner factory, with no middleman. Design, project management and installation are handled by our local team, and stock is held at our Rigaud warehouse.",
             },
           ],
         },

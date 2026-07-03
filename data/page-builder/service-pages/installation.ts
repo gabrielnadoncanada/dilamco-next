@@ -209,7 +209,7 @@ export const installationPage: PageTemplateData = {
             },
             {
               q: "Installez-vous seulement vos propres armoires?",
-              a: "Oui. Nous installons les éléments que nous fabriquons pour garantir la cohérence du résultat.",
+              a: "Oui. Nous installons les éléments que nous fournissons pour garantir la cohérence du résultat.",
             },
             {
               q: "Travaillez-vous en condo ou en commercial?",

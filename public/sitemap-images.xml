@@ -39,6 +39,16 @@
       <image:caption>Aménagement commercial sur mesure</image:caption>
       <image:title>Aménagement commercial sur mesure</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-featured-cuisine-project-01.webp</image:loc>
+      <image:caption>Armoires de cuisine en stock prêtes à installer</image:caption>
+      <image:title>Armoires de cuisine en stock prêtes à installer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-featured-bath-project-01.webp</image:loc>
+      <image:caption>Vanités de salle de bain en stock, 24 et 30 pouces</image:caption>
+      <image:title>Vanités de salle de bain en stock, 24 et 30 pouces</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/a-propos</loc>
@@ -84,6 +94,16 @@
       <image:loc>https://dilamco.com/images/generated/home/home-space-commercial-card-01.webp</image:loc>
       <image:caption>Custom commercial fit-out</image:caption>
       <image:title>Custom commercial fit-out</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-featured-cuisine-project-01.webp</image:loc>
+      <image:caption>In-stock kitchen cabinets ready to install</image:caption>
+      <image:title>In-stock kitchen cabinets ready to install</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/home/home-featured-bath-project-01.webp</image:loc>
+      <image:caption>In-stock bathroom vanities, 24 and 30 inch</image:caption>
+      <image:title>In-stock bathroom vanities, 24 and 30 inch</image:title>
     </image:image>
   </url>
   <url>
@@ -1026,13 +1046,13 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Custom bathroom vanity installed in Laval</image:caption>
-      <image:title>Custom bathroom vanity installed in Laval</image:title>
+      <image:caption>3D rendering of a custom bathroom vanity</image:caption>
+      <image:title>3D rendering of a custom bathroom vanity</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen built in our workshop</image:caption>
-      <image:title>Custom kitchen built in our workshop</image:title>
+      <image:caption>3D rendering of a custom kitchen layout</image:caption>
+      <image:title>3D rendering of a custom kitchen layout</image:title>
     </image:image>
   </url>
   <url>
@@ -1204,8 +1224,8 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Détail d&amp;#x27;ébénisterie sur mesure pour aménagement de sous-sol</image:caption>
-      <image:title>Détail d&amp;#x27;ébénisterie sur mesure pour aménagement de sous-sol</image:title>
+      <image:caption>Détail de mobilier intégré sur mesure pour aménagement de sous-sol</image:caption>
+      <image:title>Détail de mobilier intégré sur mesure pour aménagement de sous-sol</image:title>
     </image:image>
   </url>
   <url>
@@ -1967,19 +1987,19 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Vanité de salle de bain sur mesure installée à Laval</image:caption>
-      <image:title>Vanité de salle de bain sur mesure installée à Laval</image:title>
+      <image:caption>Illustration 3D d&amp;#x27;une vanité de salle de bain sur mesure</image:caption>
+      <image:title>Illustration 3D d&amp;#x27;une vanité de salle de bain sur mesure</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
-      <image:caption>Cuisine sur mesure fabriquée en atelier</image:caption>
-      <image:title>Cuisine sur mesure fabriquée en atelier</image:title>
+      <image:caption>Illustration 3D d&amp;#x27;un aménagement de cuisine sur mesure</image:caption>
+      <image:title>Illustration 3D d&amp;#x27;un aménagement de cuisine sur mesure</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-1-porte-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb12_face.webp?v=6b39bdae</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb12_face.webp?v=39c43d26</image:loc>
       <image:caption>Armoire de cuisine du bas avec 1 porte (12&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 1 porte (12&quot;)</image:title>
     </image:image>
@@ -1987,7 +2007,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-1-porte-15-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb15_face.webp?v=843e1aa0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb15_face.webp?v=7187583a</image:loc>
       <image:caption>Armoire de cuisine du bas avec 1 porte (15&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 1 porte (15&quot;)</image:title>
     </image:image>
@@ -1995,7 +2015,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-1-porte-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb18_face.webp?v=5f0e223c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb18_face.webp?v=5197e22c</image:loc>
       <image:caption>Armoire de cuisine du bas avec 1 porte (18&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 1 porte (18&quot;)</image:title>
     </image:image>
@@ -2003,7 +2023,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-1-porte-21-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb21_face.webp?v=ed7b796b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb21_face.webp?v=1448ed4a</image:loc>
       <image:caption>Armoire de cuisine du bas avec 1 porte (21&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 1 porte (21&quot;)</image:title>
     </image:image>
@@ -2011,7 +2031,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-1-porte-9-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb09_face.webp?v=8f961bbe</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb09_face.webp?v=ca3d510b</image:loc>
       <image:caption>Armoire de cuisine du bas avec 1 porte (9&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 1 porte (9&quot;)</image:title>
     </image:image>
@@ -2019,7 +2039,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-portes-24-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb24_face.webp?v=b6c721db</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb24_face.webp?v=250cf7a4</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 portes (24&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 portes (24&quot;)</image:title>
     </image:image>
@@ -2027,7 +2047,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-portes-27-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb27_face.webp?v=955955bf</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb27_face.webp?v=5ac19c76</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 portes (27&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 portes (27&quot;)</image:title>
     </image:image>
@@ -2035,7 +2055,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-portes-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb30_face.webp?v=f1868762</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb30_face.webp?v=083de3c3</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 portes (30&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 portes (30&quot;)</image:title>
     </image:image>
@@ -2043,7 +2063,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-portes-33-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb33_face.webp?v=3ed2df56</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb33_face.webp?v=8fabfd02</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 portes (33&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 portes (33&quot;)</image:title>
     </image:image>
@@ -2051,7 +2071,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-portes-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb36_face.webp?v=2399c146</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb36_face.webp?v=f576485e</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 portes (36&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 portes (36&quot;)</image:title>
     </image:image>
@@ -2059,7 +2079,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-portes-39-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb39_face.webp?v=14f773e0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb39_face.webp?v=21be7512</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 portes (39&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 portes (39&quot;)</image:title>
     </image:image>
@@ -2067,7 +2087,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-portes-42-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb42_face.webp?v=ad06a3f3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb42_face.webp?v=0b177ab2</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 portes (42&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 portes (42&quot;)</image:title>
     </image:image>
@@ -2075,7 +2095,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db12-2-muf_face.webp?v=606261c7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db12-2-muf_face.webp?v=d6256025</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (12&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (12&quot;)</image:title>
     </image:image>
@@ -2083,7 +2103,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-15-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db15-2-muf_face.webp?v=a9a7d906</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db15-2-muf_face.webp?v=1357b9a5</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (15&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (15&quot;)</image:title>
     </image:image>
@@ -2091,7 +2111,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db18-2-muf_face.webp?v=8cd601ba</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db18-2-muf_face.webp?v=302f6b3b</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (18&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (18&quot;)</image:title>
     </image:image>
@@ -2099,7 +2119,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-21-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db21-2-muf_face.webp?v=e342543f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db21-2-muf_face.webp?v=f59c6bca</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (21&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (21&quot;)</image:title>
     </image:image>
@@ -2107,7 +2127,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-24-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db24-2-muf_face.webp?v=90eb0f84</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db24-2-muf_face.webp?v=2f4ad838</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (24&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (24&quot;)</image:title>
     </image:image>
@@ -2115,7 +2135,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-27-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db27-2_face.webp?v=a8b0ec97</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db27-2_face.webp?v=bc6fb068</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (27&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (27&quot;)</image:title>
     </image:image>
@@ -2123,7 +2143,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db30-2_face.webp?v=1ae31ec0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db30-2_face.webp?v=2abc1176</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (30&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (30&quot;)</image:title>
     </image:image>
@@ -2131,7 +2151,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-33-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db33-2-muf_face.webp?v=713f21ef</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db33-2-muf_face.webp?v=ebec6827</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (33&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (33&quot;)</image:title>
     </image:image>
@@ -2139,7 +2159,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-2-tiroirs-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db36-2-muf_face.webp?v=060157a3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db36-2-muf_face.webp?v=1e67574d</image:loc>
       <image:caption>Armoire de cuisine du bas avec 2 tiroirs (36&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 2 tiroirs (36&quot;)</image:title>
     </image:image>
@@ -2147,7 +2167,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db12_face.webp?v=9967203d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db12_face.webp?v=42117baa</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (12&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (12&quot;)</image:title>
     </image:image>
@@ -2155,7 +2175,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-15-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db15_face.webp?v=7e204422</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db15_face.webp?v=ad13cb69</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (15&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (15&quot;)</image:title>
     </image:image>
@@ -2163,7 +2183,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db18_face.webp?v=cdabdf98</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db18_face.webp?v=f1396bfd</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (18&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (18&quot;)</image:title>
     </image:image>
@@ -2171,7 +2191,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-21-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db21_face.webp?v=59acbadc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db21_face.webp?v=1d2130aa</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (21&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (21&quot;)</image:title>
     </image:image>
@@ -2179,7 +2199,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-24-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db24_face.webp?v=a28c76a8</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db24_face.webp?v=231c26b6</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (24&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (24&quot;)</image:title>
     </image:image>
@@ -2187,7 +2207,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-27-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db27_face.webp?v=5460c71b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db27_face.webp?v=7c31ea7d</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (27&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (27&quot;)</image:title>
     </image:image>
@@ -2195,7 +2215,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db30_face.webp?v=e6ce4250</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db30_face.webp?v=bccf2e34</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (30&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (30&quot;)</image:title>
     </image:image>
@@ -2203,7 +2223,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-33-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db33_face.webp?v=7baff8ff</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db33_face.webp?v=f6d95762</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (33&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (33&quot;)</image:title>
     </image:image>
@@ -2211,7 +2231,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-3-tiroirs-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db36_face.webp?v=0044013f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db36_face.webp?v=e2c3e3b1</image:loc>
       <image:caption>Armoire de cuisine du bas avec 3 tiroirs (36&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec 3 tiroirs (36&quot;)</image:title>
     </image:image>
@@ -2219,7 +2239,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-90-33-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=5ca996b2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=f04d300a</image:loc>
       <image:caption>Armoire de cuisine du bas coin 90º (33&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin 90º (33&quot;)</image:title>
     </image:image>
@@ -2227,7 +2247,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-90-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=3ea1adf4</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=9ad39cc4</image:loc>
       <image:caption>Armoire de cuisine du bas coin 90º (36&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin 90º (36&quot;)</image:title>
     </image:image>
@@ -2235,7 +2255,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-mort-42-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=9525a96e</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=c9cab398</image:loc>
       <image:caption>Armoire de cuisine du bas coin mort (42&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin mort (42&quot;)</image:title>
     </image:image>
@@ -2243,7 +2263,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-mort-45-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=c9f3798f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=d78f309f</image:loc>
       <image:caption>Armoire de cuisine du bas coin mort (45&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin mort (45&quot;)</image:title>
     </image:image>
@@ -2251,7 +2271,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-coin-mort-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=aa4df53a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=c6d71fb9</image:loc>
       <image:caption>Armoire de cuisine du bas coin mort (48&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas coin mort (48&quot;)</image:title>
     </image:image>
@@ -2259,7 +2279,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-espace-micro-ondes-1-tiroir-27-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bmc27_face.webp?v=2fd56e57</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bmc27_face.webp?v=e6f6a1fb</image:loc>
       <image:caption>Armoire de cuisine du bas avec espace micro-ondes et 1 tiroir (27&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec espace micro-ondes et 1 tiroir (27&quot;)</image:title>
     </image:image>
@@ -2267,7 +2287,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-evier-farmhouse-33-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb33x19-75-10-1-8_face.webp?v=d82dbfda</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb33x19-75-10-1-8_face.webp?v=77083517</image:loc>
       <image:caption>Armoire de cuisine du bas pour évier farmhouse (33&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas pour évier farmhouse (33&quot;)</image:title>
     </image:image>
@@ -2275,7 +2295,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-evier-farmhouse-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb36x19-75-10-1-8_face.webp?v=59763bd5</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb36x19-75-10-1-8_face.webp?v=d18078bb</image:loc>
       <image:caption>Armoire de cuisine du bas pour évier farmhouse (36&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas pour évier farmhouse (36&quot;)</image:title>
     </image:image>
@@ -2283,7 +2303,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-range-epices-coulissant-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-sp12_face.webp?v=e86995ff</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-sp12_face.webp?v=0bfc0846</image:loc>
       <image:caption>Armoire de cuisine du bas avec range-épices coulissant (12&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec range-épices coulissant (12&quot;)</image:title>
     </image:image>
@@ -2291,7 +2311,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-range-epices-coulissant-6-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-sp06_face.webp?v=a9dbf028</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-sp06_face.webp?v=24a56da5</image:loc>
       <image:caption>Armoire de cuisine du bas avec range-épices coulissant (6&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec range-épices coulissant (6&quot;)</image:title>
     </image:image>
@@ -2299,7 +2319,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-range-epices-coulissant-9-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-sp09_face.webp?v=e3253d1d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-sp09_face.webp?v=655c6ca4</image:loc>
       <image:caption>Armoire de cuisine du bas avec range-épices coulissant (9&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec range-épices coulissant (9&quot;)</image:title>
     </image:image>
@@ -2307,7 +2327,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-bas-tiroir-dechets-coulissant-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-b18-po_face.webp?v=60e09f17</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-b18-po_face.webp?v=2b675ba2</image:loc>
       <image:caption>Armoire de cuisine du bas avec tiroir à déchets coulissant (18&quot;)</image:caption>
       <image:title>Armoire de cuisine du bas avec tiroir à déchets coulissant (18&quot;)</image:title>
     </image:image>
@@ -2315,7 +2335,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-12-x-93-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp129327_face.webp?v=1fd6bf1b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp129327_face.webp?v=35f080a1</image:loc>
       <image:caption>Armoire de cuisine garde-manger (12&quot; x 93&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (12&quot; x 93&quot;)</image:title>
     </image:image>
@@ -2323,7 +2343,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-15-x-93-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp159327_face.webp?v=de8befb7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp159327_face.webp?v=c173a137</image:loc>
       <image:caption>Armoire de cuisine garde-manger (15&quot; x 93&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (15&quot; x 93&quot;)</image:title>
     </image:image>
@@ -2331,7 +2351,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-18-x-84-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp188427_face.webp?v=dac3d2b5</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp188427_face.webp?v=d5755880</image:loc>
       <image:caption>Armoire de cuisine garde-manger (18&quot; x 84&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (18&quot; x 84&quot;)</image:title>
     </image:image>
@@ -2339,7 +2359,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-18-x-90-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189027_face.webp?v=54539c7f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189027_face.webp?v=a127d87e</image:loc>
       <image:caption>Armoire de cuisine garde-manger (18&quot; x 90&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (18&quot; x 90&quot;)</image:title>
     </image:image>
@@ -2347,7 +2367,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-18-x-91-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp18x91-527_face.webp?v=e6c70bea</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp18x91-527_face.webp?v=f0e17bb4</image:loc>
       <image:caption>Armoire de cuisine garde-manger (18&quot; x 91.5&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (18&quot; x 91.5&quot;)</image:title>
     </image:image>
@@ -2355,7 +2375,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-18-x-93-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189327_face.webp?v=ae888269</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189327_face.webp?v=91f3cca4</image:loc>
       <image:caption>Armoire de cuisine garde-manger (18&quot; x 93&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (18&quot; x 93&quot;)</image:title>
     </image:image>
@@ -2363,7 +2383,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-24-x-103-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp24x103-5_face.webp?v=332552d2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp24x103-5_face.webp?v=d4f22cd1</image:loc>
       <image:caption>Armoire de cuisine garde-manger (24&quot; x 103.5&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (24&quot; x 103.5&quot;)</image:title>
     </image:image>
@@ -2371,7 +2391,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-24-x-84-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp248427_face.webp?v=7e98c4f1</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp248427_face.webp?v=ffc28907</image:loc>
       <image:caption>Armoire de cuisine garde-manger (24&quot; x 84&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (24&quot; x 84&quot;)</image:title>
     </image:image>
@@ -2379,7 +2399,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-24-x-90-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249027_face.webp?v=80e17367</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249027_face.webp?v=dac5a012</image:loc>
       <image:caption>Armoire de cuisine garde-manger (24&quot; x 90&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (24&quot; x 90&quot;)</image:title>
     </image:image>
@@ -2387,7 +2407,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-24-x-91-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2491-5x27_face.webp?v=d99da8be</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2491-5x27_face.webp?v=ee3fe657</image:loc>
       <image:caption>Armoire de cuisine garde-manger (24&quot; x 91.5&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (24&quot; x 91.5&quot;)</image:title>
     </image:image>
@@ -2395,7 +2415,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-24-x-93-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249327_face.webp?v=8993b8da</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249327_face.webp?v=ea05078d</image:loc>
       <image:caption>Armoire de cuisine garde-manger (24&quot; x 93&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (24&quot; x 93&quot;)</image:title>
     </image:image>
@@ -2403,7 +2423,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-24-x-96-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249627_face.webp?v=410bd56d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249627_face.webp?v=96cc78de</image:loc>
       <image:caption>Armoire de cuisine garde-manger (24&quot; x 96&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (24&quot; x 96&quot;)</image:title>
     </image:image>
@@ -2411,7 +2431,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-27-x-91-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2791-5x27_face.webp?v=18f56cfe</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2791-5x27_face.webp?v=3f38afb5</image:loc>
       <image:caption>Armoire de cuisine garde-manger (27&quot; x 91.5&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (27&quot; x 91.5&quot;)</image:title>
     </image:image>
@@ -2419,7 +2439,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-27-x-93-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279327_face.webp?v=6474c2a2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279327_face.webp?v=b52e9122</image:loc>
       <image:caption>Armoire de cuisine garde-manger (27&quot; x 93&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (27&quot; x 93&quot;)</image:title>
     </image:image>
@@ -2427,7 +2447,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-27-x-96-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279627_face.webp?v=cab02e7b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279627_face.webp?v=875641c5</image:loc>
       <image:caption>Armoire de cuisine garde-manger (27&quot; x 96&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (27&quot; x 96&quot;)</image:title>
     </image:image>
@@ -2435,7 +2455,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-30-x-103-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp30x103-5_face.webp?v=e7a40d44</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp30x103-5_face.webp?v=255808bb</image:loc>
       <image:caption>Armoire de cuisine garde-manger (30&quot; x 103.5&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (30&quot; x 103.5&quot;)</image:title>
     </image:image>
@@ -2443,7 +2463,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-30-x-84-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp308427_face.webp?v=46e5c7e2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp308427_face.webp?v=4ce11fb8</image:loc>
       <image:caption>Armoire de cuisine garde-manger (30&quot; x 84&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (30&quot; x 84&quot;)</image:title>
     </image:image>
@@ -2451,7 +2471,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-30-x-90-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309027_face.webp?v=8d92339d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309027_face.webp?v=b891aaa4</image:loc>
       <image:caption>Armoire de cuisine garde-manger (30&quot; x 90&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (30&quot; x 90&quot;)</image:title>
     </image:image>
@@ -2459,7 +2479,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-30-x-93-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309327_face.webp?v=e4b32954</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309327_face.webp?v=28f3f843</image:loc>
       <image:caption>Armoire de cuisine garde-manger (30&quot; x 93&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (30&quot; x 93&quot;)</image:title>
     </image:image>
@@ -2467,7 +2487,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-garde-manger-30-x-96-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309627_face.webp?v=8de7cfc2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309627_face.webp?v=cbca7212</image:loc>
       <image:caption>Armoire de cuisine garde-manger (30&quot; x 96&quot;)</image:caption>
       <image:title>Armoire de cuisine garde-manger (30&quot; x 96&quot;)</image:title>
     </image:image>
@@ -2475,7 +2495,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-12-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1230_face.webp?v=9ff346f9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1230_face.webp?v=1259cbb2</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (12&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (12&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2483,7 +2503,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-12-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1236_face.webp?v=0ee25a5c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1236_face.webp?v=6d065e83</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (12&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (12&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2491,7 +2511,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-12-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1248_face.webp?v=c994bd35</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1248_face.webp?v=a594812c</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (12&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (12&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2499,7 +2519,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-14-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1436_face.webp?v=b01382a1</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1436_face.webp?v=0619f403</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (14&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (14&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2507,7 +2527,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-15-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1530_face.webp?v=185f2c8a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1530_face.webp?v=ecd8f2f7</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (15&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (15&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2515,7 +2535,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-15-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1536_face.webp?v=eed883ae</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1536_face.webp?v=564ee297</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (15&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (15&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2523,7 +2543,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-15-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1548_face.webp?v=ed254d39</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1548_face.webp?v=58c86d1b</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (15&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (15&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2531,7 +2551,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-18-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1830_face.webp?v=4448aec9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1830_face.webp?v=c1a7ac15</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (18&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (18&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2539,7 +2559,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-18-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1836_face.webp?v=3f87c7d9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1836_face.webp?v=d88930f8</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (18&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (18&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2547,7 +2567,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-18-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1848_face.webp?v=d5d12763</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1848_face.webp?v=23c02aa0</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (18&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (18&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2555,7 +2575,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-20-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2036_face.webp?v=292039e9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2036_face.webp?v=de778901</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (20&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (20&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2563,7 +2583,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-21-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2130_face.webp?v=c61b30de</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2130_face.webp?v=0aa0d880</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (21&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (21&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2571,7 +2591,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-21-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2136_face.webp?v=304cc186</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2136_face.webp?v=17e04e08</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (21&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (21&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2579,7 +2599,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-21-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2148_face.webp?v=4d46d500</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2148_face.webp?v=8d25309b</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (21&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (21&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2587,7 +2607,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-23-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2336_face.webp?v=ee0f519c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2336_face.webp?v=bdc83db8</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (23&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (23&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2595,7 +2615,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-9-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w0930_face.webp?v=e0d8abdb</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w0930_face.webp?v=fb2adfc1</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (9&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (9&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2603,7 +2623,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-1-porte-9-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w0936_face.webp?v=bb237703</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w0936_face.webp?v=c7c9d48e</image:loc>
       <image:caption>Armoire de cuisine du haut à 1 porte (9&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 1 porte (9&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2611,7 +2631,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-24-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2430_face.webp?v=9af5e4db</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2430_face.webp?v=a3d1d9e1</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (24&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2619,7 +2639,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-24-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2436_face.webp?v=607ad01e</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2436_face.webp?v=8d95ca72</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (24&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2627,7 +2647,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-24-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2448_face.webp?v=320b3b57</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2448_face.webp?v=feb9359e</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (24&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (24&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2635,7 +2655,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-27-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2730_face.webp?v=05dd51c3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2730_face.webp?v=7c7241f8</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (27&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (27&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2643,7 +2663,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-27-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2736_face.webp?v=92ca91b9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2736_face.webp?v=270db6cf</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (27&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (27&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2651,7 +2671,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-27-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2748_face.webp?v=65324164</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2748_face.webp?v=a2323e1f</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (27&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (27&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2659,7 +2679,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3012_face.webp?v=c8eab8c7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3012_face.webp?v=f1ec0948</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 12&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 12&quot;)</image:title>
     </image:image>
@@ -2667,7 +2687,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-15-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3015_face.webp?v=206e5f98</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3015_face.webp?v=df434509</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 15&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 15&quot;)</image:title>
     </image:image>
@@ -2675,7 +2695,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3018_face.webp?v=74e4bcfc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3018_face.webp?v=229fb891</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 18&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 18&quot;)</image:title>
     </image:image>
@@ -2683,7 +2703,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-19-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w30x19-5_face.webp?v=cb309dcf</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w30x19-5_face.webp?v=16a0ad6c</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 19.5&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 19.5&quot;)</image:title>
     </image:image>
@@ -2691,7 +2711,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-21-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3021_face.webp?v=f0172bd6</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3021_face.webp?v=724558c8</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 21&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 21&quot;)</image:title>
     </image:image>
@@ -2699,7 +2719,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-24-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3024_face.webp?v=d1868c69</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3024_face.webp?v=d768be92</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 24&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 24&quot;)</image:title>
     </image:image>
@@ -2707,7 +2727,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-27-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3027_face.webp?v=8aa831c7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3027_face.webp?v=d00bea89</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 27&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 27&quot;)</image:title>
     </image:image>
@@ -2715,7 +2735,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3030_face.webp?v=d7136cab</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3030_face.webp?v=2f4a2a09</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2723,7 +2743,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3036_face.webp?v=e549b5d6</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3036_face.webp?v=bbe7ae4e</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2731,7 +2751,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-42-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3042_face.webp?v=74d442a6</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3042_face.webp?v=2d39f93f</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 42&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 42&quot;)</image:title>
     </image:image>
@@ -2739,7 +2759,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-30-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3048_face.webp?v=d5a320dd</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3048_face.webp?v=0f5be9fc</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (30&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (30&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2747,7 +2767,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-33-x-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3312_face.webp?v=5cf2be4a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3312_face.webp?v=a91bfe57</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (33&quot; x 12&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (33&quot; x 12&quot;)</image:title>
     </image:image>
@@ -2755,7 +2775,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-33-x-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3318_face.webp?v=cca4b563</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3318_face.webp?v=0e09c5a8</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (33&quot; x 18&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (33&quot; x 18&quot;)</image:title>
     </image:image>
@@ -2763,7 +2783,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-33-x-19-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33x19-5_face.webp?v=c7a793b8</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33x19-5_face.webp?v=bc52286c</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (33&quot; x 19.5&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (33&quot; x 19.5&quot;)</image:title>
     </image:image>
@@ -2771,7 +2791,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-33-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3330_face.webp?v=7e49fc4a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3330_face.webp?v=78493071</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (33&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (33&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2779,7 +2799,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-33-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3336_face.webp?v=6acf23cc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3336_face.webp?v=5cc5dacc</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (33&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (33&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2787,7 +2807,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-33-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3348_face.webp?v=97cfe79b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3348_face.webp?v=d6c557ce</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (33&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (33&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2795,7 +2815,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3612_face.webp?v=314e4fc9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3612_face.webp?v=f3066bbf</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 12&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 12&quot;)</image:title>
     </image:image>
@@ -2803,7 +2823,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3618_face.webp?v=f1a09c16</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3618_face.webp?v=bd3652fd</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 18&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 18&quot;)</image:title>
     </image:image>
@@ -2811,7 +2831,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-19-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36x19-5_face.webp?v=599a1c5c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36x19-5_face.webp?v=5b8e462b</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 19.5&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 19.5&quot;)</image:title>
     </image:image>
@@ -2819,7 +2839,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-24-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3624_face.webp?v=7da2f7ff</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3624_face.webp?v=469b28bb</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 24&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 24&quot;)</image:title>
     </image:image>
@@ -2827,7 +2847,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3630_face.webp?v=5b65f052</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3630_face.webp?v=d0587be3</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2835,7 +2855,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3636_face.webp?v=0512a43b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3636_face.webp?v=b0d08722</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2843,7 +2863,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-42-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3642_face.webp?v=c1d587df</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3642_face.webp?v=13774bef</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 42&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 42&quot;)</image:title>
     </image:image>
@@ -2851,7 +2871,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-36-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3648_face.webp?v=daae2b3c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3648_face.webp?v=417bec76</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (36&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (36&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2859,7 +2879,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-39-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3930_face.webp?v=9159108c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3930_face.webp?v=27aa0862</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (39&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (39&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2867,7 +2887,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-39-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3936_face.webp?v=500bb2f2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3936_face.webp?v=7df826fe</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (39&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (39&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2875,7 +2895,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-42-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w4230_face.webp?v=91a73321</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w4230_face.webp?v=ca92cc45</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (42&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (42&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2883,7 +2903,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-42-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w4236_face.webp?v=94332794</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w4236_face.webp?v=7de278c2</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes (42&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes (42&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2891,7 +2911,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-33-5-x-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51227_face.webp?v=e3facc4a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51227_face.webp?v=d4a14861</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 12&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 12&quot;)</image:title>
     </image:image>
@@ -2899,7 +2919,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-33-5-x-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51827_face.webp?v=74a16670</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51827_face.webp?v=6a4ef9f6</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 18&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 18&quot;)</image:title>
     </image:image>
@@ -2907,7 +2927,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-33-5-x-20-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-52027_face.webp?v=9674f5c1</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-52027_face.webp?v=f08597ad</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 20&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 20&quot;)</image:title>
     </image:image>
@@ -2915,7 +2935,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-33-5-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-5x30x27_face.webp?v=7d83827d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-5x30x27_face.webp?v=d808b390</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (33.5&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2923,7 +2943,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-36-5-x-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51227_face.webp?v=5e3102e9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51227_face.webp?v=460395a9</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 12&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 12&quot;)</image:title>
     </image:image>
@@ -2931,7 +2951,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-36-5-x-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51827_face.webp?v=d7ce1745</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51827_face.webp?v=52d58542</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 18&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 18&quot;)</image:title>
     </image:image>
@@ -2939,7 +2959,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-36-5-x-20-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x20x27_face.webp?v=7cbda17d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x20x27_face.webp?v=321a31df</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 20&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 20&quot;)</image:title>
     </image:image>
@@ -2947,7 +2967,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-36-5-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x30x27_face.webp?v=7c2f0263</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x30x27_face.webp?v=786ca762</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2955,7 +2975,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-36-5-x-31-5-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x31-5x27_face.webp?v=15a6777b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x31-5x27_face.webp?v=ed8b206f</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 31.5&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (36.5&quot; x 31.5&quot;)</image:title>
     </image:image>
@@ -2963,7 +2983,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-2-portes-dessus-refrigerateur-39-x-20-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w39x20x27_face.webp?v=43bdfbdd</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w39x20x27_face.webp?v=15dac1dd</image:loc>
       <image:caption>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (39&quot; x 20&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut à 2 portes pour dessus de réfrigérateur (39&quot; x 20&quot;)</image:title>
     </image:image>
@@ -2971,7 +2991,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-45-24-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=f83610ec</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=ea8d12f6</image:loc>
       <image:caption>Armoire de cuisine du haut coin 45º (24&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin 45º (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -2979,7 +2999,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-45-24-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=7a148b50</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=493ea937</image:loc>
       <image:caption>Armoire de cuisine du haut coin 45º (24&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin 45º (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -2987,7 +3007,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-45-24-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=68ff56cc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=cd84f163</image:loc>
       <image:caption>Armoire de cuisine du haut coin 45º (24&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin 45º (24&quot; x 48&quot;)</image:title>
     </image:image>
@@ -2995,7 +3015,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-30-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=44feffd4</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=6d52599b</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (30&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (30&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3003,7 +3023,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-30-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=45d4d361</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=1be67892</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (30&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (30&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3011,7 +3031,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-33-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=f5a2ed32</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=55207837</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (33&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (33&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3019,7 +3039,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-33-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=7e21f674</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=cb7bafda</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (33&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (33&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3027,7 +3047,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-36-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=7b1521c3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=9e5c0b24</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (36&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (36&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3035,7 +3055,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-coin-mort-36-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=6c458f4d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=0c687f0f</image:loc>
       <image:caption>Armoire de cuisine du haut coin mort (36&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut coin mort (36&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3043,7 +3063,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-24-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=7a31745b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=e29d7a6d</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3051,7 +3071,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-24-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=c1543202</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=939c76ef</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3059,7 +3079,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-27-x-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=20f4d34b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=660f9299</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 30&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3067,7 +3087,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-27-x-36-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=1ab429d7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=23d0915f</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 36&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3075,7 +3095,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-cuisine-haut-espace-micro-ondes-2-portes-27-x-48-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=2346d8d9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=a7f7827e</image:loc>
       <image:caption>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 48&quot;)</image:caption>
       <image:title>Armoire de cuisine du haut avec espace micro-ondes et 2 portes (27&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3083,7 +3103,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-salle-de-bain-3-tiroirs-12-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1221_face.webp?v=bcf73426</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1221_face.webp?v=701299b5</image:loc>
       <image:caption>Armoire de salle de bain avec 3 tiroirs (12&quot;)</image:caption>
       <image:title>Armoire de salle de bain avec 3 tiroirs (12&quot;)</image:title>
     </image:image>
@@ -3091,7 +3111,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-salle-de-bain-3-tiroirs-15-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1521_face.webp?v=31acf3c3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1521_face.webp?v=32e743ae</image:loc>
       <image:caption>Armoire de salle de bain avec 3 tiroirs (15&quot;)</image:caption>
       <image:title>Armoire de salle de bain avec 3 tiroirs (15&quot;)</image:title>
     </image:image>
@@ -3099,7 +3119,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/armoire-salle-de-bain-3-tiroirs-18-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1821_face.webp?v=8399b15f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1821_face.webp?v=cdf3d32b</image:loc>
       <image:caption>Armoire de salle de bain avec 3 tiroirs (18&quot;)</image:caption>
       <image:title>Armoire de salle de bain avec 3 tiroirs (18&quot;)</image:title>
     </image:image>
@@ -3107,7 +3127,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/vanite-salle-de-bain-2-portes-24-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vs2421_face.webp?v=8ad46738</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vs2421_face.webp?v=a36d6807</image:loc>
       <image:caption>Vanité de salle de bain à 2 portes (24&quot;)</image:caption>
       <image:title>Vanité de salle de bain à 2 portes (24&quot;)</image:title>
     </image:image>
@@ -3115,7 +3135,7 @@
   <url>
     <loc>https://dilamco.com/boutique/produit/vanite-salle-de-bain-2-portes-30-pouces</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vs3021_face.webp?v=20a2de2b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vs3021_face.webp?v=281b6355</image:loc>
       <image:caption>Vanité de salle de bain à 2 portes (30&quot;)</image:caption>
       <image:title>Vanité de salle de bain à 2 portes (30&quot;)</image:title>
     </image:image>
@@ -3123,7 +3143,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-blind-corner-cabinet-42-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=9525a96e</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc42_face.webp?v=c9cab398</image:loc>
       <image:caption>Base kitchen blind-corner cabinet (42&quot;)</image:caption>
       <image:title>Base kitchen blind-corner cabinet (42&quot;)</image:title>
     </image:image>
@@ -3131,7 +3151,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-blind-corner-cabinet-45-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=c9f3798f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc45_face.webp?v=d78f309f</image:loc>
       <image:caption>Base kitchen blind-corner cabinet (45&quot;)</image:caption>
       <image:title>Base kitchen blind-corner cabinet (45&quot;)</image:title>
     </image:image>
@@ -3139,7 +3159,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-blind-corner-cabinet-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=aa4df53a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bbc48_face.webp?v=c6d71fb9</image:loc>
       <image:caption>Base kitchen blind-corner cabinet (48&quot;)</image:caption>
       <image:title>Base kitchen blind-corner cabinet (48&quot;)</image:title>
     </image:image>
@@ -3147,7 +3167,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-1-door-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb12_face.webp?v=6b39bdae</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb12_face.webp?v=39c43d26</image:loc>
       <image:caption>Base kitchen cabinet with 1 door (12&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 1 door (12&quot;)</image:title>
     </image:image>
@@ -3155,7 +3175,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-1-door-15-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb15_face.webp?v=843e1aa0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb15_face.webp?v=7187583a</image:loc>
       <image:caption>Base kitchen cabinet with 1 door (15&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 1 door (15&quot;)</image:title>
     </image:image>
@@ -3163,7 +3183,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-1-door-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb18_face.webp?v=5f0e223c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb18_face.webp?v=5197e22c</image:loc>
       <image:caption>Base kitchen cabinet with 1 door (18&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 1 door (18&quot;)</image:title>
     </image:image>
@@ -3171,7 +3191,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-1-door-21-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb21_face.webp?v=ed7b796b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb21_face.webp?v=1448ed4a</image:loc>
       <image:caption>Base kitchen cabinet with 1 door (21&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 1 door (21&quot;)</image:title>
     </image:image>
@@ -3179,7 +3199,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-1-door-9-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb09_face.webp?v=8f961bbe</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb09_face.webp?v=ca3d510b</image:loc>
       <image:caption>Base kitchen cabinet with 1 door (9&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 1 door (9&quot;)</image:title>
     </image:image>
@@ -3187,7 +3207,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-doors-24-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb24_face.webp?v=b6c721db</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb24_face.webp?v=250cf7a4</image:loc>
       <image:caption>Base kitchen cabinet with 2 doors (24&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 doors (24&quot;)</image:title>
     </image:image>
@@ -3195,7 +3215,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-doors-27-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb27_face.webp?v=955955bf</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb27_face.webp?v=5ac19c76</image:loc>
       <image:caption>Base kitchen cabinet with 2 doors (27&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 doors (27&quot;)</image:title>
     </image:image>
@@ -3203,7 +3223,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-doors-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb30_face.webp?v=f1868762</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb30_face.webp?v=083de3c3</image:loc>
       <image:caption>Base kitchen cabinet with 2 doors (30&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 doors (30&quot;)</image:title>
     </image:image>
@@ -3211,7 +3231,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-doors-33-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb33_face.webp?v=3ed2df56</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb33_face.webp?v=8fabfd02</image:loc>
       <image:caption>Base kitchen cabinet with 2 doors (33&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 doors (33&quot;)</image:title>
     </image:image>
@@ -3219,7 +3239,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-doors-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb36_face.webp?v=2399c146</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb36_face.webp?v=f576485e</image:loc>
       <image:caption>Base kitchen cabinet with 2 doors (36&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 doors (36&quot;)</image:title>
     </image:image>
@@ -3227,7 +3247,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-doors-39-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb39_face.webp?v=14f773e0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb39_face.webp?v=21be7512</image:loc>
       <image:caption>Base kitchen cabinet with 2 doors (39&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 doors (39&quot;)</image:title>
     </image:image>
@@ -3235,7 +3255,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-doors-42-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fb42_face.webp?v=ad06a3f3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fb42_face.webp?v=0b177ab2</image:loc>
       <image:caption>Base kitchen cabinet with 2 doors (42&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 doors (42&quot;)</image:title>
     </image:image>
@@ -3243,7 +3263,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db12-2-muf_face.webp?v=606261c7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db12-2-muf_face.webp?v=d6256025</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (12&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (12&quot;)</image:title>
     </image:image>
@@ -3251,7 +3271,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-15-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db15-2-muf_face.webp?v=a9a7d906</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db15-2-muf_face.webp?v=1357b9a5</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (15&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (15&quot;)</image:title>
     </image:image>
@@ -3259,7 +3279,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db18-2-muf_face.webp?v=8cd601ba</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db18-2-muf_face.webp?v=302f6b3b</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (18&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (18&quot;)</image:title>
     </image:image>
@@ -3267,7 +3287,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-21-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db21-2-muf_face.webp?v=e342543f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db21-2-muf_face.webp?v=f59c6bca</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (21&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (21&quot;)</image:title>
     </image:image>
@@ -3275,7 +3295,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-24-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db24-2-muf_face.webp?v=90eb0f84</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db24-2-muf_face.webp?v=2f4ad838</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (24&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (24&quot;)</image:title>
     </image:image>
@@ -3283,7 +3303,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-27-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db27-2_face.webp?v=a8b0ec97</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db27-2_face.webp?v=bc6fb068</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (27&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (27&quot;)</image:title>
     </image:image>
@@ -3291,7 +3311,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db30-2_face.webp?v=1ae31ec0</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db30-2_face.webp?v=2abc1176</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (30&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (30&quot;)</image:title>
     </image:image>
@@ -3299,7 +3319,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-33-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db33-2-muf_face.webp?v=713f21ef</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db33-2-muf_face.webp?v=ebec6827</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (33&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (33&quot;)</image:title>
     </image:image>
@@ -3307,7 +3327,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-2-drawers-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db36-2-muf_face.webp?v=060157a3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db36-2-muf_face.webp?v=1e67574d</image:loc>
       <image:caption>Base kitchen cabinet with 2 drawers (36&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 2 drawers (36&quot;)</image:title>
     </image:image>
@@ -3315,7 +3335,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db12_face.webp?v=9967203d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db12_face.webp?v=42117baa</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (12&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (12&quot;)</image:title>
     </image:image>
@@ -3323,7 +3343,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-15-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db15_face.webp?v=7e204422</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db15_face.webp?v=ad13cb69</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (15&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (15&quot;)</image:title>
     </image:image>
@@ -3331,7 +3351,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db18_face.webp?v=cdabdf98</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db18_face.webp?v=f1396bfd</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (18&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (18&quot;)</image:title>
     </image:image>
@@ -3339,7 +3359,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-21-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db21_face.webp?v=59acbadc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db21_face.webp?v=1d2130aa</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (21&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (21&quot;)</image:title>
     </image:image>
@@ -3347,7 +3367,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-24-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db24_face.webp?v=a28c76a8</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db24_face.webp?v=231c26b6</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (24&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (24&quot;)</image:title>
     </image:image>
@@ -3355,7 +3375,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-27-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db27_face.webp?v=5460c71b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db27_face.webp?v=7c31ea7d</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (27&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (27&quot;)</image:title>
     </image:image>
@@ -3363,7 +3383,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db30_face.webp?v=e6ce4250</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db30_face.webp?v=bccf2e34</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (30&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (30&quot;)</image:title>
     </image:image>
@@ -3371,7 +3391,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-33-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db33_face.webp?v=7baff8ff</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db33_face.webp?v=f6d95762</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (33&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (33&quot;)</image:title>
     </image:image>
@@ -3379,7 +3399,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-3-drawers-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-db36_face.webp?v=0044013f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-db36_face.webp?v=e2c3e3b1</image:loc>
       <image:caption>Base kitchen cabinet with 3 drawers (36&quot;)</image:caption>
       <image:title>Base kitchen cabinet with 3 drawers (36&quot;)</image:title>
     </image:image>
@@ -3387,7 +3407,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-farmhouse-sink-33-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb33x19-75-10-1-8_face.webp?v=d82dbfda</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb33x19-75-10-1-8_face.webp?v=77083517</image:loc>
       <image:caption>Base kitchen cabinet for farmhouse sink (33&quot;)</image:caption>
       <image:title>Base kitchen cabinet for farmhouse sink (33&quot;)</image:title>
     </image:image>
@@ -3395,7 +3415,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-farmhouse-sink-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb36x19-75-10-1-8_face.webp?v=59763bd5</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-fsb36x19-75-10-1-8_face.webp?v=d18078bb</image:loc>
       <image:caption>Base kitchen cabinet for farmhouse sink (36&quot;)</image:caption>
       <image:title>Base kitchen cabinet for farmhouse sink (36&quot;)</image:title>
     </image:image>
@@ -3403,7 +3423,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-microwave-space-1-drawer-27-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-bmc27_face.webp?v=2fd56e57</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-bmc27_face.webp?v=e6f6a1fb</image:loc>
       <image:caption>Base kitchen cabinet with microwave space and 1 drawer (27&quot;)</image:caption>
       <image:title>Base kitchen cabinet with microwave space and 1 drawer (27&quot;)</image:title>
     </image:image>
@@ -3411,7 +3431,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-pull-out-spice-rack-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-sp12_face.webp?v=e86995ff</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-sp12_face.webp?v=0bfc0846</image:loc>
       <image:caption>Base kitchen cabinet with pull-out spice rack (12&quot;)</image:caption>
       <image:title>Base kitchen cabinet with pull-out spice rack (12&quot;)</image:title>
     </image:image>
@@ -3419,7 +3439,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-pull-out-spice-rack-6-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-sp06_face.webp?v=a9dbf028</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-sp06_face.webp?v=24a56da5</image:loc>
       <image:caption>Base kitchen cabinet with pull-out spice rack (6&quot;)</image:caption>
       <image:title>Base kitchen cabinet with pull-out spice rack (6&quot;)</image:title>
     </image:image>
@@ -3427,7 +3447,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-pull-out-spice-rack-9-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-sp09_face.webp?v=e3253d1d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-sp09_face.webp?v=655c6ca4</image:loc>
       <image:caption>Base kitchen cabinet with pull-out spice rack (9&quot;)</image:caption>
       <image:title>Base kitchen cabinet with pull-out spice rack (9&quot;)</image:title>
     </image:image>
@@ -3435,7 +3455,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-cabinet-pull-out-waste-bin-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-b18-po_face.webp?v=60e09f17</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-b18-po_face.webp?v=2b675ba2</image:loc>
       <image:caption>Base kitchen cabinet with pull-out waste bin (18&quot;)</image:caption>
       <image:title>Base kitchen cabinet with pull-out waste bin (18&quot;)</image:title>
     </image:image>
@@ -3443,7 +3463,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-corner-cabinet-90-33-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=5ca996b2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3309_face.webp?v=f04d300a</image:loc>
       <image:caption>Base kitchen corner cabinet 90º (33&quot;)</image:caption>
       <image:title>Base kitchen corner cabinet 90º (33&quot;)</image:title>
     </image:image>
@@ -3451,7 +3471,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/base-kitchen-corner-cabinet-90-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=3ea1adf4</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-ls3612_face.webp?v=9ad39cc4</image:loc>
       <image:caption>Base kitchen corner cabinet 90º (36&quot;)</image:caption>
       <image:title>Base kitchen corner cabinet 90º (36&quot;)</image:title>
     </image:image>
@@ -3459,7 +3479,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/bathroom-cabinet-3-drawers-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1221_face.webp?v=bcf73426</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1221_face.webp?v=701299b5</image:loc>
       <image:caption>Bathroom cabinet with 3 drawers (12&quot;)</image:caption>
       <image:title>Bathroom cabinet with 3 drawers (12&quot;)</image:title>
     </image:image>
@@ -3467,7 +3487,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/bathroom-cabinet-3-drawers-15-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1521_face.webp?v=31acf3c3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1521_face.webp?v=32e743ae</image:loc>
       <image:caption>Bathroom cabinet with 3 drawers (15&quot;)</image:caption>
       <image:title>Bathroom cabinet with 3 drawers (15&quot;)</image:title>
     </image:image>
@@ -3475,7 +3495,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/bathroom-cabinet-3-drawers-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1821_face.webp?v=8399b15f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vdb1821_face.webp?v=cdf3d32b</image:loc>
       <image:caption>Bathroom cabinet with 3 drawers (18&quot;)</image:caption>
       <image:title>Bathroom cabinet with 3 drawers (18&quot;)</image:title>
     </image:image>
@@ -3483,7 +3503,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/bathroom-vanity-2-doors-24-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vs2421_face.webp?v=8ad46738</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vs2421_face.webp?v=a36d6807</image:loc>
       <image:caption>Bathroom vanity with 2 doors (24&quot;)</image:caption>
       <image:title>Bathroom vanity with 2 doors (24&quot;)</image:title>
     </image:image>
@@ -3491,7 +3511,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/bathroom-vanity-2-doors-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-vs3021_face.webp?v=20a2de2b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-vs3021_face.webp?v=281b6355</image:loc>
       <image:caption>Bathroom vanity with 2 doors (30&quot;)</image:caption>
       <image:title>Bathroom vanity with 2 doors (30&quot;)</image:title>
     </image:image>
@@ -3499,7 +3519,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-12-x-93-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp129327_face.webp?v=1fd6bf1b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp129327_face.webp?v=35f080a1</image:loc>
       <image:caption>Pantry kitchen cabinet (12&quot; x 93&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (12&quot; x 93&quot;)</image:title>
     </image:image>
@@ -3507,7 +3527,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-15-x-93-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp159327_face.webp?v=de8befb7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp159327_face.webp?v=c173a137</image:loc>
       <image:caption>Pantry kitchen cabinet (15&quot; x 93&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (15&quot; x 93&quot;)</image:title>
     </image:image>
@@ -3515,7 +3535,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-18-x-84-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp188427_face.webp?v=dac3d2b5</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp188427_face.webp?v=d5755880</image:loc>
       <image:caption>Pantry kitchen cabinet (18&quot; x 84&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (18&quot; x 84&quot;)</image:title>
     </image:image>
@@ -3523,7 +3543,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-18-x-90-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189027_face.webp?v=54539c7f</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189027_face.webp?v=a127d87e</image:loc>
       <image:caption>Pantry kitchen cabinet (18&quot; x 90&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (18&quot; x 90&quot;)</image:title>
     </image:image>
@@ -3531,7 +3551,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-18-x-91-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp18x91-527_face.webp?v=e6c70bea</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp18x91-527_face.webp?v=f0e17bb4</image:loc>
       <image:caption>Pantry kitchen cabinet (18&quot; x 91.5&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (18&quot; x 91.5&quot;)</image:title>
     </image:image>
@@ -3539,7 +3559,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-18-x-93-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189327_face.webp?v=ae888269</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp189327_face.webp?v=91f3cca4</image:loc>
       <image:caption>Pantry kitchen cabinet (18&quot; x 93&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (18&quot; x 93&quot;)</image:title>
     </image:image>
@@ -3547,7 +3567,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-24-x-103-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp24x103-5_face.webp?v=332552d2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp24x103-5_face.webp?v=d4f22cd1</image:loc>
       <image:caption>Pantry kitchen cabinet (24&quot; x 103.5&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (24&quot; x 103.5&quot;)</image:title>
     </image:image>
@@ -3555,7 +3575,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-24-x-84-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp248427_face.webp?v=7e98c4f1</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp248427_face.webp?v=ffc28907</image:loc>
       <image:caption>Pantry kitchen cabinet (24&quot; x 84&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (24&quot; x 84&quot;)</image:title>
     </image:image>
@@ -3563,7 +3583,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-24-x-90-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249027_face.webp?v=80e17367</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249027_face.webp?v=dac5a012</image:loc>
       <image:caption>Pantry kitchen cabinet (24&quot; x 90&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (24&quot; x 90&quot;)</image:title>
     </image:image>
@@ -3571,7 +3591,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-24-x-91-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2491-5x27_face.webp?v=d99da8be</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2491-5x27_face.webp?v=ee3fe657</image:loc>
       <image:caption>Pantry kitchen cabinet (24&quot; x 91.5&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (24&quot; x 91.5&quot;)</image:title>
     </image:image>
@@ -3579,7 +3599,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-24-x-93-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249327_face.webp?v=8993b8da</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249327_face.webp?v=ea05078d</image:loc>
       <image:caption>Pantry kitchen cabinet (24&quot; x 93&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (24&quot; x 93&quot;)</image:title>
     </image:image>
@@ -3587,7 +3607,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-24-x-96-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249627_face.webp?v=410bd56d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp249627_face.webp?v=96cc78de</image:loc>
       <image:caption>Pantry kitchen cabinet (24&quot; x 96&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (24&quot; x 96&quot;)</image:title>
     </image:image>
@@ -3595,7 +3615,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-27-x-91-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2791-5x27_face.webp?v=18f56cfe</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp2791-5x27_face.webp?v=3f38afb5</image:loc>
       <image:caption>Pantry kitchen cabinet (27&quot; x 91.5&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (27&quot; x 91.5&quot;)</image:title>
     </image:image>
@@ -3603,7 +3623,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-27-x-93-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279327_face.webp?v=6474c2a2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279327_face.webp?v=b52e9122</image:loc>
       <image:caption>Pantry kitchen cabinet (27&quot; x 93&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (27&quot; x 93&quot;)</image:title>
     </image:image>
@@ -3611,7 +3631,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-27-x-96-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279627_face.webp?v=cab02e7b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp279627_face.webp?v=875641c5</image:loc>
       <image:caption>Pantry kitchen cabinet (27&quot; x 96&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (27&quot; x 96&quot;)</image:title>
     </image:image>
@@ -3619,7 +3639,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-30-x-103-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp30x103-5_face.webp?v=e7a40d44</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp30x103-5_face.webp?v=255808bb</image:loc>
       <image:caption>Pantry kitchen cabinet (30&quot; x 103.5&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (30&quot; x 103.5&quot;)</image:title>
     </image:image>
@@ -3627,7 +3647,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-30-x-84-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp308427_face.webp?v=46e5c7e2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp308427_face.webp?v=4ce11fb8</image:loc>
       <image:caption>Pantry kitchen cabinet (30&quot; x 84&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (30&quot; x 84&quot;)</image:title>
     </image:image>
@@ -3635,7 +3655,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-30-x-90-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309027_face.webp?v=8d92339d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309027_face.webp?v=b891aaa4</image:loc>
       <image:caption>Pantry kitchen cabinet (30&quot; x 90&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (30&quot; x 90&quot;)</image:title>
     </image:image>
@@ -3643,7 +3663,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-30-x-93-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309327_face.webp?v=e4b32954</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309327_face.webp?v=28f3f843</image:loc>
       <image:caption>Pantry kitchen cabinet (30&quot; x 93&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (30&quot; x 93&quot;)</image:title>
     </image:image>
@@ -3651,7 +3671,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/pantry-kitchen-cabinet-30-x-96-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309627_face.webp?v=8de7cfc2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wp309627_face.webp?v=cbca7212</image:loc>
       <image:caption>Pantry kitchen cabinet (30&quot; x 96&quot;)</image:caption>
       <image:title>Pantry kitchen cabinet (30&quot; x 96&quot;)</image:title>
     </image:image>
@@ -3659,7 +3679,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-30-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=44feffd4</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3030_face.webp?v=6d52599b</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (30&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (30&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3667,7 +3687,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-30-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=45d4d361</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3036_face.webp?v=1be67892</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (30&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (30&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3675,7 +3695,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-33-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=f5a2ed32</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3330_face.webp?v=55207837</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (33&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (33&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3683,7 +3703,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-33-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=7e21f674</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3336_face.webp?v=cb7bafda</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (33&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (33&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3691,7 +3711,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-36-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=7b1521c3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3630_face.webp?v=9e5c0b24</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (36&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (36&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3699,7 +3719,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-blind-corner-cabinet-36-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=6c458f4d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbc3636_face.webp?v=0c687f0f</image:loc>
       <image:caption>Wall kitchen blind-corner cabinet (36&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen blind-corner cabinet (36&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3707,7 +3727,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-12-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1230_face.webp?v=9ff346f9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1230_face.webp?v=1259cbb2</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (12&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (12&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3715,7 +3735,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-12-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1236_face.webp?v=0ee25a5c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1236_face.webp?v=6d065e83</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (12&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (12&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3723,7 +3743,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-12-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1248_face.webp?v=c994bd35</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1248_face.webp?v=a594812c</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (12&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (12&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3731,7 +3751,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-14-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1436_face.webp?v=b01382a1</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1436_face.webp?v=0619f403</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (14&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (14&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3739,7 +3759,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-15-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1530_face.webp?v=185f2c8a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1530_face.webp?v=ecd8f2f7</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (15&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (15&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3747,7 +3767,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-15-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1536_face.webp?v=eed883ae</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1536_face.webp?v=564ee297</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (15&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (15&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3755,7 +3775,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-15-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1548_face.webp?v=ed254d39</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1548_face.webp?v=58c86d1b</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (15&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (15&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3763,7 +3783,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-18-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1830_face.webp?v=4448aec9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1830_face.webp?v=c1a7ac15</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (18&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (18&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3771,7 +3791,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-18-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1836_face.webp?v=3f87c7d9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1836_face.webp?v=d88930f8</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (18&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (18&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3779,7 +3799,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-18-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w1848_face.webp?v=d5d12763</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w1848_face.webp?v=23c02aa0</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (18&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (18&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3787,7 +3807,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-20-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2036_face.webp?v=292039e9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2036_face.webp?v=de778901</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (20&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (20&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3795,7 +3815,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-21-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2130_face.webp?v=c61b30de</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2130_face.webp?v=0aa0d880</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (21&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (21&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3803,7 +3823,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-21-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2136_face.webp?v=304cc186</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2136_face.webp?v=17e04e08</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (21&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (21&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3811,7 +3831,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-21-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2148_face.webp?v=4d46d500</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2148_face.webp?v=8d25309b</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (21&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (21&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3819,7 +3839,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-23-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2336_face.webp?v=ee0f519c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2336_face.webp?v=bdc83db8</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (23&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (23&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3827,7 +3847,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-9-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w0930_face.webp?v=e0d8abdb</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w0930_face.webp?v=fb2adfc1</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (9&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (9&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3835,7 +3855,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-1-door-9-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w0936_face.webp?v=bb237703</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w0936_face.webp?v=c7c9d48e</image:loc>
       <image:caption>Wall kitchen cabinet with 1 door (9&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 1 door (9&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3843,7 +3863,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-24-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2430_face.webp?v=9af5e4db</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2430_face.webp?v=a3d1d9e1</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (24&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3851,7 +3871,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-24-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2436_face.webp?v=607ad01e</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2436_face.webp?v=8d95ca72</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (24&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3859,7 +3879,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-24-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2448_face.webp?v=320b3b57</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2448_face.webp?v=feb9359e</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (24&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (24&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3867,7 +3887,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-27-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2730_face.webp?v=05dd51c3</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2730_face.webp?v=7c7241f8</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (27&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (27&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3875,7 +3895,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-27-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2736_face.webp?v=92ca91b9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2736_face.webp?v=270db6cf</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (27&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (27&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3883,7 +3903,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-27-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w2748_face.webp?v=65324164</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w2748_face.webp?v=a2323e1f</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (27&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (27&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3891,7 +3911,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3012_face.webp?v=c8eab8c7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3012_face.webp?v=f1ec0948</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 12&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 12&quot;)</image:title>
     </image:image>
@@ -3899,7 +3919,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-15-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3015_face.webp?v=206e5f98</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3015_face.webp?v=df434509</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 15&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 15&quot;)</image:title>
     </image:image>
@@ -3907,7 +3927,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3018_face.webp?v=74e4bcfc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3018_face.webp?v=229fb891</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 18&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 18&quot;)</image:title>
     </image:image>
@@ -3915,7 +3935,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-19-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w30x19-5_face.webp?v=cb309dcf</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w30x19-5_face.webp?v=16a0ad6c</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 19.5&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 19.5&quot;)</image:title>
     </image:image>
@@ -3923,7 +3943,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-21-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3021_face.webp?v=f0172bd6</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3021_face.webp?v=724558c8</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 21&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 21&quot;)</image:title>
     </image:image>
@@ -3931,7 +3951,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-24-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3024_face.webp?v=d1868c69</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3024_face.webp?v=d768be92</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 24&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 24&quot;)</image:title>
     </image:image>
@@ -3939,7 +3959,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-27-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3027_face.webp?v=8aa831c7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3027_face.webp?v=d00bea89</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 27&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 27&quot;)</image:title>
     </image:image>
@@ -3947,7 +3967,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3030_face.webp?v=d7136cab</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3030_face.webp?v=2f4a2a09</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 30&quot;)</image:title>
     </image:image>
@@ -3955,7 +3975,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3036_face.webp?v=e549b5d6</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3036_face.webp?v=bbe7ae4e</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 36&quot;)</image:title>
     </image:image>
@@ -3963,7 +3983,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-42-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3042_face.webp?v=74d442a6</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3042_face.webp?v=2d39f93f</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 42&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 42&quot;)</image:title>
     </image:image>
@@ -3971,7 +3991,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-30-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3048_face.webp?v=d5a320dd</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3048_face.webp?v=0f5be9fc</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (30&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (30&quot; x 48&quot;)</image:title>
     </image:image>
@@ -3979,7 +3999,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-33-x-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3312_face.webp?v=5cf2be4a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3312_face.webp?v=a91bfe57</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (33&quot; x 12&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (33&quot; x 12&quot;)</image:title>
     </image:image>
@@ -3987,7 +4007,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-33-x-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3318_face.webp?v=cca4b563</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3318_face.webp?v=0e09c5a8</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (33&quot; x 18&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (33&quot; x 18&quot;)</image:title>
     </image:image>
@@ -3995,7 +4015,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-33-x-19-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33x19-5_face.webp?v=c7a793b8</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33x19-5_face.webp?v=bc52286c</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (33&quot; x 19.5&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (33&quot; x 19.5&quot;)</image:title>
     </image:image>
@@ -4003,7 +4023,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-33-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3330_face.webp?v=7e49fc4a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3330_face.webp?v=78493071</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (33&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (33&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4011,7 +4031,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-33-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3336_face.webp?v=6acf23cc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3336_face.webp?v=5cc5dacc</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (33&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (33&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4019,7 +4039,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-33-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3348_face.webp?v=97cfe79b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3348_face.webp?v=d6c557ce</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (33&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (33&quot; x 48&quot;)</image:title>
     </image:image>
@@ -4027,7 +4047,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3612_face.webp?v=314e4fc9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3612_face.webp?v=f3066bbf</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 12&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 12&quot;)</image:title>
     </image:image>
@@ -4035,7 +4055,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3618_face.webp?v=f1a09c16</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3618_face.webp?v=bd3652fd</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 18&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 18&quot;)</image:title>
     </image:image>
@@ -4043,7 +4063,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-19-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36x19-5_face.webp?v=599a1c5c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36x19-5_face.webp?v=5b8e462b</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 19.5&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 19.5&quot;)</image:title>
     </image:image>
@@ -4051,7 +4071,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-24-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3624_face.webp?v=7da2f7ff</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3624_face.webp?v=469b28bb</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 24&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 24&quot;)</image:title>
     </image:image>
@@ -4059,7 +4079,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3630_face.webp?v=5b65f052</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3630_face.webp?v=d0587be3</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4067,7 +4087,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3636_face.webp?v=0512a43b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3636_face.webp?v=b0d08722</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4075,7 +4095,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-42-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3642_face.webp?v=c1d587df</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3642_face.webp?v=13774bef</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 42&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 42&quot;)</image:title>
     </image:image>
@@ -4083,7 +4103,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-36-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3648_face.webp?v=daae2b3c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3648_face.webp?v=417bec76</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (36&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (36&quot; x 48&quot;)</image:title>
     </image:image>
@@ -4091,7 +4111,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-39-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3930_face.webp?v=9159108c</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3930_face.webp?v=27aa0862</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (39&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (39&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4099,7 +4119,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-39-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w3936_face.webp?v=500bb2f2</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w3936_face.webp?v=7df826fe</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (39&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (39&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4107,7 +4127,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-42-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w4230_face.webp?v=91a73321</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w4230_face.webp?v=ca92cc45</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (42&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (42&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4115,7 +4135,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-42-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w4236_face.webp?v=94332794</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w4236_face.webp?v=7de278c2</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors (42&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors (42&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4123,7 +4143,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-33-5-x-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51227_face.webp?v=e3facc4a</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51227_face.webp?v=d4a14861</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 12&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 12&quot;)</image:title>
     </image:image>
@@ -4131,7 +4151,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-33-5-x-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51827_face.webp?v=74a16670</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-51827_face.webp?v=6a4ef9f6</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 18&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 18&quot;)</image:title>
     </image:image>
@@ -4139,7 +4159,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-33-5-x-20-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-52027_face.webp?v=9674f5c1</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-52027_face.webp?v=f08597ad</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 20&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 20&quot;)</image:title>
     </image:image>
@@ -4147,7 +4167,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-33-5-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-5x30x27_face.webp?v=7d83827d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w33-5x30x27_face.webp?v=d808b390</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (33.5&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4155,7 +4175,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-36-5-x-12-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51227_face.webp?v=5e3102e9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51227_face.webp?v=460395a9</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 12&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 12&quot;)</image:title>
     </image:image>
@@ -4163,7 +4183,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-36-5-x-18-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51827_face.webp?v=d7ce1745</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-51827_face.webp?v=52d58542</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 18&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 18&quot;)</image:title>
     </image:image>
@@ -4171,7 +4191,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-36-5-x-20-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x20x27_face.webp?v=7cbda17d</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x20x27_face.webp?v=321a31df</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 20&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 20&quot;)</image:title>
     </image:image>
@@ -4179,7 +4199,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-36-5-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x30x27_face.webp?v=7c2f0263</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x30x27_face.webp?v=786ca762</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4187,7 +4207,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-36-5-x-31-5-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x31-5x27_face.webp?v=15a6777b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w36-5x31-5x27_face.webp?v=ed8b206f</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 31.5&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (36.5&quot; x 31.5&quot;)</image:title>
     </image:image>
@@ -4195,7 +4215,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-2-doors-above-fridge-39-x-20-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-w39x20x27_face.webp?v=43bdfbdd</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-w39x20x27_face.webp?v=15dac1dd</image:loc>
       <image:caption>Wall kitchen cabinet with 2 doors for above-fridge (39&quot; x 20&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with 2 doors for above-fridge (39&quot; x 20&quot;)</image:title>
     </image:image>
@@ -4203,7 +4223,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-24-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=7a31745b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2430_face.webp?v=e29d7a6d</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4211,7 +4231,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-24-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=c1543202</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2436_face.webp?v=939c76ef</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4219,7 +4239,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-27-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=20f4d34b</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2730_face.webp?v=660f9299</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4227,7 +4247,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-27-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=1ab429d7</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2736_face.webp?v=23d0915f</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4235,7 +4255,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-cabinet-microwave-space-2-doors-27-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=2346d8d9</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wbl2748_face.webp?v=a7f7827e</image:loc>
       <image:caption>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen cabinet with microwave space and 2 doors (27&quot; x 48&quot;)</image:title>
     </image:image>
@@ -4243,7 +4263,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-30-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=f83610ec</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2430_face.webp?v=ea8d12f6</image:loc>
       <image:caption>Wall kitchen corner cabinet 45º (24&quot; x 30&quot;)</image:caption>
       <image:title>Wall kitchen corner cabinet 45º (24&quot; x 30&quot;)</image:title>
     </image:image>
@@ -4251,7 +4271,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-36-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=7a148b50</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2436_face.webp?v=493ea937</image:loc>
       <image:caption>Wall kitchen corner cabinet 45º (24&quot; x 36&quot;)</image:caption>
       <image:title>Wall kitchen corner cabinet 45º (24&quot; x 36&quot;)</image:title>
     </image:image>
@@ -4259,7 +4279,7 @@
   <url>
     <loc>https://dilamco.com/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-48-inch</loc>
     <image:image>
-      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=68ff56cc</image:loc>
+      <image:loc>https://dilamco.com/assets/products/renders/s8-wdc2448_face.webp?v=cd84f163</image:loc>
       <image:caption>Wall kitchen corner cabinet 45º (24&quot; x 48&quot;)</image:caption>
       <image:title>Wall kitchen corner cabinet 45º (24&quot; x 48&quot;)</image:title>
     </image:image>

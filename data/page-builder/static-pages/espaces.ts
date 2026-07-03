@@ -33,7 +33,7 @@ export const page: PageTemplateData = {
           heading:
             "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
           description:
-            "Chaque espace a ses contraintes. Notre rôle est de concevoir, fabriquer et installer des solutions durables, fonctionnelles et bien exécutées.",
+            "Chaque espace a ses contraintes. Notre rôle est de concevoir, fournir et installer des solutions durables, fonctionnelles et bien exécutées.",
           actions: [
             {
               label: "Obtenir une soumission",

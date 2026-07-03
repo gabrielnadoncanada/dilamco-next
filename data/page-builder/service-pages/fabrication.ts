@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const fabricationPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Fabrication d'armoires sur mesure à Montréal",
+    title: "Fabrication d'armoires sur mesure — notre processus",
     description:
       "Fabrication sur mesure : durabilité, précision et finition haut de gamme pour un résultat cohérent et durable.",
     path: "/services/fabrication",

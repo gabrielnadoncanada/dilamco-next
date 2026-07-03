@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Custom cabinetmaker in Montreal — About Dilamco",
+    title: "Custom cabinet specialist in Montreal — About Dilamco",
     description:
       "About Dilamco: custom work, controlled fabrication, careful installation and a long-term vision for durable projects.",
     path: "/a-propos",
@@ -23,7 +23,7 @@ export const pageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - About",
-          heading: "A custom workshop built to better control execution",
+          heading: "A custom-cabinet company built to better control execution",
           description:
             "Dilamco is not just a cabinet seller. Our approach connects design, fabrication, installation and coordination when the project calls for it, to deliver a result that is more consistent and more durable.",
           actions: [
@@ -56,7 +56,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "The structural advantage we aim to protect",
           description:
-            "A solid custom workshop doesn't rely on style alone. It relies on its ability to stay in control across design decisions, fabrication quality, material choices and on-site installation.",
+            "A solid custom-cabinet company doesn't rely on style alone. It relies on its ability to stay in control across design decisions, fabrication quality, material choices and on-site installation.",
           cards: [
             {
               title: "Less fragmentation",

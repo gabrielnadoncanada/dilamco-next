@@ -95,7 +95,7 @@ export const cuisinePage: PageTemplateData = {
         props: {
           heading: "Ce qu'on conçoit dans une cuisine sur mesure",
           intro:
-            "Une cuisine sur mesure ne se résume pas aux armoires. C'est un ensemble — îlot, rangement, hauteurs et zones de travail — pensé pour votre espace réel, en tant que fabricant et installateur.",
+            "Une cuisine sur mesure ne se résume pas aux armoires. C'est un ensemble — îlot, rangement, hauteurs et zones de travail — pensé pour votre espace réel, en tant que concepteur et installateur avec un accès direct à l'usine.",
           columns: "2",
           items: [
             {
@@ -134,11 +134,11 @@ export const cuisinePage: PageTemplateData = {
             {
               title: "Conception, fabrication et installation",
               description:
-                "Un seul fabricant d'armoires de cuisine, du plan à la pose.",
+                "Une seule équipe responsable, du plan à la pose.",
               icon: "wrench",
               bullets: [
                 "Décisions cadrées tôt avec une seule équipe.",
-                "Fabrication contrôlée en atelier.",
+                "Fabrication contrôlée chez notre usine partenaire.",
                 "Pose et ajustements précis sur place.",
               ],
             },
@@ -290,7 +290,7 @@ export const cuisinePage: PageTemplateData = {
         props: {
           heading: "Armoires de cuisine sur mesure dans tout le Grand Montréal",
           intro:
-            "Basés à Pierrefonds-Roxboro, on conçoit, fabrique et installe des armoires et cuisines sur mesure dans l'Ouest-de-l'Île et partout dans le Grand Montréal.",
+            "Basés dans le Grand Montréal, on conçoit et installe des armoires et cuisines sur mesure dans l'Ouest-de-l'Île et partout dans la région, fabriquées exclusivement pour nous par notre usine partenaire.",
           badges: [
             "Pierrefonds-Roxboro",
             "Ouest-de-l'Île",

@@ -151,7 +151,7 @@ export const renovationCuisinePage: PageTemplateData = {
         props: {
           heading: "Séquence type d'une rénovation de cuisine",
           intro:
-            "La portée exacte est confirmée lors de la soumission, mais la logique générale reste la même: clarifier, fabriquer, coordonner puis installer proprement.",
+            "La portée exacte est confirmée lors de la soumission, mais la logique générale reste la même: clarifier, préparer, coordonner puis installer proprement.",
           steps: [
             {
               number: "1",

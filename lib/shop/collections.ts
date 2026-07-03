@@ -171,11 +171,11 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} modules d'armoires de cuisine en stock : caissons du bas, armoires murales et garde-manger en Blanc Pur et Chêne blanc. Prix affichés, prêts à installer, livraison dans le Grand Montréal.",
       intro:
-        "Composez votre cuisine module par module. Nos armoires de cuisine sont offertes en porte Shaker, finition Blanc Pur ou Chêne blanc, et tenues en stock dans notre entrepôt de Pierrefonds — sans délai de fabrication. Chaque prix est affiché : ajoutez vos caissons du bas, armoires murales et garde-manger au projet et obtenez une soumission ferme. Livraison et installation disponibles dans le Grand Montréal.",
+        "Composez votre cuisine module par module. Nos armoires de cuisine sont offertes en porte Shaker, finition Blanc Pur ou Chêne blanc, et tenues en stock dans notre entrepôt de Rigaud — sans délai de fabrication. Chaque prix est affiché : ajoutez vos caissons du bas, armoires murales et garde-manger au projet et obtenez une soumission ferme. Livraison et installation disponibles dans le Grand Montréal.",
       faq: [
         {
           q: "Quelle différence entre vos armoires de cuisine en stock et le sur mesure ?",
-          a: "Nos armoires en stock sont des modules standards tenus dans notre entrepôt de Pierrefonds : prix affiché, prêts à installer, livrés en quelques jours sans délai de fabrication. Le sur mesure (notre atelier) conçoit des armoires aux dimensions exactes de votre pièce, avec un délai plus long.",
+          a: "Nos armoires en stock sont des modules standards tenus dans notre entrepôt de Rigaud : prix affiché, prêts à installer, livrés en quelques jours sans délai de fabrication. Le sur mesure conçoit des armoires aux dimensions exactes de votre pièce, avec un délai plus long (environ 9 à 15 semaines).",
         },
         {
           q: "Faites-vous de la liquidation d'armoires de cuisine ?",
@@ -191,11 +191,11 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} in-stock kitchen cabinet modules: base cabinets, wall cabinets and pantries in Pure White and White Oak. Prices shown, ready to install, delivery across Greater Montreal.",
       intro:
-        "Build your kitchen module by module. Our kitchen cabinets come with a Shaker door in Pure White or White Oak, kept in stock at our Pierrefonds warehouse — no manufacturing lead time. Every price is shown: add your base cabinets, wall cabinets and pantries to the project and get a firm quote. Delivery and installation available across Greater Montreal.",
+        "Build your kitchen module by module. Our kitchen cabinets come with a Shaker door in Pure White or White Oak, kept in stock at our Rigaud warehouse — no manufacturing lead time. Every price is shown: add your base cabinets, wall cabinets and pantries to the project and get a firm quote. Delivery and installation available across Greater Montreal.",
       faq: [
         {
           q: "What is the difference between your in-stock kitchen cabinets and custom?",
-          a: "Our in-stock cabinets are standard modules kept in our Pierrefonds warehouse: price shown, ready to install, delivered in a few days. Custom (our workshop) builds cabinets to the exact dimensions of your room, with a longer lead time.",
+          a: "Our in-stock cabinets are standard modules kept in our Rigaud warehouse: price shown, ready to install, delivered in a few days. Custom cabinets are designed to the exact dimensions of your room, with a longer lead time (roughly 9 to 15 weeks).",
         },
       ],
     },
@@ -216,7 +216,7 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} modèles d'armoires de cuisine en bois, finition Chêne blanc. En stock, prêtes à installer, livraison dans le Grand Montréal.",
       intro:
-        "Nos armoires de cuisine en bois adoptent une finition Chêne blanc chaleureuse, au grain authentique. Mêmes caissons robustes que la gamme Blanc Pur, offerts en porte Shaker et tenus en stock à Pierrefonds.",
+        "Nos armoires de cuisine en bois adoptent une finition Chêne blanc chaleureuse, au grain authentique. Mêmes caissons robustes que la gamme Blanc Pur, offerts en porte Shaker et tenus en stock à Rigaud.",
     },
     en: {
       crumb: "Wood — white oak",
@@ -226,7 +226,7 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} wood kitchen cabinet models in a White Oak finish. In stock, ready to install, delivery across Greater Montreal.",
       intro:
-        "Our wood kitchen cabinets feature a warm White Oak finish with authentic grain. Same sturdy boxes as the Pure White range, with a Shaker door, kept in stock in Pierrefonds.",
+        "Our wood kitchen cabinets feature a warm White Oak finish with authentic grain. Same sturdy boxes as the Pure White range, with a Shaker door, kept in stock in Rigaud.",
     },
   },
 
@@ -243,7 +243,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Armoires du bas",
       h1: "Armoires de cuisine du bas",
       intro:
-        "Les armoires du bas (caissons) forment la base de votre cuisine : plan de travail, rangement et électroménagers encastrés. Standard, à tiroirs, de coin et plus — en stock à Pierrefonds.",
+        "Les armoires du bas (caissons) forment la base de votre cuisine : plan de travail, rangement et électroménagers encastrés. Standard, à tiroirs, de coin et plus — en stock à Rigaud.",
     },
     en: { crumb: "Base cabinets", h1: "Kitchen base cabinets" },
   },
@@ -324,7 +324,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Armoires murales",
       h1: "Armoires de cuisine murales",
       intro:
-        "Les armoires murales (du haut) maximisent le rangement vertical au-dessus du plan de travail. Standard, de coin, à micro-ondes ou au-dessus du réfrigérateur — en stock à Pierrefonds.",
+        "Les armoires murales (du haut) maximisent le rangement vertical au-dessus du plan de travail. Standard, de coin, à micro-ondes ou au-dessus du réfrigérateur — en stock à Rigaud.",
     },
     en: { crumb: "Wall cabinets", h1: "Kitchen wall cabinets" },
   },
@@ -381,7 +381,7 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} garde-manger et armoires utilitaires en stock : rangement pleine hauteur pour provisions et électroménagers. Blanc Pur ou Chêne blanc, livraison dans le Grand Montréal.",
       intro:
-        "Le garde-manger offre un rangement pleine hauteur pour provisions, vaisselle et électroménagers. Nos armoires utilitaires sont offertes en porte Shaker, finition Blanc Pur ou Chêne blanc, et tenues en stock à Pierrefonds — prêtes à installer.",
+        "Le garde-manger offre un rangement pleine hauteur pour provisions, vaisselle et électroménagers. Nos armoires utilitaires sont offertes en porte Shaker, finition Blanc Pur ou Chêne blanc, et tenues en stock à Rigaud — prêtes à installer.",
       faq: [
         {
           q: "Quelle différence entre un garde-manger et une armoire de rangement de cuisine ?",
@@ -401,7 +401,7 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} in-stock pantry and utility cabinets: full-height storage for food and appliances. Pure White or White Oak, delivery across Greater Montreal.",
       intro:
-        "A pantry offers full-height storage for food, dishes and appliances. Our utility cabinets come with a Shaker door in Pure White or White Oak, kept in stock in Pierrefonds — ready to install.",
+        "A pantry offers full-height storage for food, dishes and appliances. Our utility cabinets come with a Shaker door in Pure White or White Oak, kept in stock in Rigaud — ready to install.",
       faq: [
         {
           q: "What is the difference between a pantry and a kitchen storage cabinet?",
@@ -532,7 +532,7 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} modules d'armoires de cuisine en liquidation : tenus en stock, prêts à installer, livraison dans le Grand Montréal.",
       intro:
-        "Notre boutique fonctionne en déstockage continu : armoires de cuisine tenues en inventaire à Pierrefonds, prix affichés, prêtes à partir. L'équivalent d'une liquidation permanente.",
+        "Notre boutique fonctionne en déstockage continu : armoires de cuisine tenues en inventaire à Rigaud, prix affichés, prêtes à partir. L'équivalent d'une liquidation permanente.",
       faq: [
         {
           q: "La liquidation veut-elle dire fin de série ou défaut ?",
@@ -548,7 +548,7 @@ export const COLLECTIONS: Collection[] = [
       metaDescription:
         "{count} kitchen cabinet modules on clearance: held in stock, ready to install, delivery across Greater Montreal.",
       intro:
-        "Our shop runs on continuous clearance: kitchen cabinets held in inventory in Pierrefonds, prices shown, ready to go — the equivalent of a permanent liquidation.",
+        "Our shop runs on continuous clearance: kitchen cabinets held in inventory in Rigaud, prices shown, ready to go — the equivalent of a permanent liquidation.",
     },
   },
 ];

@@ -226,7 +226,7 @@
         "title": "Le module, hors-catalogue.",
         "caption1": "Cuisine complète, Outremont",
         "caption2": "Détail moulure Shaker",
-        "caption3": "Atelier — vérification finition",
+        "caption3": "Contrôle qualité — vérification finition",
         "fallbackAlt": "Vue en situation {n}"
       },
       "description": {
@@ -306,7 +306,7 @@
           "body": "Jonctions renforcées sans fixations visibles : des modules stables et mieux alignés."
         },
         "point4": {
-          "title": "Entrepôt local à Montréal",
+          "title": "Entrepôt local",
           "body": "Inventaire contrôlé sur place : disponibilité réelle et délais prévisibles."
         }
       },
@@ -315,7 +315,7 @@
       "card": {
         "addAria": "Ajouter {name} au projet",
         "addShort": "+ Projet",
-        "inStock": "En stock — entrepôt à Montréal",
+        "inStock": "En stock — entrepôt local",
         "deliveryAvailable": "Livraison et installation disponibles",
         "otherOptions": "{count, plural, one {Offert en # autre option} other {Offert en # autres options}}"
       }

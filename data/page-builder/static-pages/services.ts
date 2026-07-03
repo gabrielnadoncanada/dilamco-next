@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Ébénisterie sur mesure à Montréal : design, fabrication et installation",
+    title: "Armoires sur mesure à Montréal : design, fabrication et installation",
     description:
       "Services Dilamco : design, fabrication sur mesure, installation et rénovation clé en main.",
     path: "/services",
