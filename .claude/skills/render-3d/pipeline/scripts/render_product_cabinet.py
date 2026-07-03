@@ -1080,27 +1080,35 @@ def setup_camera(cabinet):
     bmin, bmax = world_bbox(cabinet)
     center = (bmin + bmax) * 0.5
     size = bmax - bmin
-    # Slightly below mid-height, near-horizontal view: reads like a product
-    # photo and keeps the open cabinet top mostly out of sight.
-    target = Vector((center.x, center.y - size.y * 0.10, bmin.z + size.z * 0.48))
     # Empreinte horizontale projetée en vue 3/4 = diagonale du footprint ;
     # sans elle, les caissons larges (coins 42-48 po) sortent du cadre.
     horiz = math.sqrt(size.x * size.x + size.y * size.y)
-    extent = max(size.z * 1.32, horiz * 1.30)
     half_fov_tan = 18.0 / 85.0  # 85mm lens, 36mm sensor
+    # Caisson TRÈS HAUT (garde-manger, ratio h/l > 1.6) : dans un cadre carré il
+    # se réduit à un mince filet perdu (« trop loin »). On SERRE le cadre sur sa
+    # hauteur (marge 6 %) et on CENTRE la cible verticalement → il remplit la
+    # hauteur du carré = beaucoup plus gros/détaillé. (Reste carré : la galerie
+    # object-contain + la lightbox PhotoSwipe 1600² supposent un carré.)
+    tall = size.z > horiz * 1.6
+    if tall:
+        extent = size.z * 1.06
+        target = Vector((center.x, center.y - size.y * 0.10, center.z))
+    else:
+        # Slightly below mid-height, near-horizontal view: reads like a product
+        # photo and keeps the open cabinet top mostly out of sight.
+        extent = max(size.z * 1.32, horiz * 1.30)
+        target = Vector((center.x, center.y - size.y * 0.10, bmin.z + size.z * 0.48))
     distance = (extent / 2.0) / half_fov_tan
     # Vue à 15° de lacet : la façade domine, le côté donne le volume. Caméra
     # sous le dessus du caisson pour cacher la carcasse ouverte des modules du bas.
     # Angle de vue surchargeable (showcase multi-angles) ; défaut = 3/4 avant-droit.
     direction = Vector(CONFIG.get("cam_dir", (0.415, -1.55, 0.14))).normalized()
     loc = target + direction * distance
-    # Plafonner la hauteur caméra JUSTE SOUS le dessus du caisson. Sinon, pour les
-    # caissons COURTS ET PROFONDS (dessus-frigo : 12 po haut × 27 po profond), la
-    # grande distance (pilotée par la profondeur) hisse la caméra au-dessus du
-    # caisson → on plonge sur un immense DESSUS blanc qui se fond dans le fond
-    # clair. Ce plafond ramène la vue façade-dominante (comme le micro-ondes) ;
-    # les caissons hauts sont déjà sous ce plafond → inchangés.
-    loc.z = min(loc.z, bmax.z - size.z * 0.12)
+    # Plafonner la hauteur caméra JUSTE SOUS le dessus du caisson (caissons COURTS
+    # ET PROFONDS type dessus-frigo : sinon on plonge sur un grand dessus blanc qui
+    # se fond). Pas pour les très hauts (on les veut centrés, vue façade).
+    if not tall:
+        loc.z = min(loc.z, bmax.z - size.z * 0.12)
 
     bpy.ops.object.camera_add(location=loc)
     cam = bpy.context.object
@@ -1113,7 +1121,7 @@ def setup_camera(cabinet):
     log("Camera loc=" + repr(tuple(round(v, 3) for v in loc)) + " dist=" + repr(round(distance, 3)))
 
 
-def setup_lighting():
+def setup_lighting(cabinet=None):
     world = bpy.context.scene.world or bpy.data.worlds.new("World")
     bpy.context.scene.world = world
     world.use_nodes = True
@@ -1155,13 +1163,30 @@ def setup_lighting():
         direction = Vector(target) - light.location
         light.rotation_euler = direction.to_track_quat("-Z", "Y").to_euler()
 
-    # Appoint léger par-dessus le HDRI studio : key douce pour un peu de modelé +
-    # rim arrière pour détacher les arêtes. Volontairement faibles : le HDRI fait
-    # l'essentiel (sinon on retombe dans le « flat » ou le sur-éclairé).
-    area("Key_Soft", (-1.5, -1.1, 2.3), 35, 1.8, target=(0.0, 0.0, 0.50), cast_shadow=False)
+    # Cible verticale des lampes d'appoint : z~0.5 par défaut (caissons courts,
+    # centrés bas). Pour un caisson TRÈS HAUT (garde-manger, qui monte à ~2.3 m),
+    # on VISE SON CENTRE — sinon la key/rim n'arrosent que le bas et les portes
+    # du haut ressortent grises (mesure : 207 vs 220 pour une murale). L'énergie
+    # est aussi remontée (le caisson est bien plus loin de la lampe).
+    key_z = 0.50
+    key_energy, rim_energy = 35.0, 25.0
+    if cabinet is not None:
+        bmin, bmax = world_bbox(cabinet)
+        s = bmax - bmin
+        horiz = math.sqrt(s.x * s.x + s.y * s.y)
+        if s.z > horiz * 1.6:  # très haut : viser le CENTRE (sinon portes du haut
+            # grises car la key/rim n'arrosent que le bas), + boost d'énergie SCALÉ
+            # par l'étroitesse : un garde-manger ÉTROIT (façade oblique + grand côté
+            # sombre) sort gris, un LARGE surexpose vite → le boost décroît avec la
+            # largeur. Bornes : ~×1.6 (étroit 12") → ~×1.0 (large 30").
+            key_z = (bmin.z + bmax.z) / 2.0
+            boost = max(1.0, min(1.6, 1.25 / horiz))
+            key_energy *= boost
+            rim_energy *= boost
+    area("Key_Soft", (-1.5, -1.1, 2.3), key_energy, 1.8, target=(0.0, 0.0, key_z), cast_shadow=False)
     # Rim réduit (70 → 25) : à 70 il arrosait le panneau latéral +X qui montait
     # à la luminance du fond du site (~241) — caisson illisible sur la fiche.
-    area("Rim_Edge", (1.5, 1.3, 2.5), 25, 0.9, target=(0.1, 0.0, 0.60), cast_shadow=False)
+    area("Rim_Edge", (1.5, 1.3, 2.5), rim_energy, 0.9, target=(0.1, 0.0, key_z + 0.10), cast_shadow=False)
     # PAS de lampe d'appoint sur le toe-kick : toute lampe assez forte pour
     # neutraliser le reflet crème délave aussi le tiroir du bas (vérifié sur la
     # fiche produit — bas du caisson « glow »). Le reflet est réglé À LA SOURCE
@@ -1623,7 +1648,7 @@ def run_one(main_scene):
             obj = build_flat_panel()
         setup_shadow_catcher_floor(obj)
         setup_negative_fill(obj)
-        setup_lighting()
+        setup_lighting(obj)
         setup_camera(obj)
         configure_render()
         bpy.ops.render.render(write_still=True)
@@ -1722,7 +1747,7 @@ def run_one(main_scene):
     hide_all_pulls()
     setup_shadow_catcher_floor(cabinet)
     setup_negative_fill(cabinet)
-    setup_lighting()
+    setup_lighting(cabinet)
     setup_camera(cabinet)
     configure_render()
 
