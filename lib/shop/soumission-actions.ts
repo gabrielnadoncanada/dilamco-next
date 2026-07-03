@@ -198,6 +198,7 @@ export async function submitSoumission(
   const { error } = await resend.emails.send({
     from: fromEmail,
     to: [toEmail],
+    cc: ["gabriel@dilamco.com"],
     replyTo: data.email,
     subject: `Nouvelle demande de soumission boutique - ${nomComplet}`,
     text: [

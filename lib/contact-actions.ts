@@ -166,6 +166,7 @@ export async function submitContactLead(
   const { error } = await resend.emails.send({
     from: fromEmail,
     to: [toEmail],
+    cc: ["gabriel@dilamco.com"],
     replyTo: data.courriel,
     subject: `Nouvelle demande de soumission - ${data.nom}`,
     text: [

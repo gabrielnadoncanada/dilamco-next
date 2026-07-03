@@ -148,6 +148,7 @@ export async function submitConstructionLead(
   const { error } = await resend.emails.send({
     from: fromEmail,
     to: [toEmail],
+    cc: ["gabriel@dilamco.com"],
     replyTo: data.courriel,
     subject: `Nouvelle demande construction/renovation - ${data.nom}`,
     text: [
