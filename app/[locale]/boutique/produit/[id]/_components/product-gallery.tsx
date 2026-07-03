@@ -202,7 +202,7 @@ function GallerySlide({
         target="_blank"
         rel="noreferrer"
         aria-label={zoomLabel}
-        className="relative block aspect-square w-full overflow-hidden border border-border bg-secondary cursor-zoom-in max-[700px]:aspect-[4/3]"
+        className="relative block aspect-square w-full overflow-hidden border border-border  cursor-zoom-in max-[700px]:aspect-[4/3]"
       >
         <Image
           src={view.src}

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CartProvider } from "@/components/shop/cart-provider";
 import Header from "@/components/Header";
@@ -37,16 +36,14 @@ export default async function BoutiqueLayout({
   setRequestLocale(locale);
 
   return (
-    <NuqsAdapter>
-      <CartProvider>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer showReviews={false} />
-          <CartDrawer />
-          <HelpButton />
-        </div>
-      </CartProvider>
-    </NuqsAdapter>
+    <CartProvider>
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer showReviews={false} />
+        <CartDrawer />
+        <HelpButton />
+      </div>
+    </CartProvider>
   );
 }

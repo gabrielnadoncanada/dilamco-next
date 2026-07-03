@@ -159,7 +159,9 @@ export default function ProduitClient({ id }: { id: string }) {
     activeVariant.gallery ?? product.gallery,
   ).map((v) => ({
     ...v,
-    alt: /techni|dessin/i.test(v.label) ? `${baseAlt}${technicalSuffix}` : baseAlt,
+    alt: /techni|dessin/i.test(v.label)
+      ? `${baseAlt}${technicalSuffix}`
+      : baseAlt,
   }));
 
   return (
@@ -200,9 +202,9 @@ export default function ProduitClient({ id }: { id: string }) {
       </div>
       <QualityHighlights />
       <ProductRelated products={related} />
-      <div className="mt-[100px] max-[700px]:mt-14">
+      {/* <div className="mt-[100px] max-[700px]:mt-14">
         <ShowroomCta />
-      </div>
+      </div> */}
     </Container>
   );
 }

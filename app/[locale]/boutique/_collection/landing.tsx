@@ -140,41 +140,12 @@ export async function CollectionLanding({
           )}
         </header>
 
+        {/* La grille se rend CÔTÉ SERVEUR (état par défaut, non filtré) :
+            chaque carte est un <a> crawlable dans le HTML brut. Les filtres
+            s'appliquent à l'hydratation (CatalogFiltersProvider). */}
         <div className="mt-6">
           <ProductGrid scope={scope} />
         </div>
-
-        {/* Index des modèles rendu CÔTÉ SERVEUR : la grille ci-dessus est un
-            composant client (nuqs/useSearchParams), donc ses liens produits
-            sont absents du HTML brut. Cette liste garantit à Googlebot des
-            <a> crawlables vers chaque fiche de la collection (découverte +
-            budget de crawl), en plus d'un index texte utile. */}
-        {products.length > 0 && (
-          <nav
-            aria-label={
-              locale === "en"
-                ? "All models in this collection"
-                : "Tous les modèles de cette collection"
-            }
-            className="mt-16 max-w-[760px] border-t border-border pt-10"
-          >
-            <Headline level="title" as="h2" className="text-[22px]">
-              {locale === "en" ? "All models" : "Tous les modèles"}
-            </Headline>
-            <ul className="mt-4 grid grid-cols-2 gap-x-8 gap-y-2 max-[700px]:grid-cols-1">
-              {products.map((m) => (
-                <li key={m.code}>
-                  <Link
-                    href={routes.product(slugForCode(m.code, locale))}
-                    className="text-[14px] leading-[1.5] text-foreground underline-offset-2 hover:underline"
-                  >
-                    {localizeProductLabel(m.name, locale)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
 
         {/* FAQ niveau-collection : profondeur de contenu + citabilité IA. */}
         {faq.length > 0 && (

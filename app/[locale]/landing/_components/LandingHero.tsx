@@ -57,7 +57,8 @@ export function LandingHero() {
             style={{ animationDelay: "240ms" }}
           >
             Fabrication sur mesure, matériaux durables et gestion complète du
-            projet — de la conception à l&apos;installation, par une seule équipe.
+            projet — de la conception à l&apos;installation, par une seule
+            équipe.
           </p>
 
           <div
@@ -111,7 +112,7 @@ export function LandingHero() {
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5 text-white/85" />
-              Entrepôt local à Montréal
+              Entrepôt local
             </span>
             <span className="flex items-center gap-1.5">
               <CheckCircle2 className="h-3.5 w-3.5 text-white/85" />

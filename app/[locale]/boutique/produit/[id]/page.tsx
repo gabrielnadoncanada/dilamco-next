@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { notFound, permanentRedirect } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { findProduct } from "@/lib/shop/products";
@@ -202,9 +201,11 @@ export default async function ProduitPage({
           { name: localName, url: productUrl },
         ])}
       />
-      <Suspense fallback={null}>
-        <ProduitClient id={model.id} />
-      </Suspense>
+      {/* PAS de <Suspense> ici : la boundary faisait servir son fallback (main
+          vide) dans le HTML statique → fiche invisible sans JS / non indexée.
+          Rien ne suspend dans ProduitClient (le deep-link ?couleur= est lu en
+          useEffect, pas via useSearchParams). */}
+      <ProduitClient id={model.id} />
     </>
   );
 }

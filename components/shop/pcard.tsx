@@ -83,7 +83,7 @@ export function PCard({
 
   return (
     <article className="group flex flex-col border border-border bg-card text-card-foreground transition-[border-color] duration-200 hover:border-foreground">
-      <div className="relative aspect-square overflow-hidden border-b border-border bg-secondary">
+      <div className="relative aspect-square overflow-hidden border-b border-border ">
         <Link
           href={productHref}
           aria-label={label}

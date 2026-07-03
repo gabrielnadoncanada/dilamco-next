@@ -1,13 +1,7 @@
 "use client";
 
-import { Suspense, useMemo } from "react";
+import { useMemo } from "react";
 import { useTranslations } from "next-intl";
-import {
-  parseAsInteger,
-  parseAsString,
-  parseAsStringLiteral,
-  useQueryState,
-} from "nuqs";
 import { cn } from "@/lib/shop/utils";
 import {
   applyFilters,
@@ -17,6 +11,8 @@ import {
   type CatalogScope,
   type FinishKey,
 } from "./filtering";
+import { useCatalogFilters } from "./catalog-filters";
+import { SORT_VALUES } from "./types";
 
 export const FINISH_LABELS: Record<FinishKey, string> = {
   blanc: "Blanc Pur",
@@ -24,17 +20,13 @@ export const FINISH_LABELS: Record<FinishKey, string> = {
 };
 
 /**
- * État + options des facettes catalogue (URL via nuqs) — partagé entre la
- * colonne desktop et le bottom drawer mobile. Compteurs à la Amazon :
- * chaque facette est calculée avec les autres facettes actives.
+ * Options + compteurs des facettes catalogue — partagé entre la colonne
+ * desktop et le bottom drawer mobile. L'état vit dans CatalogFiltersProvider
+ * (pas nuqs : voir catalog-filters.tsx). Compteurs à la Amazon : chaque
+ * facette est calculée avec les autres facettes actives.
  */
 export function useCatalogFacets(scope?: CatalogScope) {
-  const [q, setQ] = useQueryState("q", parseAsString.withDefault(""));
-  const [width, setWidth] = useQueryState("largeur", parseAsInteger);
-  const [finish, setFinish] = useQueryState(
-    "fini",
-    parseAsStringLiteral(FINISH_VALUES),
-  );
+  const { q, setQ, width, setWidth, finish, setFinish } = useCatalogFilters();
 
   const base = useMemo(() => baseProducts(scope), [scope]);
   const state = { q, width, finish };
@@ -92,26 +84,12 @@ export function useCatalogFacets(scope?: CatalogScope) {
   };
 }
 
-const SORT_VALUES: string[] = ["family", "price-asc", "price-desc", "width"];
-
 /**
  * Colonne de gauche façon IKEA : groupes repliés (Trier, Catégories,
- * Finition, Largeur) avec résumé de la sélection dans l'en-tête.
+ * Finition, Largeur) avec résumé de la sélection dans l'en-tête. Se rend
+ * côté serveur (état par défaut) — pas de Suspense/nuqs, voir catalog-filters.
  */
-/** nuqs (useSearchParams) exige un Suspense boundary pour le prerender statique. */
-export function SidebarFilters(props: {
-  scope?: CatalogScope;
-  activeSlug?: string;
-  categories?: React.ReactNode;
-}) {
-  return (
-    <Suspense>
-      <SidebarFiltersInner {...props} />
-    </Suspense>
-  );
-}
-
-function SidebarFiltersInner({
+export function SidebarFilters({
   scope,
   activeSlug,
   categories,
@@ -132,10 +110,7 @@ function SidebarFiltersInner({
     hasActive,
     clearAll,
   } = useCatalogFacets(scope);
-  const [sort, setSort] = useQueryState(
-    "tri",
-    parseAsString.withDefault("family"),
-  );
+  const { sort, setSort } = useCatalogFilters();
   const t = useTranslations("shop.collections");
   const sortLabel = (value: string) => t(`sort.${value}`);
 
@@ -164,10 +139,7 @@ function SidebarFiltersInner({
         className="mb-2 border border-border-strong bg-card px-3 py-2.5 text-[13px] text-foreground outline-none placeholder:text-muted-foreground focus-visible:border-primary"
       />
 
-      <SidebarGroup
-        label={t("sortGroup")}
-        summary={SORT_VALUES.includes(sort) ? sortLabel(sort) : undefined}
-      >
+      <SidebarGroup label={t("sortGroup")} summary={sortLabel(sort)}>
         <ul className="flex flex-col">
           {SORT_VALUES.map((value) => (
             <li key={value}>

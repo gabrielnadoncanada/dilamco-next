@@ -1,6 +1,5 @@
 "use client";
 
-import { Suspense } from "react";
 import { useTranslations } from "next-intl";
 import { SlidersHorizontal } from "lucide-react";
 import {
@@ -34,16 +33,7 @@ interface Props {
  * groupes repliés (résumé de la sélection dans l'en-tête), recherche en
  * haut, et pied collant « Voir les N modules » qui ferme le drawer.
  */
-/** nuqs (useSearchParams) exige un Suspense boundary pour le prerender statique. */
-export function MobileFiltersDrawer(props: Props) {
-  return (
-    <Suspense>
-      <MobileFiltersDrawerInner {...props} />
-    </Suspense>
-  );
-}
-
-function MobileFiltersDrawerInner({ scope, activeSlug }: Props) {
+export function MobileFiltersDrawer({ scope, activeSlug }: Props) {
   const {
     q,
     setQ,

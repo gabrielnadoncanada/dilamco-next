@@ -1,22 +1,12 @@
 "use client";
 
-import { Fragment, Suspense, useMemo } from "react";
+import { Fragment, useMemo } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import {
-  parseAsInteger,
-  parseAsString,
-  parseAsStringLiteral,
-  useQueryState,
-} from "nuqs";
 import { PCard } from "@/components/shop/pcard";
 import type { Product } from "@/lib/shop/types";
-import { familyRank, pluralTitle, SORT_VALUES } from "./types";
-import {
-  applyFilters,
-  baseProducts,
-  FINISH_VALUES,
-  type CatalogScope,
-} from "./filtering";
+import { familyRank, pluralTitle } from "./types";
+import { applyFilters, baseProducts, type CatalogScope } from "./filtering";
+import { useCatalogFilters } from "./catalog-filters";
 
 interface Props {
   scope?: CatalogScope;
@@ -24,23 +14,14 @@ interface Props {
   groupByFamily?: boolean;
 }
 
-/** nuqs (useSearchParams) exige un Suspense boundary pour le prerender statique. */
-export function ProductGrid(props: Props) {
-  return (
-    <Suspense>
-      <ProductGridInner {...props} />
-    </Suspense>
-  );
-}
-
-function ProductGridInner({ scope, groupByFamily = false }: Props) {
-  const [sort] = useQueryState(
-    "tri",
-    parseAsStringLiteral(SORT_VALUES).withDefault("family"),
-  );
-  const [q] = useQueryState("q", parseAsString.withDefault(""));
-  const [width] = useQueryState("largeur", parseAsInteger);
-  const [finish] = useQueryState("fini", parseAsStringLiteral(FINISH_VALUES));
+/**
+ * PAS de Suspense ni de nuqs/useSearchParams ici : la grille par défaut (non
+ * filtrée) doit être dans le HTML serveur — chaque carte produit est un lien
+ * crawlable. Les filtres viennent du CatalogFiltersProvider (état client,
+ * appliqué à l'hydratation).
+ */
+export function ProductGrid({ scope, groupByFamily = false }: Props) {
+  const { q, width, finish, sort } = useCatalogFilters();
   const t = useTranslations("shop.collections");
   const locale = useLocale() as "fr" | "en";
 
