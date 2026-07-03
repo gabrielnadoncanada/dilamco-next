@@ -10,7 +10,7 @@ export function ShowroomCta() {
   const t = useTranslations("shop.chrome.showroomCta");
   return (
     <SplitMediaCta
-      imageSrc="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=1200&q=80"
+      imageSrc="/images/showroom.webp"
       eyebrow={t("eyebrow")}
       headline={
         <>
@@ -21,7 +21,7 @@ export function ShowroomCta() {
       }
       body={t("body")}
     >
-      <div className="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-6 max-[700px]:grid-cols-1 max-[700px]:gap-3.5">
+      <div className="mt-8 grid grid-cols-1 gap-6 border-t border-border pt-6 max-[700px]:grid-cols-1 max-[700px]:gap-3.5">
         {/* <div>
           <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-muted-foreground">
             {t("addressLabel")}
