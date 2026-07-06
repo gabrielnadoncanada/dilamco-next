@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const walkInPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Garde-robe et walk-in sur mesure à Montréal",
+    title: "Garde-robe et walk-in sur mesure à Montréal : prix et conception",
     description:
-      "Garde-robe et walk-in sur mesure haut de gamme : conception, fabrication contrôlée et installation à Pierrefonds, Montréal, Laval et le Grand Montréal.",
+      "Garde-robe et walk-in sur mesure à Montréal, Laval et le Grand Montréal : fourchettes de prix, comparaison avec les systèmes modulaires, conception et installation haut de gamme.",
     path: "/espaces/walk-in",
     ogAlt: "Garde-robe et walk-in sur mesure Dilamco",
   },
@@ -174,6 +174,93 @@ export const walkInPage: PageTemplateData = {
       },
     },
     {
+      id: "pricing",
+      content: {
+        type: "comparison",
+        variant: "table-basic",
+        props: {
+          heading: "Combien coûte une garde-robe sur mesure ?",
+          intro:
+            "Chaque projet est chiffré selon les dimensions, le niveau d'aménagement et les matériaux. Voici des fourchettes réalistes pour cadrer votre budget avant la soumission.",
+          columns: ["Fourchette de prix", "Ce que ça comprend"],
+          rows: [
+            {
+              label: "Garde-robe murale sur mesure",
+              values: [
+                "3 000 $ à 8 000 $",
+                "Aménagement complet d'un placard : penderie, tablettes et tiroirs sur mesure",
+              ],
+            },
+            {
+              label: "Walk-in sur mesure",
+              values: [
+                "8 000 $ à 20 000 $",
+                "Pièce dédiée : modules muraux, tiroirs, accessoires et finitions intégrées",
+              ],
+            },
+            {
+              label: "Walk-in haut de gamme",
+              values: [
+                "20 000 $ et plus",
+                "Îlot central, éclairage intégré, portes vitrées, bois massif et verre",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "vs-modulaire",
+      content: {
+        type: "comparison",
+        variant: "table-basic",
+        props: {
+          heading:
+            "Garde-robe sur mesure ou système modulaire (IKEA, filaire) ?",
+          intro:
+            "Les systèmes modulaires dépannent bien à court terme. Le sur mesure devient rentable dès que l'espace, la durabilité ou l'intégration comptent.",
+          columns: ["Système modulaire", "Garde-robe sur mesure"],
+          rows: [
+            {
+              label: "Adaptation à l'espace",
+              values: [
+                "Dimensions standard, espaces perdus dans les angles et sous le plafond",
+                "Conçue au millimètre pour vos murs, niches et hauteurs réelles",
+              ],
+            },
+            {
+              label: "Matériaux",
+              values: [
+                "Panneaux minces et quincaillerie de base",
+                "Contreplaqué de bouleau, tiroirs en bois massif, quincaillerie robuste",
+              ],
+            },
+            {
+              label: "Intégration",
+              values: [
+                "Meubles posés, jeux et plinthes apparents",
+                "Intégration mur à mur et jusqu'au plafond, rendu architectural",
+              ],
+            },
+            {
+              label: "Durée de vie",
+              values: [
+                "Affaissement fréquent après quelques années",
+                "Structure stable pensée pour l'usage quotidien à long terme",
+              ],
+            },
+            {
+              label: "Prix",
+              values: [
+                "Moins cher à l'achat",
+                "Investissement plus élevé, mais valeur ajoutée à la revente",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "projects",
       content: {
         type: "grid",
@@ -224,6 +311,46 @@ export const walkInPage: PageTemplateData = {
       },
     },
     {
+      id: "zones",
+      content: {
+        type: "split",
+        variant: "badges-checklist-cta",
+        props: {
+          heading:
+            "Garde-robe sur mesure à Montréal, Laval et dans le Grand Montréal",
+          intro:
+            "Basés dans le Grand Montréal, on conçoit et installe des garde-robes et walk-ins sur mesure dans l'Ouest-de-l'Île et partout dans la région.",
+          badges: [
+            "Montréal",
+            "Laval",
+            "Pierrefonds-Roxboro",
+            "Ouest-de-l'Île",
+            "Rive-Nord",
+            "Rive-Sud",
+          ],
+          cardTitle: "Zones desservies",
+          items: [
+            "Montréal et les quartiers centraux",
+            "Laval et la Rive-Nord",
+            "Pierrefonds-Roxboro et l'Ouest-de-l'Île",
+            "Rive-Sud et couronne sud",
+          ],
+          actions: [
+            {
+              label: "Demander une soumission",
+              href: "/contact",
+              variant: "primary",
+            },
+            {
+              label: "Voir nos projets",
+              href: "/projets",
+              variant: "ghost",
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "faq",
 
       content: {
@@ -240,19 +367,23 @@ export const walkInPage: PageTemplateData = {
             },
             {
               q: "Combien coûte une garde-robe ou un walk-in sur mesure ?",
-              a: "Le prix varie selon les dimensions, le niveau d'aménagement (penderie, tiroirs, îlot, éclairage) et les matériaux choisis. On vous donne une estimation claire après avoir cadré le projet.",
+              a: "La plupart des garde-robes murales sur mesure se situent entre 3 000 $ et 8 000 $, et les walk-ins complets entre 8 000 $ et 20 000 $. Un walk-in haut de gamme (îlot central, éclairage intégré, portes vitrées) dépasse généralement 20 000 $. On vous remet une soumission détaillée après avoir cadré le projet.",
+            },
+            {
+              q: "Une garde-robe sur mesure vaut-elle le coût par rapport à un système IKEA ?",
+              a: "Un système modulaire coûte moins cher à l'achat, mais il impose ses dimensions standard et vieillit plus vite. Le sur mesure exploite chaque centimètre (angles, hauteurs, niches), utilise des matériaux plus robustes et s'intègre à la pièce comme du mobilier architectural — un atout à la revente.",
+            },
+            {
+              q: "Quel est le délai pour un projet de garde-robe sur mesure ?",
+              a: "Comptez généralement de 9 à 15 semaines entre la validation du design et l'installation, selon la complexité du projet. L'échéancier précis est confirmé avec la soumission.",
             },
             {
               q: "Est-ce utile dans un petit espace ?",
               a: "Oui. Le sur mesure est justement pertinent quand il faut optimiser niches, angles et hauteurs disponibles.",
             },
             {
-              q: "Quelle est la différence avec un système modulaire ?",
-              a: "Le sur mesure permet une organisation plus adaptée, une meilleure intégration et une structure souvent plus robuste.",
-            },
-            {
               q: "Travaillez-vous à Montréal et autour ?",
-              a: "Oui. Nous desservons Montréal, Laval et la Rive-Sud.",
+              a: "Oui. Nous desservons Montréal, Laval, l'Ouest-de-l'Île, la Rive-Nord et la Rive-Sud.",
             },
           ],
         },

@@ -149,13 +149,15 @@ export const sousSolPage: PageTemplateData = {
             },
             {
               title: "Rangement & mécanique",
+              href: "/espaces/walk-in",
               description:
-                "Placards, rangements fermés et accès discrets aux espaces techniques pour garder un sous-sol net et organisé.",
+                "Placards, garde-robes sur mesure et accès discrets aux espaces techniques pour garder un sous-sol net et organisé.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
                 alt: "Rangement fermé sur mesure le long d'un mur de sous-sol",
               },
               badges: ["Rangement", "Durable"],
+              footerCtaLabel: "Voir les garde-robes sur mesure",
             },
           ],
         },

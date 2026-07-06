@@ -149,13 +149,15 @@ export const sousSolPageEn: PageTemplateData = {
             },
             {
               title: "Storage & mechanical",
+              href: "/espaces/walk-in",
               description:
-                "Closets, closed storage and discreet access to technical spaces to keep a basement clean and organized.",
+                "Custom closets, closed storage and discreet access to technical spaces to keep a basement clean and organized.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
                 alt: "Custom closed storage along a basement wall",
               },
               badges: ["Storage", "Durable"],
+              footerCtaLabel: "See custom closets",
             },
           ],
         },

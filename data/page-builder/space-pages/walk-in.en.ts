@@ -4,22 +4,22 @@ import { SITE } from "@/seo/schema/site";
 export const walkInPageEn: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Custom walk-in closets in Montreal",
+    title: "Custom closets and walk-ins in Montreal: pricing and design",
     description:
-      "High-end custom walk-in closet: design, controlled fabrication and precise installation in Montréal, Laval and on the South Shore.",
+      "High-end custom closets and walk-in closets in Montreal, Laval and the South Shore: realistic price ranges, custom vs modular comparison, design and installation.",
     path: "/espaces/walk-in",
-    ogAlt: "Dilamco custom walk-in closet",
+    ogAlt: "Dilamco custom closet and walk-in",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
-    { name: "Custom walk-in closet", url: SITE.url + "/espaces/walk-in" },
+    { name: "Custom closets", url: SITE.url + "/espaces/walk-in" },
   ],
   service: {
-    name: "Custom walk-in closet",
+    name: "Custom closets and walk-in closets",
     description:
-      "Design, controlled fabrication and installation of high-end custom walk-in closets.",
+      "Design, controlled fabrication and installation of high-end custom closets and walk-in closets in Montreal, Laval and the Greater Montreal area.",
     url: SITE.url + "/espaces/walk-in",
-    serviceType: "Custom walk-in closet",
+    serviceType: "Custom closet",
   },
   blocks: [
     {
@@ -30,9 +30,9 @@ export const walkInPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Dilamco - Spaces",
-          heading: "Custom walk-in closet, storage designed for real use",
+          heading: "Custom closets and walk-ins in Montreal, designed for real use",
           description:
-            "Custom work lets you optimize the space, improve organization and achieve a more stable result than a standard system.",
+            "A custom closet or walk-in lets you optimize the space, improve organization and achieve a more stable, better-integrated result than a standard system — design, fabrication and installation by a single team.",
           actions: [
             {
               label: "Get a quote",
@@ -61,7 +61,7 @@ export const walkInPageEn: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "A walk-in closet built for everyday use",
+          heading: "A custom closet built for everyday use",
           intro:
             "This kind of project is about better organizing zones, access and volumes rather than stacking standard shelves.",
           badges: ["Optimization", "Access", "Durability"],
@@ -173,6 +173,92 @@ export const walkInPageEn: PageTemplateData = {
       },
     },
     {
+      id: "pricing",
+      content: {
+        type: "comparison",
+        variant: "table-basic",
+        props: {
+          heading: "How much does a custom closet cost in Montreal?",
+          intro:
+            "Every project is priced according to dimensions, level of fit-out and materials. Here are realistic ranges to frame your budget before the quote.",
+          columns: ["Price range", "What it includes"],
+          rows: [
+            {
+              label: "Custom reach-in closet",
+              values: [
+                "$3,000 to $8,000",
+                "Complete fit-out of an existing closet: hanging space, shelves and custom drawers",
+              ],
+            },
+            {
+              label: "Custom walk-in closet",
+              values: [
+                "$8,000 to $20,000",
+                "Dedicated room: wall modules, drawers, accessories and integrated finishes",
+              ],
+            },
+            {
+              label: "High-end walk-in",
+              values: [
+                "$20,000 and up",
+                "Center island, integrated lighting, glass doors, solid wood and glass",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "vs-modular",
+      content: {
+        type: "comparison",
+        variant: "table-basic",
+        props: {
+          heading: "Custom closet or modular system (IKEA, wire shelving)?",
+          intro:
+            "Modular systems work fine short-term. Custom becomes worthwhile as soon as space, durability or integration matter.",
+          columns: ["Modular system", "Custom closet"],
+          rows: [
+            {
+              label: "Fit to the space",
+              values: [
+                "Standard dimensions, wasted space in corners and below the ceiling",
+                "Designed to the millimetre for your real walls, nooks and heights",
+              ],
+            },
+            {
+              label: "Materials",
+              values: [
+                "Thin panels and basic hardware",
+                "Birch plywood, solid wood drawers, robust hardware",
+              ],
+            },
+            {
+              label: "Integration",
+              values: [
+                "Freestanding units, visible gaps and baseboards",
+                "Wall-to-wall and floor-to-ceiling integration, built-in architectural look",
+              ],
+            },
+            {
+              label: "Lifespan",
+              values: [
+                "Sagging common after a few years",
+                "Stable structure built for long-term daily use",
+              ],
+            },
+            {
+              label: "Price",
+              values: [
+                "Cheaper upfront",
+                "Higher investment, but added resale value",
+              ],
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "projects",
       content: {
         type: "grid",
@@ -223,31 +309,75 @@ export const walkInPageEn: PageTemplateData = {
       },
     },
     {
+      id: "zones",
+      content: {
+        type: "split",
+        variant: "badges-checklist-cta",
+        props: {
+          heading:
+            "Custom closets in Montreal, Laval and across Greater Montreal",
+          intro:
+            "Based in Greater Montreal, we design and install custom closets and walk-ins in the West Island and throughout the region.",
+          badges: [
+            "Montreal",
+            "Laval",
+            "Pierrefonds-Roxboro",
+            "West Island",
+            "North Shore",
+            "South Shore",
+          ],
+          cardTitle: "Areas served",
+          items: [
+            "Montreal and central neighbourhoods",
+            "Laval and the North Shore",
+            "Pierrefonds-Roxboro and the West Island",
+            "South Shore and southern suburbs",
+          ],
+          actions: [
+            {
+              label: "Request a quote",
+              href: "/contact",
+              variant: "primary",
+            },
+            {
+              label: "View our projects",
+              href: "/projets",
+              variant: "ghost",
+            },
+          ],
+        },
+      },
+    },
+    {
       id: "faq",
 
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - custom walk-in closets",
+          heading: "FAQ - custom closets and walk-ins",
           intro:
             "The most common questions before starting a custom storage project.",
           items: [
             {
-              q: "How much does a custom walk-in closet cost?",
-              a: "The price varies depending on the dimensions, the level of fit-out and the materials chosen.",
+              q: "How much does a custom closet cost?",
+              a: "Most custom reach-in closets fall between $3,000 and $8,000, and complete walk-in closets between $8,000 and $20,000. A high-end walk-in (center island, integrated lighting, glass doors) generally exceeds $20,000. You get a detailed quote once the project is framed.",
+            },
+            {
+              q: "Is a custom closet worth it compared to an IKEA system?",
+              a: "A modular system is cheaper upfront, but it imposes standard dimensions and ages faster. Custom work uses every centimetre (corners, heights, nooks), relies on more robust materials and integrates into the room like architectural millwork — an asset at resale.",
+            },
+            {
+              q: "What is the timeline for a custom closet project?",
+              a: "Plan for roughly 9 to 15 weeks between design approval and installation, depending on the project's complexity. The precise schedule is confirmed with the quote.",
             },
             {
               q: "Is it useful in a small space?",
               a: "Yes. Custom work is exactly what's relevant when you need to optimize the available nooks, corners and heights.",
             },
             {
-              q: "What's the difference with a modular system?",
-              a: "Custom work allows for better-suited organization, better integration and an often more robust structure.",
-            },
-            {
-              q: "Do you work in Montréal and the surrounding area?",
-              a: "Yes. We serve Montréal, Laval and the South Shore.",
+              q: "Do you work in Montreal and the surrounding area?",
+              a: "Yes. We serve Montreal, Laval, the West Island, the North Shore and the South Shore.",
             },
           ],
         },
@@ -259,7 +389,7 @@ export const walkInPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Tell us about your walk-in closet project",
+          heading: "Tell us about your custom closet or walk-in project",
           intro:
             "We help you frame custom storage that truly fits the space and the way you use it.",
           actions: [

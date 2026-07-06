@@ -235,6 +235,18 @@ export const zoneLavalPage: PageTemplateData = {
               badges: ["Cuisine", "Sur mesure"],
               footerCtaLabel: "Voir l'espace cuisine",
             },
+            {
+              title: "Garde-robe sur mesure",
+              href: "/espaces/walk-in",
+              description:
+                "Garde-robes et walk-ins sur mesure à Laval : prix, comparaison avec les systèmes modulaires et aménagement complet.",
+              image: {
+                src: "/images/generated/spaces/space-walkin-hero-01.webp",
+                alt: "Garde-robe et walk-in sur mesure à Laval",
+              },
+              badges: ["Garde-robe", "Walk-in"],
+              footerCtaLabel: "Voir l'espace garde-robe",
+            },
           ],
         },
       },

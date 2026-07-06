@@ -234,6 +234,18 @@ export const zoneLavalPageEn: PageTemplateData = {
               badges: ["Kitchen", "Custom"],
               footerCtaLabel: "See the kitchen page",
             },
+            {
+              title: "Custom closets",
+              href: "/espaces/walk-in",
+              description:
+                "Custom closets and walk-ins in Laval: pricing, custom vs modular comparison and complete fit-out.",
+              image: {
+                src: "/images/generated/spaces/space-walkin-hero-01.webp",
+                alt: "Custom closet and walk-in in Laval",
+              },
+              badges: ["Closet", "Walk-in"],
+              footerCtaLabel: "See the closet page",
+            },
           ],
         },
       },
