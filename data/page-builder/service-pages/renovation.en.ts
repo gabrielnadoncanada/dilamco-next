@@ -34,7 +34,7 @@ export const renovationPageEn: PageTemplateData = {
           heading:
             "Turnkey renovation in Montréal, a single framework from design to installation",
           description:
-            "When a renovation involves several trades, the value isn't decided only by the final result. It's decided by the sequence, the coordination, the quality of technical decisions and the ability to deliver a coherent whole from start to finish.",
+            "A turnkey renovation is a mandate where a single team takes charge of the full sequence — design, fabrication, worksite coordination and finishing — instead of leaving the client to orchestrate several trades. The value is decided as much by the coordination and the quality of technical decisions as by the final result.",
           actions: [
             {
               label: "Request a quote",
@@ -340,7 +340,7 @@ export const renovationPageEn: PageTemplateData = {
           items: [
             {
               q: "How much does a turnkey renovation cost?",
-              a: "The price depends on the scope, the materials, the complexity of the worksite and the level of coordination required. A structured quote is exactly what clarifies these points before starting.",
+              a: "The price of a turnkey renovation depends on the scope of the project (one room or several), the materials and finishes, the complexity of the worksite and the level of coordination required between trades. Since every project is different, there's no single price: a structured quote is exactly what clarifies the scope, the choices and the budget before starting, to avoid unpleasant surprises along the way.",
             },
             {
               q: "What's the difference with buying cabinets then managing the rest separately?",
@@ -352,7 +352,7 @@ export const renovationPageEn: PageTemplateData = {
             },
             {
               q: "What are the timelines for a renovation?",
-              a: "Timelines vary depending on the space, the complexity, procurement and related work. A realistic schedule is set once the project scope is clarified.",
+              a: "Renovation timelines vary depending on the space involved, the complexity of the worksite, material procurement and related work (plumbing, electrical, flooring). Rather than a generic estimate, a realistic schedule is set once the project scope is clarified, with the key stages sequenced to limit downtime and rework. That way you know when each phase starts and ends.",
             },
             {
               q: "Is it relevant for a kitchen, a bathroom or an extension?",

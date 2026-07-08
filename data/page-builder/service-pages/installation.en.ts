@@ -37,7 +37,7 @@ export const installationPageEn: PageTemplateData = {
           heading:
             "Professional installation: precision, alignment and finish",
           description:
-            "A quality installation is decisive for the final result: on-site adjustments, precise alignments and careful finishing.",
+            "Installation is the final stage where cabinets are set and adjusted on site: levelling, precise alignments, fastening and finishing. It is what turns fabricated elements into a clean, durable whole — on-site adjustments are an integral part of a professional install.",
           actions: [
             {
               label: "Request a quote",
@@ -201,7 +201,7 @@ export const installationPageEn: PageTemplateData = {
           items: [
             {
               q: "How long does an installation take?",
-              a: "It depends on the project type and its complexity. A full kitchen takes more time than a vanity or a walk-in.",
+              a: "How long an installation takes depends on the project type and its complexity. A bathroom vanity or a walk-in is generally set in a day or two, while a full kitchen — with an island, tall cabinets and appliance coordination — takes longer. We confirm the expected duration during planning, once the project scope is set, so you know what to expect on site.",
             },
             {
               q: "Are adjustments normal?",
@@ -209,7 +209,7 @@ export const installationPageEn: PageTemplateData = {
             },
             {
               q: "Do you only install your own cabinets?",
-              a: "Yes. We install the elements we fabricate to guarantee a consistent result.",
+              a: "Yes. We install the elements we design and fabricate, which lets us guarantee consistency between fabrication and installation: same standards, same tolerances, one team responsible for the result. This continuity avoids the grey areas that are common when fabrication and installation are handled by different parties, and it makes final on-site adjustments easier.",
             },
             {
               q: "Do you work in condos or commercial spaces?",

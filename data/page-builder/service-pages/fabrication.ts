@@ -36,7 +36,7 @@ export const fabricationPage: PageTemplateData = {
           eyebrow: "Dilamco - Services",
           heading: "Fabrication sur mesure, précision, constance et durabilité",
           description:
-            "La fabrication détermine la solidité, la stabilité et la longévité du projet. L'objectif est un résultat cohérent, durable et propre à installer.",
+            "La fabrication est l'étape où les armoires sont produites selon les plans validés : découpe, assemblage et finition des caissons, portes et tiroirs. Elle détermine la solidité, la stabilité et la longévité du projet. Chez Dilamco, elle est réalisée de façon contrôlée en usine partenaire, pour un résultat cohérent et propre à installer.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -190,7 +190,7 @@ export const fabricationPage: PageTemplateData = {
           items: [
             {
               q: "Quelle est la différence entre sur mesure et semi-custom?",
-              a: "Le sur mesure s'adapte à l'espace exact alors que le semi-custom part de modules prédéfinis avec certaines variations.",
+              a: "Le sur mesure part de votre espace réel : chaque caisson est dimensionné au millimètre selon vos mesures, votre aménagement et vos contraintes. Le semi-custom, lui, part de modules prédéfinis qu'on adapte dans une certaine limite (quelques largeurs, options de finition), sans reconcevoir entièrement. Le sur mesure exploite mieux les angles, les hauteurs et les espaces atypiques ; le semi-custom peut suffire quand l'espace est standard. La différence se voit surtout dans l'ajustement final et l'exploitation de chaque centimètre.",
             },
             {
               q: "Quels matériaux vieillissent le mieux?",
@@ -202,7 +202,7 @@ export const fabricationPage: PageTemplateData = {
             },
             {
               q: "Quels sont les délais de fabrication?",
-              a: "Ils varient selon la complexité, la disponibilité et la coordination avec l'installation.",
+              a: "Les délais de fabrication varient selon la complexité du projet, la disponibilité des matériaux et la coordination avec l'installation. Pour un projet sur mesure, il faut généralement compter de 9 à 15 semaines entre la validation du design et la pose finale. Un échéancier précis est confirmé une fois les plans arrêtés, pour vous donner une visibilité claire sur chaque étape.",
             },
           ],
         },
