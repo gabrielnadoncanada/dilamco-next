@@ -36,7 +36,7 @@ export const pageEn: PageTemplateData = {
           eyebrow: "Dilamco - Process",
           heading: "A clear process, from scoping to installation",
           description:
-            "Every project moves forward with a defined sequence to reduce grey areas, validate decisions at the right time and protect the final quality.",
+            "The Dilamco process is a defined sequence — design, validation, fabrication, installation — built to reduce grey areas, validate decisions at the right time and protect the final quality of every project.",
           actions: [
             {
               label: "Request a quote",
@@ -297,11 +297,11 @@ export const pageEn: PageTemplateData = {
             },
             {
               q: "Do you also handle installation?",
-              a: "Yes. Installation, adjustments and the final inspection are part of the execution logic when the mandate provides for it.",
+              a: "Yes. Installation, on-site adjustments and the final inspection are an integral part of our execution logic when the mandate provides for it. Entrusting the install to the same team as the design and fabrication guarantees a consistent result: same standards, same tolerances, and single responsibility from the plan through to the finish.",
             },
             {
               q: "Does the process also work in a condo or in constrained contexts?",
-              a: "Yes. The process exists precisely to identify access, schedule or coordination constraints early enough to integrate them better.",
+              a: "Yes. The process exists precisely to identify early the access (elevator, parking), scheduling (allowed work hours) or coordination constraints specific to the building, so they can be integrated into the planning. Once these constraints are framed, a project in a condo or a tight space proceeds with the same rigour as anywhere else.",
             },
           ],
         },

@@ -25,7 +25,7 @@ export const page: PageTemplateData = {
           eyebrow: "Dilamco - Matériaux",
           heading: "Matériaux, durabilité, finition et performance",
           description:
-            "Le bon matériau dépend de l'usage réel. Nous priorisons la cohérence entre structure, quincaillerie, finition et installation pour obtenir un résultat plus durable.",
+            "Le choix des matériaux d'armoires — bois massif, contreplaqué, MDF, mélamine, quincaillerie et finis — détermine la durabilité et le rendu d'un projet. Le bon matériau dépend de l'usage réel : nous priorisons la cohérence entre structure, quincaillerie, finition et installation pour un résultat plus durable.",
           actions: [
             {
               label: "Demander une soumission",
@@ -268,19 +268,19 @@ export const page: PageTemplateData = {
           items: [
             {
               q: "Contreplaqué ou MDF ?",
-              a: "Le choix dépend du rôle de la pièce, de l'humidité et de la durabilité visée.",
+              a: "Ils excellent à des endroits différents. Le contreplaqué, plus stable grâce à ses plis croisés, est souvent privilégié pour la structure des caissons et les tiroirs. Le MDF offre une surface plus lisse, idéale pour certaines façades peintes. Le choix dépend du rôle de la pièce, de l'humidité et de la durabilité visée — et la meilleure approche combine souvent les deux.",
             },
             {
               q: "La mélamine est-elle un bon choix ?",
-              a: "Oui dans certains contextes, avec une attention particulière aux chants et à l'installation.",
+              a: "Oui, dans les bons contextes. La mélamine offre un large choix de finis à un coût maîtrisé et une surface facile d'entretien. Sa durabilité dépend surtout de la qualité des chants et de la précision d'installation : bien posée, elle est pertinente pour de nombreux projets, notamment les intérieurs de caissons et les budgets cadrés.",
             },
             {
               q: "La quincaillerie soft-close vaut-elle la peine ?",
-              a: "Oui, si le système est fiable et bien installé.",
+              a: "Oui, à condition que le système soit fiable et bien installé. La fermeture amortie réduit les chocs et le bruit, améliore le confort au quotidien et prolonge la durée de vie des portes et tiroirs, très sollicités. C'est un des détails, souvent invisibles, qui distinguent le plus une cuisine durable d'une cuisine d'entrée de gamme.",
             },
             {
               q: "Quels matériaux éviter en salle de bain ?",
-              a: "Ceux mal protégés contre l'humidité ou mal adaptés au contexte réel.",
+              a: "En salle de bain, on évite les matériaux mal protégés contre l'humidité ou dont les chants sont mal scellés, car la vapeur et les éclaboussures s'infiltrent avec le temps. On privilégie des structures stables, des finis résistants à l'humidité et une quincaillerie durable, combinés à une bonne ventilation et à une installation soignée — c'est l'exécution qui protège la durabilité.",
             },
           ],
         },

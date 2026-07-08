@@ -28,7 +28,7 @@ export const pageEn: PageTemplateData = {
           heading:
             "Custom spaces: kitchen, bathroom, storage and commercial",
           description:
-            "Every space has its constraints. Our role is to design, fabricate and install durable, functional and well-executed solutions.",
+            "A custom cabinetry specialist established in Greater Montréal, we design and install custom kitchens, cabinets, vanities and storage, made exclusively for us by our partner factory. Every space has its constraints: our role is to deliver durable, functional and well-executed solutions.",
           actions: [
             {
               label: "Get a quote",
@@ -271,7 +271,7 @@ export const pageEn: PageTemplateData = {
           items: [
             {
               q: "What budget should I plan for a custom kitchen?",
-              a: "The budget depends on the dimensions, the layout (drawers, accessories, island), the materials and the coordination required. For a custom, turnkey approach, expect an investment aligned with premium, durable execution.",
+              a: "The budget for a custom kitchen depends on the dimensions, the layout (drawers, accessories, island), the materials and the level of coordination. For a custom, turnkey approach, the investment generally ranges between $30,000 and $65,000, with a typical lead time of 9 to 15 weeks. We clarify a realistic budget from the initial consultation, once the project is scoped.",
             },
             {
               q: "What's the difference with IKEA / big-box stores?",
@@ -279,7 +279,7 @@ export const pageEn: PageTemplateData = {
             },
             {
               q: "What are typical lead times?",
-              a: "Lead times vary with complexity and production load. A structured process (validation before fabrication + installation coordination) allows more predictable planning and fewer surprises.",
+              a: "Lead times vary with complexity and production load, but you should generally allow 9 to 15 weeks between design approval and installation. A structured process — validation before fabrication, then installation coordination — allows more predictable planning and limits surprises.",
             },
             {
               q: "Do you handle the full renovation?",

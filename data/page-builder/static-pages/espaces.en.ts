@@ -33,7 +33,7 @@ export const pageEn: PageTemplateData = {
           heading:
             "Custom spaces: kitchen, bathroom, storage and commercial",
           description:
-            "Every space has its constraints. Our role is to design, build and install durable, functional and well-executed solutions.",
+            "At Dilamco, every space in the home — kitchen, bathroom, walk-in, basement, laundry room — can receive custom cabinets and storage. Our role: to design, supply and install durable, functional and well-executed solutions, adapted to the real constraints of each room.",
           actions: [
             {
               label: "Request a quote",
@@ -199,19 +199,19 @@ export const pageEn: PageTemplateData = {
           items: [
             {
               q: "Which spaces do you handle?",
-              a: "Kitchen, bathroom, laundry room, walk-in and commercial projects.",
+              a: "We design and install custom cabinets and storage for the kitchen, the bathroom (vanities), the laundry room, walk-ins and closets, the basement and commercial projects. Each space has its own constraints — moisture, dimensions, use — and the layout is designed around them, not assembled from stock modules.",
             },
             {
               q: "Do you only work in Montreal?",
-              a: "We serve Montreal, Laval and the South Shore.",
+              a: "No. Based in Greater Montréal, we serve Montréal, Laval, the North Shore, the South Shore, the West Island and Pierrefonds-Roxboro. Since custom work involves precise measurements and careful installation, we frame the service area and logistics for each project from the start.",
             },
             {
               q: "What is the difference with a standard solution?",
-              a: "Custom work allows a better fit to the space, a stronger structure and more controlled execution.",
+              a: "A standard solution starts from fixed-size modules that have to be adapted to the room, which often leaves wasted space. Custom work does the opposite: each element is sized for your real space, with a stronger structure (solid birch and birch plywood) and better-controlled execution, from design to installation.",
             },
             {
               q: "Do you also handle installation?",
-              a: "Yes. The goal is precisely to ensure consistent execution from design to installation.",
+              a: "Yes. We install the elements we design and supply, which ensures consistent execution from design to installation, by a single team. This continuity avoids the grey areas between fabrication and installation and makes final on-site adjustments easier.",
             },
           ],
         },

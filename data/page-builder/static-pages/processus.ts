@@ -36,7 +36,7 @@ export const page: PageTemplateData = {
           eyebrow: "Dilamco - Processus",
           heading: "Un processus clair, du cadrage à l'installation",
           description:
-            "Chaque projet avance avec une séquence définie pour réduire les zones grises, valider les décisions au bon moment et protéger la qualité finale.",
+            "Le processus Dilamco est une séquence définie — design, validation, fabrication, installation — pensée pour réduire les zones grises, valider les décisions au bon moment et protéger la qualité finale de chaque projet.",
           actions: [
             {
               label: "Demander une soumission",
@@ -297,11 +297,11 @@ export const page: PageTemplateData = {
             },
             {
               q: "Faites-vous aussi l'installation ?",
-              a: "Oui. L'installation, les ajustements et l'inspection finale font partie de la logique d'exécution quand le mandat le prévoit.",
+              a: "Oui. L'installation, les ajustements sur place et l'inspection finale font partie intégrante de notre logique d'exécution quand le mandat le prévoit. Confier la pose à la même équipe que la conception et la fabrication garantit la cohérence du résultat : mêmes standards, mêmes tolérances, et une responsabilité unique du plan jusqu'à la finition.",
             },
             {
               q: "Le processus fonctionne-t-il aussi en condo ou dans des contextes contraints ?",
-              a: "Oui. Le processus sert justement à identifier les contraintes d'accès, de calendrier ou de coordination assez tôt pour mieux les intégrer.",
+              a: "Oui. Le processus sert justement à identifier tôt les contraintes d'accès (ascenseur, stationnement), de calendrier (horaires de travaux autorisés) ou de coordination propres au bâtiment, pour mieux les intégrer à la planification. Une fois ces contraintes cadrées, un projet en condo ou en espace restreint se déroule avec la même rigueur qu'ailleurs.",
             },
           ],
         },
