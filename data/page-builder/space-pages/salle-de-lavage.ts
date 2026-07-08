@@ -35,7 +35,7 @@ export const salleDeLavagePage: PageTemplateData = {
           eyebrow: "Dilamco - Espaces",
           heading: "Salle de lavage sur mesure, espace technique bien cadré",
           description:
-            "Une salle de lavage performante repose sur l'organisation, la durabilité et une exécution propre adaptée à l'humidité et à l'usage fréquent.",
+            "Une salle de lavage sur mesure est un espace technique — rangement, plan de travail, colonnes lave-linge et sèche-linge — conçu et fabriqué pour votre configuration réelle, avec des matériaux adaptés à l'humidité et à l'usage fréquent. Chez Dilamco, dans le Grand Montréal, on conçoit et installe cet aménagement du plan à la finition.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -238,7 +238,7 @@ export const salleDeLavagePage: PageTemplateData = {
           items: [
             {
               q: "Combien coûte une salle de lavage sur mesure ?",
-              a: "Le prix dépend de la configuration, des matériaux, du rangement et des contraintes techniques du lieu.",
+              a: "Le prix d'une salle de lavage sur mesure dépend de la configuration (colonnes ou appareils côte à côte, plan de travail, cuve), du volume de rangement, des matériaux et finis, et des contraintes techniques du local — plomberie, ventilation, espace disponible. Comme la pièce subit humidité et usage fréquent, on privilégie des matériaux stables et une quincaillerie durable, ce qui influence le budget. Nous confirmons une estimation précise une fois la configuration cadrée, pour éviter les surprises.",
             },
             {
               q: "Est-ce que vous pouvez coordonner d'autres travaux ?",
@@ -246,7 +246,7 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               q: "Quels matériaux recommandez-vous ?",
-              a: "Des choix stables, durables et adaptés à l'humidité et à l'usage fréquent.",
+              a: "Pour une salle de lavage, on privilégie des matériaux stables face à l'humidité et à l'usage fréquent : panneaux et finis résistants à la vapeur et aux éclaboussures, quincaillerie durable (coulisses et charnières qui tiennent la cadence), et plans de travail faciles à entretenir. Les détails de construction — arrières, fixations, dégagements autour des appareils — sont soignés pour limiter le gondolement et prolonger la tenue dans le temps. L'objectif : un espace qui reste propre et fonctionnel malgré une utilisation intensive.",
             },
             {
               q: "Travaillez-vous à Montréal et autour ?",

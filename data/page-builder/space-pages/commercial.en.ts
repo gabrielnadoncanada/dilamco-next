@@ -33,7 +33,7 @@ export const commercialPageEn: PageTemplateData = {
           heading:
             "Custom commercial cabinets, stable and planned execution",
           description:
-            "In a commercial context, quality comes down to durability, maintenance, logistics and meeting the schedule just as much as appearance.",
+            "Custom commercial cabinetry and fit-outs are installations designed and built for heavy use — reception, storage, functional furniture — sized for your premises and your schedule. At Dilamco, across Greater Montréal, we handle the design, controlled fabrication at our partner factory and installation, framing the sequence early to meet your opening windows.",
           actions: [
             {
               label: "Get a commercial quote",
@@ -236,7 +236,7 @@ export const commercialPageEn: PageTemplateData = {
           items: [
             {
               q: "What kinds of commercial projects do you take on?",
-              a: "Custom fit-outs and cabinets for spaces where durability, maintenance and execution consistency matter.",
+              a: "We build custom fit-outs and cabinets for commercial spaces where durability, maintenance and execution consistency matter: reception and front desk, technical storage, functional furniture, service areas. Each project is sized for heavy use and for your actual premises, with materials chosen to keep up with the pace. Because the same team handles the design, fabrication at our partner factory and installation, the sequence is framed early to meet your schedule and opening windows — a key issue in a commercial context.",
             },
             {
               q: "Can you meet installation windows?",

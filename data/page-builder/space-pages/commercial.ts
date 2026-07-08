@@ -33,7 +33,7 @@ export const commercialPage: PageTemplateData = {
           heading:
             "Armoires commerciales sur mesure, exécution stable et planifiée",
           description:
-            "En contexte commercial, la qualité se joue sur la durabilité, l'entretien, la logistique et le respect de l'échéancier autant que sur l'apparence.",
+            "Des armoires et aménagements commerciaux sur mesure sont des installations conçues et fabriquées pour un usage intensif — accueil, rangement, mobilier fonctionnel — dimensionnées pour votre local et votre échéancier. Chez Dilamco, dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et l'installation, en cadrant tôt la séquence pour respecter vos fenêtres d'ouverture.",
           actions: [
             {
               label: "Obtenir une soumission commerciale",
@@ -236,7 +236,7 @@ export const commercialPage: PageTemplateData = {
           items: [
             {
               q: "Quels types de projets commerciaux réalisez-vous ?",
-              a: "Des aménagements et armoires sur mesure pour des espaces où la durabilité, l'entretien et la cohérence d'exécution sont importants.",
+              a: "Nous réalisons des aménagements et armoires sur mesure pour des espaces commerciaux où la durabilité, l'entretien et la cohérence d'exécution comptent : accueil et réception, rangement technique, mobilier fonctionnel, espaces de service. Chaque projet est dimensionné pour un usage intensif et pour votre local réel, avec des matériaux choisis pour tenir la cadence. Comme la même équipe gère la conception, la fabrication en usine partenaire et l'installation, la séquence est cadrée tôt pour respecter votre échéancier et vos fenêtres d'ouverture — un enjeu clé en contexte commercial.",
             },
             {
               q: "Pouvez-vous respecter des fenêtres d'installation ?",

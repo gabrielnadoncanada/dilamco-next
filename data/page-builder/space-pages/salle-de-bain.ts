@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const salleDeBainPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Vanité de salle de bain sur mesure à Laval et Montréal",
+    title: "Vanité de salle de bain sur mesure à Laval",
     description:
       "Vanité de salle de bain sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval, sur la Rive-Nord et la Rive-Sud.",
     path: "/espaces/salle-de-bain",
@@ -36,7 +36,7 @@ export const salleDeBainPage: PageTemplateData = {
           heading:
             "Vanité de salle de bain sur mesure à Laval et dans le Grand Montréal",
           description:
-            "Une vanité durable demande des matériaux adaptés à l'humidité, une fabrication stable et une installation précise. On conçoit, fournit et installe partout dans le Grand Montréal : Montréal, Laval, Rive-Nord et Rive-Sud.",
+            "Une vanité de salle de bain sur mesure est un meuble-lavabo conçu et fabriqué aux dimensions exactes de votre pièce, avec des matériaux choisis pour résister à l'humidité. Chez Dilamco, à Laval et dans le Grand Montréal, on conçoit, fournit et installe des vanités sur mesure — structure stable, rangement adapté et pose précise, du plan à la finition.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -329,7 +329,7 @@ export const salleDeBainPage: PageTemplateData = {
           items: [
             {
               q: "Combien coûte une vanité de salle de bain sur mesure ?",
-              a: "Le prix varie selon les dimensions, les matériaux, le rangement et le niveau de finition. On vous donne une estimation claire une fois le projet cadré.",
+              a: "Le prix d'une vanité de salle de bain sur mesure dépend surtout de cinq éléments : les dimensions et le format (simple ou double lavabo), le volume de rangement (tiroirs, colonnes, niches), les matériaux et finis choisis, la quincaillerie (coulisses, charnières), et les contraintes du lieu. Comme la pièce est humide, les matériaux et les détails de construction sont sélectionnés pour la stabilité et la tenue dans le temps, ce qui influence aussi le budget. Nous établissons une estimation précise une fois le projet cadré — mesures réelles, rangement souhaité et niveau de finition — pour un budget clair, sans surprise.",
             },
             {
               q: "Faites-vous des vanités sur mesure à Laval et sur la Rive-Nord ?",
@@ -337,7 +337,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               q: "Quelle est la différence avec une vanité de salle de bain standard ?",
-              a: "Le sur mesure permet d'adapter précisément l'espace disponible et d'utiliser une structure mieux dimensionnée pour l'usage réel et l'humidité de la pièce.",
+              a: "Une vanité standard est vendue en dimensions fixes : il faut composer avec l'espace restant, quitte à perdre des centimètres autour du lavabo ou de la plomberie. Une vanité sur mesure est dimensionnée au millimètre pour votre salle de bain, ce qui permet d'exploiter les angles, les hauteurs et les niches, et d'ajuster précisément le rangement autour de la tuyauterie. La structure est aussi choisie pour l'environnement humide de la pièce — matériaux stables, détails de construction qui limitent le gondolement — là où beaucoup de vanités standards vieillissent mal. Résultat : un meuble mieux adapté, plus durable et intégré à la pièce.",
             },
             {
               q: "Est-ce que l'humidité change vos choix de matériaux ?",

@@ -32,7 +32,7 @@ export const walkInPageEn: PageTemplateData = {
           eyebrow: "Dilamco - Spaces",
           heading: "Custom closets and walk-ins in Montreal, designed for real use",
           description:
-            "A custom closet or walk-in lets you optimize the space, improve organization and achieve a more stable, better-integrated result than a standard system — design, fabrication and installation by a single team.",
+            "A custom closet — or walk-in — is a storage system designed and built to the exact dimensions of your space (hanging, drawers, shelves, accessories), rather than assembled from stock modules. At Dilamco, across Greater Montréal, a single team handles the design, controlled fabrication at our partner factory and installation.",
           actions: [
             {
               label: "Get a quote",

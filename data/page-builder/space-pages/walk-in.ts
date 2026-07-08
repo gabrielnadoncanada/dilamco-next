@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const walkInPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Garde-robe et walk-in sur mesure à Montréal : prix et conception",
+    title: "Garde-robe et walk-in sur mesure à Montréal",
     description:
       "Garde-robe et walk-in sur mesure à Montréal, Laval et le Grand Montréal : fourchettes de prix, comparaison avec les systèmes modulaires, conception et installation haut de gamme.",
     path: "/espaces/walk-in",
@@ -31,9 +31,9 @@ export const walkInPage: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Espaces",
           heading:
-            "Garde-robe et walk-in sur mesure à Pierrefonds et dans le Grand Montréal",
+            "Garde-robe et walk-in sur mesure à Montréal et dans le Grand Montréal",
           description:
-            "Une garde-robe sur mesure (ou walk-in) permet d'optimiser l'espace, d'améliorer l'organisation et d'obtenir un résultat plus stable et durable qu'un système standard — conception, fabrication et installation par une seule équipe.",
+            "Une garde-robe sur mesure — ou walk-in — est un rangement conçu et fabriqué aux dimensions exactes de votre espace (penderie, tiroirs, tablettes, accessoires), plutôt qu'assemblé à partir de modules standards. Chez Dilamco, dans le Grand Montréal, une seule équipe gère la conception, la fabrication contrôlée en usine partenaire et l'installation.",
           actions: [
             {
               label: "Obtenir une soumission",
