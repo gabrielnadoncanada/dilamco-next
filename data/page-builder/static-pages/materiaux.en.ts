@@ -25,7 +25,7 @@ export const pageEn: PageTemplateData = {
           eyebrow: "Dilamco - Materials",
           heading: "Materials, durability, finish and performance",
           description:
-            "The right material depends on real use. We prioritize consistency between structure, hardware, finish and installation to achieve a more durable result.",
+            "The choice of cabinet materials — solid wood, plywood, MDF, melamine, hardware and finishes — determines a project's durability and look. The right material depends on real use: we prioritize consistency between structure, hardware, finish and installation for a more durable result.",
           actions: [
             {
               label: "Request a quote",
@@ -268,19 +268,19 @@ export const pageEn: PageTemplateData = {
           items: [
             {
               q: "Plywood or MDF?",
-              a: "The choice depends on the role of the component, moisture and the targeted durability.",
+              a: "They excel in different places. Plywood, more stable thanks to its cross-grain plies, is often preferred for cabinet structure and drawers. MDF offers a smoother surface, ideal for certain painted fronts. The choice depends on the role of the component, moisture and the targeted durability — and the best approach often combines the two.",
             },
             {
               q: "Is melamine a good choice?",
-              a: "Yes in certain contexts, with particular attention to edges and installation.",
+              a: "Yes, in the right contexts. Melamine offers a wide choice of finishes at a controlled cost and an easy-to-maintain surface. Its durability depends mainly on the quality of the edges and installation precision: well installed, it's relevant for many projects, especially cabinet interiors and budget-framed jobs.",
             },
             {
               q: "Is soft-close hardware worth it?",
-              a: "Yes, if the system is reliable and well installed.",
+              a: "Yes, provided the system is reliable and well installed. Soft-close reduces impact and noise, improves daily comfort and extends the life of doors and drawers, which are used constantly. It's one of the often-invisible details that most distinguish a durable kitchen from an entry-level one.",
             },
             {
               q: "Which materials should be avoided in a bathroom?",
-              a: "Those poorly protected against moisture or poorly suited to the real context.",
+              a: "In a bathroom, you avoid materials that are poorly protected against moisture or whose edges are poorly sealed, because steam and splashes seep in over time. You favour stable structures, moisture-resistant finishes and durable hardware, combined with good ventilation and careful installation — it's the execution that protects durability.",
             },
           ],
         },

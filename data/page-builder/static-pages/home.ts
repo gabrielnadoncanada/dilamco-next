@@ -271,7 +271,7 @@ export const page: PageTemplateData = {
           items: [
             {
               q: "Quel budget prévoir pour une cuisine sur mesure ?",
-              a: "Le budget dépend des dimensions, de l'aménagement (tiroirs, accessoires, îlot), des matériaux et de la coordination. Pour une approche sur mesure et clé en main, il faut s'attendre à un investissement aligné avec une exécution premium et durable.",
+              a: "Le budget d'une cuisine sur mesure dépend des dimensions, de l'aménagement (tiroirs, accessoires, îlot), des matériaux et du niveau de coordination. Pour une approche sur mesure et clé en main, l'investissement se situe généralement entre 30 000 $ et 65 000 $, avec un délai typique de 9 à 15 semaines. Nous clarifions le budget réaliste dès la consultation initiale, une fois le projet cadré.",
             },
             {
               q: "Quelle est la différence avec IKEA / grandes surfaces ?",
@@ -279,7 +279,7 @@ export const page: PageTemplateData = {
             },
             {
               q: "Quels sont les délais typiques ?",
-              a: "Les délais varient selon la complexité et la charge de production. Un processus structuré (validation avant fabrication + coordination installation) permet une planification plus prévisible et moins d'imprévus.",
+              a: "Les délais varient selon la complexité et la charge de production, mais il faut généralement prévoir de 9 à 15 semaines entre la validation du design et l'installation. Un processus structuré — validation avant fabrication, puis coordination de l'installation — permet une planification plus prévisible et limite les imprévus.",
             },
             {
               q: "Gérez-vous la rénovation complète ?",

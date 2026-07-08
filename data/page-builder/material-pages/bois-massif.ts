@@ -27,7 +27,7 @@ export const boisMassifPage: PageTemplateData = {
           heading:
             "Bois massif : authenticité, caractère et limites à connaître",
           description:
-            "Le bois massif est recherché pour son grain, sa profondeur visuelle et sa valeur perçue. C'est aussi un matériau vivant : son comportement dépend du contexte, du fini et de l'endroit où il est utilisé.",
+            "Le bois massif est du bois issu directement de la grume — des planches pleines, par opposition aux panneaux composites. Recherché pour son grain et sa profondeur visuelle, c'est un matériau vivant : son comportement dépend du contexte, du fini et de l'endroit où il est utilisé.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -233,7 +233,7 @@ export const boisMassifPage: PageTemplateData = {
           items: [
             {
               q: "Le bois massif est-il toujours meilleur ?",
-              a: "Non. Il est excellent pour l'esthétique et certaines applications, mais des panneaux techniques peuvent être plus stables selon les contraintes.",
+              a: "Non. Le bois massif est superbe pour l'esthétique — grain, profondeur, valeur perçue — et excellent sur les portes et éléments visibles. Mais c'est un matériau vivant qui bouge avec l'humidité ; sur de grandes surfaces planes ou dans des environnements exigeants, des panneaux techniques (contreplaqué, MDF) offrent parfois plus de stabilité. La stratégie la plus cohérente cible le bois massif là où il se voit et se touche.",
             },
             {
               q: "Est-ce recommandé en cuisine ?",
@@ -241,7 +241,7 @@ export const boisMassifPage: PageTemplateData = {
             },
             {
               q: "Comment réagit-il à l'humidité ?",
-              a: "Le bois peut bouger avec l'humidité. La conception, la finition et le bon usage limitent ces effets.",
+              a: "Le bois massif réagit à l'humidité : il peut gonfler, se contracter ou se déformer selon les variations d'humidité de la pièce. Une bonne conception (jeu prévu, assemblages adaptés), une finition qui scelle le bois et un usage approprié limitent nettement ces mouvements. C'est pourquoi on l'utilise souvent de façon ciblée, en le combinant à des panneaux plus stables sur les structures.",
             },
             {
               q: "Peut-on combiner bois massif et autres matériaux ?",

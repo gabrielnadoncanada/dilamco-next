@@ -33,7 +33,7 @@ export const designPageEn: PageTemplateData = {
           eyebrow: "Dilamco - Services",
           heading: "Design service — structuring the project before fabrication",
           description:
-            "Design serves to frame usage, organize the space, integrate constraints and make the right decisions before fabrication and installation.",
+            "Custom cabinet design is the planning stage where usage is framed, the space organized, technical constraints integrated and material choices validated — before fabrication and installation. That is where the right decisions are made, on paper, to avoid costly compromises later.",
           actions: [
             {
               label: "Discuss your project",
@@ -198,7 +198,7 @@ export const designPageEn: PageTemplateData = {
           items: [
             {
               q: "Is design mandatory?",
-              a: "In a custom project, it serves to frame decisions before fabrication and to reduce late compromises.",
+              a: "In a custom project, design isn't a formality: it's what frames every decision before fabrication. It lets us validate the real dimensions, the layout of zones, the integration of appliances and technical constraints, and the material choices. Skipping this step means risking costly compromises discovered too late, during fabrication or installation. Good design reduces surprises and saves time across the whole project.",
             },
             {
               q: "Can we go straight to fabrication?",
@@ -210,7 +210,7 @@ export const designPageEn: PageTemplateData = {
             },
             {
               q: "When does design come in during the project?",
-              a: "At the start, before fabrication, to validate the space logic, the material choices and the technical constraints.",
+              a: "Design comes in at the very start, before fabrication. We begin by analyzing the real space (measurements, circulation, plumbing and electrical), then validate the layout logic, the heights, the storage zones and the material and finish choices. Once these decisions are settled and validated with you, they serve as a stable reference for fabrication and installation — which limits costly changes along the way.",
             },
           ],
         },

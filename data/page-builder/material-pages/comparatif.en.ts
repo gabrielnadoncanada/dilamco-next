@@ -26,7 +26,7 @@ export const comparatifPageEn: PageTemplateData = {
           eyebrow: "Dilamco - Materials",
           heading: "Materials comparison: choosing based on use",
           description:
-            "There is no universal material. The right choice depends on the space, humidity, targeted durability, the desired finish and the quality of execution.",
+            "There is no universal cabinet material: melamine, MDF, plywood and solid wood each have their strengths. The right choice depends on the space, humidity, targeted durability, the desired finish and the quality of execution.",
           actions: [
             {
               label: "Discuss your project",
@@ -216,7 +216,7 @@ export const comparatifPageEn: PageTemplateData = {
           items: [
             {
               q: "MDF or melamine?",
-              a: "MDF often serves a uniform painted finish; melamine is better suited to a decorative look and controlled cost.",
+              a: "MDF is preferred for a perfectly uniform painted finish, when you want a custom colour and smooth doors. Melamine arrives already finished with a thermofused decor: a wide choice of colours and wood looks, controlled cost, no painting step. In practice, MDF often serves painted fronts and melamine the cabinet boxes or budget-framed projects.",
             },
             {
               q: "Is plywood always preferable?",
@@ -228,7 +228,7 @@ export const comparatifPageEn: PageTemplateData = {
             },
             {
               q: "Can several materials be combined?",
-              a: "Yes. It is often the best strategy to balance performance, look and budget.",
+              a: "Yes, and it's often the best strategy. Rather than choosing a single material, you target each where it performs: birch plywood for the cabinet structure, solid wood on doors and visible elements, MDF for certain painted fronts, melamine for a durable, economical interior. This combination balances performance, look and budget.",
             },
           ],
         },

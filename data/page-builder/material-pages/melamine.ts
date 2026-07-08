@@ -26,7 +26,7 @@ export const melaminePage: PageTemplateData = {
           eyebrow: "Dilamco - Matériaux",
           heading: "Mélamine : usages, limites et alternatives",
           description:
-            "La mélamine est populaire pour sa variété de finis et un coût souvent plus maîtrisé. Sa durabilité dépend surtout des chants, de l'usage réel et de la qualité d'installation.",
+            "La mélamine est un panneau (particules ou MDF) recouvert d'une couche décorative thermofusionnée, qui offre une grande variété de finis à un coût maîtrisé. Sa durabilité dépend surtout de la qualité des chants, de l'usage réel et de la précision d'installation.",
           actions: [
             {
               label: "Demander une soumission",
@@ -230,7 +230,7 @@ export const melaminePage: PageTemplateData = {
           items: [
             {
               q: "La mélamine est-elle bas de gamme ?",
-              a: "Pas forcément. Elle peut être pertinente selon le projet et l'usage réel.",
+              a: "Pas forcément. La mélamine couvre une catégorie large : sa qualité dépend du substrat, de l'épaisseur, du fini et surtout du traitement des chants. Bien posée, avec des chants de qualité, elle offre une surface résistante aux rayures et facile d'entretien, pertinente pour de nombreux projets. Ce qui la dessert, c'est une exécution bâclée ou une exposition prolongée à l'humidité par des chants mal scellés — pas le matériau en soi.",
             },
             {
               q: "La mélamine gonfle-t-elle ?",
@@ -238,7 +238,7 @@ export const melaminePage: PageTemplateData = {
             },
             {
               q: "Mélamine ou MDF ?",
-              a: "Le MDF est souvent choisi pour peinture uniforme; la mélamine pour les finis décoratifs et un coût plus maîtrisé.",
+              a: "Les deux répondent à des besoins différents. Le MDF est privilégié quand on vise une surface peinte parfaitement uniforme (portes lisses, couleur sur mesure). La mélamine arrive déjà finie avec un décor thermofusionné : elle offre un large choix de couleurs et d'imitations de bois à un coût maîtrisé, sans étape de peinture. Le choix dépend du fini recherché, du budget et de l'usage réel de la pièce.",
             },
             {
               q: "Est-ce recommandé en salle de bain ?",

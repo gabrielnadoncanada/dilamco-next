@@ -26,7 +26,7 @@ export const mdfPage: PageTemplateData = {
           eyebrow: "Dilamco - Matériaux",
           heading: "MDF : quand et pourquoi l'utiliser en sur mesure",
           description:
-            "Le MDF est souvent choisi pour obtenir une surface très uniforme, idéale pour des portes peintes. Ce n'est pas un matériau universel : le contexte d'usage et la protection des chants déterminent sa pertinence.",
+            "Le MDF (panneau de fibres à densité moyenne) est un matériau composé de fibres de bois compressées avec un liant, qui offre une surface très uniforme — idéale pour des portes peintes. Ce n'est pas un matériau universel : le contexte d'usage et la protection des chants déterminent sa pertinence.",
           actions: [
             {
               label: "Demander une soumission",
@@ -231,11 +231,11 @@ export const mdfPage: PageTemplateData = {
           items: [
             {
               q: "Le MDF est-il bas de gamme ?",
-              a: "Non. Il peut être excellent pour certaines applications, surtout les portes peintes, si l'exécution est soignée.",
+              a: "Non. Le MDF est un panneau technique dont la densité et l'homogénéité en font un excellent support pour les portes peintes : ni fil ni nœud, une surface parfaitement lisse une fois peinte. Sa pertinence dépend de l'application et de l'exécution — chants protégés, finition soignée. Mal utilisé ou exposé à l'eau sans protection, il performe moins bien ; bien mis en œuvre, il peut viser le haut de gamme.",
             },
             {
               q: "Le MDF gonfle-t-il avec l'humidité ?",
-              a: "Il peut réagir à l'eau si la protection est insuffisante, surtout aux chants.",
+              a: "Le MDF peut absorber l'eau et gonfler si sa surface ou ses chants ne sont pas protégés, car il est composé de fibres compressées. La protection (fini, scellant, chants bien fermés) et une conception adaptée à la pièce limitent nettement ce risque. Dans les zones très humides ou exposées aux éclaboussures, d'autres matériaux ou un MDF hydrofuge peuvent être préférables.",
             },
             {
               q: "MDF ou mélamine ?",

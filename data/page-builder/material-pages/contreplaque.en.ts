@@ -36,7 +36,7 @@ export const contreplaquePageEn: PageTemplateData = {
           heading:
             "Plywood: stability, durability and smart structure",
           description:
-            "Plywood is often preferred in custom work for the structure of cabinets. Its cross-grain ply construction gives it a more stable and more predictable behaviour.",
+            "Plywood is a panel made of thin layers of wood (plies) glued with the grain crossed, which gives it more stable and predictable behaviour than particleboard. That is why it is often preferred in custom work for the structure of cabinets.",
           actions: [
             {
               label: "Discuss your project",
@@ -241,7 +241,7 @@ export const contreplaquePageEn: PageTemplateData = {
           items: [
             {
               q: "Is plywood always better than MDF?",
-              a: "Not necessarily. Plywood is often very relevant for the structure; MDF can be a better fit for certain fronts and finishes.",
+              a: "Not necessarily — they excel in different places. Thanks to its cross-grain plies, plywood is more stable and holds screws and hinges better: it is often ideal for cabinet structure and drawers. MDF offers a smoother, more uniform surface, which suits certain painted fronts better. The best approach often combines the two, each where it performs best.",
             },
             {
               q: "Is plywood suitable for the bathroom?",
@@ -249,7 +249,7 @@ export const contreplaquePageEn: PageTemplateData = {
             },
             {
               q: "Is it more expensive?",
-              a: "Often yes, in exchange for better structural quality depending on use.",
+              a: "Often yes: quality plywood generally costs more than MDF or particleboard. In return, it brings better structural stability, greater moisture resistance and better fastener retention over time. It's an investment that's justified mainly on the structural elements used every day.",
             },
             {
               q: "Is it visible once installed?",

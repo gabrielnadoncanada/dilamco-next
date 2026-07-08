@@ -33,7 +33,7 @@ export const designPage: PageTemplateData = {
           eyebrow: "Dilamco - Services",
           heading: "Service de design, structurer le projet avant de fabriquer",
           description:
-            "Le design sert à cadrer l'usage, organiser l'espace, intégrer les contraintes et prendre les bonnes décisions avant la fabrication et l'installation.",
+            "Le design d'armoires sur mesure est l'étape de conception où l'on cadre l'usage, organise l'espace, intègre les contraintes techniques et valide les choix de matériaux — avant la fabrication et l'installation. C'est là que se prennent les bonnes décisions, en plan, pour éviter les compromis coûteux plus tard.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -198,7 +198,7 @@ export const designPage: PageTemplateData = {
           items: [
             {
               q: "Le design est-il obligatoire?",
-              a: "Dans un projet sur mesure, il sert à cadrer les décisions avant la fabrication et à réduire les compromis tardifs.",
+              a: "Dans un projet sur mesure, le design n'est pas une formalité : c'est lui qui cadre toutes les décisions avant la fabrication. Il permet de valider les dimensions réelles, l'organisation des zones, l'intégration des électroménagers et des contraintes techniques, et les choix de matériaux. Sauter cette étape, c'est prendre le risque de compromis coûteux découverts trop tard, en cours de fabrication ou d'installation. Un bon design réduit les imprévus et fait gagner du temps sur l'ensemble du projet.",
             },
             {
               q: "Peut-on passer directement à la fabrication?",
@@ -210,7 +210,7 @@ export const designPage: PageTemplateData = {
             },
             {
               q: "Quand intervient le design dans le projet?",
-              a: "Au début, avant la fabrication, pour valider la logique d'espace, les choix de matériaux et les contraintes techniques.",
+              a: "Le design intervient au tout début, avant la fabrication. On commence par analyser l'espace réel (mesures, circulation, plomberie et électricité), puis on valide la logique d'aménagement, les hauteurs, les zones de rangement et les choix de matériaux et de finis. Une fois ces décisions arrêtées et validées avec vous, elles servent de référence stable pour la fabrication et l'installation — ce qui limite les changements coûteux en cours de route.",
             },
           ],
         },

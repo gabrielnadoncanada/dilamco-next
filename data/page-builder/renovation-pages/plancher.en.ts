@@ -38,7 +38,7 @@ export const renovationPlancherPageEn: PageTemplateData = {
           heading:
             "Flooring renovation: better manage levels, transitions and site sequencing",
           description:
-            "Flooring affects levels, transitions, cabinet installation and the perceived quality of the project. It must be planned within the overall site sequence, not treated as an isolated decision.",
+            "Flooring renovation is the replacement or refinishing of the floor covering, which affects levels, transitions, cabinet installation and the perceived quality of the whole. It must be planned within the overall site sequence, not treated as an isolated decision.",
           actions: [
             {
               label: "Request a quote",
@@ -343,7 +343,7 @@ export const renovationPlancherPageEn: PageTemplateData = {
           items: [
             {
               q: "Can I redo only the flooring?",
-              a: "Yes, but as soon as there are cabinets or a larger renovation, coordination becomes decisive.",
+              a: "Yes, flooring can be redone on its own. But as soon as there are cabinets in place or a larger renovation, coordination becomes decisive: the order of the work, the levels and the transitions directly affect the alignment of the furniture and the finish. We then frame the sequence to avoid doing the same work twice.",
             },
             {
               q: "In what order should the work be done?",
@@ -355,7 +355,7 @@ export const renovationPlancherPageEn: PageTemplateData = {
             },
             {
               q: "Is it possible in a condo?",
-              a: "Yes. Access, scheduling and sometimes acoustic constraints must be framed at the start.",
+              a: "Yes. In a condo, access constraints, the work hours allowed and often soundproofing requirements (an acoustic membrane under the covering) must be checked at the start, because many boards impose noise standards between floors. Once these rules are framed, the installation is planned normally.",
             },
             {
               q: "Does the flooring affect the cabinet installation?",

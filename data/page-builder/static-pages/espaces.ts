@@ -33,7 +33,7 @@ export const page: PageTemplateData = {
           heading:
             "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
           description:
-            "Chaque espace a ses contraintes. Notre rôle est de concevoir, fournir et installer des solutions durables, fonctionnelles et bien exécutées.",
+            "Chez Dilamco, chaque espace de la maison — cuisine, salle de bain, walk-in, sous-sol, salle de lavage — peut recevoir des armoires et rangements sur mesure. Notre rôle : concevoir, fournir et installer des solutions durables, fonctionnelles et bien exécutées, adaptées aux contraintes réelles de chaque pièce.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -201,19 +201,19 @@ export const page: PageTemplateData = {
           items: [
             {
               q: "Quels espaces faites-vous ?",
-              a: "Cuisine, salle de bain, salle de lavage, walk-in et projets commerciaux.",
+              a: "Nous concevons et installons des armoires et rangements sur mesure pour la cuisine, la salle de bain (vanités), la salle de lavage, les walk-ins et garde-robes, le sous-sol et les projets commerciaux. Chaque espace a ses contraintes propres — humidité, dimensions, usage — et l'aménagement est pensé en fonction de celles-ci, pas assemblé à partir de modules standards.",
             },
             {
               q: "Travaillez-vous seulement à Montréal ?",
-              a: "Nous desservons Montréal, Laval et la Rive-Sud.",
+              a: "Non. Basés dans le Grand Montréal, nous desservons Montréal, Laval, la Rive-Nord, la Rive-Sud, l'Ouest-de-l'Île et Pierrefonds-Roxboro. Le sur mesure impliquant des mesures précises et une installation soignée, nous cadrons dès le départ la zone d'intervention et la logistique pour chaque projet.",
             },
             {
               q: "Quelle est la différence avec une solution standard ?",
-              a: "Le sur mesure permet une meilleure adaptation à l'espace, une structure plus solide et une exécution mieux contrôlée.",
+              a: "Une solution standard part de modules aux dimensions fixes qu'il faut adapter à la pièce, ce qui laisse souvent des espaces perdus. Le sur mesure fait l'inverse : chaque élément est dimensionné pour votre espace réel, avec une structure plus solide (bois massif et contreplaqué de bouleau) et une exécution mieux contrôlée, du design à la pose.",
             },
             {
               q: "Faites-vous aussi l'installation ?",
-              a: "Oui. L'objectif est justement d'assurer une exécution cohérente du design à la pose.",
+              a: "Oui. Nous installons les éléments que nous concevons et fournissons, ce qui garantit une exécution cohérente du design à la pose, par une seule équipe. Cette continuité évite les zones grises entre fabrication et installation et facilite les ajustements finaux sur place.",
             },
           ],
         },

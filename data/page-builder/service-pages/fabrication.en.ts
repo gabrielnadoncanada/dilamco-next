@@ -36,7 +36,7 @@ export const fabricationPageEn: PageTemplateData = {
           eyebrow: "Dilamco - Services",
           heading: "Custom fabrication: precision, consistency and durability",
           description:
-            "Fabrication determines a project's solidity, stability and longevity. The goal is a consistent, durable result that is clean to install.",
+            "Fabrication is the stage where cabinets are produced from the approved plans: cutting, assembly and finishing of the boxes, doors and drawers. It determines a project's solidity, stability and longevity. At Dilamco, it is carried out under control at our partner factory, for a consistent result that is clean to install.",
           actions: [
             {
               label: "Discuss your project",
@@ -190,7 +190,7 @@ export const fabricationPageEn: PageTemplateData = {
           items: [
             {
               q: "What's the difference between custom and semi-custom?",
-              a: "Custom adapts to the exact space, while semi-custom starts from predefined modules with some variations.",
+              a: "Custom starts from your real space: each cabinet is sized to the millimetre according to your measurements, layout and constraints. Semi-custom starts from predefined modules that are adapted within certain limits (a few widths, finish options), without redesigning entirely. Custom makes better use of corners, heights and unusual spaces; semi-custom can be enough when the space is standard. The difference shows mostly in the final fit and in making the most of every centimetre.",
             },
             {
               q: "Which materials age best?",
@@ -202,7 +202,7 @@ export const fabricationPageEn: PageTemplateData = {
             },
             {
               q: "What are the fabrication lead times?",
-              a: "They vary with complexity, availability and coordination with installation.",
+              a: "Fabrication lead times vary with the project's complexity, material availability and coordination with installation. For a custom project, you should generally allow 9 to 15 weeks between design approval and the final install. A precise schedule is confirmed once the plans are settled, to give you clear visibility on each stage.",
             },
           ],
         },

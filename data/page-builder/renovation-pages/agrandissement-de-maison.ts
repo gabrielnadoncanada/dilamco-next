@@ -38,7 +38,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
           heading:
             "Agrandissement de maison clé en main, planifier l'extension sans fragiliser l'existant",
           description:
-            "Un agrandissement résidentiel ne se résume pas à ajouter des pieds carrés. Il faut cadrer la faisabilité, la structure, l'enveloppe, les raccords intérieurs et la séquence de chantier pour livrer un résultat cohérent et habitable.",
+            "Un agrandissement résidentiel est l'ajout de surface habitable à une maison existante — extension au sol, surélévation ou annexe — qui touche la faisabilité, la structure, l'enveloppe et les raccords intérieurs. Bien au-delà d'ajouter des pieds carrés, il faut cadrer la séquence de chantier pour livrer un résultat cohérent et habitable.",
           actions: [
             {
               label: "Demander une soumission",

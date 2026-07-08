@@ -34,7 +34,7 @@ export const renovationPage: PageTemplateData = {
           heading:
             "Rénovation clé en main à Montréal, un seul cadre du design à l'installation",
           description:
-            "Quand la rénovation touche plusieurs corps de métier, la valeur ne se joue pas seulement dans le résultat final. Elle se joue dans la séquence, la coordination, la qualité des décisions techniques et la capacité de livrer un ensemble cohérent du début à la fin.",
+            "Une rénovation clé en main est un mandat où une seule équipe prend en charge la séquence complète — design, fabrication, coordination du chantier et finition — plutôt que de laisser le client orchestrer plusieurs corps de métier. La valeur se joue autant dans la coordination et la qualité des décisions techniques que dans le résultat final.",
           actions: [
             {
               label: "Demander une soumission",
@@ -340,7 +340,7 @@ export const renovationPage: PageTemplateData = {
           items: [
             {
               q: "Combien coûte une rénovation clé en main ?",
-              a: "Le prix dépend de la portée, des matériaux, de la complexité du chantier et du niveau de coordination requis. Une soumission structurée sert justement à clarifier ces points avant de démarrer.",
+              a: "Le prix d'une rénovation clé en main dépend de la portée du projet (une pièce ou plusieurs), des matériaux et finis, de la complexité du chantier et du niveau de coordination requis entre les corps de métier. Comme chaque projet est différent, il n'existe pas de prix unique : une soumission structurée sert justement à clarifier la portée, les choix et le budget avant de démarrer, pour éviter les mauvaises surprises en cours de route.",
             },
             {
               q: "Quelle est la différence avec acheter des armoires puis gérer le reste séparément ?",
@@ -352,7 +352,7 @@ export const renovationPage: PageTemplateData = {
             },
             {
               q: "Quels sont les délais pour une rénovation ?",
-              a: "Les délais varient selon l'espace, la complexité, l'approvisionnement et les travaux connexes. Un échéancier réaliste est établi une fois la portée du projet clarifiée.",
+              a: "Les délais d'une rénovation varient selon l'espace concerné, la complexité du chantier, l'approvisionnement des matériaux et les travaux connexes (plomberie, électricité, plancher). Plutôt qu'une estimation générique, un échéancier réaliste est établi une fois la portée du projet clarifiée, avec les étapes clés séquencées pour limiter les temps morts et les reprises. Vous savez ainsi quand chaque phase commence et se termine.",
             },
             {
               q: "Est-ce pertinent pour une cuisine, une salle de bain ou un agrandissement ?",

@@ -38,7 +38,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
           heading:
             "Turnkey bathroom renovation in Montréal — better managing moisture, plumbing and finishes",
           description:
-            "In a bathroom, the final quality depends as much on coordination as on materials, moisture, plumbing and installation details. The site must be better sequenced to protect long-term durability.",
+            "A bathroom renovation is a project where plumbing, ventilation, waterproofing, surfaces and cabinetry come together in a humid environment. The final quality depends as much on coordination and the work sequence as on the materials — that is what protects long-term durability.",
           actions: [
             {
               label: "Request a quote",
@@ -374,11 +374,11 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
           items: [
             {
               q: "How long does a bathroom renovation take?",
-              a: "The duration depends on the scope, the site constraints and the related work.",
+              a: "How long a bathroom renovation takes depends on the scope (replacing the vanity or a full redesign), the site constraints and the related work — plumbing, ventilation, waterproofing, surfaces. A full renovation generally spans several weeks, sequenced to respect drying times and protect the waterproofing. A realistic schedule is set once the scope is clarified.",
             },
             {
               q: "Is there a risk of water damage?",
-              a: "Rigorous execution and choices suited to moisture greatly reduce long-term risks.",
+              a: "There's a risk of water damage in any bathroom, but it's controlled through execution. A well-installed waterproofing membrane, materials suited to moisture, adequate ventilation and careful plumbing connections greatly reduce long-term risks. That's exactly why the work sequence and installation quality are decisive in a bathroom.",
             },
             {
               q: "Do you work with other trades on this kind of project?",

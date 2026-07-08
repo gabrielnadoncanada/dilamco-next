@@ -37,7 +37,7 @@ export const installationPage: PageTemplateData = {
           heading:
             "Installation professionnelle, précision, alignement et finition",
           description:
-            "Une installation de qualité est déterminante pour le résultat final : ajustements sur place, alignements précis et finition soignée.",
+            "L'installation est l'étape finale où les armoires sont posées et ajustées sur place : mise à niveau, alignements précis, fixation et finition. C'est elle qui transforme des éléments fabriqués en un ensemble net et durable — les ajustements sur place font partie intégrante d'une pose professionnelle.",
           actions: [
             {
               label: "Demander une soumission",
@@ -201,7 +201,7 @@ export const installationPage: PageTemplateData = {
           items: [
             {
               q: "Combien de temps dure une installation?",
-              a: "Cela dépend du type de projet et de sa complexité. Une cuisine complète demande plus de temps qu'une vanité ou un walk-in.",
+              a: "La durée d'une installation dépend du type de projet et de sa complexité. Une vanité de salle de bain ou un walk-in se posent généralement en une journée ou deux, tandis qu'une cuisine complète — avec îlot, armoires hautes et coordination des électroménagers — demande davantage de temps. Nous confirmons la durée prévue à la planification, une fois la portée du projet établie, pour que vous sachiez à quoi vous attendre sur place.",
             },
             {
               q: "Des ajustements sont-ils normaux?",
@@ -209,7 +209,7 @@ export const installationPage: PageTemplateData = {
             },
             {
               q: "Installez-vous seulement vos propres armoires?",
-              a: "Oui. Nous installons les éléments que nous fournissons pour garantir la cohérence du résultat.",
+              a: "Oui. Nous installons les éléments que nous concevons et fournissons, ce qui nous permet de garantir la cohérence entre la fabrication et la pose : mêmes standards, mêmes tolérances, une seule équipe responsable du résultat. Cette continuité évite les zones grises fréquentes quand la fabrication et l'installation relèvent d'intervenants différents, et facilite les ajustements finaux sur place.",
             },
             {
               q: "Travaillez-vous en condo ou en commercial?",

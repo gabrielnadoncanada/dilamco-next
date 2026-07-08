@@ -26,7 +26,7 @@ export const couleursPage: PageTemplateData = {
           eyebrow: "Dilamco - Matériaux",
           heading: "Couleurs et finitions : style, lumière et entretien",
           description:
-            "La couleur influence la lumière, la perception de l'espace et l'entretien. Le bon choix dépend du matériau, de l'usage et du contexte réel.",
+            "Le choix des couleurs d'armoires détermine la lumière, la perception de l'espace et la facilité d'entretien. Le bon choix dépend du matériau, du fini (mat ou satiné), de l'usage réel et du contexte de la pièce.",
           actions: [
             {
               label: "Parler design et finitions",
@@ -256,7 +256,7 @@ export const couleursPage: PageTemplateData = {
           items: [
             {
               q: "Mat ou satiné ?",
-              a: "Le satiné est souvent un bon compromis entre entretien et rendu, surtout en cuisine.",
+              a: "Le satiné est souvent le meilleur compromis, surtout en cuisine : il renvoie un peu de lumière, masque mieux les traces de doigts et s'entretient facilement. Le mat offre un rendu plus contemporain et feutré, mais marque davantage et demande un entretien plus attentif sur les surfaces très sollicitées. Le bon choix dépend de la pièce, de la couleur et de votre tolérance à l'entretien.",
             },
             {
               q: "Les couleurs foncées sont-elles risquées ?",
@@ -268,7 +268,7 @@ export const couleursPage: PageTemplateData = {
             },
             {
               q: "Comment éviter un rendu daté ?",
-              a: "En gardant une base intemporelle et des accents plus flexibles.",
+              a: "Pour un résultat qui vieillit bien, on garde une base intemporelle (teintes neutres, bois naturels, blancs chauds) sur les grandes surfaces, et on réserve les couleurs ou finis plus marqués aux éléments faciles à changer — un îlot, une crédence, des accessoires. Cette logique permet de rafraîchir l'apparence sans refaire toute la cuisine, et limite le risque qu'une tendance forte fige l'espace dans une époque.",
             },
           ],
         },
