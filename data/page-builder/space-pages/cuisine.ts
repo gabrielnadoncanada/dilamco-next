@@ -33,7 +33,7 @@ export const cuisinePage: PageTemplateData = {
           heading:
             "Cuisine sur mesure et armoires de cuisine sur mesure à Pierrefonds et dans le Grand Montréal",
           description:
-            "Conception, fabrication contrôlée et installation précise de cuisines sur mesure et d'armoires de cuisine sur mesure. Un espace durable et bien organisé, du plan à la finition — à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île et partout dans le Grand Montréal.",
+            "Une cuisine sur mesure est un ensemble d'armoires conçu et fabriqué aux dimensions exactes de votre pièce — îlot, rangement et hauteurs compris — plutôt qu'assemblé à partir de modules standards. Chez Dilamco, à Pierrefonds et dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et la pose, en bois massif et contreplaqué de bouleau.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -334,7 +334,7 @@ export const cuisinePage: PageTemplateData = {
           items: [
             {
               q: "Combien coûte une cuisine ou des armoires sur mesure ?",
-              a: "Le prix dépend de l'aménagement, des matériaux, des dimensions et du niveau de coordination requis. On vous donne une estimation claire après avoir cadré le projet.",
+              a: "Pour une cuisine ou des armoires sur mesure haut de gamme, l'investissement se situe généralement entre 30 000 $ et 65 000 $, selon quatre facteurs principaux : les dimensions et la superficie à couvrir, la complexité de l'aménagement (îlot, garde-manger, armoires jusqu'au plafond), les matériaux et finis retenus, et le niveau de coordination requis sur le chantier. Un projet est généralement réalisé en 9 à 15 semaines, de la validation du design à l'installation finale. Nous établissons une estimation précise après avoir cadré le projet avec vous — mesures réelles, priorités et niveau de finition —, ce qui évite les surprises et vous donne un budget clair avant de vous engager.",
             },
             {
               q: "Faites-vous des armoires de cuisine sur mesure à Pierrefonds et dans l'Ouest-de-l'Île ?",
@@ -342,7 +342,7 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               q: "Quelle est la différence avec des armoires standard ?",
-              a: "Le sur mesure permet d'adapter précisément l'espace, d'améliorer la structure (bois massif, contreplaqué de bouleau) et de mieux contrôler le résultat final.",
+              a: "La différence tient à trois choses : l'ajustement, la structure et le contrôle du résultat. Des armoires standards sont vendues en dimensions fixes, ce qui oblige à adapter la pièce aux modules et laisse souvent des espaces perdus ou des hauteurs mal exploitées. Une cuisine sur mesure est conçue à l'inverse : chaque caisson est dimensionné au millimètre pour votre espace réel, jusqu'au plafond si nécessaire. La structure est aussi plus robuste — bois massif de bouleau pour les tiroirs, contreplaqué de bouleau pour les fonds — là où le standard utilise souvent des panneaux de particules. Enfin, comme la même équipe gère la conception, la fabrication en usine partenaire et la pose, le résultat est mieux contrôlé, avec des alignements et des finitions vérifiés sur place.",
             },
             {
               q: "Concevez-vous des îlots de cuisine sur mesure ?",
