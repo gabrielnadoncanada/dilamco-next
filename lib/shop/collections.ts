@@ -18,7 +18,7 @@ import { models, modelForVariantCode } from "./models";
 import type { Product } from "./types";
 import { BOUTIQUE_TAXON_EN } from "@/seo/i18n-path";
 
-export type FinishKey = "blanc" | "chene" | "navi";
+export type FinishKey = "blanc" | "chene"; // navi masque temporairement (feature Navi non finalisee)
 
 /** Produits auto : filtre sur les attributs du catalogue (xlsx). */
 export interface CollectionRule {
