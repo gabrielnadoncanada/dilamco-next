@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const sousSolPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Aménagement de sous-sol sur mesure à Pierrefonds et Montréal",
+    title: "Aménagement de sous-sol sur mesure à Pierrefonds",
     description:
       "Aménagement de sous-sol sur mesure : cinéma maison, bar, cave à vin, bibliothèque et rangement. Conception et installation à Montréal et le Grand Montréal.",
     path: "/espaces/sous-sol",
@@ -33,7 +33,7 @@ export const sousSolPage: PageTemplateData = {
           heading:
             "Aménagement de sous-sol sur mesure à Pierrefonds et dans le Grand Montréal",
           description:
-            "Transformez votre sous-sol en espace de vie haut de gamme : salle de cinéma maison, bar, cave à vin, bibliothèque ou salle de jeux. Conception, fabrication contrôlée et installation soignée — du plan à la finition, par une seule équipe basée à Pierrefonds-Roxboro.",
+            "Aménager un sous-sol sur mesure, c'est transformer un espace souvent sous-utilisé en pièce de vie haut de gamme — salle de cinéma maison, bar, cave à vin, bibliothèque ou salle de jeux — avec un mobilier intégré conçu pour vos usages réels. Chez Dilamco, à Pierrefonds et dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et l'installation, du plan à la finition.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -300,7 +300,7 @@ export const sousSolPage: PageTemplateData = {
           items: [
             {
               q: "Combien coûte l'aménagement d'un sous-sol sur mesure ?",
-              a: "Le prix dépend de la superficie, des espaces souhaités (cinéma, bar, cave à vin, rangement), des matériaux et de la coordination requise. On vous donne une estimation claire après avoir cadré le projet.",
+              a: "Le prix d'un aménagement de sous-sol sur mesure varie beaucoup selon la superficie à couvrir et les espaces souhaités : une salle de cinéma maison, un bar, une cave à vin, une bibliothèque ou du rangement n'impliquent pas le même niveau de menuiserie ni la même coordination. S'ajoutent les matériaux et finis retenus, les détails adaptés à l'environnement d'un sous-sol (humidité, gestion des hauteurs), et l'ampleur de la coordination si d'autres corps de métier interviennent. Plutôt qu'un prix générique, nous établissons une estimation précise après avoir cadré le projet avec vous — usages réels, priorités et niveau de finition — pour un budget clair avant de vous engager.",
             },
             {
               q: "Quelle est la différence entre une « salle de cinéma maison » et un « cinéma maison » ?",

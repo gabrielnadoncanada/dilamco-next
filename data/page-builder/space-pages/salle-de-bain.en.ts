@@ -36,7 +36,7 @@ export const salleDeBainPageEn: PageTemplateData = {
           heading:
             "Custom bathroom vanity in Laval and Greater Montréal",
           description:
-            "A durable vanity needs materials suited to moisture, stable fabrication and precise installation. We design, fabricate and install across Greater Montréal: Montréal, Laval, the North Shore and the South Shore.",
+            "A custom bathroom vanity is a sink cabinet designed and built to the exact dimensions of your room, with materials chosen to withstand moisture. At Dilamco, in Laval and across Greater Montréal, we design, fabricate and install custom vanities — stable structure, tailored storage and precise installation, from plan to finish.",
           actions: [
             {
               label: "Get a quote",
@@ -270,7 +270,7 @@ export const salleDeBainPageEn: PageTemplateData = {
           items: [
             {
               q: "How much does a custom bathroom vanity cost?",
-              a: "The price varies with the dimensions, materials, storage and finish level. We give you a clear estimate once the project is scoped.",
+              a: "The price of a custom bathroom vanity depends mainly on five things: the dimensions and format (single or double sink), the amount of storage (drawers, columns, niches), the materials and finishes chosen, the hardware (slides, hinges), and the constraints of the space. Because the room is humid, the materials and construction details are selected for stability and durability over time, which also affects the budget. We provide a precise estimate once the project is scoped — real measurements, desired storage and finish level — for a clear budget with no surprises.",
             },
             {
               q: "Do you make custom vanities in Laval and on the North Shore?",
@@ -278,7 +278,7 @@ export const salleDeBainPageEn: PageTemplateData = {
             },
             {
               q: "What's the difference with a stock bathroom vanity?",
-              a: "Custom work lets us fit the available space precisely and use a structure better sized for the real use and the room's moisture.",
+              a: "A stock vanity is sold in fixed sizes, so you have to work around the leftover space, often losing centimetres around the sink or the plumbing. A custom vanity is sized to the millimetre for your bathroom, which lets you use the corners, heights and niches, and tailor the storage precisely around the pipes. The structure is also chosen for the room's humid environment — stable materials, construction details that limit warping — where many stock vanities age poorly. The result: a cabinet that fits better, lasts longer and is integrated into the room.",
             },
             {
               q: "Does moisture change your material choices?",

@@ -35,7 +35,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
           eyebrow: "Dilamco - Spaces",
           heading: "Custom laundry room, a well-scoped utility space",
           description:
-            "A high-performing laundry room relies on organization, durability and clean execution suited to moisture and frequent use.",
+            "A custom laundry room is a technical space — storage, countertop, washer and dryer columns — designed and built for your actual configuration, with materials suited to moisture and frequent use. At Dilamco, across Greater Montréal, we design and install this fit-out from plan to finish.",
           actions: [
             {
               label: "Get a quote",
@@ -238,7 +238,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
           items: [
             {
               q: "How much does a custom laundry room cost?",
-              a: "The price depends on the configuration, materials, storage and the technical constraints of the space.",
+              a: "The price of a custom laundry room depends on the configuration (stacked or side-by-side appliances, countertop, sink), the amount of storage, the materials and finishes, and the technical constraints of the space — plumbing, ventilation, available room. Because the space deals with moisture and frequent use, we favour stable materials and durable hardware, which affects the budget. We confirm a precise estimate once the configuration is scoped, to avoid surprises.",
             },
             {
               q: "Can you coordinate other work?",
@@ -246,7 +246,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
             },
             {
               q: "Which materials do you recommend?",
-              a: "Stable, durable choices suited to moisture and frequent use.",
+              a: "For a laundry room, we favour materials that stay stable against moisture and frequent use: panels and finishes resistant to steam and splashes, durable hardware (slides and hinges that keep up with the pace), and countertops that are easy to maintain. The construction details — backs, fastenings, clearances around the appliances — are done carefully to limit warping and extend durability over time. The goal: a space that stays clean and functional despite heavy use.",
             },
             {
               q: "Do you work in Montréal and the surrounding area?",

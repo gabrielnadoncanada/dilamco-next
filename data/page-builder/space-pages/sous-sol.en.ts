@@ -33,7 +33,7 @@ export const sousSolPageEn: PageTemplateData = {
           heading:
             "Custom basement finishing in Pierrefonds and Greater Montréal",
           description:
-            "Turn your basement into a high-end living space: home theatre, bar, wine cellar, library or game room. Design, controlled fabrication and careful installation — from plan to finish, by a single team based in Pierrefonds-Roxboro.",
+            "Custom basement finishing turns an often underused space into a high-end living area — home theatre room, bar, wine cellar, library or game room — with built-in cabinetry designed for how you actually use it. At Dilamco, in Pierrefonds and across Greater Montréal, we handle the design, controlled fabrication at our partner factory and installation, from plan to finish.",
           actions: [
             {
               label: "Get a quote",
@@ -300,7 +300,7 @@ export const sousSolPageEn: PageTemplateData = {
           items: [
             {
               q: "How much does custom basement finishing cost?",
-              a: "The price depends on the floor area, the spaces you want (theatre, bar, wine cellar, storage), the materials and the coordination required. We give you a clear estimate once the project is scoped.",
+              a: "The price of custom basement finishing varies a lot depending on the floor area to cover and the spaces you want: a home theatre room, a bar, a wine cellar, a library or storage don't involve the same level of millwork or coordination. Add to that the materials and finishes chosen, the details suited to a basement environment (moisture, height management), and the extent of coordination if other trades are involved. Rather than a generic price, we provide a precise estimate once the project is scoped with you — real uses, priorities and finish level — for a clear budget before you commit.",
             },
             {
               q: "What's the difference between a “home theatre room” and a “home theatre”?",

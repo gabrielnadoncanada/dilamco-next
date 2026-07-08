@@ -33,7 +33,7 @@ export const cuisinePageEn: PageTemplateData = {
           heading:
             "Custom kitchens and cabinetry in Pierrefonds and Greater Montréal",
           description:
-            "Design, controlled fabrication and precise installation of custom kitchen cabinets. A durable, well-organized space, from plan to finish — in Pierrefonds-Roxboro, the West Island and across Greater Montréal.",
+            "A custom kitchen is a set of cabinets designed and built to the exact dimensions of your room — island, storage and heights included — rather than assembled from stock modules. At Dilamco, in Pierrefonds and across Greater Montréal, we handle the design, controlled fabrication at our partner factory and installation, in solid birch and birch plywood.",
           actions: [
             {
               label: "Get a quote",
@@ -275,7 +275,7 @@ export const cuisinePageEn: PageTemplateData = {
           items: [
             {
               q: "How much does a custom kitchen or custom cabinets cost?",
-              a: "The price depends on the layout, materials, dimensions and the level of coordination required. We give you a clear estimate once the project is scoped.",
+              a: "For a high-end custom kitchen or custom cabinets, the investment generally ranges between $30,000 and $65,000, depending on four main factors: the dimensions and area to cover, the complexity of the layout (island, pantry, cabinets to the ceiling), the materials and finishes chosen, and the level of coordination required on site. A project is typically completed in 9 to 15 weeks, from design sign-off to final installation. We provide a precise estimate once we've scoped the project with you — real measurements, priorities and finish level — which avoids surprises and gives you a clear budget before you commit.",
             },
             {
               q: "Do you make custom kitchen cabinets in Pierrefonds and the West Island?",
@@ -283,7 +283,7 @@ export const cuisinePageEn: PageTemplateData = {
             },
             {
               q: "What's the difference with stock cabinets?",
-              a: "Custom work lets us fit the space precisely, improve the structure (solid wood, birch plywood) and better control the final result.",
+              a: "The difference comes down to three things: fit, structure and control of the result. Stock cabinets are sold in fixed sizes, so the room has to be adapted to the modules, which often leaves wasted space or poorly used heights. A custom kitchen is designed the other way around: each cabinet is sized to the millimetre for your actual space, up to the ceiling if needed. The structure is also more robust — solid birch for the drawers, birch plywood for the bottoms — where stock cabinets often use particleboard. Finally, because the same team handles the design, fabrication at our partner factory and installation, the result is better controlled, with alignments and finishes checked on site.",
             },
             {
               q: "Do you also handle installation?",
