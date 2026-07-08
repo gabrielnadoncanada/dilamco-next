@@ -63,7 +63,12 @@ function AccordionContent({
   return (
     <AccordionPrimitive.Content
       data-slot="accordion-content"
-      className="data-open:animate-accordion-down data-closed:animate-accordion-up overflow-hidden"
+      // forceMount : garde le contenu TOUJOURS dans le DOM (SSR + rendu Google).
+      // Sans ça, Radix démonte le contenu des items fermés → réponses FAQ absentes
+      // du HTML serveur (mauvais SEO). Comme forceMount neutralise le masquage natif
+      // de Radix, on masque nous-mêmes l'item fermé via `data-[state=closed]:hidden`.
+      forceMount
+      className="overflow-hidden data-[state=closed]:hidden"
       {...props}
     >
       <div
