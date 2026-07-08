@@ -325,6 +325,31 @@ export function faqJsonLd(items: Array<{ q: string; a: string }>): JsonLd {
   };
 }
 
+/**
+ * WebPage avec dateModified — signal de fraîcheur lisible par Google AI Mode et
+ * les moteurs IA (contenu récent ~3× plus cité). `dateModified` provient de la
+ * date du dernier commit du fichier de contenu (cf. lib/seo/content-dates).
+ */
+export function webPageJsonLd(args: {
+  url: string;
+  dateModified: string;
+  datePublished?: string;
+  locale?: SchemaLocale;
+}): JsonLd {
+  const data: JsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${args.url}#webpage`,
+    url: args.url,
+    dateModified: args.dateModified,
+    isPartOf: { "@id": `${SITE.url}/#website` },
+    publisher: { "@id": ORG_ID },
+  };
+  if (args.datePublished) data.datePublished = args.datePublished;
+  if (args.locale) data.inLanguage = BCP47[args.locale];
+  return data;
+}
+
 export function serviceJsonLd(args: {
   name: string;
   description: string;
