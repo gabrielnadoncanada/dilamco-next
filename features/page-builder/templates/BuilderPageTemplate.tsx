@@ -13,7 +13,6 @@ import type { BuilderPageData } from "../page/definitions";
 import { extractFaqItems, extractImages } from "../seo/extractStructuredData";
 import type { Registry } from "../model/block-types";
 import { PageRenderer } from "../ui/PageRenderer";
-import { PageUpdatedAt } from "../ui/PageUpdatedAt";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -57,7 +56,6 @@ export async function BuilderPageTemplate(props: {
       ))}
       <Header />
       <PageRenderer blocks={data.blocks} blockRegistry={blockRegistry} />
-      {updatedAt ? <PageUpdatedAt date={updatedAt} locale={locale} /> : null}
       <Footer />
     </>
   );

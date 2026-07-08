@@ -14,7 +14,6 @@ import type { Registry } from "../model/block-types";
 import type { BuilderPageData } from "../page/definitions";
 import { extractFaqItems, extractImages } from "../seo/extractStructuredData";
 import { PageRenderer } from "../ui/PageRenderer";
-import { PageUpdatedAt } from "../ui/PageUpdatedAt";
 import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -57,7 +56,6 @@ export async function ServiceBuilderPageTemplate(props: {
       ))}
       <Header />
       <PageRenderer blocks={data.blocks} blockRegistry={blockRegistry} />
-      {updatedAt ? <PageUpdatedAt date={updatedAt} locale={locale} /> : null}
       <Footer />
     </>
   );
