@@ -136,49 +136,6 @@ function extractImages(html) {
   return imgs;
 }
 
-// Fiches produit : l'<img> de la galerie est rendu côté client (absent du HTML
-// statique), mais le JSON-LD Product rendu au build porte l'URL canonique
-// (slug localisé), l'image render (absolue) et le nom descriptif. C'est la
-// source de vérité du SEO image produit. Le placeholder est écarté.
-function extractProductLdImages(html) {
-  const out = [];
-  const re = /<script type="application\/ld\+json">(.*?)<\/script>/gs;
-  let m;
-  while ((m = re.exec(html))) {
-    let parsed;
-    try {
-      parsed = JSON.parse(m[1]);
-    } catch {
-      continue;
-    }
-    const nodes = Array.isArray(parsed)
-      ? parsed
-      : Array.isArray(parsed["@graph"])
-        ? parsed["@graph"]
-        : [parsed];
-    for (const n of nodes) {
-      if (!n || n["@type"] !== "Product" || !n.url) continue;
-      const raw = Array.isArray(n.image) ? n.image : [n.image];
-      const images = [...new Set(raw.filter(Boolean))].filter(
-        (u) => !/placeholder/i.test(u),
-      );
-      if (!images.length) continue;
-      out.push({ loc: n.url, name: typeof n.name === "string" ? n.name : "", images });
-    }
-  }
-  return out;
-}
-
-// Alternates hreflang (rendus corrects par les métadonnées de la page) +
-// canonical. Sert à émettre les fiches produit avec un slug FR/EN apparié.
-function extractHreflang(html) {
-  const canonical = (html.match(/<link rel="canonical" href="([^"]+)"/i) || [])[1];
-  const alts = [];
-  const re = /<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/gi;
-  let m;
-  while ((m = re.exec(html))) alts.push({ lang: m[1], href: m[2] });
-  return { canonical, alts };
-}
 
 const xmlEscape = (s) =>
   String(s)
@@ -191,24 +148,17 @@ const xmlEscape = (s) =>
 async function main() {
   const files = await walkHtml(APP_DIR);
   const byRoute = new Map();
-  const productUrls = []; // { loc, name, images[] } issus du JSON-LD des fiches
-  const productPages = []; // { loc, alts[] } pour sitemap-products (FR uniquement)
   for (const fp of files) {
     const route = fileToRoute(fp);
     if (SKIP_ROUTE(route)) continue;
     const html = await fs.readFile(fp, "utf8");
     const fpUnix = fp.replace(/\\/g, "/");
-    // Fiche produit : image + nom canoniques via JSON-LD (galerie rendue client).
-    if (fpUnix.includes("/boutique/produit/")) {
-      productUrls.push(...extractProductLdImages(html));
-      // Page produit dans sitemap-products : 1 entrée par produit (côté FR, qui
-      // porte la paire hreflang complète FR↔EN).
-      if (fpUnix.includes("/fr/boutique/produit/")) {
-        const { canonical, alts } = extractHreflang(html);
-        if (canonical) productPages.push({ loc: canonical, alts });
-      }
-      continue;
-    }
+    // Fiches produit : volontairement EXCLUES du sitemap (URL + images).
+    // Décision SEO 2026-07 — sortir les pages produit single de tous les
+    // sitemaps (crawl focalisé sur pages éditoriales + collections). Les
+    // collections restent dans sitemap-0.xml (next-sitemap), intactes.
+    // Réversible : restaurer le bloc productUrls/productPages ci-dessous.
+    if (fpUnix.includes("/boutique/produit/")) continue;
     const imgs = extractImages(html);
     if (!imgs.length) continue;
     byRoute.set(route, imgs);
@@ -232,26 +182,9 @@ async function main() {
     })
     .join("\n");
 
-  // Fiches produit (loc + images déjà absolues via JSON-LD, caption = nom produit).
-  const productXml = productUrls
-    .sort((a, b) => a.loc.localeCompare(b.loc))
-    .map((p) => {
-      totalImgs += p.images.length;
-      const images = p.images
-        .map(
-          (img) =>
-            `    <image:image>\n      <image:loc>${xmlEscape(img)}</image:loc>` +
-            (p.name
-              ? `\n      <image:caption>${xmlEscape(p.name)}</image:caption>\n      <image:title>${xmlEscape(p.name)}</image:title>`
-              : "") +
-            `\n    </image:image>`,
-        )
-        .join("\n");
-      return `  <url>\n    <loc>${xmlEscape(p.loc)}</loc>\n${images}\n  </url>`;
-    })
-    .join("\n");
-
-  const body = [urls, productXml].filter(Boolean).join("\n");
+  // Fiches produit exclues (voir boucle ci-dessus) : le sitemap-images ne liste
+  // plus que les pages éditoriales + collections.
+  const body = urls;
 
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
@@ -261,32 +194,26 @@ async function main() {
 
   await fs.writeFile(OUT, xml, "utf8");
 
-  // sitemap-products.xml : 1 <url> par fiche, hreflang FR/EN appariés (lus du HTML).
-  const productPagesXml = productPages
-    .sort((a, b) => a.loc.localeCompare(b.loc))
-    .map((p) => {
-      const links = p.alts
-        .map(
-          (a) =>
-            `    <xhtml:link rel="alternate" hreflang="${xmlEscape(a.lang)}" href="${xmlEscape(a.href)}"/>`,
-        )
-        .join("\n");
-      return `  <url>\n    <loc>${xmlEscape(p.loc)}</loc>${links ? `\n${links}` : ""}\n  </url>`;
-    })
-    .join("\n");
-  const productsXml =
-    `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n` +
-    `        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n` +
-    `${productPagesXml}\n</urlset>\n`;
-  await fs.writeFile(PRODUCTS_OUT, productsXml, "utf8");
+  // sitemap-products.xml n'est plus généré : les fiches produit single sont
+  // volontairement hors sitemap (décision SEO 2026-07). L'ancien fichier est
+  // supprimé s'il traîne, et la référence est retirée de robots.txt / index.
+  await fs.rm(PRODUCTS_OUT, { force: true });
 
-  const extraSitemaps = ["sitemap-images.xml", "sitemap-products.xml"];
+  const extraSitemaps = ["sitemap-images.xml"];
+  const removedSitemaps = ["sitemap-products.xml"];
 
-  // Référence les sitemaps additionnels dans robots.txt (si absents).
+  // Référence les sitemaps additionnels dans robots.txt (si absents) et retire
+  // les sitemaps supprimés (ex. sitemap-products.xml).
   try {
     let robots = await fs.readFile(ROBOTS, "utf8");
     let changed = false;
+    for (const name of removedSitemaps) {
+      const line = new RegExp(`\\n?Sitemap: ${SITE.replace(/[.]/g, "\\.")}/${name}\\s*`, "g");
+      if (line.test(robots)) {
+        robots = robots.replace(line, "\n");
+        changed = true;
+      }
+    }
     for (const name of extraSitemaps) {
       if (!robots.includes(name)) {
         robots = robots.trimEnd() + `\nSitemap: ${SITE}/${name}\n`;
@@ -304,6 +231,13 @@ async function main() {
   try {
     let index = await fs.readFile(INDEX, "utf8");
     let changed = false;
+    for (const name of removedSitemaps) {
+      const entry = new RegExp(`\\s*<sitemap><loc>${SITE.replace(/[.]/g, "\\.")}/${name}</loc></sitemap>`, "g");
+      if (entry.test(index)) {
+        index = index.replace(entry, "");
+        changed = true;
+      }
+    }
     for (const name of extraSitemaps) {
       if (!index.includes(name)) {
         index = index.replace(
@@ -319,9 +253,9 @@ async function main() {
   }
 
   console.log(
-    `sitemap-images.xml : ${routes.length} pages éditoriales + ${productUrls.length} fiches produit, ${totalImgs} images`,
+    `sitemap-images.xml : ${routes.length} pages éditoriales + collections, ${totalImgs} images (fiches produit exclues)`,
   );
-  console.log(`sitemap-products.xml : ${productPages.length} fiches produit (hreflang FR/EN)`);
+  console.log("sitemap-products.xml : non généré (fiches produit hors sitemap)");
 }
 
 main().catch((e) => {

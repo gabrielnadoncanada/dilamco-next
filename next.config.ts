@@ -292,6 +292,17 @@ const redirectRules = [
     destination: "/en/shop/kitchen-cabinets",
   },
 
+  // Pages-villes retirées (stratégie géo abandonnée : 0 impression sur 180 j,
+  // aucune présence physique hors Ouest-de-l'Île). 301 vers le pilier cuisine.
+  {
+    source: "/zones/laval",
+    destination: "/espaces/cuisine",
+  },
+  {
+    source: "/en/areas/laval",
+    destination: "/en/spaces/kitchen",
+  },
+
   // Filet de sécurité : toute ancienne fiche /realisation/* -> hub projets
   // (couvre chene-moderne et tout slug non listé explicitement)
   {

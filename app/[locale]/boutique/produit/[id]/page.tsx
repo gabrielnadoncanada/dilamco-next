@@ -89,7 +89,10 @@ export async function generateMetadata({
     locale,
   );
 
-  return { ...meta, title: `${localName} · Dilamco` };
+  // Title propre : pas de marque (le layout ajoute « | Boutique Dilamco ») et
+  // guillemet-pouce remplacé par « po » (évite l'entité &quot; visible en SERP).
+  const titleName = localName.replace(/["″]/g, " po").replace(/\s{2,}/g, " ").trim();
+  return { ...meta, title: titleName };
 }
 
 export default async function ProduitPage({

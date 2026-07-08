@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const cuisinePage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Cuisine sur mesure et armoires de cuisine | Pierrefonds, Montréal",
+    title: "Armoires de cuisine sur mesure à Pierrefonds",
     description:
       "Cuisine sur mesure et armoires de cuisine sur mesure haut de gamme : conception, îlot, fabrication contrôlée et pose précise à Pierrefonds, Montréal, Laval et le Grand Montréal.",
     path: "/espaces/cuisine",

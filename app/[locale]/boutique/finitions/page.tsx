@@ -18,11 +18,13 @@ export async function generateMetadata({
     locale,
   );
   // canonical auto-référent + hreflang FR/EN (absents auparavant).
+  // Page utilitaire (référence de finitions) : hors index, mais crawlable (follow).
   return {
     title: t("metaTitle"),
     alternates: meta.alternates,
     openGraph: meta.openGraph,
     twitter: meta.twitter,
+    robots: { index: false, follow: true },
   };
 }
 

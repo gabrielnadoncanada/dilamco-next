@@ -267,7 +267,6 @@ export const FOOTER_NAV: FooterNavSection[] = [
       { text: "Fabrication", url: "/services/fabrication/" },
       { text: "Installation", url: "/services/installation/" },
       { text: "Rénovation clé en main", url: "/services/renovation/" },
-      { text: "Armoires de cuisine à Laval", url: "/zones/laval" },
     ],
   },
   {

@@ -34,9 +34,9 @@ export const RENOVATION_EN: Record<string, string> = {
 
 // Zones desservies (pages géo SEO local). Valeur de slug identique FR/EN
 // (noms de villes) ; seule la map borne l'énumération pour routing/AppLink.
-export const ZONE_EN: Record<string, string> = {
-  laval: "laval",
-};
+// Pages-villes retirées (stratégie géo abandonnée). Vide : aucune zone publiée.
+// Les signaux locaux vivent dans les pages piliers (/espaces/*, /services/*).
+export const ZONE_EN: Record<string, string> = {};
 
 // Valeurs de slug matériau traduites (interne FR -> externe EN). Enum borné (7).
 export const MATERIAL_EN: Record<string, string> = {

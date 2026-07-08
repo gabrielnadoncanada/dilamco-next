@@ -1,49 +1,35 @@
-"use client";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { createPageMetadata } from "@/lib/metadata";
+import { routes } from "@/lib/shop/routes";
+import { SoumissionClient } from "./soumission-client";
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
-import { Container, Section, SectionHeading } from "@/components/shop/ds";
-import { Eyebrow, Headline, Body } from "@/components/shop/ds";
-import { SoumissionForm } from "./_components/soumission-form";
-import { SoumissionSuccess } from "./_components/soumission-success";
-import { SoumissionSummary } from "./_components/soumission-summary";
-import { INITIAL_FORM, type SoumissionForm as Form } from "./_components/types";
-
-export default function SoumissionPage() {
-  const t = useTranslations("shop.quote");
-  const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState<Form>(INITIAL_FORM);
-
-  if (submitted) {
-    return <SoumissionSuccess tel={form.tel} />;
-  }
-
-  return (
-    <>
-      <Section density="compact" divider={false}>
-        <Container>
-          <SectionHeading
-            className="max-w-4xl mr-auto"
-            eyebrow={t("intro.eyebrow")}
-            title={t("intro.title")}
-            description={t("intro.description")}
-          />
-        </Container>
-      </Section>
-      <Section className="pt-0">
-        <Container className="mx-auto grid grid-cols-[1fr_380px] gap-y-10 [column-gap:64px] max-[1000px]:grid-cols-1 max-[700px]:gap-y-6">
-          <SoumissionForm
-            form={form}
-            setForm={setForm}
-            onSubmit={() => {
-              setSubmitted(true);
-              window.scrollTo(0, 0);
-            }}
-          />
-
-          <SoumissionSummary />
-        </Container>
-      </Section>
-    </>
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: "fr" | "en" }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "shop.quote" });
+  const meta = createPageMetadata(
+    {
+      title: t("intro.title"),
+      description: t("intro.description"),
+      path: routes.quote,
+    },
+    locale,
   );
+  // Page de conversion (formulaire) : hors index, mais crawlable (follow).
+  // Le canonical redevient auto-référent (corrige l'ancien canonical vers la home).
+  return { ...meta, robots: { index: false, follow: true } };
+}
+
+export default async function SoumissionPage({
+  params,
+}: {
+  params: Promise<{ locale: "fr" | "en" }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  return <SoumissionClient />;
 }
