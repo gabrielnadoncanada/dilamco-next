@@ -38,7 +38,7 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
           heading:
             "Turnkey home addition: planning the extension without weakening the existing house",
           description:
-            "A residential addition is not just about adding square footage. You have to frame feasibility, structure, the building envelope, interior connections and the work sequence to deliver a coherent, livable result.",
+            "A residential addition is the adding of livable space to an existing house — a ground-floor extension, a raised storey or an annex — which touches feasibility, structure, the building envelope and interior connections. Far more than adding square footage, you have to frame the work sequence to deliver a coherent, livable result.",
           actions: [
             {
               label: "Request a quote",

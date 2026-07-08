@@ -38,7 +38,7 @@ export const renovationCuisinePage: PageTemplateData = {
           heading:
             "Rénovation de cuisine clé en main à Montréal, cadrer la cuisine avant d'ouvrir le chantier",
           description:
-            "Une rénovation de cuisine réussie dépend autant de la coordination que du résultat final. Il faut clarifier la portée, la séquence, les raccords techniques et les choix de fabrication pour réduire les imprévus et livrer un résultat cohérent.",
+            "Une rénovation de cuisine est un projet qui combine le remplacement des armoires et des surfaces, souvent avec de la plomberie et de l'électricité, en coordonnant plusieurs corps de métier. Sa réussite dépend autant de la coordination et de la séquence que du résultat final : c'est ce qui réduit les imprévus et protège la qualité.",
           actions: [
             {
               label: "Demander une soumission",
@@ -379,7 +379,7 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               q: "Combien de temps dure une rénovation de cuisine?",
-              a: "La durée varie selon la portée, les contraintes du lieu et la coordination requise.",
+              a: "La durée d'une rénovation de cuisine varie selon la portée (rafraîchissement ou refonte complète), les contraintes du lieu et la coordination requise entre les corps de métier. Pour une rénovation complète avec armoires sur mesure, il faut prévoir plusieurs semaines de chantier, en plus du délai de fabrication de 9 à 15 semaines. Un échéancier précis est établi une fois la portée clarifiée.",
             },
             {
               q: "Travaillez-vous avec d'autres intervenants sur le chantier?",
@@ -387,7 +387,7 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               q: "Est-ce possible en condo?",
-              a: "Oui. L'accès, les horaires et certaines contraintes techniques doivent être cadrés tôt.",
+              a: "Oui. En condo, l'accès (ascenseur, stationnement, protection des aires communes), les horaires de travaux autorisés par le syndicat et certaines contraintes techniques (plomberie, ventilation, insonorisation) doivent être cadrés tôt. Une fois ces points clarifiés, une rénovation de cuisine en condo se déroule comme ailleurs, avec une planification adaptée au bâtiment.",
             },
             {
               q: "Dois-je quitter le logement pendant les travaux?",

@@ -38,7 +38,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
           heading:
             "Turnkey kitchen renovation in Montréal: framing the kitchen before opening the job site",
           description:
-            "A successful kitchen renovation depends as much on coordination as on the final result. You need to clarify the scope, the sequence, the technical connections and the fabrication choices to reduce surprises and deliver a coherent result.",
+            "A kitchen renovation is a project that combines replacing the cabinets and surfaces, often with plumbing and electrical, while coordinating several trades. Its success depends as much on the coordination and the sequence as on the final result: that is what reduces surprises and protects quality.",
           actions: [
             {
               label: "Request a quote",
@@ -341,7 +341,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
           items: [
             {
               q: "How long does a kitchen renovation take?",
-              a: "The duration varies depending on the scope, the constraints of the location and the coordination required.",
+              a: "How long a kitchen renovation takes varies depending on the scope (a refresh or a full redesign), the constraints of the location and the coordination required between trades. For a full renovation with custom cabinets, you should allow several weeks of on-site work, on top of the 9 to 15 week fabrication lead time. A precise schedule is set once the scope is clarified.",
             },
             {
               q: "Do you work with other trades on the job site?",
@@ -349,7 +349,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
             },
             {
               q: "Is it possible in a condo?",
-              a: "Yes. Access, schedules and certain technical constraints must be framed early.",
+              a: "Yes. In a condo, access (elevator, parking, protection of common areas), the work hours allowed by the board and certain technical constraints (plumbing, ventilation, soundproofing) must be framed early. Once these points are clarified, a kitchen renovation in a condo proceeds like anywhere else, with planning adapted to the building.",
             },
             {
               q: "Do I have to leave the home during the work?",

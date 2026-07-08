@@ -38,7 +38,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           heading:
             "Rénovation de salle de bain clé en main à Montréal, mieux gérer l'humidité, la plomberie et la finition",
           description:
-            "En salle de bain, la qualité finale dépend autant de la coordination que des matériaux, de l'humidité, de la plomberie et des détails d'installation. Le chantier doit être mieux séquencé pour protéger la durabilité à long terme.",
+            "Une rénovation de salle de bain est un projet où se combinent plomberie, ventilation, étanchéité, revêtements et mobilier dans un environnement humide. La qualité finale dépend autant de la coordination et de la séquence de chantier que des matériaux — c'est ce qui protège la durabilité à long terme.",
           actions: [
             {
               label: "Demander une soumission",
@@ -374,11 +374,11 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           items: [
             {
               q: "Combien de temps dure une rénovation de salle de bain?",
-              a: "La durée dépend de la portée, des contraintes du lieu et des travaux connexes.",
+              a: "La durée d'une rénovation de salle de bain dépend de la portée (remplacement de la vanité ou refonte complète), des contraintes du lieu et des travaux connexes — plomberie, ventilation, étanchéité, revêtements. Une rénovation complète s'étale généralement sur plusieurs semaines, séquencées pour respecter les temps de séchage et protéger l'étanchéité. Un échéancier réaliste est établi une fois la portée clarifiée.",
             },
             {
               q: "Est-ce risqué au niveau des dégâts d'eau?",
-              a: "Une exécution rigoureuse et des choix adaptés à l'humidité réduisent fortement les risques à long terme.",
+              a: "Le risque de dégât d'eau existe dans toute salle de bain, mais il se maîtrise par l'exécution. Une membrane d'étanchéité bien posée, des matériaux adaptés à l'humidité, une ventilation suffisante et des raccords de plomberie soignés réduisent fortement les risques à long terme. C'est justement pourquoi la séquence de chantier et la qualité d'installation sont déterminantes dans une salle de bain.",
             },
             {
               q: "Travaillez-vous avec d'autres intervenants sur ce type de chantier?",

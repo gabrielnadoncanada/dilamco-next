@@ -38,7 +38,7 @@ export const renovationPlancherPage: PageTemplateData = {
           heading:
             "Rénovation de plancher, mieux gérer niveaux, transitions et séquence de chantier",
           description:
-            "Le plancher influence les niveaux, les transitions, l'installation des armoires et la qualité perçue du projet. Il doit être pensé dans la séquence globale du chantier, pas traité comme une décision isolée.",
+            "La rénovation de plancher est le remplacement ou la réfection du revêtement de sol, qui influence les niveaux, les transitions, l'installation des armoires et la qualité perçue de l'ensemble. Elle doit être pensée dans la séquence globale du chantier, pas traitée comme une décision isolée.",
           actions: [
             {
               label: "Demander une soumission",
@@ -343,7 +343,7 @@ export const renovationPlancherPage: PageTemplateData = {
           items: [
             {
               q: "Est-ce que je peux refaire uniquement le plancher?",
-              a: "Oui, mais dès qu'il y a des armoires ou une rénovation plus large, la coordination devient déterminante.",
+              a: "Oui, un plancher peut se refaire seul. Mais dès qu'il y a des armoires en place ou une rénovation plus large, la coordination devient déterminante : l'ordre des travaux, les niveaux et les transitions influencent directement l'alignement des meubles et la finition. On cadre alors la séquence pour éviter de refaire deux fois le même travail.",
             },
             {
               q: "Dans quel ordre faut-il faire les travaux?",
@@ -355,7 +355,7 @@ export const renovationPlancherPage: PageTemplateData = {
             },
             {
               q: "Est-ce possible en condo?",
-              a: "Oui. Les contraintes d'accès, d'horaires et parfois d'acoustique doivent être cadrées au début.",
+              a: "Oui. En condo, les contraintes d'accès, les horaires de travaux autorisés et souvent les exigences d'insonorisation (membrane acoustique sous le revêtement) doivent être vérifiées au départ, car plusieurs syndicats imposent des normes de bruit entre étages. Une fois ces règles cadrées, la pose se planifie normalement.",
             },
             {
               q: "Est-ce que le plancher influence l'installation des armoires?",
