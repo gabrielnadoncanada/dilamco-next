@@ -48,7 +48,7 @@ export async function generateMetadata({
       : space === "commercial"
         ? "commerciaux"
         : label.toLowerCase();
-  return createPageMetadata(
+  const meta = createPageMetadata(
     {
       title:
         loc === "en" ? `Custom ${ll} projects` : `Projets ${ll} sur mesure`,
@@ -60,6 +60,12 @@ export async function generateMetadata({
     },
     loc,
   );
+  // Hub « coquille » (moins de 3 réalisations) : hors index tant qu'il est mince,
+  // mais crawlable (follow) pour préserver le maillage. Repasse indexable dès 3 projets.
+  const projects = getProjectsBySpace(space, loc);
+  return projects.length >= 3
+    ? meta
+    : { ...meta, robots: { index: false, follow: true } };
 }
 
 export default async function ProjectsSpacePage({

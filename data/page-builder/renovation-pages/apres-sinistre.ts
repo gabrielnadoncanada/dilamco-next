@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const renovationApresSinistrePage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Rénovation après sinistre à Pierrefonds et l'Ouest-de-l'Île",
+    title: "Rénovation après sinistre à Pierrefonds",
     description:
       "Reconstruction après dégât d'eau ou inondation : évaluation des dommages, accompagnement de réclamation d'assurance, fabrication et installation sur mesure à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île et le Grand Montréal.",
     path: "/services/renovation/apres-sinistre",

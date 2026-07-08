@@ -84,6 +84,15 @@ const INDEXABLE_COLLECTIONS = new Set([
   "vanites/30-pouces",
   "liquidation",
 ]);
+// Hubs de projets « coquilles » (moins de 3 réalisations) : noindex + hors sitemap.
+// À garder synchronisé avec app/[locale]/projets/[space]/page.tsx (règle projects.length >= 3).
+// Seul /projets/cuisine (≥ 3 projets) reste indexé.
+const THIN_PROJECT_HUBS = new Set([
+  "/projets/walk-in",
+  "/projets/salle-de-lavage",
+  "/projets/salle-de-bain",
+  "/projets/commercial",
+]);
 // Slugs de projets traduits. Clé = `${espace FR}/${slug FR}`.
 const PROJECT_SLUG_EN = {
   "salle-de-bain/vanite-sur-mesure-laval": "custom-vanity-laval",
@@ -163,6 +172,9 @@ module.exports = {
 
     // Landings : noindex, hors sitemap (toutes locales).
     if (slug === "/landing" || slug.startsWith("/landing/")) return null;
+
+    // Hubs projets « coquilles » (< 3 réalisations) : noindex + hors sitemap.
+    if (THIN_PROJECT_HUBS.has(slug)) return null;
 
     // Ancienne structure boutique (/collections/*) supprimée : défensif si une
     // vieille URL traîne. noindex + hors sitemap.

@@ -18,7 +18,7 @@ import { models, modelForVariantCode } from "./models";
 import type { Product } from "./types";
 import { BOUTIQUE_TAXON_EN } from "@/seo/i18n-path";
 
-export type FinishKey = "blanc" | "chene";
+export type FinishKey = "blanc" | "chene" | "navi";
 
 /** Produits auto : filtre sur les attributs du catalogue (xlsx). */
 export interface CollectionRule {
@@ -167,7 +167,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Armoires de cuisine",
       eyebrow: "Catalogue en stock",
       h1: "Armoires de cuisine en stock",
-      metaTitle: "Armoires de cuisine en stock — prêtes à installer",
+      metaTitle: "Armoires de cuisine prêtes à installer",
       metaDescription:
         "{count} modules d'armoires de cuisine en stock : caissons du bas, armoires murales et garde-manger en Blanc Pur et Chêne blanc. Prix affichés, prêts à installer, livraison dans le Grand Montréal.",
       intro:
@@ -187,7 +187,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Kitchen cabinets",
       eyebrow: "In-stock catalogue",
       h1: "In-stock kitchen cabinets",
-      metaTitle: "In-stock kitchen cabinets — ready to install",
+      metaTitle: "Kitchen cabinets ready to install",
       metaDescription:
         "{count} in-stock kitchen cabinet modules: base cabinets, wall cabinets and pantries in Pure White and White Oak. Prices shown, ready to install, delivery across Greater Montreal.",
       intro:
@@ -423,7 +423,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Vanités",
       eyebrow: "Salle de bain",
       h1: "Vanités de salle de bain",
-      metaTitle: "Vanités de salle de bain — meubles-lavabos en stock",
+      metaTitle: "Vanités de salle de bain en stock",
       metaDescription:
         "{count} meubles de salle de bain en stock : vanités 24 et 30 pouces, finition Blanc Pur ou Chêne blanc. Prêts à installer, livraison dans le Grand Montréal.",
       intro:
@@ -443,7 +443,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Vanities",
       eyebrow: "Bathroom",
       h1: "Bathroom vanities",
-      metaTitle: "Bathroom vanities — in-stock vanity cabinets",
+      metaTitle: "Bathroom vanities in stock",
       metaDescription:
         "{count} in-stock bathroom cabinets: 24 and 30 inch vanities in Pure White or White Oak. Ready to install, delivery across Greater Montreal.",
       intro:
@@ -528,7 +528,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Liquidation",
       eyebrow: "Déstockage",
       h1: "Liquidation d'armoires de cuisine",
-      metaTitle: "Liquidation armoires de cuisine — en stock, prix réduits",
+      metaTitle: "Armoires de cuisine pas cher, liquidation",
       metaDescription:
         "{count} modules d'armoires de cuisine en liquidation : tenus en stock, prêts à installer, livraison dans le Grand Montréal.",
       intro:
@@ -544,7 +544,7 @@ export const COLLECTIONS: Collection[] = [
       crumb: "Clearance",
       eyebrow: "Stock clearance",
       h1: "Kitchen cabinet clearance",
-      metaTitle: "Kitchen cabinet clearance — in stock, reduced prices",
+      metaTitle: "Kitchen cabinet clearance, low prices",
       metaDescription:
         "{count} kitchen cabinet modules on clearance: held in stock, ready to install, delivery across Greater Montreal.",
       intro:
