@@ -30,7 +30,7 @@ export const quincailleriePage: PageTemplateData = {
           heading:
             "Quincaillerie d'armoires : un élément clé de la durabilité d'une cuisine",
           description:
-            "La qualité d'une cuisine ou d'une vanité ne dépend pas seulement des matériaux visibles. Les mécanismes qui ouvrent, ferment et supportent portes et tiroirs jouent un rôle central dans la durabilité, la fluidité et le confort d'utilisation.",
+            "La quincaillerie d'armoire désigne l'ensemble des mécanismes — charnières, coulisses de tiroir, systèmes de fermeture amortie — qui font ouvrir, fermer et supporter portes et tiroirs. Souvent invisible, elle joue un rôle central dans la durabilité, la fluidité et le confort d'utilisation d'une cuisine ou d'une vanité.",
           actions: [
             {
               label: "Découvrir nos cuisines sur mesure",

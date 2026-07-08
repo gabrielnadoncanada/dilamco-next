@@ -26,7 +26,7 @@ export const comparatifPage: PageTemplateData = {
           eyebrow: "Dilamco - Matériaux",
           heading: "Comparatif des matériaux : choisir selon l'usage",
           description:
-            "Il n'existe pas de matériau universel. Le bon choix dépend de l'espace, de l'humidité, de la durabilité visée, de la finition recherchée et de la qualité d'exécution.",
+            "Il n'existe pas de matériau d'armoire universel : mélamine, MDF, contreplaqué et bois massif ont chacun leurs forces. Le bon choix dépend de l'espace, de l'humidité, de la durabilité visée, de la finition recherchée et de la qualité d'exécution.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -216,7 +216,7 @@ export const comparatifPage: PageTemplateData = {
           items: [
             {
               q: "MDF ou mélamine ?",
-              a: "Le MDF sert souvent un fini peint uniforme; la mélamine sert plutôt un décor et un coût maîtrisé.",
+              a: "Le MDF est privilégié pour un fini peint parfaitement uniforme, quand on veut une couleur sur mesure et des portes lisses. La mélamine arrive déjà finie avec un décor thermofusionné : large choix de couleurs et d'imitations de bois, coût maîtrisé, sans étape de peinture. En pratique, le MDF sert souvent les façades peintes et la mélamine les caissons ou les projets au budget cadré.",
             },
             {
               q: "Le contreplaqué est-il toujours préférable ?",
@@ -228,7 +228,7 @@ export const comparatifPage: PageTemplateData = {
             },
             {
               q: "Peut-on combiner plusieurs matériaux ?",
-              a: "Oui. C'est souvent la meilleure stratégie pour équilibrer performance, rendu et budget.",
+              a: "Oui, et c'est souvent la meilleure stratégie. Plutôt que de choisir un seul matériau, on cible chacun là où il performe : contreplaqué de bouleau pour la structure des caissons, bois massif sur les portes et éléments visibles, MDF pour certaines façades peintes, mélamine pour un intérieur durable et économique. Cette combinaison équilibre performance, rendu et budget.",
             },
           ],
         },

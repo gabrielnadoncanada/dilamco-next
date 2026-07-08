@@ -26,7 +26,7 @@ export const couleursPageEn: PageTemplateData = {
           eyebrow: "Dilamco - Materials",
           heading: "Colours and finishes: style, light and maintenance",
           description:
-            "Colour influences light, how a space is perceived and maintenance. The right choice depends on the material, the use and the real context.",
+            "Choosing cabinet colours shapes the light, how the space is perceived and how easy it is to maintain. The right choice depends on the material, the finish (matte or satin), real use and the room's context.",
           actions: [
             {
               label: "Talk design and finishes",
@@ -256,7 +256,7 @@ export const couleursPageEn: PageTemplateData = {
           items: [
             {
               q: "Matte or satin?",
-              a: "Satin is often a good compromise between maintenance and look, especially in the kitchen.",
+              a: "Satin is often the best compromise, especially in a kitchen: it reflects a little light, hides fingerprints better and is easy to maintain. Matte gives a more contemporary, muted look, but marks more easily and demands more careful maintenance on heavily used surfaces. The right choice depends on the room, the colour and your tolerance for upkeep.",
             },
             {
               q: "Are dark colours risky?",
@@ -268,7 +268,7 @@ export const couleursPageEn: PageTemplateData = {
             },
             {
               q: "How can a dated look be avoided?",
-              a: "By keeping a timeless base and more flexible accents.",
+              a: "For a result that ages well, keep a timeless base (neutral tones, natural woods, warm whites) on the large surfaces, and save bolder colours or finishes for elements that are easy to change — an island, a backsplash, accessories. This approach lets you refresh the look without redoing the whole kitchen, and limits the risk of a strong trend locking the space into an era.",
             },
           ],
         },

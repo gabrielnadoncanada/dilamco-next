@@ -30,7 +30,7 @@ export const quincailleriePageEn: PageTemplateData = {
           heading:
             "Cabinet hardware: a key element of a kitchen's durability",
           description:
-            "The quality of a kitchen or vanity doesn't come only from the visible materials. The mechanisms that open, close and support doors and drawers play a central role in durability, smooth operation and comfort of use.",
+            "Cabinet hardware refers to all the mechanisms — hinges, drawer slides, soft-close systems — that make doors and drawers open, close and hold. Often invisible, it plays a central role in the durability, smooth operation and comfort of use of a kitchen or a vanity.",
           actions: [
             {
               label: "Discover our custom kitchens",

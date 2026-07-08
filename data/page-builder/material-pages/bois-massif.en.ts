@@ -27,7 +27,7 @@ export const boisMassifPageEn: PageTemplateData = {
           heading:
             "Solid wood: authenticity, character and limits to know",
           description:
-            "Solid wood is prized for its grain, visual depth and perceived value. It is also a living material: its behaviour depends on the context, the finish and where it is used.",
+            "Solid wood is wood taken directly from the log — full boards, as opposed to composite panels. Prized for its grain and visual depth, it is a living material: its behaviour depends on the context, the finish and where it is used.",
           actions: [
             {
               label: "Discuss your project",
@@ -233,7 +233,7 @@ export const boisMassifPageEn: PageTemplateData = {
           items: [
             {
               q: "Is solid wood always better?",
-              a: "No. It is excellent for aesthetics and certain applications, but engineered panels can be more stable depending on the constraints.",
+              a: "No. Solid wood is beautiful for aesthetics — grain, depth, perceived value — and excellent on doors and visible elements. But it's a living material that moves with humidity; on large flat surfaces or in demanding environments, engineered panels (plywood, MDF) sometimes offer more stability. The most coherent strategy targets solid wood where it's seen and touched.",
             },
             {
               q: "Is it recommended in a kitchen?",
@@ -241,7 +241,7 @@ export const boisMassifPageEn: PageTemplateData = {
             },
             {
               q: "How does it react to humidity?",
-              a: "Wood can move with humidity. Design, finish and proper use limit these effects.",
+              a: "Solid wood reacts to humidity: it can swell, contract or warp with the room's humidity variations. Good design (planned clearance, suitable joinery), a finish that seals the wood and proper use clearly limit these movements. That's why it's often used in a targeted way, combined with more stable panels on the structures.",
             },
             {
               q: "Can solid wood be combined with other materials?",

@@ -26,7 +26,7 @@ export const melaminePageEn: PageTemplateData = {
           eyebrow: "Dilamco - Materials",
           heading: "Melamine: uses, limits and alternatives",
           description:
-            "Melamine is popular for its variety of finishes and an often more controlled cost. Its durability depends mainly on the edges, the real use and the quality of installation.",
+            "Melamine is a panel (particleboard or MDF) covered with a thermofused decorative layer, offering a wide variety of finishes at a controlled cost. Its durability depends mainly on the quality of the edges, real use and installation precision.",
           actions: [
             {
               label: "Request a quote",
@@ -230,7 +230,7 @@ export const melaminePageEn: PageTemplateData = {
           items: [
             {
               q: "Is melamine low-end?",
-              a: "Not necessarily. It can be relevant depending on the project and the real use.",
+              a: "Not necessarily. Melamine covers a broad category: its quality depends on the substrate, the thickness, the finish and above all the edge treatment. Well installed, with quality edges, it offers a scratch-resistant, easy-to-maintain surface that is relevant for many projects. What lets it down is sloppy execution or prolonged exposure to moisture through poorly sealed edges — not the material itself.",
             },
             {
               q: "Does melamine swell?",
@@ -238,7 +238,7 @@ export const melaminePageEn: PageTemplateData = {
             },
             {
               q: "Melamine or MDF?",
-              a: "MDF is often chosen for a uniform painted finish; melamine for decorative finishes and a more controlled cost.",
+              a: "The two serve different needs. MDF is preferred when you want a perfectly uniform painted surface (smooth doors, custom colour). Melamine arrives already finished with a thermofused decor: it offers a wide choice of colours and wood looks at a controlled cost, with no painting step. The choice depends on the finish you want, the budget and the real use of the room.",
             },
             {
               q: "Is it recommended in a bathroom?",

@@ -26,7 +26,7 @@ export const mdfPageEn: PageTemplateData = {
           eyebrow: "Dilamco - Materials",
           heading: "MDF: when and why to use it for custom work",
           description:
-            "MDF is often chosen to get a very uniform surface, ideal for painted doors. It is not a universal material: the context of use and edge protection determine whether it's the right choice.",
+            "MDF (medium-density fibreboard) is a material made of wood fibres compressed with a binder, giving a very uniform surface — ideal for painted doors. It is not a universal material: the context of use and edge protection determine whether it's the right choice.",
           actions: [
             {
               label: "Request a quote",
@@ -231,11 +231,11 @@ export const mdfPageEn: PageTemplateData = {
           items: [
             {
               q: "Is MDF a low-end material?",
-              a: "No. It can be excellent for certain applications, especially painted doors, when the execution is careful.",
+              a: "No. MDF is an engineered panel whose density and homogeneity make it an excellent base for painted doors: no grain or knots, a perfectly smooth surface once painted. Its suitability depends on the application and the execution — protected edges, careful finishing. Misused or exposed to water without protection, it performs less well; well executed, it can be high-end.",
             },
             {
               q: "Does MDF swell with moisture?",
-              a: "It can react to water if protection is insufficient, especially at the edges.",
+              a: "MDF can absorb water and swell if its surface or edges aren't protected, because it's made of compressed fibres. Protection (finish, sealant, well-closed edges) and a design suited to the room clearly limit this risk. In very humid areas or those exposed to splashes, other materials or a moisture-resistant MDF may be preferable.",
             },
             {
               q: "MDF or melamine?",

@@ -36,7 +36,7 @@ export const contreplaquePage: PageTemplateData = {
           heading:
             "Contreplaqué : stabilité, durabilité et structure intelligente",
           description:
-            "Le contreplaqué est souvent privilégié en sur mesure pour la structure des armoires. Sa composition en plis croisés lui donne un comportement plus stable et plus prévisible.",
+            "Le contreplaqué est un panneau formé de fines couches de bois (plis) collées en croisant le fil, ce qui lui donne un comportement plus stable et prévisible que les panneaux de particules. C'est pourquoi il est souvent privilégié en sur mesure pour la structure des armoires.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -241,7 +241,7 @@ export const contreplaquePage: PageTemplateData = {
           items: [
             {
               q: "Le contreplaqué est-il toujours meilleur que le MDF ?",
-              a: "Pas nécessairement. Le contreplaqué est souvent très pertinent pour la structure; le MDF peut mieux convenir à certaines façades et finitions.",
+              a: "Pas nécessairement — ils excellent à des endroits différents. Le contreplaqué, grâce à ses plis croisés, est plus stable et tient mieux les vis et les charnières : il est souvent idéal pour la structure des caissons et les tiroirs. Le MDF, lui, offre une surface plus lisse et uniforme, ce qui convient mieux à certaines façades peintes. La meilleure approche combine souvent les deux, chacun là où il performe.",
             },
             {
               q: "Le contreplaqué est-il adapté à la salle de bain ?",
@@ -249,7 +249,7 @@ export const contreplaquePage: PageTemplateData = {
             },
             {
               q: "Est-ce plus cher ?",
-              a: "Souvent oui, en échange d'une meilleure qualité structurelle selon l'usage.",
+              a: "Souvent oui : le contreplaqué de qualité coûte généralement plus cher que le MDF ou les panneaux de particules. En contrepartie, il apporte une meilleure stabilité structurelle, une résistance accrue à l'humidité et une meilleure tenue des fixations dans le temps. C'est un choix d'investissement qui se justifie surtout sur les éléments structurels sollicités au quotidien.",
             },
             {
               q: "Est-ce visible une fois installé ?",
