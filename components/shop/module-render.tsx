@@ -12,6 +12,8 @@ const COLOR_MAP: Record<ColorName, PaletteEntry> = {
   "Blanc Pur":   { door: "#f5f1e8", shadow: "#d8d0bc", edge: "#a99e80", interior: "#efe9d9", knob: "#1f2622" },
   "Chêne blanc": { door: "#cba578", shadow: "#9a7a51", edge: "#6e5132", interior: "#e6d2b0", knob: "#1a1410" },
   "Bleu marin":  { door: "#1f3245", shadow: "#0e1c2a", edge: "#091421", interior: "#384a5d", knob: "#c8b890" },
+  // Navi (mélamine bleu marine ; moyenne mesurée de navi.png = #2e343c) — schéma dérivé.
+  Navi:          { door: "#2e343c", shadow: "#1c2129", edge: "#12161d", interior: "#454b54", knob: "#c8b890" },
 };
 
 interface Props {

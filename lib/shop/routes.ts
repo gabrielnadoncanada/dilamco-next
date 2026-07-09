@@ -10,6 +10,7 @@ export const routes = {
   subcollection: (slug: string, sub: string) =>
     `${BASE}/collections/${slug}/${sub}`,
   finishes: `${BASE}/finitions`,
+  returns: `${BASE}/conditions-de-retour`,
   quote: `${BASE}/soumission`,
   configurator: `${BASE}/configurateur`,
   package: (slug: string) => `${BASE}/forfait/${slug}`,

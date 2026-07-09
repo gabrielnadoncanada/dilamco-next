@@ -1,4 +1,8 @@
 @import "tailwindcss";
+/* Le pipeline render-3d (.claude/skills) contient des binaires (.blend/.blend1)
+   que le scanner de sources Tailwind v4 tente de lire comme du texte →
+   « Invalid code point » et 500 sur tout le site. On l'exclut du scan. */
+@source not "../.claude";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "yet-another-react-lightbox/styles.css";

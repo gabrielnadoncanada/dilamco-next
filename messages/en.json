@@ -261,6 +261,11 @@
           "title": "10-year warranty",
           "body": "Cabinet and hardware guaranteed for 10 years. Soft-close Blum hinges and slides. A single project lead for all follow-up after installation."
         },
+        "returns": {
+          "title": "Returns and exchanges",
+          "body": "30 days to return an uninstalled in-stock module. Custom items are final sale; an item damaged on delivery is replaced at no charge.",
+          "link": "See the return policy"
+        },
         "questions": {
           "title": "A question before ordering?",
           "callUs": "Call us at",
@@ -542,6 +547,73 @@
         "requestQuote": "Request the quote",
         "reassurance": "No commitment · delivery and installation included in the final price · firm quote within 48 h",
         "remove": "remove"
+      }
+    },
+    "returns": {
+      "metaTitle": "Cabinet Return Policy",
+      "metaDescription": "Returns, exchanges and damaged items for cabinets bought online at Dilamco: 30 days on uninstalled in-stock modules, step-by-step process and free replacement for damaged goods.",
+      "heroEyebrow": "Shop · Policy",
+      "heroTitleLead": "Return",
+      "heroTitleEmphasis": "policy.",
+      "heroIntro": "Ordering your cabinets online should be risk-free. Here’s how returns, exchanges and damaged items work — clearly, no fine print.",
+      "highlights": {
+        "window": {
+          "title": "30 days",
+          "body": "To return an uninstalled in-stock module in its original packaging."
+        },
+        "fee": {
+          "title": "15% fee",
+          "body": "Restocking fee on standard returns; the balance is refunded to you."
+        },
+        "damage": {
+          "title": "Damage = free",
+          "body": "An item that arrives damaged or defective is replaced at no charge."
+        }
+      },
+      "sections": {
+        "eyebrow": "In detail",
+        "title": "What to know before you order"
+      },
+      "faq": {
+        "window": {
+          "q": "How long do I have to return a module?",
+          "a": "You have 30 days from delivery to return a standard in-stock module. It must be new, uninstalled and unmodified, in its original packaging with all hardware. After that window, only the warranty and delivery-damage claims apply."
+        },
+        "how": {
+          "q": "How does a return work?",
+          "a": "Email ventes@dilamco.com or call (514) 820-0773 with your order number and the modules involved. We confirm eligibility and issue a return authorization. The module is then dropped off or picked up at our Rigaud warehouse, inspected, and refunded."
+        },
+        "fee": {
+          "q": "Are there any return fees?",
+          "a": "A 15% restocking fee applies to standard returns to cover handling and inspection; the rest is refunded to you. Return shipping is at your expense, except when we made an error or the item is damaged or defective — in that case Dilamco covers everything."
+        },
+        "finalSale": {
+          "q": "Which items can’t be returned?",
+          "a": "Final sale items include: custom items (catalyzed finish or a colour ordered specially), pieces cut or fitted on site (fillers, finishing panels), custom replacement doors, and any module that has been installed or modified. These items remain covered against defects by the warranty."
+        },
+        "damaged": {
+          "q": "My module arrived damaged or is defective?",
+          "a": "Report it within 48 h with photos to ventes@dilamco.com. We replace or repair the item at no charge, shipping included — even if it’s normally a final-sale item. Delivery damage is never at your expense."
+        },
+        "exchange": {
+          "q": "Can I exchange instead of return?",
+          "a": "Yes. An exchange follows the same conditions as a standard return (30 days, item intact). Changing finish or dimensions means placing a new order: we help you pick the right module and coordinate delivery."
+        },
+        "refund": {
+          "q": "When am I refunded?",
+          "a": "Once the module is received and inspected at the warehouse, the refund is issued within 5 to 10 business days to the original payment method. You receive an email confirmation."
+        },
+        "installed": {
+          "q": "What about modules already installed?",
+          "a": "An installed module isn’t eligible for return, but it stays covered by our 10-year warranty on the cabinet box and hardware. A single project manager handles any follow-up after installation."
+        }
+      },
+      "help": {
+        "eyebrow": "Need help?",
+        "title": "Unsure about your order?",
+        "body": "Talk to an advisor directly. We reply in under 24 h, no commitment.",
+        "showroom": "Showroom in Dorval — by appointment.",
+        "cta": "Contact us"
       }
     },
     "quote": {

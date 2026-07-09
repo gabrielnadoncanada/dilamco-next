@@ -261,6 +261,11 @@
           "title": "Garantie 10 ans",
           "body": "Caisson et quincaillerie garantis 10 ans. Charnières et coulisses Blum à fermeture amortie. Un seul chef de projet pour tout suivi après l'installation."
         },
+        "returns": {
+          "title": "Retours et échanges",
+          "body": "30 jours pour retourner un module en stock non installé. Articles sur mesure en vente finale ; un article endommagé à la livraison est remplacé sans frais.",
+          "link": "Voir les conditions de retour"
+        },
         "questions": {
           "title": "Une question avant de commander ?",
           "callUs": "Appelez-nous au",
@@ -542,6 +547,73 @@
         "requestQuote": "Demander la soumission",
         "reassurance": "Sans engagement · livraison et installation incluses au prix final · soumission ferme sous 48 h",
         "remove": "retirer"
+      }
+    },
+    "returns": {
+      "metaTitle": "Conditions de retour d’armoires",
+      "metaDescription": "Retours, échanges et articles endommagés pour les armoires achetées en ligne chez Dilamco : 30 jours sur les modules en stock non installés, marche à suivre et remplacement gratuit en cas de dommage.",
+      "heroEyebrow": "Boutique · Politique",
+      "heroTitleLead": "Conditions de",
+      "heroTitleEmphasis": "retour.",
+      "heroIntro": "Commander vos armoires en ligne devrait être sans risque. Voici comment fonctionnent les retours, les échanges et les articles endommagés — clairement, sans petits caractères.",
+      "highlights": {
+        "window": {
+          "title": "30 jours",
+          "body": "Pour retourner un module en stock non installé, dans son emballage d’origine."
+        },
+        "fee": {
+          "title": "Frais de 15 %",
+          "body": "Frais de réapprovisionnement sur les retours standards ; le solde vous est remboursé."
+        },
+        "damage": {
+          "title": "Dommage = gratuit",
+          "body": "Un article arrivé endommagé ou défectueux est remplacé sans frais."
+        }
+      },
+      "sections": {
+        "eyebrow": "En détail",
+        "title": "Ce qu’il faut savoir avant de commander"
+      },
+      "faq": {
+        "window": {
+          "q": "Quel est le délai pour retourner un module ?",
+          "a": "Vous disposez de 30 jours suivant la réception pour retourner un module standard en stock. Il doit être neuf, non installé et non modifié, dans son emballage d’origine avec toute la quincaillerie. Passé ce délai, seuls la garantie et les articles endommagés à la livraison s’appliquent."
+        },
+        "how": {
+          "q": "Comment fonctionne un retour ?",
+          "a": "Écrivez à ventes@dilamco.com ou appelez le (514) 820-0773 avec votre numéro de commande et les modules concernés. Nous confirmons l’admissibilité et vous transmettons une autorisation de retour. Le module est ensuite rapporté ou récupéré à notre entrepôt de Rigaud, inspecté, puis remboursé."
+        },
+        "fee": {
+          "q": "Y a-t-il des frais de retour ?",
+          "a": "Un frais de réapprovisionnement de 15 % s’applique sur les retours standards pour couvrir la manutention et l’inspection ; le reste vous est remboursé. Le transport de retour est à votre charge, sauf en cas d’erreur de notre part ou d’article endommagé ou défectueux — dans ce cas, tout est pris en charge par Dilamco."
+        },
+        "finalSale": {
+          "q": "Quels articles ne sont pas retournables ?",
+          "a": "Sont en vente finale : les articles personnalisés (fini catalysé ou couleur commandée spécialement), les pièces coupées ou ajustées sur place (fillers, panneaux de finition), les portes de remplacement sur mesure, ainsi que tout module installé ou modifié. Ces articles demeurent couverts par la garantie contre les défauts."
+        },
+        "damaged": {
+          "q": "Mon module est arrivé endommagé ou est défectueux ?",
+          "a": "Signalez-le sous 48 h avec des photos à ventes@dilamco.com. Nous remplaçons ou réparons l’article sans frais, transport inclus — même s’il s’agit d’un article normalement en vente finale. Un dommage à la livraison n’est jamais à votre charge."
+        },
+        "exchange": {
+          "q": "Puis-je échanger plutôt que retourner ?",
+          "a": "Oui. Un échange suit les mêmes conditions qu’un retour standard (30 jours, article intact). Changer de fini ou de dimension revient à passer une nouvelle commande : nous vous accompagnons pour choisir le bon module et coordonner la livraison."
+        },
+        "refund": {
+          "q": "Quand suis-je remboursé ?",
+          "a": "Une fois le module reçu et inspecté à l’entrepôt, le remboursement est émis sous 5 à 10 jours ouvrables sur le mode de paiement d’origine. Vous recevez une confirmation par courriel."
+        },
+        "installed": {
+          "q": "Et les modules déjà installés ?",
+          "a": "Un module installé n’est pas admissible au retour, mais il reste couvert par notre garantie de 10 ans sur le caisson et la quincaillerie. Un seul chef de projet assure tout suivi après l’installation."
+        }
+      },
+      "help": {
+        "eyebrow": "Besoin d’aide ?",
+        "title": "Un doute sur votre commande ?",
+        "body": "Parlez à un conseiller directement. On répond en moins de 24 h, sans engagement.",
+        "showroom": "Salle de montre à Dorval — sur rendez-vous.",
+        "cta": "Nous écrire"
       }
     },
     "quote": {

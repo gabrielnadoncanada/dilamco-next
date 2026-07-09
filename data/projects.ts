@@ -19,6 +19,10 @@ import { PROJECT_CUISINE_SUR_MESURE_MONTREAL_EN } from "@/data/project-pages/cui
 import { PROJECT_CUISINE_SUR_MESURE_PIERREFONDS_EN } from "@/data/project-pages/cuisine-pages/cuisine-sur-mesure-pierrefonds.en";
 import { PROJECT_CUISINE_SUR_MESURE_PLATEAU_MONT_ROYAL_EN } from "@/data/project-pages/cuisine-pages/cuisine-sur-mesure-plateau-mont-royal.en";
 import { PROJECT_CUISINE_SUR_MESURE_RIVE_SUD_EN } from "@/data/project-pages/cuisine-pages/cuisine-sur-mesure-rive-sud.en";
+import { PROJECT_CUISINE_SUR_MESURE_LAVAL_EN } from "@/data/project-pages/cuisine-pages/cuisine-sur-mesure-laval.en";
+import { PROJECT_CUISINE_SUR_MESURE_BROSSARD_EN } from "@/data/project-pages/cuisine-pages/cuisine-sur-mesure-brossard.en";
+import { PROJECT_CUISINE_SUR_MESURE_REPENTIGNY_EN } from "@/data/project-pages/cuisine-pages/cuisine-sur-mesure-repentigny.en";
+import { PROJECT_CUISINE_SUR_MESURE_TERREBONNE_EN } from "@/data/project-pages/cuisine-pages/cuisine-sur-mesure-terrebonne.en";
 import { PROJECT_VANITE_SUR_MESURE_LAVAL_EN } from "@/data/project-pages/salle-de-bain-pages/vanite-sur-mesure-laval.en";
 import { PROJECT_AMENAGEMENT_SUR_MESURE_BUREAU_CENTRE_VILLE_MONTREAL_EN } from "@/data/project-pages/commercial-pages/amenagement-sur-mesure-bureau-centre-ville-montreal.en";
 
@@ -50,6 +54,10 @@ const PROJECTS_EN: Record<string, ProjectData> = Object.fromEntries(
     PROJECT_CUISINE_SUR_MESURE_PIERREFONDS_EN,
     PROJECT_CUISINE_SUR_MESURE_PLATEAU_MONT_ROYAL_EN,
     PROJECT_CUISINE_SUR_MESURE_RIVE_SUD_EN,
+    PROJECT_CUISINE_SUR_MESURE_LAVAL_EN,
+    PROJECT_CUISINE_SUR_MESURE_BROSSARD_EN,
+    PROJECT_CUISINE_SUR_MESURE_REPENTIGNY_EN,
+    PROJECT_CUISINE_SUR_MESURE_TERREBONNE_EN,
     PROJECT_VANITE_SUR_MESURE_LAVAL_EN,
     PROJECT_AMENAGEMENT_SUR_MESURE_BUREAU_CENTRE_VILLE_MONTREAL_EN,
   ].map((p) => [`${p.space}/${p.slug}`, p]),

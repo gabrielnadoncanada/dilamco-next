@@ -130,6 +130,10 @@ export const routing = defineRouting({
       en: "/shop/produit/[id]",
     },
     "/boutique/finitions": { fr: "/boutique/finitions", en: "/shop/finitions" },
+    "/boutique/conditions-de-retour": {
+      fr: "/boutique/conditions-de-retour",
+      en: "/shop/return-policy",
+    },
     "/boutique/soumission": {
       fr: "/boutique/soumission",
       en: "/shop/soumission",

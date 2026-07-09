@@ -59,7 +59,12 @@ function familyFromCategory(slug: string): Family {
   return fallback;
 }
 
-const KNOWN_COLORS: ColorName[] = ["Blanc Pur", "Chêne blanc", "Bleu marin"];
+const KNOWN_COLORS: ColorName[] = [
+  "Blanc Pur",
+  "Chêne blanc",
+  "Bleu marin",
+  "Navi",
+];
 
 function colorsFor(p: RawProduct): ColorName[] {
   if (p.finish && KNOWN_COLORS.includes(p.finish as ColorName)) {
@@ -167,6 +172,11 @@ function viewKeyForProfil(profil?: string): string {
   return profil && profil !== "shaker-1" ? `face@${profil}` : "face";
 }
 
+/** Finis qui vivent comme une VUE du manifest sur le code blanc (pas un code
+ *  catalogue dédié comme le chêne `-muf`). Le rendu navi de S8-DB24 est la vue
+ *  `face@navi` de l'entrée S8-DB24. */
+const VIEW_BASED_FINISHES = new Set(["navi"]);
+
 /** Retire le préfixe fournisseur (`F9-`, `S8-`, …) : le rendu d'un meuble est le même
  *  quel que soit le fournisseur, et le manifeste reste indexé sur l'ancien préfixe. */
 const stripVendorPrefix = (code: string) => code.replace(/^[A-Z]\d+-/, "");
@@ -178,14 +188,20 @@ for (const [k, v] of Object.entries(rendersByCode)) {
 
 /** Galerie d'un code pour un profil de porte donné. Le profil sélectionne la vue
  *  `face@<profil>` ; si elle n'existe pas (rendu pas encore généré), on retombe
- *  proprement sur la `face` shaker-1. */
+ *  proprement sur la `face` shaker-1. Un FINI à base de vue (`couleur: "navi"`)
+ *  sélectionne `face@<fini>` SANS repli sur la face blanche : mieux vaut le
+ *  placeholder qu'une image de la mauvaise couleur. */
 export function galleryFor(
   code: string,
   profil?: string,
+  couleur?: string,
 ): ProductGalleryEntry[] | undefined {
   const render = rendersByCode[code] ?? rendersBySuffix.get(stripVendorPrefix(code));
   if (!render) return undefined;
-  const face = render[viewKeyForProfil(profil)] ?? render.face;
+  const face =
+    couleur && VIEW_BASED_FINISHES.has(couleur)
+      ? render[`face@${couleur}`]
+      : render[viewKeyForProfil(profil)] ?? render.face;
   if (!face) return undefined;
   const entries: ProductGalleryEntry[] = [{ src: face, label: "Produit" }];
   if (render.technique) {
@@ -311,8 +327,9 @@ export function hasVisibleProducts(slug: string): boolean {
   return result;
 }
 
-export function swatchSlug(c: string): "blanc" | "chene" | "bleu" {
+export function swatchSlug(c: string): "blanc" | "chene" | "bleu" | "navi" {
   if (c === "Blanc Pur") return "blanc";
   if (c === "Chêne blanc") return "chene";
+  if (c === "Navi") return "navi";
   return "bleu";
 }

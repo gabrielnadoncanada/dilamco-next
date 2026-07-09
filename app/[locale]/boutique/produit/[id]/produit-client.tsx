@@ -126,7 +126,12 @@ export default function ProduitClient({ id }: { id: string }) {
     );
   }
 
-  const color = (product.colors[0] as ColorName) || "Blanc Pur";
+  // Couleur de la VARIANTE, pas du code catalogue : la variante Navi partage
+  // le code (et donc le `product`) de la ligne blanche.
+  const color =
+    (activeVariant.colors[0] as ColorName) ||
+    (product.colors[0] as ColorName) ||
+    "Blanc Pur";
   // Profil de porte choisi → reporté dans le panier comme moulure (1 po / 3 po).
   const molding: Molding =
     activeVariant.options.profil === "shaker-3" ? "3 po" : "1 po";
@@ -152,12 +157,11 @@ export default function ProduitClient({ id }: { id: string }) {
   const baseAlt = localColor ? `${localName} — ${localColor}` : localName;
   const technicalSuffix =
     locale === "en" ? " (technical drawing)" : " (dessin technique)";
-  // Galerie de la VARIANTE active (profil de porte) : changer Shaker 1↔3 po
-  // bascule sur le rendu dédié. Repli sur la galerie du produit si la variante
-  // n'a pas de galerie propre.
-  const views: GalleryView[] = galleryViews(
-    activeVariant.gallery ?? product.gallery,
-  ).map((v) => ({
+  // Galerie de la VARIANTE active (profil/couleur) : changer de sélection
+  // bascule sur le rendu dédié. PAS de repli sur la galerie du produit : la
+  // variante Navi sans rendu doit montrer le placeholder, pas le caisson blanc
+  // (les autres variantes portent déjà leur propre repli via expandVariants).
+  const views: GalleryView[] = galleryViews(activeVariant.gallery).map((v) => ({
     ...v,
     alt: /techni|dessin/i.test(v.label)
       ? `${baseAlt}${technicalSuffix}`

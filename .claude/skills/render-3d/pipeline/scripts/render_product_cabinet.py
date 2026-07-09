@@ -59,6 +59,23 @@ DOOR_PROFILES = {
 }
 DEFAULT_PROFILE = "shaker-1"
 
+#: Finis ALTERNATIFS rendus par-dessus le MÊME code catalogue (pas de ligne
+#: xlsx dédiée, contrairement au chêne `-muf`). Le rendu vit dans un fichier
+#: suffixé (`<slug>_navi_face.webp`) et sur la vue manifest `face@<fini>`, lue
+#: par la couche variantes du site (models.ts). `category_prefixes` borne le
+#: batch aux catégories qui offrent réellement ce fini.
+#: navi = mélamine bleu marine, texture RÉELLE (échantillon photo navi_real_flat.png),
+#: offert sur les caissons du bas (cuisine + vanités) — décision Gabriel 2026-07-03.
+FINISH_VARIANTS = {
+    "navi": {
+        "finish_type": "navi",
+        "finish_label": "Navi",
+        "slug_suffix": "_navi",
+        "manifest_view": "face@navi",
+        "category_prefixes": ("base-", "bathroom-base-"),
+    },
+}
+
 
 def find_blender() -> Path:
     env = os.environ.get("BLENDER")
@@ -410,7 +427,7 @@ for p in [__PATHS_REPR__]:
 
 import bpy
 from bpy_extras.object_utils import world_to_camera_view
-from mathutils import Vector
+from mathutils import Vector, Matrix
 
 CONFIG = __CONFIG_JSON_REPR__
 CONFIG = __import__("json").loads(CONFIG)
@@ -501,9 +518,10 @@ def apply_hb_style(main_scene, cabinet):
 
     # Use HB's available default style. Missing enum values are ignored by HB
     # and logged by StyleBuilder.
-    if CONFIG.get("finish_type") == "oak":
-        # Mélamine Chêne blanc : porte SHAKER 5 pièces (cadre 1 po), comme le blanc
-        # (préférence Gabriel : tous les caissons en shaker 1 po, blanc ET chêne).
+    if CONFIG.get("finish_type") in ("oak", "navi"):
+        # Mélamines (Chêne blanc, Navi) : porte SHAKER 5 pièces (cadre 1 po), comme
+        # le blanc (préférence Gabriel : tous les caissons en shaker 1 po). Le vrai
+        # matériau est injecté dans les geonodes plus loin (normalize_product_materials).
         style = Style(
             cabinet_style="Default Style",
             wood_species="CUSTOM_PROCEDURAL",
@@ -546,11 +564,13 @@ def build_white_material():
         nt.nodes.remove(node)
     out = nt.nodes.new("ShaderNodeOutputMaterial")
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
-    # 0.75 quasi neutre : à 0.64 + exposure -0.25 les façades sortaient à ~203
+    # 0.72 quasi neutre : à 0.64 + exposure -0.25 les façades sortaient à ~203
     # de luminance = grises sur la fiche produit (feedback Gabriel 2026-07-01) ;
-    # 0.75 mesuré → façades ~220, sous le fond (241) mais franchement blanches.
-    # L'ancien (0.64, 0.635, 0.615) tirait aussi vers le crème (R-B trop grand).
-    bsdf.inputs["Base Color"].default_value = (0.75, 0.746, 0.735, 1.0)
+    # à 0.75 avec le HDRI tourné à 270° (softbox face à la FAÇADE, feedback
+    # 2026-07-03 : façade = face la plus claire) la façade saturait au niveau du
+    # fond (241). 0.72 mesuré → façade ~235, côté ~205 : blanc franc, hiérarchie
+    # correcte. L'ancien (0.64, 0.635, 0.615) tirait aussi vers le crème.
+    bsdf.inputs["Base Color"].default_value = (0.72, 0.716, 0.705, 1.0)
     if "Coat Weight" in bsdf.inputs:
         bsdf.inputs["Coat Weight"].default_value = 0.12
         bsdf.inputs["Coat Roughness"].default_value = 0.22
@@ -684,6 +704,114 @@ def build_oak_material():
     return mat
 
 
+def build_navi_material():
+    # Mélamine « Navi » (bleu marine) : l'albédo est l'ÉCHANTILLON PHOTO RÉEL
+    # (navi_real_flat.png) box-mappé — pas un aplat. PRIORITÉ : matériau réglé à la
+    # main dans la librairie (« Dilamco_Navi_Melamine »), comme le chêne ; sinon
+    # fallback ci-dessous : photo + roughness satinée micro-variée (même texture
+    # que le blanc, plage un peu plus basse : la mélamine foncée reflète plus) +
+    # normal très faible.
+    name = "Dilamco_Navi_Melamine"
+    mat = bpy.data.materials.get(name)
+    if mat:
+        return mat
+    libpath = CONFIG.get("material_lib") or ""
+    if libpath and Path(libpath).is_file():
+        try:
+            with bpy.data.libraries.load(libpath, link=False) as (src, dst):
+                if name in src.materials:
+                    dst.materials = [name]
+            m = bpy.data.materials.get(name)
+            if m:
+                log("Navi: matériau chargé depuis la librairie " + libpath)
+                return m
+            log("Navi: '" + name + "' absent de la librairie, fallback photo")
+        except Exception as exc:
+            log("Navi: échec chargement librairie (" + str(exc) + "), fallback photo")
+    mat = bpy.data.materials.new(name)
+    mat.use_nodes = True
+    nt = mat.node_tree
+    for node in list(nt.nodes):
+        nt.nodes.remove(node)
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
+    texco = nt.nodes.new("ShaderNodeTexCoord")
+    mapping = nt.nodes.new("ShaderNodeMapping")
+    scale = float(CONFIG.get("navi_scale", 1.4))
+    mapping.inputs["Scale"].default_value = (scale, scale, scale)
+    nt.links.new(texco.outputs["Object"], mapping.inputs["Vector"])
+
+    diff = nt.nodes.new("ShaderNodeTexImage")
+    diff.image = bpy.data.images.load(CONFIG["navi_diff"], check_existing=True)
+    diff.projection = "BOX"
+    diff.projection_blend = 0.12
+    nt.links.new(mapping.outputs["Vector"], diff.inputs["Vector"])
+    # HSV de calibration (mêmes leviers que le chêne) — neutre par défaut :
+    # l'échantillon photo EST la référence couleur.
+    hsv = nt.nodes.new("ShaderNodeHueSaturation")
+    hsv.inputs["Hue"].default_value = float(CONFIG.get("navi_hue", 0.5))
+    hsv.inputs["Saturation"].default_value = float(CONFIG.get("navi_sat", 1.0))
+    hsv.inputs["Value"].default_value = float(CONFIG.get("navi_val", 1.0))
+    nt.links.new(diff.outputs["Color"], hsv.inputs["Color"])
+    nt.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
+
+    # Roughness FRANCHEMENT MATE, plage resserrée. Trois leçons (feedback
+    # Gabriel 2026-07-03) :
+    # 1) plage large = reflets qui tachettent (« nuagé ») sur un fini foncé ;
+    # 2) roughness basse/satinée = le reflet RASANT du HDRI éclaircit le panneau
+    #    latéral au-dessus de la façade (mesuré : côté 63-90 vs façade ~40) ;
+    # 3) un drapeau noir assez grand pour tuer ce reflet écrase aussi le GI.
+    # → mate (0.60-0.68) + spéculaire bas : le côté redevient piloté par
+    # l'albédo, la hiérarchie façade>côté suit le rig comme le blanc. La vraie
+    # mélamine navi est mate de toute façon.
+    rough_path = CONFIG.get("white_rough") or ""
+    if rough_path and Path(rough_path).is_file():
+        rough = nt.nodes.new("ShaderNodeTexImage")
+        rough.image = bpy.data.images.load(rough_path, check_existing=True)
+        rough.image.colorspace_settings.name = "Non-Color"
+        rough.projection = "BOX"
+        rough.projection_blend = 0.25
+        remap = nt.nodes.new("ShaderNodeMapRange")
+        remap.inputs["To Min"].default_value = 0.60
+        remap.inputs["To Max"].default_value = 0.68
+        nt.links.new(mapping.outputs["Vector"], rough.inputs["Vector"])
+        nt.links.new(rough.outputs["Color"], remap.inputs["Value"])
+        nt.links.new(remap.outputs["Result"], bsdf.inputs["Roughness"])
+    else:
+        bsdf.inputs["Roughness"].default_value = 0.64
+
+    nor_path = CONFIG.get("white_nor") or ""
+    if nor_path and Path(nor_path).is_file():
+        nor = nt.nodes.new("ShaderNodeTexImage")
+        nor.image = bpy.data.images.load(nor_path, check_existing=True)
+        nor.image.colorspace_settings.name = "Non-Color"
+        nor.projection = "BOX"
+        nor.projection_blend = 0.25
+        nmap = nt.nodes.new("ShaderNodeNormalMap")
+        nmap.inputs["Strength"].default_value = 0.10
+        nt.links.new(mapping.outputs["Vector"], nor.inputs["Vector"])
+        nt.links.new(nor.outputs["Color"], nmap.inputs["Color"])
+        nt.links.new(nmap.outputs["Normal"], bsdf.inputs["Normal"])
+
+    if "Specular IOR Level" in bsdf.inputs:
+        # Quasi nul : chaque point de spéculaire éclaircit le CÔTÉ en incidence
+        # rasante (Fresnel) et inverse la hiérarchie façade>côté sur un foncé.
+        bsdf.inputs["Specular IOR Level"].default_value = 0.05
+    nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
+    return mat
+
+
+def build_finish_material():
+    # Matériau EXTÉRIEUR du caisson selon le fini (façades, côtés, toe-kick,
+    # géométrie custom). Point unique de dispatch — ajouter un fini = un cas ici
+    # + son builder.
+    ft = CONFIG.get("finish_type")
+    if ft == "oak":
+        return build_oak_material()
+    if ft == "navi":
+        return build_navi_material()
+    return build_white_material()
+
 
 def material(name, color, roughness=0.5, metallic=0.0, coat=0.0, specular=None):
     mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
@@ -747,18 +875,18 @@ def build_maple_interior():
 
 
 def build_shelf_material():
-    # Bois pâle doré de l'INTÉRIEUR (fond, côtés, tablettes, boîtes de tiroir) :
-    # set PBR ambientCG Wood095 (frêne/bouleau clair) — RACCORDABLE (aucune
-    # couture possible, contrairement aux photos shelves_material/erable_real)
-    # avec rugosité + relief réels. Choisi après itérations avec Gabriel
-    # 2026-07-01 (« il doit exister une texture online plus réaliste »).
+    # Bois pâle de l'INTÉRIEUR (fond, côtés intérieurs, plancher, tablettes, boîtes de
+    # tiroir) : texture birch_wood.png (contreplaqué bouleau pâle propre, fournie par
+    # Gabriel) en projection BOX (raccordable, échelle réelle). Validé 2026-07-05 —
+    # remplace le PBR Wood021 (trop ambré) ; pas de rough/normal (image sans maps),
+    # roughness plate. HSV configurable mais défauts NEUTRES (image déjà propre).
     name = "Dilamco_Product_Shelf_Birch"
     mat = bpy.data.materials.get(name)
     if mat:
         return mat
     path = CONFIG.get("shelf_diff") or ""
     if not path or not Path(path).is_file():
-        return material(name, (0.74, 0.66, 0.50, 1), 0.55)
+        return material(name, (0.82, 0.74, 0.58, 1), 0.55)  # fallback bouleau pâle uni
     mat = bpy.data.materials.new(name)
     mat.use_nodes = True
     nt = mat.node_tree
@@ -766,50 +894,24 @@ def build_shelf_material():
         nt.nodes.remove(node)
     out = nt.nodes.new("ShaderNodeOutputMaterial")
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
-    bsdf.inputs["Roughness"].default_value = 0.5
+    bsdf.inputs["Roughness"].default_value = 0.55
     texco = nt.nodes.new("ShaderNodeTexCoord")
     mapping = nt.nodes.new("ShaderNodeMapping")
-    # Texture raccordable → REPEAT sans risque ; échelle 1.0 = grain à
-    # l'échelle réelle (~1 m par tuile).
-    mapping.inputs["Scale"].default_value = (1.0, 1.0, 1.0)
+    mapping.inputs["Scale"].default_value = (1.6, 1.6, 1.6)  # grain à l'échelle réelle
     nt.links.new(texco.outputs["Object"], mapping.inputs["Vector"])
-
-    def box_img(p, noncolor):
-        node = nt.nodes.new("ShaderNodeTexImage")
-        node.image = bpy.data.images.load(p, check_existing=True)
-        if noncolor:
-            node.image.colorspace_settings.name = "Non-Color"
-        node.projection = "BOX"
-        node.projection_blend = 0.2
-        nt.links.new(mapping.outputs["Vector"], node.inputs["Vector"])
-        return node
-
-    diff = box_img(path, False)
-    # HSV : désaturer + éclaircir le placage vers le contreplaqué bouleau PÂLE
-    # réel Dilamco (le PBR ambientCG sort trop chaud/ambré à l'état brut).
+    diff = nt.nodes.new("ShaderNodeTexImage")
+    diff.image = bpy.data.images.load(path, check_existing=True)
+    diff.projection = "BOX"
+    diff.projection_blend = 0.25
+    nt.links.new(mapping.outputs["Vector"], diff.inputs["Vector"])
     hsv = nt.nodes.new("ShaderNodeHueSaturation")
     hsv.inputs["Hue"].default_value = float(CONFIG.get("shelf_hue", 0.5))
-    hsv.inputs["Saturation"].default_value = float(CONFIG.get("shelf_sat", 0.55))
-    hsv.inputs["Value"].default_value = float(CONFIG.get("shelf_val", 1.16))
+    hsv.inputs["Saturation"].default_value = float(CONFIG.get("shelf_sat", 1.0))
+    hsv.inputs["Value"].default_value = float(CONFIG.get("shelf_val", 1.0))
     nt.links.new(diff.outputs["Color"], hsv.inputs["Color"])
     nt.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
-    rough_path = CONFIG.get("shelf_rough") or ""
-    if rough_path and Path(rough_path).is_file():
-        rough = box_img(rough_path, True)
-        remap = nt.nodes.new("ShaderNodeMapRange")
-        remap.inputs["To Min"].default_value = 0.35
-        remap.inputs["To Max"].default_value = 0.62
-        nt.links.new(rough.outputs["Color"], remap.inputs["Value"])
-        nt.links.new(remap.outputs["Result"], bsdf.inputs["Roughness"])
-    nor_path = CONFIG.get("shelf_normal") or ""
-    if nor_path and Path(nor_path).is_file():
-        nor = box_img(nor_path, True)
-        nmap = nt.nodes.new("ShaderNodeNormalMap")
-        nmap.inputs["Strength"].default_value = 0.5
-        nt.links.new(nor.outputs["Color"], nmap.inputs["Color"])
-        nt.links.new(nmap.outputs["Normal"], bsdf.inputs["Normal"])
     nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
-    log("Intérieur/tablettes: set PBR " + Path(path).name)
+    log("Intérieur/tablettes: birch_wood BOX " + Path(path).name)
     return mat
 
 
@@ -823,20 +925,27 @@ def assign_material(obj, mat):
 
 
 def set_geonode_materials(obj, mat):
-    # CABINET_PART meshes get their materials through GeoNodeCutpart modifier
-    # inputs (Input_8..13), not material slots. Swap every Material-typed input.
+    # CABINET_PART meshes get their materials through GeoNode modifier inputs (pas
+    # les slots). On règle CHAQUE input de type NodeSocketMaterial via l'interface
+    # du groupe — Y COMPRIS ceux laissés à None. PIÈGE (boîtes de tiroir blanches) :
+    # GeoNodeDrawerBox expose un input « Material » à None par défaut, et son node
+    # Set Material y est LIÉ → boîte SANS matériau → rendue blanche. L'ancienne
+    # version n'échangeait que les inputs déjà non-None → cet input restait None.
     count = 0
     for mod in obj.modifiers:
-        if mod.type != "NODES":
+        if mod.type != "NODES" or not mod.node_group:
             continue
-        for key in list(mod.keys()):
-            try:
-                val = mod[key]
-            except Exception:
-                continue
-            if isinstance(val, bpy.types.Material):
-                mod[key] = mat
-                count += 1
+        for item in mod.node_group.interface.items_tree:
+            if (
+                getattr(item, "item_type", "") == "SOCKET"
+                and getattr(item, "in_out", "") == "INPUT"
+                and getattr(item, "socket_type", "") == "NodeSocketMaterial"
+            ):
+                try:
+                    mod[item.identifier] = mat
+                    count += 1
+                except Exception:
+                    continue
     return count
 
 
@@ -871,7 +980,8 @@ def normalize_product_materials(cabinet):
     # 2026-07-02). Vaut pour le caisson base micro-ondes (niche ouverte en haut).
     is_microwave = CONFIG.get("category") in ("microwave", "base-microwave-cabinet")
     if is_microwave:
-        interior_mat = build_oak_material() if CONFIG.get("finish_type") == "oak" else white
+        # Niche au fini extérieur (blanc satin pour le blanc ; chêne/navi sinon).
+        interior_mat = white if CONFIG.get("finish_type") == "white" else build_finish_material()
 
     # HB's pull finish materials use metallic=1.0, which mirrors the HDRI sky
     # and reads as stainless instead of matte black. Tame the existing material
@@ -920,10 +1030,12 @@ def normalize_product_materials(cabinet):
         elif "toe" in lname:
             # Same finish as the cabinet: the recess reads through its natural
             # shadow, not through a fake dark paint.
-            finish_mat = build_oak_material() if CONFIG.get("finish_type") == "oak" else white
+            finish_mat = white if CONFIG.get("finish_type") == "white" else build_finish_material()
             swapped = set_geonode_materials(obj, finish_mat)
             log("mat finish <- " + obj.name + " (" + str(swapped) + " geonode inputs)")
-        elif obj.get("IS_FRAMELESS_INTERIOR_PART") or any(k in lname for k in ("shelf", "back", "bottom", "interior", "tray")):
+        elif obj.get("IS_FRAMELESS_INTERIOR_PART") or (
+            "toe" not in lname and any(k in lname for k in ("shelf", "back", "bottom", "interior", "tray", "top"))
+        ):
             # Le DESSOUS du caisson (« Bottom ») rebondit sa couleur sur le
             # toe-kick en retrait → reflet crème sur les caissons blancs
             # (feedback Gabriel 2026-07-01). Invisible portes fermées : on le
@@ -933,7 +1045,17 @@ def normalize_product_materials(cabinet):
                 # Niche micro-ondes : toutes les faces au fini extérieur.
                 assign_material(obj, interior_mat)
             elif CONFIG.get("finish_type") != "oak" and "bottom" in lname:
-                assign_material(obj, white)
+                # Finis peints/mélamine unis (blanc, navi) : le dessous prend le
+                # fini extérieur (évite le rebond crème/érable sur le toe-kick).
+                assign_material(
+                    obj,
+                    white if CONFIG.get("finish_type") == "white" else build_finish_material(),
+                )
+            elif "top" in lname:
+                # DESSUS carcasse = contreplaqué BOULEAU (comme la photo réf. + les
+                # vrais caissons Dilamco : caisson en contreplaqué bouleau russe,
+                # bois visible côtés/fond/dessus). Vaut pour muraux ET bas.
+                assign_material(obj, build_shelf_material())
             elif obj.get("IS_DRAWER_BOX") or "shelf" in lname or "tray" in lname:
                 # Tablettes + boîtes de tiroir = bouleau doré (photo Gabriel).
                 assign_material(obj, build_shelf_material())
@@ -953,30 +1075,30 @@ def normalize_product_materials(cabinet):
             obj.modifiers.new("product weighted normals", "WEIGHTED_NORMAL")
 
     # Injection du matériau dans les geonodes (le shader CabinetWood de HB ignore
-    # nos réglages au rendu headless). Pièces EXTÉRIEURES → fini (chêne/blanc) ;
+    # nos réglages au rendu headless). Pièces EXTÉRIEURES → fini (chêne/navi/blanc) ;
     # pièces INTÉRIEURES (tablettes, fond, dessous, boîtes/plateaux) → érable —
-    # l'intérieur n'est JAMAIS au fini chêne de la façade.
-    finish_mat = (
-        build_oak_material()
-        if CONFIG.get("finish_type") == "oak"
-        else build_white_material()
-    )
+    # l'intérieur n'est JAMAIS au fini de la façade.
+    finish_mat = build_finish_material()
     for obj in cabinet.children_recursive:
         if obj.type != "MESH" or obj.get("IS_GEONODE_CAGE"):
             continue
         if _is_pull(obj):
             continue
         lname = obj.name.lower()
-        is_interior = obj.get("IS_FRAMELESS_INTERIOR_PART") or any(
-            k in lname for k in ("shelf", "back", "bottom", "interior", "tray")
+        is_interior = obj.get("IS_FRAMELESS_INTERIOR_PART") or (
+            "toe" not in lname and any(k in lname for k in ("shelf", "back", "bottom", "interior", "tray", "top"))
         )
         # Mêmes exceptions que plus haut : « Bottom » blanc sur caisson blanc
-        # (reflet crème du toe-kick) ; tablettes/tiroirs = bouleau doré. La niche
-        # micro-ondes fait exception : tout au fini (interior_mat = fini ici).
+        # (reflet crème du toe-kick) ; tablettes/tiroirs + DESSUS carcasse = bouleau
+        # (dessus bois visible d'en haut, comme la photo réf.). La niche micro-ondes
+        # fait exception : tout au fini (interior_mat = fini ici).
         if is_interior and is_microwave:
             inject = interior_mat
         elif is_interior and CONFIG.get("finish_type") != "oak" and "bottom" in lname:
             inject = finish_mat
+        elif is_interior and "top" in lname:
+            # Dessus carcasse = contreplaqué bouleau (muraux ET bas).
+            inject = build_shelf_material()
         elif is_interior and (obj.get("IS_DRAWER_BOX") or "shelf" in lname or "tray" in lname):
             inject = build_shelf_material()
         elif is_interior:
@@ -1001,6 +1123,375 @@ def world_bbox(root):
         Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts))),
         Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts))),
     )
+
+
+def _own_bbox(o):
+    # Bbox monde de l'objet SEUL (sans ses enfants) — contrairement à world_bbox
+    # qui agrège les enfants. Indispensable pour les façades : la boîte de tiroir
+    # (profonde) est enfant de la façade et fausserait son Y arrière.
+    cs = [o.matrix_world @ Vector(c) for c in o.bound_box]
+    return (
+        Vector((min(c.x for c in cs), min(c.y for c in cs), min(c.z for c in cs))),
+        Vector((max(c.x for c in cs), max(c.y for c in cs), max(c.z for c in cs))),
+    )
+
+
+def _frame_slab(name, x0, x1, y0, y1, z0, z1, mat, cabinet):
+    # Petit pavé plein (membre de cadre) parenté au caisson.
+    import bmesh
+    me = bpy.data.meshes.new(name)
+    bm = bmesh.new()
+    for xx in (x0, x1):
+        for yy in (y0, y1):
+            for zz in (z0, z1):
+                bm.verts.new((xx, yy, zz))
+    bmesh.ops.convex_hull(bm, input=bm.verts)
+    bm.to_mesh(me)
+    bm.free()
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.scene.collection.objects.link(ob)
+    ob.data.materials.append(mat)
+    ob.parent = cabinet
+    ob.matrix_parent_inverse = cabinet.matrix_world.inverted()
+    bev = ob.modifiers.new("edge", "BEVEL")
+    bev.width = 0.0008
+    bev.segments = 2
+    bev.use_clamp_overlap = True
+    return ob
+
+
+def add_face_frame(cabinet):
+    # CADRE DE FAÇADE (face frame) — réalité Dilamco (voir mémoire) : cadre 2 po au
+    # FINI EXTÉRIEUR sur le devant de la boîte. Les façades (overlay, plus larges)
+    # s'accotent sur le cadre et le couvrent en fermé ; on le voit à l'ouverture.
+    # Les BOÎTES de tiroir sont rétrécies + recentrées pour PASSER dans l'ouverture
+    # du cadre. Les panneaux séparateurs HB (« Vertical Splitter ») sont masqués
+    # (pas de vrai séparateur entre tiroirs). Tout est piloté par des drivers HB :
+    # on coupe le driver de largeur (Socket_2) et de location des boîtes avant de
+    # figer, sinon HB écrase nos valeurs. À appeler EN DERNIER (après le reste).
+    FW = 0.0508  # largeur montants/traverses (2 po)
+    FT = 0.019   # épaisseur du cadre
+    finish = build_finish_material()
+    bmn, bmx = world_bbox(cabinet)
+    cx = (bmn.x + bmx.x) / 2.0
+    xL, xR = bmn.x, bmx.x
+
+    fronts = []
+    for o in cabinet.children_recursive:
+        if o.type != "MESH" or o.hide_render or _is_pull(o):
+            continue
+        ln = o.name.lower()
+        if "drawer front" in ln or "pullout front" in ln or ln.endswith("door") or " door" in ln:
+            bb0, bb1 = _own_bbox(o)  # bbox propre : sans la boîte enfant (profonde)
+            fronts.append((o, bb0, bb1))
+    if not fronts:
+        log("cadre façade: aucune façade trouvée, ignoré")
+        return
+
+    # Le cadre s'ACCOTE sur le devant de la boîte et est PROUD (en avant du devant
+    # de carcasse), pas embarqué dedans. box_front_y = Y avant des panneaux latéraux.
+    front_back_y = max(bb1.y for (_, bb0, bb1) in fronts)  # dos actuel des façades
+    side_front = [
+        _own_bbox(o)[0].y for o in cabinet.children_recursive
+        if o.type == "MESH" and not o.hide_render and "side" in o.name.lower()
+    ]
+    box_front_y = min(side_front) if side_front else min(bb0.y for (_, bb0, _) in fronts)
+    fy1 = box_front_y            # face arrière du cadre = devant de la boîte
+    fy0 = box_front_y - FT       # face avant du cadre (proud, en avant)
+
+    toe_top = bmn.z
+    for o in cabinet.children_recursive:
+        if o.type == "MESH" and not o.hide_render and "toe" in o.name.lower():
+            toe_top = world_bbox(o)[1].z
+            break
+    zb, zt = toe_top, bmx.z
+    zb1, zt0 = zb + FW, zt - FW
+    xl1, xr0 = xL + FW, xR - FW
+
+    # Contour extérieur
+    _frame_slab("FaceFrame_TopRail", xL, xR, fy0, fy1, zt0, zt, finish, cabinet)
+    _frame_slab("FaceFrame_BotRail", xL, xR, fy0, fy1, zb, zb1, finish, cabinet)
+    _frame_slab("FaceFrame_LStile", xL, xl1, fy0, fy1, zb1, zt0, finish, cabinet)
+    _frame_slab("FaceFrame_RStile", xr0, xR, fy0, fy1, zb1, zt0, finish, cabinet)
+
+    # Traverses (façades empilées) + montants (façades côte à côte), UNIQUEMENT entre
+    # façades ADJACENTES (aucune 3e façade entre les deux dans la même colonne/rangée).
+    def _between_z(a0, a1, b1, exclude):  # y a-t-il une façade entre b (bas) et a (haut) ?
+        for (c, c0, c1) in fronts:
+            if c in exclude:
+                continue
+            if min(a1.x, c1.x) - max(a0.x, c0.x) > 0.05:  # même colonne
+                cz = (c0.z + c1.z) / 2.0
+                if b1.z - 0.02 < cz < a0.z + 0.02:
+                    return True
+        return False
+
+    def _between_x(a0, a1, b1, exclude):  # y a-t-il une façade entre b (gauche) et a (droite) ?
+        for (c, c0, c1) in fronts:
+            if c in exclude:
+                continue
+            if min(a1.z, c1.z) - max(a0.z, c0.z) > 0.05:  # même rangée
+                cxm = (c0.x + c1.x) / 2.0
+                if b1.x - 0.02 < cxm < a0.x + 0.02:
+                    return True
+        return False
+
+    rails_z, stiles_x = set(), set()
+    for (a, a0, a1) in fronts:
+        for (b, b0, b1) in fronts:
+            if a is b:
+                continue
+            xov = min(a1.x, b1.x) - max(a0.x, b0.x)
+            zov = min(a1.z, b1.z) - max(a0.z, b0.z)
+            if xov > 0.05 and a0.z >= b1.z - 0.02 and not _between_z(a0, a1, b1, (a, b)):
+                rails_z.add(round((a0.z + b1.z) / 2.0, 3))
+            if zov > 0.05 and a0.x >= b1.x - 0.02 and not _between_x(a0, a1, b1, (a, b)):
+                stiles_x.add(round((a0.x + b1.x) / 2.0, 3))
+    for i, zc in enumerate(sorted(rails_z)):
+        _frame_slab("FaceFrame_MidRail%d" % i, xl1, xr0, fy0, fy1, zc - FW / 2, zc + FW / 2, finish, cabinet)
+    for i, xc2 in enumerate(sorted(stiles_x)):
+        _frame_slab("FaceFrame_MidStile%d" % i, xc2 - FW / 2, xc2 + FW / 2, fy0, fy1, zb1, zt0, finish, cabinet)
+    log("cadre façade: contour + " + str(len(rails_z)) + " traverse(s) + " + str(len(stiles_x)) + " montant(s)")
+
+    # Panneaux séparateurs de tiroirs : masqués (pas de vrai splitter)
+    for o in cabinet.children_recursive:
+        if o.type == "MESH" and o.name.lower().startswith("vertical splitter"):
+            o.hide_render = True
+            o.hide_viewport = True
+
+    # --- BOÎTES : rétrécir (X) + raccourcir (Z) pour passer dans l'ouverture du cadre,
+    # puis recentrer dans l'ouverture (X et Z). Les ouvertures verticales = espaces
+    # entre traverses consécutives. Largeur/hauteur/position = drivers HB -> on coupe.
+    rail_ranges = [(zb, zb1), (zt0, zt)]
+    for zc in rails_z:
+        rail_ranges.append((zc - FW / 2.0, zc + FW / 2.0))
+    rail_ranges.sort()
+    openings_z = [(rail_ranges[i][1], rail_ranges[i + 1][0]) for i in range(len(rail_ranges) - 1)]
+
+    box_w = max(0.12, (xr0 - xl1) - 0.014)  # ~7 mm de jeu par côté
+    clr_z = 0.012                            # jeu vertical total dans l'ouverture
+    boxes = [
+        o for o in cabinet.children_recursive
+        if o.type == "MESH" and "drawer box" in o.name.lower()
+    ]
+    dg = bpy.context.evaluated_depsgraph_get()
+    targets = []
+    for o in boxes:
+        ev = o.evaluated_get(dg)
+        me = ev.to_mesh()
+        zs = [(o.matrix_world @ v.co).z for v in me.vertices]
+        ev.to_mesh_clear()
+        bcz = (min(zs) + max(zs)) / 2.0 if zs else 0.0
+        op = None
+        for (z0, z1) in openings_z:
+            if z0 - 0.03 <= bcz <= z1 + 0.03:
+                op = (z0, z1)
+                break
+        ad = o.animation_data
+        if ad:
+            for d in list(ad.drivers):
+                if (d.data_path.endswith('["Socket_2"]') or d.data_path.endswith('["Socket_4"]')
+                        or d.data_path == "location"):
+                    ad.drivers.remove(d)
+        for mod in o.modifiers:
+            if mod.type == "NODES" and mod.node_group:
+                try:
+                    mod["Socket_2"] = box_w
+                    if op:
+                        mod["Socket_4"] = max(0.05, (op[1] - op[0]) - clr_z)
+                except Exception:
+                    pass
+        # dé-parenter (transform monde conservé) -> déplaçable de façon fiable
+        world = o.matrix_world.copy()
+        o.parent = None
+        o.matrix_world = world
+        targets.append((o, (op[0] + op[1]) / 2.0 if op else bcz))
+    for (o, tz) in targets:
+        bpy.context.view_layer.update()
+        dg = bpy.context.evaluated_depsgraph_get()
+        ev = o.evaluated_get(dg)
+        me = ev.to_mesh()
+        xs = [(o.matrix_world @ v.co).x for v in me.vertices]
+        zs = [(o.matrix_world @ v.co).z for v in me.vertices]
+        ev.to_mesh_clear()
+        if xs:
+            o.location.x += cx - (min(xs) + max(xs)) / 2.0
+            o.location.z += tz - (min(zs) + max(zs)) / 2.0
+    bpy.context.view_layer.update()
+
+    # --- FAÇADES avancées pour s'accoter sur le cadre proud (dos juste devant fy0).
+    # Elles sont pilotées par des drivers de location -> on les coupe puis on décale.
+    front_shift = (fy0 - 0.002) - front_back_y
+    for (o, _, _) in fronts:
+        ad = o.animation_data
+        if ad:
+            for d in list(ad.drivers):
+                if d.data_path == "location":
+                    ad.drivers.remove(d)
+        world = o.matrix_world.copy()
+        o.parent = None
+        o.matrix_world = Matrix.Translation(Vector((0.0, front_shift, 0.0))) @ world
+    bpy.context.view_layer.update()
+
+    n = len(boxes)
+    if n:
+        log("cadre façade: " + str(n) + " boîte(s) ajustée(s) (larg " + str(round(box_w, 3))
+            + ", hauteur par ouverture) + façades avancées de " + str(round(front_shift, 3)) + " m")
+
+
+def fix_stretchers(cabinet):
+    # Réalité Dilamco : les caissons n'ont QU'UNE traverse AVANT (pas de traverse
+    # arrière — le panneau de fond suffit), et cette traverse avant est en
+    # contreplaqué BOULEAU (structure de carcasse, pas peinte au fini). HB génère
+    # une traverse avant ET arrière, l'avant en blanc → on masque l'arrière et on
+    # passe l'avant en bouleau.
+    birch = build_shelf_material()
+    # SUPPRESSION (pas hide_render) de la traverse arrière : un handler HB réinitialise
+    # hide_render lors de l'apply des geonodes → il faut la retirer définitivement.
+    # D'où l'appel EN DERNIER dans run_one (après apply_birch_interior).
+    to_remove = []
+    for o in list(cabinet.children_recursive):
+        if o.type != "MESH":
+            continue
+        ln = o.name.lower()
+        if "stretcher" not in ln:
+            continue
+        if "back" in ln:
+            to_remove.append(o)
+        else:
+            set_geonode_materials(o, birch)
+            assign_material(o, birch)
+            log("traverse avant -> bouleau: " + o.name)
+    for o in to_remove:
+        log("traverse arrière supprimée: " + o.name)
+        bpy.data.objects.remove(o, do_unlink=True)
+
+
+def build_chant_plies_material():
+    # PLIS de contreplaqué pour la TRANCHE DU DESSUS des côtés (le « chant ») — allure
+    # pro + réalité produit (Gabriel, réf. chant-panneau.jpg). La VRAIE photo bouleau
+    # russe recadrée (quelques plis nets + léger flou = chant_tile.png), projetée en
+    # BOX ESPACE MONDE. CLÉ (Gabriel avait raison) : le mapping Generated étirait la
+    # tuile ~10x le long de la profondeur -> aliasing/stries verdâtres. En BOX à taille
+    # réelle (pas d'étirement), les plis rendent PROPRES, même à l'échelle packshot.
+    name = "Dilamco_Chant_Plies"
+    m = bpy.data.materials.get(name)
+    if m:
+        return m
+    m = bpy.data.materials.new(name)
+    m.use_nodes = True
+    nt = m.node_tree
+    for nd in list(nt.nodes):
+        nt.nodes.remove(nd)
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
+    bsdf.inputs["Roughness"].default_value = 0.8
+    nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
+    # ======================================================================
+    # LARGEUR DES PLIS DU CHANT — RÉGLE ICI :
+    #   CHANT_PLY_SCALE : PLUS PETIT = plis PLUS LARGES (moins de plis).
+    #   Essaie 3 (très larges) … 12 (fins). Défaut 6.
+    CHANT_PLY_SCALE = 2.5
+    # ======================================================================
+    path = CONFIG.get("chant_tile") or ""
+    if path and Path(path).is_file():
+        img = bpy.data.images.load(path, check_existing=True)
+        tc = nt.nodes.new("ShaderNodeTexCoord")
+        mp = nt.nodes.new("ShaderNodeMapping")
+        # BOX espace Object (PAS Generated, qui étire -> aliase). Rotation 90° pour que
+        # les plis courent SUR LE LONG de l'arête. La largeur des plis = CHANT_PLY_SCALE.
+        mp.inputs["Rotation"].default_value = (0.0, 0.0, math.radians(90.0))
+        mp.inputs["Scale"].default_value = (3.0, CHANT_PLY_SCALE, CHANT_PLY_SCALE)
+        nt.links.new(tc.outputs["Object"], mp.inputs["Vector"])
+        tex = nt.nodes.new("ShaderNodeTexImage")
+        tex.image = img
+        tex.projection = "BOX"
+        tex.projection_blend = 0.3
+        tex.extension = "REPEAT"
+        tex.interpolation = "Cubic"
+        nt.links.new(mp.outputs["Vector"], tex.inputs["Vector"])
+        # birch_plywood_side.png est déjà propre/chaud -> pas de correction couleur.
+        nt.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+    else:
+        bsdf.inputs["Base Color"].default_value = (0.74, 0.62, 0.44, 1)  # fallback bouleau uni
+    return m
+
+
+def apply_birch_interior(cabinet):
+    # Faces INTÉRIEURES de la carcasse en contreplaqué BOULEAU, face EXTÉRIEURE au
+    # fini. Réalité Dilamco (photo Gabriel) : caisson en contreplaqué bouleau,
+    # extérieur peint/mélaminé, intérieur bois brut — visible par le dessus ouvert
+    # des caissons du bas (et portes ouvertes). Avant : côtés + plancher blancs à
+    # l'intérieur (incohérent avec fond/tablettes déjà en bouleau).
+    # Les panneaux sont des geonodes (mesh vide) : on APPLIQUE le modifier en mesh
+    # puis on ré-assigne la face tournée vers le CENTRE du caisson (côtés) ou la
+    # face du DESSUS (plancher) au bouleau ; l'extérieur reste au fini.
+    birch = build_shelf_material()
+    bmn, bmx = world_bbox(cabinet)
+    cx = (bmn.x + bmx.x) / 2.0
+    parts = [
+        o for o in cabinet.children_recursive
+        if o.type == "MESH" and not o.hide_render and not _is_pull(o)
+        and ("side" in o.name.lower() or "bottom" in o.name.lower()
+             or ("back" in o.name.lower() and "stretcher" not in o.name.lower()))
+    ]
+    for s in parts:
+        bb0, bb1 = world_bbox(s)
+        ln_s = s.name.lower()
+        is_side = "side" in ln_s
+        is_back = "back" in ln_s  # panneau de fond (le back stretcher est exclu du filtre)
+        if is_side and (bb1.x - bb0.x) > 0.06:
+            continue  # pas un panneau latéral mince (ex. faux montant large)
+        bpy.context.view_layer.objects.active = s
+        s.select_set(True)
+        for m in list(s.modifiers):
+            if m.type == "NODES":
+                try:
+                    bpy.ops.object.modifier_apply(modifier=m.name)
+                except Exception as exc:
+                    log("intérieur: modifier_apply KO sur " + s.name + " : " + str(exc))
+        s.select_set(False)
+        me = s.data
+        if not me.polygons:
+            continue
+        if birch.name not in [m.name for m in me.materials if m]:
+            me.materials.append(birch)
+        bidx = [i for i, m in enumerate(me.materials) if m and m.name == birch.name][0]
+        mw = s.matrix_world
+        n = 0
+        if is_side:
+            # Dessus des côtés = PLIS de contreplaqué (chant) ; intérieur = bouleau plat.
+            plies = build_chant_plies_material()
+            if plies.name not in [m.name for m in me.materials if m]:
+                me.materials.append(plies)
+            pidx = [i for i, m in enumerate(me.materials) if m and m.name == plies.name][0]
+            scx = (bb0.x + bb1.x) / 2.0
+            inward = 1.0 if scx < cx else -1.0  # normale intérieure pointe vers le centre
+            for p in me.polygons:
+                nrm = mw.to_3x3() @ p.normal
+                if nrm.z > 0.5:            # DESSUS = plis (chant)
+                    p.material_index = pidx
+                    n += 1
+                elif nrm.x * inward > 0.5:  # INTÉRIEUR = bouleau plat
+                    p.material_index = bidx
+                    n += 1
+        elif is_back:
+            # Dessus du panneau ARRIÈRE = PLIS de contreplaqué (chant), comme les côtés ;
+            # le reste du panneau garde son bouleau.
+            plies = build_chant_plies_material()
+            if plies.name not in [m.name for m in me.materials if m]:
+                me.materials.append(plies)
+            pidx = [i for i, m in enumerate(me.materials) if m and m.name == plies.name][0]
+            for p in me.polygons:
+                if (mw.to_3x3() @ p.normal).z > 0.5:  # DESSUS = plis (chant)
+                    p.material_index = pidx
+                    n += 1
+        else:  # plancher : face du DESSUS (intérieur) ; dessous garde le fini
+            for p in me.polygons:
+                if (mw.to_3x3() @ p.normal).z > 0.5:
+                    p.material_index = bidx
+                    n += 1
+        log("intérieur bouleau: " + s.name + " -> " + str(n) + " face(s)")
 
 
 def setup_shadow_catcher_floor(cabinet):
@@ -1102,13 +1593,13 @@ def setup_camera(cabinet):
     # Vue à 15° de lacet : la façade domine, le côté donne le volume. Caméra
     # sous le dessus du caisson pour cacher la carcasse ouverte des modules du bas.
     # Angle de vue surchargeable (showcase multi-angles) ; défaut = 3/4 avant-droit.
-    direction = Vector(CONFIG.get("cam_dir", (0.415, -1.55, 0.14))).normalized()
+    # Vue 3/4 PLONGEANTE (~17° au-dessus de l'horizon, comme les photos produit
+    # pro) : on voit le DESSUS bouleau + les façades, et la lumière rasante creuse
+    # l'ombre du renfoncement shaker (portes plus nettes). z=0.42 → élévation ~15°.
+    direction = Vector(CONFIG.get("cam_dir", (0.415, -1.55, 0.42))).normalized()
     loc = target + direction * distance
-    # Plafonner la hauteur caméra JUSTE SOUS le dessus du caisson (caissons COURTS
-    # ET PROFONDS type dessus-frigo : sinon on plonge sur un grand dessus blanc qui
-    # se fond). Pas pour les très hauts (on les veut centrés, vue façade).
-    if not tall:
-        loc.z = min(loc.z, bmax.z - size.z * 0.12)
+    # (Plus de plafond caméra : le dessus est maintenant BOULEAU, il ne se fond
+    # plus dans le fond clair — on peut/veut le montrer d'en haut.)
 
     bpy.ops.object.camera_add(location=loc)
     cam = bpy.context.object
@@ -1168,8 +1659,12 @@ def setup_lighting(cabinet=None):
     # on VISE SON CENTRE — sinon la key/rim n'arrosent que le bas et les portes
     # du haut ressortent grises (mesure : 207 vs 220 pour une murale). L'énergie
     # est aussi remontée (le caisson est bien plus loin de la lampe).
+    # Hiérarchie voulue (feedback Gabriel 2026-07-03) : la FAÇADE est la face la
+    # plus claire, le côté légèrement plus sombre (avant : façade 212 vs côté 228,
+    # inversé). Recette : key frontale seule (le rim est SUPPRIMÉ — il rasait le
+    # panneau +X) + drapeau noir côté +X (bloc plus bas).
     key_z = 0.50
-    key_energy, rim_energy = 35.0, 25.0
+    key_energy = float(CONFIG.get("key_energy", 30.0))
     if cabinet is not None:
         bmin, bmax = world_bbox(cabinet)
         s = bmax - bmin
@@ -1182,15 +1677,21 @@ def setup_lighting(cabinet=None):
             key_z = (bmin.z + bmax.z) / 2.0
             boost = max(1.0, min(1.6, 1.25 / horiz))
             key_energy *= boost
-            rim_energy *= boost
     area("Key_Soft", (-1.5, -1.1, 2.3), key_energy, 1.8, target=(0.0, 0.0, key_z), cast_shadow=False)
-    # Rim réduit (70 → 25) : à 70 il arrosait le panneau latéral +X qui montait
-    # à la luminance du fond du site (~241) — caisson illisible sur la fiche.
-    area("Rim_Edge", (1.5, 1.3, 2.5), rim_energy, 0.9, target=(0.1, 0.0, key_z + 0.10), cast_shadow=False)
+    # PAS de rim : il rasait le panneau latéral +X et l'éclaircissait au-dessus
+    # de la façade — hiérarchie inversée sur TOUS les finis (feedback Gabriel
+    # 2026-07-03). La façade est éclairée par la key ; le côté est assombri par
+    # le drapeau ci-dessous.
     # PAS de lampe d'appoint sur le toe-kick : toute lampe assez forte pour
     # neutraliser le reflet crème délave aussi le tiroir du bas (vérifié sur la
     # fiche produit — bas du caisson « glow »). Le reflet est réglé À LA SOURCE
     # dans normalize_product_materials (dessous du caisson blanc, pas érable).
+
+    # NB : le seul drapeau négatif est l'historique `setup_negative_fill` (dégradé
+    # radial, appelé dans le flux de rendu). Un DEUXIÈME drapeau noir opaque a été
+    # essayé ici (2026-07-03) pour assombrir le côté : il bloque le GI du HDRI et
+    # assombrit TOUT le caisson (blanc gris L181, navi noir) — rejeté. La
+    # hiérarchie façade>côté se règle par la ROTATION du HDRI (270°) + key seule.
 
 
 def configure_render():
@@ -1311,7 +1812,7 @@ def build_pullout_cabinet():
     W = float(CONFIG["width_m"])
     H = float(CONFIG["height_m"])
     D = float(CONFIG["depth_m"])
-    finish = build_oak_material() if CONFIG.get("finish_type") == "oak" else build_white_material()
+    finish = build_finish_material()
     black = material("Dilamco_Product_Matte_Black_Pull", (0.015, 0.015, 0.015, 1), 0.80, 0.0, specular=0.05)
     t = 0.0175
     tkh = 0.1143      # toe-kick 4.5 po (caisson BASE)
@@ -1319,7 +1820,7 @@ def build_pullout_cabinet():
     # Carcasse : côtés pleine hauteur jusqu'au sol, fond/bas surélevés au-dessus
     # du toe-kick, panneau de toe-kick reculé à l'avant-bas.
     root = _flat_box("PO_Bottom", (W, D, t), (0.0, 0.0, tkh + t / 2.0), finish)
-    _flat_box("PO_Top", (W, D, t), (0.0, 0.0, H - t / 2.0), finish, parent=root)
+    _flat_box("PO_Top", (W, D, t), (0.0, 0.0, H - t / 2.0), build_shelf_material(), parent=root)
     _flat_box("PO_Left", (t, D, H), (-W / 2.0 + t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("PO_Right", (t, D, H), (W / 2.0 - t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("PO_Back", (W - 2.0 * t, t, H - tkh), (0.0, D / 2.0 - t / 2.0, tkh + (H - tkh) / 2.0), finish, parent=root)
@@ -1345,7 +1846,7 @@ def build_microwave_cabinet():
     W = float(CONFIG["width_m"])
     H = float(CONFIG["height_m"])
     D = float(CONFIG["depth_m"])
-    finish = build_oak_material() if CONFIG.get("finish_type") == "oak" else build_white_material()
+    finish = build_finish_material()
     # NICHE MICRO-ONDES = au FINI EXTÉRIEUR (renfoncement d'électro fini mélamine) :
     # caisson blanc → niche BLANCHE ; caisson chêne → niche chêne (précision Gabriel
     # 2026-07-02). Ce n'est PAS un intérieur brut bouleau (≠ tablettes/coin aveugle).
@@ -1356,7 +1857,7 @@ def build_microwave_cabinet():
     # s'insèrent ENTRE eux (largeur W-2t). Évite le chevauchement côté/bas aux
     # coins z[0,t] (qui créait une poche d'AO = petit carré gris au coin avant).
     root = _flat_box("MW_Bottom", (W - 2.0 * t, D, t), (0.0, 0.0, t / 2.0), finish)
-    _flat_box("MW_Top", (W - 2.0 * t, D, t), (0.0, 0.0, H - t / 2.0), finish, parent=root)
+    _flat_box("MW_Top", (W - 2.0 * t, D, t), (0.0, 0.0, H - t / 2.0), build_shelf_material(), parent=root)
     _flat_box("MW_Left", (t, D, H), (-W / 2.0 + t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("MW_Right", (t, D, H), (W / 2.0 - t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("MW_Back", (W - 2.0 * t, t, H), (0.0, D / 2.0 - t / 2.0, H / 2.0), finish, parent=root)
@@ -1414,11 +1915,7 @@ def build_flat_panel():
     width = float(CONFIG["width_m"])
     height = float(CONFIG["height_m"])
     thickness = float(CONFIG["depth_m"])
-    finish_mat = (
-        build_oak_material()
-        if CONFIG.get("finish_type") == "oak"
-        else build_white_material()
-    )
+    finish_mat = build_finish_material()
 
     if CONFIG.get("flat_style") == "shaker":
         # Porte shaker 5 pièces : 2 montants + 2 traverses + panneau encastré.
@@ -1477,7 +1974,7 @@ def add_shaker_frame_to_pullouts(cabinet):
     fronts = [o for o in cabinet.children_recursive if o.get("IS_PULLOUT_FRONT")]
     if not fronts:
         return
-    finish_mat = build_oak_material() if CONFIG.get("finish_type") == "oak" else build_white_material()
+    finish_mat = build_finish_material()
     deps = bpy.context.evaluated_depsgraph_get()
     for front in fronts:
         ev = front.evaluated_get(deps)
@@ -1583,7 +2080,7 @@ def build_blind_corner_cabinet():
     H = float(CONFIG["height_m"])
     D = float(CONFIG["depth_m"])
     is_base = CONFIG.get("cabinet_type") == "BASE"
-    finish = build_oak_material() if CONFIG.get("finish_type") == "oak" else build_white_material()
+    finish = build_finish_material()
     # Intérieur = TOUJOURS érable/bouleau naturel (réalité Dilamco, blanc ET chêne).
     interior_mat = build_maple_interior()
     black = material("Dilamco_Product_Matte_Black_Pull", (0.015, 0.015, 0.015, 1), 0.80, 0.0, specular=0.05)
@@ -1607,7 +2104,7 @@ def build_blind_corner_cabinet():
         interior_mat,
         parent=root,
     )
-    _flat_box("BC_Top", (W - 2.0 * t, D, t), (0.0, 0.0, H - t / 2.0), finish, parent=root)
+    _flat_box("BC_Top", (W - 2.0 * t, D, t), (0.0, 0.0, H - t / 2.0), build_shelf_material(), parent=root)
     _flat_box("BC_Left", (t, D, H), (-W / 2.0 + t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("BC_Right", (t, D, H), (W / 2.0 - t / 2.0, 0.0, H / 2.0), finish, parent=root)
     _flat_box("BC_Back", (W - 2.0 * t, t, H - tkh), (0.0, D / 2.0 - t / 2.0, tkh + (H - tkh) / 2.0), interior_mat, parent=root)
@@ -1716,11 +2213,7 @@ def run_one(main_scene):
             fill.dimensions = (fill_w, depth, height)
             fill.parent = cabinet
             fill.matrix_parent_inverse = cabinet.matrix_world.inverted()
-            finish_mat = (
-                build_oak_material()
-                if CONFIG.get("finish_type") == "oak"
-                else build_white_material()
-            )
+            finish_mat = build_finish_material()
             assign_material(fill, finish_mat)
             bevel = fill.modifiers.new("edge radius", "BEVEL")
             bevel.width = 0.0012
@@ -1745,11 +2238,23 @@ def run_one(main_scene):
     # EN DERNIER (après run_calc_fix, qui remet hide_render=False sur les objets
     # HB) : pas de quincaillerie sur les packshots (préférence Gabriel 2026-07-01).
     hide_all_pulls()
+    apply_birch_interior(cabinet)
+    fix_stretchers(cabinet)  # après apply_birch_interior : la suppression du back
+    # stretcher doit survivre au handler HB déclenché par l'apply des geonodes.
+    add_face_frame(cabinet)  # EN DERNIER : cadre + boîtes rétrécies (coupe des drivers
+    # HB) ; rien après ne doit re-déclencher un recalc HB qui les écraserait.
     setup_shadow_catcher_floor(cabinet)
     setup_negative_fill(cabinet)
     setup_lighting(cabinet)
     setup_camera(cabinet)
     configure_render()
+
+    if CONFIG.get("save_blend"):
+        # Sauvegarde de la scène montée (caisson + matériaux + lumière + caméra)
+        # pour itérer visuellement dans Blender au lieu du rendu headless.
+        bpy.ops.wm.save_as_mainfile(filepath=CONFIG["save_blend"])
+        log("Saved blend " + CONFIG["save_blend"])
+        return
 
     bpy.ops.render.render(write_still=True)
     if not Path(CONFIG["output"]).exists():
@@ -1865,12 +2370,31 @@ def build_parser() -> argparse.ArgumentParser:
         help="profil de porte (largeur du rail shaker) : shaker-1 (1 po) ou shaker-3 (3 po)",
     )
     parser.add_argument(
+        "--finish",
+        choices=["auto"] + sorted(FINISH_VARIANTS),
+        default="auto",
+        help="fini : auto (déduit du code : blanc, ou chêne si -muf) ou un fini "
+        "alternatif (navi = mélamine bleu marine, caissons du bas seulement)",
+    )
+    parser.add_argument("--navi-scale", type=float, default=1.4,
+                        help="échelle du box-mapping de l'échantillon navi")
+    parser.add_argument("--navi-sat", type=float, default=1.0, help="saturation navi (1=natif)")
+    parser.add_argument("--navi-val", type=float, default=1.0, help="luminosité navi (1=natif)")
+    parser.add_argument("--navi-hue", type=float, default=0.5, help="teinte navi (0.5=neutre)")
+    parser.add_argument(
         "--hdri",
         type=str,
         default="studio_kontrast_03_2k.exr",
         help="nom du fichier HDRI dans pipeline/hdris/ (défaut: studio_kontrast_03)",
     )
     parser.add_argument("--hdri-strength", type=float, default=1.0)
+    # 270° : softbox principal FACE au caisson → façade = face la plus claire,
+    # côté +X en retrait (feedback Gabriel 2026-07-03). L'ancien 235° éclairait
+    # le côté plus que la façade (hiérarchie inversée, blanc ET navi).
+    parser.add_argument("--hdri-rotation", type=float, default=270.0,
+                        help="rotation Z du HDRI en degrés (oriente le softbox principal)")
+    parser.add_argument("--key-energy", type=float, default=30.0,
+                        help="énergie de la key frontale (W)")
     parser.add_argument("--exposure", type=float, default=-0.1)
     parser.add_argument("--oak-set", type=str, default="real",
                         help="'real' = swatch photo Chêne blanc Dilamco ; sinon dossier PBR ambientCG (Wood050, Wood095)")
@@ -1885,9 +2409,9 @@ def build_parser() -> argparse.ArgumentParser:
     # matcher le contreplaqué pâle réel Dilamco (photo salle de montre).
     parser.add_argument("--shelf-set", type=str, default="Wood021",
                         help="dossier PBR ambientCG de l'intérieur (Wood021, Wood095, ...)")
-    parser.add_argument("--shelf-sat", type=float, default=0.82,
+    parser.add_argument("--shelf-sat", type=float, default=1.0,
                         help="saturation de l'intérieur (1=natif ; <1 = plus pâle)")
-    parser.add_argument("--shelf-val", type=float, default=0.98,
+    parser.add_argument("--shelf-val", type=float, default=1.0,
                         help="luminosité de l'intérieur (>1 = plus clair)")
     parser.add_argument("--shelf-hue", type=float, default=0.5,
                         help="teinte de l'intérieur (0.5=neutre)")
@@ -1898,6 +2422,21 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     product = load_product(args.catalog, args.product_code)
     hb_config = infer_hb_config(product)
+    # Fini alternatif forcé (--finish navi) : par-dessus le même code catalogue.
+    # Interdit sur les codes -muf (le chêne EST déjà un fini) ; averti hors des
+    # catégories qui l'offrent (rendu de test permis, batch borné lui).
+    if args.finish != "auto":
+        spec = FINISH_VARIANTS[args.finish]
+        if hb_config.get("finish_type") == "oak":
+            raise SystemExit(f"--finish {args.finish} interdit sur un code chêne (-muf)")
+        if not str(hb_config.get("category") or "").startswith(spec["category_prefixes"]):
+            print(
+                f"[render_product_cabinet.py] AVERTISSEMENT : {hb_config['code']} "
+                f"({hb_config.get('category')}) n'offre pas le fini {args.finish} au catalogue",
+                file=sys.stderr,
+            )
+        hb_config["finish"] = spec["finish_label"]
+        hb_config["finish_type"] = spec["finish_type"]
     hdri = REPO_ROOT / "hdris" / args.hdri
     if not hdri.is_file():
         hdri = REPO_ROOT / "hdris" / "brown_photostudio_02_2k.exr"
@@ -1919,10 +2458,11 @@ def main(argv: list[str] | None = None) -> int:
         oak_rough = REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"
     white_rough = REPO_ROOT / "textures" / "laminate_floor_02_rough_2k.jpg"
     white_nor = REPO_ROOT / "textures" / "laminate_floor_02_nor_gl_2k.jpg"
-    # Intérieur (contreplaqué bouleau) : set PBR ambientCG choisi (défaut Wood021).
+    # Intérieur (contreplaqué bouleau) : birch_wood.png (bouleau pâle propre, 2026-07-05).
+    # build_shelf_material n'utilise plus rough/normal ; ces chemins restent pour compat.
     shelf_dir = REPO_ROOT / "textures" / f"{args.shelf_set}_acg"
     shelf_pref = f"{args.shelf_set}_2K-JPG"
-    shelf_diff = shelf_dir / f"{shelf_pref}_Color.jpg"
+    shelf_diff = REPO_ROOT / "textures" / "birch_wood.png"
     shelf_rough = shelf_dir / f"{shelf_pref}_Roughness.jpg"
     shelf_normal = shelf_dir / f"{shelf_pref}_NormalGL.jpg"
     if not shelf_diff.is_file():  # repli sur l'ancien set si le dossier manque
@@ -1938,7 +2478,8 @@ def main(argv: list[str] | None = None) -> int:
             "resolution": [args.resolution, args.resolution],
             "hdri": str(hdri) if hdri.is_file() else "",
             "hdri_strength": args.hdri_strength,
-            "hdri_rotation_deg": 235.0,
+            "hdri_rotation_deg": args.hdri_rotation,
+            "key_energy": args.key_energy,
             "exposure": args.exposure,
             "oak_diff": str(oak_diff),
             "oak_rough": str(oak_rough),
@@ -1951,12 +2492,19 @@ def main(argv: list[str] | None = None) -> int:
             "material_lib": str(REPO_ROOT / "materials" / "dilamco_materials.blend"),
             "white_rough": str(white_rough),
             "white_nor": str(white_nor) if white_nor.is_file() else "",
+            # Navi : échantillon photo réel (albédo) + leviers de calibration.
+            "navi_diff": str(REPO_ROOT / "textures" / "navi_real_flat.png"),
+            "navi_scale": args.navi_scale,
+            "navi_sat": args.navi_sat,
+            "navi_val": args.navi_val,
+            "navi_hue": args.navi_hue,
             "shelf_diff": str(shelf_diff),
             "shelf_rough": str(shelf_rough),
             "shelf_normal": str(shelf_normal),
             "shelf_sat": args.shelf_sat,
             "shelf_val": args.shelf_val,
             "shelf_hue": args.shelf_hue,
+            "chant_tile": str(REPO_ROOT / "textures" / "birch_plywood_side.png"),
         }
     )
 

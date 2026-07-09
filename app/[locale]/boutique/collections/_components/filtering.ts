@@ -6,7 +6,7 @@ import { getDescendantSlugs } from "@/lib/shop/catalog-categories";
 import { models, modelForVariantCode } from "@/lib/shop/models";
 import type { Product } from "@/lib/shop/types";
 
-export const FINISH_VALUES = ["blanc", "chene"] as const;
+export const FINISH_VALUES = ["blanc", "chene", "navi"] as const;
 export type FinishKey = (typeof FINISH_VALUES)[number];
 
 /**

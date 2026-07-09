@@ -17,6 +17,7 @@ import { SORT_VALUES } from "./types";
 export const FINISH_LABELS: Record<FinishKey, string> = {
   blanc: "Blanc Pur",
   chene: "Chêne blanc",
+  navi: "Navi",
 };
 
 /**
@@ -50,9 +51,12 @@ export function useCatalogFacets(scope?: CatalogScope) {
     const pool = applyFilters(base, state, "finish");
     // Model-aware : un meuble compte pour « chêne » s'il a une variante chêne
     // (la grille est dédupliquée au modèle, le code canonique est non-muf).
-    const blanc = pool.filter((p) => productHasFinish(p, "blanc")).length;
-    const chene = pool.filter((p) => productHasFinish(p, "chene")).length;
-    return { blanc, chene };
+    return Object.fromEntries(
+      FINISH_VALUES.map((f) => [
+        f,
+        pool.filter((p) => productHasFinish(p, f)).length,
+      ]),
+    ) as Record<FinishKey, number>;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [base, q, width]);
 

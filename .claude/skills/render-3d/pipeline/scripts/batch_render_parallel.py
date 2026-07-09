@@ -29,6 +29,7 @@ from pathlib import Path
 from render_product_cabinet import (
     DEFAULT_PROFILE,
     DOOR_PROFILES,
+    FINISH_VARIANTS,
     FLAT_CATEGORIES,
     QUALITY_SAMPLES,
     RENDERABLE_CATEGORIES,
@@ -70,7 +71,10 @@ def texture_paths() -> dict:
     return {
         "hdri": str(hdri) if hdri.is_file() else "",
         "hdri_strength": 1.0,
-        "hdri_rotation_deg": 235.0,
+        # 270° = softbox principal FACE au caisson (façade la plus claire, côté
+        # en retrait — feedback Gabriel 2026-07-03). Garder aligné avec le
+        # défaut --hdri-rotation de render_product_cabinet.build_parser.
+        "hdri_rotation_deg": 270.0,
         "material_lib": str(REPO_ROOT / "materials" / "dilamco_materials.blend"),
         "oak_diff": str(REPO_ROOT / "textures" / "oak_veneer_01_diff_2k.jpg"),
         "oak_rough": str(REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"),
@@ -80,12 +84,16 @@ def texture_paths() -> dict:
         # ajusté pour matcher le contreplaqué réel Dilamco (photo salle de montre).
         # Wood095 (ancien) sortait trop ambré/orangé. Garder aligné avec les
         # défauts --shelf-* de render_product_cabinet.build_parser.
-        "shelf_diff": str(REPO_ROOT / "textures" / "Wood021_acg" / "Wood021_2K-JPG_Color.jpg"),
-        "shelf_rough": str(REPO_ROOT / "textures" / "Wood021_acg" / "Wood021_2K-JPG_Roughness.jpg"),
-        "shelf_normal": str(REPO_ROOT / "textures" / "Wood021_acg" / "Wood021_2K-JPG_NormalGL.jpg"),
-        "shelf_sat": 0.82,
-        "shelf_val": 0.98,
+        # Intérieur = birch_wood.png (contreplaqué bouleau pâle propre, 2026-07-05).
+        "shelf_diff": str(REPO_ROOT / "textures" / "birch_wood.png"),
+        "shelf_sat": 1.0,
+        "shelf_val": 1.0,
         "shelf_hue": 0.5,
+        # Chant (plis du dessus des côtés) : crop propre de la photo bouleau russe.
+        "chant_tile": str(REPO_ROOT / "textures" / "birch_plywood_side.png"),
+        # Navi : échantillon photo réel (défauts alignés sur render_product_cabinet).
+        "navi_diff": str(REPO_ROOT / "textures" / "navi_real_flat.png"),
+        "navi_scale": 1.4,
     }
 
 
@@ -160,14 +168,18 @@ def rebuild_manifest(catalog: dict, out_dir: Path, manifest_path: Path) -> int:
         # ainsi que la vue `technique` si elle existe.
         entry = products.get(code, {})
         had_any = False
-        for prof, spec in DOOR_PROFILES.items():
+        # Vues par PROFIL de porte (face, face@shaker-3) puis par FINI alternatif
+        # (face@navi) : même mécanique fichier-présent → vue, fichier-disparu →
+        # vue élaguée. Un batch d'un profil/fini ne clobbe jamais les autres vues.
+        views_specs = list(DOOR_PROFILES.values()) + list(FINISH_VARIANTS.values())
+        for spec in views_specs:
             view = spec["manifest_view"]
             webp = out_dir / f"{slug}{spec['slug_suffix']}_face.webp"
             if webp.is_file():
                 entry[view] = f"/assets/products/renders/{slug}{spec['slug_suffix']}_face.webp"
                 had_any = True
             elif view in entry:
-                # Fichier disparu pour ce profil : retirer la vue obsolète.
+                # Fichier disparu pour cette vue : retirer l'entrée obsolète.
                 del entry[view]
         if had_any:
             products[code] = entry
@@ -208,11 +220,21 @@ def main(argv: list[str] | None = None) -> int:
         help="profil de porte : shaker-1 (1 po, défaut) ou shaker-3 (3 po). "
         "Les profils non-défaut ne s'appliquent qu'au Blanc Pur (codes non -muf).",
     )
+    ap.add_argument(
+        "--finish",
+        choices=["default"] + sorted(FINISH_VARIANTS),
+        default="default",
+        help="fini : default (blanc / chêne selon le code) ou un fini alternatif "
+        "(navi = mélamine bleu marine, caissons du bas + vanités seulement).",
+    )
     args = ap.parse_args(argv)
 
     profile = args.profile
     spec = DOOR_PROFILES[profile]
-    suffix = spec["slug_suffix"]
+    finish_spec = FINISH_VARIANTS.get(args.finish) if args.finish != "default" else None
+    if finish_spec and profile != DEFAULT_PROFILE:
+        raise SystemExit("--finish ne se combine pas avec un profil alternatif (navi = shaker-1)")
+    suffix = spec["slug_suffix"] + (finish_spec["slug_suffix"] if finish_spec else "")
 
     catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
     products = [p for p in catalog.get("products", []) if is_renderable(p)]
@@ -220,6 +242,15 @@ def main(argv: list[str] | None = None) -> int:
         # Seul le Blanc Pur a des profils alternatifs (le Chêne = -muf, shaker-1
         # uniquement). On ne rend donc le profil alternatif que pour le blanc.
         products = [p for p in products if not p["code"].endswith("-muf")]
+    if finish_spec:
+        # Fini alternatif : uniquement les catégories qui l'offrent (caissons du
+        # bas + vanités pour navi) et jamais les codes chêne -muf.
+        products = [
+            p
+            for p in products
+            if not p["code"].endswith("-muf")
+            and str(p.get("category") or "").startswith(finish_spec["category_prefixes"])
+        ]
     if args.only:
         wanted = {c.strip() for c in args.only.split(",") if c.strip()}
         products = [p for p in products if p["code"] in wanted]
@@ -234,6 +265,9 @@ def main(argv: list[str] | None = None) -> int:
         if not args.force and (args.out_dir / f"{slug}{suffix}_face.webp").is_file():
             continue
         cfg = infer_hb_config(p)
+        if finish_spec:
+            cfg["finish"] = finish_spec["finish_label"]
+            cfg["finish_type"] = finish_spec["finish_type"]
         cfg.update(
             {
                 "output": str(args.out_dir / f"{slug}{suffix}_face.png"),
