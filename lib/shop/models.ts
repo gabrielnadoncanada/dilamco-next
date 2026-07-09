@@ -41,6 +41,7 @@ const COLOR_VALUE_ID: Record<string, string> = {
   "Blanc Pur": "blanc",
   "Chêne blanc": "chene",
   "Bleu marin": "bleu",
+  Navi: "navi",
 };
 
 /** Coordonnée « couleur » d'un produit, dérivée de sa finition. */
@@ -71,8 +72,26 @@ interface ProfilOption {
 const PROFIL_BY_COLOR: Record<string, ProfilOption[]> = {
   blanc: [{ id: "shaker-1", label: "Shaker 1 po" }],
   chene: [{ id: "shaker-1", label: "Shaker 1 po" }],
+  navi: [{ id: "shaker-1", label: "Shaker 1 po" }],
 };
 const DEFAULT_PROFILS: ProfilOption[] = [{ id: "shaker-1", label: "Shaker 1 po" }];
+
+/**
+ * FINI NAVI (mélamine bleu marine, texture réelle `navi.png`) — offert sur les
+ * CAISSONS DU BAS (cuisine + vanités) uniquement. Le xlsx n'a pas de ligne
+ * Navi : la variante est GÉNÉRÉE ici sur le code blanc (même code catalogue,
+ * même SKU, prix = blanc + `NAVI_PRICE_DELTA`), et son rendu vit sur la vue
+ * manifest `face@navi` du même code (pipeline : batch --finish navi).
+ */
+const NAVI_CATEGORY_PREFIXES = ["base-", "bathroom-base-"] as const;
+const NAVI_PRICE_DELTA = 0; // décision Gabriel 2026-07-03 : même prix que le blanc.
+
+function offersNavi(p: Product): boolean {
+  return (
+    p.code === baseCode(p.code) &&
+    NAVI_CATEGORY_PREFIXES.some((pre) => p.category.startsWith(pre))
+  );
+}
 
 const PROFIL_LABEL: Record<string, string> = {
   "shaker-1": "Shaker 1 po",
@@ -83,6 +102,7 @@ const COLOR_LABEL: Record<string, string> = {
   blanc: "Blanc Pur",
   chene: "Chêne blanc",
   bleu: "Bleu marin",
+  navi: "Navi",
 };
 const AXIS_LABEL: Record<string, string> = {
   profil: "Profil de porte",
@@ -111,6 +131,27 @@ function expandVariants(group: Product[]): Variant[] {
         h: p.h,
         d: p.d,
         available: p.visible && p.price > 0,
+      });
+    }
+  }
+  // Variantes NAVI générées (pas de ligne catalogue) : greffées sur le code
+  // blanc, en DERNIER (ordre des pastilles : blanc, chêne, navi). Pas de repli
+  // de galerie sur le rendu blanc — placeholder tant que `face@navi` n'existe pas.
+  const naviBase = group.find(offersNavi);
+  if (naviBase) {
+    for (const pr of PROFIL_BY_COLOR.navi ?? DEFAULT_PROFILS) {
+      out.push({
+        id: `${naviBase.code}__${pr.id}--navi`,
+        code: naviBase.code,
+        sku: naviBase.sku,
+        options: { profil: pr.id, couleur: "navi" },
+        price: naviBase.price + (pr.priceDelta ?? 0) + NAVI_PRICE_DELTA,
+        colors: ["Navi"],
+        gallery: galleryFor(naviBase.code, pr.id, "navi"),
+        w: naviBase.w,
+        h: naviBase.h,
+        d: naviBase.d,
+        available: naviBase.visible && naviBase.price > 0,
       });
     }
   }

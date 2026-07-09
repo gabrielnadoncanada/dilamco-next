@@ -101,12 +101,36 @@ uv run python scripts/batch_render_parallel.py --profile shaker-3 --workers 3
   slug nu : les rendus shaker-1 existants ne bougent pas.
 - Manifest : défaut → `face` ; profil alt → **`face@<profil>`** (ex. `face@shaker-3`).
   `rebuild_manifest` est multi-profil (ne se clobbe pas entre profils ; préserve `technique`).
-- Côté site : `galleryFor(code, profil)` (products.ts) lit `face@<profil>` avec repli
+- Côté site : `galleryFor(code, profil, couleur?)` (products.ts) lit `face@<profil>` avec repli
   sur `face` ; la couche variantes (`models.ts`) donne sa galerie propre à chaque
   variante profil ; la fiche (`produit-client`) affiche la galerie de la variante active
   → changer de profil bascule l'image. Dispo des profils par couleur =
   `PROFIL_BY_COLOR` (models.ts) : shaker-1 seulement depuis 2026-07 (le 3 po est
   retiré de la vente ; ses renders `face@shaker-3` restent dans le manifest).
+
+### B.2 Finis alternatifs (navi) — `--finish`
+Registre `FINISH_VARIANTS` (render_product_cabinet.py) : un fini rendu PAR-DESSUS le
+même code catalogue (pas de ligne xlsx, contrairement au chêne `-muf`). `navi` =
+mélamine bleu marine, texture RÉELLE `textures/navi_real_flat.png` (= échantillon
+navi.png DÉLIGHTÉ par haute-passe gaussienne r=80 — la photo brute rend « nuagé » sur
+les grandes façades). Matériau `build_navi_material` : priorité librairie .blend
+(`Dilamco_Navi_Melamine`), fallback photo box-mappée, **MAT roughness 0.60-0.68 +
+specular 0.05** (tout spéculaire éclaircit le CÔTÉ en rasant sur un foncé et inverse
+la hiérarchie façade>côté — ne pas « satiner »). Leviers : `--navi-scale/sat/val/hue`.
+```
+# les ~84 caissons du bas + vanités en navi (refuse -muf et shaker-3) :
+uv run python scripts/batch_render_parallel.py --finish navi --workers 3
+# rendu unique : render_product_cabinet.py --product-code S8-FB30 --finish navi --output ...
+```
+- Fichiers suffixés `<slug>_navi_face.webp` ; manifest → vue **`face@navi`** (rebuild
+  multi-vues : profils + finis, ne se clobbent pas). Batch borné aux catégories
+  `category_prefixes` (`base-`, `bathroom-base-`).
+- Côté site : couleur « Navi » (id `navi`) générée dans `models.ts` sur le code blanc
+  (`NAVI_CATEGORY_PREFIXES`, prix = blanc + `NAVI_PRICE_DELTA`) ; `galleryFor(code,
+  profil, "navi")` lit `face@navi` SANS repli sur la face blanche (placeholder sinon) ;
+  pastille = crop réel `public/assets/products/swatch-navi.webp`.
+- Ajouter un fini = 1 entrée `FINISH_VARIANTS` + un builder matériau + la couleur
+  boutique (patron navi).
 
 ## C. Mapping catalogue → caisson (`infer_hb_config` dans `render_product_cabinet.py`)
 - **Caissons HB** (place_cabinet_script) : `cabinet_type` BASE/UPPER/TALL + `front_layout`.
@@ -125,12 +149,28 @@ uv run python scripts/batch_render_parallel.py --profile shaker-3 --workers 3
   tablier d'évier apparent en haut (Base Top Construction=Sink) + 2 portes shaker DESSOUS.
 - **Finitions** : défaut = Blanc Pur ; SKU `-muf` ou finish « Chêne blanc » =
   mélamine chêne, matériau PBR Polyhaven injecté dans les geonodes (le shader
-  CabinetWood de HB ne marche pas en headless). Dans les DEUX cas la porte est
+  CabinetWood de HB ne marche pas en headless) ; `--finish navi` = mélamine marine
+  (B.2), dispatch central `build_finish_material()`. Dans TOUS les cas la porte est
   **shaker 5 pièces, rail 1 po** (préférence Gabriel : jamais de slab).
+- **Intérieur = contreplaqué BOULEAU** (réalité Dilamco : caisson bouleau, extérieur
+  peint/mélaminé, intérieur bois brut). Fond/tablettes/tiroirs/dessus carcasse = bouleau
+  via `normalize_product_materials`. Les **côtés + plancher** sont des geonodes peints au
+  fini sur toutes leurs faces → `apply_birch_interior(cabinet)` (appelé dans `run_one`
+  après `hide_all_pulls`) APPLIQUE le geonode en mesh puis ré-assigne la **face tournée
+  vers le centre** (côtés) et la **face du dessus** (plancher) au bouleau ; la face
+  extérieure reste au fini. Visible par le dessus ouvert des caissons du bas. Ne PAS
+  peindre tout le côté en bouleau (l'extérieur doit rester au fini).
 
 ## D. Réglages de rendu (déjà dans le script — ne pas régresser)
-HDRI studio `brown_photostudio_02_2k.exr` (strength 0.9, rot 235°) ; key dédoublée
-(ombre 3× plus pâle) ; caméra 85 mm, 15° de lacet, sous le dessus du caisson ; view
+**HIÉRARCHIE DES FACES (exigence Gabriel 2026-07-03) : la FAÇADE est LA face la plus
+claire, le côté +X plus sombre.** Recette : HDRI `studio_kontrast_03_2k.exr` tourné à
+**270°** (softbox principal FACE au caisson — à 235° il éclairait le côté = hiérarchie
+inversée), **key frontale 30 W seule, PAS de rim** (supprimé : il rasait le côté),
+blanc base 0.72 (0.75 saturait la façade au niveau du fond 241). Mesures cibles (luma,
+bande 45-60 % du bbox) : blanc ~236/194-211, chêne ~158/134, navi ~36/33 — vérifier
+`façade > côté` sur CHAQUE fini après toute retouche (`--hdri-rotation`, `--key-energy`
+existent pour re-scanner) ; toute modif du rig ⇒ re-render COMPLET du catalogue.
+Caméra 85 mm, 15° de lacet, sous le dessus du caisson ; view
 transform **Khronos PBR Neutral** (AgX délave les albédos) ; GPU OptiX + adaptive 0.01 ;
 fond transparent (RGBA + film_transparent) + shadow catcher, ombre atténuée en post (PIL).
 `fit_pulls_to_fronts` (après le cadre shaker) rétrécit toute poignée HB (longueur FIXE)
@@ -177,6 +217,29 @@ BlenderMCP → panneau N → onglet **BlenderMCP** → « Connect to MCP server 
 Usage : valider en direct un caisson placé interactivement (lire la scène, screenshot,
 exécuter un check). Le **headless reste préférable pour les batchs** ; le MCP sert au
 contrôle live et à la validation visuelle dans le Blender de l'utilisateur.
+
+### G.1 Ouvrir N'IMPORTE QUEL caisson dans Blender (debug visuel) — `open_in_blender.py`
+Pour déboguer le visuel d'un caisson : monter la scène packshot COMPLÈTE (caisson +
+matériaux + rig lumière/caméra + view transform Khronos) et la sauver en `.blend`,
+puis l'ouvrir dans le Blender de l'utilisateur. Bien plus rapide que re-rendre à chaque
+essai — on itère sur les matériaux/la géométrie en direct.
+```
+cd .claude/skills/render-3d/pipeline
+uv run python scripts/open_in_blender.py --code S8-SP06            # blanc, shaker-1
+uv run python scripts/open_in_blender.py --code S8-FB30 --finish navi
+uv run python scripts/open_in_blender.py --code S8-DB12 --profile shaker-3
+```
+- Écrit `blends/<slug>.blend` (+ chemin dans `blends/_last.txt`). Config IDENTIQUE au
+  batch (`infer_hb_config` + `texture_paths` + profil/fini), donc ce que tu vois = le
+  packshot réel.
+- Repose sur l'option `save_blend` de `run_one` (dans `render_product_cabinet.py`) :
+  si `CONFIG["save_blend"]` est posé, la scène montée est sauvée et le rendu est sauté.
+- Ouvrir ensuite dans le Blender live (MCP) :
+  `bpy.ops.wm.open_mainfile(filepath=r"...\blends\<slug>.blend")` — l'addon BlenderMCP
+  survit au chargement (il est app-level). Caméra = `HB5_Product_Camera`. Rendre depuis
+  cette caméra reproduit exactement le packshot.
+- Le `.blend` est en **CYCLES** (comme le packshot) ; le viewport peut aliaser les
+  textures fines sur les faces minces (artefact viewport, filtré au rendu final).
 
 ## H. Gotchas (déjà résolus — ne pas réintroduire)
 - `obj.bound_box` faux pour geonodes → bbox via géométrie évaluée.

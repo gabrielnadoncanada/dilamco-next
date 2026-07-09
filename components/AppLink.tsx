@@ -70,6 +70,7 @@ const TEMPLATES = [
   ...BOUTIQUE_COLLECTION_TEMPLATES,
   "/boutique/produit/[id]",
   "/boutique/finitions",
+  "/boutique/conditions-de-retour",
   "/boutique/soumission",
   "/boutique",
 ] as const;

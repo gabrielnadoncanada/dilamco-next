@@ -12,6 +12,8 @@ export function Swatch({ color, size = "sm", title }: Props) {
     blanc: "bg-[#f3efe6]",
     chene: "bg-[#c9b48a]",
     bleu: "bg-[#2a3d52]",
+    // Navi = échantillon RÉEL du panneau (crop de navi.png), pas un aplat.
+    navi: "bg-[url('/assets/products/swatch-navi.webp')] bg-cover bg-center",
   }[swatchSlug(color)];
 
   return (

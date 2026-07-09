@@ -72,6 +72,12 @@ const BOUTIQUE_TAXON_EN = {
   liquidation: "clearance",
 };
 
+// Pages utilitaires boutique HORS taxonomie (slug traduit en EN). Synchronisé
+// avec seo/i18n-path.ts BOUTIQUE_PAGE_EN et i18n/routing.ts.
+const BOUTIQUE_PAGE_EN = {
+  "conditions-de-retour": "return-policy",
+};
+
 // Collections INDEXABLES (index:true dans lib/shop/collections.ts) : seules
 // celles-ci vont au sitemap. Les autres collections (index:false, navigation)
 // sont noindex et exclues. À garder synchronisé avec les `index: true`.
@@ -114,7 +120,8 @@ function localizedUrl(slug, locale) {
   // Taxonomie boutique : sous-chemin FR -> EN (armoires-cuisine -> kitchen-cabinets).
   if (head === "boutique" && segs.length > 1) {
     const sub = segs.slice(1).join("/");
-    if (BOUTIQUE_TAXON_EN[sub]) return `${SITE}/en/shop/${BOUTIQUE_TAXON_EN[sub]}`;
+    const enSub = BOUTIQUE_TAXON_EN[sub] || BOUTIQUE_PAGE_EN[sub];
+    if (enSub) return `${SITE}/en/shop/${enSub}`;
   }
   if ((head === "espaces" || head === "projets") && segs[1]) {
     // Slug de projet (3e segment) traduit AVANT l'espace (clé = espace FR).

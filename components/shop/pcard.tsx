@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { AppLink as Link } from "@/components/AppLink";
 import { useCart } from "./cart-provider";
 import { Swatch } from "./swatch";
-import { photoForProduct } from "@/lib/shop/photos";
+import { galleryViews, photoForProduct } from "@/lib/shop/photos";
 import { findProduct, widthSiblings } from "@/lib/shop/products";
 import { findModel, resolveVariant, slugForCode } from "@/lib/shop/models";
 import { routes } from "@/lib/shop/routes";
@@ -50,8 +50,13 @@ export function PCard({
     : undefined;
   const previewProduct =
     (previewVariant && findProduct(previewVariant.code)) || product;
-  const displayColor = previewProduct.colors[0] || "Blanc Pur";
-  const photo = photoForProduct(previewProduct, displayColor);
+  // Couleur + photo de la VARIANTE prévisualisée (Navi partage le code
+  // catalogue du blanc : couleur/galerie vivent sur la variante, pas le code).
+  const displayColor =
+    previewVariant?.colors[0] || previewProduct.colors[0] || "Blanc Pur";
+  const photo = previewVariant
+    ? galleryViews(previewVariant.gallery)[0].src
+    : photoForProduct(previewProduct, displayColor);
 
   // Prix : exact de la couleur filtrée si un filtre est actif, sinon le prix de
   // la couleur par défaut (canonique). Pas de « à partir de ».

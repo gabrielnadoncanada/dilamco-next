@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button, ButtonArrow } from "@/components/ui/button";
 import { Headline, Body } from "@/components/shop/ds";
-import { photoForProduct } from "@/lib/shop/photos";
+import { galleryViews } from "@/lib/shop/photos";
 import { Price } from "@/components/shop/price";
 import { AvailabilityDot } from "@/components/shop/availability-dot";
 import { ProductSpecs } from "./product-specs";
@@ -211,6 +211,17 @@ function ProductReassurance({ product }: { product: Product }) {
           {t("accordion.delivery.body")}
         </AccordionContent>
       </AccordionItem>
+      <AccordionItem value="retours" className="border-border">
+        <AccordionTrigger className="py-4 text-[14px] font-medium tracking-[0.01em] hover:no-underline">
+          {t("accordion.returns.title")}
+        </AccordionTrigger>
+        <AccordionContent className="text-xs leading-[1.6] text-soft-foreground">
+          {t("accordion.returns.body")}{" "}
+          <Link className="text-primary underline" href={routes.returns}>
+            {t("accordion.returns.link")}
+          </Link>
+        </AccordionContent>
+      </AccordionItem>
       <AccordionItem value="questions" className="border-border">
         <AccordionTrigger className="py-4 text-[14px] font-medium tracking-[0.01em] hover:no-underline">
           {t("accordion.questions.title")}
@@ -283,7 +294,9 @@ function VariantAxes({
                   axis.key,
                   val.id,
                 );
-                const targetProduct = findProduct(target.code);
+                // Vignette = galerie de la VARIANTE (le rendu navi vit sur le
+                // même code catalogue que le blanc) ; placeholder si absente.
+                const tileSrc = galleryViews(target.gallery)[0].src;
                 const isActive = val.id === activeValueId;
                 // Disponible « ensemble » avec la sélection courante des autres axes.
                 const available = isAxisValueAvailable(
@@ -296,15 +309,13 @@ function VariantAxes({
                 const tile = (
                   <>
                     <span className="relative block size-[86px] overflow-hidden bg-secondary max-[700px]:size-[72px]">
-                      {targetProduct && (
-                        <Image
-                          src={photoForProduct(targetProduct)}
-                          alt={label}
-                          fill
-                          sizes="86px"
-                          className="object-cover"
-                        />
-                      )}
+                      <Image
+                        src={tileSrc}
+                        alt={label}
+                        fill
+                        sizes="86px"
+                        className="object-cover"
+                      />
                     </span>
                     <span className="block px-1.5 pb-1.5 pt-1 text-center">
                       <span className="block text-[12px] leading-[1.3] text-foreground">

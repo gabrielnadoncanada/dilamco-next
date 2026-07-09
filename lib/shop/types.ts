@@ -1,4 +1,4 @@
-export type ColorName = "Blanc Pur" | "Chêne blanc" | "Bleu marin";
+export type ColorName = "Blanc Pur" | "Chêne blanc" | "Bleu marin" | "Navi";
 export type Molding = "1 po" | "3 po";
 export type Ceiling = "8 pi" | "9 pi" | string;
 export type Corner = "Non" | "Coin 45 degres" | "Coin 90 degres" | string;

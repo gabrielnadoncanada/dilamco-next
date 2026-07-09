@@ -2,550 +2,695 @@
   "_convention": "/assets/products/renders/<slug>_<view>.webp?v=<hash8> ; slug = code SKU minuscule, * -> x, autres separateurs -> tiret ; view: face | technique ; ?v= = md5(8) du contenu pour cache-busting (regrave via scripts/stamp_manifest_hashes.py ; auto en batch)",
   "products": {
     "S8-B18-PO": {
-      "face": "/assets/products/renders/s8-b18-po_face.webp?v=2b675ba2"
+      "face": "/assets/products/renders/s8-b18-po_face.webp?v=17ee2855",
+      "face@navi": "/assets/products/renders/s8-b18-po_navi_face.webp?v=026b18c2"
     },
     "S8-B18-PO-muf": {
-      "face": "/assets/products/renders/s8-b18-po-muf_face.webp?v=6c74d0d3"
+      "face": "/assets/products/renders/s8-b18-po-muf_face.webp?v=886b336c"
     },
     "S8-BBC42": {
-      "face": "/assets/products/renders/s8-bbc42_face.webp?v=c9cab398"
+      "face": "/assets/products/renders/s8-bbc42_face.webp?v=22e106f7",
+      "face@navi": "/assets/products/renders/s8-bbc42_navi_face.webp?v=3736132d"
     },
     "S8-BBC42-muf": {
-      "face": "/assets/products/renders/s8-bbc42-muf_face.webp?v=f293edb8"
+      "face": "/assets/products/renders/s8-bbc42-muf_face.webp?v=5d29ff27"
     },
     "S8-BBC45": {
-      "face": "/assets/products/renders/s8-bbc45_face.webp?v=d78f309f"
+      "face": "/assets/products/renders/s8-bbc45_face.webp?v=0698f95d",
+      "face@navi": "/assets/products/renders/s8-bbc45_navi_face.webp?v=8591d387"
     },
     "S8-BBC45-muf": {
-      "face": "/assets/products/renders/s8-bbc45-muf_face.webp?v=0122a45b"
+      "face": "/assets/products/renders/s8-bbc45-muf_face.webp?v=317d872b"
     },
     "S8-BBC48": {
-      "face": "/assets/products/renders/s8-bbc48_face.webp?v=c6d71fb9"
+      "face": "/assets/products/renders/s8-bbc48_face.webp?v=daadb49b",
+      "face@navi": "/assets/products/renders/s8-bbc48_navi_face.webp?v=0f5b3697"
     },
     "S8-BBC48-muf": {
-      "face": "/assets/products/renders/s8-bbc48-muf_face.webp?v=d15b580a"
+      "face": "/assets/products/renders/s8-bbc48-muf_face.webp?v=057bd03b"
+    },
+    "S8-BDD12.75*36": {
+      "face": "/assets/products/renders/s8-bdd12-75x36_face.webp?v=1449ffb6"
+    },
+    "S8-BDD12.75*36-muf": {
+      "face": "/assets/products/renders/s8-bdd12-75x36-muf_face.webp?v=40c02a7c"
+    },
+    "S8-BDD21.75*36": {
+      "face": "/assets/products/renders/s8-bdd21-75x36_face.webp?v=bb35e636"
+    },
+    "S8-BDD21.75*36-muf": {
+      "face": "/assets/products/renders/s8-bdd21-75x36-muf_face.webp?v=3276efd0"
+    },
+    "S8-BDD24.75*36": {
+      "face": "/assets/products/renders/s8-bdd24-75x36_face.webp?v=6b7de2ac"
+    },
+    "S8-BDD24.75*36-muf": {
+      "face": "/assets/products/renders/s8-bdd24-75x36-muf_face.webp?v=c5fcd887"
+    },
+    "S8-BDD2430": {
+      "face": "/assets/products/renders/s8-bdd2430_face.webp?v=bf214577"
+    },
+    "S8-BDD2430-muf": {
+      "face": "/assets/products/renders/s8-bdd2430-muf_face.webp?v=0f98512a"
+    },
+    "S8-BDD25.75*36": {
+      "face": "/assets/products/renders/s8-bdd25-75x36_face.webp?v=e0d09fa0"
+    },
+    "S8-BDD25.75*36-muf": {
+      "face": "/assets/products/renders/s8-bdd25-75x36-muf_face.webp?v=abf74f31"
+    },
+    "S8-BDD2730": {
+      "face": "/assets/products/renders/s8-bdd2730_face.webp?v=6ee600b7"
+    },
+    "S8-BDD2730-muf": {
+      "face": "/assets/products/renders/s8-bdd2730-muf_face.webp?v=c19248ef"
+    },
+    "S8-BDD3030": {
+      "face": "/assets/products/renders/s8-bdd3030_face.webp?v=d452cad8"
+    },
+    "S8-BDD3030-muf": {
+      "face": "/assets/products/renders/s8-bdd3030-muf_face.webp?v=b38cd730"
+    },
+    "S8-BDD3330": {
+      "face": "/assets/products/renders/s8-bdd3330_face.webp?v=0c022945"
+    },
+    "S8-BDD3330-muf": {
+      "face": "/assets/products/renders/s8-bdd3330-muf_face.webp?v=d121c047"
+    },
+    "S8-BDD37.5x36": {
+      "face": "/assets/products/renders/s8-bdd37-5x36_face.webp?v=d3619d25"
+    },
+    "S8-BDD37.5x36-muf": {
+      "face": "/assets/products/renders/s8-bdd37-5x36-muf_face.webp?v=e238f7d2"
+    },
+    "S8-BDD49.75*36": {
+      "face": "/assets/products/renders/s8-bdd49-75x36_face.webp?v=fa67266c"
+    },
+    "S8-BDD49.75*36-muf": {
+      "face": "/assets/products/renders/s8-bdd49-75x36-muf_face.webp?v=879bb490"
     },
     "S8-BMC27": {
-      "face": "/assets/products/renders/s8-bmc27_face.webp?v=e6f6a1fb"
+      "face": "/assets/products/renders/s8-bmc27_face.webp?v=50d89d6d",
+      "face@navi": "/assets/products/renders/s8-bmc27_navi_face.webp?v=9b15ac6c"
     },
     "S8-BMC27-muf": {
-      "face": "/assets/products/renders/s8-bmc27-muf_face.webp?v=5e7aed69"
+      "face": "/assets/products/renders/s8-bmc27-muf_face.webp?v=62eacccc"
     },
     "S8-DB12": {
-      "face": "/assets/products/renders/s8-db12_face.webp?v=42117baa"
+      "face": "/assets/products/renders/s8-db12_face.webp?v=64caa7b3",
+      "face@navi": "/assets/products/renders/s8-db12_navi_face.webp?v=7c8f5e84"
     },
     "S8-DB12-2-muf": {
-      "face": "/assets/products/renders/s8-db12-2-muf_face.webp?v=d6256025"
+      "face": "/assets/products/renders/s8-db12-2-muf_face.webp?v=8f1fe85c"
     },
     "S8-DB12-muf": {
-      "face": "/assets/products/renders/s8-db12-muf_face.webp?v=941e2351"
+      "face": "/assets/products/renders/s8-db12-muf_face.webp?v=163cff0f"
     },
     "S8-DB15": {
-      "face": "/assets/products/renders/s8-db15_face.webp?v=ad13cb69"
+      "face": "/assets/products/renders/s8-db15_face.webp?v=3fc9fa0b",
+      "face@navi": "/assets/products/renders/s8-db15_navi_face.webp?v=48aff7af"
     },
     "S8-DB15-2-muf": {
-      "face": "/assets/products/renders/s8-db15-2-muf_face.webp?v=1357b9a5"
+      "face": "/assets/products/renders/s8-db15-2-muf_face.webp?v=4320e78a"
     },
     "S8-DB15-muf": {
-      "face": "/assets/products/renders/s8-db15-muf_face.webp?v=09123720"
+      "face": "/assets/products/renders/s8-db15-muf_face.webp?v=48b880cf"
     },
     "S8-DB18": {
-      "face": "/assets/products/renders/s8-db18_face.webp?v=f1396bfd"
+      "face": "/assets/products/renders/s8-db18_face.webp?v=caa076bc",
+      "face@navi": "/assets/products/renders/s8-db18_navi_face.webp?v=530bfbf8"
     },
     "S8-DB18-2-muf": {
-      "face": "/assets/products/renders/s8-db18-2-muf_face.webp?v=302f6b3b"
+      "face": "/assets/products/renders/s8-db18-2-muf_face.webp?v=ab1d2468"
     },
     "S8-DB18-muf": {
-      "face": "/assets/products/renders/s8-db18-muf_face.webp?v=8565b5ce"
+      "face": "/assets/products/renders/s8-db18-muf_face.webp?v=d96bc9f3"
     },
     "S8-DB21": {
-      "face": "/assets/products/renders/s8-db21_face.webp?v=1d2130aa"
+      "face": "/assets/products/renders/s8-db21_face.webp?v=8ffbc869",
+      "face@navi": "/assets/products/renders/s8-db21_navi_face.webp?v=b4d675dc"
     },
     "S8-DB21-2-muf": {
-      "face": "/assets/products/renders/s8-db21-2-muf_face.webp?v=f59c6bca"
+      "face": "/assets/products/renders/s8-db21-2-muf_face.webp?v=37f2727d"
     },
     "S8-DB21-muf": {
-      "face": "/assets/products/renders/s8-db21-muf_face.webp?v=af4c0993"
+      "face": "/assets/products/renders/s8-db21-muf_face.webp?v=ac74b7e5"
     },
     "S8-DB24": {
-      "face": "/assets/products/renders/s8-db24_face.webp?v=231c26b6"
+      "face": "/assets/products/renders/s8-db24_face.webp?v=1e6d2767",
+      "face@navi": "/assets/products/renders/s8-db24_navi_face.webp?v=28763ccb"
     },
     "S8-DB24-2-muf": {
-      "face": "/assets/products/renders/s8-db24-2-muf_face.webp?v=2f4ad838"
+      "face": "/assets/products/renders/s8-db24-2-muf_face.webp?v=8db928c2"
     },
     "S8-DB24-muf": {
-      "face": "/assets/products/renders/s8-db24-muf_face.webp?v=1a270e79"
+      "face": "/assets/products/renders/s8-db24-muf_face.webp?v=e63cb818"
     },
     "S8-DB27": {
-      "face": "/assets/products/renders/s8-db27_face.webp?v=7c31ea7d"
+      "face": "/assets/products/renders/s8-db27_face.webp?v=8ae43855",
+      "face@navi": "/assets/products/renders/s8-db27_navi_face.webp?v=be70ca52"
     },
     "S8-DB27-2": {
-      "face": "/assets/products/renders/s8-db27-2_face.webp?v=bc6fb068"
+      "face": "/assets/products/renders/s8-db27-2_face.webp?v=92be66a2",
+      "face@navi": "/assets/products/renders/s8-db27-2_navi_face.webp?v=699dc7fe"
     },
     "S8-DB27-2-muf": {
-      "face": "/assets/products/renders/s8-db27-2-muf_face.webp?v=98de8ed8"
+      "face": "/assets/products/renders/s8-db27-2-muf_face.webp?v=80a9333c"
     },
     "S8-DB27-muf": {
-      "face": "/assets/products/renders/s8-db27-muf_face.webp?v=01832011"
+      "face": "/assets/products/renders/s8-db27-muf_face.webp?v=a1aced75"
     },
     "S8-DB30": {
-      "face": "/assets/products/renders/s8-db30_face.webp?v=bccf2e34"
+      "face": "/assets/products/renders/s8-db30_face.webp?v=b455dc44",
+      "face@navi": "/assets/products/renders/s8-db30_navi_face.webp?v=0ddbae28"
     },
     "S8-DB30-2": {
-      "face": "/assets/products/renders/s8-db30-2_face.webp?v=2abc1176"
+      "face": "/assets/products/renders/s8-db30-2_face.webp?v=1e7e22ed",
+      "face@navi": "/assets/products/renders/s8-db30-2_navi_face.webp?v=d0a48230"
     },
     "S8-DB30-2-muf": {
-      "face": "/assets/products/renders/s8-db30-2-muf_face.webp?v=08491407"
+      "face": "/assets/products/renders/s8-db30-2-muf_face.webp?v=8d79c73e"
     },
     "S8-DB30-muf": {
-      "face": "/assets/products/renders/s8-db30-muf_face.webp?v=f731fac5"
+      "face": "/assets/products/renders/s8-db30-muf_face.webp?v=27464edf"
     },
     "S8-DB33": {
-      "face": "/assets/products/renders/s8-db33_face.webp?v=f6d95762"
+      "face": "/assets/products/renders/s8-db33_face.webp?v=561cbc40",
+      "face@navi": "/assets/products/renders/s8-db33_navi_face.webp?v=ccaa4932"
     },
     "S8-DB33-2-muf": {
-      "face": "/assets/products/renders/s8-db33-2-muf_face.webp?v=ebec6827"
+      "face": "/assets/products/renders/s8-db33-2-muf_face.webp?v=01002414"
     },
     "S8-DB33-muf": {
-      "face": "/assets/products/renders/s8-db33-muf_face.webp?v=969bb8fa"
+      "face": "/assets/products/renders/s8-db33-muf_face.webp?v=463a903e"
     },
     "S8-DB36": {
-      "face": "/assets/products/renders/s8-db36_face.webp?v=e2c3e3b1"
+      "face": "/assets/products/renders/s8-db36_face.webp?v=a011420e",
+      "face@navi": "/assets/products/renders/s8-db36_navi_face.webp?v=286aba03"
     },
     "S8-DB36-2-muf": {
-      "face": "/assets/products/renders/s8-db36-2-muf_face.webp?v=1e67574d"
+      "face": "/assets/products/renders/s8-db36-2-muf_face.webp?v=bc737ac7"
     },
     "S8-DB36-muf": {
-      "face": "/assets/products/renders/s8-db36-muf_face.webp?v=4e73993e"
+      "face": "/assets/products/renders/s8-db36-muf_face.webp?v=66be9e2f"
     },
     "S8-FB09": {
-      "face": "/assets/products/renders/s8-fb09_face.webp?v=ca3d510b"
+      "face": "/assets/products/renders/s8-fb09_face.webp?v=21889c88",
+      "face@navi": "/assets/products/renders/s8-fb09_navi_face.webp?v=a0c5bd4d"
     },
     "S8-FB09-muf": {
-      "face": "/assets/products/renders/s8-fb09-muf_face.webp?v=3d84a76b"
+      "face": "/assets/products/renders/s8-fb09-muf_face.webp?v=3649f24c"
     },
     "S8-FB12": {
-      "face": "/assets/products/renders/s8-fb12_face.webp?v=39c43d26"
+      "face": "/assets/products/renders/s8-fb12_face.webp?v=4c8d49d8",
+      "face@navi": "/assets/products/renders/s8-fb12_navi_face.webp?v=0316e903"
     },
     "S8-FB12-muf": {
-      "face": "/assets/products/renders/s8-fb12-muf_face.webp?v=98f8cdde"
+      "face": "/assets/products/renders/s8-fb12-muf_face.webp?v=48067e29"
     },
     "S8-FB15": {
-      "face": "/assets/products/renders/s8-fb15_face.webp?v=7187583a"
+      "face": "/assets/products/renders/s8-fb15_face.webp?v=6da69565",
+      "face@navi": "/assets/products/renders/s8-fb15_navi_face.webp?v=3e8dd2dd"
     },
     "S8-FB15-muf": {
-      "face": "/assets/products/renders/s8-fb15-muf_face.webp?v=d532f8a5"
+      "face": "/assets/products/renders/s8-fb15-muf_face.webp?v=3afaf8b7"
     },
     "S8-FB18": {
-      "face": "/assets/products/renders/s8-fb18_face.webp?v=5197e22c"
+      "face": "/assets/products/renders/s8-fb18_face.webp?v=49397f77",
+      "face@navi": "/assets/products/renders/s8-fb18_navi_face.webp?v=4b3a42e0"
     },
     "S8-FB18-muf": {
-      "face": "/assets/products/renders/s8-fb18-muf_face.webp?v=e065b1c3"
+      "face": "/assets/products/renders/s8-fb18-muf_face.webp?v=f891dd43"
     },
     "S8-FB21": {
-      "face": "/assets/products/renders/s8-fb21_face.webp?v=1448ed4a"
+      "face": "/assets/products/renders/s8-fb21_face.webp?v=6f8e9a4f",
+      "face@navi": "/assets/products/renders/s8-fb21_navi_face.webp?v=096aa203"
     },
     "S8-FB21-muf": {
-      "face": "/assets/products/renders/s8-fb21-muf_face.webp?v=13c75478"
+      "face": "/assets/products/renders/s8-fb21-muf_face.webp?v=6a6acac8"
     },
     "S8-FB24": {
-      "face": "/assets/products/renders/s8-fb24_face.webp?v=250cf7a4"
+      "face": "/assets/products/renders/s8-fb24_face.webp?v=d5cedb9e",
+      "face@navi": "/assets/products/renders/s8-fb24_navi_face.webp?v=dcf3bd44"
     },
     "S8-FB24-muf": {
-      "face": "/assets/products/renders/s8-fb24-muf_face.webp?v=ae19f040"
+      "face": "/assets/products/renders/s8-fb24-muf_face.webp?v=4535196d"
     },
     "S8-FB27": {
-      "face": "/assets/products/renders/s8-fb27_face.webp?v=5ac19c76"
+      "face": "/assets/products/renders/s8-fb27_face.webp?v=c2737350",
+      "face@navi": "/assets/products/renders/s8-fb27_navi_face.webp?v=464e81e8"
     },
     "S8-FB27-muf": {
-      "face": "/assets/products/renders/s8-fb27-muf_face.webp?v=d1a3a275"
+      "face": "/assets/products/renders/s8-fb27-muf_face.webp?v=6b8c3923"
     },
     "S8-FB30": {
-      "face": "/assets/products/renders/s8-fb30_face.webp?v=083de3c3"
+      "face": "/assets/products/renders/s8-fb30_face.webp?v=4d819125",
+      "face@navi": "/assets/products/renders/s8-fb30_navi_face.webp?v=ea86734a"
     },
     "S8-FB30-muf": {
-      "face": "/assets/products/renders/s8-fb30-muf_face.webp?v=92a07522"
+      "face": "/assets/products/renders/s8-fb30-muf_face.webp?v=41623671"
     },
     "S8-FB33": {
-      "face": "/assets/products/renders/s8-fb33_face.webp?v=8fabfd02"
+      "face": "/assets/products/renders/s8-fb33_face.webp?v=02128c70",
+      "face@navi": "/assets/products/renders/s8-fb33_navi_face.webp?v=414d1cbc"
     },
     "S8-FB33-muf": {
-      "face": "/assets/products/renders/s8-fb33-muf_face.webp?v=16fa4653"
+      "face": "/assets/products/renders/s8-fb33-muf_face.webp?v=babc6501"
     },
     "S8-FB36": {
-      "face": "/assets/products/renders/s8-fb36_face.webp?v=f576485e"
+      "face": "/assets/products/renders/s8-fb36_face.webp?v=00223b94",
+      "face@navi": "/assets/products/renders/s8-fb36_navi_face.webp?v=dcb84e5e"
     },
     "S8-FB36-muf": {
-      "face": "/assets/products/renders/s8-fb36-muf_face.webp?v=6fc88a13"
+      "face": "/assets/products/renders/s8-fb36-muf_face.webp?v=81eb023d"
     },
     "S8-FB39": {
-      "face": "/assets/products/renders/s8-fb39_face.webp?v=21be7512"
+      "face": "/assets/products/renders/s8-fb39_face.webp?v=9bf54835",
+      "face@navi": "/assets/products/renders/s8-fb39_navi_face.webp?v=b52ae1c4"
     },
     "S8-FB39-muf": {
-      "face": "/assets/products/renders/s8-fb39-muf_face.webp?v=b43ee828"
+      "face": "/assets/products/renders/s8-fb39-muf_face.webp?v=90a95053"
     },
     "S8-FB42": {
-      "face": "/assets/products/renders/s8-fb42_face.webp?v=0b177ab2"
+      "face": "/assets/products/renders/s8-fb42_face.webp?v=aaf8e101",
+      "face@navi": "/assets/products/renders/s8-fb42_navi_face.webp?v=813f31a6"
     },
     "S8-FB42-muf": {
-      "face": "/assets/products/renders/s8-fb42-muf_face.webp?v=eb3c05d5"
+      "face": "/assets/products/renders/s8-fb42-muf_face.webp?v=19c5bffe"
     },
     "S8-FSB33*19.75(10-1/8)": {
-      "face": "/assets/products/renders/s8-fsb33x19-75-10-1-8_face.webp?v=77083517"
+      "face": "/assets/products/renders/s8-fsb33x19-75-10-1-8_face.webp?v=a6515aa9",
+      "face@navi": "/assets/products/renders/s8-fsb33x19-75-10-1-8_navi_face.webp?v=a7359533"
     },
     "S8-FSB33*19.75(10-1/8)-muf": {
-      "face": "/assets/products/renders/s8-fsb33x19-75-10-1-8-muf_face.webp?v=e166489e"
+      "face": "/assets/products/renders/s8-fsb33x19-75-10-1-8-muf_face.webp?v=05fc31fc"
     },
     "S8-FSB36*19.75(10-1/8)": {
-      "face": "/assets/products/renders/s8-fsb36x19-75-10-1-8_face.webp?v=d18078bb"
+      "face": "/assets/products/renders/s8-fsb36x19-75-10-1-8_face.webp?v=67378d84",
+      "face@navi": "/assets/products/renders/s8-fsb36x19-75-10-1-8_navi_face.webp?v=4f773393"
     },
     "S8-FSB36*19.75(10-1/8)-muf": {
-      "face": "/assets/products/renders/s8-fsb36x19-75-10-1-8-muf_face.webp?v=c7a18a99"
+      "face": "/assets/products/renders/s8-fsb36x19-75-10-1-8-muf_face.webp?v=5a68cd76"
+    },
+    "S8-IBP9618": {
+      "face": "/assets/products/renders/s8-ibp9618_face.webp?v=1be383e2"
+    },
+    "S8-IBP9636": {
+      "face": "/assets/products/renders/s8-ibp9636_face.webp?v=8acdb082"
+    },
+    "S8-IBP9636-muf": {
+      "face": "/assets/products/renders/s8-ibp9636-muf_face.webp?v=93f8de60"
+    },
+    "S8-ISP2436-muf": {
+      "face": "/assets/products/renders/s8-isp2436-muf_face.webp?v=ccbc9c16"
+    },
+    "S8-ISP25.75X36": {
+      "face": "/assets/products/renders/s8-isp25-75x36_face.webp?v=6f0d3b82"
+    },
+    "S8-ISP2536-muf": {
+      "face": "/assets/products/renders/s8-isp2536-muf_face.webp?v=c056cfee"
+    },
+    "S8-ISP37.75X36": {
+      "face": "/assets/products/renders/s8-isp37-75x36_face.webp?v=5c1b1ead"
     },
     "S8-LS3309": {
-      "face": "/assets/products/renders/s8-ls3309_face.webp?v=f04d300a"
+      "face": "/assets/products/renders/s8-ls3309_face.webp?v=fefd0cee",
+      "face@navi": "/assets/products/renders/s8-ls3309_navi_face.webp?v=ea9c5761"
     },
     "S8-LS3309-muf": {
-      "face": "/assets/products/renders/s8-ls3309-muf_face.webp?v=ba8a5f83"
+      "face": "/assets/products/renders/s8-ls3309-muf_face.webp?v=c3801bf7"
     },
     "S8-LS3612": {
-      "face": "/assets/products/renders/s8-ls3612_face.webp?v=9ad39cc4"
+      "face": "/assets/products/renders/s8-ls3612_face.webp?v=b8c626dd",
+      "face@navi": "/assets/products/renders/s8-ls3612_navi_face.webp?v=c718e976"
     },
     "S8-LS3612-muf": {
-      "face": "/assets/products/renders/s8-ls3612-muf_face.webp?v=d3816bd9"
+      "face": "/assets/products/renders/s8-ls3612-muf_face.webp?v=c9aec1c5"
     },
     "S8-SP06": {
-      "face": "/assets/products/renders/s8-sp06_face.webp?v=24a56da5"
+      "face": "/assets/products/renders/s8-sp06_face.webp?v=076e3c8d",
+      "face@navi": "/assets/products/renders/s8-sp06_navi_face.webp?v=443f0688"
     },
     "S8-SP09": {
-      "face": "/assets/products/renders/s8-sp09_face.webp?v=655c6ca4"
+      "face": "/assets/products/renders/s8-sp09_face.webp?v=f303f3de",
+      "face@navi": "/assets/products/renders/s8-sp09_navi_face.webp?v=376fa073"
     },
     "S8-SP09-muf": {
-      "face": "/assets/products/renders/s8-sp09-muf_face.webp?v=5215ee2c"
+      "face": "/assets/products/renders/s8-sp09-muf_face.webp?v=868c0578"
     },
     "S8-SP12": {
-      "face": "/assets/products/renders/s8-sp12_face.webp?v=0bfc0846"
+      "face": "/assets/products/renders/s8-sp12_face.webp?v=ccfe7f7f",
+      "face@navi": "/assets/products/renders/s8-sp12_navi_face.webp?v=f58bcd63"
     },
     "S8-SP12-muf": {
-      "face": "/assets/products/renders/s8-sp12-muf_face.webp?v=8f3f30d2"
+      "face": "/assets/products/renders/s8-sp12-muf_face.webp?v=03019467"
     },
     "S8-VDB1221": {
-      "face": "/assets/products/renders/s8-vdb1221_face.webp?v=701299b5"
+      "face": "/assets/products/renders/s8-vdb1221_face.webp?v=21484d53",
+      "face@navi": "/assets/products/renders/s8-vdb1221_navi_face.webp?v=240d99fb"
     },
     "S8-VDB1221-muf": {
-      "face": "/assets/products/renders/s8-vdb1221-muf_face.webp?v=5e0bdfad"
+      "face": "/assets/products/renders/s8-vdb1221-muf_face.webp?v=8a5faf3c"
     },
     "S8-VDB1521": {
-      "face": "/assets/products/renders/s8-vdb1521_face.webp?v=32e743ae"
+      "face": "/assets/products/renders/s8-vdb1521_face.webp?v=3f64a253",
+      "face@navi": "/assets/products/renders/s8-vdb1521_navi_face.webp?v=f98759cc"
     },
     "S8-VDB1521-muf": {
-      "face": "/assets/products/renders/s8-vdb1521-muf_face.webp?v=9ec382f4"
+      "face": "/assets/products/renders/s8-vdb1521-muf_face.webp?v=07e23ae9"
     },
     "S8-VDB1821": {
-      "face": "/assets/products/renders/s8-vdb1821_face.webp?v=cdf3d32b"
+      "face": "/assets/products/renders/s8-vdb1821_face.webp?v=cb05479f",
+      "face@navi": "/assets/products/renders/s8-vdb1821_navi_face.webp?v=0b8838c2"
     },
     "S8-VDB1821-muf": {
-      "face": "/assets/products/renders/s8-vdb1821-muf_face.webp?v=2650db74"
+      "face": "/assets/products/renders/s8-vdb1821-muf_face.webp?v=6ba6c011"
     },
     "S8-VS2421": {
-      "face": "/assets/products/renders/s8-vs2421_face.webp?v=a36d6807"
+      "face": "/assets/products/renders/s8-vs2421_face.webp?v=7862fb5d",
+      "face@navi": "/assets/products/renders/s8-vs2421_navi_face.webp?v=a5c59a87"
     },
     "S8-VS2421-muf": {
-      "face": "/assets/products/renders/s8-vs2421-muf_face.webp?v=b9e5715e"
+      "face": "/assets/products/renders/s8-vs2421-muf_face.webp?v=77497617"
     },
     "S8-VS3021": {
-      "face": "/assets/products/renders/s8-vs3021_face.webp?v=281b6355"
+      "face": "/assets/products/renders/s8-vs3021_face.webp?v=c2592c77",
+      "face@navi": "/assets/products/renders/s8-vs3021_navi_face.webp?v=d4bf91f5"
     },
     "S8-VS3021-muf": {
-      "face": "/assets/products/renders/s8-vs3021-muf_face.webp?v=394bff9e"
+      "face": "/assets/products/renders/s8-vs3021-muf_face.webp?v=87808c63"
     },
     "S8-W0930": {
-      "face": "/assets/products/renders/s8-w0930_face.webp?v=c25e20d5"
+      "face": "/assets/products/renders/s8-w0930_face.webp?v=d7af1369"
     },
     "S8-W0936": {
-      "face": "/assets/products/renders/s8-w0936_face.webp?v=2254ad2e"
+      "face": "/assets/products/renders/s8-w0936_face.webp?v=784a6aa6"
     },
     "S8-W1230": {
-      "face": "/assets/products/renders/s8-w1230_face.webp?v=53e88394"
+      "face": "/assets/products/renders/s8-w1230_face.webp?v=ef745c20"
     },
     "S8-W1236": {
-      "face": "/assets/products/renders/s8-w1236_face.webp?v=57722f68"
+      "face": "/assets/products/renders/s8-w1236_face.webp?v=acd9a620"
     },
     "S8-W1248": {
-      "face": "/assets/products/renders/s8-w1248_face.webp?v=1db5e7ae"
+      "face": "/assets/products/renders/s8-w1248_face.webp?v=90ef8068"
     },
     "S8-W1436": {
-      "face": "/assets/products/renders/s8-w1436_face.webp?v=6264dba9"
+      "face": "/assets/products/renders/s8-w1436_face.webp?v=913bf776"
     },
     "S8-W1530": {
-      "face": "/assets/products/renders/s8-w1530_face.webp?v=ecd8f2f7"
+      "face": "/assets/products/renders/s8-w1530_face.webp?v=64085a3f"
     },
     "S8-W1536": {
-      "face": "/assets/products/renders/s8-w1536_face.webp?v=74fe44fa"
+      "face": "/assets/products/renders/s8-w1536_face.webp?v=804ba91a"
     },
     "S8-W1548": {
-      "face": "/assets/products/renders/s8-w1548_face.webp?v=43576fba"
+      "face": "/assets/products/renders/s8-w1548_face.webp?v=956cae74"
     },
     "S8-W1830": {
-      "face": "/assets/products/renders/s8-w1830_face.webp?v=c1a7ac15"
+      "face": "/assets/products/renders/s8-w1830_face.webp?v=bb4ffd41"
     },
     "S8-W1836": {
-      "face": "/assets/products/renders/s8-w1836_face.webp?v=772819c8"
+      "face": "/assets/products/renders/s8-w1836_face.webp?v=69c060df"
     },
     "S8-W1848": {
-      "face": "/assets/products/renders/s8-w1848_face.webp?v=adc8119d"
+      "face": "/assets/products/renders/s8-w1848_face.webp?v=0aeae447"
     },
     "S8-W2036": {
-      "face": "/assets/products/renders/s8-w2036_face.webp?v=de778901"
+      "face": "/assets/products/renders/s8-w2036_face.webp?v=b5e52cf2"
     },
     "S8-W2130": {
-      "face": "/assets/products/renders/s8-w2130_face.webp?v=0aa0d880"
+      "face": "/assets/products/renders/s8-w2130_face.webp?v=bdfcd87c"
     },
     "S8-W2136": {
-      "face": "/assets/products/renders/s8-w2136_face.webp?v=17e04e08"
+      "face": "/assets/products/renders/s8-w2136_face.webp?v=5bdd2bcb"
     },
     "S8-W2148": {
-      "face": "/assets/products/renders/s8-w2148_face.webp?v=22d53e4c"
+      "face": "/assets/products/renders/s8-w2148_face.webp?v=23b56797"
     },
     "S8-W2336": {
-      "face": "/assets/products/renders/s8-w2336_face.webp?v=bdc83db8"
+      "face": "/assets/products/renders/s8-w2336_face.webp?v=c81cdbbe"
     },
     "S8-W2430": {
-      "face": "/assets/products/renders/s8-w2430_face.webp?v=a3d1d9e1"
+      "face": "/assets/products/renders/s8-w2430_face.webp?v=65cf3a33"
     },
     "S8-W2436": {
-      "face": "/assets/products/renders/s8-w2436_face.webp?v=8d95ca72"
+      "face": "/assets/products/renders/s8-w2436_face.webp?v=c1494a9c"
     },
     "S8-W2448": {
-      "face": "/assets/products/renders/s8-w2448_face.webp?v=243d2f6b"
+      "face": "/assets/products/renders/s8-w2448_face.webp?v=1d4ff273"
     },
     "S8-W2730": {
-      "face": "/assets/products/renders/s8-w2730_face.webp?v=7c7241f8"
+      "face": "/assets/products/renders/s8-w2730_face.webp?v=dca52803"
     },
     "S8-W2736": {
-      "face": "/assets/products/renders/s8-w2736_face.webp?v=270db6cf"
+      "face": "/assets/products/renders/s8-w2736_face.webp?v=a9842274"
     },
     "S8-W2748": {
-      "face": "/assets/products/renders/s8-w2748_face.webp?v=a1b86519"
+      "face": "/assets/products/renders/s8-w2748_face.webp?v=808f5e89"
     },
     "S8-W3012": {
-      "face": "/assets/products/renders/s8-w3012_face.webp?v=f1ec0948"
+      "face": "/assets/products/renders/s8-w3012_face.webp?v=fd4ed3fe"
     },
     "S8-W3015": {
-      "face": "/assets/products/renders/s8-w3015_face.webp?v=df434509"
+      "face": "/assets/products/renders/s8-w3015_face.webp?v=6cb302aa"
     },
     "S8-W3018": {
-      "face": "/assets/products/renders/s8-w3018_face.webp?v=229fb891"
+      "face": "/assets/products/renders/s8-w3018_face.webp?v=0728fb65"
     },
     "S8-W3021": {
-      "face": "/assets/products/renders/s8-w3021_face.webp?v=724558c8"
+      "face": "/assets/products/renders/s8-w3021_face.webp?v=f4b778d4"
     },
     "S8-W3024": {
-      "face": "/assets/products/renders/s8-w3024_face.webp?v=d768be92"
+      "face": "/assets/products/renders/s8-w3024_face.webp?v=9032c963"
     },
     "S8-W3027": {
-      "face": "/assets/products/renders/s8-w3027_face.webp?v=d00bea89"
+      "face": "/assets/products/renders/s8-w3027_face.webp?v=217fa387"
     },
     "S8-W3030": {
-      "face": "/assets/products/renders/s8-w3030_face.webp?v=2f4a2a09"
+      "face": "/assets/products/renders/s8-w3030_face.webp?v=0bfa8684"
     },
     "S8-W3036": {
-      "face": "/assets/products/renders/s8-w3036_face.webp?v=bbe7ae4e"
+      "face": "/assets/products/renders/s8-w3036_face.webp?v=e91685af"
     },
     "S8-W3042": {
-      "face": "/assets/products/renders/s8-w3042_face.webp?v=2d39f93f"
+      "face": "/assets/products/renders/s8-w3042_face.webp?v=af384794"
     },
     "S8-W3048": {
-      "face": "/assets/products/renders/s8-w3048_face.webp?v=0f5be9fc"
+      "face": "/assets/products/renders/s8-w3048_face.webp?v=efa10c9b"
     },
     "S8-W30X19.5": {
-      "face": "/assets/products/renders/s8-w30x19-5_face.webp?v=16a0ad6c"
+      "face": "/assets/products/renders/s8-w30x19-5_face.webp?v=a365b0b3"
     },
     "S8-W33.51227": {
-      "face": "/assets/products/renders/s8-w33-51227_face.webp?v=d4a14861"
+      "face": "/assets/products/renders/s8-w33-51227_face.webp?v=539e47d6"
     },
     "S8-W33.51827": {
-      "face": "/assets/products/renders/s8-w33-51827_face.webp?v=6a4ef9f6"
+      "face": "/assets/products/renders/s8-w33-51827_face.webp?v=f35b2d86"
     },
     "S8-W33.52027": {
-      "face": "/assets/products/renders/s8-w33-52027_face.webp?v=f08597ad"
+      "face": "/assets/products/renders/s8-w33-52027_face.webp?v=64168a8e"
     },
     "S8-W33.5X30X27": {
-      "face": "/assets/products/renders/s8-w33-5x30x27_face.webp?v=d808b390"
+      "face": "/assets/products/renders/s8-w33-5x30x27_face.webp?v=0b61092d"
     },
     "S8-W3312": {
-      "face": "/assets/products/renders/s8-w3312_face.webp?v=a91bfe57"
+      "face": "/assets/products/renders/s8-w3312_face.webp?v=eeab9f63"
     },
     "S8-W3318": {
-      "face": "/assets/products/renders/s8-w3318_face.webp?v=0e09c5a8"
+      "face": "/assets/products/renders/s8-w3318_face.webp?v=97a7a866"
     },
     "S8-W3330": {
-      "face": "/assets/products/renders/s8-w3330_face.webp?v=78493071"
+      "face": "/assets/products/renders/s8-w3330_face.webp?v=656d11ab"
     },
     "S8-W3336": {
-      "face": "/assets/products/renders/s8-w3336_face.webp?v=5cc5dacc"
+      "face": "/assets/products/renders/s8-w3336_face.webp?v=d6f85ebd"
     },
     "S8-W3348": {
-      "face": "/assets/products/renders/s8-w3348_face.webp?v=d6c557ce"
+      "face": "/assets/products/renders/s8-w3348_face.webp?v=dc2376a3"
     },
     "S8-W33X19.5": {
-      "face": "/assets/products/renders/s8-w33x19-5_face.webp?v=bc52286c"
+      "face": "/assets/products/renders/s8-w33x19-5_face.webp?v=7d2fd142"
     },
     "S8-W36.51227": {
-      "face": "/assets/products/renders/s8-w36-51227_face.webp?v=460395a9"
+      "face": "/assets/products/renders/s8-w36-51227_face.webp?v=50c43b34"
     },
     "S8-W36.51827": {
-      "face": "/assets/products/renders/s8-w36-51827_face.webp?v=52d58542"
+      "face": "/assets/products/renders/s8-w36-51827_face.webp?v=f39c4c66"
     },
     "S8-W36.5X20X27": {
-      "face": "/assets/products/renders/s8-w36-5x20x27_face.webp?v=321a31df"
+      "face": "/assets/products/renders/s8-w36-5x20x27_face.webp?v=44a07cff"
     },
     "S8-W36.5X30X27": {
-      "face": "/assets/products/renders/s8-w36-5x30x27_face.webp?v=786ca762"
+      "face": "/assets/products/renders/s8-w36-5x30x27_face.webp?v=cb9e1c77"
     },
     "S8-W36.5X31.5X27": {
-      "face": "/assets/products/renders/s8-w36-5x31-5x27_face.webp?v=ed8b206f"
+      "face": "/assets/products/renders/s8-w36-5x31-5x27_face.webp?v=6c9e532a"
     },
     "S8-W3612": {
-      "face": "/assets/products/renders/s8-w3612_face.webp?v=f3066bbf"
+      "face": "/assets/products/renders/s8-w3612_face.webp?v=a7b8c25c"
     },
     "S8-W3618": {
-      "face": "/assets/products/renders/s8-w3618_face.webp?v=bd3652fd"
+      "face": "/assets/products/renders/s8-w3618_face.webp?v=2a526dad"
     },
     "S8-W3624": {
-      "face": "/assets/products/renders/s8-w3624_face.webp?v=469b28bb"
+      "face": "/assets/products/renders/s8-w3624_face.webp?v=0e22ef4f"
     },
     "S8-W3630": {
-      "face": "/assets/products/renders/s8-w3630_face.webp?v=d0587be3"
+      "face": "/assets/products/renders/s8-w3630_face.webp?v=f6407098"
     },
     "S8-W3636": {
-      "face": "/assets/products/renders/s8-w3636_face.webp?v=b0d08722"
+      "face": "/assets/products/renders/s8-w3636_face.webp?v=2fc7c89d"
     },
     "S8-W3642": {
-      "face": "/assets/products/renders/s8-w3642_face.webp?v=13774bef"
+      "face": "/assets/products/renders/s8-w3642_face.webp?v=65cbaca1"
     },
     "S8-W3648": {
-      "face": "/assets/products/renders/s8-w3648_face.webp?v=417bec76"
+      "face": "/assets/products/renders/s8-w3648_face.webp?v=51afa4af"
     },
     "S8-W36X19.5": {
-      "face": "/assets/products/renders/s8-w36x19-5_face.webp?v=5b8e462b"
+      "face": "/assets/products/renders/s8-w36x19-5_face.webp?v=39d83644"
     },
     "S8-W3930": {
-      "face": "/assets/products/renders/s8-w3930_face.webp?v=27aa0862"
+      "face": "/assets/products/renders/s8-w3930_face.webp?v=5b7c477e"
     },
     "S8-W3936": {
-      "face": "/assets/products/renders/s8-w3936_face.webp?v=7df826fe"
+      "face": "/assets/products/renders/s8-w3936_face.webp?v=320a808e"
     },
     "S8-W39X20X27": {
-      "face": "/assets/products/renders/s8-w39x20x27_face.webp?v=15dac1dd"
+      "face": "/assets/products/renders/s8-w39x20x27_face.webp?v=86f21013"
     },
     "S8-W4230": {
-      "face": "/assets/products/renders/s8-w4230_face.webp?v=ca92cc45"
+      "face": "/assets/products/renders/s8-w4230_face.webp?v=ea62039d"
     },
     "S8-W4236": {
-      "face": "/assets/products/renders/s8-w4236_face.webp?v=7de278c2"
+      "face": "/assets/products/renders/s8-w4236_face.webp?v=f554e492"
     },
     "S8-WBC3030": {
-      "face": "/assets/products/renders/s8-wbc3030_face.webp?v=6d52599b"
+      "face": "/assets/products/renders/s8-wbc3030_face.webp?v=6b5ebb73"
     },
     "S8-WBC3036": {
-      "face": "/assets/products/renders/s8-wbc3036_face.webp?v=1be67892"
+      "face": "/assets/products/renders/s8-wbc3036_face.webp?v=0e411b5d"
     },
     "S8-WBC3330": {
-      "face": "/assets/products/renders/s8-wbc3330_face.webp?v=55207837"
+      "face": "/assets/products/renders/s8-wbc3330_face.webp?v=7f7fba4d"
     },
     "S8-WBC3336": {
-      "face": "/assets/products/renders/s8-wbc3336_face.webp?v=cb7bafda"
+      "face": "/assets/products/renders/s8-wbc3336_face.webp?v=a73db386"
     },
     "S8-WBC3630": {
-      "face": "/assets/products/renders/s8-wbc3630_face.webp?v=9e5c0b24"
+      "face": "/assets/products/renders/s8-wbc3630_face.webp?v=64b9f86f"
     },
     "S8-WBC3636": {
-      "face": "/assets/products/renders/s8-wbc3636_face.webp?v=0c687f0f"
+      "face": "/assets/products/renders/s8-wbc3636_face.webp?v=c48a5fa6"
     },
     "S8-WBL2430": {
-      "face": "/assets/products/renders/s8-wbl2430_face.webp?v=e29d7a6d"
+      "face": "/assets/products/renders/s8-wbl2430_face.webp?v=59142810"
     },
     "S8-WBL2436": {
-      "face": "/assets/products/renders/s8-wbl2436_face.webp?v=939c76ef"
+      "face": "/assets/products/renders/s8-wbl2436_face.webp?v=b63c9c81"
     },
     "S8-WBL2730": {
-      "face": "/assets/products/renders/s8-wbl2730_face.webp?v=660f9299"
+      "face": "/assets/products/renders/s8-wbl2730_face.webp?v=2ef05790"
     },
     "S8-WBL2736": {
-      "face": "/assets/products/renders/s8-wbl2736_face.webp?v=23d0915f"
+      "face": "/assets/products/renders/s8-wbl2736_face.webp?v=d3e8cb3c"
     },
     "S8-WBL2748": {
-      "face": "/assets/products/renders/s8-wbl2748_face.webp?v=4fcf2d6f"
+      "face": "/assets/products/renders/s8-wbl2748_face.webp?v=0ea28dab"
     },
     "S8-WDC2430": {
-      "face": "/assets/products/renders/s8-wdc2430_face.webp?v=ea8d12f6"
+      "face": "/assets/products/renders/s8-wdc2430_face.webp?v=47833158"
     },
     "S8-WDC2436": {
-      "face": "/assets/products/renders/s8-wdc2436_face.webp?v=493ea937"
+      "face": "/assets/products/renders/s8-wdc2436_face.webp?v=843e458b"
     },
     "S8-WDC2448": {
-      "face": "/assets/products/renders/s8-wdc2448_face.webp?v=07a25151"
+      "face": "/assets/products/renders/s8-wdc2448_face.webp?v=4a63148e"
+    },
+    "S8-WDD12.75*36": {
+      "face": "/assets/products/renders/s8-wdd12-75x36_face.webp?v=dafcc6c9"
+    },
+    "S8-WDD12.75*48": {
+      "face": "/assets/products/renders/s8-wdd12-75x48_face.webp?v=fdde65e8"
+    },
+    "S8-WEP1330": {
+      "face": "/assets/products/renders/s8-wep1330_face.webp?v=8018225c"
+    },
+    "S8-WEP1336": {
+      "face": "/assets/products/renders/s8-wep1336_face.webp?v=3daff84e"
+    },
+    "S8-WEP1348": {
+      "face": "/assets/products/renders/s8-wep1348_face.webp?v=f863413b"
     },
     "S8-WP129327": {
-      "face": "/assets/products/renders/s8-wp129327_face.webp?v=c52f77b4"
+      "face": "/assets/products/renders/s8-wp129327_face.webp?v=d0641601"
     },
     "S8-WP159327": {
-      "face": "/assets/products/renders/s8-wp159327_face.webp?v=02a9af06"
+      "face": "/assets/products/renders/s8-wp159327_face.webp?v=f3b0247b"
     },
     "S8-WP188427": {
-      "face": "/assets/products/renders/s8-wp188427_face.webp?v=398347dd"
+      "face": "/assets/products/renders/s8-wp188427_face.webp?v=3aab0d74"
     },
     "S8-WP189027": {
-      "face": "/assets/products/renders/s8-wp189027_face.webp?v=6b738d3d"
+      "face": "/assets/products/renders/s8-wp189027_face.webp?v=e106a205"
     },
     "S8-WP189327": {
-      "face": "/assets/products/renders/s8-wp189327_face.webp?v=4d202632"
+      "face": "/assets/products/renders/s8-wp189327_face.webp?v=3d4065b2"
     },
     "S8-WP18X91.527": {
-      "face": "/assets/products/renders/s8-wp18x91-527_face.webp?v=f3ec3142"
+      "face": "/assets/products/renders/s8-wp18x91-527_face.webp?v=ac20b56e"
     },
     "S8-WP248427": {
-      "face": "/assets/products/renders/s8-wp248427_face.webp?v=53480adc"
+      "face": "/assets/products/renders/s8-wp248427_face.webp?v=a7d6bc73"
     },
     "S8-WP249027": {
-      "face": "/assets/products/renders/s8-wp249027_face.webp?v=5d0e5be4"
+      "face": "/assets/products/renders/s8-wp249027_face.webp?v=8f9b94b0"
     },
     "S8-WP2491.5X27": {
-      "face": "/assets/products/renders/s8-wp2491-5x27_face.webp?v=163b3295"
+      "face": "/assets/products/renders/s8-wp2491-5x27_face.webp?v=287debf5"
     },
     "S8-WP249327": {
-      "face": "/assets/products/renders/s8-wp249327_face.webp?v=e755e634"
+      "face": "/assets/products/renders/s8-wp249327_face.webp?v=0b105318"
     },
     "S8-WP249627": {
-      "face": "/assets/products/renders/s8-wp249627_face.webp?v=e94bcaee"
+      "face": "/assets/products/renders/s8-wp249627_face.webp?v=167e6fa1"
     },
     "S8-WP24X103.5": {
-      "face": "/assets/products/renders/s8-wp24x103-5_face.webp?v=f0bfd4f4"
+      "face": "/assets/products/renders/s8-wp24x103-5_face.webp?v=25e20c46"
     },
     "S8-WP2791.5X27": {
-      "face": "/assets/products/renders/s8-wp2791-5x27_face.webp?v=b29be26d"
+      "face": "/assets/products/renders/s8-wp2791-5x27_face.webp?v=2ca81aa5"
     },
     "S8-WP279327": {
-      "face": "/assets/products/renders/s8-wp279327_face.webp?v=8746c4e4"
+      "face": "/assets/products/renders/s8-wp279327_face.webp?v=20d04411"
     },
     "S8-WP279627": {
-      "face": "/assets/products/renders/s8-wp279627_face.webp?v=0fc6e7dc"
+      "face": "/assets/products/renders/s8-wp279627_face.webp?v=35d960e8"
     },
     "S8-WP308427": {
-      "face": "/assets/products/renders/s8-wp308427_face.webp?v=fdca2402"
+      "face": "/assets/products/renders/s8-wp308427_face.webp?v=7acbb47a"
     },
     "S8-WP309027": {
-      "face": "/assets/products/renders/s8-wp309027_face.webp?v=46ff2869"
+      "face": "/assets/products/renders/s8-wp309027_face.webp?v=1c45d72f"
     },
     "S8-WP309327": {
-      "face": "/assets/products/renders/s8-wp309327_face.webp?v=7902854f"
+      "face": "/assets/products/renders/s8-wp309327_face.webp?v=29ddda21"
     },
     "S8-WP309627": {
-      "face": "/assets/products/renders/s8-wp309627_face.webp?v=dd09c7a0"
+      "face": "/assets/products/renders/s8-wp309627_face.webp?v=0ce4f718"
     },
     "S8-WP30X103.5": {
-      "face": "/assets/products/renders/s8-wp30x103-5_face.webp?v=c4f0d3c1"
+      "face": "/assets/products/renders/s8-wp30x103-5_face.webp?v=32ebbaac"
+    },
+    "S8-WPDD13.75*37.5": {
+      "face": "/assets/products/renders/s8-wpdd13-75x37-5_face.webp?v=3d3a792a"
+    },
+    "S8-WPDD13.75*39": {
+      "face": "/assets/products/renders/s8-wpdd13-75x39_face.webp?v=b5d5a270"
+    },
+    "S8-WPDD13.75*49.5": {
+      "face": "/assets/products/renders/s8-wpdd13-75x49-5_face.webp?v=27be1b69"
     }
   }
 }

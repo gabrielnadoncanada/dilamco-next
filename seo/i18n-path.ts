@@ -79,6 +79,13 @@ export const BOUTIQUE_TAXON_EN: Record<string, string> = {
   liquidation: "clearance",
 };
 
+// Pages utilitaires boutique HORS taxonomie (sous /boutique/, slug traduit en EN).
+// Distinct de BOUTIQUE_TAXON_EN (lié au catalogue par une assertion build-time).
+// DOIT rester synchronisé avec les pathnames de i18n/routing.ts.
+export const BOUTIQUE_PAGE_EN: Record<string, string> = {
+  "conditions-de-retour": "return-policy",
+};
+
 // Slugs de projets traduits. Clé = `${espace FR}/${slug FR}` (le slug interne
 // reste FR ; seule l'URL EN est traduite). Enum borné (1 par projet publié).
 export const PROJECT_SLUG_EN: Record<string, string> = {
@@ -105,9 +112,10 @@ export function localizePath(path: string, locale: "fr" | "en"): string {
   const segs = path.replace(/^\/+/, "").split("/");
   const head = segs[0];
   // Taxonomie boutique : sous-chemin FR -> EN (armoires-cuisine -> kitchen-cabinets).
+  // Puis pages utilitaires boutique (conditions-de-retour -> return-policy).
   if (head === "boutique" && segs.length > 1) {
     const sub = segs.slice(1).join("/");
-    const enSub = BOUTIQUE_TAXON_EN[sub];
+    const enSub = BOUTIQUE_TAXON_EN[sub] ?? BOUTIQUE_PAGE_EN[sub];
     if (enSub) return `/en/shop/${enSub}`;
   }
   // Traduit le slug de projet (3e segment) sous /projets — AVANT l'espace,
