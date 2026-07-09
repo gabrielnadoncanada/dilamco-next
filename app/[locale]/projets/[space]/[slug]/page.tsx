@@ -22,6 +22,7 @@ import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Heading } from "@/components/elements/heading";
 import { Button } from "@/components/ui/button";
+import { ProjectGallery } from "@/components/projets/project-gallery";
 
 type Params = { locale: string; space: string; slug: string };
 
@@ -102,7 +103,7 @@ export default async function ProjectDetailPage({
   const spaceLabel = getSpaceLabel(project.space, locale);
   const labelLower = locale === "en" ? spaceLabel : spaceLabel.toLowerCase();
   const canonical = getProjectCanonicalUrl(project, locale);
-  const hero = project.images?.[0];
+  const images = project.images ?? [];
   const related = getProjectsBySpace(project.space, locale)
     .filter((p) => p.slug !== project.slug)
     .slice(0, 3);
@@ -183,18 +184,7 @@ export default async function ProjectDetailPage({
               </div>
             </div>
 
-            {hero ? (
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-muted">
-                <Image
-                  src={hero.src}
-                  alt={hero.alt}
-                  fill
-                  priority
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-            ) : null}
+            {images.length > 0 ? <ProjectGallery images={images} /> : null}
           </div>
         </section>
 
