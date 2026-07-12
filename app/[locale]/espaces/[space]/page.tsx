@@ -10,5 +10,7 @@ const { generateStaticParams, generateMetadata, Page } = createPageCollection({
   paramName: "space",
 });
 
+export const dynamicParams = false;
+
 export { generateStaticParams, generateMetadata };
 export default Page;

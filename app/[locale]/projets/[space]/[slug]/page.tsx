@@ -28,6 +28,8 @@ type Params = { locale: string; space: string; slug: string };
 
 const asLocale = (l: string): "fr" | "en" => (l === "en" ? "en" : "fr");
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return PUBLIC_PROJECTS.map((p) => ({ space: p.space, slug: p.slug }));
 }
