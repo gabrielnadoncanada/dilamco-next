@@ -10,7 +10,7 @@ import { Heading } from "@/components/elements/heading";
 
 const faqItems = [
   {
-    question: "Combien coûte-t-il ?",
+    question: "Combien coûte ALTO ?",
     answer:
       "895 $, prix de lancement. Cliquez sur « Acheter » et vous serez avisé dès l'ouverture des commandes.",
   },
@@ -30,7 +30,7 @@ const faqItems = [
       "Oui, quatre des cinq tablettes se repositionnent à la hauteur voulue.",
   },
   {
-    question: "Quand sera-t-il disponible ?",
+    question: "Quand ALTO sera-t-il disponible ?",
     answer:
       "Très bientôt. Les personnes inscrites sont avisées avant l'ouverture publique des commandes.",
   },
@@ -48,14 +48,14 @@ export function PantryFaq() {
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div className="lg:sticky lg:top-24 lg:self-start">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              § 08 · FAQ
+              FAQ
             </p>
             <Heading as="h2" variant="h2" className="text-balance">
               Avant de faire de la <em>place</em>.
             </Heading>
             <p className="mt-5 max-w-md text-base leading-7 text-muted-foreground">
-              Tout ce qu&apos;on nous demande avant d&apos;acheter, répondu
-              sans détour.
+              Tout ce qu&apos;on nous demande avant d&apos;acheter, répondu sans
+              détour.
             </p>
 
             <div className="mt-10 rounded-2xl border border-border bg-[var(--surface-tint-bg)] p-6">

@@ -8,8 +8,8 @@ export function PantryLifestyle() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative min-h-[560px] overflow-hidden rounded-2xl md:min-h-[700px]">
           <Image
-            src="/images/landing/garde-manger/lifestyle.webp"
-            alt="Garde-manger Dilamco intégré dans une cuisine contemporaine"
+            src="/images/landing/alto/lifestyle.webp"
+            alt="ALTO intégré dans une cuisine contemporaine"
             fill
             className="object-cover"
             sizes="(max-width: 1280px) 100vw, 1216px"
@@ -20,7 +20,7 @@ export function PantryLifestyle() {
           />
           <div className="absolute bottom-0 left-0 z-10 max-w-xl p-7 text-white sm:p-12 lg:p-16">
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
-              § 02 · Une petite empreinte, une grande présence
+              Une petite empreinte, une grande présence
             </p>
             <Heading
               as="h2"

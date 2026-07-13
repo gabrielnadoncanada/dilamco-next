@@ -35,7 +35,7 @@ export function PantryBuyButton({
     if (open) {
       (window as unknown as { dataLayer?: unknown[] }).dataLayer?.push({
         event: "buy_click",
-        product: "garde-manger-24po",
+        product: "alto",
         location,
       });
     }
@@ -60,7 +60,7 @@ export function PantryBuyButton({
             Bientôt disponible
           </DialogTitle>
           <DialogDescription className="text-sm leading-6">
-            Le garde-manger 24 po sera offert à{" "}
+            ALTO, notre garde-manger 24 po, sera offert à{" "}
             <span className="font-semibold text-foreground">895 $</span>.
             Laissez vos coordonnées et nous vous aviserons dès qu&apos;il est en
             vente — avant tout le monde.

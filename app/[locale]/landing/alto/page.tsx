@@ -19,12 +19,12 @@ import {
 
 // Le noindex est hérité du layout /landing (campagnes jamais indexées).
 export const metadata: Metadata = {
-  title: "Garde-manger 24 po démontable — 895 $ — Dilamco",
+  title: "ALTO — Garde-manger démontable 24 po à 895 $",
   description:
-    "Un garde-manger élégant au fini noyer véritable à 895 $. Monté en quelques minutes, il trouve sa place partout : condo, appartement ou extension de cuisine.",
+    "ALTO est un garde-manger élégant au fini noyer véritable à 895 $. Monté en quelques minutes, il trouve sa place partout.",
 };
 
-export default function GardeMangerLandingPage() {
+export default function AltoLandingPage() {
   return (
     <main id="top" className="min-h-screen bg-background text-foreground">
       <PantryHeader />

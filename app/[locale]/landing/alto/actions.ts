@@ -78,16 +78,16 @@ export async function submitPantrySignup(
     to: [toEmail],
     cc: ["gabriel@dilamco.com"],
     replyTo: courriel,
-    subject: `Intention d'achat garde-manger 24 po (895 $) — ${nom}`,
+    subject: `Intention d'achat ALTO (895 $) — ${nom}`,
     text: [
-      "Nouvelle demande de notification — garde-manger Dilamco 24 po (895 $)",
+      "Nouvelle demande de notification — ALTO, garde-manger Dilamco 24 po (895 $)",
       "",
       `Nom : ${nom}`,
       `Courriel : ${courriel}`,
     ].join("\n"),
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #111827;">
-        <h2 style="margin-bottom: 16px;">Nouvelle demande de notification — garde-manger Dilamco 24 po (895 $)</h2>
+        <h2 style="margin-bottom: 16px;">Nouvelle demande de notification — ALTO, garde-manger Dilamco 24 po (895 $)</h2>
         <p><strong>Nom :</strong> ${escapeHtml(nom)}</p>
         <p><strong>Courriel :</strong> ${escapeHtml(courriel)}</p>
       </div>
@@ -105,6 +105,6 @@ export async function submitPantrySignup(
   return {
     status: "success",
     message:
-      "C'est noté. Nous vous aviserons par courriel dès que le garde-manger est disponible.",
+      "C'est noté. Nous vous aviserons par courriel dès qu'ALTO sera disponible.",
   };
 }
