@@ -6,6 +6,8 @@ import { collectionMetadata } from "../_collection/meta";
 
 type Params = { locale: "fr" | "en"; slug: string[] };
 
+export const dynamicParams = false;
+
 /** Une route pour TOUTES les collections : /boutique/<slug imbriqué>. */
 export function generateStaticParams() {
   return COLLECTIONS.map((c) => ({ slug: c.slug.split("/") }));

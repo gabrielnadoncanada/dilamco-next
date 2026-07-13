@@ -10,5 +10,7 @@ const { generateStaticParams, generateMetadata, Page } = createPageCollection({
   paramName: "type",
 });
 
+export const dynamicParams = false;
+
 export { generateStaticParams, generateMetadata };
 export default Page;

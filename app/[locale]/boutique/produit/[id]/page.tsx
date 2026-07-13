@@ -27,6 +27,12 @@ import ProduitClient from "./produit-client";
 
 type MetaLocale = "fr" | "en";
 
+export const dynamicParams = false;
+
+function isPrerenderableId(id: string) {
+  return /^[a-zA-Z0-9_-]+$/.test(id);
+}
+
 /**
  * Fiches prérendues (SSG) : une par ProductModel (≈197), par locale. Le param
  * `[id]` = le slug mot-clé LOCALISÉ (FR sous /boutique, EN sous /shop). Les
@@ -39,7 +45,14 @@ export function generateStaticParams({
   params: { locale: string };
 }) {
   const locale: MetaLocale = params.locale === "en" ? "en" : "fr";
-  return models.map((m) => ({ id: modelSlug(m, locale) }));
+  return models.flatMap((m) => {
+    const ids = new Set<string>([
+      modelSlug(m, locale),
+      m.id,
+      ...m.variants.map((v) => v.code),
+    ]);
+    return [...ids].filter(isPrerenderableId).map((id) => ({ id }));
+  });
 }
 
 function dimsLabel(w?: number, h?: number, d?: number) {

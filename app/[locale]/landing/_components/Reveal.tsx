@@ -28,11 +28,10 @@ export function Reveal({
       rect.top < window.innerHeight && rect.bottom > 0;
 
     if (inViewport) {
+      node.classList.remove("is-pending");
       node.classList.add("is-visible");
       return;
     }
-
-    node.classList.add("is-pending");
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,11 +50,13 @@ export function Reveal({
     return () => observer.disconnect();
   }, []);
 
+  // « is-pending » dès le rendu serveur : l'élément arrive déjà caché, ce qui
+  // évite le flash visible → caché → animé au moment de l'hydratation.
   return createElement(
     as,
     {
       ref,
-      className: `reveal-up ${className}`,
+      className: `reveal-up is-pending ${className}`,
       style: delay ? { animationDelay: `${delay}ms` } : undefined,
     },
     children,

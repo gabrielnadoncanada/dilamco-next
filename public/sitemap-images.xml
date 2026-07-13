@@ -478,6 +478,143 @@
       <image:caption>White custom kitchen in Brossard, South Shore</image:caption>
       <image:title>White custom kitchen in Brossard, South Shore</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-1.webp</image:loc>
+      <image:caption>Custom kitchen in Laval with light wood island and marbled quartz countertop</image:caption>
+      <image:title>Custom kitchen in Laval with light wood island and marbled quartz countertop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-brossard-1.webp</image:loc>
+      <image:caption>Two-tone custom kitchen in Brossard with white cabinets and navy blue bases</image:caption>
+      <image:title>Two-tone custom kitchen in Brossard with white cabinets and navy blue bases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-1.webp</image:loc>
+      <image:caption>Classic white custom kitchen in Repentigny with island and mouldings</image:caption>
+      <image:title>Classic white custom kitchen in Repentigny with island and mouldings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-1.webp</image:loc>
+      <image:caption>Modern custom kitchen in Terrebonne with high-gloss white finish and calacatta quartz countertop</image:caption>
+      <image:title>Modern custom kitchen in Terrebonne with high-gloss white finish and calacatta quartz countertop</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projects/kitchen/cuisine-sur-mesure-brossard</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-brossard-1.webp</image:loc>
+      <image:caption>Two-tone custom kitchen in Brossard with white cabinets and navy blue bases</image:caption>
+      <image:title>Two-tone custom kitchen in Brossard with white cabinets and navy blue bases</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-brossard-2.webp</image:loc>
+      <image:caption>Navy blue kitchen cabinets and marbled quartz countertop in Brossard</image:caption>
+      <image:title>Navy blue kitchen cabinets and marbled quartz countertop in Brossard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Custom kitchen cabinets in Pierrefonds, West Island</image:caption>
+      <image:title>Custom kitchen cabinets in Pierrefonds, West Island</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Custom kitchen in Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Custom kitchen in Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>High-end custom kitchen in Montréal</image:caption>
+      <image:title>High-end custom kitchen in Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projects/kitchen/cuisine-sur-mesure-laval</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-1.webp</image:loc>
+      <image:caption>Custom kitchen in Laval with light wood island and marbled quartz countertop</image:caption>
+      <image:title>Custom kitchen in Laval with light wood island and marbled quartz countertop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-2.webp</image:loc>
+      <image:caption>White custom kitchen cabinets in Laval with quartz backsplash</image:caption>
+      <image:title>White custom kitchen cabinets in Laval with quartz backsplash</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-3.webp</image:loc>
+      <image:caption>Light wood-veneer kitchen island and veined quartz in Laval</image:caption>
+      <image:title>Light wood-veneer kitchen island and veined quartz in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Custom kitchen cabinets in Pierrefonds, West Island</image:caption>
+      <image:title>Custom kitchen cabinets in Pierrefonds, West Island</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Custom kitchen in Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Custom kitchen in Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>High-end custom kitchen in Montréal</image:caption>
+      <image:title>High-end custom kitchen in Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projects/kitchen/cuisine-sur-mesure-repentigny</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-1.webp</image:loc>
+      <image:caption>Classic white custom kitchen in Repentigny with island and mouldings</image:caption>
+      <image:title>Classic white custom kitchen in Repentigny with island and mouldings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-2.webp</image:loc>
+      <image:caption>White raised-panel kitchen cabinets and ceramic backsplash in Repentigny</image:caption>
+      <image:title>White raised-panel kitchen cabinets and ceramic backsplash in Repentigny</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Custom kitchen cabinets in Pierrefonds, West Island</image:caption>
+      <image:title>Custom kitchen cabinets in Pierrefonds, West Island</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Custom kitchen in Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Custom kitchen in Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>High-end custom kitchen in Montréal</image:caption>
+      <image:title>High-end custom kitchen in Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/projects/kitchen/cuisine-sur-mesure-terrebonne</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-1.webp</image:loc>
+      <image:caption>Modern custom kitchen in Terrebonne with high-gloss white finish and calacatta quartz countertop</image:caption>
+      <image:title>Modern custom kitchen in Terrebonne with high-gloss white finish and calacatta quartz countertop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-2.webp</image:loc>
+      <image:caption>Handleless white kitchen cabinets and quartz island in Terrebonne</image:caption>
+      <image:title>Handleless white kitchen cabinets and quartz island in Terrebonne</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Custom kitchen cabinets in Pierrefonds, West Island</image:caption>
+      <image:title>Custom kitchen cabinets in Pierrefonds, West Island</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Custom kitchen in Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Custom kitchen in Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>High-end custom kitchen in Montréal</image:caption>
+      <image:title>High-end custom kitchen in Montréal</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/projects/kitchen/custom-kitchen-montreal</loc>
@@ -1581,6 +1718,87 @@
       <image:caption>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:caption>
       <image:title>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure à Laval avec îlot en bois clair et comptoir de quartz marbré</image:caption>
+      <image:title>Cuisine sur mesure à Laval avec îlot en bois clair et comptoir de quartz marbré</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-brossard-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure bicolore à Brossard avec armoires blanches et bases bleu marine</image:caption>
+      <image:title>Cuisine sur mesure bicolore à Brossard avec armoires blanches et bases bleu marine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure blanche classique à Repentigny avec îlot et moulures</image:caption>
+      <image:title>Cuisine sur mesure blanche classique à Repentigny avec îlot et moulures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure moderne à Terrebonne en fini blanc lustré et comptoir de quartz calacatta</image:caption>
+      <image:title>Cuisine sur mesure moderne à Terrebonne en fini blanc lustré et comptoir de quartz calacatta</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-brossard</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-brossard-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure bicolore à Brossard avec armoires blanches et bases bleu marine</image:caption>
+      <image:title>Cuisine sur mesure bicolore à Brossard avec armoires blanches et bases bleu marine</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-brossard-2.webp</image:loc>
+      <image:caption>Armoires de cuisine bleu marine et comptoir de quartz marbré à Brossard</image:caption>
+      <image:title>Armoires de cuisine bleu marine et comptoir de quartz marbré à Brossard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-laval</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure à Laval avec îlot en bois clair et comptoir de quartz marbré</image:caption>
+      <image:title>Cuisine sur mesure à Laval avec îlot en bois clair et comptoir de quartz marbré</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-2.webp</image:loc>
+      <image:caption>Armoires de cuisine blanches sur mesure à Laval avec dosseret de quartz</image:caption>
+      <image:title>Armoires de cuisine blanches sur mesure à Laval avec dosseret de quartz</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-3.webp</image:loc>
+      <image:caption>Îlot de cuisine en placage de bois clair et quartz veiné à Laval</image:caption>
+      <image:title>Îlot de cuisine en placage de bois clair et quartz veiné à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-montreal</loc>
@@ -1652,11 +1870,67 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-repentigny</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure blanche classique à Repentigny avec îlot et moulures</image:caption>
+      <image:title>Cuisine sur mesure blanche classique à Repentigny avec îlot et moulures</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-2.webp</image:loc>
+      <image:caption>Armoires de cuisine blanches à panneaux relevés et dosseret de céramique à Repentigny</image:caption>
+      <image:title>Armoires de cuisine blanches à panneaux relevés et dosseret de céramique à Repentigny</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-rive-sud</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
       <image:caption>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:caption>
       <image:title>Cuisine sur mesure blanche à Brossard, Rive-Sud</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>
+      <image:caption>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:caption>
+      <image:title>Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l&amp;#x27;Île</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
+      <image:caption>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:caption>
+      <image:title>Cuisine sur mesure au Plateau-Mont-Royal, Montréal</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme à Montréal</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme à Montréal</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/projets/cuisine/cuisine-sur-mesure-terrebonne</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure moderne à Terrebonne en fini blanc lustré et comptoir de quartz calacatta</image:caption>
+      <image:title>Cuisine sur mesure moderne à Terrebonne en fini blanc lustré et comptoir de quartz calacatta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-2.webp</image:loc>
+      <image:caption>Armoires de cuisine blanches sans poignées et îlot de quartz à Terrebonne</image:caption>
+      <image:title>Armoires de cuisine blanches sans poignées et îlot de quartz à Terrebonne</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-pierrefonds.webp</image:loc>

@@ -23,6 +23,8 @@ const SPACES = Object.keys(SPACE_LABEL) as ProjectSpace[];
 
 const asLocale = (l: string): "fr" | "en" => (l === "en" ? "en" : "fr");
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return SPACES.map((space) => ({ space }));
 }

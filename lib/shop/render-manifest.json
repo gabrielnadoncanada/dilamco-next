@@ -2,11 +2,11 @@
   "_convention": "/assets/products/renders/<slug>_<view>.webp?v=<hash8> ; slug = code SKU minuscule, * -> x, autres separateurs -> tiret ; view: face | technique ; ?v= = md5(8) du contenu pour cache-busting (regrave via scripts/stamp_manifest_hashes.py ; auto en batch)",
   "products": {
     "S8-B18-PO": {
-      "face": "/assets/products/renders/s8-b18-po_face.webp?v=17ee2855",
-      "face@navi": "/assets/products/renders/s8-b18-po_navi_face.webp?v=026b18c2"
+      "face": "/assets/products/renders/s8-b18-po_face.webp?v=a9c36365",
+      "face@navi": "/assets/products/renders/s8-b18-po_navi_face.webp?v=8dbb2ed2"
     },
     "S8-B18-PO-muf": {
-      "face": "/assets/products/renders/s8-b18-po-muf_face.webp?v=886b336c"
+      "face": "/assets/products/renders/s8-b18-po-muf_face.webp?v=4de2118c"
     },
     "S8-BBC42": {
       "face": "/assets/products/renders/s8-bbc42_face.webp?v=22e106f7",
@@ -107,14 +107,15 @@
       "face": "/assets/products/renders/s8-db12-muf_face.webp?v=163cff0f"
     },
     "S8-DB15": {
-      "face": "/assets/products/renders/s8-db15_face.webp?v=3fc9fa0b",
-      "face@navi": "/assets/products/renders/s8-db15_navi_face.webp?v=48aff7af"
+      "face": "/assets/products/renders/s8-db15_face.webp?v=fb2f48eb",
+      "face@navi": "/assets/products/renders/s8-db15_navi_face.webp?v=fb816ac6",
+      "open": "/assets/products/renders/s8-db15_open.webp?v=7c1af7cd"
     },
     "S8-DB15-2-muf": {
       "face": "/assets/products/renders/s8-db15-2-muf_face.webp?v=4320e78a"
     },
     "S8-DB15-muf": {
-      "face": "/assets/products/renders/s8-db15-muf_face.webp?v=48b880cf"
+      "face": "/assets/products/renders/s8-db15-muf_face.webp?v=baf1365e"
     },
     "S8-DB18": {
       "face": "/assets/products/renders/s8-db18_face.webp?v=caa076bc",
@@ -328,22 +329,22 @@
       "face": "/assets/products/renders/s8-ls3612-muf_face.webp?v=c9aec1c5"
     },
     "S8-SP06": {
-      "face": "/assets/products/renders/s8-sp06_face.webp?v=076e3c8d",
-      "face@navi": "/assets/products/renders/s8-sp06_navi_face.webp?v=443f0688"
+      "face": "/assets/products/renders/s8-sp06_face.webp?v=210bae46",
+      "face@navi": "/assets/products/renders/s8-sp06_navi_face.webp?v=35cc8b4b"
     },
     "S8-SP09": {
-      "face": "/assets/products/renders/s8-sp09_face.webp?v=f303f3de",
-      "face@navi": "/assets/products/renders/s8-sp09_navi_face.webp?v=376fa073"
+      "face": "/assets/products/renders/s8-sp09_face.webp?v=dab3f041",
+      "face@navi": "/assets/products/renders/s8-sp09_navi_face.webp?v=1eac4b1f"
     },
     "S8-SP09-muf": {
-      "face": "/assets/products/renders/s8-sp09-muf_face.webp?v=868c0578"
+      "face": "/assets/products/renders/s8-sp09-muf_face.webp?v=2c5ab0b2"
     },
     "S8-SP12": {
-      "face": "/assets/products/renders/s8-sp12_face.webp?v=ccfe7f7f",
-      "face@navi": "/assets/products/renders/s8-sp12_navi_face.webp?v=f58bcd63"
+      "face": "/assets/products/renders/s8-sp12_face.webp?v=93898ec9",
+      "face@navi": "/assets/products/renders/s8-sp12_navi_face.webp?v=f2bd283c"
     },
     "S8-SP12-muf": {
-      "face": "/assets/products/renders/s8-sp12-muf_face.webp?v=03019467"
+      "face": "/assets/products/renders/s8-sp12-muf_face.webp?v=ee322874"
     },
     "S8-VDB1221": {
       "face": "/assets/products/renders/s8-vdb1221_face.webp?v=21484d53",

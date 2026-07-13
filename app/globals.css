@@ -274,6 +274,7 @@
   @media (prefers-reduced-motion: reduce) {
     .hero-reveal,
     .reveal-up,
+    .reveal-up.is-pending,
     .reveal-up.is-visible,
     .ken-burns {
       animation: none;

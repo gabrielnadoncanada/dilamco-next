@@ -167,9 +167,9 @@ const rendersByCode = (
   renderManifest as { products: Record<string, RenderViews> }
 ).products;
 
-/** Clé de vue manifest pour un profil de porte (défaut shaker-1 = `face`). */
-function viewKeyForProfil(profil?: string): string {
-  return profil && profil !== "shaker-1" ? `face@${profil}` : "face";
+/** Clé de vue manifest pour un profil de porte (défaut shaker-1 = `face`/`open`). */
+function viewKeyForProfil(profil: string | undefined, view = "face"): string {
+  return profil && profil !== "shaker-1" ? `${view}@${profil}` : view;
 }
 
 /** Finis qui vivent comme une VUE du manifest sur le code blanc (pas un code
@@ -198,12 +198,20 @@ export function galleryFor(
 ): ProductGalleryEntry[] | undefined {
   const render = rendersByCode[code] ?? rendersBySuffix.get(stripVendorPrefix(code));
   if (!render) return undefined;
-  const face =
-    couleur && VIEW_BASED_FINISHES.has(couleur)
-      ? render[`face@${couleur}`]
-      : render[viewKeyForProfil(profil)] ?? render.face;
+  const viewSuffix =
+    couleur && VIEW_BASED_FINISHES.has(couleur) ? couleur : undefined;
+  const face = viewSuffix
+    ? render[`face@${viewSuffix}`]
+    : render[viewKeyForProfil(profil)] ?? render.face;
   if (!face) return undefined;
   const entries: ProductGalleryEntry[] = [{ src: face, label: "Produit" }];
+  const open = viewSuffix
+    ? render[`open@${viewSuffix}`]
+    : render[viewKeyForProfil(profil, "open")] ??
+      (render[viewKeyForProfil(profil)] ? undefined : render.open);
+  if (open) {
+    entries.push({ src: open, label: "Tiroirs ouverts" });
+  }
   if (render.technique) {
     entries.push({ src: render.technique, label: "Dessin technique" });
   }
