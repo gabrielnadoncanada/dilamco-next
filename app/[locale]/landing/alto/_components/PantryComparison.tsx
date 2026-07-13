@@ -35,7 +35,7 @@ export function PantryComparison() {
         <div className="grid gap-6 md:grid-cols-[1fr_0.8fr] md:items-end md:gap-12">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              § 05 · La différence Dilamco
+              La différence ALTO
             </p>
             <Heading as="h2" variant="h2" className="text-balance">
               Un meuble conçu autour de sa <em>deuxième</em> installation.
@@ -51,7 +51,7 @@ export function PantryComparison() {
         <div className="mt-12 overflow-hidden rounded-2xl border border-border bg-background">
           <div
             role="table"
-            aria-label="Comparaison entre le garde-manger Dilamco et un meuble ordinaire"
+            aria-label="Comparaison entre ALTO et un meuble ordinaire"
           >
             <div
               role="row"
@@ -64,7 +64,7 @@ export function PantryComparison() {
                 role="columnheader"
                 className="border-l border-border bg-foreground px-4 py-4 text-background sm:px-6"
               >
-                Dilamco
+                ALTO
               </div>
               <div
                 role="columnheader"
@@ -79,7 +79,10 @@ export function PantryComparison() {
                 role="row"
                 className="grid grid-cols-[1.25fr_0.9fr_0.9fr] border-b border-border text-sm last:border-b-0"
               >
-                <div role="cell" className="px-4 py-4 text-foreground/85 sm:px-6">
+                <div
+                  role="cell"
+                  className="px-4 py-4 text-foreground/85 sm:px-6"
+                >
                   {row.label}
                 </div>
                 <div

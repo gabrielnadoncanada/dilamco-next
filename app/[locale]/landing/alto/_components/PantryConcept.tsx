@@ -32,7 +32,7 @@ export function PantryConcept() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            § 01 · Le meuble qu&apos;on garde
+            Le meuble qu&apos;on garde
           </p>
           <Heading as="h2" variant="h2" className="text-balance">
             Un <em>vrai</em> meuble. Pas un compromis.

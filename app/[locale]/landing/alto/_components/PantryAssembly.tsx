@@ -33,7 +33,7 @@ export function PantryAssembly() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:px-8">
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-background/55">
-            § 03 · Assemblage repensé
+            Assemblage repensé
           </p>
           <Heading
             as="h2"
@@ -71,8 +71,8 @@ export function PantryAssembly() {
 
         <div className="overflow-hidden rounded-2xl bg-white">
           <Image
-            src="/images/landing/garde-manger/exploded.webp"
-            alt="Vue éclatée du garde-manger Dilamco montrant chaque panneau"
+            src="/images/landing/alto/exploded.webp"
+            alt="Vue éclatée d'ALTO montrant chaque panneau"
             width={1122}
             height={1402}
             className="h-auto w-full object-cover"

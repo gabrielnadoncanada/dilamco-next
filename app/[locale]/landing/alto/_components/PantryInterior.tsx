@@ -29,8 +29,8 @@ export function PantryInterior() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-20 lg:px-8">
         <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
           <Image
-            src="/images/landing/garde-manger/open.webp"
-            alt="Intérieur du garde-manger Dilamco avec ses cinq tablettes"
+            src="/images/landing/alto/open.webp"
+            alt="Intérieur d'ALTO avec ses cinq tablettes"
             width={1122}
             height={1402}
             className="h-auto w-full object-cover"
@@ -40,7 +40,7 @@ export function PantryInterior() {
 
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-            § 04 · À l&apos;intérieur
+            À l&apos;intérieur
           </p>
           <Heading as="h2" variant="h2" className="text-balance">
             Simple, ajustable et réellement <em>utile</em>.

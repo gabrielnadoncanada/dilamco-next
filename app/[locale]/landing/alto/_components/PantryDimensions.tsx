@@ -16,8 +16,8 @@ export function PantryDimensions() {
         <div className="grid items-center gap-10 rounded-2xl border border-border bg-background p-6 sm:p-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16 lg:p-16">
           <div className="relative overflow-hidden rounded-xl bg-[var(--surface-tint-bg)]">
             <Image
-              src="/images/landing/garde-manger/closed.webp"
-              alt="Dimensions du garde-manger Dilamco : 24 pouces de largeur, 16 de profondeur, 72 de hauteur"
+              src="/images/landing/alto/closed.webp"
+              alt="Dimensions d'ALTO : 24 pouces de largeur, 16 de profondeur et 72 de hauteur"
               width={1122}
               height={1402}
               className="h-auto w-full object-cover"
@@ -33,7 +33,7 @@ export function PantryDimensions() {
 
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              § 06 · Dimensions
+              Dimensions
             </p>
             <Heading as="h2" variant="h2" className="text-balance">
               Beaucoup de rangement, sans bloquer la <em>pièce</em>.
@@ -57,7 +57,6 @@ export function PantryDimensions() {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>

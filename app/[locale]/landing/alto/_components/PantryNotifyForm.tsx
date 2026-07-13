@@ -118,8 +118,8 @@ export function PantryNotifyForm({ idPrefix = "pantry" }: { idPrefix?: string })
       )}
 
       <p className="text-xs leading-5 text-muted-foreground">
-        Aucun pourriel. Nous vous écrirons uniquement lorsque le garde-manger
-        sera disponible.
+        Aucun pourriel. Nous vous écrirons uniquement lorsqu&apos;ALTO sera
+        disponible.
       </p>
     </form>
   );

@@ -15,29 +15,29 @@ const views = [
   {
     key: "closed",
     label: "Fermé",
-    src: "/images/landing/garde-manger/closed.webp",
-    alt: "Garde-manger Dilamco fermé, fini noyer",
+    src: "/images/landing/alto/closed.webp",
+    alt: "ALTO, garde-manger Dilamco fermé au fini noyer",
     fit: "contain",
   },
   {
     key: "open",
     label: "Ouvert",
-    src: "/images/landing/garde-manger/open.webp",
-    alt: "Garde-manger Dilamco ouvert montrant les cinq tablettes",
+    src: "/images/landing/alto/open.webp",
+    alt: "ALTO ouvert, montrant ses cinq tablettes",
     fit: "contain",
   },
   {
     key: "exploded",
     label: "Assemblage",
-    src: "/images/landing/garde-manger/exploded.webp",
-    alt: "Garde-manger Dilamco en vue éclatée",
+    src: "/images/landing/alto/exploded.webp",
+    alt: "ALTO en vue éclatée",
     fit: "contain",
   },
   {
     key: "lifestyle",
     label: "En situation",
-    src: "/images/landing/garde-manger/lifestyle.webp",
-    alt: "Garde-manger Dilamco dans une cuisine",
+    src: "/images/landing/alto/lifestyle.webp",
+    alt: "ALTO intégré dans une cuisine contemporaine",
     fit: "cover",
   },
 ] as const;
@@ -49,7 +49,7 @@ export function PantryGallery() {
         <div className="grid gap-6 md:grid-cols-[1fr_0.8fr] md:items-end md:gap-12">
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-              § 07 · Voir le produit
+              Voir le produit
             </p>
             <Heading as="h2" variant="h2" className="text-balance">
               Un seul meuble. Tous ses <em>angles</em>.

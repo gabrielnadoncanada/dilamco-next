@@ -16,7 +16,7 @@ export function PantryFinalCta() {
           variant="h2"
           className="text-balance text-background [&_em]:text-background"
         >
-          Le prochain meuble que vous n&apos;aurez <em>pas</em> à jeter.
+          ALTO, le meuble que vous n&apos;aurez <em>pas</em> à jeter.
         </Heading>
         <p className="max-w-2xl text-base leading-7 text-background/70">
           Prix de lancement :{" "}

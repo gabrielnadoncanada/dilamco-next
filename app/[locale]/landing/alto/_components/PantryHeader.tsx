@@ -26,7 +26,7 @@ export function PantryHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <a
           href="#top"
-          aria-label="Garde-manger Dilamco"
+          aria-label="ALTO, garde-manger Dilamco"
           className="flex items-center gap-3"
         >
           <Image
@@ -37,7 +37,7 @@ export function PantryHeader() {
             className="w-30"
           />
           <span className="hidden border-l border-border pl-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground sm:inline">
-            Garde-manger 24 po
+            ALTO · Garde-manger 24 po
           </span>
         </a>
 

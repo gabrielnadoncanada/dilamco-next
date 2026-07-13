@@ -7,10 +7,10 @@ import { PantryBuyButton } from "./PantryBuyButton";
 export function PantryHero() {
   return (
     <section className="relative overflow-hidden bg-[var(--surface-tint-bg)]">
-      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-28 sm:px-6 md:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:pb-24">
+      <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-16 pt-20 sm:px-6 md:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:px-8 lg:pb-24">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-background px-4 py-1.5 text-xs font-medium text-foreground/75">
-            Garde-manger modulaire · 24 po · Fini noyer
+            ALTO · Garde-manger modulaire · 24 po
           </div>
 
           <Heading as="h1" variant="h1" className="mt-7 text-balance">
@@ -20,9 +20,9 @@ export function PantryHero() {
           </Heading>
 
           <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
-            Un garde-manger élégant au fini noyer véritable, monté en quelques
-            minutes. Condo, appartement ou extension de cuisine : il trouve sa
-            place partout.
+            ALTO est un garde-manger élégant au fini noyer véritable, monté en
+            quelques minutes. Condo, appartement ou extension de cuisine : il
+            trouve sa place partout.
           </p>
 
           <div className="mt-6 flex items-baseline gap-3">
@@ -54,11 +54,11 @@ export function PantryHero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative order-first lg:order-last">
           <div className="relative overflow-hidden rounded-2xl bg-white shadow-xl">
             <Image
-              src="/images/landing/garde-manger/closed.webp"
-              alt="Garde-manger Dilamco 24 po fermé, fini noyer"
+              src="/images/landing/alto/closed.webp"
+              alt="ALTO, garde-manger Dilamco 24 po fermé au fini noyer"
               width={1122}
               height={1402}
               className="h-auto w-full object-cover"
