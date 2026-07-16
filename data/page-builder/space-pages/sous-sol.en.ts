@@ -234,6 +234,11 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
+              label: "In-stock pantry and storage cabinets",
+              href: "/boutique/garde-manger",
+              variant: "ghost",
+            },
+            {
               label: "View our services",
               href: "/services",
               variant: "ghost",

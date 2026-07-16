@@ -157,6 +157,11 @@ export const walkInPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
+              label: "In-stock full-height storage cabinets",
+              href: "/boutique/garde-manger",
+              variant: "ghost",
+            },
+            {
               label: "View our spaces",
               href: "/espaces",
               variant: "ghost",

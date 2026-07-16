@@ -13,7 +13,7 @@ export const SplitSteps2x2CtaSchema = z.object({
     )
     .min(1)
     .max(8),
-  actions: z.array(ActionSchema).min(1).max(2).optional(),
+  actions: z.array(ActionSchema).min(1).max(3).optional(),
 });
 
 export type SplitSteps2x2CtaProps = z.infer<typeof SplitSteps2x2CtaSchema>;

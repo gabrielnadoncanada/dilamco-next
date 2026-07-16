@@ -158,6 +158,11 @@ export const walkInPage: PageTemplateData = {
               variant: "ghost",
             },
             {
+              label: "Rangements pleine hauteur en stock",
+              href: "/boutique/garde-manger",
+              variant: "ghost",
+            },
+            {
               label: "Cuisine sur mesure",
               href: "/espaces/cuisine",
               variant: "ghost",

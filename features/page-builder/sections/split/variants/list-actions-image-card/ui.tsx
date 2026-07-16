@@ -14,9 +14,6 @@ import {
 export function SplitListActionsImageCard(
   props: SplitListActionsImageCardProps,
 ) {
-  const primary = props.actions[0];
-  const secondary = props.actions[1];
-
   return (
     <div className="grid gap-y-8 lg:grid-cols-12 lg:items-center">
       {/* Left */}
@@ -38,16 +35,12 @@ export function SplitListActionsImageCard(
           ))}
         </ul>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Button asChild variant={primary.variant ?? "ghost"}>
-            <Link href={primary.href}>{primary.label}</Link>
-          </Button>
-
-          {secondary ? (
-            <Button asChild variant={secondary.variant ?? "ghost"}>
-              <Link href={secondary.href}>{secondary.label}</Link>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          {props.actions.map((a) => (
+            <Button key={`${a.href}-${a.label}`} asChild variant={a.variant ?? "ghost"}>
+              <Link href={a.href}>{a.label}</Link>
             </Button>
-          ) : null}
+          ))}
         </div>
       </div>
 

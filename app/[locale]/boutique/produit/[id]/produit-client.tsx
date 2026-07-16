@@ -26,6 +26,8 @@ import {
 import { ProductDetails, ProductInfo } from "./_components/product-info";
 import { ProductRelated } from "./_components/product-related";
 import { ShowroomCta } from "@/components/shop/showroom-cta";
+import { productFaq } from "@/lib/shop/product-faq";
+import type { ProductModel } from "@/lib/shop/types";
 
 /**
  * Bande « construction et qualité » : l'information des anciens blocs
@@ -81,6 +83,35 @@ function QualityHighlights() {
           </div>
         ))}
       </div>
+    </section>
+  );
+}
+
+/**
+ * FAQ spec-driven de la fiche (mêmes Q/R que le FAQPage JSON-LD émis côté
+ * serveur). Texte visible dans le HTML statique — PAS d'accordéon Radix : le
+ * contenu fermé serait absent du HTML serveur, donc invisible pour Google.
+ */
+function ProductFaq({ model }: { model: ProductModel }) {
+  const locale = useLocale() as "fr" | "en";
+  const items = productFaq(model, locale);
+  return (
+    <section className="mt-20 border-t border-border pt-10 max-[700px]:mt-12 max-[700px]:pt-7">
+      <h2 className="font-serif text-[22px] tracking-[-0.01em] text-foreground">
+        {locale === "fr" ? "Questions fréquentes" : "Frequently asked questions"}
+      </h2>
+      <dl className="mt-6 grid max-w-[760px] gap-7">
+        {items.map((item) => (
+          <div key={item.q} className="flex flex-col gap-2">
+            <dt className="text-[14px] font-medium leading-[1.4] text-foreground">
+              {item.q}
+            </dt>
+            <dd className="m-0 text-[13px] leading-[1.65] text-soft-foreground">
+              {item.a}
+            </dd>
+          </div>
+        ))}
+      </dl>
     </section>
   );
 }
@@ -205,6 +236,7 @@ export default function ProduitClient({ id }: { id: string }) {
         <ProductDetails product={product} />
       </div>
       <QualityHighlights />
+      <ProductFaq model={model} />
       <ProductRelated products={related} />
       <div className="mt-[100px] max-[700px]:mt-14">
         <ShowroomCta />

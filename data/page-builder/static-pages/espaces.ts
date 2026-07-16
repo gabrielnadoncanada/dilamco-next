@@ -183,6 +183,11 @@ export const page: PageTemplateData = {
               href: "/materiaux",
               variant: "ghost",
             },
+            {
+              label: "Caissons en stock (boutique)",
+              href: "/boutique",
+              variant: "ghost",
+            },
           ],
         },
       },

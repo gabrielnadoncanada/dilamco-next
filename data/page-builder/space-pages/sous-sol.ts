@@ -234,6 +234,11 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
             {
+              label: "Garde-manger et rangements en stock",
+              href: "/boutique/garde-manger",
+              variant: "ghost",
+            },
+            {
               label: "Reconstruction après dégât d'eau",
               href: "/services/renovation/apres-sinistre",
               variant: "ghost",

@@ -245,6 +245,21 @@ const redirectRules = [
     destination: "/projets",
   },
   {
+    source: "/realisations/feed",
+    destination: "/projets",
+  },
+  // Vestige d'un ancien déploiement : le segment dynamique littéral "[type]"
+  // a été crawlé par Google (GSC 404, juin 2026). Plus rien ne l'émet ; on
+  // 301 vers le hub rénovation pour purger l'index plus vite qu'un 404.
+  {
+    source: "/services/renovation/\\[type\\]",
+    destination: "/services/renovation",
+  },
+  {
+    source: "/en/services/renovation/\\[type\\]",
+    destination: "/en/services/renovation",
+  },
+  {
     source: "/spaces",
     destination: "/espaces/cuisine",
   },
