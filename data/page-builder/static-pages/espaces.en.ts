@@ -183,6 +183,11 @@ export const pageEn: PageTemplateData = {
               href: "/materiaux",
               variant: "ghost",
             },
+            {
+              label: "In-stock cabinets (shop)",
+              href: "/boutique",
+              variant: "ghost",
+            },
           ],
         },
       },

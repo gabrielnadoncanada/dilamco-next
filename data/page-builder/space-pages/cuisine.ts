@@ -217,6 +217,11 @@ export const cuisinePage: PageTemplateData = {
               variant: "ghost",
             },
             {
+              label: "Armoires de cuisine en stock",
+              href: "/boutique/armoires-cuisine",
+              variant: "ghost",
+            },
+            {
               label: "Vanité de salle de bain sur mesure",
               href: "/espaces/salle-de-bain",
               variant: "ghost",

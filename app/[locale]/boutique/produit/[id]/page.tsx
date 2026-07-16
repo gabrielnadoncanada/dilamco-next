@@ -17,7 +17,8 @@ import { createPageMetadata } from "@/lib/metadata";
 import { localizePath } from "@/seo/i18n-path";
 import { SITE } from "@/seo/schema/site";
 import { JsonLd } from "@/seo/JsonLd";
-import { breadcrumbJsonLd, productJsonLd } from "@/seo/schema/builders";
+import { breadcrumbJsonLd, productJsonLd, faqJsonLd } from "@/seo/schema/builders";
+import { productFaq } from "@/lib/shop/product-faq";
 import {
   localizeProductLabel,
   localizeFamily,
@@ -206,6 +207,8 @@ export default async function ProduitPage({
           additionalProperties,
         })}
       />
+      {/* FAQ spec-driven (mêmes Q/R que la section visible de la fiche). */}
+      <JsonLd data={faqJsonLd(productFaq(model, locale))} />
       <JsonLd
         data={breadcrumbJsonLd([
           { name: t("breadcrumb.home"), url: `${SITE.url}/` },

@@ -126,8 +126,20 @@ type AppLinkProps = Omit<ComponentProps<typeof Link>, "href"> & {
  * Localise automatiquement l'URL (FR à la racine, EN sous /en avec segments
  * traduits) en convertissant le href string en href typé next-intl.
  * Les liens externes (http, mailto, #) passent par une balise <a> simple.
+ *
+ * `prefetch` défaut = false : sur Vercel, chaque route est servie via la couche
+ * ISR (middleware next-intl obligatoire pour les slugs traduits), donc chaque
+ * prefetch RSC de `<Link>` compte comme un ISR read. Sur une grille (30 cartes
+ * produit), le prefetch viewport multipliait les reads par ~30 par visite. On
+ * coupe le prefetch auto par défaut ; passer `prefetch` explicitement le
+ * réactive là où la vitesse de navigation le justifie (ex. nav principale).
  */
-export function AppLink({ href, children, ...rest }: AppLinkProps) {
+export function AppLink({
+  href,
+  children,
+  prefetch = false,
+  ...rest
+}: AppLinkProps) {
   if (typeof href !== "string" || !href.startsWith("/")) {
     // Externe / ancre / mailto : lien brut.
     const { locale: _locale, ...anchorRest } = rest as Record<string, unknown>;
@@ -151,7 +163,7 @@ export function AppLink({ href, children, ...rest }: AppLinkProps) {
   }
 
   return (
-    <Link href={intlHref} {...rest}>
+    <Link href={intlHref} prefetch={prefetch} {...rest}>
       {children}
     </Link>
   );

@@ -14,14 +14,14 @@ import type { ProductModel } from "./types";
 type Loc = "fr" | "en";
 
 /** Seed stable depuis le code produit → choix de formulation reproductible. */
-function seed(code: string): number {
+export function seed(code: string): number {
   let s = 0;
   for (let i = 0; i < code.length; i += 1) s = (s * 31 + code.charCodeAt(i)) >>> 0;
   return s;
 }
 // Index robuste : tronque (les specs peuvent être des floats, ex. h = 34.5) et
 // borne en positif, pour ne jamais tomber sur arr[float] / arr[négatif] = undefined.
-const pick = <T>(arr: T[], s: number): T =>
+export const pick = <T>(arr: T[], s: number): T =>
   arr[Math.abs(Math.trunc(s)) % arr.length];
 
 /** Profil de type : noms + ouvertures + cas d'usage, par langue. */
@@ -331,18 +331,18 @@ const COLOR_EN: Record<string, string> = {
 };
 
 /** Finitions (couleurs), localisées. */
-function finishNames(model: ProductModel, loc: Loc): string[] {
+export function finishNames(model: ProductModel, loc: Loc): string[] {
   const labels = axisLabels(model, "couleur");
   return loc === "fr" ? labels : labels.map((l) => COLOR_EN[l] ?? l);
 }
 /** Profils de porte, localisés (« Shaker 1 po » → « Shaker 1" » en EN). */
-function profilNames(model: ProductModel, loc: Loc): string[] {
+export function profilNames(model: ProductModel, loc: Loc): string[] {
   const labels = axisLabels(model, "profil");
   return loc === "fr" ? labels : labels.map((l) => l.replace(/\s*po\b/, '"'));
 }
 
 /** Liste en français : ["A","B","C"] → "A, B ou C". */
-function joinList(items: string[], loc: Loc): string {
+export function joinList(items: string[], loc: Loc): string {
   if (items.length <= 1) return items[0] ?? "";
   const last = items[items.length - 1];
   const head = items.slice(0, -1).join(", ");
@@ -435,4 +435,12 @@ export function productDescription(model: ProductModel, loc: Loc): string {
       : `${opening}${cfg}, ${dims}.`;
 
   return `${sentence1}${finishPhrase} ${useCase} ${close}`;
+}
+
+/** Nom générique du type de caisson (ex. « armoire murale »), pour la FAQ produit. */
+export function typeNoun(category: string, loc: Loc): string {
+  const types = loc === "fr" ? TYPES_FR : TYPES_EN;
+  return (
+    types[category]?.noun ?? (loc === "fr" ? "armoire en stock" : "in-stock cabinet")
+  );
 }

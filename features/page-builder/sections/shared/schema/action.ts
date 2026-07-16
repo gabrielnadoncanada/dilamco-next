@@ -13,6 +13,6 @@ export const ActionSchema = z.object({
   variant: ActionVariantSchema.optional(),
 });
 
-export const ActionsSchema = z.array(ActionSchema).min(1).max(2);
+export const ActionsSchema = z.array(ActionSchema).min(1).max(3);
 
 export type Action = z.infer<typeof ActionSchema>;
