@@ -42,9 +42,9 @@ export const renovationSousSolPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Finition de sous-sol",
-          heading: "Régler l'humidité avant de poser un seul panneau",
+          heading: "Régler l'eau avant de poser un seul panneau",
           description:
-            "Diagnostic, drainage, isolation, permis, issue de secours et finition, sous un seul contrat.",
+            "Diagnostic, drainage, isolation, issue de secours et finition menés sous un contrat unique.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -57,12 +57,13 @@ export const renovationSousSolPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Permis obligatoire", "Humidité et drainage", "Prix ferme"],
+          badges: ["Permis obligatoire", "Humidité vérifiée"],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Sous-sol fini et aménagé par un entrepreneur général",
           },
-          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
+          imageSide: "left",
+          caption: "Sous-sols finis, Montréal et Rive-Sud",
         },
       },
     },
@@ -72,48 +73,47 @@ export const renovationSousSolPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que le mandat comprend",
-          intro: "La portée exacte est écrite dans la soumission.",
+          heading: "Ce que couvre le mandat sous-sol",
           columns: "2",
           items: [
             {
-              title: "Diagnostic, eau et permis",
+              title: "Eau et fondation",
               description: "L'étape qui conditionne tout le reste",
               icon: "droplets",
               bullets: [
-                "Fondation, dalle et traces d'infiltration inspectées",
-                "Drainage, pente du terrain et pompe de puisard vérifiés",
-                "Fissures réparées, permis d'aménagement déposé",
+                "Dalle, murs et traces d'infiltration examinés",
+                "Drain, pente de terrain et pompe vérifiés",
+                "Fissures réparées avant d'isoler",
               ],
             },
             {
-              title: "Isolation et charpente",
-              description: "Le mur qui décide de l'humidité",
+              title: "Isolation et divisions",
+              description: "Le mur qui gère la vapeur",
               icon: "layers",
               bullets: [
-                "Isolant continu contre le béton, vapeur gérée correctement",
-                "Colombages montés en retrait, sans contact avec la dalle",
-                "Solives de rive et pourtour de dalle isolés",
+                "Isolant continu appliqué contre le béton",
+                "Colombages montés en retrait de la dalle",
+                "Solives de rive et pourtour traités",
               ],
             },
             {
-              title: "Électricité, plomberie, issues",
-              description: "Inspectés avant la fermeture des murs",
-              icon: "wrench",
+              title: "Issue de secours",
+              description: "La condition pour une chambre",
+              icon: "doorOpen",
               bullets: [
-                "Circuits, éclairage, détecteurs de fumée et de monoxyde",
-                "Fenêtre d'égress ou porte extérieure pour une chambre",
-                "Salle de bain : drain de dalle ou pompe de relevage",
+                "Fenêtre ouvrante ou porte donnant dehors",
+                "Découpe de fondation et margelle",
+                "Avertisseurs de fumée et de monoxyde",
               ],
             },
             {
-              title: "Planchers, plafond, finition",
+              title: "Finition et rangement",
               description: "La partie visible, sur une base saine",
               icon: "package2",
               bullets: [
-                "Revêtement adapté au sous-sol, sur sous-plancher isolant",
-                "Plafond suspendu ou gypse selon l'accès aux services",
-                "Peinture, portes, moulures, escalier et rangements",
+                "Revêtement toléré par une dalle de béton",
+                "Plafond suspendu ou gypse selon l'accès",
+                "Escalier, portes, rangements intégrés",
               ],
             },
           ],
@@ -126,92 +126,120 @@ export const renovationSousSolPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Le chantier, étape par étape",
+          heading: "La séquence d'un sous-sol",
           steps: [
             {
               number: "1",
-              title: "Visite et diagnostic",
+              title: "Diagnostic d'humidité",
               description:
-                "Fondations, dalle, drainage, pompe de puisard et hauteur libre inspectés.",
+                "Dalle, fissures, pompe de puisard et hauteur libre mesurées.",
             },
             {
               number: "2",
-              title: "Plan et soumission",
+              title: "Travaux correctifs",
               description:
-                "Plan d'aménagement, portée écrite et estimation détaillée.",
+                "Fissures scellées, drainage repris. On ne finit pas sur une fuite.",
             },
             {
               number: "3",
-              title: "Contrat et permis",
+              title: "Plan et permis",
               description:
-                "Échéancier signé, demande de permis déposée avec les plans exigés.",
+                "Plan d'aménagement dessiné, demande déposée à votre ville.",
             },
             {
               number: "4",
-              title: "Travaux correctifs",
+              title: "Isolation et divisions",
               description:
-                "Fissures, drainage, pompe. On ne finit pas par-dessus une infiltration.",
+                "Isolant, colombages, égress, circuits et plomberie inspectés.",
             },
             {
               number: "5",
-              title: "Structure, mécanique, finition",
+              title: "Finition",
               description:
-                "Isolation, égress, électricité, plomberie, inspections, puis gypse et finis.",
+                "Gypse, plafond, plancher, escalier, peinture, puis livraison.",
             },
           ],
         },
       },
     },
     {
-      id: "permis",
+      id: "prix",
       content: {
-        type: "split",
-        variant: "list-actions-image-card",
+        type: "grid",
+        variant: "price-tiles",
         props: {
-          heading: "Permis, issue de secours et conformité",
-          intro:
-            "Transformer un sous-sol brut en espace habitable exige un permis. Nous déposons la demande.",
-          items: [
+          heading: "Ce que coûte un sous-sol",
+          tiles: [
             {
-              title: "Permis d'aménagement",
-              description: "Requis dès qu'on ajoute des pièces habitables.",
+              title: "Aire ouverte",
+              price: "à partir de 25 000 $",
+              hint: "une grande pièce, sans plomberie",
+              includes: [
+                "Isolation et pare-vapeur",
+                "Colombages, gypse et peinture",
+                "Éclairage et circuits",
+              ],
             },
             {
-              title: "Fenêtre d'égress",
-              description: "Obligatoire pour toute chambre : fenêtre accessible ou porte.",
-            },
-            {
-              title: "Hauteur libre",
-              description: "Un minimum est exigé pour reconnaître l'espace habitable.",
-            },
-            {
-              title: "Électricité et avertisseurs",
-              description: "Circuits inspectés, avertisseurs de fumée et de monoxyde.",
-            },
-            {
-              title: "Logement accessoire",
-              description: "Zonage, entrée distincte, coupe-feu : une portée différente.",
-            },
-          ],
-          actions: [
-            {
-              label: "Rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "Zones desservies",
-              href: "/zones",
-              variant: "ghost",
+              title: "Sous-sol complet",
+              price: "40 000 $ à 80 000 $",
+              hint: "chambre, salle de bain, rangement",
+              featured: true,
+              includes: [
+                "Plan et permis d'aménagement",
+                "Fenêtre d'issue de secours",
+                "Salle de bain raccordée",
+                "Plancher, plafond, portes",
+              ],
             },
           ],
-          image: {
-            src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-            alt: "Matériaux et finition adaptés à un aménagement de sous-sol",
+          note: "Prix indicatifs. Les travaux correctifs de drainage ou de fondation se chiffrent séparément.",
+          action: {
+            label: "Soumission gratuite",
+            href: "/contact",
+            variant: "primary",
           },
-          cardTitle: "Pourquoi le permis vous protège",
-          cardDescription:
-            "Un sous-sol fait avec permis compte comme superficie habitable et ne devient pas un litige avec l'assureur.",
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Des sous-sols déjà finis",
+          tiles: [
+            {
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
+                alt: "Salle de cinéma aménagée dans un sous-sol fini",
+              },
+              caption: "Salle de cinéma",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
+                alt: "Bar de sous-sol avec comptoir et rangements",
+              },
+              caption: "Bar et comptoir",
+            },
+            {
+              kind: "stat",
+              value: "1 permis",
+              label: "Exigé dès qu'une pièce habitable est ajoutée",
+            },
+            {
+              kind: "text",
+              title: "Voir les aménagements",
+              description:
+                "Cinéma, bar, cellier, bureau : ce qu'un sous-sol peut devenir.",
+              href: "/espaces/sous-sol",
+            },
+          ],
         },
       },
     },
@@ -224,28 +252,24 @@ export const renovationSousSolPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte la finition d'un sous-sol ?",
-              a: "Un aménagement de base démarre autour de 25 000 $. Un sous-sol complet avec chambre et salle de bain se situe souvent entre 40 000 $ et 80 000 $. Les travaux correctifs se chiffrent à part.",
+              q: "Mon sous-sol prend l'eau, peut-on le finir quand même ?",
+              a: "Pas avant d'avoir coupé l'entrée d'eau : fissure, drain français bouché, terrain qui verse vers la maison ou pompe défaillante. Finir par-dessus une infiltration oblige à tout recommencer.",
             },
             {
               q: "Faut-il un permis pour finir un sous-sol ?",
-              a: "Oui. Aménager un sous-sol en espace habitable exige un permis de transformation à Montréal et dans la plupart des municipalités, avec plan à l'appui. Nous déposons la demande pour vous.",
-            },
-            {
-              q: "Mon sous-sol prend l'eau. Peut-on le finir quand même ?",
-              a: "Pas avant d'avoir réglé l'entrée d'eau : fissure, drain français obstrué, pente de terrain ou pompe de puisard. Finir par-dessus une infiltration garantit d'avoir à tout refaire.",
+              a: "Oui. Transformer un sous-sol brut en espace habitable demande un permis dans la plupart des municipalités, avec plan à l'appui. Nous montons le dossier et déposons la demande.",
             },
             {
               q: "Puis-je aménager une chambre au sous-sol ?",
-              a: "Oui, à condition d'avoir une issue de secours : fenêtre ouvrante accessible ou porte donnant dehors. Cela demande souvent de découper le mur de fondation et d'installer une margelle.",
+              a: "Seulement avec une issue de secours : fenêtre ouvrante atteignable ou porte vers l'extérieur. Cela suppose souvent de découper le béton de fondation et d'installer une margelle.",
             },
             {
-              q: "Peut-on ajouter une salle de bain ?",
-              a: "Oui. Selon la position du drain principal, on casse la dalle pour raccorder par gravité ou on installe une pompe de relevage. S'ajoutent la ventilation et l'inspection avant fermeture.",
+              q: "Peut-on ajouter une salle de bain au sous-sol ?",
+              a: "Oui. Selon la profondeur du drain principal, on casse la dalle pour raccorder par gravité ou on pose une pompe de relevage. La ventilation suit, avec inspection.",
             },
             {
-              q: "Les travaux sont-ils garantis ?",
-              a: "Oui, avec la portée et la durée inscrites au contrat. Licence RBQ 8306-0806-27 valide sans restriction depuis 2004, cautionnement de 40 000 $, aucune réclamation au dossier. Responsabilité civile et assurance chantier en vigueur.",
+              q: "Et si la hauteur du plafond est juste ?",
+              a: "On gagne quelques centimètres en suspendant peu, en dégageant les conduits et en choisissant un plancher mince. Nous mesurons la hauteur libre au relevé et vous donnons le verdict.",
             },
           ],
         },
@@ -259,7 +283,7 @@ export const renovationSousSolPage: PageTemplateData = {
         props: {
           heading: "Faites évaluer votre sous-sol",
           intro:
-            "Estimation gratuite, permis inclus. Premier retour sous 24 à 48 heures ouvrables.",
+            "On commence par l'humidité et la hauteur libre, puis on chiffre l'aménagement.",
           actions: [
             {
               label: "Soumission gratuite",

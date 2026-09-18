@@ -20,12 +20,12 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Réalisations",
-          heading: "Cuisines, vanités, rangement et commercial",
+          badges: ["Cas réels"],
+          heading: "Cuisines, vanités, rangement et projets commerciaux",
           description:
-            "Des chantiers réels menés dans le Grand Montréal par un entrepreneur général licencié RBQ.",
+            "Des chantiers menés dans le Grand Montréal, du relevé sur place à la pose finale.",
           actions: [
             {
               label: "Demander une soumission",
@@ -38,12 +38,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Cas réels", "Montréal", "Laval", "Rive-Sud"],
-          image: {
-            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "Réalisation sur mesure Dilamco",
-          },
-          caption: "Cuisine haut de gamme · Laval",
         },
       },
     },
@@ -114,32 +108,53 @@ export const page: PageTemplateData = {
     },
 
     {
-      id: "process",
+      id: "galerie",
       content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "De la conception à la pose",
-          steps: [
+          heading: "Quelques chantiers livrés",
+          tiles: [
             {
-              number: "1",
-              title: "Cadrage",
-              description: "Besoins, contraintes du lieu et portée réelle du projet.",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-laval-1.webp",
+                alt: "Cuisine sur mesure livrée à Laval",
+              },
+              caption: "Cuisine sur mesure, Laval",
             },
             {
-              number: "2",
-              title: "Conception",
-              description: "Implantation, finis et dessins validés avant la production.",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-terrebonne-1.webp",
+                alt: "Armoires pleine hauteur posées à Terrebonne",
+              },
+              caption: "Armoires pleine hauteur, Terrebonne",
             },
             {
-              number: "3",
-              title: "Production",
-              description: "Commande à notre usine partenaire, aux dimensions relevées sur place.",
+              kind: "image",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-repentigny-1.webp",
+                alt: "Îlot central d'une cuisine sur mesure à Repentigny",
+              },
+              caption: "Îlot central, Repentigny",
             },
             {
-              number: "4",
-              title: "Installation",
-              description: "Pose et ajustements coordonnés avec le reste du chantier.",
+              kind: "image",
+              image: {
+                src: "/images/projects/Signature-Bouleau.webp",
+                alt: "Caissons et tiroirs en bouleau d'une cuisine signature",
+              },
+              caption: "Intérieurs en bouleau",
+            },
+            {
+              kind: "text",
+              title: "Un projet semblable ?",
+              description:
+                "Envoyez vos photos et vos dimensions, on revient avec un ordre de grandeur.",
+              href: "/contact",
             },
           ],
         },

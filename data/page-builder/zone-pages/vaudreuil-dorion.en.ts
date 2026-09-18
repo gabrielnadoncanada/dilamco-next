@@ -34,16 +34,14 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Vaudreuil-Dorion",
-          heading:
-            "General contractor in Vaudreuil-Dorion, from permit to handover",
+          eyebrow: "General contractor in",
+          heading: "Vaudreuil-Dorion",
           description:
-            "From 18,600 residents in 1995 to nearly 46,000 today. A mostly recent housing stock, with an older Dorion core.",
+            "From 18,600 residents in 1995 to nearly 46,000 today. A lot of basements are still waiting to be finished.",
           actions: [
             {
               label: "Request a quote",
@@ -56,42 +54,72 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Vaudreuil-Dorion", "Vaudreuil-Soulanges", "RBQ licence"],
           image: {
             src: "/images/generated/home/home-hero-premium-kitchen-01.webp",
-            alt: "Renovated kitchen in a Vaudreuil-Dorion home",
+            alt: "Rebuilt kitchen in a recent Vaudreuil-Dorion home",
           },
-          caption: "Vaudreuil-Dorion, Hudson, Saint-Lazare, Île-Perrot",
+          facts: [
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro · 30 min on Highway 40",
+            },
+            {
+              label: "Permits",
+              value: "Permits and inspections division, 450 455-3371",
+            },
+            {
+              label: "Housing stock",
+              value: "2000-2020 subdivisions, old Dorion from before 1960",
+            },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "housing",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about homes here",
-          description:
-            "Two housing stocks sit side by side: the planned 2000-2020 neighbourhoods and pre-1960 old Dorion.",
-          cards: [
+          heading: "A city that doubled in thirty years",
+          intro:
+            "The 2021 census counted 43,268 residents, 13.5% more than in 2016. The building stock follows that curve exactly.",
+          rows: [
             {
-              title: "2000-2020 neighbourhoods",
-              description:
-                "Sound structure, entry-level original finishes, basements often delivered unfinished.",
+              label: "Housing stock",
+              value: "Homes built 2000 to 2020, entry-level original finishes",
             },
             {
-              title: "Permits and inspections division",
-              description:
-                "Online filing, no permit issued on the spot, invoice paid before issuance.",
+              label: "Older core",
+              value: "Old Dorion from before 1960, systems to replace outright",
             },
             {
-              title: "By-laws under review",
-              description:
-                "Planning programme revised, Harwood – De Lotbinière PPU updated in November 2025.",
+              label: "Permits",
+              value: "No permit issued on the spot, invoice paid before release",
+            },
+            {
+              label: "Fees",
+              value: "Set by municipal by-law no. 1709, according to the work",
+            },
+            {
+              label: "Planning rules",
+              value: "Urban plan under review, Harwood – De Lotbinière PPU updated",
+            },
+            {
+              label: "Common projects",
+              value: "Finishing basements, kitchens, adding a room or a garage",
+            },
+            {
+              label: "From our base",
+              value: "Île-aux-Tourtes bridge, then the Harwood exit",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
+            alt: "Finished basement with storage in a Vaudreuil-Dorion home",
+          },
+          note: "Sources: City of Vaudreuil-Dorion, Statistics Canada 2021. Verified 2026-09-18.",
         },
       },
     },
@@ -101,16 +129,16 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in Vaudreuil-Dorion",
+          heading: "Three typical Vaudreuil-Soulanges jobs",
           items: [
             {
               title: "Basement finishing",
               href: "/services/renovation/sous-sol",
               description:
-                "Finishing a bare basement: family room, bedroom, bathroom.",
+                "Finishing the bare basement handed over by a Cité-des-Jeunes builder",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
-                alt: "Finished basement used as an office and library",
+                alt: "Basement turned into an office in a Cité-des-Jeunes home",
               },
               badges: ["Basement"],
               footerCtaLabel: "See the service",
@@ -119,24 +147,24 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
               title: "Kitchen renovation",
               href: "/services/renovation/cuisine",
               description:
-                "Replacing original cabinets, rethinking the island and the traffic flow.",
+                "Replacing the original cabinets of a 2008 model and reworking the island",
               image: {
                 src: "/images/generated/spaces/espaces-featured-cuisine-project-01.webp",
-                alt: "Custom kitchen with a central island",
+                alt: "Island replacing the original kitchen of a 2008 house",
               },
               badges: ["Kitchen"],
-              footerCtaLabel: "See the service",
+              footerCtaLabel: "See kitchens",
             },
             {
               title: "Home addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Adding a room, a garage or a storey, permit included.",
+                "Adding a room or a garage, by-law 1709 fees included in the scope",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Residential addition tied into the existing house",
+                alt: "Addition blended into a Vaudreuil-Dorion house",
               },
-              badges: ["Permit"],
+              badges: ["Permits"],
               footerCtaLabel: "See the service",
             },
           ],
@@ -144,35 +172,28 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "What we check on site",
-          intro:
-            "A 2008 house and a pre-1960 house do not lead to the same project.",
-          badges: ["On-site visit", "Free estimate", "24-48 h reply"],
-          cardTitle: "Our on-site checklist",
+          heading: "Before the bridge, in the West Island",
+          columns: "3",
           items: [
-            "Year of construction and neighbourhood",
-            "Quality of the original finishes",
-            "Clear height and possible basement egress",
-            "Electrical service and panel capacity",
-            "Load-bearing walls and prefabricated roof trusses",
-            "Zoning and the by-laws in force today",
-            "Permit type and the by-law 1709 fee",
-          ],
-          actions: [
             {
-              label: "Book a visit",
-              href: "/contact",
-              variant: "primary",
+              title: "Beaconsfield",
+              href: "/zones/beaconsfield",
+              ctaLabel: "See the area",
             },
             {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
+              title: "Kirkland",
+              href: "/zones/kirkland",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "See the area",
             },
           ],
         },
@@ -184,31 +205,23 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions in Vaudreuil-Dorion",
+          heading: "Vaudreuil-Dorion questions we get",
           items: [
             {
-              q: "How do I get a permit in Vaudreuil-Dorion?",
-              a: "Through the permits and inspections division. The City strongly recommends filing online, since the platform lists the required documents. No permit is issued on the spot, and the invoice must be paid before the permit is released.",
+              q: "How do you obtain a permit in Vaudreuil-Dorion?",
+              a: "Through the permits and inspections division. The City strongly recommends applying online, where the required document list is shown. No permit is handed over in person and the invoice must be paid before it is released.",
             },
             {
-              q: "What does the permit cost?",
-              a: "Fees are set by municipal by-law no. 1709 and vary with the work. We include the amount during scoping. The permits and inspections division answers at 450 455-3371 for questions specific to your address.",
+              q: "What does a Vaudreuil-Dorion permit cost?",
+              a: "Fees are set by municipal by-law no. 1709 and vary with the nature of the work. The amount goes into the scope. The permits and inspections division answers at 450 455-3371 for address-specific cases.",
             },
             {
-              q: "Are the planning by-laws changing?",
-              a: "Yes. The planning programme and by-laws are under review, and the Harwood – De Lotbinière corridor is covered by a special planning programme updated in November 2025. We confirm the rules in force at the time of the project.",
+              q: "Are the planning rules changing right now?",
+              a: "Yes. The urban plan and its by-laws are under review, and the Harwood – De Lotbinière corridor has a special planning programme updated on 12 November 2025. Rules are confirmed at the time of the project.",
             },
             {
-              q: "Do you work in Hudson, Saint-Lazare and on Île-Perrot?",
-              a: "Yes. Our territory covers Vaudreuil-Soulanges, the West Island, Montréal, Laval and the South Shore. Each neighbouring municipality has its own planning department, so we confirm the file with the right city before filing.",
-            },
-            {
-              q: "What budget should I plan for?",
-              a: "Our mandates start around $25,000. A full kitchen lands between $35,000 and $50,000 and up. The estimate is free and the budget is set in the written contract before work begins.",
-            },
-            {
-              q: "Are you licensed and insured?",
-              a: "Yes. RBQ licence 8306-0806-27, valid and unrestricted since 2004, categories 1.2 and 1.3 plus subcategory 12 for cabinets and countertops. Civil liability, job-site coverage and licence bond in force, with no claims on file.",
+              q: "Why are so many basements here left unfinished?",
+              a: "Subdivisions built between 2000 and 2020 were often delivered with a bare basement. Finishing stays possible later: headroom, egress, drainage and fire separation are checked before the rooms are drawn.",
             },
           ],
         },
@@ -220,9 +233,8 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a project in Vaudreuil-Dorion?",
-          intro:
-            "We take Highway 40, confirm the by-laws and price it in writing.",
+          heading: "Finishing or reworking your Vaudreuil-Dorion home",
+          intro: "Send the address and the list of work you want done.",
           actions: [
             {
               label: "Request a quote",
@@ -235,7 +247,7 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ-licensed general contractor 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Dilamco · Vaudreuil-Soulanges and the West Island · (514) 820-0773",
         },
       },
     },

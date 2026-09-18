@@ -42,9 +42,9 @@ export const agrandissementMaisonPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Agrandissement de maison",
-          heading: "Du zonage aux fondations, jusqu'à la finition",
+          heading: "Gagner une pièce sans quitter votre quartier",
           description:
-            "Permis de construction, plans d'ingénieur, fondation sous le niveau de gel et raccord à la maison existante.",
+            "Zonage vérifié, plans scellés, fondation coulée sous le gel et raccord soigné au bâtiment existant.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -62,7 +62,8 @@ export const agrandissementMaisonPage: PageTemplateData = {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
             alt: "Agrandissement résidentiel en construction",
           },
-          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
+          imageSide: "left",
+          caption: "Agrandissements, Ouest-de-l'Île et Laval",
         },
       },
     },
@@ -72,47 +73,47 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que comprend le mandat",
+          heading: "Ce que couvre le mandat d'agrandissement",
           columns: "2",
           items: [
             {
-              title: "Faisabilité et permis",
-              description: "Ce qui se vérifie avant de dessiner quoi que ce soit.",
+              title: "Faisabilité et dossier",
+              description: "Ce qui se vérifie avant de dessiner",
               icon: "fileCheck",
               bullets: [
-                "Zonage : marges, implantation, hauteur, occupation du sol",
-                "Relevé de la fondation, de la structure et des services",
-                "Plans scellés et demande de permis déposée",
+                "Marges, hauteur et occupation du sol",
+                "Fondation, structure et services relevés",
+                "Plans scellés joints à la demande",
               ],
             },
             {
-              title: "Excavation et fondations",
-              description: "La partie qui détermine la tenue du bâtiment.",
+              title: "Excavation et fondation",
+              description: "La partie qui porte tout le reste",
               icon: "hardHat",
               bullets: [
-                "Localisation des services souterrains, excavation",
+                "Services souterrains localisés avant de creuser",
                 "Semelles coulées sous le niveau de gel",
-                "Drain, imperméabilisation et remblai drainant",
+                "Drain, imperméabilisation, remblai drainant",
               ],
             },
             {
-              title: "Structure et enveloppe",
-              description: "Fermer le bâtiment avant que la météo décide.",
+              title: "Charpente et enveloppe",
+              description: "Fermer avant que la météo décide",
               icon: "building2",
               bullets: [
-                "Charpente selon les plans d'ingénieur",
-                "Mur porteur ouvert, charges reprises par poutre calculée",
-                "Toiture, pare-air, fenêtres et revêtement agencé",
+                "Charpente montée selon les plans scellés",
+                "Charges du mur ouvert reprises par poutre",
+                "Toiture, pare-air, fenêtres, revêtement agencé",
               ],
             },
             {
               title: "Raccordements et finition",
-              description: "La nouvelle section devient une vraie pièce de la maison.",
+              description: "La pièce entre dans la maison",
               icon: "wrench",
               bullets: [
-                "Plomberie, électricité, chauffage et ventilation étendus",
-                "Inspections municipales avant la fermeture des murs",
-                "Gypse, peinture, planchers raccordés aux niveaux existants",
+                "Chauffage, ventilation et circuits prolongés",
+                "Inspections avant la fermeture des murs",
+                "Gypse, peinture, planchers mis au même niveau",
               ],
             },
           ],
@@ -125,37 +126,37 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Cinq étapes",
+          heading: "La séquence d'un agrandissement",
           steps: [
             {
               number: "1",
               title: "Faisabilité",
               description:
-                "Visite, relevé et vérification du zonage : marges, hauteur, superficie autorisée.",
+                "Zonage, certificat de localisation et superficie autorisée vérifiés.",
             },
             {
               number: "2",
               title: "Plans et ingénieur",
               description:
-                "Plans de construction, calcul de structure et plans scellés par un ingénieur.",
+                "Dessins de construction et calcul des charges par un ingénieur.",
             },
             {
               number: "3",
               title: "Permis et contrat",
               description:
-                "Demande déposée à la ville, contrat signé avec échéancier et budget.",
+                "Dossier déposé à la ville, échéancier et budget signés.",
             },
             {
               number: "4",
               title: "Fondation et structure",
               description:
-                "Excavation, semelles, drain, charpente, toiture et fermeture de l'enveloppe.",
+                "Excavation, semelles, drain, charpente, toiture, enveloppe fermée.",
             },
             {
               number: "5",
               title: "Mécanique et finition",
               description:
-                "Plomberie, électricité, ventilation, inspections, gypse, planchers, puis livraison.",
+                "Services prolongés, inspections, gypse, planchers, puis livraison.",
             },
           ],
         },
@@ -165,26 +166,28 @@ export const agrandissementMaisonPage: PageTemplateData = {
       id: "types",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "list-actions-image-card",
         props: {
-          heading: "Les types d'agrandissement que nous réalisons",
+          heading: "Les formes d'agrandissement possibles",
           intro:
-            "La forme retenue dépend autant du terrain et du zonage que du besoin de départ.",
-          badges: [
-            "Rallonge arrière",
-            "Rallonge latérale",
-            "Ajout d'étage",
-            "Solarium quatre saisons",
-            "Suite parentale",
-            "Garage attenant",
-          ],
-          cardTitle: "Ce qu'on évalue pour trancher",
+            "Le terrain et le règlement de zonage tranchent souvent avant le besoin de départ.",
           items: [
-            "La superficie autorisée après application des marges de recul",
-            "La capacité de la fondation à recevoir un étage",
-            "L'ensoleillement et l'impact sur les fenêtres actuelles",
-            "La position de l'entrée électrique, du drain et du chauffage",
-            "L'accès au terrain pour l'excavation et les livraisons",
+            {
+              title: "Rallonge arrière",
+              description: "la plus courante, si la cour laisse la marge requise.",
+            },
+            {
+              title: "Rallonge latérale",
+              description: "dépend de la distance à la ligne de lot voisine.",
+            },
+            {
+              title: "Ajout d'étage",
+              description: "possible si la fondation reprend la charge ajoutée.",
+            },
+            {
+              title: "Suite parentale ou garage",
+              description: "volume attaché, raccordé au chauffage de la maison.",
+            },
           ],
           actions: [
             {
@@ -198,6 +201,13 @@ export const agrandissementMaisonPage: PageTemplateData = {
               variant: "primary",
             },
           ],
+          image: {
+            src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+            alt: "Chantier d'agrandissement raccordé à une maison existante",
+          },
+          cardTitle: "Ce qu'on regarde pour trancher",
+          cardDescription:
+            "Accès du terrain pour l'excavation, position de l'entrée électrique et du drain, ensoleillement des fenêtres actuelles.",
         },
       },
     },
@@ -210,28 +220,24 @@ export const agrandissementMaisonPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Faut-il un permis pour agrandir ?",
-              a: "Oui, toujours. Un agrandissement ajoute de la superficie de plancher et modifie l'implantation : c'est un permis de construction, avec plans d'implantation, coupes, élévations et plans de structure scellés. Nous montons le dossier et déposons la demande.",
-            },
-            {
               q: "Mon terrain permet-il un agrandissement ?",
-              a: "Le règlement de zonage fixe les marges de recul, le pourcentage d'occupation du terrain et la hauteur maximale. Nous vérifions ces paramètres et votre certificat de localisation avant de dessiner. Une dérogation mineure reste possible, sans garantie de résultat.",
+              a: "Le règlement de zonage fixe les marges de recul, la part du terrain occupable et la hauteur permise. Nous lisons ces paramètres avec votre certificat de localisation avant de dessiner quoi que ce soit.",
             },
             {
-              q: "Ai-je besoin d'un ingénieur ?",
-              a: "Dans presque tous les cas. Les fondations, la charpente et la poutre qui remplace le mur porteur ouvert exigent un calcul de charges. Les plans scellés accompagnent la demande de permis et servent de référence au chantier.",
+              q: "Faut-il un permis pour agrandir une maison ?",
+              a: "Toujours. Ajouter de la surface de plancher modifie l'implantation du bâtiment : cela demande un permis de construction, accompagné des coupes, élévations et plans de structure.",
             },
             {
-              q: "Combien de temps dure un agrandissement ?",
-              a: "On raisonne en mois. La phase administrative, faisabilité, plans, ingénieur et permis, pèse souvent autant que la fondation, selon le délai d'analyse de votre municipalité. L'échéancier détaillé est joint au contrat.",
+              q: "Ai-je besoin d'un ingénieur pour l'agrandissement ?",
+              a: "Dans presque tous les cas. Semelles, charpente et poutre de remplacement reposent sur un calcul de charges. Les plans scellés partent avec la demande et servent de référence au chantier.",
             },
             {
-              q: "Combien coûte un agrandissement ?",
-              a: "C'est le mandat où les écarts sont les plus grands : fondation, structure, toiture et enveloppe changent selon le terrain. Un budget sérieux se construit après la visite, la vérification du zonage et les plans. L'estimation est gratuite.",
+              q: "Combien de temps prend un agrandissement ?",
+              a: "On compte en mois. La phase papier, faisabilité, plans et analyse municipale, pèse souvent autant que la fondation. L'échéancier détaillé accompagne le contrat signé.",
             },
             {
-              q: "Construisez-vous des maisons neuves ?",
-              a: "Non. Notre licence RBQ 8306-0806-27 couvre la rénovation, la transformation, l'agrandissement et la reconstruction, catégories 1.2 et 1.3. La maison neuve relève d'une autre catégorie et d'un plan de garantie distinct qui ne s'applique pas ici.",
+              q: "Agrandir ou construire neuf ?",
+              a: "Nous ne construisons pas de maisons neuves. Notre travail part toujours d'un bâtiment existant : agrandir, transformer, reconstruire. Pour beaucoup de familles, une rallonge revient moins cher qu'un déménagement.",
             },
           ],
         },
@@ -245,7 +251,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
         props: {
           heading: "Un agrandissement à valider ?",
           intro:
-            "On commence par ce que votre terrain et votre structure permettent réellement.",
+            "Première étape, lire le zonage et la fondation pour savoir ce qui est réellement permis.",
           actions: [
             {
               label: "Estimation gratuite",

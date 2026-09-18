@@ -95,6 +95,31 @@ Tailles de boutons : `small` 40 px (barre de navigation), `default` 48 px (secti
 
 Tous les blocs partagent `SectionHeader` (titre h2 + `text-lead` + emplacement à droite) et `sectionBodyClassName`. Les blocs « split » alignent le titre à gauche (5 colonnes) et le contenu à droite (7 colonnes) avec le titre collant sur desktop. Un seul kicker par page (`eyebrow` du hero) ; les sections n'ont pas d'eyebrow.
 
+## Navigation et gabarit de page
+
+- **En-tête** : menu desktop dès `lg` (1024 px) en 14 px, puis 15 px et numéro de téléphone en clair dès `xl` (1280 px) ; sous `lg`, bouton téléphone + tiroir mobile. Entrée active : soulignement vert court (`aria-current`), calculé sur le chemin interne FR dans les deux langues.
+- **Fil d'Ariane** (`PageBreadcrumbs`) sur toute page intérieure, à partir des `breadcrumbs` de la page.
+- **Barre CTA mobile** (`MobileStickyCta`) : « Appeler » + « Soumission gratuite », apparaît après le hero, disparaît près du pied de page, absente sur /contact.
+- **404** bilingue : titre display, quatre raccourcis.
+
+## Blocs par famille de page (anti-monotonie)
+
+Chaque famille a sa composition (détail dans `docs/redaction-web.md › Recettes`) :
+- **Zone** : `hero.zone` (photo pleine largeur, ville en display, fiche locale flottante) → `split.fact-sheet` → cartes photo → villes voisines → FAQ locale → CTA nommant la ville.
+- **Rénovation** : `hero.split-image` image à gauche → inclusions → frise d'étapes du service → `grid.price-tiles` (si fourchettes connues) → bento ou photo → FAQ → CTA.
+- **Espace** : `hero.centered` → `grid.bento` (photos, chiffre, citation) → fiche « En bref » → FAQ → CTA.
+- **Matériau** : `hero.split-image` → fiche technique → comparatif → FAQ → CTA.
+- **À propos** : hero image à gauche → bento (photos + stats) → licence en tuiles → FAQ → CTA.
+
+### Frise d'étapes (`process.horizontal-steps-cards`)
+Rail continu : horizontal avec jalons numérotés (cercle vert 40 px, `ring` fond) dès `lg`, vertical à gauche en dessous. Titres alignés (`content-start`, sinon la grille étire les pistes).
+
+### Fiche locale / fiche technique
+Liste `dl` : étiquette en `text-label`, valeur en 15 px, rangées filetées. Les étiquettes sont des noms courts, jamais des phrases.
+
+### Bento
+Grille 3 colonnes, rangées ≥ 220 px, tuiles `wide` (2 col.) et `tall` (2 rangées). Une tuile chiffre (vert plein), une tuile citation (vert pâle), le reste en photo avec pastille de légende.
+
 ## Ce qu'on ne fait pas
 
 - Bordure latérale colorée, texte en dégradé, verre décoratif.

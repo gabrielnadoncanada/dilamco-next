@@ -43,9 +43,9 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Disaster rebuild",
-          heading: "Rebuilding after water or fire damage",
+          heading: "Putting the house back together after water or fire",
           description:
-            "We take over once the space is dry: written scope, line-by-line quote, permits and reconstruction.",
+            "We step in once the place is dry: findings, written scope, line-by-line quote and rebuild.",
           actions: [
             {
               label: "Request an assessment",
@@ -53,17 +53,18 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See basements",
+              label: "See the basement",
               href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
           ],
           badges: ["Insurance file", "West Island"],
           image: {
-            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-            alt: "Basement rebuilt after water damage",
+            src: "/images/generated/services/service-renovation-project-02.webp",
+            alt: "Room rebuilt after water damage",
           },
-          caption: "Pierrefonds-Roxboro · West Island",
+          imageSide: "left",
+          caption: "Pierrefonds-Roxboro and the West Island",
         },
       },
     },
@@ -73,49 +74,49 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "The losses we rebuild",
+          heading: "What the rebuild mandate covers",
           intro:
-            "Pumping, drying and decontamination belong to specialized firms. We rebuild afterwards.",
+            "Pumping and decontamination stay with the emergency firms. We rebuild afterwards.",
           columns: "2",
           items: [
             {
-              title: "Water damage and flooding",
-              description: "Sewer backup, burst pipe, seepage, rising water.",
+              title: "Water damage",
+              description: "Sewer backup, burst pipe, flooding",
               icon: "droplets",
               bullets: [
-                "Walls and floors opened to see the real extent",
-                "Affected drywall, insulation and subfloor replaced",
-                "Framing and joists checked before closing up",
+                "Walls opened to measure the real extent",
+                "Drywall, insulation and substrate replaced",
+                "Joists checked before anything closes",
               ],
             },
             {
               title: "Fire and smoke",
-              description: "Direct damage, soot, odours held in porous materials.",
+              description: "Soot and odours inside porous materials",
               icon: "hardHat",
               bullets: [
-                "Affected sections demolished",
-                "Structure and envelope rebuilt to the drawings",
+                "Affected sections demolished outright",
+                "Structure and envelope rebuilt to drawings",
                 "Rooms rebuilt from studs to paint",
               ],
             },
             {
               title: "Mould",
-              description: "Usually the result of a slow leak or missing ventilation.",
+              description: "The tail of a slow leak or stagnant air",
               icon: "shieldCheck",
               bullets: [
                 "Rebuild after specialized decontamination",
-                "Cause fixed: ventilation, air sealing, drainage",
-                "Assemblies suited to damp areas",
+                "Cause corrected: ventilation, seal, drain",
+                "Assemblies chosen for damp areas",
               ],
             },
             {
               title: "Flooded basement",
-              description: "The most common situation in the West Island.",
+              description: "The most frequent case near the shoreline",
               icon: "layers",
               bullets: [
-                "Finishes and insulation removed to a safe height",
-                "Weeping tile, sump pump and cracks checked",
-                "Permit required if the basement is finished again",
+                "Finishes and insulation cut back to sound height",
+                "Drain, pump and cracks re-examined",
+                "Permit filed if the basement is refinished",
               ],
             },
           ],
@@ -128,37 +129,37 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Five steps",
+          heading: "How a rebuild unfolds",
           steps: [
             {
               number: "1",
-              title: "On-site assessment",
+              title: "On-site findings",
               description:
-                "Visit after drying, with targeted openings to see behind the finishes.",
+                "Visit after drying, targeted openings behind the finishes.",
             },
             {
               number: "2",
               title: "Scope and quote",
               description:
-                "Room-by-room description, line-by-line quote and photos, for your insurer.",
+                "Room-by-room description, price per item, photos attached.",
             },
             {
               number: "3",
               title: "Contract and permit",
               description:
-                "Signed with a schedule, then a permit application if structure is involved.",
+                "Signature, then an application if the structure is affected.",
             },
             {
               number: "4",
-              title: "Demolition",
+              title: "Selective demolition",
               description:
-                "Affected materials removed. Hidden damage documented before the work continues.",
+                "Damaged materials removed, hidden damage logged in the file.",
             },
             {
               number: "5",
-              title: "Reconstruction",
+              title: "Rebuild",
               description:
-                "Mechanical, inspections, drywall, paint, floors, then a final walkthrough with you.",
+                "Mechanical, inspections, drywall, paint, floors, keys returned.",
             },
           ],
         },
@@ -172,26 +173,24 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         props: {
           heading: "What we bring to your claim",
           intro:
-            "We replace neither your insurer nor your adjuster. We supply the technical substance of the file.",
+            "We replace neither your insurer nor the adjuster. We supply the technical substance.",
           items: [
             {
-              title: "A written scope, room by room",
-              description: "Damage and repairs described, not a single lump sum.",
+              title: "A room-by-room scope",
+              description: "every damage described, instead of one lump sum.",
             },
             {
-              title: "A line-by-line quote",
+              title: "A price per item",
               description:
-                "Demolition, mechanical, materials and finishing priced separately.",
+                "demolition, mechanical, materials and finishing costed apart.",
             },
             {
               title: "Photo documentation",
-              description:
-                "Condition before work, inspection openings and hidden damage.",
+              description: "condition before work, test openings, hidden damage.",
             },
             {
-              title: "Loss and upgrades kept apart",
-              description:
-                "Anything outside the claim is isolated in the quote, line by line.",
+              title: "Upgrades kept separate",
+              description: "anything beyond the loss sits on its own lines.",
             },
           ],
           actions: [
@@ -207,12 +206,12 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Damage assessed before a floor is rebuilt",
+            src: "/images/generated/services/service-renovation-project-03.webp",
+            alt: "Damage assessment before a room is rebuilt",
           },
-          cardTitle: "Why the licence matters here",
+          cardTitle: "One point of contact",
           cardDescription:
-            "RBQ licence 8306-0806-27, valid since 2004, bond in force, civil liability and job-site insurance. Licensed, inspected work stands up better.",
+            "The same contractor signs the quote, coordinates the trades and answers the adjuster's technical questions.",
         },
       },
     },
@@ -226,27 +225,23 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
           items: [
             {
               q: "Do you handle pumping and drying?",
-              a: "No. Pumping, drying and decontamination are emergency services handled by specialized firms, often retained by the insurer. We take over the rebuild once the premises are dry and safe.",
+              a: "No. Emergency work, pumping and decontamination go to specialized firms, often hired by the insurer. We take over once the place is dry and measured.",
             },
             {
-              q: "Do you work with my insurance?",
-              a: "We supply the written scope, the line-by-line quote and the photos your claim needs, and we answer the adjuster's technical questions. You remain the policyholder and your insurer's point of contact.",
+              q: "Do you work with my insurer?",
+              a: "We hand over the written scope, the itemized quote and the photos the claim needs, and we answer the adjuster. You remain the insured and the contact on file.",
             },
             {
-              q: "Can I choose my own contractor?",
-              a: "As a rule the homeowner chooses who does the work, even when the insurer suggests companies from its network. Confirm the terms of your policy with your insurer. We provide the documents so our quote can be compared.",
+              q: "Can I choose my own contractor after a loss?",
+              a: "As a rule yes, even when the insurer suggests firms from its network. Check the wording of your policy. We provide documents so our quote can be compared.",
             },
             {
-              q: "What if you find more damage?",
-              a: "It happens often after water damage. We document hidden damage with photos and a description, give you the cost in writing and let you file a supplementary claim. Nothing is closed over a known problem.",
+              q: "What if you uncover more damage?",
+              a: "Common behind a flooded wall. We photograph it, price it in writing and let you file a supplementary claim before we continue. Nothing gets closed over a known problem.",
             },
             {
-              q: "Do I need a permit to rebuild?",
-              a: "Often. As soon as the rebuild touches structure, moves plumbing or finishes a basement as living space, a permit is required. We confirm with your city and file the application.",
-            },
-            {
-              q: "Is the work warranted?",
-              a: "Yes, with the scope and duration written into the contract. RBQ licence 8306-0806-27, valid with no restrictions since 2004, bond in force, no claims on file.",
+              q: "Is a permit required to rebuild?",
+              a: "Often. As soon as the rebuild touches structure, moves plumbing or refinishes a basement as living space, the city requires one. We verify and file the application.",
             },
           ],
         },
@@ -260,7 +255,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         props: {
           heading: "A loss to rebuild?",
           intro:
-            "We assess the damage, build the scope and the quote, then rebuild under a single contract.",
+            "We document the damage, build the quote, then rebuild under a single contract.",
           actions: [
             {
               label: "Request an assessment",
@@ -268,7 +263,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See service areas",
+              label: "See our service areas",
               href: "/zones",
               variant: "ghost",
             },

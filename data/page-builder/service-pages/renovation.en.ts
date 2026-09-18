@@ -35,12 +35,12 @@ export const renovationPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "General contractor",
-          heading: "One contractor, from permit to handover",
+          badges: ["Permit included", "Written contract", "Insured"],
+          heading: "One contractor, from the permit to the handover",
           description:
-            "We sign the contract, file the permit, pay the trades and answer for the finished work.",
+            "We sign the contract, file the permit, pay the trades and answer for the result.",
           actions: [
             {
               label: "Free estimate",
@@ -53,47 +53,6 @@ export const renovationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Permit included", "Written contract", "Insured"],
-          image: {
-            src: "/images/generated/services/service-renovation-hero-01.webp",
-            alt: "Turnkey residential renovation job site",
-          },
-          caption: "West Island, Montreal, Laval, South Shore",
-        },
-      },
-    },
-    {
-      id: "promesse",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What moves from your side to ours",
-          description:
-            "A general contracting mandate is not a marketing formula, it is a transfer of responsibility.",
-          cards: [
-            {
-              title: "The permit",
-              description:
-                "Requirement confirmed with your city, application filed and followed through to issuance.",
-            },
-            {
-              title: "The trades",
-              description:
-                "Plumbing, electrical, ventilation, drywall and finishing work under our contract. We pay them.",
-            },
-            {
-              title: "Schedule and inspections",
-              description:
-                "Every trade gets a window, every inspection is booked before the walls close.",
-            },
-            {
-              title: "The warranty",
-              description:
-                "Work warranted per the contract. Need an adjustment later? You call the same company.",
-            },
-          ],
-          columns: "2",
         },
       },
     },
@@ -103,13 +62,13 @@ export const renovationPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "The six types of renovation",
+          heading: "The six kinds of renovation",
           items: [
             {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "Demolition, plumbing, electrical, cabinets and finishing in one sequence.",
+                "From the drain to the countertop, cabinets supplied and installed.",
               image: {
                 src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
                 alt: "Full kitchen renovation",
@@ -121,7 +80,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Bathroom",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Waterproofing membrane, ventilation, plumbing, tile and vanity.",
+                "Continuous membrane, verified slope, exhaust vented outdoors.",
               image: {
                 src: "/images/generated/renovation/renovation-bath-hero-01.webp",
                 alt: "Full bathroom renovation",
@@ -133,7 +92,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Basement",
               href: "/services/renovation/sous-sol",
               description:
-                "Moisture, drainage, insulation, egress and the permit you must have.",
+                "Water and clear height are settled before the first partition.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Basement finished by a general contractor",
@@ -145,7 +104,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Flooring",
               href: "/services/renovation/plancher",
               description:
-                "Subfloor, flatness, levels and transitions between rooms.",
+                "Substrate brought back true, thresholds and levels set on plan.",
               image: {
                 src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
                 alt: "Residential flooring renovation",
@@ -154,12 +113,12 @@ export const renovationPageEn: PageTemplateData = {
               footerCtaLabel: "See flooring",
             },
             {
-              title: "Home addition",
+              title: "Addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Zoning, permit, foundation, structure, envelope and service connections.",
+                "Zoning read, drawings sealed, footings poured below the frost line.",
               image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Home addition under construction",
               },
               badges: ["Structure"],
@@ -169,10 +128,10 @@ export const renovationPageEn: PageTemplateData = {
               title: "Disaster rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Rebuilding after water or fire damage, documented for your insurer.",
+                "Room-by-room scope and an itemized quote for your claim.",
               image: {
-                src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-                alt: "Rebuilding after water damage",
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Rebuild after water damage",
               },
               badges: ["Insurance"],
               footerCtaLabel: "See disaster rebuild",
@@ -192,67 +151,73 @@ export const renovationPageEn: PageTemplateData = {
           steps: [
             {
               number: "1",
-              title: "Visit and assessment",
+              title: "Call and visit",
               description:
-                "We survey the space, the existing condition and the constraints. At no charge.",
+                "We come see the place and note the constraints, at no charge.",
             },
             {
               number: "2",
               title: "Detailed quote",
               description:
-                "Scope, materials, exclusions and budget, within 24 to 48 business hours.",
+                "Scope, materials, exclusions and budget within 24 to 48 hours.",
             },
             {
               number: "3",
               title: "Contract and permit",
               description:
-                "Dates, payments and conditions signed, then the application filed with the city.",
+                "Dates and payment terms signed, file submitted to the city.",
             },
             {
               number: "4",
-              title: "Coordinated execution",
+              title: "Coordinated site",
               description:
-                "Demolition, mechanical, inspections, closing up and finishing, in order.",
+                "Trades follow the schedule, walls opened then closed again.",
             },
             {
               number: "5",
-              title: "Handover and warranty",
+              title: "Handover",
               description:
-                "Final walkthrough with you, deficiencies fixed before the last payment.",
+                "Closing walkthrough with you, touch-ups done before the balance.",
             },
           ],
         },
       },
     },
     {
-      id: "faq",
+      id: "en-bref",
       content: {
-        type: "faq",
-        variant: "accordion",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Frequently asked questions",
-          items: [
+          heading: "At a glance",
+          intro: "The terms of a turnkey mandate.",
+          rows: [
             {
-              q: "What does turnkey actually include?",
-              a: "Full project management: permit, hiring and paying the trades, ordering materials, the calendar, inspections, protecting and cleaning the premises, handover and warranty. Exclusions are spelled out in the quote.",
+              label: "Contract",
+              value: "Scope, price, schedule and payments in writing, priced change orders",
             },
             {
-              q: "What does a renovation cost?",
-              a: "Our mandates start around $25,000. As an indication, a bathroom often lands between $15,000 and $35,000, a full kitchen between $35,000 and $50,000. The firm price is set after the on-site survey.",
+              label: "Permit",
+              value: "Verified with your city, filed and followed by us",
             },
             {
-              q: "Do I need a permit?",
-              a: "Generally as soon as you touch a load-bearing wall, move plumbing, finish a basement or add living area. We confirm with your city and file the application on your behalf.",
+              label: "Trades",
+              value: "Hired and paid by us, a single invoice stream",
             },
             {
-              q: "How long does a job take?",
-              a: "A bathroom runs in weeks, a kitchen or basement in months, an addition longer because of the permit and the foundation. Custom cabinets take 9 to 15 weeks, planned in parallel.",
+              label: "Insurance",
+              value: "Civil liability and builder's risk coverage in force",
             },
             {
-              q: "Is the work warranted?",
-              a: "Yes, with the scope and duration written into the contract. RBQ licence 8306-0806-27, valid with no restrictions since 2004, classes 1.2 and 1.3. We do not build new homes, so the GCR plan does not apply.",
+              label: "Response time",
+              value: "24 to 48 business hours after your request",
+            },
+            {
+              label: "Territory",
+              value: "West Island, Montreal, Laval, South Shore, Vaudreuil-Soulanges",
             },
           ],
+          note: "RBQ licence 8306-0806-27, categories 1.2 and 1.3, valid since 2004.",
         },
       },
     },
@@ -262,8 +227,9 @@ export const renovationPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Tell us about your project",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          heading: "Tell us about your renovation project",
+          intro:
+            "Give us the room, the budget in mind and the deadline. We book the visit.",
           actions: [
             {
               label: "Free estimate",
@@ -271,7 +237,7 @@ export const renovationPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See service areas",
+              label: "See our service areas",
               href: "/zones",
               variant: "ghost",
             },

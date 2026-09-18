@@ -29,7 +29,7 @@ export const quincailleriePage: PageTemplateData = {
           eyebrow: "Matériaux",
           heading: "La quincaillerie décide de la durée de vos armoires",
           description:
-            "Charnières, coulisses et amortisseurs encaissent des milliers de cycles par année. C'est la pièce qui lâche en premier quand elle est bas de gamme.",
+            "Charnières, coulisses et amortisseurs encaissent des milliers de cycles par année. C'est la pièce qui lâche en premier.",
           actions: [
             {
               label: "Voir nos cuisines",
@@ -45,67 +45,53 @@ export const quincailleriePage: PageTemplateData = {
           badges: ["Charnières", "Coulisses", "Soft-close"],
           image: {
             src: "/images/generated/materials/material-hardware-hero-01.webp",
-            alt: "Cuisine sur mesure mettant en valeur la qualité de la quincaillerie",
+            alt: "Coulisse de tiroir et charnière dans une armoire sur mesure",
           },
           caption: "Le détail qu'on ne voit jamais",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "types",
+      id: "fiche",
       frame: { surface: "muted" },
       content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on spécifie",
-          columns: "2",
-          items: [
+          heading: "La quincaillerie en fiche",
+          intro: "Ce qu'on spécifie par défaut sur chaque porte et chaque tiroir.",
+          rows: [
             {
-              title: "Charnières",
-              description:
-                "Elles portent la porte et gardent son alignement dans le temps.",
-              icon: "doorOpen",
-              bullets: [
-                "Réglage sur trois axes",
-                "Fermeture amortie intégrée",
-                "Ouverture jusqu'à 155 degrés",
-              ],
+              label: "Composition",
+              value: "Acier embouti nickelé, amortisseur hydraulique intégré",
             },
             {
-              title: "Coulisses de tiroir",
-              description:
-                "Elles supportent la charge et donnent accès au fond du tiroir.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Extension complète",
-                "Charge de 35 à 60 kg",
-                "Sous le tiroir, invisibles",
-              ],
+              label: "Humidité",
+              value: "Finition nickelée exigée en salle de bain",
             },
             {
-              title: "Systèmes de tiroir",
-              description:
-                "Caisson et mécanisme forment un ensemble, pas deux pièces séparées.",
-              icon: "package2",
-              bullets: [
-                "Côtés en métal ou en bois",
-                "Séparateurs ajustables",
-                "Tiroir dans tiroir",
-              ],
+              label: "Entretien",
+              value: "Un réglage de charnière par année, rien d'autre",
             },
             {
-              title: "Mécanismes spéciaux",
-              description:
-                "Pour les armoires hautes, les angles et les façades sans poignée.",
-              icon: "wrench",
-              bullets: [
-                "Relevables et pousse-lâche",
-                "Plateaux tournants d'angle",
-                "Garde-manger coulissants",
-              ],
+              label: "Usages recommandés",
+              value: "Toutes les portes et tous les tiroirs, sans exception",
+            },
+            {
+              label: "Prix relatif",
+              value: "5 à 10 pour cent du coût des armoires",
+            },
+            {
+              label: "Garantie",
+              value: "À vie chez les grandes marques européennes",
             },
           ],
+          image: {
+            src: "/images/generated/materials/material-hardware-detail-01.webp",
+            alt: "Détail d'une charnière réglable sur une porte d'armoire",
+          },
+          note: "Modèles exacts inscrits au devis avant la signature.",
         },
       },
     },
@@ -148,7 +134,7 @@ export const quincailleriePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la quincaillerie",
           items: [
             {
               q: "Extension partielle ou complète ?",
@@ -163,8 +149,8 @@ export const quincailleriePage: PageTemplateData = {
               a: "Une charnière se remplace facilement. Une coulisse demande que les perçages du caisson correspondent, ce qui est rarement le cas entre deux marques.",
             },
             {
-              q: "Est-ce compris dans votre soumission ?",
-              a: "Oui. Le modèle de charnière et de coulisse est inscrit dans la soumission détaillée, avec le reste des matériaux, avant la signature du contrat.",
+              q: "Une charnière qui grince, on fait quoi ?",
+              a: "Une goutte de lubrifiant sec sur l'axe, puis un quart de tour sur la vis de profondeur. Nous le faisons au passage pendant la période de garantie.",
             },
           ],
         },
@@ -176,9 +162,9 @@ export const quincailleriePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Parlons de votre projet",
+          heading: "Choisir la quincaillerie avant la commande",
           intro:
-            "On cadre les matériaux, la quincaillerie et l'échéancier dans une seule soumission.",
+            "On vous fait ouvrir et fermer les modèles, puis on inscrit la référence retenue.",
           actions: [
             {
               label: "Obtenir une soumission",

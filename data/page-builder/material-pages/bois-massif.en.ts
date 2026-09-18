@@ -26,105 +26,69 @@ export const boisMassifPageEn: PageTemplateData = {
           eyebrow: "Materials",
           heading: "Solid wood in the right place, not everywhere",
           description:
-            "Full boards, visible grain, high perceived value. A living material that moves with humidity, so we target it at the surfaces you see.",
+            "Full boards, visible grain. A material that moves with humidity, so we keep it on the parts you actually see.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
           badges: ["Natural", "Doors", "Details"],
           image: {
-            src: "/images/generated/materials/material-birch-drawer-detail-01.webp",
-            alt: "Custom kitchen with solid wood details",
+            src: "/images/generated/materials/material-solid-wood-card-01.webp",
+            alt: "Solid wood cabinet door with visible grain",
           },
           caption: "Doors and details seen up close",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "overview",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What solid wood brings",
-          description:
-            "Full material and natural variation. It wins on fronts and details, it costs you stability on large flat surfaces.",
-          cards: [
+          heading: "Solid wood at a glance",
+          intro: "What to know before it goes into the quote.",
+          rows: [
             {
-              title: "Grain and depth",
-              description:
-                "Every piece keeps its own variations of tone and texture.",
+              label: "Composition",
+              value: "Full boards edge-glued, in maple, oak or walnut",
             },
             {
-              title: "Perceived value",
-              description:
-                "It pulls the result upmarket on the elements you see.",
+              label: "Humidity",
+              value: "Strong reaction, swells in summer, shrinks in winter",
             },
             {
-              title: "Repairable",
-              description:
-                "Some marks can be reworked, depending on the finish applied.",
+              label: "Upkeep",
+              value: "Soft cloth, never leave water sitting on a joint",
             },
             {
-              title: "It moves",
-              description:
-                "Swelling and shrinking follow the room's humidity and temperature.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Where we use it",
-          intro:
-            "We target solid wood where it is seen and touched, and switch to panels everywhere else.",
-          items: [
-            {
-              title: "Doors and fronts",
-              description: "Where the grain reads up close.",
+              label: "Recommended uses",
+              value: "Doors, mouldings, crowns, exposed shelves",
             },
             {
-              title: "Details and mouldings",
-              description: "Crowns, end panels, exposed shelving.",
+              label: "Relative cost",
+              value: "The highest of the four panels",
             },
             {
-              title: "Plywood boxes",
-              description: "More stable under load and in humidity.",
-            },
-          ],
-          actions: [
-            {
-              label: "View the comparison",
-              href: "/materiaux/comparatif",
-              variant: "ghost",
-            },
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Available finishes",
+              value: "Stain, varnish, oil, opaque lacquer",
             },
           ],
           image: {
             src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-            alt: "Solid wood finish detail",
+            alt: "Finish detail on a solid wood component",
           },
-          cardTitle: "Recommended approach",
-          cardDescription:
-            "Solid wood on the visible surfaces, stable panels for the structure.",
+          note: "Indicative values. The species is confirmed in the quote.",
         },
       },
     },
@@ -134,23 +98,23 @@ export const boisMassifPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about solid wood",
           items: [
             {
-              q: "Is solid wood always the right choice?",
-              a: "No. It excels on doors and visible details. On large flat surfaces and cabinet boxes, plywood and MDF hold their line better over time.",
+              q: "Does solid wood suit cabinet boxes?",
+              a: "No. Under load and across wide flat surfaces it moves and eventually cups. Plywood keeps the boxes straight; solid wood stays on the visible parts.",
             },
             {
-              q: "How does it react to humidity?",
-              a: "It swells and shrinks with the room's humidity. Clearance planned at the design stage, suitable joinery and a finish that seals the wood clearly limit that movement.",
+              q: "Which species should you choose?",
+              a: "Maple takes light stains without blotching. Oak shows a strong grain. Walnut starts dark and costs more. The call is made on a sample, in your home.",
             },
             {
-              q: "Is it recommended in a kitchen?",
-              a: "Yes, on doors and visible elements. The finish you choose and the room's ventilation matter as much as the wood species.",
+              q: "Will the joints open in winter?",
+              a: "Slight movement is normal once dry air drops below 30 per cent humidity. A properly set humidifier keeps that movement invisible.",
             },
             {
-              q: "Can it be combined with other materials?",
-              a: "Yes, and that is the usual approach: solid wood on the fronts, birch plywood for the boxes, MDF for certain painted doors.",
+              q: "Can a scratch be repaired?",
+              a: "On an oiled finish, yes: spot sanding, then a fresh coat. On an opaque lacquer, the touch-up always shows a little.",
             },
           ],
         },
@@ -162,9 +126,9 @@ export const boisMassifPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a project with solid wood?",
+          heading: "Solid wood in your kitchen?",
           intro:
-            "We tell you where it brings real value and where another panel will hold up better.",
+            "We tell you which parts are worth the price and where a panel will hold up better.",
           actions: [
             {
               label: "Request a quote",
@@ -172,7 +136,7 @@ export const boisMassifPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
+              label: "See the comparison",
               href: "/materiaux/comparatif",
               variant: "ghost",
             },

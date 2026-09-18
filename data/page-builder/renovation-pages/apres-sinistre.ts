@@ -43,9 +43,9 @@ export const renovationApresSinistrePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Rénovation après sinistre",
-          heading: "Reconstruire après un dégât d'eau ou un feu",
+          heading: "Remettre la maison en état après l'eau ou le feu",
           description:
-            "Nous prenons le relais une fois les lieux asséchés : portée écrite, devis par poste, permis et reconstruction.",
+            "Nous entrons une fois les lieux asséchés : constat, portée écrite, devis par poste et reconstruction.",
           actions: [
             {
               label: "Demander une évaluation",
@@ -60,10 +60,11 @@ export const renovationApresSinistrePage: PageTemplateData = {
           ],
           badges: ["Dossier d'assurance", "Ouest-de-l'Île"],
           image: {
-            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-            alt: "Sous-sol reconstruit après un dégât d'eau",
+            src: "/images/generated/services/service-renovation-project-02.webp",
+            alt: "Pièce reconstruite après un dégât d'eau",
           },
-          caption: "Pierrefonds-Roxboro · Ouest-de-l'Île",
+          imageSide: "left",
+          caption: "Pierrefonds-Roxboro et Ouest-de-l'Île",
         },
       },
     },
@@ -73,49 +74,49 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Les sinistres que nous reconstruisons",
+          heading: "Ce que couvre le mandat de reconstruction",
           intro:
-            "Le pompage, l'assèchement et la décontamination reviennent à des firmes spécialisées. Nous reconstruisons ensuite.",
+            "Le pompage et la décontamination restent aux firmes d'urgence. Nous rebâtissons ensuite.",
           columns: "2",
           items: [
             {
-              title: "Dégât d'eau et inondation",
-              description: "Refoulement d'égout, tuyau éclaté, infiltration, crue.",
+              title: "Dégât d'eau",
+              description: "Refoulement, tuyau éclaté, crue",
               icon: "droplets",
               bullets: [
-                "Murs et planchers ouverts pour constater l'étendue réelle",
-                "Gypse, isolant et sous-plancher atteints remplacés",
-                "Charpente et solives vérifiées avant de refermer",
+                "Murs ouverts pour mesurer l'étendue réelle",
+                "Gypse, isolant et support remplacés",
+                "Solives contrôlées avant de refermer",
               ],
             },
             {
               title: "Feu et fumée",
-              description: "Dommages directs, suie, odeurs dans les matériaux poreux.",
+              description: "Suie et odeurs dans les matériaux poreux",
               icon: "hardHat",
               bullets: [
-                "Démolition des sections atteintes",
-                "Structure et enveloppe reprises selon les plans",
-                "Pièces reconstruites du colombage à la peinture",
+                "Sections atteintes démolies au complet",
+                "Structure et enveloppe reprises aux plans",
+                "Pièces rebâties du colombage à la peinture",
               ],
             },
             {
               title: "Moisissures",
-              description: "Souvent la suite d'une fuite lente ou d'une ventilation absente.",
+              description: "Suite d'une fuite lente ou d'un air stagnant",
               icon: "shieldCheck",
               bullets: [
-                "Reconstruction après la décontamination spécialisée",
-                "Cause corrigée : ventilation, étanchéité, drainage",
-                "Assemblages adaptés aux zones humides",
+                "Reconstruction après décontamination spécialisée",
+                "Cause corrigée : ventilation, étanchéité, drain",
+                "Assemblages choisis pour les zones humides",
               ],
             },
             {
               title: "Sous-sol inondé",
-              description: "La situation la plus fréquente dans l'Ouest-de-l'Île.",
+              description: "Le cas le plus fréquent près des berges",
               icon: "layers",
               bullets: [
-                "Finis et isolant retirés jusqu'à hauteur sûre",
-                "Drain, pompe de puisard et fissures vérifiés",
-                "Permis d'aménagement si le sous-sol est refini",
+                "Finis et isolant retirés jusqu'à hauteur saine",
+                "Drain, pompe et fissures réexaminés",
+                "Permis demandé si le sous-sol est refini",
               ],
             },
           ],
@@ -128,37 +129,37 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Cinq étapes",
+          heading: "La séquence après un sinistre",
           steps: [
             {
               number: "1",
-              title: "Évaluation sur place",
+              title: "Constat sur place",
               description:
-                "Visite après l'assèchement, ouvertures ciblées pour voir derrière les finis.",
+                "Visite après l'assèchement, ouvertures ciblées derrière les finis.",
             },
             {
               number: "2",
               title: "Portée et devis",
               description:
-                "Description pièce par pièce, devis par poste et photos, pour votre assureur.",
+                "Description pièce par pièce, prix par poste, photos à l'appui.",
             },
             {
               number: "3",
               title: "Contrat et permis",
               description:
-                "Signature avec échéancier, puis demande de permis si la structure est touchée.",
+                "Signature, puis demande déposée si la structure est touchée.",
             },
             {
               number: "4",
-              title: "Démolition",
+              title: "Démolition sélective",
               description:
-                "Retrait des matériaux atteints. Dommages cachés documentés avant de poursuivre.",
+                "Matériaux atteints sortis, dommages cachés notés au dossier.",
             },
             {
               number: "5",
               title: "Reconstruction",
               description:
-                "Mécanique, inspections, gypse, peinture, planchers, puis inspection finale avec vous.",
+                "Mécanique, inspections, gypse, peinture, planchers, remise des clés.",
             },
           ],
         },
@@ -172,26 +173,24 @@ export const renovationApresSinistrePage: PageTemplateData = {
         props: {
           heading: "Ce que nous apportons à votre réclamation",
           intro:
-            "Nous ne remplaçons ni votre assureur ni votre expert. Nous fournissons la matière technique du dossier.",
+            "Nous ne remplaçons ni votre assureur ni son expert. Nous fournissons la matière technique.",
           items: [
             {
-              title: "Une portée écrite, pièce par pièce",
-              description: "Dommages et travaux décrits, plutôt qu'un montant global.",
+              title: "Une portée pièce par pièce",
+              description: "chaque dommage décrit, plutôt qu'un montant global.",
             },
             {
               title: "Un devis par poste",
               description:
-                "Démolition, mécanique, matériaux, finition chiffrés séparément.",
+                "démolition, mécanique, matériaux et finition chiffrés à part.",
             },
             {
               title: "Une documentation photo",
-              description:
-                "État avant travaux, ouvertures de constat et dommages cachés.",
+              description: "état avant travaux, ouvertures de constat, dommages cachés.",
             },
             {
-              title: "Sinistre et améliorations séparés",
-              description:
-                "La part hors sinistre est isolée dans le devis, ligne par ligne.",
+              title: "Les améliorations isolées",
+              description: "ce qui sort du sinistre apparaît sur ses propres lignes.",
             },
           ],
           actions: [
@@ -207,12 +206,12 @@ export const renovationApresSinistrePage: PageTemplateData = {
             },
           ],
           image: {
-            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Constat des dommages avant la reconstruction d'un plancher",
+            src: "/images/generated/services/service-renovation-project-03.webp",
+            alt: "Constat des dommages avant la reconstruction d'une pièce",
           },
-          cardTitle: "Pourquoi la licence compte ici",
+          cardTitle: "Un interlocuteur unique",
           cardDescription:
-            "Licence RBQ 8306-0806-27 valide depuis 2004, cautionnement, responsabilité civile et assurance chantier en vigueur.",
+            "Le même entrepreneur signe le devis, coordonne les métiers et répond aux questions techniques de l'expert.",
         },
       },
     },
@@ -226,27 +225,23 @@ export const renovationApresSinistrePage: PageTemplateData = {
           items: [
             {
               q: "Faites-vous le pompage et l'assèchement ?",
-              a: "Non. Le pompage, l'assèchement et la décontamination sont des interventions d'urgence confiées à des firmes spécialisées, souvent mandatées par l'assureur. Nous prenons le relais une fois les lieux asséchés.",
+              a: "Non. L'urgence, le pompage et la décontamination reviennent à des firmes spécialisées, souvent mandatées par l'assureur. Nous prenons la suite quand les lieux sont secs et mesurés.",
             },
             {
-              q: "Travaillez-vous avec mon assurance ?",
-              a: "Nous fournissons la portée écrite, le devis par poste et les photos dont votre réclamation a besoin, et nous répondons aux questions techniques de l'expert. Vous demeurez l'assuré et l'interlocuteur de votre assureur.",
+              q: "Travaillez-vous avec mon assureur ?",
+              a: "Nous remettons la portée écrite, le devis par poste et les photos dont la réclamation a besoin, et répondons à l'expert. Vous restez l'assuré et l'interlocuteur au dossier.",
             },
             {
-              q: "Puis-je choisir mon entrepreneur ?",
-              a: "En règle générale, le propriétaire choisit qui exécute les travaux, même si l'assureur propose des entreprises de son réseau. Vérifiez les modalités de votre police. Nous fournissons les documents pour que notre devis soit comparé.",
+              q: "Puis-je choisir mon entrepreneur après un sinistre ?",
+              a: "En règle générale oui, même si l'assureur suggère des entreprises de son réseau. Vérifiez les modalités de votre police. Nous fournissons les documents pour que notre devis soit comparé.",
             },
             {
               q: "Et si vous découvrez d'autres dommages ?",
-              a: "C'est fréquent après un dégât d'eau. Nous documentons les dommages cachés avec photos, vous soumettons le coût par écrit et vous laissons déposer un complément de réclamation. Rien n'est refermé sur un problème connu.",
+              a: "C'est courant derrière un mur inondé. Nous photographions, chiffrons par écrit et vous laissons déposer un complément de réclamation avant de continuer. Rien n'est refermé sur un problème connu.",
             },
             {
               q: "Faut-il un permis pour reconstruire ?",
-              a: "Souvent. Dès que la reconstruction touche la structure, déplace la plomberie ou refinit un sous-sol en espace habitable, un permis est requis. Nous validons avec votre ville et déposons la demande.",
-            },
-            {
-              q: "Les travaux sont-ils garantis ?",
-              a: "Oui, avec la portée et la durée inscrites au contrat. Licence RBQ 8306-0806-27 valide sans restriction depuis 2004, cautionnement en vigueur, aucune réclamation au dossier.",
+              a: "Souvent. Dès que la reconstruction touche la structure, déplace la plomberie ou refait un sous-sol habitable, la ville l'exige. Nous validons le cas et déposons la demande.",
             },
           ],
         },
@@ -260,7 +255,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
         props: {
           heading: "Un sinistre à reconstruire ?",
           intro:
-            "Nous évaluons les dommages, montons la portée et le devis, puis nous reconstruisons sous un seul contrat.",
+            "Nous constatons les dommages, montons le devis, puis rebâtissons sous un seul contrat.",
           actions: [
             {
               label: "Demander une évaluation",

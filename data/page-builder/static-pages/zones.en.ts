@@ -34,12 +34,12 @@ export const pageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Service areas",
-          heading: "General contractor across the West Island and Greater Montréal",
+          badges: ["West Island", "Montréal", "Laval"],
+          heading: "Where we work, city by city",
           description:
-            "Based in Pierrefonds-Roxboro. Eleven area pages, from the municipal permit to handover.",
+            "Eleven local pages. Each one gives the housing stock, the permit office involved and the drive from our base.",
           actions: [
             {
               label: "Request a quote",
@@ -52,12 +52,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["RBQ licence", "Since 2004", "West Island"],
-          image: {
-            src: "/images/generated/home/home-hero-premium-kitchen-01.webp",
-            alt: "Renovation project completed by Dilamco in the West Island",
-          },
-          caption: "Base: Pierrefonds-Roxboro, Montréal",
         },
       },
     },
@@ -68,21 +62,19 @@ export const pageEn: PageTemplateData = {
         variant: "link-cards-compact",
         props: {
           heading: "The areas we serve",
-          intro:
-            "One page per city: local housing stock, the permit department involved and a municipal FAQ.",
           columns: "3",
           items: [
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              description: "Our base, 1950s-1980s bungalows and cottages",
-              badges: ["Home base"],
+              description: "Our home base",
+              badges: ["Base"],
               ctaLabel: "See the area",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              description: "Zoning rewritten in 2025",
+              description: "Zoning overhauled in 2025",
               ctaLabel: "See the area",
             },
             {
@@ -94,49 +86,49 @@ export const pageEn: PageTemplateData = {
             {
               title: "Pointe-Claire",
               href: "/zones/pointe-claire",
-              description: "Heritage Village and architectural review files",
+              description: "Heritage village under PIIA",
               ctaLabel: "See the area",
             },
             {
               title: "Beaconsfield",
               href: "/zones/beaconsfield",
-              description: "Zoning by-law 720 and tree permits",
+              description: "Tree felling by-law",
               ctaLabel: "See the area",
             },
             {
               title: "Dorval",
               href: "/zones/dorval",
-              description: "Homes and commercial spaces near the airport",
+              description: "Housing near the airport",
               ctaLabel: "See the area",
             },
             {
               title: "L'Île-Bizard–Sainte-Geneviève",
               href: "/zones/ile-bizard-sainte-genevieve",
-              description: "Waterfront homes, wide lots",
+              description: "Mapped flood zones",
               ctaLabel: "See the area",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              description: "Plexes and post-war bungalows",
+              description: "Post-war plexes and condos",
               ctaLabel: "See the area",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              description: "From Chomedey to Sainte-Rose",
+              description: "Bungalows from the 1960s",
               ctaLabel: "See the area",
             },
             {
               title: "Vaudreuil-Dorion",
               href: "/zones/vaudreuil-dorion",
-              description: "Vaudreuil-Soulanges, fast-growing sectors",
+              description: "Basements delivered bare",
               ctaLabel: "See the area",
             },
             {
               title: "South Shore",
               href: "/zones/rive-sud",
-              description: "Longueuil, Brossard, Saint-Lambert and nearby",
+              description: "Substantial mandates only",
               ctaLabel: "See the area",
             },
           ],
@@ -147,57 +139,42 @@ export const pageEn: PageTemplateData = {
       id: "territoire",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "How our territory is drawn",
-          description:
-            "On a project that runs for weeks, distance decides how fast a problem gets solved.",
-          cards: [
+          heading: "Our territory, measured in minutes",
+          intro:
+            "On a job that runs for weeks, distance decides how fast a problem gets solved on site.",
+          rows: [
             {
-              title: "West Island",
-              description:
-                "Under twenty minutes from our base, with tight site follow-up.",
+              label: "Base",
+              value: "18625 Larocque Street, Pierrefonds-Roxboro",
             },
             {
-              title: "Montréal, Laval, Vaudreuil-Soulanges",
-              description:
-                "Regular territory, same method, planning department confirmed at scoping.",
+              label: "Radius",
+              value: "West Island, Montréal, Laval, Vaudreuil-Soulanges, South Shore",
             },
             {
-              title: "South Shore and beyond",
-              description:
-                "Case by case, depending on the scope of the project and the season.",
+              label: "Drive time",
+              value: "From 10 minutes on Île Bizard to an hour in Châteauguay",
+            },
+            {
+              label: "Permits",
+              value: "A different planning office in every city and borough",
+            },
+            {
+              label: "First reply",
+              value: "24 to 48 business hours, free visit and estimate",
+            },
+            {
+              label: "Travel",
+              value: "Priced into the quote, not billed along the way",
             },
           ],
-          columns: "3",
-        },
-      },
-    },
-    {
-      id: "faq",
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "Frequently asked questions",
-          items: [
-            {
-              q: "Which territory do you serve exactly?",
-              a: "Our core territory is the West Island, from our base at 18625 rue Larocque in Pierrefonds-Roxboro. We work regularly elsewhere on the island of Montréal, in Laval and across Vaudreuil-Soulanges. The South Shore is assessed case by case.",
-            },
-            {
-              q: "Do you charge travel fees?",
-              a: "The visit and the estimate are free within our service areas. Farther out, travel is built into the quote rather than billed separately partway through the project. Everything is written into the contract before work begins.",
-            },
-            {
-              q: "My city is not on the list. Do you work there?",
-              a: "Possibly. The list covers the municipalities where we work most often, not the only ones where we accept mandates. Write to us with the city and the nature of the project; we will say plainly if it is not a mandate for us.",
-            },
-            {
-              q: "Do you handle the permit in every city?",
-              a: "Yes. Every city and borough has its own planning department, by-laws and process. We assemble and file the application as part of the mandate, and the processing time is built into the schedule.",
-            },
-          ],
+          image: {
+            src: "/images/generated/services/service-renovation-hero-01.webp",
+            alt: "Renovation site run from our Pierrefonds-Roxboro base",
+          },
+          note: "Business base and licence verified in the RBQ register on 2026-09-18.",
         },
       },
     },
@@ -209,7 +186,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Tell us where your project is",
           intro:
-            "City, type of work, target date. We confirm quickly and book the visit.",
+            "City, type of work, timeline. We confirm and book the visit.",
           actions: [
             {
               label: "Request a quote",
@@ -222,7 +199,7 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · 18625 rue Larocque, Pierrefonds-Roxboro · RBQ 8306-0806-27",
+          note: "Dilamco · 18625 Larocque Street, Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

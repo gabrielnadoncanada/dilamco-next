@@ -37,16 +37,14 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "L'Île-Bizard–Sainte-Geneviève",
-          heading:
-            "General contractor in L'Île-Bizard–Sainte-Geneviève, renovating with the water in mind",
+          eyebrow: "General contractor in",
+          heading: "L'Île-Bizard–Sainte-Geneviève",
           description:
-            "Flood zones, basements rebuilt after the 2017 and 2019 floods, borough permits prepared and filed by us.",
+            "Two islands, a river that rises every spring, and basements rebuilt after the 2017 and 2019 floods.",
           actions: [
             {
               label: "Request a quote",
@@ -54,47 +52,74 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Post-damage renovation",
+              label: "Post-damage rebuilds",
               href: "/services/renovation/apres-sinistre",
               variant: "ghost",
             },
           ],
-          badges: ["Disaster recovery", "Flood zone", "Insured"],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-            alt: "Addition to a single-family home in L'Île-Bizard",
+            alt: "Home addition on a single-family house in L'Île-Bizard",
           },
-          caption: "Île Mercier, old Sainte-Geneviève",
+          facts: [
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro · 10 min over the bridge",
+            },
+            {
+              label: "Permits",
+              value: "Counter at 15795 Gouin Boulevard West",
+            },
+            {
+              label: "Housing stock",
+              value: "Single-family homes on deep lots, 1845 village",
+            },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about the borough",
-          description:
-            "Rivière des Prairies to the north, Lac des Deux Montagnes to the west. Large wooded lots, mapped flood zones, an old village core.",
-          cards: [
+          heading: "What the water dictates on the island",
+          intro:
+            "Rivière des Prairies to the north, Lac des Deux Montagnes to the west. The flood-plain map drives the project.",
+          rows: [
             {
-              title: "Single-family homes, large lots",
-              description:
-                "Deep lots along chemin Cherrier and boulevard Jacques-Bizard, with mature trees to protect.",
+              label: "Housing stock",
+              value:
+                "Single-family homes on deep lots, Chemin Cherrier and Jacques-Bizard Boulevard",
             },
             {
-              title: "Urban planning and permits division",
-              description:
-                "Permit counter at 15795 boulevard Gouin Ouest, division at 406 montée de l'Église.",
+              label: "Permits",
+              value: "Every flood-plain job needs one, with no exception",
             },
             {
-              title: "Mapped flood zones",
-              description:
-                "High-velocity 0-20 year zone: building prohibited. Low-velocity 20-100 year zone: flood-proofing required.",
+              label: "By-laws",
+              value: "11-018 construction, 11-010 sewer backup protection",
+            },
+            {
+              label: "Local risks",
+              value: "2017 and 2019 floods, Île Mercier submerged, evacuations",
+            },
+            {
+              label: "Common projects",
+              value: "Rebuilt basements, additions, older homes on Gouin West",
+            },
+            {
+              label: "From our base",
+              value: "Jacques-Bizard bridge, then Montée de l'Église",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
+            alt: "Materials staged to rebuild a basement on Île Bizard",
+          },
+          note: "Sources: City of Montréal, 311 information bank, SPHIB-SG. Verified 2026-09-18.",
         },
       },
     },
@@ -104,101 +129,76 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build on the island",
+          heading: "What we rebuild on Île Bizard",
           items: [
             {
-              title: "Disaster recovery",
-              href: "/services/renovation/apres-sinistre",
-              description:
-                "Drying, selective demolition, rebuild and a documented file for your insurer.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-                alt: "Materials prepared to rebuild a basement",
-              },
-              badges: ["Insurance"],
-              footerCtaLabel: "See the service",
-            },
-            {
-              title: "Basement",
+              title: "Basement rebuild",
               href: "/services/renovation/sous-sol",
               description:
-                "Weeping tile, sump pump and backwater valve checked before finishing.",
+                "Drain, backflow valve and sump pump checked before a riverside basement closes",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
-                alt: "Basement finished as a home theatre",
+                alt: "Basement finished as a home cinema on Île Bizard",
               },
               badges: ["Drainage"],
               footerCtaLabel: "See basements",
             },
             {
+              title: "Post-damage rebuild",
+              href: "/services/renovation/apres-sinistre",
+              description:
+                "Rebuilding homes hit by the flood waters around Île Mercier",
+              image: {
+                src: "/images/generated/services/service-renovation-project-03.webp",
+                alt: "Interior rebuild after flooding near Île Mercier",
+              },
+              badges: ["Insurance"],
+              footerCtaLabel: "See the service",
+            },
+            {
               title: "Home addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Setbacks, shoreline buffer and fill confirmed before anything is drawn.",
+                "Shoreline strip, setbacks and fill confirmed before the first sketch",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planning a home addition",
+                alt: "Planning an addition on a riverside lot on the island",
               },
               badges: ["Zoning"],
               footerCtaLabel: "See additions",
-            },
-            {
-              title: "Kitchen",
-              href: "/services/renovation/cuisine",
-              description:
-                "Opening to the dining room once the structure is verified.",
-              image: {
-                src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
-                alt: "Renovated kitchen in a West Island home",
-              },
-              badges: ["Custom"],
-              footerCtaLabel: "See kitchens",
-            },
-            {
-              title: "Heritage sector",
-              href: "/services/renovation",
-              description:
-                "Older homes on boulevard Gouin Ouest, surveyed before any drawing.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Conversion of an older Sainte-Geneviève home",
-              },
-              badges: ["Heritage"],
-              footerCtaLabel: "See the service",
             },
           ],
         },
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "What we check before pricing",
-          intro:
-            "On the island, two questions decide the real scope of the work.",
-          badges: ["On-site visit", "Free estimate"],
-          cardTitle: "Our on-site checklist",
+          heading: "Across the bridge",
+          columns: "2",
           items: [
-            "Where the lot sits in the flood zone",
-            "History of flooding or sewer backup",
-            "Level of the basement floor",
-            "Backwater valve, sump pump, weeping tile",
-            "Shoreline buffer and applicable setbacks",
-            "Trees 10 cm in diameter and over",
-          ],
-          actions: [
             {
-              label: "Book a visit",
-              href: "/contact",
-              variant: "primary",
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "See the area",
             },
             {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Kirkland",
+              href: "/zones/kirkland",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Laval",
+              href: "/zones/laval",
+              ctaLabel: "See the area",
             },
           ],
         },
@@ -210,31 +210,23 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions we hear on the island",
           items: [
             {
-              q: "Where do I apply for a permit in the borough?",
-              a: "At the permit counter, 15795 boulevard Gouin Ouest, or at the urban planning, permits and inspections division, 406 montée de l'Église. We prepare and file the application as part of the mandate.",
+              q: "Where are permits filed in L'Île-Bizard–Sainte-Geneviève?",
+              a: "At the permit counter, 15795 Gouin Boulevard West, or with the urban planning, permits and inspections division at 406 Montée de l'Église, 514 620-6607. We prepare and file the application.",
             },
             {
-              q: "My house is in a flood zone. Can I still renovate?",
-              a: "It depends on the zone. In the high-velocity 0-20 year zone, buildings and works are prohibited apart from listed exceptions. In the low-velocity 20-100 year zone, any structure that is not flood-proofed is prohibited. All work in a floodplain requires a permit.",
+              q: "Can I renovate in a high-velocity flood zone on Île Bizard?",
+              a: "In the 0 to 20 year high-velocity zone, construction and work are prohibited apart from listed exceptions. In the 20 to 100 year zone, any non flood-proofed construction is banned. We confirm the elevation before drawing.",
             },
             {
-              q: "Do you rebuild after a flood?",
-              a: "Yes. The 2017 and 2019 floods hit several streets, including Île Mercier. Selective demolition, sanitation, structural repair where needed, then a rebuild documented for your insurance file.",
+              q: "What does by-law 11-010 change for a Sainte-Geneviève basement?",
+              a: "It requires the building to be protected against sewer backups. Backflow valve, sump pump and French drain come before finishes, and the lower wall materials have to survive a repeat event.",
             },
             {
-              q: "Can a basement near the river be finished?",
-              a: "Often yes, but not the same way as elsewhere. By-law 11-010 on protection against sewer backup applies: backwater valve, sump pump and weeping tile first, water-tolerant materials second.",
-            },
-            {
-              q: "What budget should I plan for?",
-              a: "Our projects start around $25,000. A full kitchen lands between $35,000 and $50,000 and up. Estimates are free, and budget and schedule are set in the written contract before work starts.",
-            },
-            {
-              q: "Are you licensed and insured?",
-              a: "RBQ licence 8306-0806-27, valid with no restrictions since September 2004, classes 1.2 and 1.3, no claims on file. Liability and site insurance in force, licence bond in place.",
+              q: "Can an older house in old Sainte-Geneviève be transformed?",
+              a: "Yes, starting with a survey of what is there. The village core is recognized as exceptional in character, around the 1843-1845 church and the D'Ailleboust-De-Manthet house at 15886 Gouin Boulevard West.",
             },
           ],
         },
@@ -246,9 +238,8 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a project here?",
-          intro:
-            "We cross the Jacques-Bizard bridge, survey the house, and price it.",
+          heading: "A project in L'Île-Bizard or Sainte-Geneviève?",
+          intro: "We cross the bridge, survey the house and price the work.",
           actions: [
             {
               label: "Request a quote",
@@ -261,7 +252,7 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Dilamco · general contractor based in Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

@@ -21,30 +21,24 @@ export const comparatifPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Materials",
+          badges: ["Structure", "Humidity", "Finish"],
           heading: "Which panel for which part of the cabinet",
           description:
-            "No material wins everywhere. A good kitchen combines three or four, each one where it holds up best.",
+            "No material wins everywhere. A well-planned kitchen mixes three or four, each one where it belongs.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View all materials",
+              label: "See all materials",
               href: "/materiaux",
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Humidity", "Finish"],
-          image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.webp",
-            alt: "Materials comparison for a custom kitchen",
-          },
-          caption: "Four panels, four roles",
         },
       },
     },
@@ -54,20 +48,20 @@ export const comparatifPageEn: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Comparison table",
+          heading: "Four panels, four roles",
           columns: ["Strength", "Where to use it"],
           rows: [
             {
               label: "Plywood",
-              values: ["Stability and screw retention", "Boxes, drawers, shelves"],
+              values: ["Stability and screw hold", "Boxes, drawers, shelves"],
             },
             {
               label: "MDF",
-              values: ["Surface with no grain", "Painted doors and fronts"],
+              values: ["Grain-free surface", "Painted doors and fronts"],
             },
             {
               label: "Melamine",
-              values: ["Pre-finished, low cost", "Interiors, shelves, framed budgets"],
+              values: ["Pre-finished, low cost", "Interiors and secondary storage"],
             },
             {
               label: "Solid wood",
@@ -75,44 +69,56 @@ export const comparatifPageEn: PageTemplateData = {
             },
             {
               label: "Hardware",
-              values: ["Comfort and longevity", "Hinges, slides, mechanisms"],
+              values: ["Comfort and lifespan", "Hinges, slides, mechanisms"],
+            },
+            {
+              label: "Particleboard",
+              values: ["Lowest cost", "Nothing that carries or moves"],
             },
           ],
         },
       },
     },
     {
-      id: "limits",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What the table does not say",
-          description:
-            "Two kitchens built from the same panel can age very differently. The gap comes from four execution details.",
-          cards: [
+          heading: "How to choose",
+          intro: "Two questions settle the call in most rooms.",
+          rows: [
             {
-              title: "The edges",
-              description:
-                "An open edge lets water in, whatever the panel underneath.",
+              label: "First question",
+              value: "Does the part carry a load or meet water?",
             },
             {
-              title: "The assembly",
-              description:
-                "Dowels, screws and glue decide how the box holds together.",
+              label: "Second question",
+              value: "Is the target finish painted, decor or natural wood?",
             },
             {
-              title: "The hardware",
-              description:
-                "Hinges and slides carry daily use, not the panel itself.",
+              label: "Structure",
+              value: "Plywood wherever there are screws and weight",
             },
             {
-              title: "The installation",
-              description:
-                "Levelling and final adjustments keep doors from rubbing.",
+              label: "Fronts",
+              value: "MDF to paint, solid wood for grain, melamine for price",
+            },
+            {
+              label: "Budget",
+              value: "Shift the spending to what is seen and touched",
+            },
+            {
+              label: "Breaking point",
+              value: "The edges and the install, not the panel itself",
             },
           ],
-          columns: "2",
+          image: {
+            src: "/images/generated/materials/comparatif-materiaux-01.webp",
+            alt: "Cabinet panels compared side by side",
+          },
+          note: "The table gives the rule; the on-site survey gives the exception.",
         },
       },
     },
@@ -122,23 +128,19 @@ export const comparatifPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about choosing materials",
           items: [
             {
-              q: "MDF or melamine?",
-              a: "MDF when you want a specific painted colour on the doors. Melamine when you want a decor that is already finished, with no paint step and a lower cost.",
+              q: "Should a kitchen use a single material?",
+              a: "No, and it is rarely desirable. Three or four panels share the same room, each placed where its weakness does not show.",
             },
             {
-              q: "Is plywood always preferable?",
-              a: "For boxes and drawers, yes, because it holds screws. On a painted door, MDF gives a more even surface.",
+              q: "How do you compare two quotes?",
+              a: "Look at box thickness, plywood species, slide brand and edge band thickness. The rest is presentation.",
             },
             {
-              q: "Solid wood everywhere?",
-              a: "No. It moves with humidity. On large flat surfaces and cabinet boxes, panels hold their line better over time.",
-            },
-            {
-              q: "Can several materials be combined?",
-              a: "That is the norm. Birch plywood for the boxes, MDF for painted doors, solid wood on visible details, melamine inside.",
+              q: "Should particleboard be ruled out?",
+              a: "Under a decor and away from water, it does the job. We keep it out of cabinet boxes, because it does not hold screws over time.",
             },
           ],
         },
@@ -150,9 +152,9 @@ export const comparatifPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want a comparison for your project?",
+          heading: "Settle the materials for your project",
           intro:
-            "We weigh structure, finish, humidity and budget after the on-site survey.",
+            "We weigh structure, finish, humidity and budget after the survey at your place.",
           actions: [
             {
               label: "Request a quote",
@@ -160,7 +162,7 @@ export const comparatifPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View all materials",
+              label: "See all materials",
               href: "/materiaux",
               variant: "ghost",
             },

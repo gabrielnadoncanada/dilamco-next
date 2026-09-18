@@ -42,9 +42,9 @@ export const renovationPlancherPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Rénovation de plancher",
-          heading: "Un plancher qui tient commence sous le revêtement",
+          heading: "Ce qui tient un plancher se trouve dessous",
           description:
-            "Sous-plancher, planéité et humidité vérifiés avant la pose. Seuils et transitions réglés au plan.",
+            "Support, planéité et humidité mesurés avant la pose. Seuils et niveaux décidés au plan.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -57,12 +57,13 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Sous-plancher vérifié", "Contrat écrit"],
+          badges: ["Support vérifié", "Contrat écrit"],
           image: {
             src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
             alt: "Rénovation de plancher résidentiel par un entrepreneur général",
           },
-          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
+          imageSide: "left",
+          caption: "Planchers refaits dans l'Ouest-de-l'Île",
         },
       },
     },
@@ -72,47 +73,47 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que comprend le mandat",
+          heading: "Ce que couvre le mandat plancher",
           columns: "2",
           items: [
             {
-              title: "Arrachage et diagnostic",
-              description: "On voit le support avant de chiffrer la pose.",
+              title: "Arrachage et lecture",
+              description: "Le support se juge à nu",
               icon: "hammer",
               bullets: [
-                "Retrait des revêtements, plinthes et seuils",
-                "Inspection du sous-plancher et des traces d'eau",
-                "Test d'humidité sur dalle ou sur bois",
+                "Revêtements, plinthes et seuils enlevés",
+                "Traces d'eau et panneaux mous repérés",
+                "Taux d'humidité mesuré sur dalle ou bois",
               ],
             },
             {
-              title: "Correction de la base",
-              description: "L'étape que la plupart des poseurs facturent en extra.",
+              title: "Remise en état du support",
+              description: "La ligne que les poseurs facturent en extra",
               icon: "ruler",
               bullets: [
-                "Panneaux abîmés remplacés, revissage complet",
-                "Nivellement selon la tolérance du revêtement",
-                "Renforcement des solives si affaissement",
+                "Panneaux abîmés changés, vissage repris",
+                "Nivellement selon la tolérance du produit",
+                "Solives renforcées si le plancher plie",
               ],
             },
             {
               title: "Pose du revêtement",
-              description: "Bois franc, ingénierie, vinyle ou céramique.",
+              description: "Bois franc, ingénierie, vinyle ou céramique",
               icon: "layers",
               bullets: [
-                "Acclimatation du bois avant la pose",
-                "Membrane ou sous-tapis selon l'étage",
-                "Jeux périphériques respectés",
+                "Bois acclimaté dans la maison avant la pose",
+                "Membrane ou sous-tapis choisis selon l'étage",
+                "Jeux périphériques respectés partout",
               ],
             },
             {
-              title: "Seuils et finition",
-              description: "Les détails qui distinguent une pose propre.",
+              title: "Seuils et raccords",
+              description: "Les détails d'une pose propre",
               icon: "slidersHorizontal",
               bullets: [
-                "Transitions entre pièces planifiées d'avance",
-                "Raccords d'escalier et nez de marche",
-                "Plinthes, quarts-de-rond, portes ajustées",
+                "Transitions entre pièces prévues au plan",
+                "Nez de marche et raccords d'escalier",
+                "Plinthes, quarts-de-rond, portes rabotées",
               ],
             },
           ],
@@ -125,37 +126,37 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Cinq étapes",
+          heading: "La séquence d'un plancher",
           steps: [
             {
               number: "1",
-              title: "Visite et relevé",
+              title: "Relevé des niveaux",
               description:
-                "Surfaces, planéité, niveaux entre pièces et seuils existants.",
+                "Surfaces, planéité, différences entre pièces et seuils actuels.",
             },
             {
               number: "2",
-              title: "Soumission",
+              title: "Arrachage",
               description:
-                "Portée et exclusions écrites. Réponse sous 24 à 48 heures ouvrables.",
+                "Lieux protégés, anciens revêtements sortis, support mis à nu.",
             },
             {
               number: "3",
-              title: "Arrachage",
+              title: "Réparation",
               description:
-                "Protection des lieux, retrait des anciens revêtements, inspection du support.",
+                "Panneaux remplacés, vissage complet, solives reprises au besoin.",
             },
             {
               number: "4",
-              title: "Préparation du support",
+              title: "Nivellement et séchage",
               description:
-                "Réparations, revissage, ajout de sous-plancher, nivellement et séchage.",
+                "Ragréage appliqué, temps de séchage inscrit à l'échéancier.",
             },
             {
               number: "5",
-              title: "Pose et livraison",
+              title: "Pose et seuils",
               description:
-                "Revêtement, seuils, plinthes, portes ajustées, inspection finale avec vous.",
+                "Revêtement, transitions, plinthes, portes ajustées, remise des lieux.",
             },
           ],
         },
@@ -167,29 +168,25 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Où le plancher se place dans le chantier",
+          heading: "Quand poser le plancher dans un chantier",
           intro:
-            "L'ordre des travaux décide du coût réel. Voici les règles que nous appliquons.",
+            "L'ordre des travaux fait varier la facture autant que le produit choisi.",
           items: [
             {
               title: "Après la mécanique et la peinture",
-              description:
-                "Un plancher neuf sous un chantier ouvert se fait marquer.",
+              description: "un revêtement neuf sous un chantier ouvert se marque.",
             },
             {
               title: "Avant les armoires",
-              description:
-                "Évite les décalages de hauteur si un électroménager change.",
+              description: "évite un décalage de hauteur si un appareil change.",
             },
             {
-              title: "Niveaux décidés au plan",
-              description:
-                "Céramique, bois et vinyle n'ont pas la même épaisseur.",
+              title: "Niveaux arrêtés au plan",
+              description: "céramique, bois et vinyle n'ont pas la même épaisseur.",
             },
             {
-              title: "Sous-sol sur dalle",
-              description:
-                "Sous-plancher isolant ou membrane de désolidarisation avant le revêtement.",
+              title: "Sur une dalle de béton",
+              description: "sous-plancher isolant ou membrane de désolidarisation.",
             },
           ],
           actions: [
@@ -208,9 +205,9 @@ export const renovationPlancherPage: PageTemplateData = {
             src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
             alt: "Préparation du sous-plancher avant la pose d'un revêtement",
           },
-          cardTitle: "Un seul responsable",
+          cardTitle: "Un seul calendrier",
           cardDescription:
-            "Nous répondons du calendrier, de la protection des lieux et du raccord avec les armoires, la salle de bain et l'escalier.",
+            "Le raccord avec les armoires, la salle de bain et l'escalier relève du même contrat.",
         },
       },
     },
@@ -223,28 +220,24 @@ export const renovationPlancherPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Peut-on poser par-dessus l'ancien plancher ?",
-              a: "Rarement une bonne idée : la hauteur augmente, les portes se recoupent, les seuils se compliquent et l'état du sous-plancher reste invisible. Nous recommandons l'arrachage, sauf cas particulier documenté dans la soumission.",
-            },
-            {
               q: "Pourquoi mon plancher craque-t-il ?",
-              a: "Presque toujours à cause du sous-plancher : panneaux mal fixés, vis manquantes, contreplaqué trop mince. Le revêtement n'est qu'un symptôme. On arrache, on revisse et on remplace ce qui est abîmé.",
+              a: "Presque toujours le support : panneaux mal fixés, vis manquantes, contreplaqué trop mince. Le revêtement ne fait que révéler le défaut. On arrache, on revisse et on change ce qui a bougé.",
             },
             {
-              q: "Faut-il un permis ?",
-              a: "Pas pour remplacer un revêtement. Un permis devient nécessaire dès que les travaux touchent la structure : solives modifiées, trémie ouverte, dalle abaissée. Nous validons avec votre ville avant de commencer.",
+              q: "Peut-on poser par-dessus l'ancien plancher ?",
+              a: "Rarement une bonne idée. La hauteur monte, les portes frottent, les seuils se compliquent et l'état du support reste invisible. Nous recommandons l'arrachage, sauf exception notée dans la soumission.",
             },
             {
-              q: "Quel revêtement pour un sous-sol ?",
-              a: "Sur une dalle de béton, on mesure d'abord l'humidité. Le vinyle de luxe et la céramique tolèrent bien l'environnement. Le bois franc massif est déconseillé directement sur dalle.",
+              q: "Quel revêtement pour un plancher de sous-sol ?",
+              a: "On mesure d'abord l'humidité de la dalle. Le vinyle de luxe et la céramique s'en accommodent bien. Le bois franc massif posé directement sur béton est à éviter.",
             },
             {
-              q: "Combien coûte une réfection de plancher ?",
-              a: "Trois postes : arrachage, remise en état du support et pose. Le support est la ligne la plus variable d'une maison à l'autre. Le prix ferme est fixé après le relevé.",
+              q: "Faut-il un permis pour refaire un plancher ?",
+              a: "Pas pour changer un revêtement. Le permis devient nécessaire dès que la structure bouge : solives modifiées, ouverture d'une trémie, dalle abaissée. Nous validons avec votre ville.",
             },
             {
-              q: "Combien de temps dure le chantier ?",
-              a: "Cela dépend de la surface et de l'état du support. Le nivellement et l'acclimatation du bois ajoutent des jours de séchage, inscrits à l'échéancier du contrat.",
+              q: "Pourquoi laisser le bois s'acclimater ?",
+              a: "Le bois franc gonfle et rétrécit selon l'humidité ambiante. Posé trop vite, il ouvre des joints en hiver. Quelques jours dans la maison, à température normale, règlent la question.",
             },
           ],
         },
@@ -258,7 +251,7 @@ export const renovationPlancherPage: PageTemplateData = {
         props: {
           heading: "Un plancher à refaire ?",
           intro:
-            "Nous vérifions la planéité et le sous-plancher, puis nous chiffrons sous 24 à 48 heures ouvrables.",
+            "Nous mesurons la planéité, ouvrons un coin du support, puis chiffrons la réfection.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -271,7 +264,7 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île et Grand Montréal",
+          note: "Licence RBQ 8306-0806-27 · Support, nivellement, pose et seuils",
         },
       },
     },

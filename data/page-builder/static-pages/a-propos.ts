@@ -26,7 +26,7 @@ export const page: PageTemplateData = {
           heading:
             "Entrepreneur général en rénovation résidentielle depuis 2004",
           description:
-            "Licence RBQ délivrée en 2004, toujours valide et sans restriction. Base à Pierrefonds-Roxboro, chantiers dans le Grand Montréal.",
+            "Même licence, même répondant, même adresse depuis vingt ans. Les chantiers restent dans le Grand Montréal.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -45,36 +45,60 @@ export const page: PageTemplateData = {
             alt: "Escalier et rampe de verre : finition intérieure réalisée par Dilamco",
           },
           caption: "9139-1250 Québec inc. · Pierrefonds-Roxboro",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "structural-advantage",
+      id: "reperes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "Ce qui tient un chantier",
-          description:
-            "Un chantier déraille entre les intervenants, pas sur un choix de céramique. Nous réduisons le nombre de transferts.",
-          cards: [
+          heading: "Ce que vingt ans laissent derrière",
+          tiles: [
             {
-              title: "Séquence planifiée",
-              description:
-                "Les métiers entrent dans l'ordre, chaque étape inspectée avant la suivante.",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/mur-bois-accent-plafond-haut-01.webp",
+                alt: "Mur de bois en accent sous un plafond de grande hauteur",
+              },
+              caption: "Mur d'accent, plafond haut",
             },
             {
-              title: "Un seul responsable",
-              description:
-                "Nous engageons les corps de métier et répondons du travail livré.",
+              kind: "stat",
+              value: "2004",
+              label: "Licence RBQ délivrée, jamais interrompue",
             },
             {
-              title: "Engagements écrits",
-              description:
-                "Portée, prix, exclusions et échéancier au contrat. Tout changement passe par un avenant chiffré.",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
+                alt: "Plancher de bois franc neuf posé dans une pièce rénovée",
+              },
+              caption: "Plancher de bois franc",
+            },
+            {
+              kind: "stat",
+              value: "5,0",
+              label: "Note Google, 11 avis",
+            },
+            {
+              kind: "stat",
+              value: "40 000 $",
+              label: "Cautionnement FACCQ, aucune réclamation",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
+                alt: "Présentoirs de finis et de matériaux au showroom de Dorval",
+              },
+              caption: "Présentoirs de finis, Dorval",
             },
           ],
-          columns: "3",
         },
       },
     },
@@ -153,12 +177,12 @@ export const page: PageTemplateData = {
               a: "Au 18625, rue Larocque, à Pierrefonds-Roxboro. Nous couvrons l'Ouest-de-l'Île, Montréal, Laval, la Rive-Sud et Vaudreuil-Soulanges.",
             },
             {
-              q: "Construisez-vous des maisons neuves ?",
-              a: "Non. Notre licence couvre la rénovation, la transformation, l'agrandissement et la reconstruction après sinistre. Le plan de garantie GCR ne s'applique donc pas.",
+              q: "Qui est le répondant de la licence ?",
+              a: "Sean Diffley, inscrit au registre comme répondant en gestion et en exécution des travaux. C'est la personne que la Régie reconnaît comme responsable des chantiers.",
             },
             {
-              q: "Fabriquez-vous vos armoires ?",
-              a: "Non. La sous-catégorie 12 de notre licence couvre les armoires et comptoirs : nous concevons, coordonnons et installons. Les armoires sont fournies par notre usine partenaire.",
+              q: "Pourquoi passer par un entrepreneur général ?",
+              a: "Parce qu'une seule signature couvre les permis, les corps de métier, l'échéancier et le prix. Sans lui, les arbitrages entre métiers retombent sur le propriétaire.",
             },
           ],
         },
@@ -171,7 +195,8 @@ export const page: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlons de votre projet",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          intro:
+            "Estimation gratuite. Les attestations d'assurance sont fournies avant la signature.",
           actions: [
             {
               label: "Estimation gratuite",

@@ -15,6 +15,11 @@ import { getActionButtonVariant } from "./utils";
 const PHONE_HREF = `tel:${SITE.telephone.replace(/[^+\d]/g, "")}`;
 const PHONE_DISPLAY = SITE.telephone.replace(/^\+1-?/, "");
 
+/**
+ * Barre de navigation. Trois zones en flex (logo · menu · actions) : jamais de
+ * chevauchement. Le menu desktop apparaît dès `lg` (1024 px) : un portable
+ * n'est pas un téléphone. Le numéro s'affiche en clair à partir de `xl`.
+ */
 export function Navbar({
   className,
   logo,
@@ -28,25 +33,22 @@ export function Navbar({
       aria-label="Navigation principale"
       className={cn("pointer-events-auto w-full", className)}
     >
-      {/* Trois zones en flex (logo · menu · actions) : jamais de chevauchement,
-          quelle que soit la largeur. Le menu desktop apparaît à partir de xl. */}
-      <div className="mx-auto flex h-[68px] w-full max-w-[1440px] items-center gap-4 px-[clamp(20px,1rem,56px)] max-[700px]:px-[18px] md:h-[76px]">
+      <div className="mx-auto flex h-[68px] w-full max-w-[1440px] items-center gap-3 px-[clamp(20px,1rem,56px)] max-[700px]:px-[18px] md:h-[76px] lg:gap-4">
         <div className="flex shrink-0 items-center">
           <Logo logo={logo} />
         </div>
 
-        <div className="hidden min-w-0 flex-1 justify-center xl:flex">
+        <div className="hidden min-w-0 flex-1 justify-center lg:flex">
           <DesktopNavigation />
         </div>
 
-        <div className="ml-auto hidden shrink-0 items-center gap-2 xl:flex">
+        <div className="ml-auto hidden shrink-0 items-center gap-1.5 lg:flex xl:gap-2">
           <a
             href={PHONE_HREF}
-            className="inline-flex h-10 items-center gap-2 rounded-full px-3 text-sm font-semibold text-foreground/80 transition-ui focus-ring hover:bg-primary-soft hover:text-primary"
+            className="hidden h-10 items-center gap-2 rounded-full px-3 text-sm font-semibold text-foreground/80 transition-ui focus-ring hover:bg-primary-soft hover:text-primary xl:inline-flex"
           >
             <Phone className="size-4" strokeWidth={2.25} />
-            <span className="hidden tabular-nums 2xl:inline">{PHONE_DISPLAY}</span>
-            <span className="sr-only 2xl:hidden">{PHONE_DISPLAY}</span>
+            <span className="tabular-nums">{PHONE_DISPLAY}</span>
           </a>
           <LocaleSwitcher className="mr-1" />
           {actions.map((action, index) => (
@@ -65,7 +67,7 @@ export function Navbar({
           ))}
         </div>
 
-        <div className="ml-auto flex items-center gap-1 xl:hidden">
+        <div className="ml-auto flex items-center gap-1 lg:hidden">
           <a
             href={PHONE_HREF}
             aria-label={PHONE_DISPLAY}

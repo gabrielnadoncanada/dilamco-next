@@ -17,6 +17,9 @@ export const HeroSplitImageSchema = z.object({
   image: ImageSchema,
 
   caption: z.string().optional(), // small text under image
+
+  /** Côté de la photo sur desktop (défaut : droite). */
+  imageSide: z.enum(["left", "right"]).optional(),
 });
 
 export type HeroSplitImageProps = z.infer<typeof HeroSplitImageSchema>;

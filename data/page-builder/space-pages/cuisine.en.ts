@@ -27,12 +27,12 @@ export const cuisinePageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Kitchen",
-          heading: "Custom kitchen cabinets, installed by your contractor",
+          badges: ["Custom-built", "Cabinet division"],
+          heading: "Custom kitchen cabinets, installed by your general contractor",
           description:
-            "Built to the real dimensions of the room and folded into the job site. One less supplier, one quote.",
+            "Measured once demolition is done, ordered afterwards, installed in step with the rest of the job.",
           actions: [
             {
               label: "Get a quote",
@@ -45,155 +45,111 @@ export const cuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Custom-built", "Cabinet division"],
-          image: {
-            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "High-end custom kitchen cabinets in Pierrefonds",
-          },
-          caption: "Pierrefonds · West Island · Greater Montréal",
         },
       },
     },
     {
-      id: "composition",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "bento",
         props: {
-          heading: "What the mandate covers",
-          columns: "2",
-          items: [
+          heading: "Kitchens delivered across the West Island",
+          tiles: [
             {
-              title: "Island and worktop",
-              description: "Proportions set to how you actually move through the room.",
-              icon: "package2",
-              bullets: [
-                "Built-in storage and outlets",
-                "Overhang sized for the seating side",
-              ],
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Open-plan kitchen with island and full-height cabinet columns",
+              },
+              caption: "Island and columns, open plan",
             },
             {
-              title: "Storage and pantry",
-              description: "Planned for daily use, not added at the end.",
-              icon: "doorOpen",
-              bullets: [
-                "Deep drawers and dedicated spaces",
-                "Direct access to the cooking zone",
-              ],
+              kind: "stat",
+              value: "$30,000",
+              label: "Low end of the range, full kitchen",
             },
             {
-              title: "Cabinets to the ceiling",
-              description: "The full wall height used, with no gap above.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Heights adjusted to the room",
-                "More storage, less dust",
-              ],
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "White kitchen with island and quartz countertop",
+              },
+              caption: "Quartz countertop, white island",
             },
             {
-              title: "Design, order and install",
-              description: "One team, from the plan to the final adjustment.",
-              icon: "wrench",
-              bullets: [
-                "Measured after demolition",
-                "Adjustments checked on site",
-              ],
+              kind: "quote",
+              quote:
+                "Excellent contractor. They did my floors and other projects and we are very satisfied. I recommend them 100%.",
+              author: "Mélina Desbiens, Google review (translated)",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
+                alt: "Glass-front kitchen cabinets and tile backsplash",
+              },
+              caption: "Glass fronts and backsplash",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+                alt: "Navy blue island with birch-lined drawers",
+              },
+              caption: "Navy island, birch interior",
             },
           ],
         },
       },
     },
     {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Recent kitchens",
-          items: [
-            {
-              title: "Custom kitchen, Pierrefonds",
-              href: "/projets/cuisine/cuisine-sur-mesure-pierrefonds",
-              description: "Precise layout and careful finish in the West Island.",
-              image: {
-                src: "/images/projects/chene-moderne.webp",
-                alt: "Custom kitchen cabinet project in Pierrefonds",
-              },
-              badges: ["Pierrefonds"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Custom kitchen, Montréal",
-              href: "/projets/cuisine/cuisine-sur-mesure-montreal",
-              description: "Cabinets to the ceiling and a central island.",
-              image: {
-                src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-                alt: "Custom kitchen project in Montréal",
-              },
-              badges: ["Montréal"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Custom kitchen, South Shore",
-              href: "/projets/cuisine/cuisine-sur-mesure-rive-sud",
-              description: "Full room renovation, cabinets included.",
-              image: {
-                src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
-                alt: "Custom kitchen project on the South Shore",
-              },
-              badges: ["South Shore"],
-              footerCtaLabel: "View project",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "What sits under the finish",
-          intro: "Durability comes from the parts you stop seeing once the kitchen is installed.",
-          items: [
+          heading: "The kitchen at a glance",
+          intro:
+            "The numbers homeowners ask about before they book an appointment.",
+          rows: [
             {
-              title: "Solid wood drawers",
-              description: "Solid birch, joinery that holds the load",
+              label: "Lead time",
+              value: "Nine to fifteen weeks from design sign-off to installation",
             },
             {
-              title: "Plywood bottoms",
-              description: "Birch plywood, no particleboard",
+              label: "Price",
+              value: "$30,000 to $65,000 for a full kitchen, survey required",
             },
             {
-              title: "Finishes and hardware",
-              description: "Chosen for upkeep and daily use",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Materials",
+              value: "Solid birch drawers, birch plywood cabinet boxes",
             },
             {
-              label: "Kitchen renovation",
-              href: "/services/renovation/cuisine",
-              variant: "ghost",
+              label: "Hardware",
+              value: "Undermount slides and soft-close hinges",
+            },
+            {
+              label: "Installation",
+              value: "By our crew, once plumbing and flooring are done",
+            },
+            {
+              label: "Warranty",
+              value: "Scope and term in the contract, adjustments redone on site",
             },
           ],
           image: {
-            src: "/images/spaces/cabinet-cuisines.webp",
-            alt: "Material detail for a custom kitchen",
+            src: "/images/generated/spaces/space-cuisine-hero-01.webp",
+            alt: "High-end custom kitchen with a central island",
           },
-          cardTitle: "Why it matters",
-          cardDescription: "A sound structure avoids premature replacements.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -201,24 +157,20 @@ export const cuisinePageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "How much do custom kitchen cabinets cost?",
-              a: "Usually $30,000 to $65,000, depending on dimensions, layout complexity, finishes and the coordination required. The firm price is set after the on-site survey, in the detailed quote.",
+              q: "When do you measure the kitchen?",
+              a: "After demolition, once the walls sit in their final position. That is what keeps dead space from showing up beside the columns and under the ceiling.",
             },
             {
-              q: "How long does it take?",
-              a: "Nine to fifteen weeks from design sign-off to final installation. When the cabinets are part of a full renovation, the order is placed to land at the right point in the site schedule.",
+              q: "Can the kitchen stay usable during the work?",
+              a: "A temporary station, sink and fridge, goes somewhere else in the house. The room itself stays closed while demolition, plumbing and flooring are under way.",
             },
             {
-              q: "How is this different from stock cabinets?",
-              a: "Stock modules come in fixed sizes, which leaves wasted space and poorly used heights. Every custom cabinet is sized for your room, up to the ceiling where needed.",
+              q: "Who supplies the countertop and backsplash?",
+              a: "We do. The countertop template is taken once the boxes are anchored, then the backsplash follows. Both are priced in the same quote as the cabinets.",
             },
             {
-              q: "What materials do you use?",
-              a: "Solid birch drawers, birch plywood bottoms, soft-close hardware. Doors, finishes and countertops are chosen with you before the order goes in.",
-            },
-            {
-              q: "Can you handle the full kitchen renovation?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, coordinated by one party. Schedule and budget set in the written contract.",
+              q: "Do you handle the wiring and the range hood vent?",
+              a: "Yes. Dedicated circuits, island outlets and the hood duct are set on the kitchen drawing and run by our trades before the cabinets arrive.",
             },
           ],
         },
@@ -231,7 +183,8 @@ export const cuisinePageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your kitchen project",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro:
+            "Free estimate, on-site survey and an itemized quote before anything is ordered.",
           actions: [
             {
               label: "Request a quote",

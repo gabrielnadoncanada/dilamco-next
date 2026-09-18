@@ -24,9 +24,9 @@ export const couleursPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "Choosing a colour that holds up in daily use",
+          heading: "Choosing a colour that survives daily use",
           description:
-            "The shade gets decided on site, in the room's real light. The sheen level is what decides your daily upkeep.",
+            "The shade is settled in your home, in the room's real light. The sheen level is what decides the upkeep.",
           actions: [
             {
               label: "Talk design and finishes",
@@ -41,90 +41,54 @@ export const couleursPageEn: PageTemplateData = {
           ],
           badges: ["Light", "Sheen", "Upkeep"],
           image: {
-            src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Colour and finish choices for a custom project",
+            src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
+            alt: "Coloured cabinets seen in the light of a room",
           },
-          caption: "Samples seen in your own room",
+          caption: "Samples seen inside your room",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "method",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Four things to look at",
-          description:
-            "A sample shifts with the room's orientation, the substrate and the sheen. We validate all three before ordering.",
-          cards: [
+          heading: "Finishes at a glance",
+          intro: "Six markers for locking a palette without a bad surprise.",
+          rows: [
             {
-              title: "Light in the room",
-              description:
-                "A north exposure pulls grey, a south exposure warms every shade.",
+              label: "Substrate",
+              value: "The same shade reads differently on MDF, melamine or wood",
             },
             {
-              title: "Substrate",
-              description:
-                "The same tone reads differently on MDF, melamine or wood.",
+              label: "Sheen",
+              value: "Matte, satin, gloss, from softest to most reflective",
             },
             {
-              title: "Sheen",
-              description:
-                "Matte, satin or gloss change both the colour and the upkeep.",
+              label: "Upkeep",
+              value: "Satin asks for the least cleaning in a kitchen",
             },
             {
-              title: "Neighbouring surfaces",
-              description:
-                "Counter, backsplash and floor get validated together, not separately.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "care",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Three sheens, three behaviours",
-          intro:
-            "Sheen weighs more than colour when it comes to the cleaning you will actually do.",
-          items: [
-            {
-              title: "Matte",
-              description: "Muted and contemporary, it marks sooner.",
+              label: "Recommended uses",
+              value: "Neutrals on large runs, colour on the island",
             },
             {
-              title: "Satin",
-              description: "The usual kitchen compromise, easy to wipe down.",
+              label: "Relative cost",
+              value: "Custom paint above a catalogue decor",
             },
             {
-              title: "Gloss",
-              description: "It bounces light back and shows every mark.",
-            },
-          ],
-          actions: [
-            {
-              label: "View hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-            {
-              label: "View materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Sign-off",
+              value: "Sample left in the room, seen morning and evening",
             },
           ],
           image: {
-            src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-            alt: "Finish choices and colour samples",
+            src: "/images/generated/materials/material-finish-samples-01.webp",
+            alt: "Colour samples and sheen levels side by side",
           },
-          cardTitle: "Common mistake",
-          cardDescription:
-            "Approving a colour on a screen or under a showroom's lighting.",
+          note: "A screen adds blue and erases sheen, so we never sign off on one.",
         },
       },
     },
@@ -134,23 +98,23 @@ export const couleursPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about colours and finishes",
           items: [
             {
-              q: "Matte or satin?",
-              a: "Satin in a kitchen, in almost every case: it returns a little light, hides fingerprints and wipes clean with no special product. Matte suits rooms that see less use.",
+              q: "Will white turn yellow?",
+              a: "Today's acrylic paints hold. What yellows is an oil varnish laid over white, or a range hood that pulls cooking grease badly.",
             },
             {
-              q: "Are dark colours risky?",
-              a: "No, provided you have natural light or good under-cabinet lighting. A satin finish also limits the marks, which show more on dark shades.",
+              q: "Two shades in the same kitchen?",
+              a: "Yes, if the split follows a whole volume. Light uppers, darker bases and island is the division that works most of the time.",
             },
             {
-              q: "Can the colour be changed later?",
-              a: "A painted door can be repainted. A melamine or veneered door gets replaced. That is a call to make before ordering, not after.",
+              q: "Can you match an existing colour?",
+              a: "Yes, from a door you hand us. The reading is taken with a colorimeter, then the gap is checked on a painted sample.",
             },
             {
-              q: "How do I avoid a dated look?",
-              a: "Neutral tones on the large surfaces, strong colour on what changes quickly: island, backsplash, handles. You refresh the room without redoing the cabinets.",
+              q: "How do you avoid a dated look?",
+              a: "Neutrals on the large runs, strong colour on what changes fast: island, backsplash, handles. The room gets refreshed without redoing the cabinets.",
             },
           ],
         },
@@ -162,9 +126,9 @@ export const couleursPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need help settling the palette?",
+          heading: "Need help locking the palette?",
           intro:
-            "We bring the samples to your home and validate them in the room's own light.",
+            "We bring the samples to your home and look at them under your own lighting.",
           actions: [
             {
               label: "Talk design",

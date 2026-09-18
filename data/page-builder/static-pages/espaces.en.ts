@@ -27,12 +27,12 @@ export const pageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Cabinet division",
-          heading: "Custom cabinetry, built into your renovation",
+          badges: ["Cabinet division"],
+          heading: "Custom cabinetry for six rooms of the house",
           description:
-            "Kitchen, bathroom, walk-in, basement, laundry room or commercial space: one contract, one party accountable.",
+            "The general contractor draws it, orders it and installs it. No supplier for you to chase.",
           actions: [
             {
               label: "Get a quote",
@@ -45,12 +45,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Custom-built", "Turnkey"],
-          image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Dilamco custom spaces",
-          },
-          caption: "Montréal · Laval · South Shore",
         },
       },
     },
@@ -65,7 +59,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Kitchen",
               href: "/espaces/cuisine",
-              description: "Island, pantry and cabinets to the ceiling.",
+              description: "Island, pantry and ceiling height put to work",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "High-end custom kitchen cabinets",
@@ -76,7 +70,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Bathroom",
               href: "/espaces/salle-de-bain",
-              description: "Single or double vanities, built for moisture.",
+              description: "Vanity set with the tile and the plumbing",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Custom bathroom vanity",
@@ -87,7 +81,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Laundry room",
               href: "/espaces/salle-de-lavage",
-              description: "Folding counter, towers and plumbing worked out.",
+              description: "Sink, towers and an unbroken folding surface",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Custom laundry room",
@@ -98,7 +92,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Walk-in",
               href: "/espaces/walk-in",
-              description: "Hanging space, drawers and shelves, wall to ceiling.",
+              description: "Hanging rails and drawers worked out by garment",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Custom walk-in closet",
@@ -109,7 +103,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Basement",
               href: "/espaces/sous-sol",
-              description: "Home theatre, bar, wine cellar and library.",
+              description: "Theatre, bar, cellar or library built in",
               image: {
                 src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
                 alt: "Custom basement finishing",
@@ -120,7 +114,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Commercial",
               href: "/espaces/commercial",
-              description: "Offices, retail and leasehold improvements.",
+              description: "Reception, service storage and back-of-house",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Custom commercial fit-out",
@@ -133,58 +127,45 @@ export const pageEn: PageTemplateData = {
       },
     },
     {
-      id: "standard",
+      id: "division",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Why go through the general contractor",
-          description:
-            "Our RBQ licence covers cabinets and countertops. They arrive at the right moment in the job-site sequence.",
-          cards: [
+          heading: "The cabinetry division at a glance",
+          intro:
+            "A division of the general contracting firm, not a second company to hire.",
+          rows: [
             {
-              title: "One quote",
-              description: "Work and cabinets priced together, one less supplier to manage.",
+              label: "Licence",
+              value: "RBQ subclass 12, cabinets and countertops, held by us",
             },
             {
-              title: "Measured after demolition",
-              description: "Taken once the walls are in their final position.",
+              label: "Production",
+              value: "Partner factory, ordered after the on-site survey",
             },
             {
-              title: "One party accountable",
-              description: "Plumbing, electrical, flooring and installation coordinated by us.",
+              label: "Lead time",
+              value: "Nine to fifteen weeks from drawing approval to delivery",
+            },
+            {
+              label: "Materials",
+              value: "Solid birch in drawers, plywood in the boxes",
+            },
+            {
+              label: "Installation",
+              value: "By our crew, in its place among the trades",
+            },
+            {
+              label: "Contract",
+              value: "Work and cabinets gathered into a single quote",
             },
           ],
-          columns: "3",
-        },
-      },
-    },
-    {
-      id: "faq",
-
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "Frequently asked questions",
-          items: [
-            {
-              q: "Which spaces do you cover?",
-              a: "Kitchen, bathroom, laundry room, walk-in and closets, basement and commercial units. Each space has its own moisture, dimension and use constraints, handled at the design stage.",
-            },
-            {
-              q: "How long does it take?",
-              a: "Nine to fifteen weeks from design sign-off to installation. When the cabinets are part of a renovation, the order is timed to the site schedule.",
-            },
-            {
-              q: "How is this different from a stock solution?",
-              a: "Stock modules impose their sizes on the room and leave wasted space. Custom work starts from your real space, with solid wood and birch plywood on the structural parts.",
-            },
-            {
-              q: "Can you handle the full renovation?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, coordinated by one party, in the written contract.",
-            },
-          ],
+          image: {
+            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
+            alt: "Overview of custom spaces delivered by Dilamco",
+          },
         },
       },
     },
@@ -195,7 +176,8 @@ export const pageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your space",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro:
+            "Free estimate for the room you have in mind, and one contract to sign.",
           actions: [
             {
               label: "Get a quote",

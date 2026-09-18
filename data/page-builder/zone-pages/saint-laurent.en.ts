@@ -34,16 +34,14 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Saint-Laurent",
-          heading:
-            "General contractor in Saint-Laurent, plexes, bungalows and condos",
+          eyebrow: "General contractor in",
+          heading: "Saint-Laurent",
           description:
-            "Three eras of buildings, three sets of surprises. Borough permits and trade coordination included in the mandate.",
+            "The population tripled between 1941 and 1951. Norgate plexes still carry their original electrical service.",
           actions: [
             {
               label: "Request a quote",
@@ -56,42 +54,68 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Plexes", "Condos", "Since 2004"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Renovated bathroom in a Saint-Laurent plex",
+            alt: "Bathroom rebuilt in a Saint-Laurent plex",
           },
-          caption: "Norgate, Côte-Vertu, Bois-Franc",
+          facts: [
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro · 20 min on Highway 40",
+            },
+            {
+              label: "Permits",
+              value: "Permits division, 777 Marcel-Laurin Boulevard",
+            },
+            {
+              label: "Housing stock",
+              value: "Post-war plexes, condos built since 1990",
+            },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about Saint-Laurent buildings",
-          description:
-            "The population tripled between 1941 and 1951, then doubled again the next decade. A dated post-war stock, plus planned neighbourhoods built since 1990.",
-          cards: [
+          heading: "Three building eras in one borough",
+          intro:
+            "Norgate went up in 1949, Nouveau-Saint-Laurent in the early 1990s. The era sets the method.",
+          rows: [
             {
-              title: "Norgate plexes",
-              description:
-                "Built from 1949 to the early 1950s: shared stacks, party walls, original electrical services.",
+              label: "Housing stock",
+              value: "Plexes from 1949 to 1955, bungalows, Bois-Franc condos",
             },
             {
-              title: "Permits and inspections division",
-              description:
-                "At 777 boulevard Marcel-Laurin, or online with a City digital services account.",
+              label: "Permits",
+              value: "City digital services account, applications filed online",
             },
             {
-              title: "Bois-Franc and condos",
-              description:
-                "Neighbourhoods planned since the 1990s: access, elevator, work hours and common areas all governed.",
+              label: "Condo rules",
+              value: "The board controls access, elevator, common areas, work hours",
+            },
+            {
+              label: "Watch for",
+              value: "Shared plumbing stacks and party walls in the plexes",
+            },
+            {
+              label: "Common projects",
+              value: "Bathrooms, kitchens, soundproofing between units",
+            },
+            {
+              label: "From our base",
+              value: "Highway 40 east, Côte-Vertu or Marcel-Laurin exit",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/espaces-card-bath-01.webp",
+            alt: "Renovated bathroom on the upper floor of a local duplex",
+          },
+          note: "Sources: City of Montréal, 311 bank, borough history records. Verified 2026-09-18.",
         },
       },
     },
@@ -101,102 +125,76 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in Saint-Laurent",
+          heading: "Our three typical Saint-Laurent jobs",
           items: [
-            {
-              title: "Kitchen",
-              href: "/services/renovation/cuisine",
-              description:
-                "Load-bearing status and electrical capacity confirmed before any opening.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-project-01.webp",
-                alt: "Renovated kitchen with custom cabinets",
-              },
-              badges: ["Custom"],
-              footerCtaLabel: "See kitchens",
-            },
             {
               title: "Bathroom",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Shared plumbing stacks located before any drain is moved.",
+                "Shared stack in a Norgate plex located before any drain moves",
               image: {
-                src: "/images/generated/spaces/espaces-card-bath-01.webp",
-                alt: "Renovated bathroom in an existing unit",
+                src: "/images/generated/spaces/space-bath-project-02.webp",
+                alt: "Bathroom rebuilt in a Norgate apartment",
               },
-              badges: ["Plexes"],
+              badges: ["Plex"],
               footerCtaLabel: "See bathrooms",
+            },
+            {
+              title: "Kitchen",
+              href: "/services/renovation/cuisine",
+              description:
+                "Opening up a closed Côte-Vertu bungalow kitchen once the structure checks out",
+              image: {
+                src: "/images/generated/spaces/space-cuisine-project-01.webp",
+                alt: "Open kitchen in a bungalow near Côte-Vertu",
+              },
+              badges: ["Structure"],
+              footerCtaLabel: "See kitchens",
             },
             {
               title: "Basement",
               href: "/services/renovation/sous-sol",
               description:
-                "Headroom, moisture, egress and fire separation checked before the plan.",
+                "Headroom and egress measured under an Old Saint-Laurent duplex",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Basement finished as a living space",
+                alt: "Basement turned into living space under a duplex",
               },
               badges: ["Code"],
               footerCtaLabel: "See basements",
-            },
-            {
-              title: "Plexes and rental units",
-              href: "/services/renovation",
-              description:
-                "Soundproofing redone while the floors are open, vacancy kept short.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Renovation work in a Saint-Laurent duplex",
-              },
-              badges: ["Multi-unit"],
-              footerCtaLabel: "See the service",
-            },
-            {
-              title: "Flooring",
-              href: "/services/renovation/plancher",
-              description:
-                "Subfloor levelled before installation, thresholds and transitions aligned.",
-              image: {
-                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-                alt: "Flooring installed in a renovated room",
-              },
-              badges: ["Preparation"],
-              footerCtaLabel: "See flooring",
             },
           ],
         },
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "What we check before pricing",
-          intro:
-            "In a post-war building, the real scope only shows up on site.",
-          badges: ["On-site visit", "Free estimate"],
-          cardTitle: "Our on-site checklist",
+          heading: "Neighbouring areas we serve",
+          columns: "2",
           items: [
-            "Year built and alterations since",
-            "Electrical service and panel capacity",
-            "Position of shared plumbing stacks",
-            "Load-bearing walls and party walls",
-            "Soundproofing between units or floors",
-            "Permitted use and number of units",
-            "Condo syndicate constraints",
-          ],
-          actions: [
             {
-              label: "Book a visit",
-              href: "/contact",
-              variant: "primary",
+              title: "Dorval",
+              href: "/zones/dorval",
+              ctaLabel: "See the area",
             },
             {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Laval",
+              href: "/zones/laval",
+              ctaLabel: "See the area",
             },
           ],
         },
@@ -208,31 +206,23 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Saint-Laurent questions we get",
           items: [
             {
-              q: "Where do I get a renovation permit in Saint-Laurent?",
-              a: "From the borough's permits and inspections division, 777 boulevard Marcel-Laurin, or online through the City's digital services, which require creating an account. We prepare and file the application.",
-            },
-            {
-              q: "Do I need a permit for interior work?",
-              a: "Yes in most cases, as soon as the work touches structure, room layout, plumbing or electrical. Routine maintenance usually does not. Working without a permit can lead to a stop-work order.",
+              q: "How is a permit application filed in Saint-Laurent?",
+              a: "Through the City's digital services, which require an account, or at the counter of the permits and inspections division, 777 Marcel-Laurin Boulevard. We build the file and follow it through.",
             },
             {
               q: "Do you work on the Norgate plexes?",
-              a: "Yes. These buildings date from 1949 to the early 1950s. Electrical service, plumbing stacks, load-bearing walls and soundproofing between units are all checked before a plan is confirmed.",
+              a: "Yes. The neighbourhood was built from 1949 into the early 1950s, around Galeries Norgate, which opened on 5 December 1950. Electrical service, plumbing stacks and sound separation are checked before any plan.",
             },
             {
               q: "Can a Bois-Franc condo be renovated?",
-              a: "Yes, with extra preparation. The syndicate governs access, elevator use, protection of common areas and work hours. Some work touching common elements requires written authorization.",
+              a: "Yes, with extra preparation. The board controls access, elevator use, protection of common areas and working hours. Touching a common portion requires written authorization first.",
             },
             {
-              q: "Can I add a unit or change the use?",
-              a: "It depends on the zoning at your address. The number of units, the permitted use and some exterior alterations are governed by the borough's planning by-laws. We check this before quoting, never after demolition.",
-            },
-            {
-              q: "What does it cost, and are you insured?",
-              a: "Our projects start around $25,000, a full kitchen between $35,000 and $50,000 and up. RBQ licence 8306-0806-27, valid with no restrictions since 2004, classes 1.2 and 1.3, liability and site insurance in force.",
+              q: "Can I add a unit to a Saint-Laurent duplex?",
+              a: "It depends on the zoning at your address. The number of units, the permitted use and some changes visible from the street are governed by planning rules. We verify that before quoting, never after demolition.",
             },
           ],
         },
@@ -244,8 +234,8 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a Saint-Laurent project?",
-          intro: "We visit, confirm zoning and permits, then price the work.",
+          heading: "Renovating your Saint-Laurent plex or condo",
+          intro: "Address, floor, building type. We visit and we price it.",
           actions: [
             {
               label: "Request a quote",
@@ -253,12 +243,12 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See all service areas",
-              href: "/zones",
+              label: "See our services",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Licensed general contractor · based at 18625 Larocque Street · (514) 820-0773",
         },
       },
     },

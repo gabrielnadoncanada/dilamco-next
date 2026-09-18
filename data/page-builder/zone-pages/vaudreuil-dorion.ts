@@ -58,16 +58,14 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Vaudreuil-Dorion",
-          heading:
-            "Entrepreneur général à Vaudreuil-Dorion, du permis à la livraison",
+          eyebrow: "Entrepreneur général à",
+          heading: "Vaudreuil-Dorion",
           description:
-            "De 18 600 habitants en 1995 à près de 46 000 aujourd'hui. Un parc surtout récent, un noyau ancien à Dorion.",
+            "De 18 600 habitants en 1995 à près de 46 000 aujourd'hui. Beaucoup de sous-sols attendent encore leur finition.",
           actions: [
             {
               label: "Demander une soumission",
@@ -75,47 +73,77 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir nos projets",
+              label: "Voir nos réalisations",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Vaudreuil-Dorion", "Vaudreuil-Soulanges", "Licence RBQ"],
           image: {
             src: "/images/generated/home/home-hero-premium-kitchen-01.webp",
-            alt: "Cuisine rénovée dans une maison de Vaudreuil-Dorion",
+            alt: "Cuisine refaite dans une maison récente de Vaudreuil-Dorion",
           },
-          caption: "Vaudreuil-Dorion, Hudson, Saint-Lazare, l'Île-Perrot",
+          facts: [
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro · 30 min par l'autoroute 40",
+            },
+            {
+              label: "Permis",
+              value: "Division permis et inspections, 450 455-3371",
+            },
+            {
+              label: "Bâti",
+              value: "Quartiers de 2000-2020, vieux Dorion d'avant 1960",
+            },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "housing",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît des maisons d'ici",
-          description:
-            "Deux parcs cohabitent : les quartiers planifiés de 2000-2020 et le vieux Dorion d'avant 1960.",
-          cards: [
+          heading: "Une ville qui a doublé en trente ans",
+          intro:
+            "Recensement de 2021 : 43 268 habitants, 13,5 % de plus qu'en 2016. Le bâti suit exactement cette courbe.",
+          rows: [
             {
-              title: "Quartiers 2000-2020",
-              description:
-                "Structure saine, finis d'origine d'entrée de gamme, sous-sols souvent livrés bruts.",
+              label: "Bâti dominant",
+              value: "Maisons de 2000 à 2020, finis d'origine d'entrée de gamme",
             },
             {
-              title: "Division permis et inspections",
-              description:
-                "Demande en ligne, aucun permis délivré sur place, facture payée avant délivrance.",
+              label: "Noyau ancien",
+              value: "Vieux Dorion d'avant 1960, systèmes à reprendre au complet",
             },
             {
-              title: "Réglementation en révision",
-              description:
-                "Plan d'urbanisme revu, PPU Harwood – De Lotbinière mis à jour en novembre 2025.",
+              label: "Permis",
+              value: "Aucun permis délivré sur place, facture payée avant délivrance",
+            },
+            {
+              label: "Tarifs",
+              value: "Fixés au règlement municipal no 1709, selon la nature des travaux",
+            },
+            {
+              label: "Réglementation",
+              value: "Plan d'urbanisme en révision, PPU Harwood – De Lotbinière revu",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Finition de sous-sol, cuisine, ajout d'une pièce ou d'un garage",
+            },
+            {
+              label: "Depuis notre base",
+              value: "Pont de l'Île-aux-Tourtes, puis sortie Harwood",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
+            alt: "Sous-sol fini avec rangements dans une maison de Vaudreuil-Dorion",
+          },
+          note: "Sources : Ville de Vaudreuil-Dorion, Statistique Canada 2021. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -125,16 +153,16 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise à Vaudreuil-Dorion",
+          heading: "Trois chantiers typiques de Vaudreuil-Soulanges",
           items: [
             {
-              title: "Aménagement de sous-sol",
+              title: "Finition de sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Finir un sous-sol livré brut : salle familiale, chambre, salle de bain.",
+                "Terminer le sous-sol brut livré par le promoteur du quartier Cité-des-Jeunes",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
-                alt: "Sous-sol aménagé en bureau et bibliothèque",
+                alt: "Sous-sol converti en bureau dans une maison de Cité-des-Jeunes",
               },
               badges: ["Sous-sol"],
               footerCtaLabel: "Voir le service",
@@ -143,22 +171,22 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
               title: "Rénovation de cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Remplacer les armoires d'origine, revoir l'îlot et la circulation.",
+                "Remplacer les armoires d'origine d'un modèle de 2008 et revoir l'îlot",
               image: {
                 src: "/images/generated/spaces/espaces-featured-cuisine-project-01.webp",
-                alt: "Cuisine sur mesure avec îlot central",
+                alt: "Îlot central remplaçant la cuisine d'origine d'une maison de 2008",
               },
               badges: ["Cuisine"],
-              footerCtaLabel: "Voir le service",
+              footerCtaLabel: "Voir la cuisine",
             },
             {
               title: "Agrandissement de maison",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Ajouter une pièce, un garage ou un étage, permis inclus.",
+                "Ajouter une pièce ou un garage, tarif du règlement 1709 compris au cadrage",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Agrandissement résidentiel intégré à la maison existante",
+                alt: "Agrandissement intégré à une maison de Vaudreuil-Dorion",
               },
               badges: ["Permis"],
               footerCtaLabel: "Voir le service",
@@ -168,35 +196,28 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "Ce qu'on vérifie en visite",
-          intro:
-            "Une maison de 2008 et une maison d'avant 1960 ne mènent pas au même chantier.",
-          badges: ["Visite sur place", "Estimation gratuite", "Réponse 24-48 h"],
-          cardTitle: "Notre liste de vérification",
+          heading: "Avant le pont, dans l'Ouest-de-l'Île",
+          columns: "3",
           items: [
-            "Année de construction et quartier",
-            "Qualité des finis d'origine",
-            "Hauteur libre et issue possible au sous-sol",
-            "Capacité de l'entrée électrique et du panneau",
-            "Murs porteurs et fermes de toit préfabriquées",
-            "Zonage et règles applicables au moment du projet",
-            "Type de permis et tarif du règlement no 1709",
-          ],
-          actions: [
             {
-              label: "Planifier une visite",
-              href: "/contact",
-              variant: "primary",
+              title: "Beaconsfield",
+              href: "/zones/beaconsfield",
+              ctaLabel: "Voir la zone",
             },
             {
-              label: "Voir notre processus",
-              href: "/processus",
-              variant: "ghost",
+              title: "Kirkland",
+              href: "/zones/kirkland",
+              ctaLabel: "Voir la zone",
+            },
+            {
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "Voir la zone",
             },
           ],
         },
@@ -212,27 +233,19 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
           items: [
             {
               q: "Comment obtient-on un permis à Vaudreuil-Dorion ?",
-              a: "Par la Division permis et inspections. La Ville recommande fortement la demande en ligne : la plateforme donne la liste des documents exigés. Aucun permis n'est délivré sur place et la facture doit être acquittée avant la délivrance.",
+              a: "Par la Division permis et inspections. La Ville recommande fortement la demande en ligne, qui affiche la liste des documents exigés. Aucun permis n'est remis sur place et la facture doit être acquittée avant la délivrance.",
             },
             {
-              q: "Combien coûte le permis ?",
-              a: "Les tarifs sont fixés au règlement municipal no 1709 et varient selon les travaux. On inclut le montant au cadrage. La Division permis et inspections répond au 450 455-3371 pour les questions propres à votre adresse.",
+              q: "Combien coûte un permis à Vaudreuil-Dorion ?",
+              a: "Les tarifs sont fixés au règlement municipal no 1709 et varient selon la nature des travaux. Le montant entre dans le cadrage. La Division permis et inspections répond au 450 455-3371 pour les cas propres à une adresse.",
             },
             {
-              q: "La réglementation d'urbanisme est-elle en train de changer ?",
-              a: "Oui. Le plan et les règlements d'urbanisme sont en révision, et le corridor Harwood – De Lotbinière fait l'objet d'un programme particulier d'urbanisme mis à jour en novembre 2025. On valide les règles au moment du projet.",
+              q: "La réglementation d'urbanisme change-t-elle en ce moment ?",
+              a: "Oui. Le plan et les règlements sont en révision, et le corridor Harwood – De Lotbinière fait l'objet d'un programme particulier d'urbanisme mis à jour le 12 novembre 2025. Les règles sont validées au moment du projet.",
             },
             {
-              q: "Travaillez-vous à Hudson, Saint-Lazare et sur l'Île-Perrot ?",
-              a: "Oui. Notre territoire couvre Vaudreuil-Soulanges, l'Ouest-de-l'Île, Montréal, Laval et la Rive-Sud. Chaque municipalité voisine a son propre service d'urbanisme : on valide le dossier auprès de la bonne ville avant de déposer.",
-            },
-            {
-              q: "Quel budget prévoir pour une rénovation ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $ et plus. L'estimation est gratuite et le budget est fixé au contrat écrit avant le début des travaux.",
-            },
-            {
-              q: "Êtes-vous licenciés et assurés ?",
-              a: "Oui. Licence RBQ 8306-0806-27, valide sans restriction depuis 2004, catégories 1.2 et 1.3 et sous-catégorie 12 pour les armoires et comptoirs. Responsabilité civile, couverture de chantier et cautionnement en vigueur, aucune réclamation au dossier.",
+              q: "Pourquoi tant de sous-sols bruts dans les maisons d'ici ?",
+              a: "Les quartiers bâtis entre 2000 et 2020 ont souvent été livrés sans sous-sol fini. La finition reste possible plus tard : hauteur libre, issue, drainage et séparation coupe-feu se vérifient avant de dessiner les pièces.",
             },
           ],
         },
@@ -244,9 +257,8 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à Vaudreuil-Dorion ?",
-          intro:
-            "On prend l'autoroute 40, on valide la réglementation, on chiffre par écrit.",
+          heading: "Finir ou transformer votre maison de Vaudreuil-Dorion",
+          intro: "Envoyez l'adresse et la liste des travaux souhaités.",
           actions: [
             {
               label: "Demander une soumission",
@@ -259,7 +271,7 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Entrepreneur général licencié RBQ 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Dilamco · Vaudreuil-Soulanges et Ouest-de-l'Île · (514) 820-0773",
         },
       },
     },

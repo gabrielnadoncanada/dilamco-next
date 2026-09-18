@@ -20,12 +20,12 @@ export const pageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Projects",
-          heading: "Kitchens, vanities, storage and commercial",
+          badges: ["Real cases"],
+          heading: "Kitchens, vanities, storage and commercial work",
           description:
-            "Real projects delivered across Greater Montréal by an RBQ-licensed general contractor.",
+            "Job sites run across Greater Montréal, from the on-site survey to the final fitting.",
           actions: [
             {
               label: "Request a quote",
@@ -38,12 +38,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Real cases", "Montréal", "Laval", "South Shore"],
-          image: {
-            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "Dilamco custom project",
-          },
-          caption: "High-end kitchen · Laval",
         },
       },
     },
@@ -114,32 +108,53 @@ export const pageEn: PageTemplateData = {
     },
 
     {
-      id: "process",
+      id: "galerie",
       content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "From design to installation",
-          steps: [
+          heading: "A few completed job sites",
+          tiles: [
             {
-              number: "1",
-              title: "Scoping",
-              description: "Needs, site constraints and the real scope of the project.",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-laval-1.webp",
+                alt: "Custom kitchen delivered in Laval",
+              },
+              caption: "Custom kitchen, Laval",
             },
             {
-              number: "2",
-              title: "Design",
-              description: "Layout, finishes and drawings approved before production.",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-terrebonne-1.webp",
+                alt: "Full-height cabinets installed in Terrebonne",
+              },
+              caption: "Full-height cabinets, Terrebonne",
             },
             {
-              number: "3",
-              title: "Production",
-              description: "Ordered from our partner factory, to the dimensions measured on site.",
+              kind: "image",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-repentigny-1.webp",
+                alt: "Centre island in a custom kitchen in Repentigny",
+              },
+              caption: "Centre island, Repentigny",
             },
             {
-              number: "4",
-              title: "Installation",
-              description: "Setting and adjustments coordinated with the rest of the job.",
+              kind: "image",
+              image: {
+                src: "/images/projects/Signature-Bouleau.webp",
+                alt: "Birch cabinet boxes and drawers in a signature kitchen",
+              },
+              caption: "Birch interiors",
+            },
+            {
+              kind: "text",
+              title: "Something similar in mind?",
+              description:
+                "Send your photos and dimensions, we come back with a budget bracket.",
+              href: "/contact",
             },
           ],
         },

@@ -27,12 +27,12 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Division armoires",
-          heading: "Armoires sur mesure, intégrées à votre rénovation",
+          badges: ["Division armoires"],
+          heading: "Armoires sur mesure pour six espaces de la maison",
           description:
-            "Cuisine, salle de bain, walk-in, sous-sol, salle de lavage ou local commercial : un seul contrat, un seul responsable.",
+            "L'entrepreneur général dessine, commande et pose. Aucun fournisseur à coordonner de votre côté.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -45,12 +45,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Clé en main"],
-          image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Espaces sur mesure Dilamco",
-          },
-          caption: "Montréal · Laval · Rive-Sud",
         },
       },
     },
@@ -65,7 +59,7 @@ export const page: PageTemplateData = {
             {
               title: "Cuisine",
               href: "/espaces/cuisine",
-              description: "Îlot, garde-manger et armoires jusqu'au plafond.",
+              description: "Îlot, garde-manger et hauteur de plafond exploitée",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Armoires de cuisine sur mesure haut de gamme",
@@ -76,7 +70,7 @@ export const page: PageTemplateData = {
             {
               title: "Salle de bain",
               href: "/espaces/salle-de-bain",
-              description: "Vanités simple ou double, conçues pour l'humidité.",
+              description: "Meuble-lavabo posé avec la céramique et la plomberie",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Vanité de salle de bain sur mesure",
@@ -87,7 +81,7 @@ export const page: PageTemplateData = {
             {
               title: "Salle de lavage",
               href: "/espaces/salle-de-lavage",
-              description: "Comptoir de pliage, colonnes et plomberie ajustés.",
+              description: "Cuve, colonnes et surface de pliage en continu",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Salle de lavage sur mesure",
@@ -98,7 +92,7 @@ export const page: PageTemplateData = {
             {
               title: "Walk-in",
               href: "/espaces/walk-in",
-              description: "Penderie, tiroirs et tablettes du mur au plafond.",
+              description: "Penderies et tiroirs calculés par type de vêtement",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Walk-in sur mesure",
@@ -109,7 +103,7 @@ export const page: PageTemplateData = {
             {
               title: "Sous-sol",
               href: "/espaces/sous-sol",
-              description: "Cinéma maison, bar, cellier et bibliothèque.",
+              description: "Cinéma, bar, cellier ou bibliothèque intégrés",
               image: {
                 src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
                 alt: "Aménagement de sous-sol sur mesure",
@@ -120,7 +114,7 @@ export const page: PageTemplateData = {
             {
               title: "Commercial",
               href: "/espaces/commercial",
-              description: "Bureaux, commerces et améliorations locatives.",
+              description: "Accueil, rangement technique et espaces de service",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial sur mesure",
@@ -133,58 +127,45 @@ export const page: PageTemplateData = {
       },
     },
     {
-      id: "standard",
+      id: "division",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Pourquoi passer par l'entrepreneur général",
-          description:
-            "Notre licence RBQ couvre les armoires et les comptoirs. Les armoires arrivent au bon moment, dans la séquence du chantier.",
-          cards: [
+          heading: "La division armoires en bref",
+          intro:
+            "Une division de l'entreprise générale, pas une deuxième entreprise à engager.",
+          rows: [
             {
-              title: "Une seule soumission",
-              description: "Travaux et armoires chiffrés ensemble, un fournisseur de moins à gérer.",
+              label: "Licence",
+              value: "Sous-catégorie RBQ 12, armoires et comptoirs, sur la nôtre",
             },
             {
-              title: "Mesures après démolition",
-              description: "Prises quand les murs sont à leur position définitive.",
+              label: "Production",
+              value: "Usine partenaire, commande lancée après le relevé",
             },
             {
-              title: "Un seul responsable",
-              description: "Plomberie, électricité, plancher et pose coordonnés par nous.",
+              label: "Délai",
+              value: "9 à 15 semaines entre l'approbation des dessins et la livraison",
+            },
+            {
+              label: "Matériaux",
+              value: "Bouleau massif aux tiroirs, contreplaqué aux caissons",
+            },
+            {
+              label: "Pose",
+              value: "Par notre équipe, à son rang dans la séquence des métiers",
+            },
+            {
+              label: "Contrat",
+              value: "Travaux et armoires réunis dans une seule soumission",
             },
           ],
-          columns: "3",
-        },
-      },
-    },
-    {
-      id: "faq",
-
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "Questions fréquentes",
-          items: [
-            {
-              q: "Quels espaces couvrez-vous ?",
-              a: "Cuisine, salle de bain, salle de lavage, walk-in et garde-robe, sous-sol et locaux commerciaux. Chaque espace a ses contraintes d'humidité, de dimensions et d'usage, prises en compte au design.",
-            },
-            {
-              q: "Quel est le délai ?",
-              a: "De 9 à 15 semaines entre la validation du design et l'installation. Quand les armoires font partie d'une rénovation, la commande est calée sur l'échéancier du chantier.",
-            },
-            {
-              q: "Quelle différence avec une solution standard ?",
-              a: "Les modules standards imposent leurs dimensions à la pièce et laissent des espaces perdus. Le sur mesure part de votre espace réel, avec bois massif et contreplaqué de bouleau sur les éléments structurants.",
-            },
-            {
-              q: "Pouvez-vous faire la rénovation complète ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : permis, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable, au contrat écrit.",
-            },
-          ],
+          image: {
+            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
+            alt: "Vue d'ensemble des espaces sur mesure réalisés par Dilamco",
+          },
         },
       },
     },
@@ -195,7 +176,8 @@ export const page: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre espace",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          intro:
+            "Estimation gratuite pour l'espace qui vous intéresse, et un seul contrat à signer.",
           actions: [
             {
               label: "Obtenir une soumission",

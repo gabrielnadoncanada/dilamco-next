@@ -26,7 +26,7 @@ export const couleursPage: PageTemplateData = {
           eyebrow: "Matériaux",
           heading: "Choisir une couleur qui tient à l'usage",
           description:
-            "La teinte se décide sur place, à la lumière réelle de la pièce. Le niveau de lustre, lui, décide de l'entretien quotidien.",
+            "La teinte se décide chez vous, dans la lumière réelle de la pièce. Le lustre, lui, décide de l'entretien.",
           actions: [
             {
               label: "Parler design et finitions",
@@ -41,90 +41,54 @@ export const couleursPage: PageTemplateData = {
           ],
           badges: ["Lumière", "Lustre", "Entretien"],
           image: {
-            src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Choix de couleurs et finis pour projet sur mesure",
+            src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
+            alt: "Armoires colorées vues dans la lumière d'une pièce",
           },
           caption: "Échantillons vus dans votre pièce",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "method",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Quatre choses à regarder",
-          description:
-            "Un échantillon change d'aspect selon l'orientation de la pièce, le support et le lustre. On valide les trois avant de commander.",
-          cards: [
+          heading: "Les finis en fiche",
+          intro: "Six repères pour arrêter une palette sans mauvaise surprise.",
+          rows: [
             {
-              title: "Lumière de la pièce",
-              description:
-                "Une façade nord tire au gris, une façade sud réchauffe les teintes.",
+              label: "Support",
+              value: "Le même ton rend autrement sur MDF, mélamine ou bois",
             },
             {
-              title: "Support",
-              description:
-                "Le même ton ne rend pas pareil sur MDF, mélamine ou bois.",
+              label: "Lustre",
+              value: "Mat, satiné, lustré, du plus feutré au plus réfléchissant",
             },
             {
-              title: "Lustre",
-              description:
-                "Mat, satiné ou brillant changent la couleur perçue et l'entretien.",
+              label: "Entretien",
+              value: "Le satiné demande le moins de nettoyage en cuisine",
             },
             {
-              title: "Surfaces voisines",
-              description:
-                "Comptoir, dosseret et plancher se valident ensemble, pas séparément.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "care",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Trois lustres, trois comportements",
-          intro:
-            "Le lustre pèse plus lourd que la couleur sur le travail d'entretien.",
-          items: [
-            {
-              title: "Mat",
-              description: "Feutré et contemporain, il marque plus vite.",
+              label: "Usages recommandés",
+              value: "Neutres sur les grandes surfaces, couleur sur l'îlot",
             },
             {
-              title: "Satiné",
-              description: "Le compromis courant en cuisine, facile à nettoyer.",
+              label: "Prix relatif",
+              value: "Peinture sur mesure au-dessus d'un décor de série",
             },
             {
-              title: "Brillant",
-              description: "Il renvoie la lumière et montre chaque trace.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-            {
-              label: "Voir les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Validation",
+              value: "Échantillon posé dans la pièce, vu matin et soir",
             },
           ],
           image: {
-            src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-            alt: "Choix de finis et échantillons de couleurs",
+            src: "/images/generated/materials/material-finish-samples-01.webp",
+            alt: "Échantillons de couleurs et de niveaux de lustre",
           },
-          cardTitle: "Erreur fréquente",
-          cardDescription:
-            "Valider une couleur sur un écran ou sous l'éclairage d'un magasin.",
+          note: "Un écran ajoute du bleu et efface le lustre : on ne valide jamais dessus.",
         },
       },
     },
@@ -134,23 +98,23 @@ export const couleursPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur les couleurs et les finis",
           items: [
             {
-              q: "Mat ou satiné ?",
-              a: "Satiné en cuisine, dans presque tous les cas : il renvoie un peu de lumière, masque les traces de doigts et se nettoie sans produit particulier. Le mat convient mieux aux pièces peu sollicitées.",
+              q: "Le blanc va-t-il jaunir ?",
+              a: "Les peintures acryliques actuelles tiennent. Ce qui jaunit, c'est un vernis huilé posé sur du blanc, ou une hotte qui aspire mal la graisse de cuisson.",
             },
             {
-              q: "Les couleurs foncées sont-elles risquées ?",
-              a: "Non, à condition d'avoir de la lumière naturelle ou un bon éclairage sous les armoires. Un fini satiné limite aussi les traces, plus visibles sur les teintes foncées.",
+              q: "Deux teintes dans la même cuisine ?",
+              a: "Oui, si la séparation suit un volume entier. Armoires hautes claires, bas et îlot plus foncés : c'est la répartition qui fonctionne le plus souvent.",
             },
             {
-              q: "Peut-on changer la couleur plus tard ?",
-              a: "Une porte peinte se repeint. Une porte mélamine ou plaquée se remplace. C'est un point à trancher avant de commander, pas après.",
+              q: "Peut-on assortir une couleur existante ?",
+              a: "Oui, à partir d'une porte que vous nous confiez. Le relevé se fait au colorimètre, puis on valide l'écart sur un échantillon peint.",
             },
             {
               q: "Comment éviter un rendu daté ?",
-              a: "Teintes neutres sur les grandes surfaces, couleur forte sur ce qui se change vite : îlot, dosseret, poignées. Vous rafraîchissez la pièce sans refaire les armoires.",
+              a: "Teintes neutres sur les grandes surfaces, couleur forte sur ce qui se change vite : îlot, dosseret, poignées. La pièce se rafraîchit sans refaire les armoires.",
             },
           ],
         },
@@ -162,9 +126,9 @@ export const couleursPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'aide pour arrêter la palette ?",
+          heading: "Besoin d'arrêter la palette ?",
           intro:
-            "On apporte les échantillons chez vous et on valide à la lumière de la pièce.",
+            "On apporte les échantillons chez vous et on les regarde dans votre éclairage.",
           actions: [
             {
               label: "Parler design",

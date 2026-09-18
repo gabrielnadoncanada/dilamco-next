@@ -21,12 +21,12 @@ export const comparatifPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Matériaux",
+          badges: ["Structure", "Humidité", "Finition"],
           heading: "Quel panneau pour quelle partie de l'armoire",
           description:
-            "Aucun matériau ne gagne partout. Une bonne cuisine en combine trois ou quatre, chacun à l'endroit où il tient le mieux.",
+            "Aucun matériau ne gagne partout. Une cuisine bien pensée en combine trois ou quatre, chacun à sa place.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -39,12 +39,6 @@ export const comparatifPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Humidité", "Finition"],
-          image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.webp",
-            alt: "Comparatif de matériaux pour cuisine sur mesure",
-          },
-          caption: "Quatre panneaux, quatre rôles",
         },
       },
     },
@@ -54,7 +48,7 @@ export const comparatifPage: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Tableau comparatif",
+          heading: "Quatre panneaux, quatre rôles",
           columns: ["Point fort", "Où l'utiliser"],
           rows: [
             {
@@ -67,7 +61,7 @@ export const comparatifPage: PageTemplateData = {
             },
             {
               label: "Mélamine",
-              values: ["Déjà fini, coût bas", "Intérieurs, tablettes, budgets cadrés"],
+              values: ["Déjà fini, coût bas", "Intérieurs et rangement secondaire"],
             },
             {
               label: "Bois massif",
@@ -77,42 +71,54 @@ export const comparatifPage: PageTemplateData = {
               label: "Quincaillerie",
               values: ["Confort et longévité", "Charnières, coulisses, mécanismes"],
             },
+            {
+              label: "Panneau de particules",
+              values: ["Coût minimal", "Rien qui porte ou qui bouge"],
+            },
           ],
         },
       },
     },
     {
-      id: "limits",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce que le tableau ne dit pas",
-          description:
-            "Deux cuisines du même panneau peuvent vieillir très différemment. L'écart vient de quatre détails d'exécution.",
-          cards: [
+          heading: "Comment choisir",
+          intro: "Deux questions suffisent à trancher dans la majorité des pièces.",
+          rows: [
             {
-              title: "Les chants",
-              description:
-                "Un chant ouvert laisse entrer l'eau, quel que soit le panneau.",
+              label: "Première question",
+              value: "La pièce porte-t-elle une charge ou reçoit-elle de l'eau ?",
             },
             {
-              title: "L'assemblage",
-              description:
-                "Tourillons, vis et colle décident de la tenue du caisson.",
+              label: "Deuxième question",
+              value: "Le fini visé est-il peint, décor ou bois naturel ?",
             },
             {
-              title: "La quincaillerie",
-              description:
-                "Charnières et coulisses supportent l'usage quotidien, pas le panneau.",
+              label: "Structure",
+              value: "Contreplaqué dès qu'il y a des vis et du poids",
             },
             {
-              title: "La pose",
-              description:
-                "Mise à niveau et ajustements finaux évitent les portes qui frottent.",
+              label: "Façade",
+              value: "MDF pour peindre, massif pour le grain, mélamine pour le prix",
+            },
+            {
+              label: "Budget",
+              value: "Déplacer la dépense vers ce qui se voit et se touche",
+            },
+            {
+              label: "Point de rupture",
+              value: "Les chants et la pose, pas le panneau lui-même",
             },
           ],
-          columns: "2",
+          image: {
+            src: "/images/generated/materials/comparatif-materiaux-01.webp",
+            alt: "Panneaux d'armoires comparés côte à côte",
+          },
+          note: "Le tableau donne la règle, le relevé sur place donne l'exception.",
         },
       },
     },
@@ -122,23 +128,19 @@ export const comparatifPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur le choix des matériaux",
           items: [
             {
-              q: "MDF ou mélamine ?",
-              a: "Le MDF quand vous voulez une couleur peinte précise sur les portes. La mélamine quand vous voulez un décor déjà fini, sans peinture, à coût plus bas.",
+              q: "Faut-il un seul matériau par cuisine ?",
+              a: "Non, et c'est rarement souhaitable. Trois ou quatre panneaux cohabitent dans la même pièce, chacun placé là où sa faiblesse ne se voit pas.",
             },
             {
-              q: "Le contreplaqué est-il toujours préférable ?",
-              a: "Pour les caissons et les tiroirs, oui, parce qu'il tient les vis. Sur une porte peinte, le MDF donne une surface plus régulière.",
+              q: "Comment comparer deux soumissions ?",
+              a: "Regardez l'épaisseur du caisson, l'essence du contreplaqué, la marque des coulisses et l'épaisseur du chant. Le reste tient de la présentation.",
             },
             {
-              q: "Du bois massif partout ?",
-              a: "Non. Il bouge avec l'humidité. Sur les grandes surfaces planes et les caissons, les panneaux tiennent mieux la ligne dans le temps.",
-            },
-            {
-              q: "Peut-on combiner plusieurs matériaux ?",
-              a: "C'est la norme. Contreplaqué de bouleau pour les caissons, MDF pour les portes peintes, bois massif sur les détails vus, mélamine à l'intérieur.",
+              q: "Le panneau de particules est-il à exclure ?",
+              a: "Sous un décor et loin de l'eau, il fait le travail. Nous l'écartons des caissons, parce qu'il ne retient pas les vis sur la durée.",
             },
           ],
         },
@@ -150,9 +152,9 @@ export const comparatifPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un comparatif pour votre projet ?",
+          heading: "Arbitrer les matériaux de votre projet",
           intro:
-            "On arbitre structure, finition, humidité et budget après le relevé sur place.",
+            "On tranche structure, fini, humidité et budget après le relevé chez vous.",
           actions: [
             {
               label: "Demander une soumission",

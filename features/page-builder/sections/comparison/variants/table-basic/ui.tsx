@@ -20,9 +20,13 @@ export function ComparisonTableBasic(props: ComparisonTableBasicProps) {
     <div className="text-left">
       <SectionHeader heading={props.heading} intro={props.intro} />
 
-      <div
-        className={`${sectionBodyClassName} overflow-x-auto rounded-card border border-border/80 bg-card`}
-      >
+      <div className={`${sectionBodyClassName} relative`}>
+        {/* Indice de défilement horizontal sur petit écran. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-px right-px z-10 w-12 rounded-r-card bg-gradient-to-l from-card to-transparent sm:hidden"
+        />
+        <div className="overflow-x-auto rounded-card border border-border/80 bg-card">
         <Table className="min-w-[560px]">
           <TableHeader>
             <TableRow className="bg-primary-soft/60 hover:bg-primary-soft/60">
@@ -53,6 +57,7 @@ export function ComparisonTableBasic(props: ComparisonTableBasicProps) {
             ))}
           </TableBody>
         </Table>
+        </div>
       </div>
     </div>
   );

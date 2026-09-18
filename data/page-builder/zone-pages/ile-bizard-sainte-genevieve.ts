@@ -64,16 +64,14 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "L'Île-Bizard–Sainte-Geneviève",
-          heading:
-            "Entrepreneur général à L'Île-Bizard–Sainte-Geneviève, rénover en tenant compte de l'eau",
+          eyebrow: "Entrepreneur général à",
+          heading: "L'Île-Bizard–Sainte-Geneviève",
           description:
-            "Zones inondables, sous-sols repris après les crues de 2017 et 2019, permis d'arrondissement montés par nous.",
+            "Deux îles, une rivière qui monte au printemps, des sous-sols repris après les crues de 2017 et 2019.",
           actions: [
             {
               label: "Demander une soumission",
@@ -86,42 +84,70 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Après sinistre", "Zone inondable", "Assuré"],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
             alt: "Agrandissement d'une maison unifamiliale à L'Île-Bizard",
           },
-          caption: "Île Mercier, vieux Sainte-Geneviève",
+          facts: [
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro · 10 min par le pont",
+            },
+            {
+              label: "Permis",
+              value: "Comptoir du 15795, boulevard Gouin Ouest",
+            },
+            {
+              label: "Bâti",
+              value: "Unifamiliales sur grands lots, village de 1845",
+            },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît de l'arrondissement",
-          description:
-            "Rivière des Prairies au nord, lac des Deux Montagnes à l'ouest. Grands terrains boisés, zones inondables cartographiées, noyau villageois ancien.",
-          cards: [
+          heading: "Ce que l'eau impose sur l'île",
+          intro:
+            "Rivière des Prairies au nord, lac des Deux Montagnes à l'ouest. La carte des plaines inondables commande le projet.",
+          rows: [
             {
-              title: "Unifamiliales sur grands terrains",
-              description:
-                "Lots profonds le long du chemin Cherrier et du boulevard Jacques-Bizard, arbres matures à protéger.",
+              label: "Bâti dominant",
+              value:
+                "Unifamiliales sur lots profonds, chemin Cherrier et boulevard Jacques-Bizard",
             },
             {
-              title: "Division de l'urbanisme et des permis",
-              description:
-                "Comptoir au 15795, boulevard Gouin Ouest, division au 406, montée de l'Église.",
+              label: "Permis",
+              value:
+                "Tous les travaux en plaine inondable en exigent un, sans exception",
             },
             {
-              title: "Zones inondables cartographiées",
-              description:
-                "Grand courant 0-20 ans : construction interdite. Faible courant 20-100 ans : immunisation obligatoire.",
+              label: "Règlements",
+              value: "11-018 construction, 11-010 refoulements d'égout",
+            },
+            {
+              label: "Risques locaux",
+              value: "Crues de 2017 et 2019, île Mercier submergée, évacuations",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Sous-sol repris, agrandissement, maison ancienne de Gouin Ouest",
+            },
+            {
+              label: "Depuis notre base",
+              value: "Pont Jacques-Bizard, puis montée de l'Église",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
+            alt: "Matériaux préparés pour reprendre un sous-sol de l'île Bizard",
+          },
+          note: "Sources : Ville de Montréal, banque d'information 311, SPHIB-SG. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -131,101 +157,76 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise sur l'île",
+          heading: "Ce qu'on refait sur l'île Bizard",
           items: [
             {
-              title: "Après sinistre",
-              href: "/services/renovation/apres-sinistre",
-              description:
-                "Assèchement, démolition sélective, reconstruction et dossier documenté pour l'assureur.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-                alt: "Matériaux préparés pour la reconstruction d'un sous-sol",
-              },
-              badges: ["Assurances"],
-              footerCtaLabel: "Voir le service",
-            },
-            {
-              title: "Sous-sol",
+              title: "Reprise de sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Drain français, pompe de puisard et clapet antiretour vérifiés avant la finition.",
+                "Drain, clapet et pompe revus avant de refermer un sous-sol riverain",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
-                alt: "Sous-sol aménagé en salle de cinéma maison",
+                alt: "Sous-sol aménagé en salle de cinéma sur l'île Bizard",
               },
               badges: ["Drainage"],
               footerCtaLabel: "Voir le sous-sol",
             },
             {
+              title: "Après sinistre",
+              href: "/services/renovation/apres-sinistre",
+              description:
+                "Reprise des maisons touchées par la crue autour de l'île Mercier",
+              image: {
+                src: "/images/generated/services/service-renovation-project-03.webp",
+                alt: "Reconstruction intérieure après une inondation sur l'île Mercier",
+              },
+              badges: ["Assurances"],
+              footerCtaLabel: "Voir le service",
+            },
+            {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Marges, bande riveraine et remblais validés avant de dessiner.",
+                "Bande riveraine, marges et remblais vérifiés avant le premier croquis",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planification d'un agrandissement de maison",
+                alt: "Planification d'un agrandissement sur un lot riverain de l'île",
               },
               badges: ["Zonage"],
               footerCtaLabel: "Voir l'agrandissement",
-            },
-            {
-              title: "Cuisine",
-              href: "/services/renovation/cuisine",
-              description:
-                "Ouverture vers la salle à manger après validation de la structure.",
-              image: {
-                src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
-                alt: "Cuisine rénovée dans une maison de l'Ouest-de-l'Île",
-              },
-              badges: ["Sur mesure"],
-              footerCtaLabel: "Voir la cuisine",
-            },
-            {
-              title: "Secteur patrimonial",
-              href: "/services/renovation",
-              description:
-                "Maisons anciennes du boulevard Gouin Ouest, relevé de l'existant avant tout plan.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Transformation d'une maison ancienne de Sainte-Geneviève",
-              },
-              badges: ["Patrimoine"],
-              footerCtaLabel: "Voir le service",
             },
           ],
         },
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "Ce qu'on vérifie avant de chiffrer",
-          intro:
-            "Sur l'île, deux questions décident de la portée réelle des travaux.",
-          badges: ["Visite sur place", "Estimation gratuite"],
-          cardTitle: "Liste de vérification en visite",
+          heading: "De l'autre côté du pont",
+          columns: "2",
           items: [
-            "Position du terrain en zone inondable",
-            "Historique d'inondation ou de refoulement",
-            "Niveau du plancher de sous-sol",
-            "Clapet antiretour, pompe de puisard, drain français",
-            "Bande riveraine et marges applicables",
-            "Arbres de 10 cm de diamètre et plus",
-          ],
-          actions: [
             {
-              label: "Planifier une visite",
-              href: "/contact",
-              variant: "primary",
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "Voir la zone",
             },
             {
-              label: "Voir notre processus",
-              href: "/processus",
-              variant: "ghost",
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
+              ctaLabel: "Voir la zone",
+            },
+            {
+              title: "Kirkland",
+              href: "/zones/kirkland",
+              ctaLabel: "Voir la zone",
+            },
+            {
+              title: "Laval",
+              href: "/zones/laval",
+              ctaLabel: "Voir la zone",
             },
           ],
         },
@@ -237,31 +238,23 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes sur l'île",
           items: [
             {
-              q: "Où demande-t-on un permis dans l'arrondissement ?",
-              a: "Au comptoir des permis du 15795, boulevard Gouin Ouest, ou à la Division de l'urbanisme, des permis et des inspections, au 406, montée de l'Église. Nous montons et déposons le dossier dans le cadre du mandat.",
+              q: "Où dépose-t-on un permis à L'Île-Bizard–Sainte-Geneviève ?",
+              a: "Au comptoir des permis du 15795, boulevard Gouin Ouest, ou à la Division de l'urbanisme, des permis et des inspections, 406, montée de l'Église, 514 620-6607. On monte et on dépose le dossier.",
             },
             {
-              q: "Ma maison est en zone inondable : puis-je rénover ?",
-              a: "Cela dépend de la zone. En grand courant, récurrence 0-20 ans, constructions et travaux sont interdits sauf exceptions. En faible courant, 20-100 ans, toute construction non immunisée est interdite. Tous les travaux en plaine inondable exigent un permis.",
+              q: "Puis-je rénover en zone de grand courant sur l'île Bizard ?",
+              a: "En grand courant, récurrence de 0 à 20 ans, les constructions et travaux sont interdits sauf exceptions prévues. En faible courant, de 20 à 100 ans, toute construction non immunisée est interdite. On valide la cote avant de dessiner.",
             },
             {
-              q: "Faites-vous de la reconstruction après une inondation ?",
-              a: "Oui. Les crues de 2017 et de 2019 ont touché plusieurs rues, dont l'île Mercier. Démolition sélective, assainissement, reprise de structure au besoin, puis reconstruction documentée pour votre dossier d'assurance.",
+              q: "Que change le règlement 11-010 pour un sous-sol de Sainte-Geneviève ?",
+              a: "Il impose la protection du bâtiment contre les refoulements d'égout. Clapet antiretour, pompe de puisard et drain français passent avant la finition, et les matériaux de bas de mur doivent encaisser une récidive.",
             },
             {
-              q: "Peut-on aménager un sous-sol près de la rivière ?",
-              a: "Souvent oui, mais pas comme ailleurs. Le règlement 11-010 sur la protection contre les refoulements d'égout s'applique : clapet antiretour, pompe de puisard et drain français d'abord, matériaux tolérants à l'eau ensuite.",
-            },
-            {
-              q: "Quel budget prévoir ?",
-              a: "Nos projets démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $ et plus. Estimation gratuite, budget et échéancier fixés au contrat écrit avant le début des travaux.",
-            },
-            {
-              q: "Êtes-vous licenciés et assurés ?",
-              a: "Licence RBQ 8306-0806-27, valide et sans restriction depuis septembre 2004, catégories 1.2 et 1.3, aucune réclamation au dossier. Responsabilité civile et couverture de chantier en vigueur, cautionnement en place.",
+              q: "Peut-on transformer une maison du vieux Sainte-Geneviève ?",
+              a: "Oui, avec un relevé de l'existant d'abord. L'îlot villageois est reconnu à caractère exceptionnel, autour de l'église de 1843-1845 et de la maison D'Ailleboust-De-Manthet, au 15886, boulevard Gouin Ouest.",
             },
           ],
         },
@@ -273,9 +266,8 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet sur l'île ?",
-          intro:
-            "On traverse le pont Jacques-Bizard, on relève la maison, on chiffre.",
+          heading: "Un chantier à L'Île-Bizard ou à Sainte-Geneviève ?",
+          intro: "On traverse le pont, on relève la maison, on chiffre.",
           actions: [
             {
               label: "Demander une soumission",
@@ -288,7 +280,7 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Dilamco · entrepreneur général établi à Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

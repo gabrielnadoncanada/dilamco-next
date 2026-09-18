@@ -42,12 +42,12 @@ export const renovationSousSolPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Basement finishing",
-          heading: "Solve the moisture before a single panel goes up",
+          heading: "Fix the water before a single panel goes up",
           description:
-            "Diagnosis, drainage, insulation, permit, egress and finishing. One contract, from bare basement to handover.",
+            "Diagnosis, drainage, insulation, egress and finishing carried out under a single contract.",
           actions: [
             {
-              label: "Free estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
@@ -57,12 +57,13 @@ export const renovationSousSolPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Permit required", "Moisture and drainage", "Firm price"],
+          badges: ["Permit required", "Moisture checked"],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-            alt: "Basement finished and fitted out by a general contractor",
+            alt: "Basement finished and furnished by a general contractor",
           },
-          caption: "West Island, Montreal, Laval, South Shore",
+          imageSide: "left",
+          caption: "Basements finished in Montreal and the South Shore",
         },
       },
     },
@@ -72,49 +73,47 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the mandate covers",
-          intro:
-            "The first two parts disappear once they are done. They are the ones that hold.",
+          heading: "What the basement mandate covers",
           columns: "2",
           items: [
             {
-              title: "Diagnosis, water and permit",
-              description: "The stage everything else depends on",
+              title: "Water and foundation",
+              description: "The step everything else depends on",
               icon: "droplets",
               bullets: [
-                "Foundation, slab and signs of seepage inspected",
-                "Drainage, ground slope and sump pump checked",
-                "Cracks repaired, conversion permit filed",
+                "Slab, walls and seepage marks examined",
+                "Drain, ground slope and sump pump checked",
+                "Cracks repaired before any insulation",
               ],
             },
             {
               title: "Insulation and framing",
-              description: "The wall that settles the moisture for twenty years",
+              description: "The wall that manages vapour",
               icon: "layers",
               bullets: [
-                "Continuous insulation against the concrete, vapour handled properly",
-                "Studs held back from the wall, off the slab",
-                "Rim joists and slab perimeter insulated",
+                "Continuous insulation against the concrete",
+                "Studs held back off the slab",
+                "Rim joists and slab perimeter treated",
               ],
             },
             {
-              title: "Electrical, plumbing, egress",
-              description: "The work inspected before the walls close",
-              icon: "wrench",
+              title: "Egress",
+              description: "The condition for a bedroom",
+              icon: "doorOpen",
               bullets: [
-                "Circuits, lighting, smoke and carbon monoxide alarms",
-                "Egress window or exterior door for any bedroom",
-                "Bathroom: slab drain or sewage ejector pump",
+                "Opening window or door to the outside",
+                "Foundation cut and window well",
+                "Smoke and carbon monoxide alarms",
               ],
             },
             {
-              title: "Floors, ceiling, finishing",
-              description: "The visible part, set on a sound base",
+              title: "Finishing and storage",
+              description: "The visible part, on a sound base",
               icon: "package2",
               bullets: [
-                "Basement-rated flooring over an insulating subfloor",
-                "Suspended ceiling or drywall, depending on service access",
-                "Paint, doors, mouldings, stairs and built-in storage",
+                "Flooring a concrete slab can tolerate",
+                "Drop ceiling or drywall, depending on access",
+                "Stairs, doors and built-in storage",
               ],
             },
           ],
@@ -127,92 +126,120 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "The job, step by step",
+          heading: "How a basement unfolds",
           steps: [
             {
               number: "1",
-              title: "Visit and diagnosis",
+              title: "Moisture diagnosis",
               description:
-                "Foundation, slab, drainage, sump pump and headroom inspected.",
+                "Slab, cracks, sump pump and clear ceiling height measured.",
             },
             {
               number: "2",
-              title: "Layout and quote",
+              title: "Corrective work",
               description:
-                "Layout drawing, written scope and estimate within 24 to 48 hours.",
+                "Cracks sealed, drainage redone. Nothing gets finished over a leak.",
             },
             {
               number: "3",
-              title: "Contract and permit",
+              title: "Layout and permit",
               description:
-                "Schedule signed, permit application filed with the required drawings.",
+                "Floor plan drawn, application filed with your city.",
             },
             {
               number: "4",
-              title: "Corrective work",
+              title: "Insulation and framing",
               description:
-                "Cracks, drainage, pump. We never finish over an active leak.",
+                "Insulation, studs, egress, circuits and plumbing inspected.",
             },
             {
               number: "5",
-              title: "Structure, mechanical, finishing",
+              title: "Finishing",
               description:
-                "Insulation, egress, electrical, plumbing, inspections, then drywall and finishes.",
+                "Drywall, ceiling, flooring, stairs, paint, then handover.",
             },
           ],
         },
       },
     },
     {
-      id: "permis",
+      id: "prix",
       content: {
-        type: "split",
-        variant: "list-actions-image-card",
+        type: "grid",
+        variant: "price-tiles",
         props: {
-          heading: "Permit, egress and compliance",
-          intro:
-            "Turning a bare basement into living space requires a permit. We prepare and file the application.",
-          items: [
+          heading: "What a basement costs",
+          tiles: [
             {
-              title: "Conversion permit",
-              description: "Required as soon as habitable rooms are added.",
+              title: "Open floor",
+              price: "from $25,000",
+              hint: "one large room, no plumbing",
+              includes: [
+                "Insulation and vapour control",
+                "Framing, drywall and paint",
+                "Lighting and circuits",
+              ],
             },
             {
-              title: "Egress window",
-              description: "Mandatory for any bedroom: accessible window or door.",
-            },
-            {
-              title: "Headroom",
-              description: "A minimum height is required for recognized living space.",
-            },
-            {
-              title: "Electrical and alarms",
-              description: "Inspected circuits, smoke and carbon monoxide alarms.",
-            },
-            {
-              title: "Secondary suite",
-              description: "Zoning, separate entrance, fire separation: a different scope.",
-            },
-          ],
-          actions: [
-            {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "Service areas",
-              href: "/zones",
-              variant: "ghost",
+              title: "Full basement",
+              price: "$40,000 to $80,000",
+              hint: "bedroom, bathroom, storage",
+              featured: true,
+              includes: [
+                "Floor plan and conversion permit",
+                "Egress window",
+                "Bathroom connected to the drain",
+                "Flooring, ceiling, doors",
+              ],
             },
           ],
-          image: {
-            src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-            alt: "Materials and finishes suited to a basement conversion",
+          note: "Indicative ranges. Corrective drainage or foundation work is priced separately.",
+          action: {
+            label: "Free quote",
+            href: "/contact",
+            variant: "primary",
           },
-          cardTitle: "Why the permit protects you",
-          cardDescription:
-            "A basement finished with a permit and inspections counts as living area and does not turn into a dispute with your insurer.",
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Basements already finished",
+          tiles: [
+            {
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
+                alt: "Home theatre built into a finished basement",
+              },
+              caption: "Home theatre",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
+                alt: "Basement bar with counter and storage",
+              },
+              caption: "Bar and counter",
+            },
+            {
+              kind: "stat",
+              value: "1 permit",
+              label: "Required as soon as a living space is added",
+            },
+            {
+              kind: "text",
+              title: "See basement layouts",
+              description:
+                "Theatre, bar, wine room, office: what a basement can become.",
+              href: "/espaces/sous-sol",
+            },
+          ],
         },
       },
     },
@@ -225,28 +252,24 @@ export const renovationSousSolPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "What does finishing a basement cost?",
-              a: "A basic conversion starts around $25,000. A complete basement with a bedroom, bathroom and built-in storage often lands between $40,000 and $80,000 and up. Corrective work is priced separately.",
+              q: "My basement takes on water, can it still be finished?",
+              a: "Not before the water is stopped: a crack, a blocked weeping tile, ground sloping toward the house or a failing pump. Finishing over seepage means doing it all again.",
             },
             {
               q: "Do I need a permit to finish a basement?",
-              a: "Yes. Converting a basement into living space requires a conversion permit in Montreal and in the vast majority of municipalities, with a drawing to support it. We file the application for you.",
-            },
-            {
-              q: "My basement takes on water. Can it still be finished?",
-              a: "Not before the water is stopped: foundation crack, blocked weeping tile, ground sloping toward the house, gutters or sump pump. Finishing over an active leak guarantees redoing all of it.",
+              a: "Yes. Turning a raw basement into living space requires a permit in most municipalities, with a drawing attached. We prepare the file and submit the application.",
             },
             {
               q: "Can I put a bedroom in the basement?",
-              a: "Yes, provided there is an egress opening: an accessible operable window of sufficient size, or a door leading outside. That often means cutting the foundation wall and installing a window well.",
+              a: "Only with an egress: a reachable opening window or a door to the outside. That usually means cutting the concrete foundation and adding a window well.",
             },
             {
-              q: "Can a bathroom be added?",
-              a: "Yes. Depending on where the main drain sits, we either break the slab to connect by gravity or install an ejector pump. Ventilation, water supply and inspection before closing up come with it.",
+              q: "Can a bathroom be added to the basement?",
+              a: "Yes. Depending on how deep the main drain sits, we break the slab to connect by gravity or install an ejector pump. Ventilation follows, with an inspection.",
             },
             {
-              q: "Is the work warranted?",
-              a: "Yes, with the scope and duration written into the contract. RBQ licence 8306-0806-27, valid with no restrictions since 2004, $40,000 bond, no claims on file. Liability and job-site insurance in force.",
+              q: "What if the ceiling height is tight?",
+              a: "A few centimetres come back from hanging less, rerouting ducts and choosing a thin floor assembly. We measure the clear height at the visit and give you the verdict.",
             },
           ],
         },
@@ -260,10 +283,10 @@ export const renovationSousSolPageEn: PageTemplateData = {
         props: {
           heading: "Have your basement assessed",
           intro:
-            "Free estimate, permit included. First reply within 24 to 48 business hours.",
+            "We start with moisture and clear height, then price the layout.",
           actions: [
             {
-              label: "Free estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },

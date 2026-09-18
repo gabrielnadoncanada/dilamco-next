@@ -37,12 +37,12 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Processus",
+          badges: ["Contrat écrit", "Permis"],
           heading: "Le déroulement d'un projet de rénovation",
           description:
-            "Cinq étapes. Chacune se ferme par un document signé, un permis obtenu ou une inspection passée.",
+            "Cinq jalons. Chacun se ferme sur un document signé, un permis délivré ou une inspection passée.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -55,12 +55,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Soumission détaillée", "Contrat écrit", "Permis"],
-          image: {
-            src: "/images/generated/services/service-renovation-project-03.webp",
-            alt: "Chantier de rénovation résidentielle en cours d'exécution",
-          },
-          caption: "Estimation gratuite · Licence RBQ 8306-0806-27",
         },
       },
     },
@@ -71,37 +65,37 @@ export const page: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Cinq étapes, toujours dans cet ordre",
+          heading: "Cinq jalons, toujours dans cet ordre",
           steps: [
             {
               number: "1",
-              title: "Visite et estimation",
+              title: "Visite et relevé",
               description:
-                "Retour sous 24 à 48 heures ouvrables, relevé sur place, ordre de grandeur.",
+                "Prise de mesures chez vous et première fourchette de budget.",
             },
             {
               number: "2",
-              title: "Soumission détaillée",
+              title: "Soumission poste par poste",
               description:
-                "Travaux poste par poste, matériaux, quantités et exclusions écrits noir sur blanc.",
+                "Chaque poste chiffré, avec les quantités et ce qui reste exclu.",
             },
             {
               number: "3",
-              title: "Contrat et permis",
+              title: "Signature et permis",
               description:
-                "Échéancier daté, calendrier de paiements, demande de permis déposée à la ville.",
+                "Échéancier daté, calendrier de paiements, demande déposée à votre ville.",
             },
             {
               number: "4",
-              title: "Chantier coordonné",
+              title: "Exécution par métiers",
               description:
-                "Chaque métier entre après l'inspection de l'étape précédente. Rien n'est recouvert sans vérification.",
+                "Chaque corps de métier entre après l'inspection du précédent.",
             },
             {
               number: "5",
-              title: "Livraison et garantie",
+              title: "Réception des travaux",
               description:
-                "Inspection finale avec vous, déficiences corrigées avant le dernier paiement.",
+                "Visite finale, liste de déficiences, correction avant le solde.",
             },
           ],
         },
@@ -111,52 +105,41 @@ export const page: PageTemplateData = {
       id: "documents",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
           heading: "Ce que vous recevez",
           intro:
-            "Un chantier bien tenu laisse une trace écrite. Exigez ces documents de n'importe quel entrepreneur.",
-          items: [
+            "Six documents qu'on devrait exiger de n'importe quel entrepreneur.",
+          rows: [
             {
-              title: "La soumission détaillée",
-              description:
-                "les travaux poste par poste et ce qui n'est pas inclus.",
+              label: "Soumission",
+              value: "Travaux, matériaux et exclusions détaillés avant signature",
             },
             {
-              title: "Le contrat écrit",
-              description:
-                "portée, prix, échéancier daté, paiements et modalités de garantie.",
+              label: "Contrat",
+              value: "Portée, prix, modalités de paiement et clause de garantie",
             },
             {
-              title: "Les avenants",
-              description:
-                "chaque changement est chiffré et accepté par écrit avant d'être exécuté.",
+              label: "Échéancier",
+              value: "Dates de début et de fin, jalons par corps de métier",
             },
             {
-              title: "Le permis et la liste de déficiences",
-              description:
-                "copie du permis délivré et liste corrigée avant le paiement final.",
-            },
-          ],
-          actions: [
-            {
-              label: "Parler de votre projet",
-              href: "/contact",
-              variant: "primary",
+              label: "Avenants",
+              value: "Chaque changement chiffré et accepté avant exécution",
             },
             {
-              label: "En savoir plus sur Dilamco",
-              href: "/a-propos",
-              variant: "ghost",
+              label: "Permis",
+              value: "Copie du permis délivré, émis au nom du propriétaire",
+            },
+            {
+              label: "Réception",
+              value: "Liste de déficiences dressée avec vous, corrigée au solde",
             },
           ],
           image: {
             src: "/images/process3.jpg",
             alt: "Plans et documents de chantier sur une table de travail",
           },
-          cardTitle: "Tout est écrit",
-          cardDescription:
-            "Aucune décision structurante ne repose sur une entente verbale.",
         },
       },
     },

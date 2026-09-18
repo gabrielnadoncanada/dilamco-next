@@ -42,12 +42,12 @@ export const renovationCuisinePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Kitchen renovation",
-          heading: "A kitchen rebuilt in full, under one contract",
+          heading: "A kitchen rebuilt from the drain to the countertop",
           description:
-            "Demolition, plumbing, electrical, ventilation, cabinets and countertop. Permit included, schedule in writing.",
+            "Demolition, plumbing, electrical, ventilation, cabinets and countertop handled by the same crew.",
           actions: [
             {
-              label: "Free estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
@@ -57,12 +57,13 @@ export const renovationCuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Permit included", "Coordinated trades", "Firm price"],
+          badges: ["Permit filed", "Trades coordinated", "Firm price"],
           image: {
             src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
             alt: "Kitchen renovated by a general contractor in Montreal",
           },
-          caption: "West Island, Montreal, Laval, South Shore",
+          imageSide: "left",
+          caption: "Kitchens delivered across Greater Montreal",
         },
       },
     },
@@ -72,48 +73,48 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the mandate covers",
-          intro: "The exact scope is written into the quote.",
+          heading: "Four scopes, one contract",
+          intro: "Exclusions are listed in the quote.",
           columns: "2",
           items: [
             {
-              title: "Permit and demolition",
-              description: "What is settled before the cabinets arrive",
-              icon: "fileCheck",
+              title: "Demolition and protection",
+              description: "The site opened cleanly",
+              icon: "hammer",
               bullets: [
-                "Permit confirmed and filed with your city",
-                "Old cabinets, countertop and finishes removed",
-                "Debris handling and disposal",
+                "Cabinets, countertop and finishes removed",
+                "Floors and hallways protected daily",
+                "Bin supplied, debris hauled away",
               ],
             },
             {
-              title: "Plumbing, electrical, ventilation",
-              description: "The work done before the walls close",
+              title: "Plumbing and electrical",
+              description: "Redone before the walls close",
               icon: "wrench",
               bullets: [
-                "Sink, dishwasher and refrigerator lines connected",
-                "Circuits, island receptacles, recessed lighting",
-                "Hood vented outside, inspection before closing up",
+                "Sink, dishwasher and fridge connected",
+                "Island circuits and counter outlets",
+                "Range hood vented outside, then inspected",
               ],
             },
             {
-              title: "Floors, walls and ceilings",
-              description: "The base everything else aligns to",
-              icon: "layers",
-              bullets: [
-                "Subfloor repaired and levelled",
-                "New flooring or clean transition to existing",
-                "Drywall, taping, paint, backsplash and mouldings",
-              ],
-            },
-            {
-              title: "Cabinets, countertop, finishing",
-              description: "Supplied and installed by the same crew",
+              title: "Cabinets and countertop",
+              description: "Supplied and set in the same mandate",
               icon: "package2",
               bullets: [
-                "Custom cabinets supplied by our partner factory",
-                "Countertop templated, cut and set",
-                "Appliances connected, doors and drawers adjusted",
+                "Cabinets from our partner factory",
+                "Countertop templated, cut, installed",
+                "Doors and drawers adjusted at handover",
+              ],
+            },
+            {
+              title: "Surfaces and finishing",
+              description: "What you see walking in",
+              icon: "layers",
+              bullets: [
+                "Subfloor corrected and levelled",
+                "Backsplash, drywall, taping and paint",
+                "Mouldings, lighting and hardware",
               ],
             },
           ],
@@ -126,92 +127,130 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "The job, step by step",
+          heading: "How a kitchen unfolds",
           steps: [
             {
               number: "1",
-              title: "Visit and quote",
+              title: "Measure and quote",
               description:
-                "Dimensions, electrical panel, plumbing and structure checked on site.",
+                "Dimensions, electrical panel, drain and structure checked on site.",
             },
             {
               number: "2",
-              title: "Contract and drawings",
+              title: "Demolition",
               description:
-                "Scope, price, schedule and layout drawings signed before any purchase.",
+                "Cabinets, countertop and old finishes stripped out.",
             },
             {
               number: "3",
-              title: "Permit and demolition",
+              title: "Mechanical",
               description:
-                "Application filed with your city, then the room is stripped.",
+                "Drains, supply lines, circuits and hood duct redone.",
             },
             {
               number: "4",
-              title: "Mechanical and inspection",
+              title: "Cabinets and countertop",
               description:
-                "Plumbing, electrical and ventilation inspected before the walls close.",
+                "Boxes set, countertop templated, sink opening cut.",
             },
             {
               number: "5",
-              title: "Cabinets and handover",
+              title: "Finishing",
               description:
-                "Install, countertop, hookups, adjustments and final walkthrough with you.",
+                "Backsplash, paint, appliances hooked up, doors aligned.",
             },
           ],
         },
       },
     },
     {
-      id: "permis",
+      id: "prix",
       content: {
-        type: "split",
-        variant: "list-actions-image-card",
+        type: "grid",
+        variant: "price-tiles",
         props: {
-          heading: "Permits: when do you need one?",
-          intro:
-            "Requirements change from one city to the next. We confirm your case and file the application.",
-          items: [
+          heading: "What a kitchen costs",
+          tiles: [
             {
-              title: "Load-bearing wall modified",
-              description: "Permit required, with an engineer's drawing for the beam.",
+              title: "Refresh",
+              price: "from $20,000",
+              hint: "existing boxes kept",
+              includes: [
+                "Countertop and backsplash replaced",
+                "New paint and hardware",
+                "Appliances reconnected",
+              ],
             },
             {
-              title: "Plumbing relocated",
-              description: "Permit and inspection before the walls are closed.",
+              title: "Full kitchen",
+              price: "$35,000 to $50,000",
+              hint: "cabinets and countertop included",
+              featured: true,
+              includes: [
+                "Demolition and debris handling",
+                "Plumbing and electrical redone",
+                "Cabinets and countertop installed",
+                "Backsplash, paint, mouldings",
+              ],
             },
             {
-              title: "New exterior opening",
-              description: "Hood outlet or enlarged window: permit required.",
-            },
-            {
-              title: "Replacement in the same footprint",
-              description: "Usually no permit. We confirm with the city.",
-            },
-            {
-              title: "Condo",
-              description: "Syndicate approval, work hours and access confirmed first.",
-            },
-          ],
-          actions: [
-            {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "Service areas",
-              href: "/zones",
-              variant: "ghost",
+              title: "Kitchen and open plan",
+              price: "above $50,000",
+              hint: "load-bearing wall or floor included",
+              includes: [
+                "Beam sized by an engineer",
+                "Flooring tied into adjoining rooms",
+                "Lighting and ventilation reworked",
+              ],
             },
           ],
-          image: {
-            src: "/images/generated/renovation/renovation-cuisine-approach-01.webp",
-            alt: "Planning and measuring a kitchen renovation",
+          note: "Indicative ranges. The firm amount for a kitchen is set in the quote, after the on-site measure.",
+          action: {
+            label: "Free quote",
+            href: "/contact",
+            variant: "primary",
           },
-          cardTitle: "Why we never skip this",
-          cardDescription:
-            "Work done without a permit can trigger a stop-work order and complicate a resale or an insurance claim.",
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Kitchens already delivered",
+          tiles: [
+            {
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Kitchen open to the living room with island and tall columns",
+              },
+              caption: "Island and full-height columns",
+            },
+            {
+              kind: "stat",
+              value: "9 to 15 wks",
+              label: "Cabinet production, scheduled in parallel",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "White kitchen with a quartz island",
+              },
+              caption: "Quartz island",
+            },
+            {
+              kind: "text",
+              title: "See more kitchens",
+              description:
+                "Layouts, storage and finishes photographed in client homes.",
+              href: "/espaces/cuisine",
+            },
+          ],
         },
       },
     },
@@ -224,28 +263,24 @@ export const renovationCuisinePageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "What does a kitchen renovation cost?",
-              a: "A refresh starts around $20,000. A full renovation generally runs between $35,000 and $50,000 and up. The firm price is set after the on-site survey.",
-            },
-            {
-              q: "Do I need a permit?",
-              a: "Yes for most full renovations: load-bearing wall modified, plumbing relocated or a new exterior opening. A replacement in the same footprint usually does not. We check and file the application.",
-            },
-            {
-              q: "How long does the job take?",
-              a: "Several weeks on site, plus your city's permit turnaround and the 9 to 15 week cabinet production lead time. Both are planned in parallel.",
+              q: "How long is the kitchen unusable?",
+              a: "A few weeks without a sink or appliances. We set up a temporary corner and time the cabinet delivery to the end of the mechanical work, which shortens the gap.",
             },
             {
               q: "Can the wall between kitchen and living room come out?",
-              a: "Often yes. If it is load-bearing, an engineer sizes the beam and supports, and the drawing goes in with the permit application. We tell you at the site visit.",
+              a: "Often yes. If it carries a load, an engineer sizes the beam and its supports, and that drawing goes with the permit application. We tell you at the first visit.",
             },
             {
-              q: "Do you supply the cabinets and the countertop?",
-              a: "Yes. Custom cabinets are supplied by our partner factory, under subcategory 12 of our RBQ licence, then installed by our own crews. The countertop is templated and set in the same mandate.",
+              q: "Do I need a permit to renovate a kitchen?",
+              a: "Yes as soon as a bearing wall changes, plumbing moves or a hood duct pierces the exterior wall. Replacing fixtures in the same spot usually does not require one.",
             },
             {
-              q: "Is the work warranted?",
-              a: "Yes, with the scope and duration written into the contract. RBQ licence 8306-0806-27, valid with no restrictions since 2004, $40,000 bond, no claims on file. Liability and job-site insurance in force.",
+              q: "Where do the cabinets and countertop come from?",
+              a: "Custom cabinets come from our partner factory and our crews install them. The countertop is templated once the boxes are set, then cut and fitted.",
+            },
+            {
+              q: "What if the island moves?",
+              a: "The drain, supply lines and circuits have to follow. We open the floor or run the services from the basement, and that work is priced before demolition starts.",
             },
           ],
         },
@@ -257,11 +292,12 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Have your kitchen assessed",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          heading: "Get your kitchen priced",
+          intro:
+            "On-site visit, full measure and a detailed quote, at no charge.",
           actions: [
             {
-              label: "Free estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
@@ -271,7 +307,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Permit, trades and schedule included",
+          note: "RBQ licence 8306-0806-27 · Permit, mechanical, cabinets and countertop",
         },
       },
     },

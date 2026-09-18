@@ -42,9 +42,9 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Home addition",
-          heading: "From zoning to foundation, through to finishing",
+          heading: "Gain a room without leaving your neighbourhood",
           description:
-            "Building permit, engineered drawings, footings below the frost line and a clean tie-in to the existing house.",
+            "Zoning verified, drawings sealed, footings poured below the frost line and a clean tie-in to the house.",
           actions: [
             {
               label: "Free estimate",
@@ -62,7 +62,8 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
             alt: "Residential addition under construction",
           },
-          caption: "West Island, Montreal, Laval, South Shore",
+          imageSide: "left",
+          caption: "Additions in the West Island and Laval",
         },
       },
     },
@@ -72,47 +73,47 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the mandate covers",
+          heading: "What the addition mandate covers",
           columns: "2",
           items: [
             {
-              title: "Feasibility and permit",
-              description: "What gets checked before anything is drawn.",
+              title: "Feasibility and file",
+              description: "Checked before anything is drawn",
               icon: "fileCheck",
               bullets: [
-                "Zoning: setbacks, siting, height, lot coverage",
-                "Survey of foundation, structure and services",
-                "Sealed drawings and permit application filed",
+                "Setbacks, height and lot coverage",
+                "Foundation, structure and services surveyed",
+                "Sealed drawings filed with the application",
               ],
             },
             {
               title: "Excavation and foundation",
-              description: "The part that decides how the building holds.",
+              description: "The part that carries everything",
               icon: "hardHat",
               bullets: [
-                "Underground services located, then excavation",
+                "Underground services located before digging",
                 "Footings poured below the frost line",
-                "Weeping tile, waterproofing and draining backfill",
+                "Drain, damp-proofing, draining backfill",
               ],
             },
             {
-              title: "Structure and envelope",
-              description: "Close the building in before the weather decides.",
+              title: "Framing and envelope",
+              description: "Closed in before the weather decides",
               icon: "building2",
               bullets: [
-                "Framing built to the engineered drawings",
-                "Bearing wall opened, loads carried by a sized beam",
-                "Roof, air barrier, windows and matched cladding",
+                "Framing raised to the sealed drawings",
+                "Opened wall's load carried by a beam",
+                "Roof, air barrier, windows, matched siding",
               ],
             },
             {
               title: "Connections and finishing",
-              description: "The new section becomes a real part of the house.",
+              description: "The room joins the house",
               icon: "wrench",
               bullets: [
-                "Plumbing, electrical, heating and ventilation extended",
-                "Municipal inspections before walls are closed",
-                "Drywall, paint, floors levelled to the existing house",
+                "Heating, ventilation and circuits extended",
+                "Inspections before the walls close",
+                "Drywall, paint, floors brought to level",
               ],
             },
           ],
@@ -125,37 +126,37 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Five steps",
+          heading: "How an addition unfolds",
           steps: [
             {
               number: "1",
               title: "Feasibility",
               description:
-                "Visit, survey and zoning check: setbacks, height, allowable floor area.",
+                "Zoning, location certificate and allowable area reviewed.",
             },
             {
               number: "2",
               title: "Drawings and engineer",
               description:
-                "Construction drawings, load calculations and engineer-sealed structural plans.",
+                "Construction drawings and load calculations by an engineer.",
             },
             {
               number: "3",
               title: "Permit and contract",
               description:
-                "Application filed with the city, contract signed with schedule and budget.",
+                "File submitted to the city, schedule and budget signed.",
             },
             {
               number: "4",
               title: "Foundation and structure",
               description:
-                "Excavation, footings, drainage, framing, roof and envelope closed in.",
+                "Excavation, footings, drain, framing, roof, envelope closed.",
             },
             {
               number: "5",
               title: "Mechanical and finishing",
               description:
-                "Plumbing, electrical, ventilation, inspections, drywall, floors, then handover.",
+                "Services extended, inspections, drywall, floors, then handover.",
             },
           ],
         },
@@ -165,39 +166,48 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
       id: "types",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "list-actions-image-card",
         props: {
-          heading: "The types of addition we build",
+          heading: "The shapes an addition can take",
           intro:
-            "The final shape depends as much on the lot and the zoning as on the original need.",
-          badges: [
-            "Rear addition",
-            "Side addition",
-            "Second storey",
-            "Four-season sunroom",
-            "Primary suite",
-            "Attached garage",
-          ],
-          cardTitle: "What we weigh before deciding",
+            "The lot and the zoning by-law usually decide before the original wish does.",
           items: [
-            "The floor area allowed once setbacks are applied",
-            "Whether the foundation can carry a second storey",
-            "Sunlight and the impact on existing windows",
-            "The position of the electrical entrance, drain and furnace",
-            "Site access for excavation and deliveries",
+            {
+              title: "Rear extension",
+              description: "the most common, if the yard leaves the setback.",
+            },
+            {
+              title: "Side extension",
+              description: "depends on the distance to the neighbouring lot line.",
+            },
+            {
+              title: "Second storey",
+              description: "possible when the foundation carries the added load.",
+            },
+            {
+              title: "Primary suite or garage",
+              description: "an attached volume tied into the home's heating.",
+            },
           ],
           actions: [
             {
-              label: "See kitchens",
+              label: "See the kitchen",
               href: "/services/renovation/cuisine",
               variant: "ghost",
             },
             {
-              label: "Talk about your project",
+              label: "Discuss your project",
               href: "/contact",
               variant: "primary",
             },
           ],
+          image: {
+            src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+            alt: "Addition under construction tied into an existing house",
+          },
+          cardTitle: "What we weigh first",
+          cardDescription:
+            "Site access for excavation, position of the electrical entrance and the drain, daylight reaching the existing windows.",
         },
       },
     },
@@ -210,28 +220,24 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Do I need a permit to add on?",
-              a: "Yes, always. An addition adds floor area and changes the siting of the building: that means a building permit, with site plan, sections, elevations and engineer-sealed structural drawings. We assemble the file and submit the application.",
-            },
-            {
               q: "Does my lot allow an addition?",
-              a: "The zoning by-law sets the setbacks, the lot coverage percentage and the maximum height. We check those and your certificate of location before drawing anything. A minor exemption stays possible, with no guaranteed outcome.",
+              a: "The zoning by-law sets the setbacks, the buildable share of the lot and the permitted height. We read those against your location certificate before anything gets drawn.",
             },
             {
-              q: "Do I need an engineer?",
-              a: "In almost every case. The foundation, the framing and the beam replacing the opened bearing wall require load calculations. The sealed drawings go with the permit application and serve as the reference on site.",
+              q: "Do I need a permit to add on?",
+              a: "Always. Adding floor area changes the building's footprint, so a building permit is required, together with sections, elevations and structural drawings.",
+            },
+            {
+              q: "Do I need an engineer for an addition?",
+              a: "In nearly every case. Footings, framing and any replacement beam rest on a load calculation. The sealed drawings go with the application and guide the site.",
             },
             {
               q: "How long does an addition take?",
-              a: "Think in months. The administrative phase, feasibility, drawings, engineer and permit, often weighs as much as the foundation, depending on your municipality's review time. The detailed schedule is attached to the contract.",
+              a: "Count in months. The paper phase, feasibility, drawings and municipal review, often weighs as much as the foundation. The detailed schedule comes with the contract.",
             },
             {
-              q: "What does an addition cost?",
-              a: "This is the mandate with the widest spread: foundation, structure, roof and envelope all change with the lot. A serious budget is built after the visit, the zoning check and the drawings. The estimate is free.",
-            },
-            {
-              q: "Do you build new homes?",
-              a: "No. Our RBQ licence 8306-0806-27 covers renovation, conversion, additions and rebuilding, classes 1.2 and 1.3. New home construction falls under another class and a separate warranty plan that does not apply here.",
+              q: "Add on or build new?",
+              a: "We do not build new houses. Our work always starts from an existing building: extending, converting, rebuilding. For many families an extension costs less than moving.",
             },
           ],
         },
@@ -245,7 +251,7 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         props: {
           heading: "An addition to validate?",
           intro:
-            "We start with what your lot and your structure actually allow.",
+            "First step, read the zoning and the foundation to see what is truly allowed.",
           actions: [
             {
               label: "Free estimate",
@@ -258,7 +264,7 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Zoning, permit, engineer and foundation",
+          note: "RBQ licence 8306-0806-27 · Zoning, permit, engineer and foundations",
         },
       },
     },

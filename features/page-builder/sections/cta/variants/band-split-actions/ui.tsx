@@ -26,7 +26,7 @@ export function CtaBandSplitActions(props: CtaBandSplitActionsProps) {
         </div>
 
         <div className="flex flex-col gap-4 lg:col-span-5 lg:items-end">
-          <div className="flex flex-col gap-3 sm:flex-row">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
             <Button asChild size="xl" variant="paper">
               <Link href={primary.href}>
                 {primary.label}

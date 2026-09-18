@@ -36,7 +36,7 @@ export const installationPageEn: PageTemplateData = {
           eyebrow: "Cabinetry division",
           heading: "Installation is planned around the other trades",
           description:
-            "Our crews set the cabinets at the right point in the job: after plumbing and electrical, before the countertops.",
+            "Our crews hang the cabinets at the right moment, after plumbing and electrical, before the countertops.",
           actions: [
             {
               label: "Request a quote",
@@ -49,96 +49,92 @@ export const installationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Levelling", "Alignments", "Coordination"],
+          badges: ["Levelling", "Alignment", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
-            alt: "Technical drawing and panel samples for custom installation",
+            alt: "Custom cabinets being installed in a kitchen",
           },
-          caption: "Residential and commercial installation",
+          caption: "Residential and commercial installs",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "différence",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Why installation changes everything",
-          description:
-            "No wall is plumb and no floor is level. Installation absorbs that gap, or it shows on every door.",
-          cards: [
+          heading: "Four steps on site",
+          steps: [
             {
+              number: "1",
+              title: "Protection",
+              description:
+                "Floors covered, thresholds protected, dust kept to the room.",
+            },
+            {
+              number: "2",
               title: "Levelling",
               description:
-                "Boxes are shimmed before they are fastened to the structure.",
+                "Boxes shimmed, then anchored into the wall studs.",
             },
             {
-              title: "Alignments",
+              number: "3",
+              title: "Adjustment",
               description:
-                "Even gaps between doors and drawers along the whole run.",
+                "Hinges set on three axes, gaps evened out across the run.",
             },
             {
-              title: "Fastening",
+              number: "4",
+              title: "Finishing",
               description:
-                "Anchored into the studs, not just into the drywall.",
-            },
-            {
-              title: "Coordination",
-              description:
-                "Counters, backsplash and appliances follow in the right order.",
+                "Mouldings, toe kicks, handles and a walk-through with you.",
             },
           ],
-          columns: "2",
         },
       },
     },
     {
-      id: "included",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "What is included",
-          intro:
-            "Installation is more than screwing units to a wall.",
-          items: [
+          heading: "In short",
+          intro: "What happens in your home during the install days.",
+          rows: [
             {
-              title: "Site check",
-              description: "Walls, floors, levels and constraints surveyed first.",
+              label: "Timeline",
+              value: "One to two days for a vanity, three to five for a kitchen",
             },
             {
-              title: "Setting and fastening",
-              description: "Shimming, anchoring and joining the units together.",
+              label: "Deliverables",
+              value: "Cabinets hung, doors adjusted, deficiencies corrected",
             },
             {
-              title: "Door adjustment",
-              description: "Hinges set on three axes, drawers brought into line.",
+              label: "Who does what",
+              value: "Our installers, coordinated with countertop and electrician",
             },
             {
-              title: "Final walkthrough",
-              description: "Done with you, deficiencies fixed before the last payment.",
-            },
-          ],
-          actions: [
-            {
-              label: "View the process",
-              href: "/processus",
-              variant: "ghost",
+              label: "Prerequisite",
+              value: "Plumbing, electrical and flooring done before we arrive",
             },
             {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
+              label: "Warranty",
+              value: "One catch-up adjustment included in the first year",
+            },
+            {
+              label: "Job site",
+              value: "Swept every evening, debris hauled out at the end",
             },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
-            alt: "Custom installation in progress",
+            alt: "Cabinets adjusted and aligned after installation",
           },
-          cardTitle: "On-site coordination",
-          cardDescription:
-            "A clean install depends as much on preparation as on the final adjustments.",
+          note: "The install date is set once the delivery is confirmed.",
         },
       },
     },
@@ -148,23 +144,23 @@ export const installationPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about installation",
           items: [
             {
-              q: "How long does an installation take?",
-              a: "A vanity or a walk-in goes in within a day or two. A full kitchen takes longer, depending on the island, tall cabinets and appliances. The duration is confirmed at planning.",
+              q: "Do we have to leave the house during install?",
+              a: "No. The room stays out of service for a few days, but the rest of the house remains protected and usable. Water is restored each evening where possible.",
             },
             {
-              q: "Are adjustments normal?",
-              a: "Yes. Doors and drawers are set after the boxes are fastened. It is a planned step, not a sign that something went wrong.",
+              q: "Who installs the countertop?",
+              a: "The countertop supplier, after our install. They template on the boxes already anchored, which removes millimetre-level gaps.",
             },
             {
-              q: "Do you only install your own cabinets?",
-              a: "Yes. We install what we design and supply, so the same tolerances apply from drawings to installation, under a single line of accountability.",
+              q: "Do you install cabinets bought elsewhere?",
+              a: "No. We install what we designed and supplied, so that one responsibility covers the drawings, the parts and the install.",
             },
             {
-              q: "Can you renovate the whole room?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27. Permit, demolition, plumbing, electrical, flooring and cabinet installation under one written contract.",
+              q: "What if a door rubs six months later?",
+              a: "Call us. Wood that moves with the seasons is corrected in a few minutes of adjustment, and it is covered in the first year.",
             },
           ],
         },
@@ -176,9 +172,9 @@ export const installationPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want a clean, coordinated install?",
+          heading: "Schedule your cabinet installation",
           intro:
-            "We plan the installation around the rest of the job and hand over after a walkthrough with you.",
+            "We set the date against the rest of the job site and hand over after a walk-through.",
           actions: [
             {
               label: "Request a quote",
@@ -186,7 +182,7 @@ export const installationPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },

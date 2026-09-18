@@ -42,9 +42,9 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Rénovation de salle de bain",
-          heading: "Une salle de bain refaite d'abord pour son étanchéité",
+          heading: "Une salle de bain étanche avant d'être belle",
           description:
-            "Plomberie, ventilation, membrane, tuilage et vanité. Un seul contrat, une seule licence, des travaux inspectés.",
+            "Drains, ventilation, membrane et tuilage repris dans l'ordre, avec inspection avant la fermeture des murs.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -57,12 +57,13 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Membrane d'étanchéité", "Plomberie inspectée", "Prix ferme"],
+          badges: ["Membrane continue", "Plomberie inspectée"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
             alt: "Salle de bain rénovée par un entrepreneur général",
           },
-          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
+          imageSide: "left",
+          caption: "Salles de bain, Ouest-de-l'Île et Laval",
         },
       },
     },
@@ -72,48 +73,47 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que le mandat comprend",
-          intro: "La portée exacte est écrite dans la soumission.",
+          heading: "Ce qui est compris dans le mandat",
           columns: "2",
           items: [
             {
-              title: "Démolition et mise à nu",
-              description: "On ouvre pour voir l'état réel",
+              title: "Mise à nu",
+              description: "On regarde l'état réel du support",
               icon: "hammer",
               bullets: [
-                "Retrait de la douche, de la vanité et des revêtements",
-                "Contreplaqué et solives vérifiés sous la douche",
-                "Sous-plancher et charpente corrigés avant la pose",
+                "Douche, vanité et revêtements retirés",
+                "Solives et contreplaqué inspectés",
+                "Sous-plancher corrigé avant la pose",
               ],
             },
             {
-              title: "Plomberie et ventilation",
-              description: "Les travaux qui passent l'inspection",
+              title: "Drains et ventilation",
+              description: "Les points qu'un inspecteur vérifie",
               icon: "droplets",
               bullets: [
-                "Drains et alimentation repris avec la pente requise",
-                "Ventilateur évacué dehors, jamais dans l'entretoit",
-                "Valve antibrûlure et inspection avant fermeture",
+                "Pente de drain et alimentation reprises",
+                "Ventilateur sorti dehors, pas dans l'entretoit",
+                "Valve antibrûlure installée",
               ],
             },
             {
-              title: "Étanchéité et tuilage",
+              title: "Membrane et céramique",
               description: "L'étape invisible qui décide de la durée",
               icon: "shieldCheck",
               bullets: [
                 "Panneau hydrofuge sur les surfaces mouillées",
-                "Membrane continue, remontée aux murs, raccordée au drain",
-                "Pente validée avant la pose de la céramique",
+                "Membrane remontée aux murs, liée au drain",
+                "Pente validée avant le tuilage",
               ],
             },
             {
-              title: "Vanité et finition",
-              description: "Ce qui se voit, sur une base saine",
+              title: "Vanité et accessoires",
+              description: "La partie visible, sur une base saine",
               icon: "bath",
               bullets: [
-                "Vanité sur mesure fournie par notre usine partenaire",
-                "Comptoir, robinetterie, miroir et éclairage",
-                "Toilette, porte de douche, peinture et moulures",
+                "Vanité venue de notre usine partenaire",
+                "Robinetterie, miroir, éclairage",
+                "Toilette, porte de douche, moulures",
               ],
             },
           ],
@@ -126,92 +126,130 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Le chantier, étape par étape",
+          heading: "La séquence d'une salle de bain",
           steps: [
             {
               number: "1",
-              title: "Visite et soumission",
+              title: "Relevé",
               description:
-                "Relevé, ventilation, plomberie et signes d'infiltration vérifiés sur place.",
+                "Ventilation, plomberie et traces d'infiltration examinées sur place.",
             },
             {
               number: "2",
-              title: "Contrat et permis",
+              title: "Démolition et constat",
               description:
-                "Portée, prix, échéancier signés, demande déposée si la plomberie bouge.",
+                "Un sous-plancher atteint est photographié, puis chiffré avec vous.",
             },
             {
               number: "3",
-              title: "Démolition",
+              title: "Mécanique et inspection",
               description:
-                "Mise à nu complète. Un sous-plancher atteint est chiffré avec vous.",
+                "Drains, circuits et extraction posés, contrôlés avant de fermer.",
             },
             {
               number: "4",
-              title: "Mécanique et inspection",
+              title: "Étanchéité et tuilage",
               description:
-                "Drains, circuits, ventilation, puis inspection avant la fermeture des murs.",
+                "Panneau, membrane, pente, puis céramique du sol aux murs.",
             },
             {
               number: "5",
-              title: "Étanchéité, finition, livraison",
+              title: "Vanité et livraison",
               description:
-                "Membrane, céramique, vanité, raccordements et inspection finale avec vous.",
+                "Vanité, robinetterie, porte de douche, ajustements finaux.",
             },
           ],
         },
       },
     },
     {
-      id: "permis",
+      id: "prix",
       content: {
-        type: "split",
-        variant: "list-actions-image-card",
+        type: "grid",
+        variant: "price-tiles",
         props: {
-          heading: "Permis, ventilation et conformité",
-          intro:
-            "Ce sont les points qu'un inspecteur vérifie et qu'un assureur regarde après un dégât d'eau.",
-          items: [
+          heading: "Ce que coûte une salle de bain",
+          tiles: [
             {
-              title: "Plomberie déplacée",
-              description: "Permis requis, inspection avant la fermeture des murs.",
+              title: "Salle d'eau",
+              price: "à partir de 10 000 $",
+              hint: "toilette et lavabo, sans douche",
+              includes: [
+                "Démolition et plomberie au même endroit",
+                "Céramique au sol",
+                "Vanité, toilette, éclairage",
+              ],
             },
             {
-              title: "Nouvelle salle de bain",
-              description: "Permis exigé presque partout, plans à l'appui.",
+              title: "Salle de bain complète",
+              price: "15 000 $ à 35 000 $",
+              hint: "douche, bain, vanité",
+              featured: true,
+              includes: [
+                "Membrane d'étanchéité continue",
+                "Drains et ventilation repris",
+                "Céramique murale et au sol",
+                "Vanité, comptoir, robinetterie",
+              ],
             },
             {
-              title: "Ventilation obligatoire",
-              description: "Extraction vers l'extérieur, jamais dans l'entretoit.",
-            },
-            {
-              title: "Protection antibrûlure",
-              description: "Robinets de douche et de bain à température limitée.",
-            },
-            {
-              title: "Remplacement à l'identique",
-              description: "Habituellement sans permis. On valide avec la ville.",
-            },
-          ],
-          actions: [
-            {
-              label: "Rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "Zones desservies",
-              href: "/zones",
-              variant: "ghost",
+              title: "Douche de plain-pied",
+              price: "vers le haut de la fourchette",
+              hint: "dalle entaillée, drain linéaire",
+              includes: [
+                "Sol abaissé pour un seuil nul",
+                "Drain linéaire et pente calculée",
+                "Verre trempé sur mesure",
+              ],
             },
           ],
-          image: {
-            src: "/images/generated/renovation/renovation-bath-approach-01.webp",
-            alt: "Préparation d'une douche avec membrane d'étanchéité",
+          note: "Prix indicatifs. Le montant ferme dépend de la plomberie déplacée et du format de céramique retenu.",
+          action: {
+            label: "Soumission gratuite",
+            href: "/contact",
+            variant: "primary",
           },
-          cardTitle: "Ce que l'assureur regarde",
-          cardDescription:
-            "La conformité des travaux et la présence d'un entrepreneur licencié pèsent dans le traitement d'une réclamation.",
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Des salles de bain déjà livrées",
+          tiles: [
+            {
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Douche de plain-pied avec paroi de verre",
+              },
+              caption: "Douche de plain-pied",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
+                alt: "Vanité avec comptoir de quartz et miroir rétroéclairé",
+              },
+              caption: "Vanité et miroir rétroéclairé",
+            },
+            {
+              kind: "stat",
+              value: "2 étapes",
+              label: "Inspection avant fermeture, puis pente vérifiée",
+            },
+            {
+              kind: "text",
+              title: "Voir d'autres salles de bain",
+              description:
+                "Douches, vanités et finis photographiés après la livraison.",
+              href: "/espaces/salle-de-bain",
+            },
+          ],
         },
       },
     },
@@ -224,28 +262,24 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte une rénovation de salle de bain ?",
-              a: "Une salle de bain complète se situe le plus souvent entre 15 000 $ et 35 000 $. Le haut de la fourchette correspond à une douche de plain-pied, un plancher chauffant ou un déplacement de plomberie.",
-            },
-            {
-              q: "Faut-il un permis ?",
-              a: "Un remplacement au même endroit n'en demande habituellement pas. Dès que la plomberie est déplacée ou qu'une salle de bain est ajoutée, un permis est requis, avec inspection avant fermeture.",
-            },
-            {
-              q: "Combien de temps dure le chantier ?",
-              a: "Quelques semaines sur place. Les temps de séchage du mortier, du coulis et de la peinture sont incompressibles, et l'inspection se planifie avant la fermeture des murs. L'échéancier est joint au contrat.",
-            },
-            {
               q: "Qu'est-ce qu'une membrane d'étanchéité ?",
-              a: "Une couche continue posée sous la céramique de la douche, remontée sur les murs et raccordée au drain. Elle empêche l'eau d'atteindre la structure.",
+              a: "Une couche continue posée sous la céramique, remontée sur les murs de la douche et raccordée au drain. Elle bloque l'eau avant qu'elle n'atteigne le bois de la structure.",
             },
             {
-              q: "Et si vous trouvez des dégâts d'eau en démolissant ?",
-              a: "C'est fréquent après vingt ans. Nous vous montrons ce qui est atteint et soumettons le coût de la réparation par écrit avant de poursuivre. Rien n'est refermé sur un problème connu.",
+              q: "Peut-on installer une douche de plain-pied ?",
+              a: "Souvent oui. Il faut abaisser le sol entre les solives ou entailler la dalle pour loger le drain et la pente. Nous le vérifions à la visite, avant de chiffrer.",
             },
             {
-              q: "Les travaux sont-ils garantis ?",
-              a: "Oui, avec la portée et la durée inscrites au contrat. Licence RBQ 8306-0806-27 valide sans restriction depuis 2004, cautionnement de 40 000 $, aucune réclamation au dossier. Responsabilité civile et assurance chantier en vigueur.",
+              q: "La ventilation de la salle de bain est-elle obligatoire ?",
+              a: "Oui, et elle doit sortir à l'extérieur. Un ventilateur qui souffle dans l'entretoit crée du givre, puis de la moisissure. Nous refaisons le conduit quand il se termine sous le toit.",
+            },
+            {
+              q: "Et si vous trouvez du bois pourri en démolissant ?",
+              a: "C'est courant après vingt ans sous une douche mal étanchée. Nous vous montrons les photos, chiffrons la réparation par écrit, puis continuons. Rien n'est refermé sur un problème connu.",
+            },
+            {
+              q: "Faut-il un permis pour une salle de bain ?",
+              a: "Un remplacement au même endroit n'en demande habituellement pas. Déplacer la plomberie ou ajouter une pièce d'eau exige un permis, avec inspection avant que les murs soient refermés.",
             },
           ],
         },
@@ -257,9 +291,9 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Faites évaluer votre salle de bain",
+          heading: "Faites chiffrer votre salle de bain",
           intro:
-            "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+            "Nous mesurons, vérifions la ventilation et remettons une soumission détaillée.",
           actions: [
             {
               label: "Soumission gratuite",

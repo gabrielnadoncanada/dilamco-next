@@ -33,107 +33,75 @@ export const contreplaquePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "Plywood holds the structure of your cabinets",
+          heading: "Plywood carries the structure of your cabinets",
           description:
-            "Wood plies glued with the grain crossed. The result is a panel far more stable than particleboard, and one that keeps its screws.",
+            "Cross-grain plies bonded under heat. The panel stays straight and holds the screws of hinges and drawer slides.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Stability", "Boxes"],
+          badges: ["Structure", "Stability", "Cabinet boxes"],
           image: {
             src: "/images/generated/materials/material-plywood-hero-01.webp",
-            alt: "Custom kitchen with a durable structure",
+            alt: "Birch plywood cabinet box",
           },
           caption: "Boxes, drawers and parts under load",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "benefits",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Why it serves as structure",
-          description:
-            "Crossing the grain from one ply to the next locks the wood's movement. That is what gives the panel its mechanical strength.",
-          cards: [
+          heading: "Plywood at a glance",
+          intro: "The numbers we ask the supplier for before ordering.",
+          rows: [
             {
-              title: "Cross-grain plies",
-              description:
-                "The panel barely moves, even over tall runs.",
+              label: "Composition",
+              value: "Birch plies cross-bonded, 13 to 15 mm thick",
             },
             {
-              title: "Screw retention",
-              description:
-                "Hinges and slides stay tight after thousands of cycles.",
+              label: "Humidity",
+              value: "Tolerant as long as the edges stay sealed",
             },
             {
-              title: "Load capacity",
-              description:
-                "Shelves and drawer bottoms sag less under weight.",
+              label: "Upkeep",
+              value: "None, it lives hidden behind the finish",
             },
             {
-              title: "Higher cost",
-              description:
-                "The gap pays off on the parts under stress, not on everything.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "What to watch for",
-          intro:
-            "Plywood is not waterproof. The grade, the edges and the installation decide the result.",
-          items: [
-            {
-              title: "Grade changes everything",
-              description: "Ply count, internal voids, quality of the glue.",
+              label: "Recommended uses",
+              value: "Boxes, drawer bottoms, loaded shelves",
             },
             {
-              title: "Edges must be closed",
-              description: "Visible or water-exposed edges have to be sealed.",
+              label: "Relative cost",
+              value: "Above MDF, below solid wood",
             },
             {
-              title: "Wet areas",
-              description: "Under sinks and in bathrooms, we protect more.",
-            },
-          ],
-          actions: [
-            {
-              label: "Compare materials",
-              href: "/materiaux/comparatif",
-              variant: "ghost",
+              label: "Screw hold",
+              value: "Roughly twice that of a particleboard panel",
             },
             {
-              label: "View hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
+              label: "Grade to target",
+              value: "Seven plies minimum, no visible internal voids",
             },
           ],
           image: {
             src: "/images/generated/materials/material-plywood-detail-01.webp",
-            alt: "Detail of a custom kitchen in plywood",
+            alt: "Cross-grain plies visible on a plywood edge",
           },
-          cardTitle: "Key takeaway",
-          cardDescription:
-            "An excellent structural choice, provided the grade and the edges are handled properly.",
+          note: "Grade and glue matter more than the face veneer species.",
         },
       },
     },
@@ -143,23 +111,23 @@ export const contreplaquePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about plywood",
           items: [
             {
-              q: "Plywood or MDF?",
-              a: "Both, in different places. Plywood for boxes and drawers, because it holds screws. MDF for painted doors, because its surface is smoother.",
+              q: "Is plywood needed under the sink?",
+              a: "Yes, that is where it pays off fastest. With a sealed edge and a removable bottom, a slow leak is repaired without pulling the box apart.",
             },
             {
-              q: "Is it more expensive?",
-              a: "Yes, generally more than MDF or particleboard. The gap pays for itself on the parts used every day: boxes, drawers, loaded shelves.",
+              q: "How many plies should you look for?",
+              a: "Seven plies over 13 mm for a cabinet box. Fewer plies means thicker layers, so more voids and more dips under the veneer.",
             },
             {
-              q: "Is it suitable for a bathroom?",
-              a: "Yes, with sealed edges, a finish that protects the surface and decent ventilation. Steam attacks panels through their edges first.",
+              q: "Is an exposed edge acceptable?",
+              a: "Yes, several clients ask for it on shelves and island ends. It then needs a void-free veneer, sanded fine and varnished.",
             },
             {
-              q: "Is it visible once installed?",
-              a: "No, unless that is a deliberate design choice. The plies can be left exposed on an edge or a shelf as a visual statement.",
+              q: "Is plywood heavier?",
+              a: "At equal thickness it weighs less than MDF. You feel it when hanging upper cabinets and on the wall anchors.",
             },
           ],
         },
@@ -171,9 +139,9 @@ export const contreplaquePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Looking for a structure that lasts?",
+          heading: "Cabinet boxes that stay square?",
           intro:
-            "We tell you where plywood actually makes a difference in your project.",
+            "We write the grade, the thickness and the edge treatment into the quote.",
           actions: [
             {
               label: "Request a quote",

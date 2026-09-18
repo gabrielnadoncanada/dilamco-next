@@ -60,61 +60,77 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Pierrefonds-Roxboro",
-          heading:
-            "Entrepreneur général à Pierrefonds-Roxboro, du permis à la livraison",
+          eyebrow: "Entrepreneur général à",
+          heading: "Pierrefonds-Roxboro",
           description:
-            "Notre adresse d'affaires est rue Larocque, dans l'arrondissement. Licence RBQ 8306-0806-27, valide sans restriction depuis 2004.",
+            "Notre bureau est rue Larocque, dans l'arrondissement où nous menons des chantiers résidentiels depuis 2004.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Soumission gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos réalisations",
-              href: "/projets",
+              label: "Voir le sous-sol",
+              href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
           ],
-          badges: ["Depuis 2004", "Entrepreneur général", "Assuré"],
           image: {
             src: "/images/generated/services/service-renovation-hero-01.webp",
             alt: "Rénovation résidentielle à Pierrefonds-Roxboro",
           },
-          caption: "Rue Larocque · Pierrefonds-Roxboro",
+          facts: [
+            { label: "Notre base", value: "Rue Larocque, dans l'arrondissement" },
+            { label: "Permis", value: "Comptoir du 13665, boul. de Pierrefonds" },
+            { label: "Bâti", value: "Bungalows et cottages, 1950 à 1980" },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît de l'arrondissement",
-          description:
-            "Bungalows et cottages des années 1950 à 1980, une rivière qui déborde, un comptoir des permis d'arrondissement. Trois réalités de chantier.",
-          cards: [
+          heading: "Le terrain de jeu, rue par rue",
+          intro:
+            "Soixante-dix mille résidents sur vingt-sept kilomètres carrés, une rivière au nord et des sous-sols qui ont déjà pris l'eau.",
+          rows: [
             {
-              title: "Bungalows et split-levels",
-              description:
-                "Roxboro, Pierrefonds-Est, Cloverdale : dalles non isolées, panneaux sous-dimensionnés, murs centraux souvent porteurs.",
+              label: "Bâti dominant",
+              value: "Split-levels et jumelés, dalles souvent non isolées",
             },
             {
-              title: "Permis d'arrondissement",
-              description:
-                "Comptoir des permis du 13665, boulevard de Pierrefonds. Plans transmis par courriel, signature sur rendez-vous.",
+              label: "Dépôt du dossier",
+              value: "Plans par courriel, signature sur rendez-vous",
             },
             {
-              title: "La rivière des Prairies",
-              description:
-                "Crues de 2017 et 2019 : drain, clapet antiretour et pompe validés avant de finir un sous-sol.",
+              label: "Agrandissement",
+              value: "Marges et implantation validées par l'arrondissement",
+            },
+            {
+              label: "Risque riverain",
+              value: "Crues de la rivière des Prairies, 2017 et 2019",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Sous-sol repris, après-sinistre, mur central ouvert",
+            },
+            {
+              label: "Temps de route",
+              value: "Sur place en dix minutes, toute l'année",
             },
           ],
-          columns: "1",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+            alt: "Sous-sol fini dans un bungalow de Pierrefonds-Roxboro",
+          },
+          note: "Sources : Ville de Montréal, UQAM, Wikipédia. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -124,28 +140,28 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise ici",
+          heading: "Ce qu'on réalise dans l'arrondissement",
           items: [
             {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Drain, clapet et pompe vérifiés avant d'isoler et de finir.",
+                "Clapet et pompe validés avant d'isoler, secteur riverain oblige",
               image: {
-                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Sous-sol aménagé à Pierrefonds-Roxboro",
+                src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
+                alt: "Sous-sol aménagé en salle de jeux à Pierrefonds",
               },
               badges: ["Humidité"],
-              footerCtaLabel: "Voir le service",
+              footerCtaLabel: "Voir le sous-sol",
             },
             {
               title: "Après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Dégât d'eau ou refoulement : reconstruction conforme, une fois l'assèchement terminé.",
+                "Refoulement ou crue printanière, reconstruction documentée pour l'assureur",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
-                alt: "Reconstruction après un dégât d'eau",
+                alt: "Reconstruction après un dégât d'eau à Roxboro",
               },
               badges: ["Assurances"],
               footerCtaLabel: "Voir le service",
@@ -154,84 +170,26 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Mur porteur ouvert, plomberie et panneau électrique mis à niveau.",
+                "Mur central porteur des bungalows d'ici, poutre calculée d'abord",
               image: {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
-                alt: "Cuisine rénovée dans un bungalow de l'Ouest-de-l'Île",
+                alt: "Cuisine ouverte dans un bungalow de l'arrondissement",
               },
-              badges: ["Clé en main"],
-              footerCtaLabel: "Voir le service",
-            },
-            {
-              title: "Salle de bain",
-              href: "/services/renovation/salle-de-bain",
-              description:
-                "Étanchéité refaite avant la céramique, ventilation sortie vers l'extérieur.",
-              image: {
-                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
-                alt: "Salle de bain rénovée avec douche en céramique",
-              },
-              badges: ["Étanchéité"],
-              footerCtaLabel: "Voir le service",
-            },
-            {
-              title: "Agrandissement",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Rallonge, ajout d'étage ou garage converti, permis inclus.",
-              image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Agrandissement arrière d'une maison unifamiliale",
-              },
-              badges: ["Permis"],
-              footerCtaLabel: "Voir le service",
+              badges: ["Structure"],
+              footerCtaLabel: "Voir la cuisine",
             },
           ],
         },
       },
     },
     {
-      id: "preuves",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Un entrepreneur établi dans l'arrondissement",
-          intro:
-            "Licence vérifiable, assurances en vigueur, budget et échéancier écrits au contrat.",
-          badges: ["Depuis 2004", "5,0 sur Google", "Assuré"],
-          cardTitle: "Ce qui est vérifiable",
-          items: [
-            "Licence RBQ 8306-0806-27 depuis le 7 septembre 2004",
-            "Catégories entrepreneur général 1.2 et 1.3",
-            "Aucune réclamation au dossier de licence",
-            "Responsabilité civile et couverture chantier",
-            "Base rue Larocque, à quelques minutes",
-            "Armoires sur mesure au même contrat",
-          ],
-          actions: [
-            {
-              label: "Voir nos services",
-              href: "/services/renovation",
-              variant: "primary",
-            },
-            {
-              label: "Parler de votre projet",
-              href: "/contact",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "secteurs",
+      id: "voisins",
       content: {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Villes voisines desservies",
-          columns: "3",
+          heading: "Nos autres secteurs de l'Ouest-de-l'Île",
+          columns: "2",
           items: [
             {
               title: "Dollard-des-Ormeaux",
@@ -242,6 +200,7 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
               href: "/zones/ile-bizard-sainte-genevieve",
             },
             { title: "Kirkland", href: "/zones/kirkland" },
+            { title: "Laval", href: "/zones/laval" },
           ],
         },
       },
@@ -255,24 +214,20 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Faut-il un permis pour rénover à Pierrefonds-Roxboro ?",
-              a: "Presque toujours, dès qu'on touche à la structure, à l'enveloppe, à la plomberie ou à l'électricité. Le permis vient de l'arrondissement, au comptoir du 13665, boulevard de Pierrefonds. Nous montons et déposons le dossier.",
+              q: "Où obtient-on un permis de rénovation à Pierrefonds-Roxboro ?",
+              a: "Au comptoir des permis de l'arrondissement, 13665, boulevard de Pierrefonds. Les plans partent par courriel et la signature se prend sur rendez-vous. Nous montons le dossier et suivons son cheminement.",
             },
             {
-              q: "Mon sous-sol a été inondé. Pouvez-vous le refaire ?",
-              a: "Oui. Avant la finition, on valide le drain, le clapet antiretour, la pompe submersible et l'état de la dalle. En secteur riverain, on choisit des matériaux qui tolèrent l'humidité.",
+              q: "Mon sous-sol de Roxboro a été inondé, que vérifiez-vous ?",
+              a: "Le drain, le clapet antiretour, la pompe submersible et l'état de la dalle, avant toute isolation. Après les crues de 2017 et de 2019, on retient des matériaux qui tolèrent une remontée d'eau.",
             },
             {
-              q: "Combien coûte une rénovation ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe généralement entre 35 000 $ et 50 000 $. Estimation gratuite, prix ferme fixé au contrat après la visite.",
+              q: "Combien de temps dure un chantier de sous-sol ici ?",
+              a: "Quelques semaines pour une pièce simple, davantage quand le drainage doit être corrigé avant de refermer. Les dates de début et de livraison sont inscrites au contrat, pas promises à l'oral.",
             },
             {
-              q: "Êtes-vous licenciés et assurés ?",
-              a: "Licence RBQ 8306-0806-27, délivrée le 7 septembre 2004, valide sans restriction, catégories 1.2 et 1.3, aucune réclamation au dossier. Responsabilité civile et couverture chantier. Vérifiable au registre de la Régie du bâtiment.",
-            },
-            {
-              q: "Construisez-vous des maisons neuves ?",
-              a: "Non. Rénovation, transformation, agrandissement, reconstruction après sinistre et aménagement commercial. Nous ne construisons pas de maisons neuves, le plan de garantie GCR ne s'applique donc pas.",
+              q: "Combien coûte un sous-sol de bungalow à Pierrefonds ?",
+              a: "Un mandat démarre autour de 25 000 $, et une salle d'eau ajoutée au sous-sol fait monter la portée. Ce qu'on trouve sous la dalle décide du reste. Visite et estimation gratuites.",
             },
           ],
         },
@@ -284,9 +239,8 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à Pierrefonds-Roxboro ?",
-          intro:
-            "On se déplace, on regarde la maison, on revient avec une portée écrite et un prix.",
+          heading: "Rénover à Pierrefonds-Roxboro",
+          intro: "Votre maison est à dix minutes de notre bureau.",
           actions: [
             {
               label: "Demander une soumission",
@@ -299,7 +253,7 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · 18625, rue Larocque, Pierrefonds-Roxboro · RBQ 8306-0806-27",
+          note: "Dilamco · 18625, rue Larocque, Pierrefonds-Roxboro",
         },
       },
     },

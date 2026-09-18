@@ -38,61 +38,77 @@ export const zonePointeClairePageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Pointe-Claire",
-          heading:
-            "General contractor in Pointe-Claire, from the Village to postwar streets",
+          eyebrow: "General contractor in",
+          heading: "Pointe-Claire",
           description:
-            "A heritage house, a 1950s bungalow or a recent condo: the rules differ. RBQ licence 8306-0806-27, valid since 2004.",
+            "From the 1854 Village to the post-war streets, two neighbouring houses can fall under different rules.",
           actions: [
             {
-              label: "Request an estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See our work",
-              href: "/projets",
+              label: "See bathrooms",
+              href: "/services/renovation/salle-de-bain",
               variant: "ghost",
             },
           ],
-          badges: ["Since 2004", "SPAI files", "Insured"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Bathroom renovation in Pointe-Claire",
+            alt: "Renovated bathroom in a Pointe-Claire home",
           },
-          caption: "From the Village to boulevard Saint-Jean",
+          facts: [
+            { label: "Our base", value: "Pierrefonds-Roxboro, twenty minutes" },
+            { label: "Permits", value: "Planning counter, 451 boul. Saint-Jean" },
+            { label: "Housing stock", value: "Heritage homes and post-war bungalows" },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about Pointe-Claire homes",
-          description:
-            "A municipality in 1854, a city in 1911. Two houses eight streets apart can follow completely different job-site logic.",
-          cards: [
+          heading: "Three building eras on one territory",
+          intro:
+            "A municipality in 1854, a city in 1911, two railways in the nineteenth century, then a suburban wave after 1945.",
+          rows: [
             {
-              title: "Three building eras",
-              description:
-                "Village and Lakeshore: older homes, stone foundations, out-of-level floors. Cedar Park Heights and Northview: postwar bungalows.",
+              label: "Older sectors",
+              value: "The Village and the Lakeshore, stone foundations",
             },
             {
-              title: "SPAI, found out too late",
-              description:
-                "By-law PC-2787 covers older sectors and heritage buildings: qualitative review and a longer processing time.",
+              label: "Post-war sectors",
+              value: "Cedar Park Heights, Northview, Oneida, Valois",
             },
             {
-              title: "Urban planning counter",
-              description:
-                "City hall, 451 boulevard Saint-Jean. Zoning PC-2775, construction by-law and the Québec Construction Code.",
+              label: "SPAIP",
+              value: "By-law PC-2787, qualitative review of the project",
+            },
+            {
+              label: "Zoning",
+              value: "PC-2775, codified 10 December 2024",
+            },
+            {
+              label: "Common projects",
+              value: "Bathroom, kitchen, levelled floor, rear addition",
+            },
+            {
+              label: "Drive time",
+              value: "Twenty minutes along boulevard Saint-Jean",
             },
           ],
-          columns: "1",
+          image: {
+            src: "/images/generated/services/service-renovation-project-03.webp",
+            alt: "Interior renovation of an older home in Pointe-Claire Village",
+          },
+          note: "Sources: City of Pointe-Claire, Wikipedia. Verified 2026-09-18.",
         },
       },
     },
@@ -108,111 +124,54 @@ export const zonePointeClairePageEn: PageTemplateData = {
               title: "Bathroom",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Waterproofing redone before the tile, original plumbing replaced where needed.",
+                "Original Lakeshore plumbing replaced back to the supply line",
               image: {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
-                alt: "Renovated bathroom with tiled shower",
+                alt: "Bathroom rebuilt in a Lakeshore house",
               },
               badges: ["Waterproofing"],
-              footerCtaLabel: "See the service",
+              footerCtaLabel: "See bathrooms",
             },
             {
-              title: "Kitchen",
-              href: "/services/renovation/cuisine",
-              description:
-                "Structure checked before any opening, especially in pre-1950 houses.",
-              image: {
-                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
-                alt: "Kitchen renovated in a Pointe-Claire home",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "See the service",
-            },
-            {
-              title: "Heritage home",
+              title: "Older home",
               href: "/services/renovation",
               description:
-                "Levels, foundation and framing surveyed before anything is drawn.",
+                "Levels, stone foundation and framing surveyed before the first drawing",
               image: {
-                src: "/images/generated/services/service-renovation-project-03.webp",
-                alt: "Interior renovation of an older Pointe-Claire home",
+                src: "/images/generated/services/service-renovation-hero-01.webp",
+                alt: "Renovation job site in Pointe-Claire Village",
               },
               badges: ["Heritage"],
-              footerCtaLabel: "See the service",
-            },
-            {
-              title: "Home addition",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Addition, second storey or sunroom, within what zoning PC-2775 allows.",
-              image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Rear addition on a single-family home",
-              },
-              badges: ["Permit"],
               footerCtaLabel: "See the service",
             },
             {
               title: "Flooring",
               href: "/services/renovation/plancher",
               description:
-                "Subfloor, levels and transitions redone in older houses.",
+                "Subfloor and transitions rebuilt when the house is a century old",
               image: {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
-                alt: "Hardwood floor installed in a home",
+                alt: "Hardwood floor laid in a Pointe-Claire home",
               },
               badges: ["Hardwood"],
-              footerCtaLabel: "See the service",
+              footerCtaLabel: "See flooring",
             },
           ],
         },
       },
     },
     {
-      id: "preuves",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "The rules confirmed before the quote",
-          intro:
-            "In Pointe-Claire the risk is not the workmanship. It is starting without knowing which rules the project falls under.",
-          badges: ["Since 2004", "5.0 on Google", "Insured"],
-          cardTitle: "What you can verify",
-          items: [
-            "RBQ licence 8306-0806-27 since 7 September 2004",
-            "General contractor classes 1.2 and 1.3",
-            "No claims on the licence record",
-            "Liability insurance and site coverage",
-            "SPAI status checked during scoping",
-            "Custom cabinets in the same contract",
-          ],
-          actions: [
-            {
-              label: "See our services",
-              href: "/services/renovation",
-              variant: "primary",
-            },
-            {
-              label: "Request an estimate",
-              href: "/contact",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "secteurs",
+      id: "voisins",
       content: {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Neighbouring cities we serve",
-          columns: "3",
+          heading: "Pointe-Claire neighbours we serve",
+          columns: "2",
           items: [
             { title: "Dorval", href: "/zones/dorval" },
             { title: "Beaconsfield", href: "/zones/beaconsfield" },
+            { title: "Kirkland", href: "/zones/kirkland" },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
@@ -230,28 +189,20 @@ export const zonePointeClairePageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Where do I file a permit application in Pointe-Claire?",
-              a: "At the urban planning counter, on the first floor of city hall, 451 boulevard Saint-Jean. The department takes residential and commercial applications there. We prepare the file and submit it.",
+              q: "Is my Pointe-Claire address subject to SPAIP?",
+              a: "By-law PC-2787 covers heritage-interest buildings and older sectors such as the Village. We check your address at the planning counter before pricing anything.",
             },
             {
-              q: "What is SPAI and does it apply to me?",
-              a: "The Site Planning and Architectural Integration by-law (PC-2787) supplements zoning and covers heritage buildings and older sectors in particular. We check your address during scoping.",
+              q: "Does a SPAIP file stretch the schedule?",
+              a: "Yes. The city reviews the project against qualitative criteria, which takes longer than an ordinary application. That delay appears in the schedule at quote time, never mid-job.",
             },
             {
-              q: "Does an SPAI project take longer?",
-              a: "Yes. The city allows a longer processing time than an ordinary application, since the project goes through a qualitative review. We put that delay in the schedule from the start.",
+              q: "Do you renovate older homes in the Village?",
+              a: "We do. Floor levels, the stone foundation and systems added in layers get surveyed first. The budget carries a margin for whatever shows up once walls are open.",
             },
             {
-              q: "Do you renovate the older homes in the Village?",
-              a: "Yes. Foundation, floor levels, framing and systems added in layers are surveyed before anything is drawn. The budget carries a margin for what shows up on opening, and every scope change is written down.",
-            },
-            {
-              q: "Can a condo be renovated in Pointe-Claire?",
-              a: "Yes, notably in the Lakeside sector. Co-ownership constraints are framed early: permitted work hours, elevator access, protection of common areas, soundproofing and common elements that cannot be touched.",
-            },
-            {
-              q: "How much does a renovation cost in Pointe-Claire?",
-              a: "Our projects start around $25,000. A complete kitchen lands between $35,000 and $50,000. In an older home the real scope depends on what sits behind the finishes. Free estimate.",
+              q: "What does a bathroom cost in Pointe-Claire?",
+              a: "In a pre-1950 house, plumbing and subfloor weigh as much as the finishes. A mandate starts near $25,000 and the scope is set after the survey. Estimates are free.",
             },
           ],
         },
@@ -263,22 +214,21 @@ export const zonePointeClairePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A project in Pointe-Claire?",
-          intro:
-            "We come see the house, confirm which rules apply, and come back with a price.",
+          heading: "Your Pointe-Claire home",
+          intro: "We confirm which rules apply before pricing.",
           actions: [
             {
-              label: "Request an estimate",
+              label: "Request a quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See our service areas",
+              label: "See service areas",
               href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Dilamco · General contractor, RBQ licence 8306-0806-27 · West Island",
+          note: "Dilamco · Pointe-Claire SPAIP files prepared",
         },
       },
     },

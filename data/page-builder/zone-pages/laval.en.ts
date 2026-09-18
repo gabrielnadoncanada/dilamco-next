@@ -36,15 +36,14 @@ export const zoneLavalPageEn: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Laval",
-          heading: "General contractor in Laval, from permit to handover",
+          eyebrow: "General contractor in",
+          heading: "Laval",
           description:
-            "Chomedey bungalows, Vimont basements, rebuilds after flooding in Laval-Ouest. One person accountable for the site.",
+            "Chomedey and Laval-des-Rapides date from the 1960s. Here the sector tells you what sits behind the walls.",
           actions: [
             {
               label: "Request a quote",
@@ -57,42 +56,72 @@ export const zoneLavalPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Laval", "RBQ licence", "Since 2004"],
           image: {
             src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-            alt: "Renovated kitchen in a Laval home",
+            alt: "Renovated kitchen in a Chomedey bungalow",
           },
-          caption: "Chomedey, Sainte-Dorothée, Vimont, Sainte-Rose",
+          facts: [
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro · 25 min on Highway 13",
+            },
+            {
+              label: "Permits",
+              value: "Urban planning service, 1333 Chomedey Boulevard",
+            },
+            {
+              label: "Housing stock",
+              value: "1960s bungalows on concrete block foundations",
+            },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "housing",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about Laval homes",
-          description:
-            "The city was built in waves. The sector already tells us what sits behind the walls.",
-          cards: [
+          heading: "Laval reads sector by sector",
+          intro:
+            "Four building waves, flood elevations written into the zoning by-law and two separate permits depending on the work.",
+          rows: [
             {
-              title: "Chomedey, the 1960-1970 wave",
-              description:
-                "Bungalows on concrete block foundations, possible vermiculite in the attic.",
+              label: "Housing stock",
+              value: "1960-1970 wave in Chomedey, 1980-1990 in Duvernay-Vimont",
             },
             {
-              title: "Service de l'urbanisme",
-              description:
-                "Online application, progress tracked in Mon dossier, permit sent by email.",
+              label: "Permits",
+              value: "Two separate files, interior or exterior renovation",
             },
             {
-              title: "Mille Îles flood zones",
-              description:
-                "Flood elevations set in the zoning by-law; Laval-Ouest and Fabreville flooded in 2017.",
+              label: "Process",
+              value: "Filed online, tracked in Mon dossier, permit sent by email",
+            },
+            {
+              label: "Local risks",
+              value: "2017 floods in Laval-Ouest, Fabreville and Sainte-Dorothée",
+            },
+            {
+              label: "Flood zones",
+              value: "Flood elevations in the zoning, from a 2014 study",
+            },
+            {
+              label: "Common projects",
+              value: "Basements, opening a closed kitchen, water damage rebuilds",
+            },
+            {
+              label: "From our base",
+              value: "Louis-Bisson bridge, then Highway 440 or Saint-Martin",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
+            alt: "Basement finished as a games room in a Vimont home",
+          },
+          note: "Sources: City of Laval, CCI Laval 2017 flood review, Laval housing profile. Verified 2026-09-18.",
         },
       },
     },
@@ -102,16 +131,16 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in Laval",
+          heading: "What we build inside Laval homes",
           items: [
             {
               title: "Basement finishing",
               href: "/services/renovation/sous-sol",
               description:
-                "Family room, bedroom and bathroom, all built to Code.",
+                "Family room and bedroom under a Vimont bungalow, built to Code",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
-                alt: "Finished basement with a bar area",
+                alt: "Basement with a bar area in a Laval home",
               },
               badges: ["Basement"],
               footerCtaLabel: "See the service",
@@ -120,22 +149,22 @@ export const zoneLavalPageEn: PageTemplateData = {
               title: "Kitchen renovation",
               href: "/services/renovation/cuisine",
               description:
-                "Opening up a closed bungalow kitchen, custom cabinetry installed.",
+                "Taking down the wall of a closed 1960s bungalow kitchen",
               image: {
                 src: "/images/generated/spaces/space-cuisine-project-02.webp",
-                alt: "Open renovated kitchen in a suburban home",
+                alt: "Kitchen opened to the dining room of a Laval bungalow",
               },
               badges: ["Kitchen"],
-              footerCtaLabel: "See the service",
+              footerCtaLabel: "See kitchens",
             },
             {
-              title: "Post-damage renovation",
+              title: "Post-damage rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Selective demolition, rebuild and a documented file for your insurer.",
+                "Rebuilding Laval-Ouest basements after a river flood event",
               image: {
-                src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-                alt: "Materials staged for a basement rebuild",
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Interior rebuild after flooding in Laval-Ouest",
               },
               badges: ["Insurance"],
               footerCtaLabel: "See the service",
@@ -145,36 +174,33 @@ export const zoneLavalPageEn: PageTemplateData = {
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "What we check on site",
-          intro:
-            "The sector gives us a hypothesis; the visit confirms it before any number is written.",
-          badges: ["On-site visit", "Free estimate", "24-48 h reply"],
-          cardTitle: "Our on-site checklist",
+          heading: "Also nearby",
+          columns: "2",
           items: [
-            "Year of construction and sector",
-            "Electrical service and panel capacity",
-            "Block foundation and signs of movement",
-            "Possible vermiculite in the attic",
-            "Clear height, beams and columns downstairs",
-            "Drainage, sump pump and backwater valve",
-            "Flood elevation set in the zoning by-law",
-            "Permit required: interior, exterior or commercial",
-          ],
-          actions: [
             {
-              label: "Book a visit",
-              href: "/contact",
-              variant: "primary",
+              title: "L'Île-Bizard–Sainte-Geneviève",
+              href: "/zones/ile-bizard-sainte-genevieve",
+              ctaLabel: "See the area",
             },
             {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Saint-Laurent",
+              href: "/zones/saint-laurent",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
+              ctaLabel: "See the area",
             },
           ],
         },
@@ -186,31 +212,23 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions in Laval",
+          heading: "Laval questions we get",
           items: [
             {
-              q: "How do I get a renovation permit in Laval?",
-              a: "Online, through the Service de l'urbanisme. Progress is tracked in Mon dossier, and the issued permit is posted there and sent by email. An application that cannot be filed online is presented at 1333 boulevard Chomedey, by appointment.",
+              q: "Which permit does a Laval renovation need?",
+              a: "The City splits interior and exterior residential renovation into two permits. We identify the right one during scoping, file online and follow the case in Mon dossier until the permit arrives by email.",
             },
             {
-              q: "Which permit covers an interior renovation?",
-              a: "The City separates the interior residential renovation permit, its exterior counterpart and the commercial space permit. We identify the right one during scoping and assemble the file before work starts.",
+              q: "My Laval-Ouest home sits in a flood zone, is that a dead end?",
+              a: "Not necessarily. Laval flood plains are set by the flood elevations written into the zoning by-law, from a study approved by the provincial government in 2014. We check the elevation for your address before drawing.",
             },
             {
-              q: "My house sits in a flood zone. Does that block the project?",
-              a: "Not necessarily. Floodplain limits come from the flood elevations written into the zoning by-law, based on a study approved by the Quebec government in 2014. We confirm the elevation before anything is drawn.",
+              q: "What can be done with a flooded Fabreville basement?",
+              a: "We step in once it is dry, as after the 2017 floods: selective demolition, decontamination, then rebuilding. Drainage, sump pump and backflow valve get reviewed, and the lower walls take materials that survive a repeat.",
             },
             {
-              q: "What should I do with a flooded basement in Laval-Ouest or Fabreville?",
-              a: "We step in once drying is done: selective demolition, remediation, then rebuild. We revisit the drainage, sump pump and backwater valve, and pick lower-wall materials that can take a second water event.",
-            },
-            {
-              q: "What does a renovation cost in Laval?",
-              a: "Our mandates start around $25,000. A full kitchen lands between $35,000 and $50,000 and up. The firm price is set after the on-site survey, in the detailed written quote.",
-            },
-            {
-              q: "Are you licensed and insured?",
-              a: "Yes. RBQ licence 8306-0806-27, valid and unrestricted since 2004, categories 1.2 and 1.3. Civil liability, job-site coverage and licence bond in force, with no claims on file.",
+              q: "Should I worry about vermiculite in a Duvernay bungalow?",
+              a: "It is worth testing. Attics from the Laval 1980-1990 building wave sometimes contain it. A sample goes to the lab before we open the ceiling, and the result changes the site method, not the project.",
             },
           ],
         },
@@ -222,9 +240,8 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a renovation in Laval?",
-          intro:
-            "We come out, identify the permit and send a detailed written quote.",
+          heading: "A Laval renovation, from Chomedey to Sainte-Rose",
+          intro: "Tell us the sector and the work. We book the visit.",
           actions: [
             {
               label: "Request a quote",
@@ -237,7 +254,7 @@ export const zoneLavalPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Dilamco · general contractor in renovation since 2004 · (514) 820-0773",
         },
       },
     },

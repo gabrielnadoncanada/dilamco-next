@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "bento",
+  "title": "Grid Bento",
+  "description": "Grille bento de 4 à 7 tuiles mixtes (photo large/haute, chiffre, citation, texte) pour les pages portées par l'image.",
+  "propsModel": ["heading", "intro", "tiles"],
+  "kitchenSink": {
+    "group": "content",
+    "order": 330,
+    "viewport": "desktop"
+  }
+}

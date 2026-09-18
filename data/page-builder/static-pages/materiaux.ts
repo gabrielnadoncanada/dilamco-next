@@ -20,12 +20,12 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Division armoires",
+          badges: ["Contreplaqué", "MDF", "Quincaillerie"],
           heading: "Les matériaux qu'on met dans vos armoires",
           description:
-            "Panneaux, quincaillerie et finis sont spécifiés par nous, produits par notre usine partenaire, puis vérifiés à la réception avant la pose.",
+            "Panneaux, quincaillerie et finis sont spécifiés par nous, produits par notre usine partenaire, puis vérifiés à la réception.",
           actions: [
             {
               label: "Demander une soumission",
@@ -38,47 +38,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Contreplaqué", "MDF", "Quincaillerie"],
-          image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.webp",
-            alt: "Comparatif visuel de matériaux pour armoires sur mesure",
-          },
-          caption: "Spécifié ici, vérifié à la livraison",
-        },
-      },
-    },
-    {
-      id: "method",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "Comment on choisit",
-          description:
-            "Le panneau se décide pièce par pièce. Une porte de cuisine et un caisson sous lavabo ne subissent pas les mêmes contraintes.",
-          cards: [
-            {
-              title: "Humidité",
-              description:
-                "Salle de bain, sous-évier et salle de lavage exigent plus de protection.",
-            },
-            {
-              title: "Charge",
-              description:
-                "Tiroirs, tablettes et armoires hautes portent des poids différents.",
-            },
-            {
-              title: "Fini visé",
-              description:
-                "Peinture uniforme, décor thermofusionné ou grain de bois naturel.",
-            },
-            {
-              title: "Chants et pose",
-              description:
-                "Ce sont eux qui décident de la durée, pas seulement le panneau.",
-            },
-          ],
-          columns: "2",
         },
       },
     },
@@ -110,7 +69,7 @@ export const page: PageTemplateData = {
             {
               title: "Bois massif",
               href: "/materiaux/bois-massif",
-              description: "Façades et détails",
+              description: "Façades et moulures",
             },
             {
               title: "Quincaillerie",
@@ -125,37 +84,51 @@ export const page: PageTemplateData = {
             {
               title: "Comparatif",
               href: "/materiaux/comparatif",
-              description: "Les quatre panneaux côte à côte",
+              description: "Les quatre côte à côte",
             },
           ],
         },
       },
     },
     {
-      id: "faq",
+      id: "fiche",
       content: {
-        type: "faq",
-        variant: "accordion",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Questions fréquentes",
-          items: [
+          heading: "Ce qu'on spécifie par défaut",
+          intro: "Le standard de la division armoires, avant toute option.",
+          rows: [
             {
-              q: "Contreplaqué ou MDF ?",
-              a: "Contreplaqué pour les caissons et les tiroirs, parce qu'il tient les vis. MDF pour les portes peintes, parce que sa surface ne laisse remonter aucun fil.",
+              label: "Caissons",
+              value: "Contreplaqué de bouleau, 15 mm, chants scellés",
             },
             {
-              q: "La mélamine est-elle un bon choix ?",
-              a: "Oui à l'intérieur des caissons et sur les tablettes. Sa durée dépend des chants : bande épaisse bien collée, sinon l'eau finit par entrer.",
+              label: "Façades",
+              value: "MDF peint, mélamine ou bouleau massif selon la pièce",
             },
             {
-              q: "Quels matériaux éviter en salle de bain ?",
-              a: "Tout panneau dont les chants restent nus. La vapeur attaque les bords avant la surface. On scelle, on ventile, et on passe au contreplaqué sous le lavabo.",
+              label: "Quincaillerie",
+              value: "Charnières réglables et coulisses à extension complète",
             },
             {
-              q: "Pouvez-vous rénover la pièce au complet ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27. Permis, démolition, plomberie, électricité, plancher et pose des armoires sous un seul contrat écrit.",
+              label: "Finis",
+              value: "Peinture sur mesure ou décor thermofusionné",
+            },
+            {
+              label: "Provenance",
+              value: "Production confiée à notre usine partenaire exclusive",
+            },
+            {
+              label: "Réception",
+              value: "Chaque livraison comptée et inspectée avant la pose",
             },
           ],
+          image: {
+            src: "/images/generated/materials/material-plywood-card-01.webp",
+            alt: "Caisson de bouleau et façade peinte d'une armoire sur mesure",
+          },
+          note: "Toute substitution est écrite au devis, jamais décidée sur le chantier.",
         },
       },
     },
@@ -167,7 +140,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Un avis sur vos choix techniques ?",
           intro:
-            "On fixe la combinaison panneaux, quincaillerie et finis dans la soumission détaillée.",
+            "On fixe panneaux, quincaillerie et finis dans une soumission détaillée avant la commande.",
           actions: [
             {
               label: "Demander une soumission",

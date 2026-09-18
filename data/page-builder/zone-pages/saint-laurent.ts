@@ -55,16 +55,14 @@ export const zoneSaintLaurentPage: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Saint-Laurent",
-          heading:
-            "Entrepreneur général à Saint-Laurent, plex, bungalows et condos",
+          eyebrow: "Entrepreneur général à",
+          heading: "Saint-Laurent",
           description:
-            "Trois époques de bâtiments, trois séries de pièges. Permis d'arrondissement et coordination des métiers inclus au mandat.",
+            "Population triplée entre 1941 et 1951. Les plex de Norgate portent encore leur entrée électrique d'origine.",
           actions: [
             {
               label: "Demander une soumission",
@@ -72,47 +70,73 @@ export const zoneSaintLaurentPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir nos projets",
+              label: "Voir nos réalisations",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Plex", "Copropriété", "Depuis 2004"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Salle de bain rénovée dans un plex de Saint-Laurent",
+            alt: "Salle de bain refaite dans un plex de Saint-Laurent",
           },
-          caption: "Norgate, Côte-Vertu, Bois-Franc",
+          facts: [
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro · 20 min par l'autoroute 40",
+            },
+            {
+              label: "Permis",
+              value: "Division des permis, 777, boulevard Marcel-Laurin",
+            },
+            {
+              label: "Bâti",
+              value: "Plex d'après-guerre, copropriétés depuis 1990",
+            },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît des bâtiments de Saint-Laurent",
-          description:
-            "Population triplée entre 1941 et 1951, puis doublée la décennie suivante. Un parc d'après-guerre très daté, plus des quartiers planifiés depuis 1990.",
-          cards: [
+          heading: "Trois époques de bâtiments dans le même arrondissement",
+          intro:
+            "Norgate sort de terre en 1949, le Nouveau-Saint-Laurent au début des années 1990. L'époque dicte la méthode.",
+          rows: [
             {
-              title: "Plex de Norgate",
-              description:
-                "Développés de 1949 au début des années 1950 : colonnes communes, murs mitoyens, entrées électriques d'origine.",
+              label: "Bâti dominant",
+              value: "Plex de 1949 à 1955, bungalows, copropriétés de Bois-Franc",
             },
             {
-              title: "Division des permis et des inspections",
-              description:
-                "Au 777, boulevard Marcel-Laurin, ou en ligne avec un compte des services numériques de la Ville.",
+              label: "Permis",
+              value: "Compte des services numériques de la Ville, dépôt en ligne",
             },
             {
-              title: "Bois-Franc et copropriétés",
-              description:
-                "Quartiers planifiés depuis les années 1990 : accès, ascenseur, horaires et parties communes encadrés.",
+              label: "Copropriété",
+              value: "Le syndicat encadre accès, ascenseur, aires communes, horaires",
+            },
+            {
+              label: "Point de vigilance",
+              value: "Colonnes de plomberie communes et murs mitoyens des plex",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Salle de bain, cuisine, insonorisation entre logements",
+            },
+            {
+              label: "Depuis notre base",
+              value: "Autoroute 40 est, sortie Côte-Vertu ou Marcel-Laurin",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/espaces-card-bath-01.webp",
+            alt: "Salle de bain rénovée à l'étage d'un duplex laurentien",
+          },
+          note: "Sources : Ville de Montréal, banque 311, histoire de l'arrondissement. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -122,102 +146,76 @@ export const zoneSaintLaurentPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise à Saint-Laurent",
+          heading: "Nos trois chantiers types à Saint-Laurent",
           items: [
-            {
-              title: "Cuisine",
-              href: "/services/renovation/cuisine",
-              description:
-                "Caractère porteur et capacité électrique validés avant toute ouverture.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-project-01.webp",
-                alt: "Cuisine rénovée avec armoires sur mesure",
-              },
-              badges: ["Sur mesure"],
-              footerCtaLabel: "Voir la cuisine",
-            },
             {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Colonnes de plomberie communes repérées avant de déplacer un drain.",
+                "Colonne commune d'un plex de Norgate repérée avant de bouger un drain",
               image: {
-                src: "/images/generated/spaces/espaces-card-bath-01.webp",
-                alt: "Salle de bain rénovée dans un logement existant",
+                src: "/images/generated/spaces/space-bath-project-02.webp",
+                alt: "Salle de bain refaite dans un logement de Norgate",
               },
               badges: ["Plex"],
               footerCtaLabel: "Voir la salle de bain",
             },
             {
+              title: "Cuisine",
+              href: "/services/renovation/cuisine",
+              description:
+                "Ouvrir la cuisine fermée d'un bungalow de Côte-Vertu, structure validée",
+              image: {
+                src: "/images/generated/spaces/space-cuisine-project-01.webp",
+                alt: "Cuisine ouverte dans un bungalow du secteur Côte-Vertu",
+              },
+              badges: ["Structure"],
+              footerCtaLabel: "Voir la cuisine",
+            },
+            {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Hauteur libre, humidité, issue et séparation coupe-feu vérifiées avant le plan.",
+                "Hauteur libre et issue mesurées sous un duplex du Vieux-Saint-Laurent",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Sous-sol aménagé en pièce de vie",
+                alt: "Sous-sol transformé en pièce de vie sous un duplex",
               },
               badges: ["Conformité"],
               footerCtaLabel: "Voir le sous-sol",
-            },
-            {
-              title: "Plex et logement locatif",
-              href: "/services/renovation",
-              description:
-                "Insonorisation reprise pendant que les planchers sont ouverts, inoccupation limitée.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Chantier de rénovation dans un duplex de Saint-Laurent",
-              },
-              badges: ["Multilogement"],
-              footerCtaLabel: "Voir le service",
-            },
-            {
-              title: "Planchers",
-              href: "/services/renovation/plancher",
-              description:
-                "Support nivelé avant la pose, seuils et transitions alignés.",
-              image: {
-                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-                alt: "Pose de plancher dans une pièce rénovée",
-              },
-              badges: ["Préparation"],
-              footerCtaLabel: "Voir le plancher",
             },
           ],
         },
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "Ce qu'on vérifie avant de chiffrer",
-          intro:
-            "Sur un bâtiment d'après-guerre, la portée réelle se découvre sur place.",
-          badges: ["Visite sur place", "Estimation gratuite"],
-          cardTitle: "Liste de vérification en visite",
+          heading: "Villes voisines desservies",
+          columns: "2",
           items: [
-            "Année de construction et transformations subies",
-            "Capacité de l'entrée électrique et du panneau",
-            "Position des colonnes de plomberie communes",
-            "Murs porteurs et murs mitoyens",
-            "Insonorisation entre logements ou étages",
-            "Usage et nombre de logements au zonage",
-            "Contraintes du syndicat de copropriété",
-          ],
-          actions: [
             {
-              label: "Planifier une visite",
-              href: "/contact",
-              variant: "primary",
+              title: "Dorval",
+              href: "/zones/dorval",
+              ctaLabel: "Voir la zone",
             },
             {
-              label: "Voir notre processus",
-              href: "/processus",
-              variant: "ghost",
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
+              ctaLabel: "Voir la zone",
+            },
+            {
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "Voir la zone",
+            },
+            {
+              title: "Laval",
+              href: "/zones/laval",
+              ctaLabel: "Voir la zone",
             },
           ],
         },
@@ -229,31 +227,23 @@ export const zoneSaintLaurentPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes à Saint-Laurent",
           items: [
             {
-              q: "Où obtient-on un permis de rénovation à Saint-Laurent ?",
-              a: "Auprès de la Division des permis et des inspections de l'arrondissement, au 777, boulevard Marcel-Laurin, ou en ligne par les services numériques de la Ville, qui exigent la création d'un compte. Nous montons et déposons le dossier.",
+              q: "Comment dépose-t-on une demande de permis à Saint-Laurent ?",
+              a: "Par les services numériques de la Ville, qui exigent la création d'un compte, ou au comptoir de la Division des permis et des inspections, 777, boulevard Marcel-Laurin. Le dossier est monté et suivi par nous.",
             },
             {
-              q: "Faut-il un permis pour une rénovation intérieure ?",
-              a: "Oui dans la majorité des cas, dès que les travaux touchent la structure, la configuration des pièces, la plomberie ou l'électricité. L'entretien courant n'en exige généralement pas. Travailler sans permis peut mener à un arrêt de chantier.",
+              q: "Travaillez-vous sur les plex du quartier Norgate ?",
+              a: "Oui. Le quartier est bâti de 1949 au début des années 1950, autour des Galeries Norgate ouvertes le 5 décembre 1950. Entrée électrique, colonnes de plomberie et insonorisation entre logements sont vérifiées avant le plan.",
             },
             {
-              q: "Travaillez-vous sur les plex de Norgate ?",
-              a: "Oui. Ces bâtiments datent de 1949 au début des années 1950. Entrée électrique, colonnes de plomberie, caractère porteur des murs et insonorisation entre logements sont vérifiés avant de valider un plan.",
+              q: "Peut-on rénover une copropriété de Bois-Franc ?",
+              a: "Oui, avec une préparation de plus. Le syndicat encadre l'accès, l'usage de l'ascenseur, la protection des aires communes et les heures de travaux. Une intervention sur une partie commune demande une autorisation écrite.",
             },
             {
-              q: "Peut-on rénover un condo à Bois-Franc ?",
-              a: "Oui, avec une préparation supplémentaire. Le syndicat encadre l'accès, l'ascenseur, la protection des aires communes et les heures de travaux. Certaines interventions sur les parties communes exigent une autorisation écrite.",
-            },
-            {
-              q: "Puis-je ajouter un logement ou changer l'usage ?",
-              a: "Cela dépend du zonage applicable à votre adresse. Le nombre de logements, l'usage et certaines transformations extérieures sont encadrés par la réglementation d'urbanisme. C'est une vérification faite avant la soumission, jamais après la démolition.",
-            },
-            {
-              q: "Quel budget prévoir et êtes-vous assurés ?",
-              a: "Nos projets démarrent autour de 25 000 $, une cuisine complète entre 35 000 $ et 50 000 $ et plus. Licence RBQ 8306-0806-27, valide sans restriction depuis 2004, catégories 1.2 et 1.3, responsabilité civile et couverture de chantier en vigueur.",
+              q: "Puis-je ajouter un logement dans un duplex de Saint-Laurent ?",
+              a: "Cela dépend du zonage de votre adresse. Le nombre de logements, l'usage et certaines transformations visibles de la rue sont encadrés par la réglementation d'urbanisme. La vérification se fait avant la soumission, jamais après la démolition.",
             },
           ],
         },
@@ -265,9 +255,8 @@ export const zoneSaintLaurentPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à Saint-Laurent ?",
-          intro:
-            "On visite, on valide le zonage et le permis, puis on chiffre.",
+          heading: "Rénover votre plex ou votre condo à Saint-Laurent",
+          intro: "Adresse, étage, type de bâtiment. On visite et on chiffre.",
           actions: [
             {
               label: "Demander une soumission",
@@ -275,12 +264,12 @@ export const zoneSaintLaurentPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir les zones desservies",
-              href: "/zones",
+              label: "Voir nos services",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Entrepreneur général licencié · base au 18625, rue Larocque · (514) 820-0773",
         },
       },
     },

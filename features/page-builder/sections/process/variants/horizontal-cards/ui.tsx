@@ -7,8 +7,9 @@ import {
 import { cn } from "@/lib/utils";
 
 /**
- * Étapes numérotées en ligne : numéro en police d'affichage, titre de carte,
- * une ligne. Le numéro est légitime : le processus est une vraie séquence.
+ * Frise d'étapes. Desktop (lg+) : un rail horizontal continu avec des jalons
+ * numérotés, une colonne par étape. Sous lg : rail vertical à gauche, une
+ * étape par ligne (plus d'orphelin en grille 2 × N).
  */
 export function ProcessHorizontalStepsCards(
   props: ProcessHorizontalStepsCardsProps,
@@ -30,27 +31,35 @@ export function ProcessHorizontalStepsCards(
       <ol
         className={cn(
           sectionBodyClassName,
-          "grid gap-x-6 gap-y-8 border-t border-foreground/15 sm:grid-cols-2",
+          // Rail : vertical (gauche) sous lg, horizontal (haut) à partir de lg.
+          "relative grid gap-y-10 before:absolute before:bg-border before:content-[''] max-lg:before:bottom-6 max-lg:before:left-[19px] max-lg:before:top-6 max-lg:before:w-px lg:gap-x-6 lg:before:left-0 lg:before:right-0 lg:before:top-[19px] lg:before:h-px",
           cols,
         )}
       >
-        {props.steps.map((step, index) => (
-          <li key={`${step.number}-${step.title}`} className="relative pt-6">
-            <span
-              aria-hidden
-              className="absolute -top-px left-0 h-0.5 w-10 bg-primary"
-            />
-            <span className="text-numeral text-[length:var(--title-3)] text-primary">
-              {String(step.number || index + 1).padStart(2, "0")}
-            </span>
-            <Heading as="h3" variant="card" className="mt-4">
-              {step.title}
-            </Heading>
-            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-              {step.description}
-            </p>
-          </li>
-        ))}
+        {props.steps.map((step, index) => {
+          const n = String(step.number || index + 1).padStart(2, "0");
+          return (
+            <li
+              key={`${step.number}-${step.title}`}
+              className="relative grid grid-cols-[40px_1fr] content-start gap-x-4 lg:grid-cols-1 lg:gap-y-6"
+            >
+              <span
+                aria-hidden
+                className="text-numeral relative z-10 flex size-10 items-center justify-center rounded-full bg-primary text-sm text-primary-foreground ring-4 ring-background"
+              >
+                {n}
+              </span>
+              <div className="pt-1.5 lg:pt-0">
+                <Heading as="h3" variant="card">
+                  {step.title}
+                </Heading>
+                <p className="mt-1.5 max-w-[34ch] text-sm leading-relaxed text-muted-foreground">
+                  {step.description}
+                </p>
+              </div>
+            </li>
+          );
+        })}
       </ol>
     </div>
   );

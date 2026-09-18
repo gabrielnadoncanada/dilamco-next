@@ -35,9 +35,9 @@ export const renovationPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Entrepreneur général",
+          badges: ["Permis inclus", "Contrat écrit", "Assuré"],
           heading: "Un seul entrepreneur, du permis à la livraison",
           description:
             "Nous signons le contrat, déposons le permis, payons les corps de métier et répondons du résultat.",
@@ -53,47 +53,6 @@ export const renovationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Permis inclus", "Contrat écrit", "Assuré"],
-          image: {
-            src: "/images/generated/services/service-renovation-hero-01.webp",
-            alt: "Chantier de rénovation résidentielle clé en main",
-          },
-          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
-        },
-      },
-    },
-    {
-      id: "promesse",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "Ce qui passe de votre côté au nôtre",
-          description:
-            "Le mandat d'entrepreneur général n'est pas une formule commerciale, c'est une répartition de responsabilité.",
-          cards: [
-            {
-              title: "Le permis",
-              description:
-                "Vérification du besoin auprès de votre ville, dépôt du dossier et suivi jusqu'à la délivrance.",
-            },
-            {
-              title: "Les corps de métier",
-              description:
-                "Plomberie, électricité, ventilation, plâtre et finition travaillent sous notre contrat. C'est nous qui payons.",
-            },
-            {
-              title: "Le calendrier et les inspections",
-              description:
-                "Chaque métier a sa fenêtre, chaque inspection est planifiée avant la fermeture des murs.",
-            },
-            {
-              title: "La garantie",
-              description:
-                "Travaux garantis selon le contrat. Un ajustement plus tard ? Vous rappelez la même entreprise.",
-            },
-          ],
-          columns: "2",
         },
       },
     },
@@ -109,7 +68,7 @@ export const renovationPage: PageTemplateData = {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Démolition, plomberie, électricité, armoires et finition en une seule séquence.",
+                "Du drain au comptoir, armoires fournies et posées dans le même mandat.",
               image: {
                 src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
                 alt: "Rénovation de cuisine complète",
@@ -121,7 +80,7 @@ export const renovationPage: PageTemplateData = {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Membrane d'étanchéité, ventilation, plomberie, céramique et vanité.",
+                "Membrane continue, pente validée, ventilation sortie à l'extérieur.",
               image: {
                 src: "/images/generated/renovation/renovation-bath-hero-01.webp",
                 alt: "Rénovation de salle de bain complète",
@@ -133,7 +92,7 @@ export const renovationPage: PageTemplateData = {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Humidité, drainage, isolation, issue de secours et permis obligatoire.",
+                "L'eau et la hauteur libre se règlent avant la première division.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol fini par un entrepreneur général",
@@ -145,7 +104,7 @@ export const renovationPage: PageTemplateData = {
               title: "Plancher",
               href: "/services/renovation/plancher",
               description:
-                "Sous-plancher, planéité, niveaux et transitions entre les pièces.",
+                "Support remis d'aplomb, seuils et niveaux réglés au plan.",
               image: {
                 src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
                 alt: "Rénovation de plancher résidentiel",
@@ -157,9 +116,9 @@ export const renovationPage: PageTemplateData = {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Zonage, permis, fondations, structure, enveloppe et raccordements.",
+                "Zonage lu, plans scellés, semelles coulées sous le niveau de gel.",
               image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Agrandissement de maison en construction",
               },
               badges: ["Structure"],
@@ -169,9 +128,9 @@ export const renovationPage: PageTemplateData = {
               title: "Après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Reconstruction après dégât d'eau ou feu, documentée pour l'assureur.",
+                "Portée pièce par pièce et devis par poste pour votre réclamation.",
               image: {
-                src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
+                src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction après un dégât d'eau",
               },
               badges: ["Assurance"],
@@ -192,67 +151,73 @@ export const renovationPage: PageTemplateData = {
           steps: [
             {
               number: "1",
-              title: "Visite et évaluation",
+              title: "Appel et visite",
               description:
-                "Relevé des lieux, de l'état de l'existant et des contraintes. Sans frais.",
+                "Nous venons voir les lieux et relever les contraintes, sans frais.",
             },
             {
               number: "2",
               title: "Soumission détaillée",
               description:
-                "Portée, matériaux, exclusions et budget, sous 24 à 48 heures ouvrables.",
+                "Portée, matériaux, exclusions et budget remis en 24 à 48 heures.",
             },
             {
               number: "3",
               title: "Contrat et permis",
               description:
-                "Dates, paiements et conditions signés, puis demande déposée à la ville.",
+                "Dates et modalités de paiement signées, dossier déposé à la ville.",
             },
             {
               number: "4",
-              title: "Exécution coordonnée",
+              title: "Chantier coordonné",
               description:
-                "Démolition, mécanique, inspections, fermeture et finition, dans le bon ordre.",
+                "Les métiers se succèdent au calendrier, mur ouvert puis refermé.",
             },
             {
               number: "5",
-              title: "Livraison et garantie",
+              title: "Livraison",
               description:
-                "Inspection finale avec vous, déficiences corrigées avant le dernier paiement.",
+                "Visite de fin avec vous, retouches réglées avant le solde.",
             },
           ],
         },
       },
     },
     {
-      id: "faq",
+      id: "en-bref",
       content: {
-        type: "faq",
-        variant: "accordion",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Questions fréquentes",
-          items: [
+          heading: "En bref",
+          intro: "Les conditions d'un mandat clé en main.",
+          rows: [
             {
-              q: "Qu'est-ce qui est inclus dans « clé en main » ?",
-              a: "La gestion complète : permis, embauche et paiement des corps de métier, commande des matériaux, calendrier, inspections, protection et nettoyage des lieux, livraison et garantie. Les exclusions sont écrites noir sur blanc dans la soumission.",
+              label: "Contrat",
+              value: "Portée, prix, échéancier et paiements écrits, avenant chiffré",
             },
             {
-              q: "Combien coûte une rénovation ?",
-              a: "Nos mandats démarrent autour de 25 000 $. À titre indicatif, une salle de bain se situe souvent entre 15 000 $ et 35 000 $, une cuisine complète entre 35 000 $ et 50 000 $. Le prix ferme est fixé après le relevé.",
+              label: "Permis",
+              value: "Vérifié auprès de votre ville, déposé et suivi par nous",
             },
             {
-              q: "Ai-je besoin d'un permis ?",
-              a: "Généralement dès qu'on touche un mur porteur, qu'on déplace la plomberie, qu'on aménage un sous-sol ou qu'on ajoute de la surface habitable. Nous validons auprès de votre ville et déposons la demande à votre place.",
+              label: "Corps de métier",
+              value: "Engagés et payés par nous, une seule facturation",
             },
             {
-              q: "Combien de temps dure un chantier ?",
-              a: "Une salle de bain se compte en semaines, une cuisine ou un sous-sol en mois, un agrandissement davantage à cause du permis et de la fondation. Les armoires sur mesure demandent 9 à 15 semaines, planifiées en parallèle.",
+              label: "Assurances",
+              value: "Responsabilité civile et assurance chantier en vigueur",
             },
             {
-              q: "Les travaux sont-ils garantis ?",
-              a: "Oui, avec la portée et la durée inscrites au contrat. Licence RBQ 8306-0806-27 valide sans restriction depuis 2004, catégories 1.2 et 1.3. Nous ne construisons pas de maisons neuves, le plan GCR ne s'applique donc pas.",
+              label: "Délai de retour",
+              value: "24 à 48 heures ouvrables après votre demande",
+            },
+            {
+              label: "Territoire",
+              value: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud, Vaudreuil-Soulanges",
             },
           ],
+          note: "Licence RBQ 8306-0806-27, catégories 1.2 et 1.3, valide depuis 2004.",
         },
       },
     },
@@ -262,9 +227,9 @@ export const renovationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Décrivez-nous votre projet",
+          heading: "Décrivez-nous votre projet de rénovation",
           intro:
-            "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+            "Dites-nous la pièce, le budget envisagé et l'échéance. Nous fixons la visite.",
           actions: [
             {
               label: "Estimation gratuite",

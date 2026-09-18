@@ -7,6 +7,7 @@ import {
   NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import { AppLink as Link } from "@/components/AppLink";
+import { cn } from "@/lib/utils";
 import type { DesktopMenuItemProps } from "../navbar.types";
 import { NavLinkItem } from "./nav-link-item";
 import { DESKTOP_GROUP_WIDTH } from "../navbar.constants";
@@ -16,18 +17,40 @@ const TWO_COLUMN_THRESHOLD = 4;
 const groupColumns = (linksCount: number) =>
   linksCount > TWO_COLUMN_THRESHOLD ? 2 : 1;
 
-const triggerClass =
-  "h-10 rounded-full bg-transparent px-3.5 text-[0.9375rem] font-medium text-foreground/80 transition-ui focus-ring hover:bg-primary-soft hover:text-primary data-open:bg-primary-soft data-open:text-primary data-popup-open:bg-primary-soft";
+const strip = (p: string) => p.replace(/\/+$/, "");
 
-export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
+const triggerClass =
+  "relative h-10 rounded-full bg-transparent px-2.5 text-sm font-medium text-foreground/80 transition-ui focus-ring hover:bg-primary-soft hover:text-primary data-open:bg-primary-soft data-open:text-primary data-popup-open:bg-primary-soft xl:px-3.5 xl:text-[0.9375rem]";
+
+// Entrée active : soulignement court en vert sous le libellé, indépendant du
+// survol (qui reste la pilule pâle).
+const activeClass =
+  "text-foreground after:absolute after:inset-x-3 after:-bottom-[3px] after:h-0.5 after:rounded-full after:bg-primary";
+
+export function DesktopMenuItem({
+  item,
+  index,
+  currentPath = "",
+}: DesktopMenuItemProps & { currentPath?: string }) {
+  const here = strip(currentPath);
+
   if (item.groups) {
+    const isActive = item.groups.some((g) =>
+      g.links.some((l) => {
+        const u = strip(l.url);
+        return u !== "" && (here === u || here.startsWith(u + "/"));
+      }),
+    );
     const totalColumns = item.groups.reduce(
       (sum, group) => sum + groupColumns(group.links.length),
       0,
     );
     return (
       <NavigationMenuItem key={`desktop-menu-item-${index}`} value={`${index}`}>
-        <NavigationMenuTrigger className={triggerClass}>
+        <NavigationMenuTrigger
+          aria-current={isActive ? "true" : undefined}
+          className={cn(triggerClass, isActive && activeClass)}
+        >
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent className="!rounded-card !border-border/70 !p-0 !shadow-[0_24px_60px_-24px_rgb(21_25_26/35%)]">
@@ -53,7 +76,11 @@ export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
                     </li>
                     {group.links.map((link, index2) => (
                       <li key={`desktop-links-${index1}-${index2}`}>
-                        <NavLinkItem link={link} variant="desktop" />
+                        <NavLinkItem
+                          link={link}
+                          variant="desktop"
+                          active={here === strip(link.url)}
+                        />
                       </li>
                     ))}
                   </ul>
@@ -66,13 +93,23 @@ export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
     );
   }
 
+  const url = strip(item.url ?? "/");
+  const isActive =
+    url === "" ? here === "" : here === url || here.startsWith(url + "/");
+
   return (
     <NavigationMenuItem key={`desktop-menu-item-${index}`} value={`${index}`}>
       <NavigationMenuLink
         asChild
-        className={`inline-flex items-center justify-center transition-colors ${triggerClass}`}
+        className={cn(
+          "inline-flex items-center justify-center",
+          triggerClass,
+          isActive && activeClass,
+        )}
       >
-        <Link href={item.url ?? "/"}>{item.title}</Link>
+        <Link href={item.url ?? "/"} aria-current={isActive ? "page" : undefined}>
+          {item.title}
+        </Link>
       </NavigationMenuLink>
     </NavigationMenuItem>
   );

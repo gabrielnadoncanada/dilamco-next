@@ -61,3 +61,28 @@ Ne pas dépasser 8 blocs. Supprimer les blocs qui répètent une section précé
 - Les images existantes (`src` sous `/images/...`) ; on peut en retirer, pas en inventer.
 - Les commentaires de sources en tête des pages zones (lignes `//`).
 - Le `id` du hero (`hero`) et du CTA final (`cta`).
+
+## Recettes par type de page (refonte 2026-09, 2e passe)
+
+Chaque famille de pages a SA composition. Deux pages de familles différentes ne doivent pas se ressembler ; deux pages d'une même famille partagent la composition mais jamais le texte.
+
+| Famille | Composition (dans l'ordre) |
+|---|---|
+| **Zone** (`zone-pages`) | `hero.zone` (eyebrow « Entrepreneur général à », heading = nom de la ville seul, 3–4 `facts` : Notre base · Permis · Bâti · Premier retour) → `split.fact-sheet` (5–7 rangées locales : bâti, permis, règlement, particularité, projets fréquents, distance) → `grid.image-cards-slider` (3 services, descriptions ancrées dans la ville) → `grid.link-cards-compact` (3–4 villes voisines, sans description) → `faq.accordion` (4 questions, TOUTES locales : permis de cette ville, contraintes locales, délais, prix d'un projet typique ici) → `cta.band-split-actions` (heading nomme la ville) |
+| **Rénovation** (`renovation-pages`, `service-pages/renovation`) | `hero.split-image` avec `imageSide: "left"` → `grid.icon-cards-bullets` (3–4 : ce qui est inclus) → `process.horizontal-steps-cards` (4–5 étapes propres à ce service) → `grid.price-tiles` (2–3 tuiles, uniquement si l'ancien contenu donnait des fourchettes) → `split.list-actions-image-card` OU `grid.bento` (4 tuiles) → `faq.accordion` (4–5, spécifiques au service) → `cta` |
+| **Espace** (`space-pages`) | `hero.centered` (court) → `grid.bento` (5–6 tuiles : 3–4 photos de CET espace, 1 stat, 1 citation ou texte) → `split.fact-sheet` « En bref » (délai, matériaux, prix, garantie, pose) → `faq.accordion` (4) → `cta` |
+| **Matériau** (`material-pages`) | `hero.split-image` (image à droite) → `split.fact-sheet` (composition, résistance, entretien, usage, prix relatif) → `comparison.table-basic` si pertinent → `faq.accordion` (3–4) → `cta` |
+| **À propos** | `hero.split-image` `imageSide: "left"` → `grid.bento` (photos + stats 2004 / 5,0 / 40 000 $) → `grid.icon-cards-bullets` (licence, cautionnement, assurances, garantie) → `faq` (3–4) → `cta` |
+| **Processus** | `hero.centered` → `process.horizontal-steps-cards` (5) → `split.fact-sheet` « Ce que vous recevez » → `faq` (3–4) → `cta` |
+| **Projets** | `hero.centered` → `grid.image-cards-slider-lightbox` → `grid.bento` → `cta` |
+| **Hubs** (services, zones, espaces, matériaux) | `hero.centered` → grille de liens/cartes → un bloc de faits (`split.fact-sheet` ou `split.text-divider-cards`) → `cta` |
+| **Contact** | inchangé |
+
+### Anti-duplication (test `tests/duplicate-content.test.ts`)
+
+- Aucune phrase de 60 caractères ou plus ne peut apparaître dans deux fichiers de la même langue. Le test échoue sinon.
+- Les FAQ génériques (« Êtes-vous licenciés ? », « Vos travaux sont-ils garantis ? ») n'existent QUE sur l'accueil et à propos. Ailleurs, chaque question contient le nom de la ville, du service ou de l'espace, et la réponse cite un fait propre à la page.
+- Le bloc `split.badges-checklist-cta` « Ce qui est vérifiable » n'apparaît plus sur les pages zones (il vivait sur 11 pages).
+- Les descriptions du slider de services sur une page zone parlent de CETTE ville (type de maisons, règlement, secteur), pas du service en général.
+- Le `cta` final varie : heading avec le nom de la ville / du service, intro différente, note différente.
+- Les `facts` du `hero.zone` et les `rows` du `fact-sheet` ne se répètent pas entre eux.

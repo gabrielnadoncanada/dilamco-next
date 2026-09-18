@@ -42,9 +42,9 @@ export const renovationCuisinePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Rénovation de cuisine",
-          heading: "Une cuisine refaite au complet, sous un seul contrat",
+          heading: "Une cuisine remise à neuf, du drain au comptoir",
           description:
-            "Démolition, plomberie, électricité, ventilation, armoires et comptoir. Permis compris, échéancier écrit.",
+            "Démolition, plomberie, électricité, ventilation, armoires et comptoir menés par la même équipe.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -57,12 +57,13 @@ export const renovationCuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Permis inclus", "Métiers coordonnés", "Prix ferme"],
+          badges: ["Permis déposé", "Métiers coordonnés", "Prix ferme"],
           image: {
             src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
             alt: "Cuisine rénovée par un entrepreneur général à Montréal",
           },
-          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
+          imageSide: "left",
+          caption: "Cuisines livrées dans le Grand Montréal",
         },
       },
     },
@@ -72,48 +73,48 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que le mandat comprend",
-          intro: "La portée exacte est écrite dans la soumission.",
+          heading: "Quatre postes, un seul contrat",
+          intro: "Les exclusions sont listées dans la soumission.",
           columns: "2",
           items: [
             {
-              title: "Permis et démolition",
-              description: "Ce qui se règle avant l'arrivée des armoires",
-              icon: "fileCheck",
+              title: "Démolition et protection",
+              description: "Le chantier ouvert proprement",
+              icon: "hammer",
               bullets: [
-                "Permis vérifié et déposé à votre ville",
-                "Retrait des armoires, du comptoir et des revêtements",
-                "Gestion et évacuation des débris",
+                "Armoires, comptoir et revêtements retirés",
+                "Planchers et corridors protégés chaque jour",
+                "Conteneur et évacuation des débris",
               ],
             },
             {
-              title: "Plomberie, électricité, ventilation",
-              description: "Les travaux faits avant de fermer les murs",
+              title: "Plomberie et électricité",
+              description: "Repris avant de refermer les murs",
               icon: "wrench",
               bullets: [
                 "Évier, lave-vaisselle et réfrigérateur raccordés",
-                "Circuits, prises d'îlot, éclairage encastré",
-                "Hotte évacuée vers l'extérieur, inspection avant fermeture",
+                "Circuits d'îlot et prises de comptoir",
+                "Hotte évacuée dehors, puis inspection",
               ],
             },
             {
-              title: "Planchers, murs et plafonds",
-              description: "La base sur laquelle tout s'aligne",
+              title: "Armoires et comptoir",
+              description: "Fournis et posés dans le même mandat",
+              icon: "package2",
+              bullets: [
+                "Armoires venues de notre usine partenaire",
+                "Comptoir gabarié, découpé, posé",
+                "Portes et tiroirs ajustés à la livraison",
+              ],
+            },
+            {
+              title: "Surfaces et finition",
+              description: "Ce que l'oeil voit en entrant",
               icon: "layers",
               bullets: [
                 "Sous-plancher corrigé et mis à niveau",
-                "Plancher neuf ou raccord avec l'existant",
-                "Gypse, joints, peinture, dosseret et moulures",
-              ],
-            },
-            {
-              title: "Armoires, comptoir, finition",
-              description: "Fournis et posés par la même équipe",
-              icon: "package2",
-              bullets: [
-                "Armoires sur mesure fournies par notre usine partenaire",
-                "Comptoir gabarié, coupé et posé",
-                "Électroménagers raccordés, portes et tiroirs ajustés",
+                "Dosseret, gypse, joints et peinture",
+                "Moulures, éclairage et quincaillerie",
               ],
             },
           ],
@@ -126,92 +127,130 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Le chantier, étape par étape",
+          heading: "La séquence d'une cuisine",
           steps: [
             {
               number: "1",
-              title: "Visite et soumission",
+              title: "Relevé et soumission",
               description:
-                "Relevé des dimensions, panneau électrique, plomberie et structure vérifiés sur place.",
+                "Dimensions, panneau électrique, drain et structure vérifiés sur place.",
             },
             {
               number: "2",
-              title: "Contrat et plans",
+              title: "Démolition",
               description:
-                "Portée, prix, échéancier et plans d'implantation signés avant tout achat.",
+                "Retrait des armoires, du comptoir et des anciens revêtements.",
             },
             {
               number: "3",
-              title: "Permis et démolition",
+              title: "Mécanique",
               description:
-                "Demande déposée à votre ville, puis mise à nu de la pièce.",
+                "Drains, alimentation, circuits et sortie de hotte repris.",
             },
             {
               number: "4",
-              title: "Mécanique et inspection",
+              title: "Armoires et comptoir",
               description:
-                "Plomberie, électricité et ventilation inspectées avant la fermeture des murs.",
+                "Caissons posés, gabarit du comptoir, découpe de l'évier.",
             },
             {
               number: "5",
-              title: "Armoires et livraison",
+              title: "Finition",
               description:
-                "Pose, comptoir, raccordements, ajustements et inspection finale avec vous.",
+                "Dosseret, peinture, électroménagers branchés, portes ajustées.",
             },
           ],
         },
       },
     },
     {
-      id: "permis",
+      id: "prix",
       content: {
-        type: "split",
-        variant: "list-actions-image-card",
+        type: "grid",
+        variant: "price-tiles",
         props: {
-          heading: "Permis : quand en faut-il un ?",
-          intro:
-            "Les exigences changent d'une ville à l'autre. Nous validons votre cas et déposons la demande.",
-          items: [
+          heading: "Ce que coûte une cuisine",
+          tiles: [
             {
-              title: "Mur porteur modifié",
-              description: "Permis requis, avec plan d'ingénieur pour la poutre.",
+              title: "Rafraîchissement",
+              price: "à partir de 20 000 $",
+              hint: "caissons existants conservés",
+              includes: [
+                "Comptoir et dosseret remplacés",
+                "Peinture et quincaillerie neuves",
+                "Électroménagers rebranchés",
+              ],
             },
             {
-              title: "Plomberie déplacée",
-              description: "Permis et inspection avant la fermeture des murs.",
+              title: "Cuisine complète",
+              price: "35 000 $ à 50 000 $",
+              hint: "armoires et comptoir compris",
+              featured: true,
+              includes: [
+                "Démolition et gestion des débris",
+                "Plomberie et électricité reprises",
+                "Armoires et comptoir posés",
+                "Dosseret, peinture, moulures",
+              ],
             },
             {
-              title: "Nouvelle ouverture extérieure",
-              description: "Sortie de hotte ou fenêtre agrandie : permis requis.",
-            },
-            {
-              title: "Remplacement au même endroit",
-              description: "Habituellement sans permis. On valide avec la ville.",
-            },
-            {
-              title: "Condo",
-              description: "Autorisation du syndicat, horaires et accès confirmés avant.",
-            },
-          ],
-          actions: [
-            {
-              label: "Rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "Zones desservies",
-              href: "/zones",
-              variant: "ghost",
+              title: "Cuisine et aire ouverte",
+              price: "au-delà de 50 000 $",
+              hint: "mur porteur ou plancher inclus",
+              includes: [
+                "Poutre calculée par un ingénieur",
+                "Plancher raccordé aux pièces voisines",
+                "Éclairage et ventilation repensés",
+              ],
             },
           ],
-          image: {
-            src: "/images/generated/renovation/renovation-cuisine-approach-01.webp",
-            alt: "Planification et relevé d'une rénovation de cuisine",
+          note: "Prix indicatifs. Le montant ferme d'une cuisine est arrêté dans la soumission, après le relevé sur place.",
+          action: {
+            label: "Soumission gratuite",
+            href: "/contact",
+            variant: "primary",
           },
-          cardTitle: "Pourquoi on ne saute pas l'étape",
-          cardDescription:
-            "Des travaux sans permis peuvent entraîner un arrêt de chantier et compliquer une revente ou une réclamation d'assurance.",
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Des cuisines déjà livrées",
+          tiles: [
+            {
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Cuisine ouverte sur le salon avec îlot et colonnes",
+              },
+              caption: "Îlot et colonnes pleine hauteur",
+            },
+            {
+              kind: "stat",
+              value: "9 à 15 sem.",
+              label: "Production des armoires, planifiée en parallèle",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "Cuisine blanche avec îlot en quartz",
+              },
+              caption: "Îlot en quartz",
+            },
+            {
+              kind: "text",
+              title: "Voir d'autres cuisines",
+              description:
+                "Aménagements, rangements et finis photographiés chez nos clients.",
+              href: "/espaces/cuisine",
+            },
+          ],
         },
       },
     },
@@ -224,28 +263,24 @@ export const renovationCuisinePage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte une rénovation de cuisine ?",
-              a: "Un rafraîchissement démarre autour de 20 000 $. Une rénovation complète se situe généralement entre 35 000 $ et 50 000 $ et plus. Le prix ferme est fixé après le relevé sur place.",
-            },
-            {
-              q: "Ai-je besoin d'un permis ?",
-              a: "Oui dans la plupart des rénovations complètes : mur porteur modifié, plomberie déplacée ou nouvelle ouverture extérieure. Un remplacement au même endroit n'en demande habituellement pas. Nous vérifions et déposons la demande.",
-            },
-            {
-              q: "Combien de temps dure le chantier ?",
-              a: "Plusieurs semaines sur place, auxquelles s'ajoutent le délai de permis de votre ville et la production des armoires, de 9 à 15 semaines. Les deux se planifient en parallèle.",
+              q: "Combien de temps la cuisine reste-t-elle inutilisable ?",
+              a: "Quelques semaines sans évier ni électroménagers. Nous montons un coin temporaire et calons la livraison des armoires sur la fin de la mécanique, pour raccourcir la période creuse.",
             },
             {
               q: "Peut-on ouvrir le mur entre la cuisine et le salon ?",
-              a: "Souvent oui. S'il est porteur, un ingénieur calcule la poutre et les appuis, le plan part avec la demande de permis. Nous vous le disons dès la visite.",
+              a: "Souvent oui. S'il porte une charge, un ingénieur calcule la poutre et les appuis, et son plan accompagne la demande de permis. Nous le disons dès la visite.",
             },
             {
-              q: "Fournissez-vous les armoires et le comptoir ?",
-              a: "Oui. Les armoires sur mesure sont fournies par notre usine partenaire, sous la sous-catégorie 12 de notre licence RBQ, puis posées par nos équipes. Le comptoir est gabarié et installé dans le même mandat.",
+              q: "Faut-il un permis pour rénover une cuisine ?",
+              a: "Oui dès qu'un mur porteur change, que la plomberie se déplace ou qu'une sortie de hotte perce le mur extérieur. Un remplacement au même endroit n'en demande habituellement pas.",
             },
             {
-              q: "Les travaux sont-ils garantis ?",
-              a: "Oui, avec la portée et la durée inscrites au contrat. Licence RBQ 8306-0806-27 valide sans restriction depuis 2004, cautionnement de 40 000 $, aucune réclamation au dossier. Responsabilité civile et assurance chantier en vigueur.",
+              q: "D'où viennent les armoires et le comptoir ?",
+              a: "Les armoires sur mesure sortent de notre usine partenaire et nos équipes les posent. Le comptoir est gabarié une fois les caissons en place, puis découpé et installé.",
+            },
+            {
+              q: "Et si l'îlot change de position ?",
+              a: "Le drain, l'alimentation et les circuits doivent suivre. On ouvre le plancher ou on passe par le sous-sol, et ce travail est chiffré avant la démolition.",
             },
           ],
         },
@@ -257,9 +292,9 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Faites évaluer votre cuisine",
+          heading: "Faites chiffrer votre cuisine",
           intro:
-            "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+            "Visite sur place, relevé des mesures et soumission détaillée, sans frais.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -272,7 +307,7 @@ export const renovationCuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Permis, métiers et échéancier inclus",
+          note: "Licence RBQ 8306-0806-27 · Permis, mécanique, armoires et comptoir",
         },
       },
     },

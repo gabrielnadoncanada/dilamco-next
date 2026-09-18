@@ -27,12 +27,12 @@ export const sousSolPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Basement",
-          heading: "Custom basement finishing, from framing to built-ins",
+          badges: ["Turnkey"],
+          heading: "Custom basement finishing in Pierrefonds",
           description:
-            "Home theatre, bar, wine cellar or built-in storage, designed with the room and installed in the site sequence.",
+            "Home theatre, bar, cellar or library, drawn once moisture and headroom have been checked.",
           actions: [
             {
               label: "Get a quote",
@@ -40,133 +40,112 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See our work",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
-          badges: ["Custom-built", "Turnkey"],
-          image: {
-            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-            alt: "High-end custom basement finishing in Pierrefonds",
-          },
-          caption: "Pierrefonds · West Island · Greater Montréal",
-        },
-      },
-    },
-    {
-      id: "espaces",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "What we build downstairs",
-          items: [
-            {
-              title: "Home theatre room",
-              description: "Riser, panels, equipment storage and screen integration.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
-                alt: "Custom home theatre room in a basement",
-              },
-              badges: ["Home theatre"],
-            },
-            {
-              title: "Basement bar",
-              description: "Counter, bottle and glassware storage, appliances built in.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
-                alt: "Custom basement bar",
-              },
-              badges: ["Bar"],
-            },
-            {
-              title: "Wine cellar",
-              description: "Wood, glass or under-stair, designed for storage conditions.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
-                alt: "Custom wine cellar in a basement",
-              },
-              badges: ["Cellar"],
-            },
-            {
-              title: "Library and office",
-              description: "Storage wall and built-in desk for working from home.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
-                alt: "Custom wall library and built-in desk",
-              },
-              badges: ["Office"],
-            },
-            {
-              title: "Games room",
-              description: "Wall unit and storage for an orderly family room.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
-                alt: "Custom games room and wall unit in a basement",
-              },
-              badges: ["Wall unit"],
-            },
-            {
-              title: "Storage and mechanical",
-              href: "/espaces/walk-in",
-              description: "Closed storage and discreet access to mechanical spaces.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
-                alt: "Custom closed storage along a basement wall",
-              },
-              badges: ["Storage"],
-              footerCtaLabel: "See closets",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "What a basement demands",
-          intro: "Moisture, headroom and mechanical access are settled before the finishing, not after.",
-          items: [
-            {
-              title: "Moisture checked first",
-              description: "Drain, cracks and levels verified before insulating",
-            },
-            {
-              title: "Durable structure",
-              description: "Birch plywood where the load matters",
-            },
-            {
-              title: "Clean integration",
-              description: "Wiring and mechanical access concealed",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
               label: "Basement finishing",
               href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
+          ],
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "What we build below the main floor",
+          tiles: [
             {
-              label: "After water damage",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
+                alt: "Home theatre with a riser platform and acoustic panels",
+              },
+              caption: "Home theatre, built-in riser",
+            },
+            {
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
+                alt: "Glass wine cellar built under a basement staircase",
+              },
+              caption: "Glass cellar under the stairs",
+            },
+            {
+              kind: "stat",
+              value: "9–15 wks",
+              label: "Built-in millwork, ordered during framing",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
+                alt: "Basement bar with counter and bottle storage",
+              },
+              caption: "Bar and bottle storage",
+            },
+            {
+              kind: "text",
+              title: "After water damage",
+              description:
+                "Drying, rebuilding and a file put together for your insurer.",
               href: "/services/renovation/apres-sinistre",
-              variant: "ghost",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
+                alt: "Wall library and built-in desk in a basement",
+              },
+              caption: "Library and built-in desk",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "en-bref",
+      frame: { surface: "muted" },
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "The basement at a glance",
+          intro:
+            "A buried floor sets its own rules long before anyone picks a finish.",
+          rows: [
+            {
+              label: "Prerequisite",
+              value: "Drain, cracks and moisture level checked before insulating",
+            },
+            {
+              label: "Permit",
+              value: "Required as soon as a wall, bedroom or bathroom is added",
+            },
+            {
+              label: "Lead time",
+              value: "Nine to fifteen weeks for millwork, fitted after flooring",
+            },
+            {
+              label: "Materials",
+              value: "Birch plywood wherever shelves carry real weight",
+            },
+            {
+              label: "Installation",
+              value: "Mechanical access kept and hidden behind panels",
+            },
+            {
+              label: "Warranty",
+              value: "Québec Construction Code compliance, term in the contract",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-            alt: "Detail of custom built-in millwork for a finished basement",
+            alt: "Close-up of custom built-in millwork in a finished basement",
           },
-          cardTitle: "Why it matters",
-          cardDescription: "A poorly prepped basement warps and smells damp.",
         },
       },
     },
@@ -179,24 +158,20 @@ export const sousSolPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does finishing a basement cost?",
-              a: "The price varies with the area and the spaces you keep: a home theatre, a bar or a cellar do not involve the same millwork. The firm amount is set after the on-site survey, in the detailed quote.",
+              q: "How much headroom does a finished basement need?",
+              a: "We aim for at least two metres under the finished ceiling. Ducts and pipes get relocated or boxed in so the height is there where people walk and sit.",
             },
             {
-              q: "How long for the built-in millwork?",
-              a: "Nine to fifteen weeks from design sign-off to installation. The order is timed to the site schedule so it lands once the partitions and flooring are done.",
+              q: "How do you deal with moisture before finishing?",
+              a: "We survey the weeping tile, inspect cracks and measure moisture levels. Fixes come before insulation, otherwise the millwork warps within two years.",
             },
             {
-              q: "How do you handle moisture?",
-              a: "We check the drain, the cracks and the moisture levels before insulating. Finishes and materials are chosen for a basement environment, which limits warping.",
+              q: "Can a bedroom go in the basement?",
+              a: "Yes, if the window meets the required egress dimensions. Enlarging the opening means cutting the foundation, which is planned with the structure.",
             },
             {
-              q: "Do I need a permit to finish a basement?",
-              a: "Often yes, as soon as you add partitions, a bathroom or a bedroom. We check your city's requirements and file the application for you.",
-            },
-            {
-              q: "Can you handle the full finishing?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: permit, insulation, partitions, electrical, plumbing, flooring and millwork installation, coordinated by one party, in the written contract.",
+              q: "Does a wine cellar need a refrigerated room?",
+              a: "Not always. A cool, stable basement suits an everyday reserve. For a collection, we insulate the room and allow for a dedicated cooling unit.",
             },
           ],
         },
@@ -209,7 +184,8 @@ export const sousSolPageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your basement project",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro:
+            "Free estimate. Moisture and headroom get checked on the first visit.",
           actions: [
             {
               label: "Request a quote",

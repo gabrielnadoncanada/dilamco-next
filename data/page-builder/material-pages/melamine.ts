@@ -26,7 +26,7 @@ export const melaminePage: PageTemplateData = {
           eyebrow: "Matériaux",
           heading: "La mélamine arrive déjà finie, à coût maîtrisé",
           description:
-            "Un panneau recouvert d'un décor thermofusionné. Pas d'étape de peinture, une surface facile à nettoyer, et des chants qui décident de sa durée.",
+            "Un décor thermofusionné sur panneau. Aucune étape de peinture, une surface lavable, et des chants qui décident de sa durée.",
           actions: [
             {
               label: "Demander une soumission",
@@ -41,90 +41,50 @@ export const melaminePage: PageTemplateData = {
           ],
           badges: ["Décor", "Entretien", "Budget"],
           image: {
-            src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Finis décoratifs de type mélamine",
+            src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
+            alt: "Détail d'un panneau mélamine et de son chant",
           },
           caption: "Intérieurs de caissons et budgets cadrés",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "overview",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce que la mélamine apporte",
-          description:
-            "Le décor est fusionné au panneau en usine. Rien à peindre, rien à retoucher, et un prix nettement sous le bois.",
-          cards: [
+          heading: "La mélamine en fiche",
+          intro: "Un panneau jugé sur son chant plus que sur son décor.",
+          rows: [
             {
-              title: "Décors nombreux",
-              description:
-                "Unis, textures, imitations de bois, disponibles tout de suite.",
+              label: "Composition",
+              value: "Papier décor fusionné sous presse sur panneau de fibres",
             },
             {
-              title: "Entretien simple",
-              description:
-                "Un linge humide suffit, la surface résiste aux rayures légères.",
+              label: "Humidité",
+              value: "Surface étanche, panneau exposé par un chant ouvert",
             },
             {
-              title: "Coût contenu",
-              description:
-                "Le poste armoires baisse sans toucher à la structure.",
+              label: "Entretien",
+              value: "Linge humide, aucun produit abrasif",
             },
             {
-              title: "Les chants décident",
-              description:
-                "Un chant mince qui se décolle laisse entrer l'eau dans le panneau.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Où on l'utilise",
-          intro:
-            "Elle est pertinente à l'intérieur des caissons et sur les façades quand le budget cadre le projet.",
-          items: [
-            {
-              title: "Intérieurs et tablettes",
-              description: "Surface lavable, teinte stable dans le temps.",
+              label: "Usages recommandés",
+              value: "Intérieurs, tablettes, rangement secondaire",
             },
             {
-              title: "Chants épais",
-              description: "Bande PVC de 1 mm ou plus, collée serré.",
+              label: "Prix relatif",
+              value: "Le poste armoires le moins cher",
             },
             {
-              title: "Réparations difficiles",
-              description: "Un éclat ne se ponce pas, la pièce se remplace.",
+              label: "Chants",
+              value: "Bande PVC de 1 mm ou plus, collée sous presse",
             },
           ],
-          actions: [
-            {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Comparer avec le MDF",
-              href: "/materiaux/mdf",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-            alt: "Panneaux mélamine décoratifs",
-          },
-          cardTitle: "Approche recommandée",
-          cardDescription:
-            "Mélamine à l'intérieur, panneau plus stable là où l'eau et la charge arrivent.",
+          note: "Un éclat ne se ponce pas : la pièce touchée se remplace.",
         },
       },
     },
@@ -134,23 +94,23 @@ export const melaminePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la mélamine",
           items: [
             {
-              q: "La mélamine est-elle bas de gamme ?",
-              a: "Le mot couvre une catégorie très large. Ce qui change tout, c'est le substrat, l'épaisseur du décor et la qualité des chants, pas l'étiquette.",
+              q: "La mélamine jaunit-elle avec le temps ?",
+              a: "Les blancs actuels tiennent, même près d'une fenêtre. Ce sont les décors très brillants des anciennes séries qui viraient, pas les panneaux d'aujourd'hui.",
             },
             {
-              q: "La mélamine gonfle-t-elle ?",
-              a: "Le panneau sous le décor, oui, si l'eau entre par un chant décollé ou une perforation. Le décor lui-même ne craint ni l'eau ni les produits courants.",
+              q: "Peut-on percer sans écailler le décor ?",
+              a: "Oui, avec une mèche à pointe centrée et un ruban sur le trait. C'est une question d'outil, pas de panneau.",
             },
             {
-              q: "Mélamine ou MDF ?",
-              a: "Mélamine pour un décor déjà fini et un budget cadré. MDF pour une couleur peinte précise sur les portes. Les deux se combinent dans la même cuisine.",
+              q: "Mélamine ou stratifié sur une porte ?",
+              a: "Le stratifié est plus épais et encaisse mieux les chocs, à prix plus haut. La mélamine suffit dès que la porte n'est pas ouverte cinquante fois par jour.",
             },
             {
-              q: "Est-ce recommandé en salle de bain ?",
-              a: "Oui, avec des chants épais bien collés et un ventilateur qui fonctionne. C'est la vapeur en continu qui décolle les chants, pas les éclaboussures.",
+              q: "Convient-elle à une salle de lavage ?",
+              a: "Oui, c'est un de ses terrains les plus solides. Surfaces lavables, tablettes qui ne tachent pas, et un coût qui laisse le budget aux zones vues.",
             },
           ],
         },
@@ -162,9 +122,9 @@ export const melaminePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "La mélamine convient-elle à votre projet ?",
+          heading: "La mélamine tient-elle dans votre budget ?",
           intro:
-            "On regarde la pièce, l'usage et le budget, puis on vous dit oui ou non.",
+            "On sépare ce qui se voit de ce qui se range, puis on répartit le budget.",
           actions: [
             {
               label: "Demander une soumission",
@@ -172,8 +132,8 @@ export const melaminePage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir le comparatif",
-              href: "/materiaux/comparatif",
+              label: "Comparer avec le MDF",
+              href: "/materiaux/mdf",
               variant: "ghost",
             },
           ],

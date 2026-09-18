@@ -33,7 +33,7 @@ export const designPage: PageTemplateData = {
           eyebrow: "Division armoires",
           heading: "On arrête les plans avant d'ouvrir un mur",
           description:
-            "Relevé sur place, implantation, hauteurs, matériaux. Les décisions sont prises et validées avec vous avant la mise en production.",
+            "Relevé sur place, implantation, hauteurs, matériaux. Tout est décidé et signé avant la mise en production.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -52,90 +52,86 @@ export const designPage: PageTemplateData = {
             alt: "Plan de cuisine sur mesure et échantillons de matériaux",
           },
           caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "rôle",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Ce qu'on règle au design",
-          description:
-            "Un plan arrêté tôt coûte moins cher qu'un changement en cours de chantier. Quatre points se décident ici.",
-          cards: [
+          heading: "Quatre étapes de design",
+          steps: [
             {
-              title: "Implantation",
+              number: "1",
+              title: "Relevé",
               description:
-                "Circulation, zones de travail, dégagements devant chaque porte.",
+                "Mesures réelles des murs, ouvertures, colonnes et sorties existantes.",
             },
             {
-              title: "Rangement",
+              number: "2",
+              title: "Plan",
               description:
-                "Tiroirs plutôt que portes basses, hauteurs adaptées à vous.",
+                "Implantation, élévations, position de chaque module et de chaque prise.",
             },
             {
-              title: "Plomberie et électricité",
+              number: "3",
+              title: "Choix",
               description:
-                "Ce qui se déplace, ce qui reste, et ce que ça implique.",
+                "Panneaux, quincaillerie, couleurs et finis arrêtés sur échantillon.",
             },
             {
-              title: "Matériaux et finis",
+              number: "4",
+              title: "Validation",
               description:
-                "Panneaux, quincaillerie et couleurs fixés avant la commande.",
+                "Plans signés, soumission détaillée, échéancier inscrit au contrat.",
             },
           ],
-          columns: "2",
         },
       },
     },
     {
-      id: "includes",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce que vous recevez",
-          intro:
-            "Le design sert à exécuter, pas à rêver. Il devient la référence du contrat.",
-          items: [
+          heading: "En bref",
+          intro: "Ce que couvre l'étape de design, et ce qu'elle produit.",
+          rows: [
             {
-              title: "Relevé de l'existant",
-              description: "Mesures réelles, murs, ouvertures, contraintes.",
+              label: "Délai",
+              value: "Deux à quatre semaines du relevé aux plans signés",
             },
             {
-              title: "Plan d'implantation",
-              description: "Élévations et positions de chaque module.",
+              label: "Livrables",
+              value: "Plan d'implantation, élévations, liste de matériaux, devis",
             },
             {
-              title: "Liste de matériaux",
-              description: "Panneaux, quincaillerie, couleurs et finis retenus.",
+              label: "Qui fait quoi",
+              value: "Le designer mène, l'entrepreneur général valide la faisabilité",
             },
             {
-              title: "Soumission détaillée",
-              description: "Portée, exclusions, prix et échéancier écrits.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir la fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "Sur place",
+              value: "Une visite de relevé, une visite de présentation",
             },
             {
-              label: "Rénovation de cuisine",
-              href: "/services/renovation/cuisine",
-              variant: "ghost",
+              label: "Garantie",
+              value: "Les plans signés font foi pendant tout le chantier",
+            },
+            {
+              label: "Coût",
+              value: "Crédité au projet si les travaux nous sont confiés",
             },
           ],
           image: {
             src: "/images/services/design-hero.webp",
-            alt: "Design sur mesure en cours de planification",
+            alt: "Plans et élévations d'une cuisine en cours de conception",
           },
-          cardTitle: "Pourquoi c'est utile",
-          cardDescription:
-            "Plus les décisions sont prises tôt, moins le chantier réserve de surprises.",
+          note: "Prix et quantités sont révisés si les plans changent après signature.",
         },
       },
     },
@@ -145,23 +141,23 @@ export const designPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur l'étape de design",
           items: [
             {
-              q: "Le design est-il obligatoire ?",
-              a: "En sur mesure, oui. Sans plan arrêté, les dimensions, l'intégration des électroménagers et les contraintes techniques se découvrent pendant la pose, quand tout changement coûte cher.",
+              q: "Combien de temps prend le design ?",
+              a: "Comptez deux à quatre semaines selon la taille de la pièce et le nombre d'allers-retours. Une vanité seule se règle souvent en une rencontre.",
             },
             {
-              q: "Quand intervient le design ?",
-              a: "Au tout début, avant la commande. Les plans validés avec vous servent ensuite de référence stable pour la production, la pose et le contrat.",
+              q: "Dois-je avoir choisi mes électroménagers ?",
+              a: "Oui, au moins les modèles. Les dégagements, l'encastrement et les raccords se dessinent à partir de leurs fiches techniques, pas d'une estimation.",
             },
             {
-              q: "Est-ce que ça fonctionne en condo ?",
-              a: "Oui. Le design y est même plus utile : accès par ascenseur, dimensions des pièces, règlements du syndicat et emplacement des colonnes se règlent sur papier.",
+              q: "Le design couvre-t-il l'éclairage ?",
+              a: "Oui quand nous menons la rénovation complète. Circuits, encastrés et bandes sous armoires se placent sur le plan avant l'ouverture des murs.",
             },
             {
-              q: "Pouvez-vous rénover la pièce au complet ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27. Le design couvre alors l'implantation, la plomberie, l'électricité, le plancher et l'éclairage, pas seulement les armoires.",
+              q: "Peut-on modifier le plan après signature ?",
+              a: "Oui, tant que la production n'est pas lancée. Ensuite, tout changement passe par un avenant écrit, avec son coût et son effet sur l'échéancier.",
             },
           ],
         },
@@ -173,9 +169,9 @@ export const designPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Parlez-nous de votre projet",
+          heading: "Commencer par les plans",
           intro:
-            "Votre espace, votre secteur, votre échéance. On revient vers vous avec un cadre réaliste.",
+            "Décrivez la pièce et votre échéance, on revient avec une première lecture.",
           actions: [
             {
               label: "Demander une soumission",

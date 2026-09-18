@@ -35,7 +35,7 @@ export const contreplaquePage: PageTemplateData = {
           eyebrow: "Matériaux",
           heading: "Le contreplaqué tient la structure des armoires",
           description:
-            "Des plis de bois collés à fil croisé. Résultat : un panneau plus stable que la particule, qui garde les vis et les charnières.",
+            "Des plis croisés collés à chaud. Le panneau reste droit et retient les vis des charnières et des coulisses.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -51,89 +51,57 @@ export const contreplaquePage: PageTemplateData = {
           badges: ["Structure", "Stabilité", "Caissons"],
           image: {
             src: "/images/generated/materials/material-plywood-hero-01.webp",
-            alt: "Cuisine sur mesure avec structure durable",
+            alt: "Caisson d'armoire en contreplaqué de bouleau",
           },
           caption: "Caissons, tiroirs et pièces sous charge",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "benefits",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Pourquoi il sert de structure",
-          description:
-            "Le fil croisé d'un pli à l'autre bloque les mouvements du bois. C'est ce qui donne au panneau sa tenue mécanique.",
-          cards: [
+          heading: "Le contreplaqué en fiche",
+          intro: "Les chiffres qu'on demande au fournisseur avant de commander.",
+          rows: [
             {
-              title: "Plis croisés",
-              description:
-                "Le panneau bouge peu, même sur de grandes hauteurs.",
+              label: "Composition",
+              value: "Plis de bouleau collés à fil croisé, 13 à 15 mm",
             },
             {
-              title: "Tenue des vis",
-              description:
-                "Charnières et coulisses restent serrées après des milliers de cycles.",
+              label: "Humidité",
+              value: "Tolérant tant que les chants restent scellés",
             },
             {
-              title: "Charge supportée",
-              description:
-                "Tablettes et fonds de tiroirs fléchissent moins sous le poids.",
+              label: "Entretien",
+              value: "Aucun, il vit caché derrière le fini",
             },
             {
-              title: "Coût plus élevé",
-              description:
-                "L'écart se justifie sur les pièces sollicitées, pas sur tout.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Ce qu'il faut surveiller",
-          intro:
-            "Le contreplaqué n'est pas imperméable. Le grade, les chants et la pose décident du résultat.",
-          items: [
-            {
-              title: "Le grade change tout",
-              description: "Nombre de plis, vides internes, qualité de la colle.",
+              label: "Usages recommandés",
+              value: "Caissons, fonds de tiroir, tablettes chargées",
             },
             {
-              title: "Chants à fermer",
-              description: "Visibles ou exposés à l'eau, ils doivent être scellés.",
+              label: "Prix relatif",
+              value: "Au-dessus du MDF, sous le bois massif",
             },
             {
-              title: "Zones humides",
-              description: "Sous évier et salle de bain, on protège davantage.",
-            },
-          ],
-          actions: [
-            {
-              label: "Comparer les matériaux",
-              href: "/materiaux/comparatif",
-              variant: "ghost",
+              label: "Tenue des vis",
+              value: "Environ le double d'un panneau de particules",
             },
             {
-              label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
+              label: "Grade à viser",
+              value: "Sept plis minimum, sans vide interne visible",
             },
           ],
           image: {
             src: "/images/generated/materials/material-plywood-detail-01.webp",
-            alt: "Détail de cuisine sur mesure en contreplaqué",
+            alt: "Plis croisés visibles sur un chant de contreplaqué",
           },
-          cardTitle: "À retenir",
-          cardDescription:
-            "Excellent choix structurel, à condition de soigner le grade et les chants.",
+          note: "Le grade et la colle pèsent plus lourd que l'essence du placage.",
         },
       },
     },
@@ -143,23 +111,23 @@ export const contreplaquePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur le contreplaqué",
           items: [
             {
-              q: "Contreplaqué ou MDF ?",
-              a: "Les deux, à des endroits différents. Le contreplaqué pour les caissons et les tiroirs, parce qu'il tient les vis. Le MDF pour les portes peintes, parce que sa surface est plus lisse.",
+              q: "Faut-il du contreplaqué sous l'évier ?",
+              a: "Oui, c'est la zone où il paie le plus vite. Avec un chant scellé et un fond amovible, une fuite lente se répare sans démonter le caisson.",
             },
             {
-              q: "Est-ce plus cher ?",
-              a: "Oui, généralement plus cher que le MDF ou la particule. L'écart se rentabilise sur les pièces sollicitées chaque jour : caissons, tiroirs, tablettes chargées.",
+              q: "Combien de plis viser ?",
+              a: "Sept plis sur 13 mm pour un caisson d'armoire. Moins de plis veut dire des couches plus épaisses, donc plus de vides et de creux sous le placage.",
             },
             {
-              q: "Est-ce adapté à la salle de bain ?",
-              a: "Oui, avec des chants scellés, un fini qui protège la surface et une ventilation correcte. La vapeur attaque les panneaux par leurs bords avant tout.",
+              q: "Un chant apparent est-il acceptable ?",
+              a: "Oui, plusieurs clients le demandent sur les tablettes et les bouts d'îlot. Il faut alors un placage sans vide, poncé fin puis verni.",
             },
             {
-              q: "Est-ce visible une fois installé ?",
-              a: "Non, sauf choix de design volontaire. Les plis peuvent rester apparents sur un chant ou une tablette, comme parti pris esthétique.",
+              q: "Le contreplaqué est-il plus lourd ?",
+              a: "À épaisseur égale, il pèse moins que le MDF. Cela se sent à la pose des armoires hautes et sur les ancrages du mur.",
             },
           ],
         },
@@ -171,9 +139,9 @@ export const contreplaquePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous visez une structure qui dure ?",
+          heading: "Des caissons qui ne bougent pas ?",
           intro:
-            "On vous dit où le contreplaqué change vraiment quelque chose dans votre projet.",
+            "On inscrit le grade, l'épaisseur et le traitement des chants dans la soumission.",
           actions: [
             {
               label: "Demander une soumission",

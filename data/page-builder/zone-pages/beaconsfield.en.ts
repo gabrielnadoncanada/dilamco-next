@@ -39,16 +39,15 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Beaconsfield",
-          heading:
-            "General contractor in Beaconsfield, major renovations and additions",
+          eyebrow: "General contractor in",
+          heading: "Beaconsfield",
           description:
-            "Houses built between 1951 and 1963, taken on in full, on wooded lots where every tree is regulated.",
+            "Houses built from 1951 to 1963, on wooded lots where every tree falls under a by-law.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
@@ -58,42 +57,59 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Major renovation", "Additions", "Insured"],
           image: {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Interior renovation of a Beaconsfield home",
+            alt: "Renovated interior of a Beaconsfield home",
           },
-          caption: "Beaurepaire, Beacon Hill, Sherwood, Lakeshore",
+          facts: [
+            { label: "Our base", value: "Pierrefonds-Roxboro, twenty-five minutes" },
+            { label: "Permits", value: "Planning department, 514 428-4430" },
+            { label: "Housing stock", value: "Homes from 1951 to 1963, wooded lots" },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about Beaconsfield homes",
-          description:
-            "A city built in fifteen years, from 990 residents in 1951 to 16,800 in 1967. Wooded lots, a regulated canopy, houses sixty to seventy-five years old.",
-          cards: [
+          heading: "A town built in fifteen years",
+          intro:
+            "From 990 residents in 1951 to 16,800 in 1967, over 1,050 hectares of which 5% were ceded as green space.",
+          rows: [
             {
-              title: "Homes built 1951 to 1963",
-              description:
-                "Kensington Gardens 1951, Forest Garden 1954, Drummond Park 1955, Beacon Hill 1962, Sherwood 1963.",
+              label: "Dated neighbourhoods",
+              value: "Kensington Gardens 1951, Drummond Park 1955, Sherwood 1963",
             },
             {
-              title: "Beaconsfield planning and permits",
-              description:
-                "The city's urban planning and building inspection advisors confirm whether a project needs a permit.",
+              label: "Original village",
+              value: "Beaurepaire, settled from 1925, near the station",
             },
             {
-              title: "The canopy is regulated",
-              description:
-                "No tree cut without a permit, replacement required, siting driven by zoning by-law 720.",
+              label: "Zoning",
+              value: "By-law 720, consolidated 1 August 2025",
+            },
+            {
+              label: "Tree felling",
+              value: "Permit required, replacement mandatory, refundable deposit",
+            },
+            {
+              label: "Common projects",
+              value: "Whole-house redo, kitchen, bathroom, rear addition",
+            },
+            {
+              label: "Drive time",
+              value: "Twenty-five minutes along Highway 40",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
+            alt: "Kitchen rebuilt in a Beaconsfield home",
+          },
+          note: "Sources: City of Beaconsfield, Wikipedia. Verified 2026-09-18.",
         },
       },
     },
@@ -109,62 +125,54 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
               title: "Major renovation",
               href: "/services/renovation",
               description:
-                "The whole house taken on in one sequence, one written schedule.",
+                "A 1955 house taken back and rebuilt in a single sequence",
               image: {
                 src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Major renovation of a 1950s house",
+                alt: "Major renovation of a Beaconsfield house",
               },
               badges: ["Turnkey"],
               footerCtaLabel: "See the service",
             },
             {
-              title: "Kitchen",
-              href: "/services/renovation/cuisine",
+              title: "Addition",
+              href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Load-bearing wall analyzed and beam sized before demolition.",
+                "Siting drawn around the trees that by-law 720 protects",
               image: {
-                src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
-                alt: "Renovated kitchen in a West Island home",
+                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+                alt: "Planning an addition on a wooded Beaconsfield lot",
               },
-              badges: ["Structure"],
-              footerCtaLabel: "See kitchens",
+              badges: ["Tree permit"],
+              footerCtaLabel: "See additions",
             },
             {
               title: "Bathroom",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Full waterproofing membrane before tile, ventilation vented outside.",
+                "Exhaust vented outdoors, not into a Beacon Hill bungalow attic",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Renovated bathroom in a Beaconsfield home",
+                alt: "Bathroom renovated in a Beacon Hill home",
               },
               badges: ["Waterproofing"],
               footerCtaLabel: "See bathrooms",
             },
-            {
-              title: "Home addition",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Siting drawn around the trees to keep, under zoning by-law 720.",
-              image: {
-                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planning an addition in Beaconsfield",
-              },
-              badges: ["Permit"],
-              footerCtaLabel: "See additions",
-            },
-            {
-              title: "Basement",
-              href: "/services/renovation/sous-sol",
-              description:
-                "Moisture and drainage assessed before insulating and closing up.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Basement finished as a living space",
-              },
-              badges: ["Insulation"],
-              footerCtaLabel: "See basements",
-            },
+          ],
+        },
+      },
+    },
+    {
+      id: "voisins",
+      content: {
+        type: "grid",
+        variant: "link-cards-compact",
+        props: {
+          heading: "Towns we serve around Beaconsfield",
+          columns: "3",
+          items: [
+            { title: "Kirkland", href: "/zones/kirkland" },
+            { title: "Pointe-Claire", href: "/zones/pointe-claire" },
+            { title: "Dorval", href: "/zones/dorval" },
           ],
         },
       },
@@ -178,28 +186,20 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Do I need a permit to renovate in Beaconsfield?",
-              a: "In most cases, yes. The city's urban planning and building inspection advisors confirm whether one is required, as soon as structure, envelope or siting is involved. We prepare and file the application.",
+              q: "Can I fell a tree to build an addition in Beaconsfield?",
+              a: "Only with a permit. A tree standing less than three metres from the footprint of a planned structure may be felled, but only if the building cannot be sited elsewhere.",
             },
             {
-              q: "Can I cut a tree to make room for my addition?",
-              a: "Not without a permit. A tree within 3 m of the footprint of a proposed construction may be cut, but only if the building cannot be located elsewhere on the lot. No authorization is needed under 10 cm trunk diameter, measured 1.5 m above ground.",
+              q: "What does the Beaconsfield felling certificate cost?",
+              a: "A $500 deposit covers the first five trees, then $100 per additional tree. The city refunds it once replacement is completed under the conditions of the by-law.",
             },
             {
-              q: "What does the tree-cutting certificate cost?",
-              a: "A $500 deposit for the first five trees, plus $100 per additional tree. It is refunded once replacement is completed under the conditions of zoning by-law 720.",
+              q: "Does zoning by-law 720 limit my rear addition?",
+              a: "It sets siting, setbacks and heights, in the version consolidated on 1 August 2025. The planning advisers confirm what your zone allows before anything is drawn.",
             },
             {
-              q: "Should I renovate in stages?",
-              a: "Rarely, when several systems reach end of life together. Every small project pays again for mobilization, site protection and finishing. One sequence usually costs less overall. The work can still be split into contractual phases.",
-            },
-            {
-              q: "What does a renovation cost in Beaconsfield?",
-              a: "Our projects start around $25,000. A full kitchen lands between $35,000 and $50,000 and up. A major renovation or an addition sits above that range. Estimates are free.",
-            },
-            {
-              q: "Are you licensed and insured?",
-              a: "RBQ licence 8306-0806-27, valid with no restrictions since 2004, classes 1.2 and 1.3, no claims on file. Liability and site insurance in force. We do not build new homes, so the GCR plan does not apply.",
+              q: "Is it better to renovate in stages in Beaconsfield?",
+              a: "Rarely. In neighbourhoods built between 1951 and 1963, roof, windows, plumbing and wiring reach end of life together. One sequence avoids paying twice for setup and site protection.",
             },
           ],
         },
@@ -211,9 +211,8 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a Beaconsfield project?",
-          intro:
-            "We survey the house and the lot, then price it. Free estimate.",
+          heading: "Your Beaconsfield home",
+          intro: "Lot, trees and building surveyed before pricing.",
           actions: [
             {
               label: "Request a quote",
@@ -221,12 +220,12 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See all service areas",
+              label: "See service areas",
               href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · West Island",
+          note: "Dilamco · permits and tree filings handled in Beaconsfield",
         },
       },
     },

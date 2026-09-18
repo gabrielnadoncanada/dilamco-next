@@ -107,7 +107,7 @@ export function HeroContent({
       {actions?.length ? (
         <div
           className={cn(
-            "mt-8 flex flex-col gap-3 sm:flex-row",
+            "mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap",
             isCentered && "items-center justify-center",
             !isCentered && "sm:items-center",
           )}

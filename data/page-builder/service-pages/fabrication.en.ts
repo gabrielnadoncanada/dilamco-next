@@ -34,111 +34,107 @@ export const fabricationPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Cabinetry division",
-          heading: "Our plans, our partner factory, our quality control",
+          heading: "Our drawings, our partner factory, our quality control",
           description:
-            "Production is entrusted to our exclusive partner factory. The drawings, the specifications and the check on delivery stay with us.",
+            "Production goes to our exclusive partner factory. Specifications, order follow-up and receiving checks stay with us.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Custom", "Quality control", "One contract"],
+          badges: ["Custom-built", "Quality control", "One contract"],
           image: {
             src: "/images/generated/services/service-fabrication-hero-01.webp",
-            alt: "Technical drawings and material samples for custom fabrication",
+            alt: "Technical drawings and material samples for a custom order",
           },
-          caption: "Checked on delivery, before installation",
+          caption: "Checked on delivery, before install",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "meaning",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "What custom actually means",
-          description:
-            "Every box is sized from the survey of your room, not picked out of a grid of standard widths.",
-          cards: [
+          heading: "From order to job site",
+          steps: [
             {
-              title: "Real dimensions",
+              number: "1",
+              title: "Order",
               description:
-                "Corners, heights and awkward spaces used in full.",
+                "Panels, finishes and hardware ordered against the signed drawings.",
             },
             {
-              title: "Specified materials",
-              description:
-                "Panel and hardware chosen part by part, based on use.",
-            },
-            {
-              title: "Controlled alignments",
-              description:
-                "Gaps and proportions settled between units before production.",
-            },
-            {
-              title: "One party accountable",
-              description:
-                "Plans, sourcing, receiving and installation all sit with Dilamco.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "process",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "From sign-off to delivery",
-          intro:
-            "Four steps between the signed drawings and the boxes landing on site.",
-          items: [
-            {
-              title: "Sign-off",
-              description: "Design, measurements and constraints settled with you.",
-            },
-            {
-              title: "Sourcing",
-              description: "Panels, finishes and hardware ordered to specification.",
-            },
-            {
+              number: "2",
               title: "Production",
-              description: "Boxes, doors and drawers produced by our partner factory.",
+              description:
+                "Boxes, doors and drawers produced by our partner factory.",
             },
             {
-              title: "Receiving",
-              description: "Quality control on delivery, before anything reaches the site.",
+              number: "3",
+              title: "Inspection",
+              description:
+                "Counts, dimensions and finishes checked as soon as it lands.",
+            },
+            {
+              number: "4",
+              title: "Delivery",
+              description:
+                "Modules wrapped and dropped on site in install sequence.",
             },
           ],
-          actions: [
+        },
+      },
+    },
+    {
+      id: "fiche",
+      frame: { surface: "muted" },
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "In short",
+          intro: "Who produces, who checks, and on what timeline.",
+          rows: [
             {
-              label: "View materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Timeline",
+              value: "9 to 15 weeks from signed drawings to install",
             },
             {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
+              label: "Deliverables",
+              value: "Boxes, doors, drawers, shelves and hardware assembled",
+            },
+            {
+              label: "Who does what",
+              value: "The partner factory produces, Dilamco specifies and checks",
+            },
+            {
+              label: "Inspection",
+              value: "Every module opened and measured before it enters the site",
+            },
+            {
+              label: "Warranty",
+              value: "Non-conforming parts reordered at our cost",
+            },
+            {
+              label: "Storage",
+              value: "Held at our place if the job site runs late",
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-            alt: "Custom kitchen with precise fabrication",
+            src: "/images/services/fabrication-hero.webp",
+            alt: "Wrapped cabinet modules waiting for delivery",
           },
-          cardTitle: "Our role",
-          cardDescription:
-            "We specify, we verify, we install. You deal with one party throughout.",
+          note: "Production lead times are confirmed in writing when the order goes out.",
         },
       },
     },
@@ -148,23 +144,23 @@ export const fabricationPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about production",
           items: [
             {
               q: "Who actually produces your cabinets?",
-              a: "Our exclusive partner factory, to our drawings and specifications. Dilamco keeps the design, the material choices, quality control on delivery, the installation and the after-sales service.",
+              a: "Our exclusive partner factory, to our drawings and specifications. Dilamco keeps the design, the receiving inspection, the install and the after-sales service.",
             },
             {
-              q: "What are the lead times?",
-              a: "Generally 9 to 15 weeks between design sign-off and installation. The firm schedule is confirmed once the drawings are settled and written into the contract.",
+              q: "What if a part arrives damaged?",
+              a: "It is refused on receiving and reordered the same day. That is exactly why the check happens before modules enter the job site.",
+            },
+            {
+              q: "Can a module be added along the way?",
+              a: "Before production starts, yes, at no restart cost. After that, the addition ships separately and carries its own lead time.",
             },
             {
               q: "Custom or semi-custom?",
-              a: "Custom starts from your real measurements, box by box. Semi-custom adapts predefined units in a few widths. The gap shows up in corners and heights.",
-            },
-            {
-              q: "Can you renovate the whole room?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27. Permit, demolition, plumbing, electrical, flooring and cabinet installation under one written contract.",
+              a: "Custom starts from your measurements, box by box. Semi-custom adapts preset widths. The gap shows up in corners and heights.",
             },
           ],
         },
@@ -176,9 +172,9 @@ export const fabricationPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want a project built to last?",
+          heading: "Put your cabinets into production",
           intro:
-            "We frame the materials, the hardware and the schedule before anything goes into production.",
+            "We frame materials, hardware and schedule before the order is sent out.",
           actions: [
             {
               label: "Request a quote",
@@ -186,12 +182,12 @@ export const fabricationPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View materials",
+              label: "See the materials",
               href: "/materiaux",
               variant: "ghost",
             },
           ],
-          note: "West Island, Montréal, Laval, South Shore",
+          note: "West Island, Montreal, Laval, South Shore",
         },
       },
     },

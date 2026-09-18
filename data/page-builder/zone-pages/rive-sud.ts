@@ -86,15 +86,14 @@ export const zoneRiveSudPage: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Rive-Sud",
-          heading: "Entrepreneur général sur la Rive-Sud de Montréal",
+          eyebrow: "Entrepreneur général sur la",
+          heading: "Rive-Sud",
           description:
-            "Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, Châteauguay. Mandats d'envergure : rénovation complète, agrandissement, après-sinistre.",
+            "Huit villes, huit réglementations, un pont à traverser. On y prend les mandats d'envergure, pas les chantiers de deux jours.",
           actions: [
             {
               label: "Demander une soumission",
@@ -107,42 +106,72 @@ export const zoneRiveSudPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Licence RBQ", "Depuis 2004", "Déplacement au contrat"],
           image: {
-            src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-            alt: "Agrandissement résidentiel réalisé par un entrepreneur général sur la Rive-Sud de Montréal",
+            src: "/images/generated/services/service-renovation-project-02.webp",
+            alt: "Rénovation intérieure complète menée sur la Rive-Sud de Montréal",
           },
-          caption: "Déplacement chiffré dans la soumission",
+          facts: [
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro · 45 à 60 min",
+            },
+            {
+              label: "Permis",
+              value: "Varie par ville ; Longueuil et Brossard en ligne",
+            },
+            {
+              label: "Bâti",
+              value: "Bungalows d'après-guerre, secteurs planifiés des années 1960",
+            },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît des maisons de la Rive-Sud",
-          description:
-            "Quatre parcs immobiliers collés les uns aux autres, huit villes, huit réglementations. Une soumission sérieuse commence par savoir laquelle s'applique.",
-          cards: [
+          heading: "Huit villes, huit règlements d'urbanisme",
+          intro:
+            "Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, Châteauguay. Savoir lequel s'applique change la soumission.",
+          rows: [
             {
-              title: "Bungalows d'après-guerre",
-              description:
-                "Vieux-Longueuil, Greenfield Park, Saint-Hubert : dalles, solives et entrées électriques d'origine.",
+              label: "Bâti dominant",
+              value: "Bungalows du Vieux-Longueuil, secteurs alphabétiques de Brossard",
             },
             {
-              title: "Permis, ville par ville",
-              description:
-                "Longueuil : Direction de l'aménagement et de l'urbanisme, portail Permis en ligne.",
+              label: "Permis",
+              value: "Longueuil par Permis en ligne, Brossard par la Direction de l'urbanisme",
             },
             {
-              title: "Patrimoine et zones inondables",
-              description:
-                "PIIA à Saint-Lambert, site patrimonial du Vieux-Boucherville, digues de Châteauguay.",
+              label: "Patrimoine",
+              value: "PIIA à Saint-Lambert, site patrimonial du Vieux-Boucherville",
+            },
+            {
+              label: "Risques locaux",
+              value: "Digues de Châteauguay non reconnues, jusqu'à 1 100 résidences visées",
+            },
+            {
+              label: "Croissance",
+              value: "Candiac, 2 406 permis résidentiels délivrés entre 2000 et 2010",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Rénovation complète, agrandissement, reprise après dégât d'eau",
+            },
+            {
+              label: "Depuis notre base",
+              value: "Autoroute 30, pont Samuel-De Champlain ou pont-tunnel La Fontaine",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+            alt: "Agrandissement livré dans une municipalité de la Rive-Sud",
+          },
+          note: "Sources : villes de Longueuil, Brossard, Saint-Lambert et Candiac, Le Soleil de Châteauguay. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -152,28 +181,28 @@ export const zoneRiveSudPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise sur la Rive-Sud",
+          heading: "Les mandats qu'on prend au sud du fleuve",
           items: [
             {
               title: "Agrandissement de maison",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Rallonge, ajout d'étage ou conversion de garage, permis municipal inclus.",
+                "Rallonge ou ajout d'étage sur un bungalow du Vieux-Longueuil",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planification d'un agrandissement résidentiel sur la Rive-Sud de Montréal",
+                alt: "Plan d'agrandissement pour un bungalow du Vieux-Longueuil",
               },
               badges: ["Permis"],
               footerCtaLabel: "Voir le service",
             },
             {
-              title: "Rénovation intérieure complète",
+              title: "Rénovation complète",
               href: "/services/renovation",
               description:
-                "Reprendre la maison d'un bout à l'autre plutôt que pièce par pièce.",
+                "Reprendre une maison de secteur brossardois d'un bout à l'autre",
               image: {
-                src: "/images/generated/services/service-renovation-project-02.webp",
-                alt: "Rénovation intérieure complète coordonnée par un entrepreneur général",
+                src: "/images/generated/services/service-renovation-project-03.webp",
+                alt: "Rénovation complète d'une maison d'un secteur de Brossard",
               },
               badges: ["Clé en main"],
               footerCtaLabel: "Voir le service",
@@ -182,10 +211,10 @@ export const zoneRiveSudPage: PageTemplateData = {
               title: "Rénovation après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Dégât d'eau, refoulement ou incendie : reconstruction conforme et documentée.",
+                "Refoulement ou dégât d'eau à Châteauguay, reconstruction documentée",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-                alt: "Matériaux préparés pour une reconstruction de sous-sol",
+                alt: "Matériaux prêts pour une reconstruction de sous-sol à Châteauguay",
               },
               badges: ["Assurances"],
               footerCtaLabel: "Voir le service",
@@ -195,38 +224,33 @@ export const zoneRiveSudPage: PageTemplateData = {
       },
     },
     {
-      id: "acces",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "Parlons franchement de la distance",
-          intro:
-            "Notre base est à Pierrefonds-Roxboro. Le déplacement est chiffré dans la soumission, jamais ajouté en cours de chantier.",
-          badges: [
-            "Mandats d'envergure",
-            "Déplacement au contrat",
-            "Estimation gratuite",
-          ],
-          cardTitle: "Comment on couvre la Rive-Sud",
+          heading: "Ailleurs sur notre territoire",
+          columns: "2",
           items: [
-            "Châteauguay, La Prairie, Candiac : par l'autoroute 30",
-            "Brossard et Longueuil : pont Samuel-De Champlain",
-            "Boucherville et Saint-Bruno : pont-tunnel La Fontaine",
-            "Déplacement inclus, ligne visible à la soumission",
-            "Mandats d'envergure, pas les chantiers de deux jours",
-            "Journée complète sur place, pas des allers-retours",
-          ],
-          actions: [
             {
-              label: "Décrire votre projet",
-              href: "/contact",
-              variant: "primary",
+              title: "Vaudreuil-Dorion",
+              href: "/zones/vaudreuil-dorion",
+              ctaLabel: "Voir la zone",
             },
             {
-              label: "Voir nos services de rénovation",
-              href: "/services/renovation",
-              variant: "ghost",
+              title: "Dorval",
+              href: "/zones/dorval",
+              ctaLabel: "Voir la zone",
+            },
+            {
+              title: "Saint-Laurent",
+              href: "/zones/saint-laurent",
+              ctaLabel: "Voir la zone",
+            },
+            {
+              title: "Laval",
+              href: "/zones/laval",
+              ctaLabel: "Voir la zone",
             },
           ],
         },
@@ -241,28 +265,20 @@ export const zoneRiveSudPage: PageTemplateData = {
           heading: "Questions fréquentes sur la Rive-Sud",
           items: [
             {
-              q: "Travaillez-vous vraiment sur la Rive-Sud ?",
-              a: "Oui, pour les mandats d'envergure : rénovation complète, agrandissement, transformation, reconstruction après sinistre. Le déplacement est chiffré dans la soumission. Pour un chantier d'une ou deux journées, un entrepreneur de votre municipalité sera mieux placé, et on vous le dira.",
-            },
-            {
               q: "Quelles villes de la Rive-Sud couvrez-vous ?",
               a: "Longueuil et ses arrondissements du Vieux-Longueuil, de Saint-Hubert et de Greenfield Park, puis Brossard, Saint-Lambert, Boucherville, Saint-Bruno-de-Montarville, Candiac, La Prairie et Châteauguay. Ailleurs, la réponse dépend de la portée du projet.",
             },
             {
-              q: "Qui s'occupe du permis à Longueuil ou à Brossard ?",
-              a: "Nous. À Longueuil, le dossier passe par la Direction de l'aménagement et de l'urbanisme et le portail Permis en ligne, qui sert au dépôt, au paiement et au suivi. À Brossard, par la Direction de l'urbanisme. On gère les allers-retours avec l'analyste.",
+              q: "Qui monte le dossier de permis à Longueuil ou à Brossard ?",
+              a: "Nous. À Longueuil, le dossier passe par la Direction de l'aménagement et de l'urbanisme et le portail Permis en ligne, ouvert au dépôt, au paiement et au suivi. À Brossard, par la Direction de l'urbanisme et son portail de demandes.",
             },
             {
-              q: "Rénover à Saint-Lambert, est-ce plus compliqué ?",
-              a: "Plus long, surtout. Toute modification extérieure visible de la rue est assujettie au règlement sur les plans d'implantation et d'intégration architecturale : la demande passe par le comité consultatif d'urbanisme avant le permis. L'intérieur se modernise librement.",
+              q: "Rénover à Saint-Lambert prend-il plus de temps ?",
+              a: "Plus long, surtout. Toute modification extérieure visible de la rue est assujettie au règlement sur les plans d'implantation et d'intégration architecturale, examiné par le comité consultatif d'urbanisme avant le permis. L'intérieur se modernise sans ce détour.",
             },
             {
-              q: "Combien coûte une rénovation sur la Rive-Sud ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $ et plus. Un agrandissement se chiffre après vérification du zonage et des marges. Estimation gratuite, budget fixé au contrat.",
-            },
-            {
-              q: "Construisez-vous des maisons neuves ?",
-              a: "Non. Nos catégories RBQ 1.2 et 1.3 couvrent la rénovation, la transformation, l'agrandissement, la reconstruction après sinistre et l'aménagement commercial. Nous ne construisons pas de maisons neuves et n'offrons pas de plan de garantie pour bâtiment résidentiel neuf.",
+              q: "Que change la zone inondable de Châteauguay pour un sous-sol ?",
+              a: "Beaucoup. De 700 à 1 100 résidences sont potentiellement visées, et les digues des boulevards Salaberry Nord et D'Youville ne sont pas reconnues comme ouvrages de protection. Le bas de mur et le drainage se conçoivent en conséquence.",
             },
           ],
         },
@@ -274,9 +290,8 @@ export const zoneRiveSudPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet d'envergure sur la Rive-Sud ?",
-          intro:
-            "Décrivez les travaux et l'adresse. On valide, on visite, on chiffre par écrit.",
+          heading: "Un mandat d'envergure sur la Rive-Sud",
+          intro: "Adresse, portée des travaux, échéance. On répond franchement.",
           actions: [
             {
               label: "Demander une soumission",
@@ -289,7 +304,7 @@ export const zoneRiveSudPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · RBQ 8306-0806-27 · Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, La Prairie, Châteauguay",
+          note: "Déplacement chiffré dans la soumission, jamais ajouté en cours de chantier.",
         },
       },
     },

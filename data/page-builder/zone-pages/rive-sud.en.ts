@@ -36,15 +36,14 @@ export const zoneRiveSudPageEn: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "South Shore",
-          heading: "General contractor on Montreal's South Shore",
+          eyebrow: "General contractor on the",
+          heading: "South Shore",
           description:
-            "Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, Châteauguay. Substantial mandates: full renovations, additions, disaster rebuilds.",
+            "Eight cities, eight sets of rules, one bridge to cross. We take the substantial mandates here, not two-day jobs.",
           actions: [
             {
               label: "Request a quote",
@@ -57,42 +56,72 @@ export const zoneRiveSudPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["RBQ licence", "Since 2004", "Travel in contract"],
           image: {
-            src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-            alt: "Residential addition built by a general contractor on Montreal's South Shore",
+            src: "/images/generated/services/service-renovation-project-02.webp",
+            alt: "Full interior renovation carried out on Montreal's South Shore",
           },
-          caption: "Travel priced in the written quote",
+          facts: [
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro · 45 to 60 min",
+            },
+            {
+              label: "Permits",
+              value: "Varies by city; Longueuil and Brossard online",
+            },
+            {
+              label: "Housing stock",
+              value: "Post-war bungalows, planned 1960s sectors",
+            },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about South Shore homes",
-          description:
-            "Four housing stocks side by side, eight cities, eight sets of by-laws. A serious quote starts by knowing which one applies.",
-          cards: [
+          heading: "Eight cities, eight planning by-laws",
+          intro:
+            "Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, Châteauguay. Knowing which one applies changes the quote.",
+          rows: [
             {
-              title: "Post-war bungalows",
-              description:
-                "Vieux-Longueuil, Greenfield Park, Saint-Hubert: original slabs, joists and electrical services.",
+              label: "Housing stock",
+              value: "Old Longueuil bungalows, Brossard's alphabet sectors",
             },
             {
-              title: "Permits, city by city",
-              description:
-                "Longueuil: Direction de l'aménagement et de l'urbanisme, Permis en ligne portal.",
+              label: "Permits",
+              value: "Longueuil via Permis en ligne, Brossard via its planning department",
             },
             {
-              title: "Heritage and flood zones",
-              description:
-                "Architectural review in Saint-Lambert, Vieux-Boucherville heritage site, Châteauguay dikes.",
+              label: "Heritage",
+              value: "Saint-Lambert PIIA review, Old Boucherville heritage site",
+            },
+            {
+              label: "Local risks",
+              value: "Châteauguay dykes unrecognized, up to 1,100 homes concerned",
+            },
+            {
+              label: "Growth",
+              value: "Candiac issued 2,406 residential permits between 2000 and 2010",
+            },
+            {
+              label: "Common projects",
+              value: "Full renovations, additions, water damage rebuilds",
+            },
+            {
+              label: "From our base",
+              value: "Highway 30, Samuel-De Champlain bridge or La Fontaine tunnel",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+            alt: "Completed addition in a South Shore municipality",
+          },
+          note: "Sources: cities of Longueuil, Brossard, Saint-Lambert and Candiac, Le Soleil de Châteauguay. Verified 2026-09-18.",
         },
       },
     },
@@ -102,40 +131,40 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build on the South Shore",
+          heading: "The mandates we take south of the river",
           items: [
             {
               title: "Home addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Rear extension, added storey or garage conversion, municipal permit included.",
+                "Rear extension or added storey on an Old Longueuil bungalow",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planning a residential addition on Montreal's South Shore",
+                alt: "Addition plan for an Old Longueuil bungalow",
               },
-              badges: ["Permit"],
+              badges: ["Permits"],
               footerCtaLabel: "See the service",
             },
             {
-              title: "Full interior renovation",
+              title: "Full renovation",
               href: "/services/renovation",
               description:
-                "Taking the house end to end rather than one room at a time.",
+                "Taking a Brossard sector home from end to end in one go",
               image: {
-                src: "/images/generated/services/service-renovation-project-02.webp",
-                alt: "Full interior renovation coordinated by a general contractor",
+                src: "/images/generated/services/service-renovation-project-03.webp",
+                alt: "Full renovation of a house in a Brossard sector",
               },
               badges: ["Turnkey"],
               footerCtaLabel: "See the service",
             },
             {
-              title: "Post-damage renovation",
+              title: "Post-damage rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Water damage, sewer backup or fire: a compliant, documented rebuild.",
+                "Sewer backup or water damage in Châteauguay, documented rebuild",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-                alt: "Materials staged for a basement rebuild",
+                alt: "Materials ready for a basement rebuild in Châteauguay",
               },
               badges: ["Insurance"],
               footerCtaLabel: "See the service",
@@ -145,38 +174,33 @@ export const zoneRiveSudPageEn: PageTemplateData = {
       },
     },
     {
-      id: "acces",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "Let us be plain about the distance",
-          intro:
-            "Our base is in Pierrefonds-Roxboro. Travel is priced in the quote, never added partway through the project.",
-          badges: [
-            "Substantial mandates",
-            "Travel in contract",
-            "Free estimate",
-          ],
-          cardTitle: "How we cover the South Shore",
+          heading: "Elsewhere across our territory",
+          columns: "2",
           items: [
-            "Châteauguay, La Prairie, Candiac: via Highway 30",
-            "Brossard and Longueuil: Samuel-De Champlain bridge",
-            "Boucherville and Saint-Bruno: Louis-Hippolyte-La Fontaine tunnel",
-            "Travel included as a visible quote line",
-            "Substantial mandates, not two-day jobs",
-            "A full day on site, not back-and-forth trips",
-          ],
-          actions: [
             {
-              label: "Describe your project",
-              href: "/contact",
-              variant: "primary",
+              title: "Vaudreuil-Dorion",
+              href: "/zones/vaudreuil-dorion",
+              ctaLabel: "See the area",
             },
             {
-              label: "See our renovation services",
-              href: "/services/renovation",
-              variant: "ghost",
+              title: "Dorval",
+              href: "/zones/dorval",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Saint-Laurent",
+              href: "/zones/saint-laurent",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Laval",
+              href: "/zones/laval",
+              ctaLabel: "See the area",
             },
           ],
         },
@@ -188,31 +212,23 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions on the South Shore",
+          heading: "South Shore questions we get",
           items: [
             {
-              q: "Do you really work on the South Shore?",
-              a: "Yes, for substantial mandates: full renovations, additions, conversions and post-disaster rebuilds. Travel is priced in the quote. For a one or two day job, a contractor from your own municipality will serve you better, and we will say so.",
-            },
-            {
               q: "Which South Shore cities do you cover?",
-              a: "Longueuil and its Vieux-Longueuil, Saint-Hubert and Greenfield Park boroughs, plus Brossard, Saint-Lambert, Boucherville, Saint-Bruno-de-Montarville, Candiac, La Prairie and Châteauguay. Elsewhere, the answer depends on the scope of the project.",
+              a: "Longueuil and its Vieux-Longueuil, Saint-Hubert and Greenfield Park boroughs, then Brossard, Saint-Lambert, Boucherville, Saint-Bruno-de-Montarville, Candiac, La Prairie and Châteauguay. Beyond that, the answer depends on the scope.",
             },
             {
-              q: "Who handles the permit in Longueuil or Brossard?",
-              a: "We do. In Longueuil the file goes through the Direction de l'aménagement et de l'urbanisme and the Permis en ligne portal, used for filing, payment and tracking. In Brossard, through the Direction de l'urbanisme. We handle the exchanges with the analyst.",
+              q: "Who prepares the permit file in Longueuil or Brossard?",
+              a: "We do. In Longueuil the file goes through the planning department and the Permis en ligne portal, open for filing, payment and tracking. In Brossard it goes through its planning department and online request portal.",
             },
             {
-              q: "Is renovating in Saint-Lambert more complicated?",
-              a: "Longer, mostly. Any exterior change visible from the street falls under the site planning and architectural integration by-law: the application goes to the planning advisory committee before the permit. The interior can be modernized freely.",
+              q: "Does renovating in Saint-Lambert take longer?",
+              a: "Longer, mainly. Any exterior change visible from the street falls under the site planning and architectural integration by-law, reviewed by the planning advisory committee before the permit. Interior work skips that detour.",
             },
             {
-              q: "What does a renovation cost on the South Shore?",
-              a: "Our mandates start around $25,000. A full kitchen lands between $35,000 and $50,000 and up. An addition is priced after zoning and setbacks are verified. The estimate is free and the budget is set in the contract.",
-            },
-            {
-              q: "Do you build new houses?",
-              a: "No. Our RBQ categories 1.2 and 1.3 cover renovation, conversion, additions, post-disaster rebuilds and commercial fit-outs. We do not build new houses and we do not offer a new home warranty plan.",
+              q: "What does the Châteauguay flood zone change for a basement?",
+              a: "A great deal. Between 700 and 1,100 homes are potentially concerned, and the dykes along Salaberry Nord and D'Youville boulevards are not recognized as protection works. Lower walls and drainage are designed accordingly.",
             },
           ],
         },
@@ -224,9 +240,8 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A substantial South Shore project?",
-          intro:
-            "Describe the work and the address. We confirm, we visit, we price it in writing.",
+          heading: "A substantial mandate on the South Shore",
+          intro: "Address, scope, timeline. We answer you straight.",
           actions: [
             {
               label: "Request a quote",
@@ -239,7 +254,7 @@ export const zoneRiveSudPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · RBQ 8306-0806-27 · Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, La Prairie, Châteauguay",
+          note: "Travel is priced into the quote, never added mid-project.",
         },
       },
     },

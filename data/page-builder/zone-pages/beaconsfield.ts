@@ -60,16 +60,15 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Beaconsfield",
-          heading:
-            "Entrepreneur général à Beaconsfield, rénovation majeure et agrandissement",
+          eyebrow: "Entrepreneur général à",
+          heading: "Beaconsfield",
           description:
-            "Des maisons bâties de 1951 à 1963, à reprendre au complet, sur des terrains où chaque arbre est réglementé.",
+            "Des maisons de 1951 à 1963 sur des terrains boisés où chaque arbre relève d'un règlement.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Soumission gratuite",
               href: "/contact",
               variant: "primary",
             },
@@ -79,42 +78,59 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Rénovation majeure", "Agrandissement", "Assuré"],
           image: {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Rénovation intérieure d'une maison de Beaconsfield",
+            alt: "Intérieur rénové d'une maison de Beaconsfield",
           },
-          caption: "Beaurepaire, Beacon Hill, Sherwood, Lakeshore",
+          facts: [
+            { label: "Notre base", value: "Pierrefonds-Roxboro, vingt-cinq minutes" },
+            { label: "Permis", value: "Service de l'urbanisme, 514 428-4430" },
+            { label: "Bâti", value: "Maisons de 1951 à 1963, terrains boisés" },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît des maisons de Beaconsfield",
-          description:
-            "Ville bâtie en quinze ans, de 990 résidents en 1951 à 16 800 en 1967. Terrains boisés, canopée réglementée, maisons de soixante à soixante-quinze ans.",
-          cards: [
+          heading: "Une ville bâtie en quinze ans",
+          intro:
+            "De 990 résidents en 1951 à 16 800 en 1967, sur 1 050 hectares dont 5 % ont été cédés en espaces verts.",
+          rows: [
             {
-              title: "Des maisons de 1951 à 1963",
-              description:
-                "Kensington Gardens 1951, Forest Garden 1954, Drummond Park 1955, Beacon Hill 1962, Sherwood 1963.",
+              label: "Quartiers datés",
+              value: "Kensington Gardens 1951, Drummond Park 1955, Sherwood 1963",
             },
             {
-              title: "Urbanisme et permis de Beaconsfield",
-              description:
-                "Les conseillers en urbanisme et inspection des bâtiments valident si le projet exige un permis.",
+              label: "Village d'origine",
+              value: "Beaurepaire, habité dès 1925, près de la gare",
             },
             {
-              title: "La canopée est réglementée",
-              description:
-                "Aucun arbre abattu sans permis, remplacement obligatoire, implantation dictée par le règlement de zonage 720.",
+              label: "Zonage",
+              value: "Règlement 720, consolidé au 1er août 2025",
+            },
+            {
+              label: "Abattage",
+              value: "Permis exigé, remplacement obligatoire, dépôt remboursable",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Reprise complète, cuisine, salle de bain, rallonge",
+            },
+            {
+              label: "Temps de route",
+              value: "Vingt-cinq minutes par l'autoroute 40",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
+            alt: "Cuisine refaite dans une maison de Beaconsfield",
+          },
+          note: "Sources : Ville de Beaconsfield, Wikipédia. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -130,62 +146,54 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
               title: "Rénovation majeure",
               href: "/services/renovation",
               description:
-                "Toute la maison reprise en une seule séquence, un seul échéancier écrit.",
+                "Une maison de 1955 reprise au complet dans une seule séquence",
               image: {
                 src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Rénovation majeure d'une maison des années 1950",
+                alt: "Rénovation majeure d'une maison de Beaconsfield",
               },
               badges: ["Clé en main"],
               footerCtaLabel: "Voir le service",
             },
             {
-              title: "Cuisine",
-              href: "/services/renovation/cuisine",
+              title: "Agrandissement",
+              href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Mur porteur analysé et poutre dimensionnée avant la démolition.",
+                "Implantation dessinée autour des arbres que le règlement 720 protège",
               image: {
-                src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
-                alt: "Cuisine rénovée dans une maison de l'Ouest-de-l'Île",
+                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+                alt: "Planification d'un agrandissement sur un terrain boisé",
               },
-              badges: ["Structure"],
-              footerCtaLabel: "Voir la cuisine",
+              badges: ["Abattage"],
+              footerCtaLabel: "Voir l'agrandissement",
             },
             {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Membrane d'étanchéité complète avant la céramique, ventilation évacuée à l'extérieur.",
+                "Ventilation sortie dehors, pas dans l'entretoit d'un bungalow de Beacon Hill",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain rénovée dans une maison de Beaconsfield",
+                alt: "Salle de bain rénovée dans une maison de Beacon Hill",
               },
               badges: ["Étanchéité"],
               footerCtaLabel: "Voir la salle de bain",
             },
-            {
-              title: "Agrandissement",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Implantation dessinée autour des arbres à conserver, sous le zonage 720.",
-              image: {
-                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planification d'un agrandissement à Beaconsfield",
-              },
-              badges: ["Permis"],
-              footerCtaLabel: "Voir l'agrandissement",
-            },
-            {
-              title: "Sous-sol",
-              href: "/services/renovation/sous-sol",
-              description:
-                "Humidité et drainage évalués avant d'isoler et de refermer.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Sous-sol aménagé en pièce de vie",
-              },
-              badges: ["Isolation"],
-              footerCtaLabel: "Voir le sous-sol",
-            },
+          ],
+        },
+      },
+    },
+    {
+      id: "voisins",
+      content: {
+        type: "grid",
+        variant: "link-cards-compact",
+        props: {
+          heading: "Villes desservies autour de Beaconsfield",
+          columns: "3",
+          items: [
+            { title: "Kirkland", href: "/zones/kirkland" },
+            { title: "Pointe-Claire", href: "/zones/pointe-claire" },
+            { title: "Dorval", href: "/zones/dorval" },
           ],
         },
       },
@@ -199,28 +207,20 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Faut-il un permis pour rénover à Beaconsfield ?",
-              a: "Dans la plupart des cas, oui. Les conseillers en urbanisme et inspection des bâtiments de la Ville confirment si le projet en exige un, dès qu'on touche à la structure, à l'enveloppe ou à l'implantation. Nous montons et déposons le dossier.",
+              q: "Puis-je abattre un arbre pour agrandir à Beaconsfield ?",
+              a: "Seulement avec un permis. Un arbre situé à moins de trois mètres de l'emprise d'une construction projetée peut être abattu, mais uniquement si le bâtiment ne peut pas être implanté ailleurs.",
             },
             {
-              q: "Puis-je abattre un arbre pour mon agrandissement ?",
-              a: "Pas sans permis. Un arbre à moins de 3 m de l'emprise d'une construction projetée peut être abattu, mais seulement si celle-ci ne peut pas être implantée ailleurs. Aucune autorisation sous 10 cm de diamètre, mesuré à 1,5 m du sol.",
+              q: "Combien coûte le certificat d'abattage à Beaconsfield ?",
+              a: "Un dépôt de 500 $ couvre les cinq premiers arbres, puis 100 $ par arbre supplémentaire. La Ville le rembourse une fois le remplacement réalisé selon les conditions du règlement.",
             },
             {
-              q: "Combien coûte le certificat d'abattage ?",
-              a: "Un dépôt de 500 $ pour les cinq premiers arbres, plus 100 $ par arbre additionnel. Il est remboursé une fois le remplacement effectué selon les conditions du règlement de zonage 720.",
+              q: "Le règlement de zonage 720 limite-t-il ma rallonge ?",
+              a: "Il fixe l'implantation, les marges et les hauteurs, dans sa version consolidée du 1er août 2025. Les conseillers en urbanisme confirment ce que permet votre zone avant qu'on dessine.",
             },
             {
-              q: "Vaut-il mieux rénover par étapes ?",
-              a: "Rarement, quand plusieurs systèmes arrivent à échéance ensemble. Chaque petit chantier repaie la mobilisation, la protection des lieux et la finition. Une seule séquence coûte généralement moins cher. Le projet peut être découpé en phases contractuelles.",
-            },
-            {
-              q: "Combien coûte une rénovation à Beaconsfield ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $ et plus. Une rénovation majeure ou un agrandissement dépasse cet ordre de grandeur. Estimation gratuite.",
-            },
-            {
-              q: "Êtes-vous licenciés et assurés ?",
-              a: "Licence RBQ 8306-0806-27, valide sans restriction depuis 2004, catégories 1.2 et 1.3, aucune réclamation au dossier. Responsabilité civile et couverture de chantier en vigueur. Nous ne construisons pas de maisons neuves, le plan GCR ne s'applique donc pas.",
+              q: "Vaut-il mieux rénover par étapes à Beaconsfield ?",
+              a: "Rarement. Dans les quartiers bâtis entre 1951 et 1963, toiture, fenêtres, plomberie et électricité arrivent à échéance ensemble. Une seule séquence évite de repayer chaque fois mobilisation et protection des lieux.",
             },
           ],
         },
@@ -232,9 +232,8 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à Beaconsfield ?",
-          intro:
-            "On relève la maison et le terrain, puis on chiffre. Estimation gratuite.",
+          heading: "Votre maison de Beaconsfield",
+          intro: "Terrain, arbres et bâtiment relevés avant le chiffrage.",
           actions: [
             {
               label: "Demander une soumission",
@@ -247,7 +246,7 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île",
+          note: "Dilamco · permis et abattage gérés à Beaconsfield",
         },
       },
     },

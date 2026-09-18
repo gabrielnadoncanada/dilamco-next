@@ -58,61 +58,77 @@ export const zonePointeClairePage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Pointe-Claire",
-          heading:
-            "Entrepreneur général à Pointe-Claire, du Village aux quartiers d'après-guerre",
+          eyebrow: "Entrepreneur général à",
+          heading: "Pointe-Claire",
           description:
-            "Maison ancienne, bungalow des années 1950 ou condo récent : les règles diffèrent. Licence RBQ 8306-0806-27, valide depuis 2004.",
+            "Du Village de 1854 aux quartiers d'après-guerre, deux maisons voisines relèvent parfois de règles différentes.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Soumission gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos réalisations",
-              href: "/projets",
+              label: "Voir la salle de bain",
+              href: "/services/renovation/salle-de-bain",
               variant: "ghost",
             },
           ],
-          badges: ["Depuis 2004", "Dossiers PIIA", "Assuré"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Rénovation de salle de bain à Pointe-Claire",
+            alt: "Salle de bain rénovée dans une maison de Pointe-Claire",
           },
-          caption: "Du Village au boulevard Saint-Jean",
+          facts: [
+            { label: "Notre base", value: "Pierrefonds-Roxboro, vingt minutes" },
+            { label: "Permis", value: "Comptoir urbanisme, 451 boul. Saint-Jean" },
+            { label: "Bâti", value: "Maisons anciennes et bungalows d'après-guerre" },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît des maisons de Pointe-Claire",
-          description:
-            "Municipalité en 1854, ville en 1911. Deux maisons distantes de huit rues peuvent relever de logiques de chantier complètement différentes.",
-          cards: [
+          heading: "Trois époques de bâti sur un même territoire",
+          intro:
+            "Municipalité en 1854, ville en 1911, deux chemins de fer au XIXe siècle, puis une vague de banlieue après 1945.",
+          rows: [
             {
-              title: "Trois époques de construction",
-              description:
-                "Village et Lakeshore : maisons anciennes, fondations de pierre, planchers hors niveau. Cedar Park Heights et Northview : bungalows d'après-guerre.",
+              label: "Secteurs anciens",
+              value: "Le Village et le Lakeshore, fondations de pierre",
             },
             {
-              title: "Le PIIA, découvert trop tard",
-              description:
-                "Le règlement PC-2787 vise les secteurs anciens et les bâtiments patrimoniaux : évaluation qualitative et délai plus long.",
+              label: "Secteurs d'après-guerre",
+              value: "Cedar Park Heights, Northview, Oneida, Valois",
             },
             {
-              title: "Comptoir urbanisme",
-              description:
-                "Hôtel de ville, 451, boulevard Saint-Jean. Zonage PC-2775, règlement de construction et Code de construction du Québec.",
+              label: "PIIA",
+              value: "Règlement PC-2787, évaluation qualitative du projet",
+            },
+            {
+              label: "Zonage",
+              value: "PC-2775, codification du 10 décembre 2024",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Salle de bain, cuisine, plancher redressé, rallonge",
+            },
+            {
+              label: "Temps de route",
+              value: "Vingt minutes par le boulevard Saint-Jean",
             },
           ],
-          columns: "1",
+          image: {
+            src: "/images/generated/services/service-renovation-project-03.webp",
+            alt: "Rénovation intérieure d'une maison ancienne du Village de Pointe-Claire",
+          },
+          note: "Sources : Ville de Pointe-Claire, Wikipédia. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -128,111 +144,54 @@ export const zonePointeClairePage: PageTemplateData = {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Étanchéité refaite avant la céramique, plomberie d'origine remplacée au besoin.",
+                "Plomberie d'origine du Lakeshore remplacée jusqu'à l'alimentation",
               image: {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
-                alt: "Salle de bain rénovée avec douche en céramique",
+                alt: "Salle de bain refaite dans une maison du Lakeshore",
               },
               badges: ["Étanchéité"],
-              footerCtaLabel: "Voir le service",
-            },
-            {
-              title: "Cuisine",
-              href: "/services/renovation/cuisine",
-              description:
-                "Structure vérifiée avant toute ouverture, surtout dans les maisons d'avant 1950.",
-              image: {
-                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
-                alt: "Cuisine rénovée dans une maison de Pointe-Claire",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "Voir le service",
+              footerCtaLabel: "Voir la salle de bain",
             },
             {
               title: "Maison ancienne",
               href: "/services/renovation",
               description:
-                "Relevé des niveaux, de la fondation et de la charpente avant de dessiner.",
+                "Niveaux, fondation de pierre et charpente relevés avant le premier dessin",
               image: {
-                src: "/images/generated/services/service-renovation-project-03.webp",
-                alt: "Rénovation intérieure d'une maison ancienne de Pointe-Claire",
+                src: "/images/generated/services/service-renovation-hero-01.webp",
+                alt: "Chantier de rénovation dans le Village de Pointe-Claire",
               },
               badges: ["Patrimoine"],
-              footerCtaLabel: "Voir le service",
-            },
-            {
-              title: "Agrandissement",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Rallonge, ajout d'étage ou solarium, selon ce que permet le zonage PC-2775.",
-              image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Agrandissement arrière d'une maison unifamiliale",
-              },
-              badges: ["Permis"],
               footerCtaLabel: "Voir le service",
             },
             {
               title: "Plancher",
               href: "/services/renovation/plancher",
               description:
-                "Sous-plancher, niveaux et raccords repris dans les maisons anciennes.",
+                "Sous-plancher et raccords repris quand la maison a cent ans",
               image: {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
-                alt: "Pose de plancher de bois franc dans une résidence",
+                alt: "Plancher de bois franc posé dans une maison de Pointe-Claire",
               },
               badges: ["Bois franc"],
-              footerCtaLabel: "Voir le service",
+              footerCtaLabel: "Voir le plancher",
             },
           ],
         },
       },
     },
     {
-      id: "preuves",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Le cadre réglementaire validé avant la soumission",
-          intro:
-            "À Pointe-Claire, le risque n'est pas la pose. C'est de démarrer sans savoir sous quelles règles le projet tombe.",
-          badges: ["Depuis 2004", "5,0 sur Google", "Assuré"],
-          cardTitle: "Ce qui est vérifiable",
-          items: [
-            "Licence RBQ 8306-0806-27 depuis le 7 septembre 2004",
-            "Catégories entrepreneur général 1.2 et 1.3",
-            "Aucune réclamation au dossier de licence",
-            "Responsabilité civile et couverture chantier",
-            "Assujettissement au PIIA vérifié au cadrage",
-            "Armoires sur mesure au même contrat",
-          ],
-          actions: [
-            {
-              label: "Voir nos services",
-              href: "/services/renovation",
-              variant: "primary",
-            },
-            {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "secteurs",
+      id: "voisins",
       content: {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Villes voisines desservies",
-          columns: "3",
+          heading: "Voisines de Pointe-Claire desservies",
+          columns: "2",
           items: [
             { title: "Dorval", href: "/zones/dorval" },
             { title: "Beaconsfield", href: "/zones/beaconsfield" },
+            { title: "Kirkland", href: "/zones/kirkland" },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
@@ -250,28 +209,20 @@ export const zonePointeClairePage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Où déposer une demande de permis à Pointe-Claire ?",
-              a: "Au comptoir urbanisme, au premier étage de l'hôtel de ville, au 451, boulevard Saint-Jean. Le Service d'urbanisme y reçoit les demandes résidentielles et commerciales. Nous montons le dossier et faisons le dépôt.",
+              q: "Suis-je assujetti au PIIA à Pointe-Claire ?",
+              a: "Le règlement PC-2787 vise notamment les bâtiments d'intérêt patrimonial et les secteurs anciens comme Le Village. Nous vérifions votre adresse au comptoir urbanisme avant de chiffrer quoi que ce soit.",
             },
             {
-              q: "Qu'est-ce que le PIIA et suis-je assujetti ?",
-              a: "Le règlement sur les plans d'implantation et d'intégration architecturale (PC-2787) complète le zonage et vise notamment les bâtiments d'intérêt patrimonial et les secteurs anciens. Nous vérifions votre adresse au cadrage.",
-            },
-            {
-              q: "Un projet assujetti au PIIA prend-il plus de temps ?",
-              a: "Oui. La ville prévoit un délai de traitement plus long qu'une demande ordinaire, puisque le projet fait l'objet d'une évaluation qualitative. Nous inscrivons ce délai à l'échéancier dès le départ.",
+              q: "Un dossier PIIA rallonge-t-il l'échéancier ?",
+              a: "Oui. La ville évalue le projet sur des critères qualitatifs, ce qui prend plus de temps qu'une demande ordinaire. Ce délai figure à l'échéancier dès la soumission, jamais en cours de chantier.",
             },
             {
               q: "Rénovez-vous les maisons anciennes du Village ?",
-              a: "Oui. Fondation, niveaux de plancher, charpente et systèmes ajoutés par couches se relèvent avant de dessiner. Le budget prévoit une marge pour ce qui apparaît à l'ouverture, et chaque changement de portée est écrit.",
+              a: "Oui. On relève d'abord les niveaux de plancher, la fondation de pierre et les systèmes ajoutés par couches. Le budget prévoit une marge pour ce qui apparaît à l'ouverture des murs.",
             },
             {
-              q: "Peut-on rénover un condo à Pointe-Claire ?",
-              a: "Oui, notamment dans le secteur Lakeside. Il faut cadrer tôt les contraintes de copropriété : horaires autorisés, accès par l'ascenseur, protection des aires communes, insonorisation et parties communes intouchables.",
-            },
-            {
-              q: "Combien coûte une rénovation à Pointe-Claire ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $. Dans une maison ancienne, la portée dépend de ce qu'on trouve derrière les finis. Estimation gratuite.",
+              q: "Combien coûte une salle de bain à Pointe-Claire ?",
+              a: "Dans une maison d'avant 1950, la plomberie et le sous-plancher pèsent autant que la finition. Un mandat démarre vers 25 000 $ et la portée se fixe après le relevé. Estimation gratuite.",
             },
           ],
         },
@@ -283,9 +234,8 @@ export const zonePointeClairePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à Pointe-Claire ?",
-          intro:
-            "On vient voir la maison, on valide le cadre applicable, on revient avec un prix.",
+          heading: "Votre maison de Pointe-Claire",
+          intro: "On valide le cadre applicable avant de chiffrer.",
           actions: [
             {
               label: "Demander une soumission",
@@ -298,7 +248,7 @@ export const zonePointeClairePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · Entrepreneur général RBQ 8306-0806-27 · Ouest-de-l'Île",
+          note: "Dilamco · dossiers PIIA de Pointe-Claire préparés",
         },
       },
     },

@@ -31,111 +31,107 @@ export const designPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Cabinetry division",
-          heading: "We settle the plans before a wall is opened",
+          heading: "Plans are settled before a wall is opened",
           description:
-            "On-site survey, layout, heights, materials. The decisions are made and approved with you before anything goes into production.",
+            "On-site survey, layout, heights, materials. Everything is decided and signed before production starts.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["On-site survey", "Plans", "Materials"],
+          badges: ["On-site survey", "Drawings", "Materials"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
-            alt: "Custom kitchen plan and material samples",
+            alt: "Custom kitchen drawing and material samples",
           },
-          caption: "West Island, Montréal, Laval, South Shore",
+          caption: "West Island, Montreal, Laval, South Shore",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "rôle",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "What design settles",
-          description:
-            "A plan locked early costs less than a change mid-project. Four things get decided here.",
-          cards: [
+          heading: "Four design steps",
+          steps: [
             {
-              title: "Layout",
+              number: "1",
+              title: "Survey",
               description:
-                "Circulation, work zones, clearance in front of every door.",
+                "Real measurements of walls, openings, columns and existing outlets.",
             },
             {
-              title: "Storage",
+              number: "2",
+              title: "Drawings",
               description:
-                "Drawers instead of low doors, heights matched to you.",
+                "Layout, elevations, position of every module and every outlet.",
             },
             {
-              title: "Plumbing and electrical",
+              number: "3",
+              title: "Selections",
               description:
-                "What moves, what stays, and what that implies.",
+                "Panels, hardware, colours and finishes settled on samples.",
             },
             {
-              title: "Materials and finishes",
+              number: "4",
+              title: "Sign-off",
               description:
-                "Panels, hardware and colours fixed before the order.",
+                "Signed drawings, detailed quote, schedule written into the contract.",
             },
           ],
-          columns: "2",
         },
       },
     },
     {
-      id: "includes",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "What you receive",
-          intro:
-            "Design exists to be built, not to be admired. It becomes the contract's reference.",
-          items: [
+          heading: "In short",
+          intro: "What the design stage covers, and what it produces.",
+          rows: [
             {
-              title: "Survey of the existing space",
-              description: "Real measurements, walls, openings, constraints.",
+              label: "Timeline",
+              value: "Two to four weeks from survey to signed drawings",
             },
             {
-              title: "Layout drawings",
-              description: "Elevations and the position of every unit.",
+              label: "Deliverables",
+              value: "Layout plan, elevations, material list, detailed quote",
             },
             {
-              title: "Material list",
-              description: "Panels, hardware, colours and finishes selected.",
+              label: "Who does what",
+              value: "The designer leads, the general contractor checks feasibility",
             },
             {
-              title: "Detailed quote",
-              description: "Scope, exclusions, price and schedule in writing.",
-            },
-          ],
-          actions: [
-            {
-              label: "View fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "On site",
+              value: "One survey visit, one presentation visit",
             },
             {
-              label: "Kitchen renovation",
-              href: "/services/renovation/cuisine",
-              variant: "ghost",
+              label: "Warranty",
+              value: "Signed drawings govern the whole job site",
+            },
+            {
+              label: "Cost",
+              value: "Credited to the project if the work is awarded to us",
             },
           ],
           image: {
             src: "/images/services/design-hero.webp",
-            alt: "Custom design being planned",
+            alt: "Drawings and elevations of a kitchen being designed",
           },
-          cardTitle: "Why it matters",
-          cardDescription:
-            "The earlier the decisions are made, the fewer surprises the job site holds.",
+          note: "Prices and quantities are revised if drawings change after signing.",
         },
       },
     },
@@ -145,23 +141,23 @@ export const designPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about the design stage",
           items: [
             {
-              q: "Is design mandatory?",
-              a: "For custom work, yes. Without settled plans, dimensions, appliance integration and technical constraints get discovered during installation, when every change is expensive.",
+              q: "How long does design take?",
+              a: "Allow two to four weeks depending on room size and the number of revisions. A vanity on its own is often settled in a single meeting.",
             },
             {
-              q: "When does design happen?",
-              a: "At the very start, before the order. The drawings approved with you then serve as the stable reference for production, installation and the contract.",
+              q: "Do I need my appliances chosen?",
+              a: "Yes, at least the models. Clearances, built-in openings and connections are drawn from their spec sheets, not from an estimate.",
             },
             {
-              q: "Does it work in a condo?",
-              a: "Yes, and it matters more there: elevator access, room dimensions, building rules and column locations all get resolved on paper first.",
+              q: "Does design cover the lighting?",
+              a: "Yes when we run the full renovation. Circuits, pot lights and under-cabinet strips are placed on the drawing before walls open.",
             },
             {
-              q: "Can you renovate the whole room?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27. Design then covers layout, plumbing, electrical, flooring and lighting, not only the cabinets.",
+              q: "Can the plan change after signing?",
+              a: "Yes, as long as production has not started. After that, every change goes through a written change order, with its cost and schedule impact.",
             },
           ],
         },
@@ -173,9 +169,9 @@ export const designPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Tell us about your project",
+          heading: "Start with the drawings",
           intro:
-            "Your space, your area, your timeline. We come back with a realistic framework.",
+            "Describe the room and your deadline, and we come back with a first read.",
           actions: [
             {
               label: "Request a quote",
@@ -183,7 +179,7 @@ export const designPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },

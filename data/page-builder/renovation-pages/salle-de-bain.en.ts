@@ -42,12 +42,12 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Bathroom renovation",
-          heading: "A bathroom rebuilt first for its waterproofing",
+          heading: "A bathroom kept watertight before it is pretty",
           description:
-            "Plumbing, ventilation, membrane, tiling and vanity. One contract, one licence, inspected work.",
+            "Drains, ventilation, membrane and tiling redone in order, with an inspection before the walls close.",
           actions: [
             {
-              label: "Free estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
@@ -57,12 +57,13 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Waterproofing membrane", "Inspected plumbing", "Firm price"],
+          badges: ["Continuous membrane", "Plumbing inspected"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
             alt: "Bathroom renovated by a general contractor",
           },
-          caption: "West Island, Montreal, Laval, South Shore",
+          imageSide: "left",
+          caption: "Bathrooms in the West Island and Laval",
         },
       },
     },
@@ -72,48 +73,47 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the mandate covers",
-          intro: "The exact scope is written into the quote.",
+          heading: "What the mandate includes",
           columns: "2",
           items: [
             {
-              title: "Demolition and strip-out",
-              description: "We open up to see the real state of the framing",
+              title: "Strip-out",
+              description: "The substrate is judged bare",
               icon: "hammer",
               bullets: [
                 "Shower, vanity and finishes removed",
-                "Plywood and joists checked under the shower",
-                "Subfloor and framing repaired before any new work",
+                "Joists and plywood inspected",
+                "Subfloor corrected before tiling",
               ],
             },
             {
-              title: "Plumbing and ventilation",
-              description: "The work that has to pass inspection",
+              title: "Drains and ventilation",
+              description: "What an inspector looks at",
               icon: "droplets",
               bullets: [
-                "Drains and supply redone at the required slope",
-                "Exhaust fan vented outside, never into the attic",
-                "Anti-scald valve and inspection before closing up",
+                "Drain slope and supply lines redone",
+                "Fan ducted outdoors, never into the attic",
+                "Anti-scald valve installed",
               ],
             },
             {
-              title: "Waterproofing and tiling",
-              description: "The invisible stage that sets the lifespan",
+              title: "Membrane and tile",
+              description: "The hidden layer that decides lifespan",
               icon: "shieldCheck",
               bullets: [
-                "Water-resistant board on every wet surface",
-                "Continuous membrane up the walls and tied to the drain",
-                "Slope checked before the tile goes down",
+                "Water-resistant board on wet surfaces",
+                "Membrane carried up the walls, tied to the drain",
+                "Slope verified before tiling",
               ],
             },
             {
-              title: "Vanity and finishing",
-              description: "The visible part, set on a sound base",
+              title: "Vanity and fixtures",
+              description: "The visible part, on a sound base",
               icon: "bath",
               bullets: [
-                "Custom vanity supplied by our partner factory",
-                "Countertop, faucets, mirror and lighting",
-                "Toilet, shower door, paint and mouldings",
+                "Vanity from our partner factory",
+                "Faucets, mirror, lighting",
+                "Toilet, shower door, mouldings",
               ],
             },
           ],
@@ -126,92 +126,130 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "The job, step by step",
+          heading: "How a bathroom unfolds",
           steps: [
             {
               number: "1",
-              title: "Visit and quote",
+              title: "Site measure",
               description:
-                "Measurements, ventilation, plumbing and signs of leaks checked on site.",
+                "Ventilation, plumbing and signs of leaks examined on site.",
             },
             {
               number: "2",
-              title: "Contract and permit",
+              title: "Strip-out and findings",
               description:
-                "Scope, price and schedule signed, application filed if plumbing moves.",
+                "A damaged subfloor is photographed, then priced with you.",
             },
             {
               number: "3",
-              title: "Demolition",
+              title: "Mechanical and inspection",
               description:
-                "Full strip-out. A damaged subfloor is priced with you first.",
+                "Drains, circuits and exhaust set, checked before closing.",
             },
             {
               number: "4",
-              title: "Mechanical and inspection",
+              title: "Waterproofing and tile",
               description:
-                "Drains, circuits, ventilation, then inspection before the walls close.",
+                "Board, membrane, slope, then tile from floor to walls.",
             },
             {
               number: "5",
-              title: "Waterproofing, finishing, handover",
+              title: "Vanity and handover",
               description:
-                "Membrane, tile, vanity, hookups and final walkthrough with you.",
+                "Vanity, faucets, shower door and final adjustments.",
             },
           ],
         },
       },
     },
     {
-      id: "permis",
+      id: "prix",
       content: {
-        type: "split",
-        variant: "list-actions-image-card",
+        type: "grid",
+        variant: "price-tiles",
         props: {
-          heading: "Permits, ventilation and compliance",
-          intro:
-            "These are the points an inspector checks and an insurer looks at after water damage.",
-          items: [
+          heading: "What a bathroom costs",
+          tiles: [
             {
-              title: "Plumbing relocated",
-              description: "Permit required, inspection before the walls close.",
+              title: "Powder room",
+              price: "from $10,000",
+              hint: "toilet and sink, no shower",
+              includes: [
+                "Strip-out, plumbing kept in place",
+                "Floor tile",
+                "Vanity, toilet, lighting",
+              ],
             },
             {
-              title: "New bathroom",
-              description: "Permit required almost everywhere, with drawings.",
+              title: "Full bathroom",
+              price: "$15,000 to $35,000",
+              hint: "shower, tub, vanity",
+              featured: true,
+              includes: [
+                "Continuous waterproofing membrane",
+                "Drains and ventilation redone",
+                "Wall and floor tile",
+                "Vanity, counter, faucets",
+              ],
             },
             {
-              title: "Ventilation is mandatory",
-              description: "Exhaust to the outside, never into the attic.",
-            },
-            {
-              title: "Anti-scald protection",
-              description: "Shower and tub valves must limit the temperature.",
-            },
-            {
-              title: "Like-for-like replacement",
-              description: "Usually no permit. We confirm with the city.",
-            },
-          ],
-          actions: [
-            {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "Service areas",
-              href: "/zones",
-              variant: "ghost",
+              title: "Curbless shower",
+              price: "top of the range",
+              hint: "recessed floor, linear drain",
+              includes: [
+                "Floor dropped for a zero threshold",
+                "Linear drain and calculated slope",
+                "Custom tempered glass",
+              ],
             },
           ],
-          image: {
-            src: "/images/generated/renovation/renovation-bath-approach-01.webp",
-            alt: "Shower prepared with a waterproofing membrane",
+          note: "Indicative ranges. The firm amount depends on how far plumbing moves and on the tile format chosen.",
+          action: {
+            label: "Free quote",
+            href: "/contact",
+            variant: "primary",
           },
-          cardTitle: "What the insurer looks at",
-          cardDescription:
-            "Compliant work and a licensed contractor both weigh on how a water damage claim is handled.",
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Bathrooms already delivered",
+          tiles: [
+            {
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Curbless shower with a glass panel",
+              },
+              caption: "Curbless shower",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
+                alt: "Vanity with quartz counter and backlit mirror",
+              },
+              caption: "Vanity and backlit mirror",
+            },
+            {
+              kind: "stat",
+              value: "2 checks",
+              label: "Inspection before closing, then slope verified",
+            },
+            {
+              kind: "text",
+              title: "See more bathrooms",
+              description:
+                "Showers, vanities and finishes photographed after handover.",
+              href: "/espaces/salle-de-bain",
+            },
+          ],
         },
       },
     },
@@ -224,28 +262,24 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "What does a bathroom renovation cost?",
-              a: "A complete bathroom most often lands between $15,000 and $35,000. The high end covers a curbless shower, heated flooring or relocated plumbing.",
-            },
-            {
-              q: "Do I need a permit?",
-              a: "A like-for-like replacement usually does not need one. As soon as plumbing is relocated or a bathroom is added, a permit is required, with inspection before the walls close.",
-            },
-            {
-              q: "How long does the job take?",
-              a: "A few weeks on site. Curing times for mortar, grout and paint cannot be compressed, and the municipal inspection is booked before the walls close. The schedule comes with the contract.",
-            },
-            {
               q: "What is a waterproofing membrane?",
-              a: "A continuous layer set under the shower tile, run up the walls and tied into the drain. It keeps water away from the framing. We install it on every wet surface.",
+              a: "A continuous layer set under the tile, carried up the shower walls and tied into the drain. It stops water before it reaches the wood framing underneath.",
             },
             {
-              q: "What if you find water damage during demolition?",
-              a: "It is common after twenty years. We show you what is affected, document the condition and submit the repair cost in writing before going further. Nothing is closed up over a known problem.",
+              q: "Can I have a curbless shower?",
+              a: "Often yes. The floor has to drop between the joists, or the slab has to be cut, to house the drain and its slope. We verify that at the visit, before pricing.",
             },
             {
-              q: "Is the work warranted?",
-              a: "Yes, with the scope and duration written into the contract. RBQ licence 8306-0806-27, valid with no restrictions since 2004, $40,000 bond, no claims on file. Liability and job-site insurance in force.",
+              q: "Is bathroom ventilation mandatory?",
+              a: "Yes, and it has to exhaust outdoors. A fan blowing into the attic builds frost, then mould. We redo the duct whenever it stops short under the roof.",
+            },
+            {
+              q: "What if you find rotten wood during the strip-out?",
+              a: "Common after twenty years under a leaking shower. We show you the photos, price the repair in writing, then carry on. Nothing gets closed over a known problem.",
+            },
+            {
+              q: "Do I need a permit for a bathroom?",
+              a: "Replacing fixtures in place usually does not. Moving plumbing or adding a bathroom does, with an inspection before the walls are closed back up.",
             },
           ],
         },
@@ -257,11 +291,12 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Have your bathroom assessed",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          heading: "Get your bathroom priced",
+          intro:
+            "We measure, check the ventilation and hand you a detailed quote.",
           actions: [
             {
-              label: "Free estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
@@ -271,7 +306,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Compliant waterproofing, ventilation and plumbing",
+          note: "RBQ licence 8306-0806-27 · Waterproofing, ventilation and plumbing to code",
         },
       },
     },

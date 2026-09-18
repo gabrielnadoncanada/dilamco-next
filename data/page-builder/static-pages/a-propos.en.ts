@@ -25,7 +25,7 @@ export const pageEn: PageTemplateData = {
           eyebrow: "About",
           heading: "A residential renovation general contractor since 2004",
           description:
-            "RBQ licence issued in 2004, still valid with no restrictions. Based in Pierrefonds-Roxboro, working across Greater Montréal.",
+            "Same licence, same officer, same address for twenty years. The work stays in Greater Montréal.",
           actions: [
             {
               label: "Free estimate",
@@ -44,36 +44,60 @@ export const pageEn: PageTemplateData = {
             alt: "Staircase and glass railing: interior finishing by Dilamco",
           },
           caption: "9139-1250 Québec inc. · Pierrefonds-Roxboro",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "structural-advantage",
+      id: "reperes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "What holds a job site together",
-          description:
-            "A project derails between the people involved, not over a tile choice. We cut down the number of handoffs.",
-          cards: [
+          heading: "What twenty years leave behind",
+          tiles: [
             {
-              title: "Planned sequence",
-              description:
-                "Trades come in order, each stage inspected before the next one starts.",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/mur-bois-accent-plafond-haut-01.webp",
+                alt: "Timber accent wall under a high ceiling",
+              },
+              caption: "Accent wall, high ceiling",
             },
             {
-              title: "One party accountable",
-              description:
-                "We hire the trades and answer for the work that gets delivered.",
+              kind: "stat",
+              value: "2004",
+              label: "RBQ licence issued, never lapsed",
             },
             {
-              title: "Written commitments",
-              description:
-                "Scope, price, exclusions and schedule in the contract. Any change goes through a priced change order.",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
+                alt: "New hardwood floor laid in a renovated room",
+              },
+              caption: "New hardwood floor",
+            },
+            {
+              kind: "stat",
+              value: "5.0",
+              label: "Google rating, 11 reviews",
+            },
+            {
+              kind: "stat",
+              value: "$40,000",
+              label: "FACCQ licence bond, no claim on file",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
+                alt: "Finish and material displays at the Dorval showroom",
+              },
+              caption: "Finish displays, Dorval",
             },
           ],
-          columns: "3",
         },
       },
     },
@@ -152,12 +176,12 @@ export const pageEn: PageTemplateData = {
               a: "At 18625 rue Larocque, in Pierrefonds-Roxboro. We cover the West Island, Montréal, Laval, the South Shore and Vaudreuil-Soulanges.",
             },
             {
-              q: "Do you build new homes?",
-              a: "No. Our licence covers renovation, conversion, additions and rebuilding after a loss. The GCR warranty plan therefore does not apply.",
+              q: "Who is the designated officer on the licence?",
+              a: "Sean Diffley, listed on the register as the officer for management and for carrying out the work. He is the person the Régie holds accountable for our sites.",
             },
             {
-              q: "Do you make your own cabinets?",
-              a: "No. Subclass 12 of our licence covers cabinets and countertops: we design, coordinate and install. The cabinets are supplied by our partner factory.",
+              q: "Why hire a general contractor at all?",
+              a: "Because one signature covers the permits, the trades, the schedule and the price. Without one, every trade-off between trades lands back on the homeowner.",
             },
           ],
         },
@@ -170,7 +194,8 @@ export const pageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your project",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro:
+            "Free estimate. Insurance certificates are handed over before signing.",
           actions: [
             {
               label: "Free estimate",

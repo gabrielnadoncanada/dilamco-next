@@ -36,7 +36,7 @@ export const installationPage: PageTemplateData = {
           eyebrow: "Division armoires",
           heading: "La pose se planifie avec les autres corps de métier",
           description:
-            "Nos équipes posent les armoires au bon moment du chantier, après la plomberie et l'électricité, avant les comptoirs.",
+            "Nos équipes posent les armoires au bon moment, après la plomberie et l'électricité, avant les comptoirs.",
           actions: [
             {
               label: "Demander une soumission",
@@ -52,93 +52,89 @@ export const installationPage: PageTemplateData = {
           badges: ["Mise à niveau", "Alignements", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
-            alt: "Plan technique et échantillons de panneaux pour installation sur mesure",
+            alt: "Pose d'armoires sur mesure en cours dans une cuisine",
           },
           caption: "Installation résidentielle et commerciale",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "différence",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Pourquoi la pose change tout",
-          description:
-            "Aucun mur n'est d'aplomb et aucun plancher n'est de niveau. La pose absorbe cet écart, ou il se voit sur chaque porte.",
-          cards: [
+          heading: "Quatre étapes sur le chantier",
+          steps: [
             {
+              number: "1",
+              title: "Protection",
+              description:
+                "Planchers couverts, seuils protégés, poussière confinée à la pièce.",
+            },
+            {
+              number: "2",
               title: "Mise à niveau",
               description:
-                "Les caissons sont calés avant d'être fixés à la structure.",
+                "Caissons calés puis ancrés dans les montants du mur.",
             },
             {
-              title: "Alignements",
+              number: "3",
+              title: "Ajustement",
               description:
-                "Jeux réguliers entre portes et tiroirs sur toute la longueur.",
+                "Charnières réglées sur trois axes, jeux égalisés partout.",
             },
             {
-              title: "Fixation",
+              number: "4",
+              title: "Finition",
               description:
-                "Ancrage dans les montants, pas seulement dans le gypse.",
-            },
-            {
-              title: "Coordination",
-              description:
-                "Comptoirs, dosseret et électroménagers suivent dans le bon ordre.",
+                "Moulures, plinthes, poignées et tour d'inspection avec vous.",
             },
           ],
-          columns: "2",
         },
       },
     },
     {
-      id: "included",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qui est inclus",
-          intro:
-            "La pose ne se limite pas à visser des modules au mur.",
-          items: [
+          heading: "En bref",
+          intro: "Ce qui se passe chez vous pendant les journées de pose.",
+          rows: [
             {
-              title: "Vérification du site",
-              description: "Murs, planchers, niveaux et contraintes relevés avant.",
+              label: "Délai",
+              value: "Une à deux journées pour une vanité, trois à cinq pour une cuisine",
             },
             {
-              title: "Pose et fixation",
-              description: "Calage, ancrage et assemblage des modules entre eux.",
+              label: "Livrables",
+              value: "Armoires posées, portes réglées, déficiences corrigées",
             },
             {
-              title: "Réglage des portes",
-              description: "Charnières ajustées sur trois axes, tiroirs alignés.",
+              label: "Qui fait quoi",
+              value: "Nos poseurs, coordonnés avec le comptoir et l'électricien",
             },
             {
-              title: "Inspection finale",
-              description: "Tour avec vous, déficiences corrigées avant le paiement final.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "ghost",
+              label: "Préalable",
+              value: "Plomberie, électricité et plancher terminés avant notre arrivée",
             },
             {
-              label: "Rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
+              label: "Garantie",
+              value: "Un réglage de rattrapage inclus dans l'année suivant la pose",
+            },
+            {
+              label: "Chantier",
+              value: "Site balayé chaque soir, rebuts sortis à la fin",
             },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
-            alt: "Installation sur mesure en cours",
+            alt: "Armoires ajustées et alignées après la pose",
           },
-          cardTitle: "Coordination sur site",
-          cardDescription:
-            "Une pose propre dépend autant de la préparation que des ajustements finaux.",
+          note: "La date de pose est fixée une fois la livraison confirmée.",
         },
       },
     },
@@ -148,23 +144,23 @@ export const installationPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la pose",
           items: [
             {
-              q: "Combien de temps dure une installation ?",
-              a: "Une vanité ou un walk-in se posent en une journée ou deux. Une cuisine complète demande davantage, selon l'îlot, les armoires hautes et les électroménagers. La durée est confirmée à la planification.",
+              q: "Faut-il quitter la maison pendant la pose ?",
+              a: "Non. La pièce reste inutilisable quelques jours, mais le reste de la maison demeure protégé et accessible. L'eau est rétablie chaque soir quand c'est possible.",
             },
             {
-              q: "Des ajustements sont-ils normaux ?",
-              a: "Oui. Les portes et les tiroirs se règlent après la pose, une fois les caissons fixés. C'est une étape prévue, pas un signe de problème.",
+              q: "Qui installe le comptoir ?",
+              a: "Le fournisseur du comptoir, après notre pose. Il prend son gabarit sur les caissons déjà fixés, ce qui évite les écarts au millimètre près.",
             },
             {
-              q: "Posez-vous seulement vos propres armoires ?",
-              a: "Oui. Nous installons ce que nous concevons et fournissons, pour que les mêmes tolérances s'appliquent des plans à la pose, sous une seule responsabilité.",
+              q: "Posez-vous des armoires achetées ailleurs ?",
+              a: "Non. Nous installons ce que nous avons conçu et fourni, pour que la même responsabilité couvre les plans, les pièces et la pose.",
             },
             {
-              q: "Pouvez-vous rénover la pièce au complet ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27. Permis, démolition, plomberie, électricité, plancher et pose des armoires sous un seul contrat écrit.",
+              q: "Et si une porte frotte six mois plus tard ?",
+              a: "Appelez-nous. Un bois qui bouge avec les saisons se rattrape en quelques minutes de réglage, et c'est compris la première année.",
             },
           ],
         },
@@ -176,9 +172,9 @@ export const installationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Une pose propre et coordonnée ?",
+          heading: "Planifier la pose de vos armoires",
           intro:
-            "On planifie la pose avec le reste du chantier et on livre après inspection avec vous.",
+            "On cale la date avec le reste du chantier et on livre après inspection avec vous.",
           actions: [
             {
               label: "Demander une soumission",

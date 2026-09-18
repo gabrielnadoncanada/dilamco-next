@@ -27,12 +27,12 @@ export const walkInPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Walk-in",
-          heading: "Garde-robe et walk-in sur mesure, du mur au plafond",
+          badges: ["Sur mesure"],
+          heading: "Garde-robe et walk-in sur mesure à Montréal",
           description:
-            "Penderie, tiroirs et tablettes dimensionnés pour vos murs réels, posés par l'équipe qui mène la rénovation.",
+            "Penderies, tiroirs et tablettes calculés par type de vêtement, montés du plancher au plafond.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -41,146 +41,116 @@ export const walkInPage: PageTemplateData = {
             },
             {
               label: "Voir nos walk-ins",
-              href: "/projets",
+              href: "/projets/walk-in",
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Division armoires"],
-          image: {
-            src: "/images/generated/spaces/space-walkin-hero-01.webp",
-            alt: "Garde-robe et walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal",
-          },
-          caption: "Montréal · Laval · Ouest-de-l'Île",
         },
       },
     },
     {
-      id: "inclus",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "Ce que comprend le mandat",
-          description:
-            "Le rangement est conçu autour de ce que vous rangez vraiment, puis intégré mur à mur.",
-          cards: [
-            {
-              title: "Penderie et tiroirs",
-              description: "Hauteurs de penderie et profondeurs de tiroirs calculées par type de vêtement.",
-            },
-            {
-              title: "Angles et niches exploités",
-              description: "Les coins, les hauteurs sous plafond et les retraits de mur servent au rangement.",
-            },
-            {
-              title: "Îlot, éclairage, portes vitrées",
-              description: "Options de walk-in haut de gamme intégrées au plan, pas ajoutées après.",
-            },
-            {
-              title: "Pose intégrée au chantier",
-              description: "Cloisons, éclairage, plancher et rangement coordonnés par un seul responsable.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "projects",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading: "Walk-ins récents",
-          items: [
+          heading: "Du mur de rangement à la pièce complète",
+          tiles: [
             {
-              title: "Walk-in, Montréal",
-              href: "/projets",
-              description: "Circulation et rangement adaptés au quotidien.",
+              kind: "image",
+              span: "wide",
               image: {
-                src: "/images/generated/spaces/space-walkin-project-01.webp",
-                alt: "Projet walk-in sur mesure à Montréal",
+                src: "/images/generated/spaces/space-walkin-hero-01.webp",
+                alt: "Walk-in sur mesure avec penderie sur deux hauteurs",
               },
-              badges: ["Montréal"],
-              footerCtaLabel: "Voir le projet",
+              caption: "Penderie sur deux hauteurs",
             },
             {
-              title: "Walk-in, Laval",
-              href: "/projets",
-              description: "Espace maximisé dans une pièce contrainte.",
+              kind: "image",
+              span: "tall",
               image: {
                 src: "/images/generated/spaces/space-walkin-project-02.webp",
-                alt: "Projet walk-in sur mesure à Laval",
+                alt: "Walk-in aménagé dans un angle de chambre à Laval",
               },
-              badges: ["Laval"],
-              footerCtaLabel: "Voir le projet",
+              caption: "Angle exploité, Laval",
             },
             {
-              title: "Walk-in, Rive-Sud",
-              href: "/projets",
-              description: "Îlot central et éclairage intégré.",
+              kind: "stat",
+              value: "3 000 $",
+              label: "Départ d'un mur de rangement, walk-in dès 8 000 $",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-walkin-project-01.webp",
+                alt: "Tiroirs et tablettes sur mesure dans un walk-in de Montréal",
+              },
+              caption: "Tiroirs et tablettes, Montréal",
+            },
+            {
+              kind: "image",
               image: {
                 src: "/images/generated/spaces/space-walkin-project-03.webp",
-                alt: "Projet walk-in sur mesure sur la Rive-Sud",
+                alt: "Walk-in avec îlot central et éclairage intégré",
               },
-              badges: ["Rive-Sud"],
-              footerCtaLabel: "Voir le projet",
+              caption: "Îlot central et éclairage",
+            },
+            {
+              kind: "text",
+              title: "Face au modulaire",
+              description:
+                "Dimensions imposées, tablettes qui fléchissent sous la charge après quelques saisons.",
+              href: "/materiaux",
             },
           ],
         },
       },
     },
     {
-      id: "materials",
+      id: "en-bref",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qui tient après cinq ans",
-          intro: "Un rangement se juge sur les tiroirs chargés et les tablettes longues, pas sur la photo du premier jour.",
-          items: [
+          heading: "Le rangement en bref",
+          intro:
+            "Un walk-in se juge cinq ans plus tard, tiroirs pleins et tablettes chargées.",
+          rows: [
             {
-              title: "Tiroirs en bouleau massif",
-              description: "Supportent une charge quotidienne variable",
+              label: "Prix",
+              value: "3 000 $ à 8 000 $ le mur, 8 000 $ à 20 000 $ le walk-in",
             },
             {
-              title: "Structure en contreplaqué",
-              description: "Tablettes qui ne s'affaissent pas",
+              label: "Délai",
+              value: "9 à 15 semaines, selon le nombre de modules et les finis",
             },
             {
-              title: "Quincaillerie robuste",
-              description: "Coulisses et charnières à fermeture amortie",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Matériaux",
+              value: "Tiroirs en bouleau massif, tablettes en contreplaqué",
             },
             {
-              label: "Cuisine sur mesure",
-              href: "/espaces/cuisine",
-              variant: "ghost",
+              label: "Quincaillerie",
+              value: "Coulisses à extension complète, charnières amorties",
             },
             {
-              label: "Rénovation résidentielle",
-              href: "/services/renovation",
-              variant: "ghost",
+              label: "Pose",
+              value: "Après la peinture, avant les plinthes et l'éclairage",
+            },
+            {
+              label: "Garantie",
+              value: "Ajustement des portes et tiroirs repris, durée au contrat",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-walkin-project-01.webp",
-            alt: "Détail matériau pour walk-in sur mesure",
+            alt: "Détail de tiroirs et de tablettes dans un walk-in sur mesure",
           },
-          cardTitle: "Avantage concret",
-          cardDescription: "Un walk-in qui reste net et fonctionnel dans le temps.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -188,24 +158,20 @@ export const walkInPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte une garde-robe ou un walk-in sur mesure ?",
-              a: "Une garde-robe murale se situe généralement entre 3 000 $ et 8 000 $, un walk-in complet entre 8 000 $ et 20 000 $. Avec îlot central, éclairage intégré et portes vitrées, comptez plus de 20 000 $.",
+              q: "Quelle largeur faut-il pour un walk-in confortable ?",
+              a: "Comptez 1,7 m de mur à mur pour une penderie d'un seul côté et un passage utilisable, 2,4 m pour deux côtés. Sous cette largeur, un mur de rangement rend mieux service.",
             },
             {
-              q: "Quel est le délai ?",
-              a: "De 9 à 15 semaines entre la validation du design et l'installation, selon la complexité. L'échéancier précis est confirmé avec la soumission détaillée.",
+              q: "Combien de penderie et combien de tablettes ?",
+              a: "On compte vos vêtements longs, vos vestons et vos piles de chandails avant de dessiner. La répartition sort du contenu réel, pas d'un gabarit standard.",
             },
             {
-              q: "Quelle différence avec une garde-robe et un walk-in ?",
-              a: "Un walk-in est une petite pièce dans laquelle on entre. Une garde-robe sur mesure s'intègre le long d'un mur. Dans les deux cas, penderie, tiroirs et tablettes sont dimensionnés pour votre espace.",
+              q: "Faut-il des portes sur un walk-in ?",
+              a: "Une porte de pièce suffit dans la plupart des cas. Les façades fermées servent surtout aux zones visibles depuis la chambre et au rangement de saison.",
             },
             {
-              q: "Est-ce que ça vaut le coût face à un système modulaire ?",
-              a: "Un système modulaire coûte moins cher à l'achat, impose ses dimensions standard et s'affaisse plus vite. Le sur mesure exploite les angles et les hauteurs, avec du contreplaqué de bouleau et des tiroirs en bois massif.",
-            },
-            {
-              q: "Pouvez-vous rénover toute la pièce ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : cloisons, porte, électricité, éclairage, plancher, peinture et pose du rangement, coordonnés par un seul responsable, au contrat écrit.",
+              q: "Peut-on ajouter l'éclairage et une prise ?",
+              a: "Oui. Bandes DEL sous les tablettes, détecteur de présence et prise pour la repasseuse sont tirés avant la fermeture des murs, par notre électricien.",
             },
           ],
         },
@@ -218,7 +184,8 @@ export const walkInPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre projet de walk-in",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          intro:
+            "Estimation gratuite. Un relevé des murs suffit pour chiffrer le rangement.",
           actions: [
             {
               label: "Demander une soumission",
@@ -227,7 +194,7 @@ export const walkInPage: PageTemplateData = {
             },
             {
               label: "Voir nos walk-ins",
-              href: "/projets",
+              href: "/projets/walk-in",
               variant: "ghost",
             },
           ],

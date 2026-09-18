@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 import { HeroContent } from "@/features/page-builder/sections/hero/shared/ui/HeroContent";
 import type { HeroSplitImageProps } from "./schema";
 
@@ -11,8 +13,13 @@ import type { HeroSplitImageProps } from "./schema";
  */
 export function HeroSplitImage(props: HeroSplitImageProps) {
   return (
-    <div className="grid gap-4 text-left lg:grid-cols-2">
-      <div className="flex flex-col justify-center rounded-panel bg-primary p-7 text-primary-foreground sm:p-10 lg:min-h-[560px] lg:p-14">
+    <div className="grid gap-4 text-left xl:grid-cols-2">
+      <div
+        className={cn(
+          "flex flex-col justify-center rounded-panel bg-primary p-7 text-primary-foreground sm:p-10 xl:min-h-[560px] xl:p-14",
+          props.imageSide === "left" && "xl:order-2",
+        )}
+      >
         <HeroContent
           eyebrow={props.eyebrow}
           actions={props.actions}
@@ -25,7 +32,12 @@ export function HeroSplitImage(props: HeroSplitImageProps) {
         />
       </div>
 
-      <div className="relative min-h-[300px] overflow-hidden rounded-panel bg-muted sm:min-h-[400px] lg:min-h-[560px]">
+      <div
+        className={cn(
+          "relative min-h-[300px] overflow-hidden rounded-panel bg-muted sm:min-h-[400px] xl:min-h-[560px]",
+          props.imageSide === "left" && "xl:order-1",
+        )}
+      >
         <Image
           src={props.image.src}
           alt={props.image.alt}

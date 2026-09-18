@@ -30,12 +30,12 @@ export const salleDeBainPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Salle de bain",
-          heading: "Vanité sur mesure, posée avec la plomberie",
+          badges: ["Simple ou double", "Fini lavable"],
+          heading: "Vanité de salle de bain sur mesure à Laval",
           description:
-            "Le meuble-lavabo est dimensionné pour la pièce et installé dans la séquence du chantier, par une seule équipe.",
+            "Le meuble-lavabo arrive entre la membrane d'étanchéité et les robinets, jamais avant.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -44,159 +44,115 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets",
-              href: "/projets",
+              href: "/projets/salle-de-bain",
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Résistant à l'humidité"],
-          image: {
-            src: "/images/generated/spaces/space-bath-hero-01.webp",
-            alt: "Vanité de salle de bain sur mesure à Pierrefonds et dans le Grand Montréal",
-          },
-          caption: "Laval · Montréal · Rive-Nord · Rive-Sud",
         },
       },
     },
     {
-      id: "types",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "bento",
         props: {
-          heading: "Les configurations qu'on réalise",
-          columns: "2",
-          items: [
+          heading: "Salles de bain refaites au complet",
+          tiles: [
             {
-              title: "Simple lavabo",
-              description: "Pour les salles de bain compactes et les salles d'eau.",
-              icon: "package2",
-              bullets: [
-                "Largeur ajustée au mur disponible",
-                "Rangement optimisé sous le lavabo",
-              ],
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
+                alt: "Salle de bain en marbre avec meuble-lavabo flottant",
+              },
+              caption: "Meuble-lavabo flottant, marbre",
             },
             {
-              title: "Double lavabo",
-              description: "Pour une salle de bain principale partagée.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Deux plans de travail dédiés",
-                "Colonne ou tiroirs centraux au besoin",
-              ],
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Douche à l'italienne avec paroi de verre",
+              },
+              caption: "Douche à l'italienne, verre",
             },
             {
-              title: "Vanité suspendue",
-              description: "Fixation murale, plancher dégagé et entretien facilité.",
-              icon: "doorOpen",
-              bullets: [
-                "Sensation d'espace dans les petites pièces",
-                "Hauteur ajustée à votre usage",
-              ],
+              kind: "stat",
+              value: "9 à 15 sem.",
+              label: "Du design validé à la pose de la vanité",
             },
             {
-              title: "Vanité avec rangement",
-              description: "Tiroirs profonds, colonne et organisation intégrée.",
-              icon: "wrench",
-              bullets: [
-                "Tiroirs en bouleau massif",
-                "Espaces dédiés aux produits et serviettes",
-              ],
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
+                alt: "Vanité avec miroir à éclairage DEL et comptoir de quartz",
+              },
+              caption: "Miroir DEL et comptoir quartz",
+            },
+            {
+              kind: "quote",
+              quote:
+                "L'expérience client au cœur des services de Dilamco Construction !",
+              author: "Jean-Philippe Hébert, avis Google",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-pierre-claire-01.webp",
+                alt: "Douche habillée de pierre claire dans une salle de bain rénovée",
+              },
+              caption: "Pierre claire, Ouest-de-l'Île",
             },
           ],
         },
       },
     },
     {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Salles de bain récentes",
-          items: [
-            {
-              title: "Vanité sur mesure, Laval",
-              href: "/projets/salle-de-bain/vanite-sur-mesure-laval",
-              description: "Rangement optimisé autour de la plomberie existante.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-01.webp",
-                alt: "Projet salle de bain sur mesure à Laval",
-              },
-              badges: ["Laval"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Salle de bain, Montréal",
-              href: "/projets",
-              description: "Vanité et céramique posées dans la même séquence.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-02.webp",
-                alt: "Projet salle de bain sur mesure à Montréal",
-              },
-              badges: ["Montréal"],
-              footerCtaLabel: "Voir les projets",
-            },
-            {
-              title: "Salle de bain, Rive-Sud",
-              href: "/projets",
-              description: "Alignements soignés et finis choisis pour l'humidité.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-03.webp",
-                alt: "Projet salle de bain sur mesure sur la Rive-Sud",
-              },
-              badges: ["Rive-Sud"],
-              footerCtaLabel: "Voir les projets",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Des matériaux choisis pour l'humidité",
-          intro: "Une salle de bain use les meubles plus vite que le reste de la maison. La structure fait la différence.",
-          items: [
+          heading: "La salle de bain en bref",
+          intro:
+            "Ce qu'une pièce humide impose au meuble, au calendrier et au contrat.",
+          rows: [
             {
-              title: "Bouleau massif",
-              description: "Sur les éléments critiques, pour la stabilité",
+              label: "Délai",
+              value: "9 à 15 semaines, commande lancée après le relevé",
             },
             {
-              title: "Contreplaqué de bouleau",
-              description: "Meilleure tenue dimensionnelle qu'un panneau de particules",
+              label: "Prix",
+              value: "Selon le format, simple ou double lavabo, et le rangement",
             },
             {
-              title: "Finis lavables",
-              description: "Choisis pour l'entretien quotidien",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Matériaux",
+              value: "Contreplaqué de bouleau, chants scellés contre la vapeur",
             },
             {
-              label: "Rénovation de salle de bain",
-              href: "/services/renovation/salle-de-bain",
-              variant: "ghost",
+              label: "Quincaillerie",
+              value: "Charnières et coulisses traitées contre la corrosion",
+            },
+            {
+              label: "Pose",
+              value: "Après la membrane et la céramique, avant la robinetterie",
+            },
+            {
+              label: "Garantie",
+              value: "Déficiences reprises avant le solde, durée au contrat",
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-bath-project-01.webp",
-            alt: "Détail matériau pour salle de bain sur mesure",
+            src: "/images/generated/spaces/space-bath-hero-01.webp",
+            alt: "Vanité de salle de bain sur mesure dans une pièce rénovée",
           },
-          cardTitle: "Ce que ça change",
-          cardDescription: "Moins de gondolement, une tenue plus longue.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -204,24 +160,20 @@ export const salleDeBainPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte une vanité sur mesure ?",
-              a: "Le prix dépend du format (simple ou double lavabo), du volume de rangement, des finis et de la quincaillerie. Le montant ferme est fixé après le relevé sur place, dans la soumission détaillée.",
+              q: "Peut-on déplacer la toilette ou le bain ?",
+              a: "Oui, à condition de refaire l'alimentation et le drain. Dans une dalle de béton, il faut ouvrir le plancher, ce qui change le budget et le calendrier. On le tranche au relevé.",
             },
             {
-              q: "Quel est le délai ?",
-              a: "De 9 à 15 semaines entre la validation du design et la pose. Quand la vanité fait partie d'une rénovation complète, la commande est calée sur l'échéancier du chantier.",
+              q: "Comment évitez-vous la moisissure derrière la vanité ?",
+              a: "Membrane continue sous la céramique, scellant aux jonctions, ventilateur dimensionné pour le volume de la pièce et raccordé vers l'extérieur, pas vers l'entretoit.",
             },
             {
-              q: "Quelle différence avec une vanité standard ?",
-              a: "Une vanité standard est vendue en dimensions fixes, ce qui laisse des centimètres perdus autour du lavabo et de la tuyauterie. Le sur mesure exploite les angles, les hauteurs et les niches réelles de la pièce.",
+              q: "Combien de temps la salle de bain est-elle inutilisable ?",
+              a: "Comptez deux à quatre semaines de travaux sur place, selon la démolition et le séchage. Les dates sont fixées à l'échéancier, pas laissées à l'improvisation.",
             },
             {
-              q: "L'humidité change-t-elle vos matériaux ?",
-              a: "Oui. Bouleau massif, contreplaqué de bouleau et finis lavables, choisis pour limiter le gondolement. La ventilation de la pièce est vérifiée avec le reste du chantier.",
-            },
-            {
-              q: "Pouvez-vous rénover toute la salle de bain ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : démolition, plomberie, électricité, membrane d'étanchéité, céramique, ventilation et pose de la vanité, coordonnées par un seul responsable, au contrat écrit.",
+              q: "Une vanité sur mesure vaut-elle le prix dans une petite pièce ?",
+              a: "C'est là qu'elle change le plus de choses : largeur ajustée au centimètre, tiroirs contournant le siphon, hauteur adaptée aux utilisateurs plutôt qu'au catalogue.",
             },
           ],
         },
@@ -234,7 +186,8 @@ export const salleDeBainPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre salle de bain",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          intro:
+            "Visite gratuite. Vous repartez avec une soumission poste par poste.",
           actions: [
             {
               label: "Demander une soumission",
@@ -243,7 +196,7 @@ export const salleDeBainPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets",
-              href: "/projets",
+              href: "/projets/salle-de-bain",
               variant: "ghost",
             },
           ],

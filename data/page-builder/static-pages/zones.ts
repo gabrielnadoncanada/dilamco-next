@@ -41,13 +41,12 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Zones desservies",
-          heading:
-            "Entrepreneur général dans l'Ouest-de-l'Île et le Grand Montréal",
+          badges: ["Ouest-de-l'Île", "Montréal", "Laval"],
+          heading: "Où nous travaillons, ville par ville",
           description:
-            "Base à Pierrefonds-Roxboro. Onze pages de zones, du permis municipal à la livraison.",
+            "Onze pages locales. Chacune dit le bâti du secteur, le service des permis concerné et la route depuis notre base.",
           actions: [
             {
               label: "Demander une soumission",
@@ -60,12 +59,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Licence RBQ", "Depuis 2004", "Ouest-de-l'Île"],
-          image: {
-            src: "/images/generated/home/home-hero-premium-kitchen-01.webp",
-            alt: "Projet de rénovation réalisé par Dilamco dans l'Ouest-de-l'Île",
-          },
-          caption: "Base : Pierrefonds-Roxboro, Montréal",
         },
       },
     },
@@ -76,14 +69,12 @@ export const page: PageTemplateData = {
         variant: "link-cards-compact",
         props: {
           heading: "Les zones que nous desservons",
-          intro:
-            "Une page par ville : parc immobilier local, service des permis concerné et FAQ municipale.",
           columns: "3",
           items: [
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              description: "Notre base, bungalows et cottages 1950-1980",
+              description: "Notre base d'affaires",
               badges: ["Base"],
               ctaLabel: "Voir la zone",
             },
@@ -102,49 +93,49 @@ export const page: PageTemplateData = {
             {
               title: "Pointe-Claire",
               href: "/zones/pointe-claire",
-              description: "Village patrimonial et dossiers assujettis au PIIA",
+              description: "Village patrimonial assujetti au PIIA",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Beaconsfield",
               href: "/zones/beaconsfield",
-              description: "Zonage 720 et règlement d'abattage",
+              description: "Règlement d'abattage d'arbres",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Dorval",
               href: "/zones/dorval",
-              description: "Résidentiel et commercial près de l'aéroport",
+              description: "Résidentiel près de l'aéroport",
               ctaLabel: "Voir la zone",
             },
             {
               title: "L'Île-Bizard–Sainte-Geneviève",
               href: "/zones/ile-bizard-sainte-genevieve",
-              description: "Maisons riveraines, terrains larges",
+              description: "Zones inondables cartographiées",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              description: "Plex et bungalows d'après-guerre",
+              description: "Plex d'après-guerre et copropriétés",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              description: "De Chomedey à Sainte-Rose",
+              description: "Bungalows des années 1960",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Vaudreuil-Dorion",
               href: "/zones/vaudreuil-dorion",
-              description: "Vaudreuil-Soulanges, secteurs en développement",
+              description: "Sous-sols livrés bruts",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Rive-Sud",
               href: "/zones/rive-sud",
-              description: "Longueuil, Brossard, Saint-Lambert et environs",
+              description: "Mandats d'envergure seulement",
               ctaLabel: "Voir la zone",
             },
           ],
@@ -155,57 +146,42 @@ export const page: PageTemplateData = {
       id: "territoire",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Comment se dessine notre territoire",
-          description:
+          heading: "Notre territoire, mesuré en minutes",
+          intro:
             "Sur un chantier de plusieurs semaines, la distance décide de la vitesse à laquelle un problème se règle.",
-          cards: [
+          rows: [
             {
-              title: "Ouest-de-l'Île",
-              description:
-                "Moins de vingt minutes depuis la base, suivi de chantier serré.",
+              label: "Base",
+              value: "18625, rue Larocque, Pierrefonds-Roxboro",
             },
             {
-              title: "Montréal, Laval, Vaudreuil-Soulanges",
-              description:
-                "Territoire régulier, même méthode, service d'urbanisme validé au cadrage.",
+              label: "Rayon",
+              value: "Ouest-de-l'Île, Montréal, Laval, Vaudreuil-Soulanges, Rive-Sud",
             },
             {
-              title: "Rive-Sud et au-delà",
-              description:
-                "Au cas par cas, selon la portée du projet et la période.",
-            },
-          ],
-          columns: "3",
-        },
-      },
-    },
-    {
-      id: "faq",
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "Questions fréquentes",
-          items: [
-            {
-              q: "Quel territoire desservez-vous exactement ?",
-              a: "Notre cœur de territoire est l'Ouest-de-l'Île, depuis notre base du 18625, rue Larocque, à Pierrefonds-Roxboro. On travaille régulièrement ailleurs sur l'île de Montréal, à Laval et dans Vaudreuil-Soulanges. La Rive-Sud s'évalue au cas par cas.",
+              label: "Temps de route",
+              value: "De 10 minutes sur l'île Bizard à une heure à Châteauguay",
             },
             {
-              q: "Facturez-vous des frais de déplacement ?",
-              a: "La visite et l'estimation sont gratuites dans nos zones desservies. Plus loin, le déplacement est intégré à la soumission plutôt que facturé à part en cours de chantier. Tout est écrit au contrat avant le début des travaux.",
+              label: "Permis",
+              value: "Un service d'urbanisme différent par ville et par arrondissement",
             },
             {
-              q: "Ma ville n'apparaît pas dans la liste. Travaillez-vous chez moi ?",
-              a: "Peut-être. La liste couvre les municipalités où on intervient le plus souvent, pas les seules où on accepte des mandats. Écrivez-nous avec la ville et la nature du projet ; on répond franchement si ce n'est pas un mandat pour nous.",
+              label: "Premier retour",
+              value: "24 à 48 heures ouvrables, visite et estimation gratuites",
             },
             {
-              q: "Vous occupez-vous du permis dans chaque ville ?",
-              a: "Oui. Chaque ville et chaque arrondissement a son service d'urbanisme, ses règlements et son processus. On monte et on dépose le dossier dans le cadre du mandat, et le délai de traitement entre dans l'échéancier.",
+              label: "Déplacement",
+              value: "Chiffré dans la soumission, pas facturé en cours de route",
             },
           ],
+          image: {
+            src: "/images/generated/services/service-renovation-hero-01.webp",
+            alt: "Chantier de rénovation suivi depuis notre base de Pierrefonds-Roxboro",
+          },
+          note: "Base d'affaires et licence vérifiées au registre RBQ le 2026-09-18.",
         },
       },
     },
@@ -217,7 +193,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Dites-nous où est votre projet",
           intro:
-            "Ville, type de travaux, échéance. On confirme rapidement et on fixe la visite.",
+            "Ville, type de travaux, échéance. On confirme et on fixe la visite.",
           actions: [
             {
               label: "Demander une soumission",
@@ -230,7 +206,7 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · 18625, rue Larocque, Pierrefonds-Roxboro · RBQ 8306-0806-27",
+          note: "Dilamco · 18625, rue Larocque, Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

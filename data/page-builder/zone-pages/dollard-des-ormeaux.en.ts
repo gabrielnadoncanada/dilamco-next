@@ -40,61 +40,77 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Dollard-des-Ormeaux",
-          heading:
-            "General contractor in Dollard-des-Ormeaux, permit and trades coordinated",
+          eyebrow: "General contractor in",
+          heading: "Dollard-des-Ormeaux",
           description:
-            "Bungalows, split-levels and cottages from 1960 to 1985. Our base is ten minutes away. RBQ licence 8306-0806-27 since 2004.",
+            "Forty-eight thousand residents, a housing stock built in twenty-five years, and the same faults from street to street.",
           actions: [
             {
-              label: "Request an estimate",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See our work",
-              href: "/projets",
+              label: "See kitchens",
+              href: "/services/renovation/cuisine",
               variant: "ghost",
             },
           ],
-          badges: ["Since 2004", "General contractor", "Insured"],
           image: {
             src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-            alt: "Kitchen renovation in a Dollard-des-Ormeaux home",
+            alt: "Renovated kitchen in a Dollard-des-Ormeaux home",
           },
-          caption: "Saint-Jean, Westpark, Sunnybrooke",
+          facts: [
+            { label: "Our base", value: "Pierrefonds-Roxboro, ten minutes" },
+            { label: "Permits", value: "City hall, 12001 boul. De Salaberry" },
+            { label: "Housing stock", value: "Bungalows and split-levels, 1960 to 1985" },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about DDO homes",
-          description:
-            "Almost the entire housing stock went up in twenty-five years, in waves. The same defects repeat from street to street.",
-          cards: [
+          heading: "DDO homes, sector by sector",
+          intro:
+            "The city counted 1,800 residents in the early 1960s and close to 40,000 twenty years later.",
+          rows: [
             {
-              title: "Three sectors, three generations",
-              description:
-                "Sunnybrooke: bungalows and split-levels from the first wave. Westpark and Saint-Jean: cottages, semis, row houses.",
+              label: "First wave",
+              value: "Sunnybrooke, then Westpark and the Saint-Jean sector",
             },
             {
-              title: "Zoning rewritten in 2025",
-              description:
-                "Urban plan R-2024-190 in force 24 April 2025, zoning by-law R-2025-199 on 16 May 2025.",
+              label: "Zoning",
+              value: "R-2025-199, in force since 16 May 2025",
             },
             {
-              title: "Permits at city hall",
-              description:
-                "Filed online or at 12001 boulevard De Salaberry. Detailed sketches, plans or drawings are mandatory.",
+              label: "Planning programme",
+              value: "R-2024-190, applicable since 24 April 2025",
+            },
+            {
+              label: "Documents required",
+              value: "Sketches, plans or detailed drawings of the work",
+            },
+            {
+              label: "Common projects",
+              value: "Centre wall opened, bathroom, basement, rear addition",
+            },
+            {
+              label: "Drive time",
+              value: "Ten minutes along boulevard Saint-Jean",
             },
           ],
-          columns: "1",
+          image: {
+            src: "/images/generated/spaces/space-bath-hero-01.webp",
+            alt: "Bathroom redone in a Dollard-des-Ormeaux split-level",
+          },
+          note: "Sources: City of Dollard-des-Ormeaux, Wikipedia. Verified 2026-09-18.",
         },
       },
     },
@@ -104,113 +120,55 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in DDO",
+          heading: "What we build in Dollard-des-Ormeaux",
           items: [
             {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "Centre wall often load-bearing: beam and columns sized before demolition.",
+                "In DDO split-levels the centre wall often carries the upper floor",
               image: {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
-                alt: "Open kitchen renovated in a split-level",
+                alt: "Kitchen opened onto the living room of a DDO split-level",
               },
               badges: ["Structure"],
-              footerCtaLabel: "See the service",
-            },
-            {
-              title: "Bathroom",
-              href: "/services/renovation/salle-de-bain",
-              description:
-                "Full waterproofing membrane, ventilation vented outside and not into the attic.",
-              image: {
-                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
-                alt: "Renovated bathroom with tiled shower",
-              },
-              badges: ["Waterproofing"],
-              footerCtaLabel: "See the service",
+              footerCtaLabel: "See kitchens",
             },
             {
               title: "Basement",
               href: "/services/renovation/sous-sol",
               description:
-                "Insulation and vapour barrier redone to current rules, not to 1975.",
+                "Insulation and vapour barrier rebuilt to today's code, not to 1975",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Basement finished as a family room",
+                alt: "Basement family room finished in Dollard-des-Ormeaux",
               },
               badges: ["Insulation"],
-              footerCtaLabel: "See the service",
+              footerCtaLabel: "See basements",
             },
             {
-              title: "Home addition",
+              title: "Addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Addition, sunroom or second storey checked under zoning by-law R-2025-199.",
+                "Rear addition or sunroom cleared under zoning R-2025-199",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Rear addition on a suburban home",
+                alt: "Rear addition on a Dollard-des-Ormeaux house",
               },
               badges: ["Permit"],
-              footerCtaLabel: "See the service",
-            },
-            {
-              title: "Disaster recovery",
-              href: "/services/renovation/apres-sinistre",
-              description:
-                "Water damage or backup: valve and pump checked, code-compliant rebuild.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Rebuild under way after water damage",
-              },
-              badges: ["Insurance"],
-              footerCtaLabel: "See the service",
+              footerCtaLabel: "See additions",
             },
           ],
         },
       },
     },
     {
-      id: "preuves",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Why a West Island general contractor",
-          intro:
-            "An unplanned visit to DDO does not cost half a day of driving. That changes how fast things get settled.",
-          badges: ["Since 2004", "5.0 on Google", "Insured"],
-          cardTitle: "What you can verify",
-          items: [
-            "RBQ licence 8306-0806-27 since 7 September 2004",
-            "General contractor classes 1.2 and 1.3",
-            "No claims on the licence record",
-            "Liability insurance and site coverage",
-            "Zoning R-2025-199 confirmed with the city",
-            "Custom cabinets in the same contract",
-          ],
-          actions: [
-            {
-              label: "See our services",
-              href: "/services/renovation",
-              variant: "primary",
-            },
-            {
-              label: "Request an estimate",
-              href: "/contact",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "secteurs",
+      id: "voisins",
       content: {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Neighbouring cities we serve",
+          heading: "Around DDO, we also serve",
           columns: "3",
           items: [
             {
@@ -232,28 +190,20 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Do I need a permit to renovate in DDO?",
-              a: "In the vast majority of cases, yes. The city requires detailed sketches, plans or drawings that clearly show the work. Applications go online or to city hall. We prepare the file.",
+              q: "Does zoning R-2025-199 change my DDO project?",
+              a: "It may. Setbacks, heights and siting were revised when it came into force on 16 May 2025. We read your zone sheet at city hall before anything gets drawn.",
             },
             {
-              q: "Does the new zoning by-law change anything?",
-              a: "Possibly. Urban plan R-2024-190 has been in force since 24 April 2025 and zoning by-law R-2025-199 since 16 May 2025. Setbacks, heights and siting rules may have changed.",
+              q: "What documents does Dollard-des-Ormeaux require?",
+              a: "Sketches, plans or detailed drawings that clearly show the work. Filing is done online or at 12001 boulevard De Salaberry. We prepare the application and answer the inspector.",
             },
             {
-              q: "Can the wall between kitchen and living room be opened?",
-              a: "Often yes, rarely without structural work. In DDO split-levels the centre wall frequently carries the upper floor. Sized beam and columns down to proper bearing, decided before the contract.",
+              q: "Can the wall between kitchen and living room come out in DDO?",
+              a: "Often yes, rarely without structural work. In Sunnybrooke split-levels that wall frequently carries the floor above. Beam and posts are sized before you sign anything.",
             },
             {
-              q: "How long does a job take?",
-              a: "A bathroom takes weeks, a complete kitchen months. Custom cabinets take 9 to 15 weeks, running alongside the job site. The schedule is written into the contract.",
-            },
-            {
-              q: "How much does a renovation cost in Dollard-des-Ormeaux?",
-              a: "Our projects start around $25,000. A complete kitchen usually lands between $35,000 and $50,000. Free estimate, budget set in the written contract after the site visit.",
-            },
-            {
-              q: "Are you licensed and insured?",
-              a: "RBQ licence 8306-0806-27, issued 7 September 2004, valid with no restrictions, classes 1.2 and 1.3, no claims on file. Liability insurance and site coverage.",
+              q: "What does a kitchen cost in Dollard-des-Ormeaux?",
+              a: "Most often between $35,000 and $50,000, structure, electrical and plumbing included. Smaller mandates start near $25,000. The budget is fixed in the written contract after the visit.",
             },
           ],
         },
@@ -265,22 +215,21 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A project in Dollard-des-Ormeaux?",
-          intro:
-            "We come see the house, frame the scope, and come back with a detailed quote.",
+          heading: "A job site in Dollard-des-Ormeaux",
+          intro: "Ten minutes separate us from your street.",
           actions: [
             {
-              label: "Request an estimate",
+              label: "Request a quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See our service areas",
+              label: "See service areas",
               href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Dilamco · General contractor, RBQ licence 8306-0806-27 · West Island",
+          note: "Dilamco · general contractor, ten minutes from DDO",
         },
       },
     },

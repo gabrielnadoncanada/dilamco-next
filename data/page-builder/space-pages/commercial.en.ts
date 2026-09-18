@@ -27,12 +27,12 @@ export const commercialPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Commercial",
-          heading: "Commercial fit-outs delivered on the agreed date",
+          badges: ["Offices", "Retail"],
+          heading: "Commercial fit-outs in Montréal, delivered on the agreed date",
           description:
-            "Offices, retail, leasehold improvements and multi-unit buildings. Permit, trades and schedule under one accountability.",
+            "Offices, retail and leasehold improvements, run in phases so your unit keeps trading.",
           actions: [
             {
               label: "Get a quote",
@@ -41,98 +41,117 @@ export const commercialPageEn: PageTemplateData = {
             },
             {
               label: "See our work",
-              href: "/projets",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],
-          badges: ["Offices", "Retail", "Multi-unit"],
-          image: {
-            src: "/images/generated/spaces/space-commercial-hero-01.webp",
-            alt: "Custom commercial fit-out in Montréal and Greater Montréal",
-          },
-          caption: "Montréal · Laval · South Shore · Vaudreuil-Soulanges",
         },
       },
     },
     {
-      id: "inclus",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What the mandate covers",
-          description:
-            "A unit closed longer than planned is expensive. The sequence is set before the walls open.",
-          cards: [
-            {
-              title: "Permit and compliance",
-              description: "Plans, city application and work compliant with the Québec Construction Code.",
-            },
-            {
-              title: "Phased work",
-              description: "After-hours intervention when the space has to stay open.",
-            },
-            {
-              title: "One party accountable",
-              description: "Partitions, electrical, plumbing, venting, flooring and paint coordinated.",
-            },
-            {
-              title: "Built-in millwork",
-              description: "Reception, technical storage and service areas from our cabinet division.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "projects",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading: "Commercial projects",
-          items: [
+          heading: "Units put back into service",
+          tiles: [
             {
-              title: "Office fit-out",
-              href: "/projets",
-              description: "Downtown space reworked and handed over ready to occupy.",
+              kind: "image",
+              span: "wide",
               image: {
-                src: "/images/generated/spaces/space-commercial-project-01.webp",
-                alt: "Commercial project in Montréal",
+                src: "/images/generated/spaces/space-commercial-hero-01.webp",
+                alt: "Office refitted in a downtown Montréal building",
               },
-              badges: ["Montréal"],
-              footerCtaLabel: "View project",
+              caption: "Office refit, downtown",
             },
             {
-              title: "Leasehold improvements",
-              href: "/projets",
-              description: "Space adapted to the tenant, within the lease terms.",
+              kind: "image",
+              span: "tall",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
-                alt: "Commercial project in Laval",
+                alt: "Leasehold improvements carried out in a Laval unit",
               },
-              badges: ["Laval"],
-              footerCtaLabel: "View project",
+              caption: "Leasehold work, Laval",
             },
             {
-              title: "Built-in commercial millwork",
-              href: "/projets",
-              description: "Reception and technical storage installed with the rest.",
+              kind: "stat",
+              value: "1.2 and 1.3",
+              label: "RBQ classes, buildings of all kinds covered",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-01.webp",
+                alt: "Commercial unit delivered ready to occupy in downtown Montréal",
+              },
+              caption: "Unit ready to occupy",
+              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
+            },
+            {
+              kind: "image",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
-                alt: "Commercial project on the South Shore",
+                alt: "Reception counter and service storage built into a retail space",
               },
-              badges: ["South Shore"],
-              footerCtaLabel: "View project",
+              caption: "Built-in reception millwork",
+            },
+            {
+              kind: "text",
+              title: "Work outside opening hours",
+              description:
+                "Dated phases in the contract, so the unit keeps serving its customers.",
+              href: "/processus",
             },
           ],
+        },
+      },
+    },
+    {
+      id: "en-bref",
+      frame: { surface: "muted" },
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "The commercial mandate at a glance",
+          intro:
+            "A unit closed longer than planned costs more than the work itself.",
+          rows: [
+            {
+              label: "Lead time",
+              value: "Set in the contract after scoping, the permit drives it",
+            },
+            {
+              label: "Permit",
+              value: "Municipal application filed by us, inspections followed",
+            },
+            {
+              label: "Compliance",
+              value: "Québec Construction Code, RBQ classes 1.2 and 1.3",
+            },
+            {
+              label: "Insurance",
+              value: "Civil liability and site cover, certificates provided",
+            },
+            {
+              label: "Millwork",
+              value: "Reception and service storage, nine to fifteen weeks",
+            },
+            {
+              label: "Installation",
+              value: "In phases, off-hours while the unit stays open",
+            },
+          ],
+          image: {
+            src: "/images/generated/spaces/space-commercial-project-03.webp",
+            alt: "Built-in commercial millwork in a unit delivered by Dilamco",
+          },
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -140,24 +159,20 @@ export const commercialPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "What kinds of commercial projects do you take on?",
-              a: "Offices, retail, service spaces, leasehold improvements within the lease terms and work in multi-unit buildings. Built-in millwork is supplied by our cabinet division when the project calls for it.",
+              q: "Who deals with the building owner during the work?",
+              a: "We do. Notice to the manager, freight elevator booking, protection of common areas and approved working hours are settled before day one on site.",
             },
             {
-              q: "Can you work around our opening hours?",
-              a: "Yes, when the sequence is set during planning. The work is split into phases, and after-hours interventions are written into the contract with their dates.",
+              q: "How are leasehold improvements handled under the lease?",
+              a: "The scope is split according to what the lease puts on the landlord and on the tenant. Each share is priced separately so the invoicing can follow.",
             },
             {
-              q: "Do you handle permits and compliance?",
-              a: "Yes. City permit application, inspection coordination and work compliant with the Québec Construction Code. RBQ licence 8306-0806-27, classes 1.2 and 1.3, liability and site insurance.",
+              q: "Do you work in multi-unit residential buildings?",
+              a: "Yes: vacant units, common areas, balconies and storage rooms. Work is sequenced to limit noise and service interruptions for the occupants.",
             },
             {
-              q: "How long does a commercial fit-out take?",
-              a: "Mostly it depends on the permit and the scope. The schedule is set in the contract after scoping. Built-in millwork takes 9 to 15 weeks, ordered alongside the work.",
-            },
-            {
-              q: "Where do you work?",
-              a: "Our base is in the West Island. We work in Montréal, Laval, on the South Shore and in Vaudreuil-Soulanges.",
+              q: "What if a municipal inspection rejects an item?",
+              a: "The fix is carried out at our cost when it comes from our execution. If the refusal stems from the drawings supplied, it is documented and reworked with the designer.",
             },
           ],
         },
@@ -170,7 +185,8 @@ export const commercialPageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your commercial project",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro:
+            "Free estimate. We scope the permit and the sequence before any wall opens.",
           actions: [
             {
               label: "Request a quote",
@@ -179,7 +195,7 @@ export const commercialPageEn: PageTemplateData = {
             },
             {
               label: "See our work",
-              href: "/projets",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],

@@ -27,12 +27,12 @@ export const walkInPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Walk-in",
-          heading: "Custom closets and walk-ins, wall to ceiling",
+          badges: ["Custom-built"],
+          heading: "Custom closets and walk-ins in Montréal",
           description:
-            "Hanging space, drawers and shelves sized to your real walls, installed by the crew running the renovation.",
+            "Hanging rails, drawers and shelves worked out by garment type, built floor to ceiling.",
           actions: [
             {
               label: "Get a quote",
@@ -41,146 +41,116 @@ export const walkInPageEn: PageTemplateData = {
             },
             {
               label: "See our walk-ins",
-              href: "/projets",
+              href: "/projets/walk-in",
               variant: "ghost",
             },
           ],
-          badges: ["Custom-built", "Cabinet division"],
-          image: {
-            src: "/images/generated/spaces/space-walkin-hero-01.webp",
-            alt: "High-end custom closet and walk-in in Pierrefonds and Greater Montreal",
-          },
-          caption: "Montreal · Laval · West Island",
         },
       },
     },
     {
-      id: "inclus",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What the mandate covers",
-          description:
-            "Storage is planned around what you actually keep, then built in from wall to wall.",
-          cards: [
-            {
-              title: "Hanging space and drawers",
-              description: "Rod heights and drawer depths worked out by garment type.",
-            },
-            {
-              title: "Corners and alcoves used",
-              description: "Corners, ceiling height and wall recesses all turn into storage.",
-            },
-            {
-              title: "Island, lighting, glass doors",
-              description: "High-end walk-in options planned in, not added afterwards.",
-            },
-            {
-              title: "Installed with the job site",
-              description: "Partitions, lighting, flooring and storage coordinated by one party.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "projects",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading: "Recent walk-ins",
-          items: [
+          heading: "From a storage wall to a full room",
+          tiles: [
             {
-              title: "Walk-in, Montreal",
-              href: "/projets",
-              description: "Circulation and storage set for daily use.",
+              kind: "image",
+              span: "wide",
               image: {
-                src: "/images/generated/spaces/space-walkin-project-01.webp",
-                alt: "Custom walk-in project in Montreal",
+                src: "/images/generated/spaces/space-walkin-hero-01.webp",
+                alt: "Custom walk-in closet with double-height hanging rails",
               },
-              badges: ["Montreal"],
-              footerCtaLabel: "View project",
+              caption: "Double-height hanging rails",
             },
             {
-              title: "Walk-in, Laval",
-              href: "/projets",
-              description: "Space maximized in a tight room.",
+              kind: "image",
+              span: "tall",
               image: {
                 src: "/images/generated/spaces/space-walkin-project-02.webp",
-                alt: "Custom walk-in project in Laval",
+                alt: "Walk-in closet fitted into a bedroom corner in Laval",
               },
-              badges: ["Laval"],
-              footerCtaLabel: "View project",
+              caption: "Corner put to work, Laval",
             },
             {
-              title: "Walk-in, South Shore",
-              href: "/projets",
-              description: "Centre island and built-in lighting.",
+              kind: "stat",
+              value: "$3,000",
+              label: "Storage wall starting point, walk-ins from $8,000",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-walkin-project-01.webp",
+                alt: "Custom drawers and shelves in a Montréal walk-in closet",
+              },
+              caption: "Drawers and shelves, Montréal",
+            },
+            {
+              kind: "image",
               image: {
                 src: "/images/generated/spaces/space-walkin-project-03.webp",
-                alt: "Custom walk-in project on the South Shore",
+                alt: "Walk-in closet with a centre island and integrated lighting",
               },
-              badges: ["South Shore"],
-              footerCtaLabel: "View project",
+              caption: "Centre island and lighting",
+            },
+            {
+              kind: "text",
+              title: "Against modular kits",
+              description:
+                "Fixed sizes, and shelves that sag under load after a few seasons.",
+              href: "/materiaux",
             },
           ],
         },
       },
     },
     {
-      id: "materials",
+      id: "en-bref",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "What still holds after five years",
-          intro: "A closet is judged on loaded drawers and long shelves, not on the photo taken on day one.",
-          items: [
+          heading: "Storage at a glance",
+          intro:
+            "A walk-in is judged five years later, drawers full and shelves loaded.",
+          rows: [
             {
-              title: "Solid birch drawers",
-              description: "Built for a varying daily load",
+              label: "Price",
+              value: "$3,000 to $8,000 a wall, $8,000 to $20,000 a walk-in",
             },
             {
-              title: "Plywood structure",
-              description: "Shelves that do not sag",
+              label: "Lead time",
+              value: "Nine to fifteen weeks, driven by unit count and finishes",
             },
             {
-              title: "Solid hardware",
-              description: "Soft-close slides and hinges",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Materials",
+              value: "Solid birch drawers, plywood shelving",
             },
             {
-              label: "Custom kitchens",
-              href: "/espaces",
-              variant: "ghost",
+              label: "Hardware",
+              value: "Full-extension slides, soft-close hinges",
             },
             {
-              label: "Home renovation",
-              href: "/services/renovation",
-              variant: "ghost",
+              label: "Installation",
+              value: "After painting, before baseboards and lighting",
+            },
+            {
+              label: "Warranty",
+              value: "Door and drawer adjustments redone, term in the contract",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-walkin-project-01.webp",
-            alt: "Material detail for a custom walk-in",
+            alt: "Close-up of drawers and shelving in a custom walk-in closet",
           },
-          cardTitle: "The real benefit",
-          cardDescription: "A walk-in that stays tidy and usable over time.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -188,24 +158,20 @@ export const walkInPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does a custom closet or walk-in cost?",
-              a: "A custom wall closet usually runs $3,000 to $8,000, a full walk-in $8,000 to $20,000. With a centre island, built-in lighting and glass doors, expect more than $20,000.",
+              q: "How wide does a comfortable walk-in need to be?",
+              a: "Allow 1.7 m wall to wall for hanging on one side and a usable aisle, 2.4 m for both sides. Below that, a storage wall serves you better.",
             },
             {
-              q: "How long does it take?",
-              a: "Nine to fifteen weeks from design sign-off to installation, depending on complexity. The exact schedule is confirmed with the detailed quote.",
+              q: "How much hanging space versus shelving?",
+              a: "We count your long garments, jackets and folded stacks before drawing anything. The split comes out of what you actually own, not a standard template.",
             },
             {
-              q: "What is the difference between a closet and a walk-in?",
-              a: "A walk-in is a small room you step into. A custom closet is built along a wall. In both cases, hanging space, drawers and shelves are sized for your room.",
+              q: "Do walk-ins need doors on the units?",
+              a: "A room door is usually enough. Closed fronts mainly earn their place on what is visible from the bedroom and on off-season storage.",
             },
             {
-              q: "Is it worth it over a modular system?",
-              a: "A modular system costs less up front, imposes its stock sizes and sags sooner. Custom work uses the corners and heights, with birch plywood and solid wood drawers.",
-            },
-            {
-              q: "Can you renovate the whole room?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: partitions, door, electrical, lighting, flooring, painting and storage installation, coordinated by one party, in the written contract.",
+              q: "Can lighting and an outlet be added?",
+              a: "Yes. LED strips under the shelves, an occupancy sensor and an outlet for a steamer are run by our electrician before the walls close up.",
             },
           ],
         },
@@ -218,7 +184,8 @@ export const walkInPageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your walk-in project",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro:
+            "Free estimate. A wall survey is enough to price the storage.",
           actions: [
             {
               label: "Request a quote",
@@ -227,11 +194,11 @@ export const walkInPageEn: PageTemplateData = {
             },
             {
               label: "See our walk-ins",
-              href: "/projets",
+              href: "/projets/walk-in",
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Montreal, Laval, West Island, South Shore",
+          note: "RBQ licence 8306-0806-27 · Montréal, Laval, West Island, South Shore",
         },
       },
     },

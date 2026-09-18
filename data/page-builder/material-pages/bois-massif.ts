@@ -26,7 +26,7 @@ export const boisMassifPage: PageTemplateData = {
           eyebrow: "Matériaux",
           heading: "Le bois massif au bon endroit, pas partout",
           description:
-            "Planches pleines, grain visible, valeur perçue élevée. Un matériau vivant qui bouge avec l'humidité, donc ciblé sur les surfaces vues.",
+            "Planches pleines, grain visible. Un matériau qui travaille avec l'humidité, donc réservé aux pièces qui se voient.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -41,90 +41,54 @@ export const boisMassifPage: PageTemplateData = {
           ],
           badges: ["Naturel", "Portes", "Détails"],
           image: {
-            src: "/images/generated/materials/material-birch-drawer-detail-01.webp",
-            alt: "Cuisine sur mesure avec détails en bois massif",
+            src: "/images/generated/materials/material-solid-wood-card-01.webp",
+            alt: "Porte d'armoire en bois massif au grain apparent",
           },
           caption: "Portes et détails vus de près",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "overview",
+      id: "fiche",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce que le bois massif apporte",
-          description:
-            "Matière pleine et variations naturelles. Il gagne sur les façades et les détails, il coûte en stabilité sur les grandes surfaces planes.",
-          cards: [
+          heading: "Le bois massif en fiche",
+          intro: "Ce qu'il faut savoir avant de l'inscrire au devis.",
+          rows: [
             {
-              title: "Grain et profondeur",
-              description:
-                "Chaque pièce garde ses variations de teinte et de texture.",
+              label: "Composition",
+              value: "Planches pleines collées sur chant, érable, chêne ou noyer",
             },
             {
-              title: "Valeur perçue",
-              description:
-                "Il tire le rendu vers le haut de gamme sur les éléments vus.",
+              label: "Humidité",
+              value: "Réaction forte, gonfle l'été et retreint l'hiver",
             },
             {
-              title: "Réparable",
-              description:
-                "Certaines marques se reprennent selon le fini appliqué.",
+              label: "Entretien",
+              value: "Chiffon doux, aucune eau laissée sur un joint",
             },
             {
-              title: "Il bouge",
-              description:
-                "Gonflement et retrait suivent l'humidité et la température de la pièce.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Où on l'utilise",
-          intro:
-            "On cible le bois massif là où il se voit et se touche, et on passe au panneau ailleurs.",
-          items: [
-            {
-              title: "Portes et façades",
-              description: "Là où le grain se lit de près.",
+              label: "Usages recommandés",
+              value: "Portes, moulures, corniches, tablettes apparentes",
             },
             {
-              title: "Détails et moulures",
-              description: "Corniches, panneaux latéraux, tablettes apparentes.",
+              label: "Prix relatif",
+              value: "Le plus élevé des quatre panneaux",
             },
             {
-              title: "Caissons en contreplaqué",
-              description: "Plus stables sous charge et dans l'humidité.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir le comparatif",
-              href: "/materiaux/comparatif",
-              variant: "ghost",
-            },
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Finis disponibles",
+              value: "Teinture, vernis, huile, laque opaque",
             },
           ],
           image: {
             src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-            alt: "Détail de finition en bois massif",
+            alt: "Détail de finition sur une pièce en bois massif",
           },
-          cardTitle: "Approche recommandée",
-          cardDescription:
-            "Bois massif sur les surfaces vues, panneaux stables pour la structure.",
+          note: "Valeurs indicatives. L'essence retenue est confirmée au devis.",
         },
       },
     },
@@ -134,23 +98,23 @@ export const boisMassifPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur le bois massif",
           items: [
             {
-              q: "Le bois massif est-il toujours le bon choix ?",
-              a: "Non. Il excelle sur les portes et les détails visibles. Sur les grandes surfaces planes et les caissons, le contreplaqué et le MDF tiennent mieux la ligne dans le temps.",
+              q: "Le bois massif convient-il aux caissons ?",
+              a: "Non. Sous charge et sur de grandes surfaces planes, il travaille et finit par voiler. Le contreplaqué garde les caissons droits, le massif reste sur les pièces vues.",
             },
             {
-              q: "Comment réagit-il à l'humidité ?",
-              a: "Il gonfle et se contracte selon l'humidité de la pièce. Un jeu prévu à la conception, des assemblages adaptés et un fini qui scelle le bois limitent nettement ces mouvements.",
+              q: "Quelle essence choisir ?",
+              a: "L'érable accepte les teintures claires sans tacher. Le chêne affiche un grain marqué. Le noyer part foncé et coûte plus cher. Le choix se fait sur échantillon, chez vous.",
             },
             {
-              q: "Est-ce recommandé en cuisine ?",
-              a: "Oui, sur les portes et les éléments vus. Le fini choisi et la ventilation de la pièce comptent autant que l'essence de bois.",
+              q: "Les joints vont-ils ouvrir l'hiver ?",
+              a: "Un léger jeu est normal quand l'air sec descend sous 30 pour cent d'humidité. Un humidificateur réglé correctement garde ce mouvement invisible.",
             },
             {
-              q: "Peut-on le combiner à d'autres matériaux ?",
-              a: "Oui, et c'est l'approche habituelle : bois massif sur les façades, contreplaqué de bouleau pour les caissons, MDF pour certaines portes peintes.",
+              q: "Peut-on reprendre une égratignure ?",
+              a: "Sur un fini huilé, oui : ponçage local puis nouvelle couche. Sur une laque opaque, la reprise se devine toujours un peu.",
             },
           ],
         },
@@ -162,9 +126,9 @@ export const boisMassifPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet avec du bois massif ?",
+          heading: "Du bois massif dans votre cuisine ?",
           intro:
-            "On vous dit où il apporte une vraie valeur et où un autre panneau tiendra mieux.",
+            "On vous dit sur quelles pièces il vaut son prix et où un panneau tiendra mieux.",
           actions: [
             {
               label: "Demander une soumission",

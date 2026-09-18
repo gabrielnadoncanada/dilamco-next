@@ -29,7 +29,7 @@ export const quincailleriePageEn: PageTemplateData = {
           eyebrow: "Materials",
           heading: "Hardware decides how long your cabinets last",
           description:
-            "Hinges, slides and dampers absorb thousands of cycles a year. It is the part that fails first when it is cheap.",
+            "Hinges, slides and dampers absorb thousands of cycles a year. It is the part that gives out first.",
           actions: [
             {
               label: "See our kitchens",
@@ -45,67 +45,53 @@ export const quincailleriePageEn: PageTemplateData = {
           badges: ["Hinges", "Slides", "Soft-close"],
           image: {
             src: "/images/generated/materials/material-hardware-hero-01.webp",
-            alt: "Custom kitchen highlighting the quality of the hardware",
+            alt: "Drawer slide and hinge inside a custom cabinet",
           },
           caption: "The detail nobody ever sees",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "types",
+      id: "fiche",
       frame: { surface: "muted" },
       content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "What we specify",
-          columns: "2",
-          items: [
+          heading: "Hardware at a glance",
+          intro: "What we specify by default on every door and every drawer.",
+          rows: [
             {
-              title: "Hinges",
-              description:
-                "They carry the door and keep it aligned over the years.",
-              icon: "doorOpen",
-              bullets: [
-                "Three-axis adjustment",
-                "Built-in soft close",
-                "Opening up to 155 degrees",
-              ],
+              label: "Composition",
+              value: "Nickel-plated stamped steel, built-in hydraulic damper",
             },
             {
-              title: "Drawer slides",
-              description:
-                "They take the load and give access to the back of the drawer.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Full extension",
-                "Rated 35 to 60 kg",
-                "Undermount, out of sight",
-              ],
+              label: "Humidity",
+              value: "Nickel-plated finish required in bathrooms",
             },
             {
-              title: "Drawer systems",
-              description:
-                "Box and mechanism form one assembly, not two separate parts.",
-              icon: "package2",
-              bullets: [
-                "Metal or wood sides",
-                "Adjustable dividers",
-                "Drawer within a drawer",
-              ],
+              label: "Upkeep",
+              value: "One hinge adjustment a year, nothing else",
             },
             {
-              title: "Specialty mechanisms",
-              description:
-                "For tall cabinets, corners and handleless fronts.",
-              icon: "wrench",
-              bullets: [
-                "Lift-ups and push-to-open",
-                "Corner carousels",
-                "Pull-out pantries",
-              ],
+              label: "Recommended uses",
+              value: "Every door and every drawer, no exception",
+            },
+            {
+              label: "Relative cost",
+              value: "5 to 10 per cent of the cabinetry cost",
+            },
+            {
+              label: "Warranty",
+              value: "Lifetime from the major European brands",
             },
           ],
+          image: {
+            src: "/images/generated/materials/material-hardware-detail-01.webp",
+            alt: "Close-up of an adjustable hinge on a cabinet door",
+          },
+          note: "Exact models are written into the quote before signing.",
         },
       },
     },
@@ -135,7 +121,7 @@ export const quincailleriePageEn: PageTemplateData = {
               values: ["Two axes", "Three axes"],
             },
             {
-              label: "Maker's warranty",
+              label: "Brand warranty",
               values: ["Limited", "Often lifetime"],
             },
           ],
@@ -148,23 +134,23 @@ export const quincailleriePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about hardware",
           items: [
             {
               q: "Partial or full extension?",
-              a: "A partial slide leaves the back of the drawer under the counter. Full extension pulls the whole drawer out, which makes that back storage genuinely usable.",
+              a: "A partial slide leaves the back of the drawer under the counter. Full extension pulls the whole drawer out, which makes the rear storage genuinely usable.",
             },
             {
-              q: "Is soft close worth the cost?",
-              a: "Yes. It removes the slam, but above all it removes the impact that loosens screws and throws doors out of line over the years.",
+              q: "Is soft-close worth the cost?",
+              a: "Yes. It removes the slam, but above all it avoids the impact that loosens screws and shifts doors out of line over the years.",
             },
             {
-              q: "Can hardware be changed later?",
-              a: "A hinge swaps out easily. A slide requires the holes in the box to line up, which is rarely the case between two brands.",
+              q: "Can hardware be swapped later?",
+              a: "A hinge is easy to replace. A slide requires the holes in the box to line up, which is rarely the case between two brands.",
             },
             {
-              q: "Is it included in your quote?",
-              a: "Yes. The hinge and slide models are listed in the detailed quote, along with the rest of the materials, before the contract is signed.",
+              q: "What about a squeaking hinge?",
+              a: "A drop of dry lubricant on the pin, then a quarter turn on the depth screw. We handle it during a visit while the warranty runs.",
             },
           ],
         },
@@ -176,9 +162,9 @@ export const quincailleriePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Let's talk about your project",
+          heading: "Choose the hardware before ordering",
           intro:
-            "We frame materials, hardware and schedule in a single quote.",
+            "You open and close the models yourself, then we write the chosen reference down.",
           actions: [
             {
               label: "Get a quote",
@@ -186,12 +172,12 @@ export const quincailleriePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View all materials",
+              label: "See all materials",
               href: "/materiaux",
               variant: "ghost",
             },
           ],
-          note: "West Island, Montréal, Laval, South Shore",
+          note: "West Island, Montreal, Laval, South Shore",
         },
       },
     },

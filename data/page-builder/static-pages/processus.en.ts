@@ -37,12 +37,12 @@ export const pageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Process",
+          badges: ["Written contract", "Permits"],
           heading: "How a renovation project runs",
           description:
-            "Five stages. Each one closes with a signed document, a permit obtained or an inspection passed.",
+            "Five milestones. Each closes on a signed document, a permit issued or an inspection passed.",
           actions: [
             {
               label: "Free estimate",
@@ -55,12 +55,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Itemized quote", "Written contract", "Permits"],
-          image: {
-            src: "/images/generated/services/service-renovation-project-03.webp",
-            alt: "Residential renovation work under way",
-          },
-          caption: "Free estimate · RBQ licence 8306-0806-27",
         },
       },
     },
@@ -71,37 +65,37 @@ export const pageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Five stages, always in this order",
+          heading: "Five milestones, always in this order",
           steps: [
             {
               number: "1",
-              title: "Visit and estimate",
+              title: "Visit and survey",
               description:
-                "Reply within 24 to 48 business hours, on-site survey, order of magnitude.",
+                "Measurements taken at your place and a first budget bracket.",
             },
             {
               number: "2",
-              title: "Itemized quote",
+              title: "Line-by-line quote",
               description:
-                "Work line by line, materials, quantities and exclusions set out in writing.",
+                "Every line priced, with quantities and what stays excluded.",
             },
             {
               number: "3",
-              title: "Contract and permit",
+              title: "Signing and permit",
               description:
-                "Dated schedule, payment calendar, permit application filed with the city.",
+                "Dated schedule, payment calendar, application filed with your city.",
             },
             {
               number: "4",
-              title: "Coordinated job site",
+              title: "Trades on site",
               description:
-                "Each trade starts after the previous stage is inspected. Nothing is covered up unchecked.",
+                "Each trade starts once the previous one has been inspected.",
             },
             {
               number: "5",
-              title: "Handover and warranty",
+              title: "Handover",
               description:
-                "Final walkthrough with you, deficiencies fixed before the last payment.",
+                "Final walkthrough, deficiency list, corrections before the balance.",
             },
           ],
         },
@@ -111,52 +105,41 @@ export const pageEn: PageTemplateData = {
       id: "documents",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
           heading: "What you receive",
           intro:
-            "A well-run project leaves a paper trail. Ask any contractor for these documents.",
-          items: [
+            "Six documents worth demanding from any contractor you consider.",
+          rows: [
             {
-              title: "The itemized quote",
-              description:
-                "the work line by line and what is not included.",
+              label: "Quote",
+              value: "Work, materials and exclusions detailed before signing",
             },
             {
-              title: "The written contract",
-              description:
-                "scope, price, dated schedule, payments and warranty terms.",
+              label: "Contract",
+              value: "Scope, price, payment terms and the warranty clause",
             },
             {
-              title: "Change orders",
-              description:
-                "every change is priced and accepted in writing before it is carried out.",
+              label: "Schedule",
+              value: "Start and end dates, milestones trade by trade",
             },
             {
-              title: "The permit and deficiency list",
-              description:
-                "a copy of the issued permit and the list fixed before the final payment.",
-            },
-          ],
-          actions: [
-            {
-              label: "Talk about your project",
-              href: "/contact",
-              variant: "primary",
+              label: "Change orders",
+              value: "Every change priced and accepted before it is carried out",
             },
             {
-              label: "More about Dilamco",
-              href: "/a-propos",
-              variant: "ghost",
+              label: "Permit",
+              value: "A copy of the issued permit, in the owner's name",
+            },
+            {
+              label: "Handover",
+              value: "Deficiency list drawn up with you, cleared at the balance",
             },
           ],
           image: {
             src: "/images/process3.jpg",
             alt: "Construction drawings and project documents on a work table",
           },
-          cardTitle: "Everything in writing",
-          cardDescription:
-            "No structural decision rests on a verbal agreement.",
         },
       },
     },

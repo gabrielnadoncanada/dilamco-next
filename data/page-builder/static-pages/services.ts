@@ -34,12 +34,12 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Entrepreneur général",
-          heading: "Rénovation résidentielle coordonnée par un seul entrepreneur",
+          badges: ["RBQ 8306-0806-27", "Depuis 2004", "Contrat écrit"],
+          heading: "Deux divisions, un seul entrepreneur responsable",
           description:
-            "Permis, corps de métier, échéancier et budget écrits au contrat. Licence RBQ depuis 2004.",
+            "La rénovation résidentielle et commerciale d'un côté, les armoires sur mesure de l'autre, sous le même contrat.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -52,12 +52,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["RBQ 8306-0806-27", "Depuis 2004", "Contrat écrit"],
-          image: {
-            src: "/images/generated/services/service-renovation-hero-01.webp",
-            alt: "Chantier de rénovation résidentielle coordonné par un entrepreneur général",
-          },
-          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },
@@ -67,16 +61,16 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Nos services de rénovation",
+          heading: "Ce que nous prenons en charge",
           items: [
             {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Démolition, plomberie, électricité, ventilation, armoires et finition dans une seule séquence.",
+                "Une pièce mise à nu, refaite et rebranchée par la même équipe.",
               image: {
-                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
-                alt: "Rénovation complète de cuisine résidentielle",
+                src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+                alt: "Cuisine shaker en U avec dosseret métro",
               },
               badges: ["Multi-métiers"],
               footerCtaLabel: "Voir la cuisine",
@@ -85,10 +79,10 @@ export const page: PageTemplateData = {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Membrane d'étanchéité, plomberie, céramique, ventilation et vanité.",
+                "Étanchéité, pente et extraction avant la moindre céramique.",
               image: {
-                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
-                alt: "Salle de bain rénovée avec douche en céramique",
+                src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
+                alt: "Salle de bain avec meuble-lavabo flottant et marbre",
               },
               badges: ["Étanchéité"],
               footerCtaLabel: "Voir la salle de bain",
@@ -97,10 +91,10 @@ export const page: PageTemplateData = {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Humidité, drainage, isolation, pare-vapeur et issue de secours. Permis obligatoire.",
+                "Diagnostic d'humidité, permis, issue de secours, puis finition.",
               image: {
-                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Sous-sol aménagé en pièce de vie",
+                src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
+                alt: "Sous-sol aménagé en salle de jeux",
               },
               badges: ["Permis"],
               footerCtaLabel: "Voir le sous-sol",
@@ -109,7 +103,7 @@ export const page: PageTemplateData = {
               title: "Plancher",
               href: "/services/renovation/plancher",
               description:
-                "Sous-plancher mis à niveau, transitions et finition entre les pièces.",
+                "Arrachage, support corrigé, nivellement, pose et seuils.",
               image: {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Pose de plancher de bois franc dans une résidence",
@@ -121,7 +115,7 @@ export const page: PageTemplateData = {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Fondation, structure, enveloppe, raccordements et conformité au zonage.",
+                "Marges de recul, fondation, charpente et raccord à l'existant.",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement arrière d'une maison unifamiliale",
@@ -133,10 +127,10 @@ export const page: PageTemplateData = {
               title: "Après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Dégât d'eau ou feu : assèchement, reconstruction et dossier pour l'assureur.",
+                "Constat, devis par poste et remise en état après l'assèchement.",
               image: {
-                src: "/images/generated/services/service-renovation-project-02.webp",
-                alt: "Reconstruction d'une pièce après un dégât d'eau",
+                src: "/images/generated/services/service-renovation-project-01.webp",
+                alt: "Pièce remise en état après un sinistre",
               },
               badges: ["Assurances"],
               footerCtaLabel: "Voir l'après sinistre",
@@ -145,7 +139,7 @@ export const page: PageTemplateData = {
               title: "Aménagement commercial",
               href: "/espaces/commercial",
               description:
-                "Bureaux, commerces et améliorations locatives, sous la catégorie RBQ 1.3.",
+                "Bureaux, commerces et améliorations locatives, catégorie RBQ 1.3.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial livré prêt à occuper",
@@ -153,98 +147,82 @@ export const page: PageTemplateData = {
               badges: ["RBQ 1.3"],
               footerCtaLabel: "Voir le commercial",
             },
+            {
+              title: "Design d'armoires",
+              href: "/services/design",
+              description:
+                "Implantation, finis et quincaillerie arrêtés avant la commande.",
+              image: {
+                src: "/images/generated/services/service-design-hero-01.webp",
+                alt: "Séance de design d'armoires sur mesure",
+              },
+              badges: ["Sous-catégorie 12"],
+              footerCtaLabel: "Voir le design",
+            },
+            {
+              title: "Production des armoires",
+              href: "/services/fabrication",
+              description:
+                "Caissons et façades produits par notre usine partenaire.",
+              image: {
+                src: "/images/generated/services/service-fabrication-hero-01.webp",
+                alt: "Caissons et façades d'armoires sur mesure",
+              },
+              badges: ["Sur mesure"],
+              footerCtaLabel: "Voir la production",
+            },
+            {
+              title: "Installation",
+              href: "/services/installation",
+              description:
+                "Pose, ajustement des portes et raccordement des électroménagers.",
+              image: {
+                src: "/images/generated/services/service-installation-hero-01.webp",
+                alt: "Installation d'armoires sur mesure pendant un chantier",
+              },
+              badges: ["Nos équipes"],
+              footerCtaLabel: "Voir l'installation",
+            },
           ],
         },
       },
     },
     {
-      id: "armoires",
+      id: "en-bref",
       frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "La division armoires",
-          intro:
-            "Notre licence couvre la sous-catégorie 12, armoires et comptoirs. Un fournisseur de moins à coordonner.",
-          items: [
+          heading: "L'entreprise en bref",
+          intro: "Les faits vérifiables avant de nous confier un chantier.",
+          rows: [
             {
-              title: "Intégrées au mandat",
-              description: "même soumission et même échéancier que les travaux.",
+              label: "Licence",
+              value: "8306-0806-27, délivrée le 7 septembre 2004, sans restriction",
             },
             {
-              title: "Relevé après la démolition",
-              description:
-                "les mesures sont prises quand les murs sont en position finale.",
+              label: "Catégories",
+              value: "1.2 et 1.3, plus la sous-catégorie 12, armoires et comptoirs",
             },
             {
-              title: "Fournies par notre usine partenaire",
-              description: "conçues, coordonnées et installées par nos équipes.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir le design",
-              href: "/services/design",
-              variant: "ghost",
+              label: "Maisons neuves",
+              value: "Nous n'en construisons pas, uniquement du bâti existant",
             },
             {
-              label: "Voir les espaces",
-              href: "/espaces",
-              variant: "ghost",
+              label: "Base",
+              value: "Pierrefonds-Roxboro, dans l'Ouest-de-l'Île",
+            },
+            {
+              label: "Interlocuteur",
+              value: "Un seul responsable, du devis au dernier paiement",
+            },
+            {
+              label: "Estimation",
+              value: "Gratuite, sur place, sans engagement",
             },
           ],
-          image: {
-            src: "/images/generated/services/service-installation-hero-01.webp",
-            alt: "Installation d'armoires sur mesure pendant un chantier de rénovation",
-          },
-          cardTitle: "Sous-catégorie RBQ 12",
-          cardDescription:
-            "Armoires et comptoirs usinés, inscrits à notre licence.",
-        },
-      },
-    },
-    {
-      id: "divisions",
-      content: {
-        type: "grid",
-        variant: "link-cards-compact",
-        props: {
-          heading: "Le volet armoires, étape par étape",
-          columns: "3",
-          items: [
-            { title: "Design", href: "/services/design" },
-            { title: "Fabrication", href: "/services/fabrication" },
-            { title: "Installation", href: "/services/installation" },
-          ],
-        },
-      },
-    },
-    {
-      id: "faq",
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "Questions fréquentes",
-          items: [
-            {
-              q: "Quelle est votre licence RBQ ?",
-              a: "Licence 8306-0806-27, délivrée le 7 septembre 2004, valide et sans restriction. Catégories 1.2 et 1.3, plus la sous-catégorie 12, armoires et comptoirs. Vérifiable au registre de la Régie du bâtiment du Québec.",
-            },
-            {
-              q: "Construisez-vous des maisons neuves ?",
-              a: "Non. Rénovation, transformation, agrandissement, reconstruction après sinistre et aménagement commercial. Le plan de garantie GCR ne s'applique donc pas.",
-            },
-            {
-              q: "Combien coûte une rénovation ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une salle de bain se situe souvent entre 15 000 $ et 35 000 $, une cuisine complète entre 35 000 $ et 50 000 $. Le prix ferme est fixé après le relevé sur place.",
-            },
-            {
-              q: "Qui engage et paie les sous-traitants ?",
-              a: "Nous. Plombier, électricien, ventilation, céramique et plâtrier travaillent sous notre contrat et notre calendrier. Vous avez un seul interlocuteur et une seule facturation.",
-            },
-          ],
+          note: "Licence vérifiable au registre de la Régie du bâtiment du Québec.",
         },
       },
     },
@@ -254,8 +232,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à faire évaluer ?",
-          intro: "Estimation gratuite. Retour sous 24 à 48 heures ouvrables.",
+          heading: "Quel service correspond à votre projet ?",
+          intro:
+            "Décrivez la pièce ou le bâtiment. Nous vous dirons quelle division s'en occupe.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -268,7 +247,7 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Entrepreneur général depuis 2004 · Ouest-de-l'Île et Grand Montréal",
+          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île et Grand Montréal",
         },
       },
     },

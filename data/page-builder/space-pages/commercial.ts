@@ -27,12 +27,12 @@ export const commercialPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Commercial",
-          heading: "Aménagement commercial livré à la date convenue",
+          badges: ["Bureaux", "Commerces"],
+          heading: "Aménagement commercial à Montréal, livré à la date convenue",
           description:
-            "Bureaux, commerces, améliorations locatives et multi-logements. Permis, corps de métier et échéancier sous une seule responsabilité.",
+            "Bureaux, commerces et améliorations locatives, menés par phases pour garder votre local en activité.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -41,98 +41,117 @@ export const commercialPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets",
-              href: "/projets",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],
-          badges: ["Bureaux", "Commerces", "Multi-logements"],
-          image: {
-            src: "/images/generated/spaces/space-commercial-hero-01.webp",
-            alt: "Aménagement commercial sur mesure à Montréal et dans le Grand Montréal",
-          },
-          caption: "Montréal · Laval · Rive-Sud · Vaudreuil-Soulanges",
         },
       },
     },
     {
-      id: "inclus",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "Ce que comprend le mandat",
-          description:
-            "Un local fermé plus longtemps que prévu coûte cher. La séquence est cadrée avant d'ouvrir les murs.",
-          cards: [
-            {
-              title: "Permis et conformité",
-              description: "Plans, demande municipale et travaux conformes au Code de construction du Québec.",
-            },
-            {
-              title: "Travaux par phases",
-              description: "Interventions hors des heures d'ouverture quand le local doit rester actif.",
-            },
-            {
-              title: "Un seul responsable",
-              description: "Cloisons, électricité, plomberie, ventilation, planchers et peinture coordonnés.",
-            },
-            {
-              title: "Mobilier intégré",
-              description: "Accueil, rangement technique et espaces de service par notre division armoires.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "projects",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading: "Projets commerciaux",
-          items: [
+          heading: "Des locaux remis en service",
+          tiles: [
             {
-              title: "Aménagement de bureaux",
-              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
-              description: "Local réaménagé et livré prêt à occuper, au centre-ville.",
+              kind: "image",
+              span: "wide",
               image: {
-                src: "/images/generated/spaces/space-commercial-project-01.webp",
-                alt: "Projet commercial à Montréal",
+                src: "/images/generated/spaces/space-commercial-hero-01.webp",
+                alt: "Bureau réaménagé dans un immeuble du centre-ville de Montréal",
               },
-              badges: ["Montréal"],
-              footerCtaLabel: "Voir le projet",
+              caption: "Bureau réaménagé, centre-ville",
             },
             {
-              title: "Améliorations locatives",
-              href: "/projets",
-              description: "Local adapté au locataire, selon les termes du bail.",
+              kind: "image",
+              span: "tall",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
-                alt: "Projet commercial à Laval",
+                alt: "Améliorations locatives réalisées dans un local de Laval",
               },
-              badges: ["Laval"],
-              footerCtaLabel: "Voir le projet",
+              caption: "Améliorations locatives, Laval",
             },
             {
-              title: "Mobilier commercial intégré",
-              href: "/projets",
-              description: "Accueil et rangement technique posés avec le reste.",
+              kind: "stat",
+              value: "1.2 et 1.3",
+              label: "Catégories RBQ, bâtiments de tout genre couverts",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-01.webp",
+                alt: "Local commercial livré prêt à occuper au centre-ville de Montréal",
+              },
+              caption: "Local prêt à occuper",
+              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
+            },
+            {
+              kind: "image",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
-                alt: "Projet commercial sur la Rive-Sud",
+                alt: "Comptoir d'accueil et rangement technique intégrés à un commerce",
               },
-              badges: ["Rive-Sud"],
-              footerCtaLabel: "Voir le projet",
+              caption: "Mobilier d'accueil intégré",
+            },
+            {
+              kind: "text",
+              title: "Travaux hors des heures",
+              description:
+                "Phases datées au contrat, pour un local qui continue de recevoir sa clientèle.",
+              href: "/processus",
             },
           ],
+        },
+      },
+    },
+    {
+      id: "en-bref",
+      frame: { surface: "muted" },
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "Le mandat commercial en bref",
+          intro:
+            "Un local fermé plus longtemps que prévu coûte plus cher que les travaux.",
+          rows: [
+            {
+              label: "Délai",
+              value: "Fixé au contrat après cadrage, le permis mène le calendrier",
+            },
+            {
+              label: "Permis",
+              value: "Demande municipale déposée par nous, inspections suivies",
+            },
+            {
+              label: "Conformité",
+              value: "Code de construction du Québec, catégories RBQ 1.2 et 1.3",
+            },
+            {
+              label: "Assurances",
+              value: "Responsabilité civile et chantier, attestations fournies",
+            },
+            {
+              label: "Mobilier",
+              value: "Accueil et rangement technique, 9 à 15 semaines de délai",
+            },
+            {
+              label: "Pose",
+              value: "Par phases, hors des heures quand le local reste actif",
+            },
+          ],
+          image: {
+            src: "/images/generated/spaces/space-commercial-project-03.webp",
+            alt: "Mobilier commercial intégré dans un local livré par Dilamco",
+          },
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -140,24 +159,20 @@ export const commercialPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Quels types de projets commerciaux réalisez-vous ?",
-              a: "Bureaux, commerces de détail, espaces de service, améliorations locatives selon les termes du bail et travaux dans les immeubles multi-logements. Le mobilier intégré est fourni par notre division armoires quand le projet en demande.",
+              q: "Qui répond au propriétaire de l'immeuble pendant les travaux ?",
+              a: "Nous. Avis au gestionnaire, réservation du monte-charge, protection des aires communes et horaires autorisés sont réglés avant la première journée de chantier.",
             },
             {
-              q: "Pouvez-vous respecter nos heures d'ouverture ?",
-              a: "Oui, quand la séquence est cadrée dès la planification. Les travaux sont découpés en phases et les interventions hors heures sont inscrites au contrat écrit, avec leurs dates.",
+              q: "Comment sont traitées les améliorations locatives au bail ?",
+              a: "La portée est découpée selon ce que le bail met à la charge du locateur et du locataire. Chaque part est chiffrée séparément pour que la facturation suive.",
             },
             {
-              q: "Vous occupez-vous des permis et de la conformité ?",
-              a: "Oui. Demande de permis municipal, coordination des inspections et exécution conforme au Code de construction du Québec. Licence RBQ 8306-0806-27, catégories 1.2 et 1.3, assurance responsabilité civile et chantier.",
+              q: "Travaillez-vous dans les immeubles multi-logements ?",
+              a: "Oui, unités vacantes, aires communes, balcons et remises. Les travaux sont séquencés pour limiter le bruit et les coupures de service chez les occupants.",
             },
             {
-              q: "Quel est le délai d'un aménagement commercial ?",
-              a: "Il dépend surtout du permis et de la portée. L'échéancier est fixé au contrat après le cadrage. Le mobilier intégré demande de 9 à 15 semaines, commandé en parallèle des travaux.",
-            },
-            {
-              q: "Où intervenez-vous ?",
-              a: "Notre base est dans l'Ouest-de-l'Île. On intervient à Montréal, à Laval, sur la Rive-Sud et dans Vaudreuil-Soulanges.",
+              q: "Que se passe-t-il si l'inspection municipale refuse un élément ?",
+              a: "Le correctif est exécuté à nos frais quand il relève de notre exécution. Si le refus vient des plans fournis, il est documenté et repris avec le concepteur.",
             },
           ],
         },
@@ -170,7 +185,8 @@ export const commercialPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre projet commercial",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          intro:
+            "Estimation gratuite. On cadre le permis et la séquence avant d'ouvrir les murs.",
           actions: [
             {
               label: "Demander une soumission",
@@ -179,7 +195,7 @@ export const commercialPage: PageTemplateData = {
             },
             {
               label: "Voir nos projets",
-              href: "/projets",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],

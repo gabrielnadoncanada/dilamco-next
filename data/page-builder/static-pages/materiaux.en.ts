@@ -20,12 +20,12 @@ export const pageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Cabinetry division",
+          badges: ["Plywood", "MDF", "Hardware"],
           heading: "The materials that go into your cabinets",
           description:
-            "Panels, hardware and finishes are specified by us, produced by our partner factory, then checked on delivery before installation.",
+            "Panels, hardware and finishes are specified by us, produced by our partner factory, then checked on delivery.",
           actions: [
             {
               label: "Request a quote",
@@ -38,47 +38,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Plywood", "MDF", "Hardware"],
-          image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.webp",
-            alt: "Visual comparison of materials for custom cabinets",
-          },
-          caption: "Specified here, checked on delivery",
-        },
-      },
-    },
-    {
-      id: "method",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "How we choose",
-          description:
-            "The panel is decided part by part. A kitchen door and a cabinet box under a sink do not face the same conditions.",
-          cards: [
-            {
-              title: "Humidity",
-              description:
-                "Bathrooms, under-sink boxes and laundry rooms call for more protection.",
-            },
-            {
-              title: "Load",
-              description:
-                "Drawers, shelves and tall cabinets carry very different weights.",
-            },
-            {
-              title: "Target finish",
-              description:
-                "Uniform paint, thermofused decor or natural wood grain.",
-            },
-            {
-              title: "Edges and installation",
-              description:
-                "They decide how long it lasts, not just the panel itself.",
-            },
-          ],
-          columns: "2",
         },
       },
     },
@@ -110,7 +69,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Solid wood",
               href: "/materiaux/bois-massif",
-              description: "Fronts and details",
+              description: "Fronts and mouldings",
             },
             {
               title: "Hardware",
@@ -125,37 +84,51 @@ export const pageEn: PageTemplateData = {
             {
               title: "Comparison",
               href: "/materiaux/comparatif",
-              description: "The four panels side by side",
+              description: "All four side by side",
             },
           ],
         },
       },
     },
     {
-      id: "faq",
+      id: "fiche",
       content: {
-        type: "faq",
-        variant: "accordion",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Frequently asked questions",
-          items: [
+          heading: "What we specify by default",
+          intro: "The cabinetry division standard, before any upgrade.",
+          rows: [
             {
-              q: "Plywood or MDF?",
-              a: "Plywood for boxes and drawers, because it holds screws. MDF for painted doors, because its surface lets no grain telegraph through.",
+              label: "Boxes",
+              value: "Birch plywood, 15 mm, sealed edges",
             },
             {
-              q: "Is melamine a good choice?",
-              a: "Yes, inside cabinet boxes and on shelves. Its life depends on the edges: thick, well-bonded banding, or water eventually gets in.",
+              label: "Fronts",
+              value: "Painted MDF, melamine or solid birch by room",
             },
             {
-              q: "What should be avoided in a bathroom?",
-              a: "Any panel left with bare edges. Steam attacks the edges before the surface. We seal, we ventilate, and we switch to plywood under the basin.",
+              label: "Hardware",
+              value: "Adjustable hinges and full-extension drawer slides",
             },
             {
-              q: "Can you renovate the whole room?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27. Permit, demolition, plumbing, electrical, flooring and cabinet installation under one written contract.",
+              label: "Finishes",
+              value: "Custom paint or thermofused decor",
+            },
+            {
+              label: "Origin",
+              value: "Production entrusted to our exclusive partner factory",
+            },
+            {
+              label: "Receiving",
+              value: "Every delivery counted and inspected before install",
             },
           ],
+          image: {
+            src: "/images/generated/materials/material-plywood-card-01.webp",
+            alt: "Birch box and painted front of a custom cabinet",
+          },
+          note: "Any substitution is written into the quote, never decided on site.",
         },
       },
     },
@@ -167,7 +140,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Want a read on your technical choices?",
           intro:
-            "We lock the panel, hardware and finish combination into the detailed quote.",
+            "We lock panels, hardware and finishes in a detailed quote before the order goes out.",
           actions: [
             {
               label: "Request a quote",
@@ -175,7 +148,7 @@ export const pageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
+              label: "See the comparison",
               href: "/materiaux/comparatif",
               variant: "ghost",
             },

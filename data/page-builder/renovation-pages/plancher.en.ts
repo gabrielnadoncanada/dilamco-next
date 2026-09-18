@@ -42,9 +42,9 @@ export const renovationPlancherPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Flooring renovation",
-          heading: "A floor that holds starts under the surface",
+          heading: "What holds a floor up sits underneath it",
           description:
-            "Subfloor, flatness and moisture checked before installation. Thresholds and transitions settled on the plan.",
+            "Substrate, flatness and moisture measured before installation. Thresholds and levels settled on the plan.",
           actions: [
             {
               label: "Free estimate",
@@ -57,12 +57,13 @@ export const renovationPlancherPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Subfloor checked", "Written contract"],
+          badges: ["Substrate checked", "Written contract"],
           image: {
             src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
             alt: "Residential flooring renovation by a general contractor",
           },
-          caption: "West Island, Montreal, Laval, South Shore",
+          imageSide: "left",
+          caption: "Floors redone across the West Island",
         },
       },
     },
@@ -72,46 +73,46 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the mandate covers",
+          heading: "What the flooring mandate covers",
           columns: "2",
           items: [
             {
-              title: "Tear-out and diagnosis",
-              description: "We see the subfloor before pricing the install.",
+              title: "Tear-out and reading",
+              description: "A substrate is judged bare",
               icon: "hammer",
               bullets: [
-                "Old flooring, baseboards and thresholds removed",
-                "Subfloor and water staining inspected",
-                "Moisture tested on slab or wood",
+                "Finishes, baseboards and thresholds removed",
+                "Water stains and soft panels located",
+                "Moisture read on slab or on wood",
               ],
             },
             {
-              title: "Fixing the base",
-              description: "The step most installers bill as an extra.",
+              title: "Substrate repair",
+              description: "The line installers bill as an extra",
               icon: "ruler",
               bullets: [
-                "Damaged panels replaced, everything re-screwed",
-                "Levelling to the flooring's stated tolerance",
-                "Joists reinforced where sagging shows",
+                "Damaged panels swapped, screwing redone",
+                "Levelling to the product's own tolerance",
+                "Joists reinforced where the floor sags",
               ],
             },
             {
               title: "Installation",
-              description: "Hardwood, engineered, vinyl or tile.",
+              description: "Hardwood, engineered, vinyl or tile",
               icon: "layers",
               bullets: [
-                "Wood acclimatized before installation",
-                "Membrane or underlay chosen by floor level",
-                "Perimeter expansion gaps respected",
+                "Wood acclimatized indoors before laying",
+                "Membrane or underlay chosen by storey",
+                "Expansion gaps respected throughout",
               ],
             },
             {
-              title: "Thresholds and finishing",
-              description: "The details that set a clean install apart.",
+              title: "Thresholds and trim",
+              description: "The details of a clean install",
               icon: "slidersHorizontal",
               bullets: [
                 "Room-to-room transitions planned ahead",
-                "Stair tie-ins and nosings",
+                "Stair nosings and landing details",
                 "Baseboards, quarter round, doors trimmed",
               ],
             },
@@ -125,37 +126,37 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Five steps",
+          heading: "How a floor unfolds",
           steps: [
             {
               number: "1",
-              title: "Visit and survey",
+              title: "Level survey",
               description:
-                "Areas, flatness, levels between rooms and existing thresholds.",
+                "Areas, flatness, differences between rooms and existing thresholds.",
             },
             {
               number: "2",
-              title: "Quote",
+              title: "Tear-out",
               description:
-                "Scope and exclusions in writing. Answer within 24 to 48 business hours.",
+                "Site protected, old finishes removed, substrate exposed.",
             },
             {
               number: "3",
-              title: "Tear-out",
+              title: "Repair",
               description:
-                "Premises protected, old flooring removed, subfloor inspected for real.",
+                "Panels replaced, full re-screwing, joists addressed if needed.",
             },
             {
               number: "4",
-              title: "Subfloor preparation",
+              title: "Levelling and drying",
               description:
-                "Repairs, re-screwing, added subfloor, levelling and drying time.",
+                "Compound poured, drying time written into the schedule.",
             },
             {
               number: "5",
-              title: "Install and handover",
+              title: "Install and thresholds",
               description:
-                "Flooring, thresholds, baseboards, doors trimmed, final walkthrough with you.",
+                "Flooring, transitions, baseboards, doors trimmed, site returned.",
             },
           ],
         },
@@ -167,49 +168,46 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Where flooring fits in the job sequence",
+          heading: "When flooring belongs in the schedule",
           intro:
-            "The order of the work decides the real cost. These are the rules we apply.",
+            "The order of trades moves the invoice as much as the product you pick.",
           items: [
             {
-              title: "After mechanical work and paint",
-              description: "A new floor under an open job site gets marked up.",
+              title: "After mechanical and paint",
+              description: "new flooring under an open site gets marked up.",
             },
             {
               title: "Before the cabinets",
-              description:
-                "Avoids height mismatches if an appliance changes later.",
+              description: "avoids a height mismatch if an appliance changes.",
             },
             {
-              title: "Levels decided on the plan",
-              description:
-                "Tile, wood and vinyl do not share the same thickness.",
+              title: "Levels set on the plan",
+              description: "tile, wood and vinyl are not the same thickness.",
             },
             {
-              title: "Basements on slab",
-              description:
-                "Insulated subfloor or uncoupling membrane before the finish.",
+              title: "On a concrete slab",
+              description: "insulated subfloor or an uncoupling membrane first.",
             },
           ],
           actions: [
             {
-              label: "See kitchens",
+              label: "See the kitchen",
               href: "/services/renovation/cuisine",
               variant: "ghost",
             },
             {
-              label: "See basements",
+              label: "See the basement",
               href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
           ],
           image: {
             src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Subfloor prepared before a new floor is installed",
+            alt: "Subfloor preparation before a flooring installation",
           },
-          cardTitle: "One party accountable",
+          cardTitle: "One schedule",
           cardDescription:
-            "We answer for the schedule, for protecting the premises and for the tie-in with cabinets, bathroom and stairs.",
+            "Tying the floor into the cabinets, the bathroom and the staircase falls under the same contract.",
         },
       },
     },
@@ -222,28 +220,24 @@ export const renovationPlancherPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Can you install over the old floor?",
-              a: "Rarely a good idea: height goes up, doors have to be trimmed, thresholds get awkward and the subfloor stays hidden. We recommend tear-out, unless the quote documents a specific exception.",
-            },
-            {
               q: "Why does my floor squeak?",
-              a: "Almost always the subfloor: loose panels, missing screws, plywood too thin for the joist span. The surface is only the symptom. We tear out, re-screw and replace what is damaged.",
+              a: "Almost always the substrate: loose panels, missing screws, plywood too thin. The surface only reveals the fault. We tear out, re-screw and replace what has moved.",
             },
             {
-              q: "Do I need a permit?",
-              a: "Not to replace a floor covering. A permit is needed as soon as the work touches structure: joists altered, an opening framed, a slab lowered. We confirm with your city before starting.",
+              q: "Can new flooring go over the old one?",
+              a: "Rarely a good idea. Height goes up, doors rub, thresholds get awkward and the substrate stays hidden. We recommend tearing out, unless the quote notes an exception.",
             },
             {
-              q: "Which floor suits a basement?",
-              a: "On a concrete slab we measure moisture first. Luxury vinyl and tile handle the environment well. Solid hardwood is not recommended directly over a slab.",
+              q: "Which flooring suits a basement?",
+              a: "We read the slab moisture first. Luxury vinyl and tile handle it well. Solid hardwood laid straight on concrete is the one to avoid.",
             },
             {
-              q: "What does a floor replacement cost?",
-              a: "Three line items: tear-out, subfloor repair and installation. The subfloor is the most variable line from one house to the next. The firm price is set after the survey.",
+              q: "Do I need a permit to redo a floor?",
+              a: "Not to change a surface. A permit is needed once the structure moves: joists altered, a stairwell opened, a slab lowered. We check with your city first.",
             },
             {
-              q: "How long does the job take?",
-              a: "It depends on the area and the condition of the subfloor. Levelling and wood acclimatization add drying and waiting days, written into the contract schedule.",
+              q: "Why let hardwood acclimatize?",
+              a: "Wood swells and shrinks with indoor humidity. Laid too soon, it opens gaps in winter. A few days in the house at normal temperature settles it.",
             },
           ],
         },
@@ -257,7 +251,7 @@ export const renovationPlancherPageEn: PageTemplateData = {
         props: {
           heading: "A floor to redo?",
           intro:
-            "We check flatness and the subfloor, then price the work within 24 to 48 business hours.",
+            "We measure flatness, open a corner of the substrate, then price the work.",
           actions: [
             {
               label: "Free estimate",
@@ -265,12 +259,12 @@ export const renovationPlancherPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See service areas",
+              label: "See our service areas",
               href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · West Island and Greater Montreal",
+          note: "RBQ licence 8306-0806-27 · Substrate, levelling, install and thresholds",
         },
       },
     },

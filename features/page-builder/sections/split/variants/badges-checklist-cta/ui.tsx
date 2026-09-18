@@ -53,7 +53,7 @@ export function SplitBadgesChecklistCta(props: SplitBadgesChecklistCtaProps) {
             ))}
           </ul>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button asChild variant="paper">
               <Link href={primaryAction.href}>
                 {primaryAction.label}

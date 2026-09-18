@@ -37,61 +37,77 @@ export const zoneDorvalPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Dorval",
-          heading:
-            "General contractor in Dorval, from permit to handover",
+          eyebrow: "General contractor in",
+          heading: "Dorval",
           description:
-            "Post-war bungalows, Strathmore cottages and Lakeshore homes, renovated by one accountable lead since 2004.",
+            "Post-war bungalows between Lac Saint-Louis and Highway 20, Strathmore cottages in the middle.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See our projects",
+              label: "See our work",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["City permits", "Since 2004", "Insured"],
           image: {
-            src: "/images/generated/services/service-renovation-hero-01.webp",
-            alt: "Residential renovation led by a general contractor in Dorval",
+            src: "/images/generated/renovation/renovation-cuisine-approach-01.webp",
+            alt: "Interior renovation of a Dorval home",
           },
-          caption: "Village, Strathmore, Lakeshore",
+          facts: [
+            { label: "Our base", value: "Pierrefonds-Roxboro, a twenty-minute drive" },
+            { label: "Permits", value: "Urban planning services, 514 633-4084" },
+            { label: "Housing stock", value: "Post-war bungalows, 1950 to 1975" },
+            { label: "First reply", value: "24 to 48 business hours" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What we know about Dorval homes",
-          description:
-            "Between Lac Saint-Louis and Highway 20, a housing stock built mostly from 1950 to 1975. Three bands, three kinds of jobsite.",
-          cards: [
+          heading: "The City of Dorval in three bands",
+          intro:
+            "The lake to the south, the rail line and the airport to the north, and a post-war residential fabric in between.",
+          rows: [
             {
-              title: "Post-war bungalows",
-              description:
-                "Undersized electrical services, block foundations, low basement headroom, load-bearing walls to verify.",
+              label: "Lakeshore",
+              value: "Buildings on the chemin need council approval",
             },
             {
-              title: "Urban planning department",
-              description:
-                "The City issues its own permits: 30 business days once the file is complete and paid.",
+              label: "Strathmore",
+              value: "Cottages from the 1950s and 1960s, Surrey park",
             },
             {
-              title: "Lakeshore SPAIP review",
-              description:
-                "New construction, residential additions and Lakeshore buildings go through council approval.",
+              label: "Permit delay",
+              value: "Thirty business days, file complete and paid",
+            },
+            {
+              label: "Filing",
+              value: "Applications submitted and tracked online with the city",
+            },
+            {
+              label: "By-law",
+              value: "RCM-60H-2024 on comprehensive development plans",
+            },
+            {
+              label: "Common projects",
+              value: "Kitchen, bathroom, basement, condo renovation",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
+            alt: "Basement finished in a Dorval bungalow",
+          },
+          note: "Sources: City of Dorval, Wikipedia, 2026 neighbourhood guide. Verified 2026-09-18.",
         },
       },
     },
@@ -107,95 +123,56 @@ export const zoneDorvalPageEn: PageTemplateData = {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "Wall opened once load-bearing status is confirmed, electrical and plumbing redone.",
+                "Electrical service in local bungalows often needs upsizing first",
               image: {
-                src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
-                alt: "Custom kitchen built in a West Island home",
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "Kitchen renovated in a Dorval bungalow",
               },
               badges: ["Custom"],
               footerCtaLabel: "See kitchens",
             },
             {
-              title: "Bathroom",
-              href: "/services/renovation/salle-de-bain",
-              description:
-                "Membrane, drain, slope and ventilation rebuilt down to the substrate.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-01.webp",
-                alt: "Renovated bathroom with careful finishing",
-              },
-              badges: ["Waterproofing"],
-              footerCtaLabel: "See bathrooms",
-            },
-            {
-              title: "Basement",
-              href: "/services/renovation/sous-sol",
-              description:
-                "Moisture, weeping tile and headroom checked before any drawing.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
-                alt: "Basement finished as a games room",
-              },
-              badges: ["Code"],
-              footerCtaLabel: "See basements",
-            },
-            {
-              title: "Home addition",
+              title: "Addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "SPAIP file and council approval prepared before the permit is issued.",
+                "SPAIP file prepared for council before the permit is issued",
               image: {
-                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planning a residential addition in Dorval",
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                alt: "Residential addition planned in Dorval",
               },
               badges: ["SPAIP"],
               footerCtaLabel: "See additions",
             },
             {
-              title: "Disaster recovery",
-              href: "/services/renovation/apres-sinistre",
+              title: "Basement",
+              href: "/services/renovation/sous-sol",
               description:
-                "Drying, selective demolition, rebuild and a documented file for your insurer.",
+                "Headroom and moisture measured inside block foundations",
               image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Room rebuilt after water damage",
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Finished basement in a Dorval house",
               },
-              badges: ["Insurance"],
-              footerCtaLabel: "See the service",
+              badges: ["Compliance"],
+              footerCtaLabel: "See basements",
             },
           ],
         },
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "What we check before pricing",
-          intro:
-            "A serious quote rests on checks made on site, not over the phone.",
-          badges: ["On-site visit", "Free estimate"],
-          cardTitle: "Our on-site checklist",
+          heading: "Towns we serve near Dorval",
+          columns: "3",
           items: [
-            "Electrical service and panel capacity",
-            "Position of existing plumbing stacks",
-            "Load-bearing status of walls to open",
-            "Basement headroom and moisture signs",
-            "Backup history and condition of the drain",
-            "Zoning, SPAIP review and permit type",
-          ],
-          actions: [
+            { title: "Pointe-Claire", href: "/zones/pointe-claire" },
+            { title: "Saint-Laurent", href: "/zones/saint-laurent" },
             {
-              label: "Book a visit",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
             },
           ],
         },
@@ -210,28 +187,20 @@ export const zoneDorvalPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Do I need a permit to renovate in Dorval?",
-              a: "Yes, in most cases. The City of Dorval issues its own permits through its urban planning department, and every renovation requires its own application. We confirm the scope and file the application.",
+              q: "How long does the City of Dorval take to issue a permit?",
+              a: "Thirty business days from the moment the file is complete, compliant and paid. A missing document restarts the count, which is why we prepare the application ourselves.",
             },
             {
-              q: "How long does the permit take?",
-              a: "Thirty business days from the moment the file is complete, compliant and paid. An incomplete file restarts that clock, which is why we prepare the application ourselves.",
+              q: "Does SPAIP apply to my Lakeshore house?",
+              a: "Most likely. In Dorval, council approval covers new construction, residential additions and buildings along chemin du Bord-du-Lac. It is planned at scoping, before dates are set.",
             },
             {
-              q: "What is the SPAIP and does it apply to me?",
-              a: "It is a council approval that comes on top of the permit. In Dorval it covers new construction, residential additions and buildings along chemin du Bord-du-Lac. We plan for it during scoping.",
+              q: "Do you renovate condos near the Dorval train station?",
+              a: "Yes. Hours allowed by the syndicate, elevator access, protection of common areas and shared plumbing stacks are settled before the first day on site.",
             },
             {
-              q: "What budget should I plan for?",
-              a: "Our projects start around $25,000. A full kitchen lands between $35,000 and $50,000 and up, depending on scope. Estimates are free, and budget and schedule are set in the written contract.",
-            },
-            {
-              q: "Do you renovate condos near the Dorval station?",
-              a: "Yes. Access, elevator use, protection of common areas, the syndicate's permitted work hours and shared plumbing stacks are all settled before the first day on site.",
-            },
-            {
-              q: "Are you licensed and insured?",
-              a: "RBQ licence 8306-0806-27, valid with no restrictions since September 2004, classes 1.2 and 1.3, no claims on file. Liability and site insurance in force, licence bond in place.",
+              q: "What does renovating a Dorval bungalow cost?",
+              a: "It depends on the electrical service and the walls being opened. A mandate starts near $25,000 and a full kitchen runs distinctly higher. Site visit and estimate are free.",
             },
           ],
         },
@@ -243,8 +212,8 @@ export const zoneDorvalPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a Dorval project?",
-          intro: "We visit, set the scope, and hand you a written quote.",
+          heading: "Renovating in Dorval",
+          intro: "We visit, scope the work, hand back a written price.",
           actions: [
             {
               label: "Request a quote",
@@ -252,12 +221,12 @@ export const zoneDorvalPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See all service areas",
+              label: "See service areas",
               href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Dilamco · City of Dorval permits prepared",
         },
       },
     },

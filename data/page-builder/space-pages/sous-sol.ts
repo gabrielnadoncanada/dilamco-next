@@ -27,12 +27,12 @@ export const sousSolPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Sous-sol",
-          heading: "Aménagement de sous-sol sur mesure, du gros œuvre au mobilier",
+          badges: ["Clé en main"],
+          heading: "Aménagement de sous-sol sur mesure à Pierrefonds",
           description:
-            "Cinéma maison, bar, cellier ou rangement intégré, conçus avec la pièce et posés dans la séquence du chantier.",
+            "Cinéma maison, bar, cellier ou bibliothèque, dessinés une fois l'humidité et la hauteur libre validées.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -40,133 +40,112 @@ export const sousSolPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir nos projets",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
-          badges: ["Sur mesure", "Clé en main"],
-          image: {
-            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-            alt: "Aménagement de sous-sol sur mesure haut de gamme à Pierrefonds",
-          },
-          caption: "Pierrefonds · Ouest-de-l'Île · Grand Montréal",
-        },
-      },
-    },
-    {
-      id: "espaces",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Ce qu'on aménage au sous-sol",
-          items: [
-            {
-              title: "Salle de cinéma maison",
-              description: "Estrade, panneaux, rangement d'équipement et intégration de l'écran.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
-                alt: "Salle de cinéma maison sur mesure dans un sous-sol",
-              },
-              badges: ["Cinéma maison"],
-            },
-            {
-              title: "Bar de sous-sol",
-              description: "Comptoir, rangement à bouteilles, verrerie et électroménagers intégrés.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
-                alt: "Bar de sous-sol sur mesure",
-              },
-              badges: ["Bar"],
-            },
-            {
-              title: "Cave à vin, cellier",
-              description: "Bois, verre ou sous-escalier, pensés pour la conservation.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
-                alt: "Cave à vin / cellier sur mesure au sous-sol",
-              },
-              badges: ["Cellier"],
-            },
-            {
-              title: "Bibliothèque et bureau",
-              description: "Mur de rangement et bureau intégré pour le télétravail.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
-                alt: "Bibliothèque murale et bureau intégré sur mesure",
-              },
-              badges: ["Bureau"],
-            },
-            {
-              title: "Salle de jeux",
-              description: "Unité murale et rangements pour une salle familiale ordonnée.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
-                alt: "Salle de jeux et unité murale sur mesure au sous-sol",
-              },
-              badges: ["Unité murale"],
-            },
-            {
-              title: "Rangement et mécanique",
-              href: "/espaces/walk-in",
-              description: "Placards fermés et accès discrets aux espaces techniques.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
-                alt: "Rangement fermé sur mesure le long d'un mur de sous-sol",
-              },
-              badges: ["Rangement"],
-              footerCtaLabel: "Voir les garde-robes",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Ce qu'un sous-sol impose",
-          intro: "Humidité, hauteur libre et accès mécaniques se règlent avant la finition, pas après.",
-          items: [
-            {
-              title: "Humidité validée d'abord",
-              description: "Drain, fissures et taux vérifiés avant d'isoler",
-            },
-            {
-              title: "Structure durable",
-              description: "Contreplaqué de bouleau là où la charge compte",
-            },
-            {
-              title: "Intégration propre",
-              description: "Câblage et accès mécaniques dissimulés",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
               label: "Finition de sous-sol",
               href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
+          ],
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Ce qu'on installe sous le rez-de-chaussée",
+          tiles: [
             {
-              label: "Après dégât d'eau",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
+                alt: "Salle de cinéma maison avec estrade et panneaux acoustiques",
+              },
+              caption: "Cinéma maison, estrade intégrée",
+            },
+            {
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
+                alt: "Cellier vitré aménagé sous un escalier de sous-sol",
+              },
+              caption: "Cellier vitré sous escalier",
+            },
+            {
+              kind: "stat",
+              value: "9 à 15 sem.",
+              label: "Mobilier intégré, commandé pendant le gros œuvre",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
+                alt: "Bar de sous-sol avec comptoir et rangement à bouteilles",
+              },
+              caption: "Bar et rangement à bouteilles",
+            },
+            {
+              kind: "text",
+              title: "Après un dégât d'eau",
+              description:
+                "Assèchement, reconstruction et dossier monté pour votre assureur.",
               href: "/services/renovation/apres-sinistre",
-              variant: "ghost",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
+                alt: "Bibliothèque murale et bureau intégré au sous-sol",
+              },
+              caption: "Bibliothèque et bureau intégrés",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "en-bref",
+      frame: { surface: "muted" },
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "Le sous-sol en bref",
+          intro:
+            "Un étage enfoui impose ses règles avant qu'on parle de finition.",
+          rows: [
+            {
+              label: "Préalable",
+              value: "Drain, fissures et taux d'humidité vérifiés avant d'isoler",
+            },
+            {
+              label: "Permis",
+              value: "Exigé dès qu'on ajoute une cloison, une chambre, un bain",
+            },
+            {
+              label: "Délai",
+              value: "9 à 15 semaines pour le mobilier, posé après le plancher",
+            },
+            {
+              label: "Matériaux",
+              value: "Contreplaqué de bouleau sur les tablettes chargées",
+            },
+            {
+              label: "Pose",
+              value: "Accès à la mécanique conservés et dissimulés derrière portes",
+            },
+            {
+              label: "Garantie",
+              value: "Conformité au Code de construction, durée écrite au contrat",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-            alt: "Détail de mobilier intégré sur mesure pour aménagement de sous-sol",
+            alt: "Détail de mobilier intégré sur mesure dans un sous-sol fini",
           },
-          cardTitle: "Pourquoi ça compte",
-          cardDescription: "Un sous-sol mal préparé gondole et sent l'humidité.",
         },
       },
     },
@@ -179,24 +158,20 @@ export const sousSolPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte l'aménagement d'un sous-sol ?",
-              a: "Le prix varie selon la superficie et les espaces retenus : un cinéma maison, un bar ou un cellier n'impliquent pas la même menuiserie. Le montant ferme est fixé après le relevé sur place, dans la soumission détaillée.",
+              q: "Quelle hauteur libre faut-il pour finir un sous-sol ?",
+              a: "On vise au moins 2 m sous le plafond fini. Les conduits et la plomberie sont relocalisés ou encoffrés pour dégager la hauteur là où on circule et où on s'assoit.",
             },
             {
-              q: "Quel est le délai pour le mobilier intégré ?",
-              a: "De 9 à 15 semaines entre la validation du design et la pose. La commande est calée sur l'échéancier du chantier pour arriver une fois les cloisons et le plancher terminés.",
+              q: "Comment traitez-vous l'humidité avant la finition ?",
+              a: "Relevé du drain français, inspection des fissures et mesure du taux d'humidité. Les correctifs passent avant l'isolant, sinon le mobilier gondole dans les deux ans.",
             },
             {
-              q: "Comment gérez-vous l'humidité ?",
-              a: "On vérifie le drain, les fissures et le taux d'humidité avant d'isoler. Les finis et les matériaux sont choisis pour l'environnement d'un sous-sol, ce qui limite le gondolement.",
+              q: "Peut-on ajouter une chambre au sous-sol ?",
+              a: "Oui, si la fenêtre atteint les dimensions d'issue de secours exigées. Agrandir l'ouverture demande une coupe dans la fondation, planifiée avec la structure.",
             },
             {
-              q: "Faut-il un permis pour finir un sous-sol ?",
-              a: "Souvent oui, dès qu'on ajoute des cloisons, une salle de bain ou une chambre. On vérifie les exigences de votre ville et on dépose la demande pour vous.",
-            },
-            {
-              q: "Pouvez-vous faire la finition complète ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : permis, isolation, cloisons, électricité, plomberie, plancher et pose du mobilier intégré, coordonnés par un seul responsable, au contrat écrit.",
+              q: "Un cellier demande-t-il une pièce réfrigérée ?",
+              a: "Pas toujours. Un sous-sol tempéré et stable convient à une réserve courante. Pour une collection, on isole la pièce et on prévoit un groupe de refroidissement.",
             },
           ],
         },
@@ -209,7 +184,8 @@ export const sousSolPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre projet de sous-sol",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          intro:
+            "Estimation sans frais. L'humidité et la hauteur sont vérifiées dès la visite.",
           actions: [
             {
               label: "Demander une soumission",

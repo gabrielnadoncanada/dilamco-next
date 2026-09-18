@@ -26,7 +26,7 @@ export const melaminePageEn: PageTemplateData = {
           eyebrow: "Materials",
           heading: "Melamine arrives already finished, at a controlled cost",
           description:
-            "A panel covered with a thermofused decor. No painting step, a surface that wipes clean, and edges that decide how long it lasts.",
+            "A thermofused decor on panel. No painting stage, a washable surface, and edges that decide how long it lasts.",
           actions: [
             {
               label: "Request a quote",
@@ -34,97 +34,57 @@ export const melaminePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
+              label: "See the comparison",
               href: "/materiaux/comparatif",
               variant: "ghost",
             },
           ],
-          badges: ["Decor", "Upkeep", "Budget"],
-          image: {
-            src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Melamine-type decorative finishes",
-          },
-          caption: "Cabinet interiors and framed budgets",
-        },
-      },
-    },
-    {
-      id: "overview",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What melamine brings",
-          description:
-            "The decor is fused to the panel at the plant. Nothing to paint, nothing to touch up, and a price well under wood.",
-          cards: [
-            {
-              title: "Many decors",
-              description:
-                "Solids, textures and wood looks, available right away.",
-            },
-            {
-              title: "Easy upkeep",
-              description:
-                "A damp cloth is enough, and the surface resists light scratches.",
-            },
-            {
-              title: "Contained cost",
-              description:
-                "The cabinet budget drops without touching the structure.",
-            },
-            {
-              title: "Edges decide",
-              description:
-                "A thin edge band that lifts lets water into the panel.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Where we use it",
-          intro:
-            "It earns its place inside cabinet boxes, and on fronts when the budget frames the project.",
-          items: [
-            {
-              title: "Interiors and shelves",
-              description: "Washable surface, colour stable over time.",
-            },
-            {
-              title: "Thick edge banding",
-              description: "PVC of 1 mm or more, tightly bonded.",
-            },
-            {
-              title: "Hard to repair",
-              description: "A chip cannot be sanded out, the part is replaced.",
-            },
-          ],
-          actions: [
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Compare with MDF",
-              href: "/materiaux/mdf",
-              variant: "ghost",
-            },
-          ],
+          badges: ["Decor", "Easy care", "Budget"],
           image: {
             src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-            alt: "Decorative melamine panels",
+            alt: "Close-up of a melamine panel and its edge band",
           },
-          cardTitle: "Recommended approach",
-          cardDescription:
-            "Melamine inside, a more stable panel wherever water and load arrive.",
+          caption: "Cabinet interiors and tight budgets",
+          imageSide: "right",
+        },
+      },
+    },
+    {
+      id: "fiche",
+      frame: { surface: "muted" },
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "Melamine at a glance",
+          intro: "A panel judged on its edge band more than on its decor.",
+          rows: [
+            {
+              label: "Composition",
+              value: "Decor paper press-fused onto a fibreboard core",
+            },
+            {
+              label: "Humidity",
+              value: "Sealed surface, core exposed through an open edge",
+            },
+            {
+              label: "Upkeep",
+              value: "Damp cloth, no abrasive product",
+            },
+            {
+              label: "Recommended uses",
+              value: "Interiors, shelves, secondary storage",
+            },
+            {
+              label: "Relative cost",
+              value: "The least expensive cabinetry line item",
+            },
+            {
+              label: "Edge banding",
+              value: "PVC band of 1 mm or more, press-glued",
+            },
+          ],
+          note: "A chip cannot be sanded out: the affected part is replaced.",
         },
       },
     },
@@ -134,23 +94,23 @@ export const melaminePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about melamine",
           items: [
             {
-              q: "Is melamine low-end?",
-              a: "The word covers a very broad category. What changes everything is the substrate, the thickness of the decor and the quality of the edges, not the label.",
+              q: "Does melamine yellow over time?",
+              a: "Today's whites hold, even beside a window. It was the very glossy decors of older series that turned, not the panels made now.",
             },
             {
-              q: "Does melamine swell?",
-              a: "The panel under the decor does, if water gets in through a lifted edge or a drilled hole. The decor itself resists water and everyday cleaners.",
+              q: "Can you drill without chipping the decor?",
+              a: "Yes, with a centre-point bit and tape over the line. It is a question of tooling, not of panel.",
             },
             {
-              q: "Melamine or MDF?",
-              a: "Melamine for a decor that is already finished and a framed budget. MDF for a specific painted colour on the doors. The two combine in the same kitchen.",
+              q: "Melamine or laminate on a door?",
+              a: "Laminate is thicker and takes knocks better, at a higher price. Melamine is enough as soon as a door is not opened fifty times a day.",
             },
             {
-              q: "Is it recommended in a bathroom?",
-              a: "Yes, with thick, well-bonded edge banding and a fan that actually runs. Steady steam is what lifts edges, not the occasional splash.",
+              q: "Does it suit a laundry room?",
+              a: "Yes, that is one of its strongest settings. Washable surfaces, shelves that do not stain, and a cost that leaves budget for the visible areas.",
             },
           ],
         },
@@ -162,9 +122,9 @@ export const melaminePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Does melamine suit your project?",
+          heading: "Does melamine fit your budget?",
           intro:
-            "We look at the room, the use and the budget, then give you a straight answer.",
+            "We separate what gets seen from what gets stored, then split the budget.",
           actions: [
             {
               label: "Request a quote",
@@ -172,8 +132,8 @@ export const melaminePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
-              href: "/materiaux/comparatif",
+              label: "Compare with MDF",
+              href: "/materiaux/mdf",
               variant: "ghost",
             },
           ],

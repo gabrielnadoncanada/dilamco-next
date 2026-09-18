@@ -52,6 +52,21 @@
       <image:caption>Escalier et rampe de verre : finition intérieure réalisée par Dilamco</image:caption>
       <image:title>Escalier et rampe de verre : finition intérieure réalisée par Dilamco</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/mur-bois-accent-plafond-haut-01.webp</image:loc>
+      <image:caption>Mur de bois en accent sous un plafond de grande hauteur</image:caption>
+      <image:title>Mur de bois en accent sous un plafond de grande hauteur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/plancher-bois-franc-neuf-01.webp</image:loc>
+      <image:caption>Plancher de bois franc neuf posé dans une pièce rénovée</image:caption>
+      <image:title>Plancher de bois franc neuf posé dans une pièce rénovée</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/showroom-dorval-presentoirs-finis-01.webp</image:loc>
+      <image:caption>Présentoirs de finis et de matériaux au showroom de Dorval</image:caption>
+      <image:title>Présentoirs de finis et de matériaux au showroom de Dorval</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en</loc>
@@ -103,196 +118,196 @@
       <image:caption>Staircase and glass railing: interior finishing by Dilamco</image:caption>
       <image:title>Staircase and glass railing: interior finishing by Dilamco</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/mur-bois-accent-plafond-haut-01.webp</image:loc>
+      <image:caption>Timber accent wall under a high ceiling</image:caption>
+      <image:title>Timber accent wall under a high ceiling</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/plancher-bois-franc-neuf-01.webp</image:loc>
+      <image:caption>New hardwood floor laid in a renovated room</image:caption>
+      <image:title>New hardwood floor laid in a renovated room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/showroom-dorval-presentoirs-finis-01.webp</image:loc>
+      <image:caption>Finish and material displays at the Dorval showroom</image:caption>
+      <image:title>Finish and material displays at the Dorval showroom</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/home/home-hero-premium-kitchen-01.webp</image:loc>
-      <image:caption>Renovation project completed by Dilamco in the West Island</image:caption>
-      <image:title>Renovation project completed by Dilamco in the West Island</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
+      <image:caption>Renovation site run from our Pierrefonds-Roxboro base</image:caption>
+      <image:title>Renovation site run from our Pierrefonds-Roxboro base</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/beaconsfield</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
-      <image:caption>Interior renovation of a Beaconsfield home</image:caption>
-      <image:title>Interior renovation of a Beaconsfield home</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Major renovation of a 1950s house</image:caption>
-      <image:title>Major renovation of a 1950s house</image:title>
+      <image:caption>Renovated interior of a Beaconsfield home</image:caption>
+      <image:title>Renovated interior of a Beaconsfield home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
-      <image:caption>Renovated kitchen in a West Island home</image:caption>
-      <image:title>Renovated kitchen in a West Island home</image:title>
+      <image:caption>Kitchen rebuilt in a Beaconsfield home</image:caption>
+      <image:title>Kitchen rebuilt in a Beaconsfield home</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Renovated bathroom in a Beaconsfield home</image:caption>
-      <image:title>Renovated bathroom in a Beaconsfield home</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
+      <image:caption>Major renovation of a Beaconsfield house</image:caption>
+      <image:title>Major renovation of a Beaconsfield house</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planning an addition in Beaconsfield</image:caption>
-      <image:title>Planning an addition in Beaconsfield</image:title>
+      <image:caption>Planning an addition on a wooded Beaconsfield lot</image:caption>
+      <image:title>Planning an addition on a wooded Beaconsfield lot</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Basement finished as a living space</image:caption>
-      <image:title>Basement finished as a living space</image:title>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Bathroom renovated in a Beacon Hill home</image:caption>
+      <image:title>Bathroom renovated in a Beacon Hill home</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/dollard-des-ormeaux</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
-      <image:caption>Kitchen renovation in a Dollard-des-Ormeaux home</image:caption>
-      <image:title>Kitchen renovation in a Dollard-des-Ormeaux home</image:title>
+      <image:caption>Renovated kitchen in a Dollard-des-Ormeaux home</image:caption>
+      <image:title>Renovated kitchen in a Dollard-des-Ormeaux home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Bathroom redone in a Dollard-des-Ormeaux split-level</image:caption>
+      <image:title>Bathroom redone in a Dollard-des-Ormeaux split-level</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Open kitchen renovated in a split-level</image:caption>
-      <image:title>Open kitchen renovated in a split-level</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Renovated bathroom with tiled shower</image:caption>
-      <image:title>Renovated bathroom with tiled shower</image:title>
+      <image:caption>Kitchen opened onto the living room of a DDO split-level</image:caption>
+      <image:title>Kitchen opened onto the living room of a DDO split-level</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Basement finished as a family room</image:caption>
-      <image:title>Basement finished as a family room</image:title>
+      <image:caption>Basement family room finished in Dollard-des-Ormeaux</image:caption>
+      <image:title>Basement family room finished in Dollard-des-Ormeaux</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Rear addition on a suburban home</image:caption>
-      <image:title>Rear addition on a suburban home</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Rebuild under way after water damage</image:caption>
-      <image:title>Rebuild under way after water damage</image:title>
+      <image:caption>Rear addition on a Dollard-des-Ormeaux house</image:caption>
+      <image:title>Rear addition on a Dollard-des-Ormeaux house</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/dorval</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
-      <image:caption>Residential renovation led by a general contractor in Dorval</image:caption>
-      <image:title>Residential renovation led by a general contractor in Dorval</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
-      <image:caption>Custom kitchen built in a West Island home</image:caption>
-      <image:title>Custom kitchen built in a West Island home</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
-      <image:caption>Renovated bathroom with careful finishing</image:caption>
-      <image:title>Renovated bathroom with careful finishing</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-approach-01.webp</image:loc>
+      <image:caption>Interior renovation of a Dorval home</image:caption>
+      <image:title>Interior renovation of a Dorval home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
-      <image:caption>Basement finished as a games room</image:caption>
-      <image:title>Basement finished as a games room</image:title>
+      <image:caption>Basement finished in a Dorval bungalow</image:caption>
+      <image:title>Basement finished in a Dorval bungalow</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planning a residential addition in Dorval</image:caption>
-      <image:title>Planning a residential addition in Dorval</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Kitchen renovated in a Dorval bungalow</image:caption>
+      <image:title>Kitchen renovated in a Dorval bungalow</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Room rebuilt after water damage</image:caption>
-      <image:title>Room rebuilt after water damage</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
+      <image:caption>Residential addition planned in Dorval</image:caption>
+      <image:title>Residential addition planned in Dorval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Finished basement in a Dorval house</image:caption>
+      <image:title>Finished basement in a Dorval house</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/ile-bizard-sainte-genevieve</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Addition to a single-family home in L&amp;#x27;Île-Bizard</image:caption>
-      <image:title>Addition to a single-family home in L&amp;#x27;Île-Bizard</image:title>
+      <image:caption>Home addition on a single-family house in L&amp;#x27;Île-Bizard</image:caption>
+      <image:title>Home addition on a single-family house in L&amp;#x27;Île-Bizard</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Materials prepared to rebuild a basement</image:caption>
-      <image:title>Materials prepared to rebuild a basement</image:title>
+      <image:caption>Materials staged to rebuild a basement on Île Bizard</image:caption>
+      <image:title>Materials staged to rebuild a basement on Île Bizard</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
-      <image:caption>Basement finished as a home theatre</image:caption>
-      <image:title>Basement finished as a home theatre</image:title>
+      <image:caption>Basement finished as a home cinema on Île Bizard</image:caption>
+      <image:title>Basement finished as a home cinema on Île Bizard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Interior rebuild after flooding near Île Mercier</image:caption>
+      <image:title>Interior rebuild after flooding near Île Mercier</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planning a home addition</image:caption>
-      <image:title>Planning a home addition</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
-      <image:caption>Renovated kitchen in a West Island home</image:caption>
-      <image:title>Renovated kitchen in a West Island home</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Conversion of an older Sainte-Geneviève home</image:caption>
-      <image:title>Conversion of an older Sainte-Geneviève home</image:title>
+      <image:caption>Planning an addition on a riverside lot on the island</image:caption>
+      <image:title>Planning an addition on a riverside lot on the island</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/kirkland</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Addition on a single-family home in Kirkland</image:caption>
-      <image:title>Addition on a single-family home in Kirkland</image:title>
+      <image:caption>Addition to a single-family house in Kirkland</image:caption>
+      <image:title>Addition to a single-family house in Kirkland</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
+      <image:caption>Planning an addition on a Kirkland lot</image:caption>
+      <image:title>Planning an addition on a Kirkland lot</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Major renovation of a Kirkland home</image:caption>
-      <image:title>Major renovation of a Kirkland home</image:title>
+      <image:caption>Addition under construction on a Kirkland street</image:caption>
+      <image:title>Addition under construction on a Kirkland street</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Kitchen opened onto the living areas</image:caption>
-      <image:title>Kitchen opened onto the living areas</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Full renovation of a Kirkland house</image:caption>
+      <image:title>Full renovation of a Kirkland house</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Renovated bathroom with tiled shower</image:caption>
-      <image:title>Renovated bathroom with tiled shower</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Basement finished as a living space</image:caption>
-      <image:title>Basement finished as a living space</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp</image:loc>
+      <image:caption>Open kitchen in a detached Kirkland home</image:caption>
+      <image:title>Open kitchen in a detached Kirkland home</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/laval</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
-      <image:caption>Renovated kitchen in a Laval home</image:caption>
-      <image:title>Renovated kitchen in a Laval home</image:title>
+      <image:caption>Renovated kitchen in a Chomedey bungalow</image:caption>
+      <image:title>Renovated kitchen in a Chomedey bungalow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Basement finished as a games room in a Vimont home</image:caption>
+      <image:title>Basement finished as a games room in a Vimont home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
-      <image:caption>Finished basement with a bar area</image:caption>
-      <image:title>Finished basement with a bar area</image:title>
+      <image:caption>Basement with a bar area in a Laval home</image:caption>
+      <image:title>Basement with a bar area in a Laval home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-project-02.webp</image:loc>
-      <image:caption>Open renovated kitchen in a suburban home</image:caption>
-      <image:title>Open renovated kitchen in a suburban home</image:title>
+      <image:caption>Kitchen opened to the dining room of a Laval bungalow</image:caption>
+      <image:title>Kitchen opened to the dining room of a Laval bungalow</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Materials staged for a basement rebuild</image:caption>
-      <image:title>Materials staged for a basement rebuild</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Interior rebuild after flooding in Laval-Ouest</image:caption>
+      <image:title>Interior rebuild after flooding in Laval-Ouest</image:title>
     </image:image>
   </url>
   <url>
@@ -304,238 +319,228 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Finished basement in Pierrefonds-Roxboro</image:caption>
-      <image:title>Finished basement in Pierrefonds-Roxboro</image:title>
+      <image:caption>Finished basement in a Pierrefonds-Roxboro bungalow</image:caption>
+      <image:title>Finished basement in a Pierrefonds-Roxboro bungalow</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Basement games room finished in Pierrefonds</image:caption>
+      <image:title>Basement games room finished in Pierrefonds</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Rebuild after water damage</image:caption>
-      <image:title>Rebuild after water damage</image:title>
+      <image:caption>Rebuilding after water damage in Roxboro</image:caption>
+      <image:title>Rebuilding after water damage in Roxboro</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Kitchen renovated in a West Island bungalow</image:caption>
-      <image:title>Kitchen renovated in a West Island bungalow</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Renovated bathroom with tiled shower</image:caption>
-      <image:title>Renovated bathroom with tiled shower</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Rear addition on a single-family home</image:caption>
-      <image:title>Rear addition on a single-family home</image:title>
+      <image:caption>Open kitchen in a borough bungalow</image:caption>
+      <image:title>Open kitchen in a borough bungalow</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/pointe-claire</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
-      <image:caption>Bathroom renovation in Pointe-Claire</image:caption>
-      <image:title>Bathroom renovation in Pointe-Claire</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Renovated bathroom with tiled shower</image:caption>
-      <image:title>Renovated bathroom with tiled shower</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Kitchen renovated in a Pointe-Claire home</image:caption>
-      <image:title>Kitchen renovated in a Pointe-Claire home</image:title>
+      <image:caption>Renovated bathroom in a Pointe-Claire home</image:caption>
+      <image:title>Renovated bathroom in a Pointe-Claire home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
-      <image:caption>Interior renovation of an older Pointe-Claire home</image:caption>
-      <image:title>Interior renovation of an older Pointe-Claire home</image:title>
+      <image:caption>Interior renovation of an older home in Pointe-Claire Village</image:caption>
+      <image:title>Interior renovation of an older home in Pointe-Claire Village</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Rear addition on a single-family home</image:caption>
-      <image:title>Rear addition on a single-family home</image:title>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Bathroom rebuilt in a Lakeshore house</image:caption>
+      <image:title>Bathroom rebuilt in a Lakeshore house</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
+      <image:caption>Renovation job site in Pointe-Claire Village</image:caption>
+      <image:title>Renovation job site in Pointe-Claire Village</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/plancher-bois-franc-neuf-01.webp</image:loc>
-      <image:caption>Hardwood floor installed in a home</image:caption>
-      <image:title>Hardwood floor installed in a home</image:title>
+      <image:caption>Hardwood floor laid in a Pointe-Claire home</image:caption>
+      <image:title>Hardwood floor laid in a Pointe-Claire home</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/rive-sud</loc>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Full interior renovation carried out on Montreal&amp;#x27;s South Shore</image:caption>
+      <image:title>Full interior renovation carried out on Montreal&amp;#x27;s South Shore</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Residential addition built by a general contractor on Montreal&amp;#x27;s South Shore</image:caption>
-      <image:title>Residential addition built by a general contractor on Montreal&amp;#x27;s South Shore</image:title>
+      <image:caption>Completed addition in a South Shore municipality</image:caption>
+      <image:title>Completed addition in a South Shore municipality</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planning a residential addition on Montreal&amp;#x27;s South Shore</image:caption>
-      <image:title>Planning a residential addition on Montreal&amp;#x27;s South Shore</image:title>
+      <image:caption>Addition plan for an Old Longueuil bungalow</image:caption>
+      <image:title>Addition plan for an Old Longueuil bungalow</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Full interior renovation coordinated by a general contractor</image:caption>
-      <image:title>Full interior renovation coordinated by a general contractor</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Full renovation of a house in a Brossard sector</image:caption>
+      <image:title>Full renovation of a house in a Brossard sector</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Materials staged for a basement rebuild</image:caption>
-      <image:title>Materials staged for a basement rebuild</image:title>
+      <image:caption>Materials ready for a basement rebuild in Châteauguay</image:caption>
+      <image:title>Materials ready for a basement rebuild in Châteauguay</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/saint-laurent</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
-      <image:caption>Renovated bathroom in a Saint-Laurent plex</image:caption>
-      <image:title>Renovated bathroom in a Saint-Laurent plex</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-project-01.webp</image:loc>
-      <image:caption>Renovated kitchen with custom cabinets</image:caption>
-      <image:title>Renovated kitchen with custom cabinets</image:title>
+      <image:caption>Bathroom rebuilt in a Saint-Laurent plex</image:caption>
+      <image:title>Bathroom rebuilt in a Saint-Laurent plex</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-bath-01.webp</image:loc>
-      <image:caption>Renovated bathroom in an existing unit</image:caption>
-      <image:title>Renovated bathroom in an existing unit</image:title>
+      <image:caption>Renovated bathroom on the upper floor of a local duplex</image:caption>
+      <image:title>Renovated bathroom on the upper floor of a local duplex</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-02.webp</image:loc>
+      <image:caption>Bathroom rebuilt in a Norgate apartment</image:caption>
+      <image:title>Bathroom rebuilt in a Norgate apartment</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-project-01.webp</image:loc>
+      <image:caption>Open kitchen in a bungalow near Côte-Vertu</image:caption>
+      <image:title>Open kitchen in a bungalow near Côte-Vertu</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Basement finished as a living space</image:caption>
-      <image:title>Basement finished as a living space</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Renovation work in a Saint-Laurent duplex</image:caption>
-      <image:title>Renovation work in a Saint-Laurent duplex</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-hero-01.webp</image:loc>
-      <image:caption>Flooring installed in a renovated room</image:caption>
-      <image:title>Flooring installed in a renovated room</image:title>
+      <image:caption>Basement turned into living space under a duplex</image:caption>
+      <image:title>Basement turned into living space under a duplex</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/areas/vaudreuil-dorion</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/home/home-hero-premium-kitchen-01.webp</image:loc>
-      <image:caption>Renovated kitchen in a Vaudreuil-Dorion home</image:caption>
-      <image:title>Renovated kitchen in a Vaudreuil-Dorion home</image:title>
+      <image:caption>Rebuilt kitchen in a recent Vaudreuil-Dorion home</image:caption>
+      <image:title>Rebuilt kitchen in a recent Vaudreuil-Dorion home</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-rangement-01.webp</image:loc>
+      <image:caption>Finished basement with storage in a Vaudreuil-Dorion home</image:caption>
+      <image:title>Finished basement with storage in a Vaudreuil-Dorion home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp</image:loc>
-      <image:caption>Finished basement used as an office and library</image:caption>
-      <image:title>Finished basement used as an office and library</image:title>
+      <image:caption>Basement turned into an office in a Cité-des-Jeunes home</image:caption>
+      <image:title>Basement turned into an office in a Cité-des-Jeunes home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-featured-cuisine-project-01.webp</image:loc>
-      <image:caption>Custom kitchen with a central island</image:caption>
-      <image:title>Custom kitchen with a central island</image:title>
+      <image:caption>Island replacing the original kitchen of a 2008 house</image:caption>
+      <image:title>Island replacing the original kitchen of a 2008 house</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Residential addition tied into the existing house</image:caption>
-      <image:title>Residential addition tied into the existing house</image:title>
+      <image:caption>Addition blended into a Vaudreuil-Dorion house</image:caption>
+      <image:title>Addition blended into a Vaudreuil-Dorion house</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
-      <image:caption>Visual comparison of materials for custom cabinets</image:caption>
-      <image:title>Visual comparison of materials for custom cabinets</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-card-01.webp</image:loc>
+      <image:caption>Birch box and painted front of a custom cabinet</image:caption>
+      <image:title>Birch box and painted front of a custom cabinet</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials/colours</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
-      <image:caption>Colour and finish choices for a custom project</image:caption>
-      <image:title>Colour and finish choices for a custom project</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Coloured cabinets seen in the light of a room</image:caption>
+      <image:title>Coloured cabinets seen in the light of a room</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
-      <image:caption>Finish choices and colour samples</image:caption>
-      <image:title>Finish choices and colour samples</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
+      <image:caption>Colour samples and sheen levels side by side</image:caption>
+      <image:title>Colour samples and sheen levels side by side</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials/comparison</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
-      <image:caption>Materials comparison for a custom kitchen</image:caption>
-      <image:title>Materials comparison for a custom kitchen</image:title>
+      <image:caption>Cabinet panels compared side by side</image:caption>
+      <image:title>Cabinet panels compared side by side</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials/hardware</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-hardware-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen highlighting the quality of the hardware</image:caption>
-      <image:title>Custom kitchen highlighting the quality of the hardware</image:title>
+      <image:caption>Drawer slide and hinge inside a custom cabinet</image:caption>
+      <image:title>Drawer slide and hinge inside a custom cabinet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-detail-01.webp</image:loc>
+      <image:caption>Close-up of an adjustable hinge on a cabinet door</image:caption>
+      <image:title>Close-up of an adjustable hinge on a cabinet door</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials/mdf</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
-      <image:caption>Samples and uniform painted surface</image:caption>
-      <image:title>Samples and uniform painted surface</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>MDF panel with an even painted finish</image:caption>
+      <image:title>MDF panel with an even painted finish</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
-      <image:caption>Uniform painted finish on an MDF panel</image:caption>
-      <image:title>Uniform painted finish on an MDF panel</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-kitchen-durability-card-01.webp</image:loc>
+      <image:caption>Painted fronts in a custom kitchen</image:caption>
+      <image:title>Painted fronts in a custom kitchen</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials/melamine</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
-      <image:caption>Melamine-type decorative finishes</image:caption>
-      <image:title>Melamine-type decorative finishes</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
-      <image:caption>Decorative melamine panels</image:caption>
-      <image:title>Decorative melamine panels</image:title>
+      <image:caption>Close-up of a melamine panel and its edge band</image:caption>
+      <image:title>Close-up of a melamine panel and its edge band</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials/plywood</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen with a durable structure</image:caption>
-      <image:title>Custom kitchen with a durable structure</image:title>
+      <image:caption>Birch plywood cabinet box</image:caption>
+      <image:title>Birch plywood cabinet box</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-plywood-detail-01.webp</image:loc>
-      <image:caption>Detail of a custom kitchen in plywood</image:caption>
-      <image:title>Detail of a custom kitchen in plywood</image:title>
+      <image:caption>Cross-grain plies visible on a plywood edge</image:caption>
+      <image:title>Cross-grain plies visible on a plywood edge</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/materials/solid-wood</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
-      <image:caption>Custom kitchen with solid wood details</image:caption>
-      <image:title>Custom kitchen with solid wood details</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-card-01.webp</image:loc>
+      <image:caption>Solid wood cabinet door with visible grain</image:caption>
+      <image:title>Solid wood cabinet door with visible grain</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
-      <image:caption>Solid wood finish detail</image:caption>
-      <image:title>Solid wood finish detail</image:title>
+      <image:caption>Finish detail on a solid wood component</image:caption>
+      <image:title>Finish detail on a solid wood component</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/process</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
-      <image:caption>Residential renovation work under way</image:caption>
-      <image:title>Residential renovation work under way</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/process3.jpg</image:loc>
       <image:caption>Construction drawings and project documents on a work table</image:caption>
@@ -544,11 +549,6 @@
   </url>
   <url>
     <loc>https://dilamco.com/en/projects</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
-      <image:caption>Dilamco custom project</image:caption>
-      <image:title>Dilamco custom project</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
       <image:caption>Custom kitchen projects</image:caption>
@@ -573,6 +573,26 @@
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
       <image:caption>Custom commercial projects</image:caption>
       <image:title>Custom commercial projects</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-1.webp</image:loc>
+      <image:caption>Custom kitchen delivered in Laval</image:caption>
+      <image:title>Custom kitchen delivered in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-1.webp</image:loc>
+      <image:caption>Full-height cabinets installed in Terrebonne</image:caption>
+      <image:title>Full-height cabinets installed in Terrebonne</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-1.webp</image:loc>
+      <image:caption>Centre island in a custom kitchen in Repentigny</image:caption>
+      <image:title>Centre island in a custom kitchen in Repentigny</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/Signature-Bouleau.webp</image:loc>
+      <image:caption>Birch cabinet boxes and drawers in a signature kitchen</image:caption>
+      <image:title>Birch cabinet boxes and drawers in a signature kitchen</image:title>
     </image:image>
   </url>
   <url>
@@ -862,29 +882,24 @@
   <url>
     <loc>https://dilamco.com/en/services</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
-      <image:caption>Residential renovation site coordinated by a general contractor</image:caption>
-      <image:title>Residential renovation site coordinated by a general contractor</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp</image:loc>
+      <image:caption>U-shaped shaker kitchen with subway tile backsplash</image:caption>
+      <image:title>U-shaped shaker kitchen with subway tile backsplash</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Complete residential kitchen renovation</image:caption>
-      <image:title>Complete residential kitchen renovation</image:title>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp</image:loc>
+      <image:caption>Bathroom with floating vanity and marble surfaces</image:caption>
+      <image:title>Bathroom with floating vanity and marble surfaces</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Renovated bathroom with tiled shower</image:caption>
-      <image:title>Renovated bathroom with tiled shower</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Basement finished as a living space</image:caption>
-      <image:title>Basement finished as a living space</image:title>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Basement turned into a games room</image:caption>
+      <image:title>Basement turned into a games room</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/plancher-bois-franc-neuf-01.webp</image:loc>
-      <image:caption>Hardwood floor installed in a home</image:caption>
-      <image:title>Hardwood floor installed in a home</image:title>
+      <image:caption>Hardwood flooring installed in a home</image:caption>
+      <image:title>Hardwood flooring installed in a home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
@@ -892,9 +907,9 @@
       <image:title>Rear addition on a single-family home</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Room rebuilt after water damage</image:caption>
-      <image:title>Room rebuilt after water damage</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
+      <image:caption>Room restored after a loss</image:caption>
+      <image:title>Room restored after a loss</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
@@ -902,57 +917,62 @@
       <image:title>Commercial fit-out delivered ready to occupy</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-design-hero-01.webp</image:loc>
+      <image:caption>Custom cabinet design session</image:caption>
+      <image:title>Custom cabinet design session</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
+      <image:caption>Custom cabinet boxes and fronts</image:caption>
+      <image:title>Custom cabinet boxes and fronts</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
-      <image:caption>Custom cabinet installation during a renovation project</image:caption>
-      <image:title>Custom cabinet installation during a renovation project</image:title>
+      <image:caption>Custom cabinets installed during a renovation</image:caption>
+      <image:title>Custom cabinets installed during a renovation</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/services/design</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-design-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen plan and material samples</image:caption>
-      <image:title>Custom kitchen plan and material samples</image:title>
+      <image:caption>Custom kitchen drawing and material samples</image:caption>
+      <image:title>Custom kitchen drawing and material samples</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/services/design-hero.webp</image:loc>
-      <image:caption>Custom design being planned</image:caption>
-      <image:title>Custom design being planned</image:title>
+      <image:caption>Drawings and elevations of a kitchen being designed</image:caption>
+      <image:title>Drawings and elevations of a kitchen being designed</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/services/fabrication</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
-      <image:caption>Technical drawings and material samples for custom fabrication</image:caption>
-      <image:title>Technical drawings and material samples for custom fabrication</image:title>
+      <image:caption>Technical drawings and material samples for a custom order</image:caption>
+      <image:title>Technical drawings and material samples for a custom order</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
-      <image:caption>Custom kitchen with precise fabrication</image:caption>
-      <image:title>Custom kitchen with precise fabrication</image:title>
+      <image:loc>https://dilamco.com/images/services/fabrication-hero.webp</image:loc>
+      <image:caption>Wrapped cabinet modules waiting for delivery</image:caption>
+      <image:title>Wrapped cabinet modules waiting for delivery</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/services/installation</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
-      <image:caption>Technical drawing and panel samples for custom installation</image:caption>
-      <image:title>Technical drawing and panel samples for custom installation</image:title>
+      <image:caption>Custom cabinets being installed in a kitchen</image:caption>
+      <image:title>Custom cabinets being installed in a kitchen</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/services/installation-hero.webp</image:loc>
-      <image:caption>Custom installation in progress</image:caption>
-      <image:title>Custom installation in progress</image:title>
+      <image:caption>Cabinets adjusted and aligned after installation</image:caption>
+      <image:title>Cabinets adjusted and aligned after installation</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/services/renovation</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
-      <image:caption>Turnkey residential renovation job site</image:caption>
-      <image:title>Turnkey residential renovation job site</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
       <image:caption>Full kitchen renovation</image:caption>
@@ -974,27 +994,32 @@
       <image:title>Residential flooring renovation</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
       <image:caption>Home addition under construction</image:caption>
       <image:title>Home addition under construction</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
-      <image:caption>Rebuilding after water damage</image:caption>
-      <image:title>Rebuilding after water damage</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Rebuild after water damage</image:caption>
+      <image:title>Rebuild after water damage</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/services/renovation/basement</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Basement finished and fitted out by a general contractor</image:caption>
-      <image:title>Basement finished and fitted out by a general contractor</image:title>
+      <image:caption>Basement finished and furnished by a general contractor</image:caption>
+      <image:title>Basement finished and furnished by a general contractor</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Materials and finishes suited to a basement conversion</image:caption>
-      <image:title>Materials and finishes suited to a basement conversion</image:title>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
+      <image:caption>Home theatre built into a finished basement</image:caption>
+      <image:title>Home theatre built into a finished basement</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
+      <image:caption>Basement bar with counter and storage</image:caption>
+      <image:title>Basement bar with counter and storage</image:title>
     </image:image>
   </url>
   <url>
@@ -1005,9 +1030,14 @@
       <image:title>Bathroom renovated by a general contractor</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-approach-01.webp</image:loc>
-      <image:caption>Shower prepared with a waterproofing membrane</image:caption>
-      <image:title>Shower prepared with a waterproofing membrane</image:title>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Curbless shower with a glass panel</image:caption>
+      <image:title>Curbless shower with a glass panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp</image:loc>
+      <image:caption>Vanity with quartz counter and backlit mirror</image:caption>
+      <image:title>Vanity with quartz counter and backlit mirror</image:title>
     </image:image>
   </url>
   <url>
@@ -1019,8 +1049,8 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
-      <image:caption>Subfloor prepared before a new floor is installed</image:caption>
-      <image:title>Subfloor prepared before a new floor is installed</image:title>
+      <image:caption>Subfloor preparation before a flooring installation</image:caption>
+      <image:title>Subfloor preparation before a flooring installation</image:title>
     </image:image>
   </url>
   <url>
@@ -1029,6 +1059,11 @@
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
       <image:caption>Residential addition under construction</image:caption>
       <image:title>Residential addition under construction</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
+      <image:caption>Addition under construction tied into an existing house</image:caption>
+      <image:title>Addition under construction tied into an existing house</image:title>
     </image:image>
   </url>
   <url>
@@ -1039,31 +1074,31 @@
       <image:title>Kitchen renovated by a general contractor in Montreal</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-approach-01.webp</image:loc>
-      <image:caption>Planning and measuring a kitchen renovation</image:caption>
-      <image:title>Planning and measuring a kitchen renovation</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
+      <image:caption>Kitchen open to the living room with island and tall columns</image:caption>
+      <image:title>Kitchen open to the living room with island and tall columns</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>White kitchen with a quartz island</image:caption>
+      <image:title>White kitchen with a quartz island</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/services/renovation/water-damage</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Basement rebuilt after water damage</image:caption>
-      <image:title>Basement rebuilt after water damage</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Room rebuilt after water damage</image:caption>
+      <image:title>Room rebuilt after water damage</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
-      <image:caption>Damage assessed before a floor is rebuilt</image:caption>
-      <image:title>Damage assessed before a floor is rebuilt</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Damage assessment before a room is rebuilt</image:caption>
+      <image:title>Damage assessment before a room is rebuilt</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
-      <image:caption>Dilamco custom spaces</image:caption>
-      <image:title>Dilamco custom spaces</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
       <image:caption>High-end custom kitchen cabinets</image:caption>
@@ -1094,172 +1129,167 @@
       <image:caption>Custom commercial fit-out</image:caption>
       <image:title>Custom commercial fit-out</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Overview of custom spaces delivered by Dilamco</image:caption>
+      <image:title>Overview of custom spaces delivered by Dilamco</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/basement</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>High-end custom basement finishing in Pierrefonds</image:caption>
-      <image:title>High-end custom basement finishing in Pierrefonds</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
-      <image:caption>Custom home theatre room in a basement</image:caption>
-      <image:title>Custom home theatre room in a basement</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
-      <image:caption>Custom basement bar</image:caption>
-      <image:title>Custom basement bar</image:title>
+      <image:caption>Home theatre with a riser platform and acoustic panels</image:caption>
+      <image:title>Home theatre with a riser platform and acoustic panels</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cave-vin-01.webp</image:loc>
-      <image:caption>Custom wine cellar in a basement</image:caption>
-      <image:title>Custom wine cellar in a basement</image:title>
+      <image:caption>Glass wine cellar built under a basement staircase</image:caption>
+      <image:title>Glass wine cellar built under a basement staircase</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
+      <image:caption>Basement bar with counter and bottle storage</image:caption>
+      <image:title>Basement bar with counter and bottle storage</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp</image:loc>
-      <image:caption>Custom wall library and built-in desk</image:caption>
-      <image:title>Custom wall library and built-in desk</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
-      <image:caption>Custom games room and wall unit in a basement</image:caption>
-      <image:title>Custom games room and wall unit in a basement</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-rangement-01.webp</image:loc>
-      <image:caption>Custom closed storage along a basement wall</image:caption>
-      <image:title>Custom closed storage along a basement wall</image:title>
+      <image:caption>Wall library and built-in desk in a basement</image:caption>
+      <image:title>Wall library and built-in desk in a basement</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Detail of custom built-in millwork for a finished basement</image:caption>
-      <image:title>Detail of custom built-in millwork for a finished basement</image:title>
+      <image:caption>Close-up of custom built-in millwork in a finished basement</image:caption>
+      <image:title>Close-up of custom built-in millwork in a finished basement</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/bathroom</loc>
     <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp</image:loc>
+      <image:caption>Marble bathroom with a floating vanity</image:caption>
+      <image:title>Marble bathroom with a floating vanity</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Curbless shower with a glass panel</image:caption>
+      <image:title>Curbless shower with a glass panel</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp</image:loc>
+      <image:caption>Vanity with an LED mirror and quartz countertop</image:caption>
+      <image:title>Vanity with an LED mirror and quartz countertop</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-pierre-claire-01.webp</image:loc>
+      <image:caption>Shower clad in pale stone in a renovated bathroom</image:caption>
+      <image:title>Shower clad in pale stone in a renovated bathroom</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Custom bathroom vanity in Pierrefonds and Greater Montréal</image:caption>
-      <image:title>Custom bathroom vanity in Pierrefonds and Greater Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
-      <image:caption>Custom bathroom project in Laval</image:caption>
-      <image:title>Custom bathroom project in Laval</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-02.webp</image:loc>
-      <image:caption>Custom bathroom project in Montréal</image:caption>
-      <image:title>Custom bathroom project in Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-03.webp</image:loc>
-      <image:caption>Custom bathroom project on the South Shore</image:caption>
-      <image:title>Custom bathroom project on the South Shore</image:title>
+      <image:caption>Custom bathroom vanity in a renovated room</image:caption>
+      <image:title>Custom bathroom vanity in a renovated room</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/commercial</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
-      <image:caption>Custom commercial fit-out in Montréal and Greater Montréal</image:caption>
-      <image:title>Custom commercial fit-out in Montréal and Greater Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-01.webp</image:loc>
-      <image:caption>Commercial project in Montréal</image:caption>
-      <image:title>Commercial project in Montréal</image:title>
+      <image:caption>Office refitted in a downtown Montréal building</image:caption>
+      <image:title>Office refitted in a downtown Montréal building</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-02.webp</image:loc>
-      <image:caption>Commercial project in Laval</image:caption>
-      <image:title>Commercial project in Laval</image:title>
+      <image:caption>Leasehold improvements carried out in a Laval unit</image:caption>
+      <image:title>Leasehold improvements carried out in a Laval unit</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-01.webp</image:loc>
+      <image:caption>Commercial unit delivered ready to occupy in downtown Montréal</image:caption>
+      <image:title>Commercial unit delivered ready to occupy in downtown Montréal</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-03.webp</image:loc>
-      <image:caption>Commercial project on the South Shore</image:caption>
-      <image:title>Commercial project on the South Shore</image:title>
+      <image:caption>Reception counter and service storage built into a retail space</image:caption>
+      <image:title>Reception counter and service storage built into a retail space</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/kitchen</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
-      <image:caption>High-end custom kitchen cabinets in Pierrefonds</image:caption>
-      <image:title>High-end custom kitchen cabinets in Pierrefonds</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
+      <image:caption>Open-plan kitchen with island and full-height cabinet columns</image:caption>
+      <image:title>Open-plan kitchen with island and full-height cabinet columns</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
-      <image:caption>Custom kitchen cabinet project in Pierrefonds</image:caption>
-      <image:title>Custom kitchen cabinet project in Pierrefonds</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>White kitchen with island and quartz countertop</image:caption>
+      <image:title>White kitchen with island and quartz countertop</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
-      <image:caption>Custom kitchen project on the South Shore</image:caption>
-      <image:title>Custom kitchen project on the South Shore</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp</image:loc>
+      <image:caption>Glass-front kitchen cabinets and tile backsplash</image:caption>
+      <image:title>Glass-front kitchen cabinets and tile backsplash</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/spaces/cabinet-cuisines.webp</image:loc>
-      <image:caption>Material detail for a custom kitchen</image:caption>
-      <image:title>Material detail for a custom kitchen</image:title>
+      <image:loc>https://dilamco.com/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp</image:loc>
+      <image:caption>Navy blue island with birch-lined drawers</image:caption>
+      <image:title>Navy blue island with birch-lined drawers</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>High-end custom kitchen with a central island</image:caption>
+      <image:title>High-end custom kitchen with a central island</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/laundry-room</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-hero-01.webp</image:loc>
-      <image:caption>Custom laundry room in Pierrefonds and Greater Montréal</image:caption>
-      <image:title>Custom laundry room in Pierrefonds and Greater Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-01.webp</image:loc>
-      <image:caption>Custom laundry room project in Montréal</image:caption>
-      <image:title>Custom laundry room project in Montréal</image:title>
+      <image:caption>Laundry room with a continuous folding counter above the appliances</image:caption>
+      <image:title>Laundry room with a continuous folding counter above the appliances</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-02.webp</image:loc>
-      <image:caption>Custom laundry room project in Laval</image:caption>
-      <image:title>Custom laundry room project in Laval</image:title>
+      <image:caption>Storage towers and pull-out baskets in a Laval laundry room</image:caption>
+      <image:title>Storage towers and pull-out baskets in a Laval laundry room</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-01.webp</image:loc>
+      <image:caption>Compact laundry room fitted into a Montréal home</image:caption>
+      <image:title>Compact laundry room fitted into a Montréal home</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-03.webp</image:loc>
-      <image:caption>Custom laundry room project on the South Shore</image:caption>
-      <image:title>Custom laundry room project on the South Shore</image:title>
+      <image:caption>Utility sink and counter aligned along the same wall</image:caption>
+      <image:title>Utility sink and counter aligned along the same wall</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/walk-in</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
-      <image:caption>High-end custom closet and walk-in in Pierrefonds and Greater Montreal</image:caption>
-      <image:title>High-end custom closet and walk-in in Pierrefonds and Greater Montreal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
-      <image:caption>Custom walk-in project in Montreal</image:caption>
-      <image:title>Custom walk-in project in Montreal</image:title>
+      <image:caption>Custom walk-in closet with double-height hanging rails</image:caption>
+      <image:title>Custom walk-in closet with double-height hanging rails</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-02.webp</image:loc>
-      <image:caption>Custom walk-in project in Laval</image:caption>
-      <image:title>Custom walk-in project in Laval</image:title>
+      <image:caption>Walk-in closet fitted into a bedroom corner in Laval</image:caption>
+      <image:title>Walk-in closet fitted into a bedroom corner in Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
+      <image:caption>Custom drawers and shelves in a Montréal walk-in closet</image:caption>
+      <image:title>Custom drawers and shelves in a Montréal walk-in closet</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-03.webp</image:loc>
-      <image:caption>Custom walk-in project on the South Shore</image:caption>
-      <image:title>Custom walk-in project on the South Shore</image:title>
+      <image:caption>Walk-in closet with a centre island and integrated lighting</image:caption>
+      <image:title>Walk-in closet with a centre island and integrated lighting</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/espaces</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
-      <image:caption>Espaces sur mesure Dilamco</image:caption>
-      <image:title>Espaces sur mesure Dilamco</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
       <image:caption>Armoires de cuisine sur mesure haut de gamme</image:caption>
@@ -1290,261 +1320,256 @@
       <image:caption>Aménagement commercial sur mesure</image:caption>
       <image:title>Aménagement commercial sur mesure</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
+      <image:caption>Vue d&amp;#x27;ensemble des espaces sur mesure réalisés par Dilamco</image:caption>
+      <image:title>Vue d&amp;#x27;ensemble des espaces sur mesure réalisés par Dilamco</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/espaces/commercial</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-hero-01.webp</image:loc>
-      <image:caption>Aménagement commercial sur mesure à Montréal et dans le Grand Montréal</image:caption>
-      <image:title>Aménagement commercial sur mesure à Montréal et dans le Grand Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-01.webp</image:loc>
-      <image:caption>Projet commercial à Montréal</image:caption>
-      <image:title>Projet commercial à Montréal</image:title>
+      <image:caption>Bureau réaménagé dans un immeuble du centre-ville de Montréal</image:caption>
+      <image:title>Bureau réaménagé dans un immeuble du centre-ville de Montréal</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-02.webp</image:loc>
-      <image:caption>Projet commercial à Laval</image:caption>
-      <image:title>Projet commercial à Laval</image:title>
+      <image:caption>Améliorations locatives réalisées dans un local de Laval</image:caption>
+      <image:title>Améliorations locatives réalisées dans un local de Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-01.webp</image:loc>
+      <image:caption>Local commercial livré prêt à occuper au centre-ville de Montréal</image:caption>
+      <image:title>Local commercial livré prêt à occuper au centre-ville de Montréal</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-03.webp</image:loc>
-      <image:caption>Projet commercial sur la Rive-Sud</image:caption>
-      <image:title>Projet commercial sur la Rive-Sud</image:title>
+      <image:caption>Comptoir d&amp;#x27;accueil et rangement technique intégrés à un commerce</image:caption>
+      <image:title>Comptoir d&amp;#x27;accueil et rangement technique intégrés à un commerce</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/espaces/cuisine</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
-      <image:caption>Armoires de cuisine sur mesure haut de gamme à Pierrefonds</image:caption>
-      <image:title>Armoires de cuisine sur mesure haut de gamme à Pierrefonds</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
+      <image:caption>Cuisine à aire ouverte avec îlot et colonnes pleine hauteur</image:caption>
+      <image:title>Cuisine à aire ouverte avec îlot et colonnes pleine hauteur</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/projects/chene-moderne.webp</image:loc>
-      <image:caption>Projet d&amp;#x27;armoires de cuisine sur mesure à Pierrefonds</image:caption>
-      <image:title>Projet d&amp;#x27;armoires de cuisine sur mesure à Pierrefonds</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Cuisine blanche avec îlot et comptoir de quartz</image:caption>
+      <image:title>Cuisine blanche avec îlot et comptoir de quartz</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-blanche-sur-mesure-brossard.webp</image:loc>
-      <image:caption>Projet de cuisine sur mesure sur la Rive-Sud</image:caption>
-      <image:title>Projet de cuisine sur mesure sur la Rive-Sud</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp</image:loc>
+      <image:caption>Armoires de cuisine vitrées et dosseret de céramique</image:caption>
+      <image:title>Armoires de cuisine vitrées et dosseret de céramique</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/spaces/cabinet-cuisines.webp</image:loc>
-      <image:caption>Détail de matériaux pour cuisine sur mesure</image:caption>
-      <image:title>Détail de matériaux pour cuisine sur mesure</image:title>
+      <image:loc>https://dilamco.com/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp</image:loc>
+      <image:caption>Îlot bleu marine avec tiroirs à intérieur de bouleau</image:caption>
+      <image:title>Îlot bleu marine avec tiroirs à intérieur de bouleau</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
+      <image:caption>Cuisine sur mesure haut de gamme avec îlot central</image:caption>
+      <image:title>Cuisine sur mesure haut de gamme avec îlot central</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/espaces/salle-de-bain</loc>
     <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp</image:loc>
+      <image:caption>Salle de bain en marbre avec meuble-lavabo flottant</image:caption>
+      <image:title>Salle de bain en marbre avec meuble-lavabo flottant</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Douche à l&amp;#x27;italienne avec paroi de verre</image:caption>
+      <image:title>Douche à l&amp;#x27;italienne avec paroi de verre</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp</image:loc>
+      <image:caption>Vanité avec miroir à éclairage DEL et comptoir de quartz</image:caption>
+      <image:title>Vanité avec miroir à éclairage DEL et comptoir de quartz</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-pierre-claire-01.webp</image:loc>
+      <image:caption>Douche habillée de pierre claire dans une salle de bain rénovée</image:caption>
+      <image:title>Douche habillée de pierre claire dans une salle de bain rénovée</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Vanité de salle de bain sur mesure à Pierrefonds et dans le Grand Montréal</image:caption>
-      <image:title>Vanité de salle de bain sur mesure à Pierrefonds et dans le Grand Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
-      <image:caption>Projet salle de bain sur mesure à Laval</image:caption>
-      <image:title>Projet salle de bain sur mesure à Laval</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-02.webp</image:loc>
-      <image:caption>Projet salle de bain sur mesure à Montréal</image:caption>
-      <image:title>Projet salle de bain sur mesure à Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-03.webp</image:loc>
-      <image:caption>Projet salle de bain sur mesure sur la Rive-Sud</image:caption>
-      <image:title>Projet salle de bain sur mesure sur la Rive-Sud</image:title>
+      <image:caption>Vanité de salle de bain sur mesure dans une pièce rénovée</image:caption>
+      <image:title>Vanité de salle de bain sur mesure dans une pièce rénovée</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/espaces/salle-de-lavage</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-hero-01.webp</image:loc>
-      <image:caption>Salle de lavage sur mesure à Pierrefonds et dans le Grand Montréal</image:caption>
-      <image:title>Salle de lavage sur mesure à Pierrefonds et dans le Grand Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-01.webp</image:loc>
-      <image:caption>Projet salle de lavage sur mesure à Montréal</image:caption>
-      <image:title>Projet salle de lavage sur mesure à Montréal</image:title>
+      <image:caption>Salle de lavage avec comptoir de pliage continu au-dessus des appareils</image:caption>
+      <image:title>Salle de lavage avec comptoir de pliage continu au-dessus des appareils</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-02.webp</image:loc>
-      <image:caption>Projet salle de lavage sur mesure à Laval</image:caption>
-      <image:title>Projet salle de lavage sur mesure à Laval</image:title>
+      <image:caption>Colonnes de rangement et paniers dans une salle de lavage à Laval</image:caption>
+      <image:title>Colonnes de rangement et paniers dans une salle de lavage à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-01.webp</image:loc>
+      <image:caption>Salle de lavage compacte aménagée dans un logement de Montréal</image:caption>
+      <image:title>Salle de lavage compacte aménagée dans un logement de Montréal</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-03.webp</image:loc>
-      <image:caption>Projet salle de lavage sur mesure sur la Rive-Sud</image:caption>
-      <image:title>Projet salle de lavage sur mesure sur la Rive-Sud</image:title>
+      <image:caption>Cuve de lavage et comptoir alignés sur le même mur</image:caption>
+      <image:title>Cuve de lavage et comptoir alignés sur le même mur</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/espaces/sous-sol</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Aménagement de sous-sol sur mesure haut de gamme à Pierrefonds</image:caption>
-      <image:title>Aménagement de sous-sol sur mesure haut de gamme à Pierrefonds</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
-      <image:caption>Salle de cinéma maison sur mesure dans un sous-sol</image:caption>
-      <image:title>Salle de cinéma maison sur mesure dans un sous-sol</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
-      <image:caption>Bar de sous-sol sur mesure</image:caption>
-      <image:title>Bar de sous-sol sur mesure</image:title>
+      <image:caption>Salle de cinéma maison avec estrade et panneaux acoustiques</image:caption>
+      <image:title>Salle de cinéma maison avec estrade et panneaux acoustiques</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cave-vin-01.webp</image:loc>
-      <image:caption>Cave à vin / cellier sur mesure au sous-sol</image:caption>
-      <image:title>Cave à vin / cellier sur mesure au sous-sol</image:title>
+      <image:caption>Cellier vitré aménagé sous un escalier de sous-sol</image:caption>
+      <image:title>Cellier vitré aménagé sous un escalier de sous-sol</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
+      <image:caption>Bar de sous-sol avec comptoir et rangement à bouteilles</image:caption>
+      <image:title>Bar de sous-sol avec comptoir et rangement à bouteilles</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp</image:loc>
-      <image:caption>Bibliothèque murale et bureau intégré sur mesure</image:caption>
-      <image:title>Bibliothèque murale et bureau intégré sur mesure</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
-      <image:caption>Salle de jeux et unité murale sur mesure au sous-sol</image:caption>
-      <image:title>Salle de jeux et unité murale sur mesure au sous-sol</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-rangement-01.webp</image:loc>
-      <image:caption>Rangement fermé sur mesure le long d&amp;#x27;un mur de sous-sol</image:caption>
-      <image:title>Rangement fermé sur mesure le long d&amp;#x27;un mur de sous-sol</image:title>
+      <image:caption>Bibliothèque murale et bureau intégré au sous-sol</image:caption>
+      <image:title>Bibliothèque murale et bureau intégré au sous-sol</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Détail de mobilier intégré sur mesure pour aménagement de sous-sol</image:caption>
-      <image:title>Détail de mobilier intégré sur mesure pour aménagement de sous-sol</image:title>
+      <image:caption>Détail de mobilier intégré sur mesure dans un sous-sol fini</image:caption>
+      <image:title>Détail de mobilier intégré sur mesure dans un sous-sol fini</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/espaces/walk-in</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
-      <image:caption>Garde-robe et walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:caption>
-      <image:title>Garde-robe et walk-in sur mesure haut de gamme à Pierrefonds et dans le Grand Montréal</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
-      <image:caption>Projet walk-in sur mesure à Montréal</image:caption>
-      <image:title>Projet walk-in sur mesure à Montréal</image:title>
+      <image:caption>Walk-in sur mesure avec penderie sur deux hauteurs</image:caption>
+      <image:title>Walk-in sur mesure avec penderie sur deux hauteurs</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-02.webp</image:loc>
-      <image:caption>Projet walk-in sur mesure à Laval</image:caption>
-      <image:title>Projet walk-in sur mesure à Laval</image:title>
+      <image:caption>Walk-in aménagé dans un angle de chambre à Laval</image:caption>
+      <image:title>Walk-in aménagé dans un angle de chambre à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-01.webp</image:loc>
+      <image:caption>Tiroirs et tablettes sur mesure dans un walk-in de Montréal</image:caption>
+      <image:title>Tiroirs et tablettes sur mesure dans un walk-in de Montréal</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-03.webp</image:loc>
-      <image:caption>Projet walk-in sur mesure sur la Rive-Sud</image:caption>
-      <image:title>Projet walk-in sur mesure sur la Rive-Sud</image:title>
+      <image:caption>Walk-in avec îlot central et éclairage intégré</image:caption>
+      <image:title>Walk-in avec îlot central et éclairage intégré</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
-      <image:caption>Comparatif visuel de matériaux pour armoires sur mesure</image:caption>
-      <image:title>Comparatif visuel de matériaux pour armoires sur mesure</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-plywood-card-01.webp</image:loc>
+      <image:caption>Caisson de bouleau et façade peinte d&amp;#x27;une armoire sur mesure</image:caption>
+      <image:title>Caisson de bouleau et façade peinte d&amp;#x27;une armoire sur mesure</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux/bois-massif</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-birch-drawer-detail-01.webp</image:loc>
-      <image:caption>Cuisine sur mesure avec détails en bois massif</image:caption>
-      <image:title>Cuisine sur mesure avec détails en bois massif</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-card-01.webp</image:loc>
+      <image:caption>Porte d&amp;#x27;armoire en bois massif au grain apparent</image:caption>
+      <image:title>Porte d&amp;#x27;armoire en bois massif au grain apparent</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-solid-wood-finish-detail-01.webp</image:loc>
-      <image:caption>Détail de finition en bois massif</image:caption>
-      <image:title>Détail de finition en bois massif</image:title>
+      <image:caption>Détail de finition sur une pièce en bois massif</image:caption>
+      <image:title>Détail de finition sur une pièce en bois massif</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux/comparatif</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/comparatif-materiaux-01.webp</image:loc>
-      <image:caption>Comparatif de matériaux pour cuisine sur mesure</image:caption>
-      <image:title>Comparatif de matériaux pour cuisine sur mesure</image:title>
+      <image:caption>Panneaux d&amp;#x27;armoires comparés côte à côte</image:caption>
+      <image:title>Panneaux d&amp;#x27;armoires comparés côte à côte</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux/contreplaque</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-plywood-hero-01.webp</image:loc>
-      <image:caption>Cuisine sur mesure avec structure durable</image:caption>
-      <image:title>Cuisine sur mesure avec structure durable</image:title>
+      <image:caption>Caisson d&amp;#x27;armoire en contreplaqué de bouleau</image:caption>
+      <image:title>Caisson d&amp;#x27;armoire en contreplaqué de bouleau</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-plywood-detail-01.webp</image:loc>
-      <image:caption>Détail de cuisine sur mesure en contreplaqué</image:caption>
-      <image:title>Détail de cuisine sur mesure en contreplaqué</image:title>
+      <image:caption>Plis croisés visibles sur un chant de contreplaqué</image:caption>
+      <image:title>Plis croisés visibles sur un chant de contreplaqué</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux/couleurs</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
-      <image:caption>Choix de couleurs et finis pour projet sur mesure</image:caption>
-      <image:title>Choix de couleurs et finis pour projet sur mesure</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
+      <image:caption>Armoires colorées vues dans la lumière d&amp;#x27;une pièce</image:caption>
+      <image:title>Armoires colorées vues dans la lumière d&amp;#x27;une pièce</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-color-finish-lifestyle-01.webp</image:loc>
-      <image:caption>Choix de finis et échantillons de couleurs</image:caption>
-      <image:title>Choix de finis et échantillons de couleurs</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
+      <image:caption>Échantillons de couleurs et de niveaux de lustre</image:caption>
+      <image:title>Échantillons de couleurs et de niveaux de lustre</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux/mdf</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
-      <image:caption>Échantillons et surface peinte uniforme</image:caption>
-      <image:title>Échantillons et surface peinte uniforme</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
+      <image:caption>Panneau MDF avec finition peinte uniforme</image:caption>
+      <image:title>Panneau MDF avec finition peinte uniforme</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-mdf-painted-panel-01.webp</image:loc>
-      <image:caption>Finition peinte uniforme sur panneau MDF</image:caption>
-      <image:title>Finition peinte uniforme sur panneau MDF</image:title>
+      <image:loc>https://dilamco.com/images/generated/materials/material-kitchen-durability-card-01.webp</image:loc>
+      <image:caption>Façades peintes dans une cuisine sur mesure</image:caption>
+      <image:title>Façades peintes dans une cuisine sur mesure</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux/melamine</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/materials/material-finish-samples-01.webp</image:loc>
-      <image:caption>Finis décoratifs de type mélamine</image:caption>
-      <image:title>Finis décoratifs de type mélamine</image:title>
-    </image:image>
-    <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-melamine-panel-detail-01.webp</image:loc>
-      <image:caption>Panneaux mélamine décoratifs</image:caption>
-      <image:title>Panneaux mélamine décoratifs</image:title>
+      <image:caption>Détail d&amp;#x27;un panneau mélamine et de son chant</image:caption>
+      <image:title>Détail d&amp;#x27;un panneau mélamine et de son chant</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/materiaux/quincaillerie</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/materials/material-hardware-hero-01.webp</image:loc>
-      <image:caption>Cuisine sur mesure mettant en valeur la qualité de la quincaillerie</image:caption>
-      <image:title>Cuisine sur mesure mettant en valeur la qualité de la quincaillerie</image:title>
+      <image:caption>Coulisse de tiroir et charnière dans une armoire sur mesure</image:caption>
+      <image:title>Coulisse de tiroir et charnière dans une armoire sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/materials/material-hardware-detail-01.webp</image:loc>
+      <image:caption>Détail d&amp;#x27;une charnière réglable sur une porte d&amp;#x27;armoire</image:caption>
+      <image:title>Détail d&amp;#x27;une charnière réglable sur une porte d&amp;#x27;armoire</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/processus</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
-      <image:caption>Chantier de rénovation résidentielle en cours d&amp;#x27;exécution</image:caption>
-      <image:title>Chantier de rénovation résidentielle en cours d&amp;#x27;exécution</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/process3.jpg</image:loc>
       <image:caption>Plans et documents de chantier sur une table de travail</image:caption>
@@ -1553,11 +1578,6 @@
   </url>
   <url>
     <loc>https://dilamco.com/projets</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/projects/cuisine-haut-de-gamme-blanche-laval.webp</image:loc>
-      <image:caption>Réalisation sur mesure Dilamco</image:caption>
-      <image:title>Réalisation sur mesure Dilamco</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
       <image:caption>Projets de cuisine sur mesure</image:caption>
@@ -1582,6 +1602,26 @@
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
       <image:caption>Projets commerciaux sur mesure</image:caption>
       <image:title>Projets commerciaux sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-laval-1.webp</image:loc>
+      <image:caption>Cuisine sur mesure livrée à Laval</image:caption>
+      <image:title>Cuisine sur mesure livrée à Laval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-terrebonne-1.webp</image:loc>
+      <image:caption>Armoires pleine hauteur posées à Terrebonne</image:caption>
+      <image:title>Armoires pleine hauteur posées à Terrebonne</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/cuisine-sur-mesure-repentigny-1.webp</image:loc>
+      <image:caption>Îlot central d&amp;#x27;une cuisine sur mesure à Repentigny</image:caption>
+      <image:title>Îlot central d&amp;#x27;une cuisine sur mesure à Repentigny</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/projects/Signature-Bouleau.webp</image:loc>
+      <image:caption>Caissons et tiroirs en bouleau d&amp;#x27;une cuisine signature</image:caption>
+      <image:title>Caissons et tiroirs en bouleau d&amp;#x27;une cuisine signature</image:title>
     </image:image>
   </url>
   <url>
@@ -1871,24 +1911,19 @@
   <url>
     <loc>https://dilamco.com/services</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
-      <image:caption>Chantier de rénovation résidentielle coordonné par un entrepreneur général</image:caption>
-      <image:title>Chantier de rénovation résidentielle coordonné par un entrepreneur général</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp</image:loc>
+      <image:caption>Cuisine shaker en U avec dosseret métro</image:caption>
+      <image:title>Cuisine shaker en U avec dosseret métro</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Rénovation complète de cuisine résidentielle</image:caption>
-      <image:title>Rénovation complète de cuisine résidentielle</image:title>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp</image:loc>
+      <image:caption>Salle de bain avec meuble-lavabo flottant et marbre</image:caption>
+      <image:title>Salle de bain avec meuble-lavabo flottant et marbre</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée avec douche en céramique</image:caption>
-      <image:title>Salle de bain rénovée avec douche en céramique</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en pièce de vie</image:caption>
-      <image:title>Sous-sol aménagé en pièce de vie</image:title>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Sous-sol aménagé en salle de jeux</image:caption>
+      <image:title>Sous-sol aménagé en salle de jeux</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/plancher-bois-franc-neuf-01.webp</image:loc>
@@ -1901,9 +1936,9 @@
       <image:title>Agrandissement arrière d&amp;#x27;une maison unifamiliale</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Reconstruction d&amp;#x27;une pièce après un dégât d&amp;#x27;eau</image:caption>
-      <image:title>Reconstruction d&amp;#x27;une pièce après un dégât d&amp;#x27;eau</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
+      <image:caption>Pièce remise en état après un sinistre</image:caption>
+      <image:title>Pièce remise en état après un sinistre</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
@@ -1911,9 +1946,19 @@
       <image:title>Aménagement commercial livré prêt à occuper</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-design-hero-01.webp</image:loc>
+      <image:caption>Séance de design d&amp;#x27;armoires sur mesure</image:caption>
+      <image:title>Séance de design d&amp;#x27;armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
+      <image:caption>Caissons et façades d&amp;#x27;armoires sur mesure</image:caption>
+      <image:title>Caissons et façades d&amp;#x27;armoires sur mesure</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
-      <image:caption>Installation d&amp;#x27;armoires sur mesure pendant un chantier de rénovation</image:caption>
-      <image:title>Installation d&amp;#x27;armoires sur mesure pendant un chantier de rénovation</image:title>
+      <image:caption>Installation d&amp;#x27;armoires sur mesure pendant un chantier</image:caption>
+      <image:title>Installation d&amp;#x27;armoires sur mesure pendant un chantier</image:title>
     </image:image>
   </url>
   <url>
@@ -1925,43 +1970,38 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/services/design-hero.webp</image:loc>
-      <image:caption>Design sur mesure en cours de planification</image:caption>
-      <image:title>Design sur mesure en cours de planification</image:title>
+      <image:caption>Plans et élévations d&amp;#x27;une cuisine en cours de conception</image:caption>
+      <image:title>Plans et élévations d&amp;#x27;une cuisine en cours de conception</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/services/fabrication</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-fabrication-hero-01.webp</image:loc>
-      <image:caption>Plans techniques et échantillons de matériaux pour fabrication sur mesure</image:caption>
-      <image:title>Plans techniques et échantillons de matériaux pour fabrication sur mesure</image:title>
+      <image:caption>Plans techniques et échantillons de matériaux pour une commande sur mesure</image:caption>
+      <image:title>Plans techniques et échantillons de matériaux pour une commande sur mesure</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-hero-01.webp</image:loc>
-      <image:caption>Cuisine sur mesure avec fabrication précise</image:caption>
-      <image:title>Cuisine sur mesure avec fabrication précise</image:title>
+      <image:loc>https://dilamco.com/images/services/fabrication-hero.webp</image:loc>
+      <image:caption>Modules d&amp;#x27;armoires emballés en attente de livraison</image:caption>
+      <image:title>Modules d&amp;#x27;armoires emballés en attente de livraison</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/services/installation</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-installation-hero-01.webp</image:loc>
-      <image:caption>Plan technique et échantillons de panneaux pour installation sur mesure</image:caption>
-      <image:title>Plan technique et échantillons de panneaux pour installation sur mesure</image:title>
+      <image:caption>Pose d&amp;#x27;armoires sur mesure en cours dans une cuisine</image:caption>
+      <image:title>Pose d&amp;#x27;armoires sur mesure en cours dans une cuisine</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/services/installation-hero.webp</image:loc>
-      <image:caption>Installation sur mesure en cours</image:caption>
-      <image:title>Installation sur mesure en cours</image:title>
+      <image:caption>Armoires ajustées et alignées après la pose</image:caption>
+      <image:title>Armoires ajustées et alignées après la pose</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/services/renovation</loc>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
-      <image:caption>Chantier de rénovation résidentielle clé en main</image:caption>
-      <image:title>Chantier de rénovation résidentielle clé en main</image:title>
-    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
       <image:caption>Rénovation de cuisine complète</image:caption>
@@ -1983,12 +2023,12 @@
       <image:title>Rénovation de plancher résidentiel</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
       <image:caption>Agrandissement de maison en construction</image:caption>
       <image:title>Agrandissement de maison en construction</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
       <image:caption>Reconstruction après un dégât d&amp;#x27;eau</image:caption>
       <image:title>Reconstruction après un dégât d&amp;#x27;eau</image:title>
     </image:image>
@@ -2000,18 +2040,23 @@
       <image:caption>Agrandissement résidentiel en construction</image:caption>
       <image:title>Agrandissement résidentiel en construction</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
+      <image:caption>Chantier d&amp;#x27;agrandissement raccordé à une maison existante</image:caption>
+      <image:title>Chantier d&amp;#x27;agrandissement raccordé à une maison existante</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/services/renovation/apres-sinistre</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Sous-sol reconstruit après un dégât d&amp;#x27;eau</image:caption>
-      <image:title>Sous-sol reconstruit après un dégât d&amp;#x27;eau</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Pièce reconstruite après un dégât d&amp;#x27;eau</image:caption>
+      <image:title>Pièce reconstruite après un dégât d&amp;#x27;eau</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
-      <image:caption>Constat des dommages avant la reconstruction d&amp;#x27;un plancher</image:caption>
-      <image:title>Constat des dommages avant la reconstruction d&amp;#x27;un plancher</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Constat des dommages avant la reconstruction d&amp;#x27;une pièce</image:caption>
+      <image:title>Constat des dommages avant la reconstruction d&amp;#x27;une pièce</image:title>
     </image:image>
   </url>
   <url>
@@ -2022,9 +2067,14 @@
       <image:title>Cuisine rénovée par un entrepreneur général à Montréal</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-approach-01.webp</image:loc>
-      <image:caption>Planification et relevé d&amp;#x27;une rénovation de cuisine</image:caption>
-      <image:title>Planification et relevé d&amp;#x27;une rénovation de cuisine</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
+      <image:caption>Cuisine ouverte sur le salon avec îlot et colonnes</image:caption>
+      <image:title>Cuisine ouverte sur le salon avec îlot et colonnes</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Cuisine blanche avec îlot en quartz</image:caption>
+      <image:title>Cuisine blanche avec îlot en quartz</image:title>
     </image:image>
   </url>
   <url>
@@ -2048,9 +2098,14 @@
       <image:title>Salle de bain rénovée par un entrepreneur général</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-approach-01.webp</image:loc>
-      <image:caption>Préparation d&amp;#x27;une douche avec membrane d&amp;#x27;étanchéité</image:caption>
-      <image:title>Préparation d&amp;#x27;une douche avec membrane d&amp;#x27;étanchéité</image:title>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Douche de plain-pied avec paroi de verre</image:caption>
+      <image:title>Douche de plain-pied avec paroi de verre</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp</image:loc>
+      <image:caption>Vanité avec comptoir de quartz et miroir rétroéclairé</image:caption>
+      <image:title>Vanité avec comptoir de quartz et miroir rétroéclairé</image:title>
     </image:image>
   </url>
   <url>
@@ -2061,116 +2116,106 @@
       <image:title>Sous-sol fini et aménagé par un entrepreneur général</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Matériaux et finition adaptés à un aménagement de sous-sol</image:caption>
-      <image:title>Matériaux et finition adaptés à un aménagement de sous-sol</image:title>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
+      <image:caption>Salle de cinéma aménagée dans un sous-sol fini</image:caption>
+      <image:title>Salle de cinéma aménagée dans un sous-sol fini</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
+      <image:caption>Bar de sous-sol avec comptoir et rangements</image:caption>
+      <image:title>Bar de sous-sol avec comptoir et rangements</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/home/home-hero-premium-kitchen-01.webp</image:loc>
-      <image:caption>Projet de rénovation réalisé par Dilamco dans l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:caption>
-      <image:title>Projet de rénovation réalisé par Dilamco dans l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
+      <image:caption>Chantier de rénovation suivi depuis notre base de Pierrefonds-Roxboro</image:caption>
+      <image:title>Chantier de rénovation suivi depuis notre base de Pierrefonds-Roxboro</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/beaconsfield</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-hero-overview-01.webp</image:loc>
-      <image:caption>Rénovation intérieure d&amp;#x27;une maison de Beaconsfield</image:caption>
-      <image:title>Rénovation intérieure d&amp;#x27;une maison de Beaconsfield</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Rénovation majeure d&amp;#x27;une maison des années 1950</image:caption>
-      <image:title>Rénovation majeure d&amp;#x27;une maison des années 1950</image:title>
+      <image:caption>Intérieur rénové d&amp;#x27;une maison de Beaconsfield</image:caption>
+      <image:title>Intérieur rénové d&amp;#x27;une maison de Beaconsfield</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
-      <image:caption>Cuisine rénovée dans une maison de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:caption>
-      <image:title>Cuisine rénovée dans une maison de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:title>
+      <image:caption>Cuisine refaite dans une maison de Beaconsfield</image:caption>
+      <image:title>Cuisine refaite dans une maison de Beaconsfield</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée dans une maison de Beaconsfield</image:caption>
-      <image:title>Salle de bain rénovée dans une maison de Beaconsfield</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
+      <image:caption>Rénovation majeure d&amp;#x27;une maison de Beaconsfield</image:caption>
+      <image:title>Rénovation majeure d&amp;#x27;une maison de Beaconsfield</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planification d&amp;#x27;un agrandissement à Beaconsfield</image:caption>
-      <image:title>Planification d&amp;#x27;un agrandissement à Beaconsfield</image:title>
+      <image:caption>Planification d&amp;#x27;un agrandissement sur un terrain boisé</image:caption>
+      <image:title>Planification d&amp;#x27;un agrandissement sur un terrain boisé</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en pièce de vie</image:caption>
-      <image:title>Sous-sol aménagé en pièce de vie</image:title>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain rénovée dans une maison de Beacon Hill</image:caption>
+      <image:title>Salle de bain rénovée dans une maison de Beacon Hill</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/dollard-des-ormeaux</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
-      <image:caption>Rénovation de cuisine dans une maison de Dollard-des-Ormeaux</image:caption>
-      <image:title>Rénovation de cuisine dans une maison de Dollard-des-Ormeaux</image:title>
+      <image:caption>Cuisine rénovée dans une maison de Dollard-des-Ormeaux</image:caption>
+      <image:title>Cuisine rénovée dans une maison de Dollard-des-Ormeaux</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-hero-01.webp</image:loc>
+      <image:caption>Salle de bain refaite dans un split-level de Dollard-des-Ormeaux</image:caption>
+      <image:title>Salle de bain refaite dans un split-level de Dollard-des-Ormeaux</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Cuisine ouverte rénovée dans un split-level</image:caption>
-      <image:title>Cuisine ouverte rénovée dans un split-level</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée avec douche en céramique</image:caption>
-      <image:title>Salle de bain rénovée avec douche en céramique</image:title>
+      <image:caption>Cuisine ouverte sur le salon d&amp;#x27;un split-level de DDO</image:caption>
+      <image:title>Cuisine ouverte sur le salon d&amp;#x27;un split-level de DDO</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en salle familiale</image:caption>
-      <image:title>Sous-sol aménagé en salle familiale</image:title>
+      <image:caption>Sous-sol aménagé en salle familiale à Dollard-des-Ormeaux</image:caption>
+      <image:title>Sous-sol aménagé en salle familiale à Dollard-des-Ormeaux</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Agrandissement arrière d&amp;#x27;une maison de banlieue</image:caption>
-      <image:title>Agrandissement arrière d&amp;#x27;une maison de banlieue</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Chantier de reconstruction après un dégât d&amp;#x27;eau</image:caption>
-      <image:title>Chantier de reconstruction après un dégât d&amp;#x27;eau</image:title>
+      <image:caption>Agrandissement arrière d&amp;#x27;une maison de Dollard-des-Ormeaux</image:caption>
+      <image:title>Agrandissement arrière d&amp;#x27;une maison de Dollard-des-Ormeaux</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/dorval</loc>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
-      <image:caption>Rénovation résidentielle menée par un entrepreneur général à Dorval</image:caption>
-      <image:title>Rénovation résidentielle menée par un entrepreneur général à Dorval</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
-      <image:caption>Cuisine sur mesure réalisée dans une maison de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:caption>
-      <image:title>Cuisine sur mesure réalisée dans une maison de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée avec finition soignée</image:caption>
-      <image:title>Salle de bain rénovée avec finition soignée</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-approach-01.webp</image:loc>
+      <image:caption>Rénovation intérieure d&amp;#x27;une maison de Dorval</image:caption>
+      <image:title>Rénovation intérieure d&amp;#x27;une maison de Dorval</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en salle de jeux</image:caption>
-      <image:title>Sous-sol aménagé en salle de jeux</image:title>
+      <image:caption>Sous-sol aménagé dans un bungalow de Dorval</image:caption>
+      <image:title>Sous-sol aménagé dans un bungalow de Dorval</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planification d&amp;#x27;un agrandissement résidentiel à Dorval</image:caption>
-      <image:title>Planification d&amp;#x27;un agrandissement résidentiel à Dorval</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Cuisine rénovée dans un bungalow de Dorval</image:caption>
+      <image:title>Cuisine rénovée dans un bungalow de Dorval</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Reconstruction d&amp;#x27;une pièce après un dégât d&amp;#x27;eau</image:caption>
-      <image:title>Reconstruction d&amp;#x27;une pièce après un dégât d&amp;#x27;eau</image:title>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
+      <image:caption>Agrandissement résidentiel planifié à Dorval</image:caption>
+      <image:title>Agrandissement résidentiel planifié à Dorval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Sous-sol fini dans une maison de Dorval</image:caption>
+      <image:title>Sous-sol fini dans une maison de Dorval</image:title>
     </image:image>
   </url>
   <url>
@@ -2182,28 +2227,23 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Matériaux préparés pour la reconstruction d&amp;#x27;un sous-sol</image:caption>
-      <image:title>Matériaux préparés pour la reconstruction d&amp;#x27;un sous-sol</image:title>
+      <image:caption>Matériaux préparés pour reprendre un sous-sol de l&amp;#x27;île Bizard</image:caption>
+      <image:title>Matériaux préparés pour reprendre un sous-sol de l&amp;#x27;île Bizard</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en salle de cinéma maison</image:caption>
-      <image:title>Sous-sol aménagé en salle de cinéma maison</image:title>
+      <image:caption>Sous-sol aménagé en salle de cinéma sur l&amp;#x27;île Bizard</image:caption>
+      <image:title>Sous-sol aménagé en salle de cinéma sur l&amp;#x27;île Bizard</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Reconstruction intérieure après une inondation sur l&amp;#x27;île Mercier</image:caption>
+      <image:title>Reconstruction intérieure après une inondation sur l&amp;#x27;île Mercier</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planification d&amp;#x27;un agrandissement de maison</image:caption>
-      <image:title>Planification d&amp;#x27;un agrandissement de maison</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-cuisine-01.webp</image:loc>
-      <image:caption>Cuisine rénovée dans une maison de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:caption>
-      <image:title>Cuisine rénovée dans une maison de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Transformation d&amp;#x27;une maison ancienne de Sainte-Geneviève</image:caption>
-      <image:title>Transformation d&amp;#x27;une maison ancienne de Sainte-Geneviève</image:title>
+      <image:caption>Planification d&amp;#x27;un agrandissement sur un lot riverain de l&amp;#x27;île</image:caption>
+      <image:title>Planification d&amp;#x27;un agrandissement sur un lot riverain de l&amp;#x27;île</image:title>
     </image:image>
   </url>
   <url>
@@ -2214,47 +2254,52 @@
       <image:title>Agrandissement d&amp;#x27;une maison unifamiliale à Kirkland</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
+      <image:caption>Planification d&amp;#x27;un agrandissement sur un terrain de Kirkland</image:caption>
+      <image:title>Planification d&amp;#x27;un agrandissement sur un terrain de Kirkland</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Rénovation majeure d&amp;#x27;une maison de Kirkland</image:caption>
-      <image:title>Rénovation majeure d&amp;#x27;une maison de Kirkland</image:title>
+      <image:caption>Chantier d&amp;#x27;agrandissement dans une rue de Kirkland</image:caption>
+      <image:title>Chantier d&amp;#x27;agrandissement dans une rue de Kirkland</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Cuisine ouverte sur les aires de vie</image:caption>
-      <image:title>Cuisine ouverte sur les aires de vie</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Rénovation complète d&amp;#x27;une maison de Kirkland</image:caption>
+      <image:title>Rénovation complète d&amp;#x27;une maison de Kirkland</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée avec douche en céramique</image:caption>
-      <image:title>Salle de bain rénovée avec douche en céramique</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en pièce de vie</image:caption>
-      <image:title>Sous-sol aménagé en pièce de vie</image:title>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp</image:loc>
+      <image:caption>Cuisine ouverte dans une maison détachée de Kirkland</image:caption>
+      <image:title>Cuisine ouverte dans une maison détachée de Kirkland</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/laval</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-cuisine-hero-01.webp</image:loc>
-      <image:caption>Cuisine rénovée dans une maison de Laval</image:caption>
-      <image:title>Cuisine rénovée dans une maison de Laval</image:title>
+      <image:caption>Cuisine rénovée dans un bungalow de Chomedey</image:caption>
+      <image:title>Cuisine rénovée dans un bungalow de Chomedey</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Sous-sol aménagé en salle de jeux dans une maison de Vimont</image:caption>
+      <image:title>Sous-sol aménagé en salle de jeux dans une maison de Vimont</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bar-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé avec coin bar</image:caption>
-      <image:title>Sous-sol aménagé avec coin bar</image:title>
+      <image:caption>Sous-sol aménagé avec coin bar dans une maison lavalloise</image:caption>
+      <image:title>Sous-sol aménagé avec coin bar dans une maison lavalloise</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-project-02.webp</image:loc>
-      <image:caption>Cuisine ouverte rénovée dans une maison de banlieue</image:caption>
-      <image:title>Cuisine ouverte rénovée dans une maison de banlieue</image:title>
+      <image:caption>Cuisine ouverte sur la salle à manger d&amp;#x27;un bungalow de Laval</image:caption>
+      <image:title>Cuisine ouverte sur la salle à manger d&amp;#x27;un bungalow de Laval</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Matériaux préparés pour une reconstruction de sous-sol</image:caption>
-      <image:title>Matériaux préparés pour une reconstruction de sous-sol</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Reconstruction intérieure après une inondation à Laval-Ouest</image:caption>
+      <image:title>Reconstruction intérieure après une inondation à Laval-Ouest</image:title>
     </image:image>
   </url>
   <url>
@@ -2266,140 +2311,135 @@
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé à Pierrefonds-Roxboro</image:caption>
-      <image:title>Sous-sol aménagé à Pierrefonds-Roxboro</image:title>
+      <image:caption>Sous-sol fini dans un bungalow de Pierrefonds-Roxboro</image:caption>
+      <image:title>Sous-sol fini dans un bungalow de Pierrefonds-Roxboro</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-salle-jeux-01.webp</image:loc>
+      <image:caption>Sous-sol aménagé en salle de jeux à Pierrefonds</image:caption>
+      <image:title>Sous-sol aménagé en salle de jeux à Pierrefonds</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Reconstruction après un dégât d&amp;#x27;eau</image:caption>
-      <image:title>Reconstruction après un dégât d&amp;#x27;eau</image:title>
+      <image:caption>Reconstruction après un dégât d&amp;#x27;eau à Roxboro</image:caption>
+      <image:title>Reconstruction après un dégât d&amp;#x27;eau à Roxboro</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Cuisine rénovée dans un bungalow de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:caption>
-      <image:title>Cuisine rénovée dans un bungalow de l&amp;#x27;Ouest-de-l&amp;#x27;Île</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée avec douche en céramique</image:caption>
-      <image:title>Salle de bain rénovée avec douche en céramique</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Agrandissement arrière d&amp;#x27;une maison unifamiliale</image:caption>
-      <image:title>Agrandissement arrière d&amp;#x27;une maison unifamiliale</image:title>
+      <image:caption>Cuisine ouverte dans un bungalow de l&amp;#x27;arrondissement</image:caption>
+      <image:title>Cuisine ouverte dans un bungalow de l&amp;#x27;arrondissement</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/pointe-claire</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
-      <image:caption>Rénovation de salle de bain à Pointe-Claire</image:caption>
-      <image:title>Rénovation de salle de bain à Pointe-Claire</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée avec douche en céramique</image:caption>
-      <image:title>Salle de bain rénovée avec douche en céramique</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
-      <image:caption>Cuisine rénovée dans une maison de Pointe-Claire</image:caption>
-      <image:title>Cuisine rénovée dans une maison de Pointe-Claire</image:title>
+      <image:caption>Salle de bain rénovée dans une maison de Pointe-Claire</image:caption>
+      <image:title>Salle de bain rénovée dans une maison de Pointe-Claire</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
-      <image:caption>Rénovation intérieure d&amp;#x27;une maison ancienne de Pointe-Claire</image:caption>
-      <image:title>Rénovation intérieure d&amp;#x27;une maison ancienne de Pointe-Claire</image:title>
+      <image:caption>Rénovation intérieure d&amp;#x27;une maison ancienne du Village de Pointe-Claire</image:caption>
+      <image:title>Rénovation intérieure d&amp;#x27;une maison ancienne du Village de Pointe-Claire</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Agrandissement arrière d&amp;#x27;une maison unifamiliale</image:caption>
-      <image:title>Agrandissement arrière d&amp;#x27;une maison unifamiliale</image:title>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Salle de bain refaite dans une maison du Lakeshore</image:caption>
+      <image:title>Salle de bain refaite dans une maison du Lakeshore</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-hero-01.webp</image:loc>
+      <image:caption>Chantier de rénovation dans le Village de Pointe-Claire</image:caption>
+      <image:title>Chantier de rénovation dans le Village de Pointe-Claire</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/plancher-bois-franc-neuf-01.webp</image:loc>
-      <image:caption>Pose de plancher de bois franc dans une résidence</image:caption>
-      <image:title>Pose de plancher de bois franc dans une résidence</image:title>
+      <image:caption>Plancher de bois franc posé dans une maison de Pointe-Claire</image:caption>
+      <image:title>Plancher de bois franc posé dans une maison de Pointe-Claire</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/rive-sud</loc>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
+      <image:caption>Rénovation intérieure complète menée sur la Rive-Sud de Montréal</image:caption>
+      <image:title>Rénovation intérieure complète menée sur la Rive-Sud de Montréal</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Agrandissement résidentiel réalisé par un entrepreneur général sur la Rive-Sud de Montréal</image:caption>
-      <image:title>Agrandissement résidentiel réalisé par un entrepreneur général sur la Rive-Sud de Montréal</image:title>
+      <image:caption>Agrandissement livré dans une municipalité de la Rive-Sud</image:caption>
+      <image:title>Agrandissement livré dans une municipalité de la Rive-Sud</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-approach-01.webp</image:loc>
-      <image:caption>Planification d&amp;#x27;un agrandissement résidentiel sur la Rive-Sud de Montréal</image:caption>
-      <image:title>Planification d&amp;#x27;un agrandissement résidentiel sur la Rive-Sud de Montréal</image:title>
+      <image:caption>Plan d&amp;#x27;agrandissement pour un bungalow du Vieux-Longueuil</image:caption>
+      <image:title>Plan d&amp;#x27;agrandissement pour un bungalow du Vieux-Longueuil</image:title>
     </image:image>
     <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
-      <image:caption>Rénovation intérieure complète coordonnée par un entrepreneur général</image:caption>
-      <image:title>Rénovation intérieure complète coordonnée par un entrepreneur général</image:title>
+      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
+      <image:caption>Rénovation complète d&amp;#x27;une maison d&amp;#x27;un secteur de Brossard</image:caption>
+      <image:title>Rénovation complète d&amp;#x27;une maison d&amp;#x27;un secteur de Brossard</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-materials-01.webp</image:loc>
-      <image:caption>Matériaux préparés pour une reconstruction de sous-sol</image:caption>
-      <image:title>Matériaux préparés pour une reconstruction de sous-sol</image:title>
+      <image:caption>Matériaux prêts pour une reconstruction de sous-sol à Châteauguay</image:caption>
+      <image:title>Matériaux prêts pour une reconstruction de sous-sol à Châteauguay</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/saint-laurent</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-bath-hero-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée dans un plex de Saint-Laurent</image:caption>
-      <image:title>Salle de bain rénovée dans un plex de Saint-Laurent</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-project-01.webp</image:loc>
-      <image:caption>Cuisine rénovée avec armoires sur mesure</image:caption>
-      <image:title>Cuisine rénovée avec armoires sur mesure</image:title>
+      <image:caption>Salle de bain refaite dans un plex de Saint-Laurent</image:caption>
+      <image:title>Salle de bain refaite dans un plex de Saint-Laurent</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-bath-01.webp</image:loc>
-      <image:caption>Salle de bain rénovée dans un logement existant</image:caption>
-      <image:title>Salle de bain rénovée dans un logement existant</image:title>
+      <image:caption>Salle de bain rénovée à l&amp;#x27;étage d&amp;#x27;un duplex laurentien</image:caption>
+      <image:title>Salle de bain rénovée à l&amp;#x27;étage d&amp;#x27;un duplex laurentien</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-02.webp</image:loc>
+      <image:caption>Salle de bain refaite dans un logement de Norgate</image:caption>
+      <image:title>Salle de bain refaite dans un logement de Norgate</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-cuisine-project-01.webp</image:loc>
+      <image:caption>Cuisine ouverte dans un bungalow du secteur Côte-Vertu</image:caption>
+      <image:title>Cuisine ouverte dans un bungalow du secteur Côte-Vertu</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en pièce de vie</image:caption>
-      <image:title>Sous-sol aménagé en pièce de vie</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-01.webp</image:loc>
-      <image:caption>Chantier de rénovation dans un duplex de Saint-Laurent</image:caption>
-      <image:title>Chantier de rénovation dans un duplex de Saint-Laurent</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-hero-01.webp</image:loc>
-      <image:caption>Pose de plancher dans une pièce rénovée</image:caption>
-      <image:title>Pose de plancher dans une pièce rénovée</image:title>
+      <image:caption>Sous-sol transformé en pièce de vie sous un duplex</image:caption>
+      <image:title>Sous-sol transformé en pièce de vie sous un duplex</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/zones/vaudreuil-dorion</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/home/home-hero-premium-kitchen-01.webp</image:loc>
-      <image:caption>Cuisine rénovée dans une maison de Vaudreuil-Dorion</image:caption>
-      <image:title>Cuisine rénovée dans une maison de Vaudreuil-Dorion</image:title>
+      <image:caption>Cuisine refaite dans une maison récente de Vaudreuil-Dorion</image:caption>
+      <image:title>Cuisine refaite dans une maison récente de Vaudreuil-Dorion</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-rangement-01.webp</image:loc>
+      <image:caption>Sous-sol fini avec rangements dans une maison de Vaudreuil-Dorion</image:caption>
+      <image:title>Sous-sol fini avec rangements dans une maison de Vaudreuil-Dorion</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp</image:loc>
-      <image:caption>Sous-sol aménagé en bureau et bibliothèque</image:caption>
-      <image:title>Sous-sol aménagé en bureau et bibliothèque</image:title>
+      <image:caption>Sous-sol converti en bureau dans une maison de Cité-des-Jeunes</image:caption>
+      <image:title>Sous-sol converti en bureau dans une maison de Cité-des-Jeunes</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-featured-cuisine-project-01.webp</image:loc>
-      <image:caption>Cuisine sur mesure avec îlot central</image:caption>
-      <image:title>Cuisine sur mesure avec îlot central</image:title>
+      <image:caption>Îlot central remplaçant la cuisine d&amp;#x27;origine d&amp;#x27;une maison de 2008</image:caption>
+      <image:title>Îlot central remplaçant la cuisine d&amp;#x27;origine d&amp;#x27;une maison de 2008</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
-      <image:caption>Agrandissement résidentiel intégré à la maison existante</image:caption>
-      <image:title>Agrandissement résidentiel intégré à la maison existante</image:title>
+      <image:caption>Agrandissement intégré à une maison de Vaudreuil-Dorion</image:caption>
+      <image:title>Agrandissement intégré à une maison de Vaudreuil-Dorion</image:title>
     </image:image>
   </url>
 </urlset>

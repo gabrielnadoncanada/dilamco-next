@@ -27,12 +27,13 @@ export const cuisinePage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Cuisine",
-          heading: "Armoires de cuisine sur mesure, posées par votre entrepreneur",
+          badges: ["Sur mesure", "Division armoires"],
+          heading:
+            "Armoires de cuisine sur mesure, posées par votre entrepreneur général",
           description:
-            "Conçues aux dimensions réelles de la pièce et intégrées au chantier. Un fournisseur de moins, une seule soumission.",
+            "Dimensions relevées après la démolition, commande lancée ensuite, pose calée sur le reste du chantier.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -45,155 +46,115 @@ export const cuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Division armoires"],
-          image: {
-            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "Armoires de cuisine sur mesure haut de gamme à Pierrefonds",
-          },
-          caption: "Pierrefonds · Ouest-de-l'Île · Grand Montréal",
         },
       },
     },
     {
-      id: "composition",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "bento",
         props: {
-          heading: "Ce que comprend le mandat",
-          columns: "2",
-          items: [
+          heading: "Des cuisines livrées dans l'Ouest-de-l'Île",
+          tiles: [
             {
-              title: "Îlot et plan de travail",
-              description: "Proportions ajustées à la circulation réelle.",
-              icon: "package2",
-              bullets: [
-                "Rangement et prises intégrés",
-                "Débord calculé pour le coin repas",
-              ],
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Cuisine à aire ouverte avec îlot et colonnes pleine hauteur",
+              },
+              caption: "Îlot et colonnes, aire ouverte",
             },
             {
-              title: "Rangement et garde-manger",
-              description: "Pensé pour l'usage quotidien, pas ajouté après coup.",
-              icon: "doorOpen",
-              bullets: [
-                "Tiroirs profonds et espaces dédiés",
-                "Accès direct aux zones de cuisson",
-              ],
+              kind: "stat",
+              value: "30 000 $",
+              label: "Bas de la fourchette observée, cuisine complète",
             },
             {
-              title: "Armoires jusqu'au plafond",
-              description: "Toute la hauteur du mur utilisée, sans vide au-dessus.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Hauteurs ajustées à la pièce",
-                "Plus de rangement, moins de poussière",
-              ],
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "Cuisine blanche avec îlot et comptoir de quartz",
+              },
+              caption: "Comptoir de quartz, îlot blanc",
             },
             {
-              title: "Design, commande et pose",
-              description: "Une seule équipe, du plan à l'ajustement final.",
-              icon: "wrench",
-              bullets: [
-                "Mesures prises après la démolition",
-                "Ajustements vérifiés sur place",
-              ],
+              kind: "quote",
+              quote:
+                "Excellent contracteur. Ils ont fait mes planchers et autres projets et nous sommes très satisfaites. Je recommande 100%.",
+              author: "Mélina Desbiens, avis Google",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
+                alt: "Armoires de cuisine vitrées et dosseret de céramique",
+              },
+              caption: "Armoires vitrées et dosseret",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+                alt: "Îlot bleu marine avec tiroirs à intérieur de bouleau",
+              },
+              caption: "Îlot marine, intérieur bouleau",
             },
           ],
         },
       },
     },
     {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Cuisines récentes",
-          items: [
-            {
-              title: "Cuisine sur mesure, Pierrefonds",
-              href: "/projets/cuisine/cuisine-sur-mesure-pierrefonds",
-              description: "Implantation précise et finition soignée dans l'Ouest-de-l'Île.",
-              image: {
-                src: "/images/projects/chene-moderne.webp",
-                alt: "Projet d'armoires de cuisine sur mesure à Pierrefonds",
-              },
-              badges: ["Pierrefonds"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Cuisine sur mesure, Montréal",
-              href: "/projets/cuisine/cuisine-sur-mesure-montreal",
-              description: "Armoires jusqu'au plafond et îlot central.",
-              image: {
-                src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-                alt: "Projet de cuisine sur mesure à Montréal",
-              },
-              badges: ["Montréal"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Cuisine sur mesure, Rive-Sud",
-              href: "/projets/cuisine/cuisine-sur-mesure-rive-sud",
-              description: "Rénovation complète de la pièce, armoires incluses.",
-              image: {
-                src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
-                alt: "Projet de cuisine sur mesure sur la Rive-Sud",
-              },
-              badges: ["Rive-Sud"],
-              footerCtaLabel: "Voir le projet",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'il y a sous la finition",
-          intro: "La durabilité se joue sur les composantes qu'on ne voit plus une fois la cuisine posée.",
-          items: [
+          heading: "La cuisine en bref",
+          intro:
+            "Les chiffres que les propriétaires demandent avant de fixer un rendez-vous.",
+          rows: [
             {
-              title: "Tiroirs en bois massif",
-              description: "Bouleau massif, assemblage qui tient la charge",
+              label: "Délai",
+              value: "9 à 15 semaines entre le design validé et la pose",
             },
             {
-              title: "Fonds en contreplaqué",
-              description: "Contreplaqué de bouleau, pas de panneau de particules",
+              label: "Prix",
+              value:
+                "30 000 $ à 65 000 $ pour une cuisine complète, relevé requis",
             },
             {
-              title: "Finis et quincaillerie",
-              description: "Choisis pour l'entretien et l'usage quotidien",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Matériaux",
+              value:
+                "Tiroirs en bouleau massif, caissons en contreplaqué de bouleau",
             },
             {
-              label: "Rénovation de cuisine",
-              href: "/services/renovation/cuisine",
-              variant: "ghost",
+              label: "Quincaillerie",
+              value:
+                "Coulisses sous caisson et charnières à fermeture amortie",
+            },
+            {
+              label: "Pose",
+              value: "Par notre équipe, une fois la plomberie et le plancher faits",
+            },
+            {
+              label: "Garantie",
+              value:
+                "Portée et durée écrites au contrat, ajustements repris sur place",
             },
           ],
           image: {
-            src: "/images/spaces/cabinet-cuisines.webp",
-            alt: "Détail de matériaux pour cuisine sur mesure",
+            src: "/images/generated/spaces/space-cuisine-hero-01.webp",
+            alt: "Cuisine sur mesure haut de gamme avec îlot central",
           },
-          cardTitle: "Pourquoi ça compte",
-          cardDescription: "Une bonne structure évite les remplacements prématurés.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -201,24 +162,20 @@ export const cuisinePage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûtent des armoires de cuisine sur mesure ?",
-              a: "Comptez généralement de 30 000 $ à 65 000 $ selon les dimensions, la complexité de l'aménagement, les finis et la coordination requise. Le prix ferme est fixé après le relevé sur place, dans la soumission détaillée.",
+              q: "Quand prenez-vous les mesures de la cuisine ?",
+              a: "Après la démolition, quand les murs sont à leur position définitive. C'est ce qui évite les espaces perdus le long des colonnes et sous le plafond.",
             },
             {
-              q: "Quel est le délai ?",
-              a: "De 9 à 15 semaines entre la validation du design et l'installation finale. Quand les armoires font partie d'une rénovation complète, la commande est lancée pour arriver au bon moment dans l'échéancier du chantier.",
+              q: "Peut-on garder la cuisine utilisable pendant les travaux ?",
+              a: "Une station temporaire, évier et réfrigérateur, est installée ailleurs dans la maison. La pièce reste fermée le temps de la démolition, de la plomberie et du plancher.",
             },
             {
-              q: "Quelle est la différence avec des armoires standard ?",
-              a: "Les modules standards sont vendus en dimensions fixes, ce qui laisse des espaces perdus et des hauteurs mal exploitées. Chaque caisson sur mesure est dimensionné pour votre pièce, jusqu'au plafond si nécessaire.",
+              q: "Qui fournit le comptoir et le dosseret ?",
+              a: "Nous. Le gabarit du comptoir est pris une fois les caissons ancrés, puis la pose du dosseret suit. Le tout est chiffré dans la même soumission que les armoires.",
             },
             {
-              q: "Quels matériaux utilisez-vous ?",
-              a: "Tiroirs en bouleau massif, fonds en contreplaqué de bouleau, quincaillerie à fermeture amortie. Les portes, les finis et les comptoirs sont choisis avec vous avant la commande.",
-            },
-            {
-              q: "Pouvez-vous faire la rénovation complète de la cuisine ?",
-              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : permis, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. Échéancier et budget fixés au contrat écrit.",
+              q: "Gérez-vous l'électricité et la ventilation de la hotte ?",
+              a: "Oui. Circuits dédiés, prises d'îlot et sortie de hotte sont planifiés au plan de cuisine et exécutés par nos corps de métier avant la livraison des armoires.",
             },
           ],
         },
@@ -231,7 +188,8 @@ export const cuisinePage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre projet de cuisine",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          intro:
+            "Estimation gratuite, relevé sur place et soumission détaillée avant toute commande.",
           actions: [
             {
               label: "Demander une soumission",

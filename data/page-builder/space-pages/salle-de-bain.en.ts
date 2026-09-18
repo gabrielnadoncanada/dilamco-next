@@ -30,12 +30,12 @@ export const salleDeBainPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Bathroom",
-          heading: "Custom vanity, installed with the plumbing",
+          badges: ["Single or double", "Washable finish"],
+          heading: "Custom bathroom vanity in Laval and Montréal",
           description:
-            "The vanity is sized for the room and installed in the job-site sequence, by one team.",
+            "The vanity lands between the waterproof membrane and the faucets, never before.",
           actions: [
             {
               label: "Get a quote",
@@ -44,159 +44,115 @@ export const salleDeBainPageEn: PageTemplateData = {
             },
             {
               label: "See our work",
-              href: "/projets",
+              href: "/projets/salle-de-bain",
               variant: "ghost",
             },
           ],
-          badges: ["Custom-built", "Moisture-ready"],
-          image: {
-            src: "/images/generated/spaces/space-bath-hero-01.webp",
-            alt: "Custom bathroom vanity in Pierrefonds and Greater Montréal",
-          },
-          caption: "Laval · Montréal · North Shore · South Shore",
         },
       },
     },
     {
-      id: "types",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "bento",
         props: {
-          heading: "The configurations we build",
-          columns: "2",
-          items: [
+          heading: "Bathrooms taken back to the studs",
+          tiles: [
             {
-              title: "Single sink",
-              description: "For compact bathrooms and powder rooms.",
-              icon: "package2",
-              bullets: [
-                "Width set to the available wall",
-                "Storage optimized under the sink",
-              ],
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
+                alt: "Marble bathroom with a floating vanity",
+              },
+              caption: "Floating vanity, marble",
             },
             {
-              title: "Double sink",
-              description: "For a shared primary bathroom.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Two dedicated counter areas",
-                "Centre tower or drawers if needed",
-              ],
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Curbless shower with a glass panel",
+              },
+              caption: "Curbless shower, glass panel",
             },
             {
-              title: "Floating vanity",
-              description: "Wall-mounted, clear floor and easier cleaning.",
-              icon: "doorOpen",
-              bullets: [
-                "More open feel in small rooms",
-                "Height set to your use",
-              ],
+              kind: "stat",
+              value: "9–15 wks",
+              label: "From design sign-off to vanity installation",
             },
             {
-              title: "Storage vanity",
-              description: "Deep drawers, tower and built-in organization.",
-              icon: "wrench",
-              bullets: [
-                "Solid birch drawers",
-                "Dedicated space for products and towels",
-              ],
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
+                alt: "Vanity with an LED mirror and quartz countertop",
+              },
+              caption: "LED mirror and quartz top",
+            },
+            {
+              kind: "quote",
+              quote:
+                "Customer experience sits at the centre of what Dilamco Construction does!",
+              author: "Jean-Philippe Hébert, Google review (translated)",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-pierre-claire-01.webp",
+                alt: "Shower clad in pale stone in a renovated bathroom",
+              },
+              caption: "Pale stone, West Island",
             },
           ],
         },
       },
     },
     {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Recent bathrooms",
-          items: [
-            {
-              title: "Custom vanity, Laval",
-              href: "/projets",
-              description: "Storage worked around the existing plumbing.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-01.webp",
-                alt: "Custom bathroom project in Laval",
-              },
-              badges: ["Laval"],
-              footerCtaLabel: "See the work",
-            },
-            {
-              title: "Bathroom, Montréal",
-              href: "/projets",
-              description: "Vanity and tile installed in the same sequence.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-02.webp",
-                alt: "Custom bathroom project in Montréal",
-              },
-              badges: ["Montréal"],
-              footerCtaLabel: "See the work",
-            },
-            {
-              title: "Bathroom, South Shore",
-              href: "/projets",
-              description: "Careful alignments and finishes chosen for moisture.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-03.webp",
-                alt: "Custom bathroom project on the South Shore",
-              },
-              badges: ["South Shore"],
-              footerCtaLabel: "See the work",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
+      frame: { surface: "muted" },
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Materials chosen for moisture",
-          intro: "A bathroom wears furniture down faster than the rest of the house. The structure is what holds.",
-          items: [
+          heading: "The bathroom at a glance",
+          intro:
+            "What a wet room demands of the furniture, the calendar and the contract.",
+          rows: [
             {
-              title: "Solid birch",
-              description: "On the critical parts, for stability",
+              label: "Lead time",
+              value: "Nine to fifteen weeks, ordered after the on-site survey",
             },
             {
-              title: "Birch plywood",
-              description: "Holds its shape better than particleboard",
+              label: "Price",
+              value: "Driven by single or double sink, and storage volume",
             },
             {
-              title: "Washable finishes",
-              description: "Chosen for daily upkeep",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Materials",
+              value: "Birch plywood, edges sealed against steam",
             },
             {
-              label: "Bathroom renovation",
-              href: "/services/renovation/salle-de-bain",
-              variant: "ghost",
+              label: "Hardware",
+              value: "Hinges and slides treated against corrosion",
+            },
+            {
+              label: "Installation",
+              value: "After membrane and tile, before the faucets",
+            },
+            {
+              label: "Warranty",
+              value: "Deficiencies fixed before the balance, term in the contract",
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-bath-project-01.webp",
-            alt: "Material detail for a custom bathroom",
+            src: "/images/generated/spaces/space-bath-hero-01.webp",
+            alt: "Custom bathroom vanity in a renovated room",
           },
-          cardTitle: "What it changes",
-          cardDescription: "Less warping, a longer service life.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -204,24 +160,20 @@ export const salleDeBainPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does a custom vanity cost?",
-              a: "The price depends on the format (single or double sink), the amount of storage, the finishes and the hardware. The firm amount is set after the on-site survey, in the detailed quote.",
+              q: "Can the toilet or tub be moved?",
+              a: "Yes, provided the supply and drain are redone. On a concrete slab that means opening the floor, which shifts both budget and calendar. We settle it during the survey.",
             },
             {
-              q: "How long does it take?",
-              a: "Nine to fifteen weeks from design sign-off to installation. When the vanity is part of a full renovation, the order is timed to the site schedule.",
+              q: "How do you keep mould from forming behind the vanity?",
+              a: "A continuous membrane under the tile, sealant at every junction, and a fan sized for the room and vented outdoors rather than into the attic.",
             },
             {
-              q: "How is this different from a stock vanity?",
-              a: "A stock vanity comes in fixed sizes, which wastes inches around the sink and the pipes. Custom work uses the real angles, heights and alcoves of the room.",
+              q: "How long is the bathroom out of service?",
+              a: "Expect two to four weeks of work on site, depending on demolition and drying. The dates are set in the schedule, not improvised as the job goes.",
             },
             {
-              q: "Does moisture change your materials?",
-              a: "Yes. Solid birch, birch plywood and washable finishes, chosen to limit warping. Room ventilation is checked along with the rest of the job.",
-            },
-            {
-              q: "Can you renovate the whole bathroom?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: demolition, plumbing, electrical, waterproofing membrane, tile, ventilation and vanity installation, coordinated by one party, in the written contract.",
+              q: "Is a custom vanity worth it in a small bathroom?",
+              a: "That is where it changes the most: width matched to the centimetre, drawers routed around the trap, height suited to the people using it rather than to a catalogue.",
             },
           ],
         },
@@ -234,7 +186,7 @@ export const salleDeBainPageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your bathroom",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro: "Free site visit. You leave with a line-by-line quote.",
           actions: [
             {
               label: "Request a quote",
@@ -243,7 +195,7 @@ export const salleDeBainPageEn: PageTemplateData = {
             },
             {
               label: "See our work",
-              href: "/projets",
+              href: "/projets/salle-de-bain",
               variant: "ghost",
             },
           ],

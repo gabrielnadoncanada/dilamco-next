@@ -30,12 +30,12 @@ export const salleDeLavagePageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Laundry room",
-          heading: "Custom laundry room, plumbing and storage in one go",
+          badges: ["Washable finish"],
+          heading: "Custom laundry room in Montréal and Laval",
           description:
-            "Folding counter, towers and storage sized for the room, installed with the plumbing and venting.",
+            "Folding counter, towers and sink set around the supply, drain and dryer vent.",
           actions: [
             {
               label: "Get a quote",
@@ -44,98 +44,116 @@ export const salleDeLavagePageEn: PageTemplateData = {
             },
             {
               label: "See our work",
-              href: "/projets",
+              href: "/projets/salle-de-lavage",
               variant: "ghost",
             },
           ],
-          badges: ["Custom-built", "Moisture-ready"],
-          image: {
-            src: "/images/generated/spaces/space-laundry-hero-01.webp",
-            alt: "Custom laundry room in Pierrefonds and Greater Montréal",
-          },
-          caption: "Montréal · Laval · South Shore",
         },
       },
     },
     {
-      id: "inclus",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What the mandate covers",
-          description:
-            "A laundry room is a service space. We settle the appliances, the water and the air before the storage.",
-          cards: [
-            {
-              title: "Folding counter",
-              description: "A continuous surface over the appliances, at working height.",
-            },
-            {
-              title: "Towers and baskets",
-              description: "Vertical storage for supplies, baskets and cleaning gear.",
-            },
-            {
-              title: "Plumbing and venting",
-              description: "Sink, tap, dryer exhaust and appliance clearances all checked.",
-            },
-            {
-              title: "One party accountable",
-              description: "Flooring, paint, electrical and cabinets under the same contract.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "projects",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading: "Recent laundry rooms",
-          items: [
+          heading: "A service room kept in line",
+          tiles: [
             {
-              title: "Laundry room, Montréal",
-              href: "/projets",
-              description: "Storage and worktop in a compact service space.",
+              kind: "image",
+              span: "wide",
               image: {
-                src: "/images/generated/spaces/space-laundry-project-01.webp",
-                alt: "Custom laundry room project in Montréal",
+                src: "/images/generated/spaces/space-laundry-hero-01.webp",
+                alt: "Laundry room with a continuous folding counter above the appliances",
               },
-              badges: ["Montréal"],
-              footerCtaLabel: "View project",
+              caption: "Continuous folding counter",
             },
             {
-              title: "Laundry room, Laval",
-              href: "/projets",
-              description: "Vertical storage and washable finishes.",
+              kind: "image",
+              span: "tall",
               image: {
                 src: "/images/generated/spaces/space-laundry-project-02.webp",
-                alt: "Custom laundry room project in Laval",
+                alt: "Storage towers and pull-out baskets in a Laval laundry room",
               },
-              badges: ["Laval"],
-              footerCtaLabel: "View project",
+              caption: "Towers and baskets, Laval",
             },
             {
-              title: "Laundry room, South Shore",
-              href: "/projets",
-              description: "Sink, counter and towers on a single run.",
+              kind: "stat",
+              value: "9–15 wks",
+              label: "Cabinets delivered once the plumbing is redone",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-laundry-project-01.webp",
+                alt: "Compact laundry room fitted into a Montréal home",
+              },
+              caption: "Tight footprint, Montréal",
+            },
+            {
+              kind: "image",
               image: {
                 src: "/images/generated/spaces/space-laundry-project-03.webp",
-                alt: "Custom laundry room project on the South Shore",
+                alt: "Utility sink and counter aligned along the same wall",
               },
-              badges: ["South Shore"],
-              footerCtaLabel: "View project",
+              caption: "Sink and counter aligned",
+            },
+            {
+              kind: "text",
+              title: "Moving the appliances",
+              description:
+                "Supply, drain and vent follow along, and often decide the final layout.",
+              href: "/contact",
             },
           ],
+        },
+      },
+    },
+    {
+      id: "en-bref",
+      frame: { surface: "muted" },
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "The laundry room at a glance",
+          intro:
+            "Three things run through this room: water, hot air and power.",
+          rows: [
+            {
+              label: "Lead time",
+              value: "Nine to fifteen weeks, plumbing and wiring done first",
+            },
+            {
+              label: "Price",
+              value: "Driven by the sink, the worktop and the tower count",
+            },
+            {
+              label: "Materials",
+              value: "Birch plywood, backs sealed against steam",
+            },
+            {
+              label: "Hardware",
+              value: "Anchors sized for shelves loaded with detergent",
+            },
+            {
+              label: "Installation",
+              value: "Clearances kept around the washer and dryer",
+            },
+            {
+              label: "Warranty",
+              value: "Adjustment work written into the signed contract",
+            },
+          ],
+          image: {
+            src: "/images/generated/spaces/space-laundry-project-01.webp",
+            alt: "Close-up of custom laundry room cabinetry",
+          },
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
@@ -143,24 +161,20 @@ export const salleDeLavagePageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does a custom laundry room cost?",
-              a: "The price depends on the layout (stacked or side-by-side appliances, sink, worktop), the amount of storage and the technical constraints. The firm amount is set after the on-site survey.",
+              q: "Does a laundry room need a floor drain?",
+              a: "It is not required everywhere, but it prevents expensive damage upstairs. Otherwise we fit a drain pan under the washer and a shut-off valve you can reach.",
             },
             {
-              q: "How long does it take?",
-              a: "Nine to fifteen weeks from design sign-off to installation. Plumbing and electrical work are scheduled before the cabinets are delivered.",
+              q: "Can the washer and dryer be stacked?",
+              a: "Yes, if the appliances are rated for stacking. It frees half a wall for a storage tower and an access panel to the pipework.",
             },
             {
-              q: "What materials do you recommend?",
-              a: "Birch plywood, washable finishes that stand up to steam and splashes, durable hardware. Backs, fasteners and clearances around the appliances limit warping.",
+              q: "Where does the dryer vent run?",
+              a: "The shortest path to an exterior wall, in rigid duct. A long run full of elbows stretches cycles out and clogs the duct faster.",
             },
             {
-              q: "Can the appliances be moved in the room?",
-              a: "Yes, by relocating the supply, the drain and the dryer exhaust. That often decides the final layout, so we confirm it during the survey.",
-            },
-            {
-              q: "Can you renovate the whole room?",
-              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: plumbing, electrical, venting, flooring, painting and cabinet installation, coordinated by one party, in the written contract.",
+              q: "Can the laundry room go upstairs?",
+              a: "Yes, with reinforced framing where needed, a water shut-off and a dedicated vent. We check the structure and duct route before drawing the storage.",
             },
           ],
         },
@@ -173,7 +187,8 @@ export const salleDeLavagePageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your laundry room",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro:
+            "Free estimate. Plumbing constraints get surveyed on site.",
           actions: [
             {
               label: "Request a quote",
@@ -182,7 +197,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
             },
             {
               label: "See our work",
-              href: "/projets",
+              href: "/projets/salle-de-lavage",
               variant: "ghost",
             },
           ],

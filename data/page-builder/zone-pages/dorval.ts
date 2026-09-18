@@ -58,16 +58,15 @@ export const zoneDorvalPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "zone",
         props: {
-          eyebrow: "Dorval",
-          heading:
-            "Entrepreneur général à Dorval, du permis à la livraison",
+          eyebrow: "Entrepreneur général à",
+          heading: "Dorval",
           description:
-            "Bungalows d'après-guerre, cottages de Strathmore et maisons du Bord-du-Lac, rénovés par un seul responsable depuis 2004.",
+            "Bungalows d'après-guerre entre le lac Saint-Louis et l'autoroute 20, cottages de Strathmore au centre.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Soumission gratuite",
               href: "/contact",
               variant: "primary",
             },
@@ -77,42 +76,59 @@ export const zoneDorvalPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Permis municipal", "Depuis 2004", "Assuré"],
           image: {
-            src: "/images/generated/services/service-renovation-hero-01.webp",
-            alt: "Rénovation résidentielle menée par un entrepreneur général à Dorval",
+            src: "/images/generated/renovation/renovation-cuisine-approach-01.webp",
+            alt: "Rénovation intérieure d'une maison de Dorval",
           },
-          caption: "Village, Strathmore, Bord-du-Lac",
+          facts: [
+            { label: "Notre base", value: "Pierrefonds-Roxboro, vingt minutes de route" },
+            { label: "Permis", value: "Aménagement urbain, 514 633-4084" },
+            { label: "Bâti", value: "Bungalows d'après-guerre, 1950 à 1975" },
+            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+          ],
         },
       },
     },
     {
-      id: "connaissance-locale",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on connaît des maisons de Dorval",
-          description:
-            "Entre le lac Saint-Louis et l'autoroute 20, un parc bâti surtout de 1950 à 1975. Trois bandes, trois types de chantiers.",
-          cards: [
+          heading: "La Cité de Dorval en trois bandes",
+          intro:
+            "Le lac au sud, la voie ferrée et l'aéroport au nord, et entre les deux un tissu résidentiel d'après-guerre.",
+          rows: [
             {
-              title: "Bungalows d'après-guerre",
-              description:
-                "Entrées électriques sous-dimensionnées, fondations en blocs, sous-sols à faible dégagement, murs porteurs à valider.",
+              label: "Bord-du-Lac",
+              value: "Bâtiments du chemin soumis à l'approbation du conseil",
             },
             {
-              title: "Service de l'aménagement urbain",
-              description:
-                "La Cité délivre ses propres permis : 30 jours ouvrables une fois le dossier complet et payé.",
+              label: "Strathmore",
+              value: "Cottages des années 1950 et 1960, parc Surrey",
             },
             {
-              title: "PIIA du Bord-du-Lac",
-              description:
-                "Nouvelle construction, agrandissement résidentiel et bâtiments du Bord-du-Lac passent par le conseil.",
+              label: "Délai de permis",
+              value: "Trente jours ouvrables, dossier complet et payé",
+            },
+            {
+              label: "Dépôt",
+              value: "Demandes déposées et suivies en ligne auprès de la Cité",
+            },
+            {
+              label: "Règlement",
+              value: "RCM-60H-2024 sur les plans d'aménagement d'ensemble",
+            },
+            {
+              label: "Projets fréquents",
+              value: "Cuisine, salle de bain, sous-sol, rénovation de condo",
             },
           ],
-          columns: "3",
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
+            alt: "Sous-sol aménagé dans un bungalow de Dorval",
+          },
+          note: "Sources : Cité de Dorval, Wikipédia, guide de quartier 2026. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -128,95 +144,56 @@ export const zoneDorvalPage: PageTemplateData = {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Mur ouvert après validation du caractère porteur, électricité et plomberie reprises.",
+                "Entrée électrique des bungalows d'ici souvent à remonter avant l'ouverture",
               image: {
-                src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
-                alt: "Cuisine sur mesure réalisée dans une maison de l'Ouest-de-l'Île",
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "Cuisine rénovée dans un bungalow de Dorval",
               },
               badges: ["Sur mesure"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
-              title: "Salle de bain",
-              href: "/services/renovation/salle-de-bain",
-              description:
-                "Membrane, drain, pente et ventilation refaits jusqu'au support.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-01.webp",
-                alt: "Salle de bain rénovée avec finition soignée",
-              },
-              badges: ["Étanchéité"],
-              footerCtaLabel: "Voir la salle de bain",
-            },
-            {
-              title: "Sous-sol",
-              href: "/services/renovation/sous-sol",
-              description:
-                "Humidité, drain français et hauteur libre vérifiés avant tout plan.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
-                alt: "Sous-sol aménagé en salle de jeux",
-              },
-              badges: ["Conformité"],
-              footerCtaLabel: "Voir le sous-sol",
-            },
-            {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "PIIA et approbation du conseil préparés avant l'émission du permis.",
+                "Dossier PIIA monté pour le conseil avant l'émission du permis",
               image: {
-                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-                alt: "Planification d'un agrandissement résidentiel à Dorval",
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                alt: "Agrandissement résidentiel planifié à Dorval",
               },
               badges: ["PIIA"],
               footerCtaLabel: "Voir l'agrandissement",
             },
             {
-              title: "Après sinistre",
-              href: "/services/renovation/apres-sinistre",
+              title: "Sous-sol",
+              href: "/services/renovation/sous-sol",
               description:
-                "Assèchement, démolition sélective, reconstruction et dossier documenté pour l'assureur.",
+                "Hauteur libre et humidité mesurées dans les fondations de blocs",
               image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Reconstruction d'une pièce après un dégât d'eau",
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Sous-sol fini dans une maison de Dorval",
               },
-              badges: ["Assurances"],
-              footerCtaLabel: "Voir le service",
+              badges: ["Conformité"],
+              footerCtaLabel: "Voir le sous-sol",
             },
           ],
         },
       },
     },
     {
-      id: "checks",
+      id: "voisins",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "link-cards-compact",
         props: {
-          heading: "Ce qu'on vérifie avant de chiffrer",
-          intro:
-            "Une soumission sérieuse repose sur des vérifications faites sur place.",
-          badges: ["Visite sur place", "Estimation gratuite"],
-          cardTitle: "Liste de vérification en visite",
+          heading: "Villes desservies près de Dorval",
+          columns: "3",
           items: [
-            "Capacité de l'entrée électrique et du panneau",
-            "Position des colonnes de plomberie existantes",
-            "Caractère porteur des murs à ouvrir",
-            "Hauteur libre et humidité au sous-sol",
-            "Historique de refoulement et état du drain",
-            "Zonage, PIIA applicable et type de permis",
-          ],
-          actions: [
+            { title: "Pointe-Claire", href: "/zones/pointe-claire" },
+            { title: "Saint-Laurent", href: "/zones/saint-laurent" },
             {
-              label: "Planifier une visite",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir notre processus",
-              href: "/processus",
-              variant: "ghost",
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
             },
           ],
         },
@@ -231,28 +208,20 @@ export const zoneDorvalPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Faut-il un permis pour rénover à Dorval ?",
-              a: "Oui, dans la plupart des cas. La Cité de Dorval délivre ses propres permis par son Service de l'aménagement urbain, et toute rénovation fait l'objet d'une demande distincte. Nous validons la portée et déposons le dossier.",
+              q: "Combien de temps la Cité de Dorval prend-elle pour un permis ?",
+              a: "Trente jours ouvrables à compter du moment où le dossier est complet, conforme et payé. Un document manquant relance le compte, c'est pourquoi nous préparons la demande nous-mêmes.",
             },
             {
-              q: "Combien de temps pour obtenir le permis ?",
-              a: "Trente jours ouvrables à partir du moment où le dossier est complet, conforme et payé. Un dossier incomplet relance le compte, c'est pourquoi nous préparons la demande nous-mêmes.",
+              q: "Le PIIA s'applique-t-il à ma maison du Bord-du-Lac ?",
+              a: "Probablement. À Dorval, l'approbation du conseil vise la nouvelle construction, l'agrandissement résidentiel et les bâtiments du chemin du Bord-du-Lac. Elle est planifiée au cadrage, avant de fixer les dates.",
             },
             {
-              q: "Qu'est-ce que le PIIA et est-ce que ça me concerne ?",
-              a: "C'est une approbation du conseil municipal qui s'ajoute au permis. À Dorval, elle vise notamment la nouvelle construction, l'agrandissement résidentiel et les bâtiments du chemin du Bord-du-Lac. On la planifie dès le cadrage.",
+              q: "Rénovez-vous les condos près de la gare de Dorval ?",
+              a: "Oui. Horaires autorisés par le syndicat, accès par l'ascenseur, protection des aires communes et colonnes de plomberie partagées se règlent avant le premier jour de chantier.",
             },
             {
-              q: "Quel budget prévoir ?",
-              a: "Nos projets démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $ et plus, selon la portée. Estimation gratuite, budget et échéancier fixés au contrat écrit.",
-            },
-            {
-              q: "Rénovez-vous en copropriété près de la gare de Dorval ?",
-              a: "Oui. Accès, ascenseur, protection des aires communes, horaires autorisés par le syndicat et colonnes de plomberie communes sont réglés avant le premier jour de chantier.",
-            },
-            {
-              q: "Êtes-vous licenciés et assurés ?",
-              a: "Licence RBQ 8306-0806-27, valide et sans restriction depuis septembre 2004, catégories 1.2 et 1.3, aucune réclamation au dossier. Responsabilité civile et couverture de chantier en vigueur, cautionnement en place.",
+              q: "Combien coûte de rénover un bungalow de Dorval ?",
+              a: "Tout dépend de l'entrée électrique et des murs à ouvrir. Un mandat démarre vers 25 000 $ et une cuisine complète se chiffre nettement plus haut. Visite et estimation gratuites.",
             },
           ],
         },
@@ -264,9 +233,8 @@ export const zoneDorvalPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à Dorval ?",
-          intro:
-            "On visite, on cadre la portée, on remet une soumission écrite.",
+          heading: "Rénover à Dorval",
+          intro: "On visite, on cadre la portée, on remet un prix écrit.",
           actions: [
             {
               label: "Demander une soumission",
@@ -279,7 +247,7 @@ export const zoneDorvalPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Pierrefonds-Roxboro · (514) 820-0773",
+          note: "Dilamco · permis de la Cité de Dorval préparés",
         },
       },
     },
