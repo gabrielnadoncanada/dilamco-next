@@ -11,6 +11,10 @@ import { ArrowUpRight } from "lucide-react";
 import { Heading } from "@/components/elements/heading";
 import { Badge } from "@/components/ui/badge";
 import {
+  SectionHeader,
+  sectionBodyClassName,
+} from "@/features/page-builder/sections/shared/ui/SectionHeader";
+import {
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -55,24 +59,18 @@ export function GridImageCardsSliderLightbox(
       ) : null}
 
       <Carousel opts={{ align: "start" }} className="w-full text-left">
-        <div className="flex items-end justify-between gap-4">
-          <div className="max-w-2xl">
-            <Heading as="h2" variant="h2">
-              {props.heading}
-            </Heading>
-            {props.intro ? (
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
-                {props.intro}
-              </p>
-            ) : null}
-          </div>
-          <div className="hidden shrink-0 gap-2 sm:flex">
-            <CarouselPrevious className="static size-11 translate-y-0 rounded-full border-border/80 bg-background hover:bg-primary hover:text-primary-foreground" />
-            <CarouselNext className="static size-11 translate-y-0 rounded-full border-border/80 bg-background hover:bg-primary hover:text-primary-foreground" />
-          </div>
-        </div>
+        <SectionHeader
+          heading={props.heading}
+          intro={props.intro}
+          aside={
+            <div className="hidden gap-2 sm:flex">
+              <CarouselPrevious className="static size-11 translate-y-0 rounded-full border-border/80 bg-background text-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground" />
+              <CarouselNext className="static size-11 translate-y-0 rounded-full border-border/80 bg-background text-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground" />
+            </div>
+          }
+        />
 
-        <div className="mt-8 sm:mt-10">
+        <div className={sectionBodyClassName}>
           <CarouselContent className="-ml-4">
             {props.items.map((item, index) => {
               const itemKey = `${item.href ?? "no-href"}-${item.title}-${index}`;
@@ -90,7 +88,7 @@ export function GridImageCardsSliderLightbox(
                   <div className="group flex h-full flex-col">
                     <button
                       type="button"
-                      className="relative aspect-[4/3] w-full cursor-zoom-in overflow-hidden rounded-2xl bg-muted text-left outline-none focus-visible:ring-[3px] focus-visible:ring-ring/40"
+                      className="relative aspect-[4/3] w-full cursor-zoom-in overflow-hidden rounded-card bg-muted text-left focus-ring"
                       aria-label={`Voir l'image ${item.title ?? ""}`}
                       onClick={() => openLightbox(index)}
                     >
@@ -98,7 +96,7 @@ export function GridImageCardsSliderLightbox(
                         src={item.image.src}
                         alt={item.image.alt}
                         fill
-                        className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+                        className="transition-media object-cover group-hover:scale-[1.04]"
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                       />
                       {item.badges && item.badges.length > 0 ? (
@@ -115,12 +113,12 @@ export function GridImageCardsSliderLightbox(
                       ) : null}
                     </button>
 
-                    <div className="flex items-start justify-between gap-3 pt-4">
+                    <div className="flex items-start justify-between gap-4 pt-4">
                       <div className="min-w-0">
                         {item.title ? (
-                          <h3 className="font-display text-xl font-semibold leading-tight tracking-[-0.02em] text-foreground">
+                          <Heading as="h3" variant="card">
                             {item.title}
-                          </h3>
+                          </Heading>
                         ) : null}
                         {item.description ? (
                           <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
@@ -132,7 +130,7 @@ export function GridImageCardsSliderLightbox(
                         <Link
                           href={href}
                           aria-label={footerLabel}
-                          className="mt-0.5 flex size-10 shrink-0 items-center justify-center rounded-full border border-border/80 text-foreground transition-colors duration-200 hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                          className="icon-pill size-10 border border-border/80 bg-transparent text-foreground focus-ring hover:border-primary hover:bg-primary hover:text-primary-foreground"
                         >
                           <ArrowUpRight className="size-4" strokeWidth={2.25} />
                         </Link>

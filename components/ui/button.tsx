@@ -5,10 +5,12 @@ import { ArrowUpRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 
-// Boutons en pilule (refonte 2026-09). Casse de phrase, graisse 600, flèche
-// optionnelle via <ButtonArrow /> qui glisse au survol.
+// Boutons en pilule (DESIGN.md › Composants › Bouton). Trois tailles :
+// small (barre de navigation), default (sections), xl (hero, bande CTA).
+// États : hover (fond), focus-visible (focus-ring), active (léger enfoncement),
+// disabled (50 %). La flèche <ButtonArrow /> glisse au survol du `group`.
 const buttonVariants = cva(
-  "group inline-flex items-center justify-center gap-2 rounded-full border border-transparent font-semibold leading-none whitespace-nowrap transition-[background-color,color,border-color,transform,box-shadow] duration-200 ease-out cursor-pointer select-none outline-none focus-visible:ring-[3px] focus-visible:ring-ring/40 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98] [&_svg]:size-[1.1em] [&_svg]:shrink-0",
+  "group inline-flex items-center justify-center gap-2 rounded-full border border-transparent font-semibold leading-none whitespace-nowrap transition-ui focus-ring cursor-pointer select-none disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98] [&_svg]:size-[1.1em] [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -17,9 +19,9 @@ const buttonVariants = cva(
         ghost:
           "bg-transparent border-foreground/20 text-foreground hover:border-foreground hover:bg-foreground hover:text-background",
         paper:
-          "bg-background text-foreground hover:bg-primary-soft",
+          "bg-background text-foreground hover:bg-primary-soft focus-ring-inverse",
         "ghost-light":
-          "bg-white/12 border-white/50 text-white backdrop-blur-sm hover:bg-white hover:text-foreground hover:border-white",
+          "bg-white/12 border-white/50 text-white backdrop-blur-sm hover:bg-white hover:text-foreground hover:border-white focus-ring-inverse",
         soft: "bg-primary-soft text-primary hover:bg-primary hover:text-primary-foreground",
         link: "bg-transparent px-0 text-primary underline-offset-4 hover:underline",
       },
@@ -71,7 +73,7 @@ function ButtonArrow({ className, ...props }: HTMLAttributes<HTMLSpanElement>) {
     <span
       aria-hidden
       className={cn(
-        "inline-flex transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
+        "inline-flex transition-ui group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
         className,
       )}
       {...props}
@@ -81,4 +83,20 @@ function ButtonArrow({ className, ...props }: HTMLAttributes<HTMLSpanElement>) {
   );
 }
 
-export { Button, ButtonArrow, buttonVariants };
+/** Bouton rond « flèche » utilisé sur les cartes et rangées cliquables. */
+function ArrowPill({ className, ...props }: HTMLAttributes<HTMLSpanElement>) {
+  return (
+    <span
+      aria-hidden
+      className={cn(
+        "icon-pill size-10 group-hover:bg-primary group-hover:text-primary-foreground",
+        className,
+      )}
+      {...props}
+    >
+      <ArrowUpRight className="size-4" strokeWidth={2.25} />
+    </span>
+  );
+}
+
+export { ArrowPill, Button, ButtonArrow, buttonVariants };

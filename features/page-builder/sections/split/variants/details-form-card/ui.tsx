@@ -119,7 +119,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
         <div className="order-1">
           <Heading as="h1" variant="h1">{props.heading}</Heading>
 
-          <p className="mt-4 max-w-[48ch] text-base leading-relaxed text-muted-foreground sm:text-lg">{props.intro}</p>
+          <p className="text-lead mt-4">{props.intro}</p>
         </div>
 
         <div className="order-3 lg:order-none">
@@ -138,8 +138,8 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
 
                 if (detail.href) {
                   return (
-                    <Link key={`${detail.icon}-${detail.title}`} href={detail.href} target={detail.target} className="group flex gap-3 rounded-xl outline-none focus-visible:ring-[3px] focus-visible:ring-ring/40">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                    <Link key={`${detail.icon}-${detail.title}`} href={detail.href} target={detail.target} className="group flex gap-3 rounded-control focus-ring">
+                      <div className="icon-pill size-10 bg-primary text-primary-foreground">
                         <Icon className="size-4" strokeWidth={2} />
                       </div>
                       <div>
@@ -153,7 +153,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
                 }
                 return (
                   <div key={`${detail.icon}-${detail.title}`} className="flex gap-3">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                    <div className="icon-pill size-10 bg-primary text-primary-foreground">
                       <Icon className="size-4" strokeWidth={2} />
                     </div>
                     <div>
@@ -177,7 +177,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
       </div>
 
       <div className="order-2 lg:col-[6/13] lg:order-none">
-        <Card className="rounded-[1.75rem] py-7 sm:py-9">
+        <Card className="rounded-panel py-7 sm:py-9">
           {props.formTitle ? (
             <CardHeader className="px-5 sm:px-9">
               <CardTitle className="text-2xl">{props.formTitle}</CardTitle>

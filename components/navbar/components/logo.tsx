@@ -12,7 +12,7 @@ export function Logo({ logo }: LogoProps) {
   return (
     <Link
       href="/"
-      className="flex items-center rounded-md outline-none focus-visible:ring-[3px] focus-visible:ring-ring/40"
+      className="flex items-center rounded-sm focus-ring"
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img

@@ -10,21 +10,16 @@ export function SplitSteps2x2Cta(props: SplitSteps2x2CtaProps) {
         <Heading as="h2" variant="h2">
           {props.heading}
         </Heading>
-        <p className="mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
-          {props.description}
-        </p>
+        <p className="text-lead mt-4">{props.description}</p>
       </div>
 
       <div className="lg:col-[6/13]">
         <div className="grid gap-4 sm:grid-cols-2">
           {props.steps.map((s) => (
-            <div
-              key={s.label}
-              className="rounded-2xl bg-primary-soft/60 p-6"
-            >
-              <h3 className="font-display text-lg font-semibold leading-snug tracking-[-0.015em] text-foreground">
+            <div key={s.label} className="rounded-card bg-primary-soft/60 p-6">
+              <Heading as="h3" variant="card">
                 {s.label}
-              </h3>
+              </Heading>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {s.description}
               </p>
@@ -33,7 +28,7 @@ export function SplitSteps2x2Cta(props: SplitSteps2x2CtaProps) {
         </div>
 
         {props.actions?.length ? (
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             {props.actions.map((a, index) => (
               <Button
                 key={`${a.href}-${a.label}`}

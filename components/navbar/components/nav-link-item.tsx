@@ -9,10 +9,10 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
     return (
       <NavigationMenuLink
         asChild
-        className="group/link flex-row items-start gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-primary-soft focus-visible:bg-primary-soft"
+        className="group/link flex-row items-start gap-3 rounded-control px-3 py-2.5 transition-ui hover:bg-primary-soft focus-visible:bg-primary-soft"
       >
         <Link href={link.url}>
-          <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary transition-colors duration-200 group-hover/link:bg-primary group-hover/link:text-primary-foreground">
+          <span className="icon-pill size-9 group-hover/link:bg-primary group-hover/link:text-primary-foreground">
             <link.icon className="size-4" strokeWidth={2} />
           </span>
           <span className="flex min-w-0 flex-col gap-0.5">
@@ -33,9 +33,9 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
   return (
     <Link
       href={link.url}
-      className="flex h-12 items-center gap-3 rounded-xl px-3 text-base font-medium text-foreground/85 transition-colors duration-200 hover:bg-primary-soft hover:text-primary"
+      className="flex h-12 items-center gap-3 rounded-control px-3 text-base font-medium text-foreground/85 transition-ui focus-ring hover:bg-primary-soft hover:text-primary"
     >
-      <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
+      <span className="icon-pill size-8">
         <link.icon className="size-4" strokeWidth={2} />
       </span>
       {link.label}

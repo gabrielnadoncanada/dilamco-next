@@ -34,7 +34,7 @@ export function LocaleSwitcher({ className }: { className?: string }) {
           locale={loc}
           aria-current={loc === active ? "true" : undefined}
           className={cn(
-            "inline-flex h-full items-center rounded-full px-2.5 uppercase tracking-[0.06em] transition-colors",
+            "inline-flex h-full items-center rounded-full px-2.5 uppercase tracking-[0.06em] transition-ui focus-ring",
             loc === active
               ? "bg-foreground text-background"
               : "text-muted-foreground hover:text-foreground",

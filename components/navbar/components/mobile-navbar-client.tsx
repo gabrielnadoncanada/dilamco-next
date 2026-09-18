@@ -30,7 +30,7 @@ export function MobileNavbarClient({
         onClick={toggle}
         aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
         aria-expanded={open}
-        className="inline-flex size-10 shrink-0 cursor-pointer items-center justify-center border-0 bg-transparent text-foreground transition-colors hover:text-primary"
+        className="inline-flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full border-0 bg-transparent text-foreground transition-ui focus-ring hover:bg-primary-soft hover:text-primary"
       >
         {open ? <X className="size-6" /> : <MenuIcon className="size-6" />}
       </button>

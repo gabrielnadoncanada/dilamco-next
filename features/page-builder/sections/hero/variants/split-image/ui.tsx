@@ -6,13 +6,13 @@ import type { HeroSplitImageProps } from "./schema";
 
 /**
  * Hero « panneau + photo » (référence Construction Agency) : panneau vert de
- * marque avec le titre et les actions, photo dans un cadre arrondi à droite,
+ * marque avec le titre et les actions, photo dans un panneau arrondi à droite,
  * légende en pastille sur la photo.
  */
 export function HeroSplitImage(props: HeroSplitImageProps) {
   return (
-    <div className="grid gap-4 text-left lg:grid-cols-12 lg:gap-5">
-      <div className="flex flex-col justify-center rounded-[1.75rem] bg-primary p-7 text-primary-foreground sm:p-10 lg:col-span-6 lg:min-h-[560px] lg:p-14 xl:col-span-6">
+    <div className="grid gap-4 text-left lg:grid-cols-2">
+      <div className="flex flex-col justify-center rounded-panel bg-primary p-7 text-primary-foreground sm:p-10 lg:min-h-[560px] lg:p-14">
         <HeroContent
           eyebrow={props.eyebrow}
           actions={props.actions}
@@ -22,11 +22,10 @@ export function HeroSplitImage(props: HeroSplitImageProps) {
           tone="inverse"
           badgeStyle="inverse"
           secondaryActionVariant="ghost-light"
-          headingClassName="text-[clamp(2.125rem,1.3rem+3.2vw,4rem)] leading-[1.02]"
         />
       </div>
 
-      <div className="relative min-h-[300px] overflow-hidden rounded-[1.75rem] bg-muted sm:min-h-[400px] lg:col-span-6 lg:min-h-[560px]">
+      <div className="relative min-h-[300px] overflow-hidden rounded-panel bg-muted sm:min-h-[400px] lg:min-h-[560px]">
         <Image
           src={props.image.src}
           alt={props.image.alt}

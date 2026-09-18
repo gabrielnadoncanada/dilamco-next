@@ -99,7 +99,6 @@ export function BlockFrame(props: {
 }) {
   const frame = { ...defaultFrame, ...(props.frame ?? {}) };
   const hasHeading = Boolean(props.title || props.intro);
-  const hasCustomTitleVariant = props.frame?.titleVariant !== undefined;
   const headingLevel = frame.headingLevel ?? frame.titleAs;
   // Le hero n'est jamais animé : il doit être net dès le premier rendu.
   const isHero = props.id === "hero";
@@ -111,8 +110,9 @@ export function BlockFrame(props: {
           {props.title ? (
             <Heading
               as={headingLevel}
-              variant={frame.titleVariant}
-              className={cn(!hasCustomTitleVariant && "sm:text-3xl")}
+              variant={
+                frame.titleVariant === "h4" ? "card" : frame.titleVariant
+              }
             >
               {props.title}
             </Heading>

@@ -16,11 +16,7 @@ export function Accordion(props: AccordionProps) {
           {props.heading}
         </Heading>
 
-        {props.intro ? (
-          <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-            {props.intro}
-          </p>
-        ) : null}
+        {props.intro ? <p className="text-lead mt-4">{props.intro}</p> : null}
       </div>
 
       <div className="lg:col-[6/13]">
@@ -35,7 +31,7 @@ export function Accordion(props: AccordionProps) {
               value={`item-${index}`}
               className="border-b border-border/80"
             >
-              <AccordionTrigger className="rounded-none py-5 font-display text-lg font-semibold leading-snug tracking-[-0.015em] hover:no-underline hover:text-primary sm:text-xl **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:text-primary">
+              <AccordionTrigger className="focus-ring rounded-none py-5 font-display text-[length:var(--title-5)] font-semibold leading-[1.25] tracking-[-0.015em] transition-ui hover:text-primary hover:no-underline focus-visible:ring-0 focus-visible:border-transparent **:data-[slot=accordion-trigger-icon]:size-5 **:data-[slot=accordion-trigger-icon]:text-primary">
                 {item.q}
               </AccordionTrigger>
               <AccordionContent className="max-w-[62ch] pb-6 text-base leading-relaxed text-muted-foreground">

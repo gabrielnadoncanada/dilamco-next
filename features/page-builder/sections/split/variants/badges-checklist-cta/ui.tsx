@@ -20,9 +20,7 @@ export function SplitBadgesChecklistCta(props: SplitBadgesChecklistCtaProps) {
           {props.heading}
         </Heading>
 
-        <p className="mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
-          {props.intro}
-        </p>
+        <p className="text-lead mt-4">{props.intro}</p>
 
         {props.badges?.length ? (
           <div className="mt-6 flex flex-wrap gap-2">
@@ -36,14 +34,17 @@ export function SplitBadgesChecklistCta(props: SplitBadgesChecklistCtaProps) {
       </div>
 
       <div className="lg:col-[7/13]">
-        <div className="rounded-[1.75rem] bg-primary p-7 text-primary-foreground sm:p-10">
-          <h3 className="font-display text-xl font-semibold tracking-[-0.02em]">
+        <div className="rounded-panel bg-primary p-7 text-primary-foreground sm:p-10">
+          <Heading as="h3" variant="h3" className="text-primary-foreground">
             {props.cardTitle}
-          </h3>
+          </Heading>
 
           <ul className="mt-6 space-y-3.5">
             {props.items.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-[0.9375rem] leading-relaxed">
+              <li
+                key={item}
+                className="flex items-start gap-3 text-[0.9375rem] leading-relaxed"
+              >
                 <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-white/15">
                   <Check className="size-3.5" strokeWidth={3} />
                 </span>

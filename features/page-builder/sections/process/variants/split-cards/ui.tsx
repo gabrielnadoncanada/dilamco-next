@@ -14,9 +14,7 @@ export function SplitCards(props: SplitCardsProps) {
         <Heading as="h2" variant="h2" className="lg:sticky lg:top-28">
           {props.heading}
         </Heading>
-        <p className="mt-4 max-w-[52ch] text-base leading-relaxed text-muted-foreground sm:text-lg">
-          {props.description}
-        </p>
+        <p className="text-lead mt-4">{props.description}</p>
       </div>
 
       <div className="lg:col-[6/13]">
@@ -26,13 +24,13 @@ export function SplitCards(props: SplitCardsProps) {
               key={`${step.number}-${step.title}`}
               className="grid grid-cols-[3.5rem_1fr] gap-4 border-b border-border/80 py-5 sm:grid-cols-[4.5rem_1fr]"
             >
-              <span className="font-display text-3xl font-semibold leading-none tracking-[-0.04em] text-primary tabular-nums">
+              <span className="text-numeral text-[length:var(--title-4)] text-primary">
                 {String(step.number || index + 1).padStart(2, "0")}
               </span>
               <div>
-                <h3 className="font-display text-lg font-semibold leading-snug tracking-[-0.015em] text-foreground">
+                <Heading as="h3" variant="card">
                   {step.title}
-                </h3>
+                </Heading>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                   {step.description}
                 </p>

@@ -21,6 +21,10 @@ import {
 } from "lucide-react";
 
 import { Heading } from "@/components/elements/heading";
+import {
+  SectionHeader,
+  sectionBodyClassName,
+} from "@/features/page-builder/sections/shared/ui/SectionHeader";
 
 import type { GridIconCardsBulletsProps } from "./schema";
 
@@ -50,8 +54,8 @@ function resolveIcon(icon: string) {
 }
 
 /**
- * Grille de points forts : icône dans une pastille verte, titre, une ligne,
- * puis 2 à 3 puces courtes. Fond teinté, pas de bordure.
+ * Grille de points forts : icône dans une pastille verte, titre de carte, une
+ * ligne, puis 2 à 4 puces courtes. Tuile teintée, sans bordure.
  */
 export function GridIconCardsBullets(props: GridIconCardsBulletsProps) {
   const gridCols =
@@ -59,32 +63,23 @@ export function GridIconCardsBullets(props: GridIconCardsBulletsProps) {
 
   return (
     <div className="text-left">
-      <div className="max-w-2xl">
-        <Heading as="h2" variant="h2">
-          {props.heading}
-        </Heading>
-        {props.intro ? (
-          <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            {props.intro}
-          </p>
-        ) : null}
-      </div>
+      <SectionHeader heading={props.heading} intro={props.intro} />
 
-      <div className={`mt-10 grid gap-4 sm:grid-cols-2 ${gridCols}`}>
+      <div className={`${sectionBodyClassName} grid gap-4 sm:grid-cols-2 ${gridCols}`}>
         {props.items.map((item) => {
           const Icon = resolveIcon(item.icon);
 
           return (
             <article
               key={item.title}
-              className="flex flex-col rounded-2xl bg-primary-soft/60 p-6 sm:p-7"
+              className="flex flex-col rounded-card bg-primary-soft/60 p-6 sm:p-7"
             >
-              <span className="flex size-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <span className="icon-pill size-11 bg-primary text-primary-foreground">
                 <Icon className="size-5" strokeWidth={2} />
               </span>
-              <h3 className="mt-5 font-display text-xl font-semibold leading-tight tracking-[-0.02em] text-foreground">
+              <Heading as="h3" variant="card" className="mt-5">
                 {item.title}
-              </h3>
+              </Heading>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {item.description}
               </p>

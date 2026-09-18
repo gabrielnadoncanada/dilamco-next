@@ -1,4 +1,7 @@
-import { Heading } from "@/components/elements/heading";
+import {
+  SectionHeader,
+  sectionBodyClassName,
+} from "@/features/page-builder/sections/shared/ui/SectionHeader";
 import {
   Table,
   TableBody,
@@ -15,22 +18,15 @@ export function ComparisonTableBasic(props: ComparisonTableBasicProps) {
 
   return (
     <div className="text-left">
-      <div className="max-w-2xl">
-        <Heading as="h2" variant="h2">
-          {props.heading}
-        </Heading>
-        {props.intro ? (
-          <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
-            {props.intro}
-          </p>
-        ) : null}
-      </div>
+      <SectionHeader heading={props.heading} intro={props.intro} />
 
-      <div className="mt-10 overflow-x-auto rounded-2xl border border-border/80 bg-card">
+      <div
+        className={`${sectionBodyClassName} overflow-x-auto rounded-card border border-border/80 bg-card`}
+      >
         <Table className="min-w-[560px]">
           <TableHeader>
             <TableRow className="bg-primary-soft/60 hover:bg-primary-soft/60">
-              <TableHead className="px-5 py-4 text-xs font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+              <TableHead className="text-label px-5 py-4 text-muted-foreground">
                 Critère
               </TableHead>
               <TableHead className="px-5 py-4 font-display text-base font-semibold tracking-[-0.01em] text-foreground">

@@ -12,7 +12,6 @@ export function HeroCentered(props: HeroCenteredProps) {
         badges={props.badges}
         description={props.description}
         heading={props.heading}
-        headingClassName="text-[clamp(2.25rem,1.4rem+3.4vw,4.25rem)] leading-[1.02]"
       />
     </div>
   );

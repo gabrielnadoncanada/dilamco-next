@@ -56,7 +56,7 @@ export default async function GoogleReviews() {
         <Reveal className="py-[var(--section-py)]">
           <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-4">
-              <p className="font-display text-[clamp(3rem,6vw,5rem)] font-semibold leading-none tracking-[-0.04em] text-foreground">
+              <p className="text-numeral text-[length:var(--title-1)] text-foreground">
                 {reviews.ratingValue.toLocaleString(locale === "fr" ? "fr-CA" : "en-CA", {
                   minimumFractionDigits: 1,
                 })}
@@ -72,10 +72,10 @@ export default async function GoogleReviews() {
                 href={googleReviewsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
+                className="group mt-5 inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-primary transition-ui focus-ring hover:text-primary-deep"
               >
                 {t.cta}
-                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="size-4 transition-ui group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
 
@@ -83,10 +83,10 @@ export default async function GoogleReviews() {
               {reviews.items.map((r) => (
                 <li
                   key={r.author}
-                  className="flex flex-col rounded-2xl bg-primary-soft/70 p-6"
+                  className="flex flex-col rounded-card bg-primary-soft/70 p-6"
                 >
                   <Stars rating={r.rating} />
-                  <blockquote className="mt-4 font-display text-lg font-medium leading-snug tracking-[-0.01em] text-foreground">
+                  <blockquote className="mt-4 font-display text-[length:var(--title-5)] font-medium leading-snug tracking-[-0.01em] text-foreground">
                     « {r.body} »
                   </blockquote>
                   <figcaption className="mt-auto pt-5 text-sm font-semibold text-muted-foreground">

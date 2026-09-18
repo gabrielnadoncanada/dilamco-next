@@ -67,6 +67,12 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  /* Tiers de rayons nommés (DESIGN.md) : contrôle · carte · panneau. */
+  --radius-control: var(--r-control);
+  --radius-card: var(--r-card);
+  --radius-panel: var(--r-panel);
+  /* Courbe de mouvement unique (ease-out-quint), exposée comme `ease-out-quint`. */
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 :root {
@@ -115,9 +121,9 @@
 
   /* Rythme vertical de section — SOURCE UNIQUE partagée vitrine + boutique.
      Tout padding vertical de section pointe ici pour un espacement homogène. */
-  --section-py: clamp(56px, 8vw, 112px);
-  --section-py-compact: clamp(40px, 6vw, 72px);
-  --section-py-spacious: clamp(72px, 10vw, 140px);
+  --section-py: clamp(56px, 6.5vw, 96px);
+  --section-py-compact: clamp(40px, 5vw, 64px);
+  --section-py-spacious: clamp(72px, 9vw, 128px);
 
   /* Échelle typographique des titres serif — SOURCE UNIQUE vitrine + boutique.
      Le composant Heading (vitrine) et Headline (boutique) pointent tous deux
@@ -152,9 +158,20 @@
   --chart-4: oklch(0.527 0.154 150.069);
   --chart-5: oklch(0.448 0.119 151.328);
 
-  /* Refonte 2026-09 : angles arrondis (cadres photo 1.5rem, cartes 1rem,
-     boutons en pilule). `--radius` alimente les primitives shadcn. */
-  --radius: 0.75rem;
+  /* Refonte 2026-09 : trois tiers de rayons. `--radius` (contrôle) alimente
+     aussi les primitives shadcn ; les boutons sont des pilules (9999px). */
+  --r-control: 0.75rem; /* champs, éléments de menu, pastilles carrées */
+  --r-card: 1rem; /* cartes, tuiles, rangées cliquables */
+  --r-panel: 1.75rem; /* cadres photo, panneaux hero, bande CTA, formulaire */
+  --radius: var(--r-control);
+
+  /* Taille du paragraphe d'introduction (rôle `text-lead`). */
+  --text-lead: 1.125rem;
+
+  /* Durées de mouvement (rôles `transition-ui` / `transition-media`). */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 700ms;
 
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1f1c;
@@ -323,16 +340,6 @@
     @apply bg-ink text-ink-foreground;
   }
 
-  /* Titres : sans-serif serrée, graisse 600. `<em>` = mot en vert primaire,
-     non italique. */
-  .display-heading {
-    font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.03em;
-    line-height: 1.02;
-    text-wrap: balance;
-  }
-
   /* Révélation à l'entrée dans le viewport (voir components/animations/Reveal).
      Le contenu est visible par défaut : la classe is-pending n'est ajoutée que
      par JS, pour les éléments encore sous le pli. */
@@ -344,8 +351,8 @@
     opacity: 1;
     transform: translateY(0);
     transition:
-      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity 0.9s var(--ease-out-quint),
+      transform 0.9s var(--ease-out-quint);
   }
   @media (prefers-reduced-motion: reduce) {
     [data-reveal].is-pending,

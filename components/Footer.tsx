@@ -69,13 +69,13 @@ export const Footer = async ({
               <address className="mt-6 grid gap-1 text-sm not-italic leading-6">
                 <a
                   href={`tel:${SITE.telephone.replace(/[^+\d]/g, "")}`}
-                  className="font-display text-2xl font-semibold tracking-[-0.02em] text-ink-foreground transition-opacity hover:opacity-80"
+                  className="w-fit rounded-sm font-display text-[length:var(--title-4)] font-semibold tracking-[-0.02em] text-ink-foreground transition-ui focus-ring-inverse hover:opacity-80"
                 >
                   {PHONE_DISPLAY}
                 </a>
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="text-ink-muted transition-colors hover:text-ink-foreground"
+                  className="w-fit rounded-sm text-ink-muted transition-ui focus-ring-inverse hover:text-ink-foreground"
                 >
                   {SITE.email}
                 </a>
@@ -92,7 +92,7 @@ export const Footer = async ({
                   href={SITE.rbqRegistryUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tabular-nums underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white"
+                  className="rounded-sm tabular-nums underline decoration-white/30 underline-offset-4 transition-ui focus-ring-inverse hover:decoration-white"
                 >
                   {SITE.rbqLicence}
                 </a>
@@ -105,7 +105,7 @@ export const Footer = async ({
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-7">
               {menuItems.map((section, sectionIdx) => (
                 <div key={sectionIdx}>
-                  <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-ink-muted">
+                  <h3 className="mb-4 text-label text-ink-muted">
                     {section.title}
                   </h3>
                   <ul className="space-y-2.5 text-sm">
@@ -113,7 +113,7 @@ export const Footer = async ({
                       <li key={linkIdx}>
                         <SmartLink
                           href={link.url}
-                          className="rounded-sm font-medium text-ink-foreground/85 transition-colors hover:text-ink-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                          className="rounded-sm font-medium text-ink-foreground/85 transition-ui focus-ring-inverse hover:text-ink-foreground"
                         >
                           {link.text}
                         </SmartLink>
@@ -133,7 +133,7 @@ export const Footer = async ({
                   <li key={linkIdx}>
                     <SmartLink
                       href={link.url}
-                      className="rounded-sm underline underline-offset-4 transition-colors hover:text-ink-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+                      className="rounded-sm underline underline-offset-4 transition-ui focus-ring-inverse hover:text-ink-foreground"
                     >
                       {link.text}
                     </SmartLink>

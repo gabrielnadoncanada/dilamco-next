@@ -22,9 +22,13 @@ type HeroContentProps = {
   badgeStyle?: "secondary" | "outline" | "inverse";
   secondaryActionVariant?: HeroAction["variant"];
   fillActionsOnMobile?: boolean;
-  headingClassName?: string;
 };
 
+/**
+ * Contenu textuel d'un hero : kicker, pastilles (≤ 3), titre h1 (échelle
+ * `--title-2`), phrase d'accroche, deux actions au plus. Rythme fixe :
+ * kicker 16px · pastilles 20px · titre · accroche 20px · actions 32px.
+ */
 export function HeroContent({
   heading,
   description,
@@ -36,7 +40,6 @@ export function HeroContent({
   badgeStyle = tone === "inverse" ? "inverse" : "secondary",
   secondaryActionVariant = "ghost",
   fillActionsOnMobile = false,
-  headingClassName,
 }: HeroContentProps) {
   const primary = actions?.[0];
   const secondary = actions?.[1];
@@ -44,14 +47,25 @@ export function HeroContent({
   const isInverse = tone === "inverse";
   const pills = badges?.slice(0, 3) ?? [];
 
+  // Sur un panneau sombre (vert, encre), les variantes claires sont imposées :
+  // un bouton vert ou une bordure encre y seraient invisibles, quel que soit
+  // le `variant` écrit dans les données.
+  const resolveVariant = (
+    variant: HeroAction["variant"] | undefined,
+    fallback: HeroAction["variant"],
+  ): HeroAction["variant"] => {
+    const v = variant ?? fallback;
+    if (!isInverse) return v;
+    if (v === "primary") return "paper";
+    if (v === "ghost") return "ghost-light";
+    return v;
+  };
+
   return (
     <div className={cn(isCentered && "text-center")}>
       {eyebrow ? (
         <p
-          className={cn(
-            "mb-4 text-xs font-semibold uppercase tracking-[0.14em]",
-            isInverse ? "text-white/70" : "text-primary",
-          )}
+          className={`text-label mb-4 ${isInverse ? "text-white/70" : "text-primary"}`}
         >
           {eyebrow}
         </p>
@@ -78,21 +92,13 @@ export function HeroContent({
         </div>
       ) : null}
 
-      <Heading
-        as="h1"
-        variant="h1"
-        className={cn(isInverse && "text-white", headingClassName)}
-      >
+      <Heading as="h1" variant="h1" className={cn(isInverse && "text-white")}>
         {heading}
       </Heading>
 
       {description ? (
         <p
-          className={cn(
-            "mt-5 max-w-[46ch] text-base leading-relaxed sm:text-lg",
-            isInverse ? "text-white/85" : "text-muted-foreground",
-            isCentered && "mx-auto",
-          )}
+          className={`text-lead mt-5 ${isInverse ? "text-white/85" : ""} ${isCentered ? "mx-auto" : ""}`}
         >
           {description}
         </p>
@@ -110,7 +116,7 @@ export function HeroContent({
             asChild
             size="xl"
             className={cn(fillActionsOnMobile && "w-full sm:w-auto")}
-            variant={primary?.variant ?? "primary"}
+            variant={resolveVariant(primary?.variant, "primary")}
           >
             <Link href={primary?.href ?? "#"}>
               {primary?.label ?? ""}
@@ -123,7 +129,7 @@ export function HeroContent({
               asChild
               size="xl"
               className={cn(fillActionsOnMobile && "w-full sm:w-auto")}
-              variant={secondary.variant ?? secondaryActionVariant}
+              variant={resolveVariant(secondary.variant, secondaryActionVariant)}
             >
               <Link href={secondary.href}>{secondary.label}</Link>
             </Button>

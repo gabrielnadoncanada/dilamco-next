@@ -51,7 +51,7 @@ Le site migre de l'ancien système de pages statiques (`createStaticPage`, modul
 
 ## Design (refonte 2026-09-18)
 
-Références du client : Dribbble « Construction Agency » (Odama) et « NexaCargo ». Titres **Bricolage Grotesque** 600 (`--font-display`, `app/fonts.ts`), corps Plus Jakarta Sans ; boutons **pilule** en casse de phrase (`Button` + `ButtonArrow`) ; `--radius` 0.75rem, cadres photo `rounded-[1.75rem]` ; tokens `primary-soft` (pastilles, tuiles), `ink` (sections sombres : CTA, pied de page), neutres teintés vert. Primaire `#253b2f` intouchable, jamais de doré ni de serif. `PRODUCT.md` décrit le registre/persona pour la skill `impeccable`.
+**`DESIGN.md` est la source unique** : tokens (couleurs, `--title-1…5`, `--r-control/card/panel`, durées), rôles (`text-lead`, `text-label`, `text-numeral`, `rounded-card`, `transition-ui`, `focus-ring`, `icon-pill`), états par composant. Titres via `<Heading variant>` uniquement (jamais de taille en `className` : tailwind-merge supprime l'interligne ; idem `text-lead`/`text-label` ne se combinent pas avec une couleur dans `cn()`). En-têtes de section via `SectionHeader`. Références du client : Dribbble « Construction Agency » et « NexaCargo » ; rigueur de système : Vercel Geist. Primaire `#253b2f` intouchable, jamais de doré ni de serif. `PRODUCT.md` décrit le registre/persona pour la skill `impeccable`.
 
 **Texte** : le site doit se scanner, pas se lire. Toute rédaction suit `docs/redaction-web.md` (budgets par page mesurés avec `node scripts/copy-wordcount.mjs`, longueurs par champ, mots interdits). Titre de hero sans deux-points ni tiret cadratin.
 

@@ -3,9 +3,9 @@ import { Heading } from "@/components/elements/heading";
 import { cn } from "@/lib/utils";
 
 /**
- * Titre à gauche, phrase d'intro et liste de points à droite. Les « cartes »
- * sont des rangées séparées par un filet, sans boîte : titre court en gras,
- * une ligne de description.
+ * Titre à gauche (collant), phrase d'intro et liste de points à droite. Les
+ * « cartes » sont des rangées séparées par un filet : titre de carte, une
+ * ligne de description.
  */
 export function SplitTextDividerCards(props: SplitTextDividerCardsProps) {
   const cols =
@@ -24,24 +24,14 @@ export function SplitTextDividerCards(props: SplitTextDividerCardsProps) {
       </div>
 
       <div className="lg:col-[6/13]">
-        <p className="max-w-[56ch] text-base leading-relaxed text-foreground/80 sm:text-lg">
-          {props.description}
-        </p>
+        <p className="text-lead">{props.description}</p>
 
-        <ul
-          className={cn(
-            "mt-8 grid gap-x-8 border-t border-border/80",
-            cols,
-          )}
-        >
+        <ul className={cn("mt-8 grid gap-x-8 border-t border-border/80", cols)}>
           {props.cards.map((card) => (
-            <li
-              key={card.title}
-              className="border-b border-border/80 py-5"
-            >
-              <h3 className="font-display text-lg font-semibold leading-snug tracking-[-0.015em] text-foreground">
+            <li key={card.title} className="border-b border-border/80 py-5">
+              <Heading as="h3" variant="card">
                 {card.title}
-              </h3>
+              </Heading>
               <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                 {card.description}
               </p>

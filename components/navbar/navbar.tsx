@@ -42,7 +42,7 @@ export function Navbar({
         <div className="ml-auto hidden shrink-0 items-center gap-2 xl:flex">
           <a
             href={PHONE_HREF}
-            className="inline-flex h-10 items-center gap-2 rounded-full px-3 text-sm font-semibold text-foreground/80 transition-colors hover:bg-primary-soft hover:text-primary"
+            className="inline-flex h-10 items-center gap-2 rounded-full px-3 text-sm font-semibold text-foreground/80 transition-ui focus-ring hover:bg-primary-soft hover:text-primary"
           >
             <Phone className="size-4" strokeWidth={2.25} />
             <span className="hidden tabular-nums 2xl:inline">{PHONE_DISPLAY}</span>
@@ -69,7 +69,7 @@ export function Navbar({
           <a
             href={PHONE_HREF}
             aria-label={PHONE_DISPLAY}
-            className="inline-flex size-10 items-center justify-center rounded-full text-foreground transition-colors hover:bg-primary-soft hover:text-primary"
+            className="inline-flex size-10 items-center justify-center rounded-full text-foreground transition-ui focus-ring hover:bg-primary-soft hover:text-primary"
           >
             <Phone className="size-5" strokeWidth={2.25} />
           </a>
