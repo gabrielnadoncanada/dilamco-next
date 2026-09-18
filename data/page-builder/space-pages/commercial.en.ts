@@ -29,157 +29,59 @@ export const commercialPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - General contractor",
-          heading:
-            "Commercial construction and fit-outs in Montréal and Greater Montréal",
+          eyebrow: "Commercial",
+          heading: "Commercial fit-outs delivered on the agreed date",
           description:
-            "Dilamco has been a licensed general contractor (RBQ 8306-0806-27) since 2004: office renovations, retail fit-outs, leasehold improvements and work in multi-unit buildings. We take care of the municipal permit, the trades and the schedule, and our cabinetry division supplies the built-in millwork when the project calls for it.",
+            "Offices, retail, leasehold improvements and multi-unit buildings. Permit, trades and schedule under one accountability.",
           actions: [
             {
-              label: "Get a commercial quote",
+              label: "Get a quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our commercial projects",
+              label: "See our work",
               href: "/projets",
               variant: "ghost",
             },
-            {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
           ],
-          badges: ["Offices", "Retail", "Leasehold improvements"],
+          badges: ["Offices", "Retail", "Multi-unit"],
           image: {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
             alt: "Custom commercial fit-out in Montréal and Greater Montréal",
           },
-          caption:
-            "Offices, retail spaces, service areas and multi-unit buildings",
+          caption: "Montréal · Laval · South Shore · Vaudreuil-Soulanges",
         },
       },
     },
     {
-      id: "why",
+      id: "inclus",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "text-divider-cards",
         props: {
-          heading: "A commercial job site that respects your operations",
-          intro:
-            "Premises that stay closed longer than planned cost money. The project is planned to limit disruption, hold the schedule and stay compliant with the Québec Construction Code.",
-          badges: ["Schedule", "Compliance", "Coordination"],
-          cardTitle: "When this approach makes sense",
-          items: [
-            "Office renovation or fit-out of a commercial unit.",
-            "Leasehold improvements to deliver under the terms of the lease.",
-            "A multi-unit building to renovate without emptying it.",
-          ],
-          actions: [
+          heading: "What the mandate covers",
+          description:
+            "A unit closed longer than planned is expensive. The sequence is set before the walls open.",
+          cards: [
             {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
+              title: "Permit and compliance",
+              description: "Plans, city application and work compliant with the Québec Construction Code.",
             },
             {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "A predictable sequence, from permit to handover",
-          intro:
-            "The project is framed early to manage the permit, the trades, the schedule and the handover of the premises.",
-          steps: [
-            {
-              number: "1",
-              title: "Scoping",
-              description:
-                "Use, site constraints, lease requirements and available work windows.",
+              title: "Phased work",
+              description: "After-hours intervention when the space has to stay open.",
             },
             {
-              number: "2",
-              title: "Permit",
-              description:
-                "Plans, municipal permit application and compliance check before work starts.",
+              title: "One party accountable",
+              description: "Partitions, electrical, plumbing, venting, flooring and paint coordinated.",
             },
             {
-              number: "3",
-              title: "Execution",
-              description:
-                "Trades coordinated by a single party, with schedule tracking throughout.",
-            },
-            {
-              number: "4",
-              title: "Handover",
-              description:
-                "Inspection, corrections and premises handed back ready to open.",
+              title: "Built-in millwork",
+              description: "Reception, technical storage and service areas from our cabinet division.",
             },
           ],
-        },
-      },
-    },
-    {
-      id: "materials",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Specifications designed for commercial use",
-          intro:
-            "In commercial work, durability, maintenance and compliance matter as much as how the space looks.",
-          items: [
-            {
-              title: "Robust structure",
-              description:
-                "Materials and construction details chosen to withstand sustained foot traffic.",
-            },
-            {
-              title: "Simplified maintenance",
-              description:
-                "Surfaces and finishes aligned with the reality of the space and its daily cleaning.",
-            },
-            {
-              title: "Code compliance",
-              description:
-                "Clearances, exits and installations compliant with the Québec Construction Code.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "View our services",
-              href: "/services",
-              variant: "ghost",
-            },
-            {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/spaces/space-commercial-project-01.webp",
-            alt: "Material detail for a commercial fit-out",
-          },
-          cardTitle: "Intended result",
-          cardDescription:
-            "Premises that are durable, compliant and delivered on the agreed date, with no costly rework after opening.",
+          columns: "2",
         },
       },
     },
@@ -189,44 +91,39 @@ export const commercialPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Featured commercial projects",
-          intro:
-            "A few references that show the execution quality and the level of coordination.",
+          heading: "Commercial projects",
           items: [
             {
               title: "Office fit-out",
               href: "/projets",
-              description:
-                "Office premises reworked and handed over ready to occupy, with trades coordinated.",
+              description: "Downtown space reworked and handed over ready to occupy.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-01.webp",
                 alt: "Commercial project in Montréal",
               },
-              badges: ["Montréal", "Commercial"],
+              badges: ["Montréal"],
               footerCtaLabel: "View project",
             },
             {
               title: "Leasehold improvements",
               href: "/projets",
-              description:
-                "Premises adapted to the tenant's needs, within the terms of the lease.",
+              description: "Space adapted to the tenant, within the lease terms.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
                 alt: "Commercial project in Laval",
               },
-              badges: ["Laval", "Commercial lease"],
+              badges: ["Laval"],
               footerCtaLabel: "View project",
             },
             {
               title: "Built-in commercial millwork",
               href: "/projets",
-              description:
-                "Reception, technical storage and service areas supplied by our cabinetry division.",
+              description: "Reception and technical storage installed with the rest.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
                 alt: "Commercial project on the South Shore",
               },
-              badges: ["South Shore", "Built-in millwork"],
+              badges: ["South Shore"],
               footerCtaLabel: "View project",
             },
           ],
@@ -240,29 +137,27 @@ export const commercialPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - commercial construction and fit-outs",
-          intro:
-            "The most useful questions before scoping a commercial project.",
+          heading: "Frequently asked questions",
           items: [
             {
               q: "What kinds of commercial projects do you take on?",
-              a: "Renovation and fit-out of offices, retail units and service areas, leasehold improvements under the terms of the lease, and work in multi-unit buildings. Dilamco is a licensed general contractor (RBQ 8306-0806-27), so the permit, the trades and the schedule all sit with one party. Our cabinetry division supplies the built-in millwork — reception, technical storage, service areas — when the project calls for it.",
+              a: "Offices, retail, service spaces, leasehold improvements within the lease terms and work in multi-unit buildings. Built-in millwork is supplied by our cabinet division when the project calls for it.",
             },
             {
-              q: "Can you work around our hours and available windows?",
-              a: "Yes, when the sequence is framed at the planning stage. We break the work into phases, identify what has to happen outside business hours, and the dates go into the written contract.",
+              q: "Can you work around our opening hours?",
+              a: "Yes, when the sequence is set during planning. The work is split into phases, and after-hours interventions are written into the contract with their dates.",
             },
             {
-              q: "Do you handle permits and code compliance?",
-              a: "Yes. We prepare the municipal permit application, coordinate inspections and carry out the work in compliance with the Québec Construction Code. Dilamco holds a general contractor licence (categories 1.2 Small buildings and 1.3 Buildings of all kinds) and carries liability and job-site insurance.",
+              q: "Do you handle permits and compliance?",
+              a: "Yes. City permit application, inspection coordination and work compliant with the Québec Construction Code. RBQ licence 8306-0806-27, classes 1.2 and 1.3, liability and site insurance.",
             },
             {
-              q: "Do you work in Montréal and the surrounding area?",
-              a: "Yes. Our base is in the West Island. We work in Montréal, Laval, on the South Shore and in Vaudreuil-Soulanges.",
+              q: "How long does a commercial fit-out take?",
+              a: "Mostly it depends on the permit and the scope. The schedule is set in the contract after scoping. Built-in millwork takes 9 to 15 weeks, ordered alongside the work.",
             },
             {
-              q: "Can you also handle the full renovation of the space?",
-              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation: permit, demolition, partitions, electrical, plumbing, ventilation, flooring, painting and built-in millwork, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
+              q: "Where do you work?",
+              a: "Our base is in the West Island. We work in Montréal, Laval, on the South Shore and in Vaudreuil-Soulanges.",
             },
           ],
         },
@@ -275,8 +170,7 @@ export const commercialPageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your commercial project",
-          intro:
-            "Free estimate, reply within 24 to 48 business hours. We frame the scope, the permit and the schedule before pricing.",
+          intro: "Free estimate. First reply within 24 to 48 business hours.",
           actions: [
             {
               label: "Request a quote",
@@ -284,11 +178,12 @@ export const commercialPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our commercial projects",
+              label: "See our work",
               href: "/projets",
               variant: "ghost",
             },
           ],
+          note: "RBQ licence 8306-0806-27 · Montréal, Laval, South Shore, Vaudreuil-Soulanges",
         },
       },
     },

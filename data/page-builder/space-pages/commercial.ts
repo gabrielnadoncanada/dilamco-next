@@ -29,157 +29,59 @@ export const commercialPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Entrepreneur général",
-          heading:
-            "Construction et aménagement commercial à Montréal et dans le Grand Montréal",
+          eyebrow: "Commercial",
+          heading: "Aménagement commercial livré à la date convenue",
           description:
-            "Dilamco est entrepreneur général licencié RBQ (8306-0806-27) depuis 2004 : rénovation de bureaux, aménagement de commerces, améliorations locatives et travaux dans les immeubles multi-logements. On prend en charge le permis municipal, les corps de métier et l'échéancier, et notre division armoires fournit le mobilier intégré lorsque le projet en demande.",
+            "Bureaux, commerces, améliorations locatives et multi-logements. Permis, corps de métier et échéancier sous une seule responsabilité.",
           actions: [
             {
-              label: "Obtenir une soumission commerciale",
+              label: "Obtenir une soumission",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos projets commerciaux",
+              label: "Voir nos projets",
               href: "/projets",
               variant: "ghost",
             },
-            {
-              label: "Rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
           ],
-          badges: ["Bureaux", "Commerces", "Améliorations locatives"],
+          badges: ["Bureaux", "Commerces", "Multi-logements"],
           image: {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
             alt: "Aménagement commercial sur mesure à Montréal et dans le Grand Montréal",
           },
-          caption:
-            "Bureaux, commerces, espaces de service et immeubles multi-logements",
+          caption: "Montréal · Laval · Rive-Sud · Vaudreuil-Soulanges",
         },
       },
     },
     {
-      id: "why",
+      id: "inclus",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "text-divider-cards",
         props: {
-          heading: "Un chantier commercial qui respecte vos opérations",
-          intro:
-            "Un local fermé plus longtemps que prévu coûte cher. Le projet est planifié pour limiter les interruptions, tenir l'échéancier et rester conforme au Code de construction du Québec.",
-          badges: ["Échéancier", "Conformité", "Coordination"],
-          cardTitle: "Quand cette approche est pertinente",
-          items: [
-            "Rénovation de bureaux ou aménagement d'un local commercial.",
-            "Améliorations locatives à livrer selon les termes du bail.",
-            "Immeuble multi-logements à rénover sans vider le bâtiment.",
-          ],
-          actions: [
+          heading: "Ce que comprend le mandat",
+          description:
+            "Un local fermé plus longtemps que prévu coûte cher. La séquence est cadrée avant d'ouvrir les murs.",
+          cards: [
             {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
+              title: "Permis et conformité",
+              description: "Plans, demande municipale et travaux conformes au Code de construction du Québec.",
             },
             {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Une séquence prévisible, du permis à la livraison",
-          intro:
-            "Le projet est cadré tôt pour gérer le permis, les corps de métier, l'échéancier et la remise du local.",
-          steps: [
-            {
-              number: "1",
-              title: "Cadrage",
-              description:
-                "Usage, contraintes du local, exigences du bail et fenêtres d'intervention.",
+              title: "Travaux par phases",
+              description: "Interventions hors des heures d'ouverture quand le local doit rester actif.",
             },
             {
-              number: "2",
-              title: "Permis",
-              description:
-                "Plans, demande de permis municipal et validation de la conformité avant travaux.",
+              title: "Un seul responsable",
+              description: "Cloisons, électricité, plomberie, ventilation, planchers et peinture coordonnés.",
             },
             {
-              number: "3",
-              title: "Exécution",
-              description:
-                "Corps de métier coordonnés par un seul responsable, avec suivi de l'échéancier.",
-            },
-            {
-              number: "4",
-              title: "Livraison",
-              description:
-                "Inspection, correctifs et remise du local prêt pour l'ouverture.",
+              title: "Mobilier intégré",
+              description: "Accueil, rangement technique et espaces de service par notre division armoires.",
             },
           ],
-        },
-      },
-    },
-    {
-      id: "materials",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Des spécifications pensées pour un usage commercial",
-          intro:
-            "En commercial, la durabilité, l'entretien et la conformité comptent autant que l'apparence du local.",
-          items: [
-            {
-              title: "Structure robuste",
-              description:
-                "Matériaux et détails de construction choisis pour supporter un achalandage soutenu.",
-            },
-            {
-              title: "Entretien simplifié",
-              description:
-                "Surfaces et finitions alignées avec la réalité du lieu et son nettoyage quotidien.",
-            },
-            {
-              title: "Conformité au Code",
-              description:
-                "Dégagements, sorties et installations conformes au Code de construction du Québec.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Voir nos services",
-              href: "/services",
-              variant: "ghost",
-            },
-            {
-              label: "Rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/spaces/space-commercial-project-01.webp",
-            alt: "Détail matériau pour aménagement commercial",
-          },
-          cardTitle: "Résultat recherché",
-          cardDescription:
-            "Un local durable, conforme et livré à la date convenue, sans reprises coûteuses après l'ouverture.",
+          columns: "2",
         },
       },
     },
@@ -189,44 +91,39 @@ export const commercialPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Projets commerciaux en vedette",
-          intro:
-            "Quelques références qui montrent la qualité d'exécution et le niveau de coordination.",
+          heading: "Projets commerciaux",
           items: [
             {
               title: "Aménagement de bureaux",
               href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
-              description:
-                "Local de bureaux réaménagé et livré prêt à occuper, corps de métier coordonnés.",
+              description: "Local réaménagé et livré prêt à occuper, au centre-ville.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-01.webp",
                 alt: "Projet commercial à Montréal",
               },
-              badges: ["Montréal", "Commercial"],
+              badges: ["Montréal"],
               footerCtaLabel: "Voir le projet",
             },
             {
               title: "Améliorations locatives",
               href: "/projets",
-              description:
-                "Local adapté aux besoins du locataire, dans le respect des termes du bail.",
+              description: "Local adapté au locataire, selon les termes du bail.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
                 alt: "Projet commercial à Laval",
               },
-              badges: ["Laval", "Bail commercial"],
+              badges: ["Laval"],
               footerCtaLabel: "Voir le projet",
             },
             {
               title: "Mobilier commercial intégré",
               href: "/projets",
-              description:
-                "Accueil, rangement technique et espaces de service fournis par notre division armoires.",
+              description: "Accueil et rangement technique posés avec le reste.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
                 alt: "Projet commercial sur la Rive-Sud",
               },
-              badges: ["Rive-Sud", "Mobilier intégré"],
+              badges: ["Rive-Sud"],
               footerCtaLabel: "Voir le projet",
             },
           ],
@@ -240,29 +137,27 @@ export const commercialPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - construction et aménagement commercial",
-          intro:
-            "Les questions les plus utiles avant de cadrer un projet commercial.",
+          heading: "Questions fréquentes",
           items: [
             {
               q: "Quels types de projets commerciaux réalisez-vous ?",
-              a: "Rénovation et aménagement de bureaux, de commerces de détail et d'espaces de service, améliorations locatives selon les termes du bail, et travaux dans les immeubles multi-logements. Dilamco est entrepreneur général licencié RBQ (8306-0806-27), ce qui permet de prendre en charge le permis, les corps de métier et l'échéancier sous une seule responsabilité. Notre division armoires fournit le mobilier intégré — accueil, rangement technique, espaces de service — quand le projet en demande.",
+              a: "Bureaux, commerces de détail, espaces de service, améliorations locatives selon les termes du bail et travaux dans les immeubles multi-logements. Le mobilier intégré est fourni par notre division armoires quand le projet en demande.",
             },
             {
-              q: "Pouvez-vous respecter nos heures et nos fenêtres d'intervention ?",
-              a: "Oui, quand la séquence est cadrée dès la planification. On découpe les travaux par phases, on identifie ce qui doit être exécuté hors des heures d'ouverture et les dates sont inscrites au contrat écrit.",
+              q: "Pouvez-vous respecter nos heures d'ouverture ?",
+              a: "Oui, quand la séquence est cadrée dès la planification. Les travaux sont découpés en phases et les interventions hors heures sont inscrites au contrat écrit, avec leurs dates.",
             },
             {
               q: "Vous occupez-vous des permis et de la conformité ?",
-              a: "Oui. On prépare la demande de permis municipal, on coordonne les inspections et on exécute les travaux conformément au Code de construction du Québec. Dilamco détient une licence d'entrepreneur général (catégories 1.2 Petits bâtiments et 1.3 Bâtiments de tout genre) et est assuré en responsabilité civile et chantier.",
+              a: "Oui. Demande de permis municipal, coordination des inspections et exécution conforme au Code de construction du Québec. Licence RBQ 8306-0806-27, catégories 1.2 et 1.3, assurance responsabilité civile et chantier.",
             },
             {
-              q: "Travaillez-vous à Montréal et autour ?",
-              a: "Oui. Notre base est dans l'Ouest-de-l'Île. On intervient à Montréal, à Laval, sur la Rive-Sud et dans Vaudreuil-Soulanges.",
+              q: "Quel est le délai d'un aménagement commercial ?",
+              a: "Il dépend surtout du permis et de la portée. L'échéancier est fixé au contrat après le cadrage. Le mobilier intégré demande de 9 à 15 semaines, commandé en parallèle des travaux.",
             },
             {
-              q: "Pouvez-vous aussi faire la rénovation complète du local ?",
-              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète : permis, démolition, cloisons, électricité, plomberie, ventilation, planchers, peinture et mobilier intégré, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
+              q: "Où intervenez-vous ?",
+              a: "Notre base est dans l'Ouest-de-l'Île. On intervient à Montréal, à Laval, sur la Rive-Sud et dans Vaudreuil-Soulanges.",
             },
           ],
         },
@@ -275,8 +170,7 @@ export const commercialPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre projet commercial",
-          intro:
-            "Estimation gratuite, retour sous 24 à 48 h ouvrables. On cadre la portée, le permis et l'échéancier avant de chiffrer.",
+          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
           actions: [
             {
               label: "Demander une soumission",
@@ -284,11 +178,12 @@ export const commercialPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir nos projets commerciaux",
+              label: "Voir nos projets",
               href: "/projets",
               variant: "ghost",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud, Vaudreuil-Soulanges",
         },
       },
     },

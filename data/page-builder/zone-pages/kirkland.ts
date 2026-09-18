@@ -58,11 +58,11 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Kirkland",
+          eyebrow: "Kirkland",
           heading:
-            "Entrepreneur général à Kirkland : rénovation et agrandissement sur de grands terrains",
+            "Entrepreneur général à Kirkland, rénovation majeure et agrandissement",
           description:
-            "Kirkland est une ville de moins de 20 000 résidents sur 9,6 km2, avec une densité résidentielle parmi les plus basses de l'Ouest-de-l'Île. Grands terrains, maisons unifamiliales détachées, et des propriétaires qui agrandissent plutôt que de déménager. Notre base est rue Larocque, à Pierrefonds-Roxboro, à une quinzaine de minutes du boulevard Saint-Charles. Licence RBQ 8306-0806-27, catégories entrepreneur général 1.2 et 1.3.",
+            "Grands terrains, maisons détachées, propriétaires qui agrandissent plutôt que de déménager. Licence RBQ 8306-0806-27, catégories 1.2 et 1.3.",
           actions: [
             {
               label: "Demander une soumission",
@@ -75,18 +75,12 @@ export const zoneKirklandPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: [
-            "RBQ 8306-0806-27",
-            "Agrandissement",
-            "Kirkland",
-            "Assuré",
-          ],
+          badges: ["Depuis 2004", "Agrandissement", "Assuré"],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
             alt: "Agrandissement d'une maison unifamiliale à Kirkland",
           },
-          caption:
-            "De part et d'autre de l'autoroute 40 - Ouest-de-l'Île",
+          caption: "De part et d'autre de l'autoroute 40",
         },
       },
     },
@@ -98,22 +92,22 @@ export const zoneKirklandPage: PageTemplateData = {
         props: {
           heading: "Ce qu'on connaît des maisons de Kirkland",
           description:
-            "Kirkland a été constituée en municipalité en 1961, puis reconstituée le 1er janvier 2006 après le passage par les fusions municipales. Son développement a été façonné par un élément physique : la construction de l'autoroute Transcanadienne dans les années 1960, qui coupe la ville en deux. Le parc industriel s'est installé de part et d'autre de l'autoroute 40 — Merck, Pfizer, Nissan, des entreprises du secteur aérospatial — tandis que le reste du territoire est demeuré résidentiel. Ça donne une ville à deux vitesses et un parc de maisons très homogène.",
+            "Moins de 20 000 résidents sur 9,6 km2, une ville coupée en deux par l'autoroute 40. Parc résidentiel homogène, terrains généreux.",
           cards: [
             {
-              title: "De grands terrains et des maisons détachées",
+              title: "Grands terrains, maisons détachées",
               description:
-                "Avec environ 2 000 habitants au kilomètre carré, Kirkland est nettement moins dense que ses voisines. L'essentiel du bâti résidentiel est constitué de maisons unifamiliales détachées sur des terrains généreux, bâties de la fin des années 1960 aux années 1980, avec des secteurs plus récents ajoutés par la suite. Concrètement, ça veut dire des projets d'agrandissement latéral et arrière réellement faisables, des garages doubles à convertir, des sous-sols de bonne hauteur et un accès de chantier confortable — ce qui simplifie l'installation d'un conteneur et la livraison des matériaux, contrairement aux rues serrées de certains secteurs voisins.",
+                "Environ 2 000 habitants au kilomètre carré : agrandissement latéral ou arrière réellement faisable, accès de chantier confortable.",
             },
             {
-              title: "Une génération de maisons arrivée à échéance",
+              title: "Une génération arrivée à échéance",
               description:
-                "Une maison de Kirkland construite dans les années 1970 arrive aujourd'hui à la fin de vie de plusieurs systèmes en même temps : fenêtres remplacées une fois, toiture à refaire, panneau électrique à moderniser pour supporter une borne de recharge, isolation de l'entretoit sous les normes actuelles, cuisine fermée d'origine, deux salles de bain jamais rénovées. Rénover pièce par pièce sur dix ans coûte plus cher qu'une rénovation majeure planifiée en une seule séquence, parce qu'on repaie chaque fois la mobilisation, la protection des lieux et la finition.",
+                "Maisons des années 1970 : toiture, fenêtres, panneau électrique, isolation d'entretoit et salles de bain d'origine, tous en même temps.",
             },
             {
-              title: "Un service municipal centralisé et exigeant",
+              title: "Permis et certificat d'excavation",
               description:
-                "À Kirkland, le Service de l'aménagement urbain et de l'environnement délivre les permis de construction et les certificats d'autorisation, inspecte les bâtiments et applique les règlements d'urbanisme — zonage, lotissement, construction. Pour la plupart des rénovations, intérieures comme extérieures, il faut consulter la municipalité et obtenir un permis ou un certificat avant d'entreprendre les travaux. Les demandes passent par le portail Gestion des permis en ligne, ou en personne à l'hôtel de ville, au 17200, boulevard Hymus. Les travaux d'excavation exigent leur propre certificat, à ne pas confondre avec le permis de construction.",
+                "Service de l'aménagement urbain, hôtel de ville du 17200, boulevard Hymus. Portail Gestion des permis en ligne.",
             },
           ],
           columns: "1",
@@ -124,172 +118,96 @@ export const zoneKirklandPage: PageTemplateData = {
       id: "services",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "image-cards-slider",
         props: {
           heading: "Ce qu'on réalise à Kirkland",
-          intro:
-            "Les mandats les plus fréquents dans une ville de maisons détachées sur grands terrains, et ce que chacun implique sur place.",
-          columns: "2",
           items: [
             {
-              title: "Agrandissement de maison",
+              title: "Agrandissement",
+              href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Le mandat signature à Kirkland, grâce à la taille des terrains.",
-              icon: "building2",
-              bullets: [
-                "Rallonge arrière ou latérale, ajout d'étage, solarium quatre saisons.",
-                "Certificat d'excavation et permis de construction obtenus séparément, comme l'exige la ville.",
-                "Fondation, structure, enveloppe, toiture et raccord avec l'existant sous un seul contrat.",
-              ],
+                "Rallonge, ajout d'étage ou solarium : fondation, structure, toiture et raccord.",
+              image: {
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                alt: "Agrandissement arrière d'une maison de Kirkland",
+              },
+              badges: ["Permis"],
+              footerCtaLabel: "Voir le service",
             },
             {
-              title: "Rénovation majeure complète",
+              title: "Rénovation majeure",
+              href: "/services/renovation",
               description:
-                "Reprendre une maison des années 1970 d'un seul coup.",
-              icon: "hardHat",
-              bullets: [
-                "Cuisine, salles de bain, planchers, portes et finition dans une seule séquence.",
-                "Mise à niveau du panneau électrique et de la plomberie pendant l'ouverture des murs.",
-                "Échéancier unique plutôt qu'une série de petits chantiers étalés sur dix ans.",
-              ],
+                "Reprendre une maison des années 1970 en une seule séquence plutôt qu'en dix ans.",
+              image: {
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Rénovation majeure d'une maison de Kirkland",
+              },
+              badges: ["Clé en main"],
+              footerCtaLabel: "Voir le service",
             },
             {
-              title: "Rénovation de cuisine",
+              title: "Cuisine",
+              href: "/services/renovation/cuisine",
               description:
-                "Ouvrir la cuisine fermée d'origine sur les aires de vie.",
-              icon: "chefHat",
-              bullets: [
-                "Analyse du mur à ouvrir et poutre dimensionnée avant la démolition.",
-                "Îlot, ventilation et circuits électriques planifiés avec le design, pas après.",
-                "Armoires sur mesure fournies par notre division armoires (sous-catégorie RBQ 12).",
-              ],
+                "Mur à ouvrir analysé et poutre dimensionnée avant la démolition.",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Cuisine ouverte sur les aires de vie",
+              },
+              badges: ["Structure"],
+              footerCtaLabel: "Voir le service",
             },
             {
-              title: "Rénovation de salle de bain",
+              title: "Salle de bain",
+              href: "/services/renovation/salle-de-bain",
               description:
-                "Souvent deux ou trois salles de bain à reprendre dans la même maison.",
-              icon: "bath",
-              bullets: [
-                "Étanchéité refaite complètement avant la céramique.",
-                "Ventilation corrigée et évacuée vers l'extérieur.",
-                "Séquence planifiée pour garder au moins une salle de bain fonctionnelle.",
-              ],
+                "Deux ou trois salles de bain séquencées pour en garder une fonctionnelle.",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Salle de bain rénovée avec douche en céramique",
+              },
+              badges: ["Étanchéité"],
+              footerCtaLabel: "Voir le service",
             },
             {
-              title: "Aménagement de sous-sol",
+              title: "Sous-sol",
+              href: "/services/renovation/sous-sol",
               description:
-                "Des sous-sols de bonne hauteur, souvent seulement partiellement finis.",
-              icon: "sofa",
-              bullets: [
-                "Salle familiale, cinéma maison, bureau, salle d'entraînement ou chambre d'invités.",
-                "Isolation et pare-vapeur repris selon les règles actuelles.",
-                "Salle de bain complète ajoutée quand le drain et la hauteur le permettent.",
-              ],
-            },
-            {
-              title: "Conversion de garage et annexes",
-              description:
-                "Transformer de la surface non habitable en pièce utilisable.",
-              icon: "doorOpen",
-              bullets: [
-                "Garage double converti en bureau, en salle familiale ou en atelier.",
-                "Isolation, chauffage, électricité et fenestration mis aux normes d'une pièce habitée.",
-                "Usage et conformité validés auprès du Service de l'aménagement urbain.",
-              ],
+                "Bonne hauteur libre : cinéma maison, bureau, salle d'entraînement ou chambre d'invités.",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Sous-sol aménagé en pièce de vie",
+              },
+              badges: ["Isolation"],
+              footerCtaLabel: "Voir le service",
             },
           ],
         },
       },
     },
     {
-      id: "deroulement",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Comment se déroule un projet à Kirkland",
-          intro:
-            "À Kirkland, la majorité des projets touchent l'enveloppe ou la structure. Le permis n'est pas une formalité de fin de parcours : c'est la première étape après le cadrage.",
-          steps: [
-            {
-              number: "1",
-              title: "Visite et relevé",
-              description:
-                "Relevé des dimensions, de la structure, du panneau, de la fondation et de l'espace disponible sur le terrain. Kirkland est à une quinzaine de minutes de notre base à Pierrefonds-Roxboro.",
-            },
-            {
-              number: "2",
-              title: "Faisabilité réglementaire",
-              description:
-                "Vérification des marges, de l'implantation et des normes applicables auprès du Service de l'aménagement urbain et de l'environnement avant d'engager des frais de plans.",
-            },
-            {
-              number: "3",
-              title: "Soumission détaillée",
-              description:
-                "Portée écrite, poste par poste, avec inclusions et exclusions. Retour sous 24 à 48 heures ouvrables après la visite. Estimation gratuite.",
-            },
-            {
-              number: "4",
-              title: "Permis et certificats",
-              description:
-                "Demande déposée via le portail Gestion des permis en ligne ou à l'hôtel de ville du 17200, boulevard Hymus. Le certificat d'excavation, quand il s'applique, se demande séparément.",
-            },
-            {
-              number: "5",
-              title: "Chantier coordonné",
-              description:
-                "Excavation, fondation, structure, mécanique, enveloppe et finition séquencées. Un seul responsable pour les questions et les changements, documentés par écrit.",
-            },
-            {
-              number: "6",
-              title: "Inspections et livraison",
-              description:
-                "Inspections municipales aux étapes prévues, liste de déficiences fermée avec vous, puis livraison. Travaux garantis, détails au contrat.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "pourquoi-local",
+      id: "preuves",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "badges-checklist-cta",
         props: {
-          heading: "Pourquoi un entrepreneur général pour un projet de Kirkland",
+          heading: "Un agrandissement met en jeu sept métiers",
           intro:
-            "Un agrandissement met en jeu l'excavation, la fondation, la structure, la toiture, l'enveloppe, la mécanique et la finition. Sept métiers. Sans responsable unique, ce sont sept calendriers qui se contredisent.",
+            "Excavation, fondation, structure, toiture, enveloppe, mécanique, finition. Sans responsable unique, sept calendriers se contredisent.",
+          badges: ["Depuis 2004", "5,0 sur Google", "Assuré"],
+          cardTitle: "Ce qui est vérifiable",
           items: [
-            {
-              title: "Un seul contrat, un seul responsable",
-              description:
-                "Vous ne coordonnez pas l'excavatrice, le charpentier, le couvreur, l'électricien et le plâtrier. C'est notre travail, et c'est écrit au contrat.",
-            },
-            {
-              title: "Licence RBQ 8306-0806-27",
-              description:
-                "Délivrée le 7 septembre 2004, valide et sans restriction, catégories entrepreneur général 1.2 (petits bâtiments) et 1.3 (bâtiments de tout genre). Vérifiable au registre de la Régie du bâtiment.",
-            },
-            {
-              title: "Le permis traité comme une étape de projet",
-              description:
-                "Kirkland exige un permis ou un certificat pour la plupart des rénovations, et un certificat distinct pour l'excavation. On le prévoit dans l'échéancier plutôt que de le découvrir la semaine du démarrage.",
-            },
-            {
-              title: "Assurances et conformité",
-              description:
-                "Responsabilité civile et chantier assurées, travaux réalisés en conformité avec le Code de construction du Québec. Aucune réclamation au dossier de licence.",
-            },
-            {
-              title: "Une division armoires intégrée",
-              description:
-                "Nos armoires sur mesure sont fabriquées pour nous par notre usine partenaire (sous-catégorie RBQ 12) : un intervenant de moins entre la structure et la finition.",
-            },
+            "Licence RBQ 8306-0806-27 depuis le 7 septembre 2004",
+            "Catégories entrepreneur général 1.2 et 1.3",
+            "Aucune réclamation au dossier de licence",
+            "Responsabilité civile et couverture chantier",
+            "Permis et certificat d'excavation obtenus séparément",
+            "Un seul contrat, un seul interlocuteur",
           ],
           actions: [
             {
-              label: "Voir le service d'agrandissement",
+              label: "Voir l'agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               variant: "primary",
             },
@@ -299,13 +217,6 @@ export const zoneKirklandPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          image: {
-            src: "/images/generated/services/service-renovation-project-02.webp",
-            alt: "Agrandissement et rénovation majeure d'une maison de Kirkland",
-          },
-          cardTitle: "Note Google 5,0 sur 11 avis",
-          cardDescription:
-            "Entrepreneur général depuis 2004, des centaines de chantiers résidentiels dans l'Ouest-de-l'Île. Échéancier et budget fixés au contrat écrit. Travaux garantis, détails au contrat.",
         },
       },
     },
@@ -315,49 +226,14 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Secteurs desservis et villes voisines",
-          intro:
-            "On intervient dans les huit districts de Kirkland, au nord comme au sud de l'autoroute 40 : les rues résidentielles autour du boulevard Saint-Charles, du boulevard Brunswick et du chemin Sainte-Marie, le secteur Timberlea, ainsi que les locaux commerciaux et industriels du boulevard Hymus.",
+          heading: "Villes voisines desservies",
           columns: "3",
           items: [
-            {
-              title: "Agrandissement de maison",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Rallonge, ajout d'étage ou conversion de garage, permis inclus.",
-              ctaLabel: "Voir le service",
-            },
-            {
-              title: "Rénovation de cuisine",
-              href: "/services/renovation/cuisine",
-              description:
-                "Ouvrir la cuisine fermée d'origine et refaire les aires de vie.",
-              ctaLabel: "Voir le service",
-            },
-            {
-              title: "Rénovation de sous-sol",
-              href: "/services/renovation/sous-sol",
-              description:
-                "Finir un sous-sol de bonne hauteur, isolation reprise correctement.",
-              ctaLabel: "Voir le service",
-            },
-            {
-              title: "Beaconsfield",
-              href: "/zones/beaconsfield",
-              description: "La ville voisine au sud-ouest, vers le lac Saint-Louis.",
-              ctaLabel: "Voir la zone",
-            },
-            {
-              title: "Pointe-Claire",
-              href: "/zones/pointe-claire",
-              description: "À l'est, le long du boulevard Hymus et du boulevard Saint-Jean.",
-              ctaLabel: "Voir la zone",
-            },
+            { title: "Beaconsfield", href: "/zones/beaconsfield" },
+            { title: "Pointe-Claire", href: "/zones/pointe-claire" },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              description: "Au nord-est, de l'autre côté du boulevard Saint-Charles.",
-              ctaLabel: "Voir la zone",
             },
           ],
         },
@@ -369,41 +245,31 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - rénovation à Kirkland",
-          intro:
-            "Permis, excavation, budget et déroulement : les questions les plus fréquentes des propriétaires de Kirkland.",
+          heading: "Questions fréquentes",
           items: [
             {
               q: "Faut-il un permis pour rénover à Kirkland ?",
-              a: "Oui, dans la plupart des cas. La ville indique que pour entreprendre des rénovations domiciliaires, intérieures ou extérieures, il faut d'abord consulter la municipalité et, la plupart du temps, obtenir un permis de construction ou un certificat d'autorisation délivré par le Service de l'aménagement urbain et de l'environnement. Nous montons le dossier dans le cadre du mandat.",
+              a: "Oui, dans la plupart des cas. La ville demande de la consulter avant des rénovations intérieures ou extérieures et délivre un permis de construction ou un certificat d'autorisation. Nous montons le dossier dans le cadre du mandat.",
             },
             {
-              q: "Comment se fait une demande de permis à Kirkland ?",
-              a: "Par le portail Gestion des permis en ligne, qui permet de déposer la demande, d'en suivre l'état et, dans plusieurs cas, de payer les frais et d'obtenir le permis sans se déplacer. Il est aussi possible de la déposer en personne à l'hôtel de ville, au 17200, boulevard Hymus, pendant les heures d'ouverture.",
+              q: "Comment se dépose une demande de permis ?",
+              a: "Par le portail Gestion des permis en ligne, qui permet de suivre l'état du dossier et souvent de payer sans se déplacer. Ou en personne à l'hôtel de ville, au 17200, boulevard Hymus.",
             },
             {
-              q: "Un agrandissement exige-t-il un permis distinct pour l'excavation ?",
-              a: "Kirkland traite les travaux d'excavation comme une demande distincte du permis de construction. Pour un agrandissement avec fondation, il faut donc prévoir les deux. Nous obtenons les autorisations requises et les intégrons à l'échéancier, plutôt que de les découvrir la semaine du démarrage.",
+              q: "Un agrandissement exige-t-il un certificat d'excavation ?",
+              a: "Kirkland traite les travaux d'excavation comme une demande distincte du permis de construction. Pour un agrandissement avec fondation, il faut donc les deux. Nous les prévoyons à l'échéancier.",
             },
             {
-              q: "Combien coûte une rénovation majeure à Kirkland ?",
-              a: "Nos mandats de rénovation démarrent généralement autour de 25 000 $, et une cuisine complète se situe plutôt entre 35 000 $ et 50 000 $ et plus. Un agrandissement avec fondation se situe dans un ordre de grandeur supérieur, puisqu'il ajoute l'excavation, la structure, la toiture et l'enveloppe. Le prix exact vient de la soumission détaillée, après la visite. L'estimation est gratuite.",
+              q: "Peut-on agrandir sur un terrain de Kirkland ?",
+              a: "Souvent oui : les terrains y sont plus grands que la moyenne de l'Ouest-de-l'Île. Ce qui décide, ce sont les marges de recul, l'occupation du sol et les normes de votre zone. Faisabilité validée avant les frais de plans.",
             },
             {
-              q: "Peut-on agrandir une maison sur un terrain de Kirkland ?",
-              a: "Souvent oui : les terrains de Kirkland sont généralement plus grands que la moyenne de l'Ouest-de-l'Île. Ce qui décide, ce sont les marges de recul, le pourcentage d'occupation du sol et les normes applicables dans votre zone. On valide la faisabilité auprès du Service de l'aménagement urbain avant d'engager des frais de plans.",
+              q: "Combien coûte une rénovation majeure ?",
+              a: "Nos mandats démarrent autour de 25 000 $ et une cuisine complète se situe entre 35 000 $ et 50 000 $. Un agrandissement avec fondation se situe plus haut. Estimation gratuite, prix ferme à la soumission.",
             },
             {
-              q: "Combien de temps dure un agrandissement ?",
-              a: "Plusieurs mois, avec une part importante de délai avant même le premier coup de pelle : plans, permis, certificat d'excavation et commandes de matériaux. Une fois le chantier ouvert, la séquence excavation, fondation, structure, enveloppe, mécanique et finition est continue. L'échéancier précis est inscrit au contrat.",
-            },
-            {
-              q: "Faites-vous des aménagements de locaux commerciaux à Kirkland ?",
-              a: "Oui. Le parc industriel s'étend de part et d'autre de l'autoroute 40, et le boulevard Hymus compte plusieurs locaux commerciaux. Nos catégories de licence RBQ couvrent les petits bâtiments et les bâtiments de tout genre, ce qui inclut l'aménagement de locaux commerciaux et de bureaux.",
-            },
-            {
-              q: "Construisez-vous des maisons neuves à Kirkland ?",
-              a: "Non. Nous sommes entrepreneur général en rénovation, transformation, agrandissement, reconstruction après sinistre et aménagement commercial. Nous ne construisons pas de maison neuve et n'offrons pas de plan de garantie pour bâtiment résidentiel neuf.",
+              q: "Construisez-vous des maisons neuves ?",
+              a: "Non. Rénovation, transformation, agrandissement, reconstruction après sinistre et aménagement commercial. Nous ne construisons pas de maisons neuves, le plan de garantie GCR ne s'applique donc pas.",
             },
           ],
         },
@@ -415,9 +281,9 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet de rénovation ou d'agrandissement à Kirkland ?",
+          heading: "Un projet à Kirkland ?",
           intro:
-            "On se déplace, on relève la maison et le terrain, on valide la faisabilité réglementaire, puis on revient avec une portée écrite et un prix. Retour sous 24 à 48 heures ouvrables.",
+            "On relève la maison et le terrain, on valide la faisabilité, on revient avec un prix.",
           actions: [
             {
               label: "Demander une soumission",
@@ -430,7 +296,7 @@ export const zoneKirklandPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco - entrepreneur général licencié RBQ 8306-0806-27 - Ouest-de-l'Île",
+          note: "Dilamco · Entrepreneur général RBQ 8306-0806-27 · Ouest-de-l'Île",
         },
       },
     },

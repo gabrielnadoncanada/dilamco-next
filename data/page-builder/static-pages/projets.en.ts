@@ -22,11 +22,10 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Cabinetry division",
-          heading:
-            "Custom projects: kitchens, vanities, storage and commercial",
+          eyebrow: "Projects",
+          heading: "Kitchens, vanities, storage and commercial",
           description:
-            "This page is here to show real cases, not an empty gallery. These are projects from the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27): designed by us, produced by our partner factory, installed by our crews and coordinated with the rest of the job site.",
+            "Real projects delivered across Greater Montréal by an RBQ-licensed general contractor.",
           actions: [
             {
               label: "Request a quote",
@@ -44,8 +43,7 @@ export const pageEn: PageTemplateData = {
             src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
             alt: "Dilamco custom project",
           },
-          caption:
-            "Projects that help you picture the result and check the quality of execution",
+          caption: "High-end kitchen · Laval",
         },
       },
     },
@@ -58,15 +56,13 @@ export const pageEn: PageTemplateData = {
         variant: "image-cards-slider-lightbox",
         props: {
           heading: "Explore the projects",
-          intro:
-            "Pick the project area closest to your situation to see more relevant references.",
+          intro: "Pick the area closest to your own project.",
           items: [
             {
               title: "Kitchens",
               href: "/projets/cuisine",
-              description:
-                "Custom kitchens: optimized storage and precise finish.",
-              footerCtaLabel: "View kitchen projects",
+              description: "Optimized storage and precise finish.",
+              footerCtaLabel: "View kitchens",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Custom kitchen projects",
@@ -75,9 +71,8 @@ export const pageEn: PageTemplateData = {
             {
               title: "Bathrooms & vanities",
               href: "/projets/salle-de-bain",
-              description:
-                "Durable custom vanities, designed for humidity.",
-              footerCtaLabel: "View bathroom projects",
+              description: "Durable vanities, built for humidity.",
+              footerCtaLabel: "View bathrooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Custom bathroom vanity projects",
@@ -87,7 +82,7 @@ export const pageEn: PageTemplateData = {
               title: "Walk-in closets & storage",
               href: "/projets/walk-in",
               description: "Custom storage, optimized and functional.",
-              footerCtaLabel: "View walk-in projects",
+              footerCtaLabel: "View walk-ins",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Custom walk-in closet and storage projects",
@@ -97,7 +92,7 @@ export const pageEn: PageTemplateData = {
               title: "Laundry rooms",
               href: "/projets/salle-de-lavage",
               description: "Organized, durable laundry rooms.",
-              footerCtaLabel: "View laundry room projects",
+              footerCtaLabel: "View laundry rooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Custom laundry room projects",
@@ -106,9 +101,8 @@ export const pageEn: PageTemplateData = {
             {
               title: "Commercial",
               href: "/projets/commercial",
-              description:
-                "Offices, retail and leasehold improvements delivered ready to occupy.",
-              footerCtaLabel: "View commercial projects",
+              description: "Offices and retail delivered ready to occupy.",
+              footerCtaLabel: "View commercial",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Custom commercial projects",
@@ -121,50 +115,31 @@ export const pageEn: PageTemplateData = {
 
     {
       id: "process",
-      frame: { surface: "muted" },
       content: {
         type: "process",
-        variant: "split-cards",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "The project logic behind the final result",
-          description:
-            "Good projects rarely come from luck. They come from a method that clarifies decisions up front and protects execution all the way to installation.",
+          heading: "From design to installation",
           steps: [
             {
               number: "1",
               title: "Scoping",
-              description:
-                "Understand the needs, the site constraints and the real scope of the project.",
+              description: "Needs, site constraints and the real scope of the project.",
             },
             {
               number: "2",
-              title: "Design and validations",
-              description:
-                "Structure the layout, confirm the choices and close the decisions that affect fabrication.",
+              title: "Design",
+              description: "Layout, finishes and drawings approved before production.",
             },
             {
               number: "3",
-              title: "Fabrication",
-              description:
-                "Produce on a stable base with material and technical choices already aligned.",
+              title: "Production",
+              description: "Ordered from our partner factory, to the dimensions measured on site.",
             },
             {
               number: "4",
-              title: "Installation and finish",
-              description:
-                "Adjust, align and deliver a clean, consistent and durable result.",
-            },
-          ],
-          actions: [
-            {
-              label: "See the process",
-              href: "/processus",
-              variant: "ghost",
-            },
-            {
-              label: "Turnkey home renovation",
-              href: "/services/renovation",
-              variant: "ghost",
+              title: "Installation",
+              description: "Setting and adjustments coordinated with the rest of the job.",
             },
           ],
         },
@@ -178,8 +153,7 @@ export const pageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Have a similar project?",
-          intro:
-            "If a project looks like your situation, we can help you frame the scope, the choices and the best next steps.",
+          intro: "Free estimate. Reply within 24 to 48 business hours.",
           actions: [
             {
               label: "Request a quote",
@@ -192,7 +166,7 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Residential and commercial - Montréal, Laval, South Shore",
+          note: "Residential and commercial · Montréal, Laval, South Shore",
         },
       },
     },

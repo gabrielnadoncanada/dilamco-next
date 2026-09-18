@@ -29,11 +29,10 @@ export const sousSolPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Division armoires",
-          heading:
-            "Aménagement de sous-sol sur mesure à Pierrefonds et dans le Grand Montréal",
+          eyebrow: "Sous-sol",
+          heading: "Aménagement de sous-sol sur mesure, du gros œuvre au mobilier",
           description:
-            "Aménager un sous-sol sur mesure, c'est transformer un espace souvent sous-utilisé en pièce de vie haut de gamme — salle de cinéma maison, bar, cave à vin, bibliothèque ou salle de jeux — avec un mobilier intégré conçu pour vos usages réels. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), conçoit le mobilier, le fait produire par son usine partenaire et le fait poser par ses équipes, coordonné avec la finition du sous-sol.",
+            "Cinéma maison, bar, cellier ou rangement intégré, conçus avec la pièce et posés dans la séquence du chantier.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -46,44 +45,12 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Clé en main", "Ouest-de-l'Île"],
+          badges: ["Sur mesure", "Clé en main"],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Aménagement de sous-sol sur mesure haut de gamme à Pierrefonds",
           },
-          caption:
-            "Résidentiel haut de gamme à Pierrefonds, dans l'Ouest-de-l'Île et le Grand Montréal",
-        },
-      },
-    },
-    {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Un sous-sol pensé comme une vraie pièce de vie",
-          intro:
-            "Un sous-sol gagne en valeur quand le mobilier intégré est pensé dès le départ : rangements, unité murale, bar ou cinéma planifiés avec la pièce, pas ajoutés après coup.",
-          badges: ["Sur mesure", "Durabilité", "Clé en main"],
-          cardTitle: "Bon fit pour ce type de projet",
-          items: [
-            "Sous-sol à finir ou à repenser entièrement.",
-            "Envie d'un espace cinéma, bar, cave à vin ou bureau intégré.",
-            "Priorité au rangement, aux finitions et à une coordination unique.",
-          ],
-          actions: [
-            {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "ghost",
-            },
-          ],
+          caption: "Pierrefonds · Ouest-de-l'Île · Grand Montréal",
         },
       },
     },
@@ -93,109 +60,63 @@ export const sousSolPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on aménage dans un sous-sol",
-          intro:
-            "Chaque sous-sol combine quelques-uns de ces espaces. On conçoit le mobilier intégré sur mesure pour qu'ils s'intègrent à la pièce et restent fonctionnels au quotidien.",
+          heading: "Ce qu'on aménage au sous-sol",
           items: [
             {
               title: "Salle de cinéma maison",
-              description:
-                "Estrade, panneaux, rangement d'équipement et intégration de l'écran pour une vraie salle de cinéma maison sur mesure — pas seulement un système audio posé sur un meuble.",
+              description: "Estrade, panneaux, rangement d'équipement et intégration de l'écran.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Salle de cinéma maison sur mesure dans un sous-sol",
               },
-              badges: ["Cinéma maison", "Sur mesure"],
+              badges: ["Cinéma maison"],
             },
             {
               title: "Bar de sous-sol",
-              description:
-                "Bar sur mesure avec comptoir, rangement à bouteilles, verrerie et électroménagers intégrés, conçu pour recevoir.",
+              description: "Comptoir, rangement à bouteilles, verrerie et électroménagers intégrés.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Bar de sous-sol sur mesure",
               },
-              badges: ["Bar", "Sur mesure"],
+              badges: ["Bar"],
             },
             {
-              title: "Cave à vin / cellier",
-              description:
-                "Cellier et cave à vin sur mesure (bois, verre, sous-escalier) pensés pour la conservation et la mise en valeur des bouteilles.",
+              title: "Cave à vin, cellier",
+              description: "Bois, verre ou sous-escalier, pensés pour la conservation.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
                 alt: "Cave à vin / cellier sur mesure au sous-sol",
               },
-              badges: ["Cave à vin", "Cellier"],
+              badges: ["Cellier"],
             },
             {
-              title: "Bibliothèque & bureau",
-              description:
-                "Bibliothèque murale, mur de rangement et bureau intégré pour un coin lecture, travail ou télétravail au sous-sol.",
+              title: "Bibliothèque et bureau",
+              description: "Mur de rangement et bureau intégré pour le télétravail.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
                 alt: "Bibliothèque murale et bureau intégré sur mesure",
               },
-              badges: ["Bibliothèque", "Bureau"],
+              badges: ["Bureau"],
             },
             {
-              title: "Salle de jeux & divertissement",
-              description:
-                "Unité murale, mur de divertissement et rangements pour une salle de jeux ou familiale ordonnée et durable.",
+              title: "Salle de jeux",
+              description: "Unité murale et rangements pour une salle familiale ordonnée.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Salle de jeux et unité murale sur mesure au sous-sol",
               },
-              badges: ["Salle de jeux", "Unité murale"],
+              badges: ["Unité murale"],
             },
             {
-              title: "Rangement & mécanique",
+              title: "Rangement et mécanique",
               href: "/espaces/walk-in",
-              description:
-                "Placards, garde-robes sur mesure et accès discrets aux espaces techniques pour garder un sous-sol net et organisé.",
+              description: "Placards fermés et accès discrets aux espaces techniques.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
                 alt: "Rangement fermé sur mesure le long d'un mur de sous-sol",
               },
-              badges: ["Rangement", "Durable"],
-              footerCtaLabel: "Voir les garde-robes sur mesure",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Un processus clair du design à l'installation",
-          intro:
-            "Un seul partenaire pour cadrer les décisions, coordonner les corps de métier et réduire les imprévus sur le chantier.",
-          steps: [
-            {
-              number: "1",
-              title: "Conception",
-              description:
-                "Analyse de l'espace, des contraintes (hauteur, colonnes, mécanique) et planification des zones.",
-            },
-            {
-              number: "2",
-              title: "Matériaux",
-              description:
-                "Sélection de composants et finis adaptés à l'humidité et à l'usage réel d'un sous-sol.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Production contrôlée des modules (cinéma, bar, cellier, rangement) avec standards stables.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Pose ajustée, alignements nets et finitions vérifiées sur place.",
+              badges: ["Rangement"],
+              footerCtaLabel: "Voir les garde-robes",
             },
           ],
         },
@@ -207,24 +128,20 @@ export const sousSolPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Des matériaux pensés pour la réalité d'un sous-sol",
-          intro:
-            "Un sous-sol impose ses contraintes : humidité, variations de température et accès techniques. Le choix des matériaux et de la structure compte autant que le look.",
+          heading: "Ce qu'un sous-sol impose",
+          intro: "Humidité, hauteur libre et accès mécaniques se règlent avant la finition, pas après.",
           items: [
             {
-              title: "Résistance à l'humidité",
-              description:
-                "Composants et finis sélectionnés pour mieux tolérer l'environnement d'un sous-sol.",
+              title: "Humidité validée d'abord",
+              description: "Drain, fissures et taux vérifiés avant d'isoler",
             },
             {
               title: "Structure durable",
-              description:
-                "Contreplaqué de bouleau et bois massif là où la charge et la stabilité comptent.",
+              description: "Contreplaqué de bouleau là où la charge compte",
             },
             {
               title: "Intégration propre",
-              description:
-                "Câblage, équipement et accès mécaniques dissimulés pour une finition cohérente.",
+              description: "Câblage et accès mécaniques dissimulés",
             },
           ],
           actions: [
@@ -234,12 +151,12 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Finition de sous-sol clé en main",
+              label: "Finition de sous-sol",
               href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
             {
-              label: "Reconstruction après dégât d'eau",
+              label: "Après dégât d'eau",
               href: "/services/renovation/apres-sinistre",
               variant: "ghost",
             },
@@ -249,47 +166,7 @@ export const sousSolPage: PageTemplateData = {
             alt: "Détail de mobilier intégré sur mesure pour aménagement de sous-sol",
           },
           cardTitle: "Pourquoi ça compte",
-          cardDescription:
-            "Des matériaux adaptés au sous-sol évitent le gondolement, les odeurs et les remplacements prématurés.",
-        },
-      },
-    },
-    {
-      id: "zones",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Aménagement de sous-sol partout dans le Grand Montréal",
-          intro:
-            "Basés dans le Grand Montréal, on conçoit et installe des aménagements de sous-sol sur mesure dans l'Ouest-de-l'Île et partout dans la région.",
-          badges: [
-            "Pierrefonds-Roxboro",
-            "Ouest-de-l'Île",
-            "Montréal",
-            "Laval",
-            "Rive-Nord",
-            "Rive-Sud",
-          ],
-          cardTitle: "Zones desservies",
-          items: [
-            "Pierrefonds-Roxboro et l'Ouest-de-l'Île",
-            "Montréal et les quartiers centraux",
-            "Laval et la Rive-Nord",
-            "Rive-Sud et couronne sud",
-          ],
-          actions: [
-            {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir nos projets",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
+          cardDescription: "Un sous-sol mal préparé gondole et sent l'humidité.",
         },
       },
     },
@@ -299,29 +176,27 @@ export const sousSolPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - aménagement de sous-sol",
-          intro:
-            "Réponses claires aux questions les plus fréquentes avant de lancer un projet de sous-sol.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte l'aménagement d'un sous-sol sur mesure ?",
-              a: "Le prix d'un aménagement de sous-sol sur mesure varie beaucoup selon la superficie à couvrir et les espaces souhaités : une salle de cinéma maison, un bar, une cave à vin, une bibliothèque ou du rangement n'impliquent pas le même niveau de menuiserie ni la même coordination. S'ajoutent les matériaux et finis retenus, les détails adaptés à l'environnement d'un sous-sol (humidité, gestion des hauteurs), et l'ampleur de la coordination si d'autres corps de métier interviennent. Plutôt qu'un prix générique, nous établissons une estimation précise après avoir cadré le projet avec vous — usages réels, priorités et niveau de finition — pour un budget clair avant de vous engager.",
+              q: "Combien coûte l'aménagement d'un sous-sol ?",
+              a: "Le prix varie selon la superficie et les espaces retenus : un cinéma maison, un bar ou un cellier n'impliquent pas la même menuiserie. Le montant ferme est fixé après le relevé sur place, dans la soumission détaillée.",
             },
             {
-              q: "Quelle est la différence entre une « salle de cinéma maison » et un « cinéma maison » ?",
-              a: "Un « cinéma maison » désigne souvent l'équipement audio-vidéo (haut-parleurs, récepteur). Une salle de cinéma maison sur mesure, c'est l'aménagement de la pièce : estrade, panneaux, rangement d'équipement et mobilier intégré. C'est ce qu'on conçoit et installe.",
+              q: "Quel est le délai pour le mobilier intégré ?",
+              a: "De 9 à 15 semaines entre la validation du design et la pose. La commande est calée sur l'échéancier du chantier pour arriver une fois les cloisons et le plancher terminés.",
             },
             {
-              q: "Faites-vous l'aménagement de sous-sol à Pierrefonds et dans l'Ouest-de-l'Île ?",
-              a: "Oui. Nous sommes basés à Pierrefonds-Roxboro et réalisons des aménagements de sous-sol sur mesure dans tout l'Ouest-de-l'Île, à Montréal, à Laval et dans le Grand Montréal.",
+              q: "Comment gérez-vous l'humidité ?",
+              a: "On vérifie le drain, les fissures et le taux d'humidité avant d'isoler. Les finis et les matériaux sont choisis pour l'environnement d'un sous-sol, ce qui limite le gondolement.",
             },
             {
-              q: "Comment gérez-vous l'humidité d'un sous-sol ?",
-              a: "On sélectionne des matériaux et des finis adaptés à l'environnement d'un sous-sol et on soigne les détails de construction pour limiter le gondolement et les problèmes liés à l'humidité.",
+              q: "Faut-il un permis pour finir un sous-sol ?",
+              a: "Souvent oui, dès qu'on ajoute des cloisons, une salle de bain ou une chambre. On vérifie les exigences de votre ville et on dépose la demande pour vous.",
             },
             {
-              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
-              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la finition complète du sous-sol : permis municipal, isolation, cloisons, électricité, plomberie, plancher et pose du mobilier intégré, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
+              q: "Pouvez-vous faire la finition complète ?",
+              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : permis, isolation, cloisons, électricité, plomberie, plancher et pose du mobilier intégré, coordonnés par un seul responsable, au contrat écrit.",
             },
           ],
         },
@@ -334,8 +209,7 @@ export const sousSolPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre projet de sous-sol",
-          intro:
-            "Obtenez une soumission structurée adaptée à votre espace, vos priorités et votre niveau de finition.",
+          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
           actions: [
             {
               label: "Demander une soumission",
@@ -348,6 +222,7 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

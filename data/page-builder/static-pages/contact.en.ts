@@ -21,12 +21,12 @@ export const pageEn: PageTemplateData = {
         type: "split",
         variant: "details-form-card",
         props: {
-          heading: "Tell us about your renovation project",
+          heading: "Tell us about your project",
           intro:
-            "Free estimate, no strings attached. The more precise your description, the more useful our first reply: we can give you a realistic order of magnitude even before the site visit.",
+            "Free estimate. The more precise your description, the more useful our first reply.",
           detailsTitle: "Get in touch",
           detailsIntro:
-            "Dilamco is a residential renovation general contractor based in Pierrefonds-Roxboro since 2004. RBQ licence 8306-0806-27, valid and without restrictions.",
+            "Residential renovation general contractor in Pierrefonds-Roxboro since 2004.",
           details: [
             {
               title: "Email",
@@ -52,15 +52,13 @@ export const pageEn: PageTemplateData = {
             },
             {
               title: "Response time",
-              description:
-                "Reply within 24 to 48 business hours to book the visit and the estimate.",
+              description: "Within 24 to 48 business hours.",
               icon: "clock",
             },
           ],
-          note: "RBQ licence 8306-0806-27 — general contractor, classes 1.2 and 1.3. Civil liability insurance and site coverage in force. Free estimate, no fee and no obligation.",
+          note: "RBQ licence 8306-0806-27, classes 1.2 and 1.3. Civil liability insurance and site coverage in force.",
           formTitle: "Request a free estimate",
-          formIntro:
-            "This information is used only to prepare the visit and frame your project. No automated sales follow-up.",
+          formIntro: "This information is used only to prepare the visit.",
           formAction: "/contact/",
           formMethod: "post",
           honeypotName: "website",

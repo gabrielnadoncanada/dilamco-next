@@ -5,7 +5,6 @@ import {
   NavigationMenuLink,
   NavigationMenuTrigger,
   NavigationMenuContent,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { AppLink as Link } from "@/components/AppLink";
 import type { DesktopMenuItemProps } from "../navbar.types";
@@ -17,6 +16,9 @@ const TWO_COLUMN_THRESHOLD = 4;
 const groupColumns = (linksCount: number) =>
   linksCount > TWO_COLUMN_THRESHOLD ? 2 : 1;
 
+const triggerClass =
+  "h-10 rounded-full bg-transparent px-3.5 text-[0.9375rem] font-medium text-foreground/80 hover:bg-primary-soft hover:text-primary data-open:bg-primary-soft data-open:text-primary data-popup-open:bg-primary-soft focus-visible:ring-ring/40";
+
 export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
   if (item.groups) {
     const totalColumns = item.groups.reduce(
@@ -24,16 +26,13 @@ export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
       0,
     );
     return (
-      <NavigationMenuItem
-        key={`desktop-menu-item-${index}`}
-        value={`${index}`}
-      >
-        <NavigationMenuTrigger className="h-fit bg-transparent px-2.5 text-sm leading-6 font-medium text-muted-foreground">
+      <NavigationMenuItem key={`desktop-menu-item-${index}`} value={`${index}`}>
+        <NavigationMenuTrigger className={triggerClass}>
           {item.title}
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="!rounded-xl !border !p-0">
+        <NavigationMenuContent className="!rounded-2xl !border-border/70 !p-0 !shadow-[0_24px_60px_-24px_rgb(21_25_26/35%)]">
           <ul
-            className="flex p-2"
+            className="flex gap-1 p-2.5"
             style={{ width: totalColumns * DESKTOP_GROUP_WIDTH }}
           >
             {item.groups.map((group, index1) => {
@@ -46,10 +45,10 @@ export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
                 >
                   <ul
                     className={
-                      columns === 2 ? "grid grid-cols-2 gap-x-2" : undefined
+                      columns === 2 ? "grid grid-cols-2 gap-x-1" : undefined
                     }
                   >
-                    <li className="px-3 py-2 text-sm leading-6 font-medium text-muted-foreground col-span-full">
+                    <li className="col-span-full px-3 pb-1.5 pt-2 text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
                       {group.title}
                     </li>
                     {group.links.map((link, index2) => (
@@ -68,13 +67,10 @@ export function DesktopMenuItem({ item, index }: DesktopMenuItemProps) {
   }
 
   return (
-    <NavigationMenuItem
-      key={`desktop-menu-item-${index}`}
-      value={`${index}`}
-    >
+    <NavigationMenuItem key={`desktop-menu-item-${index}`} value={`${index}`}>
       <NavigationMenuLink
         asChild
-        className={`${navigationMenuTriggerStyle()} h-fit bg-transparent px-2.5 text-sm leading-6 font-medium text-muted-foreground`}
+        className={`inline-flex items-center justify-center transition-colors ${triggerClass}`}
       >
         <Link href={item.url ?? "/"}>{item.title}</Link>
       </NavigationMenuLink>

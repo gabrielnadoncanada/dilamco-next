@@ -29,29 +29,28 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Cabinetry division",
-          heading:
-            "Custom spaces: kitchen, bathroom, storage and commercial",
+          eyebrow: "Cabinet division",
+          heading: "Custom cabinetry, built into your renovation",
           description:
-            "Every space in the home — kitchen, bathroom, walk-in, basement, laundry room — can receive custom cabinets and storage. That is the job of the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27): we design the project, our partner factory produces it, our crews install it, and the whole thing is coordinated with the rest of your renovation.",
+            "Kitchen, bathroom, walk-in, basement, laundry room or commercial space: one contract, one party accountable.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Get a quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our work",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Custom", "Durable", "Turnkey"],
+          badges: ["Custom-built", "Turnkey"],
           image: {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Dilamco custom spaces",
           },
-          caption: "Montreal, Laval and the South Shore",
+          caption: "Montréal · Laval · South Shore",
         },
       },
     },
@@ -62,80 +61,72 @@ export const pageEn: PageTemplateData = {
         variant: "image-cards-slider",
         props: {
           heading: "Choose your space",
-          intro:
-            "Go to the pillar page for your project type to see the approach, materials and references.",
           items: [
             {
-              title: "Custom cabinets & kitchens",
+              title: "Kitchen",
               href: "/espaces/cuisine",
-              description:
-                "Custom kitchen cabinets with coordination, durable materials and stable execution.",
+              description: "Island, pantry and cabinets to the ceiling.",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "High-end custom kitchen cabinets",
               },
-              badges: ["Kitchen", "Custom"],
-              footerCtaLabel: "View custom kitchens",
+              badges: ["Custom-built"],
+              footerCtaLabel: "See kitchens",
             },
             {
-              title: "Custom vanities & bathrooms",
+              title: "Bathroom",
               href: "/espaces/salle-de-bain",
-              description:
-                "Custom bathroom vanities adapted to moisture and everyday use.",
+              description: "Single or double vanities, built for moisture.",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Custom bathroom vanity",
               },
-              badges: ["Bathroom", "Moisture"],
-              footerCtaLabel: "View custom vanities",
+              badges: ["Vanity"],
+              footerCtaLabel: "See bathrooms",
             },
             {
               title: "Laundry room",
               href: "/espaces/salle-de-lavage",
-              description:
-                "A functional, durable configuration for a well-organized utility space.",
+              description: "Folding counter, towers and plumbing worked out.",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Custom laundry room",
               },
-              badges: ["Laundry room", "Functional"],
-              footerCtaLabel: "View laundry room",
+              badges: ["Storage"],
+              footerCtaLabel: "See laundry rooms",
             },
             {
-              title: "Walk-in closet",
+              title: "Walk-in",
               href: "/espaces/walk-in",
-              description:
-                "Custom organization to optimize space and storage.",
+              description: "Hanging space, drawers and shelves, wall to ceiling.",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Custom walk-in closet",
               },
-              badges: ["Walk-in", "Organization"],
-              footerCtaLabel: "View walk-in",
+              badges: ["Closet"],
+              footerCtaLabel: "See walk-ins",
             },
             {
-              title: "Basement finishing",
+              title: "Basement",
               href: "/espaces/sous-sol",
-              description:
-                "Home theatre, bar, wine cellar, library and custom storage.",
+              description: "Home theatre, bar, wine cellar and library.",
               image: {
                 src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
                 alt: "Custom basement finishing",
               },
-              badges: ["Basement", "Home theatre"],
-              footerCtaLabel: "View basement finishing",
+              badges: ["Home theatre"],
+              footerCtaLabel: "See basements",
             },
             {
               title: "Commercial",
               href: "/espaces/commercial",
-              description:
-                "Commercial construction and fit-outs: offices, retail and leasehold improvements.",
+              description: "Offices, retail and leasehold improvements.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Custom commercial fit-out",
               },
-              badges: ["Commercial", "Durable"],
-              footerCtaLabel: "View commercial",
+              badges: ["Offices"],
+              footerCtaLabel: "See commercial",
             },
           ],
         },
@@ -145,82 +136,53 @@ export const pageEn: PageTemplateData = {
       id: "standard",
       content: {
         type: "split",
-        variant: "steps-2x2-cta",
+        variant: "text-divider-cards",
         props: {
-          heading: "Our standard, whatever the space",
+          heading: "Why go through the general contractor",
           description:
-            "A repeatable method to protect quality, reduce surprises and keep execution consistent.",
-          steps: [
+            "Our RBQ licence covers cabinets and countertops. They arrive at the right moment in the job-site sequence.",
+          cards: [
             {
-              label: "1) Design",
-              description:
-                "Clear plans, a suitable configuration and validations before fabrication.",
+              title: "One quote",
+              description: "Work and cabinets priced together, one less supplier to manage.",
             },
             {
-              label: "2) Materials",
-              description:
-                "Durable choices and construction details designed for longevity.",
+              title: "Measured after demolition",
+              description: "Taken once the walls are in their final position.",
             },
             {
-              label: "3) Fabrication",
-              description:
-                "Stable standards and quality control for greater consistency.",
-            },
-            {
-              label: "4) Installation",
-              description:
-                "Precise adjustments, clean finishes and tidy coordination on site.",
+              title: "One party accountable",
+              description: "Plumbing, electrical, flooring and installation coordinated by us.",
             },
           ],
-          actions: [
-            {
-              label: "View our services",
-              href: "/services",
-              variant: "ghost",
-            },
-            {
-              label: "View our materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Turnkey home renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
+          columns: "3",
         },
       },
     },
     {
       id: "faq",
+
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - custom spaces",
-          intro:
-            "A few quick answers before diving into your project type.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "Which spaces do you handle?",
-              a: "We design and install custom cabinets and storage for the kitchen, the bathroom (vanities), the laundry room, walk-ins and closets, the basement and commercial projects. Each space has its own constraints — moisture, dimensions, use — and the layout is designed around them, not assembled from stock modules.",
+              q: "Which spaces do you cover?",
+              a: "Kitchen, bathroom, laundry room, walk-in and closets, basement and commercial units. Each space has its own moisture, dimension and use constraints, handled at the design stage.",
             },
             {
-              q: "Do you only work in Montreal?",
-              a: "No. Based in Greater Montréal, we serve Montréal, Laval, the North Shore, the South Shore, the West Island and Pierrefonds-Roxboro. Since custom work involves precise measurements and careful installation, we frame the service area and logistics for each project from the start.",
+              q: "How long does it take?",
+              a: "Nine to fifteen weeks from design sign-off to installation. When the cabinets are part of a renovation, the order is timed to the site schedule.",
             },
             {
-              q: "What is the difference with a standard solution?",
-              a: "A standard solution starts from fixed-size modules that have to be adapted to the room, which often leaves wasted space. Custom work does the opposite: each element is sized for your real space, with a stronger structure (solid birch and birch plywood) and better-controlled execution, from design to installation.",
+              q: "How is this different from a stock solution?",
+              a: "Stock modules impose their sizes on the room and leave wasted space. Custom work starts from your real space, with solid wood and birch plywood on the structural parts.",
             },
             {
-              q: "Do you also handle installation?",
-              a: "Yes. We install the elements we design and supply, which ensures consistent execution from design to installation, by a single team. This continuity avoids the grey areas between fabrication and installation and makes final on-site adjustments easier.",
-            },
-            {
-              q: "Can you also handle the full renovation of the room?",
-              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation of the room: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
+              q: "Can you handle the full renovation?",
+              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, coordinated by one party, in the written contract.",
             },
           ],
         },
@@ -232,22 +194,21 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Ready to frame your project properly?",
-          intro:
-            "Get a clear, structured quote tailored to your space and your level of requirement.",
+          heading: "Tell us about your space",
+          intro: "Free estimate. First reply within 24 to 48 business hours.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Get a quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our services",
+              label: "See our services",
               href: "/services",
               variant: "ghost",
             },
           ],
-          note: "Montreal, Laval and the South Shore",
+          note: "RBQ licence 8306-0806-27 · Montréal, Laval, South Shore",
         },
       },
     },

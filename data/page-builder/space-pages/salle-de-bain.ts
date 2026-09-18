@@ -32,11 +32,10 @@ export const salleDeBainPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Division armoires",
-          heading:
-            "Vanité de salle de bain sur mesure à Laval et dans le Grand Montréal",
+          eyebrow: "Salle de bain",
+          heading: "Vanité sur mesure, posée avec la plomberie",
           description:
-            "Une vanité de salle de bain sur mesure est un meuble-lavabo conçu et fabriqué aux dimensions exactes de votre pièce, avec des matériaux choisis pour résister à l'humidité. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), en assure la conception, la production chez son usine partenaire et la pose par ses équipes, coordonnée avec la plomberie et le reste du chantier.",
+            "Le meuble-lavabo est dimensionné pour la pièce et installé dans la séquence du chantier, par une seule équipe.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -44,48 +43,17 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir nos projets salle de bain",
+              label: "Voir nos projets",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Grand Montréal", "Humidité"],
+          badges: ["Sur mesure", "Résistant à l'humidité"],
           image: {
             src: "/images/generated/spaces/space-bath-hero-01.webp",
             alt: "Vanité de salle de bain sur mesure à Pierrefonds et dans le Grand Montréal",
           },
-          caption: "Conçu pour un usage quotidien et un environnement humide",
-        },
-      },
-    },
-    {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Une salle de bain sur mesure pensée pour durer",
-          intro:
-            "Dans une salle de bain, la structure et la tenue dans le temps comptent autant que le design.",
-          badges: ["Stabilité", "Humidité", "Finition"],
-          cardTitle: "Quand le sur mesure est pertinent",
-          items: [
-            "Vous voulez optimiser un espace réellement contraint.",
-            "La durabilité et la stabilité sont prioritaires.",
-            "Vous cherchez une exécution mieux contrôlée qu'une solution standard.",
-          ],
-          actions: [
-            {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir nos services",
-              href: "/services",
-              variant: "ghost",
-            },
-          ],
+          caption: "Laval · Montréal · Rive-Nord · Rive-Sud",
         },
       },
     },
@@ -95,53 +63,43 @@ export const salleDeBainPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Les types de vanités sur mesure qu'on offre",
-          intro:
-            "Une vanité sur mesure s'adapte à votre pièce, à votre plomberie et à vos besoins de rangement — pas l'inverse. Voici les configurations les plus fréquentes.",
+          heading: "Les configurations qu'on réalise",
           columns: "2",
           items: [
             {
-              title: "Vanité simple lavabo",
-              description:
-                "Pour les salles de bain compactes et les salles d'eau.",
+              title: "Simple lavabo",
+              description: "Pour les salles de bain compactes et les salles d'eau.",
               icon: "package2",
               bullets: [
-                "Largeur ajustée au mur disponible.",
-                "Rangement optimisé sous le lavabo.",
-                "Idéale pour petites surfaces.",
+                "Largeur ajustée au mur disponible",
+                "Rangement optimisé sous le lavabo",
               ],
             },
             {
-              title: "Vanité double lavabo",
-              description:
-                "Pour les salles de bain principales partagées.",
+              title: "Double lavabo",
+              description: "Pour une salle de bain principale partagée.",
               icon: "slidersHorizontal",
               bullets: [
-                "Deux lavabos et plans de travail dédiés.",
-                "Colonne ou tiroirs centraux au besoin.",
-                "Ergonomie pensée pour deux personnes.",
+                "Deux plans de travail dédiés",
+                "Colonne ou tiroirs centraux au besoin",
               ],
             },
             {
-              title: "Vanité suspendue (murale)",
-              description:
-                "Look épuré et entretien du plancher facilité.",
+              title: "Vanité suspendue",
+              description: "Fixation murale, plancher dégagé et entretien facilité.",
               icon: "doorOpen",
               bullets: [
-                "Fixation murale robuste.",
-                "Sensation d'espace dans les petites pièces.",
-                "Hauteur ajustée à votre usage.",
+                "Sensation d'espace dans les petites pièces",
+                "Hauteur ajustée à votre usage",
               ],
             },
             {
               title: "Vanité avec rangement",
-              description:
-                "Tiroirs profonds, colonne et organisation intégrée.",
+              description: "Tiroirs profonds, colonne et organisation intégrée.",
               icon: "wrench",
               bullets: [
-                "Tiroirs en bois massif de bouleau.",
-                "Rangement adapté aux produits et serviettes.",
-                "Accès logique et finition cohérente.",
+                "Tiroirs en bouleau massif",
+                "Espaces dédiés aux produits et serviettes",
               ],
             },
           ],
@@ -149,38 +107,45 @@ export const salleDeBainPage: PageTemplateData = {
       },
     },
     {
-      id: "process",
+      id: "projects",
       content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
+        type: "grid",
+        variant: "image-cards-slider",
         props: {
-          heading: "Du plan à la pose, sans improvisation",
-          intro:
-            "Le projet est cadré tôt pour mieux gérer plomberie, rangement, ergonomie et finition.",
-          steps: [
+          heading: "Salles de bain récentes",
+          items: [
             {
-              number: "1",
-              title: "Analyse",
-              description:
-                "Contraintes d'espace, circulation, plomberie et besoins de rangement.",
+              title: "Vanité sur mesure, Laval",
+              href: "/projets/salle-de-bain/vanite-sur-mesure-laval",
+              description: "Rangement optimisé autour de la plomberie existante.",
+              image: {
+                src: "/images/generated/spaces/space-bath-project-01.webp",
+                alt: "Projet salle de bain sur mesure à Laval",
+              },
+              badges: ["Laval"],
+              footerCtaLabel: "Voir le projet",
             },
             {
-              number: "2",
-              title: "Conception",
-              description:
-                "Validation des dimensions, des finis et de la logique d'utilisation.",
+              title: "Salle de bain, Montréal",
+              href: "/projets",
+              description: "Vanité et céramique posées dans la même séquence.",
+              image: {
+                src: "/images/generated/spaces/space-bath-project-02.webp",
+                alt: "Projet salle de bain sur mesure à Montréal",
+              },
+              badges: ["Montréal"],
+              footerCtaLabel: "Voir les projets",
             },
             {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Production contrôlée avec des standards adaptés à un environnement exigeant.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Ajustements, alignements et finitions vérifiés lors de la livraison.",
+              title: "Salle de bain, Rive-Sud",
+              href: "/projets",
+              description: "Alignements soignés et finis choisis pour l'humidité.",
+              image: {
+                src: "/images/generated/spaces/space-bath-project-03.webp",
+                alt: "Projet salle de bain sur mesure sur la Rive-Sud",
+              },
+              badges: ["Rive-Sud"],
+              footerCtaLabel: "Voir les projets",
             },
           ],
         },
@@ -192,24 +157,20 @@ export const salleDeBainPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Des matériaux adaptés à l'humidité",
-          intro:
-            "Une salle de bain premium repose sur une structure stable, des composants durables et des choix simples à entretenir.",
+          heading: "Des matériaux choisis pour l'humidité",
+          intro: "Une salle de bain use les meubles plus vite que le reste de la maison. La structure fait la différence.",
           items: [
             {
-              title: "Bois massif de bouleau",
-              description:
-                "Utilisé sur les éléments critiques pour sa résistance et sa stabilité.",
+              title: "Bouleau massif",
+              description: "Sur les éléments critiques, pour la stabilité",
             },
             {
               title: "Contreplaqué de bouleau",
-              description:
-                "Meilleure tenue dimensionnelle et meilleure résistance à la charge.",
+              description: "Meilleure tenue dimensionnelle qu'un panneau de particules",
             },
             {
-              title: "Choix de finis",
-              description:
-                "Sélection alignée avec l'entretien, l'usage et l'environnement humide.",
+              title: "Finis lavables",
+              description: "Choisis pour l'entretien quotidien",
             },
           ],
           actions: [
@@ -219,13 +180,8 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Rénovation de salle de bain clé en main",
+              label: "Rénovation de salle de bain",
               href: "/services/renovation/salle-de-bain",
-              variant: "ghost",
-            },
-            {
-              label: "Cuisine sur mesure",
-              href: "/espaces/cuisine",
               variant: "ghost",
             },
           ],
@@ -233,91 +189,8 @@ export const salleDeBainPage: PageTemplateData = {
             src: "/images/generated/spaces/space-bath-project-01.webp",
             alt: "Détail matériau pour salle de bain sur mesure",
           },
-          cardTitle: "Ce que cela apporte",
-          cardDescription:
-            "Moins de déformation, une meilleure tenue dans le temps et une sensation de solidité plus durable.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Projets salle de bain en vedette",
-          intro:
-            "Quelques réalisations qui montrent le niveau de finition et la qualité d'exécution.",
-          items: [
-            {
-              title: "Vanité sur mesure",
-              href: "/projets/salle-de-bain/vanite-sur-mesure-laval",
-              description:
-                "Rangement optimisé et finition précise adaptés à la salle de bain.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-01.webp",
-                alt: "Projet salle de bain sur mesure à Laval",
-              },
-              badges: ["Laval", "Vanité"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Salle de bain sur mesure",
-              href: "/projets",
-              description:
-                "Projet sur mesure pensé pour l'usage quotidien et la tenue dans le temps.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-02.webp",
-                alt: "Projet salle de bain sur mesure à Montréal",
-              },
-              badges: ["Montréal", "Sur mesure"],
-              footerCtaLabel: "Voir les projets",
-            },
-            {
-              title: "Salle de bain sur mesure",
-              href: "/projets",
-              description:
-                "Exécution propre avec matériaux adaptés et alignements soignés.",
-              image: {
-                src: "/images/generated/spaces/space-bath-project-03.webp",
-                alt: "Projet salle de bain sur mesure sur la Rive-Sud",
-              },
-              badges: ["Rive-Sud", "Finition"],
-              footerCtaLabel: "Voir les projets",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "zones",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Vanités sur mesure dans tout le Grand Montréal",
-          intro:
-            "On conçoit, fournit et installe des vanités de salle de bain sur mesure des deux côtés du fleuve : de l'ouest de l'île jusqu'à Laval, la Rive-Nord et la Rive-Sud.",
-          badges: ["Montréal", "Laval", "Rive-Nord", "Rive-Sud"],
-          cardTitle: "Zones desservies",
-          items: [
-            "Montréal et l'ouest de l'île",
-            "Laval et la Rive-Nord",
-            "Rive-Sud et couronne sud",
-            "Conception, fabrication et installation incluses",
-          ],
-          actions: [
-            {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir nos projets salle de bain",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
+          cardTitle: "Ce que ça change",
+          cardDescription: "Moins de gondolement, une tenue plus longue.",
         },
       },
     },
@@ -328,33 +201,27 @@ export const salleDeBainPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - salle de bain sur mesure",
-          intro:
-            "Les points qu'on clarifie le plus souvent avant de lancer le projet.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte une vanité de salle de bain sur mesure ?",
-              a: "Le prix d'une vanité de salle de bain sur mesure dépend surtout de cinq éléments : les dimensions et le format (simple ou double lavabo), le volume de rangement (tiroirs, colonnes, niches), les matériaux et finis choisis, la quincaillerie (coulisses, charnières), et les contraintes du lieu. Comme la pièce est humide, les matériaux et les détails de construction sont sélectionnés pour la stabilité et la tenue dans le temps, ce qui influence aussi le budget. Nous établissons une estimation précise une fois le projet cadré — mesures réelles, rangement souhaité et niveau de finition — pour un budget clair, sans surprise.",
+              q: "Combien coûte une vanité sur mesure ?",
+              a: "Le prix dépend du format (simple ou double lavabo), du volume de rangement, des finis et de la quincaillerie. Le montant ferme est fixé après le relevé sur place, dans la soumission détaillée.",
             },
             {
-              q: "Faites-vous des vanités sur mesure à Laval et sur la Rive-Nord ?",
-              a: "Oui. On conçoit, fournit et installe des vanités de salle de bain sur mesure à Laval, sur la Rive-Nord, à Montréal et sur la Rive-Sud.",
+              q: "Quel est le délai ?",
+              a: "De 9 à 15 semaines entre la validation du design et la pose. Quand la vanité fait partie d'une rénovation complète, la commande est calée sur l'échéancier du chantier.",
             },
             {
-              q: "Quelle est la différence avec une vanité de salle de bain standard ?",
-              a: "Une vanité standard est vendue en dimensions fixes : il faut composer avec l'espace restant, quitte à perdre des centimètres autour du lavabo ou de la plomberie. Une vanité sur mesure est dimensionnée au millimètre pour votre salle de bain, ce qui permet d'exploiter les angles, les hauteurs et les niches, et d'ajuster précisément le rangement autour de la tuyauterie. La structure est aussi choisie pour l'environnement humide de la pièce — matériaux stables, détails de construction qui limitent le gondolement — là où beaucoup de vanités standards vieillissent mal. Résultat : un meuble mieux adapté, plus durable et intégré à la pièce.",
+              q: "Quelle différence avec une vanité standard ?",
+              a: "Une vanité standard est vendue en dimensions fixes, ce qui laisse des centimètres perdus autour du lavabo et de la tuyauterie. Le sur mesure exploite les angles, les hauteurs et les niches réelles de la pièce.",
             },
             {
-              q: "Est-ce que l'humidité change vos choix de matériaux ?",
-              a: "Oui. Les matériaux et les détails de construction sont sélectionnés en fonction de cet environnement humide, pour la stabilité et la tenue dans le temps.",
+              q: "L'humidité change-t-elle vos matériaux ?",
+              a: "Oui. Bouleau massif, contreplaqué de bouleau et finis lavables, choisis pour limiter le gondolement. La ventilation de la pièce est vérifiée avec le reste du chantier.",
             },
             {
-              q: "Quel est le délai pour une vanité sur mesure ?",
-              a: "Le délai dépend de la complexité, des finis et du calendrier de fabrication. On le confirme dès la phase de conception.",
-            },
-            {
-              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
-              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la salle de bain : permis municipal si requis, démolition, plomberie, électricité, céramique, ventilation et pose de la vanité, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
+              q: "Pouvez-vous rénover toute la salle de bain ?",
+              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : démolition, plomberie, électricité, membrane d'étanchéité, céramique, ventilation et pose de la vanité, coordonnées par un seul responsable, au contrat écrit.",
             },
           ],
         },
@@ -367,8 +234,7 @@ export const salleDeBainPage: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre salle de bain",
-          intro:
-            "On vous aide à cadrer un projet durable, adapté à l'espace et bien exécuté.",
+          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
           actions: [
             {
               label: "Demander une soumission",
@@ -376,11 +242,12 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir nos projets salle de bain",
+              label: "Voir nos projets",
               href: "/projets",
               variant: "ghost",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Nord, Rive-Sud",
         },
       },
     },

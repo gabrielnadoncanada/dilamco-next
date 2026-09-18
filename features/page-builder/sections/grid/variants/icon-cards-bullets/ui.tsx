@@ -1,8 +1,8 @@
 import {
   Bath,
   Building2,
+  Check,
   ChefHat,
-  ChevronRight,
   ClipboardCheck,
   Clock,
   DoorOpen,
@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 
 import { Heading } from "@/components/elements/heading";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 import type { GridIconCardsBulletsProps } from "./schema";
 
@@ -50,46 +49,60 @@ function resolveIcon(icon: string) {
   return iconMap[icon as keyof typeof iconMap] ?? Package2;
 }
 
+/**
+ * Grille de points forts : icône dans une pastille verte, titre, une ligne,
+ * puis 2 à 3 puces courtes. Fond teinté, pas de bordure.
+ */
 export function GridIconCardsBullets(props: GridIconCardsBulletsProps) {
-  const gridCols = props.columns === "3" ? "md:grid-cols-3" : "md:grid-cols-2";
+  const gridCols =
+    props.columns === "3" ? "lg:grid-cols-3" : "lg:grid-cols-2";
 
   return (
-    <div>
-      <div className="mx-auto max-w-3xl text-center">
-        <Heading as="h2" variant="h2">{props.heading}</Heading>
+    <div className="text-left">
+      <div className="max-w-2xl">
+        <Heading as="h2" variant="h2">
+          {props.heading}
+        </Heading>
         {props.intro ? (
-          <p className="mt-4 text-muted-foreground">{props.intro}</p>
+          <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            {props.intro}
+          </p>
         ) : null}
       </div>
 
-      <div className={`mt-10 grid gap-6 ${gridCols}`}>
+      <div className={`mt-10 grid gap-4 sm:grid-cols-2 ${gridCols}`}>
         {props.items.map((item) => {
           const Icon = resolveIcon(item.icon);
 
           return (
-            <Card key={item.title} className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-3 flex size-11 items-center justify-center rounded-xl border bg-background">
-                  <Icon className="size-5" />
-                </div>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-              </CardHeader>
-
-              <CardContent>
-                <ul className="space-y-2">
-                  {item.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-2 text-sm text-muted-foreground"
-                    >
-                      <ChevronRight className="mt-0.5 size-4 shrink-0 text-primary" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+            <article
+              key={item.title}
+              className="flex flex-col rounded-2xl bg-primary-soft/60 p-6 sm:p-7"
+            >
+              <span className="flex size-11 items-center justify-center rounded-full bg-primary text-primary-foreground">
+                <Icon className="size-5" strokeWidth={2} />
+              </span>
+              <h3 className="mt-5 font-display text-xl font-semibold leading-tight tracking-[-0.02em] text-foreground">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
+              <ul className="mt-4 space-y-2 border-t border-primary/10 pt-4">
+                {item.bullets.slice(0, 4).map((bullet) => (
+                  <li
+                    key={bullet}
+                    className="flex items-start gap-2 text-sm text-foreground/85"
+                  >
+                    <Check
+                      className="mt-1 size-3.5 shrink-0 text-primary"
+                      strokeWidth={3}
+                    />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           );
         })}
       </div>

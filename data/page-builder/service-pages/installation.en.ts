@@ -33,11 +33,10 @@ export const installationPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Cabinetry division",
-          heading:
-            "Professional installation: precision, alignment and finish",
+          eyebrow: "Cabinetry division",
+          heading: "Installation is planned around the other trades",
           description:
-            "Installation is the final stage where cabinets are set and adjusted on site: levelling, precise alignments, fastening and finishing. It is carried out by the crews of Dilamco, a licensed general contractor (RBQ 8306-0806-27): the install is planned with the other trades on the job — plumbing, electrical, countertops, flooring — to avoid waiting and rework.",
+            "Our crews set the cabinets at the right point in the job: after plumbing and electrical, before the countertops.",
           actions: [
             {
               label: "Request a quote",
@@ -45,17 +44,17 @@ export const installationPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View installed projects",
+              label: "See installed projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Alignments", "Adjustments", "Finish"],
+          badges: ["Levelling", "Alignments", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
             alt: "Technical drawing and panel samples for custom installation",
           },
-          caption: "A clean install changes how the whole room is perceived",
+          caption: "Residential and commercial installation",
         },
       },
     },
@@ -65,27 +64,32 @@ export const installationPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Why installation makes all the difference",
+          heading: "Why installation changes everything",
           description:
-            "Walls, floors and ceilings are never perfectly straight. A professional installation absorbs that reality to deliver a clean and durable result.",
+            "No wall is plumb and no floor is level. Installation absorbs that gap, or it shows on every door.",
           cards: [
+            {
+              title: "Levelling",
+              description:
+                "Boxes are shimmed before they are fastened to the structure.",
+            },
             {
               title: "Alignments",
               description:
-                "Doors, drawers and modules kept straight despite site irregularities.",
+                "Even gaps between doors and drawers along the whole run.",
             },
             {
-              title: "Adjustments",
+              title: "Fastening",
               description:
-                "Fine on-site tuning for a uniform and stable result.",
+                "Anchored into the studs, not just into the drywall.",
             },
             {
-              title: "Durability",
+              title: "Coordination",
               description:
-                "A good installation reduces premature wear and visible defects.",
+                "Counters, backsplash and appliances follow in the right order.",
             },
           ],
-          columns: "3",
+          columns: "2",
         },
       },
     },
@@ -95,38 +99,31 @@ export const installationPageEn: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "What's included in a Dilamco installation",
+          heading: "What is included",
           intro:
-            "Installation is not just about fastening modules. It includes preparation, adjustment and final verification.",
+            "Installation is more than screwing units to a wall.",
           items: [
             {
-              title: "Site preparation",
-              description:
-                "Checking walls, floors, levels and visible constraints.",
+              title: "Site check",
+              description: "Walls, floors, levels and constraints surveyed first.",
             },
             {
-              title: "Levelling and fastening",
-              description: "Secure and stable anchoring of the modules.",
+              title: "Setting and fastening",
+              description: "Shimming, anchoring and joining the units together.",
             },
             {
-              title: "Door and drawer adjustment",
-              description: "Precise alignment and smooth operation.",
+              title: "Door adjustment",
+              description: "Hinges set on three axes, drawers brought into line.",
             },
             {
-              title: "Final inspection",
-              description:
-                "Verification and adjustments before the project is delivered.",
+              title: "Final walkthrough",
+              description: "Done with you, deficiencies fixed before the last payment.",
             },
           ],
           actions: [
             {
-              label: "See the process",
+              label: "View the process",
               href: "/processus",
-              variant: "ghost",
-            },
-            {
-              label: "View fabrication",
-              href: "/services/fabrication",
               variant: "ghost",
             },
             {
@@ -141,88 +138,33 @@ export const installationPageEn: PageTemplateData = {
           },
           cardTitle: "On-site coordination",
           cardDescription:
-            "A clean install depends as much on preparation as on on-site adjustments.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Installation by project type",
-          intro:
-            "Installation logic changes depending on the space, the access and the level of use.",
-          items: [
-            {
-              title: "Kitchen",
-              href: "/espaces/cuisine",
-              description:
-                "Cabinets, islands and appliance integration.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen with precise installation",
-              },
-              badges: ["Kitchen", "Integration"],
-              footerCtaLabel: "View kitchen",
-            },
-            {
-              title: "Bathroom",
-              href: "/espaces/salle-de-bain",
-              description: "Vanities and edge protection in humid environments.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom with clean finish",
-              },
-              badges: ["Humidity", "Finish"],
-              footerCtaLabel: "View bathroom",
-            },
-            {
-              title: "Commercial",
-              href: "/espaces/commercial",
-              description: "Heavy use, durability and coordination.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Commercial fit-out with planned installation",
-              },
-              badges: ["Commercial", "Coordination"],
-              footerCtaLabel: "View commercial",
-            },
-          ],
+            "A clean install depends as much on preparation as on the final adjustments.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - installation",
-          intro:
-            "Clear answers about the install, the adjustments and how the job unfolds.",
+          heading: "Frequently asked questions",
           items: [
             {
               q: "How long does an installation take?",
-              a: "How long an installation takes depends on the project type and its complexity. A bathroom vanity or a walk-in is generally set in a day or two, while a full kitchen — with an island, tall cabinets and appliance coordination — takes longer. We confirm the expected duration during planning, once the project scope is set, so you know what to expect on site.",
+              a: "A vanity or a walk-in goes in within a day or two. A full kitchen takes longer, depending on the island, tall cabinets and appliances. The duration is confirmed at planning.",
             },
             {
               q: "Are adjustments normal?",
-              a: "Yes. Adjustments are part of a professional installation and are essential to the final result.",
+              a: "Yes. Doors and drawers are set after the boxes are fastened. It is a planned step, not a sign that something went wrong.",
             },
             {
               q: "Do you only install your own cabinets?",
-              a: "Yes. We install the elements we design and fabricate, which lets us guarantee consistency between fabrication and installation: same standards, same tolerances, one team responsible for the result. This continuity avoids the grey areas that are common when fabrication and installation are handled by different parties, and it makes final on-site adjustments easier.",
+              a: "Yes. We install what we design and supply, so the same tolerances apply from drawings to installation, under a single line of accountability.",
             },
             {
-              q: "Do you work in condos or commercial spaces?",
-              a: "Yes. We adapt the installation to the access, scheduling and usage constraints of each environment.",
-            },
-            {
-              q: "Can you also handle the full renovation of the room?",
-              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation of the room: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
+              q: "Can you renovate the whole room?",
+              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27. Permit, demolition, plumbing, electrical, flooring and cabinet installation under one written contract.",
             },
           ],
         },
@@ -234,9 +176,9 @@ export const installationPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need a clean, well-controlled installation?",
+          heading: "Want a clean, coordinated install?",
           intro:
-            "We frame the install, the adjustments and the coordination to deliver a crisp, durable result.",
+            "We plan the installation around the rest of the job and hand over after a walkthrough with you.",
           actions: [
             {
               label: "Request a quote",
@@ -249,7 +191,7 @@ export const installationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Residential and commercial installation",
+          note: "RBQ licence 8306-0806-27",
         },
       },
     },

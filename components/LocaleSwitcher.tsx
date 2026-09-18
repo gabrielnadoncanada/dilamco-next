@@ -8,12 +8,10 @@ import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
 /**
- * Bascule FR/EN. `usePathname` (next-intl) renvoie le pathname INTERNE sans
- * préfixe de locale — pour une route dynamique c'est le TEMPLATE
- * (`/materiaux/[slug]`), pas le chemin concret. On passe donc `params`
- * (useParams) pour que next-intl substitue les segments dynamiques ; sans ça
- * l'URL cible contenait `[slug]` littéral (bug bascule de langue sur les pages
- * détail matériau / service).
+ * Bascule FR/EN en pilule segmentée. `usePathname` (next-intl) renvoie le
+ * pathname INTERNE sans préfixe de locale — pour une route dynamique c'est le
+ * TEMPLATE (`/materiaux/[slug]`), pas le chemin concret. On passe donc
+ * `params` (useParams) pour que next-intl substitue les segments dynamiques.
  */
 export function LocaleSwitcher({ className }: { className?: string }) {
   const pathname = usePathname();
@@ -23,30 +21,27 @@ export function LocaleSwitcher({ className }: { className?: string }) {
 
   return (
     <div
-      className={cn("flex items-center gap-1 text-sm font-medium", className)}
+      className={cn(
+        "inline-flex h-9 items-center rounded-full border border-border/80 bg-background p-0.5 text-xs font-semibold",
+        className,
+      )}
       aria-label={t("label")}
     >
-      {routing.locales.map((loc, i) => (
-        <span key={loc} className="flex items-center">
-          {i > 0 ? (
-            <span aria-hidden className="px-1 text-muted-foreground/40">
-              /
-            </span>
-          ) : null}
-          <Link
-            href={{ pathname, params } as ComponentProps<typeof Link>["href"]}
-            locale={loc}
-            aria-current={loc === active ? "true" : undefined}
-            className={cn(
-              "rounded px-1.5 py-0.5 transition-colors",
-              loc === active
-                ? "text-foreground font-semibold"
-                : "text-muted-foreground hover:text-foreground",
-            )}
-          >
-            {t(loc)}
-          </Link>
-        </span>
+      {routing.locales.map((loc) => (
+        <Link
+          key={loc}
+          href={{ pathname, params } as ComponentProps<typeof Link>["href"]}
+          locale={loc}
+          aria-current={loc === active ? "true" : undefined}
+          className={cn(
+            "inline-flex h-full items-center rounded-full px-2.5 uppercase tracking-[0.06em] transition-colors",
+            loc === active
+              ? "bg-foreground text-background"
+              : "text-muted-foreground hover:text-foreground",
+          )}
+        >
+          {t(loc)}
+        </Link>
       ))}
     </div>
   );

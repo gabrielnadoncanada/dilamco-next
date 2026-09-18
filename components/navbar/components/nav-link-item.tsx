@@ -9,18 +9,22 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
     return (
       <NavigationMenuLink
         asChild
-        className="group/link flex-row gap-2 px-3 py-2 transition-colors duration-200"
+        className="group/link flex-row items-start gap-3 rounded-xl px-3 py-2.5 transition-colors duration-200 hover:bg-primary-soft focus-visible:bg-primary-soft"
       >
         <Link href={link.url}>
-          <div className="flex size-8 shrink-0 rounded-lg border border-border bg-background/70 duration-300 group-hover/link:bg-primary">
-            <link.icon className="m-auto size-4 text-muted-foreground transition-colors group-hover/link:text-white" />
-          </div>
-          <div className="flex flex-col gap-[2px]">
-            <div className="text-sm leading-6 font-medium">{link.label}</div>
-            <div className="text-xs leading-5 text-muted-foreground group-hover/link:text-foreground">
-              {link.description}
-            </div>
-          </div>
+          <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary transition-colors duration-200 group-hover/link:bg-primary group-hover/link:text-primary-foreground">
+            <link.icon className="size-4" strokeWidth={2} />
+          </span>
+          <span className="flex min-w-0 flex-col gap-0.5">
+            <span className="text-sm font-semibold leading-5 text-foreground">
+              {link.label}
+            </span>
+            {link.description ? (
+              <span className="text-xs leading-4 text-muted-foreground">
+                {link.description}
+              </span>
+            ) : null}
+          </span>
         </Link>
       </NavigationMenuLink>
     );
@@ -29,9 +33,11 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
   return (
     <Link
       href={link.url}
-      className="flex h-12 items-center gap-2 rounded-lg px-4 text-base leading-normal font-medium text-muted-foreground transition-colors duration-300 hover:bg-muted hover:text-foreground"
+      className="flex h-12 items-center gap-3 rounded-xl px-3 text-base font-medium text-foreground/85 transition-colors duration-200 hover:bg-primary-soft hover:text-primary"
     >
-      <link.icon className="size-4 stroke-muted-foreground" />
+      <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-primary-soft text-primary">
+        <link.icon className="size-4" strokeWidth={2} />
+      </span>
       {link.label}
     </Link>
   );

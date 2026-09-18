@@ -21,12 +21,12 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "details-form-card",
         props: {
-          heading: "Décrivez-nous votre projet de rénovation",
+          heading: "Décrivez-nous votre projet",
           intro:
-            "Estimation gratuite et sans engagement. Plus votre description est précise, plus notre premier retour est utile : on vous donne un ordre de grandeur réaliste avant même la visite sur place.",
+            "Estimation gratuite. Plus votre description est précise, plus notre premier retour est utile.",
           detailsTitle: "Nous joindre",
           detailsIntro:
-            "Dilamco est un entrepreneur général en rénovation résidentielle établi à Pierrefonds-Roxboro depuis 2004. Licence RBQ 8306-0806-27, valide et sans restriction.",
+            "Entrepreneur général en rénovation résidentielle à Pierrefonds-Roxboro depuis 2004.",
           details: [
             {
               title: "Courriel",
@@ -52,15 +52,14 @@ export const page: PageTemplateData = {
             },
             {
               title: "Délai de retour",
-              description:
-                "Retour sous 24 à 48 heures ouvrables pour fixer la visite et l'estimation.",
+              description: "Sous 24 à 48 heures ouvrables.",
               icon: "clock",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 — entrepreneur général, catégories 1.2 et 1.3. Assurance responsabilité civile et couverture chantier en vigueur. Estimation gratuite, sans frais ni engagement.",
+          note: "Licence RBQ 8306-0806-27, catégories 1.2 et 1.3. Responsabilité civile et couverture chantier en vigueur.",
           formTitle: "Demander une estimation gratuite",
           formIntro:
-            "Ces informations servent uniquement à préparer la visite et à cadrer votre projet. Aucune démarche commerciale automatisée.",
+            "Ces informations servent uniquement à préparer la visite.",
           formAction: "/contact/",
           formMethod: "post",
           honeypotName: "website",

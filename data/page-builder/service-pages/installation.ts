@@ -33,11 +33,10 @@ export const installationPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Division armoires",
-          heading:
-            "Installation professionnelle, précision, alignement et finition",
+          eyebrow: "Division armoires",
+          heading: "La pose se planifie avec les autres corps de métier",
           description:
-            "L'installation est l'étape finale où les armoires sont posées et ajustées sur place : mise à niveau, alignements précis, fixation et finition. Elle est réalisée par les équipes de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : la pose est planifiée avec les autres corps de métier du chantier — plomberie, électricité, comptoirs, plancher — pour éviter les attentes et les reprises.",
+            "Nos équipes posent les armoires au bon moment du chantier, après la plomberie et l'électricité, avant les comptoirs.",
           actions: [
             {
               label: "Demander une soumission",
@@ -50,12 +49,12 @@ export const installationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Alignements", "Ajustements", "Finition"],
+          badges: ["Mise à niveau", "Alignements", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
             alt: "Plan technique et échantillons de panneaux pour installation sur mesure",
           },
-          caption: "Une pose propre change la perception de toute la pièce",
+          caption: "Installation résidentielle et commerciale",
         },
       },
     },
@@ -65,27 +64,32 @@ export const installationPage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Pourquoi l'installation fait toute la différence",
+          heading: "Pourquoi la pose change tout",
           description:
-            "Les murs, planchers et plafonds ne sont jamais parfaitement droits. Une installation professionnelle absorbe cette réalité pour livrer un résultat propre et durable.",
+            "Aucun mur n'est d'aplomb et aucun plancher n'est de niveau. La pose absorbe cet écart, ou il se voit sur chaque porte.",
           cards: [
+            {
+              title: "Mise à niveau",
+              description:
+                "Les caissons sont calés avant d'être fixés à la structure.",
+            },
             {
               title: "Alignements",
               description:
-                "Portes, tiroirs et modules droits malgré les irrégularités du site.",
+                "Jeux réguliers entre portes et tiroirs sur toute la longueur.",
             },
             {
-              title: "Ajustements",
+              title: "Fixation",
               description:
-                "Réglages fins sur place pour un rendu uniforme et stable.",
+                "Ancrage dans les montants, pas seulement dans le gypse.",
             },
             {
-              title: "Durabilité",
+              title: "Coordination",
               description:
-                "Une bonne installation réduit l'usure prématurée et les défauts visibles.",
+                "Comptoirs, dosseret et électroménagers suivent dans le bon ordre.",
             },
           ],
-          columns: "3",
+          columns: "2",
         },
       },
     },
@@ -95,38 +99,31 @@ export const installationPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Ce qui est inclus dans l'installation Dilamco",
+          heading: "Ce qui est inclus",
           intro:
-            "L'installation ne se limite pas à fixer des modules. Elle comprend la préparation, l'ajustement et la vérification finale.",
+            "La pose ne se limite pas à visser des modules au mur.",
           items: [
             {
-              title: "Préparation du site",
-              description:
-                "Vérification des murs, planchers, niveaux et contraintes visibles.",
+              title: "Vérification du site",
+              description: "Murs, planchers, niveaux et contraintes relevés avant.",
             },
             {
-              title: "Mise à niveau et fixation",
-              description: "Ancrage sécuritaire et stable des modules.",
+              title: "Pose et fixation",
+              description: "Calage, ancrage et assemblage des modules entre eux.",
             },
             {
-              title: "Ajustement des portes et tiroirs",
-              description: "Alignement précis et fonctionnement fluide.",
+              title: "Réglage des portes",
+              description: "Charnières ajustées sur trois axes, tiroirs alignés.",
             },
             {
               title: "Inspection finale",
-              description:
-                "Vérification et ajustements avant la livraison du projet.",
+              description: "Tour avec vous, déficiences corrigées avant le paiement final.",
             },
           ],
           actions: [
             {
               label: "Voir le processus",
               href: "/processus",
-              variant: "ghost",
-            },
-            {
-              label: "Voir la fabrication",
-              href: "/services/fabrication",
               variant: "ghost",
             },
             {
@@ -141,88 +138,33 @@ export const installationPage: PageTemplateData = {
           },
           cardTitle: "Coordination sur site",
           cardDescription:
-            "Une pose propre dépend autant de la préparation que des ajustements sur place.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Installation par type de projet",
-          intro:
-            "La logique de pose change selon l'espace, l'accès et le niveau d'usage.",
-          items: [
-            {
-              title: "Cuisine",
-              href: "/espaces/cuisine",
-              description:
-                "Armoires, îlots et intégration des électroménagers.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec installation précise",
-              },
-              badges: ["Cuisine", "Intégration"],
-              footerCtaLabel: "Voir cuisine",
-            },
-            {
-              title: "Salle de bain",
-              href: "/espaces/salle-de-bain",
-              description: "Vanités et protection des chants en milieu humide.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure avec finition propre",
-              },
-              badges: ["Humidité", "Finition"],
-              footerCtaLabel: "Voir salle de bain",
-            },
-            {
-              title: "Commercial",
-              href: "/espaces/commercial",
-              description: "Usage intensif, durabilité et coordination.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Aménagement commercial avec installation planifiée",
-              },
-              badges: ["Commercial", "Coordination"],
-              footerCtaLabel: "Voir commercial",
-            },
-          ],
+            "Une pose propre dépend autant de la préparation que des ajustements finaux.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - installation",
-          intro:
-            "Réponses claires sur la pose, les ajustements et le déroulement du chantier.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien de temps dure une installation?",
-              a: "La durée d'une installation dépend du type de projet et de sa complexité. Une vanité de salle de bain ou un walk-in se posent généralement en une journée ou deux, tandis qu'une cuisine complète — avec îlot, armoires hautes et coordination des électroménagers — demande davantage de temps. Nous confirmons la durée prévue à la planification, une fois la portée du projet établie, pour que vous sachiez à quoi vous attendre sur place.",
+              q: "Combien de temps dure une installation ?",
+              a: "Une vanité ou un walk-in se posent en une journée ou deux. Une cuisine complète demande davantage, selon l'îlot, les armoires hautes et les électroménagers. La durée est confirmée à la planification.",
             },
             {
-              q: "Des ajustements sont-ils normaux?",
-              a: "Oui. Les ajustements font partie d'une installation professionnelle et sont essentiels au rendu final.",
+              q: "Des ajustements sont-ils normaux ?",
+              a: "Oui. Les portes et les tiroirs se règlent après la pose, une fois les caissons fixés. C'est une étape prévue, pas un signe de problème.",
             },
             {
-              q: "Installez-vous seulement vos propres armoires?",
-              a: "Oui. Nous installons les éléments que nous concevons et fournissons, ce qui nous permet de garantir la cohérence entre la fabrication et la pose : mêmes standards, mêmes tolérances, une seule équipe responsable du résultat. Cette continuité évite les zones grises fréquentes quand la fabrication et l'installation relèvent d'intervenants différents, et facilite les ajustements finaux sur place.",
+              q: "Posez-vous seulement vos propres armoires ?",
+              a: "Oui. Nous installons ce que nous concevons et fournissons, pour que les mêmes tolérances s'appliquent des plans à la pose, sous une seule responsabilité.",
             },
             {
-              q: "Travaillez-vous en condo ou en commercial?",
-              a: "Oui. Nous adaptons l'installation aux contraintes d'accès, d'horaire et d'usage de chaque environnement.",
-            },
-            {
-              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
-              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la pièce : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
+              q: "Pouvez-vous rénover la pièce au complet ?",
+              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27. Permis, démolition, plomberie, électricité, plancher et pose des armoires sous un seul contrat écrit.",
             },
           ],
         },
@@ -234,9 +176,9 @@ export const installationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'une installation propre et maîtrisée ?",
+          heading: "Une pose propre et coordonnée ?",
           intro:
-            "On cadre la pose, les ajustements et la coordination pour livrer un résultat net et durable.",
+            "On planifie la pose avec le reste du chantier et on livre après inspection avec vous.",
           actions: [
             {
               label: "Demander une soumission",
@@ -249,7 +191,7 @@ export const installationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Installation résidentielle et commerciale",
+          note: "Licence RBQ 8306-0806-27",
         },
       },
     },

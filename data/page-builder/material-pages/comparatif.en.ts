@@ -23,10 +23,10 @@ export const comparatifPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materials",
-          heading: "Materials comparison: choosing based on use",
+          eyebrow: "Materials",
+          heading: "Which panel for which part of the cabinet",
           description:
-            "There is no universal cabinet material: melamine, MDF, plywood and solid wood each have their strengths. The right choice depends on the space, humidity, targeted durability, the desired finish and the quality of execution.",
+            "No material wins everywhere. A good kitchen combines three or four, each one where it holds up best.",
           actions: [
             {
               label: "Discuss your project",
@@ -44,7 +44,7 @@ export const comparatifPageEn: PageTemplateData = {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Materials comparison for a custom kitchen",
           },
-          caption: "The right choice always depends on the real context",
+          caption: "Four panels, four roles",
         },
       },
     },
@@ -55,85 +55,27 @@ export const comparatifPageEn: PageTemplateData = {
         variant: "table-basic",
         props: {
           heading: "Comparison table",
-          intro: "A general summary to adapt to your real context.",
-          columns: ["Performance générale", "Usage recommandé"],
+          columns: ["Strength", "Where to use it"],
           rows: [
             {
               label: "Plywood",
-              values: ["Very good stability", "Demanding structures"],
+              values: ["Stability and screw retention", "Boxes, drawers, shelves"],
             },
             {
               label: "MDF",
-              values: ["Good uniformity", "Painted doors and fronts"],
+              values: ["Surface with no grain", "Painted doors and fronts"],
             },
             {
               label: "Melamine",
-              values: [
-                "Variable depending on context",
-                "Targeted storage and decor",
-              ],
+              values: ["Pre-finished, low cost", "Interiors, shelves, framed budgets"],
             },
             {
               label: "Solid wood",
-              values: ["High perceived value", "Visible aesthetic elements"],
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "détails",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Detailed pages",
-          intro: "Dig deeper into each material according to its own logic.",
-          items: [
-            {
-              title: "Why plywood",
-              href: "/materiaux/contreplaque",
-              description: "Stability and structural integrity.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Plywood detail for custom cabinets",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "View page",
+              values: ["Grain and perceived value", "Doors, mouldings, visible details"],
             },
             {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "Uniformity and painted finish.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "MDF panel with a painted finish",
-              },
-              badges: ["Paint"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Melamine",
-              href: "/materiaux/melamine",
-              description: "Decorative finishes and controlled cost.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Melamine panel for custom furniture",
-              },
-              badges: ["Decor"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Solid wood",
-              href: "/materiaux/bois-massif",
-              description: "Natural texture and character.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Natural solid wood finish",
-              },
-              badges: ["Natural"],
-              footerCtaLabel: "View page",
+              label: "Hardware",
+              values: ["Comfort and longevity", "Hinges, slides, mechanisms"],
             },
           ],
         },
@@ -145,28 +87,29 @@ export const comparatifPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "What the table doesn't show",
+          heading: "What the table does not say",
           description:
-            "Real performance also depends on edge protection, assembly quality, hardware and installation adjustments. The table helps frame the choice, but it doesn't replace a decision suited to the project.",
+            "Two kitchens built from the same panel can age very differently. The gap comes from four execution details.",
           cards: [
             {
-              title: "Edges",
+              title: "The edges",
               description:
-                "They become critical as soon as there is humidity, impact or frequent cleaning.",
+                "An open edge lets water in, whatever the panel underneath.",
             },
             {
-              title: "Assembly",
-              description: "Good execution changes how it holds up over time.",
+              title: "The assembly",
+              description:
+                "Dowels, screws and glue decide how the box holds together.",
             },
             {
-              title: "Hardware",
+              title: "The hardware",
               description:
-                "Comfort and durability also depend on the mechanisms.",
+                "Hinges and slides carry daily use, not the panel itself.",
             },
             {
-              title: "Installation",
+              title: "The installation",
               description:
-                "Final adjustments influence how it actually performs.",
+                "Levelling and final adjustments keep doors from rubbing.",
             },
           ],
           columns: "2",
@@ -174,61 +117,28 @@ export const comparatifPageEn: PageTemplateData = {
       },
     },
     {
-      id: "errors",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Mistakes to avoid",
-          intro:
-            "Poor choices often come from an oversimplified reading: looks alone, overlooking humidity, or underestimating finishing details.",
-          badges: ["Real use", "Humidity", "Execution"],
-          cardTitle: "Keep in mind",
-          items: [
-            "Don't choose based on looks alone",
-            "Account for humidity",
-            "Don't underestimate finishing details",
-            "Assess the real role of each piece",
-          ],
-          actions: [
-            {
-              label: "View hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "primary",
-            },
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Materials comparison",
+          heading: "Frequently asked questions",
           items: [
             {
               q: "MDF or melamine?",
-              a: "MDF is preferred for a perfectly uniform painted finish, when you want a custom colour and smooth doors. Melamine arrives already finished with a thermofused decor: a wide choice of colours and wood looks, controlled cost, no painting step. In practice, MDF often serves painted fronts and melamine the cabinet boxes or budget-framed projects.",
+              a: "MDF when you want a specific painted colour on the doors. Melamine when you want a decor that is already finished, with no paint step and a lower cost.",
             },
             {
               q: "Is plywood always preferable?",
-              a: "Not always, but it is often relevant for durable structure.",
+              a: "For boxes and drawers, yes, because it holds screws. On a painted door, MDF gives a more even surface.",
             },
             {
               q: "Solid wood everywhere?",
-              a: "Not necessarily. It is often best when targeted at visible elements.",
+              a: "No. It moves with humidity. On large flat surfaces and cabinet boxes, panels hold their line better over time.",
             },
             {
               q: "Can several materials be combined?",
-              a: "Yes, and it's often the best strategy. Rather than choosing a single material, you target each where it performs: birch plywood for the cabinet structure, solid wood on doors and visible elements, MDF for certain painted fronts, melamine for a durable, economical interior. This combination balances performance, look and budget.",
+              a: "That is the norm. Birch plywood for the boxes, MDF for painted doors, solid wood on visible details, melamine inside.",
             },
           ],
         },
@@ -240,9 +150,9 @@ export const comparatifPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need a comparison tailored to your project?",
+          heading: "Want a comparison for your project?",
           intro:
-            "We help you weigh structure, finish, humidity and budget to make a smarter choice.",
+            "We weigh structure, finish, humidity and budget after the on-site survey.",
           actions: [
             {
               label: "Request a quote",

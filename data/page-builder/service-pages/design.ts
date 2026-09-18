@@ -30,10 +30,10 @@ export const designPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Division armoires",
-          heading: "Service de design, structurer le projet avant de fabriquer",
+          eyebrow: "Division armoires",
+          heading: "On arrête les plans avant d'ouvrir un mur",
           description:
-            "Le design d'armoires sur mesure est l'étape de conception où l'on cadre l'usage, organise l'espace, intègre les contraintes techniques et valide les choix de matériaux — avant la production et la pose. Ce service relève de la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : les plans sont arrêtés en tenant compte du reste du chantier, puis exécutés par notre usine partenaire et nos équipes de pose.",
+            "Relevé sur place, implantation, hauteurs, matériaux. Les décisions sont prises et validées avec vous avant la mise en production.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -46,12 +46,12 @@ export const designPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Usage réel", "Planification", "Exécution"],
+          badges: ["Relevé sur place", "Plans", "Matériaux"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
             alt: "Plan de cuisine sur mesure et échantillons de matériaux",
           },
-          caption: "Montréal, Laval et Rive-Sud",
+          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },
@@ -61,27 +61,32 @@ export const designPage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Le rôle du design dans un projet sur mesure",
+          heading: "Ce qu'on règle au design",
           description:
-            "Un bon design rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles à la fin.",
+            "Un plan arrêté tôt coûte moins cher qu'un changement en cours de chantier. Quatre points se décident ici.",
           cards: [
             {
-              title: "Optimiser l'espace",
+              title: "Implantation",
               description:
-                "Circulation, zones de travail, dégagements et hauteurs adaptées à votre usage.",
+                "Circulation, zones de travail, dégagements devant chaque porte.",
             },
             {
-              title: "Structurer le rangement",
+              title: "Rangement",
               description:
-                "Accès, organisation et priorités définies avant la production.",
+                "Tiroirs plutôt que portes basses, hauteurs adaptées à vous.",
             },
             {
-              title: "Aligner les décisions",
+              title: "Plomberie et électricité",
               description:
-                "Matériaux, finition, calendrier et niveau de complexité restent cohérents.",
+                "Ce qui se déplace, ce qui reste, et ce que ça implique.",
+            },
+            {
+              title: "Matériaux et finis",
+              description:
+                "Panneaux, quincaillerie et couleurs fixés avant la commande.",
             },
           ],
-          columns: "1",
+          columns: "2",
         },
       },
     },
@@ -91,26 +96,25 @@ export const designPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Ce que comprend le service de design",
+          heading: "Ce que vous recevez",
           intro:
-            "Le design Dilamco est orienté usage et exécution, pas inspiration déconnectée du chantier.",
+            "Le design sert à exécuter, pas à rêver. Il devient la référence du contrat.",
           items: [
             {
-              title: "Analyse des besoins",
-              description: "Vos priorités, votre usage et vos contraintes.",
+              title: "Relevé de l'existant",
+              description: "Mesures réelles, murs, ouvertures, contraintes.",
             },
             {
-              title: "Organisation fonctionnelle",
-              description: "Plan d'espace et logique de rangement.",
+              title: "Plan d'implantation",
+              description: "Élévations et positions de chaque module.",
             },
             {
-              title: "Choix matériaux et finis",
-              description: "Décisions cohérentes avec durabilité et entretien.",
+              title: "Liste de matériaux",
+              description: "Panneaux, quincaillerie, couleurs et finis retenus.",
             },
             {
-              title: "Préparation à l'exécution",
-              description:
-                "Un design pensé pour être fabriqué et posé proprement.",
+              title: "Soumission détaillée",
+              description: "Portée, exclusions, prix et échéancier écrits.",
             },
           ],
           actions: [
@@ -120,12 +124,7 @@ export const designPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Rénovation de cuisine clé en main",
+              label: "Rénovation de cuisine",
               href: "/services/renovation/cuisine",
               variant: "ghost",
             },
@@ -136,90 +135,33 @@ export const designPage: PageTemplateData = {
           },
           cardTitle: "Pourquoi c'est utile",
           cardDescription:
-            "Plus les décisions sont prises tôt, plus le projet est prévisible et exécutable.",
-        },
-      },
-    },
-    {
-      id: "types",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Design par type de projet",
-          intro:
-            "La logique de design change selon l'espace, les contraintes et le niveau d'usage.",
-          items: [
-            {
-              title: "Cuisine",
-              href: "/espaces/cuisine",
-              description:
-                "Zones de travail, circulation, îlot, rangement et intégration.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure pensée pour l'usage réel",
-              },
-              badges: ["Ergonomie", "Rangement"],
-              footerCtaLabel: "Voir cuisine",
-            },
-            {
-              title: "Salle de bain",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Contraintes d'humidité, rangement et ergonomie quotidienne.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure pensée pour l'humidité",
-              },
-              badges: ["Humidité", "Finitions"],
-              footerCtaLabel: "Voir salle de bain",
-            },
-            {
-              title: "Walk-in",
-              href: "/espaces/walk-in",
-              description:
-                "Organisation par zones, accessibilité et rangement vertical.",
-              image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Walk-in sur mesure pensé pour l'organisation",
-              },
-              badges: ["Organisation", "Accès"],
-              footerCtaLabel: "Voir walk-in",
-            },
-          ],
+            "Plus les décisions sont prises tôt, moins le chantier réserve de surprises.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - design",
-          intro:
-            "Réponses claires sur le rôle du design dans un projet sur mesure.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Le design est-il obligatoire?",
-              a: "Dans un projet sur mesure, le design n'est pas une formalité : c'est lui qui cadre toutes les décisions avant la fabrication. Il permet de valider les dimensions réelles, l'organisation des zones, l'intégration des électroménagers et des contraintes techniques, et les choix de matériaux. Sauter cette étape, c'est prendre le risque de compromis coûteux découverts trop tard, en cours de fabrication ou d'installation. Un bon design réduit les imprévus et fait gagner du temps sur l'ensemble du projet.",
+              q: "Le design est-il obligatoire ?",
+              a: "En sur mesure, oui. Sans plan arrêté, les dimensions, l'intégration des électroménagers et les contraintes techniques se découvrent pendant la pose, quand tout changement coûte cher.",
             },
             {
-              q: "Peut-on passer directement à la fabrication?",
-              a: "Seulement si les contraintes, l'organisation et les dimensions sont déjà clarifiées de façon fiable.",
+              q: "Quand intervient le design ?",
+              a: "Au tout début, avant la commande. Les plans validés avec vous servent ensuite de référence stable pour la production, la pose et le contrat.",
             },
             {
-              q: "Est-ce que ça fonctionne en condo?",
-              a: "Oui. Le design est particulièrement utile en condo pour gérer l'accès, l'espace et l'intégration des équipements.",
+              q: "Est-ce que ça fonctionne en condo ?",
+              a: "Oui. Le design y est même plus utile : accès par ascenseur, dimensions des pièces, règlements du syndicat et emplacement des colonnes se règlent sur papier.",
             },
             {
-              q: "Quand intervient le design dans le projet?",
-              a: "Le design intervient au tout début, avant la fabrication. On commence par analyser l'espace réel (mesures, circulation, plomberie et électricité), puis on valide la logique d'aménagement, les hauteurs, les zones de rangement et les choix de matériaux et de finis. Une fois ces décisions arrêtées et validées avec vous, elles servent de référence stable pour la fabrication et l'installation — ce qui limite les changements coûteux en cours de route.",
-            },
-            {
-              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
-              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. Le design peut donc couvrir toute la pièce : implantation, plomberie et électricité à déplacer, plancher, éclairage et finitions, en plus des armoires. On coordonne ensuite les corps de métier et l'échéancier sous une seule responsabilité, fixés au contrat écrit.",
+              q: "Pouvez-vous rénover la pièce au complet ?",
+              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27. Le design couvre alors l'implantation, la plomberie, l'électricité, le plancher et l'éclairage, pas seulement les armoires.",
             },
           ],
         },
@@ -233,7 +175,7 @@ export const designPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet",
           intro:
-            "Dites-nous votre espace, votre secteur et votre échéance. On vous aide à cadrer un projet réaliste et exécutable.",
+            "Votre espace, votre secteur, votre échéance. On revient vers vous avec un cadre réaliste.",
           actions: [
             {
               label: "Demander une soumission",
@@ -246,7 +188,7 @@ export const designPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Réponse généralement sous 24-48 h.",
+          note: "Premier retour sous 24 à 48 heures ouvrables.",
         },
       },
     },

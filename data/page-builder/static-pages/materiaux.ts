@@ -22,10 +22,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Division armoires",
-          heading: "Matériaux, durabilité, finition et performance",
+          eyebrow: "Division armoires",
+          heading: "Les matériaux qu'on met dans vos armoires",
           description:
-            "Le choix des matériaux d'armoires — bois massif, contreplaqué, MDF, mélamine, quincaillerie et finis — détermine la durabilité et le rendu d'un projet. Ces spécifications sont établies par la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), puis transmises à notre usine partenaire et vérifiées à la réception, avant la pose.",
+            "Panneaux, quincaillerie et finis sont spécifiés par nous, produits par notre usine partenaire, puis vérifiés à la réception avant la pose.",
           actions: [
             {
               label: "Demander une soumission",
@@ -38,13 +38,12 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Contreplaqué", "MDF", "Mélamine", "Quincaillerie"],
+          badges: ["Contreplaqué", "MDF", "Quincaillerie"],
           image: {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Comparatif visuel de matériaux pour armoires sur mesure",
           },
-          caption:
-            "Une page matériaux doit montrer la matière, pas une cuisine générique",
+          caption: "Spécifié ici, vérifié à la livraison",
         },
       },
     },
@@ -54,29 +53,29 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Comment nous choisissons les matériaux",
+          heading: "Comment on choisit",
           description:
-            "La performance ne dépend pas uniquement du panneau choisi. Elle dépend aussi de l'humidité, des charges d'usage, de la résistance aux impacts, de la stabilité dans le temps et des détails d'assemblage.",
+            "Le panneau se décide pièce par pièce. Une porte de cuisine et un caisson sous lavabo ne subissent pas les mêmes contraintes.",
           cards: [
             {
               title: "Humidité",
               description:
-                "Cuisine, salle de bain et salle de lavage n'imposent pas les mêmes contraintes.",
+                "Salle de bain, sous-évier et salle de lavage exigent plus de protection.",
             },
             {
-              title: "Charges et usage",
+              title: "Charge",
               description:
-                "Tiroirs, caissons et portes ne demandent pas tous le même niveau de robustesse.",
+                "Tiroirs, tablettes et armoires hautes portent des poids différents.",
             },
             {
-              title: "Finition attendue",
+              title: "Fini visé",
               description:
-                "Un fini peint uniforme ne se traite pas comme un décor mélamine ou un rendu bois naturel.",
+                "Peinture uniforme, décor thermofusionné ou grain de bois naturel.",
             },
             {
-              title: "Exécution finale",
+              title: "Chants et pose",
               description:
-                "Les chants, la quincaillerie et l'installation ont un impact direct sur la durabilité.",
+                "Ce sont eux qui décident de la durée, pas seulement le panneau.",
             },
           ],
           columns: "2",
@@ -88,175 +87,45 @@ export const page: PageTemplateData = {
       frame: { surface: "muted" },
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "link-cards-compact",
         props: {
-          heading: "Explorez les pages matériaux",
-          intro:
-            "Chaque page explique les compromis, usages et limites du sujet.",
+          heading: "Les matériaux en détail",
+          columns: "3",
           items: [
             {
-              title: "Pourquoi le contreplaqué",
-              description: "Structure stable et durable.",
+              title: "Contreplaqué",
               href: "/materiaux/contreplaque",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Détail de contreplaqué pour armoires sur mesure",
-              },
-              badges: ["Structure", "Durabilité"],
-              footerCtaLabel: "Voir le contreplaqué",
+              description: "Structure des caissons",
             },
             {
               title: "MDF",
-              description: "Uniformité et finition peinte.",
               href: "/materiaux/mdf",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "Panneau MDF avec finition peinte",
-              },
-              badges: ["Finition", "Peinture"],
-              footerCtaLabel: "Voir le MDF",
+              description: "Portes peintes",
             },
             {
               title: "Mélamine",
-              description: "Décor et coût maîtrisé.",
               href: "/materiaux/melamine",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de mélamine pour mobilier sur mesure",
-              },
-              badges: ["Décor", "Budget"],
-              footerCtaLabel: "Voir la mélamine",
+              description: "Décor déjà fini",
             },
             {
               title: "Bois massif",
-              description: "Texture naturelle et caractère.",
               href: "/materiaux/bois-massif",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Finition en bois massif naturel",
-              },
-              badges: ["Naturel", "Visible"],
-              footerCtaLabel: "Voir le bois massif",
+              description: "Façades et détails",
             },
             {
               title: "Quincaillerie",
-              description: "Confort, précision et longévité.",
               href: "/materiaux/quincaillerie",
-              image: {
-                src: "/images/generated/materials/material-hardware-hero-01.webp",
-                alt: "Quincaillerie premium pour armoires et tiroirs",
-              },
-              badges: ["Usage", "Durabilité"],
-              footerCtaLabel: "Voir la quincaillerie",
+              description: "Charnières et coulisses",
             },
             {
               title: "Couleurs et finis",
-              description: "Cohésion visuelle et entretien.",
               href: "/materiaux/couleurs",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Échantillons de couleurs et finis pour cuisine sur mesure",
-              },
-              badges: ["Style", "Entretien"],
-              footerCtaLabel: "Voir les couleurs et finis",
+              description: "Teinte et lustre",
             },
             {
-              title: "Comparatif des matériaux",
-              description: "Vue d'ensemble rapide pour cadrer le choix.",
+              title: "Comparatif",
               href: "/materiaux/comparatif",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
-              },
-              badges: ["Comparatif", "Décision"],
-              footerCtaLabel: "Voir le comparatif",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "quick-compare",
-      content: {
-        type: "comparison",
-        variant: "table-basic",
-        props: {
-          heading: "Comparatif rapide",
-          intro:
-            "Pour une lecture complète, consultez ensuite le comparatif détaillé.",
-          columns: ["Performance générale", "Usage typique"],
-          rows: [
-            {
-              label: "Contreplaqué",
-              values: [
-                "Structure stable et durable",
-                "Caissons et structures exigeantes",
-              ],
-            },
-            {
-              label: "MDF",
-              values: [
-                "Uniformité et rendu peint",
-                "Portes et façades peintes",
-              ],
-            },
-            {
-              label: "Mélamine",
-              values: [
-                "Décor varié et coût maîtrisé",
-                "Intérieurs et applications ciblées",
-              ],
-            },
-            {
-              label: "Bois massif",
-              values: [
-                "Valeur perçue et texture naturelle",
-                "Éléments visibles et détails premium",
-              ],
-            },
-            {
-              label: "Quincaillerie",
-              values: [
-                "Confort et précision d'usage",
-                "Portes, tiroirs et mécanismes",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "premium",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Ce qui fait vraiment haut de gamme",
-          intro:
-            "Le rendu premium vient d'un système cohérent : bons matériaux au bon endroit, quincaillerie fiable, détails de fabrication solides et ajustements propres à l'installation.",
-          badges: ["Structure", "Quincaillerie", "Installation"],
-          cardTitle: "Points qui changent vraiment le résultat",
-          items: [
-            "Structures stables et adaptées à l'usage",
-            "Quincaillerie fiable et bien réglée",
-            "Protection des chants et détails de finition",
-            "Installation et ajustements précis",
-          ],
-          actions: [
-            {
-              label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "primary",
-            },
-            {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
+              description: "Les quatre panneaux côte à côte",
             },
           ],
         },
@@ -264,32 +133,27 @@ export const page: PageTemplateData = {
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ matériaux",
+          heading: "Questions fréquentes",
           items: [
             {
               q: "Contreplaqué ou MDF ?",
-              a: "Ils excellent à des endroits différents. Le contreplaqué, plus stable grâce à ses plis croisés, est souvent privilégié pour la structure des caissons et les tiroirs. Le MDF offre une surface plus lisse, idéale pour certaines façades peintes. Le choix dépend du rôle de la pièce, de l'humidité et de la durabilité visée — et la meilleure approche combine souvent les deux.",
+              a: "Contreplaqué pour les caissons et les tiroirs, parce qu'il tient les vis. MDF pour les portes peintes, parce que sa surface ne laisse remonter aucun fil.",
             },
             {
               q: "La mélamine est-elle un bon choix ?",
-              a: "Oui, dans les bons contextes. La mélamine offre un large choix de finis à un coût maîtrisé et une surface facile d'entretien. Sa durabilité dépend surtout de la qualité des chants et de la précision d'installation : bien posée, elle est pertinente pour de nombreux projets, notamment les intérieurs de caissons et les budgets cadrés.",
-            },
-            {
-              q: "La quincaillerie soft-close vaut-elle la peine ?",
-              a: "Oui, à condition que le système soit fiable et bien installé. La fermeture amortie réduit les chocs et le bruit, améliore le confort au quotidien et prolonge la durée de vie des portes et tiroirs, très sollicités. C'est un des détails, souvent invisibles, qui distinguent le plus une cuisine durable d'une cuisine d'entrée de gamme.",
+              a: "Oui à l'intérieur des caissons et sur les tablettes. Sa durée dépend des chants : bande épaisse bien collée, sinon l'eau finit par entrer.",
             },
             {
               q: "Quels matériaux éviter en salle de bain ?",
-              a: "En salle de bain, on évite les matériaux mal protégés contre l'humidité ou dont les chants sont mal scellés, car la vapeur et les éclaboussures s'infiltrent avec le temps. On privilégie des structures stables, des finis résistants à l'humidité et une quincaillerie durable, combinés à une bonne ventilation et à une installation soignée — c'est l'exécution qui protège la durabilité.",
+              a: "Tout panneau dont les chants restent nus. La vapeur attaque les bords avant la surface. On scelle, on ventile, et on passe au contreplaqué sous le lavabo.",
             },
             {
-              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
-              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la pièce : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
+              q: "Pouvez-vous rénover la pièce au complet ?",
+              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27. Permis, démolition, plomberie, électricité, plancher et pose des armoires sous un seul contrat écrit.",
             },
           ],
         },
@@ -301,9 +165,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'un avis sur les bons choix techniques ?",
+          heading: "Un avis sur vos choix techniques ?",
           intro:
-            "On vous aide à choisir une combinaison matériaux, quincaillerie et finition cohérente avec votre espace et vos priorités.",
+            "On fixe la combinaison panneaux, quincaillerie et finis dans la soumission détaillée.",
           actions: [
             {
               label: "Demander une soumission",

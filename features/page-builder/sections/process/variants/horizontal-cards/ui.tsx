@@ -1,47 +1,65 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { ProcessHorizontalStepsCardsProps } from "./schema";
 import { Heading } from "@/components/elements/heading";
 import { cn } from "@/lib/utils";
 
+/**
+ * Étapes numérotées en ligne : grand numéro en police d'affichage, titre
+ * court, une ligne. Le numéro est légitime ici : le processus est une vraie
+ * séquence.
+ */
 export function ProcessHorizontalStepsCards(
   props: ProcessHorizontalStepsCardsProps,
 ) {
-  const gridClassName =
-    props.steps.length >= 5 ? "lg:grid-cols-5" : "lg:grid-cols-4";
+  const count = props.steps.length;
+  const cols =
+    count >= 5
+      ? "lg:grid-cols-5"
+      : count === 4
+        ? "lg:grid-cols-4"
+        : count === 3
+          ? "lg:grid-cols-3"
+          : "lg:grid-cols-2";
 
   return (
-    <div>
-      <div className="flex flex-col gap-3">
+    <div className="text-left">
+      <div className="max-w-2xl">
         <Heading as="h2" variant="h2">
           {props.heading}
         </Heading>
-
         {props.intro ? (
-          <p className="max-w-2xl text-muted-foreground">{props.intro}</p>
+          <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            {props.intro}
+          </p>
         ) : null}
       </div>
 
-      <div className="mt-10">
-        {/* Responsive: keep cards readable on small screens */}
-        <div className={cn("grid gap-6 sm:grid-cols-2", gridClassName)}>
-          {props.steps.map((step) => (
-            <Card key={`${step.number}-${step.title}`} className="relative">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-none border bg-background text-sm font-semibold">
-                    {step.number}
-                  </div>
-                  <CardTitle className="text-base">{step.title}</CardTitle>
-                </div>
-              </CardHeader>
-
-              <CardContent className="text-sm text-muted-foreground">
-                {step.description}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <ol
+        className={cn(
+          "mt-10 grid gap-x-6 gap-y-8 border-t border-foreground/15 sm:grid-cols-2",
+          cols,
+        )}
+      >
+        {props.steps.map((step, index) => (
+          <li
+            key={`${step.number}-${step.title}`}
+            className="relative pt-6"
+          >
+            <span
+              aria-hidden
+              className="absolute -top-px left-0 h-0.5 w-10 bg-primary"
+            />
+            <span className="font-display text-4xl font-semibold leading-none tracking-[-0.04em] text-primary tabular-nums">
+              {String(step.number || index + 1).padStart(2, "0")}
+            </span>
+            <h3 className="mt-4 font-display text-lg font-semibold leading-snug tracking-[-0.015em] text-foreground">
+              {step.title}
+            </h3>
+            <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+              {step.description}
+            </p>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }

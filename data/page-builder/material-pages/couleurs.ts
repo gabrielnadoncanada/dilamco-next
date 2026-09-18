@@ -23,10 +23,10 @@ export const couleursPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Matériaux",
-          heading: "Couleurs et finitions : style, lumière et entretien",
+          eyebrow: "Matériaux",
+          heading: "Choisir une couleur qui tient à l'usage",
           description:
-            "Le choix des couleurs d'armoires détermine la lumière, la perception de l'espace et la facilité d'entretien. Le bon choix dépend du matériau, du fini (mat ou satiné), de l'usage réel et du contexte de la pièce.",
+            "La teinte se décide sur place, à la lumière réelle de la pièce. Le niveau de lustre, lui, décide de l'entretien quotidien.",
           actions: [
             {
               label: "Parler design et finitions",
@@ -39,13 +39,12 @@ export const couleursPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Lumière", "Entretien", "Cohésion visuelle"],
+          badges: ["Lumière", "Lustre", "Entretien"],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Choix de couleurs et finis pour projet sur mesure",
           },
-          caption:
-            "Un bon fini doit être beau aujourd'hui et simple à vivre demain",
+          caption: "Échantillons vus dans votre pièce",
         },
       },
     },
@@ -55,145 +54,32 @@ export const couleursPage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Méthode simple pour choisir",
+          heading: "Quatre choses à regarder",
           description:
-            "Structurer les choix dès la phase design évite les erreurs de rendu. Il faut regarder la lumière, le volume, l'entretien, le type de matériau et le contexte d'usage avant de valider une palette.",
+            "Un échantillon change d'aspect selon l'orientation de la pièce, le support et le lustre. On valide les trois avant de commander.",
           cards: [
             {
-              title: "Lumière",
+              title: "Lumière de la pièce",
               description:
-                "Une couleur ne réagit pas pareil selon l'orientation et les sources lumineuses.",
+                "Une façade nord tire au gris, une façade sud réchauffe les teintes.",
             },
             {
-              title: "Volume",
+              title: "Support",
               description:
-                "Le contraste et la masse visuelle changent la perception de l'espace.",
+                "Le même ton ne rend pas pareil sur MDF, mélamine ou bois.",
             },
             {
-              title: "Usage et entretien",
+              title: "Lustre",
               description:
-                "Cuisine et salle de bain demandent des choix pragmatiques.",
+                "Mat, satiné ou brillant changent la couleur perçue et l'entretien.",
             },
             {
-              title: "Matériau et fini",
+              title: "Surfaces voisines",
               description:
-                "MDF, mélamine et bois ne produisent pas le même rendu.",
+                "Comptoir, dosseret et plancher se valident ensemble, pas séparément.",
             },
           ],
           columns: "2",
-        },
-      },
-    },
-    {
-      id: "families",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Grandes familles de finitions",
-          items: [
-            {
-              title: "Neutres",
-              href: "/services/design",
-              description: "Intemporelles, lumineuses et faciles à intégrer.",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Palette de finis neutres pour mobilier sur mesure",
-              },
-              badges: ["Intemporelle"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Tons foncés",
-              href: "/services/design",
-              description: "Fort impact visuel, demandent une bonne lumière.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Mobilier sur mesure aux tons foncés",
-              },
-              badges: ["Accentué"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Bois et textures",
-              href: "/materiaux/bois-massif",
-              description: "Apportent chaleur et variations naturelles.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Texture de bois massif naturelle",
-              },
-              badges: ["Naturel"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Cuisine",
-              href: "/espaces/cuisine",
-              description:
-                "Coordonner comptoir, dosseret, plancher et entretien.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec palette de finitions cohérentes",
-              },
-              badges: ["Cuisine"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Salle de bain",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Humidité, nettoyage fréquent et ventilation comptent.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure avec finitions adaptées",
-              },
-              badges: ["Salle de bain"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Matériaux",
-              href: "/materiaux",
-              description: "La finition finale dépend aussi du support choisi.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de matériaux et finitions",
-              },
-              badges: ["Support"],
-              footerCtaLabel: "Voir la page",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "material-impact",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Couleur et matériau : impact réel sur le rendu",
-          intro:
-            "Le rendu ne vient pas seulement de la couleur. Il dépend aussi de la texture, de la régularité du support et de la finition retenue.",
-          badges: ["MDF", "Bois", "Mélamine"],
-          cardTitle: "Repère rapide",
-          items: [
-            "MDF : plus homogène pour la peinture",
-            "Bois : texture et variation naturelles",
-            "Mélamine : grande variété de décors",
-            "Le même ton change selon le support",
-          ],
-          actions: [
-            {
-              label: "Voir le design",
-              href: "/services/design",
-              variant: "primary",
-            },
-            {
-              label: "Voir les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-          ],
         },
       },
     },
@@ -203,24 +89,21 @@ export const couleursPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Finitions et entretien",
+          heading: "Trois lustres, trois comportements",
           intro:
-            "Le bon fini n'est pas seulement celui qui paraît bien à l'échantillon. Il faut aussi penser aux traces, au nettoyage et à la tolérance du quotidien.",
+            "Le lustre pèse plus lourd que la couleur sur le travail d'entretien.",
           items: [
             {
-              title: "Mat.",
-              description:
-                "Très élégant, mais parfois plus exigeant à l'entretien.",
+              title: "Mat",
+              description: "Feutré et contemporain, il marque plus vite.",
             },
             {
-              title: "Satiné.",
-              description:
-                "Souvent un bon compromis entre rendu et maintenance.",
+              title: "Satiné",
+              description: "Le compromis courant en cuisine, facile à nettoyer.",
             },
             {
-              title: "Brillant.",
-              description:
-                "Plus lumineux, mais marque davantage selon le contexte.",
+              title: "Brillant",
+              description: "Il renvoie la lumière et montre chaque trace.",
             },
           ],
           actions: [
@@ -230,8 +113,8 @@ export const couleursPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Voir l'installation",
-              href: "/services/installation",
+              label: "Voir les matériaux",
+              href: "/materiaux",
               variant: "ghost",
             },
           ],
@@ -241,34 +124,33 @@ export const couleursPage: PageTemplateData = {
           },
           cardTitle: "Erreur fréquente",
           cardDescription:
-            "Choisir une inspiration sans la recontextualiser à la vraie lumière, aux vrais volumes et au vrai usage du projet.",
+            "Valider une couleur sur un écran ou sous l'éclairage d'un magasin.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Couleurs et finitions",
+          heading: "Questions fréquentes",
           items: [
             {
               q: "Mat ou satiné ?",
-              a: "Le satiné est souvent le meilleur compromis, surtout en cuisine : il renvoie un peu de lumière, masque mieux les traces de doigts et s'entretient facilement. Le mat offre un rendu plus contemporain et feutré, mais marque davantage et demande un entretien plus attentif sur les surfaces très sollicitées. Le bon choix dépend de la pièce, de la couleur et de votre tolérance à l'entretien.",
+              a: "Satiné en cuisine, dans presque tous les cas : il renvoie un peu de lumière, masque les traces de doigts et se nettoie sans produit particulier. Le mat convient mieux aux pièces peu sollicitées.",
             },
             {
               q: "Les couleurs foncées sont-elles risquées ?",
-              a: "Pas avec une bonne lumière et un fini adapté.",
+              a: "Non, à condition d'avoir de la lumière naturelle ou un bon éclairage sous les armoires. Un fini satiné limite aussi les traces, plus visibles sur les teintes foncées.",
             },
             {
               q: "Peut-on changer la couleur plus tard ?",
-              a: "Parfois, selon le matériau et la finition choisie.",
+              a: "Une porte peinte se repeint. Une porte mélamine ou plaquée se remplace. C'est un point à trancher avant de commander, pas après.",
             },
             {
               q: "Comment éviter un rendu daté ?",
-              a: "Pour un résultat qui vieillit bien, on garde une base intemporelle (teintes neutres, bois naturels, blancs chauds) sur les grandes surfaces, et on réserve les couleurs ou finis plus marqués aux éléments faciles à changer — un îlot, une crédence, des accessoires. Cette logique permet de rafraîchir l'apparence sans refaire toute la cuisine, et limite le risque qu'une tendance forte fige l'espace dans une époque.",
+              a: "Teintes neutres sur les grandes surfaces, couleur forte sur ce qui se change vite : îlot, dosseret, poignées. Vous rafraîchissez la pièce sans refaire les armoires.",
             },
           ],
         },
@@ -280,9 +162,9 @@ export const couleursPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'aide pour cadrer vos choix de finis ?",
+          heading: "Besoin d'aide pour arrêter la palette ?",
           intro:
-            "On vous aide à choisir une palette plus durable visuellement, plus simple à vivre et cohérente avec les matériaux retenus.",
+            "On apporte les échantillons chez vous et on valide à la lumière de la pièce.",
           actions: [
             {
               label: "Parler design",

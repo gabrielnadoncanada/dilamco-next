@@ -23,10 +23,10 @@ export const comparatifPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Matériaux",
-          heading: "Comparatif des matériaux : choisir selon l'usage",
+          eyebrow: "Matériaux",
+          heading: "Quel panneau pour quelle partie de l'armoire",
           description:
-            "Il n'existe pas de matériau d'armoire universel : mélamine, MDF, contreplaqué et bois massif ont chacun leurs forces. Le bon choix dépend de l'espace, de l'humidité, de la durabilité visée, de la finition recherchée et de la qualité d'exécution.",
+            "Aucun matériau ne gagne partout. Une bonne cuisine en combine trois ou quatre, chacun à l'endroit où il tient le mieux.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -44,7 +44,7 @@ export const comparatifPage: PageTemplateData = {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Comparatif de matériaux pour cuisine sur mesure",
           },
-          caption: "Le bon choix dépend toujours du contexte réel",
+          caption: "Quatre panneaux, quatre rôles",
         },
       },
     },
@@ -55,85 +55,27 @@ export const comparatifPage: PageTemplateData = {
         variant: "table-basic",
         props: {
           heading: "Tableau comparatif",
-          intro: "Résumé général à adapter à votre contexte réel.",
-          columns: ["Performance générale", "Usage recommandé"],
+          columns: ["Point fort", "Où l'utiliser"],
           rows: [
             {
               label: "Contreplaqué",
-              values: ["Très bonne stabilité", "Structures exigeantes"],
+              values: ["Stabilité et tenue des vis", "Caissons, tiroirs, tablettes"],
             },
             {
               label: "MDF",
-              values: ["Bonne uniformité", "Portes et façades peintes"],
+              values: ["Surface sans fil", "Portes et façades peintes"],
             },
             {
               label: "Mélamine",
-              values: [
-                "Variable selon le contexte",
-                "Rangements cibles et décor",
-              ],
+              values: ["Déjà fini, coût bas", "Intérieurs, tablettes, budgets cadrés"],
             },
             {
               label: "Bois massif",
-              values: ["Valeur perçue élevée", "Éléments esthétiques visibles"],
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "détails",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Pages détaillées",
-          intro: "Approfondissez chaque matériau selon sa logique propre.",
-          items: [
-            {
-              title: "Pourquoi le contreplaqué",
-              href: "/materiaux/contreplaque",
-              description: "Stabilité et tenue structurelle.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Détail de contreplaqué pour armoires sur mesure",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "Voir la page",
+              values: ["Grain et valeur perçue", "Portes, moulures, détails vus"],
             },
             {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "Uniformité et finition peinte.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "Panneau MDF avec finition peinte",
-              },
-              badges: ["Peinture"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Mélamine",
-              href: "/materiaux/melamine",
-              description: "Finis décoratifs et coût maîtrisé.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de mélamine pour mobilier sur mesure",
-              },
-              badges: ["Décor"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Bois massif",
-              href: "/materiaux/bois-massif",
-              description: "Texture naturelle et caractère.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Finition en bois massif naturel",
-              },
-              badges: ["Naturel"],
-              footerCtaLabel: "Voir la page",
+              label: "Quincaillerie",
+              values: ["Confort et longévité", "Charnières, coulisses, mécanismes"],
             },
           ],
         },
@@ -145,28 +87,29 @@ export const comparatifPage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Ce que le tableau ne montre pas",
+          heading: "Ce que le tableau ne dit pas",
           description:
-            "La performance réelle dépend aussi de la protection des chants, de la qualité d'assemblage, de la quincaillerie et des ajustements à l'installation. Le tableau aide à cadrer, mais il ne remplace pas un choix adapté au projet.",
+            "Deux cuisines du même panneau peuvent vieillir très différemment. L'écart vient de quatre détails d'exécution.",
           cards: [
             {
-              title: "Chants",
+              title: "Les chants",
               description:
-                "Ils deviennent critiques dès qu'il y a humidité, chocs ou nettoyage fréquent.",
+                "Un chant ouvert laisse entrer l'eau, quel que soit le panneau.",
             },
             {
-              title: "Assemblage",
-              description: "Une bonne exécution change la tenue dans le temps.",
+              title: "L'assemblage",
+              description:
+                "Tourillons, vis et colle décident de la tenue du caisson.",
             },
             {
-              title: "Quincaillerie",
+              title: "La quincaillerie",
               description:
-                "Le confort et la durabilité dépendent aussi des mécanismes.",
+                "Charnières et coulisses supportent l'usage quotidien, pas le panneau.",
             },
             {
-              title: "Installation",
+              title: "La pose",
               description:
-                "Les ajustements finaux influencent le fonctionnement réel.",
+                "Mise à niveau et ajustements finaux évitent les portes qui frottent.",
             },
           ],
           columns: "2",
@@ -174,61 +117,28 @@ export const comparatifPage: PageTemplateData = {
       },
     },
     {
-      id: "errors",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Erreurs à éviter",
-          intro:
-            "Les mauvais choix viennent souvent d'une lecture trop simplifiée : le look seul, l'oubli de l'humidité ou une sous-estimation des détails de finition.",
-          badges: ["Usage réel", "Humidité", "Exécution"],
-          cardTitle: "À garder en tête",
-          items: [
-            "Ne pas choisir uniquement pour le look",
-            "Tenir compte de l'humidité",
-            "Ne pas sous-estimer les détails de finition",
-            "Évaluer le rôle réel de chaque pièce",
-          ],
-          actions: [
-            {
-              label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "primary",
-            },
-            {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Comparatif des matériaux",
+          heading: "Questions fréquentes",
           items: [
             {
               q: "MDF ou mélamine ?",
-              a: "Le MDF est privilégié pour un fini peint parfaitement uniforme, quand on veut une couleur sur mesure et des portes lisses. La mélamine arrive déjà finie avec un décor thermofusionné : large choix de couleurs et d'imitations de bois, coût maîtrisé, sans étape de peinture. En pratique, le MDF sert souvent les façades peintes et la mélamine les caissons ou les projets au budget cadré.",
+              a: "Le MDF quand vous voulez une couleur peinte précise sur les portes. La mélamine quand vous voulez un décor déjà fini, sans peinture, à coût plus bas.",
             },
             {
               q: "Le contreplaqué est-il toujours préférable ?",
-              a: "Pas toujours, mais il est souvent pertinent pour la structure durable.",
+              a: "Pour les caissons et les tiroirs, oui, parce qu'il tient les vis. Sur une porte peinte, le MDF donne une surface plus régulière.",
             },
             {
-              q: "Bois massif partout ?",
-              a: "Pas nécessairement. Il est souvent meilleur lorsqu'il est ciblé sur les éléments visibles.",
+              q: "Du bois massif partout ?",
+              a: "Non. Il bouge avec l'humidité. Sur les grandes surfaces planes et les caissons, les panneaux tiennent mieux la ligne dans le temps.",
             },
             {
               q: "Peut-on combiner plusieurs matériaux ?",
-              a: "Oui, et c'est souvent la meilleure stratégie. Plutôt que de choisir un seul matériau, on cible chacun là où il performe : contreplaqué de bouleau pour la structure des caissons, bois massif sur les portes et éléments visibles, MDF pour certaines façades peintes, mélamine pour un intérieur durable et économique. Cette combinaison équilibre performance, rendu et budget.",
+              a: "C'est la norme. Contreplaqué de bouleau pour les caissons, MDF pour les portes peintes, bois massif sur les détails vus, mélamine à l'intérieur.",
             },
           ],
         },
@@ -240,9 +150,9 @@ export const comparatifPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'un comparatif adapté à votre projet ?",
+          heading: "Un comparatif pour votre projet ?",
           intro:
-            "On vous aide à arbitrer entre structure, finition, humidité et budget pour faire un choix plus intelligent.",
+            "On arbitre structure, finition, humidité et budget après le relevé sur place.",
           actions: [
             {
               label: "Demander une soumission",

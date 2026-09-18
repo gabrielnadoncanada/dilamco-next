@@ -23,10 +23,10 @@ export const melaminePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Matériaux",
-          heading: "Mélamine : usages, limites et alternatives",
+          eyebrow: "Matériaux",
+          heading: "La mélamine arrive déjà finie, à coût maîtrisé",
           description:
-            "La mélamine est un panneau (particules ou MDF) recouvert d'une couche décorative thermofusionnée, qui offre une grande variété de finis à un coût maîtrisé. Sa durabilité dépend surtout de la qualité des chants, de l'usage réel et de la précision d'installation.",
+            "Un panneau recouvert d'un décor thermofusionné. Pas d'étape de peinture, une surface facile à nettoyer, et des chants qui décident de sa durée.",
           actions: [
             {
               label: "Demander une soumission",
@@ -39,13 +39,12 @@ export const melaminePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Décor", "Entretien", "Coût maîtrisé"],
+          badges: ["Décor", "Entretien", "Budget"],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Finis décoratifs de type mélamine",
           },
-          caption:
-            "Pertinente dans certains contextes, moins pardonnante dans d'autres",
+          caption: "Intérieurs de caissons et budgets cadrés",
         },
       },
     },
@@ -57,61 +56,30 @@ export const melaminePage: PageTemplateData = {
         props: {
           heading: "Ce que la mélamine apporte",
           description:
-            "La mélamine est un panneau recouvert d'un revêtement décoratif. Elle peut être très pertinente pour certains projets grâce à sa variété de décors et son entretien simple.",
+            "Le décor est fusionné au panneau en usine. Rien à peindre, rien à retoucher, et un prix nettement sous le bois.",
           cards: [
             {
-              title: "Grande variété de finis",
-              description: "Bois, unis, textures et autres décors disponibles.",
+              title: "Décors nombreux",
+              description:
+                "Unis, textures, imitations de bois, disponibles tout de suite.",
             },
             {
               title: "Entretien simple",
               description:
-                "Un avantage concret dans plusieurs usages quotidiens.",
+                "Un linge humide suffit, la surface résiste aux rayures légères.",
             },
             {
-              title: "Coût souvent maîtrisé",
+              title: "Coût contenu",
               description:
-                "Intéresse particulièrement certains budgets et portées de projet.",
+                "Le poste armoires baisse sans toucher à la structure.",
             },
             {
-              title: "Sensibilité des chants",
+              title: "Les chants décident",
               description:
-                "Les impacts et infiltrations y sont souvent décisifs.",
+                "Un chant mince qui se décolle laisse entrer l'eau dans le panneau.",
             },
           ],
           columns: "2",
-        },
-      },
-    },
-    {
-      id: "fit",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Quand la mélamine est un bon choix",
-          intro:
-            "La mélamine devient pertinente quand le projet valorise surtout le décor, l'entretien et un coût mieux cadré, tout en gardant une exécution rigoureuse.",
-          badges: ["Décor", "Intérieurs", "Budget"],
-          cardTitle: "Bon usage de la mélamine",
-          items: [
-            "Composantes ou intérieurs cibles",
-            "Projets orientés décor et rationalisation",
-            "Configurations où les chants sont bien traités",
-            "Choix combinés avec d'autres matériaux pour les zones critiques",
-          ],
-          actions: [
-            {
-              label: "Voir tous les matériaux",
-              href: "/materiaux",
-              variant: "primary",
-            },
-            {
-              label: "Voir le design",
-              href: "/services/design",
-              variant: "ghost",
-            },
-          ],
         },
       },
     },
@@ -121,23 +89,21 @@ export const melaminePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Limites à surveiller",
+          heading: "Où on l'utilise",
           intro:
-            "La mélamine peut se dégrader si l'humidité s'infiltre, surtout via les chants. L'exécution et le contexte d'usage comptent donc beaucoup.",
+            "Elle est pertinente à l'intérieur des caissons et sur les façades quand le budget cadre le projet.",
           items: [
             {
-              title: "Chants sensibles.",
-              description: "Ils doivent être bien choisis et bien exécutés.",
+              title: "Intérieurs et tablettes",
+              description: "Surface lavable, teinte stable dans le temps.",
             },
             {
-              title: "Humidité à gérer.",
-              description:
-                "Les zones d'eau demandent une attention particulière.",
+              title: "Chants épais",
+              description: "Bande PVC de 1 mm ou plus, collée serré.",
             },
             {
-              title: "Réparations moins discrètes.",
-              description:
-                "Les dommages sont souvent plus difficiles à invisibiliser.",
+              title: "Réparations difficiles",
+              description: "Un éclat ne se ponce pas, la pièce se remplace.",
             },
           ],
           actions: [
@@ -158,91 +124,33 @@ export const melaminePage: PageTemplateData = {
           },
           cardTitle: "Approche recommandée",
           cardDescription:
-            "La mélamine fonctionne mieux lorsqu'elle est utilisée de façon ciblée, avec une logique claire sur les zones sensibles.",
-        },
-      },
-    },
-    {
-      id: "related",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Comparer avec les autres options",
-          items: [
-            {
-              title: "Comparatif complet",
-              href: "/materiaux/comparatif",
-              description: "Comprendre le bon usage de chaque option.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
-              },
-              badges: ["Comparatif"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "Plus orienté finition peinte.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "Panneau MDF avec finition peinte",
-              },
-              badges: ["Peinture"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Contreplaqué",
-              href: "/materiaux/contreplaque",
-              description: "Plus orienté structure durable.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Détail de contreplaqué pour armoires sur mesure",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Couleurs et finis",
-              href: "/materiaux/couleurs",
-              description: "Le décor doit rester cohérent avec l'usage.",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Échantillons de couleurs et finis pour mobilier sur mesure",
-              },
-              badges: ["Finition"],
-              footerCtaLabel: "Voir la page",
-            },
-          ],
+            "Mélamine à l'intérieur, panneau plus stable là où l'eau et la charge arrivent.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - mélamine",
+          heading: "Questions fréquentes",
           items: [
             {
               q: "La mélamine est-elle bas de gamme ?",
-              a: "Pas forcément. La mélamine couvre une catégorie large : sa qualité dépend du substrat, de l'épaisseur, du fini et surtout du traitement des chants. Bien posée, avec des chants de qualité, elle offre une surface résistante aux rayures et facile d'entretien, pertinente pour de nombreux projets. Ce qui la dessert, c'est une exécution bâclée ou une exposition prolongée à l'humidité par des chants mal scellés — pas le matériau en soi.",
+              a: "Le mot couvre une catégorie très large. Ce qui change tout, c'est le substrat, l'épaisseur du décor et la qualité des chants, pas l'étiquette.",
             },
             {
               q: "La mélamine gonfle-t-elle ?",
-              a: "Elle peut se dégrader si l'humidité s'infiltre, surtout via les chants.",
+              a: "Le panneau sous le décor, oui, si l'eau entre par un chant décollé ou une perforation. Le décor lui-même ne craint ni l'eau ni les produits courants.",
             },
             {
               q: "Mélamine ou MDF ?",
-              a: "Les deux répondent à des besoins différents. Le MDF est privilégié quand on vise une surface peinte parfaitement uniforme (portes lisses, couleur sur mesure). La mélamine arrive déjà finie avec un décor thermofusionné : elle offre un large choix de couleurs et d'imitations de bois à un coût maîtrisé, sans étape de peinture. Le choix dépend du fini recherché, du budget et de l'usage réel de la pièce.",
+              a: "Mélamine pour un décor déjà fini et un budget cadré. MDF pour une couleur peinte précise sur les portes. Les deux se combinent dans la même cuisine.",
             },
             {
               q: "Est-ce recommandé en salle de bain ?",
-              a: "Selon le contexte. La ventilation et la qualité d'exécution y sont critiques.",
+              a: "Oui, avec des chants épais bien collés et un ventilateur qui fonctionne. C'est la vapeur en continu qui décolle les chants, pas les éclaboussures.",
             },
           ],
         },
@@ -254,9 +162,9 @@ export const melaminePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez savoir si la mélamine est pertinente ici ?",
+          heading: "La mélamine convient-elle à votre projet ?",
           intro:
-            "On vous aide à voir si elle est cohérente pour votre espace, ou si une autre combinaison sera plus durable.",
+            "On regarde la pièce, l'usage et le budget, puis on vous dit oui ou non.",
           actions: [
             {
               label: "Demander une soumission",

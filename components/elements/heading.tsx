@@ -3,19 +3,18 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-// Titres éditoriaux alignés sur la boutique (composant Headline) : Fraunces
-// (font-serif → --font-display) en graisse normale pour h1–h3, avec emphase
-// `<em>` en italique vert primaire. h4–h6 restent des labels sans-serif
-// fonctionnels. Unifie d'un coup toutes les pages vitrine data-driven.
+// Titres du site (refonte 2026-09) : Bricolage Grotesque, graisse 600,
+// interlettrage serré. `<em>` met un mot en vert primaire, sans italique.
+// h4–h6 restent des labels en Plus Jakarta Sans.
 const headingVariants = cva(
-  "text-foreground [&_em]:italic [&_em]:font-normal [&_em]:text-primary",
+  "text-foreground text-balance [&_em]:not-italic [&_em]:text-primary",
   {
     variants: {
       variant: {
-        h1: "font-serif font-normal text-[length:var(--title-2)] leading-[1.04] tracking-[-0.025em]",
-        h2: "font-serif font-normal text-[length:var(--title-3)] leading-[1.08] tracking-[-0.02em]",
-        h3: "font-serif font-normal text-[length:var(--title-5)] leading-[1.12] tracking-[-0.015em] text-pretty",
-        h4: "text-lg font-semibold leading-snug tracking-tight md:text-xl",
+        h1: "font-display font-semibold text-[length:var(--title-2)] leading-[1.02] tracking-[-0.03em]",
+        h2: "font-display font-semibold text-[length:var(--title-3)] leading-[1.06] tracking-[-0.028em]",
+        h3: "font-display font-semibold text-[length:var(--title-4)] leading-[1.15] tracking-[-0.02em]",
+        h4: "font-display font-semibold text-[length:var(--title-5)] leading-snug tracking-[-0.015em]",
         h5: "text-base font-semibold leading-snug tracking-tight md:text-lg",
         h6: "text-sm font-semibold leading-snug tracking-tight md:text-base",
       },

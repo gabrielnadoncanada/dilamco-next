@@ -42,11 +42,10 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
-          heading:
-            "Disaster rebuild: rebuilding with a licensed general contractor",
+          eyebrow: "Disaster rebuild",
+          heading: "Rebuilding after water or fire damage",
           description:
-            "Once the emergency is over and the space is dried out, the real rebuild begins: opening up, assessing, pricing, obtaining permits, coordinating the trades and restoring the home. We put together the scope and the detailed quote your insurer needs, then carry out the work under one contract. Based in Pierrefonds-Roxboro.",
+            "We take over once the space is dry: written scope, line-by-line quote, permits and reconstruction.",
           actions: [
             {
               label: "Request an assessment",
@@ -54,57 +53,17 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See basement finishing",
+              label: "See basements",
               href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
           ],
-          badges: [
-            "RBQ licence 8306-0806-27",
-            "Insurance documentation",
-            "West Island",
-          ],
+          badges: ["Insurance file", "West Island"],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Basement rebuilt after water damage",
           },
-          caption:
-            "Pierrefonds-Roxboro, the West Island, Montreal, Laval and Vaudreuil-Soulanges",
-        },
-      },
-    },
-    {
-      id: "problems",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What sets a rebuild apart from a renovation",
-          description:
-            "Rebuilding after a loss follows a different logic. The scope is not chosen by the homeowner, it is dictated by the damage and by what the policy covers. Three factors change everything compared with an ordinary job.",
-          cards: [
-            {
-              title: "The damage goes past what you can see",
-              description:
-                "Water migrates behind the finishes, smoke saturates porous materials, mould grows inside cavities. A scope set by eye, without opening up, misses damage that will resurface after the work is done.",
-            },
-            {
-              title: "The insurance file dictates the format",
-              description:
-                "An insurer and their adjuster work from a written scope room by room, photos and a line-item quote. A one-page lump sum slows the settlement and feeds disagreement.",
-            },
-            {
-              title: "Loss versus upgrade",
-              description:
-                "Restoring what was there falls under the claim; upgrading or enlarging falls on you. The two blur easily. We separate them in the quote so everyone knows what they are paying for.",
-            },
-            {
-              title: "The code has moved on",
-              description:
-                "In an older building, rebuilding can require bringing certain components up to current standards — electrical, ventilation, basement egress. That is documented early in the file.",
-            },
-          ],
-          columns: "2",
+          caption: "Pierrefonds-Roxboro · West Island",
         },
       },
     },
@@ -116,42 +75,37 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         props: {
           heading: "The losses we rebuild",
           intro:
-            "We do not do emergency response: pumping, drying and decontamination are handled by specialized firms. We take over the rebuild, once the space is dry and safe.",
+            "Pumping, drying and decontamination belong to specialized firms. We rebuild afterwards.",
           columns: "2",
           items: [
             {
               title: "Water damage and flooding",
-              description: "Sewer backup, burst pipe, infiltration, river flooding.",
+              description: "Sewer backup, burst pipe, seepage, rising water.",
               icon: "droplets",
               bullets: [
-                "Walls and floors opened to establish the real extent behind the finishes.",
-                "Drywall, insulation, subfloor and affected finishes replaced.",
-                "Framing and joists checked before anything is closed up.",
-                "Affected electrical and plumbing reworked, with inspection.",
+                "Walls and floors opened to see the real extent",
+                "Affected drywall, insulation and subfloor replaced",
+                "Framing and joists checked before closing up",
               ],
             },
             {
               title: "Fire and smoke",
-              description:
-                "Direct damage, soot, odours held in the materials.",
+              description: "Direct damage, soot, odours held in porous materials.",
               icon: "hardHat",
               bullets: [
-                "Demolition of affected sections and removal of saturated materials.",
-                "Structure and envelope rebuilt to the required drawings.",
-                "Full reconstruction of affected rooms, from studs to paint.",
-                "Damaged cabinets, storage and finishes replaced.",
+                "Affected sections demolished",
+                "Structure and envelope rebuilt to the drawings",
+                "Rooms rebuilt from studs to paint",
               ],
             },
             {
               title: "Mould",
-              description:
-                "Usually the consequence of a slow leak or missing ventilation.",
+              description: "Usually the result of a slow leak or missing ventilation.",
               icon: "shieldCheck",
               bullets: [
-                "Rebuilding after decontamination carried out by a specialized firm.",
-                "The cause corrected: ventilation, waterproofing, drainage, misplaced vapour control.",
-                "Materials and assemblies suited to damp areas.",
-                "Finishes redone once the moisture problem is solved at the source.",
+                "Rebuild after specialized decontamination",
+                "Cause fixed: ventilation, air sealing, drainage",
+                "Assemblies suited to damp areas",
               ],
             },
             {
@@ -159,11 +113,52 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               description: "The most common situation in the West Island.",
               icon: "layers",
               bullets: [
-                "Affected finishes removed up to a safe height, including insulation behind the drywall.",
-                "Drain, sump pump and foundation cracks checked.",
-                "Wall rebuilt with an assembly more tolerant of moisture.",
-                "Conversion permit where the basement is refinished as living space.",
+                "Finishes and insulation removed to a safe height",
+                "Weeping tile, sump pump and cracks checked",
+                "Permit required if the basement is finished again",
               ],
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "process",
+      content: {
+        type: "process",
+        variant: "horizontal-steps-cards",
+        props: {
+          heading: "Five steps",
+          steps: [
+            {
+              number: "1",
+              title: "On-site assessment",
+              description:
+                "Visit after drying, with targeted openings to see behind the finishes.",
+            },
+            {
+              number: "2",
+              title: "Scope and quote",
+              description:
+                "Room-by-room description, line-by-line quote and photos, for your insurer.",
+            },
+            {
+              number: "3",
+              title: "Contract and permit",
+              description:
+                "Signed with a schedule, then a permit application if structure is involved.",
+            },
+            {
+              number: "4",
+              title: "Demolition",
+              description:
+                "Affected materials removed. Hidden damage documented before the work continues.",
+            },
+            {
+              number: "5",
+              title: "Reconstruction",
+              description:
+                "Mechanical, inspections, drywall, paint, floors, then a final walkthrough with you.",
             },
           ],
         },
@@ -177,37 +172,31 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         props: {
           heading: "What we bring to your claim",
           intro:
-            "We replace neither your insurer nor your claims adjuster. We supply the technical material the claim needs, in a format an insurer can process, and we stay available for questions about the scope of work.",
+            "We replace neither your insurer nor your adjuster. We supply the technical substance of the file.",
           items: [
             {
               title: "A written scope, room by room",
-              description:
-                "A description of the damage and of the restoration work for each room, rather than a lump sum. That is the document that makes comparison and discussion with the adjuster possible.",
+              description: "Damage and repairs described, not a single lump sum.",
             },
             {
-              title: "A line-item quote",
+              title: "A line-by-line quote",
               description:
-                "Demolition, mechanical, materials, labour, finishing: each item priced separately. Adjustments are negotiated line by line, not against an opaque total.",
+                "Demolition, mechanical, materials and finishing priced separately.",
             },
             {
-              title: "Photographic documentation",
+              title: "Photo documentation",
               description:
-                "Photos of the condition before work, of the openings made to assess, and of the hidden damage uncovered during demolition.",
+                "Condition before work, inspection openings and hidden damage.",
             },
             {
-              title: "Loss and upgrades kept separate",
+              title: "Loss and upgrades kept apart",
               description:
-                "If you take the opportunity to improve a room or change a layout, the non-loss portion is isolated in the quote. Everyone knows what belongs to the policy and what belongs to you.",
-            },
-            {
-              title: "One contact through to the end",
-              description:
-                "The same contractor from assessment to handover, licensed and insured. No passing you between the demolition crew, the drywaller and the installer when a question comes up.",
+                "Anything outside the claim is isolated in the quote, line by line.",
             },
           ],
           actions: [
             {
-              label: "See turnkey renovation",
+              label: "Turnkey renovation",
               href: "/services/renovation",
               variant: "ghost",
             },
@@ -219,153 +208,11 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
           ],
           image: {
             src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Assessing damage before rebuilding a floor",
+            alt: "Damage assessed before a floor is rebuilt",
           },
           cardTitle: "Why the licence matters here",
           cardDescription:
-            "RBQ licence 8306-0806-27, valid and unrestricted since 2004, a $40,000 bond and no claims on file. Civil liability and job-site insurance in force. Work carried out by a licensed contractor and inspected stands up better, both with the insurer and at resale.",
-        },
-      },
-    },
-    {
-      id: "included",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "How a rebuild unfolds",
-          intro:
-            "The final scope is confirmed once the walls are open and according to your insurer's settlement. The sequence itself stays the same.",
-          steps: [
-            {
-              number: "1",
-              title: "On-site assessment",
-              description:
-                "Visit after drying, assessment of visible damage and targeted openings to check what is hidden behind the finishes.",
-            },
-            {
-              number: "2",
-              title: "Scope and quote",
-              description:
-                "Room-by-room description, line-item quote and photos, in a format your insurer and their adjuster can work with.",
-            },
-            {
-              number: "3",
-              title: "Contract and permit",
-              description:
-                "Signed with the schedule once the scope is settled, then a permit application where the rebuild touches structure, plumbing or a basement conversion.",
-            },
-            {
-              number: "4",
-              title: "Demolition and final assessment",
-              description:
-                "Complete removal of affected materials. Hidden damage found here is documented and submitted as a supplementary claim before work continues.",
-            },
-            {
-              number: "5",
-              title: "Rebuilding",
-              description:
-                "Framing, plumbing, electrical, ventilation, insulation, municipal inspections, drywall, paint, flooring and custom millwork.",
-            },
-            {
-              number: "6",
-              title: "Handover",
-              description:
-                "Final walkthrough with you, punch list, cleanup, return of the space and the contractual warranty takes effect.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "intégration",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "The spaces most often rebuilt",
-          intro:
-            "After water damage, it is the basement, the kitchen, the bathroom and the flooring that need a full rebuild first.",
-          items: [
-            {
-              title: "Basement finishing",
-              href: "/services/renovation/sous-sol",
-              description:
-                "The space most exposed to backups and flooding. Lower walls, insulation and finishes rebuilt, with drainage corrected.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Basement rebuilt after a flood",
-              },
-              badges: ["Basement", "Drainage"],
-              footerCtaLabel: "See basement",
-            },
-            {
-              title: "Kitchen renovation",
-              href: "/services/renovation/cuisine",
-              description:
-                "When water reaches the kitchen, base cabinets, subfloor and sometimes plumbing have to be replaced.",
-              image: {
-                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-                alt: "Kitchen rebuilt after water damage",
-              },
-              badges: ["Kitchen", "Cabinets"],
-              footerCtaLabel: "See kitchen",
-            },
-            {
-              title: "Bathroom renovation",
-              href: "/services/renovation/salle-de-bain",
-              description:
-                "A long-running leak behind the shower means opening everything up, repairing the framing and redoing the waterproofing entirely.",
-              image: {
-                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-                alt: "Bathroom rebuilt after a leak",
-              },
-              badges: ["Waterproofing", "Framing"],
-              footerCtaLabel: "See bathroom",
-            },
-            {
-              title: "Flooring renovation",
-              href: "/services/renovation/plancher",
-              description:
-                "The finish and often the subfloor have to be redone after a flood. Moisture testing before anything new goes down.",
-              image: {
-                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-                alt: "Floor replaced after water damage",
-              },
-              badges: ["Flooring", "Moisture"],
-              footerCtaLabel: "See flooring",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "proof",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What a well-run rebuild delivers",
-          description:
-            "The goal is not simply to make it presentable again. It is to bring the building back to a sound, compliant and documented state, so the loss does not repeat itself in two years.",
-          cards: [
-            {
-              title: "A genuinely cleaned-out building",
-              description:
-                "Affected materials were removed, not covered over, and the cause of the loss was corrected where it belonged to the building.",
-            },
-            {
-              title: "A file that holds up",
-              description:
-                "Written scope, line-item quote and photos: a claim supported by documents the insurer can actually process.",
-            },
-            {
-              title: "Compliant, warranted work",
-              description:
-                "Permits obtained, inspections passed, a licensed and insured contractor, and a contractual warranty at handover.",
-            },
-          ],
-          columns: "1",
+            "RBQ licence 8306-0806-27, valid since 2004, bond in force, civil liability and job-site insurance. Licensed, inspected work stands up better.",
         },
       },
     },
@@ -375,49 +222,31 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ — disaster rebuild",
-          intro:
-            "Emergency response, insurance, scope, timelines, permits, hidden damage and warranty.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "Do you handle the emergency, pumping and drying?",
-              a: "No. Pumping, drying, disinfection and decontamination are emergency interventions carried out by specialized firms, often retained directly by the insurer. We take over for the rebuild, once the space is dry and safe.",
+              q: "Do you handle pumping and drying?",
+              a: "No. Pumping, drying and decontamination are emergency services handled by specialized firms, often retained by the insurer. We take over the rebuild once the premises are dry and safe.",
             },
             {
               q: "Do you work with my insurance?",
-              a: "We supply the written room-by-room scope, the line-item quote and the photographic documentation your claim needs, and we stay available to answer the adjuster's technical questions. You remain the policyholder and your insurer's contact; we support the rebuild side.",
+              a: "We supply the written scope, the line-by-line quote and the photos your claim needs, and we answer the adjuster's technical questions. You remain the policyholder and your insurer's point of contact.",
             },
             {
               q: "Can I choose my own contractor?",
-              a: "As a rule, yes: the homeowner chooses who does the work, even when the insurer proposes companies from its network. Check the terms of your policy and discuss it with your insurer before signing anything. We provide the documents needed for our quote to be compared with others.",
+              a: "As a rule the homeowner chooses who does the work, even when the insurer suggests companies from its network. Confirm the terms of your policy with your insurer. We provide the documents so our quote can be compared.",
             },
             {
-              q: "How soon after the loss can work start?",
-              a: "The rebuild starts once drying is complete, the scope is settled and the claim is far enough along. The assessment and the quote can be prepared in parallel with the drying, which avoids losing several weeks.",
+              q: "What if you find more damage?",
+              a: "It happens often after water damage. We document hidden damage with photos and a description, give you the cost in writing and let you file a supplementary claim. Nothing is closed over a known problem.",
             },
             {
-              q: "What if you find more damage during demolition?",
-              a: "It is common, especially after water damage. We document the hidden damage with photos and a description, give you the cost in writing and let you file a supplementary claim before continuing. Nothing gets closed up over a known problem.",
-            },
-            {
-              q: "Is a permit required to rebuild?",
-              a: "Often, yes. As soon as the rebuild touches the structure, relocates plumbing or refinishes a basement as living space, a permit is required. We check with your city or borough and file the application. Work done without a permit can complicate resale and a future claim.",
-            },
-            {
-              q: "Do you rebuild identically, or can we upgrade?",
-              a: "Both are possible. Restoring what was there falls under the claim; upgrades you want to add are at your expense. We separate the two clearly in the quote, so you and your insurer know exactly what belongs to which.",
-            },
-            {
-              q: "Do you work in Pierrefonds-Roxboro and the West Island?",
-              a: "Yes. Our office is at 18625 Larocque Street in Pierrefonds-Roxboro, and we cover the whole West Island, Montreal, Laval, the South Shore and Vaudreuil-Soulanges. We know the housing stock in the waterfront sectors and their constraints.",
-            },
-            {
-              q: "Which spaces do you rebuild?",
-              a: "Mainly basements, kitchens, bathrooms and flooring, though the scope can cover an entire house depending on the damage. Damaged cabinets, vanities and storage are rebuilt to measure and installed by our crews, under subcategory 12 of our licence.",
+              q: "Do I need a permit to rebuild?",
+              a: "Often. As soon as the rebuild touches structure, moves plumbing or finishes a basement as living space, a permit is required. We confirm with your city and file the application.",
             },
             {
               q: "Is the work warranted?",
-              a: "Yes. Rebuild work is warranted and the terms are in the contract. Our RBQ licence 8306-0806-27 has been valid and unrestricted since 2004, with a $40,000 bond and no claims on file. Civil liability and job-site insurance are in force.",
+              a: "Yes, with the scope and duration written into the contract. RBQ licence 8306-0806-27, valid with no restrictions since 2004, bond in force, no claims on file.",
             },
           ],
         },
@@ -429,9 +258,9 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A loss to rebuild in the West Island?",
+          heading: "A loss to rebuild?",
           intro:
-            "We assess the damage, prepare the scope and the detailed quote for your claim, then rebuild under a single contract. Call (514) 820-0773 or request an assessment.",
+            "We assess the damage, build the scope and the quote, then rebuild under a single contract.",
           actions: [
             {
               label: "Request an assessment",
@@ -444,7 +273,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro, the West Island and Greater Montreal",
+          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro and Greater Montreal",
         },
       },
     },

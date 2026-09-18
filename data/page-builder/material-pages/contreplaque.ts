@@ -32,11 +32,10 @@ export const contreplaquePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Matériaux",
-          heading:
-            "Contreplaqué : stabilité, durabilité et structure intelligente",
+          eyebrow: "Matériaux",
+          heading: "Le contreplaqué tient la structure des armoires",
           description:
-            "Le contreplaqué est un panneau formé de fines couches de bois (plis) collées en croisant le fil, ce qui lui donne un comportement plus stable et prévisible que les panneaux de particules. C'est pourquoi il est souvent privilégié en sur mesure pour la structure des armoires.",
+            "Des plis de bois collés à fil croisé. Résultat : un panneau plus stable que la particule, qui garde les vis et les charnières.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -49,13 +48,12 @@ export const contreplaquePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Stabilité", "Durabilité"],
+          badges: ["Structure", "Stabilité", "Caissons"],
           image: {
             src: "/images/generated/materials/material-plywood-hero-01.webp",
             alt: "Cuisine sur mesure avec structure durable",
           },
-          caption:
-            "Souvent pertinent quand la tenue structurelle compte vraiment",
+          caption: "Caissons, tiroirs et pièces sous charge",
         },
       },
     },
@@ -65,63 +63,32 @@ export const contreplaquePage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Pourquoi il est souvent choisi pour la structure",
+          heading: "Pourquoi il sert de structure",
           description:
-            "Le contreplaqué est constitué de plis de bois collés avec fibres croisées. Cette logique constructive améliore la stabilité dimensionnelle, la résistance mécanique et la tenue des fixations.",
+            "Le fil croisé d'un pli à l'autre bloque les mouvements du bois. C'est ce qui donne au panneau sa tenue mécanique.",
           cards: [
             {
               title: "Plis croisés",
               description:
-                "Ils limitent les mouvements et rendent le panneau plus stable.",
+                "Le panneau bouge peu, même sur de grandes hauteurs.",
             },
             {
-              title: "Bonne tenue des vis",
+              title: "Tenue des vis",
               description:
-                "Utile pour des armoires, tiroirs et modules soumis à l'usage.",
+                "Charnières et coulisses restent serrées après des milliers de cycles.",
             },
             {
-              title: "Structure robuste",
+              title: "Charge supportée",
               description:
-                "Particulièrement pertinente dans des projets résidentiels long terme.",
+                "Tablettes et fonds de tiroirs fléchissent moins sous le poids.",
             },
             {
-              title: "Polyvalence",
-              description: "Cuisine, rangement et autres zones exigeantes.",
+              title: "Coût plus élevé",
+              description:
+                "L'écart se justifie sur les pièces sollicitées, pas sur tout.",
             },
           ],
           columns: "2",
-        },
-      },
-    },
-    {
-      id: "fit",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Où le contreplaqué est le plus pertinent",
-          intro:
-            "Ce matériau prend de la valeur quand la structure, la charge et la stabilité importent plus que le rendu décoratif seul.",
-          badges: ["Caissons", "Tiroirs", "Long terme"],
-          cardTitle: "Applications typiques",
-          items: [
-            "Caissons d'armoires",
-            "Composantes internes porteuses",
-            "Tiroirs et modules soumis aux charges",
-            "Projets orientés durabilité à long terme",
-          ],
-          actions: [
-            {
-              label: "Voir la fabrication",
-              href: "/services/fabrication",
-              variant: "primary",
-            },
-            {
-              label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-          ],
         },
       },
     },
@@ -131,23 +98,21 @@ export const contreplaquePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Humidité, limites et points à surveiller",
+          heading: "Ce qu'il faut surveiller",
           intro:
-            "Le contreplaqué n'est pas imperméable. Les chants, l'assemblage, le grade et la finition restent décisifs pour le résultat final.",
+            "Le contreplaqué n'est pas imperméable. Le grade, les chants et la pose décident du résultat.",
           items: [
             {
-              title: "Qualité variable selon le grade.",
-              description: "Tous les contreplaqués ne se valent pas.",
+              title: "Le grade change tout",
+              description: "Nombre de plis, vides internes, qualité de la colle.",
             },
             {
-              title: "Coût souvent plus élevé.",
-              description:
-                "Le gain se joue surtout sur la structure et la longévité.",
+              title: "Chants à fermer",
+              description: "Visibles ou exposés à l'eau, ils doivent être scellés.",
             },
             {
-              title: "Exécution finale critique.",
-              description:
-                "Chants visibles, humidité et pose influencent fortement le rendu.",
+              title: "Zones humides",
+              description: "Sous évier et salle de bain, on protège davantage.",
             },
           ],
           actions: [
@@ -157,8 +122,8 @@ export const contreplaquePage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Voir tous les matériaux",
-              href: "/materiaux",
+              label: "Voir la quincaillerie",
+              href: "/materiaux/quincaillerie",
               variant: "ghost",
             },
           ],
@@ -168,92 +133,33 @@ export const contreplaquePage: PageTemplateData = {
           },
           cardTitle: "À retenir",
           cardDescription:
-            "Le contreplaqué est souvent un excellent choix structurel, mais sa vraie performance dépend aussi des détails d'exécution.",
-        },
-      },
-    },
-    {
-      id: "related",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Pages connexes",
-          items: [
-            {
-              title: "Comparatif complet",
-              href: "/materiaux/comparatif",
-              description:
-                "Comparer contreplaqué, MDF, mélamine et bois massif.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
-              },
-              badges: ["Comparatif"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "Plus orienté finition peinte.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "Panneau MDF avec finition peinte",
-              },
-              badges: ["Peinture"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Mélamine",
-              href: "/materiaux/melamine",
-              description: "Plus orientée décor et budget.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de mélamine pour mobilier sur mesure",
-              },
-              badges: ["Décor"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Bois massif",
-              href: "/materiaux/bois-massif",
-              description: "Plus pertinent sur les éléments visibles.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Finition en bois massif naturel",
-              },
-              badges: ["Naturel"],
-              footerCtaLabel: "Voir la page",
-            },
-          ],
+            "Excellent choix structurel, à condition de soigner le grade et les chants.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Contreplaqué",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Le contreplaqué est-il toujours meilleur que le MDF ?",
-              a: "Pas nécessairement — ils excellent à des endroits différents. Le contreplaqué, grâce à ses plis croisés, est plus stable et tient mieux les vis et les charnières : il est souvent idéal pour la structure des caissons et les tiroirs. Le MDF, lui, offre une surface plus lisse et uniforme, ce qui convient mieux à certaines façades peintes. La meilleure approche combine souvent les deux, chacun là où il performe.",
-            },
-            {
-              q: "Le contreplaqué est-il adapté à la salle de bain ?",
-              a: "Selon le contexte, oui. Les détails de protection et d'installation restent déterminants.",
+              q: "Contreplaqué ou MDF ?",
+              a: "Les deux, à des endroits différents. Le contreplaqué pour les caissons et les tiroirs, parce qu'il tient les vis. Le MDF pour les portes peintes, parce que sa surface est plus lisse.",
             },
             {
               q: "Est-ce plus cher ?",
-              a: "Souvent oui : le contreplaqué de qualité coûte généralement plus cher que le MDF ou les panneaux de particules. En contrepartie, il apporte une meilleure stabilité structurelle, une résistance accrue à l'humidité et une meilleure tenue des fixations dans le temps. C'est un choix d'investissement qui se justifie surtout sur les éléments structurels sollicités au quotidien.",
+              a: "Oui, généralement plus cher que le MDF ou la particule. L'écart se rentabilise sur les pièces sollicitées chaque jour : caissons, tiroirs, tablettes chargées.",
+            },
+            {
+              q: "Est-ce adapté à la salle de bain ?",
+              a: "Oui, avec des chants scellés, un fini qui protège la surface et une ventilation correcte. La vapeur attaque les panneaux par leurs bords avant tout.",
             },
             {
               q: "Est-ce visible une fois installé ?",
-              a: "Généralement non, sauf choix design spécifique avec tranches visibles.",
+              a: "Non, sauf choix de design volontaire. Les plis peuvent rester apparents sur un chant ou une tablette, comme parti pris esthétique.",
             },
           ],
         },
@@ -265,9 +171,9 @@ export const contreplaquePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez privilégier une structure plus durable ?",
+          heading: "Vous visez une structure qui dure ?",
           intro:
-            "On vous aide à voir si le contreplaqué est pertinent pour votre projet, ou si une combinaison de matériaux sera plus cohérente.",
+            "On vous dit où le contreplaqué change vraiment quelque chose dans votre projet.",
           actions: [
             {
               label: "Demander une soumission",

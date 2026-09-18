@@ -22,10 +22,10 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Cabinetry division",
-          heading: "Materials, durability, finish and performance",
+          eyebrow: "Cabinetry division",
+          heading: "The materials that go into your cabinets",
           description:
-            "The choice of cabinet materials — solid wood, plywood, MDF, melamine, hardware and finishes — determines a project's durability and look. These specifications are set by the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), then passed on to our partner factory and checked on delivery, before installation.",
+            "Panels, hardware and finishes are specified by us, produced by our partner factory, then checked on delivery before installation.",
           actions: [
             {
               label: "Request a quote",
@@ -33,18 +33,17 @@ export const pageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our kitchens",
+              label: "See our kitchens",
               href: "/espaces/cuisine",
               variant: "ghost",
             },
           ],
-          badges: ["Plywood", "MDF", "Melamine", "Hardware"],
+          badges: ["Plywood", "MDF", "Hardware"],
           image: {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Visual comparison of materials for custom cabinets",
           },
-          caption:
-            "A materials page should show the material itself, not a generic kitchen",
+          caption: "Specified here, checked on delivery",
         },
       },
     },
@@ -54,29 +53,29 @@ export const pageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "How we choose materials",
+          heading: "How we choose",
           description:
-            "Performance does not depend only on the chosen panel. It also depends on moisture, usage loads, impact resistance, stability over time and assembly details.",
+            "The panel is decided part by part. A kitchen door and a cabinet box under a sink do not face the same conditions.",
           cards: [
             {
-              title: "Moisture",
+              title: "Humidity",
               description:
-                "Kitchen, bathroom and laundry room don't impose the same constraints.",
+                "Bathrooms, under-sink boxes and laundry rooms call for more protection.",
             },
             {
-              title: "Loads and use",
+              title: "Load",
               description:
-                "Drawers, cabinet boxes and doors don't all require the same level of robustness.",
+                "Drawers, shelves and tall cabinets carry very different weights.",
             },
             {
-              title: "Expected finish",
+              title: "Target finish",
               description:
-                "A uniform painted finish isn't handled the same way as a melamine décor or a natural wood look.",
+                "Uniform paint, thermofused decor or natural wood grain.",
             },
             {
-              title: "Final execution",
+              title: "Edges and installation",
               description:
-                "Edges, hardware and installation have a direct impact on durability.",
+                "They decide how long it lasts, not just the panel itself.",
             },
           ],
           columns: "2",
@@ -88,175 +87,45 @@ export const pageEn: PageTemplateData = {
       frame: { surface: "muted" },
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "link-cards-compact",
         props: {
-          heading: "Explore the materials pages",
-          intro:
-            "Each page explains the trade-offs, uses and limits of the topic.",
+          heading: "Materials in detail",
+          columns: "3",
           items: [
             {
-              title: "Why plywood",
-              description: "Stable, durable structure.",
+              title: "Plywood",
               href: "/materiaux/contreplaque",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Plywood detail for custom cabinets",
-              },
-              badges: ["Structure", "Durability"],
-              footerCtaLabel: "View plywood",
+              description: "Cabinet box structure",
             },
             {
               title: "MDF",
-              description: "Uniformity and painted finish.",
               href: "/materiaux/mdf",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "MDF panel with a painted finish",
-              },
-              badges: ["Finish", "Paint"],
-              footerCtaLabel: "View MDF",
+              description: "Painted doors",
             },
             {
               title: "Melamine",
-              description: "Décor and controlled cost.",
               href: "/materiaux/melamine",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Melamine panel for custom furniture",
-              },
-              badges: ["Décor", "Budget"],
-              footerCtaLabel: "View melamine",
+              description: "Pre-finished decor",
             },
             {
               title: "Solid wood",
-              description: "Natural texture and character.",
               href: "/materiaux/bois-massif",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Natural solid wood finish",
-              },
-              badges: ["Natural", "Visible"],
-              footerCtaLabel: "View solid wood",
+              description: "Fronts and details",
             },
             {
               title: "Hardware",
-              description: "Comfort, precision and longevity.",
               href: "/materiaux/quincaillerie",
-              image: {
-                src: "/images/generated/materials/material-hardware-hero-01.webp",
-                alt: "Premium hardware for cabinets and drawers",
-              },
-              badges: ["Use", "Durability"],
-              footerCtaLabel: "View hardware",
+              description: "Hinges and slides",
             },
             {
               title: "Colours and finishes",
-              description: "Visual cohesion and maintenance.",
               href: "/materiaux/couleurs",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Colour and finish samples for a custom kitchen",
-              },
-              badges: ["Style", "Maintenance"],
-              footerCtaLabel: "View colours and finishes",
+              description: "Shade and sheen",
             },
             {
-              title: "Materials comparison",
-              description: "A quick overview to frame the choice.",
+              title: "Comparison",
               href: "/materiaux/comparatif",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Visual comparison of several cabinet materials",
-              },
-              badges: ["Comparison", "Decision"],
-              footerCtaLabel: "View the comparison",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "quick-compare",
-      content: {
-        type: "comparison",
-        variant: "table-basic",
-        props: {
-          heading: "Quick comparison",
-          intro:
-            "For a complete read, then check the detailed comparison.",
-          columns: ["Overall performance", "Typical use"],
-          rows: [
-            {
-              label: "Plywood",
-              values: [
-                "Stable, durable structure",
-                "Cabinet boxes and demanding structures",
-              ],
-            },
-            {
-              label: "MDF",
-              values: [
-                "Uniformity and painted look",
-                "Painted doors and fronts",
-              ],
-            },
-            {
-              label: "Melamine",
-              values: [
-                "Varied décor and controlled cost",
-                "Interiors and targeted applications",
-              ],
-            },
-            {
-              label: "Solid wood",
-              values: [
-                "Perceived value and natural texture",
-                "Visible elements and premium details",
-              ],
-            },
-            {
-              label: "Hardware",
-              values: [
-                "Comfort and precise operation",
-                "Doors, drawers and mechanisms",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "premium",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "What truly makes it high-end",
-          intro:
-            "A premium result comes from a coherent system: the right materials in the right place, reliable hardware, solid fabrication details and clean installation adjustments.",
-          badges: ["Structure", "Hardware", "Installation"],
-          cardTitle: "The points that really change the result",
-          items: [
-            "Stable structures suited to the use",
-            "Reliable, well-adjusted hardware",
-            "Edge protection and finishing details",
-            "Precise installation and adjustments",
-          ],
-          actions: [
-            {
-              label: "View hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "primary",
-            },
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
+              description: "The four panels side by side",
             },
           ],
         },
@@ -264,32 +133,27 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Materials FAQ",
+          heading: "Frequently asked questions",
           items: [
             {
               q: "Plywood or MDF?",
-              a: "They excel in different places. Plywood, more stable thanks to its cross-grain plies, is often preferred for cabinet structure and drawers. MDF offers a smoother surface, ideal for certain painted fronts. The choice depends on the role of the component, moisture and the targeted durability — and the best approach often combines the two.",
+              a: "Plywood for boxes and drawers, because it holds screws. MDF for painted doors, because its surface lets no grain telegraph through.",
             },
             {
               q: "Is melamine a good choice?",
-              a: "Yes, in the right contexts. Melamine offers a wide choice of finishes at a controlled cost and an easy-to-maintain surface. Its durability depends mainly on the quality of the edges and installation precision: well installed, it's relevant for many projects, especially cabinet interiors and budget-framed jobs.",
+              a: "Yes, inside cabinet boxes and on shelves. Its life depends on the edges: thick, well-bonded banding, or water eventually gets in.",
             },
             {
-              q: "Is soft-close hardware worth it?",
-              a: "Yes, provided the system is reliable and well installed. Soft-close reduces impact and noise, improves daily comfort and extends the life of doors and drawers, which are used constantly. It's one of the often-invisible details that most distinguish a durable kitchen from an entry-level one.",
+              q: "What should be avoided in a bathroom?",
+              a: "Any panel left with bare edges. Steam attacks the edges before the surface. We seal, we ventilate, and we switch to plywood under the basin.",
             },
             {
-              q: "Which materials should be avoided in a bathroom?",
-              a: "In a bathroom, you avoid materials that are poorly protected against moisture or whose edges are poorly sealed, because steam and splashes seep in over time. You favour stable structures, moisture-resistant finishes and durable hardware, combined with good ventilation and careful installation — it's the execution that protects durability.",
-            },
-            {
-              q: "Can you also handle the full renovation of the room?",
-              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation of the room: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
+              q: "Can you renovate the whole room?",
+              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27. Permit, demolition, plumbing, electrical, flooring and cabinet installation under one written contract.",
             },
           ],
         },
@@ -301,9 +165,9 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need advice on the right technical choices?",
+          heading: "Want a read on your technical choices?",
           intro:
-            "We help you choose a combination of materials, hardware and finish that's consistent with your space and your priorities.",
+            "We lock the panel, hardware and finish combination into the detailed quote.",
           actions: [
             {
               label: "Request a quote",

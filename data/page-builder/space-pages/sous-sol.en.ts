@@ -29,11 +29,10 @@ export const sousSolPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Cabinetry division",
-          heading:
-            "Custom basement finishing in Pierrefonds and Greater Montréal",
+          eyebrow: "Basement",
+          heading: "Custom basement finishing, from framing to built-ins",
           description:
-            "Custom basement finishing turns an often underused space into a high-end living area — home theatre room, bar, wine cellar, library or game room — with built-in cabinetry designed for how you actually use it. The cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), designs the millwork, has it produced by our partner factory and installed by our own crews, coordinated with the rest of the basement finishing.",
+            "Home theatre, bar, wine cellar or built-in storage, designed with the room and installed in the site sequence.",
           actions: [
             {
               label: "Get a quote",
@@ -41,49 +40,17 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our work",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Custom", "Turnkey", "West Island"],
+          badges: ["Custom-built", "Turnkey"],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "High-end custom basement finishing in Pierrefonds",
           },
-          caption:
-            "High-end residential in Pierrefonds, the West Island and Greater Montréal",
-        },
-      },
-    },
-    {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "A basement designed as a true living space",
-          intro:
-            "A basement gains value when the cabinetry is integrated from the start: storage, wall units, a bar or a theatre planned with the room, not added afterward.",
-          badges: ["Custom", "Durability", "Turnkey"],
-          cardTitle: "A good fit for this kind of project",
-          items: [
-            "A basement to finish or rethink entirely.",
-            "A desire for a theatre, bar, wine cellar or built-in office.",
-            "Priority on storage, finishes and a single point of coordination.",
-          ],
-          actions: [
-            {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
-            },
-          ],
+          caption: "Pierrefonds · West Island · Greater Montréal",
         },
       },
     },
@@ -93,109 +60,63 @@ export const sousSolPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in a basement",
-          intro:
-            "Every basement combines a few of these spaces. We design custom cabinetry so they fit into the room and stay functional day to day.",
+          heading: "What we build downstairs",
           items: [
             {
               title: "Home theatre room",
-              description:
-                "Riser, panels, equipment storage and screen integration for a true custom home theatre room — not just an audio system set on a console.",
+              description: "Riser, panels, equipment storage and screen integration.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Custom home theatre room in a basement",
               },
-              badges: ["Home theatre", "Custom"],
+              badges: ["Home theatre"],
             },
             {
               title: "Basement bar",
-              description:
-                "Custom bar with countertop, bottle storage, glassware and built-in appliances, designed for entertaining.",
+              description: "Counter, bottle and glassware storage, appliances built in.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Custom basement bar",
               },
-              badges: ["Bar", "Custom"],
+              badges: ["Bar"],
             },
             {
               title: "Wine cellar",
-              description:
-                "Custom wine cellar (wood, glass, under-stairs) designed for preserving and showcasing your bottles.",
+              description: "Wood, glass or under-stair, designed for storage conditions.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
                 alt: "Custom wine cellar in a basement",
               },
-              badges: ["Wine cellar", "Cellar"],
+              badges: ["Cellar"],
             },
             {
-              title: "Library & office",
-              description:
-                "Wall-mounted library, storage wall and built-in desk for a reading, work or home-office nook in the basement.",
+              title: "Library and office",
+              description: "Storage wall and built-in desk for working from home.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
-                alt: "Custom wall-mounted library and built-in office",
+                alt: "Custom wall library and built-in desk",
               },
-              badges: ["Library", "Office"],
+              badges: ["Office"],
             },
             {
-              title: "Game & entertainment room",
-              description:
-                "Wall unit, entertainment wall and storage for an orderly, durable game or family room.",
+              title: "Games room",
+              description: "Wall unit and storage for an orderly family room.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
-                alt: "Custom game room and wall unit in a basement",
+                alt: "Custom games room and wall unit in a basement",
               },
-              badges: ["Game room", "Wall unit"],
+              badges: ["Wall unit"],
             },
             {
-              title: "Storage & mechanical",
+              title: "Storage and mechanical",
               href: "/espaces/walk-in",
-              description:
-                "Custom closets, closed storage and discreet access to technical spaces to keep a basement clean and organized.",
+              description: "Closed storage and discreet access to mechanical spaces.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
                 alt: "Custom closed storage along a basement wall",
               },
-              badges: ["Storage", "Durable"],
-              footerCtaLabel: "See custom closets",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "A clear process from design to installation",
-          intro:
-            "A single partner to frame decisions, coordinate the trades and reduce surprises on site.",
-          steps: [
-            {
-              number: "1",
-              title: "Design",
-              description:
-                "Analysis of the space, the constraints (height, columns, mechanical) and zone planning.",
-            },
-            {
-              number: "2",
-              title: "Materials",
-              description:
-                "Selection of components and finishes suited to humidity and the real use of a basement.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Controlled production of the modules (theatre, bar, cellar, storage) with stable standards.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Precise fitting, clean alignments and finishes verified on site.",
+              badges: ["Storage"],
+              footerCtaLabel: "See closets",
             },
           ],
         },
@@ -207,24 +128,20 @@ export const sousSolPageEn: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Materials chosen for the reality of a basement",
-          intro:
-            "A basement imposes its constraints: humidity, temperature swings and technical access. The choice of materials and structure matters as much as the look.",
+          heading: "What a basement demands",
+          intro: "Moisture, headroom and mechanical access are settled before the finishing, not after.",
           items: [
             {
-              title: "Moisture resistance",
-              description:
-                "Components and finishes selected to better tolerate a basement environment.",
+              title: "Moisture checked first",
+              description: "Drain, cracks and levels verified before insulating",
             },
             {
               title: "Durable structure",
-              description:
-                "Birch plywood and solid wood where load and stability matter.",
+              description: "Birch plywood where the load matters",
             },
             {
               title: "Clean integration",
-              description:
-                "Wiring, equipment and mechanical access concealed for a consistent finish.",
+              description: "Wiring and mechanical access concealed",
             },
           ],
           actions: [
@@ -234,62 +151,22 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Turnkey basement finishing",
+              label: "Basement finishing",
               href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
             {
-              label: "View our services",
-              href: "/services",
+              label: "After water damage",
+              href: "/services/renovation/apres-sinistre",
               variant: "ghost",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
-            alt: "Custom cabinetry detail for basement finishing",
+            alt: "Detail of custom built-in millwork for a finished basement",
           },
           cardTitle: "Why it matters",
-          cardDescription:
-            "Materials suited to the basement prevent warping, odours and premature replacements.",
-        },
-      },
-    },
-    {
-      id: "zones",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Basement finishing across Greater Montréal",
-          intro:
-            "Based in Pierrefonds-Roxboro, we design, fabricate and install custom basement finishing in the West Island and across Greater Montréal.",
-          badges: [
-            "Pierrefonds-Roxboro",
-            "West Island",
-            "Montréal",
-            "Laval",
-            "North Shore",
-            "South Shore",
-          ],
-          cardTitle: "Areas served",
-          items: [
-            "Pierrefonds-Roxboro and the West Island",
-            "Montréal and central neighbourhoods",
-            "Laval and the North Shore",
-            "South Shore and southern suburbs",
-          ],
-          actions: [
-            {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "View our projects",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
+          cardDescription: "A poorly prepped basement warps and smells damp.",
         },
       },
     },
@@ -299,29 +176,27 @@ export const sousSolPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - basement finishing",
-          intro:
-            "Clear answers to the most common questions before starting a basement project.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does custom basement finishing cost?",
-              a: "The price of custom basement finishing varies a lot depending on the floor area to cover and the spaces you want: a home theatre room, a bar, a wine cellar, a library or storage don't involve the same level of millwork or coordination. Add to that the materials and finishes chosen, the details suited to a basement environment (moisture, height management), and the extent of coordination if other trades are involved. Rather than a generic price, we provide a precise estimate once the project is scoped with you — real uses, priorities and finish level — for a clear budget before you commit.",
+              q: "How much does finishing a basement cost?",
+              a: "The price varies with the area and the spaces you keep: a home theatre, a bar or a cellar do not involve the same millwork. The firm amount is set after the on-site survey, in the detailed quote.",
             },
             {
-              q: "What's the difference between a “home theatre room” and a “home theatre”?",
-              a: "A “home theatre” often refers to the audio-video equipment (speakers, receiver). A custom home theatre room is the finishing of the room itself: riser, panels, equipment storage and built-in cabinetry. That is what we design and fabricate.",
+              q: "How long for the built-in millwork?",
+              a: "Nine to fifteen weeks from design sign-off to installation. The order is timed to the site schedule so it lands once the partitions and flooring are done.",
             },
             {
-              q: "Do you do basement finishing in Pierrefonds and the West Island?",
-              a: "Yes. We are based in Pierrefonds-Roxboro and build custom basement finishing throughout the West Island, Montréal, Laval and Greater Montréal.",
+              q: "How do you handle moisture?",
+              a: "We check the drain, the cracks and the moisture levels before insulating. Finishes and materials are chosen for a basement environment, which limits warping.",
             },
             {
-              q: "How do you handle basement humidity?",
-              a: "We select materials and finishes suited to a basement environment and take care with construction details to limit warping and humidity-related issues.",
+              q: "Do I need a permit to finish a basement?",
+              a: "Often yes, as soon as you add partitions, a bathroom or a bedroom. We check your city's requirements and file the application for you.",
             },
             {
-              q: "Can you also handle the full renovation of the room?",
-              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full basement finishing: municipal permit, insulation, partitions, electrical, plumbing, flooring and installation of the built-in millwork, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
+              q: "Can you handle the full finishing?",
+              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27: permit, insulation, partitions, electrical, plumbing, flooring and millwork installation, coordinated by one party, in the written contract.",
             },
           ],
         },
@@ -334,8 +209,7 @@ export const sousSolPageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your basement project",
-          intro:
-            "Get a structured quote tailored to your space, your priorities and your finish level.",
+          intro: "Free estimate. First reply within 24 to 48 business hours.",
           actions: [
             {
               label: "Request a quote",
@@ -343,11 +217,12 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our work",
               href: "/projets",
               variant: "ghost",
             },
           ],
+          note: "RBQ licence 8306-0806-27 · West Island, Montréal, Laval, South Shore",
         },
       },
     },

@@ -22,11 +22,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Division armoires",
-          heading:
-            "Réalisations sur mesure : cuisines, vanités, rangement et commercial",
+          eyebrow: "Réalisations",
+          heading: "Cuisines, vanités, rangement et commercial",
           description:
-            "Cette page sert à montrer des cas réels, pas une galerie vide. Vous y trouvez des projets de la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : conception par nos soins, production par notre usine partenaire, pose par nos équipes, coordonnée avec le reste du chantier.",
+            "Des chantiers réels menés dans le Grand Montréal par un entrepreneur général licencié RBQ.",
           actions: [
             {
               label: "Demander une soumission",
@@ -44,8 +43,7 @@ export const page: PageTemplateData = {
             src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
             alt: "Réalisation sur mesure Dilamco",
           },
-          caption:
-            "Des projets qui servent à se projeter et à vérifier la qualité d'exécution",
+          caption: "Cuisine haut de gamme · Laval",
         },
       },
     },
@@ -58,15 +56,13 @@ export const page: PageTemplateData = {
         variant: "image-cards-slider-lightbox",
         props: {
           heading: "Explorer les projets",
-          intro:
-            "Choisissez l'univers de projet le plus proche de votre réalité pour voir des références mieux ciblées.",
+          intro: "Choisissez l'univers le plus proche de votre projet.",
           items: [
             {
               title: "Cuisines",
               href: "/projets/cuisine",
-              description:
-                "Cuisines sur mesure : rangement optimisé et finition précise.",
-              footerCtaLabel: "Voir les projets cuisine",
+              description: "Rangement optimisé et finition précise.",
+              footerCtaLabel: "Voir les cuisines",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Projets de cuisine sur mesure",
@@ -75,9 +71,8 @@ export const page: PageTemplateData = {
             {
               title: "Salles de bain & vanités",
               href: "/projets/salle-de-bain",
-              description:
-                "Vanités sur mesure durables, adaptées à l'humidité.",
-              footerCtaLabel: "Voir les projets salle de bain",
+              description: "Vanités durables, conçues pour l'humidité.",
+              footerCtaLabel: "Voir les salles de bain",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Projets de vanité de salle de bain sur mesure",
@@ -87,7 +82,7 @@ export const page: PageTemplateData = {
               title: "Walk-in & rangement",
               href: "/projets/walk-in",
               description: "Rangement sur mesure, optimisé et fonctionnel.",
-              footerCtaLabel: "Voir les projets walk-in",
+              footerCtaLabel: "Voir les walk-in",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Projets de walk-in et rangement sur mesure",
@@ -97,7 +92,7 @@ export const page: PageTemplateData = {
               title: "Salles de lavage",
               href: "/projets/salle-de-lavage",
               description: "Salles de lavage organisées et durables.",
-              footerCtaLabel: "Voir les projets salle de lavage",
+              footerCtaLabel: "Voir les salles de lavage",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Projets de salle de lavage sur mesure",
@@ -106,9 +101,8 @@ export const page: PageTemplateData = {
             {
               title: "Commercial",
               href: "/projets/commercial",
-              description:
-                "Bureaux, commerces et améliorations locatives livrés prêts à occuper.",
-              footerCtaLabel: "Voir les projets commerciaux",
+              description: "Bureaux et commerces livrés prêts à occuper.",
+              footerCtaLabel: "Voir le commercial",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Projets commerciaux sur mesure",
@@ -121,50 +115,31 @@ export const page: PageTemplateData = {
 
     {
       id: "process",
-      frame: { surface: "muted" },
       content: {
         type: "process",
-        variant: "split-cards",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "La logique de projet derrière le résultat final",
-          description:
-            "Les bonnes réalisations viennent rarement d'un coup de chance. Elles viennent d'une méthode qui clarifie les décisions en amont et protège l'exécution jusqu'à la pose.",
+          heading: "De la conception à la pose",
           steps: [
             {
               number: "1",
               title: "Cadrage",
-              description:
-                "Comprendre les besoins, les contraintes du lieu et la portée réelle du projet.",
+              description: "Besoins, contraintes du lieu et portée réelle du projet.",
             },
             {
               number: "2",
-              title: "Conception et validations",
-              description:
-                "Structurer l'implantation, confirmer les choix et fermer les décisions qui influencent la fabrication.",
+              title: "Conception",
+              description: "Implantation, finis et dessins validés avant la production.",
             },
             {
               number: "3",
-              title: "Fabrication",
-              description:
-                "Produire sur une base stable avec des choix matériaux et techniques déjà alignés.",
+              title: "Production",
+              description: "Commande à notre usine partenaire, aux dimensions relevées sur place.",
             },
             {
               number: "4",
-              title: "Installation et finition",
-              description:
-                "Ajuster, aligner et livrer un résultat propre, cohérent et durable.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "ghost",
-            },
-            {
-              label: "Rénovation résidentielle clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
+              title: "Installation",
+              description: "Pose et ajustements coordonnés avec le reste du chantier.",
             },
           ],
         },
@@ -178,8 +153,7 @@ export const page: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Vous avez un projet similaire ?",
-          intro:
-            "Si une réalisation ressemble à votre contexte, on peut vous aider à cadrer la portée, les choix et la meilleure suite.",
+          intro: "Estimation gratuite. Retour sous 24 à 48 heures ouvrables.",
           actions: [
             {
               label: "Demander une soumission",
@@ -192,7 +166,7 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Résidentiel et commercial - Montréal, Laval, Rive-Sud",
+          note: "Résidentiel et commercial · Montréal, Laval, Rive-Sud",
         },
       },
     },

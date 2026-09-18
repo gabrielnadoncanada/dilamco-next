@@ -2,7 +2,7 @@ import { AppLink as Link } from "@/components/AppLink";
 
 import { Heading } from "@/components/elements/heading";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 type HeroAction = {
@@ -14,6 +14,7 @@ type HeroAction = {
 type HeroContentProps = {
   heading: string;
   description?: string;
+  eyebrow?: string;
   badges?: string[];
   actions?: HeroAction[];
   align?: "left" | "center";
@@ -21,11 +22,13 @@ type HeroContentProps = {
   badgeStyle?: "secondary" | "outline" | "inverse";
   secondaryActionVariant?: HeroAction["variant"];
   fillActionsOnMobile?: boolean;
+  headingClassName?: string;
 };
 
 export function HeroContent({
   heading,
   description,
+  eyebrow,
   badges,
   actions,
   align = "left",
@@ -33,26 +36,41 @@ export function HeroContent({
   badgeStyle = tone === "inverse" ? "inverse" : "secondary",
   secondaryActionVariant = "ghost",
   fillActionsOnMobile = false,
+  headingClassName,
 }: HeroContentProps) {
   const primary = actions?.[0];
   const secondary = actions?.[1];
   const isCentered = align === "center";
   const isInverse = tone === "inverse";
+  const pills = badges?.slice(0, 3) ?? [];
 
   return (
     <div className={cn(isCentered && "text-center")}>
-      {badges?.length ? (
-        <div
-          className={cn("flex flex-wrap gap-2", isCentered && "justify-center")}
+      {eyebrow ? (
+        <p
+          className={cn(
+            "mb-4 text-xs font-semibold uppercase tracking-[0.14em]",
+            isInverse ? "text-white/70" : "text-primary",
+          )}
         >
-          {badges.map((badge) => (
+          {eyebrow}
+        </p>
+      ) : null}
+
+      {pills.length ? (
+        <div
+          className={cn("mb-5 flex flex-wrap gap-2", isCentered && "justify-center")}
+        >
+          {pills.map((badge) => (
             <Badge
               key={badge}
-              variant={badgeStyle === "outline" ? "outline" : "secondary"}
-              className={cn(
-                badgeStyle === "inverse" &&
-                  "bg-white/10 text-white hover:bg-white/10",
-              )}
+              variant={
+                badgeStyle === "outline"
+                  ? "outline"
+                  : badgeStyle === "inverse"
+                    ? "inverse"
+                    : "secondary"
+              }
             >
               {badge}
             </Badge>
@@ -63,11 +81,7 @@ export function HeroContent({
       <Heading
         as="h1"
         variant="h1"
-        className={cn(
-          "mt-6",
-          isInverse && "text-white",
-          isCentered && "text-balance",
-        )}
+        className={cn(isInverse && "text-white", headingClassName)}
       >
         {heading}
       </Heading>
@@ -75,11 +89,9 @@ export function HeroContent({
       {description ? (
         <p
           className={cn(
-            "mt-4",
-            isInverse
-              ? "text-base text-white/85 sm:text-lg"
-              : "text-muted-foreground",
-            isCentered && "text-lg",
+            "mt-5 max-w-[46ch] text-base leading-relaxed sm:text-lg",
+            isInverse ? "text-white/85" : "text-muted-foreground",
+            isCentered && "mx-auto",
           )}
         >
           {description}
@@ -89,22 +101,27 @@ export function HeroContent({
       {actions?.length ? (
         <div
           className={cn(
-            "mt-6 flex flex-col gap-3 sm:flex-row",
+            "mt-8 flex flex-col gap-3 sm:flex-row",
             isCentered && "items-center justify-center",
             !isCentered && "sm:items-center",
           )}
         >
           <Button
             asChild
+            size="xl"
             className={cn(fillActionsOnMobile && "w-full sm:w-auto")}
             variant={primary?.variant ?? "primary"}
           >
-            <Link href={primary?.href ?? "#"}>{primary?.label ?? ""}</Link>
+            <Link href={primary?.href ?? "#"}>
+              {primary?.label ?? ""}
+              <ButtonArrow />
+            </Link>
           </Button>
 
           {secondary ? (
             <Button
               asChild
+              size="xl"
               className={cn(fillActionsOnMobile && "w-full sm:w-auto")}
               variant={secondary.variant ?? secondaryActionVariant}
             >

@@ -49,6 +49,14 @@ Le site migre de l'ancien système de pages statiques (`createStaticPage`, modul
 - En touchant une page legacy, avancer par étapes incrémentales vers les blocs et templates `page-builder`.
 - Pas de sections ad hoc. La skill locale `page-builder-block-system` (`.agents/skills/`) décrit le système.
 
+## Design (refonte 2026-09-18)
+
+Références du client : Dribbble « Construction Agency » (Odama) et « NexaCargo ». Titres **Bricolage Grotesque** 600 (`--font-display`, `app/fonts.ts`), corps Plus Jakarta Sans ; boutons **pilule** en casse de phrase (`Button` + `ButtonArrow`) ; `--radius` 0.75rem, cadres photo `rounded-[1.75rem]` ; tokens `primary-soft` (pastilles, tuiles), `ink` (sections sombres : CTA, pied de page), neutres teintés vert. Primaire `#253b2f` intouchable, jamais de doré ni de serif. `PRODUCT.md` décrit le registre/persona pour la skill `impeccable`.
+
+**Texte** : le site doit se scanner, pas se lire. Toute rédaction suit `docs/redaction-web.md` (budgets par page mesurés avec `node scripts/copy-wordcount.mjs`, longueurs par champ, mots interdits). Titre de hero sans deux-points ni tiret cadratin.
+
+**Piège dev** : `globals.css` n'est pas recompilé par le serveur dev (cache Turbopack) → tuer le serveur, `rm -rf .next/dev`, relancer.
+
 ## Conventions
 
 - **Édition de fichiers** : utiliser les outils d'édition (Edit/apply_patch). Pas de `Set-Content`, `Out-File` ni redirection `>` pour du texte source ou de config — réservé aux artefacts générés et aux binaires. Si l'édition échoue, signaler le blocage plutôt que de contourner.

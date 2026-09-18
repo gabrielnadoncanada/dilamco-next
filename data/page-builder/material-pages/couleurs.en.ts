@@ -23,10 +23,10 @@ export const couleursPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materials",
-          heading: "Colours and finishes: style, light and maintenance",
+          eyebrow: "Materials",
+          heading: "Choosing a colour that holds up in daily use",
           description:
-            "Choosing cabinet colours shapes the light, how the space is perceived and how easy it is to maintain. The right choice depends on the material, the finish (matte or satin), real use and the room's context.",
+            "The shade gets decided on site, in the room's real light. The sheen level is what decides your daily upkeep.",
           actions: [
             {
               label: "Talk design and finishes",
@@ -39,13 +39,12 @@ export const couleursPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Light", "Maintenance", "Visual consistency"],
+          badges: ["Light", "Sheen", "Upkeep"],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Colour and finish choices for a custom project",
           },
-          caption:
-            "A good finish should look great today and be easy to live with tomorrow",
+          caption: "Samples seen in your own room",
         },
       },
     },
@@ -55,145 +54,32 @@ export const couleursPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "A simple method for choosing",
+          heading: "Four things to look at",
           description:
-            "Structuring choices early in the design phase prevents rendering mistakes. You need to consider light, volume, maintenance, the type of material and the use context before validating a palette.",
+            "A sample shifts with the room's orientation, the substrate and the sheen. We validate all three before ordering.",
           cards: [
             {
-              title: "Light",
+              title: "Light in the room",
               description:
-                "A colour does not react the same way depending on orientation and light sources.",
+                "A north exposure pulls grey, a south exposure warms every shade.",
             },
             {
-              title: "Volume",
+              title: "Substrate",
               description:
-                "Contrast and visual mass change how a space is perceived.",
+                "The same tone reads differently on MDF, melamine or wood.",
             },
             {
-              title: "Use and maintenance",
+              title: "Sheen",
               description:
-                "Kitchens and bathrooms call for pragmatic choices.",
+                "Matte, satin or gloss change both the colour and the upkeep.",
             },
             {
-              title: "Material and finish",
+              title: "Neighbouring surfaces",
               description:
-                "MDF, melamine and wood do not produce the same look.",
+                "Counter, backsplash and floor get validated together, not separately.",
             },
           ],
           columns: "2",
-        },
-      },
-    },
-    {
-      id: "families",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Main finish families",
-          items: [
-            {
-              title: "Neutrals",
-              href: "/services/design",
-              description: "Timeless, bright and easy to integrate.",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Neutral finish palette for custom furniture",
-              },
-              badges: ["Timeless"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Dark tones",
-              href: "/services/design",
-              description: "Strong visual impact, require good lighting.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Custom furniture in dark tones",
-              },
-              badges: ["Accent"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Wood and textures",
-              href: "/materiaux/bois-massif",
-              description: "Bring warmth and natural variation.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Natural solid wood texture",
-              },
-              badges: ["Natural"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Kitchen",
-              href: "/espaces/cuisine",
-              description:
-                "Coordinate countertop, backsplash, flooring and maintenance.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen with a cohesive finish palette",
-              },
-              badges: ["Kitchen"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Bathroom",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Humidity, frequent cleaning and ventilation matter.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom with suitable finishes",
-              },
-              badges: ["Bathroom"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Materials",
-              href: "/materiaux",
-              description: "The final finish also depends on the chosen substrate.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Visual comparison of materials and finishes",
-              },
-              badges: ["Substrate"],
-              footerCtaLabel: "View page",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "material-impact",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Colour and material: real impact on the result",
-          intro:
-            "The result does not come from colour alone. It also depends on the texture, the regularity of the substrate and the finish chosen.",
-          badges: ["MDF", "Wood", "Melamine"],
-          cardTitle: "Quick reference",
-          items: [
-            "MDF: more uniform for painting",
-            "Wood: natural texture and variation",
-            "Melamine: wide variety of decors",
-            "The same tone changes depending on the substrate",
-          ],
-          actions: [
-            {
-              label: "View design",
-              href: "/services/design",
-              variant: "primary",
-            },
-            {
-              label: "View materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-          ],
         },
       },
     },
@@ -203,24 +89,21 @@ export const couleursPageEn: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Finishes and maintenance",
+          heading: "Three sheens, three behaviours",
           intro:
-            "The right finish is not just the one that looks good on the sample. You also need to think about marks, cleaning and everyday tolerance.",
+            "Sheen weighs more than colour when it comes to the cleaning you will actually do.",
           items: [
             {
-              title: "Matte.",
-              description:
-                "Very elegant, but sometimes more demanding to maintain.",
+              title: "Matte",
+              description: "Muted and contemporary, it marks sooner.",
             },
             {
-              title: "Satin.",
-              description:
-                "Often a good compromise between look and maintenance.",
+              title: "Satin",
+              description: "The usual kitchen compromise, easy to wipe down.",
             },
             {
-              title: "Gloss.",
-              description:
-                "Brighter, but marks more easily depending on the context.",
+              title: "Gloss",
+              description: "It bounces light back and shows every mark.",
             },
           ],
           actions: [
@@ -230,8 +113,8 @@ export const couleursPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "View installation",
-              href: "/services/installation",
+              label: "View materials",
+              href: "/materiaux",
               variant: "ghost",
             },
           ],
@@ -241,34 +124,33 @@ export const couleursPageEn: PageTemplateData = {
           },
           cardTitle: "Common mistake",
           cardDescription:
-            "Choosing an inspiration without re-contextualizing it to the real light, the real volumes and the real use of the project.",
+            "Approving a colour on a screen or under a showroom's lighting.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Colours and finishes",
+          heading: "Frequently asked questions",
           items: [
             {
               q: "Matte or satin?",
-              a: "Satin is often the best compromise, especially in a kitchen: it reflects a little light, hides fingerprints better and is easy to maintain. Matte gives a more contemporary, muted look, but marks more easily and demands more careful maintenance on heavily used surfaces. The right choice depends on the room, the colour and your tolerance for upkeep.",
+              a: "Satin in a kitchen, in almost every case: it returns a little light, hides fingerprints and wipes clean with no special product. Matte suits rooms that see less use.",
             },
             {
               q: "Are dark colours risky?",
-              a: "Not with good lighting and a suitable finish.",
+              a: "No, provided you have natural light or good under-cabinet lighting. A satin finish also limits the marks, which show more on dark shades.",
             },
             {
               q: "Can the colour be changed later?",
-              a: "Sometimes, depending on the material and the finish chosen.",
+              a: "A painted door can be repainted. A melamine or veneered door gets replaced. That is a call to make before ordering, not after.",
             },
             {
-              q: "How can a dated look be avoided?",
-              a: "For a result that ages well, keep a timeless base (neutral tones, natural woods, warm whites) on the large surfaces, and save bolder colours or finishes for elements that are easy to change — an island, a backsplash, accessories. This approach lets you refresh the look without redoing the whole kitchen, and limits the risk of a strong trend locking the space into an era.",
+              q: "How do I avoid a dated look?",
+              a: "Neutral tones on the large surfaces, strong colour on what changes quickly: island, backsplash, handles. You refresh the room without redoing the cabinets.",
             },
           ],
         },
@@ -280,9 +162,9 @@ export const couleursPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need help framing your finish choices?",
+          heading: "Need help settling the palette?",
           intro:
-            "We help you choose a palette that ages better visually, is easier to live with and stays consistent with the materials chosen.",
+            "We bring the samples to your home and validate them in the room's own light.",
           actions: [
             {
               label: "Talk design",

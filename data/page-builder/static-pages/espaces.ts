@@ -29,11 +29,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Division armoires",
-          heading:
-            "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
+          eyebrow: "Division armoires",
+          heading: "Armoires sur mesure, intégrées à votre rénovation",
           description:
-            "Chaque espace de la maison — cuisine, salle de bain, walk-in, sous-sol, salle de lavage — peut recevoir des armoires et rangements sur mesure. C'est le rôle de la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : on conçoit le projet, notre usine partenaire le produit, nos équipes le posent, et le tout se coordonne avec le reste de votre rénovation.",
+            "Cuisine, salle de bain, walk-in, sous-sol, salle de lavage ou local commercial : un seul contrat, un seul responsable.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -46,12 +45,12 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Durable", "clé en main"],
+          badges: ["Sur mesure", "Clé en main"],
           image: {
             src: "/images/generated/spaces/espaces-hero-overview-01.webp",
             alt: "Espaces sur mesure Dilamco",
           },
-          caption: "Montréal, Laval et Rive-Sud",
+          caption: "Montréal · Laval · Rive-Sud",
         },
       },
     },
@@ -62,80 +61,72 @@ export const page: PageTemplateData = {
         variant: "image-cards-slider",
         props: {
           heading: "Choisissez votre espace",
-          intro:
-            "Accédez à la page pilier adaptée à votre type de projet pour voir l'approche, les matériaux et des références.",
           items: [
             {
-              title: "Armoires & cuisines sur mesure",
+              title: "Cuisine",
               href: "/espaces/cuisine",
-              description:
-                "Armoires de cuisine sur mesure avec coordination, matériaux durables et exécution stable.",
+              description: "Îlot, garde-manger et armoires jusqu'au plafond.",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Armoires de cuisine sur mesure haut de gamme",
               },
-              badges: ["Cuisine", "Sur mesure"],
-              footerCtaLabel: "Voir les cuisines sur mesure",
+              badges: ["Sur mesure"],
+              footerCtaLabel: "Voir la cuisine",
             },
             {
-              title: "Vanités & salles de bain sur mesure",
+              title: "Salle de bain",
               href: "/espaces/salle-de-bain",
-              description:
-                "Vanités de salle de bain sur mesure adaptées à l'humidité et à l'usage quotidien.",
+              description: "Vanités simple ou double, conçues pour l'humidité.",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Vanité de salle de bain sur mesure",
               },
-              badges: ["Salle de bain", "Humidité"],
-              footerCtaLabel: "Voir les vanités sur mesure",
+              badges: ["Vanité"],
+              footerCtaLabel: "Voir la salle de bain",
             },
             {
               title: "Salle de lavage",
               href: "/espaces/salle-de-lavage",
-              description:
-                "Configuration fonctionnelle et durable pour un espace de service bien organisé.",
+              description: "Comptoir de pliage, colonnes et plomberie ajustés.",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Salle de lavage sur mesure",
               },
-              badges: ["Salle de lavage", "Fonctionnel"],
-              footerCtaLabel: "Voir salle de lavage",
+              badges: ["Rangement"],
+              footerCtaLabel: "Voir la salle de lavage",
             },
             {
               title: "Walk-in",
               href: "/espaces/walk-in",
-              description:
-                "Organisation sur mesure pour optimiser l'espace et le rangement.",
+              description: "Penderie, tiroirs et tablettes du mur au plafond.",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Walk-in sur mesure",
               },
-              badges: ["Walk-in", "Organisation"],
-              footerCtaLabel: "Voir walk-in",
+              badges: ["Garde-robe"],
+              footerCtaLabel: "Voir le walk-in",
             },
             {
-              title: "Aménagement de sous-sol",
+              title: "Sous-sol",
               href: "/espaces/sous-sol",
-              description:
-                "Salle de cinéma maison, bar, cave à vin, bibliothèque et rangement sur mesure.",
+              description: "Cinéma maison, bar, cellier et bibliothèque.",
               image: {
                 src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
                 alt: "Aménagement de sous-sol sur mesure",
               },
-              badges: ["Sous-sol", "Cinéma maison"],
-              footerCtaLabel: "Voir l'aménagement de sous-sol",
+              badges: ["Cinéma maison"],
+              footerCtaLabel: "Voir le sous-sol",
             },
             {
               title: "Commercial",
               href: "/espaces/commercial",
-              description:
-                "Construction et aménagement commercial : bureaux, commerces et améliorations locatives.",
+              description: "Bureaux, commerces et améliorations locatives.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial sur mesure",
               },
-              badges: ["Commercial", "Durable"],
-              footerCtaLabel: "Voir commercial",
+              badges: ["Bureaux"],
+              footerCtaLabel: "Voir le commercial",
             },
           ],
         },
@@ -145,54 +136,29 @@ export const page: PageTemplateData = {
       id: "standard",
       content: {
         type: "split",
-        variant: "steps-2x2-cta",
+        variant: "text-divider-cards",
         props: {
-          heading: "Notre standard, peu importe l'espace",
+          heading: "Pourquoi passer par l'entrepreneur général",
           description:
-            "Une méthode reproductible pour protéger la qualité, réduire les imprévus et garder une exécution cohérente.",
-          steps: [
+            "Notre licence RBQ couvre les armoires et les comptoirs. Les armoires arrivent au bon moment, dans la séquence du chantier.",
+          cards: [
             {
-              label: "1) Conception",
-              description:
-                "Plans clairs, configuration adaptée et validations avant fabrication.",
+              title: "Une seule soumission",
+              description: "Travaux et armoires chiffrés ensemble, un fournisseur de moins à gérer.",
             },
             {
-              label: "2) Matériaux",
-              description:
-                "Choix durables et détails de construction pensés pour la longévité.",
+              title: "Mesures après démolition",
+              description: "Prises quand les murs sont à leur position définitive.",
             },
             {
-              label: "3) Fabrication",
-              description:
-                "Standards stables et contrôle qualité pour une meilleure constance.",
-            },
-            {
-              label: "4) Installation",
-              description:
-                "Ajustements précis, finitions nettes et coordination propre sur chantier.",
+              title: "Un seul responsable",
+              description: "Plomberie, électricité, plancher et pose coordonnés par nous.",
             },
           ],
-          actions: [
-            {
-              label: "Voir nos services",
-              href: "/services",
-              variant: "ghost",
-            },
-            {
-              label: "Voir nos matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Rénovation résidentielle clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
+          columns: "3",
         },
       },
     },
-
     {
       id: "faq",
 
@@ -200,29 +166,23 @@ export const page: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - espaces sur mesure",
-          intro:
-            "Quelques réponses rapides avant d'approfondir votre type de projet.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Quels espaces faites-vous ?",
-              a: "Nous concevons et installons des armoires et rangements sur mesure pour la cuisine, la salle de bain (vanités), la salle de lavage, les walk-ins et garde-robes, le sous-sol et les projets commerciaux. Chaque espace a ses contraintes propres — humidité, dimensions, usage — et l'aménagement est pensé en fonction de celles-ci, pas assemblé à partir de modules standards.",
+              q: "Quels espaces couvrez-vous ?",
+              a: "Cuisine, salle de bain, salle de lavage, walk-in et garde-robe, sous-sol et locaux commerciaux. Chaque espace a ses contraintes d'humidité, de dimensions et d'usage, prises en compte au design.",
             },
             {
-              q: "Travaillez-vous seulement à Montréal ?",
-              a: "Non. Basés dans le Grand Montréal, nous desservons Montréal, Laval, la Rive-Nord, la Rive-Sud, l'Ouest-de-l'Île et Pierrefonds-Roxboro. Le sur mesure impliquant des mesures précises et une installation soignée, nous cadrons dès le départ la zone d'intervention et la logistique pour chaque projet.",
+              q: "Quel est le délai ?",
+              a: "De 9 à 15 semaines entre la validation du design et l'installation. Quand les armoires font partie d'une rénovation, la commande est calée sur l'échéancier du chantier.",
             },
             {
-              q: "Quelle est la différence avec une solution standard ?",
-              a: "Une solution standard part de modules aux dimensions fixes qu'il faut adapter à la pièce, ce qui laisse souvent des espaces perdus. Le sur mesure fait l'inverse : chaque élément est dimensionné pour votre espace réel, avec une structure plus solide (bois massif et contreplaqué de bouleau) et une exécution mieux contrôlée, du design à la pose.",
+              q: "Quelle différence avec une solution standard ?",
+              a: "Les modules standards imposent leurs dimensions à la pièce et laissent des espaces perdus. Le sur mesure part de votre espace réel, avec bois massif et contreplaqué de bouleau sur les éléments structurants.",
             },
             {
-              q: "Faites-vous aussi l'installation ?",
-              a: "Oui. Nous installons les éléments que nous concevons et fournissons, ce qui garantit une exécution cohérente du design à la pose, par une seule équipe. Cette continuité évite les zones grises entre fabrication et installation et facilite les ajustements finaux sur place.",
-            },
-            {
-              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
-              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la pièce : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
+              q: "Pouvez-vous faire la rénovation complète ?",
+              a: "Oui. Dilamco est entrepreneur général, licence RBQ 8306-0806-27 : permis, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable, au contrat écrit.",
             },
           ],
         },
@@ -234,9 +194,8 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Prêt à cadrer votre projet correctement ?",
-          intro:
-            "Obtenez une soumission claire et structurée adaptée à votre espace et à votre niveau d'exigence.",
+          heading: "Parlez-nous de votre espace",
+          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -249,7 +208,7 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval et Rive-Sud",
+          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud",
         },
       },
     },

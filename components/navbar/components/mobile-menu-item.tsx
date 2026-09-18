@@ -17,14 +17,11 @@ interface MobileMenuItemProps {
 export function MobileMenuItem({ item, index }: MobileMenuItemProps) {
   if (item.groups) {
     return (
-      <AccordionItem
-        value={`nav-${index}`}
-        className="border-b-0"
-      >
-        <AccordionTrigger className="h-[3.75rem] items-center p-0 !px-6 text-base leading-normal font-medium text-muted-foreground hover:bg-muted hover:no-underline">
+      <AccordionItem value={`nav-${index}`} className="border-b-0">
+        <AccordionTrigger className="h-14 items-center rounded-xl p-0 !px-3 font-display text-lg font-semibold tracking-[-0.01em] text-foreground hover:bg-primary-soft hover:no-underline **:data-[slot=accordion-trigger-icon]:size-5">
           {item.title}
         </AccordionTrigger>
-        <AccordionContent className="max-h-[60dvh] overflow-x-auto px-2">
+        <AccordionContent className="max-h-[60dvh] overflow-y-auto pb-2">
           {item.groups.flatMap((group, groupIndex) =>
             group.links.map((link, linkIndex) => (
               <NavLinkItem
@@ -42,7 +39,7 @@ export function MobileMenuItem({ item, index }: MobileMenuItemProps) {
   return (
     <Link
       href={item.url ?? "/"}
-      className="flex h-[3.75rem] items-center border-b  p-0 px-6 text-left text-base leading-normal font-medium text-muted-foreground ring-ring/10 outline-ring/50 transition-all hover:bg-muted focus-visible:ring-4 focus-visible:outline-1 nth-last-1:border-0"
+      className="flex h-14 items-center rounded-xl px-3 font-display text-lg font-semibold tracking-[-0.01em] text-foreground transition-colors hover:bg-primary-soft focus-visible:bg-primary-soft focus-visible:outline-none"
     >
       {item.title}
     </Link>

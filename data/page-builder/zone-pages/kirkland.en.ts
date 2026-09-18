@@ -39,29 +39,29 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Kirkland",
+          eyebrow: "Kirkland",
           heading:
-            "General contractor in Kirkland: renovations and additions on larger lots",
+            "General contractor in Kirkland: major renovations and additions",
           description:
-            "Kirkland is a city of fewer than 20,000 residents across 9.6 km2, with one of the lowest residential densities in the West Island. Large lots, detached single-family homes, and owners who extend rather than move. Our base is on rue Larocque in Pierrefonds-Roxboro, about fifteen minutes from boulevard Saint-Charles. RBQ licence 8306-0806-27, general contractor categories 1.2 and 1.3.",
+            "Large lots, detached homes, owners who add on rather than move. RBQ licence 8306-0806-27, classes 1.2 and 1.3.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Request an estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See our projects",
+              label: "See our work",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["RBQ 8306-0806-27", "Additions", "Kirkland", "Insured"],
+          badges: ["Since 2004", "Additions", "Insured"],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-            alt: "Addition to a detached home in Kirkland",
+            alt: "Addition on a single-family home in Kirkland",
           },
-          caption: "On both sides of Highway 40 - West Island",
+          caption: "On both sides of Highway 40",
         },
       },
     },
@@ -73,22 +73,22 @@ export const zoneKirklandPageEn: PageTemplateData = {
         props: {
           heading: "What we know about Kirkland homes",
           description:
-            "Kirkland was incorporated in 1961, then reconstituted on 1 January 2006 after the municipal merger years. Its development was shaped by one physical feature: the Trans-Canada Highway built in the 1960s, which splits the city in two. The industrial park settled on both sides of Highway 40 — Merck, Pfizer, Nissan, aerospace firms — while the rest of the territory stayed residential. The result is a two-speed city and a very homogeneous housing stock.",
+            "Under 20,000 residents on 9.6 km2, a city split in two by Highway 40. Uniform housing stock, generous lots.",
           cards: [
             {
-              title: "Large lots and detached houses",
+              title: "Large lots, detached homes",
               description:
-                "At roughly 2,000 residents per square kilometre, Kirkland is markedly less dense than its neighbours. Most of the residential stock consists of detached single-family homes on generous lots, built from the late 1960s through the 1980s, with newer pockets added later. In practice that means side and rear additions that are genuinely feasible, double garages worth converting, basements with decent headroom and comfortable site access — which simplifies placing a bin and receiving materials, unlike the tighter streets of some neighbouring sectors.",
+                "About 2,000 residents per square kilometre: side or rear additions genuinely feasible, comfortable site access.",
             },
             {
-              title: "A generation of houses reaching its limit",
+              title: "A generation coming due",
               description:
-                "A Kirkland house built in the 1970s is now reaching end of life on several systems at once: windows replaced once, roof due, electrical panel to modernize for an EV charger, attic insulation below current standards, the original closed kitchen, two bathrooms never renovated. Renovating room by room over ten years costs more than one planned major renovation, because every round pays again for mobilization, site protection and finishing.",
+                "1970s homes: roof, windows, electrical panel, attic insulation and original bathrooms all reaching end of life together.",
             },
             {
-              title: "A centralized and demanding municipal department",
+              title: "Permit and excavation certificate",
               description:
-                "In Kirkland, the Urban Planning and Environment department issues building permits and authorization certificates, inspects buildings and enforces planning by-laws — zoning, subdivision, construction. For most renovations, interior or exterior, you must consult the municipality and obtain a permit or certificate before work begins. Applications go through the Online Permit Management portal, or in person at city hall, 17200 boulevard Hymus. Excavation work requires its own certificate, not to be confused with the building permit.",
+                "Urban Planning Department, city hall at 17200 boulevard Hymus. Applications through the online permit portal.",
             },
           ],
           columns: "1",
@@ -99,188 +99,105 @@ export const zoneKirklandPageEn: PageTemplateData = {
       id: "services",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "image-cards-slider",
         props: {
           heading: "What we build in Kirkland",
-          intro:
-            "The most frequent mandates in a city of detached houses on large lots, and what each one involves on site.",
-          columns: "2",
           items: [
             {
-              title: "Home additions",
+              title: "Home addition",
+              href: "/services/renovation/agrandissement-de-maison",
               description:
-                "The signature Kirkland mandate, thanks to lot sizes.",
-              icon: "building2",
-              bullets: [
-                "Rear or side extension, second-storey addition, four-season sunroom.",
-                "Excavation certificate and building permit obtained separately, as the city requires.",
-                "Foundation, structure, envelope, roofing and tie-in to the existing house under one contract.",
-              ],
+                "Addition, second storey or sunroom: foundation, structure, roof and tie-in.",
+              image: {
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                alt: "Rear addition on a Kirkland home",
+              },
+              badges: ["Permit"],
+              footerCtaLabel: "See the service",
             },
             {
-              title: "Full major renovation",
+              title: "Major renovation",
+              href: "/services/renovation",
               description:
-                "Taking on a 1970s house in one go.",
-              icon: "hardHat",
-              bullets: [
-                "Kitchen, bathrooms, flooring, doors and finishes in a single sequence.",
-                "Electrical panel and plumbing upgraded while walls are open.",
-                "One schedule instead of a string of small projects spread over ten years.",
-              ],
+                "Take on a 1970s house in one sequence rather than over ten years.",
+              image: {
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Major renovation of a Kirkland home",
+              },
+              badges: ["Turnkey"],
+              footerCtaLabel: "See the service",
             },
             {
-              title: "Kitchen renovation",
+              title: "Kitchen",
+              href: "/services/renovation/cuisine",
               description:
-                "Opening the original closed kitchen onto the living areas.",
-              icon: "chefHat",
-              bullets: [
-                "Wall analysis and beam sizing before demolition.",
-                "Island, ventilation and electrical circuits planned with the design, not after.",
-                "Custom cabinetry supplied by our cabinet division (RBQ subcategory 12).",
-              ],
+                "Wall to be opened assessed and beam sized before demolition.",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Kitchen opened onto the living areas",
+              },
+              badges: ["Structure"],
+              footerCtaLabel: "See the service",
             },
             {
-              title: "Bathroom renovation",
+              title: "Bathroom",
+              href: "/services/renovation/salle-de-bain",
               description:
-                "Often two or three bathrooms to redo in the same house.",
-              icon: "bath",
-              bullets: [
-                "Waterproofing rebuilt completely before any tile.",
-                "Ventilation corrected and vented to the exterior.",
-                "Sequence planned to keep at least one bathroom in service.",
-              ],
+                "Two or three bathrooms sequenced so one stays usable throughout.",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Renovated bathroom with tiled shower",
+              },
+              badges: ["Waterproofing"],
+              footerCtaLabel: "See the service",
             },
             {
-              title: "Basement finishing",
+              title: "Basement",
+              href: "/services/renovation/sous-sol",
               description:
-                "Basements with good headroom, often only partly finished.",
-              icon: "sofa",
-              bullets: [
-                "Family room, home theatre, office, gym or guest bedroom.",
-                "Insulation and vapour barrier rebuilt to current rules.",
-                "Full bathroom added where drain and headroom allow.",
-              ],
-            },
-            {
-              title: "Garage conversions",
-              description:
-                "Turning non-habitable area into usable living space.",
-              icon: "doorOpen",
-              bullets: [
-                "Double garage converted into an office, family room or workshop.",
-                "Insulation, heating, electrical and glazing brought to habitable-room standards.",
-                "Use and compliance confirmed with the Urban Planning department.",
-              ],
+                "Good headroom: home theatre, office, gym or guest bedroom.",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Basement finished as a living space",
+              },
+              badges: ["Insulation"],
+              footerCtaLabel: "See the service",
             },
           ],
         },
       },
     },
     {
-      id: "deroulement",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "How a Kirkland project runs",
-          intro:
-            "In Kirkland, most projects touch the envelope or the structure. The permit is not a last formality: it is the first step after scoping.",
-          steps: [
-            {
-              number: "1",
-              title: "Visit and survey",
-              description:
-                "We survey dimensions, structure, panel, foundation and available space on the lot. Kirkland is about fifteen minutes from our Pierrefonds-Roxboro base.",
-            },
-            {
-              number: "2",
-              title: "Regulatory feasibility",
-              description:
-                "Setbacks, siting and applicable standards checked with the Urban Planning and Environment department before you pay for drawings.",
-            },
-            {
-              number: "3",
-              title: "Detailed quote",
-              description:
-                "A written scope, item by item, with inclusions and exclusions. Answer within 24 to 48 business hours after the visit. Free estimate.",
-            },
-            {
-              number: "4",
-              title: "Permits and certificates",
-              description:
-                "Application filed through the Online Permit Management portal or at city hall, 17200 boulevard Hymus. The excavation certificate, where applicable, is requested separately.",
-            },
-            {
-              number: "5",
-              title: "Coordinated site work",
-              description:
-                "Excavation, foundation, structure, mechanical, envelope and finishes sequenced. One accountable contact for questions and changes, documented in writing.",
-            },
-            {
-              number: "6",
-              title: "Inspections and handover",
-              description:
-                "Municipal inspections at the scheduled stages, a deficiency list closed with you, then handover. Work is guaranteed, details in the contract.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "pourquoi-local",
+      id: "preuves",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "badges-checklist-cta",
         props: {
-          heading: "Why a general contractor for a Kirkland project",
+          heading: "An addition puts seven trades in play",
           intro:
-            "An addition involves excavation, foundation, structure, roofing, envelope, mechanical and finishing. Seven trades. Without one accountable party, that is seven calendars contradicting each other.",
+            "Excavation, foundation, structure, roof, envelope, mechanical, finishing. With no single lead, seven schedules contradict each other.",
+          badges: ["Since 2004", "5.0 on Google", "Insured"],
+          cardTitle: "What you can verify",
           items: [
-            {
-              title: "One contract, one accountable party",
-              description:
-                "You are not coordinating the excavator, the framer, the roofer, the electrician and the plasterer. That is our job, and it is written into the contract.",
-            },
-            {
-              title: "RBQ licence 8306-0806-27",
-              description:
-                "Issued 7 September 2004, valid and unrestricted, general contractor categories 1.2 (small buildings) and 1.3 (buildings of all kinds). Verifiable in the Régie du bâtiment registry.",
-            },
-            {
-              title: "The permit treated as a project stage",
-              description:
-                "Kirkland requires a permit or certificate for most renovations, and a separate certificate for excavation. We build that into the schedule rather than discovering it in start-up week.",
-            },
-            {
-              title: "Insurance and compliance",
-              description:
-                "Civil liability and site insurance in place, work carried out in compliance with the Québec Construction Code. No claim on our licence file.",
-            },
-            {
-              title: "An in-house cabinet division",
-              description:
-                "Our custom cabinetry is built for us by our partner factory (RBQ subcategory 12): one fewer party between structure and finishing.",
-            },
+            "RBQ licence 8306-0806-27 since 7 September 2004",
+            "General contractor classes 1.2 and 1.3",
+            "No claims on the licence record",
+            "Liability insurance and site coverage",
+            "Permit and excavation certificate filed separately",
+            "One contract, one point of contact",
           ],
           actions: [
             {
-              label: "See our addition service",
+              label: "See additions",
               href: "/services/renovation/agrandissement-de-maison",
               variant: "primary",
             },
             {
-              label: "Request a quote",
+              label: "Request an estimate",
               href: "/contact",
               variant: "ghost",
             },
           ],
-          image: {
-            src: "/images/generated/services/service-renovation-project-02.webp",
-            alt: "Addition and major renovation of a Kirkland home",
-          },
-          cardTitle: "Google rating 5.0 from 11 reviews",
-          cardDescription:
-            "A general contractor since 2004, with hundreds of residential projects across the West Island. Schedule and budget set in a written contract. Work is guaranteed, details in the contract.",
         },
       },
     },
@@ -290,49 +207,14 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Sectors we serve and neighbouring cities",
-          intro:
-            "We work across Kirkland's eight districts, north and south of Highway 40: the residential streets around boulevard Saint-Charles, boulevard Brunswick and chemin Sainte-Marie, the Timberlea sector, and the commercial and industrial spaces along boulevard Hymus.",
+          heading: "Neighbouring cities we serve",
           columns: "3",
           items: [
-            {
-              title: "Home additions",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Extension, second storey or garage conversion, permit included.",
-              ctaLabel: "See the service",
-            },
-            {
-              title: "Kitchen renovation",
-              href: "/services/renovation/cuisine",
-              description:
-                "Opening the original closed kitchen and rebuilding the living areas.",
-              ctaLabel: "See the service",
-            },
-            {
-              title: "Basement renovation",
-              href: "/services/renovation/sous-sol",
-              description:
-                "Finishing a full-height basement with insulation done properly.",
-              ctaLabel: "See the service",
-            },
-            {
-              title: "Beaconsfield",
-              href: "/zones/beaconsfield",
-              description: "The neighbouring city southwest, toward Lac Saint-Louis.",
-              ctaLabel: "See the area",
-            },
-            {
-              title: "Pointe-Claire",
-              href: "/zones/pointe-claire",
-              description: "East, along boulevard Hymus and boulevard Saint-Jean.",
-              ctaLabel: "See the area",
-            },
+            { title: "Beaconsfield", href: "/zones/beaconsfield" },
+            { title: "Pointe-Claire", href: "/zones/pointe-claire" },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              description: "Northeast, across boulevard Saint-Charles.",
-              ctaLabel: "See the area",
             },
           ],
         },
@@ -344,41 +226,31 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - renovating in Kirkland",
-          intro:
-            "Permits, excavation, budget and process: the questions Kirkland homeowners ask most.",
+          heading: "Frequently asked questions",
           items: [
             {
               q: "Do I need a permit to renovate in Kirkland?",
-              a: "Yes, in most cases. The city states that before undertaking home renovations, interior or exterior, you must first consult the municipality and, in most cases, obtain a building permit or authorization certificate issued by the Urban Planning and Environment department. We prepare the file as part of the mandate.",
+              a: "Yes, in most cases. The city asks you to consult it before interior or exterior renovations, and issues a building permit or a certificate of authorization. We prepare the application as part of the mandate.",
             },
             {
-              q: "How do you apply for a permit in Kirkland?",
-              a: "Through the Online Permit Management portal, which lets you file the application, track its status and, in many cases, pay the fees and obtain the permit without travelling. You can also file in person at city hall, 17200 boulevard Hymus, during business hours.",
+              q: "How do I file a permit application?",
+              a: "Through the online permit portal, which lets you track the file and often pay without going in. Or in person at city hall, 17200 boulevard Hymus.",
             },
             {
-              q: "Does an addition require a separate excavation permit?",
-              a: "Kirkland treats excavation work as an application separate from the building permit. For an addition with a foundation, you therefore need both. We obtain the required authorizations and build them into the schedule, instead of discovering them in start-up week.",
+              q: "Does an addition need an excavation certificate?",
+              a: "Kirkland treats excavation work as a separate application from the building permit. An addition with a foundation therefore needs both. We build them into the schedule.",
             },
             {
-              q: "What does a major renovation cost in Kirkland?",
-              a: "Our renovation mandates generally start around $25,000, and a full kitchen usually falls between $35,000 and $50,000 and up. An addition with a foundation sits in a higher range, since it adds excavation, structure, roofing and envelope. The exact price comes from the detailed quote, after the visit. Estimates are free.",
+              q: "Can I add on to a Kirkland lot?",
+              a: "Often yes: lots here are larger than the West Island average. What decides it is setbacks, lot coverage and the standards in your zone. We confirm feasibility before you pay for plans.",
             },
             {
-              q: "Can a Kirkland lot accommodate an addition?",
-              a: "Often yes: Kirkland lots are generally larger than the West Island average. What decides is setbacks, lot coverage and the standards applicable in your zone. We confirm feasibility with the Urban Planning department before you spend money on drawings.",
+              q: "How much does a major renovation cost?",
+              a: "Our projects start around $25,000 and a complete kitchen lands between $35,000 and $50,000. An addition with a foundation sits higher. Free estimate, firm price in the quote.",
             },
             {
-              q: "How long does an addition take?",
-              a: "Several months, with a significant share of that time before the first shovel: drawings, permit, excavation certificate and material orders. Once the site opens, the excavation, foundation, structure, envelope, mechanical and finishing sequence runs continuously. The exact schedule is written into the contract.",
-            },
-            {
-              q: "Do you do commercial fit-outs in Kirkland?",
-              a: "Yes. The industrial park spans both sides of Highway 40, and boulevard Hymus holds a number of commercial spaces. Our RBQ licence categories cover small buildings and buildings of all kinds, which includes commercial and office fit-outs.",
-            },
-            {
-              q: "Do you build new homes in Kirkland?",
-              a: "No. We are a general contractor for renovation, conversion, addition, post-disaster reconstruction and commercial fit-out. We do not build new houses and do not offer a new-home warranty plan.",
+              q: "Do you build new homes?",
+              a: "No. Renovation, conversion, additions, post-disaster reconstruction and commercial fit-outs. We do not build new homes, so the GCR warranty plan does not apply.",
             },
           ],
         },
@@ -390,22 +262,22 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a renovation or an addition in Kirkland?",
+          heading: "A project in Kirkland?",
           intro:
-            "We come by, survey the house and the lot, confirm regulatory feasibility, then come back with a written scope and a price. Answer within 24 to 48 business hours.",
+            "We survey the house and lot, confirm feasibility, and come back with a price.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Request an estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See all service areas",
+              label: "See our service areas",
               href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Dilamco - RBQ-licensed general contractor 8306-0806-27 - West Island",
+          note: "Dilamco · General contractor, RBQ licence 8306-0806-27 · West Island",
         },
       },
     },

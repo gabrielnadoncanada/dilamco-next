@@ -30,10 +30,10 @@ export const designPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Cabinetry division",
-          heading: "Design service — structuring the project before fabrication",
+          eyebrow: "Cabinetry division",
+          heading: "We settle the plans before a wall is opened",
           description:
-            "Custom cabinet design is the planning stage where usage is framed, the space organized, technical constraints integrated and material choices validated — before production and installation. This service belongs to the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27): plans are settled with the rest of the job site in mind, then carried out by our partner factory and our own installation crews.",
+            "On-site survey, layout, heights, materials. The decisions are made and approved with you before anything goes into production.",
           actions: [
             {
               label: "Discuss your project",
@@ -46,12 +46,12 @@ export const designPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Real usage", "Planning", "Execution"],
+          badges: ["On-site survey", "Plans", "Materials"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
             alt: "Custom kitchen plan and material samples",
           },
-          caption: "Montréal, Laval and the South Shore",
+          caption: "West Island, Montréal, Laval, South Shore",
         },
       },
     },
@@ -61,27 +61,32 @@ export const designPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "The role of design in a custom project",
+          heading: "What design settles",
           description:
-            "Good design makes the project clear and executable. It helps anticipate constraints and avoid rework during fabrication or visible compromises at the end.",
+            "A plan locked early costs less than a change mid-project. Four things get decided here.",
           cards: [
             {
-              title: "Optimize the space",
+              title: "Layout",
               description:
-                "Circulation, work zones, clearances and heights suited to your usage.",
+                "Circulation, work zones, clearance in front of every door.",
             },
             {
-              title: "Structure the storage",
+              title: "Storage",
               description:
-                "Access, organization and priorities defined before production.",
+                "Drawers instead of low doors, heights matched to you.",
             },
             {
-              title: "Align the decisions",
+              title: "Plumbing and electrical",
               description:
-                "Materials, finish, schedule and level of complexity stay consistent.",
+                "What moves, what stays, and what that implies.",
+            },
+            {
+              title: "Materials and finishes",
+              description:
+                "Panels, hardware and colours fixed before the order.",
             },
           ],
-          columns: "1",
+          columns: "2",
         },
       },
     },
@@ -91,26 +96,25 @@ export const designPageEn: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "What the design service includes",
+          heading: "What you receive",
           intro:
-            "Dilamco design is focused on usage and execution, not inspiration disconnected from the job site.",
+            "Design exists to be built, not to be admired. It becomes the contract's reference.",
           items: [
             {
-              title: "Needs analysis",
-              description: "Your priorities, your usage and your constraints.",
+              title: "Survey of the existing space",
+              description: "Real measurements, walls, openings, constraints.",
             },
             {
-              title: "Functional organization",
-              description: "Space plan and storage logic.",
+              title: "Layout drawings",
+              description: "Elevations and the position of every unit.",
             },
             {
-              title: "Material and finish choices",
-              description: "Decisions consistent with durability and maintenance.",
+              title: "Material list",
+              description: "Panels, hardware, colours and finishes selected.",
             },
             {
-              title: "Preparation for execution",
-              description:
-                "A design conceived to be fabricated and installed cleanly.",
+              title: "Detailed quote",
+              description: "Scope, exclusions, price and schedule in writing.",
             },
           ],
           actions: [
@@ -120,12 +124,7 @@ export const designPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Turnkey kitchen renovation",
+              label: "Kitchen renovation",
               href: "/services/renovation/cuisine",
               variant: "ghost",
             },
@@ -136,90 +135,33 @@ export const designPageEn: PageTemplateData = {
           },
           cardTitle: "Why it matters",
           cardDescription:
-            "The earlier the decisions are made, the more predictable and executable the project becomes.",
-        },
-      },
-    },
-    {
-      id: "types",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Design by project type",
-          intro:
-            "The design logic changes depending on the space, the constraints and the level of usage.",
-          items: [
-            {
-              title: "Kitchen",
-              href: "/espaces/cuisine",
-              description:
-                "Work zones, circulation, island, storage and integration.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen designed for real usage",
-              },
-              badges: ["Ergonomics", "Storage"],
-              footerCtaLabel: "View kitchen",
-            },
-            {
-              title: "Bathroom",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Moisture constraints, storage and daily ergonomics.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom designed for moisture",
-              },
-              badges: ["Moisture", "Finishes"],
-              footerCtaLabel: "View bathroom",
-            },
-            {
-              title: "Walk-in",
-              href: "/espaces/walk-in",
-              description:
-                "Zone-based organization, accessibility and vertical storage.",
-              image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Custom walk-in designed for organization",
-              },
-              badges: ["Organization", "Access"],
-              footerCtaLabel: "View walk-in",
-            },
-          ],
+            "The earlier the decisions are made, the fewer surprises the job site holds.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - design",
-          intro:
-            "Clear answers on the role of design in a custom project.",
+          heading: "Frequently asked questions",
           items: [
             {
               q: "Is design mandatory?",
-              a: "In a custom project, design isn't a formality: it's what frames every decision before fabrication. It lets us validate the real dimensions, the layout of zones, the integration of appliances and technical constraints, and the material choices. Skipping this step means risking costly compromises discovered too late, during fabrication or installation. Good design reduces surprises and saves time across the whole project.",
+              a: "For custom work, yes. Without settled plans, dimensions, appliance integration and technical constraints get discovered during installation, when every change is expensive.",
             },
             {
-              q: "Can we go straight to fabrication?",
-              a: "Only if the constraints, the organization and the dimensions are already reliably clarified.",
+              q: "When does design happen?",
+              a: "At the very start, before the order. The drawings approved with you then serve as the stable reference for production, installation and the contract.",
             },
             {
               q: "Does it work in a condo?",
-              a: "Yes. Design is especially useful in a condo to manage access, space and the integration of equipment.",
+              a: "Yes, and it matters more there: elevator access, room dimensions, building rules and column locations all get resolved on paper first.",
             },
             {
-              q: "When does design come in during the project?",
-              a: "Design comes in at the very start, before fabrication. We begin by analyzing the real space (measurements, circulation, plumbing and electrical), then validate the layout logic, the heights, the storage zones and the material and finish choices. Once these decisions are settled and validated with you, they serve as a stable reference for fabrication and installation — which limits costly changes along the way.",
-            },
-            {
-              q: "Can you also handle the full renovation of the room?",
-              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. Design can therefore cover the whole room: layout, plumbing and electrical to relocate, flooring, lighting and finishes, alongside the cabinets. We then coordinate the trades and the schedule under a single responsibility, set in the written contract.",
+              q: "Can you renovate the whole room?",
+              a: "Yes. Dilamco is a general contractor, RBQ licence 8306-0806-27. Design then covers layout, plumbing, electrical, flooring and lighting, not only the cabinets.",
             },
           ],
         },
@@ -233,7 +175,7 @@ export const designPageEn: PageTemplateData = {
         props: {
           heading: "Tell us about your project",
           intro:
-            "Tell us your space, your area and your timeline. We help you frame a realistic and executable project.",
+            "Your space, your area, your timeline. We come back with a realistic framework.",
           actions: [
             {
               label: "Request a quote",
@@ -246,7 +188,7 @@ export const designPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Reply usually within 24-48 h.",
+          note: "First reply within 24 to 48 business hours.",
         },
       },
     },
