@@ -1,6 +1,26 @@
 /** @type {import('next').NextConfig} */
 
 const redirectRules = [
+  // Boutique (caissons en stock) retirée du site en 2026-09 — migrée vers un
+  // projet séparé. 301 vers les pages armoires les plus proches en attendant
+  // le nouveau domaine de la boutique.
+  { source: "/boutique/armoires-cuisine/:path*", destination: "/espaces/cuisine" },
+  { source: "/en/shop/kitchen-cabinets/:path*", destination: "/en/spaces/kitchen" },
+  { source: "/boutique/vanites/:path*", destination: "/espaces/salle-de-bain" },
+  {
+    source: "/en/shop/bathroom-vanities/:path*",
+    destination: "/en/spaces/bathroom",
+  },
+  { source: "/boutique/garde-manger/:path*", destination: "/espaces/walk-in" },
+  { source: "/en/shop/pantry/:path*", destination: "/en/spaces/walk-in" },
+  { source: "/boutique/produit/:id", destination: "/espaces/cuisine" },
+  { source: "/en/shop/produit/:id", destination: "/en/spaces/kitchen" },
+  { source: "/boutique/:path*", destination: "/espaces" },
+  { source: "/en/shop/:path*", destination: "/en/spaces" },
+  { source: "/boutique", destination: "/espaces" },
+  { source: "/en/shop", destination: "/en/spaces" },
+  { source: "/landing/alto", destination: "/espaces/walk-in" },
+
   // Legacy language / home pages
   // NB: pas de règle "/en" -> "/" : /en est désormais la vraie home anglaise.
   { source: "/en/home", destination: "/en" },

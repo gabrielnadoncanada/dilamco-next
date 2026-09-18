@@ -6,7 +6,7 @@ export const sousSolPageEn: PageTemplateData = {
   metadata: {
     title: "Custom basement finishing in Pierrefonds and Montréal",
     description:
-      "High-end custom basement finishing: home theatre, bar, wine cellar, library and storage. Design and installation in Montréal and Greater Montréal.",
+      "Custom basement finishing: home theatre, bar, wine cellar and storage, built into your renovation by a licensed general contractor (RBQ) in Montréal.",
     path: "/espaces/sous-sol",
     ogAlt: "Dilamco custom basement finishing",
   },
@@ -29,11 +29,11 @@ export const sousSolPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Spaces",
+          eyebrow: "Dilamco - Cabinetry division",
           heading:
             "Custom basement finishing in Pierrefonds and Greater Montréal",
           description:
-            "Custom basement finishing turns an often underused space into a high-end living area — home theatre room, bar, wine cellar, library or game room — with built-in cabinetry designed for how you actually use it. At Dilamco, in Pierrefonds and across Greater Montréal, we handle the design, controlled fabrication at our partner factory and installation, from plan to finish.",
+            "Custom basement finishing turns an often underused space into a high-end living area — home theatre room, bar, wine cellar, library or game room — with built-in cabinetry designed for how you actually use it. The cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), designs the millwork, has it produced by our partner factory and installed by our own crews, coordinated with the rest of the basement finishing.",
           actions: [
             {
               label: "Get a quote",
@@ -234,8 +234,8 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "In-stock pantry and storage cabinets",
-              href: "/boutique/garde-manger",
+              label: "Turnkey basement finishing",
+              href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
             {
@@ -318,6 +318,10 @@ export const sousSolPageEn: PageTemplateData = {
             {
               q: "How do you handle basement humidity?",
               a: "We select materials and finishes suited to a basement environment and take care with construction details to limit warping and humidity-related issues.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full basement finishing: municipal permit, insulation, partitions, electrical, plumbing, flooring and installation of the built-in millwork, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

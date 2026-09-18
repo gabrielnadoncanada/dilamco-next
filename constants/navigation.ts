@@ -16,23 +16,169 @@ import {
   Palette,
   Settings2,
   Info,
-  Boxes,
+  MapPin,
+  Droplets,
+  Home,
 } from "lucide-react";
 import type { MenuItem } from "@/components/navbar/navbar.types";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
 
 export const BRAND: Brand = {
-  url: "http://localhost:3000/",
+  url: "/",
   src: "/images/logo.svg",
   alt: "Dilamco",
   title: "Dilamco",
   tagline:
-    "Armoires & vanités sur mesure, Design - Fabrication - Installation - Rénovation",
+    "Entrepreneur général en rénovation résidentielle — Ouest-de-l'Île, Montréal, Laval et Rive-Sud. Licence RBQ 8306-0806-27.",
 };
 
 export const MAIN_NAV: MenuItem[] = [
   {
-    title: "Espaces",
+    title: "Services",
+    groups: [
+      {
+        title: "Rénovation et construction",
+        links: [
+          {
+            label: "Rénovation clé en main",
+            url: "/services/renovation/",
+            icon: HardHat,
+            description: "Un seul entrepreneur du permis à la livraison.",
+          },
+          {
+            label: "Rénovation de cuisine",
+            url: "/services/renovation/cuisine/",
+            icon: ChefHat,
+            description: "Plomberie, électricité, armoires et finition coordonnées.",
+          },
+          {
+            label: "Rénovation de salle de bain",
+            url: "/services/renovation/salle-de-bain/",
+            icon: Bath,
+            description: "Étanchéité, ventilation, plomberie et finition durable.",
+          },
+          {
+            label: "Finition de sous-sol",
+            url: "/services/renovation/sous-sol/",
+            icon: Sofa,
+            description: "Isolation, drainage, permis et aménagement complet.",
+          },
+          {
+            label: "Agrandissement de maison",
+            url: "/services/renovation/agrandissement-de-maison/",
+            icon: Building2,
+            description: "Fondations, structure, enveloppe et intégration.",
+          },
+          {
+            label: "Rénovation de plancher",
+            url: "/services/renovation/plancher/",
+            icon: Layers,
+            description: "Niveaux, sous-planchers et transitions propres.",
+          },
+          {
+            label: "Après sinistre",
+            url: "/services/renovation/apres-sinistre/",
+            icon: Droplets,
+            description: "Dégât d'eau ou feu : reconstruction et assurances.",
+          },
+          {
+            label: "Commercial",
+            url: "/espaces/commercial/",
+            icon: Briefcase,
+            description: "Bureaux, commerces et améliorations locatives.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Zones",
+    groups: [
+      {
+        title: "Villes desservies",
+        links: [
+          {
+            label: "Pierrefonds-Roxboro",
+            url: "/zones/pierrefonds-roxboro/",
+            icon: MapPin,
+            description: "Notre base : entrepreneur général sur place.",
+          },
+          {
+            label: "Dollard-des-Ormeaux",
+            url: "/zones/dollard-des-ormeaux/",
+            icon: MapPin,
+            description: "Rénovation résidentielle à DDO.",
+          },
+          {
+            label: "Kirkland",
+            url: "/zones/kirkland/",
+            icon: MapPin,
+            description: "Rénovation et agrandissement à Kirkland.",
+          },
+          {
+            label: "Pointe-Claire",
+            url: "/zones/pointe-claire/",
+            icon: MapPin,
+            description: "Rénovation résidentielle à Pointe-Claire.",
+          },
+          {
+            label: "Beaconsfield",
+            url: "/zones/beaconsfield/",
+            icon: MapPin,
+            description: "Rénovation et agrandissement à Beaconsfield.",
+          },
+          {
+            label: "Dorval",
+            url: "/zones/dorval/",
+            icon: MapPin,
+            description: "Rénovation résidentielle à Dorval.",
+          },
+          {
+            label: "L'Île-Bizard–Sainte-Geneviève",
+            url: "/zones/ile-bizard-sainte-genevieve/",
+            icon: MapPin,
+            description: "Rénovation à L'Île-Bizard et Sainte-Geneviève.",
+          },
+          {
+            label: "Saint-Laurent",
+            url: "/zones/saint-laurent/",
+            icon: MapPin,
+            description: "Rénovation résidentielle à Saint-Laurent.",
+          },
+          {
+            label: "Laval",
+            url: "/zones/laval/",
+            icon: MapPin,
+            description: "Rénovation résidentielle à Laval.",
+          },
+          {
+            label: "Vaudreuil-Dorion",
+            url: "/zones/vaudreuil-dorion/",
+            icon: MapPin,
+            description: "Rénovation résidentielle à Vaudreuil-Dorion.",
+          },
+          {
+            label: "Rive-Sud",
+            url: "/zones/rive-sud/",
+            icon: MapPin,
+            description: "Longueuil, Brossard, Saint-Lambert et environs.",
+          },
+          {
+            label: "Toutes les zones",
+            url: "/zones/",
+            icon: Home,
+            description: "Grand Montréal, Laval, Rive-Sud et Vaudreuil.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Projets",
+    url: "/projets/",
+  },
+  {
+    title: "Armoires sur mesure",
     groups: [
       {
         title: "Espaces sur mesure",
@@ -41,7 +187,7 @@ export const MAIN_NAV: MenuItem[] = [
             label: "Cuisine sur mesure",
             url: "/espaces/cuisine/",
             icon: ChefHat,
-            description: "Armoires et cuisine sur mesure haut de gamme.",
+            description: "Armoires et cuisine sur mesure, intégrées au chantier.",
           },
           {
             label: "Salle de bain & vanités",
@@ -68,20 +214,15 @@ export const MAIN_NAV: MenuItem[] = [
             description: "Cinéma maison, bar, cave à vin et bibliothèque sur mesure.",
           },
           {
-            label: "Commercial",
-            url: "/espaces/commercial/",
-            icon: Briefcase,
-            description: "Aménagement sur mesure pour usage intensif.",
+            label: "Tous les espaces",
+            url: "/espaces/",
+            icon: LayoutGrid,
+            description: "Vue d'ensemble de la division armoires.",
           },
         ],
       },
-    ],
-  },
-  {
-    title: "Services",
-    groups: [
       {
-        title: "Services",
+        title: "Méthode et matériaux",
         links: [
           {
             label: "Design",
@@ -102,77 +243,10 @@ export const MAIN_NAV: MenuItem[] = [
             description: "Alignements, ajustements et finition soignée.",
           },
           {
-            label: "Rénovation clé en main",
-            url: "/services/renovation/",
-            icon: HardHat,
-            description: "Coordination, exécution et livraison cohérente.",
-          },
-        ],
-      },
-      {
-        title: "Rénovation (types)",
-        links: [
-          {
-            label: "Rénovation de cuisine",
-            url: "/services/renovation/cuisine/",
-            icon: Hammer,
-            description: "Coordination + armoires sur mesure + finition.",
-          },
-          {
-            label: "Rénovation salle de bain",
-            url: "/services/renovation/salle-de-bain/",
-            icon: Bath,
-            description: "Humidité, ventilation, étanchéité, durabilité.",
-          },
-          {
-            label: "Rénovation de plancher",
-            url: "/services/renovation/plancher/",
-            icon: Layers,
-            description: "Niveaux, transitions et séquence de travaux.",
-          },
-          {
-            label: "Agrandissement de maison",
-            url: "/services/renovation/agrandissement-de-maison/",
-            icon: Building2,
-            description: "Planification, coordination et exécution complète.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Projets",
-    url: "/projets/",
-  },
-  {
-    title: "Matériaux",
-    groups: [
-      {
-        title: "Matériaux & finition",
-        links: [
-          {
             label: "Matériaux",
             url: "/materiaux/",
-            icon: LayoutGrid,
-            description: "Vue d'ensemble des matériaux et critères.",
-          },
-          {
-            label: "Contreplaqué",
-            url: "/materiaux/contreplaque/",
-            icon: Layers,
-            description: "Pourquoi c'est un choix durable en sur mesure.",
-          },
-          {
-            label: "Quincaillerie",
-            url: "/materiaux/quincaillerie/",
-            icon: Wrench,
-            description: "Fiabilité, ajustements et durabilité.",
-          },
-          {
-            label: "Couleurs & finis",
-            url: "/materiaux/couleurs/",
             icon: Palette,
-            description: "Choix de finis, cohérence et rendu.",
+            description: "Contreplaqué, quincaillerie, finis et comparatif.",
           },
           {
             label: "Comparatif des matériaux",
@@ -194,53 +268,13 @@ export const MAIN_NAV: MenuItem[] = [
             label: "Notre approche",
             url: "/a-propos/",
             icon: Info,
-            description: "Sur mesure, qualité, process et responsabilité.",
+            description: "Entrepreneur général licencié depuis 2004.",
           },
           {
             label: "Processus",
             url: "/processus/",
-            icon: LayoutGrid,
-            description: "Du cadrage à l'installation finale.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Boutique",
-    groups: [
-      {
-        title: "Boutique en ligne",
-        links: [
-          {
-            label: "Armoires de cuisine",
-            url: "/boutique/armoires-cuisine",
-            icon: ChefHat,
-            description: "Caissons en stock, prêts à installer.",
-          },
-          {
-            label: "Garde-manger",
-            url: "/boutique/garde-manger",
-            icon: Boxes,
-            description: "Rangement pleine hauteur, en stock.",
-          },
-          {
-            label: "Vanités de salle de bain",
-            url: "/boutique/vanites",
-            icon: Bath,
-            description: "Meubles-lavabos en stock, 24 et 30 pouces.",
-          },
-          {
-            label: "Finitions",
-            url: "/boutique/finitions",
-            icon: Palette,
-            description: "Blanc Pur et Chêne blanc.",
-          },
-          {
-            label: "Demander une soumission",
-            url: "/boutique/soumission",
-            icon: ScanSearch,
-            description: "Soumission ferme sous 48 h sur votre sélection.",
+            icon: Hammer,
+            description: "De l'estimation au chantier livré.",
           },
         ],
       },
@@ -250,31 +284,42 @@ export const MAIN_NAV: MenuItem[] = [
 
 export const FOOTER_NAV: FooterNavSection[] = [
   {
-    title: "Espaces",
+    title: "Services",
+    links: [
+      { text: "Rénovation clé en main", url: "/services/renovation/" },
+      { text: "Rénovation de cuisine", url: "/services/renovation/cuisine/" },
+      {
+        text: "Rénovation de salle de bain",
+        url: "/services/renovation/salle-de-bain/",
+      },
+      { text: "Finition de sous-sol", url: "/services/renovation/sous-sol/" },
+      {
+        text: "Agrandissement de maison",
+        url: "/services/renovation/agrandissement-de-maison/",
+      },
+      { text: "Après sinistre", url: "/services/renovation/apres-sinistre/" },
+    ],
+  },
+  {
+    title: "Zones",
+    links: [
+      { text: "Pierrefonds-Roxboro", url: "/zones/pierrefonds-roxboro/" },
+      { text: "Dollard-des-Ormeaux", url: "/zones/dollard-des-ormeaux/" },
+      { text: "Kirkland", url: "/zones/kirkland/" },
+      { text: "Pointe-Claire", url: "/zones/pointe-claire/" },
+      { text: "Laval", url: "/zones/laval/" },
+      { text: "Rive-Sud", url: "/zones/rive-sud/" },
+      { text: "Toutes les zones", url: "/zones/" },
+    ],
+  },
+  {
+    title: "Armoires",
     links: [
       { text: "Cuisine sur mesure", url: "/espaces/cuisine/" },
       { text: "Salle de bain & vanités", url: "/espaces/salle-de-bain/" },
       { text: "Walk-in & rangement", url: "/espaces/walk-in/" },
-      { text: "Salle de lavage", url: "/espaces/salle-de-lavage/" },
-      { text: "Aménagement de sous-sol", url: "/espaces/sous-sol/" },
-      { text: "Commercial", url: "/espaces/commercial/" },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { text: "Design", url: "/services/design/" },
-      { text: "Fabrication", url: "/services/fabrication/" },
-      { text: "Installation", url: "/services/installation/" },
-      { text: "Rénovation clé en main", url: "/services/renovation/" },
-    ],
-  },
-  {
-    title: "Ressources",
-    links: [
-      { text: "Boutique", url: "/boutique" },
-      { text: "Projets", url: "/projets/" },
       { text: "Matériaux", url: "/materiaux/" },
+      { text: "Projets", url: "/projets/" },
     ],
   },
   {
@@ -291,4 +336,4 @@ export const FOOTER_NAV: FooterNavSection[] = [
 // Réajouter ici quand /politique-de-confidentialite et /conditions-dutilisation existeront.
 export const LEGAL_LINKS: LegalLink[] = [];
 
-export const COPYRIGHT_TEXT = `© ${new Date().getFullYear()} Dilamco. Tous droits réservés.`;
+export const COPYRIGHT_TEXT = `© ${new Date().getFullYear()} Dilamco (9139-1250 Québec inc.). Licence RBQ 8306-0806-27. Tous droits réservés.`;

@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const agrandissementMaisonPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Turnkey home extension in Montreal",
+    title: "Home addition in Montreal — turnkey general contractor",
     description:
-      "Turnkey home addition: feasibility, work sequencing, coordination and clean integration with the existing house.",
+      "Residential addition: zoning, permit, foundation, structure, envelope and service connections. RBQ-licensed general contractor.",
     path: "/services/renovation/agrandissement-de-maison",
-    ogAlt: "Dilamco home addition",
+    ogAlt: "Home addition by a general contractor",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
   service: {
     name: "Home addition",
     description:
-      "Planning, feasibility, coordination and full execution for residential addition projects.",
+      "Residential addition by a general contractor: zoning verification, building permit, engineered drawings, foundation, structure, envelope, service connections and interior finishing.",
     url: SITE.url + "/services/renovation/agrandissement-de-maison",
-    serviceType: "Home addition",
+    serviceType: "Residential addition",
+    areaServed: [
+      "Montreal",
+      "West Island",
+      "Laval",
+      "South Shore",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -36,27 +43,32 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Renovation",
           heading:
-            "Turnkey home addition: planning the extension without weakening the existing house",
+            "Home addition: from zoning to foundation, through to the finishes",
           description:
-            "A residential addition is the adding of livable space to an existing house — a ground-floor extension, a raised storey or an annex — which touches feasibility, structure, the building envelope and interior connections. Far more than adding square footage, you have to frame the work sequence to deliver a coherent, livable result.",
+            "An addition is not a big renovation. It is construction: zoning and setbacks have to be verified, a permit obtained, the structure calculated by an engineer, footings poured below the frost line, an airtight envelope closed in, and the new section tied into the existing services. We are the general contractor accountable for all of it.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Request a free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View turnkey renovation",
+              label: "See turnkey renovation",
               href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          badges: ["Feasibility", "Coordination", "Integration"],
+          badges: [
+            "RBQ licence 8306-0806-27",
+            "Categories 1.2 and 1.3",
+            "Engineered drawings",
+          ],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-            alt: "Residential renovation and addition project",
+            alt: "Residential addition under construction",
           },
-          caption: "Montréal, Laval and the South Shore",
+          caption:
+            "West Island, Montreal, Laval, South Shore and Vaudreuil-Soulanges",
         },
       },
     },
@@ -66,80 +78,91 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Why an addition quickly becomes complex",
+          heading: "What stops an addition project",
           description:
-            "The risk isn't only the cost of the work. The real challenge is integrating a new section into an existing house without creating grey zones between structure, envelope, circulation and finish.",
+            "Most additions that fail do not fail on site. They fail beforehand, on regulatory or structural constraints that could have been checked in a few days. Here are the four obstacles that come up most often.",
           cards: [
             {
-              title: "Existing house",
+              title: "Zoning does not allow the area you want",
               description:
-                "Levels, structure, openings and hidden constraints must be validated before designing the addition.",
+                "Every lot is subject to front, rear and side setbacks, a lot coverage ratio and sometimes a maximum height. A 20-foot rear addition on a narrow lot may simply be impossible without a variance.",
             },
             {
-              title: "Work sequence",
+              title: "The existing structure cannot carry the load",
               description:
-                "Demolition, structure, closing the envelope and finishing must follow each other cleanly to limit rework.",
+                "Opening a load-bearing wall to join the two sections, adding a storey or framing a new roof requires a load calculation. A structural engineer must provide sealed drawings, and that document is part of the permit application.",
             },
             {
-              title: "Trade coordination",
+              title: "The foundation is not suited to the site",
               description:
-                "The more elements a project touches, the more coordination determines the final quality and the predictability of timelines.",
+                "An addition on a slab, on piles or on a poured foundation does not behave the same way. The footing has to reach below the frost line, and the junction with the existing foundation must avoid differential settlement.",
+            },
+            {
+              title: "The envelope is not closed before winter",
+              description:
+                "An addition exposed to the weather takes on water. The sequence — excavation, foundation, framing, roof, windows, envelope — has to be planned around the season, not around the wish to start quickly.",
             },
           ],
-          columns: "1",
+          columns: "2",
         },
       },
     },
     {
-      id: "approach",
+      id: "included",
       content: {
-        type: "split",
-        variant: "list-actions-image-card",
+        type: "grid",
+        variant: "icon-cards-bullets",
         props: {
-          heading: "Our approach to framing a residential addition",
+          heading: "What an addition mandate covers",
           intro:
-            "The goal isn't just to add a room. You have to confirm what's realistic, structure the decisions and prepare an execution that integrates with the current house.",
+            "An addition runs through four major phases. We are the general contractor for all of them and we coordinate the outside professionals required.",
+          columns: "2",
           items: [
             {
-              title: "Scope analysis",
-              description:
-                "We clarify the intended use, the target square footage, the site constraints and the level of intervention on the existing house.",
+              title: "Feasibility, zoning and permit",
+              description: "What gets verified before anything is drawn.",
+              icon: "fileCheck",
+              bullets: [
+                "Zoning by-law check: setbacks, siting, height, lot coverage ratio.",
+                "Survey of the existing building, foundation, structure and services.",
+                "Construction drawings and structural drawings sealed by an engineer.",
+                "Building permit application filed with your city or borough and followed through to issuance.",
+              ],
             },
             {
-              title: "Technical validation",
-              description:
-                "We frame the sensitive points such as structure, connections, site access and the overall logic of the work.",
+              title: "Excavation and foundation",
+              description: "The part that decides how the building holds up.",
+              icon: "hardHat",
+              bullets: [
+                "Excavation, with underground services located beforehand.",
+                "Footings and foundation poured below the frost line.",
+                "Foundation drain, damp-proofing and free-draining backfill.",
+                "Junction with the existing foundation designed to limit differential settlement.",
+              ],
             },
             {
-              title: "Execution sequence",
-              description:
-                "The steps are ordered to limit interruptions, rework and conflicts between trades.",
+              title: "Structure, envelope and roof",
+              description: "Closing the building in before the weather decides.",
+              icon: "building2",
+              bullets: [
+                "Framing to the engineer's drawings, with beams and supports sized accordingly.",
+                "Existing wall opened and loads carried on a calculated beam.",
+                "Roof tied into the existing one, membrane, flashing and gutters.",
+                "Insulation, air barrier, vapour control, windows, doors and exterior cladding matched to the house.",
+              ],
             },
             {
-              title: "Control of the final result",
-              description:
-                "The addition should feel like it belongs to the house, not work like a poorly connected add-on.",
+              title: "Connections and interior finishing",
+              description: "The new section becomes a real part of the house.",
+              icon: "wrench",
+              bullets: [
+                "Plumbing, electrical, heating and ventilation extended from the existing systems, with their capacity verified.",
+                "Municipal inspections at the required stages, before walls are closed.",
+                "Drywall, taping, paint, flooring tied into the levels of the existing house.",
+                "Kitchen, bathroom, storage or walk-in millwork supplied and installed by our crews.",
+              ],
             },
           ],
-          actions: [
-            {
-              label: "View the design service",
-              href: "/services/design",
-              variant: "ghost",
-            },
-            {
-              label: "View turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-            alt: "Planning a residential addition project",
-          },
-          cardTitle: "What we aim to avoid",
-          cardDescription:
-            "Projects that move ahead without a clear sequence often end with costly adjustments, compromised finishes or weak visual integration.",
         },
       },
     },
@@ -149,92 +172,143 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Typical sequence of an addition project",
+          heading: "How an addition unfolds",
           intro:
-            "Every project varies, but the logic stays the same: frame before opening up, coordinate before accelerating, and finish only when the integration is clean.",
+            "It is the longest mandate we take on, and the one where the administrative phase weighs the most. Feasibility and permitting often take as long as the foundation.",
           steps: [
             {
               number: "1",
-              title: "Framing",
+              title: "Feasibility",
               description:
-                "Needs, feasibility, site constraints and the level of intervention on the existing house.",
+                "Site visit, survey of the existing building and zoning check: setbacks, siting, height and permitted area. This is when we know whether the project works as imagined.",
             },
             {
               number: "2",
-              title: "Design",
+              title: "Drawings and engineer",
               description:
-                "Organization of volumes, connections, circulation, openings and the main technical decisions.",
+                "Construction drawings, then structural calculations and sealed drawings for the foundation, the opening beam and the framing.",
             },
             {
               number: "3",
-              title: "Execution",
+              title: "Permit and contract",
               description:
-                "Structural and related work coordinated according to a sequence that protects progress on site.",
+                "Building permit application filed with the drawings, contract signed with the schedule and the budget, and issuance awaited.",
             },
             {
               number: "4",
-              title: "Integration",
+              title: "Excavation and foundation",
               description:
-                "Finishes, adjustments and connections so the addition works with the rest of the house.",
+                "Services located, excavation, footings, foundation, drain, damp-proofing and backfill. Inspection before backfilling.",
+            },
+            {
+              number: "5",
+              title: "Structure and close-in",
+              description:
+                "Framing, roof, windows, doors, air barrier and exterior cladding. The goal: a closed, weathertight building as early as possible.",
+            },
+            {
+              number: "6",
+              title: "Mechanical and finishing",
+              description:
+                "Plumbing, electrical, heating and ventilation, inspections, insulation, drywall, paint, flooring, custom millwork, then handover.",
             },
           ],
         },
       },
     },
     {
-      id: "technical",
+      id: "permis",
       content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
+        type: "split",
+        variant: "list-actions-image-card",
         props: {
-          heading: "Technical points that truly shape the project",
+          heading: "Permit, zoning and engineer: what is mandatory",
           intro:
-            "A successful addition depends on a series of technical decisions made early enough to avoid blockers and visible compromises.",
-          columns: "2",
+            "An addition adds floor area and changes the building's footprint. That is a building permit, not a renovation permit, and it requires specific documents.",
           items: [
             {
-              title: "Structure and openings",
+              title: "Zoning by-law compliance",
               description:
-                "Connection between the new volume and the existing house.",
-              icon: "package2",
-              bullets: [
-                "Checking the structure to be modified before the work begins.",
-                "Openings and spans designed for real-world use.",
-                "Impact on walls, levels and interior circulation.",
-              ],
+                "Front, rear and side setbacks, lot coverage, maximum height and sometimes alignment with neighbouring buildings. If the project exceeds them, a minor variance application is needed, with delays and no guaranteed outcome.",
             },
             {
-              title: "Envelope and connections",
+              title: "Construction drawings",
               description:
-                "The visible and invisible connection affects durability as much as appearance.",
-              icon: "doorOpen",
-              bullets: [
-                "Clean junction between old and new.",
-                "Management of interior and exterior transitions.",
-                "Attention to the details that give away a poorly integrated add-on.",
-              ],
+                "Site plan, floor plans, sections and elevations, required by the city to review the application. Some boroughs also ask for an up-to-date certificate of location.",
             },
             {
-              title: "Interior organization",
+              title: "Sealed structural drawings",
               description:
-                "The addition should improve the house, not just add square footage.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Smoother circulation between living areas.",
-                "Storage, furniture and openings planned from the start.",
-                "Possible integration of a kitchen, bathroom or walk-in.",
-              ],
+                "Foundation, beams, supports and the opening in the existing wall must be calculated by a structural engineer. The sealed drawing goes with the application and serves as the site reference.",
             },
             {
-              title: "Site coordination",
+              title: "Inspections at key stages",
               description:
-                "The level of control determines the predictability of timelines and the quality of the finish.",
-              icon: "wrench",
-              bullets: [
-                "Order of interventions clarified before starting.",
-                "Less unproductive overlap between teams.",
-                "Fewer corrections at the end of the project.",
-              ],
+                "Foundation before backfilling, framing, plumbing and electrical before the walls close. A missed inspection means reopening what was just closed.",
+            },
+            {
+              title: "Capacity of existing systems",
+              description:
+                "Electrical panel, heating appliance, water service and septic system where applicable must be able to serve the added area. We check that before pricing, not after.",
+            },
+          ],
+          actions: [
+            {
+              label: "See all services",
+              href: "/services",
+              variant: "ghost",
+            },
+            {
+              label: "See service areas",
+              href: "/zones",
+              variant: "ghost",
+            },
+          ],
+          image: {
+            src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+            alt: "Planning and surveying a residential addition project",
+          },
+          cardTitle: "Our licence covers this work",
+          cardDescription:
+            "RBQ licence 8306-0806-27, general contractor categories 1.2 small buildings and 1.3 buildings of all kinds, valid and unrestricted since 2004. We build additions, conversions and rebuilds — not new houses, which fall under a different category.",
+        },
+      },
+    },
+    {
+      id: "types",
+      content: {
+        type: "split",
+        variant: "badges-checklist-cta",
+        props: {
+          heading: "The types of addition we build",
+          intro:
+            "The shape of an addition depends as much on the lot and the zoning as on the need. Often the solution we land on is not the one first imagined.",
+          badges: [
+            "Rear addition",
+            "Side addition",
+            "Second storey",
+            "Four-season sunroom",
+            "Primary suite",
+            "Attached garage",
+          ],
+          cardTitle: "What we assess before deciding",
+          items: [
+            "The area zoning allows once setbacks are applied.",
+            "Whether the existing foundation and structure can carry a storey.",
+            "Orientation, sunlight and the impact on existing windows.",
+            "Where the electrical service, the drain and the heating appliance sit.",
+            "Site access for excavation and material delivery.",
+          ],
+          actions: [
+            {
+              label: "See kitchen renovation",
+              href: "/services/renovation/cuisine",
+              variant: "ghost",
+            },
+            {
+              label: "Talk about your project",
+              href: "/contact",
+              variant: "primary",
             },
           ],
         },
@@ -246,46 +320,57 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading:
-            "How the addition integrates with the rooms of the house",
+          heading: "What an addition actually solves",
           intro:
-            "An addition often makes the most sense when it better supports the kitchen, the bathroom or the storage areas. These pillar pages remain the main conversion destinations.",
+            "An addition almost always serves a specific need: a kitchen that is too small, a missing bathroom, no storage. These mandates are carried out under the same contract.",
           items: [
             {
-              title: "Custom kitchen",
-              href: "/espaces/cuisine",
+              title: "Kitchen renovation",
+              href: "/services/renovation/cuisine",
               description:
-                "When the addition mainly serves a more functional kitchen, the focus becomes circulation, the island and the integration of appliances.",
+                "A rear addition is often the only way to get an open kitchen with an island in a 1960s bungalow.",
               image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen integrated into an addition",
+                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
+                alt: "Kitchen enlarged by a rear addition",
               },
-              badges: ["Kitchen", "Circulation"],
-              footerCtaLabel: "View the kitchen page",
+              badges: ["Kitchen", "Addition"],
+              footerCtaLabel: "See kitchen",
             },
             {
-              title: "Bathroom",
-              href: "/espaces/salle-de-bain",
+              title: "Bathroom renovation",
+              href: "/services/renovation/salle-de-bain",
               description:
-                "An extension can let you add or enlarge a bathroom with better management of moisture, plumbing and storage.",
+                "A second storey or a primary suite lets you add a full bathroom where no plumbing existed.",
               image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom integrated into an addition",
+                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
+                alt: "Bathroom added within an extension",
               },
-              badges: ["Moisture", "Plumbing"],
-              footerCtaLabel: "View the bathroom page",
+              badges: ["Bathroom", "Plumbing"],
+              footerCtaLabel: "See bathroom",
+            },
+            {
+              title: "Flooring renovation",
+              href: "/services/renovation/plancher",
+              description:
+                "Tying the new floor into the existing one without a visible step is prepared at the floor framing stage.",
+              image: {
+                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
+                alt: "Floor junction between the addition and the house",
+              },
+              badges: ["Levels", "Junction"],
+              footerCtaLabel: "See flooring",
             },
             {
               title: "Walk-in and storage",
               href: "/espaces/walk-in",
               description:
-                "Several additions are built to create a more complete suite with tailored storage and clearer organization.",
+                "An added primary suite often includes a custom walk-in, designed and installed by our crews.",
               image: {
                 src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Custom walk-in in a residential extension",
+                alt: "Custom walk-in in an added primary suite",
               },
-              badges: ["Storage", "Suite"],
-              footerCtaLabel: "View the walk-in page",
+              badges: ["Storage", "Custom"],
+              footerCtaLabel: "See walk-in",
             },
           ],
         },
@@ -297,24 +382,24 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "What a good addition should ultimately deliver",
+          heading: "What a successful addition delivers",
           description:
-            "Proof of mastery isn't only in the added volume. It shows in how the house works after the project and in the quality of the connections visible day to day.",
+            "The best compliment an addition can get is that you cannot tell where it starts. That plays out on three levels, and two of them are invisible.",
           cards: [
             {
-              title: "Clear reading",
+              title: "Compliant structure and envelope",
               description:
-                "The new section should feel consistent with the house rather than look hastily added.",
+                "Footings below the frost line, framing to the engineer's drawings, an airtight envelope and inspections passed at every stage.",
             },
             {
-              title: "Improved use",
+              title: "Systems that keep up",
               description:
-                "Circulation, natural light, storage or capacity should be genuinely better.",
+                "Heating, ventilation, electrical and plumbing sized for the added area, not simply extended.",
             },
             {
-              title: "Clean finish",
+              title: "An invisible junction",
               description:
-                "Transitions, alignments and finishing details should support the perception of a well-controlled project.",
+                "Floor levels aligned, cladding matched, roofline continuous and interior transitions handled as if the room had always been there.",
             },
           ],
           columns: "1",
@@ -323,34 +408,53 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - home addition",
+          heading: "FAQ — home addition",
           intro:
-            "Clear answers on feasibility, coordination, timelines and integration with the existing house.",
+            "Zoning, permits, engineers, foundations, timelines, winter work, pricing and warranty.",
           items: [
             {
-              q: "Does Dilamco handle a complete addition?",
-              a: "Yes, depending on the confirmed scope. The goal is to clearly frame what's included, the level of coordination required and the overall sequence before starting.",
+              q: "Do I need a permit to add on to my house?",
+              a: "Yes, always. An addition adds floor area and changes the building's footprint: that is a building permit, supported by a site plan, floor plans, sections and elevations, plus structural drawings sealed by an engineer. We assemble the file and submit the application.",
             },
             {
-              q: "Are all additions feasible?",
-              a: "No. Feasibility depends on the existing house, the site, the structure, access and the applicable regulations. That's why the initial analysis is essential.",
+              q: "How do I know if my lot allows an addition?",
+              a: "Your city or borough zoning by-law sets the front, rear and side setbacks, the lot coverage ratio and the maximum height. We check those parameters and your certificate of location before drawing anything. If the project exceeds them, a minor variance application is possible, with delays and no guaranteed outcome.",
             },
             {
-              q: "How do you handle the unexpected on this kind of project?",
-              a: "We don't eliminate every surprise, but a good sequence and a better reading of the existing house strongly reduce late corrections and conflicts between interventions.",
+              q: "Do I need an engineer?",
+              a: "In nearly every case, yes. The foundation, the framing and above all the beam replacing the load-bearing wall opened between the existing house and the new section require a load calculation. Structural drawings sealed by an engineer accompany the permit application and serve as the reference on site.",
             },
             {
-              q: "How long does a home addition take?",
-              a: "The duration varies with the square footage, the complexity, the level of intervention on the existing house and the related work. A realistic timeline is set once the scope is better defined.",
+              q: "What kind of foundation is needed?",
+              a: "It depends on the soil, the water table, whether there is a basement and the type of addition. Poured footing and foundation wall, slab on grade or piles: in every case the bearing must reach below the frost line and the junction with the existing foundation must be designed to limit differential settlement.",
             },
             {
-              q: "Is it relevant if the main goal is to improve the kitchen or a primary suite?",
-              a: "Yes. Many addition projects exist to better accommodate a kitchen, a bathroom or a storage area. In that case, the addition serves the corresponding pillar page rather than replacing it.",
+              q: "Can a second storey be added to an existing house?",
+              a: "It is possible when the foundation and load-bearing walls can carry the additional load, which the engineer determines by calculation. The maximum height allowed by zoning also has to be checked. It is a heavy job, often involving removal of the existing roof, so weather planning is tight.",
+            },
+            {
+              q: "How long does an addition take?",
+              a: "Think in months, not weeks. The administrative phase — feasibility, drawings, engineer, permit — often runs to several weeks on its own, depending on your municipality's review time. The site work then follows the excavation, foundation, framing, close-in, mechanical and finishing sequence. The detailed schedule is attached to the contract.",
+            },
+            {
+              q: "Can you build in winter?",
+              a: "Excavation and foundation pours are scheduled around conditions and may require frost protection measures. Once the envelope is closed in and the site is heated, interior work continues normally. We set the sequence so the building is closed in before the hardest stretch of the season.",
+            },
+            {
+              q: "Can I stay in the house during construction?",
+              a: "Generally yes during excavation, foundation and framing, since the new section is built alongside. The most disruptive period is opening the wall between the two sections and tying in the systems. We discuss it when setting the schedule.",
+            },
+            {
+              q: "What does an addition cost?",
+              a: "It is the mandate with the widest spread, because the foundation, structure, roof and envelope change completely with the lot and the type of addition. A serious budget is not given over the phone: it is built after the site visit, the zoning check and the drawings. The estimate is free and detailed.",
+            },
+            {
+              q: "Do you build new houses?",
+              a: "No. Our RBQ licence covers renovation, conversion, additions and rebuilding — general contractor categories 1.2 and 1.3. Building a new house falls under a different category and a separate warranty plan. Addition work itself is warranted under the terms of the contract.",
             },
           ],
         },
@@ -362,22 +466,22 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Planning a residential addition?",
+          heading: "An addition to validate before going further?",
           intro:
-            "We help you frame feasibility, the work sequence and integration with the existing house so you start from a more manageable base.",
+            "We start with the only question that matters: what your lot and your structure actually allow. Site visit, zoning check and a detailed estimate within 24 to 48 business hours.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Request a free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View turnkey renovation",
+              label: "See turnkey renovation",
               href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Addition, reconfiguration and integrated renovation",
+          note: "RBQ licence 8306-0806-27 · Zoning, permit, engineer and foundation",
         },
       },
     },

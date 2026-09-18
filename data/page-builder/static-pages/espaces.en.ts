@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Custom spaces",
+    title: "Custom spaces — our cabinetry division",
     description:
-      "Discover our custom spaces: kitchen, bathroom, walk-in closet, laundry room and commercial.",
+      "Kitchen, bathroom, walk-in, laundry room, basement and commercial: custom cabinetry by Dilamco, a licensed general contractor (RBQ).",
     path: "/espaces",
     ogAlt: "Dilamco custom spaces",
   },
@@ -29,11 +29,11 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Spaces",
+          eyebrow: "Dilamco - Cabinetry division",
           heading:
             "Custom spaces: kitchen, bathroom, storage and commercial",
           description:
-            "At Dilamco, every space in the home — kitchen, bathroom, walk-in, basement, laundry room — can receive custom cabinets and storage. Our role: to design, supply and install durable, functional and well-executed solutions, adapted to the real constraints of each room.",
+            "Every space in the home — kitchen, bathroom, walk-in, basement, laundry room — can receive custom cabinets and storage. That is the job of the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27): we design the project, our partner factory produces it, our crews install it, and the whole thing is coordinated with the rest of your renovation.",
           actions: [
             {
               label: "Request a quote",
@@ -129,7 +129,7 @@ export const pageEn: PageTemplateData = {
               title: "Commercial",
               href: "/espaces/commercial",
               description:
-                "Durable commercial fit-outs, planned and adapted to real use.",
+                "Commercial construction and fit-outs: offices, retail and leasehold improvements.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Custom commercial fit-out",
@@ -184,8 +184,8 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "In-stock cabinets (shop)",
-              href: "/boutique",
+              label: "Turnkey home renovation",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
@@ -217,6 +217,10 @@ export const pageEn: PageTemplateData = {
             {
               q: "Do you also handle installation?",
               a: "Yes. We install the elements we design and supply, which ensures consistent execution from design to installation, by a single team. This continuity avoids the grey areas between fabrication and installation and makes final on-site adjustments easier.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation of the room: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

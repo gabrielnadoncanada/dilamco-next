@@ -6,7 +6,7 @@ export const installationPageEn: PageTemplateData = {
   metadata: {
     title: "Custom cabinet & kitchen installation",
     description:
-      "Professional installation service: precise alignments, on-site adjustments and careful finishing.",
+      "Custom cabinet and kitchen installation by our own crews: precise alignments, on-site adjustments and coordination with the rest of the job site.",
     path: "/services/installation",
     ogAlt: "Dilamco installation service",
   },
@@ -33,11 +33,11 @@ export const installationPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
+          eyebrow: "Dilamco - Cabinetry division",
           heading:
             "Professional installation: precision, alignment and finish",
           description:
-            "Installation is the final stage where cabinets are set and adjusted on site: levelling, precise alignments, fastening and finishing. It is what turns fabricated elements into a clean, durable whole — on-site adjustments are an integral part of a professional install.",
+            "Installation is the final stage where cabinets are set and adjusted on site: levelling, precise alignments, fastening and finishing. It is carried out by the crews of Dilamco, a licensed general contractor (RBQ 8306-0806-27): the install is planned with the other trades on the job — plumbing, electrical, countertops, flooring — to avoid waiting and rework.",
           actions: [
             {
               label: "Request a quote",
@@ -129,6 +129,11 @@ export const installationPageEn: PageTemplateData = {
               href: "/services/fabrication",
               variant: "ghost",
             },
+            {
+              label: "Turnkey renovation",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
@@ -214,6 +219,10 @@ export const installationPageEn: PageTemplateData = {
             {
               q: "Do you work in condos or commercial spaces?",
               a: "Yes. We adapt the installation to the access, scheduling and usage constraints of each environment.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation of the room: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

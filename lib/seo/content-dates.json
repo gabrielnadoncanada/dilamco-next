@@ -2,13 +2,13 @@
   "/": "2026-07-07",
   "/a-propos": "2026-07-03",
   "/contact": "2026-06-15",
-  "/espaces": "2026-07-07",
+  "/espaces": "2026-07-16",
   "/espaces/commercial": "2026-07-07",
-  "/espaces/cuisine": "2026-07-07",
-  "/espaces/salle-de-bain": "2026-07-07",
+  "/espaces/cuisine": "2026-07-16",
+  "/espaces/salle-de-bain": "2026-07-16",
   "/espaces/salle-de-lavage": "2026-07-07",
-  "/espaces/sous-sol": "2026-07-07",
-  "/espaces/walk-in": "2026-07-07",
+  "/espaces/sous-sol": "2026-07-16",
+  "/espaces/walk-in": "2026-07-16",
   "/materiaux": "2026-07-07",
   "/materiaux/bois-massif": "2026-07-07",
   "/materiaux/comparatif": "2026-07-07",
@@ -28,5 +28,6 @@
   "/services/renovation/apres-sinistre": "2026-07-07",
   "/services/renovation/cuisine": "2026-07-07",
   "/services/renovation/plancher": "2026-07-07",
-  "/services/renovation/salle-de-bain": "2026-07-07"
+  "/services/renovation/salle-de-bain": "2026-07-07",
+  "/zones/laval": "2026-07-07"
 }

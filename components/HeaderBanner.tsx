@@ -2,7 +2,7 @@ import { LocaleSwitcher } from "@/components/LocaleSwitcher";
 import { getTranslations } from "next-intl/server";
 
 export async function HeaderBanner() {
-  const t = await getTranslations("shop.chrome");
+  const t = await getTranslations("header");
   return (
     // Bandeau unifié : téléphone (gauche) · mention non-cliquable (centre) ·
     // sélecteur de langue (droite).

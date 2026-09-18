@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const fabricationPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Fabrication d'armoires sur mesure — notre processus",
+    title: "Fabrication d'armoires sur mesure — usine partenaire",
     description:
-      "Fabrication sur mesure : durabilité, précision et finition haut de gamme pour un résultat cohérent et durable.",
+      "Armoires sur mesure produites par notre usine partenaire, avec contrôle qualité et coordination de chantier assurés par Dilamco, entrepreneur général.",
     path: "/services/fabrication",
     ogAlt: "Service de fabrication Dilamco",
   },
@@ -21,7 +21,7 @@ export const fabricationPage: PageTemplateData = {
   service: {
     name: "Service de fabrication",
     description:
-      "Fabrication sur mesure : durabilité, précision et finition haut de gamme.",
+      "Armoires sur mesure fabriquées par notre usine partenaire, sous contrôle qualité et coordination de Dilamco.",
     url: SITE.url + "/services/fabrication",
     serviceType: "Fabrication",
   },
@@ -33,10 +33,10 @@ export const fabricationPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
+          eyebrow: "Dilamco - Division armoires",
           heading: "Fabrication sur mesure, précision, constance et durabilité",
           description:
-            "La fabrication est l'étape où les armoires sont produites selon les plans validés : découpe, assemblage et finition des caissons, portes et tiroirs. Elle détermine la solidité, la stabilité et la longévité du projet. Chez Dilamco, elle est réalisée de façon contrôlée en usine partenaire, pour un résultat cohérent et propre à installer.",
+            "La fabrication est l'étape où les armoires sont produites selon les plans validés : découpe, assemblage et finition des caissons, portes et tiroirs. La production est confiée à notre usine partenaire exclusive. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), garde la responsabilité des plans, du contrôle qualité à la réception et de la coordination avec le reste du chantier.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -67,13 +67,14 @@ export const fabricationPage: PageTemplateData = {
         props: {
           heading: "Ce que signifie vraiment fabrication sur mesure",
           intro:
-            "Le sur mesure vise une adaptation réelle à l'espace et à l'usage, pas seulement une coupe à la bonne largeur.",
-          badges: ["Dimensions réelles", "Assemblage cohérent", "Usage réel"],
+            "Le sur mesure vise une adaptation réelle à l'espace et à l'usage, pas seulement une coupe à la bonne largeur. Les plans et les spécifications viennent de nous, la production vient de notre usine partenaire.",
+          badges: ["Dimensions réelles", "Contrôle qualité", "Usage réel"],
           cardTitle: "Ce qui fait la différence",
           items: [
             "Adaptation à l'espace et aux contraintes réelles.",
             "Alignements et proportions maîtrisées entre modules.",
             "Choix de matériaux et quincaillerie selon l'usage.",
+            "Contrôle qualité à la réception, avant la pose.",
           ],
           actions: [
             {
@@ -84,6 +85,11 @@ export const fabricationPage: PageTemplateData = {
             {
               label: "Quincaillerie",
               href: "/materiaux/quincaillerie",
+              variant: "ghost",
+            },
+            {
+              label: "Rénovation clé en main",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
@@ -98,31 +104,31 @@ export const fabricationPage: PageTemplateData = {
         props: {
           heading: "Processus de fabrication",
           intro:
-            "Chaque étape prépare la suivante pour réduire les reprises et faciliter une installation propre.",
+            "Chaque étape prépare la suivante pour réduire les reprises et faciliter une pose propre.",
           steps: [
             {
               number: "1",
               title: "Validation",
               description:
-                "Design, mesures et contraintes clarifiés avant production.",
+                "Design, mesures et contraintes clarifiés par Dilamco avant la mise en production.",
             },
             {
               number: "2",
               title: "Sélection",
               description:
-                "Matériaux choisis selon durabilité, humidité et entretien.",
+                "Matériaux et quincaillerie spécifiés selon durabilité, humidité et entretien.",
             },
             {
               number: "3",
-              title: "Assemblage",
+              title: "Production",
               description:
-                "Modules, portes et tiroirs fabriqués avec cohérence et précision.",
+                "Modules, portes et tiroirs produits par notre usine partenaire selon nos spécifications.",
             },
             {
               number: "4",
-              title: "Préparation",
+              title: "Réception",
               description:
-                "Contrôle final et mise en condition pour une pose précise.",
+                "Contrôle qualité à la livraison et coordination avec le calendrier de chantier.",
             },
           ],
         },
@@ -204,6 +210,14 @@ export const fabricationPage: PageTemplateData = {
               q: "Quels sont les délais de fabrication?",
               a: "Les délais de fabrication varient selon la complexité du projet, la disponibilité des matériaux et la coordination avec l'installation. Pour un projet sur mesure, il faut généralement compter de 9 à 15 semaines entre la validation du design et la pose finale. Un échéancier précis est confirmé une fois les plans arrêtés, pour vous donner une visibilité claire sur chaque étape.",
             },
+            {
+              q: "Qui fabrique réellement vos armoires?",
+              a: "Les armoires sont produites pour nous par notre usine partenaire exclusive, selon les plans et les spécifications établis par Dilamco. Nous restons responsables du design, du choix des matériaux et de la quincaillerie, du contrôle qualité à la réception, de la pose et du service après coup. Vous avez donc un seul interlocuteur du plan à la livraison, sans intermédiaire supplémentaire.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la pièce : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
+            },
           ],
         },
       },
@@ -214,9 +228,9 @@ export const fabricationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez un projet fabriqué pour durer ?",
+          heading: "Vous voulez un projet construit pour durer ?",
           intro:
-            "On vous aide à cadrer les bons choix techniques, matériaux et détails d'exécution avant la production.",
+            "On vous aide à cadrer les bons choix techniques, matériaux et détails d'exécution avant la mise en production.",
           actions: [
             {
               label: "Demander une soumission",

@@ -6,7 +6,7 @@ export const cuisinePage: PageTemplateData = {
   metadata: {
     title: "Armoires de cuisine sur mesure à Pierrefonds",
     description:
-      "Cuisine sur mesure et armoires de cuisine sur mesure haut de gamme : conception, îlot, fabrication contrôlée et pose précise à Pierrefonds, Montréal, Laval et le Grand Montréal.",
+      "Armoires de cuisine sur mesure à Pierrefonds et dans le Grand Montréal, conçues, fournies et posées par Dilamco, entrepreneur général licencié RBQ.",
     path: "/espaces/cuisine",
     ogAlt: "Cuisine sur mesure et armoires de cuisine Dilamco",
   },
@@ -29,11 +29,11 @@ export const cuisinePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          eyebrow: "Dilamco - Division armoires",
           heading:
             "Cuisine sur mesure et armoires de cuisine sur mesure à Pierrefonds et dans le Grand Montréal",
           description:
-            "Une cuisine sur mesure est un ensemble d'armoires conçu et fabriqué aux dimensions exactes de votre pièce — îlot, rangement et hauteurs compris — plutôt qu'assemblé à partir de modules standards. Chez Dilamco, à Pierrefonds et dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et la pose, en bois massif et contreplaqué de bouleau.",
+            "Une cuisine sur mesure est un ensemble d'armoires conçu et fabriqué aux dimensions exactes de votre pièce — îlot, rangement et hauteurs compris — plutôt qu'assemblé à partir de modules standards. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), conçoit le projet, le fait produire par son usine partenaire et le fait poser par ses propres équipes, coordonné avec le reste du chantier.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -217,8 +217,8 @@ export const cuisinePage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Armoires de cuisine en stock",
-              href: "/boutique/armoires-cuisine",
+              label: "Rénovation de cuisine clé en main",
+              href: "/services/renovation/cuisine",
               variant: "ghost",
             },
             {
@@ -356,6 +356,10 @@ export const cuisinePage: PageTemplateData = {
             {
               q: "Est-ce que vous faites aussi l'installation ?",
               a: "Oui. L'objectif est d'assurer une exécution cohérente du design à la pose, par la même équipe.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la cuisine : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

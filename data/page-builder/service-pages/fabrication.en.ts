@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const fabricationPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Custom cabinetry fabrication in Montreal",
+    title: "Custom cabinetry fabrication — partner factory",
     description:
-      "Custom fabrication: durability, precision and high-end finish for a consistent, long-lasting result.",
+      "Custom cabinets produced by our partner factory, with quality control and job-site coordination handled by Dilamco, a licensed general contractor.",
     path: "/services/fabrication",
     ogAlt: "Dilamco fabrication service",
   },
@@ -21,7 +21,7 @@ export const fabricationPageEn: PageTemplateData = {
   service: {
     name: "Fabrication service",
     description:
-      "Custom fabrication: durability, precision and high-end finish.",
+      "Custom cabinets built for us by our partner factory, under Dilamco's specifications, quality control and coordination.",
     url: SITE.url + "/services/fabrication",
     serviceType: "Fabrication",
   },
@@ -33,10 +33,10 @@ export const fabricationPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
+          eyebrow: "Dilamco - Cabinetry division",
           heading: "Custom fabrication: precision, consistency and durability",
           description:
-            "Fabrication is the stage where cabinets are produced from the approved plans: cutting, assembly and finishing of the boxes, doors and drawers. It determines a project's solidity, stability and longevity. At Dilamco, it is carried out under control at our partner factory, for a consistent result that is clean to install.",
+            "Fabrication is the stage where cabinets are produced from the approved plans: cutting, assembly and finishing of the boxes, doors and drawers. Production is entrusted to our exclusive partner factory. The cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), remains responsible for the plans, for quality control on delivery and for coordination with the rest of the job site.",
           actions: [
             {
               label: "Discuss your project",
@@ -67,13 +67,14 @@ export const fabricationPageEn: PageTemplateData = {
         props: {
           heading: "What custom fabrication really means",
           intro:
-            "Custom work aims for a real fit to the space and the use, not just cutting to the right width.",
-          badges: ["Real dimensions", "Consistent assembly", "Real use"],
+            "Custom work aims for a real fit to the space and the use, not just cutting to the right width. The plans and the specifications come from us; the production comes from our partner factory.",
+          badges: ["Real dimensions", "Quality control", "Real use"],
           cardTitle: "What makes the difference",
           items: [
             "Adapting to the space and to real constraints.",
             "Controlled alignments and proportions between modules.",
             "Choice of materials and hardware based on use.",
+            "Quality control on delivery, before installation.",
           ],
           actions: [
             {
@@ -84,6 +85,11 @@ export const fabricationPageEn: PageTemplateData = {
             {
               label: "Hardware",
               href: "/materiaux/quincaillerie",
+              variant: "ghost",
+            },
+            {
+              label: "Turnkey renovation",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
@@ -104,25 +110,25 @@ export const fabricationPageEn: PageTemplateData = {
               number: "1",
               title: "Validation",
               description:
-                "Design, measurements and constraints clarified before production.",
+                "Design, measurements and constraints clarified by Dilamco before production starts.",
             },
             {
               number: "2",
               title: "Selection",
               description:
-                "Materials chosen based on durability, moisture and maintenance.",
+                "Materials and hardware specified for durability, moisture and maintenance.",
             },
             {
               number: "3",
-              title: "Assembly",
+              title: "Production",
               description:
-                "Modules, doors and drawers built with consistency and precision.",
+                "Modules, doors and drawers built by our partner factory to our specifications.",
             },
             {
               number: "4",
-              title: "Preparation",
+              title: "Receiving",
               description:
-                "Final check and conditioning for a precise installation.",
+                "Quality control on delivery and coordination with the job-site schedule.",
             },
           ],
         },
@@ -204,6 +210,14 @@ export const fabricationPageEn: PageTemplateData = {
               q: "What are the fabrication lead times?",
               a: "Fabrication lead times vary with the project's complexity, material availability and coordination with installation. For a custom project, you should generally allow 9 to 15 weeks between design approval and the final install. A precise schedule is confirmed once the plans are settled, to give you clear visibility on each stage.",
             },
+            {
+              q: "Who actually builds your cabinets?",
+              a: "The cabinets are produced for us by our exclusive partner factory, to the plans and specifications set by Dilamco. We remain responsible for the design, the choice of materials and hardware, quality control on delivery, the installation and the follow-up afterwards. You deal with one party from plan to handover, with no extra middleman.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation of the room: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
+            },
           ],
         },
       },
@@ -216,7 +230,7 @@ export const fabricationPageEn: PageTemplateData = {
         props: {
           heading: "Want a project built to last?",
           intro:
-            "We help you frame the right technical choices, materials and execution details before production.",
+            "We help you frame the right technical choices, materials and execution details before production starts.",
           actions: [
             {
               label: "Request a quote",

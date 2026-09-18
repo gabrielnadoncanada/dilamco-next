@@ -6,7 +6,7 @@ export const pageEn: PageTemplateData = {
   metadata: {
     title: "Materials for custom kitchens & cabinetry",
     description:
-      "Materials and comparisons for custom kitchens, vanities and cabinets: plywood, MDF, melamine, solid wood, hardware and finishes.",
+      "Materials and comparisons for custom cabinetry: plywood, MDF, melamine, solid wood, hardware and finishes, explained by our cabinetry division.",
     path: "/materiaux",
     ogAlt: "Dilamco materials",
   },
@@ -22,10 +22,10 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materials",
+          eyebrow: "Dilamco - Cabinetry division",
           heading: "Materials, durability, finish and performance",
           description:
-            "The choice of cabinet materials — solid wood, plywood, MDF, melamine, hardware and finishes — determines a project's durability and look. The right material depends on real use: we prioritize consistency between structure, hardware, finish and installation for a more durable result.",
+            "The choice of cabinet materials — solid wood, plywood, MDF, melamine, hardware and finishes — determines a project's durability and look. These specifications are set by the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), then passed on to our partner factory and checked on delivery, before installation.",
           actions: [
             {
               label: "Request a quote",
@@ -253,6 +253,11 @@ export const pageEn: PageTemplateData = {
               href: "/services/installation",
               variant: "ghost",
             },
+            {
+              label: "Turnkey renovation",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
         },
       },
@@ -281,6 +286,10 @@ export const pageEn: PageTemplateData = {
             {
               q: "Which materials should be avoided in a bathroom?",
               a: "In a bathroom, you avoid materials that are poorly protected against moisture or whose edges are poorly sealed, because steam and splashes seep in over time. You favour stable structures, moisture-resistant finishes and durable hardware, combined with good ventilation and careful installation — it's the execution that protects durability.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full renovation of the room: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

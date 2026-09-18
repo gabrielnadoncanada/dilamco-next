@@ -1,4 +1,24 @@
-import { ChevronRight, DoorOpen, Package2, SlidersHorizontal, Wrench } from "lucide-react";
+import {
+  Bath,
+  Building2,
+  ChefHat,
+  ChevronRight,
+  ClipboardCheck,
+  Clock,
+  DoorOpen,
+  Droplets,
+  FileCheck,
+  Hammer,
+  HardHat,
+  Layers,
+  MapPin,
+  Package2,
+  Ruler,
+  ShieldCheck,
+  SlidersHorizontal,
+  Sofa,
+  Wrench,
+} from "lucide-react";
 
 import { Heading } from "@/components/elements/heading";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +30,20 @@ const iconMap = {
   slidersHorizontal: SlidersHorizontal,
   package2: Package2,
   wrench: Wrench,
+  hardHat: HardHat,
+  hammer: Hammer,
+  building2: Building2,
+  layers: Layers,
+  droplets: Droplets,
+  mapPin: MapPin,
+  shieldCheck: ShieldCheck,
+  fileCheck: FileCheck,
+  clipboardCheck: ClipboardCheck,
+  clock: Clock,
+  ruler: Ruler,
+  bath: Bath,
+  chefHat: ChefHat,
+  sofa: Sofa,
 } as const;
 
 function resolveIcon(icon: string) {

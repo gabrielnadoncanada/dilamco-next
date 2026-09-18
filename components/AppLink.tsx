@@ -7,7 +7,6 @@ import {
   MATERIAL_EN,
   RENOVATION_EN,
   PROJECT_SLUG_EN,
-  BOUTIQUE_TAXON_EN,
   ZONE_EN,
 } from "@/seo/i18n-path";
 
@@ -36,13 +35,6 @@ const RENOVATION_TEMPLATES = Object.keys(RENOVATION_EN).map(
 // Templates littéraux par zone desservie (segment zones -> areas via routing.ts).
 const ZONE_TEMPLATES = Object.keys(ZONE_EN).map((z) => `/zones/${z}`);
 
-// Templates des collections boutique (slug mot-clé traduit via routing.ts),
-// dérivés de la map légère BOUTIQUE_TAXON_EN → auto-synchronisés avec
-// lib/shop/collections.ts (garde-fou build-time). Plus profond d'abord.
-const BOUTIQUE_COLLECTION_TEMPLATES = Object.keys(BOUTIQUE_TAXON_EN)
-  .sort((a, b) => b.split("/").length - a.split("/").length)
-  .map((sub) => `/boutique/${sub}`);
-
 // Pathnames internes connus (doivent rester synchronisés avec i18n/routing.ts).
 // Les plus spécifiques (espaces) en premier pour gagner le match.
 const TEMPLATES = [
@@ -57,6 +49,7 @@ const TEMPLATES = [
   "/services/[slug]",
   "/services/renovation",
   ...RENOVATION_TEMPLATES,
+  "/zones",
   ...ZONE_TEMPLATES,
   "/a-propos",
   "/contact",
@@ -65,14 +58,6 @@ const TEMPLATES = [
   "/conditions-dutilisation",
   "/landing",
   "/landing/construction",
-  // Boutique : collections (dérivées de BOUTIQUE_TAXON_EN, sous-collections
-  // d'abord) puis routes fixes. Synchronisé avec i18n/routing.ts.
-  ...BOUTIQUE_COLLECTION_TEMPLATES,
-  "/boutique/produit/[id]",
-  "/boutique/finitions",
-  "/boutique/conditions-de-retour",
-  "/boutique/soumission",
-  "/boutique",
 ] as const;
 
 type IntlHref = ComponentProps<typeof Link>["href"];

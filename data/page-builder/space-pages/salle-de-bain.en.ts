@@ -6,7 +6,7 @@ export const salleDeBainPageEn: PageTemplateData = {
   metadata: {
     title: "Custom bathroom vanity in Laval and Montréal",
     description:
-      "High-end custom bathroom vanity: design, controlled fabrication and precise installation in Montréal, Laval, the North Shore and the South Shore.",
+      "Custom bathroom vanity in Laval, Montréal and on both shores, designed, supplied and installed by Dilamco, a licensed general contractor (RBQ).",
     path: "/espaces/salle-de-bain",
     ogAlt: "Dilamco custom bathroom vanity",
   },
@@ -32,11 +32,11 @@ export const salleDeBainPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Spaces",
+          eyebrow: "Dilamco - Cabinetry division",
           heading:
             "Custom bathroom vanity in Laval and Greater Montréal",
           description:
-            "A custom bathroom vanity is a sink cabinet designed and built to the exact dimensions of your room, with materials chosen to withstand moisture. At Dilamco, in Laval and across Greater Montréal, we design, fabricate and install custom vanities — stable structure, tailored storage and precise installation, from plan to finish.",
+            "A custom bathroom vanity is a sink cabinet designed and built to the exact dimensions of your room, with materials chosen to withstand moisture. The cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), handles the design, has the vanity produced by our partner factory and installed by our own crews, coordinated with the plumbing and the rest of the job site.",
           actions: [
             {
               label: "Get a quote",
@@ -160,8 +160,8 @@ export const salleDeBainPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "In-stock vanities",
-              href: "/boutique/vanites",
+              label: "Turnkey bathroom renovation",
+              href: "/services/renovation/salle-de-bain",
               variant: "ghost",
             },
           ],
@@ -287,6 +287,10 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               q: "What's the lead time for a custom vanity?",
               a: "The lead time depends on complexity, finishes and the fabrication schedule. We confirm it during the design phase.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full bathroom renovation: municipal permit where required, demolition, plumbing, electrical, tiling, ventilation and vanity installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

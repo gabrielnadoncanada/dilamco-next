@@ -6,7 +6,7 @@ export const walkInPageEn: PageTemplateData = {
   metadata: {
     title: "Custom closets and walk-ins in Montreal: pricing and design",
     description:
-      "High-end custom closets and walk-in closets in Montreal, Laval and the South Shore: realistic price ranges, custom vs modular comparison, design and installation.",
+      "Custom closets and walk-ins in Montreal and Laval: price ranges, custom vs modular comparison, design and installation by a licensed general contractor.",
     path: "/espaces/walk-in",
     ogAlt: "Dilamco custom closet and walk-in",
   },
@@ -29,10 +29,10 @@ export const walkInPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Spaces",
+          eyebrow: "Dilamco - Cabinetry division",
           heading: "Custom closets and walk-ins in Montreal, designed for real use",
           description:
-            "A custom closet — or walk-in — is a storage system designed and built to the exact dimensions of your space (hanging, drawers, shelves, accessories), rather than assembled from stock modules. At Dilamco, across Greater Montréal, a single team handles the design, controlled fabrication at our partner factory and installation.",
+            "A custom closet — or walk-in — is a storage system designed and built to the exact dimensions of your space (hanging, drawers, shelves, accessories), rather than assembled from stock modules. The cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), designs the storage, has it produced by our partner factory and installed by our own crews, coordinated with the rest of the job site.",
           actions: [
             {
               label: "Get a quote",
@@ -157,13 +157,13 @@ export const walkInPageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "In-stock full-height storage cabinets",
-              href: "/boutique/garde-manger",
+              label: "View our spaces",
+              href: "/espaces",
               variant: "ghost",
             },
             {
-              label: "View our spaces",
-              href: "/espaces",
+              label: "Turnkey home renovation",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
@@ -383,6 +383,10 @@ export const walkInPageEn: PageTemplateData = {
             {
               q: "Do you work in Montreal and the surrounding area?",
               a: "Yes. We serve Montreal, Laval, the West Island, the North Shore and the South Shore.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full bedroom or walk-in renovation: partitions, door, electrical and lighting, flooring, painting and installation of the storage system, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

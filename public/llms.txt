@@ -1,30 +1,41 @@
 # Dilamco
 
-> Armoires de cuisine et rénovation sur mesure haut de gamme à Montréal et dans le Grand Montréal (Laval, Rive-Nord, Rive-Sud, Ouest-de-l'Île). Conception, importation directe de notre usine partenaire exclusive et installation de cuisines, vanités de salle de bain, walk-in, rangements et projets commerciaux. Salle de montre à Dorval, entrepôt à Rigaud (Québec).
+> Entrepreneur général en rénovation résidentielle et commerciale dans l'Ouest-de-l'Île de Montréal, le Grand Montréal, Laval et Vaudreuil-Soulanges. Licence RBQ 8306-0806-27 (valide, catégories 1.2 et 1.3 + sous-catégorie 12 armoires), en activité depuis 2004. Basé à Pierrefonds-Roxboro (18625 rue Larocque, H9K 1P1). Téléphone : 514-820-0773. Courriel : info@dilamco.com.
 
-Dilamco (Dilamco inc.) est un spécialiste des armoires sur mesure : conception, fourniture directe de l'usine et installation. Entreprise bilingue (français / anglais). Téléphone : +1 514-820-0773 — info@dilamco.com.
-
-## Espaces
-- [Cuisines sur mesure](https://dilamco.com/espaces/cuisine): armoires de cuisine sur mesure, design et fourniture directe de l'usine.
-- [Vanités de salle de bain sur mesure](https://dilamco.com/espaces/salle-de-bain): vanités et rangements de salle de bain.
-- [Walk-in et garde-robes](https://dilamco.com/espaces/walk-in): rangements de walk-in sur mesure.
-- [Sous-sol](https://dilamco.com/espaces/sous-sol): aménagement et rangements de sous-sol.
-- [Salle de lavage](https://dilamco.com/espaces/salle-de-lavage): rangements de salle de lavage.
-- [Commercial](https://dilamco.com/espaces/commercial): aménagement et mobilier commercial sur mesure.
+Dilamco (raison sociale 9139-1250 Québec inc., aussi connu sous « Dilamco Construction ») agit comme entrepreneur général unique : estimation gratuite, soumission détaillée, contrat écrit avec échéancier, permis municipaux, coordination de tous les corps de métier, inspection et garantie de travaux. Division armoires sur mesure intégrée (armoires fabriquées pour Dilamco par une usine partenaire, installées par ses équipes).
 
 ## Services
-- [Design](https://dilamco.com/services/design): conception et plans 3D.
-- [Fabrication](https://dilamco.com/services/fabrication): fabrication contrôlée chez notre usine partenaire.
-- [Installation](https://dilamco.com/services/installation): installation par notre équipe.
-- [Rénovation clé en main](https://dilamco.com/services/renovation): cuisine, salle de bain, plancher, agrandissement de maison.
 
-## Matériaux
-- [Matériaux d'armoires](https://dilamco.com/materiaux): bois massif, MDF, mélamine, contreplaqué, quincaillerie, couleurs et comparatif.
+- [Rénovation clé en main](https://dilamco.com/services/renovation) : un seul entrepreneur du permis à la livraison.
+- [Rénovation de cuisine](https://dilamco.com/services/renovation/cuisine)
+- [Rénovation de salle de bain](https://dilamco.com/services/renovation/salle-de-bain)
+- [Finition de sous-sol](https://dilamco.com/services/renovation/sous-sol)
+- [Agrandissement de maison](https://dilamco.com/services/renovation/agrandissement-de-maison)
+- [Rénovation de plancher](https://dilamco.com/services/renovation/plancher)
+- [Reconstruction après sinistre (dégât d'eau, feu)](https://dilamco.com/services/renovation/apres-sinistre)
+- [Aménagement commercial](https://dilamco.com/espaces/commercial)
+- [Armoires et cuisines sur mesure](https://dilamco.com/espaces)
 
-## À propos & contact
-- [À propos](https://dilamco.com/a-propos): l'entreprise et son approche.
-- [Processus](https://dilamco.com/processus): les étapes d'un projet sur mesure.
-- [Contact / soumission](https://dilamco.com/contact): demande de soumission.
+## Zones desservies
 
-## English
-- [English site](https://dilamco.com/en): custom cabinetry and renovation in Greater Montréal.
+- [Toutes les zones](https://dilamco.com/zones)
+- [Pierrefonds-Roxboro](https://dilamco.com/zones/pierrefonds-roxboro) (siège)
+- [Dollard-des-Ormeaux](https://dilamco.com/zones/dollard-des-ormeaux)
+- [Kirkland](https://dilamco.com/zones/kirkland)
+- [Pointe-Claire](https://dilamco.com/zones/pointe-claire)
+- [Beaconsfield](https://dilamco.com/zones/beaconsfield)
+- [Dorval](https://dilamco.com/zones/dorval)
+- [L'Île-Bizard–Sainte-Geneviève](https://dilamco.com/zones/ile-bizard-sainte-genevieve)
+- [Saint-Laurent](https://dilamco.com/zones/saint-laurent)
+- [Laval](https://dilamco.com/zones/laval)
+- [Vaudreuil-Dorion](https://dilamco.com/zones/vaudreuil-dorion)
+- [Rive-Sud (Longueuil, Brossard, Saint-Lambert…)](https://dilamco.com/zones/rive-sud)
+
+## Entreprise
+
+- [À propos](https://dilamco.com/a-propos)
+- [Processus](https://dilamco.com/processus)
+- [Projets](https://dilamco.com/projets)
+- [Contact et estimation gratuite](https://dilamco.com/contact)
+- [Registre RBQ — fiche de licence](https://www.pes.rbq.gouv.qc.ca/RegistreLicences/FicheDetenteur/8306080627)
+- [English version](https://dilamco.com/en)

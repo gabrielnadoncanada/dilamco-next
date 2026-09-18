@@ -86,9 +86,26 @@ export const Footer = async ({
                   {SITE.email}
                 </a>
                 <br />
-                {/* {SITE.address.streetAddress}, {SITE.address.addressLocality} (
-                {SITE.address.addressRegion}) */}
+                {SITE.address.streetAddress}, {SITE.address.addressLocality} (
+                {SITE.address.addressRegion}) {SITE.address.postalCode}
               </address>
+              {/* Licence RBQ : mention obligatoire sur toute publicité d'un
+                  entrepreneur (Loi sur le bâtiment). Lien vers le registre public. */}
+              <p className="mt-4 text-sm leading-6 text-background/65">
+                {isEn ? "RBQ licence" : "Licence RBQ"}{" "}
+                <a
+                  href={SITE.rbqRegistryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-background/85 underline decoration-background/30 underline-offset-4 transition-colors hover:text-background"
+                >
+                  {SITE.rbqLicence}
+                </a>
+                <br />
+                {isEn
+                  ? "Licensed general contractor since 2004 · Insured"
+                  : "Entrepreneur général licencié depuis 2004 · Assuré"}
+              </p>
             </div>
             {menuItems.map((section, sectionIdx) => (
               <div key={sectionIdx}>

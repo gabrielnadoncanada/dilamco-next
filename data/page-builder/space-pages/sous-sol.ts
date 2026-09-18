@@ -6,7 +6,7 @@ export const sousSolPage: PageTemplateData = {
   metadata: {
     title: "Aménagement de sous-sol sur mesure à Pierrefonds",
     description:
-      "Aménagement de sous-sol sur mesure : cinéma maison, bar, cave à vin, bibliothèque et rangement. Conception et installation à Montréal et le Grand Montréal.",
+      "Aménagement de sous-sol sur mesure : cinéma maison, bar, cave à vin et rangement, intégrés à votre rénovation par un entrepreneur général licencié RBQ.",
     path: "/espaces/sous-sol",
     ogAlt: "Aménagement de sous-sol sur mesure Dilamco",
   },
@@ -29,11 +29,11 @@ export const sousSolPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          eyebrow: "Dilamco - Division armoires",
           heading:
             "Aménagement de sous-sol sur mesure à Pierrefonds et dans le Grand Montréal",
           description:
-            "Aménager un sous-sol sur mesure, c'est transformer un espace souvent sous-utilisé en pièce de vie haut de gamme — salle de cinéma maison, bar, cave à vin, bibliothèque ou salle de jeux — avec un mobilier intégré conçu pour vos usages réels. Chez Dilamco, à Pierrefonds et dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et l'installation, du plan à la finition.",
+            "Aménager un sous-sol sur mesure, c'est transformer un espace souvent sous-utilisé en pièce de vie haut de gamme — salle de cinéma maison, bar, cave à vin, bibliothèque ou salle de jeux — avec un mobilier intégré conçu pour vos usages réels. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), conçoit le mobilier, le fait produire par son usine partenaire et le fait poser par ses équipes, coordonné avec la finition du sous-sol.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -234,8 +234,8 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Garde-manger et rangements en stock",
-              href: "/boutique/garde-manger",
+              label: "Finition de sous-sol clé en main",
+              href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
             {
@@ -318,6 +318,10 @@ export const sousSolPage: PageTemplateData = {
             {
               q: "Comment gérez-vous l'humidité d'un sous-sol ?",
               a: "On sélectionne des matériaux et des finis adaptés à l'environnement d'un sous-sol et on soigne les détails de construction pour limiter le gondolement et les problèmes liés à l'humidité.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la finition complète du sous-sol : permis municipal, isolation, cloisons, électricité, plomberie, plancher et pose du mobilier intégré, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

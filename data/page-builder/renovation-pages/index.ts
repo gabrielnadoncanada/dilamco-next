@@ -5,15 +5,18 @@ import { renovationApresSinistrePage } from "./apres-sinistre";
 import { renovationCuisinePage } from "./cuisine";
 import { renovationPlancherPage } from "./plancher";
 import { renovationSalleDeBainPage } from "./salle-de-bain";
+import { renovationSousSolPage } from "./sous-sol";
 import { agrandissementMaisonPageEn } from "./agrandissement-de-maison.en";
 import { renovationApresSinistrePageEn } from "./apres-sinistre.en";
 import { renovationCuisinePageEn } from "./cuisine.en";
 import { renovationPlancherPageEn } from "./plancher.en";
 import { renovationSalleDeBainPageEn } from "./salle-de-bain.en";
+import { renovationSousSolPageEn } from "./sous-sol.en";
 
 const renovationPages = {
   cuisine: renovationCuisinePage,
   "salle-de-bain": renovationSalleDeBainPage,
+  "sous-sol": renovationSousSolPage,
   plancher: renovationPlancherPage,
   "agrandissement-de-maison": agrandissementMaisonPage,
   "apres-sinistre": renovationApresSinistrePage,
@@ -24,6 +27,7 @@ const renovationPagesEn: Partial<
 > = {
   cuisine: renovationCuisinePageEn,
   "salle-de-bain": renovationSalleDeBainPageEn,
+  "sous-sol": renovationSousSolPageEn,
   plancher: renovationPlancherPageEn,
   "agrandissement-de-maison": agrandissementMaisonPageEn,
   "apres-sinistre": renovationApresSinistrePageEn,

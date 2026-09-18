@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Cuisiniste à Montréal — cuisines et armoires sur mesure | Dilamco",
+    title: "Entrepreneur général rénovation — Ouest-de-l'Île | Dilamco",
     description:
-      "Dilamco, cuisiniste dans le Grand Montréal : conception, fourniture directe de l'usine et installation de cuisines, armoires, vanités et rangements sur mesure haut de gamme. Demandez une soumission.",
+      "Entrepreneur général RBQ depuis 2004. Rénovation de cuisine, salle de bain, sous-sol et agrandissement dans l'Ouest-de-l'Île et le Grand Montréal.",
     path: "/",
-    ogAlt: "Dilamco, sur mesure, durable, bien exécuté",
+    ogAlt: "Chantier de rénovation résidentielle coordonné par Dilamco",
   },
   breadcrumbs: [
     {
@@ -22,53 +22,83 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "image-overlay",
         props: {
-          eyebrow: "Dilamco - Espaces",
           heading:
-            "Cuisiniste et spécialiste des armoires sur mesure à Montréal : cuisine, salle de bain, rangement et commercial",
+            "Entrepreneur général en rénovation résidentielle — Ouest-de-l'Île et Grand Montréal",
           description:
-            "Cuisiniste établi dans le Grand Montréal, on conçoit et installe cuisines, armoires, vanités et rangements sur mesure, fabriqués exclusivement pour nous par notre usine partenaire. Chaque espace a ses contraintes : notre rôle est de livrer des solutions durables, fonctionnelles et bien exécutées.",
+            "Dilamco prend en charge votre projet de rénovation du permis à la livraison. Un seul responsable, un échéancier écrit, un budget fixé au contrat et des corps de métier coordonnés. Estimation gratuite, retour sous 24 à 48 heures ouvrables.",
+          badges: [
+            "Rénovation résidentielle",
+            "Agrandissement",
+            "Après sinistre",
+          ],
           actions: [
             {
-              label: "Obtenir une soumission",
+              label: "Obtenir une estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos projets",
-              href: "/projets",
-              variant: "ghost",
+              label: "Voir nos services",
+              href: "/services/renovation",
+              variant: "ghost-light",
             },
           ],
-          badges: ["Sur mesure", "Durable", "Clé en main"],
           image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Espaces sur mesure Dilamco",
+            src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+            alt: "Cuisine rénovée par Dilamco dans une maison de l'Ouest-de-l'Île",
           },
-          caption: "Montréal, Laval et Rive-Sud",
+          overlay: "dark-gradient",
+          proofs: [
+            {
+              title: "Licence RBQ 8306-0806-27",
+              description:
+                "Entrepreneur général, catégories 1.2 et 1.3. Valide, sans restriction au registre.",
+            },
+            {
+              title: "Depuis 2004",
+              description:
+                "Plus de 20 ans et des centaines de chantiers résidentiels dans le Grand Montréal.",
+            },
+            {
+              title: "5,0 sur Google",
+              description:
+                "Note de 5,0 sur 11 avis à la fiche Dilamco Construction.",
+            },
+          ],
         },
       },
     },
     {
-      id: "quality-pillars",
+      id: "promesse",
       content: {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Des espaces conçus pour durer - pas des modules standard",
+          heading: "Pourquoi les chantiers dérapent — et ce qu'on garantit",
           description:
-            "Chaque espace Dilamco suit la même logique : design adapté à votre réalité, fabrication contrôlée, matériaux premium et exécution structurée. L'objectif est simple : un résultat durable, cohérent et maîtrisé, avec un seul responsable du début à la fin.",
+            "La plupart des mauvaises expériences de rénovation ont la même origine : personne ne tient réellement le projet. Le chantier traîne parce que le plombier attend l'électricien. La facture double parce que rien n'avait été chiffré au départ. Le travail est à refaire parce que la séquence des métiers était mauvaise. Notre métier d'entrepreneur général, c'est exactement d'éliminer ces quatre causes.",
           cards: [
             {
-              title: "Qualité tangible",
+              title: "Un échéancier écrit, pas une estimation verbale",
               description:
-                "Détails de construction, quincaillerie, finitions et durabilité vérifiables.",
+                "Chaque étape du chantier est datée au contrat, avec les jalons de livraison et d'inspection. Vous savez qui entre chez vous, quand, et pour combien de temps.",
             },
             {
-              title: "Gestion clé en main",
+              title: "Un budget fixé au contrat",
               description:
-                "Moins d'intervenants, moins d'imprévus, une coordination claire.",
+                "La soumission détaille les travaux, les matériaux et les exclusions. Les changements passent par un avenant écrit et chiffré avant d'être exécutés — jamais après.",
+            },
+            {
+              title: "Un seul responsable, du permis à la livraison",
+              description:
+                "Nous coordonnons plomberie, électricité, structure, gypse, carrelage et finition. Vous n'avez pas à arbitrer entre des sous-traitants qui ne se parlent pas.",
+            },
+            {
+              title: "Une exécution garantie et vérifiable",
+              description:
+                "Licence RBQ valide, cautionnement de licence, assurance responsabilité et chantier. Les travaux sont garantis, détails au contrat. Conformité au Code de construction du Québec.",
             },
           ],
           columns: "2",
@@ -76,177 +106,264 @@ export const page: PageTemplateData = {
       },
     },
     {
-      id: "spaces",
+      id: "services",
       content: {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Choisissez votre espace",
+          heading: "Ce qu'on rénove",
           intro:
-            "Accédez à la page pilier correspondante pour découvrir l'approche, les matériaux, des réalisations et une FAQ adaptée.",
+            "Rénovation résidentielle complète ou par pièce, agrandissement et reconstruction après sinistre. Chaque mandat est mené avec la même méthode : soumission détaillée, contrat écrit, coordination des corps de métier.",
           items: [
             {
-              title: "Cuisine sur mesure et armoires",
-              href: "/espaces/cuisine",
+              title: "Rénovation de cuisine",
+              href: "/services/renovation/cuisine",
               description:
-                "Cuisine sur mesure et armoires de cuisine sur mesure : îlot, ergonomie, durabilité et coordination complète pour un résultat maîtrisé.",
+                "Démolition, plomberie, électricité, ventilation, revêtements et armoires. La cuisine est la pièce la plus dense en corps de métier : c'est là que la coordination change tout.",
               image: {
-                src: "/images/generated/home/home-space-cuisine-card-01.webp",
-                alt: "Armoires de cuisine sur mesure haut de gamme",
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Rénovation complète de cuisine résidentielle",
               },
-              badges: ["Sur mesure", "Clé en main", "Haut de gamme"],
-              quickActionLabel: "Voir",
-              footerCtaLabel: "Voir les cuisines sur mesure",
+              badges: ["Résidentiel", "Clé en main"],
+              footerCtaLabel: "Voir la rénovation de cuisine",
             },
             {
-              title: "Vanités & salles de bain sur mesure",
-              href: "/espaces/salle-de-bain",
+              title: "Rénovation de salle de bain",
+              href: "/services/renovation/salle-de-bain",
               description:
-                "Vanités de salle de bain sur mesure, rangement optimisé et finitions résistantes à l'humidité pour durer.",
+                "Reprise de la plomberie, membrane d'étanchéité, céramique, ventilation et vanité. Une salle de bain mal étanchéifiée se paie deux fois : on ne coupe pas sur cette étape.",
               image: {
-                src: "/images/generated/home/home-space-bath-card-01.webp",
-                alt: "Vanité de salle de bain sur mesure",
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Salle de bain rénovée avec douche en céramique",
               },
-              badges: ["Vanités", "Durable", "Finitions"],
-              quickActionLabel: "Voir",
-              footerCtaLabel: "Voir les vanités sur mesure",
+              badges: ["Étanchéité", "Céramique"],
+              footerCtaLabel: "Voir la rénovation de salle de bain",
             },
             {
-              title: "Salle de lavage",
-              href: "/espaces/salle-de-lavage",
+              title: "Rénovation de sous-sol",
+              href: "/services/renovation/sous-sol",
               description:
-                "Solutions de rangement et d'organisation pensées pour le quotidien, sans compromis sur la solidité.",
+                "Isolation, pare-vapeur, drainage, division des pièces, plafond et éclairage. On valide d'abord l'humidité et la hauteur libre, avant de finir quoi que ce soit.",
               image: {
-                src: "/images/generated/home/home-space-laundry-card-01.webp",
-                alt: "Salle de lavage sur mesure",
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Sous-sol aménagé en pièce de vie",
               },
-              badges: ["Rangement", "Fonctionnel", "Sur mesure"],
-              quickActionLabel: "Voir",
-              footerCtaLabel: "Découvrir salle de lavage",
+              badges: ["Isolation", "Pièce de vie"],
+              footerCtaLabel: "Voir la rénovation de sous-sol",
             },
             {
-              title: "Garde-robe et walk-in sur mesure",
-              href: "/espaces/walk-in",
+              title: "Agrandissement de maison",
+              href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Garde-robe sur mesure et walk-in : penderies, tiroirs, accessoires et configuration adaptée à vos besoins.",
+                "Rallonge arrière ou latérale, ajout d'étage, extension de cuisine. Permis municipal, plans, fondation, structure et raccordement à l'existant.",
               image: {
-                src: "/images/generated/home/home-space-walkin-card-01.webp",
-                alt: "Garde-robe et walk-in sur mesure",
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                alt: "Agrandissement arrière d'une maison unifamiliale",
               },
-              badges: ["Garde-robe", "Personnalisé", "Premium"],
-              quickActionLabel: "Voir",
-              footerCtaLabel: "Découvrir garde-robe et walk-in",
+              badges: ["Permis", "Structure"],
+              footerCtaLabel: "Voir l'agrandissement de maison",
             },
             {
-              title: "Aménagement de sous-sol",
-              href: "/espaces/sous-sol",
+              title: "Installation de plancher",
+              href: "/services/renovation/plancher",
               description:
-                "Salle de cinéma maison, bar, cave à vin et bibliothèque sur mesure pour transformer le sous-sol en pièce de vie.",
+                "Bois franc, ingénierie, vinyle de luxe et céramique. Préparation du support, mise à niveau et transitions — l'essentiel d'un plancher se joue sous la surface.",
               image: {
-                src: "/images/generated/home/home-space-sous-sol-card-01.webp",
-                alt: "Aménagement de sous-sol sur mesure",
+                src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
+                alt: "Pose de plancher de bois franc dans une résidence",
               },
-              badges: ["Sous-sol", "Cinéma maison", "Sur mesure"],
-              quickActionLabel: "Voir",
-              footerCtaLabel: "Découvrir l'aménagement de sous-sol",
+              badges: ["Bois franc", "Céramique"],
+              footerCtaLabel: "Voir l'installation de plancher",
             },
             {
-              title: "Commercial",
-              href: "/espaces/commercial",
+              title: "Rénovation après sinistre",
+              href: "/services/renovation/apres-sinistre",
               description:
-                "Aménagement durable et reproductible : bureaux, espaces clients, rangements et mobilier sur mesure.",
+                "Dégât d'eau, refoulement, feu ou moisissure : démolition contrôlée, assèchement, reconstruction et remise en état. Documentation des travaux pour votre assureur.",
               image: {
-                src: "/images/generated/home/home-space-commercial-card-01.webp",
-                alt: "Aménagement commercial sur mesure",
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Reconstruction d'une pièce après un dégât d'eau",
               },
-              badges: ["Commercial", "Durable", "Exécution maîtrisée"],
-              quickActionLabel: "Voir",
-              footerCtaLabel: "Découvrir commercial",
+              badges: ["Dégât d'eau", "Reconstruction"],
+              footerCtaLabel: "Voir la rénovation après sinistre",
             },
           ],
         },
       },
     },
     {
-      id: "boutique-stock",
-      content: {
-        type: "grid",
-        variant: "image-cards-badges-cta",
-        props: {
-          heading: "Nos caissons en stock, prêts à installer",
-          intro:
-            "Pas de délai de fabrication : une sélection d'armoires et de vanités en stock, prêtes à installer. Choisissez vos caissons et obtenez une soumission ferme sous 48 h.",
-          ctaLabel: "Voir toute la boutique",
-          ctaHref: "/boutique",
-          items: [
-            {
-              title: "Armoires de cuisine en stock",
-              href: "/boutique/armoires-cuisine",
-              description:
-                "Caissons de cuisine en stock - bases, armoires murales et colonnes - prêts à installer, sans attente de production.",
-              image: {
-                src: "/images/generated/home/home-featured-cuisine-project-01.webp",
-                alt: "Armoires de cuisine en stock prêtes à installer",
-              },
-              badges: ["En stock", "Prêt à installer"],
-              footerCtaLabel: "Voir les armoires de cuisine",
-            },
-            {
-              title: "Vanités de salle de bain en stock",
-              href: "/boutique/vanites",
-              description:
-                "Meubles-lavabos 24 et 30 pouces en stock, finitions durables résistantes à l'humidité, prêts à installer.",
-              image: {
-                src: "/images/generated/home/home-featured-bath-project-01.webp",
-                alt: "Vanités de salle de bain en stock, 24 et 30 pouces",
-              },
-              badges: ["24 & 30 po", "En stock"],
-              footerCtaLabel: "Voir les vanités",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "standard",
+      id: "process",
+      frame: { surface: "muted" },
       content: {
         type: "process",
-        variant: "split-cards",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Notre standard, peu importe l'espace",
-          description:
-            "Une méthode reproductible pour protéger la qualité, réduire les imprévus et livrer un résultat cohérent.",
+          heading: "Comment se déroule un projet avec nous",
+          intro:
+            "Cinq étapes, toujours les mêmes. Elles existent pour que vous sachiez, à chaque moment, où en est le chantier et ce qui s'en vient.",
           steps: [
             {
               number: "1",
-              title: "Conception",
+              title: "Estimation gratuite en 24–48 h",
               description:
-                "Plans clairs, configuration adaptée et validations avant fabrication.",
+                "Vous nous décrivez le projet. On revient sous 24 à 48 heures ouvrables pour fixer une visite sur place et cadrer un ordre de grandeur réaliste.",
             },
             {
               number: "2",
-              title: "Matériaux",
+              title: "Soumission détaillée et contrat",
               description:
-                "Choix durables et détails de construction pensés pour la longévité.",
+                "Relevé, portée des travaux, matériaux, exclusions et prix. Une fois acceptée, la soumission devient un contrat écrit avec échéancier et calendrier de paiements.",
             },
             {
               number: "3",
-              title: "Fabrication contrôlée",
+              title: "Permis et planification",
               description:
-                "Standards stables, contrôle qualité et cohérence d'un projet à l'autre.",
+                "On prépare les plans requis, on dépose la demande de permis auprès de la ville ou de l'arrondissement et on réserve les corps de métier avant d'ouvrir le chantier.",
             },
             {
               number: "4",
-              title: "Installation",
+              title: "Chantier coordonné",
               description:
-                "Ajustements précis, finitions nettes et coordination structurée sur chantier.",
+                "Protection des surfaces, démolition, structure, plomberie, électricité, isolation, gypse, finition. Chaque métier entre à son tour, après inspection de l'étape précédente.",
+            },
+            {
+              number: "5",
+              title: "Livraison et garantie",
+              description:
+                "Inspection finale avec vous, liste de déficiences corrigée avant le dernier paiement, puis garantie sur les travaux exécutés — détails au contrat.",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "zones",
+      content: {
+        type: "grid",
+        variant: "link-cards-compact",
+        props: {
+          heading: "Zones desservies",
+          intro:
+            "Notre base est à Pierrefonds-Roxboro. On travaille partout dans l'Ouest-de-l'Île, à Montréal, à Laval, sur la Rive-Sud et dans Vaudreuil-Soulanges.",
+          columns: "3",
+          items: [
+            {
+              title: "Pierrefonds-Roxboro",
+              description:
+                "Notre secteur d'attache : bungalows, cottages et sous-sols en bordure de la rivière des Prairies.",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "Voir Pierrefonds-Roxboro",
+            },
+            {
+              title: "Dollard-des-Ormeaux",
+              description:
+                "Bungalows et split-levels des années 1960 à 1990, souvent mûrs pour une cuisine ou un sous-sol.",
+              href: "/zones/dollard-des-ormeaux",
+              ctaLabel: "Voir Dollard-des-Ormeaux",
+            },
+            {
+              title: "Kirkland",
+              description:
+                "Maisons unifamiliales à rénover ou à agrandir, avec des exigences de permis à respecter.",
+              href: "/zones/kirkland",
+              ctaLabel: "Voir Kirkland",
+            },
+            {
+              title: "Pointe-Claire",
+              description:
+                "Parc immobilier varié, du village historique aux secteurs résidentiels d'après-guerre.",
+              href: "/zones/pointe-claire",
+              ctaLabel: "Voir Pointe-Claire",
+            },
+            {
+              title: "Beaconsfield",
+              description:
+                "Grandes propriétés et projets d'agrandissement, souvent avec contraintes d'implantation.",
+              href: "/zones/beaconsfield",
+              ctaLabel: "Voir Beaconsfield",
+            },
+            {
+              title: "Dorval",
+              description:
+                "Rénovations résidentielles et aménagements commerciaux à proximité immédiate de notre base.",
+              href: "/zones/dorval",
+              ctaLabel: "Voir Dorval",
+            },
+            {
+              title: "L'Île-Bizard–Sainte-Geneviève",
+              description:
+                "Secteurs riverains où l'humidité des sous-sols et le drainage demandent une attention particulière.",
+              href: "/zones/ile-bizard-sainte-genevieve",
+              ctaLabel: "Voir L'Île-Bizard",
+            },
+            {
+              title: "Saint-Laurent",
+              description:
+                "Maisons d'après-guerre, plex et copropriétés : accès, horaires et coordination à planifier.",
+              href: "/zones/saint-laurent",
+              ctaLabel: "Voir Saint-Laurent",
+            },
+            {
+              title: "Laval",
+              description:
+                "Rénovations complètes et agrandissements, avec permis déposés auprès de la Ville de Laval.",
+              href: "/zones/laval",
+              ctaLabel: "Voir Laval",
+            },
+            {
+              title: "Vaudreuil-Dorion",
+              description:
+                "Extension naturelle de notre territoire vers l'ouest, à courte distance de Pierrefonds.",
+              href: "/zones/vaudreuil-dorion",
+              ctaLabel: "Voir Vaudreuil-Dorion",
+            },
+            {
+              title: "Rive-Sud",
+              description:
+                "Longueuil, Brossard, Saint-Lambert et environs : agrandissements, rénovations complètes et après sinistre.",
+              href: "/zones/rive-sud",
+              ctaLabel: "Voir la Rive-Sud",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "armoires",
+      content: {
+        type: "split",
+        variant: "list-actions-image-card",
+        props: {
+          heading: "Aussi : notre division armoires sur mesure",
+          intro:
+            "La sous-catégorie 12 de notre licence RBQ couvre les armoires et comptoirs usinés. Concrètement : quand votre projet demande des armoires, vous n'avez pas à ajouter un fournisseur de plus au chantier. On les inclut dans la même soumission, sous la même responsabilité.",
+          items: [
+            {
+              title: "Un intervenant de moins",
+              description:
+                "les armoires sont commandées, livrées et installées dans la séquence du chantier, pas en parallèle.",
+            },
+            {
+              title: "Des dimensions prises sur le chantier réel",
+              description:
+                "le relevé se fait après la démolition, quand les murs sont à leur position définitive.",
+            },
+            {
+              title: "Fabriquées pour nous par notre usine partenaire",
+              description:
+                "un standard stable d'un projet à l'autre, et un seul responsable si un ajustement est requis.",
+            },
+            {
+              title: "Cuisine, salle de bain, walk-in, sous-sol",
+              description:
+                "armoires, vanités, rangements et mobilier intégré selon la pièce à rénover.",
             },
           ],
           actions: [
             {
-              label: "Voir nos services",
-              href: "/services",
-              variant: "ghost",
+              label: "Voir les espaces",
+              href: "/espaces",
+              variant: "primary",
             },
             {
               label: "Comprendre nos matériaux",
@@ -254,64 +371,84 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+            alt: "Armoires de cuisine sur mesure installées par Dilamco",
+          },
+          cardTitle: "Sous-catégorie RBQ 12",
+          cardDescription:
+            "Armoires et comptoirs usinés — une division de Dilamco, intégrée au mandat de rénovation.",
         },
       },
     },
-
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ",
+          heading: "Questions fréquentes",
           intro:
-            "Réponses claires aux questions qui bloquent le plus souvent la décision.",
+            "Les questions que se posent la plupart des propriétaires avant de signer avec un entrepreneur général.",
           items: [
             {
-              q: "Quel budget prévoir pour une cuisine sur mesure ?",
-              a: "Le budget d'une cuisine sur mesure dépend des dimensions, de l'aménagement (tiroirs, accessoires, îlot), des matériaux et du niveau de coordination. Pour une approche sur mesure et clé en main, l'investissement se situe généralement entre 30 000 $ et 65 000 $, avec un délai typique de 9 à 15 semaines. Nous clarifions le budget réaliste dès la consultation initiale, une fois le projet cadré.",
+              q: "Combien coûte une rénovation ?",
+              a: "Nos mandats de rénovation démarrent généralement autour de 25 000 $. Une cuisine complète se situe habituellement entre 35 000 $ et 50 000 $, et davantage selon la portée, l'état des installations existantes et les matériaux choisis. Un ordre de grandeur donné au téléphone reste une approximation : le prix se fixe après le relevé sur place, dans la soumission détaillée.",
             },
             {
-              q: "Quelle est la différence avec IKEA / grandes surfaces ?",
-              a: "Les solutions standardisées peuvent convenir à certains contextes. Le sur mesure vise une personnalisation complète, une structure plus robuste, et une exécution mieux contrôlée - particulièrement important dans une résidence principale.",
+              q: "Combien de temps dure un chantier ?",
+              a: "La durée dépend de la portée et du nombre de corps de métier. Une salle de bain se compte en semaines, une cuisine complète ou un sous-sol en mois, un agrandissement davantage puisqu'il faut y ajouter le délai de permis et la fondation. L'échéancier est écrit au contrat avant le début des travaux, avec les jalons de chaque étape.",
             },
             {
-              q: "Quels sont les délais typiques ?",
-              a: "Les délais varient selon la complexité et la charge de production, mais il faut généralement prévoir de 9 à 15 semaines entre la validation du design et l'installation. Un processus structuré — validation avant fabrication, puis coordination de l'installation — permet une planification plus prévisible et limite les imprévus.",
+              q: "Faut-il un permis pour mes travaux ?",
+              a: "Souvent, oui. Les municipalités et les arrondissements exigent un permis dès qu'on touche à la structure, aux ouvertures, à la plomberie, à l'électricité ou qu'on ajoute de la superficie habitable. Nous vérifions les exigences applicables à votre adresse, préparons les documents et déposons la demande pour vous. Aucun chantier n'ouvre sans les autorisations requises.",
             },
             {
-              q: "Gérez-vous la rénovation complète ?",
-              a: "Oui, lorsque requis : coordination des étapes clés et intégration avec le design, la fabrication et l'installation. L'objectif est de réduire la fragmentation et d'assurer une exécution cohérente.",
+              q: "Êtes-vous licenciés et assurés ?",
+              a: "Oui. Dilamco détient la licence RBQ 8306-0806-27, valide et sans restriction, délivrée en 2004, dans les catégories entrepreneur général 1.2 (petits bâtiments) et 1.3 (bâtiments de tout genre). Un cautionnement de licence est en vigueur et aucune réclamation n'apparaît au dossier. Nous détenons une assurance responsabilité civile et une couverture chantier.",
+            },
+            {
+              q: "Vos travaux sont-ils garantis ?",
+              a: "Oui. Les travaux exécutés sont garantis et les modalités figurent au contrat, avec la portée couverte et la durée. L'inspection finale se fait avec vous : les déficiences relevées sont corrigées avant le paiement final. Nous ne construisons pas de maisons neuves, donc le plan de garantie GCR ne s'applique pas à nos mandats.",
+            },
+            {
+              q: "Quel territoire desservez-vous ?",
+              a: "Notre base est à Pierrefonds-Roxboro. Nous couvrons l'Ouest-de-l'Île, l'ensemble de Montréal, Laval, la Rive-Sud et le secteur de Vaudreuil-Soulanges. Être établis dans l'Ouest-de-l'Île change une chose concrète : les visites de suivi et les correctifs se font rapidement, sans que le chantier attende.",
+            },
+            {
+              q: "Travaillez-vous en condo ou en copropriété ?",
+              a: "Oui. Ces chantiers exigent une préparation supplémentaire : autorisation du syndicat, plages horaires permises, réservation de l'ascenseur, protection des aires communes et gestion des débris. Nous cadrons ces contraintes avant de fixer l'échéancier, pour éviter les arrêts de travaux en cours de route.",
+            },
+            {
+              q: "Fournissez-vous aussi les armoires ?",
+              a: "Oui. Notre licence RBQ inclut la sous-catégorie 12, armoires et comptoirs usinés. Les armoires sur mesure sont fabriquées pour nous par notre usine partenaire, puis livrées et installées dans la séquence du chantier. Pour vous, c'est un fournisseur de moins à coordonner et une seule soumission.",
             },
           ],
         },
       },
     },
     {
-      id: "cta-plan",
-
+      id: "cta",
       content: {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Prêt à cadrer votre projet correctement ?",
+          heading: "Décrivez-nous votre projet de rénovation",
           intro:
-            "Obtenez une soumission claire et structurée, adaptée à un projet durable et maîtrisé.",
+            "L'estimation est gratuite et le retour se fait sous 24 à 48 heures ouvrables. On vous dira franchement ce que votre projet implique, ce qu'il coûte et combien de temps il prend.",
           actions: [
             {
-              label: "Obtenir une soumission",
+              label: "Obtenir une estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Cuisine sur mesure",
-              href: "/espaces/cuisine",
+              label: "Voir nos réalisations",
+              href: "/projets",
               variant: "ghost",
             },
           ],
-          note: "Montréal • Laval • Rive-Sud - résidentiel & commercial",
+          note: "Licence RBQ 8306-0806-27 • Ouest-de-l'Île, Montréal, Laval, Rive-Sud et Vaudreuil-Soulanges",
         },
       },
     },

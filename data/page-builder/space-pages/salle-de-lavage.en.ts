@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const salleDeLavagePageEn: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "High-end custom laundry room",
+    title: "Custom laundry room — general contractor",
     description:
-      "Custom laundry room: design, controlled fabrication and precise installation in Montréal, Laval and on the South Shore.",
+      "Custom laundry room in Montréal, Laval and on the South Shore: design, production at our partner factory and installation by a licensed general contractor.",
     path: "/espaces/salle-de-lavage",
     ogAlt: "Dilamco custom laundry room",
   },
@@ -32,10 +32,10 @@ export const salleDeLavagePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Spaces",
+          eyebrow: "Dilamco - Cabinetry division",
           heading: "Custom laundry room, a well-scoped utility space",
           description:
-            "A custom laundry room is a technical space — storage, countertop, washer and dryer columns — designed and built for your actual configuration, with materials suited to moisture and frequent use. At Dilamco, across Greater Montréal, we design and install this fit-out from plan to finish.",
+            "A custom laundry room is a technical space — storage, countertop, washer and dryer columns — designed and built for your actual configuration, with materials suited to moisture and frequent use. The cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), designs the fit-out, has it produced by our partner factory and installed by our own crews, coordinated with the plumbing and the venting.",
           actions: [
             {
               label: "Get a quote",
@@ -164,6 +164,11 @@ export const salleDeLavagePageEn: PageTemplateData = {
               href: "/espaces",
               variant: "ghost",
             },
+            {
+              label: "Turnkey home renovation",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
           image: {
             src: "/images/generated/spaces/space-laundry-project-01.webp",
@@ -251,6 +256,10 @@ export const salleDeLavagePageEn: PageTemplateData = {
             {
               q: "Do you work in Montréal and the surrounding area?",
               a: "Yes. Montréal, Laval and the South Shore are part of our service area.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full laundry room renovation: relocating plumbing, electrical, dryer venting, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

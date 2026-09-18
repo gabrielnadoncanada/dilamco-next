@@ -6,7 +6,7 @@ export const pageEn: PageTemplateData = {
   metadata: {
     title: "Custom kitchen & cabinetry projects",
     description:
-      "Explore our custom projects: kitchens, vanities, walk-in closets, laundry rooms and commercial work.",
+      "Custom projects: kitchens, vanities, walk-ins, laundry rooms and commercial work, delivered by Dilamco, a licensed general contractor (RBQ).",
     path: "/projets",
     ogAlt: "Dilamco projects",
   },
@@ -22,11 +22,11 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Projects",
+          eyebrow: "Dilamco - Cabinetry division",
           heading:
             "Custom projects: kitchens, vanities, storage and commercial",
           description:
-            "This page is here to show real cases, not an empty gallery. You'll find projects that help you judge the level of execution, the kind of constraints handled and the finish quality you can expect.",
+            "This page is here to show real cases, not an empty gallery. These are projects from the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27): designed by us, produced by our partner factory, installed by our crews and coordinated with the rest of the job site.",
           actions: [
             {
               label: "Request a quote",
@@ -107,7 +107,7 @@ export const pageEn: PageTemplateData = {
               title: "Commercial",
               href: "/projets/commercial",
               description:
-                "Commercial fit-outs built for heavy use.",
+                "Offices, retail and leasehold improvements delivered ready to occupy.",
               footerCtaLabel: "View commercial projects",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
@@ -162,8 +162,8 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "View services",
-              href: "/services",
+              label: "Turnkey home renovation",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],

@@ -6,9 +6,9 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
   metadata: {
     title: "Bathroom renovation in Montreal — turnkey",
     description:
-      "Turnkey bathroom renovation: coordination, moisture control, custom vanities and durable finishes in Montréal.",
+      "Full bathroom renovation: waterproofing, membrane, ventilation, plumbing, tiling and vanity. RBQ-licensed general contractor.",
     path: "/services/renovation/salle-de-bain",
-    ogAlt: "Dilamco bathroom renovation",
+    ogAlt: "Bathroom renovation by a general contractor",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
   service: {
     name: "Bathroom renovation",
     description:
-      "Design, coordination, custom vanities and durable finishes suited to moisture and plumbing constraints.",
+      "Bathroom renovation by a general contractor: permit, plumbing, ventilation, waterproofing membrane, tiling, custom vanity and finishing.",
     url: SITE.url + "/services/renovation/salle-de-bain",
     serviceType: "Bathroom renovation",
+    areaServed: [
+      "Montreal",
+      "West Island",
+      "Laval",
+      "South Shore",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -36,27 +43,32 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Renovation",
           heading:
-            "Turnkey bathroom renovation in Montréal — better managing moisture, plumbing and finishes",
+            "Bathroom renovation: the room where waterproofing decides everything",
           description:
-            "A bathroom renovation is a project where plumbing, ventilation, waterproofing, surfaces and cabinetry come together in a humid environment. The final quality depends as much on coordination and the work sequence as on the materials — that is what protects long-term durability.",
+            "A badly waterproofed bathroom does not show in the first year. It shows when the ceiling below stains, when the tile sounds hollow, or when the framing under the shower has rotted. We redo the whole room — plumbing, ventilation, membrane, tiling, vanity — under one contract and one licence.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Request a free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View bathroom projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Moisture", "Coordination", "Montréal"],
+          badges: [
+            "RBQ licence 8306-0806-27",
+            "Waterproofing membrane",
+            "Inspected plumbing",
+          ],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Custom bathroom renovation",
+            alt: "Bathroom renovated by a general contractor",
           },
-          caption: "Montréal, Laval and the South Shore",
+          caption:
+            "West Island, Montreal, Laval, South Shore and Vaudreuil-Soulanges",
         },
       },
     },
@@ -66,112 +78,92 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading:
-            "What makes a bathroom more demanding than it looks",
+          heading: "Why bathrooms get redone twice",
           description:
-            "A bathroom concentrates water, moisture, plumbing, ventilation, storage and finishes in an often more compact space. The project ages poorly when these elements are handled separately or too late.",
+            "It is the smallest and most expensive room per square foot, and the one where shortcuts cost the most. Redos almost always come from four execution failures, never from the choice of tile.",
           cards: [
             {
-              title: "Water and moisture risk",
+              title: "No real membrane under the shower",
               description:
-                "Poor technical trade-offs cost more here than elsewhere because they directly affect durability.",
+                "Setting tile straight onto an ordinary board, with no waterproofing membrane and no proper slope to the drain, lets water through. The damage shows up months later, often on the ceiling of the floor below.",
             },
             {
-              title: "Space constraints",
+              title: "Ventilation missing or badly ducted",
               description:
-                "Circulation, clearances, storage and access must be carefully thought out in a limited room.",
+                "A fan that blows into the attic or lacks the required airflow leaves the moisture in the room. The result: bubbling paint, blackened grout, mould behind the drywall.",
             },
             {
-              title: "Sensitive coordination",
+              title: "Plumbing changed with no permit or inspection",
               description:
-                "Plumbing, ventilation, finishes and furniture must align to avoid rework and poorly resolved details.",
+                "Moving a shower or a drain changes the slope and the plumbing vent. With no permit and no inspection before closing up, nobody validates the work, and the problem is sealed inside the wall.",
+            },
+            {
+              title: "Framing nobody opened up",
+              description:
+                "When a bathroom has been leaking for years, the subfloor and sometimes the joists are affected. Installing new finishes over the top without opening up simply hides the real problem.",
             },
           ],
-          columns: "1",
+          columns: "2",
         },
       },
     },
     {
-      id: "priorities",
+      id: "included",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "icon-cards-bullets",
         props: {
-          heading: "The priorities of a bathroom renovation",
+          heading: "What a full bathroom renovation covers",
           intro:
-            "The project must protect against water, integrate the plumbing and deliver a durable finish.",
-          badges: ["Ventilation", "Plumbing", "Protection", "Finishes"],
-          cardTitle: "What we aim to protect",
-          items: [
-            "Reduce water-related risks with clear planning.",
-            "Achieve a durable result in a humid environment.",
-            "Avoid grey areas between trades and finishes.",
-          ],
-          actions: [
-            {
-              label: "View materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Our approach to framing a more durable bathroom",
-          intro:
-            "The goal is not to separate design decisions from the realities of the site. A bathroom must be thought of as a whole where moisture, storage, plumbing and finishes hold together.",
+            "The exact scope is written into the quote. Here are the four phases of a full bathroom mandate, in the order they happen.",
+          columns: "2",
           items: [
             {
-              title: "Analysis of the real context",
+              title: "Demolition and strip-out",
               description:
-                "We read the space, access, plumbing and ventilation constraints before proposing solutions.",
+                "We open it up to see the real condition before pricing the rest.",
+              icon: "hammer",
+              bullets: [
+                "Protection of the premises and circulation areas.",
+                "Removal of the shower or tub, vanity, toilet and finishes.",
+                "Framing stripped to check the subfloor, joists and water staining.",
+                "Subfloor and framing repaired before anything new goes in.",
+              ],
             },
             {
-              title: "Hierarchy of choices",
-              description:
-                "Structural and technical decisions come before purely aesthetic details.",
+              title: "Plumbing and ventilation",
+              description: "The work that must pass inspection before closing up.",
+              icon: "droplets",
+              bullets: [
+                "Supply and drains reworked or relocated, at the required slope.",
+                "Compliant plumbing venting, anti-scald shower valve.",
+                "Exhaust fan with adequate airflow, ducted outside and not into the attic.",
+                "Municipal inspection booked before the walls are closed.",
+              ],
             },
             {
-              title: "Sequence of work",
-              description:
-                "The site is organized to better protect the sensitive stages and reduce touch-ups.",
+              title: "Waterproofing and tiling",
+              description: "The invisible step that sets the lifespan.",
+              icon: "shieldCheck",
+              bullets: [
+                "Cement board or moisture-resistant panel on all wet surfaces.",
+                "Continuous waterproofing membrane in the shower, carried up the walls and tied into the drain.",
+                "Even slope to the drain, verified before any tile is set.",
+                "Tiling, grout, caulking and threshold transitions.",
+              ],
             },
             {
-              title: "Quality of the final result",
-              description:
-                "Vanity, storage, transitions and finishes must give a clean, durable read of the room.",
+              title: "Vanity, finishing and hookups",
+              description: "The visible part, installed once the base is sound.",
+              icon: "bath",
+              bullets: [
+                "Custom vanity built for us by our partner factory, under RBQ subcategory 12.",
+                "Countertop, faucets, mirror, lighting and storage.",
+                "Toilet, shower door and hardware installed.",
+                "Paint, trim, adjustments and a final walkthrough with you.",
+              ],
             },
           ],
-          actions: [
-            {
-              label: "View the bathroom page",
-              href: "/espaces/salle-de-bain",
-              variant: "ghost",
-            },
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-bath-approach-01.webp",
-            alt: "Planning a bathroom renovation",
-          },
-          cardTitle: "What we aim to avoid",
-          cardDescription:
-            "Bathrooms that age poorly were often decided without enough clarity on water, daily use and the quality of the joints.",
         },
       },
     },
@@ -181,101 +173,140 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Typical sequence of a bathroom renovation",
+          heading: "How a bathroom job unfolds",
           intro:
-            "The logic stays the same: clarify the constraints, validate the sensitive choices, then execute cleanly in a humid environment.",
+            "Six steps, three of which happen entirely behind the walls. Curing times for grout, caulking and paint are part of the schedule; they do not compress.",
           steps: [
             {
               number: "1",
-              title: "Scoping",
+              title: "Visit and quote",
               description:
-                "Scope, site constraints, access, plumbing and level of intervention to confirm.",
+                "Measurements, existing ventilation and plumbing checked, the floor below assessed and signs of infiltration noted. Estimate within 24 to 48 business hours.",
             },
             {
               number: "2",
-              title: "Design",
+              title: "Contract, layout, permit",
               description:
-                "Vanity, storage, circulation, clearances and finish decisions.",
+                "Signed with the schedule, room layout set, materials selected, then the permit filed if plumbing is being relocated.",
             },
             {
               number: "3",
-              title: "Materials",
+              title: "Demolition and condition check",
               description:
-                "Selection of components suited to moisture, maintenance and the expected durability.",
+                "Full strip-out. This is when a swollen subfloor or a damaged joist turns up, and when the scope can be adjusted with you.",
             },
             {
               number: "4",
-              title: "Coordination",
+              title: "Plumbing, electrical, ventilation",
               description:
-                "Related work sequenced to better protect the sensitive details and the finish.",
+                "Drains, supply, circuits, in-floor heating if specified and the exhaust fan. Municipal inspection before closing up.",
             },
             {
               number: "5",
-              title: "Installation",
+              title: "Waterproofing and tiling",
               description:
-                "Fitting, adjustments and final validation for a clean read of the whole.",
+                "Boards, membrane, slope to the drain, then tile, grout and caulking, with the curing times they require.",
+            },
+            {
+              number: "6",
+              title: "Vanity, finishing, handover",
+              description:
+                "Paint, vanity and countertop set, faucets, toilet, shower door, adjustments and return of the space.",
             },
           ],
         },
       },
     },
     {
-      id: "technical",
+      id: "permis",
       content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
+        type: "split",
+        variant: "list-actions-image-card",
         props: {
-          heading:
-            "Technical points that really matter in a bathroom",
+          heading: "Permits, ventilation and compliance",
           intro:
-            "A bathroom's durability does not depend on a single product. It depends on a set of well-aligned technical decisions.",
-          columns: "2",
+            "Bathrooms are governed by the Québec Construction Code on several specific points. They are also the points an inspector checks and an insurer looks at after water damage.",
           items: [
             {
-              title: "Moisture management",
+              title: "Plumbing relocated",
               description:
-                "A humid environment calls for more rigorous choices than another room.",
-              icon: "doorOpen",
-              bullets: [
-                "Materials and finishes suited to the environment.",
-                "Construction details designed to last.",
-                "Fewer visible risks in the medium term.",
-              ],
+                "Moving a shower, tub or toilet changes drains and plumbing venting. A permit is generally required, and inspection happens before the walls are closed.",
             },
             {
-              title: "Vanity structure",
+              title: "A new bathroom",
               description:
-                "The invisible components directly influence how it holds up over time.",
-              icon: "package2",
-              bullets: [
-                "Solid birch wood for the critical elements.",
-                "Birch plywood to better resist the load.",
-                "A better sense of solidity in use.",
-              ],
+                "Adding a bathroom — in a basement, a suite or an addition — requires a permit in virtually every municipality, with drawings attached.",
             },
             {
-              title: "Ergonomics and storage",
+              title: "Mandatory ventilation",
               description:
-                "The room must stay simple to use even when it is compact.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Clearances planned around the real space.",
-                "Storage suited to daily habits.",
-                "Less friction in use.",
-              ],
+                "Every bathroom must be mechanically vented to the outside. A fan discharging into the attic is non-compliant and simply moves the moisture problem elsewhere in the house.",
             },
             {
-              title: "On-site execution",
+              title: "Anti-scald protection",
               description:
-                "The finish depends on the order of the work and the quality of the adjustments.",
-              icon: "wrench",
-              bullets: [
-                "Fewer conflicts between trades.",
-                "Fewer end-of-site touch-ups.",
-                "A cleaner finish at delivery.",
-              ],
+                "Shower and tub valves must limit temperature. It is a standard safety requirement in residential inspections.",
+            },
+            {
+              title: "Like-for-like replacement",
+              description:
+                "Changing the vanity, toilet, tile and faucets without moving plumbing usually needs no permit. We confirm with your city regardless.",
             },
           ],
+          actions: [
+            {
+              label: "See turnkey renovation",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
+            {
+              label: "See service areas",
+              href: "/zones",
+              variant: "ghost",
+            },
+          ],
+          image: {
+            src: "/images/generated/renovation/renovation-bath-approach-01.webp",
+            alt: "Shower prepared with a waterproofing membrane",
+          },
+          cardTitle: "What the insurer looks at",
+          cardDescription:
+            "After water damage, the compliance of the work and the presence of a licensed contractor weigh on how the claim is handled. Our RBQ licence 8306-0806-27 has been valid and unrestricted since 2004.",
+        },
+      },
+    },
+    {
+      id: "prix",
+      content: {
+        type: "split",
+        variant: "text-divider-cards",
+        props: {
+          heading: "What does a bathroom renovation cost?",
+          description:
+            "The figures below are indicative for the Québec market. They move with the area, the condition of the framing under the finishes, whether plumbing is relocated and the level of finish chosen.",
+          cards: [
+            {
+              title: "Full bathroom — $15,000 to $35,000",
+              description:
+                "Demolition, plumbing reworked, ventilation, membrane, tiling, vanity, countertop, toilet, faucets and finishing, without moving the fixtures.",
+            },
+            {
+              title: "Relocated plumbing or curbless shower",
+              description:
+                "Moving the shower or toilet, building a curbless shower with a linear drain or adding in-floor heating pushes the budget to the top of the range and beyond.",
+            },
+            {
+              title: "A new basement bathroom",
+              description:
+                "Adding a bathroom where there was none often means breaking the slab for the drain, or installing an ejector pump. Budget it separately.",
+            },
+            {
+              title: "What moves the number",
+              description:
+                "Area, tile format, framing repairs under the shower, shower type, heated floor, faucet quality and site access in a condo.",
+            },
+          ],
+          columns: "2",
         },
       },
     },
@@ -285,46 +316,57 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading:
-            "This service page mainly supports your custom bathroom project",
+          heading: "Work that often comes with a bathroom",
           intro:
-            "The bathroom renovation mainly explains the method, the risks and the coordination. For the full view of the product, the materials and the completed projects, the bathroom pillar page remains the main destination.",
+            "A bathroom is rarely renovated on its own. These pages cover the work most often attached to it.",
           items: [
             {
-              title: "Custom bathroom",
+              title: "Basement finishing",
+              href: "/services/renovation/sous-sol",
+              description:
+                "Adding a basement bathroom means a drain in the slab or an ejector pump, plus the basement conversion permit.",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Bathroom built into a finished basement",
+              },
+              badges: ["Basement", "Ejector pump"],
+              footerCtaLabel: "See basement",
+            },
+            {
+              title: "Disaster rebuild",
+              href: "/services/renovation/apres-sinistre",
+              description:
+                "A long-running leak, water damage or mould: rebuilding starts by opening up and cleaning out, not by setting new tile.",
+              image: {
+                src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
+                alt: "Rebuilding after a bathroom leak",
+              },
+              badges: ["Mould", "Insurance"],
+              footerCtaLabel: "See disaster rebuild",
+            },
+            {
+              title: "Flooring renovation",
+              href: "/services/renovation/plancher",
+              description:
+                "Door threshold, level difference with the hallway and the joint between tile and hardwood: details to settle at the right moment.",
+              image: {
+                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
+                alt: "Flooring transition at a bathroom threshold",
+              },
+              badges: ["Thresholds", "Transitions"],
+              footerCtaLabel: "See flooring",
+            },
+            {
+              title: "Custom bathrooms",
               href: "/espaces/salle-de-bain",
               description:
-                "The main pillar page to see the finish level, the materials, the projects and the storage logic.",
+                "The vanity and storage side: dimensions, finishes, hardware and completed examples.",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "High-end custom bathroom",
+                alt: "Custom vanity in a bathroom",
               },
-              badges: ["Pillar page", "Bathroom"],
-              footerCtaLabel: "View the bathroom page",
-            },
-            {
-              title: "Fabrication service",
-              href: "/services/fabrication",
-              description:
-                "To understand what makes the vanity more stable, more durable and better executed over time.",
-              image: {
-                src: "/images/generated/services/service-fabrication-hero-01.webp",
-                alt: "Custom fabrication and technical details",
-              },
-              badges: ["Fabrication", "Durability"],
-              footerCtaLabel: "View fabrication",
-            },
-            {
-              title: "Installation service",
-              href: "/services/installation",
-              description:
-                "To see how fitting, adjustments and alignments protect a cleaner result at the end of the site.",
-              image: {
-                src: "/images/generated/services/service-installation-hero-01.webp",
-                alt: "Custom installation with precise adjustments",
-              },
-              badges: ["Installation", "Finish"],
-              footerCtaLabel: "View installation",
+              badges: ["Vanity", "Custom"],
+              footerCtaLabel: "See bathrooms",
             },
           ],
         },
@@ -336,25 +378,24 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading:
-            "What a well-managed bathroom renovation should deliver",
+          heading: "What a properly built bathroom delivers",
           description:
-            "Proof of competence is not only about appearance. It shows in how the room ages, cleans up and functions day to day without visible weakness.",
+            "A bathroom is judged over ten years, not on a photo taken on day one. Three things decide it, and none of them is visible once the work is done.",
           cards: [
             {
-              title: "A more durable room",
+              title: "A shower that is genuinely watertight",
               description:
-                "The technical choices better support moisture, load and daily use.",
+                "Continuous membrane, slope to the drain, wall junctions treated. Water never reaches the framing.",
             },
             {
-              title: "Simpler to use",
+              title: "A room that dries out",
               description:
-                "Storage, circulation and clearances make the bathroom more pleasant to use.",
+                "Ventilation at the right airflow, ducted outside. Mirrors clear, grout stays clean, paint holds.",
             },
             {
-              title: "A more credible finish",
+              title: "Sound framing under the finishes",
               description:
-                "Joints, alignments and installation details support a cleaner, more premium result.",
+                "The subfloor was checked and repaired before anything was set. Tile does not move and grout does not crack.",
             },
           ],
           columns: "1",
@@ -363,38 +404,53 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - bathroom renovation",
+          heading: "FAQ — bathroom renovation",
           intro:
-            "Clear answers on timelines, moisture, coordination and project scope.",
+            "Pricing, permits, duration, waterproofing, ventilation, condos and warranty.",
           items: [
             {
-              q: "How long does a bathroom renovation take?",
-              a: "How long a bathroom renovation takes depends on the scope (replacing the vanity or a full redesign), the site constraints and the related work — plumbing, ventilation, waterproofing, surfaces. A full renovation generally spans several weeks, sequenced to respect drying times and protect the waterproofing. A realistic schedule is set once the scope is clarified.",
+              q: "What does a bathroom renovation cost?",
+              a: "As an indication, a full bathroom most often runs between $15,000 and $35,000 depending on scope. The top of the range corresponds to a larger room, a curbless shower, a heated floor or relocated plumbing. The detailed estimate is free and sets out what is included and excluded.",
             },
             {
-              q: "Is there a risk of water damage?",
-              a: "There's a risk of water damage in any bathroom, but it's controlled through execution. A well-installed waterproofing membrane, materials suited to moisture, adequate ventilation and careful plumbing connections greatly reduce long-term risks. That's exactly why the work sequence and installation quality are decisive in a bathroom.",
+              q: "Do I need a permit to redo a bathroom?",
+              a: "A like-for-like replacement — vanity, toilet, tile and faucets in the same locations — usually needs no permit. As soon as plumbing is relocated, the shower is moved or a new bathroom is added, a permit is generally required with inspection before the walls are closed. We confirm with your city and file the application.",
             },
             {
-              q: "Do you work with other trades on this kind of project?",
-              a: "Yes, when the scope requires it. Coordination is precisely there to better order plumbing, ventilation, finishes and fitting to avoid grey areas.",
+              q: "How long does the job take?",
+              a: "A full bathroom runs to several weeks of on-site work. Curing times for mortar, grout, caulking and paint cannot be compressed, and the municipal inspection has to be booked before the walls are closed. The precise schedule is attached to the contract.",
             },
             {
-              q: "Is it possible in a condo?",
-              a: "Yes. Access, scheduling and building constraints are framed from the start.",
+              q: "What is a waterproofing membrane, and is it required?",
+              a: "It is a continuous layer installed under the shower tile, carried up the walls and tied into the drain, that stops water from reaching the framing. It is the single most important element of a durable shower. We install it on all wet surfaces, with an even slope to the drain.",
             },
             {
-              q: "Can I do a partial renovation?",
-              a: "Yes. Some projects focus mainly on the vanity and storage, others are more complete.",
+              q: "What kind of fan does a bathroom need?",
+              a: "An exhaust fan ducted to the exterior, never into the attic, sized to the volume of the room, with a short, insulated duct run. That is what keeps moisture from building up and mould from growing behind the finishes. Replacing the fan is part of the mandate.",
             },
             {
-              q: "Where can I see the full approach for a custom bathroom?",
-              a: "The bathroom renovation page mainly serves to explain the site and coordination logic. For the full view of the product, the materials and the projects, the custom bathroom page remains the main reference.",
+              q: "Can a bathroom be added in the basement?",
+              a: "Yes. We first check where the main drain sits: either the slab is broken to connect by gravity, or an ejector pump is installed. Ventilation, supply lines and the basement conversion permit come with it. The basement finishing page covers the whole mandate.",
+            },
+            {
+              q: "What if you find water damage during demolition?",
+              a: "It is common in a bathroom over twenty years old. We show you what is affected — subfloor, studs, joists —, document the condition and give you the repair cost in writing before continuing. Nothing gets closed up over a known problem.",
+            },
+            {
+              q: "Is this feasible in a condo?",
+              a: "Yes. You first need the syndicate's approval and confirmation of work hours, elevator access, protection of common areas and any restrictions in the declaration of co-ownership regarding plumbing and sound insulation. Those are settled before demolition.",
+            },
+            {
+              q: "Do you supply the vanity?",
+              a: "Yes. Custom vanities are built for us by our partner factory, under subcategory 12 of our RBQ licence, then measured and installed by our crews along with the countertop and faucets. One company is accountable for the result.",
+            },
+            {
+              q: "Is the work warranted?",
+              a: "Yes. Work is warranted and the terms are in the contract. Our RBQ licence 8306-0806-27 has been valid and unrestricted since 2004, with a $40,000 bond and no claims on file. Civil liability and job-site insurance are in force.",
             },
           ],
         },
@@ -406,22 +462,22 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need a well-framed bathroom renovation?",
+          heading: "A bathroom to redo properly?",
           intro:
-            "We help you structure the project, the sequence and the right choices for a humid environment, then guide you toward the bathroom pillar page for the full view.",
+            "We come and assess the room, the existing ventilation, the plumbing and any signs of infiltration, then come back with a detailed estimate within 24 to 48 business hours.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Request a free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View the bathroom page",
-              href: "/espaces/salle-de-bain",
+              label: "See turnkey renovation",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Bathroom, custom vanity, storage and humid environment",
+          note: "RBQ licence 8306-0806-27 · Compliant waterproofing, ventilation and plumbing",
         },
       },
     },

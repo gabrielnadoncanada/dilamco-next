@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Espaces sur mesure",
+    title: "Espaces sur mesure — notre division armoires",
     description:
-      "Découvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial.",
+      "Cuisine, salle de bain, walk-in, salle de lavage, sous-sol et commercial : armoires sur mesure par Dilamco, entrepreneur général licencié RBQ.",
     path: "/espaces",
     ogAlt: "Espaces sur mesure Dilamco",
   },
@@ -29,11 +29,11 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          eyebrow: "Dilamco - Division armoires",
           heading:
             "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
           description:
-            "Chez Dilamco, chaque espace de la maison — cuisine, salle de bain, walk-in, sous-sol, salle de lavage — peut recevoir des armoires et rangements sur mesure. Notre rôle : concevoir, fournir et installer des solutions durables, fonctionnelles et bien exécutées, adaptées aux contraintes réelles de chaque pièce.",
+            "Chaque espace de la maison — cuisine, salle de bain, walk-in, sous-sol, salle de lavage — peut recevoir des armoires et rangements sur mesure. C'est le rôle de la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : on conçoit le projet, notre usine partenaire le produit, nos équipes le posent, et le tout se coordonne avec le reste de votre rénovation.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -129,7 +129,7 @@ export const page: PageTemplateData = {
               title: "Commercial",
               href: "/espaces/commercial",
               description:
-                "Aménagement commercial durable, planifié et adapté à l'usage réel.",
+                "Construction et aménagement commercial : bureaux, commerces et améliorations locatives.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial sur mesure",
@@ -184,8 +184,8 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Caissons en stock (boutique)",
-              href: "/boutique",
+              label: "Rénovation résidentielle clé en main",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
@@ -219,6 +219,10 @@ export const page: PageTemplateData = {
             {
               q: "Faites-vous aussi l'installation ?",
               a: "Oui. Nous installons les éléments que nous concevons et fournissons, ce qui garantit une exécution cohérente du design à la pose, par une seule équipe. Cette continuité évite les zones grises entre fabrication et installation et facilite les ajustements finaux sur place.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la pièce : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

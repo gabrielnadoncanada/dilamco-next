@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Contact et soumission",
+    title: "Soumission rénovation gratuite — contactez Dilamco",
     description:
-      "Contactez Dilamco pour une soumission de cuisine, salle de bain, rangement ou projet commercial sur mesure.",
+      "Décrivez votre projet de rénovation ou de construction. Estimation gratuite, retour sous 24 à 48 heures ouvrables. Licence RBQ 8306-0806-27.",
     path: "/contact",
-    ogAlt: "Contact Dilamco",
+    ogAlt: "Contacter Dilamco pour une estimation de rénovation",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -21,12 +21,12 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "details-form-card",
         props: {
-          heading: "Parlez-nous de votre projet",
+          heading: "Décrivez-nous votre projet de rénovation",
           intro:
-            "Demandez une soumission pour un projet de cuisine, vanité, rangement sur mesure ou rénovation avec coordination.",
+            "Estimation gratuite et sans engagement. Plus votre description est précise, plus notre premier retour est utile : on vous donne un ordre de grandeur réaliste avant même la visite sur place.",
           detailsTitle: "Nous joindre",
           detailsIntro:
-            "Nous accompagnons principalement des projets résidentiels et commerciaux qui recherchent une solution durable, bien construite et bien planifiée.",
+            "Dilamco est un entrepreneur général en rénovation résidentielle établi à Pierrefonds-Roxboro depuis 2004. Licence RBQ 8306-0806-27, valide et sans restriction.",
           details: [
             {
               title: "Courriel",
@@ -46,15 +46,21 @@ export const page: PageTemplateData = {
             },
             {
               title: "Zones desservies",
-              description: "Montréal, Laval et Rive-Sud",
+              description:
+                "Ouest-de-l'Île, Montréal, Laval, Rive-Sud et Vaudreuil-Soulanges.",
               icon: "map-pin",
             },
             {
-              title: "Délai de retour visé",
-              description: "Retour initial sous 24 à 48 heures ouvrables.",
+              title: "Délai de retour",
+              description:
+                "Retour sous 24 à 48 heures ouvrables pour fixer la visite et l'estimation.",
               icon: "clock",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 — entrepreneur général, catégories 1.2 et 1.3. Assurance responsabilité civile et couverture chantier en vigueur. Estimation gratuite, sans frais ni engagement.",
+          formTitle: "Demander une estimation gratuite",
+          formIntro:
+            "Ces informations servent uniquement à préparer la visite et à cadrer votre projet. Aucune démarche commerciale automatisée.",
           formAction: "/contact/",
           formMethod: "post",
           honeypotName: "website",
@@ -82,43 +88,72 @@ export const page: PageTemplateData = {
                   label: "Téléphone",
                   autoComplete: "tel",
                   required: true,
+                  helper:
+                    "Un appel de deux minutes évite souvent trois échanges de courriels.",
                 },
                 {
                   kind: "text",
                   name: "ville",
-                  label: "Ville / secteur",
+                  label: "Ville / secteur du projet",
                   autoComplete: "address-level2",
-                  placeholder: "Montréal, Laval, Rive-Sud",
+                  placeholder: "Pierrefonds, Kirkland, Laval, Vaudreuil...",
                   required: true,
+                  helper:
+                    "Les exigences de permis changent d'une ville et d'un arrondissement à l'autre.",
                 },
                 {
                   kind: "select",
                   name: "espace",
-                  label: "Type d'espace",
+                  label: "Type de travaux",
                   placeholder: "Sélectionner...",
                   required: true,
                   options: [
-                    { label: "Cuisine", value: "cuisine" },
-                    { label: "Salle de bain / vanité", value: "salle-de-bain" },
-                    { label: "Walk-in / rangement", value: "walk-in" },
-                    { label: "Salle de lavage", value: "salle-de-lavage" },
+                    { label: "Rénovation de cuisine", value: "cuisine" },
+                    {
+                      label: "Rénovation de salle de bain",
+                      value: "salle-de-bain",
+                    },
+                    { label: "Finition de sous-sol", value: "sous-sol" },
+                    {
+                      label: "Agrandissement de maison",
+                      value: "agrandissement",
+                    },
+                    { label: "Plancher", value: "plancher" },
+                    {
+                      label: "Après sinistre (eau, feu)",
+                      value: "apres-sinistre",
+                    },
+                    {
+                      label: "Rénovation complète / plusieurs pièces",
+                      value: "renovation-complete",
+                    },
+                    {
+                      label: "Armoires sur mesure seulement",
+                      value: "armoires",
+                    },
                     { label: "Commercial", value: "commercial" },
+                    { label: "Autre", value: "autre" },
                   ],
                 },
                 {
                   kind: "select",
                   name: "type_projet",
-                  label: "Nature du projet",
+                  label: "Nature du mandat",
                   placeholder: "Sélectionner...",
                   required: true,
                   options: [
                     {
-                      label: "Sur mesure (design + fabrication + installation)",
-                      value: "sur-mesure",
+                      label:
+                        "Clé en main (entrepreneur général, permis et coordination)",
+                      value: "cle-en-main",
                     },
                     {
                       label: "Rénovation avec coordination",
                       value: "renovation",
+                    },
+                    {
+                      label: "Armoires sur mesure seulement",
+                      value: "armoires-seulement",
                     },
                     {
                       label: "À déterminer / besoin de conseils",
@@ -132,6 +167,8 @@ export const page: PageTemplateData = {
                   label: "Budget approximatif",
                   placeholder: "Sélectionner...",
                   required: true,
+                  helper:
+                    "Nos mandats de rénovation démarrent généralement autour de 25 000 $.",
                   options: [
                     { label: "Moins de 15 000 $", value: "moins-15000" },
                     { label: "15 000 $ à 25 000 $", value: "15000-25000" },
@@ -144,7 +181,7 @@ export const page: PageTemplateData = {
                 {
                   kind: "select",
                   name: "echeance",
-                  label: "Calendrier souhaité",
+                  label: "Quand souhaitez-vous commencer ?",
                   placeholder: "Sélectionner...",
                   required: true,
                   options: [
@@ -157,16 +194,18 @@ export const page: PageTemplateData = {
                 {
                   kind: "textarea",
                   name: "message",
-                  label: "Décrivez votre projet",
+                  label: "Décrivez les travaux",
                   rows: 8,
                   required: true,
+                  helper:
+                    "Type de bâtiment, année de construction, état actuel, contraintes d'accès : tout ce qui nous évite une surprise vous évite un avenant.",
                   placeholder:
-                    "Ex. type de pièce, dimensions approximatives, état actuel, besoins de rangement, matériaux souhaités, contraintes d'accès ou échéancier.",
+                    "Ex. bungalow 1968, cuisine d'origine à refaire au complet, mur à ouvrir vers la salle à manger, plomberie et électricité jamais touchées, sous-sol fini à revoir plus tard.",
                 },
               ],
             },
           ],
-          submitLabel: "Demander une soumission",
+          submitLabel: "Demander une estimation gratuite",
         },
       },
     },

@@ -6,7 +6,7 @@ export const designPageEn: PageTemplateData = {
   metadata: {
     title: "Custom kitchen & cabinetry design",
     description:
-      "Design service: space optimization, planning and material selection for kitchens, vanities, walk-ins and commercial projects.",
+      "Custom cabinetry design: space optimization, planning and material selection, built into your renovation by a licensed general contractor.",
     path: "/services/design",
     ogAlt: "Dilamco design service",
   },
@@ -30,10 +30,10 @@ export const designPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
+          eyebrow: "Dilamco - Cabinetry division",
           heading: "Design service — structuring the project before fabrication",
           description:
-            "Custom cabinet design is the planning stage where usage is framed, the space organized, technical constraints integrated and material choices validated — before fabrication and installation. That is where the right decisions are made, on paper, to avoid costly compromises later.",
+            "Custom cabinet design is the planning stage where usage is framed, the space organized, technical constraints integrated and material choices validated — before production and installation. This service belongs to the cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27): plans are settled with the rest of the job site in mind, then carried out by our partner factory and our own installation crews.",
           actions: [
             {
               label: "Discuss your project",
@@ -124,6 +124,11 @@ export const designPageEn: PageTemplateData = {
               href: "/services/installation",
               variant: "ghost",
             },
+            {
+              label: "Turnkey kitchen renovation",
+              href: "/services/renovation/cuisine",
+              variant: "ghost",
+            },
           ],
           image: {
             src: "/images/services/design-hero.webp",
@@ -211,6 +216,10 @@ export const designPageEn: PageTemplateData = {
             {
               q: "When does design come in during the project?",
               a: "Design comes in at the very start, before fabrication. We begin by analyzing the real space (measurements, circulation, plumbing and electrical), then validate the layout logic, the heights, the storage zones and the material and finish choices. Once these decisions are settled and validated with you, they serve as a stable reference for fabrication and installation — which limits costly changes along the way.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. Design can therefore cover the whole room: layout, plumbing and electrical to relocate, flooring, lighting and finishes, alongside the cabinets. We then coordinate the trades and the schedule under a single responsibility, set in the written contract.",
             },
           ],
         },

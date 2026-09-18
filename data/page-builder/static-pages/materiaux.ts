@@ -6,7 +6,7 @@ export const page: PageTemplateData = {
   metadata: {
     title: "Matériaux pour cuisines & armoires sur mesure",
     description:
-      "Matériaux et comparatifs pour cuisines, vanités et armoires sur mesure : contreplaqué, MDF, mélamine, bois massif, quincaillerie et finis.",
+      "Matériaux pour armoires sur mesure : contreplaqué, MDF, mélamine, bois massif, quincaillerie et finis, comparés par notre division armoires.",
     path: "/materiaux",
     ogAlt: "Matériaux Dilamco",
   },
@@ -22,10 +22,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Matériaux",
+          eyebrow: "Dilamco - Division armoires",
           heading: "Matériaux, durabilité, finition et performance",
           description:
-            "Le choix des matériaux d'armoires — bois massif, contreplaqué, MDF, mélamine, quincaillerie et finis — détermine la durabilité et le rendu d'un projet. Le bon matériau dépend de l'usage réel : nous priorisons la cohérence entre structure, quincaillerie, finition et installation pour un résultat plus durable.",
+            "Le choix des matériaux d'armoires — bois massif, contreplaqué, MDF, mélamine, quincaillerie et finis — détermine la durabilité et le rendu d'un projet. Ces spécifications sont établies par la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), puis transmises à notre usine partenaire et vérifiées à la réception, avant la pose.",
           actions: [
             {
               label: "Demander une soumission",
@@ -253,6 +253,11 @@ export const page: PageTemplateData = {
               href: "/services/installation",
               variant: "ghost",
             },
+            {
+              label: "Rénovation clé en main",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
         },
       },
@@ -281,6 +286,10 @@ export const page: PageTemplateData = {
             {
               q: "Quels matériaux éviter en salle de bain ?",
               a: "En salle de bain, on évite les matériaux mal protégés contre l'humidité ou dont les chants sont mal scellés, car la vapeur et les éclaboussures s'infiltrent avec le temps. On privilégie des structures stables, des finis résistants à l'humidité et une quincaillerie durable, combinés à une bonne ventilation et à une installation soignée — c'est l'exécution qui protège la durabilité.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la pièce : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

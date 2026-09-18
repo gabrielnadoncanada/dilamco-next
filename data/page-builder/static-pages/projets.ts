@@ -6,7 +6,7 @@ export const page: PageTemplateData = {
   metadata: {
     title: "Réalisations de cuisines & armoires sur mesure",
     description:
-      "Découvrez nos réalisations sur mesure : cuisines, vanités, walk-in, salles de lavage et projets commerciaux.",
+      "Réalisations sur mesure : cuisines, vanités, walk-in, salles de lavage et projets commerciaux, livrés par Dilamco, entrepreneur général licencié RBQ.",
     path: "/projets",
     ogAlt: "Réalisations Dilamco",
   },
@@ -22,11 +22,11 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Projets",
+          eyebrow: "Dilamco - Division armoires",
           heading:
             "Réalisations sur mesure : cuisines, vanités, rangement et commercial",
           description:
-            "Cette page sert à montrer des cas réels, pas une galerie vide. Vous y trouvez des projets qui aident à juger le niveau d'exécution, le type de contraintes traitées et la qualité de finition attendue.",
+            "Cette page sert à montrer des cas réels, pas une galerie vide. Vous y trouvez des projets de la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : conception par nos soins, production par notre usine partenaire, pose par nos équipes, coordonnée avec le reste du chantier.",
           actions: [
             {
               label: "Demander une soumission",
@@ -107,7 +107,7 @@ export const page: PageTemplateData = {
               title: "Commercial",
               href: "/projets/commercial",
               description:
-                "Aménagements commerciaux pensés pour l'usage intensif.",
+                "Bureaux, commerces et améliorations locatives livrés prêts à occuper.",
               footerCtaLabel: "Voir les projets commerciaux",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
@@ -162,8 +162,8 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Voir les services",
-              href: "/services",
+              label: "Rénovation résidentielle clé en main",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],

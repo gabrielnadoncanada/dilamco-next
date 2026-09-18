@@ -6,7 +6,7 @@ export const walkInPage: PageTemplateData = {
   metadata: {
     title: "Garde-robe et walk-in sur mesure à Montréal",
     description:
-      "Garde-robe et walk-in sur mesure à Montréal, Laval et le Grand Montréal : fourchettes de prix, comparaison avec les systèmes modulaires, conception et installation haut de gamme.",
+      "Garde-robe et walk-in sur mesure à Montréal et Laval : prix, comparaison avec le modulaire, conception et pose par un entrepreneur général licencié.",
     path: "/espaces/walk-in",
     ogAlt: "Garde-robe et walk-in sur mesure Dilamco",
   },
@@ -29,11 +29,11 @@ export const walkInPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          eyebrow: "Dilamco - Division armoires",
           heading:
             "Garde-robe et walk-in sur mesure à Montréal et dans le Grand Montréal",
           description:
-            "Une garde-robe sur mesure — ou walk-in — est un rangement conçu et fabriqué aux dimensions exactes de votre espace (penderie, tiroirs, tablettes, accessoires), plutôt qu'assemblé à partir de modules standards. Chez Dilamco, dans le Grand Montréal, une seule équipe gère la conception, la fabrication contrôlée en usine partenaire et l'installation.",
+            "Une garde-robe sur mesure — ou walk-in — est un rangement conçu et fabriqué aux dimensions exactes de votre espace (penderie, tiroirs, tablettes, accessoires), plutôt qu'assemblé à partir de modules standards. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), conçoit le rangement, le fait produire par son usine partenaire et le fait poser par ses équipes, coordonné avec le reste du chantier.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -158,13 +158,13 @@ export const walkInPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Rangements pleine hauteur en stock",
-              href: "/boutique/garde-manger",
+              label: "Cuisine sur mesure",
+              href: "/espaces/cuisine",
               variant: "ghost",
             },
             {
-              label: "Cuisine sur mesure",
-              href: "/espaces/cuisine",
+              label: "Rénovation résidentielle clé en main",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
@@ -389,6 +389,10 @@ export const walkInPage: PageTemplateData = {
             {
               q: "Travaillez-vous à Montréal et autour ?",
               a: "Oui. Nous desservons Montréal, Laval, l'Ouest-de-l'Île, la Rive-Nord et la Rive-Sud.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la chambre ou du walk-in : cloisons, porte, électricité et éclairage, plancher, peinture et pose du rangement, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

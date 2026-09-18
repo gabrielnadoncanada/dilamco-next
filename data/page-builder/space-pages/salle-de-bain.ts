@@ -6,7 +6,7 @@ export const salleDeBainPage: PageTemplateData = {
   metadata: {
     title: "Vanité de salle de bain sur mesure à Laval",
     description:
-      "Vanité de salle de bain sur mesure haut de gamme : conception, fabrication contrôlée et installation précise à Montréal, Laval, sur la Rive-Nord et la Rive-Sud.",
+      "Vanité de salle de bain sur mesure à Laval, Montréal et sur les deux rives, conçue, fournie et posée par Dilamco, entrepreneur général licencié RBQ.",
     path: "/espaces/salle-de-bain",
     ogAlt: "Vanité de salle de bain sur mesure Dilamco",
   },
@@ -32,11 +32,11 @@ export const salleDeBainPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          eyebrow: "Dilamco - Division armoires",
           heading:
             "Vanité de salle de bain sur mesure à Laval et dans le Grand Montréal",
           description:
-            "Une vanité de salle de bain sur mesure est un meuble-lavabo conçu et fabriqué aux dimensions exactes de votre pièce, avec des matériaux choisis pour résister à l'humidité. Chez Dilamco, à Laval et dans le Grand Montréal, on conçoit, fournit et installe des vanités sur mesure — structure stable, rangement adapté et pose précise, du plan à la finition.",
+            "Une vanité de salle de bain sur mesure est un meuble-lavabo conçu et fabriqué aux dimensions exactes de votre pièce, avec des matériaux choisis pour résister à l'humidité. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), en assure la conception, la production chez son usine partenaire et la pose par ses équipes, coordonnée avec la plomberie et le reste du chantier.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -219,8 +219,8 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "Vanités en stock, prêtes à installer",
-              href: "/boutique/vanites",
+              label: "Rénovation de salle de bain clé en main",
+              href: "/services/renovation/salle-de-bain",
               variant: "ghost",
             },
             {
@@ -351,6 +351,10 @@ export const salleDeBainPage: PageTemplateData = {
             {
               q: "Quel est le délai pour une vanité sur mesure ?",
               a: "Le délai dépend de la complexité, des finis et du calendrier de fabrication. On le confirme dès la phase de conception.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la salle de bain : permis municipal si requis, démolition, plomberie, électricité, céramique, ventilation et pose de la vanité, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

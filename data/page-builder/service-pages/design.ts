@@ -6,7 +6,7 @@ export const designPage: PageTemplateData = {
   metadata: {
     title: "Design de cuisine et d'armoires sur mesure",
     description:
-      "Service de design : optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux.",
+      "Design d'armoires sur mesure : optimisation de l'espace, planification et choix des matériaux, intégré à votre rénovation par un entrepreneur général.",
     path: "/services/design",
     ogAlt: "Service de design Dilamco",
   },
@@ -30,10 +30,10 @@ export const designPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
+          eyebrow: "Dilamco - Division armoires",
           heading: "Service de design, structurer le projet avant de fabriquer",
           description:
-            "Le design d'armoires sur mesure est l'étape de conception où l'on cadre l'usage, organise l'espace, intègre les contraintes techniques et valide les choix de matériaux — avant la fabrication et l'installation. C'est là que se prennent les bonnes décisions, en plan, pour éviter les compromis coûteux plus tard.",
+            "Le design d'armoires sur mesure est l'étape de conception où l'on cadre l'usage, organise l'espace, intègre les contraintes techniques et valide les choix de matériaux — avant la production et la pose. Ce service relève de la division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : les plans sont arrêtés en tenant compte du reste du chantier, puis exécutés par notre usine partenaire et nos équipes de pose.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -124,6 +124,11 @@ export const designPage: PageTemplateData = {
               href: "/services/installation",
               variant: "ghost",
             },
+            {
+              label: "Rénovation de cuisine clé en main",
+              href: "/services/renovation/cuisine",
+              variant: "ghost",
+            },
           ],
           image: {
             src: "/images/services/design-hero.webp",
@@ -211,6 +216,10 @@ export const designPage: PageTemplateData = {
             {
               q: "Quand intervient le design dans le projet?",
               a: "Le design intervient au tout début, avant la fabrication. On commence par analyser l'espace réel (mesures, circulation, plomberie et électricité), puis on valide la logique d'aménagement, les hauteurs, les zones de rangement et les choix de matériaux et de finis. Une fois ces décisions arrêtées et validées avec vous, elles servent de référence stable pour la fabrication et l'installation — ce qui limite les changements coûteux en cours de route.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. Le design peut donc couvrir toute la pièce : implantation, plomberie et électricité à déplacer, plancher, éclairage et finitions, en plus des armoires. On coordonne ensuite les corps de métier et l'échéancier sous une seule responsabilité, fixés au contrat écrit.",
             },
           ],
         },

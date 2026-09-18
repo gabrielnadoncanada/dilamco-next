@@ -4,7 +4,6 @@ import {
   RENOVATION_EN,
   MATERIAL_EN,
   PROJECT_SLUG_EN,
-  BOUTIQUE_TAXON_EN,
   ZONE_EN,
 } from "@/seo/i18n-path";
 
@@ -65,15 +64,6 @@ const materialPathnames = Object.fromEntries(
   ]),
 );
 
-// Pathnames explicites de la taxonomie boutique (slugs FR mot-clé traduits :
-// /boutique/armoires-cuisine -> /en/shop/kitchen-cabinets).
-const boutiqueTaxonPathnames = Object.fromEntries(
-  Object.entries(BOUTIQUE_TAXON_EN).map(([fr, en]) => [
-    `/boutique/${fr}`,
-    { fr: `/boutique/${fr}`, en: `/shop/${en}` },
-  ]),
-);
-
 export const routing = defineRouting({
   locales: ["fr", "en"],
   defaultLocale: "fr",
@@ -105,6 +95,7 @@ export const routing = defineRouting({
       en: "/services/renovation",
     },
     ...renovationPathnames,
+    "/zones": { fr: "/zones", en: "/areas" },
     ...zonePathnames,
     "/a-propos": { fr: "/a-propos", en: "/about" },
     "/contact": "/contact",
@@ -119,25 +110,6 @@ export const routing = defineRouting({
     },
     "/landing": "/landing",
     "/landing/construction": "/landing/construction",
-    // Boutique : seul le 1er segment se traduit (boutique -> shop). Les slugs
-    // de catégorie sont déjà identiques FR/EN (données bilingues), et les
-    // segments produit/finitions/soumission restent inchangés. Synchronisé
-    // avec AppLink TEMPLATES, seo/i18n-path.ts et next-sitemap.config.js.
-    "/boutique": { fr: "/boutique", en: "/shop" },
-    ...boutiqueTaxonPathnames,
-    "/boutique/produit/[id]": {
-      fr: "/boutique/produit/[id]",
-      en: "/shop/produit/[id]",
-    },
-    "/boutique/finitions": { fr: "/boutique/finitions", en: "/shop/finitions" },
-    "/boutique/conditions-de-retour": {
-      fr: "/boutique/conditions-de-retour",
-      en: "/shop/return-policy",
-    },
-    "/boutique/soumission": {
-      fr: "/boutique/soumission",
-      en: "/shop/soumission",
-    },
   },
 });
 

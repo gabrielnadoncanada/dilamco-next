@@ -6,7 +6,7 @@ export const installationPage: PageTemplateData = {
   metadata: {
     title: "Installation d'armoires et de cuisines sur mesure",
     description:
-      "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée.",
+      "Pose d'armoires et de cuisines sur mesure par nos équipes : alignements précis, ajustements sur place et coordination avec le reste du chantier.",
     path: "/services/installation",
     ogAlt: "Service d'installation Dilamco",
   },
@@ -33,11 +33,11 @@ export const installationPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
+          eyebrow: "Dilamco - Division armoires",
           heading:
             "Installation professionnelle, précision, alignement et finition",
           description:
-            "L'installation est l'étape finale où les armoires sont posées et ajustées sur place : mise à niveau, alignements précis, fixation et finition. C'est elle qui transforme des éléments fabriqués en un ensemble net et durable — les ajustements sur place font partie intégrante d'une pose professionnelle.",
+            "L'installation est l'étape finale où les armoires sont posées et ajustées sur place : mise à niveau, alignements précis, fixation et finition. Elle est réalisée par les équipes de Dilamco, entrepreneur général licencié RBQ (8306-0806-27) : la pose est planifiée avec les autres corps de métier du chantier — plomberie, électricité, comptoirs, plancher — pour éviter les attentes et les reprises.",
           actions: [
             {
               label: "Demander une soumission",
@@ -129,6 +129,11 @@ export const installationPage: PageTemplateData = {
               href: "/services/fabrication",
               variant: "ghost",
             },
+            {
+              label: "Rénovation clé en main",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
@@ -214,6 +219,10 @@ export const installationPage: PageTemplateData = {
             {
               q: "Travaillez-vous en condo ou en commercial?",
               a: "Oui. Nous adaptons l'installation aux contraintes d'accès, d'horaire et d'usage de chaque environnement.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la pièce : permis municipal, démolition, plomberie, électricité, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

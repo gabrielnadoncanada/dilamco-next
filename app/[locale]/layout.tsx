@@ -23,17 +23,17 @@ export function generateStaticParams() {
 
 const HOME = {
   fr: {
-    title: "Cuisines, vanités et armoires sur mesure au Québec | Dilamco",
+    title: "Entrepreneur général en rénovation — Ouest-de-l'Île | Dilamco",
     description:
-      "Cuisines, vanités, armoires et rangements sur mesure. Design, fabrication, installation et rénovation clé en main à Montréal, Laval et Rive-Sud.",
-    ogAlt: "Dilamco — Sur mesure, durable, bien exécuté",
+      "Entrepreneur général licencié RBQ depuis 2004 : rénovation de cuisine, salle de bain, sous-sol, agrandissement et après sinistre à Pierrefonds, Ouest-de-l'Île, Montréal et Laval.",
+    ogAlt: "Dilamco — Entrepreneur général, rénovation résidentielle",
     ogLocale: "fr_CA",
   },
   en: {
-    title: "Custom kitchens, vanities and cabinetry in Québec | Dilamco",
+    title: "General contractor for home renovation — West Island | Dilamco",
     description:
-      "Custom kitchens, vanities, cabinetry and storage. Turnkey design, fabrication, installation and renovation in Montréal, Laval and the South Shore.",
-    ogAlt: "Dilamco — Custom, durable, well executed",
+      "RBQ-licensed general contractor since 2004: kitchen, bathroom, basement, home addition and disaster-recovery renovation in Pierrefonds, the West Island, Montréal and Laval.",
+    ogAlt: "Dilamco — General contractor, residential renovation",
     ogLocale: "en_CA",
   },
 } as const;

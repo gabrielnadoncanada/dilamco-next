@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const renovationApresSinistrePage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Rénovation après sinistre à Pierrefonds",
+    title: "Rénovation après sinistre à Pierrefonds et l'Ouest-de-l'Île",
     description:
-      "Reconstruction après dégât d'eau ou inondation : évaluation des dommages, accompagnement de réclamation d'assurance, fabrication et installation sur mesure à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île et le Grand Montréal.",
+      "Reconstruction après dégât d'eau, feu, fumée ou moisissures : portée documentée pour l'assureur, permis et travaux. Entrepreneur général RBQ.",
     path: "/services/renovation/apres-sinistre",
-    ogAlt: "Rénovation après sinistre Dilamco",
+    ogAlt: "Reconstruction après sinistre par un entrepreneur général",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -22,9 +22,17 @@ export const renovationApresSinistrePage: PageTemplateData = {
   service: {
     name: "Rénovation après sinistre",
     description:
-      "Reconstruction après dégât d'eau ou inondation : évaluation des dommages, coordination, fabrication et installation sur mesure, avec accompagnement de la réclamation d'assurance, à Pierrefonds-Roxboro et dans l'Ouest-de-l'Île.",
+      "Reconstruction après dégât d'eau, feu, fumée ou moisissures par un entrepreneur général : évaluation des dommages, portée et devis détaillés pour la réclamation d'assurance, permis, coordination des corps de métier et remise en état.",
     url: SITE.url + "/services/renovation/apres-sinistre",
-    serviceType: "Rénovation après sinistre",
+    serviceType: "Reconstruction après sinistre",
+    areaServed: [
+      "Pierrefonds-Roxboro",
+      "Ouest-de-l'Île",
+      "Montréal",
+      "Laval",
+      "Rive-Sud",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -36,9 +44,9 @@ export const renovationApresSinistrePage: PageTemplateData = {
         props: {
           eyebrow: "Dilamco - Rénovation",
           heading:
-            "Rénovation après sinistre : reconstruire proprement après un dégât d'eau, à Pierrefonds et dans l'Ouest-de-l'Île",
+            "Rénovation après sinistre : reconstruire avec un entrepreneur général licencié",
           description:
-            "Une fois l'eau retirée et les lieux asséchés, il reste à reconstruire. Nous prenons le relais sur la rénovation : remise en état des sous-sols, cuisines, salles de bain et planchers touchés, avec la même rigueur de fabrication que nos projets sur mesure. Basés à Pierrefonds-Roxboro, nous connaissons les bâtiments de la zone touchée.",
+            "Une fois l'urgence passée et les lieux asséchés, il reste la vraie reconstruction : ouvrir, constater, chiffrer, obtenir les permis, coordonner les corps de métier et remettre le logement en état. Nous montons la portée et le devis détaillé dont votre assureur a besoin, puis nous exécutons les travaux sous un seul contrat. Basés à Pierrefonds-Roxboro.",
           actions: [
             {
               label: "Demander une évaluation",
@@ -46,17 +54,22 @@ export const renovationApresSinistrePage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir la rénovation de sous-sol",
-              href: "/espaces/sous-sol",
+              label: "Voir la finition de sous-sol",
+              href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
           ],
-          badges: ["Après dégât d'eau", "Reconstruction", "Ouest-de-l'Île"],
+          badges: [
+            "Licence RBQ 8306-0806-27",
+            "Dossier d'assurance",
+            "Ouest-de-l'Île",
+          ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Sous-sol reconstruit après un dégât d'eau",
           },
-          caption: "Pierrefonds-Roxboro, DDO, l'Ouest-de-l'Île et le Grand Montréal",
+          caption:
+            "Pierrefonds-Roxboro, l'Ouest-de-l'Île, Montréal, Laval et Vaudreuil-Soulanges",
         },
       },
     },
@@ -66,180 +79,92 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Ce qui rend une reconstruction après sinistre différente",
+          heading: "Ce qui distingue une reconstruction d'une rénovation",
           description:
-            "Reconstruire après un dégât d'eau n'est pas une rénovation ordinaire. Il faut composer avec des dommages parfois invisibles, un échéancier dicté par l'assurance et la nécessité de revenir à un logement sain, pas seulement refait.",
+            "Reconstruire après un sinistre suit une logique différente. La portée n'est pas choisie par le propriétaire, elle est dictée par les dommages et par ce que la police couvre. Trois facteurs changent tout par rapport à un chantier ordinaire.",
           cards: [
             {
-              title: "Dommages mal évalués",
+              title: "Les dommages dépassent ce qui se voit",
               description:
-                "L'eau migre derrière les finitions. Une portée établie trop vite laisse passer des dégâts cachés qui ressortent plus tard.",
+                "L'eau migre derrière les finis, la fumée imprègne les matériaux poreux, la moisissure se développe dans les cavités. Une portée établie à l'œil, sans ouvrir, laisse passer des dégâts qui ressortiront après les travaux.",
             },
             {
-              title: "Échéancier sous pression",
+              title: "Le dossier d'assurance impose sa forme",
               description:
-                "Entre l'assèchement, l'assurance et le retour à la normale, les décisions s'enchaînent vite. Une séquence claire évite les reprises.",
+                "Un assureur et son expert travaillent avec une portée écrite pièce par pièce, des photos et un devis détaillé par poste. Un chiffrage global d'une page ralentit le règlement et alimente les désaccords.",
             },
             {
-              title: "Réclamation à documenter",
+              title: "La distinction sinistre / amélioration",
               description:
-                "Un dossier bien monté — portée, photos, devis détaillé — facilite la réclamation et réduit les écarts avec l'assureur.",
+                "Remettre en état ce qui existait relève de la réclamation ; améliorer ou agrandir relève de vous. Les deux se mélangent facilement. Nous les séparons dans le devis, pour que chacun sache ce qu'il paie.",
+            },
+            {
+              title: "La conformité au Code a évolué",
+              description:
+                "Dans un bâtiment plus ancien, reconstruire peut exiger de mettre certaines composantes aux normes actuelles — électricité, ventilation, issue de secours au sous-sol. C'est à documenter tôt dans le dossier.",
             },
           ],
-          columns: "1",
+          columns: "2",
         },
       },
     },
     {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Notre approche : reconstruire, pas seulement réparer",
-          intro:
-            "Le marché de l'urgence (assèchement, décontamination) est une étape distincte. Nous intervenons sur la suite : la reconstruction durable, avec des choix de matériaux et de fabrication pensés pour tenir dans le temps.",
-          items: [
-            {
-              title: "Évaluation des dommages",
-              description:
-                "On documente l'étendue réelle des dégâts avant d'arrêter une portée, pour éviter les mauvaises surprises en cours de chantier.",
-            },
-            {
-              title: "Accompagnement de la réclamation",
-              description:
-                "Devis détaillé, photos et portée claire : un dossier qui parle le langage de l'assureur et appuie votre réclamation.",
-            },
-            {
-              title: "Matériaux adaptés à l'humidité",
-              description:
-                "Choix de matériaux et de finitions cohérents avec un espace qui a déjà subi l'eau, surtout au sous-sol.",
-            },
-            {
-              title: "Fabrication et pose sur mesure",
-              description:
-                "Armoires, rangements et finitions fournis et installés avec la même exigence que nos projets réguliers.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir le service de rénovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "Voir la rénovation de sous-sol",
-              href: "/espaces/sous-sol",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Reconstruction d'un plancher après dégât d'eau",
-          },
-          cardTitle: "Ce qu'on cherche à protéger",
-          cardDescription:
-            "Un espace reconstruit après un sinistre doit redevenir sain et durable, pas seulement présentable. La valeur se joue dans ce qui ne se voit plus une fois les travaux terminés.",
-        },
-      },
-    },
-    {
-      id: "included",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Séquence type d'une reconstruction après sinistre",
-          intro:
-            "La portée exacte est confirmée après l'évaluation et selon votre couverture d'assurance, mais la logique reste la même : constater, documenter, préparer, coordonner puis installer proprement.",
-          steps: [
-            {
-              number: "1",
-              title: "Évaluation",
-              description:
-                "Constat des dommages visibles et cachés, mesure de l'étendue à reconstruire.",
-            },
-            {
-              number: "2",
-              title: "Dossier",
-              description:
-                "Devis détaillé et documentation pour appuyer la réclamation d'assurance.",
-            },
-            {
-              number: "3",
-              title: "Design",
-              description:
-                "Organisation de l'espace remis en état et choix de matériaux adaptés.",
-            },
-            {
-              number: "4",
-              title: "Fabrication",
-              description:
-                "Armoires, rangements et finitions sur mesure préparés avant le chantier.",
-            },
-            {
-              number: "5",
-              title: "Installation",
-              description:
-                "Coordination des travaux connexes et pose soignée pour un espace de nouveau fonctionnel.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "technical",
+      id: "sinistres",
       content: {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Points techniques qui comptent après un dégât d'eau",
+          heading: "Les sinistres que nous reconstruisons",
           intro:
-            "La qualité d'une reconstruction se joue surtout dans des décisions qui semblent secondaires mais qui déterminent si le problème revient ou non.",
+            "Nous n'intervenons pas en urgence : le pompage, l'assèchement et la décontamination sont réalisés par des entreprises spécialisées. Nous prenons le relais sur la reconstruction, une fois les lieux asséchés et sécuritaires.",
           columns: "2",
           items: [
             {
-              title: "Sous-sol et bas de murs",
+              title: "Dégât d'eau et inondation",
               description:
-                "La zone la plus touchée par les inondations demande une attention particulière.",
-              icon: "package2",
+                "Refoulement d'égout, tuyau éclaté, infiltration, crue.",
+              icon: "droplets",
               bullets: [
-                "Finitions et matériaux choisis en tenant compte de l'humidité résiduelle.",
-                "Détails de bas de mur pensés pour un retour à un espace sain.",
-                "Rangements et armoires conçus pour durer dans la pièce reconstruite.",
+                "Ouverture des murs et des planchers pour constater l'étendue réelle sous les finis.",
+                "Remplacement du gypse, de l'isolant, du sous-plancher et des revêtements atteints.",
+                "Vérification de la charpente et des solives avant de refermer.",
+                "Reprise de l'électricité et de la plomberie touchées, avec inspection.",
               ],
             },
             {
-              title: "Planchers",
+              title: "Feu et fumée",
               description:
-                "Le revêtement est souvent à refaire entièrement après une inondation.",
-              icon: "slidersHorizontal",
+                "Dommages directs, suie, odeurs persistantes dans les matériaux.",
+              icon: "hardHat",
               bullets: [
-                "Préparation du support avant la pose du nouveau revêtement.",
-                "Choix cohérent avec l'usage et l'emplacement de la pièce.",
-                "Raccords propres avec les éléments conservés.",
+                "Démolition des sections atteintes et retrait des matériaux imprégnés.",
+                "Reprise de la structure et de l'enveloppe selon les plans requis.",
+                "Reconstruction complète des pièces touchées, du colombage à la peinture.",
+                "Remplacement des armoires, des rangements et des finitions endommagés.",
               ],
             },
             {
-              title: "Armoires et fabrication",
+              title: "Moisissures",
               description:
-                "Les modules gonflés ou tachés par l'eau doivent être remplacés, pas masqués.",
-              icon: "doorOpen",
+                "Souvent la conséquence d'une fuite lente ou d'une ventilation absente.",
+              icon: "shieldCheck",
               bullets: [
-                "Bois massif de bouleau pour les tiroirs.",
-                "Contreplaqué de bouleau pour mieux supporter la charge.",
-                "Fabrication contrôlée chez notre usine partenaire, pas d'assemblage improvisé.",
+                "Reconstruction après la décontamination réalisée par une firme spécialisée.",
+                "Correction de la cause : ventilation, étanchéité, drainage, pare-vapeur mal posé.",
+                "Choix de matériaux et d'assemblages adaptés aux zones humides.",
+                "Finition refaite une fois le problème d'humidité réglé à la source.",
               ],
             },
             {
-              title: "Coordination du chantier",
+              title: "Sous-sol inondé",
               description:
-                "Une reconstruction propre dépend d'un chantier séquencé correctement.",
-              icon: "wrench",
+                "La situation la plus fréquente dans l'Ouest-de-l'Île.",
+              icon: "layers",
               bullets: [
-                "Ordre des étapes cadré après l'assèchement.",
-                "Moins de reprises entre fabrication et installation.",
-                "Suivi clair jusqu'à la remise des lieux.",
+                "Retrait des finis atteints jusqu'à hauteur sûre, y compris l'isolant derrière le gypse.",
+                "Vérification du drain, de la pompe de puisard et des fissures de fondation.",
+                "Remontage du mur avec un assemblage plus tolérant à l'humidité.",
+                "Permis d'aménagement si le sous-sol est refini en espace habitable.",
               ],
             },
           ],
@@ -250,29 +175,107 @@ export const renovationApresSinistrePage: PageTemplateData = {
       id: "assurance",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "list-actions-image-card",
         props: {
-          heading: "Réclamation d'assurance : ce qu'on apporte au dossier",
-          description:
-            "La reconstruction est plus simple quand le dossier d'assurance est solide. Sans remplacer votre assureur ni votre expert, nous fournissons la matière dont la réclamation a besoin.",
-          cards: [
+          heading: "Ce que nous apportons à votre réclamation",
+          intro:
+            "Nous ne remplaçons ni votre assureur, ni votre expert en sinistre. Nous fournissons la matière technique dont la réclamation a besoin, dans le format qu'un assureur peut traiter, et nous restons disponibles pour les questions sur la portée des travaux.",
+          items: [
             {
-              title: "Portée documentée",
+              title: "Une portée écrite, pièce par pièce",
               description:
-                "Une description claire des travaux de reconstruction, pièce par pièce, avec photos à l'appui.",
+                "Description des dommages et des travaux de remise en état pour chaque pièce, plutôt qu'un montant global. C'est le document qui permet de comparer et de discuter avec l'expert.",
             },
             {
-              title: "Devis détaillé",
+              title: "Un devis détaillé par poste",
               description:
-                "Un chiffrage transparent qui distingue ce qui relève du sinistre et ce qui relève d'une amélioration souhaitée.",
+                "Démolition, mécanique, matériaux, main-d'œuvre, finition : chaque poste est chiffré séparément. Les ajustements se négocient ligne par ligne, pas sur une somme opaque.",
             },
             {
-              title: "Interlocuteur stable",
+              title: "Une documentation photo",
               description:
-                "Un seul responsable de la reconstruction, du constat à la livraison, pour limiter les zones grises.",
+                "Photos de l'état avant travaux, des ouvertures faites pour constater et des dommages cachés découverts en cours de démolition.",
+            },
+            {
+              title: "La séparation sinistre / améliorations",
+              description:
+                "Si vous en profitez pour améliorer une pièce ou changer un agencement, la part hors sinistre est isolée dans le devis. Chacun sait ce qui relève de la police et ce qui relève de vous.",
+            },
+            {
+              title: "Un interlocuteur unique jusqu'à la fin",
+              description:
+                "Le même entrepreneur du constat à la livraison, licencié et assuré. Pas de renvoi entre le démolisseur, le plâtrier et le poseur quand une question surgit.",
             },
           ],
-          columns: "1",
+          actions: [
+            {
+              label: "Voir la rénovation clé en main",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
+            {
+              label: "Demander une évaluation",
+              href: "/contact",
+              variant: "primary",
+            },
+          ],
+          image: {
+            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
+            alt: "Constat des dommages avant la reconstruction d'un plancher",
+          },
+          cardTitle: "Pourquoi la licence compte ici",
+          cardDescription:
+            "Licence RBQ 8306-0806-27, valide et sans restriction depuis 2004, cautionnement de 40 000 $ et aucune réclamation au dossier. Responsabilité civile et assurance chantier en vigueur. Des travaux réalisés par un entrepreneur licencié et inspectés se défendent mieux, autant auprès de l'assureur qu'au moment de la revente.",
+        },
+      },
+    },
+    {
+      id: "included",
+      content: {
+        type: "process",
+        variant: "horizontal-steps-cards",
+        props: {
+          heading: "Le déroulement d'une reconstruction",
+          intro:
+            "La portée finale est confirmée après l'ouverture des murs et selon le règlement de votre assureur. La séquence, elle, reste la même.",
+          steps: [
+            {
+              number: "1",
+              title: "Évaluation sur place",
+              description:
+                "Visite après l'assèchement, constat des dommages visibles et ouvertures ciblées pour vérifier ce qui se cache derrière les finis.",
+            },
+            {
+              number: "2",
+              title: "Portée et devis",
+              description:
+                "Description pièce par pièce, devis détaillé par poste et photos, dans un format utilisable par votre assureur et son expert.",
+            },
+            {
+              number: "3",
+              title: "Contrat et permis",
+              description:
+                "Signature avec l'échéancier une fois la portée réglée, puis demande de permis si la reconstruction touche la structure, la plomberie ou l'aménagement d'un sous-sol.",
+            },
+            {
+              number: "4",
+              title: "Démolition et constat final",
+              description:
+                "Retrait complet des matériaux atteints. Les dommages cachés découverts ici sont documentés et soumis en complément de réclamation avant de poursuivre.",
+            },
+            {
+              number: "5",
+              title: "Reconstruction",
+              description:
+                "Charpente, plomberie, électricité, ventilation, isolation, inspections municipales, gypse, peinture, planchers et menuiserie sur mesure.",
+            },
+            {
+              number: "6",
+              title: "Livraison",
+              description:
+                "Inspection finale avec vous, liste des derniers points, nettoyage, remise des lieux et entrée en vigueur de la garantie contractuelle.",
+            },
+          ],
         },
       },
     },
@@ -282,44 +285,56 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Les espaces qu'on reconstruit le plus souvent",
+          heading: "Les espaces reconstruits le plus souvent",
           intro:
-            "Après un dégât d'eau, ce sont surtout le sous-sol, la cuisine et les planchers qui demandent une reconstruction. Chaque espace a sa page dédiée.",
+            "Après un dégât d'eau, ce sont d'abord le sous-sol, la cuisine, la salle de bain et les planchers qui demandent une reconstruction complète.",
           items: [
             {
-              title: "Rénovation de sous-sol",
-              href: "/espaces/sous-sol",
+              title: "Finition de sous-sol",
+              href: "/services/renovation/sous-sol",
               description:
-                "L'espace le plus exposé aux inondations. Reconstruction complète, du bas de mur au rangement.",
+                "L'espace le plus exposé aux refoulements et aux inondations. Reconstruction du bas de mur, de l'isolation et de la finition, avec correction du drainage.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Sous-sol reconstruit après un dégât d'eau",
+                alt: "Sous-sol reconstruit après une inondation",
               },
-              badges: ["Sous-sol", "Après inondation"],
-              footerCtaLabel: "Voir le sous-sol",
+              badges: ["Sous-sol", "Drainage"],
+              footerCtaLabel: "Voir sous-sol",
             },
             {
               title: "Rénovation de cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Quand l'eau atteint la cuisine, armoires et bas de meubles sont souvent à remplacer.",
+                "Quand l'eau atteint la cuisine, les caissons du bas, le sous-plancher et parfois la plomberie sont à remplacer.",
               image: {
                 src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-                alt: "Reconstruction de cuisine après sinistre",
+                alt: "Cuisine reconstruite après un dégât d'eau",
               },
-              badges: ["Cuisine", "Reconstruction"],
+              badges: ["Cuisine", "Armoires"],
               footerCtaLabel: "Voir cuisine",
+            },
+            {
+              title: "Rénovation de salle de bain",
+              href: "/services/renovation/salle-de-bain",
+              description:
+                "Une fuite prolongée derrière la douche demande de tout ouvrir, de réparer la structure et de refaire l'étanchéité au complet.",
+              image: {
+                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
+                alt: "Salle de bain reconstruite après une fuite",
+              },
+              badges: ["Étanchéité", "Structure"],
+              footerCtaLabel: "Voir salle de bain",
             },
             {
               title: "Rénovation de plancher",
               href: "/services/renovation/plancher",
               description:
-                "Le revêtement de plancher est presque toujours à refaire après une inondation.",
+                "Le revêtement et souvent le sous-plancher sont à refaire après une inondation. Test d'humidité avant toute nouvelle pose.",
               image: {
                 src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-                alt: "Reconstruction de plancher après dégât d'eau",
+                alt: "Plancher remplacé après un dégât d'eau",
               },
-              badges: ["Plancher", "Revêtement"],
+              badges: ["Plancher", "Humidité"],
               footerCtaLabel: "Voir plancher",
             },
           ],
@@ -334,22 +349,22 @@ export const renovationApresSinistrePage: PageTemplateData = {
         props: {
           heading: "Ce qu'une reconstruction bien menée doit produire",
           description:
-            "La preuve de compétence ne tient pas à une finition rapide. Elle se voit dans un espace qui redevient sain, durable et cohérent, sans que le sinistre ne ressorte quelques mois plus tard.",
+            "Le but n'est pas seulement de refaire présentable. C'est de ramener le bâtiment à un état sain, conforme et documenté, pour que le sinistre ne se rejoue pas dans deux ans.",
           cards: [
             {
-              title: "Espace de nouveau sain",
+              title: "Un bâtiment réellement assaini",
               description:
-                "Les zones touchées sont reconstruites, pas masquées, pour éviter que le problème ne revienne.",
+                "Les matériaux atteints ont été retirés, pas recouverts, et la cause du sinistre a été corrigée quand elle relevait du bâtiment.",
             },
             {
-              title: "Chantier lisible",
+              title: "Un dossier qui tient",
               description:
-                "Moins de flottement sur la séquence et les responsabilités, dans une période déjà éprouvante.",
+                "Portée écrite, devis par poste et photos : une réclamation appuyée par des documents que l'assureur peut traiter.",
             },
             {
-              title: "Dossier propre",
+              title: "Des travaux conformes et garantis",
               description:
-                "Une documentation qui appuie la réclamation et clarifie ce qui a été reconstruit.",
+                "Permis obtenus, inspections passées, entrepreneur licencié et assuré, garantie contractuelle à la livraison.",
             },
           ],
           columns: "1",
@@ -362,33 +377,49 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - rénovation après sinistre",
+          heading: "FAQ — rénovation après sinistre",
           intro:
-            "Réponses claires sur l'assurance, les délais, l'assèchement et la portée des travaux.",
+            "Urgence, assurance, portée, délais, permis, dommages cachés et garantie.",
           items: [
             {
-              q: "Faites-vous l'urgence et l'assèchement?",
-              a: "Non. L'assèchement, le pompage et la décontamination sont des étapes d'urgence assurées par des entreprises spécialisées. Nous intervenons sur la reconstruction qui suit, une fois les lieux asséchés.",
+              q: "Faites-vous l'urgence, le pompage et l'assèchement ?",
+              a: "Non. Le pompage, l'assèchement, la désinfection et la décontamination sont des interventions d'urgence réalisées par des entreprises spécialisées, souvent mandatées directement par l'assureur. Nous prenons le relais sur la reconstruction, une fois les lieux asséchés et sécuritaires.",
             },
             {
-              q: "Travaillez-vous avec mon assurance?",
-              a: "Nous fournissons la portée des travaux, un devis détaillé et la documentation photo nécessaires à votre réclamation. Vous restez l'interlocuteur de l'assureur; nous appuyons le dossier de reconstruction.",
+              q: "Travaillez-vous avec mon assurance ?",
+              a: "Nous fournissons la portée écrite pièce par pièce, le devis détaillé par poste et la documentation photo dont votre réclamation a besoin, et nous restons disponibles pour répondre aux questions techniques de l'expert. Vous demeurez l'assuré et l'interlocuteur de votre assureur ; nous appuyons le volet reconstruction.",
             },
             {
-              q: "Intervenez-vous à Pierrefonds-Roxboro et dans l'Ouest-de-l'Île?",
-              a: "Oui. Nous sommes basés à Pierrefonds-Roxboro et intervenons dans tout l'Ouest-de-l'Île, à DDO et dans le Grand Montréal — la zone la plus touchée par les inondations récentes.",
+              q: "Puis-je choisir mon entrepreneur ?",
+              a: "En règle générale, oui : le propriétaire choisit qui exécute les travaux, même lorsque l'assureur propose des entreprises de son réseau. Vérifiez les modalités de votre police et discutez-en avec votre assureur avant de signer quoi que ce soit. Nous fournissons les documents nécessaires pour que notre devis soit comparé aux autres.",
             },
             {
-              q: "Combien de temps après le sinistre peut-on commencer?",
-              a: "La reconstruction commence une fois l'assèchement complété et la portée confirmée. On peut faire l'évaluation et monter le dossier en parallèle pour ne pas perdre de temps.",
+              q: "Combien de temps après le sinistre peut-on commencer ?",
+              a: "La reconstruction commence une fois l'assèchement terminé, la portée arrêtée et le règlement de la réclamation suffisamment avancé. L'évaluation et le montage du devis peuvent se faire en parallèle de l'assèchement, ce qui évite de perdre plusieurs semaines.",
             },
             {
-              q: "Quels espaces reconstruisez-vous?",
-              a: "Surtout les sous-sols, cuisines, salles de bain et planchers touchés par l'eau, avec fabrication d'armoires et de rangements sur mesure.",
+              q: "Et si vous découvrez d'autres dommages en démolissant ?",
+              a: "C'est fréquent, surtout après un dégât d'eau. Nous documentons les dommages cachés avec photos et description, vous soumettons le coût par écrit et vous permettons de déposer un complément de réclamation avant de poursuivre. Rien n'est refermé sur un problème connu.",
             },
             {
-              q: "Où voir votre approche complète de rénovation de sous-sol?",
-              a: "La page rénovation de sous-sol détaille les aménagements possibles et le niveau de finition. Pour une reconstruction après dégât d'eau, cette page est la suite logique.",
+              q: "Faut-il un permis pour reconstruire ?",
+              a: "Souvent, oui. Dès que la reconstruction touche la structure, déplace la plomberie ou consiste à refinir un sous-sol en espace habitable, un permis est requis. Nous vérifions avec votre ville ou arrondissement et déposons la demande. Des travaux faits sans permis peuvent compliquer la revente et une réclamation future.",
+            },
+            {
+              q: "Reconstruisez-vous à l'identique ou peut-on améliorer ?",
+              a: "Les deux sont possibles. La remise en état de ce qui existait relève de la réclamation ; les améliorations que vous souhaitez ajouter sont à votre charge. Nous séparons clairement les deux parts dans le devis, pour que vous et votre assureur sachiez exactement ce qui relève de quoi.",
+            },
+            {
+              q: "Intervenez-vous à Pierrefonds-Roxboro et dans l'Ouest-de-l'Île ?",
+              a: "Oui. Nos bureaux sont au 18625, rue Larocque à Pierrefonds-Roxboro, et nous couvrons tout l'Ouest-de-l'Île, Montréal, Laval, la Rive-Sud et Vaudreuil-Soulanges. Nous connaissons le parc résidentiel des secteurs riverains et leurs contraintes.",
+            },
+            {
+              q: "Quels espaces reconstruisez-vous ?",
+              a: "Surtout les sous-sols, les cuisines, les salles de bain et les planchers, mais la portée peut couvrir la maison entière selon les dommages. Les armoires, vanités et rangements endommagés sont refabriqués sur mesure et installés par nos équipes, sous la sous-catégorie 12 de notre licence.",
+            },
+            {
+              q: "Les travaux sont-ils garantis ?",
+              a: "Oui. Les travaux de reconstruction sont garantis et les modalités figurent au contrat. Notre licence RBQ 8306-0806-27 est valide et sans restriction depuis 2004, avec un cautionnement de 40 000 $ et aucune réclamation au dossier. Responsabilité civile et assurance chantier sont en vigueur.",
             },
           ],
         },
@@ -400,9 +431,9 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un dégât d'eau à reconstruire dans l'Ouest-de-l'Île?",
+          heading: "Un sinistre à reconstruire dans l'Ouest-de-l'Île ?",
           intro:
-            "On évalue les dommages, on monte le dossier pour l'assurance et on reconstruit proprement. Demandez une évaluation pour cadrer la suite.",
+            "Nous évaluons les dommages, montons la portée et le devis détaillé pour votre réclamation, puis nous reconstruisons sous un seul contrat. Appelez le (514) 820-0773 ou demandez une évaluation.",
           actions: [
             {
               label: "Demander une évaluation",
@@ -410,12 +441,12 @@ export const renovationApresSinistrePage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir la rénovation de sous-sol",
-              href: "/espaces/sous-sol",
+              label: "Voir les zones desservies",
+              href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Reconstruction après dégât d'eau, Pierrefonds-Roxboro et l'Ouest-de-l'Île",
+          note: "Licence RBQ 8306-0806-27 · Pierrefonds-Roxboro, l'Ouest-de-l'Île et le Grand Montréal",
         },
       },
     },

@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { AppLink as Link } from "@/components/AppLink";
-import { CartButton } from "@/components/shop/cart-button";
 import { DESKTOP_BUTTONS } from "./navbar.constants";
 import { Logo } from "./components/logo";
 import { DesktopNavigation } from "./components/desktop-navigation";
@@ -51,11 +50,8 @@ export function Navbar({
                 </Link>
               </Button>
             ))}
-            {/* Panier (boutique uniquement — null sur la vitrine). */}
-            <CartButton />
           </div>
           <div className="flex items-center gap-1 xl:hidden">
-            <CartButton />
             <MobileNavbarClient mobileActions={mobileActions} />
           </div>
         </div>

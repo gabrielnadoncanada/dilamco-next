@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const salleDeLavagePage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Salle de lavage sur mesure haut de gamme",
+    title: "Salle de lavage sur mesure — entrepreneur général",
     description:
-      "Salle de lavage sur mesure : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
+      "Salle de lavage sur mesure à Montréal, Laval et sur la Rive-Sud : conception, production en usine partenaire et pose par un entrepreneur général licencié.",
     path: "/espaces/salle-de-lavage",
     ogAlt: "Salle de lavage sur mesure Dilamco",
   },
@@ -32,10 +32,10 @@ export const salleDeLavagePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          eyebrow: "Dilamco - Division armoires",
           heading: "Salle de lavage sur mesure, espace technique bien cadré",
           description:
-            "Une salle de lavage sur mesure est un espace technique — rangement, plan de travail, colonnes lave-linge et sèche-linge — conçu et fabriqué pour votre configuration réelle, avec des matériaux adaptés à l'humidité et à l'usage fréquent. Chez Dilamco, dans le Grand Montréal, on conçoit et installe cet aménagement du plan à la finition.",
+            "Une salle de lavage sur mesure est un espace technique — rangement, plan de travail, colonnes lave-linge et sèche-linge — conçu et fabriqué pour votre configuration réelle, avec des matériaux adaptés à l'humidité et à l'usage fréquent. La division armoires de Dilamco, entrepreneur général licencié RBQ (8306-0806-27), conçoit l'aménagement, le fait produire par son usine partenaire et le fait poser par ses équipes, coordonné avec la plomberie et la ventilation.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -164,6 +164,11 @@ export const salleDeLavagePage: PageTemplateData = {
               href: "/espaces",
               variant: "ghost",
             },
+            {
+              label: "Rénovation résidentielle clé en main",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
           image: {
             src: "/images/generated/spaces/space-laundry-project-01.webp",
@@ -251,6 +256,10 @@ export const salleDeLavagePage: PageTemplateData = {
             {
               q: "Travaillez-vous à Montréal et autour ?",
               a: "Oui. Montréal, Laval et la Rive-Sud font partie de notre secteur.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète de la pièce ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète de la salle de lavage : déplacement de la plomberie, électricité, ventilation de la sécheuse, plancher, peinture et pose des armoires, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },

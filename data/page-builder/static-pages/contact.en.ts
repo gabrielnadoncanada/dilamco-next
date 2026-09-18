@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Contact and quote",
+    title: "Free renovation quote — contact Dilamco",
     description:
-      "Contact Dilamco for a quote on a custom kitchen, bathroom, storage or commercial project.",
+      "Tell us about your renovation or construction project. Free estimate, reply within 24 to 48 business hours. RBQ licence 8306-0806-27.",
     path: "/contact",
-    ogAlt: "Contact Dilamco",
+    ogAlt: "Contact Dilamco for a renovation estimate",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -21,12 +21,12 @@ export const pageEn: PageTemplateData = {
         type: "split",
         variant: "details-form-card",
         props: {
-          heading: "Tell us about your project",
+          heading: "Tell us about your renovation project",
           intro:
-            "Request a quote for a custom kitchen, vanity or storage project, or a renovation with coordination.",
+            "Free estimate, no strings attached. The more precise your description, the more useful our first reply: we can give you a realistic order of magnitude even before the site visit.",
           detailsTitle: "Get in touch",
           detailsIntro:
-            "We mainly support residential and commercial projects looking for a durable, well-built and well-planned solution.",
+            "Dilamco is a residential renovation general contractor based in Pierrefonds-Roxboro since 2004. RBQ licence 8306-0806-27, valid and without restrictions.",
           details: [
             {
               title: "Email",
@@ -46,15 +46,21 @@ export const pageEn: PageTemplateData = {
             },
             {
               title: "Areas served",
-              description: "Montréal, Laval and the South Shore",
+              description:
+                "West Island, Montréal, Laval, the South Shore and Vaudreuil-Soulanges.",
               icon: "map-pin",
             },
             {
-              title: "Target response time",
-              description: "Initial reply within 24 to 48 business hours.",
+              title: "Response time",
+              description:
+                "Reply within 24 to 48 business hours to book the visit and the estimate.",
               icon: "clock",
             },
           ],
+          note: "RBQ licence 8306-0806-27 — general contractor, classes 1.2 and 1.3. Civil liability insurance and site coverage in force. Free estimate, no fee and no obligation.",
+          formTitle: "Request a free estimate",
+          formIntro:
+            "This information is used only to prepare the visit and frame your project. No automated sales follow-up.",
           formAction: "/contact/",
           formMethod: "post",
           honeypotName: "website",
@@ -82,43 +88,63 @@ export const pageEn: PageTemplateData = {
                   label: "Phone",
                   autoComplete: "tel",
                   required: true,
+                  helper:
+                    "A two-minute call often saves three rounds of email.",
                 },
                 {
                   kind: "text",
                   name: "ville",
-                  label: "City / area",
+                  label: "City / area of the project",
                   autoComplete: "address-level2",
-                  placeholder: "Montréal, Laval, South Shore",
+                  placeholder: "Pierrefonds, Kirkland, Laval, Vaudreuil...",
                   required: true,
+                  helper:
+                    "Permit requirements change from one city and borough to the next.",
                 },
                 {
                   kind: "select",
                   name: "espace",
-                  label: "Type of space",
+                  label: "Type of work",
                   placeholder: "Select...",
                   required: true,
                   options: [
-                    { label: "Kitchen", value: "cuisine" },
-                    { label: "Bathroom / vanity", value: "salle-de-bain" },
-                    { label: "Walk-in / storage", value: "walk-in" },
-                    { label: "Laundry room", value: "salle-de-lavage" },
+                    { label: "Kitchen renovation", value: "cuisine" },
+                    { label: "Bathroom renovation", value: "salle-de-bain" },
+                    { label: "Basement finishing", value: "sous-sol" },
+                    { label: "Home addition", value: "agrandissement" },
+                    { label: "Flooring", value: "plancher" },
+                    {
+                      label: "Disaster restoration (water, fire)",
+                      value: "apres-sinistre",
+                    },
+                    {
+                      label: "Full renovation / several rooms",
+                      value: "renovation-complete",
+                    },
+                    { label: "Custom cabinetry only", value: "armoires" },
                     { label: "Commercial", value: "commercial" },
+                    { label: "Other", value: "autre" },
                   ],
                 },
                 {
                   kind: "select",
                   name: "type_projet",
-                  label: "Nature of the project",
+                  label: "Type of mandate",
                   placeholder: "Select...",
                   required: true,
                   options: [
                     {
-                      label: "Custom (design + fabrication + installation)",
-                      value: "sur-mesure",
+                      label:
+                        "Turnkey (general contractor, permits and coordination)",
+                      value: "cle-en-main",
                     },
                     {
                       label: "Renovation with coordination",
                       value: "renovation",
+                    },
+                    {
+                      label: "Custom cabinetry only",
+                      value: "armoires-seulement",
                     },
                     {
                       label: "To be determined / need advice",
@@ -132,19 +158,21 @@ export const pageEn: PageTemplateData = {
                   label: "Approximate budget",
                   placeholder: "Select...",
                   required: true,
+                  helper:
+                    "Our renovation projects generally start around $25,000.",
                   options: [
                     { label: "Under $15,000", value: "moins-15000" },
                     { label: "$15,000 to $25,000", value: "15000-25000" },
                     { label: "$25,000 to $40,000", value: "25000-40000" },
                     { label: "$40,000 to $60,000", value: "40000-60000" },
                     { label: "$60,000 and up", value: "60000-plus" },
-                    { label: "To discuss", value: "a-discuter" },
+                    { label: "To be discussed", value: "a-discuter" },
                   ],
                 },
                 {
                   kind: "select",
                   name: "echeance",
-                  label: "Desired timeline",
+                  label: "When would you like to start?",
                   placeholder: "Select...",
                   required: true,
                   options: [
@@ -157,16 +185,18 @@ export const pageEn: PageTemplateData = {
                 {
                   kind: "textarea",
                   name: "message",
-                  label: "Describe your project",
+                  label: "Describe the work",
                   rows: 8,
                   required: true,
+                  helper:
+                    "Type of building, year built, current condition, access constraints: anything that saves us a surprise saves you a change order.",
                   placeholder:
-                    "E.g. type of room, approximate dimensions, current condition, storage needs, desired materials, access constraints or timeline.",
+                    "E.g. 1968 bungalow, original kitchen to be redone entirely, wall to open toward the dining room, plumbing and electrical never touched, basement to be revisited later.",
                 },
               ],
             },
           ],
-          submitLabel: "Request a quote",
+          submitLabel: "Request a free estimate",
         },
       },
     },

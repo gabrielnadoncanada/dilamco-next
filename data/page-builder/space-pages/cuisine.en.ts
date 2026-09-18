@@ -6,7 +6,7 @@ export const cuisinePageEn: PageTemplateData = {
   metadata: {
     title: "Custom kitchen cabinets in Pierrefonds and Montréal",
     description:
-      "High-end custom kitchen cabinetry: design, controlled fabrication and precise installation in Pierrefonds, Montréal, Laval and Greater Montréal.",
+      "Custom kitchen cabinets in Pierrefonds and Greater Montréal, designed, supplied and installed by Dilamco, a licensed general contractor (RBQ).",
     path: "/espaces/cuisine",
     ogAlt: "Dilamco custom kitchen cabinets",
   },
@@ -29,11 +29,11 @@ export const cuisinePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Spaces",
+          eyebrow: "Dilamco - Cabinetry division",
           heading:
             "Custom kitchens and cabinetry in Pierrefonds and Greater Montréal",
           description:
-            "A custom kitchen is a set of cabinets designed and built to the exact dimensions of your room — island, storage and heights included — rather than assembled from stock modules. At Dilamco, in Pierrefonds and across Greater Montréal, we handle the design, controlled fabrication at our partner factory and installation, in solid birch and birch plywood.",
+            "A custom kitchen is a set of cabinets designed and built to the exact dimensions of your room — island, storage and heights included — rather than assembled from stock modules. The cabinetry division of Dilamco, a licensed general contractor (RBQ 8306-0806-27), designs the project, has it produced by our partner factory and installed by our own crews, coordinated with the rest of the job site.",
           actions: [
             {
               label: "Get a quote",
@@ -158,8 +158,8 @@ export const cuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
             {
-              label: "In-stock kitchen cabinets",
-              href: "/boutique/armoires-cuisine",
+              label: "Turnkey kitchen renovation",
+              href: "/services/renovation/cuisine",
               variant: "ghost",
             },
           ],
@@ -288,6 +288,10 @@ export const cuisinePageEn: PageTemplateData = {
             {
               q: "Do you also handle installation?",
               a: "Yes. The goal is consistent execution from design to installation, by the same team.",
+            },
+            {
+              q: "Can you also handle the full renovation of the room?",
+              a: "Yes — Dilamco is a general contractor (RBQ 8306-0806-27) and cabinetry is one of our divisions. We can take on the full kitchen renovation: municipal permit, demolition, plumbing, electrical, flooring, painting and cabinet installation, all coordinated by a single party. The schedule and the budget are set in the written contract before work begins.",
             },
           ],
         },

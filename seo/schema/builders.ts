@@ -57,8 +57,10 @@ export function organizationJsonLd(locale?: SchemaLocale): JsonLd {
     "@type": "Organization",
     "@id": ORG_ID,
     name: SITE.name,
+    alternateName: SITE.alternateName,
     url: SITE.url,
     legalName: SITE.legalName,
+    foundingDate: SITE.foundingDate,
     // Logo en ImageObject (avec dimensions) recommandé pour le Knowledge Panel.
     logo: {
       "@type": "ImageObject",
@@ -80,14 +82,49 @@ export function organizationJsonLd(locale?: SchemaLocale): JsonLd {
 export function localBusinessJsonLd(locale?: SchemaLocale): JsonLd {
   const data: JsonLd = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    // Entrepreneur général (GeneralContractor est un sous-type de
+    // HomeAndConstructionBusiness ; les deux sont déclarés pour la résolution
+    // d'entité GBP « Dilamco Construction »).
+    "@type": ["GeneralContractor", "HomeAndConstructionBusiness"],
     "@id": LOCALBUSINESS_ID,
     name: SITE.name,
+    alternateName: SITE.alternateName,
+    legalName: SITE.legalName,
+    foundingDate: SITE.foundingDate,
     url: SITE.url,
     image: SITE.imageUrl,
     logo: SITE.logo.url,
     priceRange: "$$$", // haut de gamme
     areaServed: SITE.areasServed.map((a) => ({ "@type": "Place", name: a })),
+    // Licence RBQ : identifiant vérifiable (registre public) + accréditation.
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "RBQ",
+      name: "Licence RBQ",
+      value: SITE.rbqLicence,
+      url: SITE.rbqRegistryUrl,
+    },
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "license",
+      name: `Licence d'entrepreneur RBQ ${SITE.rbqLicence}`,
+      recognizedBy: {
+        "@type": "GovernmentOrganization",
+        name: "Régie du bâtiment du Québec",
+        url: "https://www.rbq.gouv.qc.ca/",
+      },
+      url: SITE.rbqRegistryUrl,
+    },
+    knowsAbout: [
+      "Rénovation résidentielle",
+      "Entrepreneur général",
+      "Rénovation de cuisine",
+      "Rénovation de salle de bain",
+      "Finition de sous-sol",
+      "Agrandissement de maison",
+      "Reconstruction après sinistre",
+      "Armoires sur mesure",
+    ],
     // sameAs dupliqué sur le LocalBusiness (Google recommande le cross-référencement GBP).
     sameAs: SITE.sameAs,
     // Coordonnées géo : requis pour le Local Pack / Knowledge Panel.
@@ -160,152 +197,6 @@ export function breadcrumbJsonLd(
       position: idx + 1,
       name: it.name,
       item: it.url,
-    })),
-  };
-}
-
-/**
- * Product + Offer pour les fiches boutique (modules d'armoire en stock).
- * Prix en CAD ; dimensions exprimées en pouces (unitCode INH).
- * `brand`/`seller` référencent les entités Organization/LocalBusiness du site.
- */
-export function productJsonLd(args: {
-  name: string;
-  description?: string;
-  sku?: string;
-  category?: string;
-  image: string | string[];
-  price: number;
-  availability: boolean;
-  url: string;
-  width?: number;
-  height?: number;
-  depth?: number;
-  /**
-   * Variantes vendables (profil/couleur), chacune son prix/SKU. Rend un
-   * tableau d'`Offer` au lieu d'une offre unique — modélise le « 1 Product,
-   * N Offers » au lieu de deux fiches qui se cannibalisent.
-   */
-  offers?: Array<{
-    price: number;
-    sku?: string;
-    availability: boolean;
-    url?: string;
-    name?: string;
-  }>;
-  /** Date ISO jusqu'à laquelle le prix est valide (rich results / free listings). */
-  priceValidUntil?: string;
-  /** Attributs structurés (PropertyValue) : portes, tiroirs, couleurs, moulure… */
-  additionalProperties?: Array<{ name: string; value: string }>;
-}): JsonLd {
-  const images = (Array.isArray(args.image) ? args.image : [args.image])
-    .filter(Boolean)
-    .map((src) => (src.startsWith("http") ? src : `${SITE.url}${src}`));
-
-  const data: JsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `${args.url}#product`,
-    name: args.name,
-    image: images,
-    url: args.url,
-    brand: { "@type": "Organization", "@id": ORG_ID },
-  };
-
-  if (args.description) data.description = args.description;
-  if (args.sku) data.sku = args.sku;
-  if (args.category) data.category = args.category;
-
-  const dim = (v?: number) =>
-    typeof v === "number" && v > 0
-      ? { "@type": "QuantitativeValue", value: v, unitCode: "INH" }
-      : undefined;
-  const width = dim(args.width);
-  const height = dim(args.height);
-  const depth = dim(args.depth);
-  if (width) data.width = width;
-  if (height) data.height = height;
-  if (depth) data.depth = depth;
-
-  const toOffer = (o: {
-    price: number;
-    sku?: string;
-    availability: boolean;
-    url?: string;
-    name?: string;
-  }): JsonLd => {
-    const offer: JsonLd = {
-      "@type": "Offer",
-      price: o.price,
-      priceCurrency: "CAD",
-      availability: o.availability
-        ? "https://schema.org/InStock"
-        : "https://schema.org/OutOfStock",
-      // En stock = produit neuf (différenciateur vs reconditionné).
-      itemCondition: "https://schema.org/NewCondition",
-      url: o.url ?? args.url,
-      seller: { "@id": LOCALBUSINESS_ID },
-      businessFunction: "http://purl.org/goodrelations/v1#Sell",
-    };
-    if (o.sku) offer.sku = o.sku;
-    if (o.name) offer.name = o.name;
-    if (args.priceValidUntil) offer.priceValidUntil = args.priceValidUntil;
-    return offer;
-  };
-
-  // 1 Product, N Offers : une offre par variante (prix/SKU propres). Repli sur
-  // l'offre unique si aucune variante explicite n'est fournie.
-  const offerList = (args.offers ?? []).filter((o) => o.price > 0);
-  if (offerList.length > 1) {
-    data.offers = offerList.map(toOffer);
-  } else if (offerList.length === 1) {
-    data.offers = toOffer(offerList[0]);
-  } else if (args.price > 0) {
-    data.offers = toOffer({
-      price: args.price,
-      sku: args.sku,
-      availability: args.availability,
-      url: args.url,
-    });
-  }
-
-  // Attributs structurés (dimensions lisibles, portes, tiroirs, couleurs, moulure)
-  // — enrichit le Product pour les rich results et les AI Overviews.
-  const props = (args.additionalProperties ?? []).filter(
-    (p) => p.name && p.value,
-  );
-  if (props.length) {
-    data.additionalProperty = props.map((p) => ({
-      "@type": "PropertyValue",
-      name: p.name,
-      value: p.value,
-    }));
-  }
-
-  return data;
-}
-
-/**
- * ItemList pour les pages collection/taxonomie : liste ordonnée des fiches
- * produit. Signale à Google la structure de catégorie (et nourrit les carrousels
- * de produits / AI Overviews). `items` = URLs absolues des fiches.
- */
-export function itemListJsonLd(args: {
-  name: string;
-  url: string;
-  items: Array<{ url: string; name: string }>;
-}): JsonLd {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "@id": `${args.url}#itemlist`,
-    name: args.name,
-    numberOfItems: args.items.length,
-    itemListElement: args.items.map((it, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      url: it.url,
-      name: it.name,
     })),
   };
 }

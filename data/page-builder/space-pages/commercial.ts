@@ -4,22 +4,22 @@ import { SITE } from "@/seo/schema/site";
 export const commercialPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Armoires commerciales sur mesure haut de gamme",
+    title: "Construction et aménagement commercial à Montréal",
     description:
-      "Armoires commerciales sur mesure : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
+      "Construction et aménagement commercial à Montréal : bureaux, commerces, améliorations locatives et multi-logements, par un entrepreneur général licencié.",
     path: "/espaces/commercial",
-    ogAlt: "Commercial sur mesure Dilamco",
+    ogAlt: "Construction et aménagement commercial Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Commercial", url: SITE.url + "/espaces/commercial" },
   ],
   service: {
-    name: "Commercial",
+    name: "Construction et aménagement commercial",
     description:
-      "Conception, fabrication contrôlée et installation d'armoires commerciales sur mesure.",
+      "Rénovation et aménagement de bureaux, de commerces et d'immeubles multi-logements, améliorations locatives et mobilier intégré, par un entrepreneur général licencié RBQ.",
     url: SITE.url + "/espaces/commercial",
-    serviceType: "Armoires commerciales sur mesure",
+    serviceType: "Construction et aménagement commercial",
   },
   blocks: [
     {
@@ -29,11 +29,11 @@ export const commercialPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          eyebrow: "Dilamco - Entrepreneur général",
           heading:
-            "Armoires commerciales sur mesure, exécution stable et planifiée",
+            "Construction et aménagement commercial à Montréal et dans le Grand Montréal",
           description:
-            "Des armoires et aménagements commerciaux sur mesure sont des installations conçues et fabriquées pour un usage intensif — accueil, rangement, mobilier fonctionnel — dimensionnées pour votre local et votre échéancier. Chez Dilamco, dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et l'installation, en cadrant tôt la séquence pour respecter vos fenêtres d'ouverture.",
+            "Dilamco est entrepreneur général licencié RBQ (8306-0806-27) depuis 2004 : rénovation de bureaux, aménagement de commerces, améliorations locatives et travaux dans les immeubles multi-logements. On prend en charge le permis municipal, les corps de métier et l'échéancier, et notre division armoires fournit le mobilier intégré lorsque le projet en demande.",
           actions: [
             {
               label: "Obtenir une soumission commerciale",
@@ -45,14 +45,19 @@ export const commercialPage: PageTemplateData = {
               href: "/projets",
               variant: "ghost",
             },
+            {
+              label: "Rénovation clé en main",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
-          badges: ["Commercial", "Durable", "Planifié"],
+          badges: ["Bureaux", "Commerces", "Améliorations locatives"],
           image: {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
             alt: "Aménagement commercial sur mesure à Montréal et dans le Grand Montréal",
           },
           caption:
-            "Approche adaptée aux espaces clients, bureaux et environnements de travail",
+            "Bureaux, commerces, espaces de service et immeubles multi-logements",
         },
       },
     },
@@ -62,15 +67,15 @@ export const commercialPage: PageTemplateData = {
         type: "split",
         variant: "badges-checklist-cta",
         props: {
-          heading: "Une approche adaptée à l'usage intensif",
+          heading: "Un chantier commercial qui respecte vos opérations",
           intro:
-            "Les projets commerciaux demandent une exécution plus prévisible, des matériaux qui tiennent et une meilleure coordination.",
-          badges: ["Usage intensif", "Entretien", "Coordination"],
+            "Un local fermé plus longtemps que prévu coûte cher. Le projet est planifié pour limiter les interruptions, tenir l'échéancier et rester conforme au Code de construction du Québec.",
+          badges: ["Échéancier", "Conformité", "Coordination"],
           cardTitle: "Quand cette approche est pertinente",
           items: [
-            "Vous cherchez une solution durable et cohérente avec votre image.",
-            "L'échéancier et la fenêtre d'installation comptent vraiment.",
-            "Vous voulez réduire les risques liés à une coordination fragmentée.",
+            "Rénovation de bureaux ou aménagement d'un local commercial.",
+            "Améliorations locatives à livrer selon les termes du bail.",
+            "Immeuble multi-logements à rénover sans vider le bâtiment.",
           ],
           actions: [
             {
@@ -93,33 +98,33 @@ export const commercialPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Une séquence plus prévisible pour le commercial",
+          heading: "Une séquence prévisible, du permis à la livraison",
           intro:
-            "Le projet est cadré pour mieux gérer besoins, délais, fabrication et installation.",
+            "Le projet est cadré tôt pour gérer le permis, les corps de métier, l'échéancier et la remise du local.",
           steps: [
             {
               number: "1",
               title: "Cadrage",
               description:
-                "Usage, contraintes du lieu, entretien, circulation et besoins de marque.",
+                "Usage, contraintes du local, exigences du bail et fenêtres d'intervention.",
             },
             {
               number: "2",
-              title: "Validation",
+              title: "Permis",
               description:
-                "Plans, dimensions et décisions verrouillées avant production.",
+                "Plans, demande de permis municipal et validation de la conformité avant travaux.",
             },
             {
               number: "3",
-              title: "Fabrication",
+              title: "Exécution",
               description:
-                "Standards stables et exécution mieux contrôlée pour limiter les écarts.",
+                "Corps de métier coordonnés par un seul responsable, avec suivi de l'échéancier.",
             },
             {
               number: "4",
-              title: "Installation",
+              title: "Livraison",
               description:
-                "Logistique et pose planifiées pour réduire les perturbations sur place.",
+                "Inspection, correctifs et remise du local prêt pour l'ouverture.",
             },
           ],
         },
@@ -131,24 +136,24 @@ export const commercialPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Des spécifications pensées pour la tenue dans le temps",
+          heading: "Des spécifications pensées pour un usage commercial",
           intro:
-            "En commercial, le premium veut dire durabilité, entretien et stabilité, pas seulement apparence.",
+            "En commercial, la durabilité, l'entretien et la conformité comptent autant que l'apparence du local.",
           items: [
             {
               title: "Structure robuste",
               description:
-                "Matériaux et détails de fabrication choisis pour supporter un usage plus intense.",
+                "Matériaux et détails de construction choisis pour supporter un achalandage soutenu.",
             },
             {
               title: "Entretien simplifié",
               description:
-                "Choix de surfaces et de finitions alignés avec la réalité du lieu.",
+                "Surfaces et finitions alignées avec la réalité du lieu et son nettoyage quotidien.",
             },
             {
-              title: "Exécution plus stable",
+              title: "Conformité au Code",
               description:
-                "Spécifications cohérentes pour mieux reproduire la qualité d'un projet à l'autre.",
+                "Dégagements, sorties et installations conformes au Code de construction du Québec.",
             },
           ],
           actions: [
@@ -162,6 +167,11 @@ export const commercialPage: PageTemplateData = {
               href: "/services",
               variant: "ghost",
             },
+            {
+              label: "Rénovation clé en main",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
           ],
           image: {
             src: "/images/generated/spaces/space-commercial-project-01.webp",
@@ -169,7 +179,7 @@ export const commercialPage: PageTemplateData = {
           },
           cardTitle: "Résultat recherché",
           cardDescription:
-            "Moins de faiblesse structurelle, moins d'entretien correctif et une meilleure cohérence dans le temps.",
+            "Un local durable, conforme et livré à la date convenue, sans reprises coûteuses après l'ouverture.",
         },
       },
     },
@@ -184,10 +194,10 @@ export const commercialPage: PageTemplateData = {
             "Quelques références qui montrent la qualité d'exécution et le niveau de coordination.",
           items: [
             {
-              title: "Aménagement commercial",
+              title: "Aménagement de bureaux",
               href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
               description:
-                "Projet commercial conçu pour l'usage réel et une exécution propre.",
+                "Local de bureaux réaménagé et livré prêt à occuper, corps de métier coordonnés.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-01.webp",
                 alt: "Projet commercial à Montréal",
@@ -196,27 +206,27 @@ export const commercialPage: PageTemplateData = {
               footerCtaLabel: "Voir le projet",
             },
             {
-              title: "Armoires commerciales sur mesure",
+              title: "Améliorations locatives",
               href: "/projets",
               description:
-                "Exécution stable et matériaux adaptés à un usage plus intensif.",
+                "Local adapté aux besoins du locataire, dans le respect des termes du bail.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
                 alt: "Projet commercial à Laval",
               },
-              badges: ["Laval", "Usage intensif"],
+              badges: ["Laval", "Bail commercial"],
               footerCtaLabel: "Voir le projet",
             },
             {
-              title: "Mobilier commercial",
+              title: "Mobilier commercial intégré",
               href: "/projets",
               description:
-                "Projet sur mesure coordonné pour limiter les imprévus et soigner la finition.",
+                "Accueil, rangement technique et espaces de service fournis par notre division armoires.",
               image: {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
                 alt: "Projet commercial sur la Rive-Sud",
               },
-              badges: ["Rive-Sud", "Exécution"],
+              badges: ["Rive-Sud", "Mobilier intégré"],
               footerCtaLabel: "Voir le projet",
             },
           ],
@@ -230,25 +240,29 @@ export const commercialPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - commercial sur mesure",
+          heading: "FAQ - construction et aménagement commercial",
           intro:
             "Les questions les plus utiles avant de cadrer un projet commercial.",
           items: [
             {
               q: "Quels types de projets commerciaux réalisez-vous ?",
-              a: "Nous réalisons des aménagements et armoires sur mesure pour des espaces commerciaux où la durabilité, l'entretien et la cohérence d'exécution comptent : accueil et réception, rangement technique, mobilier fonctionnel, espaces de service. Chaque projet est dimensionné pour un usage intensif et pour votre local réel, avec des matériaux choisis pour tenir la cadence. Comme la même équipe gère la conception, la fabrication en usine partenaire et l'installation, la séquence est cadrée tôt pour respecter votre échéancier et vos fenêtres d'ouverture — un enjeu clé en contexte commercial.",
+              a: "Rénovation et aménagement de bureaux, de commerces de détail et d'espaces de service, améliorations locatives selon les termes du bail, et travaux dans les immeubles multi-logements. Dilamco est entrepreneur général licencié RBQ (8306-0806-27), ce qui permet de prendre en charge le permis, les corps de métier et l'échéancier sous une seule responsabilité. Notre division armoires fournit le mobilier intégré — accueil, rangement technique, espaces de service — quand le projet en demande.",
             },
             {
-              q: "Pouvez-vous respecter des fenêtres d'installation ?",
-              a: "Oui, lorsque le projet est bien planifié dès la conception et que la séquence est cadrée tôt.",
+              q: "Pouvez-vous respecter nos heures et nos fenêtres d'intervention ?",
+              a: "Oui, quand la séquence est cadrée dès la planification. On découpe les travaux par phases, on identifie ce qui doit être exécuté hors des heures d'ouverture et les dates sont inscrites au contrat écrit.",
             },
             {
-              q: "Faites-vous la coordination clé en main ?",
-              a: "Oui, selon la portée du projet, pour réduire la responsabilité fragmentée et les finitions inégales.",
+              q: "Vous occupez-vous des permis et de la conformité ?",
+              a: "Oui. On prépare la demande de permis municipal, on coordonne les inspections et on exécute les travaux conformément au Code de construction du Québec. Dilamco détient une licence d'entrepreneur général (catégories 1.2 Petits bâtiments et 1.3 Bâtiments de tout genre) et est assuré en responsabilité civile et chantier.",
             },
             {
               q: "Travaillez-vous à Montréal et autour ?",
-              a: "Oui. Montréal, Laval et la Rive-Sud font partie de notre secteur.",
+              a: "Oui. Notre base est dans l'Ouest-de-l'Île. On intervient à Montréal, à Laval, sur la Rive-Sud et dans Vaudreuil-Soulanges.",
+            },
+            {
+              q: "Pouvez-vous aussi faire la rénovation complète du local ?",
+              a: "Oui — Dilamco est entrepreneur général (RBQ 8306-0806-27) et les armoires sont une de nos divisions. On peut prendre en charge la rénovation complète : permis, démolition, cloisons, électricité, plomberie, ventilation, planchers, peinture et mobilier intégré, coordonnés par un seul responsable. L'échéancier et le budget sont fixés au contrat écrit avant le début des travaux.",
             },
           ],
         },
@@ -262,7 +276,7 @@ export const commercialPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet commercial",
           intro:
-            "On vous aide à cadrer un projet durable, planifié et mieux exécuté pour votre espace.",
+            "Estimation gratuite, retour sous 24 à 48 h ouvrables. On cadre la portée, le permis et l'échéancier avant de chiffrer.",
           actions: [
             {
               label: "Demander une soumission",
