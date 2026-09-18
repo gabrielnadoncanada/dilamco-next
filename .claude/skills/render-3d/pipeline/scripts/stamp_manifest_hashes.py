@@ -22,7 +22,8 @@ import json
 import sys
 from pathlib import Path
 
-STORE_ROOT = Path(r"C:/laragon/www/dilamco-next")
+# Racine du projet dérivée de l'emplacement du script (voir batch_render_parallel).
+STORE_ROOT = Path(__file__).resolve().parents[5]
 DEFAULT_MANIFEST = STORE_ROOT / "lib" / "shop" / "render-manifest.json"
 DEFAULT_RENDERS = STORE_ROOT / "public" / "assets" / "products" / "renders"
 

@@ -4,11 +4,11 @@ This script is a launcher. It runs normal Python first, loads one product from
 the Dilamco catalog JSON, then starts Blender headless and executes the real
 HB5 scene build inside Blender's Python.
 
-Example:
+Example (le --catalog par défaut = le catalogue du projet, dérivé du chemin du
+script ; --output reste requis) :
     uv run python scripts/render_product_cabinet.py ^
-      --product-code F9-B12 ^
-      --catalog C:/laragon/www/dilamco_store/lib/catalog-products.json ^
-      --output D:/dilamco_render/.smoke/F9-B12_hb5.png
+      --product-code S8-BMC27 ^
+      --output ../../../../public/assets/products/renders/s8-bmc27_face.png
 """
 
 from __future__ import annotations
@@ -39,7 +39,9 @@ WORKSPACE_SRCS = [
     REPO_ROOT / "apps" / "worker" / "src",
 ]
 
-DEFAULT_CATALOG = Path(r"C:/laragon/www/dilamco-next/lib/shop/catalog-products.json")
+# Racine du projet dérivée de l'emplacement du script, pas un chemin en dur
+# (…/dilamco-next/.claude/skills/render-3d/pipeline/scripts/<ce fichier>).
+DEFAULT_CATALOG = Path(__file__).resolve().parents[5] / "lib" / "shop" / "catalog-products.json"
 
 QUALITY_SAMPLES = {
     "fast": 24,
@@ -296,8 +298,8 @@ def infer_hb_config(product: dict[str, Any]) -> dict[str, Any]:
         }
 
     # COINS MORTS (blind corner) — aucun équivalent natif HB (HB n'a que pie cut
-    # et diagonal). Géométrie custom : carcasse pleine largeur + porte shaker
-    # (section ouvrante) + panneau aveugle SHAKER + toe-kick continu (base).
+    # et diagonal). Géométrie custom : carcasse ouverte en haut (traverse avant
+    # bouleau seulement), ouverture blind + montant central frame + porte overlay.
     cu = code.upper()
     is_ls = "-LS" in cu
     is_bbc = category == "base-cabinet-corner" and not is_ls
@@ -566,11 +568,13 @@ def build_white_material():
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
     # 0.72 quasi neutre : à 0.64 + exposure -0.25 les façades sortaient à ~203
     # de luminance = grises sur la fiche produit (feedback Gabriel 2026-07-01) ;
-    # à 0.75 avec le HDRI tourné à 270° (softbox face à la FAÇADE, feedback
-    # 2026-07-03 : façade = face la plus claire) la façade saturait au niveau du
-    # fond (241). 0.72 mesuré → façade ~235, côté ~205 : blanc franc, hiérarchie
-    # correcte. L'ancien (0.64, 0.635, 0.615) tirait aussi vers le crème.
-    bsdf.inputs["Base Color"].default_value = (0.72, 0.716, 0.705, 1.0)
+    # à 0.75 avec le HDRI tourné à 270° À PLEINE FORCE la façade saturait au
+    # niveau du fond (241). Depuis le rig Y2 (HDRI 0.5, banc 2026-07-12) il y a
+    # de la marge : l'albédo est paramétrable (--white-rgb) pour régler la
+    # blancheur du MATÉRIAU sans toucher l'exposition (chêne/navi intacts).
+    # L'ancien (0.64, 0.635, 0.615) tirait aussi vers le crème.
+    white_rgb = tuple(CONFIG.get("white_rgb", (0.72, 0.716, 0.705)))
+    bsdf.inputs["Base Color"].default_value = (*white_rgb, 1.0)
     if "Coat Weight" in bsdf.inputs:
         bsdf.inputs["Coat Weight"].default_value = 0.12
         bsdf.inputs["Coat Roughness"].default_value = 0.22
@@ -746,12 +750,15 @@ def build_navi_material():
     diff.projection = "BOX"
     diff.projection_blend = 0.12
     nt.links.new(mapping.outputs["Vector"], diff.inputs["Vector"])
-    # HSV de calibration (mêmes leviers que le chêne) — neutre par défaut :
-    # l'échantillon photo EST la référence couleur.
+    # HSV de calibration (mêmes leviers que le chêne). Défauts = recette N1 du
+    # banc 2026-07-12 : le rendu neutre (sat 1.0/val 1.0) sortait sat 41 % —
+    # marine criard — vs 4-12 % mesuré sur les photos showroom (le tonemap
+    # amplifie les ratios de canaux dans les tons foncés). sat 0.5 + val 1.6
+    # → façade RGB ~(48,54,61), pile sur l'échantillon réel navi_real_flat.png.
     hsv = nt.nodes.new("ShaderNodeHueSaturation")
     hsv.inputs["Hue"].default_value = float(CONFIG.get("navi_hue", 0.5))
-    hsv.inputs["Saturation"].default_value = float(CONFIG.get("navi_sat", 1.0))
-    hsv.inputs["Value"].default_value = float(CONFIG.get("navi_val", 1.0))
+    hsv.inputs["Saturation"].default_value = float(CONFIG.get("navi_sat", 0.5))
+    hsv.inputs["Value"].default_value = float(CONFIG.get("navi_val", 1.6))
     nt.links.new(diff.outputs["Color"], hsv.inputs["Color"])
     nt.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
 
@@ -838,9 +845,8 @@ def build_maple_interior():
     # Érable/bouleau INTÉRIEUR (boîtes de tiroir, fonds, coins, niches). PRIORITÉ :
     # le matériau réglé À LA MAIN par Gabriel dans la librairie .blend (texture
     # réelle + relief) ; sinon, aplat de secours (ancien comportement).
-    # TOUT l'intérieur (fond, côtés, plancher) = shelves_material.png, la même
-    # photo bouleau doré que les tablettes/tiroirs (demande Gabriel 2026-07-01,
-    # « on va aussi utiliser le même matériel pour l'intérieur des caissons »).
+    # TOUT l'intérieur (fond, côtés, plancher) passe par build_shelf_material :
+    # défaut BlenderKit Plywood PBR, fallback texture_boxe si le .blend manque.
     # Repli : « Dilamco_Maple_Bottom » de la librairie (erable_fond.jpg,
     # uniforme) puis aplat. Ne PAS revenir à Dilamco_Product_Maple_Interior
     # (erable_real.jpg) : joints de planche photographiés → motif répété.
@@ -874,16 +880,104 @@ def build_maple_interior():
     return material(name, (0.74, 0.66, 0.50, 1), 0.55)
 
 
+def load_blenderkit_plywood_material(target_name):
+    blend_path = CONFIG.get("blenderkit_plywood_blend") or ""
+    if not blend_path or not Path(blend_path).is_file():
+        return None
+    src_name = CONFIG.get("blenderkit_plywood_material", "Plywood")
+    try:
+        if not bpy.data.materials.get(src_name):
+            with bpy.data.libraries.load(blend_path, link=False) as (src, dst):
+                if src_name not in src.materials:
+                    log("BlenderKit plywood: matériau absent du blend: " + src_name)
+                    return None
+                dst.materials = [src_name]
+        src_mat = bpy.data.materials.get(src_name)
+        if not src_mat:
+            return None
+        mat = src_mat.copy()
+        mat.name = target_name
+        mat.use_fake_user = False
+        # Le matériau BlenderKit vient déjà avec diffuse/roughness/normal/bump.
+        # Ajustement minimal: garder l'échelle fournie, mais réduire tout shader
+        # trop brillant si une version d'asset change.
+        if mat.use_nodes:
+            nt = mat.node_tree
+            texco = None
+            mapping = None
+            for node in nt.nodes:
+                if node.type == "TEX_COORD" and texco is None:
+                    texco = node
+                elif node.type == "MAPPING" and mapping is None:
+                    mapping = node
+            if texco is None:
+                texco = nt.nodes.new("ShaderNodeTexCoord")
+            if mapping is None:
+                mapping = nt.nodes.new("ShaderNodeMapping")
+            mapping.inputs["Scale"].default_value = (
+                float(CONFIG.get("blenderkit_plywood_scale_x", 1.0)),
+                float(CONFIG.get("blenderkit_plywood_scale_y", 1.0)),
+                float(CONFIG.get("blenderkit_plywood_scale_z", 1.0)),
+            )
+            for link in list(nt.links):
+                if link.to_node == mapping and link.to_socket == mapping.inputs["Vector"]:
+                    nt.links.remove(link)
+            nt.links.new(texco.outputs["Object"], mapping.inputs["Vector"])
+            for node in nt.nodes:
+                if node.type == "TEX_IMAGE":
+                    node.projection = "BOX"
+                    node.projection_blend = 0.22
+                    node.extension = "REPEAT"
+                    node.interpolation = "Cubic"
+                    for link in list(nt.links):
+                        if link.to_node == node and link.to_socket == node.inputs["Vector"]:
+                            nt.links.remove(link)
+                    nt.links.new(mapping.outputs["Vector"], node.inputs["Vector"])
+            for node in mat.node_tree.nodes:
+                if node.type == "BSDF_PRINCIPLED":
+                    if "Metallic" in node.inputs:
+                        node.inputs["Metallic"].default_value = 0.0
+                    if "Roughness" in node.inputs and not node.inputs["Roughness"].is_linked:
+                        node.inputs["Roughness"].default_value = 0.68
+            # Calibration couleur vers le BOULEAU réel Dilamco (photos sample :
+            # drawer.jpg neutre = RGB ~(208,195,177), sat ~24 %). Le rendu du
+            # Plywood 2K natif sortait (188,176,165) sat 15 % = terne/sombre.
+            # HSV inséré entre la source du Base Color et le BSDF.
+            bk_sat = float(CONFIG.get("blenderkit_plywood_sat", 1.4))
+            bk_val = float(CONFIG.get("blenderkit_plywood_val", 1.28))
+            bk_hue = float(CONFIG.get("blenderkit_plywood_hue", 0.5))
+            if abs(bk_sat - 1.0) > 1e-3 or abs(bk_val - 1.0) > 1e-3 or abs(bk_hue - 0.5) > 1e-3:
+                for node in mat.node_tree.nodes:
+                    if node.type != "BSDF_PRINCIPLED":
+                        continue
+                    base = node.inputs["Base Color"]
+                    if base.is_linked:
+                        src_sock = base.links[0].from_socket
+                        hsv = nt.nodes.new("ShaderNodeHueSaturation")
+                        hsv.inputs["Hue"].default_value = bk_hue
+                        hsv.inputs["Saturation"].default_value = bk_sat
+                        hsv.inputs["Value"].default_value = bk_val
+                        nt.links.remove(base.links[0])
+                        nt.links.new(src_sock, hsv.inputs["Color"])
+                        nt.links.new(hsv.outputs["Color"], base)
+        log("BlenderKit plywood: " + target_name + " <- " + Path(blend_path).name)
+        return mat
+    except Exception as exc:
+        log("BlenderKit plywood: échec chargement (" + str(exc) + "), fallback local")
+        return None
+
+
 def build_shelf_material():
-    # Bois pâle de l'INTÉRIEUR (fond, côtés intérieurs, plancher, tablettes, boîtes de
-    # tiroir) : texture birch_wood.png (contreplaqué bouleau pâle propre, fournie par
-    # Gabriel) en projection BOX (raccordable, échelle réelle). Validé 2026-07-05 —
-    # remplace le PBR Wood021 (trop ambré) ; pas de rough/normal (image sans maps),
-    # roughness plate. HSV configurable mais défauts NEUTRES (image déjà propre).
+    # Bois de l'INTÉRIEUR (fond, côtés intérieurs, plancher, tablettes).
+    # Défaut actuel: matériau BlenderKit Plywood 2K (diffuse + roughness + normal),
+    # plus crédible que les anciennes images couleur seules. Fallback: texture_boxe.
     name = "Dilamco_Product_Shelf_Birch"
     mat = bpy.data.materials.get(name)
     if mat:
         return mat
+    blenderkit_mat = load_blenderkit_plywood_material(name)
+    if blenderkit_mat:
+        return blenderkit_mat
     path = CONFIG.get("shelf_diff") or ""
     if not path or not Path(path).is_file():
         return material(name, (0.82, 0.74, 0.58, 1), 0.55)  # fallback bouleau pâle uni
@@ -894,10 +988,11 @@ def build_shelf_material():
         nt.nodes.remove(node)
     out = nt.nodes.new("ShaderNodeOutputMaterial")
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
-    bsdf.inputs["Roughness"].default_value = 0.55
+    bsdf.inputs["Roughness"].default_value = float(CONFIG.get("shelf_roughness", 0.58))
     texco = nt.nodes.new("ShaderNodeTexCoord")
     mapping = nt.nodes.new("ShaderNodeMapping")
-    mapping.inputs["Scale"].default_value = (1.6, 1.6, 1.6)  # grain à l'échelle réelle
+    shelf_scale = float(CONFIG.get("shelf_scale", 1.35))
+    mapping.inputs["Scale"].default_value = (shelf_scale, shelf_scale, shelf_scale)
     nt.links.new(texco.outputs["Object"], mapping.inputs["Vector"])
     diff = nt.nodes.new("ShaderNodeTexImage")
     diff.image = bpy.data.images.load(path, check_existing=True)
@@ -906,12 +1001,69 @@ def build_shelf_material():
     nt.links.new(mapping.outputs["Vector"], diff.inputs["Vector"])
     hsv = nt.nodes.new("ShaderNodeHueSaturation")
     hsv.inputs["Hue"].default_value = float(CONFIG.get("shelf_hue", 0.5))
-    hsv.inputs["Saturation"].default_value = float(CONFIG.get("shelf_sat", 1.0))
-    hsv.inputs["Value"].default_value = float(CONFIG.get("shelf_val", 1.0))
+    hsv.inputs["Saturation"].default_value = float(CONFIG.get("shelf_sat", 0.96))
+    hsv.inputs["Value"].default_value = float(CONFIG.get("shelf_val", 0.93))
     nt.links.new(diff.outputs["Color"], hsv.inputs["Color"])
     nt.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
+    bump_strength = float(CONFIG.get("shelf_bump_strength", 0.004))
+    if bump_strength > 0:
+        bump = nt.nodes.new("ShaderNodeBump")
+        bump.inputs["Strength"].default_value = bump_strength
+        bump.inputs["Distance"].default_value = float(CONFIG.get("shelf_bump_distance", 0.004))
+        nt.links.new(diff.outputs["Color"], bump.inputs["Height"])
+        nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
     nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
-    log("Intérieur/tablettes: birch_wood BOX " + Path(path).name)
+    log("Intérieur/tablettes: bouleau showroom BOX " + Path(path).name)
+    return mat
+
+
+def build_drawerbox_material():
+    # Caisses de tiroir / plateaux roll-out = même famille plywood PBR que
+    # l'intérieur. Ça évite les conflits de couleur entre caisson/tiroir/chant.
+    name = "Dilamco_Drawer_Box_Solid"
+    mat = bpy.data.materials.get(name)
+    if mat:
+        return mat
+    blenderkit_mat = load_blenderkit_plywood_material(name)
+    if blenderkit_mat:
+        return blenderkit_mat
+    path = CONFIG.get("drawerbox_diff") or ""
+    if not path or not Path(path).is_file():
+        return build_shelf_material()  # repli : bouleau intérieur
+    mat = bpy.data.materials.new(name)
+    mat.use_nodes = True
+    nt = mat.node_tree
+    for node in list(nt.nodes):
+        nt.nodes.remove(node)
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
+    bsdf.inputs["Roughness"].default_value = float(CONFIG.get("drawerbox_roughness", 0.70))
+    texco = nt.nodes.new("ShaderNodeTexCoord")
+    mapping = nt.nodes.new("ShaderNodeMapping")
+    mapping.inputs["Scale"].default_value = (
+        float(CONFIG.get("drawerbox_scale_x", 1.00)),
+        float(CONFIG.get("drawerbox_scale_y", 1.00)),
+        float(CONFIG.get("drawerbox_scale_z", 2.90)),
+    )
+    nt.links.new(texco.outputs["Object"], mapping.inputs["Vector"])
+    diff = nt.nodes.new("ShaderNodeTexImage")
+    diff.image = bpy.data.images.load(path, check_existing=True)
+    diff.projection = "BOX"
+    diff.projection_blend = 0.15
+    nt.links.new(mapping.outputs["Vector"], diff.inputs["Vector"])
+    hsv = nt.nodes.new("ShaderNodeHueSaturation")
+    hsv.inputs["Hue"].default_value = float(CONFIG.get("drawerbox_hue", 0.5))
+    hsv.inputs["Saturation"].default_value = float(CONFIG.get("drawerbox_sat", 0.95))
+    hsv.inputs["Value"].default_value = float(CONFIG.get("drawerbox_val", 0.94))
+    nt.links.new(diff.outputs["Color"], hsv.inputs["Color"])
+    nt.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
+    bump = nt.nodes.new("ShaderNodeBump")
+    bump.inputs["Strength"].default_value = float(CONFIG.get("drawerbox_bump_strength", 0.008))
+    bump.inputs["Distance"].default_value = float(CONFIG.get("drawerbox_bump_distance", 0.007))
+    nt.links.new(diff.outputs["Color"], bump.inputs["Height"])
+    nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+    nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
+    log("Caisses de tiroir: texture BOX " + Path(path).name)
     return mat
 
 
@@ -1042,8 +1194,16 @@ def normalize_product_materials(cabinet):
             # peint blanc sur les caissons blancs. (Une lampe d'appoint kick a
             # été essayée : elle délave le tiroir du bas, rejetée.)
             if is_microwave:
-                # Niche micro-ondes : toutes les faces au fini extérieur.
-                assign_material(obj, interior_mat)
+                # Niche micro-ondes : parois au fini extérieur. Caisses de tiroir =
+                # bouleau (pas blanches) mais masquées en vue face (débordent parfois
+                # du caisson après recalage HB).
+                if obj.get("IS_DRAWER_BOX") or "drawer box" in lname:
+                    assign_material(obj, build_drawerbox_material())
+                    if CONFIG.get("category") == "base-microwave-cabinet":
+                        obj.hide_render = True
+                        obj.hide_viewport = True
+                else:
+                    assign_material(obj, interior_mat)
             elif CONFIG.get("finish_type") != "oak" and "bottom" in lname:
                 # Finis peints/mélamine unis (blanc, navi) : le dessous prend le
                 # fini extérieur (évite le rebond crème/érable sur le toe-kick).
@@ -1056,8 +1216,11 @@ def normalize_product_materials(cabinet):
                 # vrais caissons Dilamco : caisson en contreplaqué bouleau russe,
                 # bois visible côtés/fond/dessus). Vaut pour muraux ET bas.
                 assign_material(obj, build_shelf_material())
-            elif obj.get("IS_DRAWER_BOX") or "shelf" in lname or "tray" in lname:
-                # Tablettes + boîtes de tiroir = bouleau doré (photo Gabriel).
+            elif obj.get("IS_DRAWER_BOX"):
+                # Caisses de tiroir + plateaux = bois chaud lisse, assorti au bouleau intérieur.
+                assign_material(obj, build_drawerbox_material())
+            elif "shelf" in lname or "tray" in lname:
+                # Tablettes = bouleau miel showroom.
                 assign_material(obj, build_shelf_material())
             else:
                 assign_material(obj, interior_mat)
@@ -1068,8 +1231,11 @@ def normalize_product_materials(cabinet):
 
         if not any(m.type == "BEVEL" for m in obj.modifiers):
             bevel = obj.modifiers.new("product edge radius", "BEVEL")
-            bevel.width = 0.0008
-            bevel.segments = 2
+            # Arête ARRONDIE (eased edge) ~1,8 mm : capte un liseré lumière/ombre sur
+            # les bords du shaker (arêtes « qui roulent la lumière » comme les photos
+            # produit pro) au lieu d'une arête vive/plate. 3 segments = arrondi lisse.
+            bevel.width = 0.0014
+            bevel.segments = 3
             bevel.use_clamp_overlap = True
         if not any(m.type == "WEIGHTED_NORMAL" for m in obj.modifiers):
             obj.modifiers.new("product weighted normals", "WEIGHTED_NORMAL")
@@ -1099,7 +1265,9 @@ def normalize_product_materials(cabinet):
         elif is_interior and "top" in lname:
             # Dessus carcasse = contreplaqué bouleau (muraux ET bas).
             inject = build_shelf_material()
-        elif is_interior and (obj.get("IS_DRAWER_BOX") or "shelf" in lname or "tray" in lname):
+        elif is_interior and obj.get("IS_DRAWER_BOX"):
+            inject = build_drawerbox_material()
+        elif is_interior and ("shelf" in lname or "tray" in lname):
             inject = build_shelf_material()
         elif is_interior:
             inject = interior_mat
@@ -1160,8 +1328,533 @@ def _frame_slab(name, x0, x1, y0, y1, z0, z1, mat, cabinet):
     return ob
 
 
+def _frame_union(name, rects, y0, y1, mat, cabinet):
+    # Cadre complet en UN SEUL mesh. Les rectangles X/Z (rails + montants) sont
+    # unionnés sur une grille; on ne crée des faces latérales que sur le contour
+    # exposé. Le bevel est limité aux angles réels, donc aucune couture visuelle
+    # aux jonctions rail/montant.
+    xs = sorted({v for r in rects for v in (r[0], r[1])})
+    zs = sorted({v for r in rects for v in (r[2], r[3])})
+
+    filled = set()
+    for ix in range(len(xs) - 1):
+        for iz in range(len(zs) - 1):
+            cx = (xs[ix] + xs[ix + 1]) / 2.0
+            cz = (zs[iz] + zs[iz + 1]) / 2.0
+            if any(x0 <= cx <= x1 and z0 <= cz <= z1 for x0, x1, z0, z1 in rects):
+                filled.add((ix, iz))
+
+    verts = []
+    faces = []
+
+    def v(x, y, z):
+        verts.append((x, y, z))
+        return len(verts) - 1
+
+    def add_face(points):
+        faces.append([v(x, y, z) for x, y, z in points])
+
+    for ix, iz in filled:
+        x0, x1 = xs[ix], xs[ix + 1]
+        z0, z1 = zs[iz], zs[iz + 1]
+        # Front/back faces. Coplanar cell edges are not beveled because the bevel
+        # modifier below is angle-limited.
+        add_face([(x0, y0, z0), (x1, y0, z0), (x1, y0, z1), (x0, y0, z1)])
+        add_face([(x1, y1, z0), (x0, y1, z0), (x0, y1, z1), (x1, y1, z1)])
+        if (ix - 1, iz) not in filled:
+            add_face([(x0, y1, z0), (x0, y0, z0), (x0, y0, z1), (x0, y1, z1)])
+        if (ix + 1, iz) not in filled:
+            add_face([(x1, y0, z0), (x1, y1, z0), (x1, y1, z1), (x1, y0, z1)])
+        if (ix, iz - 1) not in filled:
+            add_face([(x0, y1, z0), (x1, y1, z0), (x1, y0, z0), (x0, y0, z0)])
+        if (ix, iz + 1) not in filled:
+            add_face([(x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1)])
+
+    me = bpy.data.meshes.new(name)
+    me.from_pydata(verts, [], faces)
+    me.update()
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.scene.collection.objects.link(ob)
+    ob.data.materials.append(mat)
+    if cabinet is not None:
+        ob.parent = cabinet
+        ob.matrix_parent_inverse = cabinet.matrix_world.inverted()
+    bev = ob.modifiers.new("edge", "BEVEL")
+    bev.width = 0.0008
+    bev.segments = 2
+    bev.use_clamp_overlap = True
+    bev.limit_method = "ANGLE"
+    bev.angle_limit = 0.1
+    ob.modifiers.new("weighted normals", "WEIGHTED_NORMAL")
+    return ob
+
+
+def _evaluated_bbox(o):
+    bpy.context.view_layer.update()
+    dg = bpy.context.evaluated_depsgraph_get()
+    ev = o.evaluated_get(dg)
+    me = ev.to_mesh()
+    try:
+        pts = [o.matrix_world @ v.co for v in me.vertices]
+    finally:
+        ev.to_mesh_clear()
+    if not pts:
+        return _own_bbox(o)
+    return (
+        Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts))),
+        Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts))),
+    )
+
+
+def replace_hb_fronts_with_clean_shaker(cabinet, fronts, finish):
+    # Home Builder's Door Style geonode emits a single drawer/door mesh, but its
+    # front face still contains rail/stile cell boundaries. Cycles reads those
+    # boundaries as hairline joints at the frame corners. Replace render fronts
+    # with our unioned shaker frame: one continuous frame volume + one recessed
+    # panel, preserving the drawer/door flags used by open_drawers/open_doors.
+    replaced = 0
+    for old, _, _ in list(fronts):
+        if old.name not in bpy.data.objects or old.hide_render:
+            continue
+        if old.get("IS_RENDER_PULLOUT_FRONT"):
+            continue
+        if old.get("IS_SINK_APRON_FRONT"):
+            continue  # déjà un front shaker propre (rebuild_sink_apron_front)
+        lname = old.name.lower()
+        is_front = old.get("IS_DRAWER_FRONT") or old.get("IS_CABINET_FRONT") or "drawer front" in lname
+        if not is_front:
+            continue
+        bb0, bb1 = _evaluated_bbox(old)
+        width = bb1.x - bb0.x
+        height = bb1.z - bb0.z
+        thickness = bb1.y - bb0.y
+        if width <= 0.05 or height <= 0.05 or thickness <= 0.003:
+            continue
+        center = ((bb0.x + bb1.x) / 2.0, (bb0.y + bb1.y) / 2.0, (bb0.z + bb1.z) / 2.0)
+        old_name = old.name
+        props = {str(k): old.get(k) for k in old.keys()}
+        new = _shaker_door(width, height, thickness, center, finish, parent=cabinet, name=old_name)
+        for key, value in props.items():
+            new[key] = value
+        if old.get("IS_DRAWER_FRONT"):
+            new["IS_DRAWER_FRONT"] = True
+        if old.get("IS_CABINET_FRONT"):
+            new["IS_CABINET_FRONT"] = True
+        bpy.data.objects.remove(old, do_unlink=True)
+        new.name = old_name
+        new.data.name = old_name + "_CleanMesh"
+        replaced += 1
+    if replaced:
+        bpy.context.view_layer.update()
+        log("façades shaker propres: " + str(replaced) + " front(s) HB remplacé(s)")
+
+
+def _remove_object_tree(obj):
+    for child in list(obj.children):
+        _remove_object_tree(child)
+    if obj.name in bpy.data.objects:
+        bpy.data.objects.remove(obj, do_unlink=True)
+
+
+def merge_single_door_drawer_front(cabinet, finish):
+    # HB5's "Base Door Drw" creates two lower doors even when the catalog SKU is
+    # a single-door base cabinet. For product renders this reads fake next to the
+    # reference photos: a 12-21" base with 1 drawer + 1 door should have one
+    # full-width bottom door. Merge only that specific layout, after the clean
+    # shaker replacement, before open_doors() rotates the front.
+    if CONFIG.get("front_layout") != "DOOR_DRAWER" or int(CONFIG.get("doors") or 0) != 1:
+        return 0
+
+    candidates = []
+    for obj in bpy.data.objects:
+        if obj.type != "MESH" or obj.hide_render or _is_pull(obj):
+            continue
+        if obj.get("IS_DRAWER_FRONT"):
+            continue
+        if not obj.get("IS_CABINET_FRONT"):
+            continue
+        bb0, bb1 = _evaluated_bbox(obj)
+        if (bb1.z - bb0.z) < 0.20 or (bb1.x - bb0.x) < 0.05:
+            continue
+        candidates.append((obj, bb0, bb1))
+    if len(candidates) < 2:
+        return 0
+
+    x0 = min(bb0.x for _, bb0, _ in candidates)
+    x1 = max(bb1.x for _, _, bb1 in candidates)
+    y0 = min(bb0.y for _, bb0, _ in candidates)
+    y1 = max(bb1.y for _, _, bb1 in candidates)
+    z0 = min(bb0.z for _, bb0, _ in candidates)
+    z1 = max(bb1.z for _, _, bb1 in candidates)
+    width = x1 - x0
+    height = z1 - z0
+    thickness = y1 - y0
+    if width <= 0.08 or height <= 0.20 or thickness <= 0.003:
+        return 0
+
+    for obj, _, _ in candidates:
+        _remove_object_tree(obj)
+    door = _shaker_door(
+        width,
+        height,
+        thickness,
+        ((x0 + x1) / 2.0, (y0 + y1) / 2.0, (z0 + z1) / 2.0),
+        finish,
+        parent=cabinet,
+        name="Single Door Front",
+    )
+    door["IS_CABINET_FRONT"] = True
+    door["IS_SINGLE_DOOR_MERGED"] = True
+    bpy.context.view_layer.update()
+    log("porte simple fusionnée: " + str(len(candidates)) + " fronts -> 1")
+    return 1
+
+
+def rebuild_sink_apron_front(cabinet, fronts, finish):
+    # Évier de ferme : HB pose un TABLIER plat (CabinetPart « Sink Apron », panneau
+    # geonode inset au fini). Précision Gabriel : le HAUT doit être une FAUSSE PORTE
+    # SHAKER, comme les autres façades — pas un panneau plat. On remplace ce panneau
+    # par un front shaker OVERLAY aligné sur les portes du dessous (même largeur +
+    # même plan Y), hauteur = celle du tablier HB. On l'ajoute à `fronts` pour que le
+    # face frame trace la traverse entre le faux-tiroir et les portes (look « 1 tiroir
+    # + 2 portes »). replace_hb_fronts_with_clean_shaker le saute (déjà propre).
+    if CONFIG.get("category") != "base-cabinet-farmhouse-sink":
+        return
+    aprons = [
+        o for o in cabinet.children_recursive
+        if o.type == "MESH" and not o.hide_render and "sink apron" in o.name.lower()
+    ]
+    doors = [
+        (o, b0, b1) for (o, b0, b1) in fronts
+        if o.name.lower().endswith("door") or " door" in o.name.lower()
+    ]
+    if not aprons or not doors:
+        log("tablier évier: apron ou portes introuvables, ignoré")
+        return
+    ab0, ab1 = _evaluated_bbox(aprons[0])
+    dx0 = min(b0.x for (_, b0, _) in doors)
+    dx1 = max(b1.x for (_, _, b1) in doors)
+    door_top = max(b1.z for (_, _, b1) in doors)
+    dy0 = min(b0.y for (_, b0, _) in doors)
+    dy1 = max(b1.y for (_, _, b1) in doors)
+    reveal = 0.003
+    z_bot = door_top + reveal
+    z_top = ab1.z
+    if z_top - z_bot < 0.03:  # sécurité : garde au moins la hauteur du tablier HB
+        z_top = z_bot + max(ab1.z - ab0.z, 0.12)
+    width = dx1 - dx0
+    height = z_top - z_bot
+    thickness = max(dy1 - dy0, 0.016)
+    center = ((dx0 + dx1) / 2.0, (dy0 + dy1) / 2.0, (z_bot + z_top) / 2.0)
+    for a in aprons:
+        _remove_object_tree(a)
+    front = _shaker_door(width, height, thickness, center, finish, parent=cabinet, name="Sink Apron Front")
+    front["IS_CABINET_FRONT"] = True
+    front["IS_SINK_APRON_FRONT"] = True
+    bpy.context.view_layer.update()
+    nb0, nb1 = _own_bbox(front)
+    fronts.append((front, nb0, nb1))
+    log("tablier évier -> fausse porte shaker (l=%.3f h=%.3f)" % (width, height))
+
+
+def reposition_base_microwave_splitter(cabinet, finish):
+    # Plan technique MDB : niche 14-3/4 po + traverse 1-1/2 po + tiroir 10-3/4 po.
+    # Repositionne seulement le séparateur niche/tiroir ; la façade est finalisée
+    # APRÈS le cadre (dos adossé sur fy0) — voir finalize_base_microwave_drawer_front.
+    if CONFIG.get("category") != "base-microwave-cabinet":
+        return None
+    inch = 0.0254
+    FW = 0.0381
+    drawer_open_h = 10.75 * inch
+    mic_open_h = 14.75 * inch
+
+    bmn, bmx = world_bbox(cabinet)
+    toe_top = bmn.z
+    for o in cabinet.children_recursive:
+        if o.type == "MESH" and not o.hide_render and "toe" in o.name.lower():
+            toe_top = world_bbox(o)[1].z
+            break
+    zb = toe_top
+    zt = bmx.z
+    zb1 = zb + FW
+    zt0 = zt - FW
+    if (zt0 - zb1) < drawer_open_h + mic_open_h + FW - 0.02:
+        log("micro-ondes base: hauteur intérieure insuffisante, splitter non recalé")
+        return None
+
+    rail_zc = zb1 + drawer_open_h + FW / 2.0
+    mic_floor_z = zb1 + drawer_open_h + FW
+
+    for o in cabinet.children_recursive:
+        if o.type != "MESH" or "vertical splitter" not in o.name.lower():
+            continue
+        ad = o.animation_data
+        if ad:
+            for d in list(ad.drivers):
+                if d.data_path == "location":
+                    ad.drivers.remove(d)
+        bb0, bb1 = world_bbox(o)
+        o.location.z += mic_floor_z - bb1.z
+        assign_material(o, finish)
+
+    bpy.context.view_layer.update()
+    log(
+        "micro-ondes base: splitter niche/tiroir @ z="
+        + str(round(mic_floor_z, 3))
+        + " (tiroir "
+        + str(round(drawer_open_h / inch, 2))
+        + '" / niche '
+        + str(round(mic_open_h / inch, 2))
+        + '")'
+    )
+    return {
+        "rail_z": rail_zc,
+        "box_z": zb1 + drawer_open_h / 2.0,
+        "box_h": drawer_open_h,
+        "mic_floor_z": mic_floor_z,
+        "zb": zb,
+        "FW": FW,
+    }
+
+
+def finalize_base_microwave_drawer_front(cabinet, finish, fy0, xL, xR, zb, FW):
+    # Façade tiroir overlay recalée EN DERNIER : dos exactement sur fy0 (face avant
+    # du cadre), comme toutes les autres façades après front_shift.
+    if CONFIG.get("category") != "base-microwave-cabinet":
+        return
+    inch = 0.0254
+    reveal = 0.003
+    drawer_open_h = 10.75 * inch
+    door_t = 0.019
+    zb1 = zb + FW
+    front_z0 = zb + reveal
+    front_z1 = zb1 + drawer_open_h + FW - reveal
+    front_h = front_z1 - front_z0
+    front_w = (xR - xL) - 2.0 * reveal
+    front_cx = (xL + xR) / 2.0
+    front_cz = (front_z0 + front_z1) / 2.0
+    # Dos façade (y1) = fy0 ; avant vers la caméra (-Y).
+    cy = fy0 - door_t / 2.0
+
+    drawer_fronts = [
+        o for o in cabinet.children_recursive
+        if o.type == "MESH" and not o.hide_render and not _is_pull(o)
+        and o.get("IS_DRAWER_FRONT")
+    ]
+    if not drawer_fronts:
+        log("micro-ondes base: finalize — aucune façade tiroir")
+        return
+
+    for o in cabinet.children_recursive:
+        if o.type == "MESH" and "drawer box" in o.name.lower():
+            w = o.matrix_world.copy()
+            o.parent = cabinet
+            o.matrix_world = w
+
+    for old in drawer_fronts:
+        old_name = old.name
+        props = {str(k): old.get(k) for k in old.keys()}
+        _remove_object_tree(old)
+        new = _shaker_door(
+            front_w, front_h, door_t, (front_cx, cy, front_cz), finish,
+            parent=None, name=old_name,
+        )
+        for key, value in props.items():
+            new[key] = value
+        new["IS_DRAWER_FRONT"] = True
+        new["IS_CLEAN_SHAKER_FRONT"] = True
+        new.data.name = old_name + "_CleanMesh"
+
+    bpy.context.view_layer.update()
+    log(
+        "micro-ondes base: façade tiroir finalisée "
+        + str(round(front_w / inch, 1))
+        + 'x'
+        + str(round(front_h / inch, 2))
+        + '" dos@fy0='
+        + str(round(fy0, 4))
+    )
+
+
+def resize_base_microwave_drawer(cabinet, finish):
+    return reposition_base_microwave_splitter(cabinet, finish)
+
+
+def finalize_garbage_pullout_fronts(cabinet, finish, fy0, xL, xR, zb, zt, FW, rails_z):
+    # Caisson déchets HB : tiroir utilitaire EN HAUT + pull-out pleine largeur EN BAS.
+    # Comme le micro-ondes, les façades overlay doivent être recalées EN DERNIER sur
+    # fy0 (dos sur le cadre) avec la bonne largeur — sinon le tiroir HB reste décalé
+    # en X/Z et la traverse horizontale entre les deux fronts disparaît visuellement.
+    # IMPORTANT : après rebuild, recentrer la CAISSE du tiroir haut sur la nouvelle
+    # façade — sinon open_drawers() rate le pairing (ΔZ) et la façade flotte seule.
+    if CONFIG.get("category") != "base-cabinet-garbage-pull-out" or not rails_z:
+        return
+    reveal = 0.003
+    door_t = 0.019
+    mid_z = sorted(rails_z)[0]
+    mid_bot = mid_z - FW / 2.0
+    mid_top = mid_z + FW / 2.0
+    front_w = (xR - xL) - 2.0 * reveal
+    front_cx = (xL + xR) / 2.0
+    cy = fy0 - door_t / 2.0
+
+    # Overlay : les deux façades SE RECOUVRENT sur la traverse (ne laissent
+    # qu'un reveal ~3 mm). Sinon toute la traverse 1.5" reste visible = barre grise.
+    drawer_z1 = zt - reveal
+    drawer_z0 = mid_z + reveal / 2.0
+    pull_z0 = zb + reveal
+    pull_z1 = mid_z - reveal / 2.0
+    # Ouverture utile tiroir (entre traverses) — hauteur de CAISSE, pas overlay.
+    open_z0 = mid_top
+    open_z1 = zt - FW
+    open_h = max(0.05, open_z1 - open_z0)
+    open_cz = (open_z0 + open_z1) / 2.0
+    box_w = max(0.12, (xR - xL) - 2.0 * FW - 0.014)
+
+    specs = [
+        ("drawer", drawer_z0, drawer_z1, "IS_DRAWER_FRONT"),
+        ("pullout", pull_z0, pull_z1, "IS_RENDER_PULLOUT_FRONT"),
+    ]
+    rebuilt = 0
+    drawer_front = None
+    for kind, z0, z1, flag in specs:
+        front_h = z1 - z0
+        if front_h <= 0.05 or front_w <= 0.05:
+            continue
+        front_cz = (z0 + z1) / 2.0
+        old_list = [
+            o for o in list(bpy.data.objects)
+            if o.type == "MESH" and not o.hide_render and not _is_pull(o)
+            and (o.get(flag) or (kind == "pullout" and o.get("IS_PULLOUT_FRONT")))
+        ]
+        old_name = old_list[0].name if old_list else ("Drawer Front" if kind == "drawer" else "Pullout Front")
+        props = {str(k): old_list[0].get(k) for k in old_list[0].keys()} if old_list else {}
+        for old in old_list:
+            _remove_object_tree(old)
+        new = _shaker_door(
+            front_w, front_h, door_t, (front_cx, cy, front_cz), finish,
+            parent=None, name=old_name,
+        )
+        for key, value in props.items():
+            new[key] = value
+        new[flag] = True
+        if kind == "pullout":
+            new["IS_PULLOUT_FRONT"] = True
+            new["IS_GARBAGE_PULLOUT_PART"] = True
+        elif kind == "drawer":
+            new["IS_DRAWER_FRONT"] = True
+            drawer_front = new
+        new["IS_CLEAN_SHAKER_FRONT"] = True
+        new.name = old_name
+        new.data.name = old_name + "_CleanMesh"
+        # Re-parenter au caisson (transform monde conservé) pour le cadrage caméra.
+        fmw = new.matrix_world.copy()
+        new.parent = cabinet
+        new.matrix_world = fmw
+        rebuilt += 1
+
+    # HB « Base Garbage Pull-Out » ne pose PAS de vraie caisse pour le tiroir
+    # utilitaire du haut : le seul « Drawer Box » est un insert pull-out géant
+    # (h~0.58 m, zc sous la traverse). On le masque et on construit une caisse
+    # bouleau propre dans l'ouverture haute, parentée à la façade.
+    for o in list(bpy.data.objects):
+        if o.type != "MESH" or o.hide_render:
+            continue
+        ln = o.name.lower()
+        if o.get("IS_DRAWER_BOX") or "drawer box" in ln or "tray" in ln:
+            log("déchets coulissant: insert HB masqué <- " + o.name)
+            o.hide_render = True
+            o.hide_viewport = True
+
+    box_built = 0
+    if drawer_front is not None and open_h > 0.05:
+        # Une seule caisse (mesh unionné) — pas de cubes scale-parentés
+        # (sinon bbox caméra explose → packshot zoomé sur un coin bois).
+        birch = build_shelf_material()
+        t = 0.012
+        box_h = max(0.05, open_h - 0.010)
+        box_d = 0.48
+        fb0, fb1 = _evaluated_bbox(drawer_front)
+        y0 = fb1.y + 0.0016
+        y1 = y0 + box_d
+        z0 = open_cz - box_h / 2.0
+        z1 = open_cz + box_h / 2.0
+        x0 = front_cx - box_w / 2.0
+        x1 = front_cx + box_w / 2.0
+        # Fond + 4 parois (haut ouvert), rectangles X/Z ou Y comme face frame.
+        import bmesh
+        me = bpy.data.meshes.new("GarbageUtilityDrawerBox")
+        bm = bmesh.new()
+        walls = [
+            # bottom
+            (x0, x1, y0, y1, z0, z0 + t),
+            # left / right
+            (x0, x0 + t, y0, y1, z0, z1),
+            (x1 - t, x1, y0, y1, z0, z1),
+            # back / front lip
+            (x0, x1, y1 - t, y1, z0, z1),
+            (x0, x1, y0, y0 + t, z0, z0 + box_h * 0.55),
+        ]
+        for wx0, wx1, wy0, wy1, wz0, wz1 in walls:
+            verts = [
+                bm.verts.new((wx0, wy0, wz0)),
+                bm.verts.new((wx1, wy0, wz0)),
+                bm.verts.new((wx1, wy1, wz0)),
+                bm.verts.new((wx0, wy1, wz0)),
+                bm.verts.new((wx0, wy0, wz1)),
+                bm.verts.new((wx1, wy0, wz1)),
+                bm.verts.new((wx1, wy1, wz1)),
+                bm.verts.new((wx0, wy1, wz1)),
+            ]
+            bm.faces.new((verts[0], verts[1], verts[2], verts[3]))
+            bm.faces.new((verts[4], verts[7], verts[6], verts[5]))
+            bm.faces.new((verts[0], verts[4], verts[5], verts[1]))
+            bm.faces.new((verts[1], verts[5], verts[6], verts[2]))
+            bm.faces.new((verts[2], verts[6], verts[7], verts[3]))
+            bm.faces.new((verts[3], verts[7], verts[4], verts[0]))
+        bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=0.0001)
+        bm.to_mesh(me)
+        bm.free()
+        root = bpy.data.objects.new("Garbage Utility Drawer Box", me)
+        bpy.context.scene.collection.objects.link(root)
+        root.data.materials.append(birch)
+        root["IS_DRAWER_BOX"] = True
+        bpy.context.view_layer.update()
+        # Centrer en X sur la façade AVANT parentage (façade peut être à cx ≠ 0).
+        fb0, fb1 = _evaluated_bbox(drawer_front)
+        bb0, bb1 = _evaluated_bbox(root)
+        root.location.x += (fb0.x + fb1.x) / 2.0 - (bb0.x + bb1.x) / 2.0
+        bpy.context.view_layer.update()
+        mw = root.matrix_world.copy()
+        root.parent = drawer_front
+        root.matrix_world = mw
+        box_built = 1
+    if rebuilt:
+        bpy.context.view_layer.update()
+        log(
+            "déchets coulissant: "
+            + str(rebuilt)
+            + " façade(s) + "
+            + str(box_built)
+            + " caisse utilitaire, dos@fy0="
+            + str(round(fy0, 4))
+        )
+
+
+def _opening_for_z(openings_z, z):
+    # Ouverture du cadre (espace net entre deux traverses) qui contient z ;
+    # à défaut, la plus proche en centre. Sert à borner une caisse de tiroir
+    # pour qu'elle passe DANS le cadre au lieu de le traverser.
+    for (z0, z1) in openings_z:
+        if z0 <= z <= z1:
+            return (z0, z1)
+    if not openings_z:
+        return None
+    return min(openings_z, key=lambda t: abs((t[0] + t[1]) / 2.0 - z))
+
+
 def add_face_frame(cabinet):
-    # CADRE DE FAÇADE (face frame) — réalité Dilamco (voir mémoire) : cadre 2 po au
+    # CADRE DE FAÇADE (face frame) — cadre 1 1/2 po au
     # FINI EXTÉRIEUR sur le devant de la boîte. Les façades (overlay, plus larges)
     # s'accotent sur le cadre et le couvrent en fermé ; on le voit à l'ouverture.
     # Les BOÎTES de tiroir sont rétrécies + recentrées pour PASSER dans l'ouverture
@@ -1169,9 +1862,14 @@ def add_face_frame(cabinet):
     # (pas de vrai séparateur entre tiroirs). Tout est piloté par des drivers HB :
     # on coupe le driver de largeur (Socket_2) et de location des boîtes avant de
     # figer, sinon HB écrase nos valeurs. À appeler EN DERNIER (après le reste).
-    FW = 0.0508  # largeur montants/traverses (2 po)
+    FW = 0.0381  # largeur montants/traverses (1 1/2 po)
     FT = 0.019   # épaisseur du cadre
     finish = build_finish_material()
+    mic_middle_rail = resize_base_microwave_drawer(cabinet, finish)
+    mic_box_z = mic_middle_rail["box_z"] if mic_middle_rail else None
+    mic_box_h = mic_middle_rail["box_h"] if mic_middle_rail else None
+    mic_rail_z = mic_middle_rail["rail_z"] if mic_middle_rail else None
+    mic_floor_z = mic_middle_rail["mic_floor_z"] if mic_middle_rail else None
     bmn, bmx = world_bbox(cabinet)
     cx = (bmn.x + bmx.x) / 2.0
     xL, xR = bmn.x, bmx.x
@@ -1180,13 +1878,30 @@ def add_face_frame(cabinet):
     for o in cabinet.children_recursive:
         if o.type != "MESH" or o.hide_render or _is_pull(o):
             continue
+        if o.get("IS_CLEAN_SHAKER_PANEL"):
+            continue
         ln = o.name.lower()
-        if "drawer front" in ln or "pullout front" in ln or ln.endswith("door") or " door" in ln:
-            bb0, bb1 = _own_bbox(o)  # bbox propre : sans la boîte enfant (profonde)
-            fronts.append((o, bb0, bb1))
+        is_front = (
+            o.get("IS_DRAWER_FRONT")
+            or o.get("IS_RENDER_PULLOUT_FRONT")
+            or o.get("IS_PULLOUT_FRONT")
+            or o.get("IS_CABINET_FRONT")
+            or "drawer front" in ln
+            or "pullout front" in ln
+            or ln.endswith("door")
+            or " door" in ln
+        )
+        if not is_front:
+            continue
+        bb0, bb1 = _own_bbox(o)  # bbox propre : sans la boîte enfant (profonde)
+        fronts.append((o, bb0, bb1))
     if not fronts:
         log("cadre façade: aucune façade trouvée, ignoré")
         return
+
+    # Évier de ferme : convertit le tablier plat HB en fausse porte shaker AVANT le
+    # calcul du cadre (pour que la traverse tablier/portes soit tracée).
+    rebuild_sink_apron_front(cabinet, fronts, finish)
 
     # Le cadre s'ACCOTE sur le devant de la boîte et est PROUD (en avant du devant
     # de carcasse), pas embarqué dedans. box_front_y = Y avant des panneaux latéraux.
@@ -1207,12 +1922,6 @@ def add_face_frame(cabinet):
     zb, zt = toe_top, bmx.z
     zb1, zt0 = zb + FW, zt - FW
     xl1, xr0 = xL + FW, xR - FW
-
-    # Contour extérieur
-    _frame_slab("FaceFrame_TopRail", xL, xR, fy0, fy1, zt0, zt, finish, cabinet)
-    _frame_slab("FaceFrame_BotRail", xL, xR, fy0, fy1, zb, zb1, finish, cabinet)
-    _frame_slab("FaceFrame_LStile", xL, xl1, fy0, fy1, zb1, zt0, finish, cabinet)
-    _frame_slab("FaceFrame_RStile", xr0, xR, fy0, fy1, zb1, zt0, finish, cabinet)
 
     # Traverses (façades empilées) + montants (façades côte à côte), UNIQUEMENT entre
     # façades ADJACENTES (aucune 3e façade entre les deux dans la même colonne/rangée).
@@ -1247,15 +1956,37 @@ def add_face_frame(cabinet):
                 rails_z.add(round((a0.z + b1.z) / 2.0, 3))
             if zov > 0.05 and a0.x >= b1.x - 0.02 and not _between_x(a0, a1, b1, (a, b)):
                 stiles_x.add(round((a0.x + b1.x) / 2.0, 3))
-    for i, zc in enumerate(sorted(rails_z)):
-        _frame_slab("FaceFrame_MidRail%d" % i, xl1, xr0, fy0, fy1, zc - FW / 2, zc + FW / 2, finish, cabinet)
-    for i, xc2 in enumerate(sorted(stiles_x)):
-        _frame_slab("FaceFrame_MidStile%d" % i, xc2 - FW / 2, xc2 + FW / 2, fy0, fy1, zb1, zt0, finish, cabinet)
+    frame_rects = [
+        (xL, xR, zt0, zt),
+        (xL, xR, zb, zb1),
+        (xL, xl1, zb1, zt0),
+        (xr0, xR, zb1, zt0),
+    ]
+    if mic_rail_z is not None:
+        rails_z.add(round(mic_rail_z, 3))
+    frame_rects.extend((xl1, xr0, zc - FW / 2, zc + FW / 2) for zc in sorted(rails_z))
+    # Pas de montant central entre deux portes : les portes partagent un simple
+    # jeu/reveal visuel, pas une pièce de face frame pleine hauteur au milieu.
+    stiles_x.clear()
+    _frame_union("FaceFrame", frame_rects, fy0, fy1, finish, cabinet)
     log("cadre façade: contour + " + str(len(rails_z)) + " traverse(s) + " + str(len(stiles_x)) + " montant(s)")
 
-    # Panneaux séparateurs de tiroirs : masqués (pas de vrai splitter)
-    for o in cabinet.children_recursive:
-        if o.type == "MESH" and o.name.lower().startswith("vertical splitter"):
+    # Panneaux séparateurs de tiroirs : masqués (pas de vrai splitter entre
+    # tiroirs empilés). EXCEPTION micro-ondes de base : le séparateur niche/tiroir
+    # est un VRAI plancher de niche (dessus du compartiment tiroir) — on le GARDE
+    # et on le peint au fini extérieur (blanc/chêne), comme le reste de la niche
+    # (feedback Gabriel 2026-07-14 : « le tiroir du bas devrait avoir un dessus »).
+    is_microwave = CONFIG.get("category") == "base-microwave-cabinet"
+    is_garbage = CONFIG.get("category") == "base-cabinet-garbage-pull-out"
+    for o in list(cabinet.children_recursive):
+        if o.type != "MESH" or not o.name.lower().startswith("vertical splitter"):
+            continue
+        if is_microwave:
+            assign_material(o, build_finish_material())
+        elif is_garbage:
+            log("déchets coulissant: séparateur HB supprimé <- " + o.name)
+            bpy.data.objects.remove(o, do_unlink=True)
+        else:
             o.hide_render = True
             o.hide_viewport = True
 
@@ -1274,6 +2005,13 @@ def add_face_frame(cabinet):
         o for o in cabinet.children_recursive
         if o.type == "MESH" and "drawer box" in o.name.lower()
     ]
+    # Hauteur/position CIBLE d'une caisse = celle de SA FAÇADE (façade la plus
+    # proche en Z), PAS de l'ouverture. Un caisson à NICHE OUVERTE (micro-ondes :
+    # 1 tiroir bas + niche haute → 0 traverse → 1 seule ouverture pleine hauteur)
+    # étirait sinon la caisse sur toute la niche = panneau blanc géant qui bouche
+    # la niche (bug trouvé par Gabriel 2026-07-14). Pour un empilement normal,
+    # hauteur façade ≈ hauteur ouverture → comportement quasi identique.
+    front_dims = [((b0.z + b1.z) / 2.0, b1.z - b0.z) for (_, b0, b1) in fronts]
     dg = bpy.context.evaluated_depsgraph_get()
     targets = []
     for o in boxes:
@@ -1282,11 +2020,38 @@ def add_face_frame(cabinet):
         zs = [(o.matrix_world @ v.co).z for v in me.vertices]
         ev.to_mesh_clear()
         bcz = (min(zs) + max(zs)) / 2.0 if zs else 0.0
-        op = None
-        for (z0, z1) in openings_z:
-            if z0 - 0.03 <= bcz <= z1 + 0.03:
-                op = (z0, z1)
-                break
+        # Façade correspondante = la plus proche en centre Z (repli : ouverture).
+        if front_dims:
+            fzc, fh = min(front_dims, key=lambda t: abs(t[0] - bcz))
+        else:
+            fzc, fh = bcz, None
+            for (z0, z1) in openings_z:
+                if z0 - 0.03 <= bcz <= z1 + 0.03:
+                    fzc, fh = (z0 + z1) / 2.0, z1 - z0
+                    break
+        mic_align_top = False
+        if mic_box_h and "drawer box" in o.name.lower():
+            fh = mic_box_h
+            fzc = mic_box_z
+            mic_align_top = True
+        # La façade OVERLAY est plus HAUTE que l'ouverture (elle recouvre les
+        # traverses du cadre) : dimensionner la caisse dessus la faisait
+        # TRAVERSER le cadre dès qu'on la sortait en vue open (Gabriel
+        # 2026-07-23 ; mesuré sur S8-DB12 : ouverture 244 mm vs caisse 288 mm).
+        # Règle J.2 : la caisse suit l'OUVERTURE nette. On garde malgré tout la
+        # façade comme BORNE HAUTE (min) pour les caissons à niche ouverte, où
+        # l'ouverture pleine hauteur donnerait une caisse géante.
+        if not mic_align_top and openings_z:
+            op = _opening_for_z(openings_z, fzc)
+            if op:
+                z0, z1 = op
+                fh = min(fh, z1 - z0) if fh else (z1 - z0)
+                inner = max(0.05, fh - clr_z)
+                lo = z0 + (clr_z / 2.0) + (inner / 2.0)
+                hi = z1 - (clr_z / 2.0) - (inner / 2.0)
+                if lo > hi:
+                    lo = hi = (z0 + z1) / 2.0
+                fzc = min(max(fzc, lo), hi)
         ad = o.animation_data
         if ad:
             for d in list(ad.drivers):
@@ -1297,16 +2062,16 @@ def add_face_frame(cabinet):
             if mod.type == "NODES" and mod.node_group:
                 try:
                     mod["Socket_2"] = box_w
-                    if op:
-                        mod["Socket_4"] = max(0.05, (op[1] - op[0]) - clr_z)
+                    if fh:
+                        mod["Socket_4"] = max(0.05, fh - clr_z)
                 except Exception:
                     pass
         # dé-parenter (transform monde conservé) -> déplaçable de façon fiable
         world = o.matrix_world.copy()
         o.parent = None
         o.matrix_world = world
-        targets.append((o, (op[0] + op[1]) / 2.0 if op else bcz))
-    for (o, tz) in targets:
+        targets.append((o, fzc, mic_align_top))
+    for (o, tz, align_top) in targets:
         bpy.context.view_layer.update()
         dg = bpy.context.evaluated_depsgraph_get()
         ev = o.evaluated_get(dg)
@@ -1316,12 +2081,18 @@ def add_face_frame(cabinet):
         ev.to_mesh_clear()
         if xs:
             o.location.x += cx - (min(xs) + max(xs)) / 2.0
-            o.location.z += tz - (min(zs) + max(zs)) / 2.0
+            if align_top and mic_floor_z is not None and zs:
+                o.location.z += mic_floor_z - 0.002 - max(zs)
+            elif zs:
+                o.location.z += tz - (min(zs) + max(zs)) / 2.0
     bpy.context.view_layer.update()
 
-    # --- FAÇADES avancées pour s'accoter sur le cadre proud (dos juste devant fy0).
+    # --- FAÇADES : le DOS de la façade vient s'ADOSSER exactement sur la FACE AVANT
+    # du cadre (fy0). Aucune collision (sans avance, la façade chevauchait le cadre de
+    # 16 mm), aucun gap (un gap de qq mm créait une couture visible au coin). Face
+    # arrière façade == face avant cadre -> plein recouvrement propre, cadre couvert.
     # Elles sont pilotées par des drivers de location -> on les coupe puis on décale.
-    front_shift = (fy0 - 0.002) - front_back_y
+    front_shift = fy0 - front_back_y
     for (o, _, _) in fronts:
         ad = o.animation_data
         if ad:
@@ -1332,6 +2103,18 @@ def add_face_frame(cabinet):
         o.parent = None
         o.matrix_world = Matrix.Translation(Vector((0.0, front_shift, 0.0))) @ world
     bpy.context.view_layer.update()
+    replace_hb_fronts_with_clean_shaker(cabinet, fronts, finish)
+    merge_single_door_drawer_front(cabinet, finish)
+
+    if CONFIG.get("category") == "base-microwave-cabinet":
+        finalize_base_microwave_drawer_front(cabinet, finish, fy0, xL, xR, zb, FW)
+        for o in cabinet.children_recursive:
+            if o.type == "MESH" and "drawer box" in o.name.lower():
+                o.hide_render = True
+                o.hide_viewport = True
+
+    if CONFIG.get("category") == "base-cabinet-garbage-pull-out":
+        finalize_garbage_pullout_fronts(cabinet, finish, fy0, xL, xR, zb, zt, FW, rails_z)
 
     n = len(boxes)
     if n:
@@ -1385,13 +2168,13 @@ def build_chant_plies_material():
         nt.nodes.remove(nd)
     out = nt.nodes.new("ShaderNodeOutputMaterial")
     bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
-    bsdf.inputs["Roughness"].default_value = 0.8
+    bsdf.inputs["Roughness"].default_value = float(CONFIG.get("chant_roughness", 0.78))
     nt.links.new(bsdf.outputs["BSDF"], out.inputs["Surface"])
     # ======================================================================
     # LARGEUR DES PLIS DU CHANT — RÉGLE ICI :
     #   CHANT_PLY_SCALE : PLUS PETIT = plis PLUS LARGES (moins de plis).
-    #   Essaie 3 (très larges) … 12 (fins). Défaut 6.
-    CHANT_PLY_SCALE = 2.5
+    #   Essaie 3 (très larges) … 12 (fins). Défaut showroom : 2.3.
+    CHANT_PLY_SCALE = float(CONFIG.get("chant_ply_scale", 2.3))
     # ======================================================================
     path = CONFIG.get("chant_tile") or ""
     if path and Path(path).is_file():
@@ -1401,7 +2184,11 @@ def build_chant_plies_material():
         # BOX espace Object (PAS Generated, qui étire -> aliase). Rotation 90° pour que
         # les plis courent SUR LE LONG de l'arête. La largeur des plis = CHANT_PLY_SCALE.
         mp.inputs["Rotation"].default_value = (0.0, 0.0, math.radians(90.0))
-        mp.inputs["Scale"].default_value = (3.0, CHANT_PLY_SCALE, CHANT_PLY_SCALE)
+        mp.inputs["Scale"].default_value = (
+            float(CONFIG.get("chant_scale_x", 3.0)),
+            CHANT_PLY_SCALE,
+            CHANT_PLY_SCALE,
+        )
         nt.links.new(tc.outputs["Object"], mp.inputs["Vector"])
         tex = nt.nodes.new("ShaderNodeTexImage")
         tex.image = img
@@ -1410,14 +2197,28 @@ def build_chant_plies_material():
         tex.extension = "REPEAT"
         tex.interpolation = "Cubic"
         nt.links.new(mp.outputs["Vector"], tex.inputs["Vector"])
-        # birch_plywood_side.png est déjà propre/chaud -> pas de correction couleur.
-        nt.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+        hsv = nt.nodes.new("ShaderNodeHueSaturation")
+        hsv.inputs["Hue"].default_value = float(CONFIG.get("chant_hue", 0.5))
+        hsv.inputs["Saturation"].default_value = float(CONFIG.get("chant_sat", 0.68))
+        hsv.inputs["Value"].default_value = float(CONFIG.get("chant_val", 1.06))
+        nt.links.new(tex.outputs["Color"], hsv.inputs["Color"])
+        nt.links.new(hsv.outputs["Color"], bsdf.inputs["Base Color"])
     else:
         bsdf.inputs["Base Color"].default_value = (0.74, 0.62, 0.44, 1)  # fallback bouleau uni
     return m
 
 
 def apply_birch_interior(cabinet):
+    # EXCEPTION micro-ondes : la niche d'électro est une mélamine finie AU FINI
+    # extérieur (blanc→blanc, chêne→chêne), PAS du bouleau brut (précision Gabriel
+    # 2026-07-02). normalize_product_materials peint déjà les parois de la niche au
+    # fini. On NE repeint donc PAS les faces intérieures ni le plancher en bouleau
+    # (sinon les 2 parois latérales de la niche ressortent en bois — bug repéré par
+    # Gabriel sur le base micro-ondes 27 po). MAIS le CHANT de contreplaqué du
+    # DESSUS des côtés et du panneau arrière DOIT rester, comme tous les caissons du
+    # bas (précision Gabriel) : on garde donc ce chant, on saute seulement le
+    # bouleau des faces intérieures.
+    microwave = CONFIG.get("category") in ("microwave", "base-microwave-cabinet")
     # Faces INTÉRIEURES de la carcasse en contreplaqué BOULEAU, face EXTÉRIEURE au
     # fini. Réalité Dilamco (photo Gabriel) : caisson en contreplaqué bouleau,
     # extérieur peint/mélaminé, intérieur bois brut — visible par le dessus ouvert
@@ -1469,10 +2270,12 @@ def apply_birch_interior(cabinet):
             inward = 1.0 if scx < cx else -1.0  # normale intérieure pointe vers le centre
             for p in me.polygons:
                 nrm = mw.to_3x3() @ p.normal
-                if nrm.z > 0.5:            # DESSUS = plis (chant)
+                if nrm.z > 0.5:            # DESSUS = plis (chant) — TOUJOURS (micro-ondes inclus)
                     p.material_index = pidx
                     n += 1
-                elif nrm.x * inward > 0.5:  # INTÉRIEUR = bouleau plat
+                elif nrm.x * inward > 0.5 and not microwave:  # INTÉRIEUR = bouleau plat
+                    # Micro-ondes : la face intérieure reste au fini (paroi de niche
+                    # blanche/chêne) — on ne la repeint pas en bouleau.
                     p.material_index = bidx
                     n += 1
         elif is_back:
@@ -1486,12 +2289,335 @@ def apply_birch_interior(cabinet):
                 if (mw.to_3x3() @ p.normal).z > 0.5:  # DESSUS = plis (chant)
                     p.material_index = pidx
                     n += 1
-        else:  # plancher : face du DESSUS (intérieur) ; dessous garde le fini
+        elif not microwave:  # plancher : face du DESSUS (intérieur) ; dessous garde le fini
+            # Micro-ondes : le plancher de la niche reste au fini (blanc/chêne), pas bouleau.
             for p in me.polygons:
                 if (mw.to_3x3() @ p.normal).z > 0.5:
                     p.material_index = bidx
                     n += 1
         log("intérieur bouleau: " + s.name + " -> " + str(n) + " face(s)")
+
+
+def open_drawers(cabinet):
+    # Vue "open" : tire les facades de tiroir en escalier (haut = le moins,
+    # bas = le plus, comme les photos produit pro) pour MONTRER les caisses en
+    # massif aboute + l'interieur - la force du produit (feedback Gabriel
+    # 2026-07-12). A appeler APRES add_face_frame : les facades y sont
+    # de-parentees et leurs drivers de location coupes -> translation monde
+    # libre. La caisse (IS_DRAWER_BOX) est enfant de la facade et suit. On
+    # re-parente ensuite au caisson (transform conserve) pour que le cadrage
+    # camera et les lumieres voient les tiroirs sortis.
+    # NB : add_face_frame de-parente AUSSI les boites (IS_DRAWER_BOX) pour les
+    # retrecir -> facades et boites sont des objets LIBRES. On les apparie par
+    # centre vertical (une boite par facade de tiroir) et on translate la paire.
+    bmin, bmax = world_bbox(cabinet)
+    depth = bmax.y - bmin.y
+
+    def zcenter(o):
+        bpy.context.view_layer.update()
+        dg = bpy.context.evaluated_depsgraph_get()
+        me = o.evaluated_get(dg).to_mesh()
+        zs = [(o.matrix_world @ v.co).z for v in me.vertices]
+        o.evaluated_get(dg).to_mesh_clear()
+        return (min(zs) + max(zs)) / 2.0 if zs else 0.0
+
+    def own_bounds(o):
+        bpy.context.view_layer.update()
+        dg = bpy.context.evaluated_depsgraph_get()
+        ev = o.evaluated_get(dg)
+        me = ev.to_mesh()
+        pts = [o.matrix_world @ v.co for v in me.vertices]
+        ev.to_mesh_clear()
+        return (
+            Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts))),
+            Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts))),
+        )
+
+    def under(obj, ancestor):
+        p = obj.parent
+        while p is not None:
+            if p is ancestor:
+                return True
+            p = p.parent
+        return False
+
+    fronts = [(o, zcenter(o)) for o in bpy.data.objects
+              if o.type == "MESH" and o.get("IS_DRAWER_FRONT") and not o.hide_render]
+    boxes = [(o, zcenter(o)) for o in bpy.data.objects
+             if o.type == "MESH" and o.get("IS_DRAWER_BOX") and not o.hide_render]
+    fronts.sort(key=lambda t: -t[1])  # du haut vers le bas
+    n = len(fronts)
+    is_garbage = CONFIG.get("category") == "base-cabinet-garbage-pull-out"
+    for i, (front, fz) in enumerate(fronts):
+        # Tirage en escalier (haut 35 % -> bas 68 %, calibre sur la reference
+        # e-commerce) : assez sorti pour voir DANS les caisses avec la camera
+        # a ~27 degres, sans que la caisse du bas se detache du caisson.
+        frac = 0.35 + (0.33 * i / (n - 1)) if n > 1 else 0.50
+        pull = depth * min(frac, 0.68)
+        shift = Matrix.Translation(Vector((0.0, -pull, 0.0)))
+        # Déchets : la caisse est enfant de la façade. On translate UNIQUEMENT
+        # la façade (enfants suivent) — aucun reparentage (sinon décalage X).
+        if is_garbage:
+            front.matrix_world = shift @ front.matrix_world
+            continue
+        group = [front]
+        if boxes:
+            box, bz = min(boxes, key=lambda t: abs(t[1] - fz))
+            if abs(bz - fz) < 0.35:  # overlay vs ouverture peut diverger (déchets)
+                if under(box, front):
+                    # Déjà enfant de la façade (finalize_garbage) → suit le parent.
+                    boxes.remove((box, bz))
+                else:
+                    # add_face_frame() avance la façade sur le cadre, mais la boîte
+                    # garde ~5/8 po de retrait. Fermé, c'est caché; ouvert, ça crée
+                    # un vide visible entre façade et boîte. On ré-accote la boîte
+                    # au dos de la façade avec seulement 1/16 po de jeu mécanique.
+                    fb0, fb1 = own_bounds(front)
+                    bb0, _ = own_bounds(box)
+                    target_gap = 0.0016  # ≈1/16 po
+                    box.matrix_world = Matrix.Translation(
+                        Vector((0.0, (fb1.y + target_gap) - bb0.y, 0.0))
+                    ) @ box.matrix_world
+                    group.append(box)
+                    boxes.remove((box, bz))
+        for o in group:
+            world = shift @ o.matrix_world.copy()
+            o.parent = cabinet
+            o.matrix_world = world
+    bpy.context.view_layer.update()
+    log("open_drawers: " + str(n) + " tiroir(s) ouvert(s), profondeur " + str(round(depth, 3)) + " m")
+    return n
+
+
+def open_doors(cabinet):
+    # Vue "open" pour caissons à portes : pivote chaque porte autour de son
+    # montant extérieur. Contrairement aux tiroirs, on ne translate rien; on garde
+    # la façade à sa position réelle et on applique une rotation Z autour d'un
+    # axe vertical de charnière.
+    bmin, bmax = world_bbox(cabinet)
+    cx = (bmin.x + bmax.x) / 2.0
+
+    def own_bounds(o):
+        bpy.context.view_layer.update()
+        dg = bpy.context.evaluated_depsgraph_get()
+        ev = o.evaluated_get(dg)
+        me = ev.to_mesh()
+        pts = [o.matrix_world @ v.co for v in me.vertices]
+        ev.to_mesh_clear()
+        return (
+            Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts))),
+            Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts))),
+        )
+
+    doors = []
+    for o in bpy.data.objects:
+        if o.type != "MESH" or o.hide_render or _is_pull(o):
+            continue
+        if o.get("IS_CLEAN_SHAKER_PANEL"):
+            continue
+        if o.get("IS_DRAWER_FRONT") or o.get("IS_PULLOUT_FRONT"):
+            continue
+        lname = o.name.lower()
+        if o.get("IS_CABINET_FRONT") or lname.endswith("door") or " door" in lname:
+            bb0, bb1 = own_bounds(o)
+            # Ignore les panneaux qui ne ressemblent pas à une porte verticale.
+            if (bb1.z - bb0.z) > 0.20 and (bb1.x - bb0.x) > 0.08:
+                doors.append((o, bb0, bb1))
+
+    angle = math.radians(float(CONFIG.get("open_door_deg", 102.0)))
+    for o, bb0, bb1 in doors:
+        dcx = (bb0.x + bb1.x) / 2.0
+        if dcx < cx:
+            hinge_x = bb0.x
+            rot = -angle
+        else:
+            hinge_x = bb1.x
+            rot = angle
+        # Pivot légèrement au dos de la façade, sur le plan du face frame.
+        pivot = Vector((hinge_x, bb1.y, (bb0.z + bb1.z) / 2.0))
+        world = o.matrix_world.copy()
+        new_world = (
+            Matrix.Translation(pivot)
+            @ Matrix.Rotation(rot, 4, "Z")
+            @ Matrix.Translation(-pivot)
+            @ world
+        )
+        o.parent = cabinet
+        o.matrix_world = new_world
+
+    bpy.context.view_layer.update()
+    if doors:
+        log("open_doors: " + str(len(doors)) + " porte(s) ouverte(s), angle " + str(round(math.degrees(angle))) + " deg")
+    return len(doors)
+
+
+def hide_garbage_pullout_orphans(cabinet):
+    # Fragments HB du module coulissant (rails, doublons de panneau) : masqués
+    # en vue open — seule la façade shaker finalisée sort avec open_pullouts().
+    if CONFIG.get("category") != "base-cabinet-garbage-pull-out":
+        return
+    hidden = 0
+    for o in cabinet.children_recursive:
+        if not o.get("IS_GARBAGE_PULLOUT_PART") or o.get("IS_RENDER_PULLOUT_FRONT"):
+            continue
+        o.hide_render = True
+        o.hide_viewport = True
+        hidden += 1
+    if hidden:
+        bpy.context.view_layer.update()
+        log("déchets coulissant: " + str(hidden) + " fragment(s) HB masqué(s) (vue open)")
+
+
+def open_pullouts(cabinet):
+    # Range-épices / poubelle coulissante : sort la façade shaker et les plateaux
+    # comme une unité de pullout. La façade d'origine HB est masquée, donc
+    # add_shaker_frame_to_pullouts() tagge la nouvelle porte shaker.
+    bmin, bmax = world_bbox(cabinet)
+    depth = bmax.y - bmin.y
+    pull = depth * 0.62
+    def own_bounds(o):
+        bpy.context.view_layer.update()
+        dg = bpy.context.evaluated_depsgraph_get()
+        ev = o.evaluated_get(dg)
+        me = ev.to_mesh()
+        pts = [o.matrix_world @ v.co for v in me.vertices]
+        ev.to_mesh_clear()
+        return (
+            Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts))),
+            Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts))),
+        )
+
+    def hierarchy_bounds(root):
+        objs = [root] + list(getattr(root, "children_recursive", []))
+        pts = []
+        dg = bpy.context.evaluated_depsgraph_get()
+        for obj in objs:
+            if obj.type != "MESH" or obj.hide_render:
+                continue
+            ev = obj.evaluated_get(dg)
+            me = ev.to_mesh()
+            pts.extend(obj.matrix_world @ v.co for v in me.vertices)
+            ev.to_mesh_clear()
+        return (
+            Vector((min(p.x for p in pts), min(p.y for p in pts), min(p.z for p in pts))),
+            Vector((max(p.x for p in pts), max(p.y for p in pts), max(p.z for p in pts))),
+        ) if pts else own_bounds(root)
+
+    fronts = []
+    inserts = []
+    is_garbage = CONFIG.get("category") == "base-cabinet-garbage-pull-out"
+    top_drawer_z = None
+    for o in bpy.data.objects:
+        if o.type == "MESH" and o.get("IS_DRAWER_FRONT") and not o.hide_render:
+            top_drawer_z = own_bounds(o)[0].z + (own_bounds(o)[1].z - own_bounds(o)[0].z) / 2.0
+            break
+    for o in bpy.data.objects:
+        if o.type != "MESH" or o.hide_render:
+            continue
+        if o.get("IS_RENDER_PULLOUT_FRONT") and o.parent in (cabinet, None):
+            fronts.append(o)
+        elif is_garbage:
+            if o.get("IS_DRAWER_FRONT") or o.get("IS_RENDER_PULLOUT_FRONT"):
+                continue
+            if o.get("IS_DRAWER_BOX") and top_drawer_z is not None:
+                oz = (own_bounds(o)[0].z + own_bounds(o)[1].z) / 2.0
+                if oz > top_drawer_z - 0.08:
+                    continue
+            root = o
+            while root.parent is not None and root.parent != cabinet:
+                root = root.parent
+            if root.get("IS_GARBAGE_PULLOUT_ASSEMBLY") or (
+                root.parent == cabinet and "pullout" in root.name.lower()
+            ):
+                inserts.append(o)
+        elif o.get("IS_DRAWER_BOX") or any(k in o.name.lower() for k in ("tray", "drawer box")):
+            inserts.append(o)
+    group = list(fronts)
+    if fronts and is_garbage:
+        pull = depth * 0.62
+        bpy.context.view_layer.update()
+    elif fronts:
+        # Les plateaux HB du spice rack ont des offsets procéduraux qui ne se
+        # comportent pas comme une vraie unité coulissante après translation.
+        # On les masque et on crée un rack visuel propre, attaché à la façade.
+        for o in inserts:
+            o.hide_render = True
+            o.hide_viewport = True
+        fb0, fb1 = hierarchy_bounds(fronts[0])
+        fcx = (fb0.x + fb1.x) / 2.0
+        fcz = (fb0.z + fb1.z) / 2.0
+        fw = fb1.x - fb0.x
+        fh = fb1.z - fb0.z
+        interior_x0 = None
+        interior_x1 = None
+        for part in cabinet.children_recursive:
+            if part.type != "MESH" or part.hide_render:
+                continue
+            lname = part.name.lower()
+            if lname.startswith("left side"):
+                interior_x0 = own_bounds(part)[1].x
+            elif lname.startswith("right side"):
+                interior_x1 = own_bounds(part)[0].x
+        rack_w = max(0.070, fw * 0.88)
+        if interior_x0 is not None and interior_x1 is not None and interior_x1 > interior_x0:
+            opening_w = interior_x1 - interior_x0
+            rack_w = max(0.070, min(rack_w, opening_w - 0.008))
+            fcx = (interior_x0 + interior_x1) / 2.0
+        rack_h = max(0.46, fh * 0.86)
+        rack_d = min(depth * 0.56, 0.41)
+        # Ouvrir à 75 % de la profondeur du rack, pas au-delà du rack complet :
+        # le panneau arrière doit rester dans le caisson comme sur un vrai pullout.
+        pull = rack_d * 0.75
+        t = 0.012
+        rail_h = 0.074
+        tray_floor_t = 0.014
+        mat = build_shelf_material()
+        y_front = fb1.y + 0.0005
+        y_center = y_front + rack_d / 2.0
+        z0 = fcz - rack_h / 2.0
+        z1 = fcz + rack_h / 2.0
+        x0 = fcx - rack_w / 2.0
+        x1 = fcx + rack_w / 2.0
+        y0 = y_front
+        y1 = y_front + rack_d
+        rack_parts = [
+            _flat_box("PulloutRack_FrontPanel", (rack_w, t, rack_h), (fcx, y0 + t / 2.0, fcz), mat, parent=cabinet),
+            _flat_box("PulloutRack_BackPanel", (rack_w, t, rack_h), (fcx, y1 - t / 2.0, fcz), mat, parent=cabinet),
+        ]
+        shelf_levels = (
+            z0 + tray_floor_t / 2.0,
+            fcz - rail_h / 2.0,
+            z1 - rail_h - tray_floor_t / 2.0,
+        )
+        for i, z in enumerate(shelf_levels):
+            side_z = z + tray_floor_t / 2.0 + rail_h / 2.0
+            rack_parts.extend([
+                # Le vrai range-épices est un châssis latéral avec de petits bacs
+                # ouverts : fond + lèvres latérales/front/back, pas trois boîtes
+                # fermées empilées. Le faux doublon à éviter est le module HB legacy.
+                _flat_box("PulloutRack_Shelf_%d" % i, (rack_w, rack_d, tray_floor_t), (fcx, y_center, z), mat, parent=cabinet),
+                _flat_box("PulloutRack_LeftSideRail_%d" % i, (t, rack_d, rail_h), (x0 + t / 2.0, y_center, side_z), mat, parent=cabinet),
+                _flat_box("PulloutRack_RightSideRail_%d" % i, (t, rack_d, rail_h), (x1 - t / 2.0, y_center, side_z), mat, parent=cabinet),
+                _flat_box("PulloutRack_FrontLip_%d" % i, (rack_w, t, rail_h), (fcx, y0 + t * 1.5, side_z), mat, parent=cabinet),
+                _flat_box("PulloutRack_BackLip_%d" % i, (rack_w, t, rail_h), (fcx, y1 - t * 1.5, side_z), mat, parent=cabinet),
+            ])
+        group.extend(rack_parts)
+        bpy.context.view_layer.update()
+    seen = set()
+    moved = 0
+    shift = Matrix.Translation(Vector((0.0, -pull, 0.0)))
+    for o in group:
+        if o.name in seen:
+            continue
+        seen.add(o.name)
+        world = shift @ o.matrix_world.copy()
+        o.parent = cabinet
+        o.matrix_world = world
+        moved += 1
+    bpy.context.view_layer.update()
+    if moved:
+        log("open_pullouts: " + str(moved) + " élément(s) sorti(s), profondeur " + str(round(pull, 3)) + " m")
+    return moved
 
 
 def setup_shadow_catcher_floor(cabinet):
@@ -1593,9 +2719,9 @@ def setup_camera(cabinet):
     # Vue à 15° de lacet : la façade domine, le côté donne le volume. Caméra
     # sous le dessus du caisson pour cacher la carcasse ouverte des modules du bas.
     # Angle de vue surchargeable (showcase multi-angles) ; défaut = 3/4 avant-droit.
-    # Vue 3/4 PLONGEANTE (~17° au-dessus de l'horizon, comme les photos produit
-    # pro) : on voit le DESSUS bouleau + les façades, et la lumière rasante creuse
-    # l'ombre du renfoncement shaker (portes plus nettes). z=0.42 → élévation ~15°.
+    # Vue packshot standard : légèrement plongeante. Les vues ouvertes peuvent
+    # surcharger `cam_dir` plus bas/frontal pour se rapprocher d'une vraie photo
+    # de produit, où on lit l'intérieur plutôt que le dessus du caisson.
     direction = Vector(CONFIG.get("cam_dir", (0.415, -1.55, 0.42))).normalized()
     loc = target + direction * distance
     # (Plus de plafond caméra : le dessus est maintenant BOULEAU, il ne se fond
@@ -1605,7 +2731,7 @@ def setup_camera(cabinet):
     cam = bpy.context.object
     cam.name = "HB5_Product_Camera"
     cam.data.type = "PERSP"
-    cam.data.lens = 85.0
+    cam.data.lens = float(CONFIG.get("camera_lens", 85.0))
     cam.data.dof.use_dof = False
     cam.rotation_euler = (target - cam.location).to_track_quat("-Z", "Y").to_euler()
     bpy.context.scene.camera = cam
@@ -1635,9 +2761,11 @@ def setup_lighting(cabinet=None):
         nt.links.new(texco.outputs["Generated"], mapping.inputs["Vector"])
         nt.links.new(mapping.outputs["Vector"], env.inputs["Vector"])
         nt.links.new(env.outputs["Color"], bg.inputs["Color"])
-        # HDRI studio = source PRINCIPALE (softboxes → reflets propres + modelé sur
-        # le blanc). Pleine force ; les lampes ci-dessous ne font que l'appoint.
-        bg.inputs["Strength"].default_value = float(CONFIG.get("hdri_strength", 1.0))
+        # HDRI studio : reflets propres + modelé sur le blanc. Depuis le banc
+        # lumière 2026-07-12 il est réduit à 0.5 (une ambiance pleine force
+        # enveloppe tout uniformément = façades plates) ; la key + Top_Softbox
+        # rapprochée portent la direction de la lumière.
+        bg.inputs["Strength"].default_value = float(CONFIG.get("hdri_strength", 0.5))
         log("World HDRI: " + hdri_path)
     else:
         bg.inputs["Color"].default_value = (0.82, 0.82, 0.80, 1)
@@ -1664,7 +2792,8 @@ def setup_lighting(cabinet=None):
     # inversé). Recette : key frontale seule (le rim est SUPPRIMÉ — il rasait le
     # panneau +X) + drapeau noir côté +X (bloc plus bas).
     key_z = 0.50
-    key_energy = float(CONFIG.get("key_energy", 30.0))
+    # 42 W (banc 2026-07-12, recette X3) : compense le HDRI réduit à 0.5.
+    key_energy = float(CONFIG.get("key_energy", 42.0))
     if cabinet is not None:
         bmin, bmax = world_bbox(cabinet)
         s = bmax - bmin
@@ -1677,7 +2806,49 @@ def setup_lighting(cabinet=None):
             key_z = (bmin.z + bmax.z) / 2.0
             boost = max(1.0, min(1.6, 1.25 / horiz))
             key_energy *= boost
-    area("Key_Soft", (-1.5, -1.1, 2.3), key_energy, 1.8, target=(0.0, 0.0, key_z), cast_shadow=False)
+    # cast_shadow=True : la key (haut-gauche) projette une ombre DOUCE (grande area
+    # 1.8) qui DÉFINIT le renfoncement shaker (arêtes haut+gauche à l'ombre = lecture
+    # « creux »). Sans ça le shaker est invisible (feedback Gabriel 2026-07-05).
+    key_size = float(CONFIG.get("key_size", 2.2))
+    area("Key_Soft", (-1.5, -1.1, 2.3), key_energy, key_size, target=(0.0, 0.0, key_z), cast_shadow=True)
+    # SOFTBOX du HAUT-avant (comme les photos produit pro) : grande area douce, au-
+    # dessus et légèrement devant, qui projette l'ombre sur l'arête HAUTE des
+    # renfoncements shaker + fait « rouler » le liseré lumière/ombre sur les arêtes
+    # arrondies (bevel). cast_shadow=True. Énergie modérée (appoint du haut, ne doit
+    # pas délaver la façade ni inverser la hiérarchie).
+    # Hauteur/taille/énergie paramétriques (banc lumière 2026-07-12, recette X3
+    # bakée) : RAPPROCHER la softbox (top_z 3.0 → 1.9) crée le FALLOFF vertical
+    # haut→bas sur la façade (loi du carré inverse sur la hauteur du caisson)
+    # que la position haute historique ne produisait pas (delta mesuré 0.1 →
+    # 4.3). Énergie ramenée à ×0.5 pour compenser le rapprochement.
+    top_z = 0.55 if cabinet is None else key_z
+    top_height = float(CONFIG.get("top_softbox_z", 1.9))
+    top_mult = float(CONFIG.get("top_softbox_mult", 0.5))
+    top_size = float(CONFIG.get("top_softbox_size", 2.4))
+    area("Top_Softbox", (-0.35, -1.2, top_height), key_energy * top_mult, top_size,
+         target=(0.0, -0.15, top_z), cast_shadow=True)
+    if CONFIG.get("view") == "open":
+        # Vue tiroirs ouverts : fill doux quasi vertical AU-DESSUS des caisses
+        # sorties (y~-0.35) -> l'INTERIEUR des caisses recoit de la lumiere
+        # (sinon il tombe dans l'ombre = bois brun sale), mais il doit ENCORE
+        # laisser des ombres de contact sous le tiroir et sur l'étagère. Un fill
+        # sans ombres rendait l'intérieur plat/CG.
+        area(
+            "Open_Boxes_Fill",
+            (0.0, -0.45, 1.45),
+            key_energy * float(CONFIG.get("open_fill_mult", 0.28)),
+            float(CONFIG.get("open_fill_size", 1.8)),
+            target=(0.0, -0.35, 0.3),
+            cast_shadow=True,
+        )
+        area(
+            "Open_Interior_Bounce",
+            (0.0, -1.65, 0.75),
+            key_energy * float(CONFIG.get("open_bounce_mult", 0.10)),
+            2.6,
+            target=(0.0, 0.0, 0.32),
+            cast_shadow=False,
+        )
     # PAS de rim : il rasait le panneau latéral +X et l'éclaircissait au-dessus
     # de la façade — hiérarchie inversée sur TOUS les finis (feedback Gabriel
     # 2026-07-03). La façade est éclairée par la key ; le côté est assombri par
@@ -1726,7 +2897,22 @@ def configure_render():
         # Adaptive sampling : ne réduit les samples que là où le bruit est
         # déjà sous le seuil — gain de temps sans perte visible.
         scene.cycles.use_adaptive_sampling = True
-        scene.cycles.adaptive_threshold = 0.01
+        scene.cycles.adaptive_threshold = float(CONFIG.get("adaptive_threshold", 0.01))
+        # REBONDS DE LUMIÈRE : levier disponible mais DÉSACTIVÉ par défaut
+        # (2026-07-14). Testé : limiter à 4 total / 2 diffus ne réduit PAS le
+        # temps (40 s vs 37 s baseline sur S8-DB15 open) — le rendu n'est PAS
+        # limité par la profondeur de rebonds mais par le shading par pixel
+        # (matériaux bois triplanar + HDRI + denoiser). On garde donc les
+        # défauts Cycles pour préserver exactement l'éclairage indirect des
+        # crevasses/intérieurs. Réactivable via limit_bounces si un cas le
+        # justifie (le prouver au chrono).
+        if CONFIG.get("limit_bounces", False):
+            scene.cycles.max_bounces = int(CONFIG.get("max_bounces", 4))
+            scene.cycles.diffuse_bounces = int(CONFIG.get("diffuse_bounces", 2))
+            scene.cycles.glossy_bounces = int(CONFIG.get("glossy_bounces", 2))
+            scene.cycles.transmission_bounces = int(CONFIG.get("transmission_bounces", 2))
+            scene.cycles.volume_bounces = 0
+            scene.cycles.transparent_max_bounces = int(CONFIG.get("transparent_bounces", 8))
     scene.render.resolution_x = int(CONFIG["resolution"][0])
     scene.render.resolution_y = int(CONFIG["resolution"][1])
     scene.render.resolution_percentage = 100
@@ -1746,9 +2932,12 @@ def configure_render():
             log("view_transform " + view_transform + " indisponible: " + str(exc))
     log("View transform: " + scene.view_settings.view_transform)
     scene.view_settings.look = "None"
-    # -0.25 : décolle les blancs du fond pâle du site (~#f4f1ec) — à -0.1 le
-    # caisson blanc se fondait dans le fond de la fiche produit.
-    scene.view_settings.exposure = float(CONFIG.get("exposure", -0.25))
+    # -0.15 (banc 2026-07-12, recette Y2) : avec le rig X3 (HDRI 0.5, key 42)
+    # la façade blanche sort à ~229 — assez claire pour lire « blanc » (à -0.22
+    # elle sortait à ~225 et Gabriel la percevait grise vs le fond 241), assez
+    # décollée pour garder falloff 4 et marge 12. À -0.1 le falloff retombe à
+    # 2,3 (compression des hautes lumières) et le caisson se fond dans le fond.
+    scene.view_settings.exposure = float(CONFIG.get("exposure", -0.15))
 
 
 def hard_reset_scene():
@@ -1786,17 +2975,100 @@ def _flat_box(name, dims, location, finish_mat, parent=None):
     return box
 
 
-def _shaker_door(width, height, thickness, center, mat, parent=None):
+def _paint_flat_side_carcass(obj, finish, interior, cabinet_cx=0.0, floor_z=0.0):
+    # Côtés _flat_box : extérieur au fini, intérieur bouleau, dessus = chant plis.
+    # apply_birch_interior() ne suffit pas ici (mesh cube parenté, 1 seule face touchée).
+    # Sous floor_z (zone toe-kick) : face intérieure au fini — visible de l'extérieur
+    # dans le vide du plintheau, pas de bouleau.
+    bpy.context.view_layer.update()
+    plies = build_chant_plies_material()
+    me = obj.data
+    if not me or not me.polygons:
+        return
+    mw = obj.matrix_world
+    bb0, bb1 = world_bbox(obj)
+    scx = (bb0.x + bb1.x) / 2.0
+    inward = 1.0 if scx < cabinet_cx else -1.0
+    me.materials.clear()
+    me.materials.append(finish)
+    me.materials.append(interior)
+    me.materials.append(plies)
+    n_int = n_top = 0
+    for poly in me.polygons:
+        # Normaliser après matrix_world : sur un côté mince (scale.x ~ 0.0175),
+        # mw.to_3x3() @ n écrase nrm.x sous le seuil sans .normalize().
+        nrm = mw.to_3x3() @ poly.normal
+        if nrm.length > 1e-8:
+            nrm.normalize()
+        fc_z = (mw @ poly.center).z
+        if nrm.z > 0.45:
+            poly.material_index = 2
+            n_top += 1
+        elif nrm.x * inward > 0.45 and fc_z > floor_z:
+            poly.material_index = 1
+            n_int += 1
+        else:
+            poly.material_index = 0
+    log("flat side carcass " + obj.name + ": int=" + str(n_int) + " top=" + str(n_top))
+
+
+def _paint_flat_bottom_carcass(obj, finish, interior):
+    # Plancher _flat_box : dessus = bouleau intérieur, reste = fini extérieur.
+    bpy.context.view_layer.update()
+    me = obj.data
+    if not me or not me.polygons:
+        return
+    mw = obj.matrix_world
+    me.materials.clear()
+    me.materials.append(finish)
+    me.materials.append(interior)
+    n_top = 0
+    for poly in me.polygons:
+        nrm = mw.to_3x3() @ poly.normal
+        if nrm.length > 1e-8:
+            nrm.normalize()
+        if nrm.z > 0.45:
+            poly.material_index = 1
+            n_top += 1
+        else:
+            poly.material_index = 0
+    log("flat bottom carcass " + obj.name + ": top=" + str(n_top))
+
+
+def _shaker_door(width, height, thickness, center, mat, parent=None, name="Door"):
     # Porte shaker 5 pièces centrée sur `center`, face dans le plan X-Z,
-    # épaisseur le long de Y (front du caisson = -Y).
+    # épaisseur le long de Y (front du caisson = -Y). Le cadre est généré en
+    # UN SEUL mesh unionné pour éviter les joints visuels rail/montant.
     cx, cy, cz = center
     rw = min(CONFIG.get("shaker_rail_m", 0.0254), width / 3.0, height / 3.0)
-    root = _flat_box("Door_Stile_L", (rw, thickness, height), (cx - width / 2.0 + rw / 2.0, cy, cz), mat, parent=parent)
-    _flat_box("Door_Stile_R", (rw, thickness, height), (cx + width / 2.0 - rw / 2.0, cy, cz), mat, parent=root)
     inner = width - 2.0 * rw
-    _flat_box("Door_Rail_T", (inner, thickness, rw), (cx, cy, cz + height / 2.0 - rw / 2.0), mat, parent=root)
-    _flat_box("Door_Rail_B", (inner, thickness, rw), (cx, cy, cz - height / 2.0 + rw / 2.0), mat, parent=root)
-    _flat_box("Door_Panel", (inner, max(thickness - 0.012, 0.006), height - 2.0 * rw), (cx, cy, cz), mat, parent=root)
+    inner_h = height - 2.0 * rw
+    x0 = cx - width / 2.0
+    x1 = cx + width / 2.0
+    z0 = cz - height / 2.0
+    z1 = cz + height / 2.0
+    y0 = cy - thickness / 2.0
+    y1 = cy + thickness / 2.0
+    frame_rects = [
+        (x0, x0 + rw, z0, z1),
+        (x1 - rw, x1, z0, z1),
+        (x0 + rw, x1 - rw, z1 - rw, z1),
+        (x0 + rw, x1 - rw, z0, z0 + rw),
+    ]
+    root = _frame_union(name + "_Frame", frame_rects, y0, y1, mat, parent)
+    root["IS_CLEAN_SHAKER_FRONT"] = True
+    if inner > 0.01 and inner_h > 0.01:
+        recess = min(0.006, thickness * 0.45)
+        panel_y0 = y0 + recess
+        panel_t = max(0.004, y1 - panel_y0)
+        panel = _flat_box(
+            name + "_Panel",
+            (inner, panel_t, inner_h),
+            (cx, panel_y0 + panel_t / 2.0, cz),
+            mat,
+            parent=root,
+        )
+        panel["IS_CLEAN_SHAKER_PANEL"] = True
     return root
 
 
@@ -1918,45 +3190,9 @@ def build_flat_panel():
     finish_mat = build_finish_material()
 
     if CONFIG.get("flat_style") == "shaker":
-        # Porte shaker 5 pièces : 2 montants + 2 traverses + panneau encastré.
-        rw = CONFIG.get("shaker_rail_m", 0.0254)  # largeur du rail selon le profil
-        rw = min(rw, width / 3.0, height / 3.0)
-        root = _flat_box(
-            "Dilamco_Door_Stile_L",
-            (rw, thickness, height),
-            (-width / 2.0 + rw / 2.0, 0.0, height / 2.0),
-            finish_mat,
-        )
-        _flat_box(
-            "Dilamco_Door_Stile_R",
-            (rw, thickness, height),
-            (width / 2.0 - rw / 2.0, 0.0, height / 2.0),
-            finish_mat,
-            parent=root,
-        )
-        inner_w = width - 2.0 * rw
-        _flat_box(
-            "Dilamco_Door_Rail_T",
-            (inner_w, thickness, rw),
-            (0.0, 0.0, height - rw / 2.0),
-            finish_mat,
-            parent=root,
-        )
-        _flat_box(
-            "Dilamco_Door_Rail_B",
-            (inner_w, thickness, rw),
-            (0.0, 0.0, rw / 2.0),
-            finish_mat,
-            parent=root,
-        )
-        _flat_box(
-            "Dilamco_Door_Panel",
-            (inner_w, max(thickness - 0.012, 0.006), height - 2.0 * rw),
-            (0.0, 0.0, height / 2.0),
-            finish_mat,
-            parent=root,
-        )
-        return root
+        # Porte shaker render-only propre : cadre unionné, pas 4 morceaux qui
+        # créent des coutures rail/montant au rendu.
+        return _shaker_door(width, height, thickness, (0.0, 0.0, height / 2.0), finish_mat, name="Dilamco_Door")
 
     return _flat_box(
         "Dilamco_Flat_Panel",
@@ -1968,13 +3204,16 @@ def build_flat_panel():
 
 def add_shaker_frame_to_pullouts(cabinet):
     # Les façades Pullout (range-épices/déchets) sont des panneaux lisses (slab).
-    # On superpose un cadre SHAKER 1 po (montants + traverses au fini du caisson)
-    # pour qu'elles matchent les portes shaker. Le panneau central existant fait
-    # office de panneau « recessé » derrière le cadre proéminent.
+    # Un simple cadre RAPPORTÉ en saillie sur le slab ne projette AUCUNE ombre
+    # lisible sur blanc (ressaut trop faible + éclairage doux → façade « slab »).
+    # On REMPLACE donc le slab par une VRAIE porte shaker 5 pièces `_shaker_door`
+    # (panneau ENCASTRÉ dans un cadre plein) — exactement la géométrie de toutes
+    # les autres portes du catalogue → même lecture, rail 1 po (préférence Gabriel).
     fronts = [o for o in cabinet.children_recursive if o.get("IS_PULLOUT_FRONT")]
     if not fronts:
         return
     finish_mat = build_finish_material()
+    is_garbage = CONFIG.get("category") == "base-cabinet-garbage-pull-out"
     deps = bpy.context.evaluated_depsgraph_get()
     for front in fronts:
         ev = front.evaluated_get(deps)
@@ -1988,21 +3227,38 @@ def add_shaker_frame_to_pullouts(cabinet):
         pts = [front.matrix_world @ v.co for v in me.vertices]
         ev.to_mesh_clear()
         xmin = min(p.x for p in pts); xmax = max(p.x for p in pts)
-        ymin = min(p.y for p in pts)
+        ymin = min(p.y for p in pts); ymax = max(p.y for p in pts)
         zmin = min(p.z for p in pts); zmax = max(p.z for p in pts)
         w = xmax - xmin
         h = zmax - zmin
         cx = (xmin + xmax) / 2.0
         cz = (zmin + zmax) / 2.0
-        rw = min(CONFIG.get("shaker_rail_m", 0.0254), w / 3.0, h / 3.0)  # cadre shaker (profil)
-        t = 0.008                            # proéminence du cadre (panneau recessé)
-        ry = ymin - t / 2.0                  # devant la face avant (front = -Y)
-        _flat_box("PO_Shaker_StileL", (rw, t, h), (xmin + rw / 2.0, ry, cz), finish_mat, parent=cabinet)
-        _flat_box("PO_Shaker_StileR", (rw, t, h), (xmax - rw / 2.0, ry, cz), finish_mat, parent=cabinet)
-        inner = w - 2.0 * rw
-        _flat_box("PO_Shaker_RailT", (inner, t, rw), (cx, ry, zmax - rw / 2.0), finish_mat, parent=cabinet)
-        _flat_box("PO_Shaker_RailB", (inner, t, rw), (cx, ry, zmin + rw / 2.0), finish_mat, parent=cabinet)
-        log("Shaker frame overlay added on " + front.name)
+        cy = (ymin + ymax) / 2.0
+        thk = max(ymax - ymin, 0.018)        # épaisseur porte (≥18 mm)
+        # Masquer le slab HB d'origine : la vraie porte shaker prend sa place.
+        old_pullout_root = front.parent
+        base_name = front.name.replace("_Frame", "").replace("_Panel", "")
+        door = _shaker_door(w, h, thk, (cx, cy, cz), finish_mat, parent=cabinet, name=base_name)
+        door["IS_RENDER_PULLOUT_FRONT"] = True
+        door["IS_PULLOUT_FRONT"] = True
+        door.name = base_name
+        log("Shaker door built over " + front.name)
+        if is_garbage and old_pullout_root is not None:
+            old_pullout_root["IS_GARBAGE_PULLOUT_ASSEMBLY"] = True
+            for part in [old_pullout_root] + list(old_pullout_root.children_recursive):
+                part["IS_GARBAGE_PULLOUT_PART"] = True
+            legacy_parts = [front] + list(front.children_recursive)
+        elif old_pullout_root is not None and "pulloutrack" not in old_pullout_root.name.lower():
+            legacy_parts = list(old_pullout_root.children_recursive) + [old_pullout_root]
+        else:
+            legacy_parts = [front] + list(front.children_recursive)
+        for legacy in reversed(list(dict.fromkeys(legacy_parts))):
+            if legacy.name in bpy.data.objects:
+                bpy.data.objects.remove(legacy, do_unlink=True)
+        if is_garbage:
+            log("Garbage pullout front replaced, assembly kept")
+        else:
+            log("Legacy pullout module removed")
 
 
 def hide_all_pulls():
@@ -2073,62 +3329,144 @@ def fit_pulls_to_fronts(cabinet):
 
 
 def build_blind_corner_cabinet():
-    # Coin mort (blind corner) : UNE porte shaker sur la section ouvrante (gauche),
-    # le RESTE OUVERT (pas de panneau) montrant l'intérieur. Carcasse pleine
-    # largeur, toe-kick continu (base) ou rien (mural). Poignée sur la porte.
+    # Coin mort (blind corner) — plan technique :
+    #   gauche  : ouverture blind (1 tablette)
+    #   centre  : montant LARGE du face frame (9" ou 12" — continuité du cadre)
+    #   droite  : porte shaker overlay (« door on right »)
+    # Pas de panneau filler séparé : le montant central EST le frame.
+    # Comme les autres caissons du bas : dessus OUVERT (traverse avant bouleau
+    # seulement, pas de panneau supérieur), toe-kick continu (base).
+    inch = 0.0254
     W = float(CONFIG["width_m"])
     H = float(CONFIG["height_m"])
     D = float(CONFIG["depth_m"])
     is_base = CONFIG.get("cabinet_type") == "BASE"
     finish = build_finish_material()
-    # Intérieur = TOUJOURS érable/bouleau naturel (réalité Dilamco, blanc ET chêne).
-    interior_mat = build_maple_interior()
-    black = material("Dilamco_Product_Matte_Black_Pull", (0.015, 0.015, 0.015, 1), 0.80, 0.0, specular=0.05)
+    shelf_mat = build_shelf_material()
+    interior_mat = shelf_mat
     t = 0.0175
     tkh = 0.1143 if is_base else 0.0
     setback = 0.0762
-    # Carcasse : côtés pleine hauteur au sol, bas surélevé au-dessus du toe-kick.
-    # Le BAS fait partie de la COQUE : au fini extérieur (ses tranches avant et
-    # latérale affleurent l'extérieur — en érable, une bande bois apparaissait
-    # sur la coque blanche, feedback Gabriel 2026-07-01). Le plancher érable
-    # visible par la section ouverte = liner posé dessus, en retrait.
-    # Bas/dessus INSÉRÉS ENTRE les côtés (largeur W-2t) : à pleine largeur ils
-    # traversaient le volume des côtés → faces coplanaires = couture verticale
-    # visible sur l'arête avant (bug visuel repéré par Gabriel 2026-07-01).
+    inner_h = H - tkh
+    # Cadre de façade (1 1/2 po) comme add_face_frame sur les caissons HB :
+    # montants/traverses au fini ; ouverture blind | montant central large | porte.
+    FW = 0.0381
+    FT = 0.019
+    xL, xR = -W / 2.0, W / 2.0
+    zb, zt = tkh, H
+    zb1, zt0 = zb + FW, zt - FW
+    xl1, xr0 = xL + FW, xR - FW
+    inner_w = W - 2.0 * FW
+    width_in = inner_w / inch
+
+    stile_in = 12.0 if (W / inch) >= 41.0 else 9.0
+    door_in = 15.0
+    blind_in = width_in - stile_in - door_in
+    if blind_in < 6.0:
+        door_in = max(12.0, width_in - stile_in - 6.0)
+        blind_in = width_in - stile_in - door_in
+    stile_w = stile_in * inch
+    door_w = door_in * inch
+    blind_w = blind_in * inch
+
+    x_inner_l = xl1
+    x_blind_r = x_inner_l + blind_w
+    x_stile_r = x_blind_r + stile_w
+    log(
+        "blind_corner layout "
+        + str(round(W / inch, 1))
+        + '" (ouverture cadre '
+        + str(round(width_in, 1))
+        + '") : blind='
+        + str(round(blind_in, 1))
+        + '" stile='
+        + str(round(stile_in, 1))
+        + '" door='
+        + str(round(door_in, 1))
+        + '"'
+    )
+
+    box_front_y = -D / 2.0
+    fy1 = box_front_y
+    fy0 = box_front_y - FT
+    door_t = 0.019
+    reveal = 0.003
+    dcy = fy0 - door_t / 2.0
+    # Façades OVERLAY (comme HB) : recouvrent traverses + montants, pas l'ouverture nette.
+    front_h = (zt - zb) - 2.0 * reveal
+    front_cz = (zb + zt) / 2.0
+
+    # Carcasse : côtés pleine hauteur, bas entre les côtés, fond plein, PAS de top.
     root = _flat_box("BC_Bottom", (W - 2.0 * t, D, t), (0.0, 0.0, tkh + t / 2.0), finish)
-    liner_t = 0.004
+    _flat_box("BC_Left Side", (t, D, inner_h), (-W / 2.0 + t / 2.0, 0.0, tkh + inner_h / 2.0), finish, parent=root)
+    _flat_box("BC_Right Side", (t, D, inner_h), (W / 2.0 - t / 2.0, 0.0, tkh + inner_h / 2.0), finish, parent=root)
+    # Retours plintheau sur les montants : 100 % fini (visible dans le vide du toe-kick).
+    if is_base:
+        _flat_box("BC_Left ToeReturn", (t, D, tkh), (-W / 2.0 + t / 2.0, 0.0, tkh / 2.0), finish, parent=root)
+        _flat_box("BC_Right ToeReturn", (t, D, tkh), (W / 2.0 - t / 2.0, 0.0, tkh / 2.0), finish, parent=root)
     _flat_box(
-        "BC_FloorLiner",
-        (W - 2.0 * t - 0.002, D - 2.0 * t, liner_t),
-        (0.0, 0.0, tkh + t + liner_t / 2.0),
+        "BC_Back",
+        (W - 2.0 * t, t, inner_h),
+        (0.0, D / 2.0 - t / 2.0, tkh + inner_h / 2.0),
         interior_mat,
         parent=root,
     )
-    _flat_box("BC_Top", (W - 2.0 * t, D, t), (0.0, 0.0, H - t / 2.0), build_shelf_material(), parent=root)
-    _flat_box("BC_Left", (t, D, H), (-W / 2.0 + t / 2.0, 0.0, H / 2.0), finish, parent=root)
-    _flat_box("BC_Right", (t, D, H), (W / 2.0 - t / 2.0, 0.0, H / 2.0), finish, parent=root)
-    _flat_box("BC_Back", (W - 2.0 * t, t, H - tkh), (0.0, D / 2.0 - t / 2.0, tkh + (H - tkh) / 2.0), interior_mat, parent=root)
     if is_base:
         _flat_box("BC_ToeKick", (W - 2.0 * t, t, tkh), (0.0, -D / 2.0 + setback, tkh / 2.0), finish, parent=root)
-    # Étagère intérieure, visible par la section ouverte, à mi-hauteur.
-    # Tablette = bouleau doré (photo Gabriel), fond/côtés = érable uniforme.
-    shelf_z = tkh + (H - tkh) * 0.5
-    _flat_box("BC_Shelf", (W - 2.0 * t, D - 2.0 * t, t), (0.0, 0.0, shelf_z), build_shelf_material(), parent=root)
-    door_t = 0.019
-    reveal = 0.003
-    dcy = -D / 2.0 - door_t / 2.0
-    front_h = (H - tkh) - 2.0 * reveal
-    front_cz = tkh + (H - tkh) / 2.0
-    # UNE porte sur la section ouvrante (gauche). Le reste reste OUVERT.
-    door_w = min(0.46, W * 0.40)
-    door_cx = -W / 2.0 + reveal + door_w / 2.0
-    _shaker_door(door_w - reveal, front_h, door_t, (door_cx, dcy, front_cz), finish, parent=root)
-    # Poignée verticale sur la porte, près du bord intérieur (côté ouvert).
-    pull_y = dcy - door_t / 2.0 - 0.012
-    pull_len = 0.10
-    pull_z = (H - 0.09) if is_base else (tkh + 0.09)  # base : en haut ; mural : en bas
-    pull_x = door_cx + door_w / 2.0 - 0.03
-    _bar_pull((pull_x, pull_y, pull_z), pull_len, black, horizontal=False, parent=root)
+
+    # Traverse avant bouleau seulement (fix_stretchers sur les caissons HB).
+    st_depth = 0.1016  # ~4 po
+    _flat_box(
+        "BC_Stretcher_Front",
+        (W - 2.0 * t, st_depth, t),
+        (0.0, -D / 2.0 + st_depth / 2.0, H - t / 2.0),
+        shelf_mat,
+        parent=root,
+    )
+
+    # Une seule tablette dans le compartiment blind (visible par l'ouverture avant).
+    # Pas de cloison interne ni de panneau filler devant.
+    shelf_h = inner_h - t
+    shelf_w = max(blind_w - t, 0.04)
+    shelf_cx = x_inner_l + shelf_w / 2.0
+    shelf_z = tkh + t + shelf_h * 0.52
+    _flat_box(
+        "BC_Shelf",
+        (shelf_w, D - 2.0 * t, t),
+        (shelf_cx, 0.0, shelf_z),
+        shelf_mat,
+        parent=root,
+    )
+
+    # Face frame : contour + montant central large (continuité du cadre, plan jaune).
+    frame_rects = [
+        (xL, xR, zt0, zt),
+        (xL, xR, zb, zb1),
+        (xL, xl1, zb1, zt0),
+        (xr0, xR, zb1, zt0),
+        (x_blind_r, x_stile_r, zb1, zt0),
+    ]
+    _frame_union("FaceFrame", frame_rects, fy0, fy1, finish, root)
+
+    # Porte overlay à droite du montant central (ne recouvre pas le stile large).
+    door_left = x_stile_r - reveal
+    door_right = xR
+    door_panel_w = door_right - door_left
+    door_cx = (door_left + door_right) / 2.0
+    _shaker_door(
+        door_panel_w,
+        front_h,
+        door_t,
+        (door_cx, dcy, front_cz),
+        finish,
+        parent=root,
+    )
+    # Intérieur bouleau : dessus du plancher + faces intérieures des côtés.
+    bpy.context.view_layer.update()
+    _paint_flat_bottom_carcass(root, finish, interior_mat)
+    for child in root.children:
+        if child.type == "MESH" and child.name.endswith("Side"):
+            _paint_flat_side_carcass(child, finish, interior_mat)
     return root
 
 
@@ -2243,6 +3581,35 @@ def run_one(main_scene):
     # stretcher doit survivre au handler HB déclenché par l'apply des geonodes.
     add_face_frame(cabinet)  # EN DERNIER : cadre + boîtes rétrécies (coupe des drivers
     # HB) ; rien après ne doit re-déclencher un recalc HB qui les écraserait.
+    if CONFIG.get("view") == "open":
+        # Vue matériaux : tiroirs ouverts en escalier + caméra plus plongeante
+        # pour voir les caisses de tiroirs.
+        drawer_count = open_drawers(cabinet)
+        door_count = open_doors(cabinet)
+        hide_garbage_pullout_orphans(cabinet)
+        # Déchets : pas de open_pullouts — le module HB n'a pas de bacs, sortir
+        # la façade seule = panneau blanc flottant. On montre le tiroir utilitaire.
+        if CONFIG.get("category") == "base-cabinet-garbage-pull-out":
+            pullout_count = 0
+        else:
+            pullout_count = open_pullouts(cabinet)
+        if pullout_count and not drawer_count:
+            CONFIG.setdefault("cam_dir", (0.78, -1.35, 0.36))
+            CONFIG.setdefault("camera_lens", 90.0)
+        elif door_count and drawer_count:
+            # Référence photo "tiroir + porte" : plus bas/frontal que la vue
+            # 3 tiroirs, sinon on voit surtout le dessus et la porte cache
+            # l'intérieur comme un objet 3D, pas comme une photo produit.
+            CONFIG.setdefault("cam_dir", (0.50, -1.55, 0.24))
+            CONFIG.setdefault("camera_lens", 95.0)
+        elif door_count and not drawer_count and not pullout_count:
+            # Portes ouvertes : caméra plus basse pour voir moins le dessus,
+            # comme une photo prise plus à hauteur du meuble.
+            CONFIG.setdefault("cam_dir", (0.70, -1.45, 0.28))
+            CONFIG.setdefault("camera_lens", 90.0)
+        else:
+            CONFIG.setdefault("cam_dir", (0.78, -1.35, 0.50))
+            CONFIG.setdefault("camera_lens", 85.0)
     setup_shadow_catcher_floor(cabinet)
     setup_negative_fill(cabinet)
     setup_lighting(cabinet)
@@ -2252,8 +3619,54 @@ def run_one(main_scene):
     if CONFIG.get("save_blend"):
         # Sauvegarde de la scène montée (caisson + matériaux + lumière + caméra)
         # pour itérer visuellement dans Blender au lieu du rendu headless.
+        # PREVIEW « posé au sol » pour F12 : le packshot réel a un fond TRANSPARENT et
+        # une ombre au sol SYNTHÉTIQUE ajoutée en post (PIL) — donc invisible dans
+        # Blender seul. Ici on rend le .blend de debug plus proche du site : shadow
+        # catcher -> SOL VISIBLE gris clair (montre l'ombre RÉELLE de la key) + fond
+        # opaque. (L'ombre exacte du site reste celle du post-process, forme différente.)
+        sc = bpy.context.scene
+        for o in bpy.data.objects:
+            if o.name.startswith("Dilamco_Shadow"):
+                o.is_shadow_catcher = False
+                for mm in o.data.materials:
+                    if mm and mm.use_nodes:
+                        for nd in mm.node_tree.nodes:
+                            if nd.type == "BSDF_PRINCIPLED":
+                                nd.inputs["Base Color"].default_value = (0.94, 0.94, 0.94, 1)
+                                nd.inputs["Roughness"].default_value = 0.9
+        sc.render.film_transparent = False
+        if CONFIG.get("blend_static"):
+            # FIGE la scene en meshes simples avant sauvegarde. Raison : ouvert
+            # dans le Blender GUI (addon HB5 actif), les handlers HB recalculent
+            # le caisson et SUPPRIMENT les pieces mutees par le pipeline (boites
+            # de tiroir/cote droit disparus chez Gabriel 2026-07-12). En statique,
+            # HB5 ignore le fichier ET les materiaux deviennent des SLOTS normaux
+            # -> drag-drop BlenderKit fonctionnel pour iterer sur les materiaux.
+            bpy.ops.object.select_all(action="DESELECT")
+            vis = [o for o in bpy.data.objects
+                   if o.type == "MESH" and not o.hide_render and not o.get("IS_GEONODE_CAGE")]
+            for o in vis:
+                o.hide_viewport = False
+                o.select_set(True)
+            if vis:
+                bpy.context.view_layer.objects.active = vis[0]
+                bpy.ops.object.convert(target="MESH")  # applique geonodes+bevel
+            # de-parenter (transform conserve) avant de supprimer les cages/empties
+            for o in vis:
+                world = o.matrix_world.copy()
+                o.parent = None
+                o.matrix_world = world
+                o.animation_data_clear()
+                for k in [k for k in o.keys() if k.startswith(("IS_", "MENU_", "PROMPT_"))]:
+                    del o[k]
+            for o in list(bpy.data.objects):
+                if o in vis or o.type in {"LIGHT", "CAMERA"}:
+                    continue
+                bpy.data.objects.remove(o, do_unlink=True)
+            bpy.context.view_layer.update()
+            log("blend statique: " + str(len(vis)) + " meshes figes, helpers HB supprimes")
         bpy.ops.wm.save_as_mainfile(filepath=CONFIG["save_blend"])
-        log("Saved blend " + CONFIG["save_blend"])
+        log("Saved blend (preview sol+ombre) " + CONFIG["save_blend"])
         return
 
     bpy.ops.render.render(write_still=True)
@@ -2293,13 +3706,80 @@ main()
 # parfaitement contrôlée sous l'empreinte du caisson — le look packshot
 # e-commerce classique. Le caisson garde sa distinction du fond par le dégradé
 # de son panneau latéral (drapeau négatif) et par ses arêtes.
-SHADOW_ELLIPSE_ALPHA = 44     # opacité crête de l'ellipse (0-255) ≈ 17 %
-SHADOW_ELLIPSE_WIDTH = 0.44   # demi-largeur en fraction de la largeur du caisson
-SHADOW_ELLIPSE_HEIGHT = 0.040 # demi-hauteur en fraction de la largeur du caisson
-SHADOW_ELLIPSE_BLUR = 0.045   # rayon de flou gaussien en fraction de la largeur
+# OMBRE STYLE IKEA (feedback Gabriel 2026-07-05) : scène TOUTE BLANCHE, ombre au sol
+# TRÈS DISCRÈTE (petite ombre de contact sous le caisson, PAS d'étalement à gauche/
+# partout). La vraie « ombre » qui donne du relief est sur le CAISSON lui-même
+# (auto-ombre du shaker via la key cast_shadow + côté +X plus sombre).
+SHADOW_ELLIPSE_ALPHA = 30     # opacité crête (0-255) ≈ 12 % — discrète
+SHADOW_ELLIPSE_WIDTH = 0.40   # demi-largeur en fraction de la largeur du caisson
+SHADOW_ELLIPSE_HEIGHT = 0.032 # demi-hauteur — ombre de contact plate
+SHADOW_ELLIPSE_BLUR = 0.050   # rayon de flou gaussien en fraction de la largeur
+SHADOW_DIR_X = 0.06           # décalage directionnel léger vers la droite (frac. largeur)
+SHADOW_DIR_EXTRA_R = 0.06     # allongement léger du côté droit (frac. largeur)
 
 
-def apply_shadow_postprocess(png_path: Path, out_path: Path | None = None) -> None:
+def _im_eval(expr: str, **kw):
+    """Évalue une expression ImageMath, compatible Pillow <10 (eval) et 10+
+    (unsafe_eval). Entrées maison uniquement -> unsafe_eval acceptable."""
+    from PIL import ImageMath
+
+    fn = getattr(ImageMath, "unsafe_eval", None) or getattr(ImageMath, "eval")
+    return fn(expr, **kw)
+
+
+def _decontaminate_edges(img, radius: float = 2.0, thresh: int = 250):
+    """Corrige la FRANGE SOMBRE du contour : Blender rend les pixels d'antialiasing
+    de la silhouette avec un RGB contaminé par la couleur du fond de scène (sombre),
+    ex. (1,1,1) à alpha 67 -> sur fond blanc du site = liseré noir « pixelisé ».
+
+    On remplace le RGB de l'anneau semi-transparent (alpha < thresh) par une moyenne
+    des voisins PONDÉRÉE PAR L'ALPHA (blur(rgb*a)/blur(a)) : les pixels opaques du
+    produit dominent -> le bord prend la vraie couleur du produit. Préserve la teinte
+    (fonctionne pour blanc, chêne, navi), contrairement à un simple « forcer en blanc ».
+    """
+    from PIL import Image, ImageChops, ImageFilter
+
+    r, g, b, a = img.split()
+    blur_a = a.filter(ImageFilter.GaussianBlur(radius))
+    fixed = []
+    for ch in (r, g, b):
+        pa = ImageChops.multiply(ch, a).filter(ImageFilter.GaussianBlur(radius))
+        dec = _im_eval(
+            "convert((p * 255) / ((ba == 0) * 255 + ba), 'L')", p=pa, ba=blur_a
+        )
+        fixed.append(dec)
+    decon_rgb = Image.merge("RGB", fixed)
+    core = a.point(lambda v: 255 if v >= thresh else 0)  # 255 = pixel plein -> garder RGB
+    out_rgb = Image.composite(Image.merge("RGB", (r, g, b)), decon_rgb, core)
+    return Image.merge("RGBA", (*out_rgb.split(), a))
+
+
+def _downscale_rgba_premult(img, factor: int):
+    """Réduit une image RGBA d'un facteur entier en LANCZOS avec alpha PRÉMULTIPLIÉ.
+
+    Sans prémultiplication, LANCZOS mélange le RGB des pixels transparents (souvent
+    noir) dans l'anneau d'antialiasing du bord → frange sombre. On prémultiplie
+    (RGB×A), on réduit, puis on dé-prémultiplie (RGB×255/A) pour retrouver de l'alpha
+    droit (attendu par le navigateur). numpy n'est pas dispo → ImageMath (PIL pur).
+    """
+    from PIL import Image, ImageChops
+
+    if factor <= 1:
+        return img
+    r, g, b, a = img.split()
+    tw, th = img.width // factor, img.height // factor
+    # prémultiplie chaque canal couleur par l'alpha, puis réduit
+    pre = [ImageChops.multiply(ch, a).resize((tw, th), Image.LANCZOS) for ch in (r, g, b)]
+    a_s = a.resize((tw, th), Image.LANCZOS)
+    # dé-prémultiplie : c*255/a (dénominateur forcé à 255 là où a==0, où c vaut 0)
+    out_ch = [
+        _im_eval("convert((c * 255) / ((a == 0) * 255 + a), 'L')", c=c, a=a_s)
+        for c in pre
+    ]
+    return Image.merge("RGBA", (*out_ch, a_s))
+
+
+def apply_shadow_postprocess(png_path: Path, out_path: Path | None = None, downscale: int = 1) -> None:
     """Remplace l'ombre plancher rendue par une ombre de contact synthétique,
     et écrit le résultat (en .webp si out_path le demande).
 
@@ -2307,10 +3787,16 @@ def apply_shadow_postprocess(png_path: Path, out_path: Path | None = None) -> No
        d'antialiasing (dilatation 2 px). Tout le reste (ombre du catcher) → 0.
     2) Dessine une ellipse noire floutée, centrée sous l'empreinte du caisson,
        composée SOUS le produit.
+    3) Si downscale>1, l'image d'entrée est un rendu SUPERSAMPLÉ (×downscale) :
+       tout le traitement se fait à la grande taille, puis on réduit en LANCZOS
+       prémultiplié → contour net sur tout le pourtour (anti-crénelage).
     """
     from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
     img = Image.open(png_path).convert("RGBA")
+    # Corrige la frange sombre du contour AVANT tout (rayon à l'échelle du rendu :
+    # 2 px à taille cible, 2×downscale si supersamplé).
+    img = _decontaminate_edges(img, radius=2.0 * max(1, downscale))
     a = img.getchannel("A")
     opaque = a.point(lambda v: 255 if v >= 240 else 0)
     bbox = opaque.getbbox()
@@ -2324,14 +3810,17 @@ def apply_shadow_postprocess(png_path: Path, out_path: Path | None = None) -> No
     else:
         x0, _, x1, y1 = bbox
         cab_w = max(1, x1 - x0)
-        cx = (x0 + x1) / 2.0
+        # Ombre DIRECTIONNELLE : décalée + allongée vers la DROITE (le caisson projette
+        # son ombre au sol à droite du panneau droit), pas une flaque symétrique.
+        cx = (x0 + x1) / 2.0 + cab_w * SHADOW_DIR_X
         rw = cab_w * SHADOW_ELLIPSE_WIDTH
         rh = max(6.0, cab_w * SHADOW_ELLIPSE_HEIGHT)
         sh = Image.new("L", img.size, 0)
         # Centre de l'ellipse sur la ligne de base du caisson (bas de la bbox),
         # la moitié basse dépasse légèrement devant — lecture « posé au sol ».
         ImageDraw.Draw(sh).ellipse(
-            [cx - rw, y1 - rh, cx + rw, y1 + rh], fill=SHADOW_ELLIPSE_ALPHA
+            [cx - rw, y1 - rh, cx + rw + cab_w * SHADOW_DIR_EXTRA_R, y1 + rh],
+            fill=SHADOW_ELLIPSE_ALPHA,
         )
         sh = sh.filter(ImageFilter.GaussianBlur(cab_w * SHADOW_ELLIPSE_BLUR))
         shadow = Image.merge(
@@ -2344,6 +3833,9 @@ def apply_shadow_postprocess(png_path: Path, out_path: Path | None = None) -> No
             ),
         )
         out = Image.alpha_composite(shadow, product)
+
+    if downscale > 1:
+        out = _downscale_rgba_premult(out, downscale)
 
     target = out_path or png_path
     if target.suffix.lower() == ".webp":
@@ -2362,7 +3854,18 @@ def build_parser() -> argparse.ArgumentParser:
         choices=sorted(QUALITY_SAMPLES),
         default="preview",
     )
+    parser.add_argument("--samples", type=int, default=0,
+                        help="override direct du nombre de samples (0 = utiliser --quality)")
+    parser.add_argument("--adaptive-threshold", type=float, default=0.01,
+                        help="seuil adaptive sampling (plus haut = plus rapide, un peu plus de bruit)")
     parser.add_argument("--resolution", type=int, default=1400)
+    parser.add_argument(
+        "--supersample",
+        type=int,
+        default=2,
+        choices=[1, 2],
+        help="rendu à N× la résolution puis réduction prémultipliée (2 = contours plus propres)",
+    )
     parser.add_argument(
         "--profile",
         choices=sorted(DOOR_PROFILES),
@@ -2378,8 +3881,10 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--navi-scale", type=float, default=1.4,
                         help="échelle du box-mapping de l'échantillon navi")
-    parser.add_argument("--navi-sat", type=float, default=1.0, help="saturation navi (1=natif)")
-    parser.add_argument("--navi-val", type=float, default=1.0, help="luminosité navi (1=natif)")
+    parser.add_argument("--navi-sat", type=float, default=0.5,
+                        help="saturation navi (0.5 = recette N1 2026-07-12 ; 1=texture native)")
+    parser.add_argument("--navi-val", type=float, default=1.6,
+                        help="luminosité navi (1.6 = recette N1 2026-07-12 ; 1=texture native)")
     parser.add_argument("--navi-hue", type=float, default=0.5, help="teinte navi (0.5=neutre)")
     parser.add_argument(
         "--hdri",
@@ -2387,15 +3892,30 @@ def build_parser() -> argparse.ArgumentParser:
         default="studio_kontrast_03_2k.exr",
         help="nom du fichier HDRI dans pipeline/hdris/ (défaut: studio_kontrast_03)",
     )
-    parser.add_argument("--hdri-strength", type=float, default=1.0)
+    # Défauts lumière = recette Y2 du banc 2026-07-12 (voir mémoire
+    # banc-lumiere-packshot-2026-07) : HDRI 0.5 + key 42/2.2 + softbox
+    # rapprochée (z 1.9, ×0.5, 2.4) + exposure -0.15 → façade blanche ~229,
+    # falloff vertical 4, marge ~12 vs fond du site, hiérarchie façade>côté
+    # validée blanc/chêne/navi.
+    parser.add_argument("--hdri-strength", type=float, default=0.5)
     # 270° : softbox principal FACE au caisson → façade = face la plus claire,
     # côté +X en retrait (feedback Gabriel 2026-07-03). L'ancien 235° éclairait
     # le côté plus que la façade (hiérarchie inversée, blanc ET navi).
     parser.add_argument("--hdri-rotation", type=float, default=270.0,
                         help="rotation Z du HDRI en degrés (oriente le softbox principal)")
-    parser.add_argument("--key-energy", type=float, default=30.0,
+    parser.add_argument("--key-energy", type=float, default=42.0,
                         help="énergie de la key frontale (W)")
-    parser.add_argument("--exposure", type=float, default=-0.1)
+    parser.add_argument("--key-size", type=float, default=2.2,
+                        help="taille de la key area (m)")
+    parser.add_argument("--top-z", type=float, default=1.9,
+                        help="hauteur de la Top_Softbox (m) ; plus bas = falloff vertical")
+    parser.add_argument("--top-mult", type=float, default=0.5,
+                        help="énergie Top_Softbox = key-energy × top-mult")
+    parser.add_argument("--top-size", type=float, default=2.4,
+                        help="taille de la Top_Softbox (m)")
+    parser.add_argument("--exposure", type=float, default=-0.15)
+    parser.add_argument("--white-rgb", type=float, nargs=3, default=[0.72, 0.716, 0.705],
+                        help="albédo du blanc peint (RGB linéaire)")
     parser.add_argument("--oak-set", type=str, default="real",
                         help="'real' = swatch photo Chêne blanc Dilamco ; sinon dossier PBR ambientCG (Wood050, Wood095)")
     parser.add_argument("--oak-scale", type=float, default=2.2)
@@ -2404,14 +3924,33 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--oak-hue", type=float, default=0.5, help="teinte (0.5=neutre)")
     parser.add_argument("--oak-tint", type=float, nargs=3, default=None,
                         help="multiplicateur RGB du placage (recolorisation, ex. 0.58 0.46 0.33)")
-    # Intérieur (contreplaqué bouleau/érable : fond, côtés, tablettes, boîtes de
-    # tiroir). Défaut Wood021 (grain fin type bouleau) désaturé + éclairci pour
-    # matcher le contreplaqué pâle réel Dilamco (photo salle de montre).
+    # Intérieur (contreplaqué bouleau/érable : fond, côtés, tablettes).
+    # Fallback intérieur si le matériau BlenderKit Plywood n'est pas disponible.
     parser.add_argument("--shelf-set", type=str, default="Wood021",
                         help="dossier PBR ambientCG de l'intérieur (Wood021, Wood095, ...)")
-    parser.add_argument("--shelf-sat", type=float, default=1.0,
+    parser.add_argument("--shelf-diff", type=str, default="",
+                        help="chemin d'une texture diffuse intérieur fallback (défaut: texture_boxe.png)")
+    parser.add_argument("--shelf-scale", type=float, default=1.35,
+                        help="échelle du box-mapping de l'intérieur showroom")
+    parser.add_argument("--plywood-blend", type=str, default="",
+                        help="chemin d'un .blend de matériau bois intérieur/caisses "
+                             "(défaut: textures/blenderkit_plywood_2k.blend)")
+    parser.add_argument("--plywood-mat", type=str, default="",
+                        help="nom du matériau dans --plywood-blend (défaut: Plywood)")
+    parser.add_argument("--plywood-sat", type=float, default=1.4,
+                        help="saturation du bois intérieur/caisses BlenderKit "
+                             "(1.4 = calibration bouleau 2026-07-14 ; 1=natif)")
+    parser.add_argument("--plywood-val", type=float, default=1.28,
+                        help="luminosité du bois intérieur/caisses BlenderKit "
+                             "(1.28 = calibration bouleau 2026-07-14 ; 1=natif)")
+    parser.add_argument("--plywood-hue", type=float, default=0.5,
+                        help="teinte du bois intérieur/caisses BlenderKit (0.5=neutre)")
+    parser.add_argument("--view", type=str, default="face", choices=["face", "open"],
+                        help="vue packshot : face (fermé, défaut) ou open (tiroirs ouverts, "
+                             "caméra plongeante — met en valeur les caisses massif + l'intérieur)")
+    parser.add_argument("--shelf-sat", type=float, default=0.96,
                         help="saturation de l'intérieur (1=natif ; <1 = plus pâle)")
-    parser.add_argument("--shelf-val", type=float, default=1.0,
+    parser.add_argument("--shelf-val", type=float, default=0.93,
                         help="luminosité de l'intérieur (>1 = plus clair)")
     parser.add_argument("--shelf-hue", type=float, default=0.5,
                         help="teinte de l'intérieur (0.5=neutre)")
@@ -2420,6 +3959,19 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    # Blender peut résoudre les chemins relatifs depuis un autre cwd que le
+    # wrapper Python. Normaliser ici évite d'écrire dans C:\tmp pendant que le
+    # wrapper attend pipeline\tmp.
+    args.output = args.output.expanduser()
+    if not args.output.is_absolute():
+        args.output = (Path.cwd() / args.output).resolve()
+    else:
+        args.output = args.output.resolve()
+    args.catalog = args.catalog.expanduser()
+    if not args.catalog.is_absolute():
+        args.catalog = (Path.cwd() / args.catalog).resolve()
+    else:
+        args.catalog = args.catalog.resolve()
     product = load_product(args.catalog, args.product_code)
     hb_config = infer_hb_config(product)
     # Fini alternatif forcé (--finish navi) : par-dessus le même code catalogue.
@@ -2458,11 +4010,12 @@ def main(argv: list[str] | None = None) -> int:
         oak_rough = REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"
     white_rough = REPO_ROOT / "textures" / "laminate_floor_02_rough_2k.jpg"
     white_nor = REPO_ROOT / "textures" / "laminate_floor_02_nor_gl_2k.jpg"
-    # Intérieur (contreplaqué bouleau) : birch_wood.png (bouleau pâle propre, 2026-07-05).
+    # Intérieur fallback : texture_boxe.png. Le défaut réel est BlenderKit Plywood
+    # si textures/blenderkit_plywood_2k.blend est disponible.
     # build_shelf_material n'utilise plus rough/normal ; ces chemins restent pour compat.
     shelf_dir = REPO_ROOT / "textures" / f"{args.shelf_set}_acg"
     shelf_pref = f"{args.shelf_set}_2K-JPG"
-    shelf_diff = REPO_ROOT / "textures" / "birch_wood.png"
+    shelf_diff = Path(args.shelf_diff) if args.shelf_diff else REPO_ROOT / "textures" / "texture_boxe.png"
     shelf_rough = shelf_dir / f"{shelf_pref}_Roughness.jpg"
     shelf_normal = shelf_dir / f"{shelf_pref}_NormalGL.jpg"
     if not shelf_diff.is_file():  # repli sur l'ancien set si le dossier manque
@@ -2474,13 +4027,19 @@ def main(argv: list[str] | None = None) -> int:
             "output": str(args.output),
             "door_profile": args.profile,
             "shaker_rail_m": DOOR_PROFILES[args.profile]["rail_m"],
-            "samples": QUALITY_SAMPLES[args.quality],
-            "resolution": [args.resolution, args.resolution],
+            "samples": args.samples if args.samples > 0 else QUALITY_SAMPLES[args.quality],
+            "adaptive_threshold": args.adaptive_threshold,
+            "resolution": [args.resolution * args.supersample, args.resolution * args.supersample],
             "hdri": str(hdri) if hdri.is_file() else "",
             "hdri_strength": args.hdri_strength,
             "hdri_rotation_deg": args.hdri_rotation,
             "key_energy": args.key_energy,
+            "key_size": args.key_size,
+            "top_softbox_z": args.top_z,
+            "top_softbox_mult": args.top_mult,
+            "top_softbox_size": args.top_size,
             "exposure": args.exposure,
+            "white_rgb": list(args.white_rgb),
             "oak_diff": str(oak_diff),
             "oak_rough": str(oak_rough),
             "oak_normal": str(oak_normal) if oak_normal else "",
@@ -2490,6 +4049,13 @@ def main(argv: list[str] | None = None) -> int:
             "oak_hue": args.oak_hue,
             "oak_tint": list(args.oak_tint) if args.oak_tint else None,
             "material_lib": str(REPO_ROOT / "materials" / "dilamco_materials.blend"),
+            "blenderkit_plywood_blend": (
+                args.plywood_blend or str(REPO_ROOT / "textures" / "blenderkit_plywood_2k.blend")
+            ),
+            "blenderkit_plywood_material": args.plywood_mat or "Plywood",
+            "blenderkit_plywood_sat": args.plywood_sat,
+            "blenderkit_plywood_val": args.plywood_val,
+            "blenderkit_plywood_hue": args.plywood_hue,
             "white_rough": str(white_rough),
             "white_nor": str(white_nor) if white_nor.is_file() else "",
             # Navi : échantillon photo réel (albédo) + leviers de calibration.
@@ -2501,6 +4067,9 @@ def main(argv: list[str] | None = None) -> int:
             "shelf_diff": str(shelf_diff),
             "shelf_rough": str(shelf_rough),
             "shelf_normal": str(shelf_normal),
+            "shelf_scale": args.shelf_scale,
+            "drawerbox_diff": str(REPO_ROOT / "textures" / "drawer_textures.png"),
+            "view": args.view,
             "shelf_sat": args.shelf_sat,
             "shelf_val": args.shelf_val,
             "shelf_hue": args.shelf_hue,
@@ -2540,7 +4109,7 @@ def main(argv: list[str] | None = None) -> int:
         sys.stdout.write(proc.stdout)
         sys.stderr.write(proc.stderr)
         if proc.returncode == 0 and args.output.is_file():
-            apply_shadow_postprocess(args.output)
+            apply_shadow_postprocess(args.output, downscale=args.supersample)
             print("[render_product_cabinet.py] ombre atténuée (PIL)", file=sys.stderr)
         return proc.returncode
     finally:

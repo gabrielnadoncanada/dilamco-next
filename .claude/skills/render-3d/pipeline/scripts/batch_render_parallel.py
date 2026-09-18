@@ -14,6 +14,7 @@ FIN depuis les fichiers rendus, donc les workers ne se battent jamais dessus.
 Usage :
     uv run python scripts/batch_render_parallel.py --workers 3 --quality preview
     uv run python scripts/batch_render_parallel.py --only S8-DB12,S8-DB15
+    uv run python scripts/batch_render_parallel.py --only S8-DB15 --views face,open
 """
 
 from __future__ import annotations
@@ -42,10 +43,25 @@ from render_product_cabinet import (
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 # Cible = site live dilamco-next (catalogue + manifest sous lib/shop/).
-STORE_ROOT = Path(r"C:/laragon/www/dilamco-next")
+# Racine du projet dérivée de l'emplacement du script
+# (…/dilamco-next/.claude/skills/render-3d/pipeline/scripts/<ce fichier>), pour
+# éviter un chemin en dur qui casse selon le disque/la machine (C:/ vs D:/).
+STORE_ROOT = Path(__file__).resolve().parents[5]
 DEFAULT_CATALOG = STORE_ROOT / "lib" / "shop" / "catalog-products.json"
 DEFAULT_OUT_DIR = STORE_ROOT / "public" / "assets" / "products" / "renders"
 DEFAULT_MANIFEST = STORE_ROOT / "lib" / "shop" / "render-manifest.json"
+
+# Supersampling catalogue : rendu à SUPERSAMPLE× puis réduction LANCZOS
+# prémultipliée. DÉSACTIVÉ 2026-07-14 (SUPERSAMPLE=1) après A/B mesuré : à 2400px
+# le rendu coûte ~146 s vs ~37 s à 1200px (4× le temps — le RENDU Cycles domine,
+# pas le build ; test 400px=14 s → build ~12 s fixe, rendu ~25 s à 1200px).
+# Or les bords natifs 1200px sont déjà propres (Cycles fait l'AA à 32 samples) :
+# zoom 6× sur le toe-kick natif vs supersamplé = différence indiscernable à
+# taille réelle. Le supersampling quadruplait donc le coût dominant pour un gain
+# de netteté nul. Remettre à 2 SEULEMENT si un cas réel montre du crénelage
+# visible à 100 % (le prouver par crop, pas à l'œil).
+SUPERSAMPLE = 1
+VIEW_CHOICES = ("face", "open")
 
 
 def is_renderable(p: dict) -> bool:
@@ -63,6 +79,50 @@ def is_renderable(p: dict) -> bool:
     )
 
 
+def supports_view(p: dict, view: str) -> bool:
+    if view == "face":
+        return True
+    if view == "open":
+        # Vue ouverte = tiroirs empilés (DB/VDB), portes ouvertes (showcase),
+        # pull-outs sortis (range-épices, poubelle). SEULE EXCLUSION : le
+        # micro-ondes de BASE (base-microwave-cabinet) — sa géométrie custom
+        # met une façade de tiroir qui FLOTTE détachée en vue ouverte (bug
+        # 2026-07-14). Tout le reste garde sa vue ouverte.
+        category = str(p.get("category") or "")
+        if category == "base-microwave-cabinet":
+            return False
+        return (
+            int(p.get("drawers") or 0) > 0
+            or int(p.get("doors") or 0) > 0
+            or "drawer" in category
+            or "pull-out" in category
+        )
+    return False
+
+
+def parse_views(value: str) -> list[str]:
+    views = []
+    for raw in value.split(","):
+        view = raw.strip()
+        if not view:
+            continue
+        if view not in VIEW_CHOICES:
+            raise SystemExit("--views accepte seulement: " + ",".join(VIEW_CHOICES))
+        if view not in views:
+            views.append(view)
+    return views or ["face"]
+
+
+def manifest_view_key(face_key: str, view: str) -> str:
+    if view == "face":
+        return face_key
+    if face_key == "face":
+        return view
+    if face_key.startswith("face@"):
+        return view + "@" + face_key.split("@", 1)[1]
+    return view
+
+
 def texture_paths() -> dict:
     hdri = REPO_ROOT / "hdris" / "studio_kontrast_03_2k.exr"
     if not hdri.is_file():
@@ -70,30 +130,50 @@ def texture_paths() -> dict:
     white_nor = REPO_ROOT / "textures" / "laminate_floor_02_nor_gl_2k.jpg"
     return {
         "hdri": str(hdri) if hdri.is_file() else "",
-        "hdri_strength": 1.0,
+        # Recette Y2 (banc lumière 2026-07-12) : HDRI réduit + key renforcée +
+        # Top_Softbox rapprochée (falloff vertical) + exposure -0.15. Garder
+        # aligné avec les défauts de render_product_cabinet.build_parser.
+        "hdri_strength": 0.5,
         # 270° = softbox principal FACE au caisson (façade la plus claire, côté
         # en retrait — feedback Gabriel 2026-07-03). Garder aligné avec le
         # défaut --hdri-rotation de render_product_cabinet.build_parser.
         "hdri_rotation_deg": 270.0,
+        "key_energy": 42.0,
+        "key_size": 2.2,
+        "top_softbox_z": 1.9,
+        "top_softbox_mult": 0.5,
+        "top_softbox_size": 2.4,
+        "exposure": -0.15,
         "material_lib": str(REPO_ROOT / "materials" / "dilamco_materials.blend"),
+        "blenderkit_plywood_blend": str(REPO_ROOT / "textures" / "blenderkit_plywood_2k.blend"),
+        "blenderkit_plywood_material": "Plywood",
+        # Calibration BOULEAU (2026-07-14) : le Plywood natif rendait (188,176,165)
+        # sat 15 % vs photos sample (208,195,177) sat 24 %. Aligné sur le CLI.
+        "blenderkit_plywood_sat": 1.4,
+        "blenderkit_plywood_val": 1.28,
         "oak_diff": str(REPO_ROOT / "textures" / "oak_veneer_01_diff_2k.jpg"),
         "oak_rough": str(REPO_ROOT / "textures" / "oak_veneer_01_rough_2k.jpg"),
         "white_rough": str(REPO_ROOT / "textures" / "laminate_floor_02_rough_2k.jpg"),
         "white_nor": str(white_nor) if white_nor.is_file() else "",
-        # Intérieur = contreplaqué bouleau PÂLE (Wood021, grain fin) désaturé +
-        # ajusté pour matcher le contreplaqué réel Dilamco (photo salle de montre).
-        # Wood095 (ancien) sortait trop ambré/orangé. Garder aligné avec les
-        # défauts --shelf-* de render_product_cabinet.build_parser.
-        # Intérieur = birch_wood.png (contreplaqué bouleau pâle propre, 2026-07-05).
-        "shelf_diff": str(REPO_ROOT / "textures" / "birch_wood.png"),
-        "shelf_sat": 1.0,
-        "shelf_val": 1.0,
+        # Défaut intérieur/tiroirs = BlenderKit Plywood PBR. Les textures
+        # ci-dessous restent les fallbacks si le .blend BlenderKit manque.
+        "shelf_diff": str(REPO_ROOT / "textures" / "texture_boxe.png"),
+        "shelf_scale": 1.35,
+        "shelf_sat": 0.96,
+        "shelf_val": 0.93,
         "shelf_hue": 0.5,
         # Chant (plis du dessus des côtés) : crop propre de la photo bouleau russe.
         "chant_tile": str(REPO_ROOT / "textures" / "birch_plywood_side.png"),
+        # Caisses de tiroir/plateaux = bois chaud lisse, sans effet patchwork.
+        # Garder aligné avec le CLI.
+        "drawerbox_diff": str(REPO_ROOT / "textures" / "drawer_textures.png"),
         # Navi : échantillon photo réel (défauts alignés sur render_product_cabinet).
+        # sat 0.5 / val 1.6 = recette N1 (banc 2026-07-12) : corrige le marine
+        # sur-saturé (41 % rendu vs 4-12 % réel showroom).
         "navi_diff": str(REPO_ROOT / "textures" / "navi_real_flat.png"),
         "navi_scale": 1.4,
+        "navi_sat": 0.5,
+        "navi_val": 1.6,
     }
 
 
@@ -115,14 +195,17 @@ def run_worker(idx: int, configs: list[dict], blender: Path, out_dir: Path, stat
             errors="replace",
         )
         assert proc.stdout is not None
+        done_in_worker = 0
         for line in proc.stdout:
             line = line.strip()
             if "BATCH_OK " in line:
                 code = line.split("BATCH_OK ", 1)[1].strip()
-                png = out_dir / f"{slugify_code(code)}{state['suffix']}_face.png"
+                cfg = configs[done_in_worker]
+                done_in_worker += 1
+                png = Path(cfg["output"])
                 if png.is_file():
                     try:
-                        apply_shadow_postprocess(png, png.with_suffix(".webp"))
+                        apply_shadow_postprocess(png, png.with_suffix(".webp"), downscale=SUPERSAMPLE)
                         png.unlink(missing_ok=True)
                     except Exception as exc:
                         print(f"[w{idx}] webp/ombre KO {code}: {exc}", flush=True)
@@ -133,6 +216,7 @@ def run_worker(idx: int, configs: list[dict], blender: Path, out_dir: Path, stat
                     eta = (el / max(d, 1)) * (state["total"] - d) / 60
                     print(f"[{d}/{state['total']}] OK {code}  ({el/max(d,1):.1f}s/img, ETA ~{eta:.0f} min)", flush=True)
             elif "BATCH_FAIL " in line:
+                done_in_worker += 1
                 with lock:
                     state["failed"] += 1
                     print(f"[w{idx}] ECHEC {line.split('BATCH_FAIL ', 1)[1]}", flush=True)
@@ -168,19 +252,21 @@ def rebuild_manifest(catalog: dict, out_dir: Path, manifest_path: Path) -> int:
         # ainsi que la vue `technique` si elle existe.
         entry = products.get(code, {})
         had_any = False
-        # Vues par PROFIL de porte (face, face@shaker-3) puis par FINI alternatif
-        # (face@navi) : même mécanique fichier-présent → vue, fichier-disparu →
+        # Vues par PROFIL de porte (face/open, face@shaker-3/open@shaker-3)
+        # puis par FINI alternatif (face@navi/open@navi) : même mécanique
+        # fichier-présent → vue, fichier-disparu →
         # vue élaguée. Un batch d'un profil/fini ne clobbe jamais les autres vues.
         views_specs = list(DOOR_PROFILES.values()) + list(FINISH_VARIANTS.values())
         for spec in views_specs:
-            view = spec["manifest_view"]
-            webp = out_dir / f"{slug}{spec['slug_suffix']}_face.webp"
-            if webp.is_file():
-                entry[view] = f"/assets/products/renders/{slug}{spec['slug_suffix']}_face.webp"
-                had_any = True
-            elif view in entry:
-                # Fichier disparu pour cette vue : retirer l'entrée obsolète.
-                del entry[view]
+            for view_name in VIEW_CHOICES:
+                view = manifest_view_key(spec["manifest_view"], view_name)
+                webp = out_dir / f"{slug}{spec['slug_suffix']}_{view_name}.webp"
+                if webp.is_file():
+                    entry[view] = f"/assets/products/renders/{slug}{spec['slug_suffix']}_{view_name}.webp"
+                    had_any = True
+                elif view in entry:
+                    # Fichier disparu pour cette vue : retirer l'entrée obsolète.
+                    del entry[view]
         if had_any:
             products[code] = entry
             mapped += 1
@@ -212,6 +298,12 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--resolution", type=int, default=1200)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--only", type=str, default="")
+    ap.add_argument(
+        "--views",
+        type=str,
+        default="face",
+        help="vues à rendre, séparées par des virgules: face,open. Défaut: face.",
+    )
     ap.add_argument("--force", action="store_true", help="re-rendre même si le .webp existe")
     ap.add_argument(
         "--profile",
@@ -228,6 +320,7 @@ def main(argv: list[str] | None = None) -> int:
         "(navi = mélamine bleu marine, caissons du bas + vanités seulement).",
     )
     args = ap.parse_args(argv)
+    views = parse_views(args.views)
 
     profile = args.profile
     spec = DOOR_PROFILES[profile]
@@ -262,32 +355,37 @@ def main(argv: list[str] | None = None) -> int:
     pending: list[dict] = []
     for p in products:
         slug = slugify_code(p["code"])
-        if not args.force and (args.out_dir / f"{slug}{suffix}_face.webp").is_file():
-            continue
-        cfg = infer_hb_config(p)
-        if finish_spec:
-            cfg["finish"] = finish_spec["finish_label"]
-            cfg["finish_type"] = finish_spec["finish_type"]
-        cfg.update(
-            {
-                "output": str(args.out_dir / f"{slug}{suffix}_face.png"),
-                "door_profile": profile,
-                "shaker_rail_m": spec["rail_m"],
-                "samples": samples,
-                "resolution": [args.resolution, args.resolution],
-                **tex,
-            }
-        )
-        pending.append(cfg)
+        for view in views:
+            if not supports_view(p, view):
+                continue
+            if not args.force and (args.out_dir / f"{slug}{suffix}_{view}.webp").is_file():
+                continue
+            cfg = infer_hb_config(p)
+            if finish_spec:
+                cfg["finish"] = finish_spec["finish_label"]
+                cfg["finish_type"] = finish_spec["finish_type"]
+            cfg.update(
+                {
+                    "output": str(args.out_dir / f"{slug}{suffix}_{view}.png"),
+                    "door_profile": profile,
+                    "shaker_rail_m": spec["rail_m"],
+                    "samples": samples,
+                    "resolution": [args.resolution * SUPERSAMPLE, args.resolution * SUPERSAMPLE],
+                    "view": view,
+                    **tex,
+                }
+            )
+            pending.append(cfg)
 
     if args.limit:
         pending = pending[: args.limit]
 
     total_renderable = len(products)
     print(
-        f"[parallel] {total_renderable} produits rendables, {len(pending)} à rendre "
+        f"[parallel] {total_renderable} produits rendables, {len(pending)} image(s) à rendre "
         f"({total_renderable - len(pending)} déjà présents) ; {args.workers} workers, "
-        f"qualité {args.quality} ({samples} samples), {args.resolution}px",
+        f"vues {','.join(views)}, qualité {args.quality} ({samples} samples), "
+        f"{args.resolution}px (rendu {args.resolution * SUPERSAMPLE}px SS×{SUPERSAMPLE})",
         flush=True,
     )
 
@@ -300,7 +398,7 @@ def main(argv: list[str] | None = None) -> int:
         slices = [s for s in slices if s]
 
         blender = find_blender()
-        state = {"done": 0, "failed": 0, "total": len(pending), "t0": time.time(), "suffix": suffix}
+        state = {"done": 0, "failed": 0, "total": len(pending), "t0": time.time()}
         lock = threading.Lock()
         threads = [
             threading.Thread(target=run_worker, args=(i, s, blender, args.out_dir, state, lock))
