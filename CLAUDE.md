@@ -53,6 +53,8 @@ Le site migre de l'ancien système de pages statiques (`createStaticPage`, modul
 
 **`DESIGN.md` est la source unique** : tokens (couleurs, `--title-1…5`, `--r-control/card/panel`, durées), rôles (`text-lead`, `text-label`, `text-numeral`, `rounded-card`, `transition-ui`, `focus-ring`, `icon-pill`), états par composant. Titres via `<Heading variant>` uniquement (jamais de taille en `className` : tailwind-merge supprime l'interligne ; idem `text-lead`/`text-label` ne se combinent pas avec une couleur dans `cn()`). En-têtes de section via `SectionHeader`. Références du client : Dribbble « Construction Agency » et « NexaCargo » ; rigueur de système : Vercel Geist. Primaire `#253b2f` intouchable, jamais de doré ni de serif. `PRODUCT.md` décrit le registre/persona pour la skill `impeccable`.
 
+**Une composition par famille de page** (zone, rénovation, espace, matériau, à propos, processus, projets, hubs) : recettes dans `docs/redaction-web.md`. Le test `tests/duplicate-content.test.ts` interdit toute phrase ≥ 60 caractères partagée entre deux pages de même langue ; les FAQ génériques (licence, garantie) n'existent que sur l'accueil et à propos.
+
 **Texte** : le site doit se scanner, pas se lire. Toute rédaction suit `docs/redaction-web.md` (budgets par page mesurés avec `node scripts/copy-wordcount.mjs`, longueurs par champ, mots interdits). Titre de hero sans deux-points ni tiret cadratin.
 
 **Piège dev** : `globals.css` n'est pas recompilé par le serveur dev (cache Turbopack) → tuer le serveur, `rm -rf .next/dev`, relancer.
