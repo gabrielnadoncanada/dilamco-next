@@ -96,7 +96,6 @@ export const pageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What goes into your cabinets by default",
-          intro: "Our standard, before any option you might choose to add.",
           rows: [
             {
               label: "Cabinet boxes",

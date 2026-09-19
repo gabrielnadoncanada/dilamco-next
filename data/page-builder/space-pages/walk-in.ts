@@ -118,8 +118,6 @@ export const walkInPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Le rangement en bref",
-          intro:
-            "Ce qu'il faut savoir avant de faire dessiner une garde-robe ou un walk-in.",
           rows: [
             {
               label: "Prix indicatif",
@@ -208,7 +206,6 @@ export const walkInPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Ouest-de-l'Île, Rive-Sud",
         },
       },
     },

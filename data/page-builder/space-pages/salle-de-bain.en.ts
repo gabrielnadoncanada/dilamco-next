@@ -120,8 +120,6 @@ export const salleDeBainPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "The bathroom in brief",
-          intro:
-            "What you should know before redoing a room that gets wet every day.",
           rows: [
             {
               label: "How long",
@@ -209,7 +207,6 @@ export const salleDeBainPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Montréal, Laval, North Shore, South Shore",
         },
       },
     },

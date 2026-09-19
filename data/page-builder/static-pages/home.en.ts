@@ -204,8 +204,6 @@ export const pageEn: PageTemplateData = {
         variant: "link-cards-compact",
         props: {
           heading: "Where we work",
-          intro:
-            "Our office is in Pierrefonds-Roxboro. We work across the West Island, Montréal, Laval, the South Shore and Vaudreuil-Soulanges.",
           columns: "3",
           items: [
             { title: "Pierrefonds-Roxboro", href: "/zones/pierrefonds-roxboro", description: "Our base" },
@@ -245,8 +243,6 @@ export const pageEn: PageTemplateData = {
             src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
             alt: "Custom kitchen cabinets installed by Dilamco",
           },
-          cardTitle: "Cabinet division",
-          cardDescription: "RBQ subclass 12, cabinets and countertops.",
         },
       },
     },
@@ -294,7 +290,6 @@ export const pageEn: PageTemplateData = {
             { label: "Free estimate", href: "/contact", variant: "primary" },
             { label: "See our work", href: "/projets", variant: "ghost" },
           ],
-          note: "RBQ licence 8306-0806-27 · West Island, Montréal, Laval, South Shore",
         },
       },
     },

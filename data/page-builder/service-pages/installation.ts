@@ -102,7 +102,6 @@ export const installationPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "La pose en bref",
-          intro: "Ce qui se passe chez vous pendant les journées d'installation.",
           rows: [
             {
               label: "Combien de temps",
@@ -192,7 +191,6 @@ export const installationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27",
         },
       },
     },

@@ -133,8 +133,6 @@ export const pageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "The cabinet division in brief",
-          intro:
-            "It is a division of our own firm, not a second company you have to hire.",
           rows: [
             {
               label: "Licence",
@@ -195,7 +193,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Montréal, Laval, South Shore",
         },
       },
     },

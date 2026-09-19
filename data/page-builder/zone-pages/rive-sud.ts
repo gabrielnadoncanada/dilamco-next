@@ -138,8 +138,6 @@ export const zoneRiveSudPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir avant de rénover sur la Rive-Sud",
-          intro:
-            "Huit villes, huit règlements d'urbanisme. Savoir lequel s'applique change le prix.",
           rows: [
             {
               label: "Âge des quartiers",
@@ -310,7 +308,6 @@ export const zoneRiveSudPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Déplacement chiffré dans la soumission, jamais ajouté en cours de chantier.",
         },
       },
     },

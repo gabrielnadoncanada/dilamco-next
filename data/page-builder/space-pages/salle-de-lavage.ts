@@ -121,8 +121,6 @@ export const salleDeLavagePage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "La salle de lavage en bref",
-          intro:
-            "Ce qu'il faut prévoir dans une pièce où passent l'eau, l'air chaud et le courant.",
           rows: [
             {
               label: "Combien de temps",
@@ -211,7 +209,6 @@ export const salleDeLavagePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud",
         },
       },
     },

@@ -102,7 +102,6 @@ export const fabricationPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "La production en bref",
-          intro: "Qui produit vos armoires, qui les contrôle et en combien de temps.",
           rows: [
             {
               label: "Combien de temps",
@@ -192,7 +191,6 @@ export const fabricationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

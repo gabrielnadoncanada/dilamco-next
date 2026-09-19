@@ -56,7 +56,6 @@ export const boisMassifPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What you should know about solid wood",
-          intro: "Its qualities, its cost, and where it holds up best.",
           rows: [
             {
               label: "What it is made of",

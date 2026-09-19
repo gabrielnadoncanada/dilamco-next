@@ -108,14 +108,10 @@ export const pageEn: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading: "What protects you when you hire us",
-          intro:
-            "You can check every bit of it on the Régie du bâtiment du Québec register.",
           columns: "2",
           items: [
             {
               title: "Our RBQ licence",
-              description:
-                "Issued on September 7, 2004 as a general contractor, with no restrictions at all.",
               icon: "fileCheck",
               bullets: [
                 "The number to check is 8306-0806-27",
@@ -125,8 +121,6 @@ export const pageEn: PageTemplateData = {
             },
             {
               title: "A guarantee deposit",
-              description:
-                "A sum set aside in advance pays you back if we fail to meet our obligations.",
               icon: "shieldCheck",
               bullets: [
                 "The deposit is $40,000",
@@ -136,8 +130,6 @@ export const pageEn: PageTemplateData = {
             },
             {
               title: "Our insurance",
-              description:
-                "You get the certificates in hand before you sign anything.",
               icon: "hardHat",
               bullets: [
                 "We carry civil liability insurance",
@@ -147,8 +139,6 @@ export const pageEn: PageTemplateData = {
             },
             {
               title: "The warranty on our work",
-              description:
-                "What is covered, and for how long, is written into your contract.",
               icon: "clipboardCheck",
               bullets: [
                 "We fix everything before you pay the balance",
@@ -209,7 +199,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · 18625 rue Larocque, Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

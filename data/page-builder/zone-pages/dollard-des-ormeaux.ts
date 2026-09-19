@@ -107,8 +107,6 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Les maisons de Dollard-des-Ormeaux, en bref",
-          intro:
-            "La ville comptait 1 800 résidents au début des années 1960 et près de 40 000 vingt ans plus tard.",
           rows: [
             {
               label: "Ce qui a changé récemment",
@@ -264,7 +262,6 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · entrepreneur général, à dix minutes de DDO",
         },
       },
     },

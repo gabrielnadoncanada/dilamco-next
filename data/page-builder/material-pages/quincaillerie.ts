@@ -59,7 +59,6 @@ export const quincailleriePage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'on installe sur chaque porte",
-          intro: "La quincaillerie comprise dans toutes nos armoires, sans supplément.",
           rows: [
             {
               label: "De quoi c'est fait",
@@ -182,7 +181,6 @@ export const quincailleriePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

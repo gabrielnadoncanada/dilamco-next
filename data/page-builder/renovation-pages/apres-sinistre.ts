@@ -75,13 +75,10 @@ export const renovationApresSinistrePage: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading: "Ce qu'on reconstruit après un sinistre",
-          intro:
-            "Le pompage et la décontamination sont faits par des firmes d'urgence. On reconstruit après.",
           columns: "2",
           items: [
             {
               title: "Dégât d'eau",
-              description: "Refoulement d'égout, tuyau éclaté ou crue",
               icon: "droplets",
               bullets: [
                 "On ouvre les murs pour voir jusqu'où l'eau s'est rendue",
@@ -91,7 +88,6 @@ export const renovationApresSinistrePage: PageTemplateData = {
             },
             {
               title: "Feu et fumée",
-              description: "La suie et l'odeur restent dans les matériaux",
               icon: "hardHat",
               bullets: [
                 "On démolit complètement les sections touchées",
@@ -101,7 +97,6 @@ export const renovationApresSinistrePage: PageTemplateData = {
             },
             {
               title: "Moisissures",
-              description: "Presque toujours le résultat d'une fuite lente",
               icon: "shieldCheck",
               bullets: [
                 "On reconstruit après la décontamination spécialisée",
@@ -111,7 +106,6 @@ export const renovationApresSinistrePage: PageTemplateData = {
             },
             {
               title: "Sous-sol inondé",
-              description: "Le cas le plus fréquent près de la rivière",
               icon: "layers",
               bullets: [
                 "On enlève les finis et l'isolant jusqu'à hauteur saine",
@@ -209,9 +203,6 @@ export const renovationApresSinistrePage: PageTemplateData = {
             src: "/images/generated/services/service-renovation-project-03.webp",
             alt: "Constat des dommages avant la reconstruction d'une pièce",
           },
-          cardTitle: "Une seule personne à qui parler",
-          cardDescription:
-            "Le même entrepreneur signe le devis, coordonne les corps de métier et répond aux questions de l'expert en sinistre.",
         },
       },
     },
@@ -268,7 +259,6 @@ export const renovationApresSinistrePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Pierrefonds-Roxboro et le Grand Montréal",
         },
       },
     },

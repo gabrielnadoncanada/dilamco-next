@@ -113,8 +113,6 @@ export const zoneLavalPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'on sait des maisons de Laval",
-          intro:
-            "Chaque secteur de Laval a son époque de construction, et son lot de surprises.",
           rows: [
             {
               label: "Âge des quartiers",
@@ -290,7 +288,6 @@ export const zoneLavalPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · entrepreneur général en rénovation depuis 2004 · (514) 820-0773",
         },
       },
     },

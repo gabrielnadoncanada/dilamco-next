@@ -189,7 +189,6 @@ export const renovationPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What a turnkey mandate covers",
-          intro: "The answers to the questions people ask us before signing.",
           rows: [
             {
               label: "What you sign",
@@ -241,7 +240,6 @@ export const renovationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · General contractor since 2004",
         },
       },
     },

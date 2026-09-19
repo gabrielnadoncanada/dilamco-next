@@ -66,6 +66,7 @@ export function SplitListActionsImageCard(
             className="object-cover"
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
+          {props.cardTitle ? (
           <figcaption className="absolute inset-x-4 bottom-4 flex flex-col gap-0.5 rounded-card bg-white/92 px-5 py-4 backdrop-blur sm:inset-x-6 sm:bottom-6">
             <span className="font-display text-base font-semibold tracking-[-0.01em] text-foreground">
               {props.cardTitle}
@@ -74,6 +75,7 @@ export function SplitListActionsImageCard(
               {props.cardDescription}
             </span>
           </figcaption>
+          ) : null}
         </figure>
       </div>
     </div>

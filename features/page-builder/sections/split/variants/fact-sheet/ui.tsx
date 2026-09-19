@@ -5,8 +5,8 @@ import type { SplitFactSheetProps } from "./schema";
 
 /**
  * Fiche technique : titre collant + photo à gauche (5 col.), liste
- * label → valeur à droite (7 col.) en rangées filetées. Sur mobile, la photo
- * passe sous le tableau.
+ * label → valeur à droite (7 col.) en rangées filetées. La photo est
+ * décorative : elle n'apparaît qu'à partir de `lg`.
  */
 export function SplitFactSheet(props: SplitFactSheetProps) {
   return (
@@ -49,17 +49,6 @@ export function SplitFactSheet(props: SplitFactSheetProps) {
           <p className="mt-3 px-1 text-xs leading-relaxed text-muted-foreground">
             {props.note}
           </p>
-        ) : null}
-        {props.image ? (
-          <figure className="relative mt-6 aspect-[4/3] overflow-hidden rounded-card bg-muted lg:hidden">
-            <Image
-              src={props.image.src}
-              alt={props.image.alt}
-              fill
-              className="object-cover"
-              sizes="100vw"
-            />
-          </figure>
         ) : null}
       </div>
     </div>

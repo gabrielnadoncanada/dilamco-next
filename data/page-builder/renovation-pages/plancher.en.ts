@@ -78,7 +78,6 @@ export const renovationPlancherPageEn: PageTemplateData = {
           items: [
             {
               title: "Tearing out the old floor",
-              description: "We take it all up to see what is underneath",
               icon: "hammer",
               bullets: [
                 "We remove the flooring, the baseboards and the thresholds",
@@ -88,7 +87,6 @@ export const renovationPlancherPageEn: PageTemplateData = {
             },
             {
               title: "Subfloor repair",
-              description: "This is what installers often bill as an extra",
               icon: "ruler",
               bullets: [
                 "We change damaged panels and re-screw the rest",
@@ -98,7 +96,6 @@ export const renovationPlancherPageEn: PageTemplateData = {
             },
             {
               title: "Laying the new floor",
-              description: "Hardwood, engineered wood, vinyl or tile",
               icon: "layers",
               bullets: [
                 "We let the wood acclimatize inside the house",
@@ -108,7 +105,6 @@ export const renovationPlancherPageEn: PageTemplateData = {
             },
             {
               title: "Thresholds, baseboards and doors",
-              description: "We finish where the rooms meet",
               icon: "slidersHorizontal",
               bullets: [
                 "We plan the transitions from one room to the next",
@@ -205,9 +201,6 @@ export const renovationPlancherPageEn: PageTemplateData = {
             src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
             alt: "Subfloor preparation before a flooring installation",
           },
-          cardTitle: "One schedule",
-          cardDescription:
-            "Tying the floor into the cabinets, the bathroom and the staircase is part of the same contract.",
         },
       },
     },
@@ -264,7 +257,6 @@ export const renovationPlancherPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Subfloor, levelling, install and thresholds",
         },
       },
     },

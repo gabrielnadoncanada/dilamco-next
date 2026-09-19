@@ -65,7 +65,6 @@ export const contreplaquePageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What you should know about plywood",
-          intro: "Answers to the questions people ask us about this panel.",
           rows: [
             {
               label: "What it is made of",

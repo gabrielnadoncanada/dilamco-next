@@ -88,8 +88,6 @@ export const zonePointeClairePageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What to know before renovating in Pointe-Claire",
-          intro:
-            "Two neighbouring houses can fall under different rules, depending on how old the area is.",
           rows: [
             {
               label: "Older neighbourhoods",
@@ -246,7 +244,6 @@ export const zonePointeClairePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · Pointe-Claire planning files prepared",
         },
       },
     },

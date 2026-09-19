@@ -75,13 +75,10 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading: "What we rebuild after a loss",
-          intro:
-            "Pumping and decontamination are done by emergency firms. We rebuild afterwards.",
           columns: "2",
           items: [
             {
               title: "Water damage",
-              description: "Sewer backup, burst pipe or flooding",
               icon: "droplets",
               bullets: [
                 "We open the walls to see how far the water went",
@@ -91,7 +88,6 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
             },
             {
               title: "Fire and smoke",
-              description: "Soot and odour stay inside the materials",
               icon: "hardHat",
               bullets: [
                 "We demolish the affected sections completely",
@@ -101,7 +97,6 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
             },
             {
               title: "Mould",
-              description: "Almost always the result of a slow leak",
               icon: "shieldCheck",
               bullets: [
                 "We rebuild after the specialized decontamination",
@@ -111,7 +106,6 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
             },
             {
               title: "Flooded basement",
-              description: "The most common case near the river",
               icon: "layers",
               bullets: [
                 "We cut the finishes and insulation back to sound height",
@@ -209,9 +203,6 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
             src: "/images/generated/services/service-renovation-project-03.webp",
             alt: "Damage assessment before a room is rebuilt",
           },
-          cardTitle: "One person to talk to",
-          cardDescription:
-            "The same contractor signs the quote, coordinates the trades and answers the claims adjuster's questions.",
         },
       },
     },
@@ -268,7 +259,6 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro and Greater Montreal",
         },
       },
     },

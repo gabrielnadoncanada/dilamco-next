@@ -87,6 +87,16 @@ Chaque famille de pages a SA composition. Deux pages de familles différentes ne
 - Le `cta` final varie : heading avec le nom de la ville / du service, intro différente, note différente.
 - Les `facts` du `hero.zone` et les `rows` du `fact-sheet` ne se répètent pas entre eux.
 
+## Remplissage (passe 2026-09, 5e) — chaque texte mène à une action ou à un fait
+
+Le propriétaire a relevé « énormément de texte qui n'amène aucune action, seulement là pour remplir ». Règles :
+
+1. **Pas d'`intro` sous un titre de section** sur les blocs de contenu (`fact-sheet`, `icon-cards-bullets`, `bento`, sliders, `link-cards-compact`, `faq`, `process`, `comparison`, `price-tiles`). Le titre suffit. L'`intro` n'existe que sur le hero, le CTA et les blocs qui portent des boutons (`list-actions-image-card`, `badges-checklist-cta`).
+2. **Pas de `note` sous les boutons du CTA final** (le numéro RBQ est au pied de page).
+3. **Cartes à puces (`icon-cards-bullets`)** : titre + puces, pas de phrase de description entre les deux.
+4. **Pas d'étiquette décorative sur une photo** (`cardTitle` / `cardDescription`) si elle ne dit rien que la page ne dise déjà.
+5. Test : si on retire la phrase et que la section se comprend et mène à la même action, la phrase était du remplissage.
+
 ## Clarté (passe 2026-09, 4e) — le texte doit se comprendre en deux secondes
 
 Le propriétaire a jugé que « les textes n'ont pas de sens ». Cause : titres-fragments façon magazine, étiquettes cryptiques, valeurs télégraphiques, jargon de chantier. Règles :

@@ -120,6 +120,13 @@ Wordmark SVG plein cadre (158 × 31) : hauteur 20 px sur mobile, 22 px dès `md`
 ### Hero centré avec photo
 `hero.centered` accepte `image` + `caption` : titre centré, puis photo pleine largeur dans un cadre `rounded-panel` (4/3 mobile, 16/9 tablette, 21/9 desktop), pastille de légende en bas à gauche. C'est le hero des pages espaces ; sans `image`, le bloc reste le hero texte des hubs et du processus.
 
+### Mobile : moins, pas plus petit
+- Fil d'Ariane : sous `sm`, un seul lien « ‹ Parent » sur une ligne ; le fil complet n'apparaît qu'à partir de `sm`.
+- Eyebrow de hero masqué sous `sm` (le fil d'Ariane le dit déjà).
+- Fiche technique : la photo n'existe qu'à partir de `lg`, jamais sous le tableau sur mobile.
+- Liens compacts (villes, pages sœurs) : pastilles qui s'enchaînent sous `md`, cartes à partir de `md`.
+- Une section = un titre + son contenu. Pas d'intro sous le titre sur les blocs de contenu (fiche, cartes, grilles, FAQ, étapes) ; l'intro n'existe que là où elle précède une action (hero, CTA, bloc liste + boutons). Pas de note sous les boutons du CTA final.
+
 ### Frise d'étapes (`process.horizontal-steps-cards`)
 Rail continu : horizontal avec jalons numérotés (cercle vert 40 px, `ring` fond) dès `lg`, vertical à gauche en dessous. Titres alignés (`content-start`, sinon la grille étire les pistes).
 

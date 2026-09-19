@@ -88,8 +88,6 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What to know before renovating on the South Shore",
-          intro:
-            "Eight cities, eight planning by-laws. Knowing which one applies changes the price.",
           rows: [
             {
               label: "Age of the neighbourhoods",
@@ -260,7 +258,6 @@ export const zoneRiveSudPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Travel is priced into the quote, never added mid-project.",
         },
       },
     },

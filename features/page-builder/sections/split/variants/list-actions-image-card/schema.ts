@@ -23,8 +23,8 @@ export const SplitListActionsImageCardSchema = z.object({
 
   image: ImageSchema,
 
-  cardTitle: z.string().min(1),
-  cardDescription: z.string().min(1),
+  cardTitle: z.string().min(1).optional(),
+  cardDescription: z.string().min(1).optional(),
 });
 
 export type SplitListActionsImageCardProps = z.infer<

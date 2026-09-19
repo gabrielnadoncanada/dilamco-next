@@ -133,8 +133,6 @@ export const page: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "La division armoires en bref",
-          intro:
-            "C'est une division de notre entreprise, pas une deuxième compagnie à engager.",
           rows: [
             {
               label: "Licence",
@@ -195,7 +193,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud",
         },
       },
     },

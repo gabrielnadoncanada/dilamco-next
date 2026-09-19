@@ -189,7 +189,6 @@ export const renovationPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce que comprend un mandat clé en main",
-          intro: "Les réponses aux questions qu'on nous pose avant de signer.",
           rows: [
             {
               label: "Ce que vous signez",
@@ -241,7 +240,6 @@ export const renovationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Entrepreneur général depuis 2004",
         },
       },
     },

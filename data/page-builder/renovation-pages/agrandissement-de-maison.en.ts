@@ -78,7 +78,6 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
           items: [
             {
               title: "Checks and permit",
-              description: "We look at what the city allows before drawing",
               icon: "fileCheck",
               bullets: [
                 "We read the required setbacks and the allowed height",
@@ -88,7 +87,6 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             },
             {
               title: "Digging and foundation",
-              description: "This is what carries the whole addition",
               icon: "hardHat",
               bullets: [
                 "We locate the underground services before digging",
@@ -98,7 +96,6 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             },
             {
               title: "Framing, walls and roof",
-              description: "We close the building in before winter",
               icon: "building2",
               bullets: [
                 "We raise the framing to the engineer's drawings",
@@ -108,7 +105,6 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             },
             {
               title: "Connections and finishing",
-              description: "The new room is joined to the house",
               icon: "wrench",
               bullets: [
                 "We extend the heating, the ventilation and the circuits",
@@ -205,9 +201,6 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             src: "/images/generated/renovation/renovation-extension-approach-01.webp",
             alt: "Addition under construction tied into an existing house",
           },
-          cardTitle: "What we look at first",
-          cardDescription:
-            "Access to the lot for the machinery, where the electrical entrance and the drain sit, and the daylight your current windows will lose.",
         },
       },
     },
@@ -264,7 +257,6 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Zoning, permit, engineer and foundations",
         },
       },
     },

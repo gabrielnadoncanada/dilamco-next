@@ -86,7 +86,6 @@ export const comparatifPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "How to choose",
-          intro: "Two questions settle it in most rooms.",
           rows: [
             {
               label: "First question",

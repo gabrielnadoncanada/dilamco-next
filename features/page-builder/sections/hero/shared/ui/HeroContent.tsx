@@ -65,7 +65,7 @@ export function HeroContent({
     <div className={cn(isCentered && "text-center")}>
       {eyebrow ? (
         <p
-          className={`text-label mb-4 ${isInverse ? "text-white/70" : "text-primary"}`}
+          className={`text-label mb-4 hidden sm:block ${isInverse ? "text-white/70" : "text-primary"}`}
         >
           {eyebrow}
         </p>

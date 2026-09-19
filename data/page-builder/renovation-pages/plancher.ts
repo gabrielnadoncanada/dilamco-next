@@ -78,7 +78,6 @@ export const renovationPlancherPage: PageTemplateData = {
           items: [
             {
               title: "Arrachage de l'ancien plancher",
-              description: "On enlève tout pour voir ce qu'il y a dessous",
               icon: "hammer",
               bullets: [
                 "On enlève le revêtement, les plinthes et les seuils",
@@ -88,7 +87,6 @@ export const renovationPlancherPage: PageTemplateData = {
             },
             {
               title: "Réparation du sous-plancher",
-              description: "C'est ce que les poseurs facturent souvent en extra",
               icon: "ruler",
               bullets: [
                 "On change les panneaux abîmés et on revisse",
@@ -98,7 +96,6 @@ export const renovationPlancherPage: PageTemplateData = {
             },
             {
               title: "Pose du revêtement",
-              description: "Bois franc, bois d'ingénierie, vinyle ou céramique",
               icon: "layers",
               bullets: [
                 "On laisse le bois s'acclimater dans la maison",
@@ -108,7 +105,6 @@ export const renovationPlancherPage: PageTemplateData = {
             },
             {
               title: "Seuils, plinthes et portes",
-              description: "On finit les jonctions entre les pièces",
               icon: "slidersHorizontal",
               bullets: [
                 "On prévoit les transitions d'une pièce à l'autre",
@@ -205,9 +201,6 @@ export const renovationPlancherPage: PageTemplateData = {
             src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
             alt: "Préparation du sous-plancher avant la pose d'un revêtement",
           },
-          cardTitle: "Un seul calendrier",
-          cardDescription:
-            "Le raccord avec les armoires, la salle de bain et l'escalier fait partie du même contrat.",
         },
       },
     },
@@ -264,7 +257,6 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Sous-plancher, nivellement, pose et seuils",
         },
       },
     },

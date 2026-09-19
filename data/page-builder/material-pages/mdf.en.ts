@@ -56,7 +56,6 @@ export const mdfPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What you should know about MDF",
-          intro: "Its strengths, its one weakness, and where we use it.",
           rows: [
             {
               label: "What it is made of",

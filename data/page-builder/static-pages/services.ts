@@ -194,7 +194,6 @@ export const page: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir sur Dilamco",
-          intro: "Les faits vérifiables avant de nous confier un chantier.",
           rows: [
             {
               label: "Notre licence RBQ",
@@ -246,7 +245,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île et Grand Montréal",
         },
       },
     },

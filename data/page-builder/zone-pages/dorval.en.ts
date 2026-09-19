@@ -87,8 +87,6 @@ export const zoneDorvalPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What to know before renovating in Dorval",
-          intro:
-            "The lake to the south, the rail line and the airport to the north, and residential streets in between.",
           rows: [
             {
               label: "How long the permit takes",
@@ -245,7 +243,6 @@ export const zoneDorvalPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · City of Dorval permits prepared",
         },
       },
     },

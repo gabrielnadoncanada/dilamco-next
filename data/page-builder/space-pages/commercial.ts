@@ -119,8 +119,6 @@ export const commercialPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Le projet commercial en bref",
-          intro:
-            "Ce qu'un propriétaire ou un locataire doit savoir avant d'ouvrir un chantier.",
           rows: [
             {
               label: "Combien de temps",
@@ -209,7 +207,6 @@ export const commercialPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud, Vaudreuil-Soulanges",
         },
       },
     },

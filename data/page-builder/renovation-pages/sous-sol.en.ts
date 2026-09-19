@@ -78,7 +78,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
           items: [
             {
               title: "Moisture and foundation",
-              description: "We settle the water before anything else starts",
               icon: "droplets",
               bullets: [
                 "We examine the slab, the walls and any water marks",
@@ -88,7 +87,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
             },
             {
               title: "Insulation and walls",
-              description: "We build walls that will not grow mould",
               icon: "layers",
               bullets: [
                 "We apply continuous insulation against the concrete",
@@ -98,7 +96,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
             },
             {
               title: "Emergency exit",
-              description: "Required if you want a bedroom down there",
               icon: "doorOpen",
               bullets: [
                 "A window that opens, or a door to the outside",
@@ -108,7 +105,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
             },
             {
               title: "Finishing and storage",
-              description: "We finish the walls, the ceiling and the floor",
               icon: "package2",
               bullets: [
                 "We choose flooring that can sit on concrete",
@@ -296,7 +292,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Moisture, insulation, permit and egress",
         },
       },
     },

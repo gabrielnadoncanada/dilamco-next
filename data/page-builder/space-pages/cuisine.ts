@@ -118,8 +118,6 @@ export const cuisinePage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "La cuisine en bref",
-          intro:
-            "Les questions que les propriétaires nous posent avant de nous rencontrer.",
           rows: [
             {
               label: "Combien de temps",
@@ -207,7 +205,6 @@ export const cuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

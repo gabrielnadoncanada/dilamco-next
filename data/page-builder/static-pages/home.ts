@@ -204,8 +204,6 @@ export const page: PageTemplateData = {
         variant: "link-cards-compact",
         props: {
           heading: "Où nous travaillons",
-          intro:
-            "Notre bureau est à Pierrefonds-Roxboro. Nous travaillons dans l'Ouest-de-l'Île, à Montréal, à Laval et sur la Rive-Sud.",
           columns: "3",
           items: [
             { title: "Pierrefonds-Roxboro", href: "/zones/pierrefonds-roxboro", description: "Notre base" },
@@ -245,8 +243,6 @@ export const page: PageTemplateData = {
             src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
             alt: "Armoires de cuisine sur mesure installées par Dilamco",
           },
-          cardTitle: "Division armoires",
-          cardDescription: "Sous-catégorie RBQ 12, armoires et comptoirs.",
         },
       },
     },
@@ -294,7 +290,6 @@ export const page: PageTemplateData = {
             { label: "Soumission gratuite", href: "/contact", variant: "primary" },
             { label: "Voir nos réalisations", href: "/projets", variant: "ghost" },
           ],
-          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

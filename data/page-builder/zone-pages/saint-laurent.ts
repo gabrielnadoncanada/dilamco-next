@@ -107,8 +107,6 @@ export const zoneSaintLaurentPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Les maisons de Saint-Laurent, en bref",
-          intro:
-            "Norgate sort de terre en 1949 et le Nouveau-Saint-Laurent au début des années 1990.",
           rows: [
             {
               label: "Âge des quartiers",
@@ -279,7 +277,6 @@ export const zoneSaintLaurentPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Entrepreneur général licencié · base au 18625, rue Larocque · (514) 820-0773",
         },
       },
     },

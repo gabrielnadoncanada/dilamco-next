@@ -109,14 +109,10 @@ export const page: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading: "Ce qui vous protège quand vous nous engagez",
-          intro:
-            "Vous pouvez tout vérifier au registre de la Régie du bâtiment du Québec.",
           columns: "2",
           items: [
             {
               title: "Notre licence RBQ",
-              description:
-                "Délivrée le 7 septembre 2004 comme entrepreneur général, sans aucune restriction.",
               icon: "fileCheck",
               bullets: [
                 "Le numéro à vérifier est le 8306-0806-27",
@@ -126,8 +122,6 @@ export const page: PageTemplateData = {
             },
             {
               title: "Un dépôt de garantie",
-              description:
-                "Une somme déposée d'avance sert à vous dédommager si nous manquons à nos obligations.",
               icon: "shieldCheck",
               bullets: [
                 "Le dépôt est de 40 000 $",
@@ -137,8 +131,6 @@ export const page: PageTemplateData = {
             },
             {
               title: "Nos assurances",
-              description:
-                "Vous recevez les attestations avant de signer quoi que ce soit.",
               icon: "hardHat",
               bullets: [
                 "Nous sommes assurés en responsabilité civile",
@@ -148,8 +140,6 @@ export const page: PageTemplateData = {
             },
             {
               title: "La garantie de nos travaux",
-              description:
-                "Ce qui est couvert et pour combien de temps est écrit dans votre contrat.",
               icon: "clipboardCheck",
               bullets: [
                 "On corrige tout avant que vous payiez la fin",
@@ -210,7 +200,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · 18625, rue Larocque, Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },
