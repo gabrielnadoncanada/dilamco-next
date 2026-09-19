@@ -107,12 +107,7 @@ export const zoneKirklandPage: PageTemplateData = {
             {
               label: "Taille des terrains",
               value:
-                "Les terrains sont larges, avec environ deux mille résidents au kilomètre carré.",
-            },
-            {
-              label: "Ce que la Ville vérifie",
-              value:
-                "Elle regarde les marges de recul et la part du terrain que la maison a le droit d'occuper.",
+                "Les terrains sont larges, ce qui laisse souvent la place pour une rallonge de plain-pied.",
             },
             {
               label: "Particularité locale",
@@ -120,26 +115,15 @@ export const zoneKirklandPage: PageTemplateData = {
                 "Creuser une nouvelle fondation demande un certificat d'excavation en plus du permis.",
             },
             {
-              label: "Comment déposer la demande",
-              value:
-                "En ligne sur le portail de la Ville, qui affiche l'état du dossier et permet de payer.",
-            },
-            {
               label: "Projets courants",
               value:
                 "Rallonge sur le côté, ajout d'un étage, solarium et ouverture de la cuisine.",
-            },
-            {
-              label: "Depuis notre base",
-              value:
-                "Quinze minutes de route par le boulevard Saint-Charles.",
             },
           ],
           image: {
             src: "/images/generated/renovation/renovation-extension-approach-01.webp",
             alt: "Planification d'un agrandissement sur un terrain de Kirkland",
           },
-          note: "Sources : Ville de Kirkland, Wikipédia, recensement 2021. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -160,7 +144,6 @@ export const zoneKirklandPage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Chantier d'agrandissement dans une rue de Kirkland",
               },
-              badges: ["Excavation"],
               footerCtaLabel: "Voir l'agrandissement",
             },
             {
@@ -172,7 +155,6 @@ export const zoneKirklandPage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Rénovation complète d'une maison de Kirkland",
               },
-              badges: ["Clé en main"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -184,7 +166,6 @@ export const zoneKirklandPage: PageTemplateData = {
                 src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
                 alt: "Cuisine ouverte dans une maison détachée de Kirkland",
               },
-              badges: ["Structure"],
               footerCtaLabel: "Voir la cuisine",
             },
           ],
@@ -220,7 +201,7 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes à Kirkland",
           items: [
             {
               q: "Où demande-t-on un permis de rénovation à Kirkland ?",

@@ -17,7 +17,7 @@ export const walkInPageEn: PageTemplateData = {
   service: {
     name: "Custom closets and walk-in closets",
     description:
-      "Design, controlled fabrication and installation of high-end custom closets and walk-in closets in Montreal, Laval and the Greater Montreal area.",
+      "Design, partner-factory production and installation of high-end custom closets and walk-in closets in Montreal, Laval and the Greater Montreal area.",
     url: SITE.url + "/espaces/walk-in",
     serviceType: "Custom closet",
   },
@@ -29,7 +29,6 @@ export const walkInPageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Custom-built"],
           heading: "Custom closets and walk-ins in Montréal",
           description:
             "We count what you own, then draw the hanging rails, the drawers and the shelves.",
@@ -49,7 +48,6 @@ export const walkInPageEn: PageTemplateData = {
             src: "/images/generated/spaces/space-walkin-hero-01.webp",
             alt: "Custom walk-in closet with double-height hanging rails",
           },
-          caption: "Double-height hanging rails",
         },
       },
     },
@@ -68,7 +66,6 @@ export const walkInPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Light oak walk-in with drawers, shelves and a jewellery tray",
               },
-              caption: "Drawers and jewellery tray",
             },
             {
               kind: "image",
@@ -77,7 +74,7 @@ export const walkInPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-walkin-project-02.webp",
                 alt: "Walk-in closet fitted into a bedroom corner in Laval",
               },
-              caption: "Corner put to work, Laval",
+              caption: "Laval",
             },
             {
               kind: "stat",
@@ -90,7 +87,7 @@ export const walkInPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-walkin-project-01.webp",
                 alt: "Custom drawers and shelves in a Montréal walk-in closet",
               },
-              caption: "Drawers and shelves, Montréal",
+              caption: "Montréal",
             },
             {
               kind: "image",
@@ -98,7 +95,6 @@ export const walkInPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-walkin-project-03.webp",
                 alt: "Walk-in closet with a centre island and integrated lighting",
               },
-              caption: "Centre island and lighting",
             },
             {
               kind: "text",

@@ -54,15 +54,22 @@ export function DesktopMenuItem({
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent className="!rounded-card !border-border/70 !p-0 !shadow-[0_24px_60px_-24px_rgb(21_25_26/35%)]">
+          {/* Le panneau est ancré sous son onglet : à deux groupes côte à côte
+              il sortait de l'écran sous 1920 px. On empile les groupes tant que
+              la place manque, et on les met côte à côte seulement au-delà. */}
           <ul
-            className="flex gap-1 p-2.5"
-            style={{ width: totalColumns * DESKTOP_GROUP_WIDTH }}
+            className="w-[var(--menu-w-min)] flex flex-wrap gap-1 p-2.5 min-[1920px]:w-[var(--menu-w)] min-[1920px]:flex-nowrap"
+            style={{
+              // largeur du groupe le plus large, puis largeur totale en 1920+
+              ["--menu-w" as string]: `${totalColumns * DESKTOP_GROUP_WIDTH}px`,
+              ["--menu-w-min" as string]: `${Math.min(totalColumns, 2) * DESKTOP_GROUP_WIDTH}px`,
+            }}
           >
             {item.groups.map((group, index1) => {
               const columns = groupColumns(group.links.length);
               return (
                 <li
-                  className="flex-1"
+                  className="min-w-[17rem] flex-1"
                   style={{ flexGrow: columns }}
                   key={`desktop-group-${index1}`}
                 >

@@ -93,16 +93,6 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
                 "The plexes date from 1949 to 1955, the Bois-Franc condos from the 1990s.",
             },
             {
-              label: "How to file the application",
-              value:
-                "Online, with a City digital services account, or at the borough counter.",
-            },
-            {
-              label: "What is different here",
-              value:
-                "In a condo, the board controls access, the elevator, the common areas and the work hours.",
-            },
-            {
               label: "What to watch for",
               value:
                 "Plexes share plumbing stacks and party walls between the units.",
@@ -112,16 +102,11 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
               value:
                 "Redoing a bathroom, opening a kitchen, soundproofing between two units.",
             },
-            {
-              label: "From our base",
-              value: "Highway 40 eastbound, Côte-Vertu or Marcel-Laurin exit.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/espaces-card-bath-01.webp",
             alt: "Renovated bathroom on the upper floor of a local duplex",
           },
-          note: "Sources: City of Montréal, 311 bank, borough history records. Verified 2026-09-18.",
         },
       },
     },
@@ -142,7 +127,6 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-bath-project-02.webp",
                 alt: "Bathroom rebuilt in a Norgate apartment",
               },
-              badges: ["Plex"],
               footerCtaLabel: "See bathrooms",
             },
             {
@@ -154,7 +138,6 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-cuisine-project-01.webp",
                 alt: "Open kitchen in a bungalow near Côte-Vertu",
               },
-              badges: ["Structure"],
               footerCtaLabel: "See kitchens",
             },
             {
@@ -166,7 +149,6 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Basement turned into living space under a duplex",
               },
-              badges: ["Code"],
               footerCtaLabel: "See basements",
             },
           ],
@@ -185,22 +167,18 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
             {
               title: "Dorval",
               href: "/zones/dorval",
-              ctaLabel: "See the area",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              ctaLabel: "See the area",
             },
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "See the area",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              ctaLabel: "See the area",
             },
           ],
         },

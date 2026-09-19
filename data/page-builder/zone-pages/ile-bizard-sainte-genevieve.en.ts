@@ -101,11 +101,6 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
                 "In a flood zone, every single job needs a permit, with no exception.",
             },
             {
-              label: "What the by-law requires",
-              value:
-                "The house must be protected against sewer backups before it is finished.",
-            },
-            {
               label: "Neighbourhoods",
               value:
                 "Single-family homes line up on deep lots, on Chemin Cherrier and Jacques-Bizard Boulevard.",
@@ -115,17 +110,11 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
               value:
                 "Rebuilding a basement, adding on, restoring an older home on Gouin Boulevard.",
             },
-            {
-              label: "From our base",
-              value:
-                "We cross the Jacques-Bizard bridge, then take Montée de l'Église.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
             alt: "Materials staged to rebuild a basement on Île Bizard",
           },
-          note: "Sources: City of Montréal, 311 information bank, SPHIB-SG. Verified 2026-09-18.",
         },
       },
     },
@@ -146,7 +135,6 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Basement finished as a home cinema on Île Bizard",
               },
-              badges: ["Drainage"],
               footerCtaLabel: "See basements",
             },
             {
@@ -158,7 +146,6 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Interior rebuild after flooding near Île Mercier",
               },
-              badges: ["Insurance"],
               footerCtaLabel: "See the service",
             },
             {
@@ -170,7 +157,6 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Planning an addition on a riverside lot on the island",
               },
-              badges: ["Zoning"],
               footerCtaLabel: "See additions",
             },
           ],
@@ -189,22 +175,18 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "See the area",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              ctaLabel: "See the area",
             },
             {
               title: "Kirkland",
               href: "/zones/kirkland",
-              ctaLabel: "See the area",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              ctaLabel: "See the area",
             },
           ],
         },

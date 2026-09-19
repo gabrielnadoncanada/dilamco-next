@@ -41,7 +41,6 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Rénovation de cuisine",
           heading: "Rénovation complète de cuisine, du permis à la finition",
           description:
             "La même équipe s'occupe de la démolition, de la plomberie, de l'électricité, des armoires et du comptoir.",
@@ -134,13 +133,13 @@ export const renovationCuisinePage: PageTemplateData = {
               number: "2",
               title: "Démolition",
               description:
-                "On sort les vieilles armoires, le comptoir et les revêtements.",
+                "On coupe l'eau et le courant, puis on vide la pièce.",
             },
             {
               number: "3",
               title: "Plomberie et électricité",
               description:
-                "On refait les drains, les circuits et la sortie de hotte.",
+                "On refait drains et circuits pendant que vos armoires se fabriquent.",
             },
             {
               number: "4",
@@ -152,7 +151,7 @@ export const renovationCuisinePage: PageTemplateData = {
               number: "5",
               title: "Finition",
               description:
-                "On pose le dosseret, on peint et on branche les électroménagers.",
+                "On branche les électroménagers, puis on fait le tour avec vous.",
             },
           ],
         },
@@ -179,7 +178,6 @@ export const renovationCuisinePage: PageTemplateData = {
             {
               title: "Cuisine complète",
               price: "35 000 $ à 50 000 $",
-              hint: "armoires et comptoir neufs",
               featured: true,
               includes: [
                 "Démolition et sortie des débris",
@@ -199,7 +197,7 @@ export const renovationCuisinePage: PageTemplateData = {
               ],
             },
           ],
-          note: "Ce sont des ordres de grandeur. Le prix exact est écrit dans la soumission, après la visite chez vous.",
+          note: "Le prix exact est écrit dans la soumission, après la visite chez vous.",
           action: {
             label: "Soumission gratuite",
             href: "/contact",
@@ -223,7 +221,6 @@ export const renovationCuisinePage: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Cuisine ouverte sur le salon avec îlot et colonnes",
               },
-              caption: "Cuisine ouverte sur le salon",
             },
             {
               kind: "stat",
@@ -236,13 +233,12 @@ export const renovationCuisinePage: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "Cuisine blanche avec îlot en quartz",
               },
-              caption: "Îlot avec comptoir de quartz",
             },
             {
               kind: "text",
               title: "Voir d'autres cuisines",
               description:
-                "Des photos prises chez nos clients.",
+                "Îlots, rangements pleine hauteur et comptoirs déjà livrés.",
               href: "/espaces/cuisine",
             },
           ],
@@ -255,7 +251,7 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la rénovation de cuisine",
           items: [
             {
               q: "Combien de temps serai-je sans cuisine ?",

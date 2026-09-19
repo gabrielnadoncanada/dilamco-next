@@ -23,7 +23,6 @@ export const boisMassifPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Matériaux",
           heading: "Où le bois massif vaut vraiment son prix",
           description:
             "Le bois bouge avec les saisons, alors on le garde pour les pièces qu'on voit de près.",
@@ -39,12 +38,10 @@ export const boisMassifPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Naturel", "Portes", "Détails"],
           image: {
             src: "/images/generated/materials/material-solid-wood-card-01.webp",
             alt: "Porte d'armoire en bois massif au grain apparent",
           },
-          caption: "Portes et détails vus de près",
           imageSide: "right",
         },
       },
@@ -92,7 +89,6 @@ export const boisMassifPage: PageTemplateData = {
             src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
             alt: "Détail de finition sur une pièce en bois massif",
           },
-          note: "L'essence de bois retenue est confirmée dans votre soumission.",
         },
       },
     },

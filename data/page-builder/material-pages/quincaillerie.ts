@@ -26,7 +26,6 @@ export const quincailleriePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Matériaux",
           heading: "Pourquoi la quincaillerie fait durer vos armoires",
           description:
             "Une porte s'ouvre des milliers de fois par année, et c'est la charnière qui lâche en premier.",
@@ -42,12 +41,10 @@ export const quincailleriePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Charnières", "Coulisses", "Soft-close"],
           image: {
             src: "/images/generated/materials/material-hardware-hero-01.webp",
             alt: "Coulisse de tiroir et charnière dans une armoire sur mesure",
           },
-          caption: "La pièce qu'on ne voit jamais",
           imageSide: "right",
         },
       },

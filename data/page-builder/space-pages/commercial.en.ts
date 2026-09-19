@@ -29,7 +29,6 @@ export const commercialPageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Offices", "Retail"],
           heading: "Commercial fit-outs in Montréal, delivered on the agreed date",
           description:
             "Offices, stores and leasehold improvements, done in stages so you can stay open.",
@@ -49,7 +48,6 @@ export const commercialPageEn: PageTemplateData = {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
             alt: "Office refitted in a downtown Montréal building",
           },
-          caption: "Office refit, downtown",
         },
       },
     },
@@ -68,7 +66,6 @@ export const commercialPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-featured-commercial-project-01.webp",
                 alt: "Oak reception counter and storage in a commercial space",
               },
-              caption: "Oak reception counter",
             },
             {
               kind: "image",
@@ -77,7 +74,7 @@ export const commercialPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
                 alt: "Leasehold improvements carried out in a Laval unit",
               },
-              caption: "Leasehold work, Laval",
+              caption: "Laval",
             },
             {
               kind: "stat",
@@ -90,7 +87,7 @@ export const commercialPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-commercial-project-01.webp",
                 alt: "Commercial unit delivered ready to occupy in downtown Montréal",
               },
-              caption: "Unit ready to occupy",
+              caption: "See this project",
               href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
             },
             {
@@ -99,7 +96,6 @@ export const commercialPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
                 alt: "Reception counter and service storage built into a retail space",
               },
-              caption: "Built-in reception millwork",
             },
             {
               kind: "text",
@@ -129,11 +125,6 @@ export const commercialPageEn: PageTemplateData = {
               label: "Permit",
               value:
                 "We file the application with the city and follow the inspections through.",
-            },
-            {
-              label: "Compliance",
-              value:
-                "Our RBQ classes 1.2 and 1.3 cover buildings of every kind.",
             },
             {
               label: "Insurance",

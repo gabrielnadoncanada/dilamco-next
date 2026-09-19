@@ -21,27 +21,13 @@ export const PROJECT_CUISINE_SUR_MESURE_MONTREAL_EN: ProjectData = {
       alt: "High-end custom kitchen in Montréal",
     },
   ],
-  scope: [
-    "Scoping and needs validation",
-    "Design and planning",
-    "Custom fabrication",
-    "Installation and adjustments",
-  ],
+  scope: [],
   constraints: [
-    "Space and circulation constraints",
-    "Walls/floors sometimes uneven (on-site adjustments)",
+    "Uneven walls and floors, adjusted on site",
     "Appliance integration and clearances",
   ],
-  solution: [
-    "Configuration optimized for real-world use (work zones and storage)",
-    "Choice of stable materials and reliable hardware",
-    "Precise installation: alignments, levels, finishes and final inspection",
-  ],
-  results: [
-    "More functional storage and smoother circulation",
-    "Consistent finish and clean lines",
-    "Greater durability through materials + hardware + installation",
-  ],
+  solution: [],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

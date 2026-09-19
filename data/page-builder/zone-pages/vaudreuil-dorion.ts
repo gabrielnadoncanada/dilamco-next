@@ -122,35 +122,15 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
                 "Beaucoup de maisons récentes ont été livrées avec un sous-sol jamais fini.",
             },
             {
-              label: "Comment obtenir le permis",
-              value:
-                "Aucun permis n'est remis sur place et la facture doit être payée avant la délivrance.",
-            },
-            {
-              label: "Combien coûte le permis",
-              value:
-                "Le tarif est fixé par un règlement municipal et varie selon la nature des travaux.",
-            },
-            {
-              label: "Ce qui change bientôt",
-              value:
-                "Le plan d'urbanisme est en révision et le corridor Harwood a été revu le 12 novembre 2025.",
-            },
-            {
               label: "Projets courants",
               value:
                 "Finir un sous-sol, refaire une cuisine, ajouter une pièce ou un garage.",
-            },
-            {
-              label: "Depuis notre base",
-              value: "Pont de l'Île-aux-Tourtes, puis la sortie Harwood.",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
             alt: "Sous-sol fini avec rangements dans une maison de Vaudreuil-Dorion",
           },
-          note: "Sources : Ville de Vaudreuil-Dorion, Statistique Canada 2021. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -171,7 +151,6 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
                 alt: "Sous-sol converti en bureau dans une maison de Cité-des-Jeunes",
               },
-              badges: ["Sous-sol"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -183,7 +162,6 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-featured-cuisine-project-01.webp",
                 alt: "Îlot central remplaçant la cuisine d'origine d'une maison de 2008",
               },
-              badges: ["Cuisine"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -195,7 +173,6 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement intégré à une maison de Vaudreuil-Dorion",
               },
-              badges: ["Permis"],
               footerCtaLabel: "Voir le service",
             },
           ],
@@ -214,17 +191,14 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
             {
               title: "Beaconsfield",
               href: "/zones/beaconsfield",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Kirkland",
               href: "/zones/kirkland",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "Voir la zone",
             },
           ],
         },

@@ -29,7 +29,6 @@ export const sousSolPageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Turnkey"],
           heading: "Custom basement finishing in Pierrefonds",
           description:
             "Home theatre, bar, wine cellar or library, drawn once we have checked the basement.",
@@ -49,7 +48,6 @@ export const sousSolPageEn: PageTemplateData = {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Basement finished as a family room with built-in storage",
           },
-          caption: "Basement finished as a family room",
         },
       },
     },
@@ -68,7 +66,6 @@ export const sousSolPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Home theatre with a riser platform and acoustic panels",
               },
-              caption: "Home theatre, built-in riser",
             },
             {
               kind: "image",
@@ -77,7 +74,6 @@ export const sousSolPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
                 alt: "Glass wine cellar built under a basement staircase",
               },
-              caption: "Glass cellar under the stairs",
             },
             {
               kind: "stat",
@@ -90,7 +86,6 @@ export const sousSolPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Basement bar with counter and bottle storage",
               },
-              caption: "Bar and bottle storage",
             },
             {
               kind: "text",
@@ -105,7 +100,6 @@ export const sousSolPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
                 alt: "Wall library and built-in desk in a basement",
               },
-              caption: "Library and built-in desk",
             },
           ],
         },
@@ -130,11 +124,6 @@ export const sousSolPageEn: PageTemplateData = {
                 "The city requires one as soon as you add a wall, a bedroom or a bathroom.",
             },
             {
-              label: "How long",
-              value:
-                "The cabinetry takes nine to fifteen weeks and goes in once the floor is finished.",
-            },
-            {
               label: "Materials",
               value:
                 "Shelves that carry weight are made of birch plywood.",
@@ -142,7 +131,7 @@ export const sousSolPageEn: PageTemplateData = {
             {
               label: "Who installs",
               value:
-                "Our own crew, leaving access doors to the plumbing and the wiring.",
+                "Our own crew, once the floor is down, leaving access doors to the plumbing.",
             },
             {
               label: "Warranty",

@@ -36,7 +36,6 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["RBQ 8306-0806-27", "Since 2004", "Written contract"],
           heading: "Residential and commercial renovation, plus custom cabinets",
           description:
             "A licensed general contractor renovates your rooms and supplies your cabinets, under the same contract.",
@@ -72,7 +71,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
                 alt: "U-shaped shaker kitchen with subway tile backsplash",
               },
-              badges: ["Multi-trade"],
               footerCtaLabel: "See the kitchen",
             },
             {
@@ -84,7 +82,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
                 alt: "Bathroom with floating vanity and marble surfaces",
               },
-              badges: ["Waterproofing"],
               footerCtaLabel: "See the bathroom",
             },
             {
@@ -96,7 +93,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Basement turned into a games room",
               },
-              badges: ["Permit"],
               footerCtaLabel: "See the basement",
             },
             {
@@ -108,7 +104,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Hardwood flooring installed in a home",
               },
-              badges: ["Hardwood"],
               footerCtaLabel: "See the flooring",
             },
             {
@@ -120,7 +115,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Rear addition on a single-family home",
               },
-              badges: ["Engineer"],
               footerCtaLabel: "See the addition",
             },
             {
@@ -132,7 +126,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Room restored after a loss",
               },
-              badges: ["Insurance"],
               footerCtaLabel: "See disaster rebuild",
             },
             {
@@ -144,7 +137,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Commercial fit-out delivered ready to occupy",
               },
-              badges: ["RBQ 1.3"],
               footerCtaLabel: "See commercial",
             },
             {
@@ -156,7 +148,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/services/service-design-hero-01.webp",
                 alt: "Custom cabinet design session",
               },
-              badges: ["Subcategory 12"],
               footerCtaLabel: "See the design",
             },
             {
@@ -168,7 +159,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/services/service-fabrication-hero-01.webp",
                 alt: "Custom cabinet boxes and fronts",
               },
-              badges: ["Made to measure"],
               footerCtaLabel: "See production",
             },
             {
@@ -180,7 +170,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/services/service-installation-hero-01.webp",
                 alt: "Custom cabinets installed during a renovation",
               },
-              badges: ["Our crews"],
               footerCtaLabel: "See the installation",
             },
           ],

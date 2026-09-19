@@ -122,30 +122,15 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
                 "Beaurepaire, près de la gare, est habité depuis 1925 et ses maisons sont plus anciennes.",
             },
             {
-              label: "Particularité locale",
-              value:
-                "Abattre un arbre demande un permis, un remplacement et un dépôt que la Ville rembourse ensuite.",
-            },
-            {
-              label: "Ce que la Ville vérifie",
-              value:
-                "Le règlement de zonage dit où poser le bâtiment, quelles marges respecter et quelle hauteur ne pas dépasser.",
-            },
-            {
               label: "Projets courants",
               value:
                 "Reprendre la maison au complet, refaire la cuisine ou la salle de bain, ajouter une rallonge.",
-            },
-            {
-              label: "Depuis notre base",
-              value: "Vingt-cinq minutes de route par l'autoroute 40.",
             },
           ],
           image: {
             src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
             alt: "Cuisine refaite dans une maison de Beaconsfield",
           },
-          note: "Sources : Ville de Beaconsfield, Wikipédia. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -166,7 +151,6 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Rénovation majeure d'une maison de Beaconsfield",
               },
-              badges: ["Clé en main"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -178,7 +162,6 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Planification d'un agrandissement sur un terrain boisé",
               },
-              badges: ["Abattage"],
               footerCtaLabel: "Voir l'agrandissement",
             },
             {
@@ -190,7 +173,6 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain rénovée dans une maison de Beacon Hill",
               },
-              badges: ["Étanchéité"],
               footerCtaLabel: "Voir la salle de bain",
             },
           ],
@@ -219,7 +201,7 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes à Beaconsfield",
           items: [
             {
               q: "Puis-je abattre un arbre pour agrandir à Beaconsfield ?",

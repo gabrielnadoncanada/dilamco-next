@@ -40,7 +40,7 @@ export const renovationPage: PageTemplateData = {
           badges: ["Permis inclus", "Contrat écrit", "Assuré"],
           heading: "Un seul entrepreneur, du permis à la livraison",
           description:
-            "Nous signons le contrat, déposons le permis, payons les corps de métier et répondons du résultat.",
+            "Nous engageons et payons les corps de métier, et nous répondons du résultat devant vous.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -73,7 +73,6 @@ export const renovationPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
                 alt: "Rénovation de cuisine complète",
               },
-              badges: ["Multi-métiers"],
               footerCtaLabel: "Voir cuisine",
             },
             {
@@ -85,7 +84,6 @@ export const renovationPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-bath-hero-01.webp",
                 alt: "Rénovation de salle de bain complète",
               },
-              badges: ["Étanchéité"],
               footerCtaLabel: "Voir salle de bain",
             },
             {
@@ -97,7 +95,6 @@ export const renovationPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol fini par un entrepreneur général",
               },
-              badges: ["Permis obligatoire"],
               footerCtaLabel: "Voir sous-sol",
             },
             {
@@ -109,7 +106,6 @@ export const renovationPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
                 alt: "Rénovation de plancher résidentiel",
               },
-              badges: ["Sous-plancher"],
               footerCtaLabel: "Voir plancher",
             },
             {
@@ -121,7 +117,6 @@ export const renovationPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Agrandissement de maison en construction",
               },
-              badges: ["Structure"],
               footerCtaLabel: "Voir agrandissement",
             },
             {
@@ -133,7 +128,6 @@ export const renovationPage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction après un dégât d'eau",
               },
-              badges: ["Assurance"],
               footerCtaLabel: "Voir après sinistre",
             },
           ],
@@ -215,7 +209,7 @@ export const renovationPage: PageTemplateData = {
               value: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud et Vaudreuil-Soulanges",
             },
           ],
-          note: "Licence RBQ 8306-0806-27, catégories 1.2 et 1.3, valide depuis 2004.",
+          note: "Licence valide depuis 2004, catégories 1.2 et 1.3 : rénovation et agrandissement, pas de construction neuve.",
         },
       },
     },

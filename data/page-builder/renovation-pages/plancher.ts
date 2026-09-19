@@ -41,7 +41,6 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Rénovation de plancher",
           heading: "Rénovation de plancher, de l'arrachage à la pose",
           description:
             "On vérifie le sous-plancher et l'humidité avant de poser votre nouveau revêtement.",
@@ -140,7 +139,7 @@ export const renovationPlancherPage: PageTemplateData = {
               number: "3",
               title: "Réparation",
               description:
-                "On remplace les panneaux abîmés et on revisse tout le sous-plancher.",
+                "On répare le sous-plancher avant de commander le revêtement.",
             },
             {
               number: "4",
@@ -210,15 +209,15 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la rénovation de plancher",
           items: [
             {
               q: "Pourquoi mon plancher craque-t-il ?",
-              a: "Presque toujours à cause du sous-plancher : panneaux mal fixés, vis manquantes, contreplaqué trop mince. Le revêtement ne fait que révéler le défaut. On arrache, on revisse et on remplace.",
+              a: "Presque toujours à cause du sous-plancher : panneaux mal fixés, vis manquantes, contreplaqué trop mince. On arrache le revêtement, on revisse et on remplace ce qui est ramolli.",
             },
             {
               q: "Peut-on poser par-dessus l'ancien plancher ?",
-              a: "C'est rarement une bonne idée. La hauteur monte, les portes frottent, les seuils se compliquent et on ne voit pas l'état du dessous. On recommande d'arracher, sauf exception écrite.",
+              a: "C'est rarement une bonne idée. La hauteur monte, les portes frottent, les seuils se compliquent et on ne voit pas l'état du dessous.",
             },
             {
               q: "Quel plancher choisir pour un sous-sol ?",

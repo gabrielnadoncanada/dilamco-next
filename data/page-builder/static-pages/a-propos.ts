@@ -22,11 +22,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "À propos",
           heading:
             "Entrepreneur général en rénovation résidentielle depuis 2004",
           description:
-            "La même licence, la même personne responsable et la même adresse depuis vingt ans.",
+            "Même licence, même responsable et même adresse depuis 2004, à Pierrefonds-Roxboro.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -39,12 +38,10 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["RBQ 8306-0806-27", "Depuis 2004", "Pierrefonds-Roxboro"],
           image: {
             src: "/images/realisations/escalier-rampe-verre-finition-interieure-01.webp",
             alt: "Escalier et rampe de verre : finition intérieure réalisée par Dilamco",
           },
-          caption: "9139-1250 Québec inc. · Pierrefonds-Roxboro",
           imageSide: "left",
         },
       },
@@ -64,7 +61,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/mur-bois-accent-plafond-haut-01.webp",
                 alt: "Mur de bois en accent sous un plafond de grande hauteur",
               },
-              caption: "Mur d'accent, plafond haut",
             },
             {
               kind: "stat",
@@ -78,7 +74,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Plancher de bois franc neuf posé dans une pièce rénovée",
               },
-              caption: "Plancher de bois franc",
             },
             {
               kind: "stat",
@@ -96,7 +91,7 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
                 alt: "Présentoirs de finis et de matériaux au showroom de Dorval",
               },
-              caption: "Présentoirs de finis, Dorval",
+              caption: "Notre showroom de Dorval",
             },
           ],
         },
@@ -126,7 +121,6 @@ export const page: PageTemplateData = {
               bullets: [
                 "Le dépôt est de 40 000 $",
                 "Personne n'a eu à s'en servir à ce jour",
-                "Le responsable inscrit est Sean Diffley",
               ],
             },
             {
@@ -187,7 +181,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Parlons de votre projet",
           intro:
-            "Estimation gratuite. Les attestations d'assurance sont fournies avant la signature.",
+            "Dites-nous ce que vous voulez rénover et dans quelle ville.",
           actions: [
             {
               label: "Estimation gratuite",

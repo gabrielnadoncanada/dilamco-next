@@ -23,27 +23,14 @@ export const PROJECT_AMENAGEMENT_SUR_MESURE_BUREAU_CENTRE_VILLE_MONTREAL_EN: Pro
         alt: "Custom office fit-out in downtown Montréal",
       },
     ],
-    scope: [
-      "Scoping the mandate (use, constraints, deadline)",
-      "Planning and validation of dimensions",
-      "Custom fabrication",
-      "Installation and adjustments",
-    ],
+    scope: [],
     constraints: [
-      "Tight schedule",
-      "Limited access (work windows)",
       "Heavy use and frequent maintenance",
     ],
     solution: [
       "Rugged modules suited to high usage cycles",
-      "Hardware selection consistent with the use",
-      "Installation with clean alignments and finishes",
     ],
-    results: [
-      "Optimized storage and improved circulation",
-      "Greater durability (heavy use)",
-      "Consistent finish in public areas",
-    ],
+    results: [],
     requiredLinks: {
       spaceHref: SPACE_HREF.commercial,
       renovationHref: CORE_HREF.renovation,

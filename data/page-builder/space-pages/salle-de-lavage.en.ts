@@ -20,7 +20,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
   service: {
     name: "Custom laundry room",
     description:
-      "Design, controlled fabrication and installation of custom laundry room cabinets.",
+      "Design, partner-factory production and installation of custom laundry room cabinets.",
     url: SITE.url + "/espaces/salle-de-lavage",
     serviceType: "Custom laundry room",
   },
@@ -32,7 +32,6 @@ export const salleDeLavagePageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Washable finish"],
           heading: "Custom laundry room in Montréal and Laval",
           description:
             "Folding counter, storage towers and utility sink, drawn around your appliances.",
@@ -52,7 +51,6 @@ export const salleDeLavagePageEn: PageTemplateData = {
             src: "/images/generated/spaces/space-laundry-hero-01.webp",
             alt: "Laundry room with a continuous folding counter above the appliances",
           },
-          caption: "Continuous folding counter",
         },
       },
     },
@@ -71,7 +69,6 @@ export const salleDeLavagePageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "White laundry room with raised appliances and a broom cabinet",
               },
-              caption: "Raised appliances, broom cabinet",
             },
             {
               kind: "image",
@@ -80,7 +77,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-laundry-project-02.webp",
                 alt: "Storage towers and pull-out baskets in a Laval laundry room",
               },
-              caption: "Towers and baskets, Laval",
+              caption: "Laval",
             },
             {
               kind: "stat",
@@ -93,7 +90,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-laundry-project-01.webp",
                 alt: "Compact laundry room fitted into a Montréal home",
               },
-              caption: "Tight footprint, Montréal",
+              caption: "Montréal",
             },
             {
               kind: "image",
@@ -101,7 +98,6 @@ export const salleDeLavagePageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-laundry-project-03.webp",
                 alt: "Utility sink and counter aligned along the same wall",
               },
-              caption: "Sink and counter aligned",
             },
             {
               kind: "text",
@@ -123,14 +119,9 @@ export const salleDeLavagePageEn: PageTemplateData = {
           heading: "The laundry room in brief",
           rows: [
             {
-              label: "How long",
+              label: "What drives the price",
               value:
-                "It takes nine to fifteen weeks, and the plumbing is redone before we install.",
-            },
-            {
-              label: "Typical price",
-              value:
-                "The price follows the number of towers, the counter area and the utility sink.",
+                "The number of towers, the counter area and the utility sink.",
             },
             {
               label: "Materials",
@@ -145,7 +136,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
             {
               label: "Who installs",
               value:
-                "Our own crew, keeping the clearance the washer and dryer need.",
+                "Our own crew, plumbing redone, keeping the clearance the appliances need.",
             },
             {
               label: "Warranty",

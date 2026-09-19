@@ -25,27 +25,17 @@ export const PROJECT_CUISINE_SUR_MESURE_BROSSARD_EN: ProjectData = {
       alt: "Navy blue kitchen cabinets and marbled quartz countertop in Brossard",
     },
   ],
-  scope: [
-    "Scoping and validation of needs",
-    "Design and selection of the two tones",
-    "Custom fabrication of cabinets",
-    "Installation and adjustments",
-  ],
+  scope: [],
   constraints: [
     "U-shaped layout in an enclosed space",
-    "Balancing the two tones (white on top, navy at the base)",
     "Integrating black stainless steel appliances",
   ],
   solution: [
-    "Navy blue bases and white upper cabinets for a controlled contrast",
-    "Marbled quartz countertops and backsplash to unify the whole",
-    "Matching elongated hardware and optimized storage",
+    "Navy blue bases and white upper cabinets",
+    "Matching marbled quartz countertops and backsplash",
+    "Matching elongated hardware",
   ],
-  results: [
-    "A current, bright two-tone kitchen",
-    "Optimized storage across three walls",
-    "Consistent finish and clean lines",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

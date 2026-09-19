@@ -23,6 +23,7 @@ import { Footer } from "@/components/Footer";
 import { Heading } from "@/components/elements/heading";
 import { Button } from "@/components/ui/button";
 import { ProjectGallery } from "@/components/projets/project-gallery";
+import { cn } from "@/lib/utils";
 
 type Params = { locale: string; space: string; slug: string };
 
@@ -98,6 +99,7 @@ export default async function ProjectDetailPage({
   const locale = asLocale(resolved.locale);
   setRequestLocale(locale);
   const project = getProject(resolved);
+  const filledColumns = COLUMN_KEYS.filter((k) => project?.[k]?.length);
   if (!project) notFound();
 
   const t = await getTranslations("projectDetail");
@@ -190,11 +192,23 @@ export default async function ProjectDetailPage({
           </div>
         </section>
 
-        {/* Détail */}
+        {/* Détail : seulement les colonnes qui portent des faits. La section
+            entière disparaît quand il n'y en a aucune, sinon on affichait une
+            bande vide. */}
+        {filledColumns.length > 0 ? (
         <section className="border-b border-border bg-secondary/30">
           <div className="mx-auto max-w-[1440px] px-4 py-14 sm:px-6 md:py-20 lg:px-8">
-            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {COLUMN_KEYS.map((key) => {
+            <div
+              className={cn(
+                "grid gap-10 sm:grid-cols-2",
+                filledColumns.length >= 4
+                  ? "lg:grid-cols-4"
+                  : filledColumns.length === 3
+                    ? "lg:grid-cols-3"
+                    : "lg:grid-cols-2",
+              )}
+            >
+              {filledColumns.map((key) => {
                 const items = project[key];
                 if (!items?.length) return null;
                 return (
@@ -219,6 +233,7 @@ export default async function ProjectDetailPage({
             </div>
           </div>
         </section>
+        ) : null}
 
         {/* Matériaux & services */}
         <section className="border-b border-border">

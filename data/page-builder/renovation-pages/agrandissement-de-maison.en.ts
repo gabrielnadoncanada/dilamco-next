@@ -41,7 +41,6 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Home addition",
           heading: "Home addition, from the zoning to the finishing",
           description:
             "We check the zoning, have the drawings made, pour the foundation and tie the new space into your house.",
@@ -166,7 +165,7 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         props: {
           heading: "The kinds of addition that are possible",
           intro:
-            "The lot and the city by-law usually decide before your original wish does.",
+            "Your city's zoning and the size of the lot decide what is possible.",
           items: [
             {
               title: "Extension at the back",
@@ -210,7 +209,7 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about home additions",
           items: [
             {
               q: "Does my lot allow an addition?",
@@ -222,7 +221,7 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             },
             {
               q: "Do I need an engineer?",
-              a: "In nearly every case. Footings, framing and any replacement beam call for a load calculation. The sealed drawings go with the application and guide the site.",
+              a: "In nearly every case. Footings, framing and any replacement beam call for a sealed load calculation.",
             },
             {
               q: "How long does an addition take?",
@@ -230,7 +229,7 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             },
             {
               q: "Add on or build new?",
-              a: "We do not build new houses. Our work always starts from an existing building. For many families an extension costs less than moving.",
+              a: "We do not build new houses. Our RBQ licence covers renovation and additions to an existing building, not new construction.",
             },
           ],
         },

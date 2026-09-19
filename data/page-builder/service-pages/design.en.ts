@@ -46,7 +46,6 @@ export const designPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["On-site survey", "Drawings", "Materials"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
             alt: "Custom kitchen drawing and material samples",
@@ -101,11 +100,6 @@ export const designPageEn: PageTemplateData = {
           heading: "The design stage in brief",
           rows: [
             {
-              label: "How long",
-              value:
-                "It takes two to four weeks between the first visit and the signed drawings.",
-            },
-            {
               label: "What you receive",
               value:
                 "A floor plan, a drawing of each wall, the list of materials and the price.",
@@ -121,12 +115,7 @@ export const designPageEn: PageTemplateData = {
                 "One visit to measure, and another one to walk you through the drawings.",
             },
             {
-              label: "Warranty",
-              value:
-                "The drawings you sign are the reference for the whole job site.",
-            },
-            {
-              label: "Typical price",
+              label: "Design fee",
               value:
                 "The design is credited to your project if you award us the work.",
             },
@@ -135,7 +124,6 @@ export const designPageEn: PageTemplateData = {
             src: "/images/services/design-hero.webp",
             alt: "Drawings and elevations of a kitchen being designed",
           },
-          note: "If the drawings change after signing, the price is reviewed with you.",
         },
       },
     },
@@ -145,7 +133,7 @@ export const designPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions about the design stage",
+          heading: "Questions about kitchen design",
           items: [
             {
               q: "How long does design take?",

@@ -1,37 +1,24 @@
 {
   "common": {
     "requestQuote": "Request a quote",
-    "getQuote": "Get a quote",
-    "seeProjects": "View our projects",
-    "seeServices": "View our services",
-    "see": "View",
     "skipToContent": "Skip to main content"
   },
   "localeSwitcher": {
     "label": "Language",
     "fr": "FR",
-    "en": "EN",
-    "frLong": "Français",
-    "enLong": "English"
-  },
-  "header": {
-    "brandTagline": "General contractor for residential renovation — RBQ licence 8306-0806-27",
-    "announcement": "General contractor · RBQ licence 8306-0806-27 · Free estimate"
+    "en": "EN"
   },
   "nav": {
     "espaces": "Spaces",
     "services": "Services",
     "projets": "Projects",
     "materiaux": "Materials",
-    "aPropos": "About",
     "zones": "Areas",
     "armoires": "Custom cabinetry"
   },
   "footer": {
     "espaces": "SPACES",
     "services": "SERVICES",
-    "ressources": "RESOURCES",
-    "aPropos": "ABOUT",
     "copyright": "© 2026 Dilamco (9139-1250 Québec inc.). RBQ licence 8306-0806-27. All rights reserved.",
     "privacy": "Privacy policy",
     "terms": "Terms of use",
@@ -47,15 +34,14 @@
     "results": "Results",
     "materials": "Materials",
     "relatedServices": "Related services",
-    "otherProjects": "Other projects",
     "otherProjectsSpace": "Other {label} projects",
     "similarProject": "Have a similar project in mind?",
     "viewProject": "View project",
     "eyebrow": "Project",
     "viewSpace": "View {label} space",
-    "ctaText": "We help you scope a custom, durable and well-executed project in {city} and across Greater Montréal.",
+    "ctaText": "Tell us about your project in {city}. On-site visit, then a detailed quote, free of charge.",
     "listingHeading": "Custom {label} projects",
-    "listingIntro": "A few custom {label} projects — design, controlled fabrication and careful installation, in Montréal, Laval and across Greater Montréal.",
+    "listingIntro": "Completed {label} projects in Montréal, Laval and Greater Montréal.",
     "comingSoon": "Our {label} projects are coming soon.",
     "discussProject": "Discuss your project",
     "allProjects": "All projects"

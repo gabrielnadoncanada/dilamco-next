@@ -114,16 +114,6 @@ export const zoneSaintLaurentPage: PageTemplateData = {
                 "Les plex datent de 1949 à 1955, les copropriétés de Bois-Franc des années 1990.",
             },
             {
-              label: "Comment déposer la demande",
-              value:
-                "En ligne, avec un compte des services numériques de la Ville, ou au comptoir de l'arrondissement.",
-            },
-            {
-              label: "Particularité locale",
-              value:
-                "En copropriété, le syndicat encadre l'accès, l'ascenseur, les aires communes et les heures de travaux.",
-            },
-            {
               label: "À surveiller",
               value:
                 "Les plex partagent des colonnes de plomberie et des murs mitoyens entre les logements.",
@@ -133,17 +123,11 @@ export const zoneSaintLaurentPage: PageTemplateData = {
               value:
                 "Refaire une salle de bain, ouvrir une cuisine, insonoriser entre deux logements.",
             },
-            {
-              label: "Depuis notre base",
-              value:
-                "Autoroute 40 vers l'est, sortie Côte-Vertu ou Marcel-Laurin.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/espaces-card-bath-01.webp",
             alt: "Salle de bain rénovée à l'étage d'un duplex laurentien",
           },
-          note: "Sources : Ville de Montréal, banque 311, histoire de l'arrondissement. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -164,7 +148,6 @@ export const zoneSaintLaurentPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-bath-project-02.webp",
                 alt: "Salle de bain refaite dans un logement de Norgate",
               },
-              badges: ["Plex"],
               footerCtaLabel: "Voir la salle de bain",
             },
             {
@@ -176,7 +159,6 @@ export const zoneSaintLaurentPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-cuisine-project-01.webp",
                 alt: "Cuisine ouverte dans un bungalow du secteur Côte-Vertu",
               },
-              badges: ["Structure"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -188,7 +170,6 @@ export const zoneSaintLaurentPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol transformé en pièce de vie sous un duplex",
               },
-              badges: ["Conformité"],
               footerCtaLabel: "Voir le sous-sol",
             },
           ],
@@ -207,22 +188,18 @@ export const zoneSaintLaurentPage: PageTemplateData = {
             {
               title: "Dorval",
               href: "/zones/dorval",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              ctaLabel: "Voir la zone",
             },
           ],
         },

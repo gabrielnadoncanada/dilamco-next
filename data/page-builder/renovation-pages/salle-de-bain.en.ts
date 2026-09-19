@@ -41,7 +41,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Bathroom renovation",
           heading: "Bathroom renovation, from the plumbing to the tile",
           description:
             "We redo the plumbing, the ventilation and the waterproofing, then we tile and set the vanity.",
@@ -146,13 +145,13 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               number: "4",
               title: "Waterproofing and tile",
               description:
-                "We lay the membrane, check the slope, then we tile.",
+                "We lay the membrane and let it cure before we tile.",
             },
             {
               number: "5",
               title: "Vanity and handover",
               description:
-                "We install the vanity, the faucets and the shower door.",
+                "We install the vanity, then we walk the room with you.",
             },
           ],
         },
@@ -191,7 +190,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             {
               title: "Curbless shower",
               price: "close to $35,000",
-              hint: "the floor has to be lowered",
               includes: [
                 "Floor lowered to remove the threshold",
                 "Linear drain and calculated slope",
@@ -199,7 +197,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               ],
             },
           ],
-          note: "These are ballpark ranges. The price changes if the plumbing moves and with the tile you choose.",
+          note: "The price changes if the plumbing moves and with the tile you choose.",
           action: {
             label: "Free quote",
             href: "/contact",
@@ -223,7 +221,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Curbless shower with a glass panel",
               },
-              caption: "Curbless shower, glass panel",
             },
             {
               kind: "image",
@@ -231,7 +228,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
                 alt: "Vanity with quartz counter and backlit mirror",
               },
-              caption: "Vanity and lit mirror",
             },
             {
               kind: "stat",
@@ -242,7 +238,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               kind: "text",
               title: "See more bathrooms",
               description:
-                "Showers and vanities photographed after the work.",
+                "Curbless showers, double vanities and bathroom storage.",
               href: "/espaces/salle-de-bain",
             },
           ],
@@ -255,7 +251,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about bathroom renovation",
           items: [
             {
               q: "What is a waterproofing membrane?",

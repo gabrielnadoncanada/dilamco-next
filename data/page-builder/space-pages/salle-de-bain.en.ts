@@ -20,7 +20,7 @@ export const salleDeBainPageEn: PageTemplateData = {
   service: {
     name: "Custom bathroom vanity",
     description:
-      "Design, controlled fabrication and installation of high-end custom bathroom vanities in Montréal, Laval, the North Shore and the South Shore.",
+      "Design, partner-factory production and installation of high-end custom bathroom vanities in Montréal, Laval, the North Shore and the South Shore.",
     url: SITE.url + "/espaces/salle-de-bain",
     serviceType: "Custom bathroom vanity",
   },
@@ -32,7 +32,6 @@ export const salleDeBainPageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Single or double", "Washable finish"],
           heading: "Custom bathroom vanity in Laval and Montréal",
           description:
             "We draw the vanity, have it built, then install it with the rest of the room.",
@@ -52,7 +51,6 @@ export const salleDeBainPageEn: PageTemplateData = {
             src: "/images/generated/spaces/space-bath-project-01.webp",
             alt: "Bathroom with a light oak double vanity and glass shower",
           },
-          caption: "Double vanity and matching linen tower",
         },
       },
     },
@@ -71,7 +69,6 @@ export const salleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
                 alt: "Marble bathroom with a floating vanity",
               },
-              caption: "Floating vanity, marble",
             },
             {
               kind: "image",
@@ -80,12 +77,11 @@ export const salleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Curbless shower with a glass panel",
               },
-              caption: "Curbless shower, glass panel",
             },
             {
               kind: "stat",
-              value: "9–15 wks",
-              label: "The wait before your vanity is installed",
+              value: "$15,000",
+              label: "The starting price for a full bathroom",
             },
             {
               kind: "image",
@@ -93,7 +89,6 @@ export const salleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
                 alt: "Vanity with an LED mirror and quartz countertop",
               },
-              caption: "LED mirror and quartz top",
             },
             {
               kind: "quote",
@@ -107,7 +102,7 @@ export const salleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-pierre-claire-01.webp",
                 alt: "Shower clad in pale stone in a renovated bathroom",
               },
-              caption: "Pale stone, West Island",
+              caption: "West Island",
             },
           ],
         },
@@ -129,7 +124,7 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               label: "Typical price",
               value:
-                "The price depends on the width, the number of sinks and the storage you want.",
+                "Redoing the whole room, vanity included, runs $15,000 to $35,000.",
             },
             {
               label: "Materials",

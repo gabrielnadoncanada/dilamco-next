@@ -22,7 +22,6 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Plywood", "MDF", "Hardware"],
           heading: "The materials that go into your cabinets",
           description:
             "We are the ones who pick the panels, the hardware and the finishes, and who check them.",
@@ -142,7 +141,7 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Advice on choosing your materials",
+          heading: "We help you choose your materials",
           intro:
             "Panels, hardware and finishes are written into the quote before we order.",
           actions: [

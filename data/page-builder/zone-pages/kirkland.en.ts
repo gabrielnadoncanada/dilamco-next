@@ -91,12 +91,7 @@ export const zoneKirklandPageEn: PageTemplateData = {
             {
               label: "Lot sizes",
               value:
-                "Lots are wide here, with roughly two thousand residents per square kilometre.",
-            },
-            {
-              label: "What the town checks",
-              value:
-                "It looks at setbacks and at how much of the lot your house is allowed to cover.",
+                "Lots are wide here, which often leaves room for a single-storey side addition.",
             },
             {
               label: "What is different here",
@@ -104,25 +99,15 @@ export const zoneKirklandPageEn: PageTemplateData = {
                 "Digging a new foundation needs an excavation certificate on top of the building permit.",
             },
             {
-              label: "How to file the application",
-              value:
-                "Online, through the town portal, which shows the file status and lets you pay.",
-            },
-            {
               label: "Common projects",
               value:
                 "Side additions, a second storey, a sunroom, and opening up the kitchen.",
-            },
-            {
-              label: "From our base",
-              value: "Fifteen minutes of driving along boulevard Saint-Charles.",
             },
           ],
           image: {
             src: "/images/generated/renovation/renovation-extension-approach-01.webp",
             alt: "Planning an addition on a Kirkland lot",
           },
-          note: "Sources: Town of Kirkland, Wikipedia, 2021 census. Verified 2026-09-18.",
         },
       },
     },
@@ -143,7 +128,6 @@ export const zoneKirklandPageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Addition under construction on a Kirkland street",
               },
-              badges: ["Excavation"],
               footerCtaLabel: "See additions",
             },
             {
@@ -155,7 +139,6 @@ export const zoneKirklandPageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Full renovation of a Kirkland house",
               },
-              badges: ["Turnkey"],
               footerCtaLabel: "See the service",
             },
             {
@@ -167,7 +150,6 @@ export const zoneKirklandPageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
                 alt: "Open kitchen in a detached Kirkland home",
               },
-              badges: ["Structure"],
               footerCtaLabel: "See kitchens",
             },
           ],
@@ -203,7 +185,7 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Kirkland questions we get",
           items: [
             {
               q: "Where do you apply for a renovation permit in Kirkland?",

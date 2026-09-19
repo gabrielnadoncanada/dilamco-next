@@ -145,16 +145,6 @@ export const zoneRiveSudPage: PageTemplateData = {
                 "Le Vieux-Longueuil aligne des bungalows, et Brossard a été planifié dans les années 1960.",
             },
             {
-              label: "Comment déposer la demande",
-              value:
-                "À Longueuil par le portail Permis en ligne, à Brossard par la Direction de l'urbanisme.",
-            },
-            {
-              label: "Particularité locale",
-              value:
-                "À Saint-Lambert, un comité approuve l'apparence des travaux visibles de la rue.",
-            },
-            {
               label: "Risque local",
               value:
                 "À Châteauguay, jusqu'à 1 100 résidences sont en zone inondable et les digues ne sont pas reconnues.",
@@ -164,17 +154,11 @@ export const zoneRiveSudPage: PageTemplateData = {
               value:
                 "Rénover une maison au complet, agrandir, remettre en état après un dégât d'eau.",
             },
-            {
-              label: "Depuis notre base",
-              value:
-                "Autoroute 30, pont Samuel-De Champlain ou pont-tunnel Louis-Hippolyte-La Fontaine.",
-            },
           ],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
             alt: "Agrandissement livré dans une municipalité de la Rive-Sud",
           },
-          note: "Sources : villes de Longueuil, Brossard, Saint-Lambert et Candiac, Le Soleil de Châteauguay. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -195,7 +179,6 @@ export const zoneRiveSudPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Plan d'agrandissement pour un bungalow du Vieux-Longueuil",
               },
-              badges: ["Permis"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -207,7 +190,6 @@ export const zoneRiveSudPage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Rénovation complète d'une maison d'un secteur de Brossard",
               },
-              badges: ["Clé en main"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -219,7 +201,6 @@ export const zoneRiveSudPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
                 alt: "Matériaux prêts pour une reconstruction de sous-sol à Châteauguay",
               },
-              badges: ["Assurances"],
               footerCtaLabel: "Voir le service",
             },
           ],
@@ -238,22 +219,18 @@ export const zoneRiveSudPage: PageTemplateData = {
             {
               title: "Vaudreuil-Dorion",
               href: "/zones/vaudreuil-dorion",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Dorval",
               href: "/zones/dorval",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              ctaLabel: "Voir la zone",
             },
           ],
         },

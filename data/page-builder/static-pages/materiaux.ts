@@ -22,7 +22,6 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Contreplaqué", "MDF", "Quincaillerie"],
           heading: "Les matériaux qu'on met dans vos armoires",
           description:
             "C'est nous qui choisissons les panneaux, la quincaillerie et les finis, et qui les vérifions.",
@@ -142,7 +141,7 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un avis sur le choix de vos matériaux",
+          heading: "Nous vous aidons à choisir vos matériaux",
           intro:
             "Panneaux, quincaillerie et finis sont écrits dans la soumission avant la commande.",
           actions: [

@@ -32,7 +32,6 @@ export const contreplaquePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Matériaux",
           heading: "Pourquoi nos caissons sont en contreplaqué",
           description:
             "C'est le panneau qui reste droit dans le temps et qui tient les vis des charnières.",
@@ -48,12 +47,10 @@ export const contreplaquePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Stabilité", "Caissons"],
           image: {
             src: "/images/generated/materials/material-plywood-hero-01.webp",
             alt: "Caisson d'armoire en contreplaqué de bouleau",
           },
-          caption: "Caissons, tiroirs et pièces sous charge",
           imageSide: "right",
         },
       },
@@ -106,7 +103,6 @@ export const contreplaquePage: PageTemplateData = {
             src: "/images/generated/materials/material-plywood-detail-01.webp",
             alt: "Plis croisés visibles sur un chant de contreplaqué",
           },
-          note: "La qualité du panneau compte plus que l'essence de bois en surface.",
         },
       },
     },
@@ -129,10 +125,6 @@ export const contreplaquePage: PageTemplateData = {
             {
               q: "Un chant apparent est-il acceptable ?",
               a: "Oui, plusieurs clients le demandent sur les tablettes et les bouts d'îlot. Il faut alors un placage sans vide, poncé fin puis verni.",
-            },
-            {
-              q: "Le contreplaqué est-il plus lourd ?",
-              a: "À épaisseur égale, il pèse moins que le MDF. Cela se sent à la pose des armoires hautes et sur les ancrages du mur.",
             },
           ],
         },

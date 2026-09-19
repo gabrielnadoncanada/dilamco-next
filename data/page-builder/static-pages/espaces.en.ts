@@ -29,7 +29,6 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Cabinet division"],
           heading: "Custom cabinetry for six rooms of the house",
           description:
             "We draw it, we order it and we install it. There is nobody else for you to call.",
@@ -64,7 +63,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "High-end custom kitchen cabinets",
               },
-              badges: ["Custom-built"],
               footerCtaLabel: "See kitchens",
             },
             {
@@ -75,7 +73,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Custom bathroom vanity",
               },
-              badges: ["Vanity"],
               footerCtaLabel: "See bathrooms",
             },
             {
@@ -86,7 +83,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Custom laundry room",
               },
-              badges: ["Storage"],
               footerCtaLabel: "See laundry rooms",
             },
             {
@@ -97,7 +93,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Custom walk-in closet",
               },
-              badges: ["Closet"],
               footerCtaLabel: "See walk-ins",
             },
             {
@@ -108,7 +103,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
                 alt: "Custom basement finishing",
               },
-              badges: ["Home theatre"],
               footerCtaLabel: "See basements",
             },
             {
@@ -119,7 +113,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Custom commercial fit-out",
               },
-              badges: ["Offices"],
               footerCtaLabel: "See commercial",
             },
           ],

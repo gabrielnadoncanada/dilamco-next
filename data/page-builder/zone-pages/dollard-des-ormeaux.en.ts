@@ -97,16 +97,6 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
                 "The new planning programme applies since 24 April 2025 and the new zoning since 16 May 2025.",
             },
             {
-              label: "What the city checks",
-              value:
-                "That by-law sets the setbacks, the heights allowed and where the building sits on the lot.",
-            },
-            {
-              label: "How to file the application",
-              value:
-                "Online or at city hall, with sketches or drawings that clearly show the work.",
-            },
-            {
               label: "What is different here",
               value:
                 "The neighbourhoods were built in waves, from Sunnybrooke to Westpark and the Saint-Jean sector.",
@@ -116,16 +106,11 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
               value:
                 "Opening the centre wall, redoing a bathroom, finishing a basement, adding on at the back.",
             },
-            {
-              label: "From our base",
-              value: "Ten minutes of driving along boulevard Saint-Jean.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/space-bath-hero-01.webp",
             alt: "Bathroom redone in a Dollard-des-Ormeaux split-level",
           },
-          note: "Sources: City of Dollard-des-Ormeaux, Wikipedia. Verified 2026-09-18.",
         },
       },
     },
@@ -146,7 +131,6 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Kitchen opened onto the living room of a DDO split-level",
               },
-              badges: ["Structure"],
               footerCtaLabel: "See kitchens",
             },
             {
@@ -158,7 +142,6 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Basement family room finished in Dollard-des-Ormeaux",
               },
-              badges: ["Insulation"],
               footerCtaLabel: "See basements",
             },
             {
@@ -170,7 +153,6 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Rear addition on a Dollard-des-Ormeaux house",
               },
-              badges: ["Permit"],
               footerCtaLabel: "See additions",
             },
           ],
@@ -202,7 +184,7 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Dollard-des-Ormeaux questions we get",
           items: [
             {
               q: "Does the new 2025 zoning change my DDO project?",

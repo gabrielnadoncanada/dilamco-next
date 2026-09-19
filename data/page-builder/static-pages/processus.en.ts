@@ -39,7 +39,6 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Written contract", "Permits"],
           heading: "How a renovation project runs",
           description:
             "Five stages. Each one ends with a signed document, a permit issued or an inspection passed.",
@@ -121,7 +120,7 @@ export const pageEn: PageTemplateData = {
               value: "It gives the start and end dates, and the order of the trades",
             },
             {
-              label: "Changes along the way",
+              label: "Changes",
               value: "Every change is priced and accepted in writing before it is done",
             },
             {
@@ -176,7 +175,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "It starts with a visit",
           intro:
-            "Tell us about the project. You leave with a detailed quote, not a number given over the phone.",
+            "Tell us about the project. You get a detailed quote, not a number given over the phone.",
           actions: [
             {
               label: "Free estimate",

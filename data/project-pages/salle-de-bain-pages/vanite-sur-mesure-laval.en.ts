@@ -21,7 +21,7 @@ export const PROJECT_VANITE_SUR_MESURE_LAVAL_EN: ProjectData = {
       alt: "Custom bathroom vanity in Laval",
     },
   ],
-  scope: ["Scoping", "Design", "Custom fabrication", "Installation"],
+  scope: [],
   constraints: [
     "Humidity and maintenance",
     "Functional storage in a compact space",
@@ -32,11 +32,7 @@ export const PROJECT_VANITE_SUR_MESURE_LAVAL_EN: ProjectData = {
     "Choice of stable, resistant materials",
     "Installation with fine adjustments and clean alignments",
   ],
-  results: [
-    "More functional storage",
-    "Improved moisture resistance",
-    "Clean, durable finish",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF["salle-de-bain"],
     renovationHref: CORE_HREF.renovation,

@@ -29,7 +29,6 @@ export const commercialPage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Bureaux", "Commerces"],
           heading: "Aménagement commercial à Montréal, livré à la date convenue",
           description:
             "Bureaux, commerces et améliorations locatives, réalisés par étapes pour garder votre local ouvert.",
@@ -49,7 +48,6 @@ export const commercialPage: PageTemplateData = {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
             alt: "Bureau réaménagé dans un immeuble du centre-ville de Montréal",
           },
-          caption: "Bureau réaménagé, centre-ville",
         },
       },
     },
@@ -68,7 +66,6 @@ export const commercialPage: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-featured-commercial-project-01.webp",
                 alt: "Comptoir d'accueil et rangement en chêne dans un espace commercial",
               },
-              caption: "Comptoir d'accueil en chêne",
             },
             {
               kind: "image",
@@ -77,7 +74,7 @@ export const commercialPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-commercial-project-02.webp",
                 alt: "Améliorations locatives réalisées dans un local de Laval",
               },
-              caption: "Améliorations locatives, Laval",
+              caption: "Laval",
             },
             {
               kind: "stat",
@@ -90,7 +87,7 @@ export const commercialPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-commercial-project-01.webp",
                 alt: "Local commercial livré prêt à occuper au centre-ville de Montréal",
               },
-              caption: "Local prêt à occuper",
+              caption: "Voir ce projet",
               href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
             },
             {
@@ -99,7 +96,6 @@ export const commercialPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-commercial-project-03.webp",
                 alt: "Comptoir d'accueil et rangement technique intégrés à un commerce",
               },
-              caption: "Mobilier d'accueil intégré",
             },
             {
               kind: "text",
@@ -129,11 +125,6 @@ export const commercialPage: PageTemplateData = {
               label: "Permis",
               value:
                 "Nous déposons la demande à la Ville et nous suivons les inspections.",
-            },
-            {
-              label: "Conformité",
-              value:
-                "Nos catégories RBQ 1.2 et 1.3 couvrent les bâtiments de tout genre.",
             },
             {
               label: "Assurances",

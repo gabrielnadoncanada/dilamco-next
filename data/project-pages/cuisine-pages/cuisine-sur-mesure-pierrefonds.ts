@@ -22,27 +22,12 @@ export const PROJECT_CUISINE_SUR_MESURE_PIERREFONDS: ProjectData = {
       alt: "Armoires de cuisine sur mesure à Pierrefonds, Ouest-de-l'Île",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design et planification",
-    "Fabrication sur mesure",
-    "Installation et ajustements",
-  ],
-  constraints: [
-    "Optimisation d'un espace réel (circulation, rangement, îlot)",
-    "Alignements et transitions visibles à maîtriser",
-    "Coordination avec les travaux connexes au besoin",
-  ],
+  scope: [],
+  constraints: [],
   solution: [
-    "Configuration des armoires adaptée à l'usage quotidien",
     "Bois massif et contreplaqué de bouleau pour la durabilité",
-    "Pose ajustée sur place : alignements, niveaux et finition",
   ],
-  results: [
-    "Rangement plus fonctionnel et circulation fluide",
-    "Finition cohérente et lignes propres",
-    "Durabilité accrue via matériaux + quincaillerie + pose",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

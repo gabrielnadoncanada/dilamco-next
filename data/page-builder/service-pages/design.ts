@@ -46,7 +46,6 @@ export const designPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Relevé sur place", "Plans", "Matériaux"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
             alt: "Plan de cuisine sur mesure et échantillons de matériaux",
@@ -101,11 +100,6 @@ export const designPage: PageTemplateData = {
           heading: "Le design en bref",
           rows: [
             {
-              label: "Combien de temps",
-              value:
-                "Il faut deux à quatre semaines entre la première visite et les plans signés.",
-            },
-            {
               label: "Ce que vous recevez",
               value:
                 "Un plan de la pièce, les dessins de chaque mur, la liste des matériaux et le prix.",
@@ -121,12 +115,7 @@ export const designPage: PageTemplateData = {
                 "Une visite pour mesurer, une autre pour vous présenter les plans.",
             },
             {
-              label: "Garantie",
-              value:
-                "Les plans que vous signez servent de référence pendant tout le chantier.",
-            },
-            {
-              label: "Prix indicatif",
+              label: "Frais de design",
               value:
                 "Le design est crédité à votre projet si vous nous confiez les travaux.",
             },
@@ -135,7 +124,6 @@ export const designPage: PageTemplateData = {
             src: "/images/services/design-hero.webp",
             alt: "Plans et élévations d'une cuisine en cours de conception",
           },
-          note: "Si les plans changent après la signature, le prix est revu avec vous.",
         },
       },
     },
@@ -145,7 +133,7 @@ export const designPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions sur l'étape de design",
+          heading: "Questions sur le design de cuisine",
           items: [
             {
               q: "Combien de temps prend le design ?",

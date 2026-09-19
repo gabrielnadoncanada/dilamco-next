@@ -29,27 +29,16 @@ export const PROJECT_CUISINE_SUR_MESURE_LAVAL_EN: ProjectData = {
       alt: "Light wood-veneer kitchen island and veined quartz in Laval",
     },
   ],
-  scope: [
-    "Scoping and validation of needs",
-    "Design and 3D planning",
-    "Custom fabrication of cabinets and island",
-    "Installation and adjustments",
-  ],
+  scope: [],
   constraints: [
     "Large central island to integrate",
-    "Harmony between white cabinets and light wood veneer",
-    "Visible alignments (lines, joints and full-height backsplash)",
   ],
   solution: [
-    "Island clad in light wood veneer to warm up the all-white palette",
+    "Island clad in light wood veneer",
     "Matching marbled quartz countertops and backsplash",
     "Glass-door pantry and full-height storage",
   ],
-  results: [
-    "Generous work surface around the island",
-    "Warm, timeless wood/white contrast",
-    "Optimized storage and consistent finish",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

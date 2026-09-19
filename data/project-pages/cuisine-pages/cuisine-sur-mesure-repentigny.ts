@@ -25,27 +25,16 @@ export const PROJECT_CUISINE_SUR_MESURE_REPENTIGNY: ProjectData = {
       alt: "Armoires de cuisine blanches à panneaux relevés et dosseret de céramique à Repentigny",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design classique et planification",
-    "Fabrication sur mesure des armoires et de l'îlot",
-    "Installation et ajustements",
-  ],
+  scope: [],
   constraints: [
-    "Style classique à panneaux relevés et moulures couronnées",
     "Intégration d'un îlot central avec évier",
-    "Alignements visibles sur grand mur d'armoires",
   ],
   solution: [
     "Armoires blanches à panneaux relevés avec moulures de couronnement",
     "Îlot central assorti offrant rangement et plan de travail",
     "Dosseret de céramique allongée et comptoirs de quartz veiné",
   ],
-  results: [
-    "Cuisine classique intemporelle et lumineuse",
-    "Îlot fonctionnel au cœur de la pièce",
-    "Rangement optimisé et finition soignée",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

@@ -59,7 +59,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Why hand your project to a general contractor",
           description:
-            "One contractor plans the job, brings the trades in the right order and answers for the result. Here is what that changes for you.",
+            "Without a general contractor, you sign one contract per trade and you carry the delays yourself.",
           cards: [
             {
               title: "A written schedule",
@@ -88,7 +88,7 @@ export const pageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we renovate",
+          heading: "Our renovation services",
           items: [
             {
               title: "Kitchen",
@@ -98,7 +98,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Complete residential kitchen renovation",
               },
-              badges: ["Turnkey"],
               footerCtaLabel: "See kitchens",
             },
             {
@@ -109,7 +108,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Renovated bathroom with tiled shower",
               },
-              badges: ["Waterproofing"],
               footerCtaLabel: "See bathrooms",
             },
             {
@@ -120,7 +118,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Basement finished as a living space",
               },
-              badges: ["Insulation"],
               footerCtaLabel: "See basements",
             },
             {
@@ -131,7 +128,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Rear addition on a single-family home",
               },
-              badges: ["Permit"],
               footerCtaLabel: "See additions",
             },
             {
@@ -142,7 +138,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Hardwood floor installed in a home",
               },
-              badges: ["Hardwood"],
               footerCtaLabel: "See flooring",
             },
             {
@@ -153,7 +148,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Room rebuilt after water damage",
               },
-              badges: ["Insurance"],
               footerCtaLabel: "See disaster recovery",
             },
           ],
@@ -231,7 +225,6 @@ export const pageEn: PageTemplateData = {
           intro:
             "Our licence also covers cabinets and countertops. You have no extra supplier to manage: everything is in the same quote.",
           items: [
-            { title: "Installed at the right time", description: "Cabinets are ordered, delivered and installed when the site is ready for them." },
             { title: "Measured after demolition", description: "We take the dimensions once the walls are in their final position, not before." },
             { title: "Kitchen, bathroom, walk-in", description: "Kitchen cabinets, vanities and built-in storage, depending on the room being renovated." },
           ],
@@ -285,7 +278,7 @@ export const pageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your project",
-          intro: "The estimate is free and we reply within 24 to 48 business hours.",
+          intro: "Describe your project and we call you back within 24 business hours.",
           actions: [
             { label: "Free estimate", href: "/contact", variant: "primary" },
             { label: "See our work", href: "/projets", variant: "ghost" },

@@ -41,7 +41,6 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Kitchen renovation",
           heading: "Complete kitchen renovation, from permit to finishing",
           description:
             "The same crew handles the demolition, the plumbing, the electrical, the cabinets and the countertop.",
@@ -134,13 +133,13 @@ export const renovationCuisinePageEn: PageTemplateData = {
               number: "2",
               title: "Demolition",
               description:
-                "We take out the old cabinets, the countertop and the finishes.",
+                "We shut off the water and the power, then we clear the room.",
             },
             {
               number: "3",
               title: "Plumbing and electrical",
               description:
-                "We redo the drains, the circuits and the range hood duct.",
+                "We redo drains and circuits while your cabinets are in production.",
             },
             {
               number: "4",
@@ -152,7 +151,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
               number: "5",
               title: "Finishing",
               description:
-                "We set the backsplash, paint and hook up the appliances.",
+                "We hook up the appliances, then we walk the room with you.",
             },
           ],
         },
@@ -179,7 +178,6 @@ export const renovationCuisinePageEn: PageTemplateData = {
             {
               title: "Full kitchen",
               price: "$35,000 to $50,000",
-              hint: "new cabinets and countertop",
               featured: true,
               includes: [
                 "Demolition and debris removal",
@@ -199,7 +197,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
               ],
             },
           ],
-          note: "These are ballpark ranges. The exact price is written in the quote, after the visit to your home.",
+          note: "The exact price is written in the quote, after the visit to your home.",
           action: {
             label: "Free quote",
             href: "/contact",
@@ -223,7 +221,6 @@ export const renovationCuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Kitchen open to the living room with island and tall columns",
               },
-              caption: "Kitchen open to the living room",
             },
             {
               kind: "stat",
@@ -236,13 +233,12 @@ export const renovationCuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "White kitchen with a quartz island",
               },
-              caption: "Island with a quartz countertop",
             },
             {
               kind: "text",
               title: "See more kitchens",
               description:
-                "Photos taken in our clients' homes.",
+                "Islands, full-height storage and countertops already delivered.",
               href: "/espaces/cuisine",
             },
           ],
@@ -255,7 +251,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about kitchen renovation",
           items: [
             {
               q: "How long will I be without a kitchen?",

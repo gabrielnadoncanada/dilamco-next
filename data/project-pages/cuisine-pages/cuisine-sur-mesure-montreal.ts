@@ -21,27 +21,13 @@ export const PROJECT_CUISINE_SUR_MESURE_MONTREAL: ProjectData = {
       alt: "Cuisine sur mesure haut de gamme à Montréal",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design et planification",
-    "Fabrication sur mesure",
-    "Installation et ajustements",
-  ],
+  scope: [],
   constraints: [
-    "Contraintes d'espace et circulation",
-    "Murs/planchers parfois irréguliers (ajustements sur place)",
+    "Murs et planchers irréguliers, ajustés sur place",
     "Intégration des électroménagers et dégagements",
   ],
-  solution: [
-    "Configuration optimisée selon l'usage réel (zones de travail et rangement)",
-    "Choix de matériaux stables et quincaillerie fiable",
-    "Installation précise : alignements, niveaux, finitions et inspection finale",
-  ],
-  results: [
-    "Rangement plus fonctionnel et circulation plus fluide",
-    "Finition cohérente et lignes propres",
-    "Durabilité accrue via matériaux + quincaillerie + pose",
-  ],
+  solution: [],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

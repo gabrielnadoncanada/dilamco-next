@@ -41,7 +41,6 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Flooring renovation",
           heading: "Flooring renovation, from tear-out to installation",
           description:
             "We check the subfloor and the moisture before we lay your new flooring.",
@@ -140,7 +139,7 @@ export const renovationPlancherPageEn: PageTemplateData = {
               number: "3",
               title: "Repair",
               description:
-                "We replace damaged panels and re-screw the whole subfloor.",
+                "We repair the subfloor before the new flooring is ordered.",
             },
             {
               number: "4",
@@ -210,15 +209,15 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about flooring renovation",
           items: [
             {
               q: "Why does my floor squeak?",
-              a: "Almost always the subfloor: loose panels, missing screws, plywood that is too thin. The surface only reveals the fault. We tear out, re-screw and replace.",
+              a: "Almost always the subfloor: loose panels, missing screws, plywood that is too thin. We tear out the surface, re-screw and replace whatever has gone soft.",
             },
             {
               q: "Can new flooring go over the old one?",
-              a: "It is rarely a good idea. The height goes up, doors rub, thresholds get awkward and you never see what is underneath. We recommend tearing out.",
+              a: "It is rarely a good idea. The height goes up, doors rub, thresholds get awkward and you never see what is underneath.",
             },
             {
               q: "Which flooring suits a basement?",

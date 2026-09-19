@@ -41,7 +41,6 @@ export const renovationSousSolPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Finition de sous-sol",
           heading: "Finition de sous-sol, du diagnostic d'humidité à la peinture",
           description:
             "On vérifie l'humidité, puis on isole, on divise les pièces et on finit, sous un seul contrat.",
@@ -189,7 +188,7 @@ export const renovationSousSolPage: PageTemplateData = {
               ],
             },
           ],
-          note: "Ce sont des ordres de grandeur. Les réparations de drainage ou de fondation sont chiffrées à part.",
+          note: "Les réparations de drainage ou de fondation sont chiffrées à part.",
           action: {
             label: "Soumission gratuite",
             href: "/contact",
@@ -213,7 +212,6 @@ export const renovationSousSolPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Salle de cinéma aménagée dans un sous-sol fini",
               },
-              caption: "Salle de cinéma maison",
             },
             {
               kind: "image",
@@ -221,7 +219,6 @@ export const renovationSousSolPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Bar de sous-sol avec comptoir et rangements",
               },
-              caption: "Bar avec comptoir et rangements",
             },
             {
               kind: "stat",
@@ -245,7 +242,7 @@ export const renovationSousSolPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la finition de sous-sol",
           items: [
             {
               q: "Mon sous-sol prend l'eau, peut-on le finir quand même ?",
@@ -265,7 +262,7 @@ export const renovationSousSolPage: PageTemplateData = {
             },
             {
               q: "Et si mon plafond est trop bas ?",
-              a: "On gagne quelques centimètres en déplaçant les conduits et en choisissant un plancher mince. On mesure la hauteur à la visite et on vous donne l'heure juste.",
+              a: "On gagne quelques centimètres en déplaçant les conduits et en choisissant un plancher mince. On vise au moins 2 m sous le plafond fini.",
             },
           ],
         },

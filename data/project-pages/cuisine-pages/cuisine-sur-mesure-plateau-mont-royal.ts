@@ -22,12 +22,7 @@ export const PROJECT_CUISINE_SUR_MESURE_PLATEAU_MONT_ROYAL: ProjectData = {
       alt: "Cuisine sur mesure au Plateau-Mont-Royal, Montréal",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design et planification",
-    "Fabrication sur mesure",
-    "Installation et ajustements",
-  ],
+  scope: [],
   constraints: [
     "Contraintes d'espace (circulation et rangements)",
     "Alignements visibles (lignes et joints)",
@@ -38,11 +33,7 @@ export const PROJECT_CUISINE_SUR_MESURE_PLATEAU_MONT_ROYAL: ProjectData = {
     "Choix de matériaux stables et durables",
     "Installation précise : ajustements, finitions et inspection",
   ],
-  results: [
-    "Rangement optimisé et circulation plus fluide",
-    "Finition cohérente et lignes propres",
-    "Durabilité accrue via matériaux + quincaillerie + pose",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

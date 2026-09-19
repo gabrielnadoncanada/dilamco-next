@@ -22,27 +22,12 @@ export const PROJECT_CUISINE_SUR_MESURE_PIERREFONDS_EN: ProjectData = {
       alt: "Custom kitchen cabinets in Pierrefonds, West Island",
     },
   ],
-  scope: [
-    "Scoping and validation of needs",
-    "Design and planning",
-    "Custom fabrication",
-    "Installation and adjustments",
-  ],
-  constraints: [
-    "Optimizing a real space (circulation, storage, island)",
-    "Visible alignments and transitions to control",
-    "Coordination with related work as needed",
-  ],
+  scope: [],
+  constraints: [],
   solution: [
-    "Cabinet configuration tailored to daily use",
     "Solid wood and birch plywood for durability",
-    "On-site fitted installation: alignments, levels and finish",
   ],
-  results: [
-    "More functional storage and smooth circulation",
-    "Consistent finish and clean lines",
-    "Increased durability through materials + hardware + installation",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

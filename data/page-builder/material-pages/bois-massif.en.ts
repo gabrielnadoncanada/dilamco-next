@@ -23,7 +23,6 @@ export const boisMassifPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Materials",
           heading: "Where solid wood is really worth the price",
           description:
             "Wood moves with the seasons, so we keep it for the parts you see up close.",
@@ -39,12 +38,10 @@ export const boisMassifPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Natural", "Doors", "Details"],
           image: {
             src: "/images/generated/materials/material-solid-wood-card-01.webp",
             alt: "Solid wood cabinet door with visible grain",
           },
-          caption: "Doors and details seen up close",
           imageSide: "right",
         },
       },
@@ -92,7 +89,6 @@ export const boisMassifPageEn: PageTemplateData = {
             src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
             alt: "Finish detail on a solid wood component",
           },
-          note: "The wood species you choose is confirmed in your quote.",
         },
       },
     },

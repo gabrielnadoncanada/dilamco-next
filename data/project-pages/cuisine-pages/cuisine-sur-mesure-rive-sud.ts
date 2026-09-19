@@ -21,12 +21,7 @@ export const PROJECT_CUISINE_SUR_MESURE_RIVE_SUD: ProjectData = {
       alt: "Cuisine sur mesure blanche à Brossard, Rive-Sud",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design et planification",
-    "Fabrication sur mesure",
-    "Installation et ajustements",
-  ],
+  scope: [],
   constraints: [
     "Contraintes d'implantation (ouvertures, circulation, îlot)",
     "Transitions et alignements visibles (joints, lignes, finitions)",
@@ -37,11 +32,7 @@ export const PROJECT_CUISINE_SUR_MESURE_RIVE_SUD: ProjectData = {
     "Matériaux stables et choix cohérents avec l'usage",
     "Installation ajustée sur place : alignements, transitions et inspection finale",
   ],
-  results: [
-    "Espace plus fonctionnel au quotidien",
-    "Finition cohérente et durable",
-    "Intégration propre avec l'existant",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

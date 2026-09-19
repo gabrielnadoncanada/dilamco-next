@@ -22,10 +22,9 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "About",
           heading: "A residential renovation general contractor since 2004",
           description:
-            "The same licence, the same person in charge and the same address for twenty years.",
+            "Same licence, same person in charge and same address since 2004, in Pierrefonds-Roxboro.",
           actions: [
             {
               label: "Free estimate",
@@ -38,12 +37,10 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["RBQ 8306-0806-27", "Since 2004", "Pierrefonds-Roxboro"],
           image: {
             src: "/images/realisations/escalier-rampe-verre-finition-interieure-01.webp",
             alt: "Staircase and glass railing: interior finishing by Dilamco",
           },
-          caption: "9139-1250 Québec inc. · Pierrefonds-Roxboro",
           imageSide: "left",
         },
       },
@@ -63,7 +60,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/mur-bois-accent-plafond-haut-01.webp",
                 alt: "Timber accent wall under a high ceiling",
               },
-              caption: "Accent wall, high ceiling",
             },
             {
               kind: "stat",
@@ -77,7 +73,6 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "New hardwood floor laid in a renovated room",
               },
-              caption: "New hardwood floor",
             },
             {
               kind: "stat",
@@ -95,7 +90,7 @@ export const pageEn: PageTemplateData = {
                 src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
                 alt: "Finish and material displays at the Dorval showroom",
               },
-              caption: "Finish displays, Dorval",
+              caption: "Our Dorval showroom",
             },
           ],
         },
@@ -125,7 +120,6 @@ export const pageEn: PageTemplateData = {
               bullets: [
                 "The deposit is $40,000",
                 "Nobody has ever had to draw on it",
-                "The person on record is Sean Diffley",
               ],
             },
             {
@@ -186,7 +180,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Tell us about your project",
           intro:
-            "Free estimate. Insurance certificates are handed over before signing.",
+            "Tell us what you want renovated and in which city.",
           actions: [
             {
               label: "Free estimate",

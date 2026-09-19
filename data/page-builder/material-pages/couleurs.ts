@@ -23,7 +23,6 @@ export const couleursPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Matériaux",
           heading: "Comment choisir la couleur de vos armoires",
           description:
             "On décide la couleur chez vous, dans la vraie lumière de la pièce.",
@@ -39,12 +38,10 @@ export const couleursPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Lumière", "Lustre", "Entretien"],
           image: {
             src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
             alt: "Armoires colorées vues dans la lumière d'une pièce",
           },
-          caption: "Échantillons vus dans votre pièce",
           imageSide: "right",
         },
       },
@@ -58,7 +55,7 @@ export const couleursPage: PageTemplateData = {
           heading: "Ce qu'il faut savoir sur les finis",
           rows: [
             {
-              label: "Le matériau change la couleur",
+              label: "Selon le matériau",
               value:
                 "La même teinte ne rend pas pareil sur du MDF, de la mélamine ou du bois.",
             },
@@ -132,7 +129,7 @@ export const couleursPage: PageTemplateData = {
         props: {
           heading: "Arrêter les couleurs de votre cuisine",
           intro:
-            "On apporte les échantillons chez vous et on les regarde dans votre éclairage.",
+            "Visite gratuite. Vous arrêtez la couleur et le niveau de lustre avant la commande.",
           actions: [
             {
               label: "Parler design",

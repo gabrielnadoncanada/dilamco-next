@@ -114,16 +114,6 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
                 "Le nouveau plan d'urbanisme s'applique depuis le 24 avril 2025 et le nouveau zonage depuis le 16 mai 2025.",
             },
             {
-              label: "Ce que la Ville vérifie",
-              value:
-                "Ce règlement fixe les marges, les hauteurs permises et la position du bâtiment sur le terrain.",
-            },
-            {
-              label: "Comment déposer la demande",
-              value:
-                "En ligne ou à l'hôtel de ville, avec des croquis ou des plans qui montrent clairement les travaux.",
-            },
-            {
               label: "Particularité locale",
               value:
                 "Les quartiers se sont bâtis par vagues, de Sunnybrooke à Westpark puis au secteur Saint-Jean.",
@@ -133,16 +123,11 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
               value:
                 "Ouvrir le mur central, refaire une salle de bain, finir un sous-sol, ajouter une rallonge.",
             },
-            {
-              label: "Depuis notre base",
-              value: "Dix minutes de route par le boulevard Saint-Jean.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/space-bath-hero-01.webp",
             alt: "Salle de bain refaite dans un split-level de Dollard-des-Ormeaux",
           },
-          note: "Sources : Ville de Dollard-des-Ormeaux, Wikipédia. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -163,7 +148,6 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Cuisine ouverte sur le salon d'un split-level de DDO",
               },
-              badges: ["Structure"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -175,7 +159,6 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol aménagé en salle familiale à Dollard-des-Ormeaux",
               },
-              badges: ["Isolation"],
               footerCtaLabel: "Voir le sous-sol",
             },
             {
@@ -187,7 +170,6 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement arrière d'une maison de Dollard-des-Ormeaux",
               },
-              badges: ["Permis"],
               footerCtaLabel: "Voir l'agrandissement",
             },
           ],
@@ -219,7 +201,7 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes à Dollard-des-Ormeaux",
           items: [
             {
               q: "Le nouveau zonage de 2025 change-t-il mon projet à DDO ?",

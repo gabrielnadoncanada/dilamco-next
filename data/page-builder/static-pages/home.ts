@@ -59,7 +59,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Pourquoi confier votre projet à un entrepreneur général",
           description:
-            "Un seul entrepreneur planifie le chantier, fait entrer les métiers dans le bon ordre et répond du résultat.",
+            "Sans entrepreneur général, vous signez un contrat par corps de métier et vous répondez vous-même des retards.",
           cards: [
             {
               title: "Un échéancier écrit",
@@ -88,7 +88,7 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on rénove",
+          heading: "Nos services de rénovation",
           items: [
             {
               title: "Cuisine",
@@ -98,7 +98,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Rénovation complète de cuisine résidentielle",
               },
-              badges: ["Clé en main"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -109,7 +108,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Salle de bain rénovée avec douche en céramique",
               },
-              badges: ["Étanchéité"],
               footerCtaLabel: "Voir la salle de bain",
             },
             {
@@ -120,7 +118,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol aménagé en pièce de vie",
               },
-              badges: ["Isolation"],
               footerCtaLabel: "Voir le sous-sol",
             },
             {
@@ -131,7 +128,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement arrière d'une maison unifamiliale",
               },
-              badges: ["Permis"],
               footerCtaLabel: "Voir l'agrandissement",
             },
             {
@@ -142,7 +138,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Pose de plancher de bois franc dans une résidence",
               },
-              badges: ["Bois franc"],
               footerCtaLabel: "Voir le plancher",
             },
             {
@@ -153,7 +148,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction d'une pièce après un dégât d'eau",
               },
-              badges: ["Assurances"],
               footerCtaLabel: "Voir l'après sinistre",
             },
           ],
@@ -231,7 +225,6 @@ export const page: PageTemplateData = {
           intro:
             "Notre licence couvre aussi les armoires et les comptoirs. Pas de fournisseur de plus à gérer : tout est dans la même soumission.",
           items: [
-            { title: "Posées au bon moment", description: "Les armoires sont commandées, livrées et installées quand le chantier est prêt à les recevoir." },
             { title: "Mesurées après la démolition", description: "On prend les dimensions quand les murs sont à leur place définitive, pas avant." },
             { title: "Cuisine, salle de bain, walk-in", description: "Armoires de cuisine, vanités et rangements intégrés, selon la pièce à rénover." },
           ],
@@ -285,7 +278,7 @@ export const page: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Parlez-nous de votre projet",
-          intro: "L'estimation est gratuite et nous répondons en 24 à 48 heures ouvrables.",
+          intro: "Décrivez votre projet, nous vous rappelons en 24 heures ouvrables.",
           actions: [
             { label: "Soumission gratuite", href: "/contact", variant: "primary" },
             { label: "Voir nos réalisations", href: "/projets", variant: "ghost" },

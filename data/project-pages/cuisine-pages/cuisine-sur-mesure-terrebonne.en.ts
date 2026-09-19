@@ -25,27 +25,17 @@ export const PROJECT_CUISINE_SUR_MESURE_TERREBONNE_EN: ProjectData = {
       alt: "Handleless white kitchen cabinets and quartz island in Terrebonne",
     },
   ],
-  scope: [
-    "Scoping and validation of needs",
-    "Modern design and planning",
-    "Custom fabrication of cabinets and island",
-    "Installation and adjustments",
-  ],
+  scope: [],
   constraints: [
-    "High-gloss white finish demanding on alignments and joints",
-    "Handleless doors (channel-pull opening)",
+    "Handleless doors with channel-pull opening",
     "Full-height quartz backsplash to connect to the countertops",
   ],
   solution: [
-    "High-gloss white handleless cabinets for a sleek look",
+    "High-gloss white handleless cabinets",
     "Matching calacatta quartz countertops and backsplash",
     "Glossy central island offering work surface and storage",
   ],
-  results: [
-    "Modern, minimalist, high-end kitchen",
-    "Easy-to-maintain surfaces and continuous lines",
-    "Optimized storage and flawless finish",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,
