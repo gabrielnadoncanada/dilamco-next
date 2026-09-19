@@ -16,7 +16,7 @@ export function HeroSplitImage(props: HeroSplitImageProps) {
     <div className="grid gap-4 text-left xl:grid-cols-2">
       <div
         className={cn(
-          "flex flex-col justify-center rounded-panel bg-primary p-7 text-primary-foreground sm:p-10 xl:min-h-[560px] xl:p-14",
+          "surface-blueprint flex flex-col justify-center rounded-panel p-7 text-primary-foreground sm:p-10 xl:min-h-[560px] xl:p-14",
           props.imageSide === "left" && "xl:order-2",
         )}
       >

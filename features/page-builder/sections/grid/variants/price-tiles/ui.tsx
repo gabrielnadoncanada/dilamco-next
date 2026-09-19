@@ -24,7 +24,7 @@ export function GridPriceTiles(props: GridPriceTilesProps) {
             key={tile.title}
             className={cn(
               "flex flex-col rounded-card border border-border/80 bg-card p-6 sm:p-7",
-              tile.featured && "border-primary bg-primary text-primary-foreground",
+              tile.featured && "surface-blueprint border-primary text-primary-foreground",
             )}
           >
             <Heading

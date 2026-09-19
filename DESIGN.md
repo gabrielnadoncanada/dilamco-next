@@ -124,7 +124,10 @@ Rail continu : horizontal avec jalons numérotés (cercle vert 40 px, `ring` fon
 Liste `dl` : étiquette en `text-label`, valeur en 15 px, rangées filetées. Les étiquettes sont des noms courts, jamais des phrases.
 
 ### Bento
-Grille 3 colonnes, rangées ≥ 220 px, tuiles `wide` (2 col.) et `tall` (2 rangées). Une tuile chiffre (vert plein), une tuile citation (vert pâle), le reste en photo avec pastille de légende.
+Grille 3 colonnes, rangées ≥ 220 px, tuiles `wide` (2 col.) et `tall` (2 rangées). Une tuile chiffre (`surface-blueprint`, chiffre en `--title-2`, filet blanc 15 % puis étiquette), une tuile citation (vert pâle), le reste en photo avec pastille de légende. Le placement est simulé (`computeSpans`) : jamais de case vide.
+
+### Panneau vert `surface-blueprint`
+Tout panneau sur vert primaire (tuile chiffre, tuile prix mise en avant, panneau checklist, panneau du hero split) porte `surface-blueprint` au lieu de `bg-primary` : quadrillage blanc 8 % de 26 px façon feuille de plan, masqué pour n'apparaître qu'en haut à droite, lueur blanche 9 % au même coin, liseré intérieur blanc 10 %. Le vert reste #253b2f ; le motif ne doit jamais passer sous le texte.
 
 ## Ce qu'on ne fait pas
 

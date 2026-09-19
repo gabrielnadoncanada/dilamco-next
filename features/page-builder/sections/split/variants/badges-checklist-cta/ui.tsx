@@ -34,7 +34,7 @@ export function SplitBadgesChecklistCta(props: SplitBadgesChecklistCtaProps) {
       </div>
 
       <div className="lg:col-[7/13]">
-        <div className="rounded-panel bg-primary p-7 text-primary-foreground sm:p-10">
+        <div className="surface-blueprint rounded-panel p-7 text-primary-foreground sm:p-10">
           <Heading as="h3" variant="h3" className="text-primary-foreground">
             {props.cardTitle}
           </Heading>

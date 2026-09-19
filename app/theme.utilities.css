@@ -87,6 +87,44 @@
   transition-timing-function: var(--ease-out-quint);
 }
 
+/* Panneau vert « plan » : quadrillage fin façon feuille de plan, fondu vers le
+   bas-gauche pour laisser le texte net, et lueur douce en haut à droite.
+   Pour les tuiles chiffre, panneaux de preuve et encarts sur `bg-primary`. */
+@utility surface-blueprint {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--primary);
+  background-image: radial-gradient(
+    120% 100% at 100% 0%,
+    color-mix(in srgb, white 9%, transparent) 0%,
+    transparent 62%
+  );
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, white 8%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, white 8%, transparent) 1px, transparent 1px);
+    background-size: 26px 26px;
+    background-position: -1px -1px;
+    -webkit-mask-image: radial-gradient(130% 120% at 100% 0%, black 0%, transparent 72%);
+    mask-image: radial-gradient(130% 120% at 100% 0%, black 0%, transparent 72%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, white 10%, transparent);
+  }
+}
+
 /* Héritage (landings /landing/**, hors système) ---------------------------- */
 @utility glass-4 {
   @apply border-border border-b-input/90 from-card/60 to-card/20 border bg-linear-to-b;

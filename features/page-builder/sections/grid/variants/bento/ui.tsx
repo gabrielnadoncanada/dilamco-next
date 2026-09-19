@@ -150,9 +150,11 @@ function TileBody({ tile }: { tile: Tile }) {
     }
     case "stat":
       return (
-        <div className="flex h-full min-h-[220px] flex-col justify-between rounded-card bg-primary p-6 text-primary-foreground">
-          <span className="text-numeral text-[length:var(--title-1)]">{tile.value}</span>
-          <span className="text-sm font-medium text-primary-foreground/85">{tile.label}</span>
+        <div className="surface-blueprint flex h-full min-h-[220px] flex-col justify-between rounded-card p-6 text-primary-foreground">
+          <span className="text-numeral text-[length:var(--title-2)]">{tile.value}</span>
+          <span className="mt-6 border-t border-white/15 pt-4 text-sm font-medium leading-snug text-primary-foreground/80">
+            {tile.label}
+          </span>
         </div>
       );
     case "quote":
