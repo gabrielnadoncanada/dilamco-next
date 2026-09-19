@@ -45,7 +45,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
           eyebrow: "Disaster rebuild",
           heading: "Rebuilding after water damage or a fire",
           description:
-            "We come in once the place is dry, describe the damage room by room, then rebuild.",
+            "We come in once the place is dry and rebuild, from demolition to paint.",
           actions: [
             {
               label: "Request an assessment",
@@ -58,7 +58,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Insurance file", "West Island"],
+          badges: ["Insurance file"],
           image: {
             src: "/images/generated/services/service-renovation-project-02.webp",
             alt: "Room rebuilt after water damage",
@@ -129,7 +129,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               number: "1",
               title: "Site visit",
               description:
-                "We come once the place is dry and open the walls in spots.",
+                "We survey every affected room and note what can be saved.",
             },
             {
               number: "2",
@@ -153,7 +153,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               number: "5",
               title: "Rebuild",
               description:
-                "Plumbing, wiring, drywall, paint, floors, then the keys go back.",
+                "We redo the plumbing, the wiring, the drywall and the floors.",
             },
           ],
         },
@@ -167,19 +167,19 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         props: {
           heading: "What we provide for your claim",
           intro:
-            "We replace neither your insurer nor the adjuster. We provide the technical documents.",
+            "We replace neither your insurer nor the claims adjuster.",
           items: [
             {
               title: "The list of damage, room by room",
-              description: "every item described, instead of one lump sum.",
+              description: "instead of one lump sum for the whole house.",
             },
             {
               title: "A price for each kind of work",
               description:
-                "demolition, plumbing, materials and finishing costed separately.",
+                "your insurer can compare each line against its own schedule.",
             },
             {
-              title: "Photos of everything",
+              title: "Photos of every room",
               description: "the state before work, the openings made, the hidden damage.",
             },
             {
@@ -212,7 +212,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about rebuilding after a loss",
           items: [
             {
               q: "Do you handle pumping and drying?",

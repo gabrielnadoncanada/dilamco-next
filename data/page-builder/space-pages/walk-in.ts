@@ -17,7 +17,7 @@ export const walkInPage: PageTemplateData = {
   service: {
     name: "Garde-robe et walk-in sur mesure",
     description:
-      "Conception, fabrication contrôlée et installation de garde-robes et walk-ins sur mesure haut de gamme à Pierrefonds, dans l'Ouest-de-l'Île et le Grand Montréal.",
+      "Conception, production en usine partenaire et installation de garde-robes et walk-ins sur mesure haut de gamme à Pierrefonds, dans l'Ouest-de-l'Île et le Grand Montréal.",
     url: SITE.url + "/espaces/walk-in",
     serviceType: "Garde-robe sur mesure",
   },
@@ -29,7 +29,6 @@ export const walkInPage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Sur mesure"],
           heading: "Garde-robe et walk-in sur mesure à Montréal",
           description:
             "On compte vos vêtements, puis on dessine les penderies, les tiroirs et les tablettes.",
@@ -49,7 +48,6 @@ export const walkInPage: PageTemplateData = {
             src: "/images/generated/spaces/space-walkin-hero-01.webp",
             alt: "Walk-in sur mesure avec penderie sur deux hauteurs",
           },
-          caption: "Penderie sur deux hauteurs",
         },
       },
     },
@@ -68,7 +66,6 @@ export const walkInPage: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Walk-in en chêne clair avec tiroirs, tablettes et plateau à bijoux",
               },
-              caption: "Tiroirs et plateau à bijoux",
             },
             {
               kind: "image",
@@ -77,7 +74,7 @@ export const walkInPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-walkin-project-02.webp",
                 alt: "Walk-in aménagé dans un angle de chambre à Laval",
               },
-              caption: "Angle exploité, Laval",
+              caption: "Laval",
             },
             {
               kind: "stat",
@@ -90,7 +87,7 @@ export const walkInPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-walkin-project-01.webp",
                 alt: "Tiroirs et tablettes sur mesure dans un walk-in de Montréal",
               },
-              caption: "Tiroirs et tablettes, Montréal",
+              caption: "Montréal",
             },
             {
               kind: "image",
@@ -98,7 +95,6 @@ export const walkInPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-walkin-project-03.webp",
                 alt: "Walk-in avec îlot central et éclairage intégré",
               },
-              caption: "Îlot central et éclairage",
             },
             {
               kind: "text",

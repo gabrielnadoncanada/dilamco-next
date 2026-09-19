@@ -17,7 +17,7 @@ export const cuisinePage: PageTemplateData = {
   service: {
     name: "Cuisine sur mesure et armoires de cuisine",
     description:
-      "Conception, fabrication contrôlée et installation de cuisines sur mesure et d'armoires de cuisine sur mesure haut de gamme à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
+      "Conception, production en usine partenaire et installation de cuisines sur mesure et d'armoires de cuisine sur mesure haut de gamme à Pierrefonds-Roxboro, dans l'Ouest-de-l'Île, à Montréal, Laval et dans le Grand Montréal.",
     url: SITE.url + "/espaces/cuisine",
     serviceType: "Cuisine sur mesure",
   },
@@ -29,7 +29,6 @@ export const cuisinePage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Sur mesure", "Division armoires"],
           heading:
             "Armoires de cuisine sur mesure, posées par votre entrepreneur général",
           description:
@@ -50,7 +49,6 @@ export const cuisinePage: PageTemplateData = {
             src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
             alt: "Cuisine en U avec armoires shaker blanches et dosseret métro",
           },
-          caption: "Armoires shaker, dosseret métro",
         },
       },
     },
@@ -69,7 +67,6 @@ export const cuisinePage: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Cuisine à aire ouverte avec îlot et colonnes pleine hauteur",
               },
-              caption: "Îlot et colonnes, aire ouverte",
             },
             {
               kind: "stat",
@@ -83,7 +80,6 @@ export const cuisinePage: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "Cuisine blanche avec îlot et comptoir de quartz",
               },
-              caption: "Comptoir de quartz, îlot blanc",
             },
             {
               kind: "quote",
@@ -97,7 +93,6 @@ export const cuisinePage: PageTemplateData = {
                 src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
                 alt: "Armoires de cuisine vitrées et dosseret de céramique",
               },
-              caption: "Armoires vitrées et dosseret",
             },
             {
               kind: "image",
@@ -105,7 +100,6 @@ export const cuisinePage: PageTemplateData = {
                 src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
                 alt: "Îlot bleu marine avec tiroirs à intérieur de bouleau",
               },
-              caption: "Îlot marine, intérieur bouleau",
             },
           ],
         },

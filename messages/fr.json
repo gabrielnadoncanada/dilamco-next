@@ -1,37 +1,24 @@
 {
   "common": {
     "requestQuote": "Demander une soumission",
-    "getQuote": "Obtenir une soumission",
-    "seeProjects": "Voir nos projets",
-    "seeServices": "Voir nos services",
-    "see": "Voir",
     "skipToContent": "Aller au contenu principal"
   },
   "localeSwitcher": {
     "label": "Langue",
     "fr": "FR",
-    "en": "EN",
-    "frLong": "Français",
-    "enLong": "English"
-  },
-  "header": {
-    "brandTagline": "Entrepreneur général en rénovation résidentielle — Licence RBQ 8306-0806-27",
-    "announcement": "Entrepreneur général · Licence RBQ 8306-0806-27 · Estimation gratuite"
+    "en": "EN"
   },
   "nav": {
     "espaces": "Espaces",
     "services": "Services",
     "projets": "Projets",
     "materiaux": "Matériaux",
-    "aPropos": "À propos",
     "zones": "Zones",
     "armoires": "Armoires sur mesure"
   },
   "footer": {
     "espaces": "ESPACES",
     "services": "SERVICES",
-    "ressources": "RESSOURCES",
-    "aPropos": "À PROPOS",
     "copyright": "© 2026 Dilamco (9139-1250 Québec inc.). Licence RBQ 8306-0806-27. Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions d'utilisation",
@@ -47,15 +34,14 @@
     "results": "Résultats",
     "materials": "Matériaux",
     "relatedServices": "Services liés",
-    "otherProjects": "Autres projets",
     "otherProjectsSpace": "Autres projets {label}",
     "similarProject": "Un projet similaire en tête ?",
     "viewProject": "Voir le projet",
     "eyebrow": "Projet",
     "viewSpace": "Voir l'espace {label}",
-    "ctaText": "On vous aide à cadrer un projet sur mesure, durable et bien exécuté à {city} et dans le Grand Montréal.",
+    "ctaText": "Décrivez votre projet à {city}. Visite sur place, puis soumission détaillée, sans frais.",
     "listingHeading": "Projets {label} sur mesure",
-    "listingIntro": "Quelques réalisations de {label} sur mesure — design, fabrication contrôlée et installation soignée, à Montréal, Laval et dans le Grand Montréal.",
+    "listingIntro": "Des {label} livrées à Montréal, à Laval et dans le Grand Montréal.",
     "comingSoon": "Nos réalisations {label} arrivent bientôt.",
     "discussProject": "Discuter de votre projet",
     "allProjects": "Tous les projets"

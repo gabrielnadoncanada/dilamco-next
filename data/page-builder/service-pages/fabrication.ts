@@ -49,12 +49,11 @@ export const fabricationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Contrôle qualité", "Un seul contrat"],
+          badges: ["Sur mesure", "Un seul contrat"],
           image: {
             src: "/images/generated/services/service-fabrication-hero-01.webp",
             alt: "Plans techniques et échantillons de matériaux pour une commande sur mesure",
           },
-          caption: "Vérifié à la livraison, avant la pose",
           imageSide: "right",
         },
       },
@@ -114,19 +113,9 @@ export const fabricationPage: PageTemplateData = {
                 "Des caissons, des portes, des tiroirs et des tablettes déjà montés.",
             },
             {
-              label: "Qui s'en occupe",
-              value:
-                "Notre usine partenaire produit, et Dilamco décide des matériaux et vérifie.",
-            },
-            {
-              label: "Contrôle",
-              value:
-                "Chaque module est ouvert et mesuré avant d'entrer chez vous.",
-            },
-            {
               label: "Garantie",
               value:
-                "Une pièce non conforme est recommandée à nos frais, pas aux vôtres.",
+                "Une pièce non conforme est remplacée à nos frais, pas aux vôtres.",
             },
             {
               label: "Si le chantier retarde",
@@ -148,7 +137,7 @@ export const fabricationPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions sur la production",
+          heading: "Questions sur la fabrication des armoires",
           items: [
             {
               q: "Qui produit réellement vos armoires ?",
@@ -156,7 +145,7 @@ export const fabricationPage: PageTemplateData = {
             },
             {
               q: "Et si une pièce arrive abîmée ?",
-              a: "Elle est refusée à la réception et recommandée le jour même. C'est la raison d'être du contrôle avant l'entrée des modules au chantier.",
+              a: "Elle est refusée à la réception et commandée de nouveau le jour même. C'est la raison du contrôle avant l'entrée des modules au chantier.",
             },
             {
               q: "Peut-on ajouter un module en cours de route ?",

@@ -22,7 +22,6 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Cas réels"],
           heading: "Cuisines, vanités, rangement et projets commerciaux",
           description:
             "Des chantiers que nous avons menés du début à la fin dans le Grand Montréal.",
@@ -53,7 +52,6 @@ export const page: PageTemplateData = {
             {
               title: "Cuisines",
               href: "/projets/cuisine",
-              description: "Des cuisines refaites au complet.",
               footerCtaLabel: "Voir les cuisines",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
@@ -63,7 +61,6 @@ export const page: PageTemplateData = {
             {
               title: "Salles de bain & vanités",
               href: "/projets/salle-de-bain",
-              description: "Des vanités qui tiennent dans une pièce humide.",
               footerCtaLabel: "Voir les salles de bain",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
@@ -73,7 +70,6 @@ export const page: PageTemplateData = {
             {
               title: "Walk-in & rangement",
               href: "/projets/walk-in",
-              description: "Du rangement dessiné pour ce que vous possédez.",
               footerCtaLabel: "Voir les walk-in",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
@@ -83,7 +79,6 @@ export const page: PageTemplateData = {
             {
               title: "Salles de lavage",
               href: "/projets/salle-de-lavage",
-              description: "Des salles de lavage faciles à entretenir.",
               footerCtaLabel: "Voir les salles de lavage",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
@@ -93,7 +88,6 @@ export const page: PageTemplateData = {
             {
               title: "Commercial",
               href: "/projets/commercial",
-              description: "Bureaux et commerces livrés prêts à occuper.",
               footerCtaLabel: "Voir le commercial",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
@@ -166,7 +160,7 @@ export const page: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Vous avez un projet du même genre",
-          intro: "L'estimation est gratuite et on vous répond en un ou deux jours.",
+          intro: "Chaque projet ci-dessus a commencé par une visite gratuite.",
           actions: [
             {
               label: "Demander une soumission",

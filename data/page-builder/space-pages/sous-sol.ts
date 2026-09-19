@@ -29,7 +29,6 @@ export const sousSolPage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Clé en main"],
           heading: "Aménagement de sous-sol sur mesure à Pierrefonds",
           description:
             "Cinéma maison, bar, cellier ou bibliothèque, dessinés une fois le sous-sol vérifié.",
@@ -49,7 +48,6 @@ export const sousSolPage: PageTemplateData = {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Sous-sol aménagé en salon familial avec rangements intégrés",
           },
-          caption: "Sous-sol aménagé en salon familial",
         },
       },
     },
@@ -68,7 +66,6 @@ export const sousSolPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Salle de cinéma maison avec estrade et panneaux acoustiques",
               },
-              caption: "Cinéma maison, estrade intégrée",
             },
             {
               kind: "image",
@@ -77,7 +74,6 @@ export const sousSolPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cave-vin-01.webp",
                 alt: "Cellier vitré aménagé sous un escalier de sous-sol",
               },
-              caption: "Cellier vitré sous escalier",
             },
             {
               kind: "stat",
@@ -90,7 +86,6 @@ export const sousSolPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Bar de sous-sol avec comptoir et rangement à bouteilles",
               },
-              caption: "Bar et rangement à bouteilles",
             },
             {
               kind: "text",
@@ -105,7 +100,6 @@ export const sousSolPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
                 alt: "Bibliothèque murale et bureau intégré au sous-sol",
               },
-              caption: "Bibliothèque et bureau intégrés",
             },
           ],
         },
@@ -130,11 +124,6 @@ export const sousSolPage: PageTemplateData = {
                 "La Ville en exige un dès qu'on ajoute un mur, une chambre ou une salle de bain.",
             },
             {
-              label: "Combien de temps",
-              value:
-                "Le mobilier prend 9 à 15 semaines et s'installe une fois le plancher fini.",
-            },
-            {
               label: "Matériaux",
               value:
                 "Les tablettes qui portent du poids sont en contreplaqué de bouleau.",
@@ -142,7 +131,7 @@ export const sousSolPage: PageTemplateData = {
             {
               label: "Qui installe",
               value:
-                "Notre équipe, en laissant des portes d'accès à la plomberie et à l'électricité.",
+                "Notre équipe, le plancher fini, en laissant des portes d'accès à la plomberie.",
             },
             {
               label: "Garantie",

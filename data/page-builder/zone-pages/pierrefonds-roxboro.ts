@@ -127,25 +127,15 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
                 "Pour un agrandissement, l'arrondissement valide les marges et la position du bâtiment sur le terrain.",
             },
             {
-              label: "Comment déposer la demande",
-              value:
-                "Les plans partent par courriel et la signature se prend sur rendez-vous.",
-            },
-            {
               label: "Projets courants",
               value:
                 "Reprendre un sous-sol, rebâtir après un dégât d'eau, ouvrir le mur central d'un bungalow.",
-            },
-            {
-              label: "Depuis notre base",
-              value: "Nous sommes chez vous en dix minutes, toute l'année.",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Sous-sol fini dans un bungalow de Pierrefonds-Roxboro",
           },
-          note: "Sources : Ville de Montréal, UQAM, Wikipédia. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -166,7 +156,6 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Sous-sol aménagé en salle de jeux à Pierrefonds",
               },
-              badges: ["Humidité"],
               footerCtaLabel: "Voir le sous-sol",
             },
             {
@@ -178,7 +167,6 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction après un dégât d'eau à Roxboro",
               },
-              badges: ["Assurances"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -190,7 +178,6 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Cuisine ouverte dans un bungalow de l'arrondissement",
               },
-              badges: ["Structure"],
               footerCtaLabel: "Voir la cuisine",
             },
           ],
@@ -226,7 +213,7 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes à Pierrefonds-Roxboro",
           items: [
             {
               q: "Où obtient-on un permis de rénovation à Pierrefonds-Roxboro ?",

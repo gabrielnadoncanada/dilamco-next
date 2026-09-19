@@ -108,25 +108,15 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
                 "For an addition, it confirms the setbacks and where the building sits on the lot.",
             },
             {
-              label: "How to file the application",
-              value:
-                "Drawings go in by email and the signature is booked by appointment.",
-            },
-            {
               label: "Common projects",
               value:
                 "Redoing a basement, rebuilding after water damage, opening a bungalow's centre wall.",
-            },
-            {
-              label: "From our base",
-              value: "We are at your door in ten minutes, all year round.",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
             alt: "Finished basement in a Pierrefonds-Roxboro bungalow",
           },
-          note: "Sources: City of Montréal, UQAM, Wikipedia. Verified 2026-09-18.",
         },
       },
     },
@@ -147,7 +137,6 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Basement games room finished in Pierrefonds",
               },
-              badges: ["Moisture"],
               footerCtaLabel: "See basements",
             },
             {
@@ -159,7 +148,6 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Rebuilding after water damage in Roxboro",
               },
-              badges: ["Insurance"],
               footerCtaLabel: "See the service",
             },
             {
@@ -171,7 +159,6 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Open kitchen in a borough bungalow",
               },
-              badges: ["Structure"],
               footerCtaLabel: "See kitchens",
             },
           ],
@@ -207,7 +194,7 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Pierrefonds-Roxboro questions we get",
           items: [
             {
               q: "Where do I get a renovation permit in Pierrefonds-Roxboro?",

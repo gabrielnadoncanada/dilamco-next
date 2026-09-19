@@ -23,7 +23,6 @@ export const melaminePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Materials",
           heading: "Melamine, the budget choice that wipes clean",
           description:
             "The panel arrives already finished, so there is nothing to paint and the surface washes down.",
@@ -39,12 +38,10 @@ export const melaminePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Decor", "Easy care", "Budget"],
           image: {
             src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
             alt: "Close-up of a melamine panel and its edge band",
           },
-          caption: "Cabinet interiors and tight budgets",
           imageSide: "right",
         },
       },
@@ -103,10 +100,6 @@ export const melaminePageEn: PageTemplateData = {
             {
               q: "Does melamine yellow over time?",
               a: "Today's whites hold, even beside a window. It was the very glossy decors of older series that turned, not the panels made now.",
-            },
-            {
-              q: "Can you drill without chipping the decor?",
-              a: "Yes, with a centre-point bit and tape over the line. It is a question of tooling, not of panel.",
             },
             {
               q: "Melamine or laminate on a door?",

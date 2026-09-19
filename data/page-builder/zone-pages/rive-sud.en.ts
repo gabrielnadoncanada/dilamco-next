@@ -95,16 +95,6 @@ export const zoneRiveSudPageEn: PageTemplateData = {
                 "Old Longueuil is lined with bungalows, and Brossard was planned in the 1960s.",
             },
             {
-              label: "How to file the application",
-              value:
-                "In Longueuil through the Permis en ligne portal, in Brossard through its planning department.",
-            },
-            {
-              label: "What is different here",
-              value:
-                "In Saint-Lambert, a committee approves how work visible from the street will look.",
-            },
-            {
               label: "Local risk",
               value:
                 "In Châteauguay, up to 1,100 homes sit in a flood zone and the dykes are not recognized.",
@@ -114,17 +104,11 @@ export const zoneRiveSudPageEn: PageTemplateData = {
               value:
                 "Renovating a whole house, adding on, rebuilding after water damage.",
             },
-            {
-              label: "From our base",
-              value:
-                "Highway 30, the Samuel-De Champlain bridge or the Louis-Hippolyte-La Fontaine tunnel.",
-            },
           ],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
             alt: "Completed addition in a South Shore municipality",
           },
-          note: "Sources: cities of Longueuil, Brossard, Saint-Lambert and Candiac, Le Soleil de Châteauguay. Verified 2026-09-18.",
         },
       },
     },
@@ -145,7 +129,6 @@ export const zoneRiveSudPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Addition plan for an Old Longueuil bungalow",
               },
-              badges: ["Permits"],
               footerCtaLabel: "See the service",
             },
             {
@@ -157,7 +140,6 @@ export const zoneRiveSudPageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Full renovation of a house in a Brossard sector",
               },
-              badges: ["Turnkey"],
               footerCtaLabel: "See the service",
             },
             {
@@ -169,7 +151,6 @@ export const zoneRiveSudPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
                 alt: "Materials ready for a basement rebuild in Châteauguay",
               },
-              badges: ["Insurance"],
               footerCtaLabel: "See the service",
             },
           ],
@@ -188,22 +169,18 @@ export const zoneRiveSudPageEn: PageTemplateData = {
             {
               title: "Vaudreuil-Dorion",
               href: "/zones/vaudreuil-dorion",
-              ctaLabel: "See the area",
             },
             {
               title: "Dorval",
               href: "/zones/dorval",
-              ctaLabel: "See the area",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              ctaLabel: "See the area",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              ctaLabel: "See the area",
             },
           ],
         },

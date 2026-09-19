@@ -32,7 +32,6 @@ export const contreplaquePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Materials",
           heading: "Why our cabinet boxes are made of plywood",
           description:
             "It is the panel that stays straight over time and holds the hinge screws.",
@@ -48,12 +47,10 @@ export const contreplaquePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Stability", "Cabinet boxes"],
           image: {
             src: "/images/generated/materials/material-plywood-hero-01.webp",
             alt: "Birch plywood cabinet box",
           },
-          caption: "Boxes, drawers and parts under load",
           imageSide: "right",
         },
       },
@@ -106,7 +103,6 @@ export const contreplaquePageEn: PageTemplateData = {
             src: "/images/generated/materials/material-plywood-detail-01.webp",
             alt: "Cross-grain plies visible on a plywood edge",
           },
-          note: "The quality of the panel matters more than the wood you see on the surface.",
         },
       },
     },
@@ -129,10 +125,6 @@ export const contreplaquePageEn: PageTemplateData = {
             {
               q: "Is an exposed edge acceptable?",
               a: "Yes, several clients ask for it on shelves and island ends. It then needs a void-free veneer, sanded fine and varnished.",
-            },
-            {
-              q: "Is plywood heavier?",
-              a: "At equal thickness it weighs less than MDF. You feel it when hanging upper cabinets and on the wall anchors.",
             },
           ],
         },

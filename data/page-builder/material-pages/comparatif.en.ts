@@ -23,7 +23,6 @@ export const comparatifPageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Structure", "Humidity", "Finish"],
           heading: "Which material for which part of the cabinet",
           description:
             "No material is good everywhere. A well-planned kitchen mixes three or four of them.",
@@ -88,16 +87,6 @@ export const comparatifPageEn: PageTemplateData = {
           heading: "How to choose",
           rows: [
             {
-              label: "First question",
-              value:
-                "Does that part carry weight, or is it likely to get wet?",
-            },
-            {
-              label: "Second question",
-              value:
-                "Do you want a painted door, a pre-finished decor or real wood?",
-            },
-            {
               label: "For the structure",
               value:
                 "Plywood everywhere there are screws and weight to carry.",
@@ -122,7 +111,6 @@ export const comparatifPageEn: PageTemplateData = {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Cabinet panels compared side by side",
           },
-          note: "The table gives the general rule. Your room may call for something else.",
         },
       },
     },

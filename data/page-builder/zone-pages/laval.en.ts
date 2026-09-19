@@ -95,41 +95,20 @@ export const zoneLavalPageEn: PageTemplateData = {
                 "Chomedey and Laval-des-Rapides date mostly from 1960-1970, Duvernay and Vimont from 1980-1990.",
             },
             {
-              label: "Which permit to apply for",
-              value:
-                "The City splits interior renovation and exterior renovation into two permits.",
-            },
-            {
-              label: "How to file the application",
-              value:
-                "Online, tracked in Mon dossier, and the permit then arrives by email.",
-            },
-            {
               label: "Local risk",
               value:
                 "The river flooded streets in Laval-Ouest, Fabreville and Sainte-Dorothée in 2017.",
-            },
-            {
-              label: "What the City checks",
-              value:
-                "In a flood zone, it compares your lot to the flood elevations written into the zoning by-law.",
             },
             {
               label: "Common projects",
               value:
                 "Finishing a basement, opening a closed kitchen, rebuilding after water damage.",
             },
-            {
-              label: "From our base",
-              value:
-                "Louis-Bisson bridge, then Highway 440 or Saint-Martin Boulevard.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
             alt: "Basement finished as a games room in a Vimont home",
           },
-          note: "Sources: City of Laval, CCI Laval 2017 flood review, Laval housing profile. Verified 2026-09-18.",
         },
       },
     },
@@ -150,7 +129,6 @@ export const zoneLavalPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Basement with a bar area in a Laval home",
               },
-              badges: ["Basement"],
               footerCtaLabel: "See the service",
             },
             {
@@ -162,7 +140,6 @@ export const zoneLavalPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-cuisine-project-02.webp",
                 alt: "Kitchen opened to the dining room of a Laval bungalow",
               },
-              badges: ["Kitchen"],
               footerCtaLabel: "See kitchens",
             },
             {
@@ -174,7 +151,6 @@ export const zoneLavalPageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Interior rebuild after flooding in Laval-Ouest",
               },
-              badges: ["Insurance"],
               footerCtaLabel: "See the service",
             },
           ],
@@ -193,22 +169,18 @@ export const zoneLavalPageEn: PageTemplateData = {
             {
               title: "L'Île-Bizard–Sainte-Geneviève",
               href: "/zones/ile-bizard-sainte-genevieve",
-              ctaLabel: "See the area",
             },
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "See the area",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              ctaLabel: "See the area",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              ctaLabel: "See the area",
             },
           ],
         },

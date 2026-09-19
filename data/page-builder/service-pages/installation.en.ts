@@ -49,7 +49,6 @@ export const installationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Levelling", "Alignment", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
             alt: "Custom cabinets being installed in a kitchen",
@@ -109,11 +108,6 @@ export const installationPageEn: PageTemplateData = {
                 "One to two days for a vanity, three to five for a full kitchen.",
             },
             {
-              label: "What you receive",
-              value:
-                "Cabinets hung, doors properly set, and every touch-up done.",
-            },
-            {
               label: "Who handles it",
               value:
                 "Our own installers, working in step with the electrician and the countertop.",
@@ -148,7 +142,7 @@ export const installationPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions about installation",
+          heading: "Questions about cabinet installation",
           items: [
             {
               q: "Do we have to leave the house during install?",
@@ -164,7 +158,7 @@ export const installationPageEn: PageTemplateData = {
             },
             {
               q: "What if a door rubs six months later?",
-              a: "Call us. Wood that moves with the seasons is corrected in a few minutes of adjustment, and it is covered in the first year.",
+              a: "Call us. Wood that moves with the seasons is corrected in a few minutes of hinge adjustment, in your home.",
             },
           ],
         },
@@ -178,7 +172,7 @@ export const installationPageEn: PageTemplateData = {
         props: {
           heading: "Schedule your cabinet installation",
           intro:
-            "We pick the date with you, and we only leave once we have checked it all together.",
+            "Give us the date you want, we confirm the site will be ready for it.",
           actions: [
             {
               label: "Request a quote",

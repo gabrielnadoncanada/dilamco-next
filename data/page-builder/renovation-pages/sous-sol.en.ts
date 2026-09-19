@@ -41,7 +41,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Basement finishing",
           heading: "Basement finishing, from the moisture check to the paint",
           description:
             "We check the moisture first, then insulate, divide the rooms and finish, under a single contract.",
@@ -189,7 +188,7 @@ export const renovationSousSolPageEn: PageTemplateData = {
               ],
             },
           ],
-          note: "These are ballpark ranges. Drainage or foundation repairs are priced separately.",
+          note: "Drainage or foundation repairs are priced separately.",
           action: {
             label: "Free quote",
             href: "/contact",
@@ -213,7 +212,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Home theatre built into a finished basement",
               },
-              caption: "Home theatre",
             },
             {
               kind: "image",
@@ -221,7 +219,6 @@ export const renovationSousSolPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Basement bar with counter and storage",
               },
-              caption: "Bar with counter and storage",
             },
             {
               kind: "stat",
@@ -245,7 +242,7 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Questions about basement finishing",
           items: [
             {
               q: "My basement takes on water, can it still be finished?",
@@ -265,7 +262,7 @@ export const renovationSousSolPageEn: PageTemplateData = {
             },
             {
               q: "What if my ceiling is too low?",
-              a: "We gain a few centimetres by rerouting the ducts and choosing a thin floor. We measure the height at the visit and give you a straight answer.",
+              a: "We gain a few centimetres by rerouting the ducts and choosing a thin floor. We aim for at least 2 m under the finished ceiling.",
             },
           ],
         },

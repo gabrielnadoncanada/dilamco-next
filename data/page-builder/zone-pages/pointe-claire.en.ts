@@ -100,11 +100,6 @@ export const zonePointeClairePageEn: PageTemplateData = {
                 "Cedar Park Heights, Northview, Oneida and Valois were built after 1945.",
             },
             {
-              label: "What is different here",
-              value:
-                "In the older sectors, a planning committee approves how the work will look before the permit.",
-            },
-            {
               label: "What the city checks",
               value:
                 "Elsewhere, the zoning by-law sets the setbacks, the heights and the use allowed on the lot.",
@@ -114,16 +109,11 @@ export const zonePointeClairePageEn: PageTemplateData = {
               value:
                 "Redoing a bathroom, opening a kitchen, levelling a floor, adding on at the back.",
             },
-            {
-              label: "From our base",
-              value: "Twenty minutes of driving along boulevard Saint-Jean.",
-            },
           ],
           image: {
             src: "/images/generated/services/service-renovation-project-03.webp",
             alt: "Interior renovation of an older home in Pointe-Claire Village",
           },
-          note: "Sources: City of Pointe-Claire, Wikipedia. Verified 2026-09-18.",
         },
       },
     },
@@ -144,7 +134,6 @@ export const zonePointeClairePageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Bathroom rebuilt in a Lakeshore house",
               },
-              badges: ["Waterproofing"],
               footerCtaLabel: "See bathrooms",
             },
             {
@@ -156,7 +145,6 @@ export const zonePointeClairePageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-hero-01.webp",
                 alt: "Renovation job site in Pointe-Claire Village",
               },
-              badges: ["Heritage"],
               footerCtaLabel: "See the service",
             },
             {
@@ -168,7 +156,6 @@ export const zonePointeClairePageEn: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Hardwood floor laid in a Pointe-Claire home",
               },
-              badges: ["Hardwood"],
               footerCtaLabel: "See flooring",
             },
           ],
@@ -201,7 +188,7 @@ export const zonePointeClairePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Pointe-Claire questions we get",
           items: [
             {
               q: "Does my project go before a committee in Pointe-Claire?",

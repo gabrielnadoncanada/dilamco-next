@@ -23,27 +23,14 @@ export const PROJECT_AMENAGEMENT_SUR_MESURE_BUREAU_CENTRE_VILLE_MONTREAL: Projec
         alt: "Aménagement de bureau sur mesure au centre-ville de Montréal",
       },
     ],
-    scope: [
-      "Cadrage du mandat (usage, contraintes, échéance)",
-      "Planification et validation des dimensions",
-      "Fabrication sur mesure",
-      "Installation et ajustements",
-    ],
+    scope: [],
     constraints: [
-      "Échéancier serré",
-      "Accès limité (fenêtres de travail)",
       "Usage intensif et entretien fréquent",
     ],
     solution: [
       "Modules robustes adaptés aux cycles élevés",
-      "Choix de quincaillerie cohérent avec l'usage",
-      "Installation avec alignements et finitions propres",
     ],
-    results: [
-      "Rangement optimisé et circulation améliorée",
-      "Durabilité accrue (usage intensif)",
-      "Finition cohérente en zone publique",
-    ],
+    results: [],
     requiredLinks: {
       spaceHref: SPACE_HREF.commercial,
       renovationHref: CORE_HREF.renovation,

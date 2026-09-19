@@ -23,7 +23,6 @@ export const comparatifPage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Structure", "Humidité", "Finition"],
           heading: "Quel matériau pour quelle partie de l'armoire",
           description:
             "Aucun matériau n'est bon partout. Une cuisine bien pensée en combine trois ou quatre.",
@@ -88,16 +87,6 @@ export const comparatifPage: PageTemplateData = {
           heading: "Comment choisir",
           rows: [
             {
-              label: "Première question",
-              value:
-                "Est-ce que la pièce porte du poids ou est-ce qu'elle risque de recevoir de l'eau ?",
-            },
-            {
-              label: "Deuxième question",
-              value:
-                "Voulez-vous une porte peinte, un décor déjà fini ou du vrai bois ?",
-            },
-            {
               label: "Pour la structure",
               value:
                 "Du contreplaqué partout où il y a des vis et du poids à porter.",
@@ -122,7 +111,6 @@ export const comparatifPage: PageTemplateData = {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Panneaux d'armoires comparés côte à côte",
           },
-          note: "Le tableau donne la règle générale. Votre pièce peut demander autre chose.",
         },
       },
     },

@@ -29,27 +29,16 @@ export const PROJECT_CUISINE_SUR_MESURE_LAVAL: ProjectData = {
       alt: "Îlot de cuisine en placage de bois clair et quartz veiné à Laval",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design et planification 3D",
-    "Fabrication sur mesure des armoires et de l'îlot",
-    "Installation et ajustements",
-  ],
+  scope: [],
   constraints: [
     "Îlot central de grande dimension à intégrer",
-    "Harmonie entre armoires blanches et placage de bois clair",
-    "Alignements visibles (lignes, joints et dosseret pleine hauteur)",
   ],
   solution: [
-    "Îlot habillé de placage de bois clair pour réchauffer l'ensemble blanc",
+    "Îlot habillé de placage de bois clair",
     "Comptoirs et dosseret en quartz marbré assortis",
     "Garde-manger à portes vitrées et rangements pleine hauteur",
   ],
-  results: [
-    "Espace de travail généreux autour de l'îlot",
-    "Contraste bois/blanc chaleureux et intemporel",
-    "Rangement optimisé et finition cohérente",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

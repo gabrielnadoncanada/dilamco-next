@@ -49,7 +49,6 @@ export const installationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Mise à niveau", "Alignements", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
             alt: "Pose d'armoires sur mesure en cours dans une cuisine",
@@ -109,11 +108,6 @@ export const installationPage: PageTemplateData = {
                 "Une à deux journées pour une vanité, trois à cinq pour une cuisine complète.",
             },
             {
-              label: "Ce que vous recevez",
-              value:
-                "Des armoires posées, des portes bien réglées et les retouches faites.",
-            },
-            {
               label: "Qui s'en occupe",
               value:
                 "Nos propres poseurs, qui s'accordent avec l'électricien et le comptoir.",
@@ -148,7 +142,7 @@ export const installationPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions sur la pose",
+          heading: "Questions sur l'installation d'armoires",
           items: [
             {
               q: "Faut-il quitter la maison pendant la pose ?",
@@ -164,7 +158,7 @@ export const installationPage: PageTemplateData = {
             },
             {
               q: "Et si une porte frotte six mois plus tard ?",
-              a: "Appelez-nous. Un bois qui bouge avec les saisons se rattrape en quelques minutes de réglage, et c'est compris la première année.",
+              a: "Appelez-nous. Un bois qui bouge avec les saisons se rattrape en quelques minutes de réglage de charnière, chez vous.",
             },
           ],
         },
@@ -178,7 +172,7 @@ export const installationPage: PageTemplateData = {
         props: {
           heading: "Planifier la pose de vos armoires",
           intro:
-            "On choisit la date avec vous, et on ne repart qu'après avoir tout vérifié ensemble.",
+            "Donnez-nous la date souhaitée, on vérifie que le chantier sera prêt.",
           actions: [
             {
               label: "Demander une soumission",

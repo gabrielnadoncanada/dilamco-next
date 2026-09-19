@@ -40,7 +40,7 @@ export const renovationPageEn: PageTemplateData = {
           badges: ["Permit included", "Written contract", "Insured"],
           heading: "One contractor, from the permit to the handover",
           description:
-            "We sign the contract, file the permit, pay the trades and answer for the result.",
+            "We hire and pay the trades, and we answer for the result in front of you.",
           actions: [
             {
               label: "Free estimate",
@@ -73,7 +73,6 @@ export const renovationPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
                 alt: "Full kitchen renovation",
               },
-              badges: ["Multi-trade"],
               footerCtaLabel: "See kitchen",
             },
             {
@@ -85,7 +84,6 @@ export const renovationPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-bath-hero-01.webp",
                 alt: "Full bathroom renovation",
               },
-              badges: ["Waterproofing"],
               footerCtaLabel: "See bathroom",
             },
             {
@@ -97,7 +95,6 @@ export const renovationPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Basement finished by a general contractor",
               },
-              badges: ["Permit required"],
               footerCtaLabel: "See basement",
             },
             {
@@ -109,7 +106,6 @@ export const renovationPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
                 alt: "Residential flooring renovation",
               },
-              badges: ["Subfloor"],
               footerCtaLabel: "See flooring",
             },
             {
@@ -121,7 +117,6 @@ export const renovationPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Home addition under construction",
               },
-              badges: ["Structure"],
               footerCtaLabel: "See addition",
             },
             {
@@ -133,7 +128,6 @@ export const renovationPageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Rebuild after water damage",
               },
-              badges: ["Insurance"],
               footerCtaLabel: "See disaster rebuild",
             },
           ],
@@ -215,7 +209,7 @@ export const renovationPageEn: PageTemplateData = {
               value: "West Island, Montreal, Laval, South Shore and Vaudreuil-Soulanges",
             },
           ],
-          note: "RBQ licence 8306-0806-27, categories 1.2 and 1.3, valid since 2004.",
+          note: "Licence valid since 2004, categories 1.2 and 1.3: renovation and additions, not new construction.",
         },
       },
     },

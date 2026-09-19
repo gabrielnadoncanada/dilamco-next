@@ -120,41 +120,20 @@ export const zoneLavalPage: PageTemplateData = {
                 "Chomedey et Laval-des-Rapides datent surtout de 1960-1970, Duvernay et Vimont de 1980-1990.",
             },
             {
-              label: "Quel permis demander",
-              value:
-                "La Ville sépare la rénovation intérieure et la rénovation extérieure en deux permis.",
-            },
-            {
-              label: "Comment déposer la demande",
-              value:
-                "En ligne, avec un suivi dans Mon dossier, et le permis arrive ensuite par courriel.",
-            },
-            {
               label: "Risque local",
               value:
                 "La rivière a inondé des rues de Laval-Ouest, de Fabreville et de Sainte-Dorothée en 2017.",
-            },
-            {
-              label: "Ce que la Ville vérifie",
-              value:
-                "En zone inondable, elle compare votre terrain aux cotes de crue inscrites au règlement de zonage.",
             },
             {
               label: "Projets courants",
               value:
                 "Finir un sous-sol, ouvrir une cuisine fermée, remettre en état après un dégât d'eau.",
             },
-            {
-              label: "Depuis notre base",
-              value:
-                "Pont Louis-Bisson, puis l'autoroute 440 ou le boulevard Saint-Martin.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
             alt: "Sous-sol aménagé en salle de jeux dans une maison de Vimont",
           },
-          note: "Sources : Ville de Laval, bilan 2017 de la CCI Laval, portrait du parc lavallois. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -175,7 +154,6 @@ export const zoneLavalPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Sous-sol aménagé avec coin bar dans une maison lavalloise",
               },
-              badges: ["Sous-sol"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -187,7 +165,6 @@ export const zoneLavalPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-cuisine-project-02.webp",
                 alt: "Cuisine ouverte sur la salle à manger d'un bungalow de Laval",
               },
-              badges: ["Cuisine"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -199,7 +176,6 @@ export const zoneLavalPage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction intérieure après une inondation à Laval-Ouest",
               },
-              badges: ["Assurances"],
               footerCtaLabel: "Voir le service",
             },
           ],
@@ -218,22 +194,18 @@ export const zoneLavalPage: PageTemplateData = {
             {
               title: "L'Île-Bizard–Sainte-Geneviève",
               href: "/zones/ile-bizard-sainte-genevieve",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              ctaLabel: "Voir la zone",
             },
           ],
         },

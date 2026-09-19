@@ -101,30 +101,15 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
                 "Beaurepaire, near the station, has been settled since 1925 and its houses are older.",
             },
             {
-              label: "What is different here",
-              value:
-                "Felling a tree needs a permit, a replacement, and a deposit the city refunds afterwards.",
-            },
-            {
-              label: "What the city checks",
-              value:
-                "The zoning by-law says where the building can sit, which setbacks apply and how high you may go.",
-            },
-            {
               label: "Common projects",
               value:
                 "Taking a house back to the studs, redoing a kitchen or bathroom, adding on at the back.",
-            },
-            {
-              label: "From our base",
-              value: "Twenty-five minutes of driving along Highway 40.",
             },
           ],
           image: {
             src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
             alt: "Kitchen rebuilt in a Beaconsfield home",
           },
-          note: "Sources: City of Beaconsfield, Wikipedia. Verified 2026-09-18.",
         },
       },
     },
@@ -145,7 +130,6 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Major renovation of a Beaconsfield house",
               },
-              badges: ["Turnkey"],
               footerCtaLabel: "See the service",
             },
             {
@@ -157,7 +141,6 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Planning an addition on a wooded Beaconsfield lot",
               },
-              badges: ["Tree permit"],
               footerCtaLabel: "See additions",
             },
             {
@@ -169,7 +152,6 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Bathroom renovated in a Beacon Hill home",
               },
-              badges: ["Waterproofing"],
               footerCtaLabel: "See bathrooms",
             },
           ],
@@ -198,7 +180,7 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Beaconsfield questions we get",
           items: [
             {
               q: "Can I fell a tree to build an addition in Beaconsfield?",

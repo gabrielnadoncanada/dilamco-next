@@ -68,7 +68,7 @@ Chaque famille de pages a SA composition. Deux pages de familles différentes ne
 
 | Famille | Composition (dans l'ordre) |
 |---|---|
-| **Zone** (`zone-pages`) | `hero.zone` (eyebrow « Entrepreneur général à », heading = nom de la ville seul, 3–4 `facts` : Notre base · Permis · Bâti · Premier retour) → `split.fact-sheet` (5–7 rangées locales : bâti, permis, règlement, particularité, projets fréquents, distance) → `grid.image-cards-slider` (3 services, descriptions ancrées dans la ville) → `grid.link-cards-compact` (3–4 villes voisines, sans description) → `faq.accordion` (4 questions, TOUTES locales : permis de cette ville, contraintes locales, délais, prix d'un projet typique ici) → `cta.band-split-actions` (heading nomme la ville) |
+| **Zone** (`zone-pages`) | `hero.zone` (eyebrow « Entrepreneur général à », heading = nom de la ville seul, 3–4 `facts` : Notre base · Permis · Bâti · Premier retour) → `split.fact-sheet` (3–6 rangées locales : bâti, permis, règlement, particularité, projets fréquents, distance) → `grid.image-cards-slider` (3 services, descriptions ancrées dans la ville) → `grid.link-cards-compact` (3–4 villes voisines, sans description) → `faq.accordion` (4 questions, TOUTES locales : permis de cette ville, contraintes locales, délais, prix d'un projet typique ici) → `cta.band-split-actions` (heading nomme la ville) |
 | **Rénovation** (`renovation-pages`, `service-pages/renovation`) | `hero.split-image` avec `imageSide: "left"` → `grid.icon-cards-bullets` (3–4 : ce qui est inclus) → `process.horizontal-steps-cards` (4–5 étapes propres à ce service) → `grid.price-tiles` (2–3 tuiles, uniquement si l'ancien contenu donnait des fourchettes) → `split.list-actions-image-card` OU `grid.bento` (4 tuiles) → `faq.accordion` (4–5, spécifiques au service) → `cta` |
 | **Espace** (`space-pages`) | `hero.centered` (court, avec `image` pleine largeur + `caption` sous le texte ; photo de CET espace, différente de celles de la bento) → `grid.bento` (5–6 tuiles : 3–4 photos de CET espace, 1 stat, 1 citation ou texte) → `split.fact-sheet` « En bref » (délai, matériaux, prix, garantie, pose) → `faq.accordion` (4) → `cta` |
 | **Matériau** (`material-pages`) | `hero.split-image` (image à droite) → `split.fact-sheet` (composition, résistance, entretien, usage, prix relatif) → `comparison.table-basic` si pertinent → `faq.accordion` (3–4) → `cta` |
@@ -86,6 +86,26 @@ Chaque famille de pages a SA composition. Deux pages de familles différentes ne
 - Les descriptions du slider de services sur une page zone parlent de CETTE ville (type de maisons, règlement, secteur), pas du service en général.
 - Le `cta` final varie : heading avec le nom de la ville / du service, intro différente, note différente.
 - Les `facts` du `hero.zone` et les `rows` du `fact-sheet` ne se répètent pas entre eux.
+
+## Raison d'être (passe 2026-09-19, 6e) — le test appliqué à chaque champ
+
+Un texte reste sur le site s'il passe l'un des deux tests, sinon il part :
+
+1. **SEO** : il contient une requête réelle (service, ville, matériau, contrainte locale nommée). Un titre de section générique n'est pas du SEO.
+2. **Conversion** : il apporte un fait vérifiable (licence, année, note Google, cautionnement, délai, prix), une réponse à une peur (dépassement, retard, qui répond du résultat), une information de décision (inclus, exclu, qui fait quoi, quand, combien) ou une action.
+
+En cas de doute, on retire. Un texte qui met en contexte, fait une transition, annonce la section ou rassure en général ne passe pas.
+
+Corollaires appliqués en 2026-09-19 :
+
+- **Pas de `badges` décoratifs** sur un hero ou une carte : un badge qui répète le titre ou la description part.
+- **Pas de `caption` qui décrit la photo.** Une légende ne survit que si elle dit un lieu ou un fait que l'image ne montre pas.
+- **Pas d'`eyebrow` contenu dans le `heading`** juste en dessous.
+- **Pas de `note` de méthodologie** (sources, dates de vérification) : c'est une note interne.
+- **Pas de rangée de fiche qui redit une réponse de FAQ** de la même page, et l'inverse.
+- **Le numéro RBQ ne se répète pas** dans une note, un badge ou une intro : il est au pied de page.
+- **Pas de `ctaLabel` générique répété** (« Voir la zone » onze fois) quand la carte porte déjà le nom de la cible.
+- **Recette Zone assouplie** : la fiche locale compte 3 à 6 rangées (et non 5 à 7). Après dédoublonnage, plusieurs villes n'ont pas assez de faits sourcés pour six rangées ; on ne remplit pas une recette avec du texte inventé.
 
 ## Remplissage (passe 2026-09, 5e) — chaque texte mène à une action ou à un fait
 

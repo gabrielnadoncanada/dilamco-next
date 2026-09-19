@@ -20,7 +20,7 @@ export const salleDeLavagePage: PageTemplateData = {
   service: {
     name: "Salle de lavage sur mesure",
     description:
-      "Conception, fabrication contrôlée et installation d'armoires de salle de lavage sur mesure.",
+      "Conception, production en usine partenaire et installation d'armoires de salle de lavage sur mesure.",
     url: SITE.url + "/espaces/salle-de-lavage",
     serviceType: "Salle de lavage sur mesure",
   },
@@ -32,7 +32,6 @@ export const salleDeLavagePage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Fini lavable"],
           heading: "Salle de lavage sur mesure à Montréal et Laval",
           description:
             "Comptoir de pliage, colonnes de rangement et cuve, dessinés autour de vos appareils.",
@@ -52,7 +51,6 @@ export const salleDeLavagePage: PageTemplateData = {
             src: "/images/generated/spaces/space-laundry-hero-01.webp",
             alt: "Salle de lavage avec comptoir de pliage continu au-dessus des appareils",
           },
-          caption: "Comptoir de pliage continu",
         },
       },
     },
@@ -71,7 +69,6 @@ export const salleDeLavagePage: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Salle de lavage blanche avec appareils surélevés et armoire à balais",
               },
-              caption: "Appareils surélevés, armoire à balais",
             },
             {
               kind: "image",
@@ -80,7 +77,7 @@ export const salleDeLavagePage: PageTemplateData = {
                 src: "/images/generated/spaces/space-laundry-project-02.webp",
                 alt: "Colonnes de rangement et paniers dans une salle de lavage à Laval",
               },
-              caption: "Colonnes et paniers, Laval",
+              caption: "Laval",
             },
             {
               kind: "stat",
@@ -93,7 +90,7 @@ export const salleDeLavagePage: PageTemplateData = {
                 src: "/images/generated/spaces/space-laundry-project-01.webp",
                 alt: "Salle de lavage compacte aménagée dans un logement de Montréal",
               },
-              caption: "Espace compact, Montréal",
+              caption: "Montréal",
             },
             {
               kind: "image",
@@ -101,7 +98,6 @@ export const salleDeLavagePage: PageTemplateData = {
                 src: "/images/generated/spaces/space-laundry-project-03.webp",
                 alt: "Cuve de lavage et comptoir alignés sur le même mur",
               },
-              caption: "Cuve et comptoir alignés",
             },
             {
               kind: "text",
@@ -123,14 +119,9 @@ export const salleDeLavagePage: PageTemplateData = {
           heading: "La salle de lavage en bref",
           rows: [
             {
-              label: "Combien de temps",
+              label: "Ce qui fait le prix",
               value:
-                "Il faut 9 à 15 semaines, et la plomberie se refait avant la pose.",
-            },
-            {
-              label: "Prix indicatif",
-              value:
-                "Le prix suit le nombre de colonnes, la surface de comptoir et la cuve de lavage.",
+                "Le nombre de colonnes, la surface de comptoir et la cuve de lavage.",
             },
             {
               label: "Matériaux",
@@ -145,7 +136,7 @@ export const salleDeLavagePage: PageTemplateData = {
             {
               label: "Qui installe",
               value:
-                "Notre équipe, en gardant l'espace nécessaire autour de la laveuse et de la sécheuse.",
+                "Notre équipe, la plomberie refaite, en gardant l'espace autour des appareils.",
             },
             {
               label: "Garantie",

@@ -25,27 +25,17 @@ export const PROJECT_CUISINE_SUR_MESURE_TERREBONNE: ProjectData = {
       alt: "Armoires de cuisine blanches sans poignées et îlot de quartz à Terrebonne",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design moderne et planification",
-    "Fabrication sur mesure des armoires et de l'îlot",
-    "Installation et ajustements",
-  ],
+  scope: [],
   constraints: [
-    "Fini blanc lustré exigeant sur les alignements et les joints",
-    "Portes sans poignées (ouverture par gorge)",
+    "Portes sans poignées, ouverture par gorge",
     "Dosseret de quartz pleine hauteur à raccorder aux comptoirs",
   ],
   solution: [
-    "Armoires en fini blanc lustré sans poignées pour un look épuré",
+    "Armoires en fini blanc lustré sans poignées",
     "Comptoirs et dosseret en quartz calacatta assortis",
     "Îlot central lustré offrant plan de travail et rangement",
   ],
-  results: [
-    "Cuisine moderne minimaliste et haut de gamme",
-    "Surfaces faciles d'entretien et lignes continues",
-    "Rangement optimisé et finition impeccable",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

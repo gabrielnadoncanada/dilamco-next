@@ -22,7 +22,6 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Real cases"],
           heading: "Kitchens, vanities, storage and commercial work",
           description:
             "Job sites we ran from start to finish across Greater Montréal.",
@@ -53,7 +52,6 @@ export const pageEn: PageTemplateData = {
             {
               title: "Kitchens",
               href: "/projets/cuisine",
-              description: "Kitchens rebuilt from top to bottom.",
               footerCtaLabel: "View kitchens",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
@@ -63,7 +61,6 @@ export const pageEn: PageTemplateData = {
             {
               title: "Bathrooms & vanities",
               href: "/projets/salle-de-bain",
-              description: "Vanities that hold up in a wet room.",
               footerCtaLabel: "View bathrooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
@@ -73,7 +70,6 @@ export const pageEn: PageTemplateData = {
             {
               title: "Walk-in closets & storage",
               href: "/projets/walk-in",
-              description: "Storage drawn around what you actually own.",
               footerCtaLabel: "View walk-ins",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
@@ -83,7 +79,6 @@ export const pageEn: PageTemplateData = {
             {
               title: "Laundry rooms",
               href: "/projets/salle-de-lavage",
-              description: "Laundry rooms that are easy to keep clean.",
               footerCtaLabel: "View laundry rooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
@@ -93,7 +88,6 @@ export const pageEn: PageTemplateData = {
             {
               title: "Commercial",
               href: "/projets/commercial",
-              description: "Offices and retail delivered ready to occupy.",
               footerCtaLabel: "View commercial",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
@@ -166,7 +160,7 @@ export const pageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "You have a project of the same kind",
-          intro: "The estimate is free and we get back to you within a day or two.",
+          intro: "Every project above started with a free site visit.",
           actions: [
             {
               label: "Request a quote",

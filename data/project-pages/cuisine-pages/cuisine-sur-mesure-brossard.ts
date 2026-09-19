@@ -25,27 +25,17 @@ export const PROJECT_CUISINE_SUR_MESURE_BROSSARD: ProjectData = {
       alt: "Armoires de cuisine bleu marine et comptoir de quartz marbré à Brossard",
     },
   ],
-  scope: [
-    "Cadrage et validation des besoins",
-    "Design et sélection des deux teintes",
-    "Fabrication sur mesure des armoires",
-    "Installation et ajustements",
-  ],
+  scope: [],
   constraints: [
     "Agencement en U dans un espace fermé",
-    "Équilibre des deux teintes (blanc en haut, marine en bas)",
     "Intégration des électroménagers en fini noir inox",
   ],
   solution: [
-    "Bases bleu marine et armoires hautes blanches pour un contraste maîtrisé",
-    "Comptoirs et dosseret en quartz marbré pour unifier l'ensemble",
-    "Quincaillerie allongée assortie et rangements optimisés",
+    "Bases bleu marine et armoires hautes blanches",
+    "Comptoirs et dosseret en quartz marbré assortis",
+    "Quincaillerie allongée assortie",
   ],
-  results: [
-    "Cuisine bicolore actuelle et lumineuse",
-    "Rangement optimisé sur trois murs",
-    "Finition cohérente et lignes propres",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

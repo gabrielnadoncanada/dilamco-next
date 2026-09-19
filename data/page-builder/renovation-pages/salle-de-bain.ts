@@ -41,7 +41,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Rénovation de salle de bain",
           heading: "Rénovation de salle de bain, de la plomberie à la céramique",
           description:
             "On refait la plomberie, la ventilation et l'étanchéité, puis on pose la céramique et la vanité.",
@@ -146,13 +145,13 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               number: "4",
               title: "Étanchéité et céramique",
               description:
-                "On pose la membrane, on vérifie la pente, puis on tuile.",
+                "On pose la membrane et on la laisse sécher avant de tuiler.",
             },
             {
               number: "5",
               title: "Vanité et livraison",
               description:
-                "On installe la vanité, la robinetterie et la porte de douche.",
+                "On installe la vanité, puis on fait le tour de la pièce avec vous.",
             },
           ],
         },
@@ -191,7 +190,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             {
               title: "Douche de plain-pied",
               price: "près de 35 000 $",
-              hint: "le plancher doit être abaissé",
               includes: [
                 "Plancher abaissé pour enlever le seuil",
                 "Drain linéaire et pente calculée",
@@ -199,7 +197,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               ],
             },
           ],
-          note: "Ce sont des ordres de grandeur. Le prix change si la plomberie se déplace et selon la céramique choisie.",
+          note: "Le prix change si la plomberie se déplace et selon la céramique choisie.",
           action: {
             label: "Soumission gratuite",
             href: "/contact",
@@ -223,7 +221,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Douche de plain-pied avec paroi de verre",
               },
-              caption: "Douche sans seuil, paroi de verre",
             },
             {
               kind: "image",
@@ -231,7 +228,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
                 alt: "Vanité avec comptoir de quartz et miroir rétroéclairé",
               },
-              caption: "Vanité et miroir éclairé",
             },
             {
               kind: "stat",
@@ -242,7 +238,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               kind: "text",
               title: "Voir d'autres salles de bain",
               description:
-                "Douches et vanités photographiées après les travaux.",
+                "Douches sans seuil, vanités doubles et rangements de salle de bain.",
               href: "/espaces/salle-de-bain",
             },
           ],
@@ -255,7 +251,7 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la rénovation de salle de bain",
           items: [
             {
               q: "C'est quoi, une membrane d'étanchéité ?",

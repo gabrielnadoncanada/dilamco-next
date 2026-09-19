@@ -21,12 +21,7 @@ export const PROJECT_CUISINE_SUR_MESURE_RIVE_SUD_EN: ProjectData = {
       alt: "White custom kitchen in Brossard, South Shore",
     },
   ],
-  scope: [
-    "Scoping and needs validation",
-    "Design and planning",
-    "Custom fabrication",
-    "Installation and adjustments",
-  ],
+  scope: [],
   constraints: [
     "Layout constraints (openings, circulation, island)",
     "Visible transitions and alignments (joints, lines, finishes)",
@@ -37,11 +32,7 @@ export const PROJECT_CUISINE_SUR_MESURE_RIVE_SUD_EN: ProjectData = {
     "Stable materials and choices consistent with use",
     "Installation adjusted on site: alignments, transitions and final inspection",
   ],
-  results: [
-    "A more functional space day to day",
-    "Consistent and durable finish",
-    "Clean integration with the existing space",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,

@@ -98,35 +98,15 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
                 "Many recent houses were handed over with a basement that was never finished.",
             },
             {
-              label: "How to get the permit",
-              value:
-                "No permit is handed over on the spot, and the invoice must be paid before it is released.",
-            },
-            {
-              label: "What the permit costs",
-              value:
-                "The fee is set by a municipal by-law and varies with the nature of the work.",
-            },
-            {
-              label: "What is changing soon",
-              value:
-                "The urban plan is under review and the Harwood corridor was updated on 12 November 2025.",
-            },
-            {
               label: "Common projects",
               value:
                 "Finishing a basement, redoing a kitchen, adding a room or a garage.",
-            },
-            {
-              label: "From our base",
-              value: "Île-aux-Tourtes bridge, then the Harwood exit.",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-rangement-01.webp",
             alt: "Finished basement with storage in a Vaudreuil-Dorion home",
           },
-          note: "Sources: City of Vaudreuil-Dorion, Statistics Canada 2021. Verified 2026-09-18.",
         },
       },
     },
@@ -147,7 +127,6 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
                 alt: "Basement turned into an office in a Cité-des-Jeunes home",
               },
-              badges: ["Basement"],
               footerCtaLabel: "See the service",
             },
             {
@@ -159,7 +138,6 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-featured-cuisine-project-01.webp",
                 alt: "Island replacing the original kitchen of a 2008 house",
               },
-              badges: ["Kitchen"],
               footerCtaLabel: "See kitchens",
             },
             {
@@ -171,7 +149,6 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Addition blended into a Vaudreuil-Dorion house",
               },
-              badges: ["Permits"],
               footerCtaLabel: "See the service",
             },
           ],
@@ -190,17 +167,14 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
             {
               title: "Beaconsfield",
               href: "/zones/beaconsfield",
-              ctaLabel: "See the area",
             },
             {
               title: "Kirkland",
               href: "/zones/kirkland",
-              ctaLabel: "See the area",
             },
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "See the area",
             },
           ],
         },

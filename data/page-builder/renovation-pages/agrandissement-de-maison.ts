@@ -41,7 +41,6 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Agrandissement de maison",
           heading: "Agrandissement de maison, du zonage à la finition",
           description:
             "On vérifie le zonage, on fait faire les plans, on coule la fondation et on raccorde à votre maison.",
@@ -166,7 +165,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
         props: {
           heading: "Les types d'agrandissement possibles",
           intro:
-            "Le terrain et le règlement de la ville décident souvent avant votre besoin de départ.",
+            "Le zonage de votre ville et la taille du terrain décident de ce qui est possible.",
           items: [
             {
               title: "Rallonge à l'arrière",
@@ -210,7 +209,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur l'agrandissement de maison",
           items: [
             {
               q: "Mon terrain permet-il un agrandissement ?",
@@ -222,7 +221,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
             {
               q: "Ai-je besoin d'un ingénieur ?",
-              a: "Dans presque tous les cas. Les semelles, la charpente et la poutre de remplacement demandent un calcul de charges. Les plans signés partent avec la demande et servent de référence.",
+              a: "Dans presque tous les cas. Les semelles, la charpente et la poutre de remplacement demandent un calcul de charges signé.",
             },
             {
               q: "Combien de temps prend un agrandissement ?",
@@ -230,7 +229,7 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
             {
               q: "Agrandir ou construire neuf ?",
-              a: "Nous ne construisons pas de maisons neuves. Notre travail part toujours d'un bâtiment existant. Pour bien des familles, une rallonge revient moins cher qu'un déménagement.",
+              a: "Nous ne construisons pas de maisons neuves. Notre licence RBQ couvre la rénovation et l'agrandissement d'un bâtiment existant, pas la construction neuve.",
             },
           ],
         },

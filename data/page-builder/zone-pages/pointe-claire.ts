@@ -120,11 +120,6 @@ export const zonePointeClairePage: PageTemplateData = {
                 "Cedar Park Heights, Northview, Oneida et Valois ont été bâtis après 1945.",
             },
             {
-              label: "Particularité locale",
-              value:
-                "Dans les secteurs anciens, un comité d'urbanisme approuve l'apparence des travaux avant le permis.",
-            },
-            {
               label: "Ce que la Ville vérifie",
               value:
                 "Ailleurs, le règlement de zonage fixe les marges, les hauteurs et l'usage permis sur le terrain.",
@@ -134,16 +129,11 @@ export const zonePointeClairePage: PageTemplateData = {
               value:
                 "Refaire une salle de bain, ouvrir une cuisine, redresser un plancher, ajouter une rallonge.",
             },
-            {
-              label: "Depuis notre base",
-              value: "Vingt minutes de route par le boulevard Saint-Jean.",
-            },
           ],
           image: {
             src: "/images/generated/services/service-renovation-project-03.webp",
             alt: "Rénovation intérieure d'une maison ancienne du Village de Pointe-Claire",
           },
-          note: "Sources : Ville de Pointe-Claire, Wikipédia. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -164,7 +154,6 @@ export const zonePointeClairePage: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Salle de bain refaite dans une maison du Lakeshore",
               },
-              badges: ["Étanchéité"],
               footerCtaLabel: "Voir la salle de bain",
             },
             {
@@ -176,7 +165,6 @@ export const zonePointeClairePage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-hero-01.webp",
                 alt: "Chantier de rénovation dans le Village de Pointe-Claire",
               },
-              badges: ["Patrimoine"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -188,7 +176,6 @@ export const zonePointeClairePage: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Plancher de bois franc posé dans une maison de Pointe-Claire",
               },
-              badges: ["Bois franc"],
               footerCtaLabel: "Voir le plancher",
             },
           ],
@@ -221,7 +208,7 @@ export const zonePointeClairePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes à Pointe-Claire",
           items: [
             {
               q: "Mon projet doit-il passer devant un comité à Pointe-Claire ?",

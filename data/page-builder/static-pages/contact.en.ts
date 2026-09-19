@@ -23,7 +23,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Tell us about your project",
           intro:
-            "Free estimate. The more precise your description, the more useful our first reply.",
+            "The more precise your description, the more useful our first reply.",
           detailsTitle: "Get in touch",
           detailsIntro:
             "Residential renovation general contractor in Pierrefonds-Roxboro since 2004.",
@@ -56,7 +56,7 @@ export const pageEn: PageTemplateData = {
               icon: "clock",
             },
           ],
-          note: "RBQ licence 8306-0806-27, classes 1.2 and 1.3. Civil liability insurance and site coverage in force.",
+          note: "Civil liability insurance and site coverage in force.",
           formTitle: "Request a free estimate",
           formIntro: "This information is used only to prepare the visit.",
           formAction: "/contact/",

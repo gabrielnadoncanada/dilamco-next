@@ -29,7 +29,6 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Division armoires"],
           heading: "Armoires sur mesure pour six espaces de la maison",
           description:
             "On dessine, on commande et on installe. Vous n'avez personne d'autre à appeler.",
@@ -64,7 +63,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Armoires de cuisine sur mesure haut de gamme",
               },
-              badges: ["Sur mesure"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -75,7 +73,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Vanité de salle de bain sur mesure",
               },
-              badges: ["Vanité"],
               footerCtaLabel: "Voir la salle de bain",
             },
             {
@@ -86,7 +83,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Salle de lavage sur mesure",
               },
-              badges: ["Rangement"],
               footerCtaLabel: "Voir la salle de lavage",
             },
             {
@@ -97,7 +93,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Walk-in sur mesure",
               },
-              badges: ["Garde-robe"],
               footerCtaLabel: "Voir le walk-in",
             },
             {
@@ -108,7 +103,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
                 alt: "Aménagement de sous-sol sur mesure",
               },
-              badges: ["Cinéma maison"],
               footerCtaLabel: "Voir le sous-sol",
             },
             {
@@ -119,7 +113,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial sur mesure",
               },
-              badges: ["Bureaux"],
               footerCtaLabel: "Voir le commercial",
             },
           ],

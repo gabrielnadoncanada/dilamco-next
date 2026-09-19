@@ -23,7 +23,6 @@ export const mdfPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Matériaux",
           heading: "Pourquoi nos portes peintes sont en MDF",
           description:
             "C'est le panneau le plus lisse, sans nœud ni veinage, donc la peinture est parfaitement unie.",
@@ -39,12 +38,10 @@ export const mdfPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Peinture", "Portes", "Uniformité"],
           image: {
             src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
             alt: "Panneau MDF avec finition peinte uniforme",
           },
-          caption: "Portes peintes et façades lisses",
           imageSide: "right",
         },
       },

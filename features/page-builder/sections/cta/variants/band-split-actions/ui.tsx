@@ -22,7 +22,9 @@ export function CtaBandSplitActions(props: CtaBandSplitActionsProps) {
           <Heading as="h2" variant="h1" className="text-ink-foreground">
             {props.heading}
           </Heading>
-          <p className="text-lead mt-4 text-ink-muted">{props.intro}</p>
+          {props.intro ? (
+            <p className="text-lead mt-4 text-ink-muted">{props.intro}</p>
+          ) : null}
         </div>
 
         <div className="flex flex-col gap-4 lg:col-span-5 lg:items-end">

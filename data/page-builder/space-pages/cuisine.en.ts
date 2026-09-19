@@ -17,7 +17,7 @@ export const cuisinePageEn: PageTemplateData = {
   service: {
     name: "Custom kitchen cabinets",
     description:
-      "Design, controlled fabrication and installation of high-end custom kitchen cabinetry in Pierrefonds-Roxboro, the West Island, Montréal, Laval and Greater Montréal.",
+      "Design, partner-factory production and installation of high-end custom kitchen cabinetry in Pierrefonds-Roxboro, the West Island, Montréal, Laval and Greater Montréal.",
     url: SITE.url + "/espaces/cuisine",
     serviceType: "Custom kitchen cabinets",
   },
@@ -29,7 +29,6 @@ export const cuisinePageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Custom-built", "Cabinet division"],
           heading: "Custom kitchen cabinets, installed by your general contractor",
           description:
             "We measure the room after demolition, order the cabinets, then install them.",
@@ -49,7 +48,6 @@ export const cuisinePageEn: PageTemplateData = {
             src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
             alt: "U-shaped kitchen with white shaker cabinets and subway tile backsplash",
           },
-          caption: "Shaker cabinets, subway backsplash",
         },
       },
     },
@@ -68,7 +66,6 @@ export const cuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Open-plan kitchen with island and full-height cabinet columns",
               },
-              caption: "Island and columns, open plan",
             },
             {
               kind: "stat",
@@ -82,7 +79,6 @@ export const cuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "White kitchen with island and quartz countertop",
               },
-              caption: "Quartz countertop, white island",
             },
             {
               kind: "quote",
@@ -96,7 +92,6 @@ export const cuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
                 alt: "Glass-front kitchen cabinets and tile backsplash",
               },
-              caption: "Glass fronts and backsplash",
             },
             {
               kind: "image",
@@ -104,7 +99,6 @@ export const cuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
                 alt: "Navy blue island with birch-lined drawers",
               },
-              caption: "Navy island, birch interior",
             },
           ],
         },

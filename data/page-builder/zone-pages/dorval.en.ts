@@ -89,16 +89,6 @@ export const zoneDorvalPageEn: PageTemplateData = {
           heading: "What to know before renovating in Dorval",
           rows: [
             {
-              label: "How long the permit takes",
-              value:
-                "The city counts thirty business days once the file is complete, compliant and paid.",
-            },
-            {
-              label: "What is different here",
-              value:
-                "Council approves how additions and chemin du Bord-du-Lac houses will look.",
-            },
-            {
               label: "How to file the application",
               value:
                 "Applications are submitted and tracked online, on the city platform.",
@@ -123,7 +113,6 @@ export const zoneDorvalPageEn: PageTemplateData = {
             src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
             alt: "Basement finished in a Dorval bungalow",
           },
-          note: "Sources: City of Dorval, Wikipedia, 2026 neighbourhood guide. Verified 2026-09-18.",
         },
       },
     },
@@ -144,7 +133,6 @@ export const zoneDorvalPageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "Kitchen renovated in a Dorval bungalow",
               },
-              badges: ["Custom"],
               footerCtaLabel: "See kitchens",
             },
             {
@@ -156,7 +144,6 @@ export const zoneDorvalPageEn: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Residential addition planned in Dorval",
               },
-              badges: ["Approval"],
               footerCtaLabel: "See additions",
             },
             {
@@ -168,7 +155,6 @@ export const zoneDorvalPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Finished basement in a Dorval house",
               },
-              badges: ["Compliance"],
               footerCtaLabel: "See basements",
             },
           ],
@@ -200,7 +186,7 @@ export const zoneDorvalPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Frequently asked questions",
+          heading: "Dorval questions we get",
           items: [
             {
               q: "How long does the City of Dorval take to issue a permit?",

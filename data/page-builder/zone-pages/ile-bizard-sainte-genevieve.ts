@@ -128,11 +128,6 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
                 "En zone inondable, tous les travaux demandent un permis, sans exception.",
             },
             {
-              label: "Ce que le règlement impose",
-              value:
-                "La maison doit être protégée contre les refoulements d'égout avant d'être finie.",
-            },
-            {
               label: "Quartiers",
               value:
                 "Les unifamiliales s'alignent sur des lots profonds, chemin Cherrier et boulevard Jacques-Bizard.",
@@ -142,17 +137,11 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
               value:
                 "Reprendre un sous-sol, agrandir, remettre en état une maison ancienne du boulevard Gouin.",
             },
-            {
-              label: "Depuis notre base",
-              value:
-                "On traverse le pont Jacques-Bizard, puis on prend la montée de l'Église.",
-            },
           ],
           image: {
             src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
             alt: "Matériaux préparés pour reprendre un sous-sol de l'île Bizard",
           },
-          note: "Sources : Ville de Montréal, banque d'information 311, SPHIB-SG. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -173,7 +162,6 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Sous-sol aménagé en salle de cinéma sur l'île Bizard",
               },
-              badges: ["Drainage"],
               footerCtaLabel: "Voir le sous-sol",
             },
             {
@@ -185,7 +173,6 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Reconstruction intérieure après une inondation sur l'île Mercier",
               },
-              badges: ["Assurances"],
               footerCtaLabel: "Voir le service",
             },
             {
@@ -197,7 +184,6 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Planification d'un agrandissement sur un lot riverain de l'île",
               },
-              badges: ["Zonage"],
               footerCtaLabel: "Voir l'agrandissement",
             },
           ],
@@ -216,22 +202,18 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Kirkland",
               href: "/zones/kirkland",
-              ctaLabel: "Voir la zone",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              ctaLabel: "Voir la zone",
             },
           ],
         },

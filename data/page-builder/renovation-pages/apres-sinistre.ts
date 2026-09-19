@@ -45,7 +45,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
           eyebrow: "Rénovation après sinistre",
           heading: "Reconstruction après un dégât d'eau ou un incendie",
           description:
-            "On arrive une fois les lieux asséchés, on décrit les dommages pièce par pièce, puis on reconstruit.",
+            "On arrive une fois les lieux asséchés et on reconstruit, de la démolition à la peinture.",
           actions: [
             {
               label: "Demander une évaluation",
@@ -58,7 +58,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Dossier d'assurance", "Ouest-de-l'Île"],
+          badges: ["Dossier d'assurance"],
           image: {
             src: "/images/generated/services/service-renovation-project-02.webp",
             alt: "Pièce reconstruite après un dégât d'eau",
@@ -129,7 +129,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
               number: "1",
               title: "Visite des lieux",
               description:
-                "On vient une fois les lieux secs et on ouvre les murs par endroits.",
+                "On relève chaque pièce touchée et on note ce qui est récupérable.",
             },
             {
               number: "2",
@@ -153,7 +153,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
               number: "5",
               title: "Reconstruction",
               description:
-                "Plomberie, électricité, gypse, peinture, planchers, puis remise des clés.",
+                "On refait la plomberie, l'électricité, le gypse et les planchers.",
             },
           ],
         },
@@ -167,19 +167,19 @@ export const renovationApresSinistrePage: PageTemplateData = {
         props: {
           heading: "Ce qu'on fournit pour votre réclamation",
           intro:
-            "On ne remplace ni votre assureur ni son expert. On fournit les documents techniques.",
+            "On ne remplace ni votre assureur ni son expert du sinistre.",
           items: [
             {
               title: "La liste des dommages, pièce par pièce",
-              description: "chaque dommage est décrit, au lieu d'un seul montant global.",
+              description: "au lieu d'un seul montant global pour toute la maison.",
             },
             {
               title: "Un prix pour chaque type de travaux",
               description:
-                "démolition, plomberie, matériaux et finition sont chiffrés séparément.",
+                "votre assureur peut comparer chaque ligne avec son propre barème.",
             },
             {
-              title: "Des photos de tout",
+              title: "Des photos de chaque pièce",
               description: "l'état avant les travaux, les ouvertures faites, les dommages cachés.",
             },
             {
@@ -212,7 +212,7 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions sur la reconstruction après sinistre",
           items: [
             {
               q: "Faites-vous le pompage et l'assèchement ?",

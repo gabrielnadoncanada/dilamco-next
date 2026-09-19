@@ -23,7 +23,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Décrivez-nous votre projet",
           intro:
-            "Estimation gratuite. Plus votre description est précise, plus notre premier retour est utile.",
+            "Plus votre description est précise, plus notre premier retour est utile.",
           detailsTitle: "Nous joindre",
           detailsIntro:
             "Entrepreneur général en rénovation résidentielle à Pierrefonds-Roxboro depuis 2004.",
@@ -56,7 +56,7 @@ export const page: PageTemplateData = {
               icon: "clock",
             },
           ],
-          note: "Licence RBQ 8306-0806-27, catégories 1.2 et 1.3. Responsabilité civile et couverture chantier en vigueur.",
+          note: "Responsabilité civile et couverture chantier en vigueur.",
           formTitle: "Demander une estimation gratuite",
           formIntro:
             "Ces informations servent uniquement à préparer la visite.",
@@ -197,7 +197,7 @@ export const page: PageTemplateData = {
                   rows: 8,
                   required: true,
                   helper:
-                    "Type de bâtiment, année de construction, état actuel, contraintes d'accès : tout ce qui nous évite une surprise vous évite un avenant.",
+                    "Type de bâtiment, année de construction, état actuel, contraintes d'accès. Tout ce qui nous évite une surprise vous évite un supplément.",
                   placeholder:
                     "Ex. bungalow 1968, cuisine d'origine à refaire au complet, mur à ouvrir vers la salle à manger, plomberie et électricité jamais touchées, sous-sol fini à revoir plus tard.",
                 },

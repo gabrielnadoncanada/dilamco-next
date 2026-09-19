@@ -23,7 +23,6 @@ export const couleursPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Materials",
           heading: "How to choose the colour of your cabinets",
           description:
             "We settle the colour at your place, in the real light of the room.",
@@ -39,12 +38,10 @@ export const couleursPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Light", "Sheen", "Upkeep"],
           image: {
             src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
             alt: "Coloured cabinets seen in the light of a room",
           },
-          caption: "Samples seen inside your room",
           imageSide: "right",
         },
       },
@@ -58,7 +55,7 @@ export const couleursPageEn: PageTemplateData = {
           heading: "What you should know about finishes",
           rows: [
             {
-              label: "The material changes the colour",
+              label: "By material",
               value:
                 "The same shade does not read the same on MDF, on melamine or on wood.",
             },
@@ -132,7 +129,7 @@ export const couleursPageEn: PageTemplateData = {
         props: {
           heading: "Settle the colours of your kitchen",
           intro:
-            "We bring the samples to your home and look at them under your own lighting.",
+            "Free visit. You settle the colour and the sheen level before we order.",
           actions: [
             {
               label: "Talk design",

@@ -23,7 +23,6 @@ export const mdfPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Materials",
           heading: "Why our painted doors are made of MDF",
           description:
             "It is the smoothest panel, with no knots and no grain, so the paint comes out perfectly even.",
@@ -39,12 +38,10 @@ export const mdfPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Paint", "Doors", "Evenness"],
           image: {
             src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
             alt: "MDF panel with an even painted finish",
           },
-          caption: "Painted doors and smooth fronts",
           imageSide: "right",
         },
       },

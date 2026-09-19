@@ -26,7 +26,6 @@ export const quincailleriePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Materials",
           heading: "Why hardware is what makes cabinets last",
           description:
             "A door opens thousands of times a year, and the hinge is what gives out first.",
@@ -42,12 +41,10 @@ export const quincailleriePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Hinges", "Slides", "Soft-close"],
           image: {
             src: "/images/generated/materials/material-hardware-hero-01.webp",
             alt: "Drawer slide and hinge inside a custom cabinet",
           },
-          caption: "The part nobody ever sees",
           imageSide: "right",
         },
       },

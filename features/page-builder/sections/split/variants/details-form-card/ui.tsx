@@ -16,6 +16,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Heading } from "@/components/elements/heading";
 import { useActionState } from "react";
+import { useLocale } from "next-intl";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import { AppLink as Link } from "@/components/AppLink";
 import { useFormStatus } from "react-dom";
@@ -36,17 +37,19 @@ const initialContactFormState: ContactFormState = {
 
 function SubmitButton({ label }: { label: string }) {
   const { pending } = useFormStatus();
+  const locale = useLocale();
 
   return (
     <Button type="submit" block disabled={pending}>
-      {pending ? "Envoi en cours..." : label}
+      {pending ? (locale === "en" ? "Sending…" : "Envoi en cours…") : label}
     </Button>
   );
 }
 
 function renderField(
   field: SplitDetailsFormCardProps["groups"][number]["fields"][number],
-  error?: string,
+  error: string | undefined,
+  selectPlaceholder: string,
 ) {
   const requiredClassName = field.required ? "required" : undefined;
 
@@ -73,7 +76,7 @@ function renderField(
       >
         <ComboboxInput
           id={field.name}
-          placeholder={field.placeholder ?? "Selectionner..."}
+          placeholder={field.placeholder ?? selectPlaceholder}
           aria-invalid={Boolean(error)}
           className={requiredClassName}
         />
@@ -106,6 +109,8 @@ function renderField(
 }
 
 export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
+  const locale = useLocale();
+  const selectPlaceholder = locale === "en" ? "Select…" : "Sélectionner…";
   const [formState, contactFormAction] = useActionState(
     submitContactLead,
     initialContactFormState,
@@ -227,7 +232,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
                           <Label htmlFor={field.name}>
                             {field.label}
                           </Label>
-                          {renderField(field, fieldError)}
+                          {renderField(field, fieldError, selectPlaceholder)}
                           {fieldError ? (
                             <p className="text-xs text-destructive">{fieldError}</p>
                           ) : null}

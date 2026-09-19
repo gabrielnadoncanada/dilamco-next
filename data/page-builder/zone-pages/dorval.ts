@@ -110,16 +110,6 @@ export const zoneDorvalPage: PageTemplateData = {
           heading: "Ce qu'il faut savoir avant de rénover à Dorval",
           rows: [
             {
-              label: "Délai de permis",
-              value:
-                "La Cité compte trente jours ouvrables une fois le dossier complet, conforme et payé.",
-            },
-            {
-              label: "Particularité locale",
-              value:
-                "Le conseil municipal approuve l'apparence des agrandissements et des maisons du chemin du Bord-du-Lac.",
-            },
-            {
               label: "Comment déposer la demande",
               value:
                 "Les demandes se déposent et se suivent en ligne, sur la plateforme de la Cité.",
@@ -144,7 +134,6 @@ export const zoneDorvalPage: PageTemplateData = {
             src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
             alt: "Sous-sol aménagé dans un bungalow de Dorval",
           },
-          note: "Sources : Cité de Dorval, Wikipédia, guide de quartier 2026. Vérifié le 2026-09-18.",
         },
       },
     },
@@ -165,7 +154,6 @@ export const zoneDorvalPage: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "Cuisine rénovée dans un bungalow de Dorval",
               },
-              badges: ["Sur mesure"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -177,7 +165,6 @@ export const zoneDorvalPage: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement résidentiel planifié à Dorval",
               },
-              badges: ["Approbation"],
               footerCtaLabel: "Voir l'agrandissement",
             },
             {
@@ -189,7 +176,6 @@ export const zoneDorvalPage: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol fini dans une maison de Dorval",
               },
-              badges: ["Conformité"],
               footerCtaLabel: "Voir le sous-sol",
             },
           ],
@@ -221,7 +207,7 @@ export const zoneDorvalPage: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions fréquentes",
+          heading: "Questions fréquentes à Dorval",
           items: [
             {
               q: "Combien de temps la Cité de Dorval prend-elle pour émettre un permis ?",

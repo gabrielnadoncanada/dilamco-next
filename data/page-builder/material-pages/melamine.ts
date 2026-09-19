@@ -23,7 +23,6 @@ export const melaminePage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Matériaux",
           heading: "La mélamine, le choix économique et lavable",
           description:
             "Le panneau arrive déjà fini, donc il n'y a aucune peinture à faire et la surface se lave.",
@@ -39,12 +38,10 @@ export const melaminePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Décor", "Entretien", "Budget"],
           image: {
             src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
             alt: "Détail d'un panneau mélamine et de son chant",
           },
-          caption: "Intérieurs de caissons et budgets cadrés",
           imageSide: "right",
         },
       },
@@ -103,10 +100,6 @@ export const melaminePage: PageTemplateData = {
             {
               q: "La mélamine jaunit-elle avec le temps ?",
               a: "Les blancs actuels tiennent, même près d'une fenêtre. Ce sont les décors très brillants des anciennes séries qui viraient, pas les panneaux d'aujourd'hui.",
-            },
-            {
-              q: "Peut-on percer sans écailler le décor ?",
-              a: "Oui, avec une mèche à pointe centrée et un ruban sur le trait. C'est une question d'outil, pas de panneau.",
             },
             {
               q: "Mélamine ou stratifié sur une porte ?",

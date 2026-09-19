@@ -21,7 +21,7 @@ export const PROJECT_VANITE_SUR_MESURE_LAVAL: ProjectData = {
       alt: "Vanité de salle de bain sur mesure à Laval",
     },
   ],
-  scope: ["Cadrage", "Design", "Fabrication sur mesure", "Installation"],
+  scope: [],
   constraints: [
     "Humidité et entretien",
     "Rangement fonctionnel dans un espace compact",
@@ -32,11 +32,7 @@ export const PROJECT_VANITE_SUR_MESURE_LAVAL: ProjectData = {
     "Choix de matériaux stables et résistants",
     "Pose avec ajustements fins et alignements propres",
   ],
-  results: [
-    "Rangement plus fonctionnel",
-    "Résistance accrue à l'humidité",
-    "Finition nette et durable",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF["salle-de-bain"],
     renovationHref: CORE_HREF.renovation,

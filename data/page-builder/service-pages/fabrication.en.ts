@@ -49,12 +49,11 @@ export const fabricationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Custom-built", "Quality control", "One contract"],
+          badges: ["Custom-built", "One contract"],
           image: {
             src: "/images/generated/services/service-fabrication-hero-01.webp",
             alt: "Technical drawings and material samples for a custom order",
           },
-          caption: "Checked on delivery, before install",
           imageSide: "right",
         },
       },
@@ -114,16 +113,6 @@ export const fabricationPageEn: PageTemplateData = {
                 "Cabinet boxes, doors, drawers and shelves that arrive already assembled.",
             },
             {
-              label: "Who handles it",
-              value:
-                "Our partner factory builds, and Dilamco picks the materials and inspects.",
-            },
-            {
-              label: "Inspection",
-              value:
-                "Every module is opened and measured before it comes into your home.",
-            },
-            {
               label: "Warranty",
               value:
                 "A part that does not match is reordered at our cost, not yours.",
@@ -148,7 +137,7 @@ export const fabricationPageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "Questions about production",
+          heading: "Questions about cabinet production",
           items: [
             {
               q: "Who actually produces your cabinets?",

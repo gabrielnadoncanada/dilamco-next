@@ -36,7 +36,6 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["RBQ 8306-0806-27", "Depuis 2004", "Contrat écrit"],
           heading: "Rénovation résidentielle, commerciale et armoires sur mesure",
           description:
             "Un entrepreneur général licencié rénove vos pièces et fournit vos armoires, sous le même contrat.",
@@ -72,7 +71,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
                 alt: "Cuisine shaker en U avec dosseret métro",
               },
-              badges: ["Multi-métiers"],
               footerCtaLabel: "Voir la cuisine",
             },
             {
@@ -84,7 +82,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
                 alt: "Salle de bain avec meuble-lavabo flottant et marbre",
               },
-              badges: ["Étanchéité"],
               footerCtaLabel: "Voir la salle de bain",
             },
             {
@@ -96,7 +93,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Sous-sol aménagé en salle de jeux",
               },
-              badges: ["Permis"],
               footerCtaLabel: "Voir le sous-sol",
             },
             {
@@ -108,7 +104,6 @@ export const page: PageTemplateData = {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Pose de plancher de bois franc dans une résidence",
               },
-              badges: ["Bois franc"],
               footerCtaLabel: "Voir le plancher",
             },
             {
@@ -120,7 +115,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement arrière d'une maison unifamiliale",
               },
-              badges: ["Ingénieur"],
               footerCtaLabel: "Voir l'agrandissement",
             },
             {
@@ -132,7 +126,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Pièce remise en état après un sinistre",
               },
-              badges: ["Assurances"],
               footerCtaLabel: "Voir l'après sinistre",
             },
             {
@@ -144,7 +137,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial livré prêt à occuper",
               },
-              badges: ["RBQ 1.3"],
               footerCtaLabel: "Voir le commercial",
             },
             {
@@ -156,7 +148,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/services/service-design-hero-01.webp",
                 alt: "Séance de design d'armoires sur mesure",
               },
-              badges: ["Sous-catégorie 12"],
               footerCtaLabel: "Voir le design",
             },
             {
@@ -168,7 +159,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/services/service-fabrication-hero-01.webp",
                 alt: "Caissons et façades d'armoires sur mesure",
               },
-              badges: ["Sur mesure"],
               footerCtaLabel: "Voir la production",
             },
             {
@@ -180,7 +170,6 @@ export const page: PageTemplateData = {
                 src: "/images/generated/services/service-installation-hero-01.webp",
                 alt: "Installation d'armoires sur mesure pendant un chantier",
               },
-              badges: ["Nos équipes"],
               footerCtaLabel: "Voir l'installation",
             },
           ],

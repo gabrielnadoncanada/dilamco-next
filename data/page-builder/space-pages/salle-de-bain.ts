@@ -20,7 +20,7 @@ export const salleDeBainPage: PageTemplateData = {
   service: {
     name: "Vanité de salle de bain sur mesure",
     description:
-      "Conception, fabrication contrôlée et installation de vanités de salle de bain sur mesure haut de gamme à Montréal, Laval, sur la Rive-Nord et la Rive-Sud.",
+      "Conception, production en usine partenaire et installation de vanités de salle de bain sur mesure haut de gamme à Montréal, Laval, sur la Rive-Nord et la Rive-Sud.",
     url: SITE.url + "/espaces/salle-de-bain",
     serviceType: "Vanité de salle de bain sur mesure",
   },
@@ -32,7 +32,6 @@ export const salleDeBainPage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
-          badges: ["Simple ou double", "Fini lavable"],
           heading: "Vanité de salle de bain sur mesure à Laval",
           description:
             "On dessine la vanité, on la fait produire, puis on la pose avec le reste de la pièce.",
@@ -52,7 +51,6 @@ export const salleDeBainPage: PageTemplateData = {
             src: "/images/generated/spaces/space-bath-project-01.webp",
             alt: "Salle de bain avec vanité double en chêne clair et douche vitrée",
           },
-          caption: "Vanité double et lingerie assortie",
         },
       },
     },
@@ -71,7 +69,6 @@ export const salleDeBainPage: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
                 alt: "Salle de bain en marbre avec meuble-lavabo flottant",
               },
-              caption: "Meuble-lavabo flottant, marbre",
             },
             {
               kind: "image",
@@ -80,12 +77,11 @@ export const salleDeBainPage: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Douche à l'italienne avec paroi de verre",
               },
-              caption: "Douche à l'italienne, verre",
             },
             {
               kind: "stat",
-              value: "9 à 15 sem.",
-              label: "Le temps d'attente avant la pose de la vanité",
+              value: "15 000 $",
+              label: "Le prix de départ d'une salle de bain complète",
             },
             {
               kind: "image",
@@ -93,7 +89,6 @@ export const salleDeBainPage: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
                 alt: "Vanité avec miroir à éclairage DEL et comptoir de quartz",
               },
-              caption: "Miroir DEL et comptoir quartz",
             },
             {
               kind: "quote",
@@ -107,7 +102,7 @@ export const salleDeBainPage: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-pierre-claire-01.webp",
                 alt: "Douche habillée de pierre claire dans une salle de bain rénovée",
               },
-              caption: "Pierre claire, Ouest-de-l'Île",
+              caption: "Ouest-de-l'Île",
             },
           ],
         },
@@ -129,7 +124,7 @@ export const salleDeBainPage: PageTemplateData = {
             {
               label: "Prix indicatif",
               value:
-                "Le prix dépend de la largeur, du nombre de lavabos et du rangement voulu.",
+                "Refaire la pièce au complet, vanité comprise, va de 15 000 $ à 35 000 $.",
             },
             {
               label: "Matériaux",
@@ -195,7 +190,7 @@ export const salleDeBainPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre salle de bain",
           intro:
-            "Visite gratuite. Vous repartez avec une soumission poste par poste.",
+            "Visite gratuite. Vous repartez avec une soumission détaillée ligne par ligne.",
           actions: [
             {
               label: "Demander une soumission",

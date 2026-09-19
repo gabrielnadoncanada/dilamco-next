@@ -25,27 +25,16 @@ export const PROJECT_CUISINE_SUR_MESURE_REPENTIGNY_EN: ProjectData = {
       alt: "White raised-panel kitchen cabinets and ceramic backsplash in Repentigny",
     },
   ],
-  scope: [
-    "Scoping and validation of needs",
-    "Classic design and planning",
-    "Custom fabrication of cabinets and island",
-    "Installation and adjustments",
-  ],
+  scope: [],
   constraints: [
-    "Classic raised-panel style with crown moulding",
     "Integrating a central island with sink",
-    "Visible alignments on a large cabinet wall",
   ],
   solution: [
     "White raised-panel cabinets with crown moulding",
     "Matching central island offering storage and work surface",
     "Elongated ceramic backsplash and veined quartz countertops",
   ],
-  results: [
-    "Timeless, bright classic kitchen",
-    "Functional island at the heart of the room",
-    "Optimized storage and careful finish",
-  ],
+  results: [],
   requiredLinks: {
     spaceHref: SPACE_HREF.cuisine,
     renovationHref: CORE_HREF.renovation,
