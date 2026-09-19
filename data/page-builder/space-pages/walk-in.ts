@@ -45,6 +45,11 @@ export const walkInPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-walkin-hero-01.webp",
+            alt: "Walk-in sur mesure avec penderie sur deux hauteurs",
+          },
+          caption: "Penderie sur deux hauteurs",
         },
       },
     },
@@ -60,10 +65,10 @@ export const walkInPage: PageTemplateData = {
               kind: "image",
               span: "wide",
               image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Walk-in sur mesure avec penderie sur deux hauteurs",
+                src: "/images/generated/spaces/espaces-card-walkin-01.webp",
+                alt: "Walk-in en chêne clair avec tiroirs, tablettes et plateau à bijoux",
               },
-              caption: "Penderie sur deux hauteurs",
+              caption: "Tiroirs et plateau à bijoux",
             },
             {
               kind: "image",

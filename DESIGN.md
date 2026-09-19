@@ -117,6 +117,9 @@ Chaque famille a sa composition (détail dans `docs/redaction-web.md › Recette
 ### Logo
 Wordmark SVG plein cadre (158 × 31) : hauteur 20 px sur mobile, 22 px dès `md`, 24 px au pied de page. Jamais 32 px : les capitales du wordmark font toute la hauteur, il écraserait le menu.
 
+### Hero centré avec photo
+`hero.centered` accepte `image` + `caption` : titre centré, puis photo pleine largeur dans un cadre `rounded-panel` (4/3 mobile, 16/9 tablette, 21/9 desktop), pastille de légende en bas à gauche. C'est le hero des pages espaces ; sans `image`, le bloc reste le hero texte des hubs et du processus.
+
 ### Frise d'étapes (`process.horizontal-steps-cards`)
 Rail continu : horizontal avec jalons numérotés (cercle vert 40 px, `ring` fond) dès `lg`, vertical à gauche en dessous. Titres alignés (`content-start`, sinon la grille étire les pistes).
 

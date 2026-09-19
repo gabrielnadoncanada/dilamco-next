@@ -45,6 +45,11 @@ export const commercialPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-commercial-hero-01.webp",
+            alt: "Office refitted in a downtown Montréal building",
+          },
+          caption: "Office refit, downtown",
         },
       },
     },
@@ -60,10 +65,10 @@ export const commercialPageEn: PageTemplateData = {
               kind: "image",
               span: "wide",
               image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Office refitted in a downtown Montréal building",
+                src: "/images/generated/spaces/espaces-featured-commercial-project-01.webp",
+                alt: "Oak reception counter and storage in a commercial space",
               },
-              caption: "Office refit, downtown",
+              caption: "Oak reception counter",
             },
             {
               kind: "image",

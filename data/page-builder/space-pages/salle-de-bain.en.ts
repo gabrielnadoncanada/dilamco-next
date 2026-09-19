@@ -48,6 +48,11 @@ export const salleDeBainPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-bath-project-01.webp",
+            alt: "Bathroom with a light oak double vanity and glass shower",
+          },
+          caption: "Double vanity and matching linen tower",
         },
       },
     },

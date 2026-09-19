@@ -46,6 +46,11 @@ export const cuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+            alt: "Cuisine en U avec armoires shaker blanches et dosseret métro",
+          },
+          caption: "Armoires shaker, dosseret métro",
         },
       },
     },

@@ -45,6 +45,11 @@ export const commercialPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-commercial-hero-01.webp",
+            alt: "Bureau réaménagé dans un immeuble du centre-ville de Montréal",
+          },
+          caption: "Bureau réaménagé, centre-ville",
         },
       },
     },
@@ -60,10 +65,10 @@ export const commercialPage: PageTemplateData = {
               kind: "image",
               span: "wide",
               image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Bureau réaménagé dans un immeuble du centre-ville de Montréal",
+                src: "/images/generated/spaces/espaces-featured-commercial-project-01.webp",
+                alt: "Comptoir d'accueil et rangement en chêne dans un espace commercial",
               },
-              caption: "Bureau réaménagé, centre-ville",
+              caption: "Comptoir d'accueil en chêne",
             },
             {
               kind: "image",

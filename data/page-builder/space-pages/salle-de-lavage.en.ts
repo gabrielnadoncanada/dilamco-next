@@ -48,6 +48,11 @@ export const salleDeLavagePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-laundry-hero-01.webp",
+            alt: "Laundry room with a continuous folding counter above the appliances",
+          },
+          caption: "Continuous folding counter",
         },
       },
     },
@@ -63,10 +68,10 @@ export const salleDeLavagePageEn: PageTemplateData = {
               kind: "image",
               span: "wide",
               image: {
-                src: "/images/generated/spaces/space-laundry-hero-01.webp",
-                alt: "Laundry room with a continuous folding counter above the appliances",
+                src: "/images/generated/spaces/espaces-card-laundry-01.webp",
+                alt: "White laundry room with raised appliances and a broom cabinet",
               },
-              caption: "Continuous folding counter",
+              caption: "Raised appliances, broom cabinet",
             },
             {
               kind: "image",

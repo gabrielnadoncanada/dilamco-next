@@ -45,6 +45,11 @@ export const walkInPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-walkin-hero-01.webp",
+            alt: "Custom walk-in closet with double-height hanging rails",
+          },
+          caption: "Double-height hanging rails",
         },
       },
     },
@@ -60,10 +65,10 @@ export const walkInPageEn: PageTemplateData = {
               kind: "image",
               span: "wide",
               image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Custom walk-in closet with double-height hanging rails",
+                src: "/images/generated/spaces/espaces-card-walkin-01.webp",
+                alt: "Light oak walk-in with drawers, shelves and a jewellery tray",
               },
-              caption: "Double-height hanging rails",
+              caption: "Drawers and jewellery tray",
             },
             {
               kind: "image",

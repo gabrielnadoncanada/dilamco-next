@@ -48,6 +48,11 @@ export const salleDeLavagePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-laundry-hero-01.webp",
+            alt: "Salle de lavage avec comptoir de pliage continu au-dessus des appareils",
+          },
+          caption: "Comptoir de pliage continu",
         },
       },
     },
@@ -63,10 +68,10 @@ export const salleDeLavagePage: PageTemplateData = {
               kind: "image",
               span: "wide",
               image: {
-                src: "/images/generated/spaces/space-laundry-hero-01.webp",
-                alt: "Salle de lavage avec comptoir de pliage continu au-dessus des appareils",
+                src: "/images/generated/spaces/espaces-card-laundry-01.webp",
+                alt: "Salle de lavage blanche avec appareils surélevés et armoire à balais",
               },
-              caption: "Comptoir de pliage continu",
+              caption: "Appareils surélevés, armoire à balais",
             },
             {
               kind: "image",

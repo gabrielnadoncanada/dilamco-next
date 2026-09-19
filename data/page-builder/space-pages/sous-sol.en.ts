@@ -45,6 +45,11 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+            alt: "Basement finished as a family room with built-in storage",
+          },
+          caption: "Basement finished as a family room",
         },
       },
     },

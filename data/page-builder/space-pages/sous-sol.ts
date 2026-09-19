@@ -45,6 +45,11 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+            alt: "Sous-sol aménagé en salon familial avec rangements intégrés",
+          },
+          caption: "Sous-sol aménagé en salon familial",
         },
       },
     },

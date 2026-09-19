@@ -45,6 +45,11 @@ export const cuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+            alt: "U-shaped kitchen with white shaker cabinets and subway tile backsplash",
+          },
+          caption: "Shaker cabinets, subway backsplash",
         },
       },
     },

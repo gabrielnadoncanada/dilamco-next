@@ -13,5 +13,10 @@
       "href": "/realisations",
       "variant": "outline"
     }
-  ]
+  ],
+  "image": {
+    "src": "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+    "alt": "Cuisine en U avec armoires shaker et dosseret métro"
+  },
+  "caption": "Cuisine en U, Ouest-de-l'Île"
 }

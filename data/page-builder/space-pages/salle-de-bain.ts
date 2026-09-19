@@ -48,6 +48,11 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-bath-project-01.webp",
+            alt: "Salle de bain avec vanité double en chêne clair et douche vitrée",
+          },
+          caption: "Vanité double et lingerie assortie",
         },
       },
     },
