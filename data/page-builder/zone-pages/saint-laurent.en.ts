@@ -1,0 +1,265 @@
+import type { PageTemplateData } from "@/features/page-builder";
+import { SITE } from "@/seo/schema/site";
+
+export const zoneSaintLaurentPageEn: PageTemplateData = {
+  template: "services",
+  metadata: {
+    title: "General Contractor in Saint-Laurent — Renovation",
+    description:
+      "RBQ-licensed general contractor in Saint-Laurent: post-war plex renovations, Bois-Franc condos, borough permits handled, one accountable lead.",
+    path: "/zones/saint-laurent",
+    ogAlt: "Residential renovation in Saint-Laurent by Dilamco",
+  },
+  breadcrumbs: [
+    { name: "Home", url: SITE.url + "/" },
+    { name: "Service areas", url: SITE.url + "/zones" },
+    { name: "Saint-Laurent", url: SITE.url + "/zones/saint-laurent" },
+  ],
+  service: {
+    name: "General contractor in Saint-Laurent",
+    description:
+      "Residential renovation in Saint-Laurent: post-war duplexes and plexes, bungalows, newer Bois-Franc and Nouveau-Saint-Laurent condos, borough permits and full coordination.",
+    url: SITE.url + "/zones/saint-laurent",
+    serviceType: "Residential renovation",
+    areaServed: [
+      "Saint-Laurent",
+      "Bois-Franc",
+      "Nouveau-Saint-Laurent",
+      "Norgate",
+      "Côte-Vertu",
+      "Chameran",
+      "Old Saint-Laurent",
+    ],
+  },
+  blocks: [
+    {
+      id: "hero",
+      content: {
+        type: "hero",
+        variant: "zone",
+        props: {
+          eyebrow: "General contractor in",
+          heading: "Saint-Laurent",
+          description:
+            "Renovations for Saint-Laurent plexes, bungalows and condos, from a licensed West Island general contractor.",
+          actions: [
+            {
+              label: "Request a quote",
+              href: "/contact",
+              variant: "primary",
+            },
+            {
+              label: "See our projects",
+              href: "/projets",
+              variant: "ghost",
+            },
+          ],
+          image: {
+            src: "/images/generated/renovation/renovation-bath-hero-01.webp",
+            alt: "Bathroom rebuilt in a Saint-Laurent plex",
+          },
+          facts: [
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro, twenty minutes on Highway 40",
+            },
+            {
+              label: "Where to apply for the permit",
+              value: "Permits division, 777 Marcel-Laurin Boulevard",
+            },
+            {
+              label: "Type of homes",
+              value: "Post-war plexes and condos built since 1990",
+            },
+            {
+              label: "First reply",
+              value: "We come back to you within 24 to 48 business hours",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "fiche",
+      content: {
+        type: "split",
+        variant: "fact-sheet",
+        props: {
+          heading: "Saint-Laurent homes, in brief",
+          intro:
+            "Norgate went up in 1949 and Nouveau-Saint-Laurent in the early 1990s.",
+          rows: [
+            {
+              label: "Age of the neighbourhoods",
+              value:
+                "The plexes date from 1949 to 1955, the Bois-Franc condos from the 1990s.",
+            },
+            {
+              label: "How to file the application",
+              value:
+                "Online, with a City digital services account, or at the borough counter.",
+            },
+            {
+              label: "What is different here",
+              value:
+                "In a condo, the board controls access, the elevator, the common areas and the work hours.",
+            },
+            {
+              label: "What to watch for",
+              value:
+                "Plexes share plumbing stacks and party walls between the units.",
+            },
+            {
+              label: "Common projects",
+              value:
+                "Redoing a bathroom, opening a kitchen, soundproofing between two units.",
+            },
+            {
+              label: "From our base",
+              value: "Highway 40 eastbound, Côte-Vertu or Marcel-Laurin exit.",
+            },
+          ],
+          image: {
+            src: "/images/generated/spaces/espaces-card-bath-01.webp",
+            alt: "Renovated bathroom on the upper floor of a local duplex",
+          },
+          note: "Sources: City of Montréal, 311 bank, borough history records. Verified 2026-09-18.",
+        },
+      },
+    },
+    {
+      id: "services",
+      content: {
+        type: "grid",
+        variant: "image-cards-slider",
+        props: {
+          heading: "Our services in Saint-Laurent",
+          items: [
+            {
+              title: "Bathroom",
+              href: "/services/renovation/salle-de-bain",
+              description:
+                "We locate the plex's shared plumbing stack before moving any drain",
+              image: {
+                src: "/images/generated/spaces/space-bath-project-02.webp",
+                alt: "Bathroom rebuilt in a Norgate apartment",
+              },
+              badges: ["Plex"],
+              footerCtaLabel: "See bathrooms",
+            },
+            {
+              title: "Kitchen",
+              href: "/services/renovation/cuisine",
+              description:
+                "We check the structure before opening a bungalow's closed kitchen",
+              image: {
+                src: "/images/generated/spaces/space-cuisine-project-01.webp",
+                alt: "Open kitchen in a bungalow near Côte-Vertu",
+              },
+              badges: ["Structure"],
+              footerCtaLabel: "See kitchens",
+            },
+            {
+              title: "Basement",
+              href: "/services/renovation/sous-sol",
+              description:
+                "We measure the headroom and the exit route under a duplex",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Basement turned into living space under a duplex",
+              },
+              badges: ["Code"],
+              footerCtaLabel: "See basements",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "voisins",
+      content: {
+        type: "grid",
+        variant: "link-cards-compact",
+        props: {
+          heading: "Also served near Saint-Laurent",
+          columns: "2",
+          items: [
+            {
+              title: "Dorval",
+              href: "/zones/dorval",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Dollard-des-Ormeaux",
+              href: "/zones/dollard-des-ormeaux",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Pierrefonds-Roxboro",
+              href: "/zones/pierrefonds-roxboro",
+              ctaLabel: "See the area",
+            },
+            {
+              title: "Laval",
+              href: "/zones/laval",
+              ctaLabel: "See the area",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "faq",
+      content: {
+        type: "faq",
+        variant: "accordion",
+        props: {
+          heading: "Saint-Laurent questions we get",
+          items: [
+            {
+              q: "How do you file a permit application in Saint-Laurent?",
+              a: "Online, with a City digital services account, or at the counter of the permits and inspections division, 777 Marcel-Laurin Boulevard. We build the file and we follow it through.",
+            },
+            {
+              q: "Do you work on the Norgate plexes?",
+              a: "Yes. The neighbourhood was built from 1949 into the early 1950s. We check the electrical service, the plumbing stacks and the sound separation between units before drawing the project.",
+            },
+            {
+              q: "Can a Bois-Franc condo be renovated?",
+              a: "Yes, with extra preparation. The board controls access, the elevator, protection of common areas and the work hours. Touching a common portion requires written authorization first.",
+            },
+            {
+              q: "Can I add a unit to a Saint-Laurent duplex?",
+              a: "It depends on the zoning at your address. The number of units, the permitted use and some changes visible from the street are all governed. We verify that before quoting, never after demolition.",
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "cta",
+      content: {
+        type: "cta",
+        variant: "band-split-actions",
+        props: {
+          heading: "A plex or condo to renovate in Saint-Laurent?",
+          intro:
+            "Give us the address, the floor and the type of building. We come and look.",
+          actions: [
+            {
+              label: "Request a quote",
+              href: "/contact",
+              variant: "primary",
+            },
+            {
+              label: "See our services",
+              href: "/services/renovation",
+              variant: "ghost",
+            },
+          ],
+          note: "Licensed general contractor · based at 18625 Larocque Street · (514) 820-0773",
+        },
+      },
+    },
+  ],
+};

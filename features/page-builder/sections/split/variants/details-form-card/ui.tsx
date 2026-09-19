@@ -114,19 +114,19 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
     props.formAction === "/contact/" && (props.formMethod ?? "post") === "post";
 
   return (
-    <div className="grid gap-y-8 lg:grid-cols-12 lg:items-start lg:gap-x-8 xl:gap-x-12">
+    <div className="grid gap-y-8 text-left lg:grid-cols-12 lg:items-start lg:gap-x-8 xl:gap-x-12">
       <div className="contents lg:col-span-5 lg:block lg:space-y-8">
         <div className="order-1">
-          <Heading as="h1" variant="h2">{props.heading}</Heading>
+          <Heading as="h1" variant="h1">{props.heading}</Heading>
 
-          <p className="mt-3 text-sm text-muted-foreground">{props.intro}</p>
+          <p className="text-lead mt-4">{props.intro}</p>
         </div>
 
         <div className="order-3 lg:order-none">
-          <Card>
+          <Card className="border-0 bg-primary-soft/60">
             {props.detailsTitle ? (
               <CardHeader>
-                <CardTitle className="text-base">{props.detailsTitle}</CardTitle>
+                <CardTitle className="text-xl">{props.detailsTitle}</CardTitle>
                 {props.detailsIntro ? (
                   <p className="text-sm text-muted-foreground">{props.detailsIntro}</p>
                 ) : null}
@@ -138,9 +138,9 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
 
                 if (detail.href) {
                   return (
-                    <Link key={`${detail.icon}-${detail.title}`} href={detail.href} target={detail.target} className="flex gap-3">
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border bg-background">
-                        <Icon className="size-4" />
+                    <Link key={`${detail.icon}-${detail.title}`} href={detail.href} target={detail.target} className="group flex gap-3 rounded-control focus-ring">
+                      <div className="icon-pill size-10 bg-primary text-primary-foreground">
+                        <Icon className="size-4" strokeWidth={2} />
                       </div>
                       <div>
                         <p className="font-medium">{detail.title}</p>
@@ -153,8 +153,8 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
                 }
                 return (
                   <div key={`${detail.icon}-${detail.title}`} className="flex gap-3">
-                    <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border bg-background">
-                      <Icon className="size-4" />
+                    <div className="icon-pill size-10 bg-primary text-primary-foreground">
+                      <Icon className="size-4" strokeWidth={2} />
                     </div>
                     <div>
                       <p className="font-medium">{detail.title}</p>
@@ -167,7 +167,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
               })}
 
               {props.note ? (
-                <p className="border-t pt-4 text-sm text-muted-foreground">
+                <p className="border-t border-primary/10 pt-4 text-xs leading-relaxed text-muted-foreground">
                   {props.note}
                 </p>
               ) : null}
@@ -177,16 +177,16 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
       </div>
 
       <div className="order-2 lg:col-[6/13] lg:order-none">
-        <Card>
+        <Card className="rounded-panel py-7 sm:py-9">
           {props.formTitle ? (
-            <CardHeader>
-              <CardTitle>{props.formTitle}</CardTitle>
+            <CardHeader className="px-5 sm:px-9">
+              <CardTitle className="text-2xl">{props.formTitle}</CardTitle>
               {props.formIntro ? (
                 <p className="text-sm text-muted-foreground">{props.formIntro}</p>
               ) : null}
             </CardHeader>
           ) : null}
-          <CardContent>
+          <CardContent className="px-5 sm:px-9">
             <form
               action={isContactSubmission ? contactFormAction : props.formAction}
               method={isContactSubmission ? undefined : (props.formMethod ?? "post")}
@@ -205,7 +205,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
 
               {props.groups.map((group) => (
                 <fieldset key={group.legend} className="space-y-4">
-                  <legend className="mb-4 text-lg font-semibold">
+                  <legend className="mb-4 font-display text-lg font-semibold tracking-[-0.01em]">
                     {group.legend}
                   </legend>
 

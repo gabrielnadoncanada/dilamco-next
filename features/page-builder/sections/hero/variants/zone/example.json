@@ -1,0 +1,19 @@
+{
+  "eyebrow": "Entrepreneur général à",
+  "heading": "Kirkland",
+  "description": "Grands terrains, maisons détachées des années 1970 et propriétaires qui agrandissent plutôt que de déménager.",
+  "actions": [
+    { "label": "Soumission gratuite", "href": "/contact", "variant": "primary" },
+    { "label": "Voir nos réalisations", "href": "/projets", "variant": "ghost" }
+  ],
+  "image": {
+    "src": "/images/generated/renovation/renovation-extension-hero-01.webp",
+    "alt": "Agrandissement d'une maison à Kirkland"
+  },
+  "facts": [
+    { "label": "Notre base", "value": "Pierrefonds-Roxboro · 15 min" },
+    { "label": "Permis", "value": "Aménagement urbain, 17200 boul. Hymus" },
+    { "label": "Bâti", "value": "Unifamiliales 1965–1985, grands terrains" },
+    { "label": "Premier retour", "value": "24 à 48 h ouvrables" }
+  ]
+}

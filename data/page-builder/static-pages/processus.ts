@@ -5,11 +5,11 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Notre processus, du design à l'installation",
+    title: "Processus : le déroulement d'un projet de rénovation",
     description:
-      "Processus Dilamco : cadrage, design, fabrication, installation et, selon le projet, coordination de rénovation clé en main.",
+      "De l'estimation gratuite à la garantie : visite, soumission détaillée, contrat écrit, permis, chantier coordonné, liste de déficiences et livraison.",
     path: "/processus",
-    ogAlt: "Processus Dilamco",
+    ogAlt: "Étapes d'un projet de rénovation mené par Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -17,12 +17,18 @@ export const page: PageTemplateData = {
   ],
   extraJsonLd: [
     serviceJsonLd({
-      name: "Processus Dilamco",
+      name: "Gestion de projet de rénovation résidentielle",
       description:
-        "Processus structuré pour projets sur mesure : cadrage, design, sélections, fabrication, installation et coordination selon la portée.",
+        "Déroulement d'un projet avec un entrepreneur général : visite et estimation, soumission détaillée, contrat écrit avec échéancier, permis municipal, chantier coordonné, liste de déficiences, livraison et garantie.",
       url: SITE.url + "/processus",
-      serviceType: "Processus de projet sur mesure",
-      areaServed: ["Montréal", "Laval", "Rive-Sud", "Québec"],
+      serviceType: "Gestion de projet de rénovation",
+      areaServed: [
+        "Ouest-de-l'Île",
+        "Montréal",
+        "Laval",
+        "Rive-Sud",
+        "Vaudreuil-Soulanges",
+      ],
     }),
   ],
   blocks: [
@@ -31,88 +37,22 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Processus",
-          heading: "Un processus clair, du cadrage à l'installation",
+          badges: ["Contrat écrit", "Permis"],
+          heading: "Le déroulement d'un projet de rénovation",
           description:
-            "Le processus Dilamco est une séquence définie — design, validation, fabrication, installation — pensée pour réduire les zones grises, valider les décisions au bon moment et protéger la qualité finale de chaque projet.",
+            "Cinq étapes. Chacune se termine par un document signé, un permis obtenu ou une inspection réussie.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
               label: "Voir nos services",
-              href: "/services",
+              href: "/services/renovation",
               variant: "ghost",
-            },
-          ],
-          badges: ["Design", "Fabrication", "Installation", "Coordination"],
-          image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Processus Dilamco pour un projet sur mesure",
-          },
-          caption:
-            "Une seule logique de travail pour mieux cadrer les décisions et l'exécution",
-        },
-      },
-    },
-    {
-      id: "benefits",
-      content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
-        props: {
-          heading: "Ce que le processus protège concrètement",
-          intro:
-            "Le but n'est pas d'ajouter des étapes. Le but est de garder le projet lisible, exécutable et cohérent du début à la fin.",
-          columns: "2",
-          items: [
-            {
-              title: "Portée plus claire",
-              description:
-                "On clarifie ce qui est inclus, ce qui doit être validé et ce qui peut ralentir le projet.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Contraintes identifiées plus tôt",
-                "Priorités mieux classées",
-                "Moins de zones grises en cours de route",
-              ],
-            },
-            {
-              title: "Choix mieux verrouillés",
-              description:
-                "Les décisions structurantes se prennent avant la fabrication, pas en réaction.",
-              icon: "doorOpen",
-              bullets: [
-                "Plans et configuration validés",
-                "Matériaux et finis confirmés",
-                "Arbitrages faits avant production",
-              ],
-            },
-            {
-              title: "Fabrication plus stable",
-              description:
-                "Une production bien lancée dépend d'informations stables et d'un cadrage propre.",
-              icon: "package2",
-              bullets: [
-                "Moins de reprises évitables",
-                "Exécution plus prévisible",
-                "Meilleure cohérence entre pièces",
-              ],
-            },
-            {
-              title: "Installation mieux contrôlée",
-              description:
-                "La pose se passe mieux quand la séquence du projet a été préparée correctement.",
-              icon: "wrench",
-              bullets: [
-                "Coordination plus nette sur place",
-                "Ajustements plus précis",
-                "Inspection finale plus simple",
-              ],
             },
           ],
         },
@@ -120,160 +60,85 @@ export const page: PageTemplateData = {
     },
     {
       id: "steps",
-      frame: { surface: "muted" },
       content: {
         type: "process",
-        variant: "split-cards",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Les grandes étapes d'un projet Dilamco",
-          description:
-            "La portée varie selon le projet, mais la logique reste la même : cadrer, valider, produire, installer.",
+          heading: "Les cinq étapes, toujours dans cet ordre",
           steps: [
             {
               number: "1",
-              title: "Cadrage initial",
+              title: "Visite chez vous",
               description:
-                "On comprend l'espace, la portée, les contraintes du site, le niveau d'exigence et l'échéance visée.",
+                "Nous prenons les mesures et donnons une première fourchette de prix.",
             },
             {
               number: "2",
-              title: "Design et configuration",
+              title: "Soumission détaillée",
               description:
-                "On structure l'implantation, les fonctions, les dimensions et les choix qui influencent le résultat final.",
+                "Chaque travail est chiffré, avec les quantités et ce qui reste exclu.",
             },
             {
               number: "3",
-              title: "Sélection des matériaux",
+              title: "Signature et permis",
               description:
-                "On confirme panneaux, quincaillerie, finis et détails selon l'usage réel et la durabilité recherchée.",
+                "Vous signez l'échéancier et le calendrier de paiements. Nous déposons le permis.",
             },
             {
               number: "4",
-              title: "Validation avant production",
+              title: "Travaux",
               description:
-                "Les décisions essentielles sont fermées avant de lancer la fabrication pour réduire les reprises.",
+                "Chaque corps de métier entre après l'inspection du précédent.",
             },
             {
               number: "5",
-              title: "Fabrication",
+              title: "Fin des travaux",
               description:
-                "La production sur mesure démarre avec une base stable, ce qui protège la constance et la précision.",
-            },
-            {
-              number: "6",
-              title: "Installation et finition",
-              description:
-                "La pose, les ajustements et l'inspection finale servent à livrer un résultat propre et cohérent.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir le service design",
-              href: "/services/design",
-              variant: "ghost",
-            },
-            {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
+                "Nous faisons le tour, notons les corrections, puis vous payez le solde.",
             },
           ],
         },
       },
     },
     {
-      id: "inputs",
+      id: "documents",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qu'il faut pour avancer plus vite",
+          heading: "Ce que vous recevez",
           intro:
-            "Un bon départ accélère surtout les validations. Quelques informations simples suffisent pour cadrer la discussion correctement.",
-          badges: ["Secteur", "Type d'espace", "Portée", "Priorités"],
-          cardTitle: "Informations utiles dès le premier échange",
-          items: [
-            "Le type d'espace et la localisation du projet",
-            "La portée réelle : design seul, sur mesure, rénovation ou coordination",
-            "Les priorités : délai, rangement, durabilité, esthétique ou budget",
-            "Des photos, mesures de base ou inspirations si disponibles",
-            "Les contraintes du bâtiment ou du chantier quand elles existent",
-          ],
-          actions: [
+            "Six documents que vous devriez exiger de n'importe quel entrepreneur.",
+          rows: [
             {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
+              label: "La soumission",
+              value: "Elle détaille les travaux, les matériaux et les exclusions avant la signature",
             },
             {
-              label: "Voir nos projets",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "resources",
-      content: {
-        type: "grid",
-        variant: "link-cards-compact",
-        props: {
-          heading: "Pages utiles pour approfondir",
-          intro:
-            "Selon l'étape où vous en êtes, ces pages aident à mieux comprendre la méthode, les services et les choix techniques.",
-          columns: "3",
-          items: [
-            {
-              title: "Service design",
-              description:
-                "Pour comprendre comment on structure les choix avant fabrication.",
-              href: "/services/design",
-              badges: ["Plans", "Configuration"],
-              ctaLabel: "Voir le design",
+              label: "Le contrat",
+              value: "Il fixe le prix, les modalités de paiement et la garantie des travaux",
             },
             {
-              title: "Service fabrication",
-              description:
-                "Pour voir comment la production s'insère dans le projet global.",
-              href: "/services/fabrication",
-              badges: ["Production", "Sur mesure"],
-              ctaLabel: "Voir la fabrication",
+              label: "L'échéancier",
+              value: "Il donne les dates de début et de fin, et l'ordre des corps de métier",
             },
             {
-              title: "Service installation",
-              description:
-                "Pour comprendre la pose, les ajustements et la finition sur place.",
-              href: "/services/installation",
-              badges: ["Pose", "Ajustements"],
-              ctaLabel: "Voir l'installation",
+              label: "Les changements en cours de route",
+              value: "Chaque changement est chiffré et accepté par écrit avant d'être exécuté",
             },
             {
-              title: "Rénovation clé en main",
-              description:
-                "Quand le projet demande de coordonner plus que les armoires.",
-              href: "/services/renovation",
-              badges: ["Coordination", "Travaux connexes"],
-              ctaLabel: "Voir la rénovation",
+              label: "Le permis",
+              value: "Vous recevez une copie du permis, émis au nom du propriétaire",
             },
             {
-              title: "Matériaux",
-              description:
-                "Pour comparer les options et comprendre ce qui change vraiment la durabilité.",
-              href: "/materiaux",
-              badges: ["Panneaux", "Quincaillerie"],
-              ctaLabel: "Voir les matériaux",
-            },
-            {
-              title: "Projets",
-              description:
-                "Pour voir des réalisations concrètes et le niveau de finition attendu.",
-              href: "/projets",
-              badges: ["Références", "Exécution"],
-              ctaLabel: "Voir les projets",
+              label: "La liste des corrections",
+              value: "Nous la dressons avec vous à la fin, et tout est corrigé avant le solde",
             },
           ],
+          image: {
+            src: "/images/process3.jpg",
+            alt: "Plans et documents de chantier sur une table de travail",
+          },
         },
       },
     },
@@ -283,25 +148,23 @@ export const page: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - processus",
-          intro:
-            "Réponses rapides aux questions qui reviennent le plus souvent avant de démarrer.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Tous les projets suivent-ils exactement les mêmes étapes ?",
-              a: "La logique reste similaire, mais la portée change selon qu'il s'agit d'un mandat de design, d'un projet sur mesure complet ou d'une rénovation avec coordination.",
+              q: "L'estimation est-elle vraiment gratuite ?",
+              a: "Oui. La visite et la première estimation ne sont pas facturées et ne vous engagent à rien. Si des plans d'architecte ou un ingénieur sont nécessaires, ils sont chiffrés à part et approuvés avant.",
             },
             {
-              q: "Quand la fabrication commence-t-elle ?",
-              a: "Une fois que les décisions structurantes sont validées : configuration, dimensions, matériaux, finis et éléments qui influencent directement la production.",
+              q: "Qui s'occupe de la demande de permis ?",
+              a: "Nous. Nous vérifions les exigences de votre ville, préparons les plans, déposons la demande et suivons le dossier. Le permis reste émis au nom du propriétaire.",
             },
             {
-              q: "Faites-vous aussi l'installation ?",
-              a: "Oui. L'installation, les ajustements sur place et l'inspection finale font partie intégrante de notre logique d'exécution quand le mandat le prévoit. Confier la pose à la même équipe que la conception et la fabrication garantit la cohérence du résultat : mêmes standards, mêmes tolérances, et une responsabilité unique du plan jusqu'à la finition.",
+              q: "Comment les paiements sont-ils répartis ?",
+              a: "Un dépôt à la signature, puis des versements liés à l'avancement réel des travaux plutôt qu'à des dates fixes. Le dernier versement est dû une fois les corrections faites.",
             },
             {
-              q: "Le processus fonctionne-t-il aussi en condo ou dans des contextes contraints ?",
-              a: "Oui. Le processus sert justement à identifier tôt les contraintes d'accès (ascenseur, stationnement), de calendrier (horaires de travaux autorisés) ou de coordination propres au bâtiment, pour mieux les intégrer à la planification. Une fois ces contraintes cadrées, un projet en condo ou en espace restreint se déroule avec la même rigueur qu'ailleurs.",
+              q: "Que se passe-t-il si on découvre un problème caché ?",
+              a: "On arrête, on documente, on vous explique les options et on chiffre le correctif par écrit. Rien n'est exécuté avant votre accord.",
             },
           ],
         },
@@ -313,22 +176,22 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin de cadrer un projet proprement avant d'avancer ?",
+          heading: "On commence par une visite",
           intro:
-            "On vous aide à clarifier la portée, les priorités et la meilleure séquence pour lancer un projet sur mesure avec moins d'imprévus.",
+            "Décrivez-nous le projet. Vous repartez avec une soumission détaillée, pas un chiffre donné au téléphone.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
               label: "Voir nos services",
-              href: "/services",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval et Rive-Sud",
+          note: "Licence RBQ 8306-0806-27 • Ouest-de-l'Île, Montréal, Laval, Rive-Sud et Vaudreuil-Soulanges",
         },
       },
     },

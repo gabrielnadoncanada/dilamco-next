@@ -4,22 +4,22 @@ import { SITE } from "@/seo/schema/site";
 export const commercialPage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Armoires commerciales sur mesure haut de gamme",
+    title: "Construction et aménagement commercial à Montréal",
     description:
-      "Armoires commerciales sur mesure : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
+      "Construction et aménagement commercial à Montréal : bureaux, commerces, améliorations locatives et multi-logements, par un entrepreneur général licencié.",
     path: "/espaces/commercial",
-    ogAlt: "Commercial sur mesure Dilamco",
+    ogAlt: "Construction et aménagement commercial Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Commercial", url: SITE.url + "/espaces/commercial" },
   ],
   service: {
-    name: "Commercial",
+    name: "Construction et aménagement commercial",
     description:
-      "Conception, fabrication contrôlée et installation d'armoires commerciales sur mesure.",
+      "Rénovation et aménagement de bureaux, de commerces et d'immeubles multi-logements, améliorations locatives et mobilier intégré, par un entrepreneur général licencié RBQ.",
     url: SITE.url + "/espaces/commercial",
-    serviceType: "Armoires commerciales sur mesure",
+    serviceType: "Construction et aménagement commercial",
   },
   blocks: [
     {
@@ -27,228 +27,162 @@ export const commercialPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Espaces",
-          heading:
-            "Armoires commerciales sur mesure, exécution stable et planifiée",
+          badges: ["Bureaux", "Commerces"],
+          heading: "Aménagement commercial à Montréal, livré à la date convenue",
           description:
-            "Des armoires et aménagements commerciaux sur mesure sont des installations conçues et fabriquées pour un usage intensif — accueil, rangement, mobilier fonctionnel — dimensionnées pour votre local et votre échéancier. Chez Dilamco, dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et l'installation, en cadrant tôt la séquence pour respecter vos fenêtres d'ouverture.",
+            "Bureaux, commerces et améliorations locatives, réalisés par étapes pour garder votre local ouvert.",
           actions: [
             {
-              label: "Obtenir une soumission commerciale",
+              label: "Obtenir une soumission",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos projets commerciaux",
-              href: "/projets",
+              label: "Voir nos projets",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],
-          badges: ["Commercial", "Durable", "Planifié"],
           image: {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
-            alt: "Aménagement commercial sur mesure à Montréal et dans le Grand Montréal",
+            alt: "Bureau réaménagé dans un immeuble du centre-ville de Montréal",
           },
-          caption:
-            "Approche adaptée aux espaces clients, bureaux et environnements de travail",
+          caption: "Bureau réaménagé, centre-ville",
         },
       },
     },
     {
-      id: "why",
+      id: "galerie",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "Une approche adaptée à l'usage intensif",
-          intro:
-            "Les projets commerciaux demandent une exécution plus prévisible, des matériaux qui tiennent et une meilleure coordination.",
-          badges: ["Usage intensif", "Entretien", "Coordination"],
-          cardTitle: "Quand cette approche est pertinente",
-          items: [
-            "Vous cherchez une solution durable et cohérente avec votre image.",
-            "L'échéancier et la fenêtre d'installation comptent vraiment.",
-            "Vous voulez réduire les risques liés à une coordination fragmentée.",
-          ],
-          actions: [
+          heading: "Des locaux remis en service",
+          tiles: [
             {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/espaces-featured-commercial-project-01.webp",
+                alt: "Comptoir d'accueil et rangement en chêne dans un espace commercial",
+              },
+              caption: "Comptoir d'accueil en chêne",
             },
             {
-              label: "Voir le processus",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-02.webp",
+                alt: "Améliorations locatives réalisées dans un local de Laval",
+              },
+              caption: "Améliorations locatives, Laval",
+            },
+            {
+              kind: "stat",
+              value: "1.2 et 1.3",
+              label: "Nos catégories RBQ, valables pour tout type de bâtiment",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-01.webp",
+                alt: "Local commercial livré prêt à occuper au centre-ville de Montréal",
+              },
+              caption: "Local prêt à occuper",
+              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-03.webp",
+                alt: "Comptoir d'accueil et rangement technique intégrés à un commerce",
+              },
+              caption: "Mobilier d'accueil intégré",
+            },
+            {
+              kind: "text",
+              title: "Travaux hors des heures",
+              description:
+                "On travaille le soir ou la nuit pour que vous puissiez rester ouvert.",
               href: "/processus",
-              variant: "ghost",
             },
           ],
         },
       },
     },
     {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Une séquence plus prévisible pour le commercial",
-          intro:
-            "Le projet est cadré pour mieux gérer besoins, délais, fabrication et installation.",
-          steps: [
-            {
-              number: "1",
-              title: "Cadrage",
-              description:
-                "Usage, contraintes du lieu, entretien, circulation et besoins de marque.",
-            },
-            {
-              number: "2",
-              title: "Validation",
-              description:
-                "Plans, dimensions et décisions verrouillées avant production.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Standards stables et exécution mieux contrôlée pour limiter les écarts.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Logistique et pose planifiées pour réduire les perturbations sur place.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Des spécifications pensées pour la tenue dans le temps",
+          heading: "Le projet commercial en bref",
           intro:
-            "En commercial, le premium veut dire durabilité, entretien et stabilité, pas seulement apparence.",
-          items: [
+            "Ce qu'un propriétaire ou un locataire doit savoir avant d'ouvrir un chantier.",
+          rows: [
             {
-              title: "Structure robuste",
-              description:
-                "Matériaux et détails de fabrication choisis pour supporter un usage plus intense.",
+              label: "Combien de temps",
+              value:
+                "La date est fixée au contrat, et c'est le permis qui donne le rythme.",
             },
             {
-              title: "Entretien simplifié",
-              description:
-                "Choix de surfaces et de finitions alignés avec la réalité du lieu.",
+              label: "Permis",
+              value:
+                "Nous déposons la demande à la Ville et nous suivons les inspections.",
             },
             {
-              title: "Exécution plus stable",
-              description:
-                "Spécifications cohérentes pour mieux reproduire la qualité d'un projet à l'autre.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Conformité",
+              value:
+                "Nos catégories RBQ 1.2 et 1.3 couvrent les bâtiments de tout genre.",
             },
             {
-              label: "Voir nos services",
-              href: "/services",
-              variant: "ghost",
+              label: "Assurances",
+              value:
+                "Nous sommes assurés en responsabilité civile et les attestations vous sont remises.",
+            },
+            {
+              label: "Mobilier",
+              value:
+                "Un comptoir d'accueil ou un rangement sur mesure demande 9 à 15 semaines.",
+            },
+            {
+              label: "Qui installe",
+              value:
+                "Notre équipe, par étapes et hors des heures si le local doit rester ouvert.",
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-commercial-project-01.webp",
-            alt: "Détail matériau pour aménagement commercial",
+            src: "/images/generated/spaces/space-commercial-project-03.webp",
+            alt: "Mobilier commercial intégré dans un local livré par Dilamco",
           },
-          cardTitle: "Résultat recherché",
-          cardDescription:
-            "Moins de faiblesse structurelle, moins d'entretien correctif et une meilleure cohérence dans le temps.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Projets commerciaux en vedette",
-          intro:
-            "Quelques références qui montrent la qualité d'exécution et le niveau de coordination.",
-          items: [
-            {
-              title: "Aménagement commercial",
-              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
-              description:
-                "Projet commercial conçu pour l'usage réel et une exécution propre.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-project-01.webp",
-                alt: "Projet commercial à Montréal",
-              },
-              badges: ["Montréal", "Commercial"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Armoires commerciales sur mesure",
-              href: "/projets",
-              description:
-                "Exécution stable et matériaux adaptés à un usage plus intensif.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-project-02.webp",
-                alt: "Projet commercial à Laval",
-              },
-              badges: ["Laval", "Usage intensif"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Mobilier commercial",
-              href: "/projets",
-              description:
-                "Projet sur mesure coordonné pour limiter les imprévus et soigner la finition.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-project-03.webp",
-                alt: "Projet commercial sur la Rive-Sud",
-              },
-              badges: ["Rive-Sud", "Exécution"],
-              footerCtaLabel: "Voir le projet",
-            },
-          ],
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - commercial sur mesure",
-          intro:
-            "Les questions les plus utiles avant de cadrer un projet commercial.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Quels types de projets commerciaux réalisez-vous ?",
-              a: "Nous réalisons des aménagements et armoires sur mesure pour des espaces commerciaux où la durabilité, l'entretien et la cohérence d'exécution comptent : accueil et réception, rangement technique, mobilier fonctionnel, espaces de service. Chaque projet est dimensionné pour un usage intensif et pour votre local réel, avec des matériaux choisis pour tenir la cadence. Comme la même équipe gère la conception, la fabrication en usine partenaire et l'installation, la séquence est cadrée tôt pour respecter votre échéancier et vos fenêtres d'ouverture — un enjeu clé en contexte commercial.",
+              q: "Qui répond au propriétaire de l'immeuble pendant les travaux ?",
+              a: "Nous. Avis au gestionnaire, réservation du monte-charge, protection des aires communes et horaires autorisés sont réglés avant la première journée de chantier.",
             },
             {
-              q: "Pouvez-vous respecter des fenêtres d'installation ?",
-              a: "Oui, lorsque le projet est bien planifié dès la conception et que la séquence est cadrée tôt.",
+              q: "Comment sont traitées les améliorations locatives au bail ?",
+              a: "La portée est découpée selon ce que le bail met à la charge du locateur et du locataire. Chaque part est chiffrée séparément pour que la facturation suive.",
             },
             {
-              q: "Faites-vous la coordination clé en main ?",
-              a: "Oui, selon la portée du projet, pour réduire la responsabilité fragmentée et les finitions inégales.",
+              q: "Travaillez-vous dans les immeubles multi-logements ?",
+              a: "Oui, unités vacantes, aires communes, balcons et remises. Les travaux sont séquencés pour limiter le bruit et les coupures de service chez les occupants.",
             },
             {
-              q: "Travaillez-vous à Montréal et autour ?",
-              a: "Oui. Montréal, Laval et la Rive-Sud font partie de notre secteur.",
+              q: "Que se passe-t-il si l'inspection municipale refuse un élément ?",
+              a: "Le correctif est exécuté à nos frais quand il relève de notre exécution. Si le refus vient des plans fournis, il est documenté et repris avec le concepteur.",
             },
           ],
         },
@@ -262,7 +196,7 @@ export const commercialPage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet commercial",
           intro:
-            "On vous aide à cadrer un projet durable, planifié et mieux exécuté pour votre espace.",
+            "Estimation gratuite. On cadre le permis et la séquence avant d'ouvrir les murs.",
           actions: [
             {
               label: "Demander une soumission",
@@ -270,11 +204,12 @@ export const commercialPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir nos projets commerciaux",
-              href: "/projets",
+              label: "Voir nos projets",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud, Vaudreuil-Soulanges",
         },
       },
     },

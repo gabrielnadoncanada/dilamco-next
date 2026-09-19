@@ -6,7 +6,7 @@ export const cuisinePage: PageTemplateData = {
   metadata: {
     title: "Armoires de cuisine sur mesure à Pierrefonds",
     description:
-      "Cuisine sur mesure et armoires de cuisine sur mesure haut de gamme : conception, îlot, fabrication contrôlée et pose précise à Pierrefonds, Montréal, Laval et le Grand Montréal.",
+      "Armoires de cuisine sur mesure à Pierrefonds et dans le Grand Montréal, conçues, fournies et posées par Dilamco, entrepreneur général licencié RBQ.",
     path: "/espaces/cuisine",
     ogAlt: "Cuisine sur mesure et armoires de cuisine Dilamco",
   },
@@ -27,13 +27,13 @@ export const cuisinePage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Espaces",
+          badges: ["Sur mesure", "Division armoires"],
           heading:
-            "Cuisine sur mesure et armoires de cuisine sur mesure à Pierrefonds et dans le Grand Montréal",
+            "Armoires de cuisine sur mesure, posées par votre entrepreneur général",
           description:
-            "Une cuisine sur mesure est un ensemble d'armoires conçu et fabriqué aux dimensions exactes de votre pièce — îlot, rangement et hauteurs compris — plutôt qu'assemblé à partir de modules standards. Chez Dilamco, à Pierrefonds et dans le Grand Montréal, on gère la conception, la fabrication contrôlée en usine partenaire et la pose, en bois massif et contreplaqué de bouleau.",
+            "On mesure la pièce après la démolition, on commande les armoires, puis on les pose.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -46,316 +46,141 @@ export const cuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Armoires sur mesure", "Pierrefonds", "Ouest-de-l'Île"],
           image: {
-            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "Armoires de cuisine sur mesure haut de gamme à Pierrefonds",
+            src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+            alt: "Cuisine en U avec armoires shaker blanches et dosseret métro",
           },
-          caption:
-            "Résidentiel haut de gamme à Pierrefonds, dans l'Ouest-de-l'Île et le Grand Montréal",
+          caption: "Armoires shaker, dosseret métro",
         },
       },
     },
     {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Une cuisine sur mesure pensée pour durer",
-          intro:
-            "La valeur d'une cuisine se joue sur la structure, l'ergonomie et la qualité d'exécution, pas seulement sur le look final.",
-          badges: ["Durabilité", "Ergonomie", "Coordination"],
-          cardTitle: "Bon fit pour ce type de projet",
-          items: [
-            "Résidence principale ou projet long terme.",
-            "Besoin d'un aménagement adapté à l'espace réel.",
-            "Priorité à la stabilité, aux finis et à la coordination.",
-          ],
-          actions: [
-            {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "composition",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "bento",
         props: {
-          heading: "Ce qu'on conçoit dans une cuisine sur mesure",
-          intro:
-            "Une cuisine sur mesure ne se résume pas aux armoires. C'est un ensemble — îlot, rangement, hauteurs et zones de travail — pensé pour votre espace réel, en tant que concepteur et installateur avec un accès direct à l'usine.",
-          columns: "2",
-          items: [
+          heading: "Des cuisines qu'on a livrées",
+          tiles: [
             {
-              title: "Îlot de cuisine sur mesure",
-              description:
-                "Pièce centrale, ajustée à la circulation et aux dimensions réelles.",
-              icon: "package2",
-              bullets: [
-                "Proportions et débord adaptés à l'espace.",
-                "Rangement, prises et coin repas intégrés au besoin.",
-                "Alignement net avec le reste de la cuisine.",
-              ],
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Cuisine à aire ouverte avec îlot et colonnes pleine hauteur",
+              },
+              caption: "Îlot et colonnes, aire ouverte",
             },
             {
-              title: "Rangement et garde-manger",
-              description:
-                "Un rangement pensé pour l'usage quotidien, pas ajouté après coup.",
-              icon: "doorOpen",
-              bullets: [
-                "Garde-manger, tiroirs profonds et espaces dédiés.",
-                "Accès logique aux zones de cuisson et de lavage.",
-                "Moins d'espace perdu, plus de fonctionnalité.",
-              ],
+              kind: "stat",
+              value: "30 000 $",
+              label: "Le prix de départ d'une cuisine complète",
             },
             {
-              title: "Armoires hautes et finition au plafond",
-              description:
-                "Des armoires de cuisine sur mesure qui exploitent toute la hauteur.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Hauteurs ajustées jusqu'au plafond.",
-                "Moins de poussière, plus de rangement.",
-                "Lecture verticale propre et cohérente.",
-              ],
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "Cuisine blanche avec îlot et comptoir de quartz",
+              },
+              caption: "Comptoir de quartz, îlot blanc",
             },
             {
-              title: "Conception, fabrication et installation",
-              description:
-                "Une seule équipe responsable, du plan à la pose.",
-              icon: "wrench",
-              bullets: [
-                "Décisions cadrées tôt avec une seule équipe.",
-                "Fabrication contrôlée chez notre usine partenaire.",
-                "Pose et ajustements précis sur place.",
-              ],
+              kind: "quote",
+              quote:
+                "Excellent contracteur. Ils ont fait mes planchers et autres projets et nous sommes très satisfaites. Je recommande 100%.",
+              author: "Mélina Desbiens, avis Google",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
+                alt: "Armoires de cuisine vitrées et dosseret de céramique",
+              },
+              caption: "Armoires vitrées et dosseret",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+                alt: "Îlot bleu marine avec tiroirs à intérieur de bouleau",
+              },
+              caption: "Îlot marine, intérieur bouleau",
             },
           ],
         },
       },
     },
     {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Un processus clair du design à l'installation",
-          intro:
-            "Un seul partenaire permet de mieux cadrer les décisions et de réduire la fragmentation sur le chantier.",
-          steps: [
-            {
-              number: "1",
-              title: "Conception",
-              description:
-                "Analyse de l'espace, organisation des zones de travail et validation des choix.",
-            },
-            {
-              number: "2",
-              title: "Matériaux",
-              description:
-                "Sélection de composants et finis adaptés à la durabilité et à l'usage quotidien.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Production contrôlée avec standards stables et qualité reproductible.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Ajustements précis, alignements nets et finitions vérifiées sur place.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Des choix de matériaux qui justifient le haut de gamme",
+          heading: "La cuisine en bref",
           intro:
-            "La durabilité réelle est structurelle. Les composantes invisibles comptent autant que les surfaces.",
-          items: [
+            "Les questions que les propriétaires nous posent avant de nous rencontrer.",
+          rows: [
             {
-              title: "Structure des tiroirs",
-              description:
-                "Bois massif de bouleau pour une meilleure résistance et une sensation de solidité durable.",
+              label: "Combien de temps",
+              value: "Comptez 9 à 15 semaines entre le plan signé et la pose.",
             },
             {
-              title: "Fond des tiroirs",
-              description:
-                "Contreplaqué de bouleau pour mieux supporter la charge et garder sa stabilité.",
+              label: "Prix indicatif",
+              value:
+                "Une cuisine complète se situe entre 30 000 $ et 65 000 $, confirmé après le relevé.",
             },
             {
-              title: "Finition cohérente",
-              description:
-                "Choix alignés avec l'entretien, la longévité et l'usage réel de la cuisine.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Matériaux",
+              value:
+                "Les caissons sont en contreplaqué de bouleau et les tiroirs en bouleau massif.",
             },
             {
-              label: "Armoires de cuisine en stock",
-              href: "/boutique/armoires-cuisine",
-              variant: "ghost",
+              label: "Quincaillerie",
+              value:
+                "Les tiroirs coulissent sur des rails cachés et les portes ferment en douceur.",
             },
             {
-              label: "Vanité de salle de bain sur mesure",
-              href: "/espaces/salle-de-bain",
-              variant: "ghost",
+              label: "Qui installe",
+              value:
+                "Notre équipe, une fois la plomberie refaite et le plancher posé.",
+            },
+            {
+              label: "Garantie",
+              value:
+                "La durée est écrite au contrat et nous revenons ajuster les portes au besoin.",
             },
           ],
           image: {
-            src: "/images/spaces/cabinet-cuisines.webp",
-            alt: "Détail de matériaux pour cuisine sur mesure",
+            src: "/images/generated/spaces/space-cuisine-hero-01.webp",
+            alt: "Cuisine sur mesure haut de gamme avec îlot central",
           },
-          cardTitle: "Pourquoi ça compte",
-          cardDescription:
-            "Une bonne structure réduit les remplacements prématurés et protège la qualité d'usage sur plusieurs années.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Projets cuisines en vedette",
-          intro:
-            "Quelques réalisations qui montrent le niveau d'exécution, pas seulement l'esthétique.",
-          items: [
-            {
-              title: "Cuisine sur mesure, Pierrefonds",
-              href: "/projets/cuisine/cuisine-sur-mesure-pierrefonds",
-              description:
-                "Armoires de cuisine sur mesure dans l'Ouest-de-l'Île : implantation précise et finition soignée.",
-              image: {
-                src: "/images/projects/chene-moderne.webp",
-                alt: "Projet d'armoires de cuisine sur mesure à Pierrefonds",
-              },
-              badges: ["Pierrefonds", "Armoires"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Cuisine sur mesure, Montréal",
-              href: "/projets/cuisine/cuisine-sur-mesure-montreal",
-              description:
-                "Cuisine conçue pour un usage quotidien et une durabilité à long terme.",
-              image: {
-                src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-                alt: "Projet de cuisine sur mesure à Montréal",
-              },
-              badges: ["Montréal", "Sur mesure"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Cuisine sur mesure, Rive-Sud",
-              href: "/projets/cuisine/cuisine-sur-mesure-rive-sud",
-              description:
-                "Exécution complète avec coordination du projet et détails maîtrisés.",
-              image: {
-                src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
-                alt: "Projet de cuisine sur mesure sur la Rive-Sud",
-              },
-              badges: ["Rive-Sud", "clé en main"],
-              footerCtaLabel: "Voir le projet",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "zones",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Armoires de cuisine sur mesure dans tout le Grand Montréal",
-          intro:
-            "Basés dans le Grand Montréal, on conçoit et installe des armoires et cuisines sur mesure dans l'Ouest-de-l'Île et partout dans la région, fabriquées exclusivement pour nous par notre usine partenaire.",
-          badges: [
-            "Pierrefonds-Roxboro",
-            "Ouest-de-l'Île",
-            "Montréal",
-            "Laval",
-            "Rive-Nord",
-            "Rive-Sud",
-          ],
-          cardTitle: "Zones desservies",
-          items: [
-            "Pierrefonds-Roxboro et l'Ouest-de-l'Île",
-            "Montréal et les quartiers centraux",
-            "Laval et la Rive-Nord",
-            "Rive-Sud et couronne sud",
-          ],
-          actions: [
-            {
-              label: "Demander une soumission",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir nos cuisines",
-              href: "/projets/cuisine",
-              variant: "ghost",
-            },
-          ],
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - cuisine sur mesure",
-          intro:
-            "Réponses claires aux questions les plus fréquentes avant de lancer un projet.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte une cuisine ou des armoires sur mesure ?",
-              a: "Pour une cuisine ou des armoires sur mesure haut de gamme, l'investissement se situe généralement entre 30 000 $ et 65 000 $, selon quatre facteurs principaux : les dimensions et la superficie à couvrir, la complexité de l'aménagement (îlot, garde-manger, armoires jusqu'au plafond), les matériaux et finis retenus, et le niveau de coordination requis sur le chantier. Un projet est généralement réalisé en 9 à 15 semaines, de la validation du design à l'installation finale. Nous établissons une estimation précise après avoir cadré le projet avec vous — mesures réelles, priorités et niveau de finition —, ce qui évite les surprises et vous donne un budget clair avant de vous engager.",
+              q: "Quand prenez-vous les mesures de la cuisine ?",
+              a: "Après la démolition, quand les murs sont à leur position définitive. C'est ce qui évite les espaces perdus le long des colonnes et sous le plafond.",
             },
             {
-              q: "Faites-vous des armoires de cuisine sur mesure à Pierrefonds et dans l'Ouest-de-l'Île ?",
-              a: "Oui. Nous sommes basés à Pierrefonds-Roxboro et installons des armoires et cuisines sur mesure dans tout l'Ouest-de-l'Île, à Montréal, à Laval et dans le Grand Montréal.",
+              q: "Peut-on garder la cuisine utilisable pendant les travaux ?",
+              a: "Une station temporaire, évier et réfrigérateur, est installée ailleurs dans la maison. La pièce reste fermée le temps de la démolition, de la plomberie et du plancher.",
             },
             {
-              q: "Quelle est la différence avec des armoires standard ?",
-              a: "La différence tient à trois choses : l'ajustement, la structure et le contrôle du résultat. Des armoires standards sont vendues en dimensions fixes, ce qui oblige à adapter la pièce aux modules et laisse souvent des espaces perdus ou des hauteurs mal exploitées. Une cuisine sur mesure est conçue à l'inverse : chaque caisson est dimensionné au millimètre pour votre espace réel, jusqu'au plafond si nécessaire. La structure est aussi plus robuste — bois massif de bouleau pour les tiroirs, contreplaqué de bouleau pour les fonds — là où le standard utilise souvent des panneaux de particules. Enfin, comme la même équipe gère la conception, la fabrication en usine partenaire et la pose, le résultat est mieux contrôlé, avec des alignements et des finitions vérifiés sur place.",
+              q: "Qui fournit le comptoir et le dosseret ?",
+              a: "Nous. On prend les mesures du comptoir une fois les caissons fixés, puis on pose le dosseret. Tout est chiffré dans la même soumission que les armoires.",
             },
             {
-              q: "Concevez-vous des îlots de cuisine sur mesure ?",
-              a: "Oui. L'îlot est conçu avec la cuisine, pas ajouté après coup : proportions, débord, rangement intégré, prises et coin repas ajustés à la circulation et aux dimensions réelles de la pièce.",
-            },
-            {
-              q: "Est-ce que vous faites aussi l'installation ?",
-              a: "Oui. L'objectif est d'assurer une exécution cohérente du design à la pose, par la même équipe.",
+              q: "Gérez-vous l'électricité et la ventilation de la hotte ?",
+              a: "Oui. Circuits dédiés, prises d'îlot et sortie de hotte sont planifiés au plan de cuisine et exécutés par nos corps de métier avant la livraison des armoires.",
             },
           ],
         },
@@ -369,7 +194,7 @@ export const cuisinePage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre projet de cuisine",
           intro:
-            "Obtenez une soumission structurée adaptée à votre espace, vos priorités et votre niveau de finition.",
+            "Estimation gratuite, relevé sur place et soumission détaillée avant toute commande.",
           actions: [
             {
               label: "Demander une soumission",
@@ -382,6 +207,7 @@ export const cuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

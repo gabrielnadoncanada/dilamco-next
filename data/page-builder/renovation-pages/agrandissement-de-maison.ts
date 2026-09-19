@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const agrandissementMaisonPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Agrandissement de maison clé en main à Montréal",
+    title: "Agrandissement de maison à Montréal — clé en main",
     description:
-      "Agrandissement de maison clé en main : faisabilité, séquence de travaux, coordination et intégration propre à l'existant.",
+      "Agrandissement résidentiel : zonage, permis, fondations, structure, enveloppe et raccordements. Entrepreneur général licencié RBQ.",
     path: "/services/renovation/agrandissement-de-maison",
-    ogAlt: "Agrandissement de maison Dilamco",
+    ogAlt: "Agrandissement de maison par un entrepreneur général",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const agrandissementMaisonPage: PageTemplateData = {
   service: {
     name: "Agrandissement de maison",
     description:
-      "Planification, faisabilité, coordination et exécution complète pour des projets d'agrandissement résidentiel.",
+      "Agrandissement résidentiel par un entrepreneur général : vérification du zonage, permis de construction, plans d'ingénieur, fondations, structure, enveloppe, raccordements et finition intérieure.",
     url: SITE.url + "/services/renovation/agrandissement-de-maison",
-    serviceType: "Agrandissement de maison",
+    serviceType: "Agrandissement résidentiel",
+    areaServed: [
+      "Montréal",
+      "Ouest-de-l'Île",
+      "Laval",
+      "Rive-Sud",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -34,112 +41,82 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Rénovation",
-          heading:
-            "Agrandissement de maison clé en main, planifier l'extension sans fragiliser l'existant",
+          eyebrow: "Agrandissement de maison",
+          heading: "Agrandissement de maison, du zonage à la finition",
           description:
-            "Un agrandissement résidentiel est l'ajout de surface habitable à une maison existante — extension au sol, surélévation ou annexe — qui touche la faisabilité, la structure, l'enveloppe et les raccords intérieurs. Bien au-delà d'ajouter des pieds carrés, il faut cadrer la séquence de chantier pour livrer un résultat cohérent et habitable.",
+            "On vérifie le zonage, on fait faire les plans, on coule la fondation et on raccorde à votre maison.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir la rénovation clé en main",
+              label: "Rénovation clé en main",
               href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          badges: ["Faisabilité", "Coordination", "Intégration"],
+          badges: ["Permis de construction", "Plans d'ingénieur"],
           image: {
             src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-            alt: "Projet résidentiel de rénovation et d'agrandissement",
+            alt: "Agrandissement résidentiel en construction",
           },
-          caption: "Montréal, Laval et Rive-Sud",
+          imageSide: "left",
+          caption: "Agrandissements, Ouest-de-l'Île et Laval",
         },
       },
     },
     {
-      id: "risks",
+      id: "included",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "icon-cards-bullets",
         props: {
-          heading: "Pourquoi un agrandissement devient vite complexe",
-          description:
-            "Le risque n'est pas seulement le coût des travaux. La vraie difficulté est d'intégrer une nouvelle partie à une maison existante sans générer de zones grises entre structure, enveloppe, circulation et finition.",
-          cards: [
-            {
-              title: "Maison existante",
-              description:
-                "Niveaux, structure, ouvertures et contraintes cachées doivent être validés avant de projeter l'agrandissement.",
-            },
-            {
-              title: "Séquence de chantier",
-              description:
-                "Démolition, structure, fermeture de l'enveloppe et finition doivent s'enchaîner proprement pour limiter les reprises.",
-            },
-            {
-              title: "Coordination des intervenants",
-              description:
-                "Plus le projet touche d'éléments, plus la coordination détermine la qualité finale et la prévision des délais.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Notre approche pour cadrer un agrandissement résidentiel",
-          intro:
-            "L'objectif n'est pas seulement d'ajouter une pièce. Il faut confirmer ce qui est réaliste, structurer les décisions et préparer une exécution qui s'intègre à la maison actuelle.",
+          heading: "Ce qui est inclus dans un agrandissement",
+          columns: "2",
           items: [
             {
-              title: "Analyse de la portée",
-              description:
-                "On clarifie l'usage recherché, la superficie visée, les contraintes du site et le niveau d'intervention sur l'existant.",
+              title: "Vérifications et permis",
+              description: "On regarde ce que la ville permet avant de dessiner",
+              icon: "fileCheck",
+              bullets: [
+                "On lit les distances à respecter et la hauteur permise",
+                "On relève la fondation, la structure et les services",
+                "Les plans signés par l'ingénieur partent avec la demande",
+              ],
             },
             {
-              title: "Validation technique",
-              description:
-                "On cadre les points sensibles comme la structure, les raccords, l'accès au chantier et la logique générale des travaux.",
+              title: "Creusage et fondation",
+              description: "C'est ce qui porte tout l'agrandissement",
+              icon: "hardHat",
+              bullets: [
+                "On localise les services souterrains avant de creuser",
+                "On coule les semelles plus bas que le niveau de gel",
+                "On pose le drain et on imperméabilise la fondation",
+              ],
             },
             {
-              title: "Séquence de réalisation",
-              description:
-                "Les étapes sont ordonnées pour limiter les interruptions, les reprises et les conflits entre corps de métier.",
+              title: "Charpente, murs et toit",
+              description: "On ferme le bâtiment avant l'hiver",
+              icon: "building2",
+              bullets: [
+                "On monte la charpente selon les plans de l'ingénieur",
+                "On installe une poutre là où le mur s'ouvre",
+                "Toit, fenêtres et revêtement agencés à votre maison",
+              ],
             },
             {
-              title: "Contrôle du résultat final",
-              description:
-                "L'agrandissement doit sembler appartenir à la maison, pas fonctionner comme un ajout mal raccordé.",
+              title: "Raccordements et finition",
+              description: "La nouvelle pièce est reliée à la maison",
+              icon: "wrench",
+              bullets: [
+                "On prolonge le chauffage, la ventilation et les circuits",
+                "On fait inspecter avant de fermer les murs",
+                "On pose le gypse, on peint et on met les planchers de niveau",
+              ],
             },
           ],
-          actions: [
-            {
-              label: "Voir le service de design",
-              href: "/services/design",
-              variant: "ghost",
-            },
-            {
-              label: "Voir la rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-extension-approach-01.webp",
-            alt: "Planification d'un projet d'agrandissement résidentiel",
-          },
-          cardTitle: "Ce qu'on cherche à éviter",
-          cardDescription:
-            "Les projets qui avancent sans séquence claire finissent souvent avec des ajustements coûteux, des finitions compromises ou une intégration visuelle faible.",
         },
       },
     },
@@ -149,208 +126,118 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Séquence type d'un projet d'agrandissement",
-          intro:
-            "Chaque projet varie, mais la logique reste la même : cadrer avant d'ouvrir, coordonner avant d'accélérer et finir seulement quand l'intégration est propre.",
+          heading: "Les étapes d'un agrandissement",
           steps: [
             {
               number: "1",
-              title: "Cadrage",
+              title: "Vérification du terrain",
               description:
-                "Besoins, faisabilité, contraintes du site et niveau d'intervention sur la maison existante.",
+                "On lit le zonage et le certificat de localisation pour savoir ce qui est permis.",
             },
             {
               number: "2",
-              title: "Conception",
+              title: "Plans et ingénieur",
               description:
-                "Organisation des volumes, raccords, circulation, ouvertures et décisions techniques principales.",
+                "Un ingénieur calcule les charges et signe les plans de construction.",
             },
             {
               number: "3",
-              title: "Exécution",
+              title: "Permis et contrat",
               description:
-                "Travaux structurels et connexes coordonnés selon une séquence qui protège l'avancement du chantier.",
+                "On dépose le dossier à la ville et on signe l'échéancier avec vous.",
             },
             {
               number: "4",
-              title: "Intégration",
+              title: "Fondation et structure",
               description:
-                "Finitions, ajustements et raccords pour que l'agrandissement fonctionne avec le reste de la maison.",
+                "On creuse, on coule la fondation, on monte la charpente et le toit.",
+            },
+            {
+              number: "5",
+              title: "Raccordements et finition",
+              description:
+                "On prolonge les services, on fait inspecter, puis on finit les murs.",
             },
           ],
         },
       },
     },
     {
-      id: "technical",
-      content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
-        props: {
-          heading: "Points techniques qui influencent vraiment le projet",
-          intro:
-            "Un agrandissement réussi dépend d'une série de décisions techniques prises assez tôt pour éviter les blocages et les compromis visibles.",
-          columns: "2",
-          items: [
-            {
-              title: "Structure et ouverture",
-              description:
-                "Liaison entre le nouveau volume et la maison existante.",
-              icon: "package2",
-              bullets: [
-                "Vérification de la structure à modifier avant les travaux.",
-                "Ouvertures et portées pensées selon l'usage réel.",
-                "Impact sur les murs, niveaux et circulation intérieure.",
-              ],
-            },
-            {
-              title: "Enveloppe et raccords",
-              description:
-                "Le raccord visible et invisible influence la durabilité autant que l'apparence.",
-              icon: "doorOpen",
-              bullets: [
-                "Jonction propre entre ancien et nouveau.",
-                "Gestion des transitions intérieures et extérieures.",
-                "Attention aux détails qui trahissent un ajout mal intégré.",
-              ],
-            },
-            {
-              title: "Organisation intérieure",
-              description:
-                "L'agrandissement doit améliorer la maison, pas juste ajouter une surface.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Circulation plus fluide entre les zones de vie.",
-                "Rangement, mobilier et ouvertures prévus dès le départ.",
-                "Intégration possible de cuisine, salle de bain ou walk-in.",
-              ],
-            },
-            {
-              title: "Coordination chantier",
-              description:
-                "Le niveau de contrôle détermine la prévision des délais et la qualité de finition.",
-              icon: "wrench",
-              bullets: [
-                "Ordre des interventions clarifié avant démarrage.",
-                "Moins de chevauchement improductif entre équipes.",
-                "Moins de corrections de fin de chantier.",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "intégration",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading:
-            "Comment l'agrandissement s'intègre aux espaces de la maison",
-          intro:
-            "Un agrandissement prend souvent tout son sens lorsqu'il supporte mieux la cuisine, la salle de bain ou les zones de rangement. Ces pages piliers restent les principales destinations de conversion.",
-          items: [
-            {
-              title: "Cuisine sur mesure",
-              href: "/espaces/cuisine",
-              description:
-                "Quand l'agrandissement sert surtout une cuisine plus fonctionnelle, l'enjeu devient la circulation, l'îlot et l'intégration des équipements.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure intégrée à un agrandissement",
-              },
-              badges: ["Cuisine", "Circulation"],
-              footerCtaLabel: "Voir la page cuisine",
-            },
-            {
-              title: "Salle de bain",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Une extension peut permettre d'ajouter ou d'agrandir une salle de bain avec meilleure gestion de l'humidité, de la plomberie et du rangement.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure intégrée à un agrandissement",
-              },
-              badges: ["Humidité", "Plomberie"],
-              footerCtaLabel: "Voir la page salle de bain",
-            },
-            {
-              title: "Walk-in et rangement",
-              href: "/espaces/walk-in",
-              description:
-                "Plusieurs agrandissements servent à créer une suite plus complète avec rangement adapté et organisation plus claire.",
-              image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Walk-in sur mesure dans une extension résidentielle",
-              },
-              badges: ["Rangement", "Suite"],
-              footerCtaLabel: "Voir la page walk-in",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "proof",
+      id: "types",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "list-actions-image-card",
         props: {
-          heading: "Ce qu'un bon agrandissement doit livrer au final",
-          description:
-            "La preuve de maîtrise ne tient pas seulement dans le volume ajouté. Elle se voit dans la façon dont la maison fonctionne après les travaux et dans la qualité des raccords visibles au quotidien.",
-          cards: [
+          heading: "Les types d'agrandissement possibles",
+          intro:
+            "Le terrain et le règlement de la ville décident souvent avant votre besoin de départ.",
+          items: [
             {
-              title: "Lecture claire",
-              description:
-                "La nouvelle section doit sembler cohérente avec la maison plutôt que paraître ajoutée à la hâte.",
+              title: "Rallonge à l'arrière",
+              description: "la plus courante, si la cour laisse assez d'espace.",
             },
             {
-              title: "Usage amélioré",
-              description:
-                "La circulation, la luminosité, le rangement ou la capacité d'accueil doivent être réellement meilleurs.",
+              title: "Rallonge sur le côté",
+              description: "possible selon la distance avec le terrain du voisin.",
             },
             {
-              title: "Finition propre",
-              description:
-                "Les transitions, alignements et détails de finition doivent soutenir la perception d'un projet maîtrisé.",
+              title: "Ajout d'un étage",
+              description: "possible si la fondation peut porter le poids ajouté.",
+            },
+            {
+              title: "Suite parentale ou garage",
+              description: "une pièce attachée à la maison et chauffée avec elle.",
             },
           ],
-          columns: "1",
+          actions: [
+            {
+              label: "Voir la cuisine",
+              href: "/services/renovation/cuisine",
+              variant: "ghost",
+            },
+            {
+              label: "Parler de votre projet",
+              href: "/contact",
+              variant: "primary",
+            },
+          ],
+          image: {
+            src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+            alt: "Chantier d'agrandissement raccordé à une maison existante",
+          },
+          cardTitle: "Ce qu'on regarde d'abord",
+          cardDescription:
+            "L'accès au terrain pour la machinerie, la position de l'entrée électrique et du drain, et la lumière que perdront vos fenêtres actuelles.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - agrandissement de maison",
-          intro:
-            "Réponses claires sur faisabilité, coordination, délais et intégration à l'existant.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Est-ce que Dilamco prend en charge un agrandissement complet?",
-              a: "Oui, selon la portée confirmée. L'objectif est de cadrer clairement ce qui est inclus, le niveau de coordination requis et la séquence générale avant le démarrage.",
+              q: "Mon terrain permet-il un agrandissement ?",
+              a: "Le règlement de zonage fixe les distances à respecter, la part du terrain que vous pouvez occuper et la hauteur permise. On lit ces règles avec votre certificat de localisation.",
             },
             {
-              q: "Est-ce que tous les agrandissements sont faisables?",
-              a: "Non. La faisabilité dépend de la maison existante, du site, de la structure, des accès et des règlements applicables. C'est pour cela que l'analyse de départ est essentielle.",
+              q: "Faut-il un permis pour agrandir une maison ?",
+              a: "Toujours. Ajouter de la surface change l'empreinte du bâtiment : il faut un permis de construction, avec les plans de structure, les coupes et les élévations.",
             },
             {
-              q: "Comment gérer les imprévus dans ce type de chantier?",
-              a: "On n'élimine pas tous les imprévus, mais une bonne séquence et une meilleure lecture de l'existant réduisent fortement les corrections tardives et les conflits entre interventions.",
+              q: "Ai-je besoin d'un ingénieur ?",
+              a: "Dans presque tous les cas. Les semelles, la charpente et la poutre de remplacement demandent un calcul de charges. Les plans signés partent avec la demande et servent de référence.",
             },
             {
-              q: "Combien de temps dure un agrandissement de maison?",
-              a: "La durée varie selon la superficie, la complexité, le niveau d'intervention sur l'existant et les travaux connexes. Un échéancier réaliste est établi une fois la portée mieux définie.",
+              q: "Combien de temps prend un agrandissement ?",
+              a: "On compte en mois. La partie papier, soit les vérifications, les plans et l'analyse de la ville, prend souvent autant de temps que la fondation elle-même.",
             },
             {
-              q: "Est-ce pertinent si l'objectif principal est d'améliorer la cuisine ou une suite parentale?",
-              a: "Oui. Plusieurs projets d'agrandissement existent pour mieux loger une cuisine, une salle de bain ou un espace de rangement. Dans ce cas, l'agrandissement sert la page pilier correspondante plutôt qu'il ne la remplace.",
+              q: "Agrandir ou construire neuf ?",
+              a: "Nous ne construisons pas de maisons neuves. Notre travail part toujours d'un bâtiment existant. Pour bien des familles, une rallonge revient moins cher qu'un déménagement.",
             },
           ],
         },
@@ -362,22 +249,22 @@ export const agrandissementMaisonPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous planifiez un agrandissement résidentiel ?",
+          heading: "Faites valider votre projet d'agrandissement",
           intro:
-            "On vous aide à cadrer la faisabilité, la séquence de travaux et l'intégration à l'existant pour partir sur une base plus maîtrisable.",
+            "On commence par lire le zonage et la fondation pour savoir ce qui est permis chez vous.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir la rénovation clé en main",
+              label: "Rénovation clé en main",
               href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Agrandissement, reconfiguration et rénovation intégrée",
+          note: "Licence RBQ 8306-0806-27 · Zonage, permis, ingénieur et fondations",
         },
       },
     },

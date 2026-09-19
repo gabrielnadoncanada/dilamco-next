@@ -12,7 +12,6 @@
     "images:generate": "node scripts/generate-images.mjs",
     "images:apply": "node scripts/apply-image-manifest.mjs",
     "images:webp": "node scripts/convert-images-to-webp.mjs",
-    "sync:catalog": "node scripts/sync-catalog.mjs",
     "postbuild": "next-sitemap && node scripts/generate-image-sitemap.mjs && node scripts/style-sitemaps.mjs"
   },
   "dependencies": {
@@ -62,7 +61,6 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.0.18",
-    "xlsx": "^0.18.5"
+    "vitest": "^4.0.18"
   }
 }

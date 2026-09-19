@@ -4,22 +4,22 @@ import { SITE } from "@/seo/schema/site";
 export const commercialPageEn: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "High-end custom commercial cabinets",
+    title: "Commercial construction and fit-outs in Montréal",
     description:
-      "Custom commercial cabinets: design, controlled fabrication and precise installation in Montréal, Laval and on the South Shore.",
+      "Commercial construction and fit-outs in Montréal: offices, retail, leasehold improvements and multi-unit buildings, by a licensed general contractor.",
     path: "/espaces/commercial",
-    ogAlt: "Dilamco custom commercial work",
+    ogAlt: "Dilamco commercial construction and fit-outs",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
     { name: "Commercial", url: SITE.url + "/espaces/commercial" },
   ],
   service: {
-    name: "Commercial",
+    name: "Commercial construction and fit-outs",
     description:
-      "Design, controlled fabrication and installation of custom commercial cabinets.",
+      "Renovation and fit-out of offices, retail spaces and multi-unit buildings, leasehold improvements and built-in cabinetry, by a licensed general contractor (RBQ).",
     url: SITE.url + "/espaces/commercial",
-    serviceType: "Custom commercial cabinets",
+    serviceType: "Commercial construction and fit-outs",
   },
   blocks: [
     {
@@ -27,228 +27,162 @@ export const commercialPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Spaces",
-          heading:
-            "Custom commercial cabinets, stable and planned execution",
+          badges: ["Offices", "Retail"],
+          heading: "Commercial fit-outs in Montréal, delivered on the agreed date",
           description:
-            "Custom commercial cabinetry and fit-outs are installations designed and built for heavy use — reception, storage, functional furniture — sized for your premises and your schedule. At Dilamco, across Greater Montréal, we handle the design, controlled fabrication at our partner factory and installation, framing the sequence early to meet your opening windows.",
+            "Offices, stores and leasehold improvements, done in stages so you can stay open.",
           actions: [
             {
-              label: "Get a commercial quote",
+              label: "Get a quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our commercial projects",
-              href: "/projets",
+              label: "See our work",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],
-          badges: ["Commercial", "Durable", "Planned"],
           image: {
             src: "/images/generated/spaces/space-commercial-hero-01.webp",
-            alt: "Custom commercial fit-out in Montréal and Greater Montréal",
+            alt: "Office refitted in a downtown Montréal building",
           },
-          caption:
-            "An approach tailored to client spaces, offices and work environments",
+          caption: "Office refit, downtown",
         },
       },
     },
     {
-      id: "why",
+      id: "galerie",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "An approach suited to heavy use",
-          intro:
-            "Commercial projects call for more predictable execution, materials that hold up and better coordination.",
-          badges: ["Heavy use", "Maintenance", "Coordination"],
-          cardTitle: "When this approach makes sense",
-          items: [
-            "You're looking for a durable solution consistent with your brand image.",
-            "The schedule and the installation window really matter.",
-            "You want to reduce the risks tied to fragmented coordination.",
-          ],
-          actions: [
+          heading: "Units put back into service",
+          tiles: [
             {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/espaces-featured-commercial-project-01.webp",
+                alt: "Oak reception counter and storage in a commercial space",
+              },
+              caption: "Oak reception counter",
             },
             {
-              label: "See our process",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-02.webp",
+                alt: "Leasehold improvements carried out in a Laval unit",
+              },
+              caption: "Leasehold work, Laval",
+            },
+            {
+              kind: "stat",
+              value: "1.2 and 1.3",
+              label: "Our RBQ classes, valid for any type of building",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-01.webp",
+                alt: "Commercial unit delivered ready to occupy in downtown Montréal",
+              },
+              caption: "Unit ready to occupy",
+              href: "/projets/commercial/amenagement-sur-mesure-bureau-centre-ville-montreal",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-commercial-project-03.webp",
+                alt: "Reception counter and service storage built into a retail space",
+              },
+              caption: "Built-in reception millwork",
+            },
+            {
+              kind: "text",
+              title: "Work outside opening hours",
+              description:
+                "We work evenings or overnight so you can keep serving customers.",
               href: "/processus",
-              variant: "ghost",
             },
           ],
         },
       },
     },
     {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "A more predictable sequence for commercial work",
-          intro:
-            "The project is framed to better manage needs, timelines, fabrication and installation.",
-          steps: [
-            {
-              number: "1",
-              title: "Scoping",
-              description:
-                "Use, site constraints, maintenance, traffic flow and branding needs.",
-            },
-            {
-              number: "2",
-              title: "Validation",
-              description:
-                "Plans, dimensions and decisions locked in before production.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Stable standards and better-controlled execution to limit deviations.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Logistics and installation planned to reduce disruption on site.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Specifications designed to last over time",
+          heading: "The commercial project in brief",
           intro:
-            "In commercial work, premium means durability, maintenance and stability, not just appearance.",
-          items: [
+            "What an owner or a tenant should know before a site opens.",
+          rows: [
             {
-              title: "Robust structure",
-              description:
-                "Materials and fabrication details chosen to withstand more intensive use.",
+              label: "How long",
+              value:
+                "The date is set in the contract, and the permit sets the pace.",
             },
             {
-              title: "Simplified maintenance",
-              description:
-                "Surface and finish choices aligned with the reality of the space.",
+              label: "Permit",
+              value:
+                "We file the application with the city and follow the inspections through.",
             },
             {
-              title: "More stable execution",
-              description:
-                "Consistent specifications to better reproduce quality from one project to the next.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Compliance",
+              value:
+                "Our RBQ classes 1.2 and 1.3 cover buildings of every kind.",
             },
             {
-              label: "View our services",
-              href: "/services",
-              variant: "ghost",
+              label: "Insurance",
+              value:
+                "We carry civil liability cover and you get the certificates in hand.",
+            },
+            {
+              label: "Millwork",
+              value:
+                "A reception counter or custom storage takes nine to fifteen weeks.",
+            },
+            {
+              label: "Who installs",
+              value:
+                "Our own crew, in stages and outside opening hours if you must stay open.",
             },
           ],
           image: {
-            src: "/images/generated/spaces/space-commercial-project-01.webp",
-            alt: "Material detail for a commercial fit-out",
+            src: "/images/generated/spaces/space-commercial-project-03.webp",
+            alt: "Built-in commercial millwork in a unit delivered by Dilamco",
           },
-          cardTitle: "Intended result",
-          cardDescription:
-            "Less structural weakness, less corrective maintenance and better consistency over time.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Featured commercial projects",
-          intro:
-            "A few references that show the execution quality and the level of coordination.",
-          items: [
-            {
-              title: "Commercial fit-out",
-              href: "/projets",
-              description:
-                "A commercial project designed for real use and clean execution.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-project-01.webp",
-                alt: "Commercial project in Montréal",
-              },
-              badges: ["Montréal", "Commercial"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Custom commercial cabinets",
-              href: "/projets",
-              description:
-                "Stable execution and materials suited to more intensive use.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-project-02.webp",
-                alt: "Commercial project in Laval",
-              },
-              badges: ["Laval", "Heavy use"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Commercial furniture",
-              href: "/projets",
-              description:
-                "A custom project coordinated to limit surprises and care for the finish.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-project-03.webp",
-                alt: "Commercial project on the South Shore",
-              },
-              badges: ["South Shore", "Execution"],
-              footerCtaLabel: "View project",
-            },
-          ],
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - custom commercial work",
-          intro:
-            "The most useful questions before scoping a commercial project.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "What kinds of commercial projects do you take on?",
-              a: "We build custom fit-outs and cabinets for commercial spaces where durability, maintenance and execution consistency matter: reception and front desk, technical storage, functional furniture, service areas. Each project is sized for heavy use and for your actual premises, with materials chosen to keep up with the pace. Because the same team handles the design, fabrication at our partner factory and installation, the sequence is framed early to meet your schedule and opening windows — a key issue in a commercial context.",
+              q: "Who deals with the building owner during the work?",
+              a: "We do. Notice to the manager, freight elevator booking, protection of common areas and approved working hours are settled before day one on site.",
             },
             {
-              q: "Can you meet installation windows?",
-              a: "Yes, when the project is well planned from the design stage and the sequence is framed early.",
+              q: "How are leasehold improvements handled under the lease?",
+              a: "The scope is split according to what the lease puts on the landlord and on the tenant. Each share is priced separately so the invoicing can follow.",
             },
             {
-              q: "Do you handle turnkey coordination?",
-              a: "Yes, depending on the project scope, to reduce fragmented responsibility and uneven finishes.",
+              q: "Do you work in multi-unit residential buildings?",
+              a: "Yes: vacant units, common areas, balconies and storage rooms. Work is sequenced to limit noise and service interruptions for the occupants.",
             },
             {
-              q: "Do you work in Montréal and the surrounding area?",
-              a: "Yes. Montréal, Laval and the South Shore are part of our service area.",
+              q: "What if a municipal inspection rejects an item?",
+              a: "The fix is carried out at our cost when it comes from our execution. If the refusal stems from the drawings supplied, it is documented and reworked with the designer.",
             },
           ],
         },
@@ -262,7 +196,7 @@ export const commercialPageEn: PageTemplateData = {
         props: {
           heading: "Tell us about your commercial project",
           intro:
-            "We help you frame a durable, planned and better-executed project for your space.",
+            "Free estimate. We scope the permit and the sequence before any wall opens.",
           actions: [
             {
               label: "Request a quote",
@@ -270,11 +204,12 @@ export const commercialPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our commercial projects",
-              href: "/projets",
+              label: "See our work",
+              href: "/projets/commercial",
               variant: "ghost",
             },
           ],
+          note: "RBQ licence 8306-0806-27 · Montréal, Laval, South Shore, Vaudreuil-Soulanges",
         },
       },
     },

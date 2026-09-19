@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import { AppLink as Link } from "@/components/AppLink";
 import { cn } from "@/lib/utils";
 import type { NavAction } from "../navbar.types";
@@ -19,10 +19,7 @@ export function ActionButtons({
   ...rest
 }: ActionButtonsProps) {
   return (
-    <div
-      className={cn("flex items-center gap-3", className)}
-      {...rest}
-    >
+    <div className={cn("flex items-center gap-3", className)} {...rest}>
       {actions.map((action, index) => {
         const { label, isPrimary, url, buttonProps = {}, linkProps = {} } =
           action;
@@ -30,15 +27,13 @@ export function ActionButtons({
           <Button
             size={size}
             variant={getActionButtonVariant(action)}
-            className={
-              isPrimary ? "text-primary-foreground" : "text-foreground"
-            }
             asChild
             key={`navbar-btn-${index}`}
             {...buttonProps}
           >
             <Link href={url} {...linkProps}>
               {label}
+              {isPrimary ? <ButtonArrow /> : null}
             </Link>
           </Button>
         );

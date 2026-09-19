@@ -21,30 +21,24 @@ export const comparatifPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Materials",
-          heading: "Materials comparison: choosing based on use",
+          badges: ["Structure", "Humidity", "Finish"],
+          heading: "Which material for which part of the cabinet",
           description:
-            "There is no universal cabinet material: melamine, MDF, plywood and solid wood each have their strengths. The right choice depends on the space, humidity, targeted durability, the desired finish and the quality of execution.",
+            "No material is good everywhere. A well-planned kitchen mixes three or four of them.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View all materials",
+              label: "See all materials",
               href: "/materiaux",
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Humidity", "Finish"],
-          image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.webp",
-            alt: "Materials comparison for a custom kitchen",
-          },
-          caption: "The right choice always depends on the real context",
         },
       },
     },
@@ -54,181 +48,104 @@ export const comparatifPageEn: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Comparison table",
-          intro: "A general summary to adapt to your real context.",
-          columns: ["Performance générale", "Usage recommandé"],
+          heading: "Each material and what it does best",
+          columns: ["What it does best", "Where we use it"],
           rows: [
             {
               label: "Plywood",
-              values: ["Very good stability", "Demanding structures"],
+              values: ["It stays straight and holds screws", "Cabinet boxes, drawers, shelves"],
             },
             {
               label: "MDF",
-              values: ["Good uniformity", "Painted doors and fronts"],
+              values: ["It takes paint perfectly smooth", "Painted doors and fronts"],
             },
             {
               label: "Melamine",
-              values: [
-                "Variable depending on context",
-                "Targeted storage and decor",
-              ],
+              values: ["It costs little and comes pre-finished", "Cabinet interiors and shelves"],
             },
             {
               label: "Solid wood",
-              values: ["High perceived value", "Visible aesthetic elements"],
+              values: ["It shows real wood grain", "Doors, mouldings and visible details"],
+            },
+            {
+              label: "Hardware",
+              values: ["It lasts years without loosening", "Hinges and drawer slides"],
+            },
+            {
+              label: "Particleboard",
+              values: ["It costs almost nothing", "Nothing that carries weight, with us"],
             },
           ],
         },
       },
     },
     {
-      id: "détails",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Detailed pages",
-          intro: "Dig deeper into each material according to its own logic.",
-          items: [
-            {
-              title: "Why plywood",
-              href: "/materiaux/contreplaque",
-              description: "Stability and structural integrity.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Plywood detail for custom cabinets",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "Uniformity and painted finish.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "MDF panel with a painted finish",
-              },
-              badges: ["Paint"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Melamine",
-              href: "/materiaux/melamine",
-              description: "Decorative finishes and controlled cost.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Melamine panel for custom furniture",
-              },
-              badges: ["Decor"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Solid wood",
-              href: "/materiaux/bois-massif",
-              description: "Natural texture and character.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Natural solid wood finish",
-              },
-              badges: ["Natural"],
-              footerCtaLabel: "View page",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "limits",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What the table doesn't show",
-          description:
-            "Real performance also depends on edge protection, assembly quality, hardware and installation adjustments. The table helps frame the choice, but it doesn't replace a decision suited to the project.",
-          cards: [
+          heading: "How to choose",
+          intro: "Two questions settle it in most rooms.",
+          rows: [
             {
-              title: "Edges",
-              description:
-                "They become critical as soon as there is humidity, impact or frequent cleaning.",
+              label: "First question",
+              value:
+                "Does that part carry weight, or is it likely to get wet?",
             },
             {
-              title: "Assembly",
-              description: "Good execution changes how it holds up over time.",
+              label: "Second question",
+              value:
+                "Do you want a painted door, a pre-finished decor or real wood?",
             },
             {
-              title: "Hardware",
-              description:
-                "Comfort and durability also depend on the mechanisms.",
+              label: "For the structure",
+              value:
+                "Plywood everywhere there are screws and weight to carry.",
             },
             {
-              title: "Installation",
-              description:
-                "Final adjustments influence how it actually performs.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "errors",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Mistakes to avoid",
-          intro:
-            "Poor choices often come from an oversimplified reading: looks alone, overlooking humidity, or underestimating finishing details.",
-          badges: ["Real use", "Humidity", "Execution"],
-          cardTitle: "Keep in mind",
-          items: [
-            "Don't choose based on looks alone",
-            "Account for humidity",
-            "Don't underestimate finishing details",
-            "Assess the real role of each piece",
-          ],
-          actions: [
-            {
-              label: "View hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "primary",
+              label: "For the fronts",
+              value:
+                "MDF if you paint, solid wood for the grain, melamine for the price.",
             },
             {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
+              label: "For the budget",
+              value:
+                "Put the money on what you see and touch every day.",
+            },
+            {
+              label: "What fails first",
+              value:
+                "The edges of the panels and the installation, rarely the material itself.",
             },
           ],
+          image: {
+            src: "/images/generated/materials/comparatif-materiaux-01.webp",
+            alt: "Cabinet panels compared side by side",
+          },
+          note: "The table gives the general rule. Your room may call for something else.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Materials comparison",
+          heading: "Questions about choosing materials",
           items: [
             {
-              q: "MDF or melamine?",
-              a: "MDF is preferred for a perfectly uniform painted finish, when you want a custom colour and smooth doors. Melamine arrives already finished with a thermofused decor: a wide choice of colours and wood looks, controlled cost, no painting step. In practice, MDF often serves painted fronts and melamine the cabinet boxes or budget-framed projects.",
+              q: "Should a kitchen use a single material?",
+              a: "No, and it is rarely desirable. Three or four panels share the same room, each placed where its weakness does not show.",
             },
             {
-              q: "Is plywood always preferable?",
-              a: "Not always, but it is often relevant for durable structure.",
+              q: "How do you compare two quotes?",
+              a: "Look at box thickness, plywood species, slide brand and edge band thickness. The rest is presentation.",
             },
             {
-              q: "Solid wood everywhere?",
-              a: "Not necessarily. It is often best when targeted at visible elements.",
-            },
-            {
-              q: "Can several materials be combined?",
-              a: "Yes, and it's often the best strategy. Rather than choosing a single material, you target each where it performs: birch plywood for the cabinet structure, solid wood on doors and visible elements, MDF for certain painted fronts, melamine for a durable, economical interior. This combination balances performance, look and budget.",
+              q: "Should particleboard be ruled out?",
+              a: "Under a decor and away from water, it does the job. We keep it out of cabinet boxes, because it does not hold screws over time.",
             },
           ],
         },
@@ -240,9 +157,9 @@ export const comparatifPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need a comparison tailored to your project?",
+          heading: "Choose the materials for your project",
           intro:
-            "We help you weigh structure, finish, humidity and budget to make a smarter choice.",
+            "We go through the room with you at home, then settle every material together.",
           actions: [
             {
               label: "Request a quote",
@@ -250,7 +167,7 @@ export const comparatifPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View all materials",
+              label: "See all materials",
               href: "/materiaux",
               variant: "ghost",
             },

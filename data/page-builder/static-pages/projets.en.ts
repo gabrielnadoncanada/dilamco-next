@@ -6,7 +6,7 @@ export const pageEn: PageTemplateData = {
   metadata: {
     title: "Custom kitchen & cabinetry projects",
     description:
-      "Explore our custom projects: kitchens, vanities, walk-in closets, laundry rooms and commercial work.",
+      "Custom projects: kitchens, vanities, walk-ins, laundry rooms and commercial work, delivered by Dilamco, a licensed general contractor (RBQ).",
     path: "/projets",
     ogAlt: "Dilamco projects",
   },
@@ -20,13 +20,12 @@ export const pageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Projects",
-          heading:
-            "Custom projects: kitchens, vanities, storage and commercial",
+          badges: ["Real cases"],
+          heading: "Kitchens, vanities, storage and commercial work",
           description:
-            "This page is here to show real cases, not an empty gallery. You'll find projects that help you judge the level of execution, the kind of constraints handled and the finish quality you can expect.",
+            "Job sites we ran from start to finish across Greater Montréal.",
           actions: [
             {
               label: "Request a quote",
@@ -39,34 +38,24 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Real cases", "Montréal", "Laval", "South Shore"],
-          image: {
-            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "Dilamco custom project",
-          },
-          caption:
-            "Projects that help you picture the result and check the quality of execution",
         },
       },
     },
 
     {
       id: "categories",
-      frame: { surface: "muted" },
       content: {
         type: "grid",
         variant: "image-cards-slider-lightbox",
         props: {
-          heading: "Explore the projects",
-          intro:
-            "Pick the project area closest to your situation to see more relevant references.",
+          heading: "Browse the projects by room",
+          intro: "Pick the room that looks most like your own project.",
           items: [
             {
               title: "Kitchens",
               href: "/projets/cuisine",
-              description:
-                "Custom kitchens: optimized storage and precise finish.",
-              footerCtaLabel: "View kitchen projects",
+              description: "Kitchens rebuilt from top to bottom.",
+              footerCtaLabel: "View kitchens",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Custom kitchen projects",
@@ -75,9 +64,8 @@ export const pageEn: PageTemplateData = {
             {
               title: "Bathrooms & vanities",
               href: "/projets/salle-de-bain",
-              description:
-                "Durable custom vanities, designed for humidity.",
-              footerCtaLabel: "View bathroom projects",
+              description: "Vanities that hold up in a wet room.",
+              footerCtaLabel: "View bathrooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Custom bathroom vanity projects",
@@ -86,8 +74,8 @@ export const pageEn: PageTemplateData = {
             {
               title: "Walk-in closets & storage",
               href: "/projets/walk-in",
-              description: "Custom storage, optimized and functional.",
-              footerCtaLabel: "View walk-in projects",
+              description: "Storage drawn around what you actually own.",
+              footerCtaLabel: "View walk-ins",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Custom walk-in closet and storage projects",
@@ -96,8 +84,8 @@ export const pageEn: PageTemplateData = {
             {
               title: "Laundry rooms",
               href: "/projets/salle-de-lavage",
-              description: "Organized, durable laundry rooms.",
-              footerCtaLabel: "View laundry room projects",
+              description: "Laundry rooms that are easy to keep clean.",
+              footerCtaLabel: "View laundry rooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Custom laundry room projects",
@@ -106,9 +94,8 @@ export const pageEn: PageTemplateData = {
             {
               title: "Commercial",
               href: "/projets/commercial",
-              description:
-                "Commercial fit-outs built for heavy use.",
-              footerCtaLabel: "View commercial projects",
+              description: "Offices and retail delivered ready to occupy.",
+              footerCtaLabel: "View commercial",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Custom commercial projects",
@@ -120,51 +107,53 @@ export const pageEn: PageTemplateData = {
     },
 
     {
-      id: "process",
-      frame: { surface: "muted" },
+      id: "galerie",
       content: {
-        type: "process",
-        variant: "split-cards",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "The project logic behind the final result",
-          description:
-            "Good projects rarely come from luck. They come from a method that clarifies decisions up front and protects execution all the way to installation.",
-          steps: [
+          heading: "A few completed job sites",
+          tiles: [
             {
-              number: "1",
-              title: "Scoping",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-laval-1.webp",
+                alt: "Custom kitchen delivered in Laval",
+              },
+              caption: "Custom kitchen, Laval",
+            },
+            {
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-terrebonne-1.webp",
+                alt: "Full-height cabinets installed in Terrebonne",
+              },
+              caption: "Full-height cabinets, Terrebonne",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/projects/cuisine-sur-mesure-repentigny-1.webp",
+                alt: "Centre island in a custom kitchen in Repentigny",
+              },
+              caption: "Centre island, Repentigny",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/projects/Signature-Bouleau.webp",
+                alt: "Birch cabinet boxes and drawers in a signature kitchen",
+              },
+              caption: "Birch interiors",
+            },
+            {
+              kind: "text",
+              title: "Something similar in mind?",
               description:
-                "Understand the needs, the site constraints and the real scope of the project.",
-            },
-            {
-              number: "2",
-              title: "Design and validations",
-              description:
-                "Structure the layout, confirm the choices and close the decisions that affect fabrication.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Produce on a stable base with material and technical choices already aligned.",
-            },
-            {
-              number: "4",
-              title: "Installation and finish",
-              description:
-                "Adjust, align and deliver a clean, consistent and durable result.",
-            },
-          ],
-          actions: [
-            {
-              label: "See the process",
-              href: "/processus",
-              variant: "ghost",
-            },
-            {
-              label: "View services",
-              href: "/services",
-              variant: "ghost",
+                "Send us your photos and measurements and we will give you a price range.",
+              href: "/contact",
             },
           ],
         },
@@ -177,9 +166,8 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Have a similar project?",
-          intro:
-            "If a project looks like your situation, we can help you frame the scope, the choices and the best next steps.",
+          heading: "You have a project of the same kind",
+          intro: "The estimate is free and we get back to you within a day or two.",
           actions: [
             {
               label: "Request a quote",
@@ -192,7 +180,7 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Residential and commercial - Montréal, Laval, South Shore",
+          note: "Residential and commercial · Montréal, Laval, South Shore",
         },
       },
     },

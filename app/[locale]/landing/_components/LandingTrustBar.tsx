@@ -5,9 +5,9 @@ type Proof = {
 };
 
 const proofs: readonly Proof[] = [
-  { value: "5700-2318", label: "Licence RBQ" },
-  { value: "4.9", label: "Avis Google", rating: true },
-  { value: "200+", label: "Cuisines livrées" },
+  { value: "8306-0806-27", label: "Licence RBQ" },
+  { value: "5,0", label: "Avis Google", rating: true },
+  { value: "2004", label: "Licencié depuis" },
   { value: "24 h", label: "Réponse garantie" },
 ];
 

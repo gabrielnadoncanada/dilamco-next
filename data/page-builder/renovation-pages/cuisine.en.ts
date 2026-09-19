@@ -6,9 +6,9 @@ export const renovationCuisinePageEn: PageTemplateData = {
   metadata: {
     title: "Kitchen renovation in Montreal — turnkey",
     description:
-      "Turnkey kitchen renovation: feasibility, coordination, fabrication and installation of custom cabinets in Montréal.",
+      "Full kitchen renovation: demolition, plumbing, electrical, ventilation, cabinets, countertops. RBQ-licensed general contractor.",
     path: "/services/renovation/cuisine",
-    ogAlt: "Dilamco kitchen renovation",
+    ogAlt: "Full kitchen renovation by a general contractor",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const renovationCuisinePageEn: PageTemplateData = {
   service: {
     name: "Kitchen renovation",
     description:
-      "Design, coordination, fabrication and installation of custom cabinets in a turnkey approach for kitchen projects.",
+      "Full kitchen renovation by a general contractor: permit, demolition, plumbing, electrical, ventilation, flooring, custom cabinets, countertops and finishing.",
     url: SITE.url + "/services/renovation/cuisine",
     serviceType: "Kitchen renovation",
+    areaServed: [
+      "Montreal",
+      "West Island",
+      "Laval",
+      "South Shore",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -34,213 +41,80 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
-          heading:
-            "Turnkey kitchen renovation in Montréal: framing the kitchen before opening the job site",
+          eyebrow: "Kitchen renovation",
+          heading: "Complete kitchen renovation, from permit to finishing",
           description:
-            "A kitchen renovation is a project that combines replacing the cabinets and surfaces, often with plumbing and electrical, while coordinating several trades. Its success depends as much on the coordination and the sequence as on the final result: that is what reduces surprises and protects quality.",
+            "The same crew handles the demolition, the plumbing, the electrical, the cabinets and the countertop.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View kitchen projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Kitchen", "turnkey", "Montréal"],
+          badges: ["Permit filed", "Trades coordinated", "Firm price"],
           image: {
             src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-            alt: "Custom kitchen renovation",
+            alt: "Kitchen renovated by a general contractor in Montreal",
           },
-          caption: "Montréal, Laval and the South Shore",
-        },
-      },
-    },
-    {
-      id: "problems",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What really makes a kitchen renovation complicated",
-          description:
-            "The challenge isn't just choosing cabinets. A kitchen brings together circulation, plumbing, electrical, appliances, storage and finish in a space that has to stay functional every day.",
-          cards: [
-            {
-              title: "Poorly framed scope",
-              description:
-                "When the sequence isn't clear, the job site piles up rework, delays and visible compromises.",
-            },
-            {
-              title: "Technical constraints",
-              description:
-                "Outlets, plumbing, ventilation, levels and appliance access directly influence design decisions.",
-            },
-            {
-              title: "Fragmented coordination",
-              description:
-                "The more misaligned parties there are, the more the final quality depends on late and costly adjustments.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Our approach to better frame a kitchen renovation",
-          intro:
-            "The goal is to keep a kitchen from being decided piece by piece. The project must be thought of as a whole where design, fabrication, job site and installation support each other.",
-          items: [
-            {
-              title: "Reading the existing space",
-              description:
-                "We start from the real constraints of the room, not from an idealized plan disconnected from the job site.",
-            },
-            {
-              title: "Hierarchy of decisions",
-              description:
-                "Circulation, island, storage, appliances and technical points are clarified before fabrication.",
-            },
-            {
-              title: "Sequence of work",
-              description:
-                "The job site is structured to better manage related steps and limit backtracking.",
-            },
-            {
-              title: "Control of the final result",
-              description:
-                "Alignments, finishes and equipment integration are thought through from the start, not corrected at the end.",
-            },
-          ],
-          actions: [
-            {
-              label: "See the design service",
-              href: "/services/design",
-              variant: "ghost",
-            },
-            {
-              label: "See the kitchen page",
-              href: "/espaces/cuisine",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-cuisine-approach-01.webp",
-            alt: "Planning a kitchen renovation",
-          },
-          cardTitle: "What we aim to protect",
-          cardDescription:
-            "A poorly sequenced kitchen rarely costs less in the end. It mostly costs more time, more corrections and often a less clean result.",
+          imageSide: "left",
+          caption: "Kitchens delivered across Greater Montreal",
         },
       },
     },
     {
       id: "included",
       content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Typical sequence of a kitchen renovation",
-          intro:
-            "The exact scope is confirmed during the quote, but the general logic stays the same: clarify, fabricate, coordinate, then install cleanly.",
-          steps: [
-            {
-              number: "1",
-              title: "Framing",
-              description:
-                "Analysis of the existing kitchen, the scope and the visible constraints.",
-            },
-            {
-              number: "2",
-              title: "Design",
-              description:
-                "Space organization, ergonomics, island, storage and main technical decisions.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Custom cabinets, island and storage prepared according to the validated choices.",
-            },
-            {
-              number: "4",
-              title: "Coordination",
-              description:
-                "Related work sequenced cleanly according to the chosen scope.",
-            },
-            {
-              number: "5",
-              title: "Installation",
-              description:
-                "Alignments, adjustments and careful finish for a clear and coherent kitchen.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "technical",
-      content: {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading:
-            "Technical points that change the quality of a renovated kitchen",
-          intro:
-            "The final result depends on a series of technical decisions that seem secondary on paper but become critical on the job site.",
+          heading: "What a kitchen renovation includes",
+          intro: "It all sits in one contract. The quote also says what is excluded.",
           columns: "2",
           items: [
             {
-              title: "Cabinet structure",
-              description:
-                "Quality also comes down to the invisible components.",
-              icon: "package2",
+              title: "Demolition and protection",
+              description: "We empty the kitchen without messing up the house",
+              icon: "hammer",
               bullets: [
-                "Solid birch wood for the drawers.",
-                "Birch plywood to better support the load.",
-                "More credible choices for intensive daily use.",
+                "We remove the cabinets, the countertop and the finishes",
+                "We protect the floors and the hallways every day",
+                "We supply the bin and haul the debris away",
               ],
             },
             {
-              title: "Appliance integration",
-              description:
-                "A kitchen reads poorly when the equipment is handled too late.",
-              icon: "doorOpen",
-              bullets: [
-                "Refrigerator, hood and dishwasher influenced by the design.",
-                "Clearances and alignments validated upfront.",
-                "Fewer visible compromises at the end of the job site.",
-              ],
-            },
-            {
-              title: "Ergonomics and circulation",
-              description:
-                "Daily comfort depends on how the room works.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "More logical work distances.",
-                "Island and storage better proportioned to the space.",
-                "Less friction in everyday use.",
-              ],
-            },
-            {
-              title: "Job site coordination",
-              description:
-                "A clean installation depends on a properly prepared job site.",
+              title: "Plumbing and electrical",
+              description: "We redo the pipes and the wiring before the walls close",
               icon: "wrench",
               bullets: [
-                "Better framed order of steps.",
-                "Fewer reworks between fabrication and installation.",
-                "More stable finish through to delivery.",
+                "We connect the sink, the dishwasher and the fridge",
+                "We add the island circuits and the counter outlets",
+                "We vent the range hood outdoors, then it gets inspected",
+              ],
+            },
+            {
+              title: "Cabinets and countertop",
+              description: "We supply both and we install them",
+              icon: "package2",
+              bullets: [
+                "The cabinets come from our partner factory",
+                "The countertop is measured in your home, cut, then set",
+                "We adjust the doors and the drawers at handover",
+              ],
+            },
+            {
+              title: "Floor, backsplash and paint",
+              description: "We finish with everything you can see",
+              icon: "layers",
+              bullets: [
+                "We correct the floor before laying the new surface",
+                "We set the backsplash, tape the joints and paint",
+                "We install the mouldings, the lighting and the handles",
               ],
             },
           ],
@@ -248,120 +122,165 @@ export const renovationCuisinePageEn: PageTemplateData = {
       },
     },
     {
-      id: "intégration",
+      id: "process",
       content: {
-        type: "grid",
-        variant: "image-cards-slider",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading:
-            "This service page mainly supports your custom kitchen project",
-          intro:
-            "Kitchen renovation reassures on method and coordination. For the full vision of the result, the materials and the projects, the kitchen pillar page remains the main destination.",
-          items: [
+          heading: "How a kitchen renovation unfolds",
+          steps: [
             {
-              title: "Custom kitchen",
-              href: "/espaces/cuisine",
+              number: "1",
+              title: "Visit and quote",
               description:
-                "The main pillar page to see the level of finish, the materials, the projects and the overall positioning.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "High-end custom kitchen",
-              },
-              badges: ["Pillar page", "Kitchen"],
-              footerCtaLabel: "See the kitchen page",
+                "We measure the room and check the electrical panel and the drain.",
             },
             {
-              title: "Fabrication service",
-              href: "/services/fabrication",
+              number: "2",
+              title: "Demolition",
               description:
-                "To understand what makes cabinets more stable, more consistent and more credible over the long term.",
-              image: {
-                src: "/images/generated/services/service-fabrication-hero-01.webp",
-                alt: "Custom fabrication and technical details",
-              },
-              badges: ["Fabrication", "Durability"],
-              footerCtaLabel: "See fabrication",
+                "We take out the old cabinets, the countertop and the finishes.",
             },
             {
-              title: "Installation service",
-              href: "/services/installation",
+              number: "3",
+              title: "Plumbing and electrical",
               description:
-                "To see how installation, on-site adjustments and alignments protect the final result.",
-              image: {
-                src: "/images/generated/services/service-installation-hero-01.webp",
-                alt: "Custom installation with precise adjustments",
-              },
-              badges: ["Installation", "Finish"],
-              footerCtaLabel: "See installation",
+                "We redo the drains, the circuits and the range hood duct.",
+            },
+            {
+              number: "4",
+              title: "Cabinets and countertop",
+              description:
+                "We install the cabinets, then measure and cut the countertop.",
+            },
+            {
+              number: "5",
+              title: "Finishing",
+              description:
+                "We set the backsplash, paint and hook up the appliances.",
             },
           ],
         },
       },
     },
     {
-      id: "proof",
+      id: "prix",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "price-tiles",
         props: {
-          heading: "What a well-framed kitchen renovation should produce",
-          description:
-            "Proof of competence isn't just a nice photo. It shows in how smoothly the kitchen is used, in the reading of alignments and in the way technical decisions disappear in favour of a kitchen that's simple to live with.",
-          cards: [
+          heading: "What a kitchen renovation costs",
+          tiles: [
             {
-              title: "A more readable job site",
-              description:
-                "Less hesitation over the sequence, the responsibilities and last-minute adjustments.",
+              title: "Refresh",
+              price: "from $20,000",
+              hint: "we keep your current cabinets",
+              includes: [
+                "Countertop and backsplash replaced",
+                "New paint and new handles",
+                "Appliances reconnected",
+              ],
             },
             {
-              title: "A more coherent kitchen",
-              description:
-                "Island, storage, appliances and circulation work as a whole instead of competing with each other.",
+              title: "Full kitchen",
+              price: "$35,000 to $50,000",
+              hint: "new cabinets and countertop",
+              featured: true,
+              includes: [
+                "Demolition and debris removal",
+                "Plumbing and electrical redone",
+                "Cabinets and countertop installed",
+                "Backsplash, paint and mouldings",
+              ],
             },
             {
-              title: "A cleaner finish",
-              description:
-                "Alignments, joints and equipment integration support a more premium perception.",
+              title: "Kitchen and open plan",
+              price: "above $50,000",
+              hint: "with a wall opening or new flooring",
+              includes: [
+                "Beam sized by an engineer",
+                "Flooring tied into the adjoining rooms",
+                "Lighting and ventilation reworked",
+              ],
             },
           ],
-          columns: "1",
+          note: "These are ballpark ranges. The exact price is written in the quote, after the visit to your home.",
+          action: {
+            label: "Free quote",
+            href: "/contact",
+            variant: "primary",
+          },
+        },
+      },
+    },
+    {
+      id: "galerie",
+      content: {
+        type: "grid",
+        variant: "bento",
+        props: {
+          heading: "Kitchens we have delivered",
+          tiles: [
+            {
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Kitchen open to the living room with island and tall columns",
+              },
+              caption: "Kitchen open to the living room",
+            },
+            {
+              kind: "stat",
+              value: "9 to 15 wks",
+              label: "Cabinet production at our partner factory",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "White kitchen with a quartz island",
+              },
+              caption: "Island with a quartz countertop",
+            },
+            {
+              kind: "text",
+              title: "See more kitchens",
+              description:
+                "Photos taken in our clients' homes.",
+              href: "/espaces/cuisine",
+            },
+          ],
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - kitchen renovation",
-          intro:
-            "Clear answers on timelines, condos, coordination and project scope.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "How long does a kitchen renovation take?",
-              a: "How long a kitchen renovation takes varies depending on the scope (a refresh or a full redesign), the constraints of the location and the coordination required between trades. For a full renovation with custom cabinets, you should allow several weeks of on-site work, on top of the 9 to 15 week fabrication lead time. A precise schedule is set once the scope is clarified.",
+              q: "How long will I be without a kitchen?",
+              a: "A few weeks without a sink or appliances. We set up a temporary corner and have the cabinets delivered as soon as the plumbing is done.",
             },
             {
-              q: "Do you work with other trades on the job site?",
-              a: "Yes, when the scope calls for it. The goal is precisely to order the work so as to avoid conflicts and protect the quality of the final result.",
+              q: "Can the wall between the kitchen and the living room come out?",
+              a: "Often yes. If the wall carries a load, an engineer sizes the beam and its supports, and that drawing goes with the permit application.",
             },
             {
-              q: "Is it possible in a condo?",
-              a: "Yes. In a condo, access (elevator, parking, protection of common areas), the work hours allowed by the board and certain technical constraints (plumbing, ventilation, soundproofing) must be framed early. Once these points are clarified, a kitchen renovation in a condo proceeds like anywhere else, with planning adapted to the building.",
+              q: "Do I need a permit to renovate a kitchen?",
+              a: "Yes if a load-bearing wall changes, if plumbing moves or if the range hood goes through an exterior wall. Replacing fixtures in the same spot usually does not.",
             },
             {
-              q: "Do I have to leave the home during the work?",
-              a: "It depends on the scope. For a full renovation, some periods may be less comfortable.",
+              q: "Where do the cabinets and the countertop come from?",
+              a: "The custom cabinets come from our partner factory and our own crews install them. The countertop is measured once the cabinets are in place.",
             },
             {
-              q: "Can I do a partial renovation?",
-              a: "Yes. Some projects focus mainly on the cabinets, the island and the installation, while others include more work.",
-            },
-            {
-              q: "Where can I see the complete approach for a custom kitchen?",
-              a: "The kitchen renovation page mainly explains the logic of coordination and the job site. For the full vision of the product, the materials and the projects, the custom kitchen page is the main reference.",
+              q: "What if I want to move the island?",
+              a: "The drain, the water lines and the wiring have to follow. We open the floor or run the services from the basement, and that work is priced before demolition.",
             },
           ],
         },
@@ -373,23 +292,22 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading:
-            "Want to frame a kitchen renovation correctly?",
+          heading: "Get your kitchen priced",
           intro:
-            "We help you define the right sequence and the right level of coordination, then redirect you to the kitchen pillar page for the full vision of the project.",
+            "We come to your home, take the measurements and hand you a detailed quote, at no charge.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "See the kitchen page",
-              href: "/espaces/cuisine",
+              label: "Turnkey renovation",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Custom kitchen, island, storage and integrated renovation",
+          note: "RBQ licence 8306-0806-27 · Permit, plumbing, electrical, cabinets and countertop",
         },
       },
     },

@@ -5,6 +5,8 @@ import {
 } from "../../../shared/schema";
 
 export const HeroSplitImageSchema = z.object({
+  /** Petit libellé au-dessus du titre (ville, service). 1 à 4 mots. */
+  eyebrow: z.string().min(1).max(40).optional(),
   heading: z.string().min(1), // H1
   description: z.string().min(1),
 
@@ -15,6 +17,9 @@ export const HeroSplitImageSchema = z.object({
   image: ImageSchema,
 
   caption: z.string().optional(), // small text under image
+
+  /** Côté de la photo sur desktop (défaut : droite). */
+  imageSide: z.enum(["left", "right"]).optional(),
 });
 
 export type HeroSplitImageProps = z.infer<typeof HeroSplitImageSchema>;

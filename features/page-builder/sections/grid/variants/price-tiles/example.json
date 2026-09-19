@@ -1,0 +1,11 @@
+{
+  "heading": "Ordres de grandeur",
+  "intro": "Des fourchettes réalistes pour situer votre projet avant la visite.",
+  "tiles": [
+    { "title": "Salle de bain", "price": "15 000 $ à 30 000 $", "hint": "selon plomberie et céramique", "includes": ["Démolition et plomberie", "Membrane d'étanchéité", "Céramique et vanité"] },
+    { "title": "Cuisine complète", "price": "35 000 $ à 50 000 $", "hint": "armoires incluses", "featured": true, "includes": ["Plomberie et électricité", "Armoires sur mesure", "Comptoir et dosseret", "Finition"] },
+    { "title": "Sous-sol", "price": "à partir de 25 000 $", "hint": "selon superficie et humidité", "includes": ["Isolation et pare-vapeur", "Divisions et électricité", "Plafond et éclairage"] }
+  ],
+  "note": "Prix indicatifs. Le prix ferme est fixé dans la soumission détaillée, après relevé sur place.",
+  "action": { "label": "Soumission gratuite", "href": "/contact", "variant": "primary" }
+}

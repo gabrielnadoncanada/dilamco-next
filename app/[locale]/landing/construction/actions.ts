@@ -108,8 +108,8 @@ export async function submitConstructionLead(
       status: "error",
       message: "Corrigez les champs indiques puis renvoyez le formulaire.",
       fieldErrors: Object.fromEntries(
-        Object.entries(fieldErrors).flatMap(([key, value]) =>
-          value && value[0] ? [[key, value[0]]] : [],
+        Object.entries(fieldErrors as Record<string, string[] | undefined>).flatMap(
+          ([key, value]) => (value && value[0] ? [[key, value[0]]] : []),
         ),
       ),
     };

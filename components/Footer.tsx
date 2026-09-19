@@ -1,5 +1,4 @@
 import { getLocale } from "next-intl/server";
-import { cn } from "@/lib/utils";
 import {
   BRAND,
   FOOTER_NAV,
@@ -14,9 +13,6 @@ import {
 } from "@/constants/navigation.en";
 import { Logo, LogoImage } from "./footer/Logo";
 import { SmartLink } from "./footer/SmartLink";
-import { Section } from "./elements/section";
-import { Container } from "./elements/container";
-import { Divider } from "./elements/divider";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
 import { SITE } from "@/seo/schema/site";
 import GoogleReviews from "./GoogleReviews";
@@ -31,12 +27,11 @@ interface FooterProps {
   menuItems?: FooterNavSection[];
   copyright?: string;
   bottomLinks?: LegalLink[];
-  /** Affiche la section avis Google au-dessus du footer. Off sur la boutique. */
+  /** Affiche la section avis Google au-dessus du footer. */
   showReviews?: boolean;
 }
 
 export const Footer = async ({
-  className,
   logo,
   tagline,
   menuItems,
@@ -50,84 +45,110 @@ export const Footer = async ({
   menuItems = menuItems ?? (isEn ? FOOTER_NAV_EN : FOOTER_NAV);
   copyright = copyright ?? (isEn ? COPYRIGHT_TEXT_EN : COPYRIGHT_TEXT);
   bottomLinks = bottomLinks ?? (isEn ? LEGAL_LINKS_EN : LEGAL_LINKS);
+
   return (
     <>
       {showReviews && <GoogleReviews />}
-      {/* Footer UNIFIÉ (vitrine + boutique) : fond vert de marque, logo blanc. */}
-      <footer className="bg-foreground text-background">
-        <div className="w-full max-w-[1440px] mx-auto px-[clamp(20px,1rem,56px)] max-[700px]:px-[18px] py-14">
-          <div className="relative z-10 grid grid-cols-2 gap-8 lg:grid-cols-6">
-            <div className="col-span-2 mb-8 lg:mb-0">
-              <div className="flex items-center gap-2 lg:justify-start">
-                <Logo url={logo.url}>
-                  <LogoImage
-                    src={logo.src}
-                    alt={logo.alt}
-                    title={logo.title}
-                    className="[filter:brightness(0)_invert(1)]"
-                  />
-                </Logo>
-              </div>
-              <p className="mt-4 max-w-xs text-sm font-normal leading-relaxed text-background/65">
+      {/* Pied de page « encre » (refonte 2026-09) : fond charbon, logo blanc,
+          wordmark fantôme en fond, licence RBQ obligatoire. */}
+      <footer className="relative overflow-hidden bg-ink text-ink-foreground">
+        <div className="relative z-10 mx-auto w-full max-w-[1440px] px-[clamp(20px,1rem,56px)] pb-10 pt-16 max-[700px]:px-[18px] md:pt-20">
+          <div className="grid gap-12 lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <Logo url={logo.url}>
+                <LogoImage
+                  src={logo.src}
+                  alt={logo.alt}
+                  title={logo.title}
+                  className="h-6 w-auto [filter:brightness(0)_invert(1)]"
+                />
+              </Logo>
+              <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-muted">
                 {tagline}
               </p>
-              <address className="mt-4 not-italic text-sm leading-6 text-background/65">
+              <address className="mt-6 grid gap-1 text-sm not-italic leading-6">
                 <a
                   href={`tel:${SITE.telephone.replace(/[^+\d]/g, "")}`}
-                  className="font-medium transition-colors hover:text-background"
+                  className="w-fit rounded-sm font-display text-[length:var(--title-4)] font-semibold tracking-[-0.02em] text-ink-foreground transition-ui focus-ring-inverse hover:opacity-80"
                 >
                   {PHONE_DISPLAY}
                 </a>
-                <br />
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="transition-colors hover:text-background"
+                  className="w-fit rounded-sm text-ink-muted transition-ui focus-ring-inverse hover:text-ink-foreground"
                 >
                   {SITE.email}
                 </a>
-                <br />
-                {/* {SITE.address.streetAddress}, {SITE.address.addressLocality} (
-                {SITE.address.addressRegion}) */}
+                <span className="text-ink-muted">
+                  {SITE.address.streetAddress}, {SITE.address.addressLocality} (
+                  {SITE.address.addressRegion}) {SITE.address.postalCode}
+                </span>
               </address>
+              {/* Licence RBQ : mention obligatoire sur toute publicité d'un
+                  entrepreneur (Loi sur le bâtiment). Lien vers le registre public. */}
+              <p className="mt-6 inline-flex flex-wrap items-center gap-x-2 gap-y-1 rounded-full border border-white/12 px-3.5 py-1.5 text-xs font-semibold text-ink-foreground/90">
+                <span>{isEn ? "RBQ licence" : "Licence RBQ"}</span>
+                <a
+                  href={SITE.rbqRegistryUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-sm tabular-nums underline decoration-white/30 underline-offset-4 transition-ui focus-ring-inverse hover:decoration-white"
+                >
+                  {SITE.rbqLicence}
+                </a>
+                <span className="text-ink-muted">
+                  · {isEn ? "since 2004 · insured" : "depuis 2004 · assuré"}
+                </span>
+              </p>
             </div>
-            {menuItems.map((section, sectionIdx) => (
-              <div key={sectionIdx}>
-                <h3 className="mb-4 text-sm font-semibold uppercase leading-6 tracking-[0.08em] text-background">
-                  {section.title}
-                </h3>
-                <ul className="space-y-3.5 text-sm leading-6 text-background/75">
-                  {section.links.map((link, linkIdx) => (
-                    <li
-                      key={linkIdx}
-                      className="font-medium transition-colors hover:text-background focus-within:text-background"
-                    >
-                      <SmartLink
-                        href={link.url}
-                        className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                      >
-                        {link.text}
-                      </SmartLink>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className="relative z-10 mt-16 flex flex-col justify-between gap-4 border-t border-background/15 pt-8 text-sm font-medium text-background/55 md:flex-row md:items-center">
-            <p>{copyright}</p>
-            <ul className="flex flex-wrap gap-4">
-              {bottomLinks.map((link, linkIdx) => (
-                <li key={linkIdx}>
-                  <SmartLink
-                    href={link.url}
-                    className="underline transition-colors hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-                  >
-                    {link.text}
-                  </SmartLink>
-                </li>
+
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-7">
+              {menuItems.map((section, sectionIdx) => (
+                <div key={sectionIdx}>
+                  <h3 className="mb-4 text-label text-ink-muted">
+                    {section.title}
+                  </h3>
+                  <ul className="space-y-2.5 text-sm">
+                    {section.links.map((link, linkIdx) => (
+                      <li key={linkIdx}>
+                        <SmartLink
+                          href={link.url}
+                          className="rounded-sm font-medium text-ink-foreground/85 transition-ui focus-ring-inverse hover:text-ink-foreground"
+                        >
+                          {link.text}
+                        </SmartLink>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
+
+          <div className="mt-16 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-xs text-ink-muted md:flex-row md:items-center">
+            <p>{copyright}</p>
+            {bottomLinks.length > 0 ? (
+              <ul className="flex flex-wrap gap-4">
+                {bottomLinks.map((link, linkIdx) => (
+                  <li key={linkIdx}>
+                    <SmartLink
+                      href={link.url}
+                      className="rounded-sm underline underline-offset-4 transition-ui focus-ring-inverse hover:text-ink-foreground"
+                    >
+                      {link.text}
+                    </SmartLink>
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        </div>
+
+        <div
+          aria-hidden
+          className="ghost-wordmark pointer-events-none absolute inset-x-0 -bottom-[0.12em] z-0 overflow-hidden text-center"
+        >
+          DILAMCO
         </div>
       </footer>
     </>

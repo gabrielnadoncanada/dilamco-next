@@ -14,6 +14,8 @@ import { extractFaqItems, extractImages } from "../seo/extractStructuredData";
 import type { Registry } from "../model/block-types";
 import { PageRenderer } from "../ui/PageRenderer";
 import Header from "@/components/Header";
+import { PageBreadcrumbs } from "@/components/PageBreadcrumbs";
+import { MobileStickyCta } from "@/components/MobileStickyCta";
 import { Footer } from "@/components/Footer";
 
 export async function BuilderPageTemplate(props: {
@@ -55,8 +57,10 @@ export async function BuilderPageTemplate(props: {
         <JsonLd key={index} data={jsonLd} />
       ))}
       <Header />
+      <PageBreadcrumbs items={data.breadcrumbs} />
       <PageRenderer blocks={data.blocks} blockRegistry={blockRegistry} />
       <Footer />
+      <MobileStickyCta hidden={pageUrl?.endsWith("/contact") ?? false} />
     </>
   );
 }

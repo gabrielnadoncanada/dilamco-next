@@ -2,25 +2,42 @@
 
 import { NavigationMenuLink } from "@/components/ui/navigation-menu";
 import { AppLink as Link } from "@/components/AppLink";
+import { cn } from "@/lib/utils";
 import type { NavLinkItemProps } from "../navbar.types";
 
-export function NavLinkItem({ link, variant }: NavLinkItemProps) {
+export function NavLinkItem({
+  link,
+  variant,
+  active = false,
+}: NavLinkItemProps & { active?: boolean }) {
   if (variant === "desktop") {
     return (
       <NavigationMenuLink
         asChild
-        className="group/link flex-row gap-2 px-3 py-2 transition-colors duration-200"
+        className={cn(
+          "group/link flex-row items-start gap-3 rounded-control px-3 py-2.5 transition-ui hover:bg-primary-soft focus-visible:bg-primary-soft",
+          active && "bg-primary-soft/70",
+        )}
       >
-        <Link href={link.url}>
-          <div className="flex size-8 shrink-0 rounded-lg border border-border bg-background/70 duration-300 group-hover/link:bg-primary">
-            <link.icon className="m-auto size-4 text-muted-foreground transition-colors group-hover/link:text-white" />
-          </div>
-          <div className="flex flex-col gap-[2px]">
-            <div className="text-sm leading-6 font-medium">{link.label}</div>
-            <div className="text-xs leading-5 text-muted-foreground group-hover/link:text-foreground">
-              {link.description}
-            </div>
-          </div>
+        <Link href={link.url} aria-current={active ? "page" : undefined}>
+          <span
+            className={cn(
+              "icon-pill size-9 group-hover/link:bg-primary group-hover/link:text-primary-foreground",
+              active && "bg-primary text-primary-foreground",
+            )}
+          >
+            <link.icon className="size-4" strokeWidth={2} />
+          </span>
+          <span className="flex min-w-0 flex-col gap-0.5">
+            <span className="text-sm font-semibold leading-5 text-foreground">
+              {link.label}
+            </span>
+            {link.description ? (
+              <span className="text-xs leading-4 text-muted-foreground">
+                {link.description}
+              </span>
+            ) : null}
+          </span>
         </Link>
       </NavigationMenuLink>
     );
@@ -29,9 +46,11 @@ export function NavLinkItem({ link, variant }: NavLinkItemProps) {
   return (
     <Link
       href={link.url}
-      className="flex h-12 items-center gap-2 rounded-lg px-4 text-base leading-normal font-medium text-muted-foreground transition-colors duration-300 hover:bg-muted hover:text-foreground"
+      className="flex h-12 items-center gap-3 rounded-control px-3 text-base font-medium text-foreground/85 transition-ui focus-ring hover:bg-primary-soft hover:text-primary"
     >
-      <link.icon className="size-4 stroke-muted-foreground" />
+      <span className="icon-pill size-8">
+        <link.icon className="size-4" strokeWidth={2} />
+      </span>
       {link.label}
     </Link>
   );

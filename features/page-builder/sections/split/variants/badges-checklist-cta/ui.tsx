@@ -1,24 +1,30 @@
+import { Check } from "lucide-react";
 import { AppLink as Link } from "@/components/AppLink";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button, ButtonArrow } from "@/components/ui/button";
 import type { SplitBadgesChecklistCtaProps } from "./schema";
 import { Heading } from "@/components/elements/heading";
 
+/**
+ * Titre + intro + pastilles à gauche ; panneau vert de marque à droite avec
+ * une liste à cocher et les actions.
+ */
 export function SplitBadgesChecklistCta(props: SplitBadgesChecklistCtaProps) {
   const primaryAction = props.actions[0];
   const secondaryAction = props.actions[1];
 
   return (
-    <div className="grid gap-y-8 lg:grid-cols-12 lg:items-start">
+    <div className="grid gap-y-8 text-left lg:grid-cols-12 lg:items-center lg:gap-x-12">
       <div className="lg:col-span-5">
-        <Heading as="h2" variant="h2">{props.heading}</Heading>
+        <Heading as="h2" variant="h2">
+          {props.heading}
+        </Heading>
 
-        <p className="mt-3 text-sm text-muted-foreground">{props.intro}</p>
+        <p className="text-lead mt-4">{props.intro}</p>
 
         {props.badges?.length ? (
           <div className="mt-6 flex flex-wrap gap-2">
-            {props.badges.map((badge) => (
+            {props.badges.slice(0, 4).map((badge) => (
               <Badge key={badge} variant="secondary">
                 {badge}
               </Badge>
@@ -28,35 +34,39 @@ export function SplitBadgesChecklistCta(props: SplitBadgesChecklistCtaProps) {
       </div>
 
       <div className="lg:col-[7/13]">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">{props.cardTitle}</CardTitle>
-          </CardHeader>
+        <div className="surface-blueprint rounded-panel p-7 text-primary-foreground sm:p-10">
+          <Heading as="h3" variant="h3" className="text-primary-foreground">
+            {props.cardTitle}
+          </Heading>
 
-          <CardContent className="space-y-3 text-sm text-muted-foreground">
-            <ul className="space-y-2">
-              {props.items.map((item, index) => (
-                <li key={item} className="flex items-start gap-2 items-center">
-                  <span className="mt-0.5 flex h-4 w-4 items-center justify-center rounded-full border bg-background text-xs font-semibold shrink-0">{index + 1}</span>
-                  {item}</li>
-              ))}
-            </ul>
-          </CardContent>
+          <ul className="mt-6 space-y-3.5">
+            {props.items.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 text-[0.9375rem] leading-relaxed"
+              >
+                <span className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-white/15">
+                  <Check className="size-3.5" strokeWidth={3} />
+                </span>
+                <span className="text-primary-foreground/92">{item}</span>
+              </li>
+            ))}
+          </ul>
 
-          <CardFooter className="border-t">
-            <div className="w-full space-y-2">
-              <Button asChild block variant={primaryAction.variant ?? "primary"}>
-                <Link href={primaryAction.href}>{primaryAction.label}</Link>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button asChild variant="paper">
+              <Link href={primaryAction.href}>
+                {primaryAction.label}
+                <ButtonArrow />
+              </Link>
+            </Button>
+            {secondaryAction ? (
+              <Button asChild variant="ghost-light">
+                <Link href={secondaryAction.href}>{secondaryAction.label}</Link>
               </Button>
-
-              {secondaryAction ? (
-                <Button asChild block variant={secondaryAction.variant ?? "ghost"}>
-                  <Link href={secondaryAction.href}>{secondaryAction.label}</Link>
-                </Button>
-              ) : null}
-            </div>
-          </CardFooter>
-        </Card>
+            ) : null}
+          </div>
+        </div>
       </div>
     </div>
   );

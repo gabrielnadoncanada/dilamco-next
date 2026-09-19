@@ -12,12 +12,15 @@ export function Logo({ logo }: LogoProps) {
   return (
     <Link
       href="/"
-      className="flex max-h-8 items-center gap-2 text-lg font-semibold tracking-tighter"
+      className="flex items-center rounded-sm focus-ring"
     >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={logoConfig.src}
         alt={logoConfig.alt}
-        className="inline-block w-30"
+        width={128}
+        height={32}
+        className="block h-5 w-auto md:h-[22px]"
       />
       <span className="sr-only">{logoConfig.title}</span>
     </Link>

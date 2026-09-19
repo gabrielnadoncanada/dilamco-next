@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const renovationPlancherPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Rénovation de plancher à Montréal",
+    title: "Rénovation de plancher à Montréal — entrepreneur général",
     description:
-      "Rénovation de plancher : séquence de chantier, niveaux, transitions et intégration propre dans un projet plus large.",
+      "Rénovation de plancher : sous-plancher, planéité, niveaux, transitions et pose. Entrepreneur général licencié RBQ, contrat écrit.",
     path: "/services/renovation/plancher",
-    ogAlt: "Rénovation de plancher Dilamco",
+    ogAlt: "Rénovation de plancher par un entrepreneur général",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const renovationPlancherPage: PageTemplateData = {
   service: {
     name: "Rénovation de plancher",
     description:
-      "Planification, coordination et finition soignée quand le plancher s'intègre à une rénovation plus large avec armoires, installation ou reconfiguration.",
+      "Réfection de plancher par un entrepreneur général : évaluation du sous-plancher, correction des niveaux, transitions entre pièces, pose et finition, coordonnées avec le reste du chantier.",
     url: SITE.url + "/services/renovation/plancher",
     serviceType: "Rénovation de plancher",
+    areaServed: [
+      "Montréal",
+      "Ouest-de-l'Île",
+      "Laval",
+      "Rive-Sud",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -34,114 +41,82 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Rénovation",
-          heading:
-            "Rénovation de plancher, mieux gérer niveaux, transitions et séquence de chantier",
+          eyebrow: "Rénovation de plancher",
+          heading: "Rénovation de plancher, de l'arrachage à la pose",
           description:
-            "La rénovation de plancher est le remplacement ou la réfection du revêtement de sol, qui influence les niveaux, les transitions, l'installation des armoires et la qualité perçue de l'ensemble. Elle doit être pensée dans la séquence globale du chantier, pas traitée comme une décision isolée.",
+            "On vérifie le sous-plancher et l'humidité avant de poser votre nouveau revêtement.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir la rénovation clé en main",
+              label: "Rénovation clé en main",
               href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          badges: ["Transitions", "Niveaux", "Séquence"],
+          badges: ["Sous-plancher vérifié", "Contrat écrit"],
           image: {
             src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-            alt: "Rénovation de plancher",
+            alt: "Rénovation de plancher résidentiel par un entrepreneur général",
           },
-          caption: "Montréal, Laval et Rive-Sud",
+          imageSide: "left",
+          caption: "Planchers refaits dans l'Ouest-de-l'Île",
         },
       },
     },
     {
-      id: "problems",
+      id: "included",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "icon-cards-bullets",
         props: {
-          heading:
-            "Pourquoi le plancher crée souvent des problèmes à retardement",
-          description:
-            "Le plancher semble simple tant qu'on ne le relie pas au reste du chantier. En réalité, il influence les hauteurs, les transitions, les ajustements sur place et parfois la logique complète d'installation.",
-          cards: [
-            {
-              title: "Niveaux et planéité",
-              description:
-                "Les variations du support se répercutent directement sur la pose, les alignements et le rendu final.",
-            },
-            {
-              title: "Mauvais ordre des travaux",
-              description:
-                "Quand le plancher est traité trop tard ou trop tôt, il force souvent des reprises ou des protections supplémentaires.",
-            },
-            {
-              title: "Raccords visibles",
-              description:
-                "Les transitions mal pensées entre zones, pièces ou matériaux diminuent vite la perception de qualité.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading:
-            "Notre approche pour intégrer le plancher sans nuire au reste du projet",
-          intro:
-            "L'objectif n'est pas seulement de remplacer une surface. Il faut s'assurer que le plancher s'intègre correctement aux armoires, aux niveaux, aux transitions et à la séquence générale du chantier.",
+          heading: "Ce qui est inclus dans une réfection de plancher",
+          columns: "2",
           items: [
             {
-              title: "Lecture de l'existant",
-              description:
-                "On clarifie les niveaux, les irrégularités visibles, les transitions et la relation avec les autres zones du projet.",
+              title: "Arrachage de l'ancien plancher",
+              description: "On enlève tout pour voir ce qu'il y a dessous",
+              icon: "hammer",
+              bullets: [
+                "On enlève le revêtement, les plinthes et les seuils",
+                "On repère les traces d'eau et les panneaux ramollis",
+                "On mesure l'humidité du béton ou du bois",
+              ],
             },
             {
-              title: "Ordre des étapes",
-              description:
-                "Le plancher est positionné dans la bonne séquence pour réduire les reprises et protéger la finition.",
+              title: "Réparation du sous-plancher",
+              description: "C'est ce que les poseurs facturent souvent en extra",
+              icon: "ruler",
+              bullets: [
+                "On change les panneaux abîmés et on revisse",
+                "On nivelle selon ce que le revêtement tolère",
+                "On renforce les poutres si le plancher plie",
+              ],
             },
             {
-              title: "Coordination avec l'installation",
-              description:
-                "Les armoires, les ajustements sur place et les raccords doivent être pensés ensemble.",
+              title: "Pose du revêtement",
+              description: "Bois franc, bois d'ingénierie, vinyle ou céramique",
+              icon: "layers",
+              bullets: [
+                "On laisse le bois s'acclimater dans la maison",
+                "On choisit la membrane selon l'étage et le support",
+                "On laisse partout l'espace que le bois exige",
+              ],
             },
             {
-              title: "Contrôle du rendu final",
-              description:
-                "Les joints, les lignes de transition et la lecture des surfaces doivent rester propres après les travaux.",
+              title: "Seuils, plinthes et portes",
+              description: "On finit les jonctions entre les pièces",
+              icon: "slidersHorizontal",
+              bullets: [
+                "On prévoit les transitions d'une pièce à l'autre",
+                "On refait les nez de marche et les raccords d'escalier",
+                "On repose les plinthes et on rabote les portes",
+              ],
             },
           ],
-          actions: [
-            {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Voir la rénovation clé en main",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Coordination du plancher dans une rénovation",
-          },
-          cardTitle: "Ce qu'on cherche à éviter",
-          cardDescription:
-            "Un plancher mal intégré peut obliger des corrections en cascade sur la pose, les niveaux et les transitions alors que le problème venait surtout d'une mauvaise séquence.",
         },
       },
     },
@@ -151,219 +126,118 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading:
-            "Séquence type pour intégrer un plancher dans une rénovation",
-          intro:
-            "La logique reste simple: comprendre le support, vérifier les impacts sur les autres éléments, puis exécuter dans le bon ordre.",
+          heading: "Comment on refait un plancher",
           steps: [
             {
               number: "1",
-              title: "Analyse",
+              title: "Mesures",
               description:
-                "Lecture du support, des niveaux, des transitions et de la relation avec les autres zones du chantier.",
+                "On mesure les surfaces et les différences de hauteur entre les pièces.",
             },
             {
               number: "2",
-              title: "Décision",
+              title: "Arrachage",
               description:
-                "Choix du matériau, des raccords et de la séquence selon la portée réelle du projet.",
+                "On protège la maison et on sort l'ancien revêtement.",
             },
             {
               number: "3",
-              title: "Préparation",
+              title: "Réparation",
               description:
-                "Mise en condition du chantier pour protéger les prochaines étapes et limiter les reprises.",
+                "On remplace les panneaux abîmés et on revisse tout le sous-plancher.",
             },
             {
               number: "4",
-              title: "Coordination",
+              title: "Nivellement",
               description:
-                "Intégration avec armoires, installation, transitions et ajustements nécessaires.",
+                "On coule le produit de nivellement et on attend qu'il sèche.",
             },
             {
               number: "5",
-              title: "Finition",
+              title: "Pose et seuils",
               description:
-                "Vérification des joints, des lignes et du rendu final dans l'ensemble de l'espace.",
+                "On pose le revêtement, les seuils et les plinthes, puis on rabote les portes.",
             },
           ],
         },
       },
     },
     {
-      id: "technical",
-      content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
-        props: {
-          heading:
-            "Points techniques qui influencent vraiment un projet de plancher",
-          intro:
-            "Le plancher est rarement un simple choix esthétique. Ce sont les détails techniques autour qui influencent le plus la qualité finale.",
-          columns: "2",
-          items: [
-            {
-              title: "Planéité du support",
-              description:
-                "La base conditionne directement le résultat visuel et fonctionnel.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Les variations de niveau se répercutent sur l'installation.",
-                "Un support mal lu crée des corrections plus tard.",
-                "Le rendu final dépend souvent de ce travail préparatoire.",
-              ],
-            },
-            {
-              title: "Transitions entre zones",
-              description:
-                "Les raccords visibles comptent autant que la surface elle-même.",
-              icon: "doorOpen",
-              bullets: [
-                "Jonctions propres entre pièces ou matériaux.",
-                "Transitions pensées selon circulation et hauteur.",
-                "Moins d'effets de seuil mal résolus.",
-              ],
-            },
-            {
-              title: "Relation avec les armoires",
-              description:
-                "Le plancher et le mobilier influencent mutuellement leur pose.",
-              icon: "package2",
-              bullets: [
-                "Impact direct sur alignements et hauteurs.",
-                "Besoin de séquence claire avec installation.",
-                "Moins de reprises sur joints et ajustements.",
-              ],
-            },
-            {
-              title: "Exécution chantier",
-              description:
-                "La qualité du rendu dépend aussi de l'ordre des interventions.",
-              icon: "wrench",
-              bullets: [
-                "Protection des surfaces au bon moment.",
-                "Moins de corrections de fin de chantier.",
-                "Finition plus nette dans l'ensemble du projet.",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "intégration",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Le plancher s'intègre surtout à un projet plus large",
-          intro:
-            "Cette page service sert à expliquer la logique de coordination. Dans la plupart des cas, le plancher soutient surtout un projet de cuisine, de salle de bain ou de rénovation clé en main plus globale.",
-          items: [
-            {
-              title: "Rénovation clé en main",
-              href: "/services/renovation",
-              description:
-                "La page principale pour comprendre comment séquence, coordination et travaux connexes s'alignent dans un projet plus large.",
-              image: {
-                src: "/images/generated/services/service-renovation-hero-01.webp",
-                alt: "Rénovation clé en main mieux coordonnée",
-              },
-              badges: ["Page principale", "Coordination"],
-              footerCtaLabel: "Voir rénovation",
-            },
-            {
-              title: "Cuisine sur mesure",
-              href: "/espaces/cuisine",
-              description:
-                "Quand le plancher influence les niveaux, l'îlot, les armoires et la lecture générale de la cuisine.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec intégration propre du plancher",
-              },
-              badges: ["Cuisine", "Niveaux"],
-              footerCtaLabel: "Voir la page cuisine",
-            },
-            {
-              title: "Salle de bain sur mesure",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Quand les transitions, l'humidité et la finition du sol doivent soutenir le reste de la pièce sans faiblesse visible.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure avec finition de plancher propre",
-              },
-              badges: ["Salle de bain", "Finition"],
-              footerCtaLabel: "Voir la page salle de bain",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "proof",
+      id: "sequence",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "list-actions-image-card",
         props: {
-          heading: "Ce qu'un plancher bien intégré doit apporter au projet",
-          description:
-            "La preuve de compétence ne tient pas seulement dans la surface choisie. Elle se voit dans les niveaux, les transitions et la façon dont le plancher soutient le reste de l'aménagement sans attirer l'attention pour les mauvaises raisons.",
-          cards: [
+          heading: "À quel moment poser le plancher",
+          intro:
+            "L'ordre des travaux change la facture autant que le revêtement choisi.",
+          items: [
             {
-              title: "Lecture plus propre",
-              description:
-                "Les lignes et raccords restent discrets au lieu de casser la cohérence de l'espace.",
+              title: "Après la plomberie et la peinture",
+              description: "un plancher neuf se marque si le chantier est encore ouvert.",
             },
             {
-              title: "Installation plus stable",
-              description:
-                "Les autres éléments du projet s'ajustent mieux quand le support et la séquence sont bien cadrés.",
+              title: "Avant les armoires",
+              description: "on évite une différence de hauteur si un électroménager change.",
             },
             {
-              title: "Finition plus crédible",
-              description:
-                "Le résultat final paraît mieux maîtrisé parce que les détails techniques ne ressortent pas.",
+              title: "Les hauteurs se décident au plan",
+              description: "la céramique, le bois et le vinyle n'ont pas la même épaisseur.",
+            },
+            {
+              title: "Sur une dalle de béton",
+              description: "il faut d'abord un sous-plancher isolant ou une membrane.",
             },
           ],
-          columns: "1",
+          actions: [
+            {
+              label: "Voir la cuisine",
+              href: "/services/renovation/cuisine",
+              variant: "ghost",
+            },
+            {
+              label: "Voir le sous-sol",
+              href: "/services/renovation/sous-sol",
+              variant: "ghost",
+            },
+          ],
+          image: {
+            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
+            alt: "Préparation du sous-plancher avant la pose d'un revêtement",
+          },
+          cardTitle: "Un seul calendrier",
+          cardDescription:
+            "Le raccord avec les armoires, la salle de bain et l'escalier fait partie du même contrat.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - rénovation de plancher",
-          intro:
-            "Réponses claires sur séquence, niveaux, condo et intégration au reste du chantier.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Est-ce que je peux refaire uniquement le plancher?",
-              a: "Oui, un plancher peut se refaire seul. Mais dès qu'il y a des armoires en place ou une rénovation plus large, la coordination devient déterminante : l'ordre des travaux, les niveaux et les transitions influencent directement l'alignement des meubles et la finition. On cadre alors la séquence pour éviter de refaire deux fois le même travail.",
+              q: "Pourquoi mon plancher craque-t-il ?",
+              a: "Presque toujours à cause du sous-plancher : panneaux mal fixés, vis manquantes, contreplaqué trop mince. Le revêtement ne fait que révéler le défaut. On arrache, on revisse et on remplace.",
             },
             {
-              q: "Dans quel ordre faut-il faire les travaux?",
-              a: "L'ordre dépend de la portée, mais l'objectif reste d'éviter les reprises et protéger le résultat final.",
+              q: "Peut-on poser par-dessus l'ancien plancher ?",
+              a: "C'est rarement une bonne idée. La hauteur monte, les portes frottent, les seuils se compliquent et on ne voit pas l'état du dessous. On recommande d'arracher, sauf exception écrite.",
             },
             {
-              q: "Travaillez-vous avec d'autres intervenants pour ce type de projet?",
-              a: "Oui, lorsque le plancher s'intègre à une rénovation plus large. La coordination sert justement à clarifier l'ordre des interventions et à protéger la finition.",
+              q: "Quel plancher choisir pour un sous-sol ?",
+              a: "On mesure d'abord l'humidité du béton. Le vinyle de qualité et la céramique s'en accommodent bien. Le bois franc posé directement sur le béton est à éviter.",
             },
             {
-              q: "Est-ce possible en condo?",
-              a: "Oui. En condo, les contraintes d'accès, les horaires de travaux autorisés et souvent les exigences d'insonorisation (membrane acoustique sous le revêtement) doivent être vérifiées au départ, car plusieurs syndicats imposent des normes de bruit entre étages. Une fois ces règles cadrées, la pose se planifie normalement.",
+              q: "Faut-il un permis pour refaire un plancher ?",
+              a: "Pas pour changer un revêtement. Il en faut un dès que la structure bouge : poutres modifiées, ouverture pour un escalier, dalle abaissée. On vérifie avec votre ville.",
             },
             {
-              q: "Est-ce que le plancher influence l'installation des armoires?",
-              a: "Oui. Les niveaux et la planéité influencent directement l'alignement, les joints et les transitions.",
-            },
-            {
-              q: "Où voir l'approche complète pour un projet plus global?",
-              a: "La page rénovation de plancher explique surtout la logique de séquence et de coordination. Pour la vision complète d'un projet plus large, la page rénovation clé en main reste la référence principale.",
+              q: "Pourquoi laisser le bois s'acclimater ?",
+              a: "Le bois gonfle et rétrécit avec l'humidité de la maison. Posé trop vite, il ouvre des joints en hiver. Quelques jours à l'intérieur, à température normale, règlent la question.",
             },
           ],
         },
@@ -375,23 +249,22 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading:
-            "Besoin d'intégrer le plancher dans une rénovation plus large ?",
+          heading: "Un plancher à refaire ? Parlons-en.",
           intro:
-            "On vous aide à cadrer la bonne séquence et les bons raccords pour protéger le résultat final, puis à vous orienter vers la page rénovation principale si le projet dépasse le seul plancher.",
+            "On mesure les niveaux, on ouvre un coin du sous-plancher, puis on chiffre les travaux.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir la rénovation clé en main",
-              href: "/services/renovation",
+              label: "Voir les zones desservies",
+              href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Plancher, transitions, niveaux et coordination chantier",
+          note: "Licence RBQ 8306-0806-27 · Sous-plancher, nivellement, pose et seuils",
         },
       },
     },

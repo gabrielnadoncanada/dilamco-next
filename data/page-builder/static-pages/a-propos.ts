@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Spécialiste des armoires sur mesure à Montréal — À propos",
+    title: "Entrepreneur général licencié depuis 2004 — À propos",
     description:
-      "À propos de Dilamco : sur mesure, fabrication contrôlée, installation soignée et vision long terme pour des projets durables.",
+      "Dilamco, entrepreneur général en rénovation résidentielle depuis 2004. Licence RBQ 8306-0806-27, base à Pierrefonds-Roxboro, Ouest-de-l'Île.",
     path: "/a-propos",
-    ogAlt: "À propos de Dilamco",
+    ogAlt: "L'équipe et l'approche de chantier de Dilamco",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -22,166 +22,139 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - À propos",
-          heading: "Une entreprise de sur mesure construite pour mieux contrôler l'exécution",
+          eyebrow: "À propos",
+          heading:
+            "Entrepreneur général en rénovation résidentielle depuis 2004",
           description:
-            "Dilamco ne se positionne pas comme un simple vendeur d'armoires. Notre approche relie design, fabrication, installation et coordination quand le projet l'exige, pour obtenir un résultat plus cohérent et plus durable.",
+            "La même licence, la même personne responsable et la même adresse depuis vingt ans.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos projets",
+              label: "Voir nos réalisations",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Exécution", "Durabilité", "clé en main"],
+          badges: ["RBQ 8306-0806-27", "Depuis 2004", "Pierrefonds-Roxboro"],
           image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Équipe et approche Dilamco pour les projets sur mesure",
+            src: "/images/realisations/escalier-rampe-verre-finition-interieure-01.webp",
+            alt: "Escalier et rampe de verre : finition intérieure réalisée par Dilamco",
           },
-          caption:
-            "Notre valeur ne vient pas d'un discours premium. Elle vient du niveau de contrôle sur le résultat final.",
+          caption: "9139-1250 Québec inc. · Pierrefonds-Roxboro",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "structural-advantage",
+      id: "reperes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "L'avantage structurel que nous cherchons à protéger",
-          description:
-            "Une entreprise de sur mesure solide ne dépend pas seulement du style. Elle dépend de sa capacité à garder le contrôle entre les décisions de design, la qualité de fabrication, le choix des matériaux et la pose sur le terrain.",
-          cards: [
+          heading: "L'entreprise en chiffres",
+          tiles: [
             {
-              title: "Moins de fragmentation",
-              description:
-                "Moins il y a de ruptures entre conception, production et installation, plus le projet reste lisible et exécutable.",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/mur-bois-accent-plafond-haut-01.webp",
+                alt: "Mur de bois en accent sous un plafond de grande hauteur",
+              },
+              caption: "Mur d'accent, plafond haut",
             },
             {
-              title: "Qualité plus tangible",
-              description:
-                "La valeur se voit dans les détails : structure, quincaillerie, finitions, ajustements et constance d'exécution.",
+              kind: "stat",
+              value: "2004",
+              label: "L'année où notre licence a été délivrée",
             },
             {
-              title: "Responsabilité plus claire",
-              description:
-                "Le client avance mieux quand il sait qui cadre les décisions et qui porte le résultat jusqu'à la fin.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "history",
-      frame: { surface: "muted" },
-      content: {
-        type: "process",
-        variant: "split-cards",
-        props: {
-          heading: "Comment l'entreprise s'est structurée",
-          description:
-            "Notre trajectoire a suivi une logique simple : réduire les faiblesses qui nuisent à la qualité finale et renforcer les étapes qui stabilisent vraiment un projet.",
-          steps: [
-            {
-              number: "1",
-              title: "Comprendre les contraintes réelles",
-              description:
-                "Les projets sur mesure demandent plus qu'un bon visuel. Ils demandent une lecture sérieuse de l'espace, de l'usage et des limites du chantier.",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
+                alt: "Plancher de bois franc neuf posé dans une pièce rénovée",
+              },
+              caption: "Plancher de bois franc",
             },
             {
-              number: "2",
-              title: "Mieux relier design et exécution",
-              description:
-                "La structure de l'entreprise s'est construite autour d'une meilleure continuité entre les choix en amont et la réalité de fabrication et d'installation.",
+              kind: "stat",
+              value: "5,0",
+              label: "Notre note Google, sur 11 avis de clients",
             },
             {
-              number: "3",
-              title: "Standardiser sans banaliser",
-              description:
-                "L'objectif n'a jamais été de faire du standard. L'objectif est d'avoir une méthode reproductible pour livrer du vrai sur mesure avec plus de constance.",
+              kind: "stat",
+              value: "40 000 $",
+              label: "Le montant déposé en garantie pour protéger nos clients",
             },
             {
-              number: "4",
-              title: "Viser une relation long terme",
-              description:
-                "Nous préférons une croissance basée sur la réputation, la qualité perçue et des projets bien exécutés plutôt que sur le volume à tout prix.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir notre processus",
-              href: "/processus",
-              variant: "ghost",
-            },
-            {
-              label: "Voir les services",
-              href: "/services",
-              variant: "ghost",
+              kind: "image",
+              image: {
+                src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
+                alt: "Présentoirs de finis et de matériaux au showroom de Dorval",
+              },
+              caption: "Présentoirs de finis, Dorval",
             },
           ],
         },
       },
     },
     {
-      id: "principles",
+      id: "licence",
       content: {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Les principes qui guident nos décisions",
+          heading: "Ce qui vous protège quand vous nous engagez",
           intro:
-            "Le bon projet n'est pas seulement beau au moment de la livraison. Il doit rester cohérent dans le temps, dans l'usage et dans la qualité perçue.",
+            "Vous pouvez tout vérifier au registre de la Régie du bâtiment du Québec.",
           columns: "2",
           items: [
             {
-              title: "Usage avant effet",
+              title: "Notre licence RBQ",
               description:
-                "Le design sert d'abord à rendre l'espace plus juste, plus fluide et plus durable.",
-              icon: "doorOpen",
+                "Délivrée le 7 septembre 2004 comme entrepreneur général, sans aucune restriction.",
+              icon: "fileCheck",
               bullets: [
-                "Ergonomie pensée selon le quotidien",
-                "Configurations adaptées à l'espace réel",
-                "Choix qui servent la fonction avant la mode",
+                "Le numéro à vérifier est le 8306-0806-27",
+                "Elle couvre les maisons comme les immeubles",
+                "Elle couvre aussi les armoires et les comptoirs",
               ],
             },
             {
-              title: "Durabilité concrète",
+              title: "Un dépôt de garantie",
               description:
-                "Le premium doit se vérifier dans les composants et dans la manière de les intégrer.",
-              icon: "package2",
+                "Une somme déposée d'avance sert à vous dédommager si nous manquons à nos obligations.",
+              icon: "shieldCheck",
               bullets: [
-                "Matériaux choisis selon l'usage",
-                "Quincaillerie et détails cohérents",
-                "Moins de compromis invisibles",
+                "Le dépôt est de 40 000 $",
+                "Personne n'a eu à s'en servir à ce jour",
+                "Le responsable inscrit est Sean Diffley",
               ],
             },
             {
-              title: "Exécution maîtrisée",
+              title: "Nos assurances",
               description:
-                "La qualité finale dépend autant de la séquence que du produit lui-même.",
-              icon: "wrench",
+                "Vous recevez les attestations avant de signer quoi que ce soit.",
+              icon: "hardHat",
               bullets: [
-                "Validation avant production",
-                "Fabrication mieux cadrée",
-                "Installation et ajustements précis",
+                "Nous sommes assurés en responsabilité civile",
+                "Le chantier est couvert pendant les travaux",
+                "Vous pouvez demander les papiers en tout temps",
               ],
             },
             {
-              title: "Vision long terme",
+              title: "La garantie de nos travaux",
               description:
-                "On cherche à bâtir une marque qui tient par la répétition d'un bon standard, pas par des promesses vagues.",
-              icon: "slidersHorizontal",
+                "Ce qui est couvert et pour combien de temps est écrit dans votre contrat.",
+              icon: "clipboardCheck",
               bullets: [
-                "Positionnement premium assumé",
-                "Croissance basée sur la confiance",
-                "Réputation soutenue par le résultat",
+                "On corrige tout avant que vous payiez la fin",
+                "Les travaux respectent le Code de construction",
+                "Nous ne bâtissons pas de maisons neuves",
               ],
             },
           ],
@@ -189,47 +162,28 @@ export const page: PageTemplateData = {
       },
     },
     {
-      id: "where-to-go-next",
+      id: "faq",
       content: {
-        type: "grid",
-        variant: "link-cards-compact",
+        type: "faq",
+        variant: "accordion",
         props: {
-          heading: "Explorer l'entreprise par angle",
-          intro:
-            "Selon ce que vous cherchez à valider, vous pouvez approfondir la méthode, les services, les matériaux ou les réalisations.",
-          columns: "2",
+          heading: "Questions fréquentes",
           items: [
             {
-              title: "Notre processus",
-              description:
-                "Pour voir comment un projet avance du cadrage à l'installation.",
-              href: "/processus",
-              badges: ["Méthode", "Étapes"],
-              ctaLabel: "Voir le processus",
+              q: "Depuis quand Dilamco existe ?",
+              a: "La licence d'entrepreneur général a été délivrée le 7 septembre 2004 et n'a jamais été interrompue. Raison sociale : 9139-1250 Québec inc., aussi connue sous « Construction Dilamco ».",
             },
             {
-              title: "Nos services",
-              description:
-                "Pour comprendre le rôle du design, de la fabrication, de l'installation et de la rénovation.",
-              href: "/services",
-              badges: ["Design", "Installation"],
-              ctaLabel: "Voir les services",
+              q: "Où êtes-vous situés ?",
+              a: "Au 18625, rue Larocque, à Pierrefonds-Roxboro. Nous couvrons l'Ouest-de-l'Île, Montréal, Laval, la Rive-Sud et Vaudreuil-Soulanges.",
             },
             {
-              title: "Nos matériaux",
-              description:
-                "Pour comprendre les choix techniques qui soutiennent la durabilité et la finition.",
-              href: "/materiaux",
-              badges: ["Panneaux", "Quincaillerie"],
-              ctaLabel: "Voir les matériaux",
+              q: "Qui est le répondant de la licence ?",
+              a: "Sean Diffley, inscrit au registre comme répondant en gestion et en exécution des travaux. C'est la personne que la Régie reconnaît comme responsable des chantiers.",
             },
             {
-              title: "Nos projets",
-              description:
-                "Pour voir des exemples concrets du niveau d'exécution recherché.",
-              href: "/projets",
-              badges: ["Références", "Réalisations"],
-              ctaLabel: "Voir les projets",
+              q: "Pourquoi passer par un entrepreneur général ?",
+              a: "Parce qu'une seule signature couvre les permis, les corps de métier, l'échéancier et le prix. Sans lui, les arbitrages entre métiers retombent sur le propriétaire.",
             },
           ],
         },
@@ -241,22 +195,22 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez valider si Dilamco est le bon fit pour votre projet ?",
+          heading: "Parlons de votre projet",
           intro:
-            "Le plus simple est de cadrer la portée, les priorités et le niveau d'exigence attendu. On vous dira clairement comment on peut intervenir.",
+            "Estimation gratuite. Les attestations d'assurance sont fournies avant la signature.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos projets",
-              href: "/projets",
+              label: "Voir notre processus",
+              href: "/processus",
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval et Rive-Sud",
+          note: "Licence RBQ 8306-0806-27 · 18625, rue Larocque, Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

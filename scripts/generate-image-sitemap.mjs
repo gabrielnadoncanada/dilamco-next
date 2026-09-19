@@ -1,9 +1,6 @@
-// Génère public/sitemap-images.xml + public/sitemap-products.xml à partir des
-// pages HTML buildées.
-// - sitemap-images : chaque <img> (/images/) ou render produit (JSON-LD) associé
-//   à sa page, pour Google Images.
-// - sitemap-products : les fiches produit avec hreflang FR/EN CORRECTS (slug
-//   traduit FR≠EN, que next-sitemap ne sait pas apparier — voir next-sitemap.config.js).
+// Génère public/sitemap-images.xml à partir des pages HTML buildées : chaque
+// <img> (/images/) associé à sa page, pour Google Images. Supprime aussi
+// l'ancien sitemap-products.xml (boutique retirée du site en 2026-09).
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -35,12 +32,12 @@ async function walkHtml(dir) {
 const EN_SEGMENT = {
   espaces: "spaces",
   projets: "projects",
-  boutique: "shop",
   materiaux: "materials",
   "a-propos": "about",
   processus: "process",
   "politique-de-confidentialite": "privacy-policy",
   "conditions-dutilisation": "terms-of-use",
+  zones: "areas",
 };
 const SPACE_EN = {
   cuisine: "kitchen",
@@ -53,8 +50,10 @@ const SPACE_EN = {
 const RENOVATION_EN = {
   cuisine: "kitchen",
   "salle-de-bain": "bathroom",
+  "sous-sol": "basement",
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
+  "apres-sinistre": "water-damage",
 };
 const MATERIAL_EN = {
   contreplaque: "plywood",
@@ -152,13 +151,6 @@ async function main() {
     const route = fileToRoute(fp);
     if (SKIP_ROUTE(route)) continue;
     const html = await fs.readFile(fp, "utf8");
-    const fpUnix = fp.replace(/\\/g, "/");
-    // Fiches produit : volontairement EXCLUES du sitemap (URL + images).
-    // Décision SEO 2026-07 — sortir les pages produit single de tous les
-    // sitemaps (crawl focalisé sur pages éditoriales + collections). Les
-    // collections restent dans sitemap-0.xml (next-sitemap), intactes.
-    // Réversible : restaurer le bloc productUrls/productPages ci-dessous.
-    if (fpUnix.includes("/boutique/produit/")) continue;
     const imgs = extractImages(html);
     if (!imgs.length) continue;
     byRoute.set(route, imgs);
@@ -182,8 +174,6 @@ async function main() {
     })
     .join("\n");
 
-  // Fiches produit exclues (voir boucle ci-dessus) : le sitemap-images ne liste
-  // plus que les pages éditoriales + collections.
   const body = urls;
 
   const xml =
@@ -194,9 +184,8 @@ async function main() {
 
   await fs.writeFile(OUT, xml, "utf8");
 
-  // sitemap-products.xml n'est plus généré : les fiches produit single sont
-  // volontairement hors sitemap (décision SEO 2026-07). L'ancien fichier est
-  // supprimé s'il traîne, et la référence est retirée de robots.txt / index.
+  // sitemap-products.xml (ancienne boutique) : supprimé s'il traîne, et la
+  // référence est retirée de robots.txt / index.
   await fs.rm(PRODUCTS_OUT, { force: true });
 
   const extraSitemaps = ["sitemap-images.xml"];
@@ -253,9 +242,8 @@ async function main() {
   }
 
   console.log(
-    `sitemap-images.xml : ${routes.length} pages éditoriales + collections, ${totalImgs} images (fiches produit exclues)`,
+    `sitemap-images.xml : ${routes.length} pages, ${totalImgs} images`,
   );
-  console.log("sitemap-products.xml : non généré (fiches produit hors sitemap)");
 }
 
 main().catch((e) => {

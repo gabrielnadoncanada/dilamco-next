@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const fabricationPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Fabrication d'armoires sur mesure — notre processus",
+    title: "Fabrication d'armoires sur mesure — usine partenaire",
     description:
-      "Fabrication sur mesure : durabilité, précision et finition haut de gamme pour un résultat cohérent et durable.",
+      "Armoires sur mesure produites par notre usine partenaire, avec contrôle qualité et coordination de chantier assurés par Dilamco, entrepreneur général.",
     path: "/services/fabrication",
     ogAlt: "Service de fabrication Dilamco",
   },
@@ -21,7 +21,7 @@ export const fabricationPage: PageTemplateData = {
   service: {
     name: "Service de fabrication",
     description:
-      "Fabrication sur mesure : durabilité, précision et finition haut de gamme.",
+      "Armoires sur mesure fabriquées par notre usine partenaire, sous contrôle qualité et coordination de Dilamco.",
     url: SITE.url + "/services/fabrication",
     serviceType: "Fabrication",
   },
@@ -33,10 +33,10 @@ export const fabricationPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading: "Fabrication sur mesure, précision, constance et durabilité",
+          eyebrow: "Division armoires",
+          heading: "Qui produit vos armoires et qui les vérifie",
           description:
-            "La fabrication est l'étape où les armoires sont produites selon les plans validés : découpe, assemblage et finition des caissons, portes et tiroirs. Elle détermine la solidité, la stabilité et la longévité du projet. Chez Dilamco, elle est réalisée de façon contrôlée en usine partenaire, pour un résultat cohérent et propre à installer.",
+            "Nos armoires sont produites par notre usine partenaire, sur nos plans, et nous les vérifions à l'arrivée.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -49,160 +49,123 @@ export const fabricationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Précision", "Durabilité", "Sur mesure"],
+          badges: ["Sur mesure", "Contrôle qualité", "Un seul contrat"],
           image: {
             src: "/images/generated/services/service-fabrication-hero-01.webp",
-            alt: "Plans techniques et échantillons de matériaux pour fabrication sur mesure",
+            alt: "Plans techniques et échantillons de matériaux pour une commande sur mesure",
           },
-          caption:
-            "Matériaux, assemblage et détails qui tiennent dans le temps",
+          caption: "Vérifié à la livraison, avant la pose",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "meaning",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Ce que signifie vraiment fabrication sur mesure",
-          intro:
-            "Le sur mesure vise une adaptation réelle à l'espace et à l'usage, pas seulement une coupe à la bonne largeur.",
-          badges: ["Dimensions réelles", "Assemblage cohérent", "Usage réel"],
-          cardTitle: "Ce qui fait la différence",
-          items: [
-            "Adaptation à l'espace et aux contraintes réelles.",
-            "Alignements et proportions maîtrisées entre modules.",
-            "Choix de matériaux et quincaillerie selon l'usage.",
-          ],
-          actions: [
-            {
-              label: "Voir les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
+      id: "etapes",
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Processus de fabrication",
-          intro:
-            "Chaque étape prépare la suivante pour réduire les reprises et faciliter une installation propre.",
+          heading: "De la commande à la livraison chez vous",
           steps: [
             {
               number: "1",
-              title: "Validation",
+              title: "On passe la commande",
               description:
-                "Design, mesures et contraintes clarifiés avant production.",
+                "On commande les panneaux, les finis et la quincaillerie sur vos plans signés.",
             },
             {
               number: "2",
-              title: "Sélection",
+              title: "L'usine produit",
               description:
-                "Matériaux choisis selon durabilité, humidité et entretien.",
+                "Notre usine partenaire monte les caissons, les portes et les tiroirs.",
             },
             {
               number: "3",
-              title: "Assemblage",
+              title: "On vérifie tout",
               description:
-                "Modules, portes et tiroirs fabriqués avec cohérence et précision.",
+                "On compte les pièces et on mesure chaque module dès qu'il arrive.",
             },
             {
               number: "4",
-              title: "Préparation",
+              title: "On livre chez vous",
               description:
-                "Contrôle final et mise en condition pour une pose précise.",
+                "On protège les modules et on les dépose dans l'ordre où on va les poser.",
             },
           ],
         },
       },
     },
     {
-      id: "types",
+      id: "fiche",
       content: {
-        type: "grid",
-        variant: "image-cards-slider",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Fabrication par type de projet",
-          intro:
-            "Le niveau d'usage et les contraintes changent selon l'espace, mais le standard d'exécution reste élevé.",
-          items: [
+          heading: "La production en bref",
+          intro: "Qui produit vos armoires, qui les contrôle et en combien de temps.",
+          rows: [
             {
-              title: "Cuisine",
-              href: "/espaces/cuisine",
-              description:
-                "Modules, îlots, rangement optimisé et intégration électroménagers.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec fabrication précise",
-              },
-              badges: ["Cuisine", "Rangement"],
-              footerCtaLabel: "Voir cuisine",
+              label: "Combien de temps",
+              value:
+                "Il s'écoule 9 à 15 semaines entre vos plans signés et la journée de pose.",
             },
             {
-              title: "Salle de bain",
-              href: "/espaces/salle-de-bain",
-              description: "Vanités et rangement adaptés à l'humidité.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure avec fabrication durable",
-              },
-              badges: ["Humidité", "Durabilité"],
-              footerCtaLabel: "Voir salle de bain",
+              label: "Ce que vous recevez",
+              value:
+                "Des caissons, des portes, des tiroirs et des tablettes déjà montés.",
             },
             {
-              title: "Commercial",
-              href: "/espaces/commercial",
-              description:
-                "Usage intensif, durabilité et cohérence fonctionnelle.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Aménagement commercial sur mesure avec fabrication robuste",
-              },
-              badges: ["Commercial", "Usage intensif"],
-              footerCtaLabel: "Voir commercial",
+              label: "Qui s'en occupe",
+              value:
+                "Notre usine partenaire produit, et Dilamco décide des matériaux et vérifie.",
+            },
+            {
+              label: "Contrôle",
+              value:
+                "Chaque module est ouvert et mesuré avant d'entrer chez vous.",
+            },
+            {
+              label: "Garantie",
+              value:
+                "Une pièce non conforme est recommandée à nos frais, pas aux vôtres.",
+            },
+            {
+              label: "Si le chantier retarde",
+              value:
+                "On garde vos armoires chez nous jusqu'à ce que la pièce soit prête.",
             },
           ],
+          image: {
+            src: "/images/services/fabrication-hero.webp",
+            alt: "Modules d'armoires emballés en attente de livraison",
+          },
+          note: "La date de livraison vous est confirmée par écrit dès la commande.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - fabrication",
-          intro:
-            "Réponses claires sur la fabrication sur mesure et ses implications.",
+          heading: "Questions sur la production",
           items: [
             {
-              q: "Quelle est la différence entre sur mesure et semi-custom?",
-              a: "Le sur mesure part de votre espace réel : chaque caisson est dimensionné au millimètre selon vos mesures, votre aménagement et vos contraintes. Le semi-custom, lui, part de modules prédéfinis qu'on adapte dans une certaine limite (quelques largeurs, options de finition), sans reconcevoir entièrement. Le sur mesure exploite mieux les angles, les hauteurs et les espaces atypiques ; le semi-custom peut suffire quand l'espace est standard. La différence se voit surtout dans l'ajustement final et l'exploitation de chaque centimètre.",
+              q: "Qui produit réellement vos armoires ?",
+              a: "Notre usine partenaire exclusive, sur nos plans et nos spécifications. Dilamco garde le design, le contrôle à la réception, la pose et le service après coup.",
             },
             {
-              q: "Quels matériaux vieillissent le mieux?",
-              a: "Cela dépend de l'espace, de l'humidité, de l'entretien, des chants, de la quincaillerie et de l'installation.",
+              q: "Et si une pièce arrive abîmée ?",
+              a: "Elle est refusée à la réception et recommandée le jour même. C'est la raison d'être du contrôle avant l'entrée des modules au chantier.",
             },
             {
-              q: "Est-ce personnalisable à 100 %?",
-              a: "L'objectif est d'adapter le projet à l'espace et à l'usage, dans les limites des contraintes techniques réelles.",
+              q: "Peut-on ajouter un module en cours de route ?",
+              a: "Avant le lancement en production, oui, sans frais de relance. Après, l'ajout part dans un second envoi, avec son propre délai.",
             },
             {
-              q: "Quels sont les délais de fabrication?",
-              a: "Les délais de fabrication varient selon la complexité du projet, la disponibilité des matériaux et la coordination avec l'installation. Pour un projet sur mesure, il faut généralement compter de 9 à 15 semaines entre la validation du design et la pose finale. Un échéancier précis est confirmé une fois les plans arrêtés, pour vous donner une visibilité claire sur chaque étape.",
+              q: "Sur mesure ou semi-sur-mesure ?",
+              a: "Le sur mesure part de vos mesures, caisson par caisson. Le semi adapte des largeurs prédéfinies. L'écart se voit dans les angles et les hauteurs.",
             },
           ],
         },
@@ -214,9 +177,9 @@ export const fabricationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous voulez un projet fabriqué pour durer ?",
+          heading: "Lancer la production de vos armoires",
           intro:
-            "On vous aide à cadrer les bons choix techniques, matériaux et détails d'exécution avant la production.",
+            "On arrête les matériaux, la quincaillerie et les dates avant d'envoyer la commande.",
           actions: [
             {
               label: "Demander une soumission",
@@ -229,7 +192,7 @@ export const fabricationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval et Rive-Sud",
+          note: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

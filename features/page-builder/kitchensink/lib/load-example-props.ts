@@ -40,7 +40,7 @@ export async function loadExampleProps<TSchema extends z.ZodTypeAny>(
     throw new Error(
       [
         `Example props validation failed for "${examplePath}".`,
-        ...result.error.issues.map(
+        ...(result.error as z.ZodError).issues.map(
           (issue) => `- ${issue.path.join(".") || "<root>"}: ${issue.message}`,
         ),
       ].join("\n"),

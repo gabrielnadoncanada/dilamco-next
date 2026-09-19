@@ -23,229 +23,103 @@ export const boisMassifPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materials",
-          heading:
-            "Solid wood: authenticity, character and limits to know",
+          eyebrow: "Materials",
+          heading: "Where solid wood is really worth the price",
           description:
-            "Solid wood is wood taken directly from the log — full boards, as opposed to composite panels. Prized for its grain and visual depth, it is a living material: its behaviour depends on the context, the finish and where it is used.",
+            "Wood moves with the seasons, so we keep it for the parts you see up close.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Natural", "Premium", "Visible elements"],
+          badges: ["Natural", "Doors", "Details"],
           image: {
-            src: "/images/generated/materials/material-birch-drawer-detail-01.webp",
-            alt: "Custom kitchen with solid wood details",
+            src: "/images/generated/materials/material-solid-wood-card-01.webp",
+            alt: "Solid wood cabinet door with visible grain",
           },
-          caption:
-            "The real point isn't solid wood everywhere, but solid wood in the right place",
+          caption: "Doors and details seen up close",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "overview",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "What solid wood really brings",
-          description:
-            "Solid wood stands apart from MDF, melamine, plywood and veneer through its full material body and natural variations. It brings warmth, depth and perceived value, but calls for more careful design.",
-          cards: [
+          heading: "What you should know about solid wood",
+          intro: "Its qualities, its cost, and where it holds up best.",
+          rows: [
             {
-              title: "Natural aesthetics",
-              description:
-                "Grain, tone and texture give a more lively result.",
+              label: "What it is made of",
+              value:
+                "Real boards of maple, oak or walnut, glued side by side.",
             },
             {
-              title: "High perceived value",
-              description:
-                "It reinforces the high-end feel on visible elements.",
+              label: "Does it handle humidity?",
+              value:
+                "It reacts a lot: it swells in summer and tightens up in winter.",
             },
             {
-              title: "Possible repairability",
-              description:
-                "Some marks can be reworked depending on the chosen finish.",
+              label: "Upkeep",
+              value:
+                "A soft cloth, and wipe up any water right away.",
             },
             {
-              title: "Stability constraint",
-              description:
-                "Its behaviour varies with humidity, temperature and design.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "fit",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Where solid wood is most relevant",
-          intro:
-            "Solid wood is often optimal on visible elements where the look, the feel and the perception of quality matter most.",
-          badges: ["Doors", "Fronts", "Details"],
-          cardTitle: "A good fit for this material",
-          items: [
-            "Doors and fronts",
-            "Decorative details",
-            "Selected pieces with high visual value",
-            "Projects where a natural character is sought",
-          ],
-          actions: [
-            {
-              label: "View design",
-              href: "/services/design",
-              variant: "primary",
+              label: "Best used for",
+              value:
+                "Doors, mouldings and the shelves you see up close.",
             },
             {
-              label: "View fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Limits and points to watch",
-          intro:
-            "Durability does not come from the material alone. It also depends on the finish, the hardware and the installation.",
-          items: [
-            {
-              title: "Natural movement.",
-              description:
-                "Wood can react to humidity and temperature.",
+              label: "Price against the others",
+              value:
+                "It is the dearest of the four materials.",
             },
             {
-              title: "Large surfaces to assess.",
-              description:
-                "Some areas need more stability than solid wood can offer.",
-            },
-            {
-              title: "Maintenance depending on the finish.",
-              description:
-                "The result and the upkeep change with the chosen protection.",
-            },
-          ],
-          actions: [
-            {
-              label: "View the comparison",
-              href: "/materiaux/comparatif",
-              variant: "ghost",
-            },
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Finishes offered",
+              value:
+                "A stain that keeps the grain visible, or an opaque paint.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-            alt: "Solid wood finish detail",
+            alt: "Finish detail on a solid wood component",
           },
-          cardTitle: "Recommended approach",
-          cardDescription:
-            "Solid wood is often better combined with more stable panels on certain structures.",
-        },
-      },
-    },
-    {
-      id: "related",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Alternatives and related pages",
-          items: [
-            {
-              title: "Plywood",
-              href: "/materiaux/contreplaque",
-              description: "More structure-oriented.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Plywood detail for custom cabinets",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "Better suited to uniform painted finishes.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "MDF panel with painted finish",
-              },
-              badges: ["Paint"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Melamine",
-              href: "/materiaux/melamine",
-              description: "More controlled decor and cost.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Melamine panel for custom furniture",
-              },
-              badges: ["Decor"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Colours and finishes",
-              href: "/materiaux/couleurs",
-              description: "Choosing the right visual result.",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Colour and finish samples for custom furniture",
-              },
-              badges: ["Finish"],
-              footerCtaLabel: "View page",
-            },
-          ],
+          note: "The wood species you choose is confirmed in your quote.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Solid wood",
+          heading: "Questions about solid wood",
           items: [
             {
-              q: "Is solid wood always better?",
-              a: "No. Solid wood is beautiful for aesthetics — grain, depth, perceived value — and excellent on doors and visible elements. But it's a living material that moves with humidity; on large flat surfaces or in demanding environments, engineered panels (plywood, MDF) sometimes offer more stability. The most coherent strategy targets solid wood where it's seen and touched.",
+              q: "Does solid wood suit cabinet boxes?",
+              a: "No. Under load and across wide flat surfaces it moves and eventually cups. Plywood keeps the boxes straight; solid wood stays on the visible parts.",
             },
             {
-              q: "Is it recommended in a kitchen?",
-              a: "Yes, often for doors and visible elements. The choice depends on the finish, the maintenance and the environment.",
+              q: "Which species should you choose?",
+              a: "Maple takes light stains without blotching. Oak shows a strong grain. Walnut starts dark and costs more. The call is made on a sample, in your home.",
             },
             {
-              q: "How does it react to humidity?",
-              a: "Solid wood reacts to humidity: it can swell, contract or warp with the room's humidity variations. Good design (planned clearance, suitable joinery), a finish that seals the wood and proper use clearly limit these movements. That's why it's often used in a targeted way, combined with more stable panels on the structures.",
+              q: "Will the joints open in winter?",
+              a: "Slight movement is normal once dry air drops below 30 per cent humidity. A properly set humidifier keeps that movement invisible.",
             },
             {
-              q: "Can solid wood be combined with other materials?",
-              a: "Yes. It is often the most coherent approach: solid wood on visible elements, more stable panels on certain structures.",
+              q: "Can a scratch be repaired?",
+              a: "On an oiled finish, yes: spot sanding, then a fresh coat. On an opaque lacquer, the touch-up always shows a little.",
             },
           ],
         },
@@ -257,9 +131,9 @@ export const boisMassifPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want to use solid wood the right way?",
+          heading: "You want solid wood in your kitchen",
           intro:
-            "We help you choose where it brings real value, and where other materials will be more coherent technically.",
+            "We tell you which parts are worth the price, and where a panel will hold up better.",
           actions: [
             {
               label: "Request a quote",
@@ -267,7 +141,7 @@ export const boisMassifPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
+              label: "See the comparison",
               href: "/materiaux/comparatif",
               variant: "ghost",
             },

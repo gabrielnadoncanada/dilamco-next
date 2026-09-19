@@ -1,7 +1,30 @@
-import { ChevronRight, DoorOpen, Package2, SlidersHorizontal, Wrench } from "lucide-react";
+import {
+  Bath,
+  Building2,
+  Check,
+  ChefHat,
+  ClipboardCheck,
+  Clock,
+  DoorOpen,
+  Droplets,
+  FileCheck,
+  Hammer,
+  HardHat,
+  Layers,
+  MapPin,
+  Package2,
+  Ruler,
+  ShieldCheck,
+  SlidersHorizontal,
+  Sofa,
+  Wrench,
+} from "lucide-react";
 
 import { Heading } from "@/components/elements/heading";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  SectionHeader,
+  sectionBodyClassName,
+} from "@/features/page-builder/sections/shared/ui/SectionHeader";
 
 import type { GridIconCardsBulletsProps } from "./schema";
 
@@ -10,52 +33,71 @@ const iconMap = {
   slidersHorizontal: SlidersHorizontal,
   package2: Package2,
   wrench: Wrench,
+  hardHat: HardHat,
+  hammer: Hammer,
+  building2: Building2,
+  layers: Layers,
+  droplets: Droplets,
+  mapPin: MapPin,
+  shieldCheck: ShieldCheck,
+  fileCheck: FileCheck,
+  clipboardCheck: ClipboardCheck,
+  clock: Clock,
+  ruler: Ruler,
+  bath: Bath,
+  chefHat: ChefHat,
+  sofa: Sofa,
 } as const;
 
 function resolveIcon(icon: string) {
   return iconMap[icon as keyof typeof iconMap] ?? Package2;
 }
 
+/**
+ * Grille de points forts : icône dans une pastille verte, titre de carte, une
+ * ligne, puis 2 à 4 puces courtes. Tuile teintée, sans bordure.
+ */
 export function GridIconCardsBullets(props: GridIconCardsBulletsProps) {
-  const gridCols = props.columns === "3" ? "md:grid-cols-3" : "md:grid-cols-2";
+  const gridCols =
+    props.columns === "3" ? "lg:grid-cols-3" : "lg:grid-cols-2";
 
   return (
-    <div>
-      <div className="mx-auto max-w-3xl text-center">
-        <Heading as="h2" variant="h2">{props.heading}</Heading>
-        {props.intro ? (
-          <p className="mt-4 text-muted-foreground">{props.intro}</p>
-        ) : null}
-      </div>
+    <div className="text-left">
+      <SectionHeader heading={props.heading} intro={props.intro} />
 
-      <div className={`mt-10 grid gap-6 ${gridCols}`}>
+      <div className={`${sectionBodyClassName} grid gap-4 sm:grid-cols-2 ${gridCols}`}>
         {props.items.map((item) => {
           const Icon = resolveIcon(item.icon);
 
           return (
-            <Card key={item.title} className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-3 flex size-11 items-center justify-center rounded-xl border bg-background">
-                  <Icon className="size-5" />
-                </div>
-                <CardTitle>{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
-              </CardHeader>
-
-              <CardContent>
-                <ul className="space-y-2">
-                  {item.bullets.map((bullet) => (
-                    <li
-                      key={bullet}
-                      className="flex items-start gap-2 text-sm text-muted-foreground"
-                    >
-                      <ChevronRight className="mt-0.5 size-4 shrink-0 text-primary" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+            <article
+              key={item.title}
+              className="flex flex-col rounded-card bg-primary-soft/60 p-6 sm:p-7"
+            >
+              <span className="icon-pill size-11 bg-primary text-primary-foreground">
+                <Icon className="size-5" strokeWidth={2} />
+              </span>
+              <Heading as="h3" variant="card" className="mt-5">
+                {item.title}
+              </Heading>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {item.description}
+              </p>
+              <ul className="mt-4 space-y-2 border-t border-primary/10 pt-4">
+                {item.bullets.slice(0, 4).map((bullet) => (
+                  <li
+                    key={bullet}
+                    className="flex items-start gap-2 text-sm text-foreground/85"
+                  >
+                    <Check
+                      className="mt-1 size-3.5 shrink-0 text-primary"
+                      strokeWidth={3}
+                    />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           );
         })}
       </div>

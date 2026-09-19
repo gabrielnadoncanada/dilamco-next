@@ -1,21 +1,134 @@
+/* ---------------------------------------------------------------------------
+   Utilitaires du système de design Dilamco (refonte 2026-09).
+   Chaque utilitaire nomme un RÔLE (lead, label, numeral, focus-ring…) et pointe
+   vers les tokens de globals.css. Les composants n'utilisent que ces rôles,
+   jamais une taille ou une durée ad hoc. Documentation : DESIGN.md.
+   --------------------------------------------------------------------------- */
 
+/* Typographie de rôle ------------------------------------------------------ */
 
-@utility glass-1 {
-  @apply border-border from-card/80 to-card/40 dark:border-border/10 dark:border-b-border/5 dark:border-t-border/20 dark:from-card/5 dark:to-card/0 border bg-linear-to-b;
+/* Paragraphe d'introduction sous un titre (18px, gris, ≤ 56 caractères). */
+@utility text-lead {
+  max-width: 56ch;
+  font-size: var(--text-lead);
+  line-height: 1.6;
+  color: var(--muted-foreground);
 }
 
-@utility glass-2 {
-  @apply border-border from-card/100 to-card/80 dark:border-border/10 dark:border-b-border/5 dark:border-t-border/20 dark:from-card/10 dark:to-card/5 border bg-linear-to-b;
+/* Étiquette : petites capitales espacées (menus, colonnes de pied de page,
+   kicker de hero). Jamais sous 12px. */
+@utility text-label {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-@utility glass-3 {
-  @apply border-border from-card/30 to-card/20 dark:border-border/10 dark:border-t-border/20 dark:border-b-border/5 dark:from-primary/5 dark:to-primary/2 border bg-linear-to-b;
+/* Chiffre mis en avant (stat, note, numéro d'étape). */
+@utility text-numeral {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
 }
 
+/* Mouvement ---------------------------------------------------------------- */
+
+/* Transition standard d'un contrôle (couleurs, bordure, ombre, transform). */
+@utility transition-ui {
+  transition-property: background-color, color, border-color, box-shadow,
+    transform, opacity;
+  transition-duration: var(--duration-base);
+  transition-timing-function: var(--ease-out-quint);
+}
+
+/* Transition lente pour les images (zoom au survol). */
+@utility transition-media {
+  transition-property: transform, opacity;
+  transition-duration: var(--duration-slow);
+  transition-timing-function: var(--ease-out-quint);
+}
+
+/* États ---------------------------------------------------------------------- */
+
+/* Anneau de focus clavier unique pour tout le site. */
+@utility focus-ring {
+  outline: none;
+  &:focus-visible {
+    box-shadow:
+      0 0 0 2px var(--background),
+      0 0 0 5px color-mix(in oklab, var(--ring) 45%, transparent);
+  }
+}
+
+/* Variante sur fond sombre (encre, panneau vert). */
+@utility focus-ring-inverse {
+  outline: none;
+  &:focus-visible {
+    box-shadow:
+      0 0 0 2px transparent,
+      0 0 0 3px rgb(255 255 255 / 70%);
+  }
+}
+
+/* Pastille icône ronde (vert pâle → vert plein au survol du parent `group`). */
+@utility icon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background-color: var(--primary-soft);
+  color: var(--primary);
+  transition-property: background-color, color;
+  transition-duration: var(--duration-base);
+  transition-timing-function: var(--ease-out-quint);
+}
+
+/* Panneau vert « plan » : quadrillage fin façon feuille de plan, fondu vers le
+   bas-gauche pour laisser le texte net, et lueur douce en haut à droite.
+   Pour les tuiles chiffre, panneaux de preuve et encarts sur `bg-primary`. */
+@utility surface-blueprint {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--primary);
+  background-image: radial-gradient(
+    120% 100% at 100% 0%,
+    color-mix(in srgb, white 9%, transparent) 0%,
+    transparent 62%
+  );
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, white 8%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, white 8%, transparent) 1px, transparent 1px);
+    background-size: 26px 26px;
+    background-position: -1px -1px;
+    -webkit-mask-image: radial-gradient(130% 120% at 100% 0%, black 0%, transparent 72%);
+    mask-image: radial-gradient(130% 120% at 100% 0%, black 0%, transparent 72%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, white 10%, transparent);
+  }
+}
+
+/* Héritage (landings /landing/**, hors système) ---------------------------- */
 @utility glass-4 {
-  @apply border-border border-b-input/90 from-card/60 to-card/20 dark:border-border/10 dark:border-t-border/30 dark:from-primary/10 dark:to-primary/5 border bg-linear-to-b dark:border-b-0;
+  @apply border-border border-b-input/90 from-card/60 to-card/20 border bg-linear-to-b;
 }
-
 @utility glass-5 {
-  @apply border-border border-b-input from-card/100 to-card/20 dark:border-border/10 dark:border-t-border/30 dark:from-primary/15 dark:to-primary/5 border bg-linear-to-b dark:border-b-0;
-} 
+  @apply border-border border-b-input from-card/100 to-card/20 border bg-linear-to-b;
+}

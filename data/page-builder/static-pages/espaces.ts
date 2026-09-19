@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Espaces sur mesure",
+    title: "Espaces sur mesure — notre division armoires",
     description:
-      "Découvrez nos espaces sur mesure : cuisine, salle de bain, walk-in, salle de lavage et commercial.",
+      "Cuisine, salle de bain, walk-in, salle de lavage, sous-sol et commercial : armoires sur mesure par Dilamco, entrepreneur général licencié RBQ.",
     path: "/espaces",
     ogAlt: "Espaces sur mesure Dilamco",
   },
@@ -27,13 +27,12 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Espaces",
-          heading:
-            "Espaces sur mesure : cuisine, salle de bain, rangement et commercial",
+          badges: ["Division armoires"],
+          heading: "Armoires sur mesure pour six espaces de la maison",
           description:
-            "Chez Dilamco, chaque espace de la maison — cuisine, salle de bain, walk-in, sous-sol, salle de lavage — peut recevoir des armoires et rangements sur mesure. Notre rôle : concevoir, fournir et installer des solutions durables, fonctionnelles et bien exécutées, adaptées aux contraintes réelles de chaque pièce.",
+            "On dessine, on commande et on installe. Vous n'avez personne d'autre à appeler.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -46,12 +45,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Sur mesure", "Durable", "clé en main"],
-          image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Espaces sur mesure Dilamco",
-          },
-          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
@@ -62,165 +55,122 @@ export const page: PageTemplateData = {
         variant: "image-cards-slider",
         props: {
           heading: "Choisissez votre espace",
-          intro:
-            "Accédez à la page pilier adaptée à votre type de projet pour voir l'approche, les matériaux et des références.",
           items: [
             {
-              title: "Armoires & cuisines sur mesure",
+              title: "Cuisine",
               href: "/espaces/cuisine",
-              description:
-                "Armoires de cuisine sur mesure avec coordination, matériaux durables et exécution stable.",
+              description: "Îlot, garde-manger et hauteur de plafond exploitée",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
                 alt: "Armoires de cuisine sur mesure haut de gamme",
               },
-              badges: ["Cuisine", "Sur mesure"],
-              footerCtaLabel: "Voir les cuisines sur mesure",
+              badges: ["Sur mesure"],
+              footerCtaLabel: "Voir la cuisine",
             },
             {
-              title: "Vanités & salles de bain sur mesure",
+              title: "Salle de bain",
               href: "/espaces/salle-de-bain",
-              description:
-                "Vanités de salle de bain sur mesure adaptées à l'humidité et à l'usage quotidien.",
+              description: "Meuble-lavabo posé avec la céramique et la plomberie",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
                 alt: "Vanité de salle de bain sur mesure",
               },
-              badges: ["Salle de bain", "Humidité"],
-              footerCtaLabel: "Voir les vanités sur mesure",
+              badges: ["Vanité"],
+              footerCtaLabel: "Voir la salle de bain",
             },
             {
               title: "Salle de lavage",
               href: "/espaces/salle-de-lavage",
-              description:
-                "Configuration fonctionnelle et durable pour un espace de service bien organisé.",
+              description: "Cuve, colonnes et surface de pliage en continu",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
                 alt: "Salle de lavage sur mesure",
               },
-              badges: ["Salle de lavage", "Fonctionnel"],
-              footerCtaLabel: "Voir salle de lavage",
+              badges: ["Rangement"],
+              footerCtaLabel: "Voir la salle de lavage",
             },
             {
               title: "Walk-in",
               href: "/espaces/walk-in",
-              description:
-                "Organisation sur mesure pour optimiser l'espace et le rangement.",
+              description: "Penderies et tiroirs calculés par type de vêtement",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
                 alt: "Walk-in sur mesure",
               },
-              badges: ["Walk-in", "Organisation"],
-              footerCtaLabel: "Voir walk-in",
+              badges: ["Garde-robe"],
+              footerCtaLabel: "Voir le walk-in",
             },
             {
-              title: "Aménagement de sous-sol",
+              title: "Sous-sol",
               href: "/espaces/sous-sol",
-              description:
-                "Salle de cinéma maison, bar, cave à vin, bibliothèque et rangement sur mesure.",
+              description: "Cinéma, bar, cellier ou bibliothèque intégrés",
               image: {
                 src: "/images/generated/spaces/espaces-card-sous-sol-01.webp",
                 alt: "Aménagement de sous-sol sur mesure",
               },
-              badges: ["Sous-sol", "Cinéma maison"],
-              footerCtaLabel: "Voir l'aménagement de sous-sol",
+              badges: ["Cinéma maison"],
+              footerCtaLabel: "Voir le sous-sol",
             },
             {
               title: "Commercial",
               href: "/espaces/commercial",
-              description:
-                "Aménagement commercial durable, planifié et adapté à l'usage réel.",
+              description: "Accueil, rangement technique et espaces de service",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial sur mesure",
               },
-              badges: ["Commercial", "Durable"],
-              footerCtaLabel: "Voir commercial",
+              badges: ["Bureaux"],
+              footerCtaLabel: "Voir le commercial",
             },
           ],
         },
       },
     },
     {
-      id: "standard",
+      id: "division",
       content: {
         type: "split",
-        variant: "steps-2x2-cta",
+        variant: "fact-sheet",
         props: {
-          heading: "Notre standard, peu importe l'espace",
-          description:
-            "Une méthode reproductible pour protéger la qualité, réduire les imprévus et garder une exécution cohérente.",
-          steps: [
-            {
-              label: "1) Conception",
-              description:
-                "Plans clairs, configuration adaptée et validations avant fabrication.",
-            },
-            {
-              label: "2) Matériaux",
-              description:
-                "Choix durables et détails de construction pensés pour la longévité.",
-            },
-            {
-              label: "3) Fabrication",
-              description:
-                "Standards stables et contrôle qualité pour une meilleure constance.",
-            },
-            {
-              label: "4) Installation",
-              description:
-                "Ajustements précis, finitions nettes et coordination propre sur chantier.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir nos services",
-              href: "/services",
-              variant: "ghost",
-            },
-            {
-              label: "Voir nos matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Caissons en stock (boutique)",
-              href: "/boutique",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-
-    {
-      id: "faq",
-
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "FAQ - espaces sur mesure",
+          heading: "La division armoires en bref",
           intro:
-            "Quelques réponses rapides avant d'approfondir votre type de projet.",
-          items: [
+            "C'est une division de notre entreprise, pas une deuxième compagnie à engager.",
+          rows: [
             {
-              q: "Quels espaces faites-vous ?",
-              a: "Nous concevons et installons des armoires et rangements sur mesure pour la cuisine, la salle de bain (vanités), la salle de lavage, les walk-ins et garde-robes, le sous-sol et les projets commerciaux. Chaque espace a ses contraintes propres — humidité, dimensions, usage — et l'aménagement est pensé en fonction de celles-ci, pas assemblé à partir de modules standards.",
+              label: "Licence",
+              value:
+                "Notre licence RBQ couvre déjà les armoires et les comptoirs.",
             },
             {
-              q: "Travaillez-vous seulement à Montréal ?",
-              a: "Non. Basés dans le Grand Montréal, nous desservons Montréal, Laval, la Rive-Nord, la Rive-Sud, l'Ouest-de-l'Île et Pierrefonds-Roxboro. Le sur mesure impliquant des mesures précises et une installation soignée, nous cadrons dès le départ la zone d'intervention et la logistique pour chaque projet.",
+              label: "Qui produit",
+              value:
+                "Notre usine partenaire, une fois que le relevé est fait chez vous.",
             },
             {
-              q: "Quelle est la différence avec une solution standard ?",
-              a: "Une solution standard part de modules aux dimensions fixes qu'il faut adapter à la pièce, ce qui laisse souvent des espaces perdus. Le sur mesure fait l'inverse : chaque élément est dimensionné pour votre espace réel, avec une structure plus solide (bois massif et contreplaqué de bouleau) et une exécution mieux contrôlée, du design à la pose.",
+              label: "Combien de temps",
+              value:
+                "Il faut 9 à 15 semaines entre l'approbation des dessins et la livraison.",
             },
             {
-              q: "Faites-vous aussi l'installation ?",
-              a: "Oui. Nous installons les éléments que nous concevons et fournissons, ce qui garantit une exécution cohérente du design à la pose, par une seule équipe. Cette continuité évite les zones grises entre fabrication et installation et facilite les ajustements finaux sur place.",
+              label: "Matériaux",
+              value:
+                "Du bouleau massif pour les tiroirs et du contreplaqué pour les caissons.",
+            },
+            {
+              label: "Qui installe",
+              value:
+                "Notre équipe, au bon moment dans l'ordre des travaux.",
+            },
+            {
+              label: "Ce que vous signez",
+              value:
+                "Une seule soumission, qui réunit les travaux et les armoires.",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
+            alt: "Vue d'ensemble des espaces sur mesure réalisés par Dilamco",
+          },
         },
       },
     },
@@ -230,9 +180,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Prêt à cadrer votre projet correctement ?",
+          heading: "Parlez-nous de la pièce à refaire",
           intro:
-            "Obtenez une soumission claire et structurée adaptée à votre espace et à votre niveau d'exigence.",
+            "L'estimation est gratuite et vous n'avez qu'un seul contrat à signer.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -245,7 +195,7 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval et Rive-Sud",
+          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud",
         },
       },
     },

@@ -3,6 +3,7 @@ import { splitSteps2x2Cta } from "./variants/steps-2x2-cta";
 import { splitBadgesChecklistCta } from "./variants/badges-checklist-cta";
 import { splitListActionsImageCard } from "./variants/list-actions-image-card";
 import { splitDetailsFormCard } from "./variants/details-form-card";
+import { splitFactSheet } from "./variants/fact-sheet";
 
 export const splitDefs = [
   splitTextDividerCards,
@@ -10,4 +11,5 @@ export const splitDefs = [
   splitBadgesChecklistCta,
   splitListActionsImageCard,
   splitDetailsFormCard,
+  splitFactSheet,
 ] as const;

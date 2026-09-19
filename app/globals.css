@@ -19,13 +19,18 @@
   --color-soft-foreground: var(--soft-foreground);
   --color-border-strong: var(--border-strong);
   --color-highlight: var(--highlight);
-  --font-sans: var(--font-sans);
-  /* Police de marque pour les titres éditoriaux (vitrine + boutique) : Georgia
-     (système, comme avant) — plus de chargement de Fraunces. `font-serif` et
-     `font-display` pointent tous deux dessus pour une typo cohérente. */
-  --font-display: Georgia, "Times New Roman", serif;
-  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  /* Titres : Bricolage Grotesque (chargée via next/font, variable
+     --font-display). `font-serif` reste un alias pour les composants qui
+     l'utilisaient encore : plus aucune serif sur le site. */
+  --font-display: var(--font-display), var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-display), var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-ink-muted: var(--ink-muted);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary-deep: var(--primary-deep);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -62,14 +67,20 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  /* Tiers de rayons nommés (DESIGN.md) : contrôle · carte · panneau. */
+  --radius-control: var(--r-control);
+  --radius-card: var(--r-card);
+  --radius-panel: var(--r-panel);
+  /* Courbe de mouvement unique (ease-out-quint), exposée comme `ease-out-quint`. */
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 :root {
-  --background: #fafaf8;
+  --background: #f8f9f6;
   --foreground: #1a1f1c;
   --soft-foreground: #2a3330;
   /* Bordure "forte" : neutre chaud assombri (aucun reflet doré). */
-  --border-strong: #c9c3b4;
+  --border-strong: #c3cac1;
   /* Accent éditorial : vert primaire de marque (remplace l'ancien doré, banni
      de toute UI visible). */
   --highlight: #253b2f;
@@ -80,43 +91,53 @@
 
   --primary: #253b2f;
   --primary-foreground: #f8f6f1;
+  /* Déclinaisons de la primaire (refonte 2026-09) : teinte claire pour les
+     pastilles et surfaces, version profonde pour les survols. */
+  --primary-soft: #e3ebe4;
+  --primary-deep: #182a20;
 
-  --secondary: #f2f1ec;
+  /* Surface « encre » : sections sombres (CTA, pied de page), charbon légèrement
+     vert plutôt que noir pur. */
+  --ink: #15191a;
+  --ink-foreground: #f3f3ef;
+  --ink-muted: rgb(243 243 239 / 62%);
+
+  --secondary: #eef1ec;
   --secondary-foreground: #222825;
 
-  --muted: #f5f4ef;
+  --muted: #edf1ec;
   --muted-foreground: #5f6762;
 
   /* `accent` = surface de survol/focus subtile (sémantique shadcn standard).
      Neutre chaud — l'ancien doré #c4a574 est banni de l'UI visible. */
-  --accent: #efece4;
+  --accent: #e9eee8;
   --accent-foreground: #1a1f1c;
 
   --destructive: oklch(0.58 0.22 27);
 
-  --border: #e5e1d8;
-  --input: #e5e1d8;
+  --border: #e1e5df;
+  --input: #d9dfd8;
   --ring: #253b2f;
 
   /* Rythme vertical de section — SOURCE UNIQUE partagée vitrine + boutique.
      Tout padding vertical de section pointe ici pour un espacement homogène. */
-  --section-py: clamp(56px, 8vw, 112px);
-  --section-py-compact: clamp(40px, 6vw, 72px);
-  --section-py-spacious: clamp(72px, 10vw, 140px);
+  --section-py: clamp(56px, 6.5vw, 96px);
+  --section-py-compact: clamp(40px, 5vw, 64px);
+  --section-py-spacious: clamp(72px, 9vw, 128px);
 
   /* Échelle typographique des titres serif — SOURCE UNIQUE vitrine + boutique.
      Le composant Heading (vitrine) et Headline (boutique) pointent tous deux
      ici, pour une seule échelle de titres cohérente sur tout le site. */
-  --title-1: clamp(40px, 6.5vw, 88px); /* hero / display */
-  --title-2: clamp(32px, 5vw, 54px); /* h1 */
-  --title-3: clamp(28px, 4vw, 48px); /* h2 / headline (titre de section) */
-  --title-4: clamp(23px, 3vw, 34px); /* h3 / subhead */
-  --title-5: clamp(20px, 2.4vw, 28px); /* headline2 / title */
-  --title-6: clamp(18px, 2vw, 22px); /* subtitle */
+  --title-1: clamp(2.25rem, 1rem + 4.6vw, 5rem); /* hero / display */
+  --title-2: clamp(2.25rem, 1.3rem + 3.2vw, 3.75rem); /* h1 */
+  --title-3: clamp(1.75rem, 1.1rem + 2.2vw, 2.75rem); /* h2 / titre de section */
+  --title-4: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); /* h3 */
+  --title-5: clamp(1.125rem, 1rem + 0.5vw, 1.25rem); /* titre de carte */
+  --title-6: 1rem; /* sous-titre */
 
   --surface-default-bg: var(--background);
-  --surface-muted-bg: #f5f4ef;
-  --surface-tint-bg: #f2f0ea;
+  --surface-muted-bg: #edf1ec;
+  --surface-tint-bg: #edf1ec;
   --surface-tint-glow: rgb(37 59 47 / 6%);
   --surface-separator: rgb(26 31 28 / 7%);
 
@@ -137,19 +158,28 @@
   --chart-4: oklch(0.527 0.154 150.069);
   --chart-5: oklch(0.448 0.119 151.328);
 
-  /* Identité « angles vifs » : Card, boutons et images sont déjà à radius 0.
-     On aligne les primitives shadcn restées arrondies (input, select, dialog,
-     textarea, accordion, tabs, tooltip…) en mettant le radius de base à 0.
-     Les pastilles (badge rounded-4xl, points rounded-full) restent rondes. */
-  --radius: 0rem;
+  /* Refonte 2026-09 : trois tiers de rayons. `--radius` (contrôle) alimente
+     aussi les primitives shadcn ; les boutons sont des pilules (9999px). */
+  --r-control: 0.75rem; /* champs, éléments de menu, pastilles carrées */
+  --r-card: 1rem; /* cartes, tuiles, rangées cliquables */
+  --r-panel: 1.75rem; /* cadres photo, panneaux hero, bande CTA, formulaire */
+  --radius: var(--r-control);
+
+  /* Taille du paragraphe d'introduction (rôle `text-lead`). */
+  --text-lead: 1.125rem;
+
+  /* Durées de mouvement (rôles `transition-ui` / `transition-media`). */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 700ms;
 
   --sidebar: #ffffff;
   --sidebar-foreground: #1a1f1c;
   --sidebar-primary: #253b2f;
   --sidebar-primary-foreground: #f8f6f1;
-  --sidebar-accent: #f5f4ef;
+  --sidebar-accent: #f0f3ef;
   --sidebar-accent-foreground: #1a1f1c;
-  --sidebar-border: #e7e3da;
+  --sidebar-border: #e1e5df;
   --sidebar-ring: rgb(37 59 47 / 24%);
 }
 
@@ -300,6 +330,49 @@
 
   [data-surface="secondary"] {
     @apply bg-secondary/50;
+  }
+
+  [data-surface="muted"] {
+    @apply bg-muted;
+  }
+
+  [data-surface="inverse"] {
+    @apply bg-ink text-ink-foreground;
+  }
+
+  /* Révélation à l'entrée dans le viewport (voir components/animations/Reveal).
+     Le contenu est visible par défaut : la classe is-pending n'est ajoutée que
+     par JS, pour les éléments encore sous le pli. */
+  [data-reveal].is-pending {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.9s var(--ease-out-quint),
+      transform 0.9s var(--ease-out-quint);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal].is-pending,
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Wordmark fantôme du pied de page (référence « CONS »). */
+  .ghost-wordmark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 0.8;
+    font-size: clamp(6rem, 22vw, 22rem);
+    color: rgb(243 243 239 / 4%);
+    user-select: none;
+    pointer-events: none;
   }
 
   .bg-linear-1 {

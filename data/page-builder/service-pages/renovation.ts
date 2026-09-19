@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const renovationPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Rénovation clé en main à Montréal : cuisine et salle de bain",
+    title: "Rénovation clé en main — entrepreneur général à Montréal",
     description:
-      "Rénovation clé en main à Montréal : design, coordination, fabrication, installation et séquence de chantier mieux maîtrisée.",
+      "Rénovation clé en main : permis, corps de métier coordonnés, échéancier et contrat écrit. Entrepreneur général licencié RBQ depuis 2004.",
     path: "/services/renovation",
-    ogAlt: "Rénovation clé en main Dilamco",
+    ogAlt: "Rénovation clé en main par un entrepreneur général",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -18,9 +18,16 @@ export const renovationPage: PageTemplateData = {
   service: {
     name: "Rénovation clé en main",
     description:
-      "Design, coordination et exécution lorsque le projet implique plusieurs corps de métier.",
+      "Entrepreneur général responsable du projet complet : demande de permis, coordination des corps de métier, inspections, échéancier et livraison, sous licence RBQ 8306-0806-27.",
     url: SITE.url + "/services/renovation",
-    serviceType: "Rénovation",
+    serviceType: "Rénovation résidentielle clé en main",
+    areaServed: [
+      "Montréal",
+      "Ouest-de-l'Île",
+      "Laval",
+      "Rive-Sud",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -28,16 +35,15 @@ export const renovationPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading:
-            "Rénovation clé en main à Montréal, un seul cadre du design à l'installation",
+          badges: ["Permis inclus", "Contrat écrit", "Assuré"],
+          heading: "Un seul entrepreneur, du permis à la livraison",
           description:
-            "Une rénovation clé en main est un mandat où une seule équipe prend en charge la séquence complète — design, fabrication, coordination du chantier et finition — plutôt que de laisser le client orchestrer plusieurs corps de métier. La valeur se joue autant dans la coordination et la qualité des décisions techniques que dans le résultat final.",
+            "Nous signons le contrat, déposons le permis, payons les corps de métier et répondons du résultat.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
@@ -47,71 +53,88 @@ export const renovationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["clé en main", "Coordination", "Montréal"],
-          image: {
-            src: "/images/generated/services/service-renovation-hero-01.webp",
-            alt: "Projet de rénovation sur mesure",
-          },
-          caption: "Montréal, Laval et Rive-Sud",
         },
       },
     },
     {
-      id: "différence",
+      id: "subservices",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "image-cards-slider",
         props: {
-          heading:
-            "Pourquoi Dilamco ne fonctionne pas comme un simple détaillant",
-          description:
-            "Une rénovation clé en main demande plus qu'un fournisseur d'armoires. L'avantage vient du contrôle de la chaîne, de la constance de fabrication et d'une meilleure maîtrise de la séquence entre design, approvisionnement, installation et travaux connexes.",
-          cards: [
-            {
-              title: "Approvisionnement mieux contrôlé",
-              description:
-                "Les choix de matériaux, composantes et finis sont cadrés plus tôt pour réduire les écarts et mieux protéger l'échéancier.",
-            },
-            {
-              title: "Qualité plus stable",
-              description:
-                "Le design, la fabrication et l'installation sont pensés comme un ensemble, pas comme des morceaux livrés sans logique commune.",
-            },
-            {
-              title: "Coordination réelle",
-              description:
-                "Quand le chantier implique plusieurs étapes, un cadre clair limite la fragmentation et les zones grises entre intervenants.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Quand la rénovation clé en main est pertinente",
-          intro:
-            "Cette approche devient pertinente quand le projet dépasse la seule fabrication et installation d'armoires et qu'il faut mieux maîtriser l'enchaînement global.",
-          badges: ["Plomberie", "Électricité", "Plancher", "Coordination"],
-          cardTitle: "Ce que ça apporte",
+          heading: "Les six types de rénovation que nous faisons",
           items: [
-            "Moins de fragmentation entre intervenants.",
-            "Un calendrier mieux cadré dès le départ.",
-            "Une exécution plus cohérente sur le chantier.",
-          ],
-          actions: [
             {
-              label: "Voir le design",
-              href: "/services/design",
+              title: "Cuisine",
+              href: "/services/renovation/cuisine",
+              description:
+                "On refait la pièce au complet et on fournit les armoires.",
+              image: {
+                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
+                alt: "Rénovation de cuisine complète",
+              },
+              badges: ["Multi-métiers"],
+              footerCtaLabel: "Voir cuisine",
             },
             {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
+              title: "Salle de bain",
+              href: "/services/renovation/salle-de-bain",
+              description:
+                "On imperméabilise la douche et on sort la ventilation dehors.",
+              image: {
+                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
+                alt: "Rénovation de salle de bain complète",
+              },
+              badges: ["Étanchéité"],
+              footerCtaLabel: "Voir salle de bain",
+            },
+            {
+              title: "Sous-sol",
+              href: "/services/renovation/sous-sol",
+              description:
+                "On règle l'humidité avant de monter le premier mur.",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Sous-sol fini par un entrepreneur général",
+              },
+              badges: ["Permis obligatoire"],
+              footerCtaLabel: "Voir sous-sol",
+            },
+            {
+              title: "Plancher",
+              href: "/services/renovation/plancher",
+              description:
+                "On répare le sous-plancher avant de poser le revêtement.",
+              image: {
+                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
+                alt: "Rénovation de plancher résidentiel",
+              },
+              badges: ["Sous-plancher"],
+              footerCtaLabel: "Voir plancher",
+            },
+            {
+              title: "Agrandissement",
+              href: "/services/renovation/agrandissement-de-maison",
+              description:
+                "On vérifie le zonage, puis on construit la nouvelle pièce.",
+              image: {
+                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+                alt: "Agrandissement de maison en construction",
+              },
+              badges: ["Structure"],
+              footerCtaLabel: "Voir agrandissement",
+            },
+            {
+              title: "Après sinistre",
+              href: "/services/renovation/apres-sinistre",
+              description:
+                "On documente les dommages, puis on remet la maison en état.",
+              image: {
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Reconstruction après un dégât d'eau",
+              },
+              badges: ["Assurance"],
+              footerCtaLabel: "Voir après sinistre",
             },
           ],
         },
@@ -123,242 +146,77 @@ export const renovationPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Un processus clé en main qui garde le chantier lisible",
-          intro:
-            "La logique reste la même d'un projet à l'autre : clarifier d'abord, verrouiller les décisions importantes, puis exécuter dans le bon ordre.",
+          heading: "Comment nous menons un projet",
           steps: [
             {
               number: "1",
-              title: "Cadrage",
+              title: "Appel et visite",
               description:
-                "Besoins, portée, contraintes du lieu et niveau de rénovation à confirmer avant d'ouvrir le chantier.",
+                "Nous venons voir les lieux et noter les contraintes, sans frais.",
             },
             {
               number: "2",
-              title: "Design",
+              title: "Soumission détaillée",
               description:
-                "Organisation de l'espace, usages, circulation et décisions qui auront un impact sur la fabrication et la séquence.",
+                "Vous recevez les travaux, les matériaux, les exclusions et le prix.",
             },
             {
               number: "3",
-              title: "Matériaux",
+              title: "Contrat et permis",
               description:
-                "Choix de composantes, finis et solutions adaptés à la durabilité, à l'entretien et au niveau d'usage attendu.",
+                "Vous signez les dates et les paiements, nous déposons la demande.",
             },
             {
               number: "4",
-              title: "Fabrication et chantier",
+              title: "Chantier",
               description:
-                "Préparation des éléments sur mesure et coordination des étapes connexes pour limiter les reprises et les conflits.",
+                "Chaque corps de métier entre à sa date, selon l'échéancier signé.",
             },
             {
               number: "5",
-              title: "Installation",
+              title: "Livraison",
               description:
-                "Pose, ajustements et finition avec une lecture claire de l'ensemble du projet.",
+                "Nous faisons le tour avec vous et corrigeons avant le dernier paiement.",
             },
           ],
         },
       },
     },
     {
-      id: "materials",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Des choix techniques qui justifient une rénovation premium",
-          intro:
-            "Le positionnement ne repose pas sur un discours marketing. Il repose sur la qualité des composantes, la stabilité de fabrication et l'intégration des décisions techniques dans le chantier.",
-          items: [
+          heading: "Ce que comprend un mandat clé en main",
+          intro: "Les réponses aux questions qu'on nous pose avant de signer.",
+          rows: [
             {
-              title: "Structure de tiroirs en bois massif de bouleau",
-              description:
-                "Un choix plus solide et plus durable qu'une construction faible quand le projet vise un usage quotidien intensif.",
+              label: "Ce que vous signez",
+              value: "Un contrat qui décrit les travaux, le prix, les dates et les paiements",
             },
             {
-              title: "Fond de tiroirs en contreplaqué de bouleau",
-              description:
-                "Meilleure résistance à la charge, meilleure stabilité dimensionnelle et meilleure perception de qualité à long terme.",
+              label: "Qui demande le permis",
+              value: "Nous. Nous vérifions les exigences de votre ville et suivons le dossier",
             },
             {
-              title: "Sélection de matériaux selon l'espace",
-              description:
-                "Cuisine, salle de bain, rangement ou zone de service ne demandent pas exactement les mêmes arbitrages techniques.",
+              label: "Qui coordonne les métiers",
+              value: "Nous les engageons et nous les payons, vous recevez une seule facture",
             },
             {
-              title: "Exécution pensée pour la pose",
-              description:
-                "Une rénovation se déroule mieux quand les choix sont pris avec la fabrication et l'installation en tête, pas séparément.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Assurances",
+              value: "Notre responsabilité civile et notre assurance chantier sont en vigueur",
             },
             {
-              label: "Voir la fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "Premier retour",
+              value: "Vous avez de nos nouvelles en 24 à 48 heures ouvrables",
+            },
+            {
+              label: "Territoire",
+              value: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud et Vaudreuil-Soulanges",
             },
           ],
-          image: {
-            src: "/images/spaces/cabinet-cuisines.webp",
-            alt: "Détails de matériaux pour rénovation sur mesure",
-          },
-          cardTitle: "Pourquoi c'est important",
-          cardDescription:
-            "Dans une rénovation complète, les composantes invisibles influencent autant la durabilité que le rendu final visible.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Réalisations qui montrent le niveau de coordination",
-          intro:
-            "La preuve de maîtrise se voit dans les projets où le design, la fabrication, la pose et la finition restent cohérents jusqu'à la livraison.",
-          items: [
-            {
-              title: "Cuisine sur mesure",
-              href: "/projets",
-              description:
-                "Projet résidentiel avec implantation précise, décisions techniques mieux cadrées et finition propre.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Projet de rénovation de cuisine à Montréal",
-              },
-              badges: ["Montréal", "Cuisine"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Cuisine sur mesure",
-              href: "/projets",
-              description:
-                "Rénovation pensée pour l'usage quotidien avec meilleure cohérence entre fabrication, chantier et installation.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-02.webp",
-                alt: "Projet de rénovation résidentielle à Laval",
-              },
-              badges: ["Laval", "Coordination"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Cuisine sur mesure",
-              href: "/projets",
-              description:
-                "Projet complet avec gestion plus propre de la séquence, des ajustements et des détails de finition.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-03.webp",
-                alt: "Projet de rénovation sur la Rive-Sud",
-              },
-              badges: ["Rive-Sud", "clé en main"],
-              footerCtaLabel: "Voir le projet",
-            },
-          ],
-          ctaLabel: "Voir tous nos projets",
-          ctaHref: "/projets/",
-        },
-      },
-    },
-    {
-      id: "subservices",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Types de rénovation",
-          intro:
-            "Accédez à la page adaptée selon la nature des travaux à coordonner.",
-          items: [
-            {
-              title: "Rénovation de cuisine",
-              href: "/services/renovation/cuisine",
-              description:
-                "Cuisine complète avec séquence de chantier, intégration des armoires et coordination des travaux connexes.",
-              image: {
-                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-                alt: "Rénovation de cuisine clé en main",
-              },
-              badges: ["Cuisine", "Coordination"],
-              footerCtaLabel: "Voir cuisine",
-            },
-            {
-              title: "Rénovation de salle de bain",
-              href: "/services/renovation/salle-de-bain",
-              description:
-                "Salle de bain mieux cadrée pour humidité, plomberie, rangement et finition durable.",
-              image: {
-                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-                alt: "Rénovation de salle de bain clé en main",
-              },
-              badges: ["Salle de bain", "Humidité"],
-              footerCtaLabel: "Voir salle de bain",
-            },
-            {
-              title: "Rénovation de plancher",
-              href: "/services/renovation/plancher",
-              description:
-                "Plancher intégré dans le bon ordre pour gérer niveaux, transitions et finition sans reprises inutiles.",
-              image: {
-                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-                alt: "Rénovation de plancher intégrée à un projet résidentiel",
-              },
-              badges: ["Plancher", "Transitions"],
-              footerCtaLabel: "Voir plancher",
-            },
-            {
-              title: "Agrandissement de maison",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "Extension résidentielle avec faisabilité, raccords et exécution mieux coordonnés avec l'existant.",
-              image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Agrandissement de maison clé en main",
-              },
-              badges: ["Agrandissement", "Exécution"],
-              footerCtaLabel: "Voir agrandissement",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "faq",
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "FAQ - rénovation clé en main",
-          intro:
-            "Réponses claires sur le prix, les délais, la coordination et la différence avec une approche plus fragmentée.",
-          items: [
-            {
-              q: "Combien coûte une rénovation clé en main ?",
-              a: "Le prix d'une rénovation clé en main dépend de la portée du projet (une pièce ou plusieurs), des matériaux et finis, de la complexité du chantier et du niveau de coordination requis entre les corps de métier. Comme chaque projet est différent, il n'existe pas de prix unique : une soumission structurée sert justement à clarifier la portée, les choix et le budget avant de démarrer, pour éviter les mauvaises surprises en cours de route.",
-            },
-            {
-              q: "Quelle est la différence avec acheter des armoires puis gérer le reste séparément ?",
-              a: "Une approche fragmentée multiplie les zones grises entre design, fabrication, chantier et finition. La clé en main vise au contraire une meilleure continuité entre les décisions et l'exécution.",
-            },
-            {
-              q: "Est-ce que vous gérez seulement les armoires ou aussi la coordination du chantier ?",
-              a: "Selon la portée définie, la rénovation peut inclure un niveau de coordination plus large pour mieux structurer les étapes et réduire les reprises.",
-            },
-            {
-              q: "Quels sont les délais pour une rénovation ?",
-              a: "Les délais d'une rénovation varient selon l'espace concerné, la complexité du chantier, l'approvisionnement des matériaux et les travaux connexes (plomberie, électricité, plancher). Plutôt qu'une estimation générique, un échéancier réaliste est établi une fois la portée du projet clarifiée, avec les étapes clés séquencées pour limiter les temps morts et les reprises. Vous savez ainsi quand chaque phase commence et se termine.",
-            },
-            {
-              q: "Est-ce pertinent pour une cuisine, une salle de bain ou un agrandissement ?",
-              a: "Oui. La logique clé en main devient particulièrement utile dès que plusieurs décisions doivent s'aligner entre espace, matériaux, séquence et finition.",
-            },
-          ],
+          note: "Licence RBQ 8306-0806-27, catégories 1.2 et 1.3, valide depuis 2004.",
         },
       },
     },
@@ -368,22 +226,22 @@ export const renovationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous avez un projet de rénovation à cadrer sérieusement ?",
+          heading: "Décrivez-nous votre projet de rénovation",
           intro:
-            "Obtenez une soumission claire et détaillée pour un projet de rénovation clé en main mieux structuré, mieux séquencé et mieux exécuté.",
+            "Dites-nous la pièce, le budget envisagé et l'échéance. Nous fixons la visite.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos projets",
-              href: "/projets",
+              label: "Voir les zones desservies",
+              href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Résidentiel, cuisine, salle de bain, plancher et agrandissement",
+          note: "Licence RBQ 8306-0806-27 · Entrepreneur général depuis 2004",
         },
       },
     },

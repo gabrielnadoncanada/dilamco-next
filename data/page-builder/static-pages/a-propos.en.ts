@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Custom cabinet specialist in Montreal — About Dilamco",
+    title: "Licensed general contractor since 2004 — About",
     description:
-      "About Dilamco: custom work, controlled fabrication, careful installation and a long-term vision for durable projects.",
+      "Dilamco, residential renovation general contractor since 2004. RBQ licence 8306-0806-27, based in Pierrefonds-Roxboro, West Island.",
     path: "/a-propos",
-    ogAlt: "About Dilamco",
+    ogAlt: "Dilamco's team and approach to running a job site",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -22,166 +22,138 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - About",
-          heading: "A custom-cabinet company built to better control execution",
+          eyebrow: "About",
+          heading: "A residential renovation general contractor since 2004",
           description:
-            "Dilamco is not just a cabinet seller. Our approach connects design, fabrication, installation and coordination when the project calls for it, to deliver a result that is more consistent and more durable.",
+            "The same licence, the same person in charge and the same address for twenty years.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Custom", "Execution", "Durability", "Turnkey"],
+          badges: ["RBQ 8306-0806-27", "Since 2004", "Pierrefonds-Roxboro"],
           image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Dilamco team and approach for custom projects",
+            src: "/images/realisations/escalier-rampe-verre-finition-interieure-01.webp",
+            alt: "Staircase and glass railing: interior finishing by Dilamco",
           },
-          caption:
-            "Our value doesn't come from a premium pitch. It comes from the level of control over the final result.",
+          caption: "9139-1250 Québec inc. · Pierrefonds-Roxboro",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "structural-advantage",
+      id: "reperes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "The structural advantage we aim to protect",
-          description:
-            "A solid custom-cabinet company doesn't rely on style alone. It relies on its ability to stay in control across design decisions, fabrication quality, material choices and on-site installation.",
-          cards: [
+          heading: "The company in numbers",
+          tiles: [
             {
-              title: "Less fragmentation",
-              description:
-                "The fewer breaks between design, production and installation, the more the project stays clear and executable.",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/mur-bois-accent-plafond-haut-01.webp",
+                alt: "Timber accent wall under a high ceiling",
+              },
+              caption: "Accent wall, high ceiling",
             },
             {
-              title: "More tangible quality",
-              description:
-                "Value shows in the details: structure, hardware, finishes, adjustments and consistency of execution.",
+              kind: "stat",
+              value: "2004",
+              label: "The year our licence was issued",
             },
             {
-              title: "Clearer accountability",
-              description:
-                "Clients move forward better when they know who frames the decisions and who carries the result through to the end.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "history",
-      frame: { surface: "muted" },
-      content: {
-        type: "process",
-        variant: "split-cards",
-        props: {
-          heading: "How the company took shape",
-          description:
-            "Our path followed a simple logic: reduce the weaknesses that hurt final quality and reinforce the steps that truly stabilize a project.",
-          steps: [
-            {
-              number: "1",
-              title: "Understand the real constraints",
-              description:
-                "Custom projects demand more than a good visual. They demand a serious reading of the space, the use and the limits of the job site.",
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
+                alt: "New hardwood floor laid in a renovated room",
+              },
+              caption: "New hardwood floor",
             },
             {
-              number: "2",
-              title: "Better connect design and execution",
-              description:
-                "The company's structure was built around better continuity between upstream choices and the reality of fabrication and installation.",
+              kind: "stat",
+              value: "5.0",
+              label: "Our Google rating, from 11 customer reviews",
             },
             {
-              number: "3",
-              title: "Standardize without making generic",
-              description:
-                "The goal has never been to make stock work. The goal is to have a repeatable method to deliver true custom work with more consistency.",
+              kind: "stat",
+              value: "$40,000",
+              label: "The sum held in guarantee to protect our clients",
             },
             {
-              number: "4",
-              title: "Aim for a long-term relationship",
-              description:
-                "We prefer growth based on reputation, perceived quality and well-executed projects rather than volume at any cost.",
-            },
-          ],
-          actions: [
-            {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
-            },
-            {
-              label: "View services",
-              href: "/services",
-              variant: "ghost",
+              kind: "image",
+              image: {
+                src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
+                alt: "Finish and material displays at the Dorval showroom",
+              },
+              caption: "Finish displays, Dorval",
             },
           ],
         },
       },
     },
     {
-      id: "principles",
+      id: "licence",
       content: {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "The principles that guide our decisions",
+          heading: "What protects you when you hire us",
           intro:
-            "The right project isn't just beautiful at delivery. It has to stay consistent over time, in use and in perceived quality.",
+            "You can check every bit of it on the Régie du bâtiment du Québec register.",
           columns: "2",
           items: [
             {
-              title: "Function before effect",
+              title: "Our RBQ licence",
               description:
-                "Design first serves to make the space more accurate, more fluid and more durable.",
-              icon: "doorOpen",
+                "Issued on September 7, 2004 as a general contractor, with no restrictions at all.",
+              icon: "fileCheck",
               bullets: [
-                "Ergonomics designed around daily life",
-                "Configurations suited to the real space",
-                "Choices that serve function before fashion",
+                "The number to check is 8306-0806-27",
+                "It covers houses as well as larger buildings",
+                "It also covers cabinets and countertops",
               ],
             },
             {
-              title: "Concrete durability",
+              title: "A guarantee deposit",
               description:
-                "Premium has to be verifiable in the components and in the way they're integrated.",
-              icon: "package2",
+                "A sum set aside in advance pays you back if we fail to meet our obligations.",
+              icon: "shieldCheck",
               bullets: [
-                "Materials chosen according to use",
-                "Consistent hardware and details",
-                "Fewer invisible compromises",
+                "The deposit is $40,000",
+                "Nobody has ever had to draw on it",
+                "The person on record is Sean Diffley",
               ],
             },
             {
-              title: "Controlled execution",
+              title: "Our insurance",
               description:
-                "Final quality depends as much on the sequence as on the product itself.",
-              icon: "wrench",
+                "You get the certificates in hand before you sign anything.",
+              icon: "hardHat",
               bullets: [
-                "Validation before production",
-                "Better-framed fabrication",
-                "Precise installation and adjustments",
+                "We carry civil liability insurance",
+                "The site is covered while the work goes on",
+                "You can ask for the paperwork at any time",
               ],
             },
             {
-              title: "Long-term vision",
+              title: "The warranty on our work",
               description:
-                "We aim to build a brand that holds up by repeating a good standard, not through vague promises.",
-              icon: "slidersHorizontal",
+                "What is covered, and for how long, is written into your contract.",
+              icon: "clipboardCheck",
               bullets: [
-                "An assumed premium positioning",
-                "Growth based on trust",
-                "Reputation backed by the result",
+                "We fix everything before you pay the balance",
+                "The work meets the Québec Construction Code",
+                "We do not build new homes",
               ],
             },
           ],
@@ -189,47 +161,28 @@ export const pageEn: PageTemplateData = {
       },
     },
     {
-      id: "where-to-go-next",
+      id: "faq",
       content: {
-        type: "grid",
-        variant: "link-cards-compact",
+        type: "faq",
+        variant: "accordion",
         props: {
-          heading: "Explore the company by angle",
-          intro:
-            "Depending on what you want to validate, you can dig into the method, the services, the materials or the completed work.",
-          columns: "2",
+          heading: "Frequently asked questions",
           items: [
             {
-              title: "Our process",
-              description:
-                "To see how a project moves from scoping to installation.",
-              href: "/processus",
-              badges: ["Method", "Steps"],
-              ctaLabel: "See the process",
+              q: "How long has Dilamco been around?",
+              a: "The general contractor licence was issued on September 7, 2004 and has never lapsed. Legal name: 9139-1250 Québec inc., also operating as « Construction Dilamco ».",
             },
             {
-              title: "Our services",
-              description:
-                "To understand the role of design, fabrication, installation and renovation.",
-              href: "/services",
-              badges: ["Design", "Installation"],
-              ctaLabel: "View services",
+              q: "Where are you based?",
+              a: "At 18625 rue Larocque, in Pierrefonds-Roxboro. We cover the West Island, Montréal, Laval, the South Shore and Vaudreuil-Soulanges.",
             },
             {
-              title: "Our materials",
-              description:
-                "To understand the technical choices that support durability and finish.",
-              href: "/materiaux",
-              badges: ["Panels", "Hardware"],
-              ctaLabel: "View materials",
+              q: "Who is the designated officer on the licence?",
+              a: "Sean Diffley, listed on the register as the officer for management and for carrying out the work. He is the person the Régie holds accountable for our sites.",
             },
             {
-              title: "Our projects",
-              description:
-                "To see concrete examples of the level of execution we aim for.",
-              href: "/projets",
-              badges: ["References", "Completed work"],
-              ctaLabel: "View projects",
+              q: "Why hire a general contractor at all?",
+              a: "Because one signature covers the permits, the trades, the schedule and the price. Without one, every trade-off between trades lands back on the homeowner.",
             },
           ],
         },
@@ -241,22 +194,22 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want to check whether Dilamco is the right fit for your project?",
+          heading: "Tell us about your project",
           intro:
-            "The simplest way is to frame the scope, the priorities and the expected level of demand. We'll tell you clearly how we can step in.",
+            "Free estimate. Insurance certificates are handed over before signing.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
-              href: "/projets",
+              label: "See our process",
+              href: "/processus",
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval and the South Shore",
+          note: "RBQ licence 8306-0806-27 · 18625 rue Larocque, Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

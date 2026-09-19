@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const salleDeLavagePageEn: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "High-end custom laundry room",
+    title: "Custom laundry room — general contractor",
     description:
-      "Custom laundry room: design, controlled fabrication and precise installation in Montréal, Laval and on the South Shore.",
+      "Custom laundry room in Montréal, Laval and on the South Shore: design, production at our partner factory and installation by a licensed general contractor.",
     path: "/espaces/salle-de-lavage",
     ogAlt: "Dilamco custom laundry room",
   },
@@ -30,12 +30,12 @@ export const salleDeLavagePageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Spaces",
-          heading: "Custom laundry room, a well-scoped utility space",
+          badges: ["Washable finish"],
+          heading: "Custom laundry room in Montréal and Laval",
           description:
-            "A custom laundry room is a technical space — storage, countertop, washer and dryer columns — designed and built for your actual configuration, with materials suited to moisture and frequent use. At Dilamco, across Greater Montréal, we design and install this fit-out from plan to finish.",
+            "Folding counter, storage towers and utility sink, drawn around your appliances.",
           actions: [
             {
               label: "Get a quote",
@@ -43,214 +43,148 @@ export const salleDeLavagePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
-              href: "/projets",
+              label: "See our work",
+              href: "/projets/salle-de-lavage",
               variant: "ghost",
             },
           ],
-          badges: ["Functional", "Durable", "Custom"],
           image: {
             src: "/images/generated/spaces/space-laundry-hero-01.webp",
-            alt: "Custom laundry room in Pierrefonds and Greater Montréal",
+            alt: "Laundry room with a continuous folding counter above the appliances",
           },
-          caption:
-            "A service space built to last and stay simple to use",
+          caption: "Continuous folding counter",
         },
       },
     },
     {
-      id: "why",
+      id: "galerie",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "A laundry space designed as a utility space",
-          intro:
-            "Custom work is what manages machines, circulation, countertop, vertical storage and moisture constraints in a coherent whole.",
-          badges: ["Storage", "Moisture", "Frequent use"],
-          cardTitle: "When this approach is useful",
-          items: [
-            "You need to optimize a tight space.",
-            "Storage and a folding countertop matter.",
-            "You want a solution more stable than a standard assembly.",
-          ],
-          actions: [
+          heading: "Laundry rooms we have fitted out",
+          tiles: [
             {
-              label: "Request a quote",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/espaces-card-laundry-01.webp",
+                alt: "White laundry room with raised appliances and a broom cabinet",
+              },
+              caption: "Raised appliances, broom cabinet",
+            },
+            {
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/generated/spaces/space-laundry-project-02.webp",
+                alt: "Storage towers and pull-out baskets in a Laval laundry room",
+              },
+              caption: "Towers and baskets, Laval",
+            },
+            {
+              kind: "stat",
+              value: "9–15 wks",
+              label: "How long the cabinets take to build",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-laundry-project-01.webp",
+                alt: "Compact laundry room fitted into a Montréal home",
+              },
+              caption: "Tight footprint, Montréal",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-laundry-project-03.webp",
+                alt: "Utility sink and counter aligned along the same wall",
+              },
+              caption: "Sink and counter aligned",
+            },
+            {
+              kind: "text",
+              title: "Moving the appliances",
+              description:
+                "We redo the water line, the drain and the vent before drawing anything.",
               href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
             },
           ],
         },
       },
     },
     {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "A clear sequence to reduce surprises",
-          intro:
-            "The project is scoped from the start to integrate technical constraints, storage and finish.",
-          steps: [
-            {
-              number: "1",
-              title: "Analysis",
-              description:
-                "Plumbing, ventilation, circulation and available depth constraints.",
-            },
-            {
-              number: "2",
-              title: "Design",
-              description:
-                "Validation of storage zones, the countertop and access to the machines.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Controlled production with material choices suited to use.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Adjustments and finishes verified on site for clean execution.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Materials that hold up over time",
+          heading: "The laundry room in brief",
           intro:
-            "In a laundry room, moisture and daily use quickly punish weak or poorly suited choices.",
-          items: [
+            "What to plan for in a room that carries water, hot air and power.",
+          rows: [
             {
-              title: "Robust structure",
-              description:
-                "Solid birch wood on critical components to better withstand use.",
+              label: "How long",
+              value:
+                "It takes nine to fifteen weeks, and the plumbing is redone before we install.",
             },
             {
-              title: "Dimensional stability",
-              description:
-                "Birch plywood to limit warping and better support load.",
+              label: "Typical price",
+              value:
+                "The price follows the number of towers, the counter area and the utility sink.",
             },
             {
-              title: "Useful storage",
-              description:
-                "A configuration designed for baskets, products, countertop and daily access.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Materials",
+              value:
+                "Birch plywood, with the backs sealed because of the steam.",
             },
             {
-              label: "View our spaces",
-              href: "/espaces",
-              variant: "ghost",
+              label: "Hardware",
+              value:
+                "Anchors chosen for shelves full of bottles and boxes of detergent.",
+            },
+            {
+              label: "Who installs",
+              value:
+                "Our own crew, keeping the clearance the washer and dryer need.",
+            },
+            {
+              label: "Warranty",
+              value:
+                "The contract covers us coming back to adjust the doors and drawers.",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-laundry-project-01.webp",
-            alt: "Material detail for a custom laundry room",
+            alt: "Close-up of custom laundry room cabinetry",
           },
-          cardTitle: "Concrete impact",
-          cardDescription:
-            "A more stable structure avoids visible compromises too early and protects the room's usability.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Featured laundry room projects",
-          intro:
-            "A few examples of well-executed configurations for frequent use.",
-          items: [
-            {
-              title: "Custom laundry room",
-              href: "/projets",
-              description:
-                "Storage and work surfaces integrated into a compact service space.",
-              image: {
-                src: "/images/generated/spaces/space-laundry-project-01.webp",
-                alt: "Custom laundry room project in Montréal",
-              },
-              badges: ["Montréal", "Functional"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Custom laundry room",
-              href: "/projets",
-              description:
-                "A durable layout with vertical storage and a clean finish.",
-              image: {
-                src: "/images/generated/spaces/space-laundry-project-02.webp",
-                alt: "Custom laundry room project in Laval",
-              },
-              badges: ["Laval", "Durable"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Custom laundry room",
-              href: "/projets",
-              description:
-                "A project designed to simplify daily use without sacrificing quality.",
-              image: {
-                src: "/images/generated/spaces/space-laundry-project-03.webp",
-                alt: "Custom laundry room project on the South Shore",
-              },
-              badges: ["South Shore", "Custom"],
-              footerCtaLabel: "View project",
-            },
-          ],
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - custom laundry room",
-          intro:
-            "The most useful questions before scoping this kind of space.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does a custom laundry room cost?",
-              a: "The price of a custom laundry room depends on the configuration (stacked or side-by-side appliances, countertop, sink), the amount of storage, the materials and finishes, and the technical constraints of the space — plumbing, ventilation, available room. Because the space deals with moisture and frequent use, we favour stable materials and durable hardware, which affects the budget. We confirm a precise estimate once the configuration is scoped, to avoid surprises.",
+              q: "Does a laundry room need a floor drain?",
+              a: "It is not required everywhere, but it prevents expensive damage upstairs. Otherwise we fit a drain pan under the washer and a shut-off valve you can reach.",
             },
             {
-              q: "Can you coordinate other work?",
-              a: "Yes, depending on the project scope. The goal is to reduce fragmentation when it's relevant.",
+              q: "Can the washer and dryer be stacked?",
+              a: "Yes, if the appliances are rated for stacking. It frees half a wall for a storage tower and an access panel to the pipework.",
             },
             {
-              q: "Which materials do you recommend?",
-              a: "For a laundry room, we favour materials that stay stable against moisture and frequent use: panels and finishes resistant to steam and splashes, durable hardware (slides and hinges that keep up with the pace), and countertops that are easy to maintain. The construction details — backs, fastenings, clearances around the appliances — are done carefully to limit warping and extend durability over time. The goal: a space that stays clean and functional despite heavy use.",
+              q: "Where does the dryer vent run?",
+              a: "The shortest path to an exterior wall, in rigid duct. A long run full of elbows stretches cycles out and clogs the duct faster.",
             },
             {
-              q: "Do you work in Montréal and the surrounding area?",
-              a: "Yes. Montréal, Laval and the South Shore are part of our service area.",
+              q: "Can the laundry room go upstairs?",
+              a: "Yes, with reinforced framing where needed, a water shut-off and a dedicated vent. We check the structure and duct route before drawing the storage.",
             },
           ],
         },
@@ -264,7 +198,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
         props: {
           heading: "Tell us about your laundry room",
           intro:
-            "We help you define a durable, organized and realistic solution for your space.",
+            "Free estimate. Plumbing constraints get surveyed on site.",
           actions: [
             {
               label: "Request a quote",
@@ -272,11 +206,12 @@ export const salleDeLavagePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
-              href: "/projets",
+              label: "See our work",
+              href: "/projets/salle-de-lavage",
               variant: "ghost",
             },
           ],
+          note: "RBQ licence 8306-0806-27 · Montréal, Laval, South Shore",
         },
       },
     },

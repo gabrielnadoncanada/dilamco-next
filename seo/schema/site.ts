@@ -1,7 +1,17 @@
 export const SITE = {
   url: "https://dilamco.com",
   name: "Dilamco",
-  legalName: "Dilamco inc.",
+  // Raison sociale au registre RBQ / REQ ; « Dilamco » et « Construction
+  // Dilamco » sont les autres noms déclarés.
+  legalName: "9139-1250 Québec inc.",
+  alternateName: ["Dilamco Construction", "Construction Dilamco", "Le Groupe Dilamco"],
+  // Licence RBQ (registre consulté 2026-09-18) : valide, sans restriction,
+  // délivrée le 2004-09-07. Catégories EG 1.2 (petits bâtiments) et 1.3
+  // (bâtiments de tout genre) + sous-catégories spécialisées dont 12 (armoires).
+  rbqLicence: "8306-0806-27",
+  rbqRegistryUrl:
+    "https://www.pes.rbq.gouv.qc.ca/RegistreLicences/FicheDetenteur/8306080627",
+  foundingDate: "2004-09-07",
   telephone: "+1-514-820-0773",
   email: "info@dilamco.com",
   logoUrl: "https://dilamco.com/logo.png",
@@ -40,7 +50,15 @@ export const SITE = {
     "Montréal",
     "Pierrefonds-Roxboro",
     "Ouest-de-l'Île",
+    "Dollard-des-Ormeaux",
+    "Kirkland",
+    "Pointe-Claire",
+    "Beaconsfield",
+    "Dorval",
+    "L'Île-Bizard–Sainte-Geneviève",
+    "Saint-Laurent",
     "Laval",
+    "Vaudreuil-Dorion",
     "Rive-Nord",
     "Rive-Sud",
   ],

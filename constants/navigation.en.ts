@@ -16,7 +16,9 @@ import {
   Palette,
   Settings2,
   Info,
-  Boxes,
+  MapPin,
+  Droplets,
+  Home,
 } from "lucide-react";
 import type { MenuItem } from "@/components/navbar/navbar.types";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
@@ -27,12 +29,156 @@ export const BRAND_EN: Brand = {
   alt: "Dilamco",
   title: "Dilamco",
   tagline:
-    "Custom cabinetry & vanities — Design, Fabrication, Installation, Renovation",
+    "General contractor for residential renovation. West Island, Montréal, Laval and South Shore.",
 };
 
 export const MAIN_NAV_EN: MenuItem[] = [
   {
-    title: "Spaces",
+    title: "Services",
+    groups: [
+      {
+        title: "Renovation and construction",
+        links: [
+          {
+            label: "Turnkey renovation",
+            url: "/services/renovation/",
+            icon: HardHat,
+            description: "One contractor from permit to hand-over.",
+          },
+          {
+            label: "Kitchen renovation",
+            url: "/services/renovation/cuisine/",
+            icon: ChefHat,
+            description: "Plumbing, electrical, cabinets and finishes, coordinated.",
+          },
+          {
+            label: "Bathroom renovation",
+            url: "/services/renovation/salle-de-bain/",
+            icon: Bath,
+            description: "Waterproofing, ventilation, plumbing and durable finishes.",
+          },
+          {
+            label: "Basement finishing",
+            url: "/services/renovation/sous-sol/",
+            icon: Sofa,
+            description: "Insulation, drainage, permits and full fit-out.",
+          },
+          {
+            label: "Home addition",
+            url: "/services/renovation/agrandissement-de-maison/",
+            icon: Building2,
+            description: "Foundations, structure, envelope and integration.",
+          },
+          {
+            label: "Flooring renovation",
+            url: "/services/renovation/plancher/",
+            icon: Layers,
+            description: "Levels, subfloors and clean transitions.",
+          },
+          {
+            label: "Disaster recovery",
+            url: "/services/renovation/apres-sinistre/",
+            icon: Droplets,
+            description: "Water or fire damage: rebuild and insurance claims.",
+          },
+          {
+            label: "Commercial",
+            url: "/espaces/commercial/",
+            icon: Briefcase,
+            description: "Offices, retail and tenant improvements.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Areas",
+    groups: [
+      {
+        title: "Cities we serve",
+        links: [
+          {
+            label: "Pierrefonds-Roxboro",
+            url: "/zones/pierrefonds-roxboro/",
+            icon: MapPin,
+            description: "Our home base: a general contractor next door.",
+          },
+          {
+            label: "Dollard-des-Ormeaux",
+            url: "/zones/dollard-des-ormeaux/",
+            icon: MapPin,
+            description: "Residential renovation in DDO.",
+          },
+          {
+            label: "Kirkland",
+            url: "/zones/kirkland/",
+            icon: MapPin,
+            description: "Renovation and additions in Kirkland.",
+          },
+          {
+            label: "Pointe-Claire",
+            url: "/zones/pointe-claire/",
+            icon: MapPin,
+            description: "Residential renovation in Pointe-Claire.",
+          },
+          {
+            label: "Beaconsfield",
+            url: "/zones/beaconsfield/",
+            icon: MapPin,
+            description: "Renovation and additions in Beaconsfield.",
+          },
+          {
+            label: "Dorval",
+            url: "/zones/dorval/",
+            icon: MapPin,
+            description: "Residential renovation in Dorval.",
+          },
+          {
+            label: "L'Île-Bizard–Sainte-Geneviève",
+            url: "/zones/ile-bizard-sainte-genevieve/",
+            icon: MapPin,
+            description: "Renovation in Île-Bizard and Sainte-Geneviève.",
+          },
+          {
+            label: "Saint-Laurent",
+            url: "/zones/saint-laurent/",
+            icon: MapPin,
+            description: "Residential renovation in Saint-Laurent.",
+          },
+          {
+            label: "Laval",
+            url: "/zones/laval/",
+            icon: MapPin,
+            description: "Residential renovation in Laval.",
+          },
+          {
+            label: "Vaudreuil-Dorion",
+            url: "/zones/vaudreuil-dorion/",
+            icon: MapPin,
+            description: "Residential renovation in Vaudreuil-Dorion.",
+          },
+          {
+            label: "South Shore",
+            url: "/zones/rive-sud/",
+            icon: MapPin,
+            description: "Longueuil, Brossard, Saint-Lambert and nearby.",
+          },
+          {
+            label: "All areas",
+            url: "/zones/",
+            icon: Home,
+            description: "Greater Montréal, Laval, South Shore and Vaudreuil.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Projects",
+    url: "/projets/",
+  },
+  {
+    title: "Custom cabinetry",
     groups: [
       {
         title: "Custom spaces",
@@ -41,7 +187,7 @@ export const MAIN_NAV_EN: MenuItem[] = [
             label: "Custom kitchens",
             url: "/espaces/cuisine/",
             icon: ChefHat,
-            description: "High-end custom kitchen cabinets.",
+            description: "Custom cabinets and kitchens, integrated with the job site.",
           },
           {
             label: "Bathrooms & vanities",
@@ -53,35 +199,30 @@ export const MAIN_NAV_EN: MenuItem[] = [
             label: "Walk-in & storage",
             url: "/espaces/walk-in/",
             icon: DoorOpen,
-            description: "Optimized, custom and functional storage.",
+            description: "Optimized, custom, functional storage.",
           },
           {
             label: "Laundry room",
             url: "/espaces/salle-de-lavage/",
             icon: Shirt,
-            description: "Organization and storage for everyday use.",
+            description: "Organization and storage built for daily use.",
           },
           {
             label: "Basement fit-out",
             url: "/espaces/sous-sol/",
             icon: Sofa,
-            description: "Home cinema, bar, wine cellar and custom bookcases.",
+            description: "Home theatre, bar, wine cellar and custom built-ins.",
           },
           {
-            label: "Commercial",
-            url: "/espaces/commercial/",
-            icon: Briefcase,
-            description: "Custom fit-out for heavy daily use.",
+            label: "All spaces",
+            url: "/espaces/",
+            icon: LayoutGrid,
+            description: "Overview of the cabinetry division.",
           },
         ],
       },
-    ],
-  },
-  {
-    title: "Services",
-    groups: [
       {
-        title: "Services",
+        title: "Method and materials",
         links: [
           {
             label: "Design",
@@ -99,86 +240,19 @@ export const MAIN_NAV_EN: MenuItem[] = [
             label: "Installation",
             url: "/services/installation/",
             icon: Wrench,
-            description: "Alignments, adjustments and clean finish.",
+            description: "Alignment, adjustment and careful finish.",
           },
-          {
-            label: "Turnkey renovation",
-            url: "/services/renovation/",
-            icon: HardHat,
-            description: "Coordination, execution and consistent delivery.",
-          },
-        ],
-      },
-      {
-        title: "Renovation (types)",
-        links: [
-          {
-            label: "Kitchen renovation",
-            url: "/services/renovation/cuisine/",
-            icon: Hammer,
-            description: "Coordination + custom cabinets + finish.",
-          },
-          {
-            label: "Bathroom renovation",
-            url: "/services/renovation/salle-de-bain/",
-            icon: Bath,
-            description: "Humidity, ventilation, sealing, durability.",
-          },
-          {
-            label: "Flooring renovation",
-            url: "/services/renovation/plancher/",
-            icon: Layers,
-            description: "Levels, transitions and work sequencing.",
-          },
-          {
-            label: "Home extension",
-            url: "/services/renovation/agrandissement-de-maison/",
-            icon: Building2,
-            description: "Planning, coordination and full execution.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Projects",
-    url: "/projets/",
-  },
-  {
-    title: "Materials",
-    groups: [
-      {
-        title: "Materials & finish",
-        links: [
           {
             label: "Materials",
             url: "/materiaux/",
-            icon: LayoutGrid,
-            description: "Overview of materials and selection criteria.",
-          },
-          {
-            label: "Plywood",
-            url: "/materiaux/contreplaque/",
-            icon: Layers,
-            description: "Why it's a durable choice for custom work.",
-          },
-          {
-            label: "Hardware",
-            url: "/materiaux/quincaillerie/",
-            icon: Wrench,
-            description: "Reliability, adjustability and durability.",
-          },
-          {
-            label: "Colours & finishes",
-            url: "/materiaux/couleurs/",
             icon: Palette,
-            description: "Finish choices, consistency and look.",
+            description: "Plywood, hardware, finishes and comparison.",
           },
           {
             label: "Materials comparison",
             url: "/materiaux/comparatif/",
             icon: ScanSearch,
-            description: "Compare by use, maintenance and durability.",
+            description: "Compare by use, upkeep and durability.",
           },
         ],
       },
@@ -194,53 +268,13 @@ export const MAIN_NAV_EN: MenuItem[] = [
             label: "Our approach",
             url: "/a-propos/",
             icon: Info,
-            description: "Custom work, quality, process and accountability.",
+            description: "Licensed general contractor since 2004.",
           },
           {
             label: "Process",
             url: "/processus/",
-            icon: LayoutGrid,
-            description: "From scoping to final installation.",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    title: "Shop",
-    groups: [
-      {
-        title: "Online shop",
-        links: [
-          {
-            label: "Kitchen cabinets",
-            url: "/boutique/armoires-cuisine",
-            icon: ChefHat,
-            description: "In-stock cabinets, ready to install.",
-          },
-          {
-            label: "Pantry",
-            url: "/boutique/garde-manger",
-            icon: Boxes,
-            description: "Full-height storage, in stock.",
-          },
-          {
-            label: "Bathroom vanities",
-            url: "/boutique/vanites",
-            icon: Bath,
-            description: "In-stock vanity cabinets, 24 and 30 inch.",
-          },
-          {
-            label: "Finishes",
-            url: "/boutique/finitions",
-            icon: Palette,
-            description: "Pure White and White Oak.",
-          },
-          {
-            label: "Request a quote",
-            url: "/boutique/soumission",
-            icon: ScanSearch,
-            description: "Firm quote within 48 h on your selection.",
+            icon: Hammer,
+            description: "From estimate to delivered job site.",
           },
         ],
       },
@@ -250,31 +284,39 @@ export const MAIN_NAV_EN: MenuItem[] = [
 
 export const FOOTER_NAV_EN: FooterNavSection[] = [
   {
-    title: "Spaces",
-    links: [
-      { text: "Custom kitchens", url: "/espaces/cuisine/" },
-      { text: "Bathrooms & vanities", url: "/espaces/salle-de-bain/" },
-      { text: "Walk-in & storage", url: "/espaces/walk-in/" },
-      { text: "Laundry room", url: "/espaces/salle-de-lavage/" },
-      { text: "Basement fit-out", url: "/espaces/sous-sol/" },
-      { text: "Commercial", url: "/espaces/commercial/" },
-    ],
-  },
-  {
     title: "Services",
     links: [
-      { text: "Design", url: "/services/design/" },
-      { text: "Fabrication", url: "/services/fabrication/" },
-      { text: "Installation", url: "/services/installation/" },
-      { text: "Turnkey renovation", url: "/services/renovation/" },
+      { text: "Turnkey", url: "/services/renovation/" },
+      { text: "Kitchen", url: "/services/renovation/cuisine/" },
+      { text: "Bathroom", url: "/services/renovation/salle-de-bain/" },
+      { text: "Basement", url: "/services/renovation/sous-sol/" },
+      {
+        text: "Home addition",
+        url: "/services/renovation/agrandissement-de-maison/",
+      },
+      { text: "Disaster recovery", url: "/services/renovation/apres-sinistre/" },
     ],
   },
   {
-    title: "Resources",
+    title: "Areas",
     links: [
-      { text: "Shop", url: "/boutique" },
-      { text: "Projects", url: "/projets/" },
+      { text: "Pierrefonds-Roxboro", url: "/zones/pierrefonds-roxboro/" },
+      { text: "Dollard-des-Ormeaux", url: "/zones/dollard-des-ormeaux/" },
+      { text: "Kirkland", url: "/zones/kirkland/" },
+      { text: "Pointe-Claire", url: "/zones/pointe-claire/" },
+      { text: "Laval", url: "/zones/laval/" },
+      { text: "South Shore", url: "/zones/rive-sud/" },
+      { text: "All areas", url: "/zones/" },
+    ],
+  },
+  {
+    title: "Cabinetry",
+    links: [
+      { text: "Kitchens", url: "/espaces/cuisine/" },
+      { text: "Vanities", url: "/espaces/salle-de-bain/" },
+      { text: "Walk-in", url: "/espaces/walk-in/" },
       { text: "Materials", url: "/materiaux/" },
+      { text: "Projects", url: "/projets/" },
     ],
   },
   {
@@ -290,6 +332,4 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
 // Pages légales pas encore créées -> aucun lien (évite les 404).
 export const LEGAL_LINKS_EN: LegalLink[] = [];
 
-export const COPYRIGHT_TEXT_EN = `© ${new Date().getFullYear()} Dilamco. All rights reserved.`;
-
-export const REQUEST_QUOTE_LABEL_EN = "Request a quote";
+export const COPYRIGHT_TEXT_EN = `© ${new Date().getFullYear()} Dilamco (9139-1250 Québec inc.). RBQ licence 8306-0806-27. All rights reserved.`;

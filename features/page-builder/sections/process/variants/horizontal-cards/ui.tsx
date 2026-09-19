@@ -1,47 +1,66 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { ProcessHorizontalStepsCardsProps } from "./schema";
 import { Heading } from "@/components/elements/heading";
+import {
+  SectionHeader,
+  sectionBodyClassName,
+} from "@/features/page-builder/sections/shared/ui/SectionHeader";
 import { cn } from "@/lib/utils";
 
+/**
+ * Frise d'étapes. Desktop (lg+) : un rail horizontal continu avec des jalons
+ * numérotés, une colonne par étape. Sous lg : rail vertical à gauche, une
+ * étape par ligne (plus d'orphelin en grille 2 × N).
+ */
 export function ProcessHorizontalStepsCards(
   props: ProcessHorizontalStepsCardsProps,
 ) {
-  const gridClassName =
-    props.steps.length >= 5 ? "lg:grid-cols-5" : "lg:grid-cols-4";
+  const count = props.steps.length;
+  const cols =
+    count >= 5
+      ? "lg:grid-cols-5"
+      : count === 4
+        ? "lg:grid-cols-4"
+        : count === 3
+          ? "lg:grid-cols-3"
+          : "lg:grid-cols-2";
 
   return (
-    <div>
-      <div className="flex flex-col gap-3">
-        <Heading as="h2" variant="h2">
-          {props.heading}
-        </Heading>
+    <div className="text-left">
+      <SectionHeader heading={props.heading} intro={props.intro} />
 
-        {props.intro ? (
-          <p className="max-w-2xl text-muted-foreground">{props.intro}</p>
-        ) : null}
-      </div>
-
-      <div className="mt-10">
-        {/* Responsive: keep cards readable on small screens */}
-        <div className={cn("grid gap-6 sm:grid-cols-2", gridClassName)}>
-          {props.steps.map((step) => (
-            <Card key={`${step.number}-${step.title}`} className="relative">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-none border bg-background text-sm font-semibold">
-                    {step.number}
-                  </div>
-                  <CardTitle className="text-base">{step.title}</CardTitle>
-                </div>
-              </CardHeader>
-
-              <CardContent className="text-sm text-muted-foreground">
-                {step.description}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+      <ol
+        className={cn(
+          sectionBodyClassName,
+          // Rail : vertical (gauche) sous lg, horizontal (haut) à partir de lg.
+          "relative grid gap-y-10 before:absolute before:bg-border before:content-[''] max-lg:before:bottom-6 max-lg:before:left-[19px] max-lg:before:top-6 max-lg:before:w-px lg:gap-x-6 lg:before:left-0 lg:before:right-0 lg:before:top-[19px] lg:before:h-px",
+          cols,
+        )}
+      >
+        {props.steps.map((step, index) => {
+          const n = String(step.number || index + 1).padStart(2, "0");
+          return (
+            <li
+              key={`${step.number}-${step.title}`}
+              className="relative grid grid-cols-[40px_1fr] content-start gap-x-4 lg:grid-cols-1 lg:gap-y-6"
+            >
+              <span
+                aria-hidden
+                className="text-numeral relative z-10 flex size-10 items-center justify-center rounded-full bg-primary text-sm text-primary-foreground ring-4 ring-background"
+              >
+                {n}
+              </span>
+              <div className="pt-1.5 lg:pt-0">
+                <Heading as="h3" variant="card">
+                  {step.title}
+                </Heading>
+                <p className="mt-1.5 max-w-[34ch] text-sm leading-relaxed text-muted-foreground">
+                  {step.description}
+                </p>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
     </div>
   );
 }

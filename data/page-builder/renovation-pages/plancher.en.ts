@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const renovationPlancherPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Flooring renovation in Montreal",
+    title: "Flooring renovation in Montreal — general contractor",
     description:
-      "Flooring renovation: site sequencing, levels, transitions and clean integration within a larger project.",
+      "Flooring renovation: subfloor, flatness, levels, transitions and installation. RBQ-licensed general contractor, written contract.",
     path: "/services/renovation/plancher",
-    ogAlt: "Dilamco flooring renovation",
+    ogAlt: "Flooring renovation by a general contractor",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const renovationPlancherPageEn: PageTemplateData = {
   service: {
     name: "Flooring renovation",
     description:
-      "Planning, coordination and careful finishing when flooring is part of a larger renovation with cabinets, installation or reconfiguration.",
+      "Flooring replacement by a general contractor: subfloor assessment, level correction, transitions between rooms, installation and finishing, coordinated with the rest of the job.",
     url: SITE.url + "/services/renovation/plancher",
     serviceType: "Flooring renovation",
+    areaServed: [
+      "Montreal",
+      "West Island",
+      "Laval",
+      "South Shore",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -34,114 +41,82 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
-          heading:
-            "Flooring renovation: better manage levels, transitions and site sequencing",
+          eyebrow: "Flooring renovation",
+          heading: "Flooring renovation, from tear-out to installation",
           description:
-            "Flooring renovation is the replacement or refinishing of the floor covering, which affects levels, transitions, cabinet installation and the perceived quality of the whole. It must be planned within the overall site sequence, not treated as an isolated decision.",
+            "We check the subfloor and the moisture before we lay your new flooring.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View turnkey renovation",
+              label: "Turnkey renovation",
               href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          badges: ["Transitions", "Levels", "Sequencing"],
+          badges: ["Subfloor checked", "Written contract"],
           image: {
             src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-            alt: "Flooring renovation",
+            alt: "Residential flooring renovation by a general contractor",
           },
-          caption: "Montréal, Laval and the South Shore",
+          imageSide: "left",
+          caption: "Floors redone across the West Island",
         },
       },
     },
     {
-      id: "problems",
+      id: "included",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "icon-cards-bullets",
         props: {
-          heading:
-            "Why flooring often creates delayed problems",
-          description:
-            "Flooring seems simple until you connect it to the rest of the site. In reality, it affects heights, transitions, on-site adjustments and sometimes the entire installation logic.",
-          cards: [
-            {
-              title: "Levels and flatness",
-              description:
-                "Variations in the subfloor carry straight through to the layout, alignments and the final result.",
-            },
-            {
-              title: "Wrong order of work",
-              description:
-                "When flooring is handled too late or too early, it often forces rework or extra protection.",
-            },
-            {
-              title: "Visible joints",
-              description:
-                "Poorly planned transitions between areas, rooms or materials quickly reduce the perception of quality.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading:
-            "Our approach to integrating flooring without harming the rest of the project",
-          intro:
-            "The goal isn't just to replace a surface. We make sure the flooring integrates properly with the cabinets, the levels, the transitions and the overall site sequence.",
+          heading: "What a flooring job includes",
+          columns: "2",
           items: [
             {
-              title: "Reading the existing conditions",
-              description:
-                "We clarify the levels, the visible irregularities, the transitions and the relationship with the other areas of the project.",
+              title: "Tearing out the old floor",
+              description: "We take it all up to see what is underneath",
+              icon: "hammer",
+              bullets: [
+                "We remove the flooring, the baseboards and the thresholds",
+                "We look for water stains and soft panels",
+                "We measure the moisture in the concrete or the wood",
+              ],
             },
             {
-              title: "Order of the steps",
-              description:
-                "Flooring is placed in the right sequence to reduce rework and protect the finish.",
+              title: "Subfloor repair",
+              description: "This is what installers often bill as an extra",
+              icon: "ruler",
+              bullets: [
+                "We change damaged panels and re-screw the rest",
+                "We level to what the new flooring can tolerate",
+                "We reinforce the joists where the floor sags",
+              ],
             },
             {
-              title: "Coordination with installation",
-              description:
-                "Cabinets, on-site adjustments and joints must be planned together.",
+              title: "Laying the new floor",
+              description: "Hardwood, engineered wood, vinyl or tile",
+              icon: "layers",
+              bullets: [
+                "We let the wood acclimatize inside the house",
+                "We pick the membrane for the storey and the substrate",
+                "We leave the expansion gap the wood needs",
+              ],
             },
             {
-              title: "Control of the final result",
-              description:
-                "Joints, transition lines and the way surfaces read must stay clean after the work.",
+              title: "Thresholds, baseboards and doors",
+              description: "We finish where the rooms meet",
+              icon: "slidersHorizontal",
+              bullets: [
+                "We plan the transitions from one room to the next",
+                "We redo the stair nosings and the landing details",
+                "We put the baseboards back and trim the doors",
+              ],
             },
           ],
-          actions: [
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "View turnkey renovation",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Coordinating flooring within a renovation",
-          },
-          cardTitle: "What we aim to avoid",
-          cardDescription:
-            "Poorly integrated flooring can force a cascade of corrections to the layout, the levels and the transitions, when the problem really came from bad sequencing.",
         },
       },
     },
@@ -151,219 +126,118 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading:
-            "Typical sequence for integrating flooring into a renovation",
-          intro:
-            "The logic stays simple: understand the subfloor, check the impacts on the other elements, then execute in the right order.",
+          heading: "How we redo a floor",
           steps: [
             {
               number: "1",
-              title: "Analysis",
+              title: "Measurements",
               description:
-                "Reading the subfloor, the levels, the transitions and the relationship with the other areas of the site.",
+                "We measure the areas and the height differences between rooms.",
             },
             {
               number: "2",
-              title: "Decision",
+              title: "Tear-out",
               description:
-                "Choosing the material, the joints and the sequence based on the real scope of the project.",
+                "We protect the house and take out the old flooring.",
             },
             {
               number: "3",
-              title: "Preparation",
+              title: "Repair",
               description:
-                "Getting the site ready to protect the next steps and limit rework.",
+                "We replace damaged panels and re-screw the whole subfloor.",
             },
             {
               number: "4",
-              title: "Coordination",
+              title: "Levelling",
               description:
-                "Integration with cabinets, installation, transitions and the necessary adjustments.",
+                "We pour the levelling compound and let it dry properly.",
             },
             {
               number: "5",
-              title: "Finishing",
+              title: "Install and thresholds",
               description:
-                "Checking the joints, the lines and the final result across the whole space.",
+                "We lay the floor, the thresholds and the baseboards, then trim the doors.",
             },
           ],
         },
       },
     },
     {
-      id: "technical",
-      content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
-        props: {
-          heading:
-            "Technical points that really affect a flooring project",
-          intro:
-            "Flooring is rarely just an aesthetic choice. It's the technical details around it that affect the final quality most.",
-          columns: "2",
-          items: [
-            {
-              title: "Subfloor flatness",
-              description:
-                "The base directly determines the visual and functional result.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Level variations carry through to the installation.",
-                "A poorly read subfloor creates corrections later.",
-                "The final result often depends on this preparatory work.",
-              ],
-            },
-            {
-              title: "Transitions between areas",
-              description:
-                "Visible joints matter as much as the surface itself.",
-              icon: "doorOpen",
-              bullets: [
-                "Clean junctions between rooms or materials.",
-                "Transitions planned around circulation and height.",
-                "Fewer poorly resolved threshold effects.",
-              ],
-            },
-            {
-              title: "Relationship with the cabinets",
-              description:
-                "Flooring and cabinetry influence each other's installation.",
-              icon: "package2",
-              bullets: [
-                "Direct impact on alignments and heights.",
-                "Need for a clear sequence with installation.",
-                "Fewer reworks on joints and adjustments.",
-              ],
-            },
-            {
-              title: "Site execution",
-              description:
-                "The quality of the result also depends on the order of the interventions.",
-              icon: "wrench",
-              bullets: [
-                "Protecting surfaces at the right time.",
-                "Fewer end-of-site corrections.",
-                "A cleaner finish across the whole project.",
-              ],
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "intégration",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Flooring mostly fits into a larger project",
-          intro:
-            "This service page is here to explain the coordination logic. In most cases, flooring mainly supports a kitchen, bathroom or larger turnkey renovation project.",
-          items: [
-            {
-              title: "Turnkey renovation",
-              href: "/services/renovation",
-              description:
-                "The main page to understand how sequencing, coordination and related work line up within a larger project.",
-              image: {
-                src: "/images/generated/services/service-renovation-hero-01.webp",
-                alt: "Better coordinated turnkey renovation",
-              },
-              badges: ["Main page", "Coordination"],
-              footerCtaLabel: "View renovation",
-            },
-            {
-              title: "Custom kitchen",
-              href: "/espaces/cuisine",
-              description:
-                "When flooring affects the levels, the island, the cabinets and the overall reading of the kitchen.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen with clean flooring integration",
-              },
-              badges: ["Kitchen", "Levels"],
-              footerCtaLabel: "View the kitchen page",
-            },
-            {
-              title: "Custom bathroom",
-              href: "/espaces/salle-de-bain",
-              description:
-                "When the transitions, moisture and floor finish need to support the rest of the room with no visible weakness.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom with clean floor finishing",
-              },
-              badges: ["Bathroom", "Finishing"],
-              footerCtaLabel: "View the bathroom page",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "proof",
+      id: "sequence",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "list-actions-image-card",
         props: {
-          heading: "What a well-integrated floor should bring to the project",
-          description:
-            "The proof of skill isn't only in the surface chosen. It shows in the levels, the transitions and the way the flooring supports the rest of the layout without drawing attention for the wrong reasons.",
-          cards: [
+          heading: "When to lay the floor",
+          intro:
+            "The order of the trades changes the invoice as much as the flooring you pick.",
+          items: [
             {
-              title: "A cleaner reading",
-              description:
-                "The lines and joints stay discreet instead of breaking the consistency of the space.",
+              title: "After the plumbing and the paint",
+              description: "a new floor gets marked up if the site is still open.",
             },
             {
-              title: "A more stable installation",
-              description:
-                "The other elements of the project adjust better when the subfloor and the sequence are well framed.",
+              title: "Before the cabinets",
+              description: "it avoids a height mismatch if an appliance changes.",
             },
             {
-              title: "A more credible finish",
-              description:
-                "The final result looks more controlled because the technical details don't stand out.",
+              title: "Heights are decided on the plan",
+              description: "tile, wood and vinyl are not the same thickness.",
+            },
+            {
+              title: "On a concrete slab",
+              description: "an insulated subfloor or a membrane comes first.",
             },
           ],
-          columns: "1",
+          actions: [
+            {
+              label: "See the kitchen",
+              href: "/services/renovation/cuisine",
+              variant: "ghost",
+            },
+            {
+              label: "See the basement",
+              href: "/services/renovation/sous-sol",
+              variant: "ghost",
+            },
+          ],
+          image: {
+            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
+            alt: "Subfloor preparation before a flooring installation",
+          },
+          cardTitle: "One schedule",
+          cardDescription:
+            "Tying the floor into the cabinets, the bathroom and the staircase is part of the same contract.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - flooring renovation",
-          intro:
-            "Clear answers on sequencing, levels, condos and integration with the rest of the site.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "Can I redo only the flooring?",
-              a: "Yes, flooring can be redone on its own. But as soon as there are cabinets in place or a larger renovation, coordination becomes decisive: the order of the work, the levels and the transitions directly affect the alignment of the furniture and the finish. We then frame the sequence to avoid doing the same work twice.",
+              q: "Why does my floor squeak?",
+              a: "Almost always the subfloor: loose panels, missing screws, plywood that is too thin. The surface only reveals the fault. We tear out, re-screw and replace.",
             },
             {
-              q: "In what order should the work be done?",
-              a: "The order depends on the scope, but the goal stays the same: avoid rework and protect the final result.",
+              q: "Can new flooring go over the old one?",
+              a: "It is rarely a good idea. The height goes up, doors rub, thresholds get awkward and you never see what is underneath. We recommend tearing out.",
             },
             {
-              q: "Do you work with other trades for this type of project?",
-              a: "Yes, when the flooring fits into a larger renovation. Coordination is precisely there to clarify the order of the interventions and protect the finish.",
+              q: "Which flooring suits a basement?",
+              a: "We measure the moisture in the concrete first. Good vinyl and tile handle it well. Solid hardwood laid straight on concrete is the one to avoid.",
             },
             {
-              q: "Is it possible in a condo?",
-              a: "Yes. In a condo, access constraints, the work hours allowed and often soundproofing requirements (an acoustic membrane under the covering) must be checked at the start, because many boards impose noise standards between floors. Once these rules are framed, the installation is planned normally.",
+              q: "Do I need a permit to redo a floor?",
+              a: "Not to change a surface. You need one as soon as the structure moves: joists altered, an opening cut for stairs, a slab lowered. We check with your city.",
             },
             {
-              q: "Does the flooring affect the cabinet installation?",
-              a: "Yes. Levels and flatness directly affect the alignment, the joints and the transitions.",
-            },
-            {
-              q: "Where can I see the complete approach for a more global project?",
-              a: "The flooring renovation page mainly explains the logic of sequencing and coordination. For the full picture of a larger project, the turnkey renovation page remains the main reference.",
+              q: "Why let hardwood acclimatize?",
+              a: "Wood swells and shrinks with the humidity in the house. Laid too soon, it opens gaps in winter. A few days indoors at normal temperature settles it.",
             },
           ],
         },
@@ -375,23 +249,22 @@ export const renovationPlancherPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading:
-            "Need to integrate flooring into a larger renovation?",
+          heading: "A floor to redo? Let's talk.",
           intro:
-            "We help you frame the right sequence and the right joints to protect the final result, then point you to the main renovation page if the project goes beyond the flooring alone.",
+            "We measure the levels, open a corner of the subfloor, then price the work.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View turnkey renovation",
-              href: "/services/renovation",
+              label: "See our service areas",
+              href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Flooring, transitions, levels and site coordination",
+          note: "RBQ licence 8306-0806-27 · Subfloor, levelling, install and thresholds",
         },
       },
     },

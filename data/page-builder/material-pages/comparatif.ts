@@ -21,12 +21,12 @@ export const comparatifPage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Matériaux",
-          heading: "Comparatif des matériaux : choisir selon l'usage",
+          badges: ["Structure", "Humidité", "Finition"],
+          heading: "Quel matériau pour quelle partie de l'armoire",
           description:
-            "Il n'existe pas de matériau d'armoire universel : mélamine, MDF, contreplaqué et bois massif ont chacun leurs forces. Le bon choix dépend de l'espace, de l'humidité, de la durabilité visée, de la finition recherchée et de la qualité d'exécution.",
+            "Aucun matériau n'est bon partout. Une cuisine bien pensée en combine trois ou quatre.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -39,12 +39,6 @@ export const comparatifPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Humidité", "Finition"],
-          image: {
-            src: "/images/generated/materials/comparatif-materiaux-01.webp",
-            alt: "Comparatif de matériaux pour cuisine sur mesure",
-          },
-          caption: "Le bon choix dépend toujours du contexte réel",
         },
       },
     },
@@ -54,181 +48,104 @@ export const comparatifPage: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Tableau comparatif",
-          intro: "Résumé général à adapter à votre contexte réel.",
-          columns: ["Performance générale", "Usage recommandé"],
+          heading: "Chaque matériau et l'usage qui lui convient",
+          columns: ["Ce qu'il fait de mieux", "Où on l'utilise"],
           rows: [
             {
               label: "Contreplaqué",
-              values: ["Très bonne stabilité", "Structures exigeantes"],
+              values: ["Il reste droit et tient les vis", "Caissons, tiroirs, tablettes"],
             },
             {
               label: "MDF",
-              values: ["Bonne uniformité", "Portes et façades peintes"],
+              values: ["Il donne une peinture parfaitement lisse", "Portes et façades peintes"],
             },
             {
               label: "Mélamine",
-              values: [
-                "Variable selon le contexte",
-                "Rangements cibles et décor",
-              ],
+              values: ["Il coûte peu et arrive déjà fini", "Intérieurs d'armoires et tablettes"],
             },
             {
               label: "Bois massif",
-              values: ["Valeur perçue élevée", "Éléments esthétiques visibles"],
+              values: ["Il montre un vrai grain de bois", "Portes, moulures et détails visibles"],
+            },
+            {
+              label: "Quincaillerie",
+              values: ["Elle tient des années sans jeu", "Charnières et coulisses de tiroir"],
+            },
+            {
+              label: "Panneau de particules",
+              values: ["Il ne coûte presque rien", "Rien qui porte du poids, chez nous"],
             },
           ],
         },
       },
     },
     {
-      id: "détails",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Pages détaillées",
-          intro: "Approfondissez chaque matériau selon sa logique propre.",
-          items: [
-            {
-              title: "Pourquoi le contreplaqué",
-              href: "/materiaux/contreplaque",
-              description: "Stabilité et tenue structurelle.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Détail de contreplaqué pour armoires sur mesure",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "Uniformité et finition peinte.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "Panneau MDF avec finition peinte",
-              },
-              badges: ["Peinture"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Mélamine",
-              href: "/materiaux/melamine",
-              description: "Finis décoratifs et coût maîtrisé.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de mélamine pour mobilier sur mesure",
-              },
-              badges: ["Décor"],
-              footerCtaLabel: "Voir la page",
-            },
-            {
-              title: "Bois massif",
-              href: "/materiaux/bois-massif",
-              description: "Texture naturelle et caractère.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Finition en bois massif naturel",
-              },
-              badges: ["Naturel"],
-              footerCtaLabel: "Voir la page",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "limits",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce que le tableau ne montre pas",
-          description:
-            "La performance réelle dépend aussi de la protection des chants, de la qualité d'assemblage, de la quincaillerie et des ajustements à l'installation. Le tableau aide à cadrer, mais il ne remplace pas un choix adapté au projet.",
-          cards: [
+          heading: "Comment choisir",
+          intro: "Deux questions suffisent à trancher dans la plupart des pièces.",
+          rows: [
             {
-              title: "Chants",
-              description:
-                "Ils deviennent critiques dès qu'il y a humidité, chocs ou nettoyage fréquent.",
+              label: "Première question",
+              value:
+                "Est-ce que la pièce porte du poids ou est-ce qu'elle risque de recevoir de l'eau ?",
             },
             {
-              title: "Assemblage",
-              description: "Une bonne exécution change la tenue dans le temps.",
+              label: "Deuxième question",
+              value:
+                "Voulez-vous une porte peinte, un décor déjà fini ou du vrai bois ?",
             },
             {
-              title: "Quincaillerie",
-              description:
-                "Le confort et la durabilité dépendent aussi des mécanismes.",
+              label: "Pour la structure",
+              value:
+                "Du contreplaqué partout où il y a des vis et du poids à porter.",
             },
             {
-              title: "Installation",
-              description:
-                "Les ajustements finaux influencent le fonctionnement réel.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "errors",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Erreurs à éviter",
-          intro:
-            "Les mauvais choix viennent souvent d'une lecture trop simplifiée : le look seul, l'oubli de l'humidité ou une sous-estimation des détails de finition.",
-          badges: ["Usage réel", "Humidité", "Exécution"],
-          cardTitle: "À garder en tête",
-          items: [
-            "Ne pas choisir uniquement pour le look",
-            "Tenir compte de l'humidité",
-            "Ne pas sous-estimer les détails de finition",
-            "Évaluer le rôle réel de chaque pièce",
-          ],
-          actions: [
-            {
-              label: "Voir la quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "primary",
+              label: "Pour les façades",
+              value:
+                "Du MDF si on peint, du bois massif pour le grain, de la mélamine pour le prix.",
             },
             {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
+              label: "Pour le budget",
+              value:
+                "Mettez l'argent sur ce que vous voyez et touchez tous les jours.",
+            },
+            {
+              label: "Ce qui lâche en premier",
+              value:
+                "Ce sont les bords des panneaux et la pose, rarement le matériau lui-même.",
             },
           ],
+          image: {
+            src: "/images/generated/materials/comparatif-materiaux-01.webp",
+            alt: "Panneaux d'armoires comparés côte à côte",
+          },
+          note: "Le tableau donne la règle générale. Votre pièce peut demander autre chose.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Comparatif des matériaux",
+          heading: "Questions sur le choix des matériaux",
           items: [
             {
-              q: "MDF ou mélamine ?",
-              a: "Le MDF est privilégié pour un fini peint parfaitement uniforme, quand on veut une couleur sur mesure et des portes lisses. La mélamine arrive déjà finie avec un décor thermofusionné : large choix de couleurs et d'imitations de bois, coût maîtrisé, sans étape de peinture. En pratique, le MDF sert souvent les façades peintes et la mélamine les caissons ou les projets au budget cadré.",
+              q: "Faut-il un seul matériau par cuisine ?",
+              a: "Non, et c'est rarement souhaitable. Trois ou quatre panneaux cohabitent dans la même pièce, chacun placé là où sa faiblesse ne se voit pas.",
             },
             {
-              q: "Le contreplaqué est-il toujours préférable ?",
-              a: "Pas toujours, mais il est souvent pertinent pour la structure durable.",
+              q: "Comment comparer deux soumissions ?",
+              a: "Regardez l'épaisseur du caisson, l'essence du contreplaqué, la marque des coulisses et l'épaisseur du chant. Le reste tient de la présentation.",
             },
             {
-              q: "Bois massif partout ?",
-              a: "Pas nécessairement. Il est souvent meilleur lorsqu'il est ciblé sur les éléments visibles.",
-            },
-            {
-              q: "Peut-on combiner plusieurs matériaux ?",
-              a: "Oui, et c'est souvent la meilleure stratégie. Plutôt que de choisir un seul matériau, on cible chacun là où il performe : contreplaqué de bouleau pour la structure des caissons, bois massif sur les portes et éléments visibles, MDF pour certaines façades peintes, mélamine pour un intérieur durable et économique. Cette combinaison équilibre performance, rendu et budget.",
+              q: "Le panneau de particules est-il à exclure ?",
+              a: "Sous un décor et loin de l'eau, il fait le travail. Nous l'écartons des caissons, parce qu'il ne retient pas les vis sur la durée.",
             },
           ],
         },
@@ -240,9 +157,9 @@ export const comparatifPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'un comparatif adapté à votre projet ?",
+          heading: "Choisir les matériaux de votre projet",
           intro:
-            "On vous aide à arbitrer entre structure, finition, humidité et budget pour faire un choix plus intelligent.",
+            "On passe la pièce en revue chez vous, puis on arrête chaque matériau avec vous.",
           actions: [
             {
               label: "Demander une soumission",

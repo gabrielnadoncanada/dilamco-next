@@ -6,7 +6,7 @@ export const designPageEn: PageTemplateData = {
   metadata: {
     title: "Custom kitchen & cabinetry design",
     description:
-      "Design service: space optimization, planning and material selection for kitchens, vanities, walk-ins and commercial projects.",
+      "Custom cabinetry design: space optimization, planning and material selection, built into your renovation by a licensed general contractor.",
     path: "/services/design",
     ogAlt: "Dilamco design service",
   },
@@ -30,187 +30,139 @@ export const designPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading: "Design service — structuring the project before fabrication",
+          eyebrow: "Cabinetry division",
+          heading: "We draw your kitchen before a wall is opened",
           description:
-            "Custom cabinet design is the planning stage where usage is framed, the space organized, technical constraints integrated and material choices validated — before fabrication and installation. That is where the right decisions are made, on paper, to avoid costly compromises later.",
+            "Measurements, drawings, heights and materials are settled and signed before we order anything.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Real usage", "Planning", "Execution"],
+          badges: ["On-site survey", "Drawings", "Materials"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
-            alt: "Custom kitchen plan and material samples",
+            alt: "Custom kitchen drawing and material samples",
           },
-          caption: "Montréal, Laval and the South Shore",
+          caption: "West Island, Montreal, Laval, South Shore",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "rôle",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "The role of design in a custom project",
-          description:
-            "Good design makes the project clear and executable. It helps anticipate constraints and avoid rework during fabrication or visible compromises at the end.",
-          cards: [
+          heading: "How the design stage works",
+          steps: [
             {
-              title: "Optimize the space",
+              number: "1",
+              title: "We measure the room",
               description:
-                "Circulation, work zones, clearances and heights suited to your usage.",
+                "We record the walls, the windows and the existing plumbing and wiring.",
             },
             {
-              title: "Structure the storage",
+              number: "2",
+              title: "We draw the plans",
               description:
-                "Access, organization and priorities defined before production.",
+                "We place every cabinet, every appliance and every outlet on the drawing.",
             },
             {
-              title: "Align the decisions",
+              number: "3",
+              title: "We choose with you",
               description:
-                "Materials, finish, schedule and level of complexity stay consistent.",
+                "You see the samples for materials, colours and handles.",
+            },
+            {
+              number: "4",
+              title: "You sign off",
+              description:
+                "You get the drawings, the itemized price and the job site dates.",
             },
           ],
-          columns: "1",
         },
       },
     },
     {
-      id: "includes",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "What the design service includes",
-          intro:
-            "Dilamco design is focused on usage and execution, not inspiration disconnected from the job site.",
-          items: [
+          heading: "The design stage in brief",
+          intro: "What the design stage gives you, and what it costs you.",
+          rows: [
             {
-              title: "Needs analysis",
-              description: "Your priorities, your usage and your constraints.",
+              label: "How long",
+              value:
+                "It takes two to four weeks between the first visit and the signed drawings.",
             },
             {
-              title: "Functional organization",
-              description: "Space plan and storage logic.",
+              label: "What you receive",
+              value:
+                "A floor plan, a drawing of each wall, the list of materials and the price.",
             },
             {
-              title: "Material and finish choices",
-              description: "Decisions consistent with durability and maintenance.",
+              label: "Who handles it",
+              value:
+                "A designer draws it, and the general contractor checks that it can be built.",
             },
             {
-              title: "Preparation for execution",
-              description:
-                "A design conceived to be fabricated and installed cleanly.",
-            },
-          ],
-          actions: [
-            {
-              label: "View fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "Meetings planned",
+              value:
+                "One visit to measure, and another one to walk you through the drawings.",
             },
             {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
+              label: "Warranty",
+              value:
+                "The drawings you sign are the reference for the whole job site.",
+            },
+            {
+              label: "Typical price",
+              value:
+                "The design is credited to your project if you award us the work.",
             },
           ],
           image: {
             src: "/images/services/design-hero.webp",
-            alt: "Custom design being planned",
+            alt: "Drawings and elevations of a kitchen being designed",
           },
-          cardTitle: "Why it matters",
-          cardDescription:
-            "The earlier the decisions are made, the more predictable and executable the project becomes.",
-        },
-      },
-    },
-    {
-      id: "types",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Design by project type",
-          intro:
-            "The design logic changes depending on the space, the constraints and the level of usage.",
-          items: [
-            {
-              title: "Kitchen",
-              href: "/espaces/cuisine",
-              description:
-                "Work zones, circulation, island, storage and integration.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen designed for real usage",
-              },
-              badges: ["Ergonomics", "Storage"],
-              footerCtaLabel: "View kitchen",
-            },
-            {
-              title: "Bathroom",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Moisture constraints, storage and daily ergonomics.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom designed for moisture",
-              },
-              badges: ["Moisture", "Finishes"],
-              footerCtaLabel: "View bathroom",
-            },
-            {
-              title: "Walk-in",
-              href: "/espaces/walk-in",
-              description:
-                "Zone-based organization, accessibility and vertical storage.",
-              image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Custom walk-in designed for organization",
-              },
-              badges: ["Organization", "Access"],
-              footerCtaLabel: "View walk-in",
-            },
-          ],
+          note: "If the drawings change after signing, the price is reviewed with you.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - design",
-          intro:
-            "Clear answers on the role of design in a custom project.",
+          heading: "Questions about the design stage",
           items: [
             {
-              q: "Is design mandatory?",
-              a: "In a custom project, design isn't a formality: it's what frames every decision before fabrication. It lets us validate the real dimensions, the layout of zones, the integration of appliances and technical constraints, and the material choices. Skipping this step means risking costly compromises discovered too late, during fabrication or installation. Good design reduces surprises and saves time across the whole project.",
+              q: "How long does design take?",
+              a: "Allow two to four weeks depending on room size and the number of revisions. A vanity on its own is often settled in a single meeting.",
             },
             {
-              q: "Can we go straight to fabrication?",
-              a: "Only if the constraints, the organization and the dimensions are already reliably clarified.",
+              q: "Do I need my appliances chosen?",
+              a: "Yes, at least the models. Clearances, built-in openings and connections are drawn from their spec sheets, not from an estimate.",
             },
             {
-              q: "Does it work in a condo?",
-              a: "Yes. Design is especially useful in a condo to manage access, space and the integration of equipment.",
+              q: "Does design cover the lighting?",
+              a: "Yes when we run the full renovation. Circuits, pot lights and under-cabinet strips are placed on the drawing before walls open.",
             },
             {
-              q: "When does design come in during the project?",
-              a: "Design comes in at the very start, before fabrication. We begin by analyzing the real space (measurements, circulation, plumbing and electrical), then validate the layout logic, the heights, the storage zones and the material and finish choices. Once these decisions are settled and validated with you, they serve as a stable reference for fabrication and installation — which limits costly changes along the way.",
+              q: "Can the plan change after signing?",
+              a: "Yes, as long as production has not started. After that, every change goes through a written change order, with its cost and schedule impact.",
             },
           ],
         },
@@ -222,9 +174,9 @@ export const designPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Tell us about your project",
+          heading: "Start with the drawings for your project",
           intro:
-            "Tell us your space, your area and your timeline. We help you frame a realistic and executable project.",
+            "Tell us about the room and the date that suits you, and we will call you back.",
           actions: [
             {
               label: "Request a quote",
@@ -232,12 +184,12 @@ export const designPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          note: "Reply usually within 24-48 h.",
+          note: "First reply within 24 to 48 business hours.",
         },
       },
     },

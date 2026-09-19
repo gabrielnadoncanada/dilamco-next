@@ -6,9 +6,9 @@ export const renovationSalleDeBainPage: PageTemplateData = {
   metadata: {
     title: "Rénovation de salle de bain à Montréal — clé en main",
     description:
-      "Rénovation de salle de bain clé en main : coordination, contrôle de l'humidité, vanités sur mesure et finition durable à Montréal.",
+      "Rénovation de salle de bain complète : étanchéité, membrane, ventilation, plomberie, tuilage et vanité. Entrepreneur général licencié RBQ.",
     path: "/services/renovation/salle-de-bain",
-    ogAlt: "Rénovation salle de bain Dilamco",
+    ogAlt: "Rénovation de salle de bain par un entrepreneur général",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const renovationSalleDeBainPage: PageTemplateData = {
   service: {
     name: "Rénovation salle de bain",
     description:
-      "Design, coordination, vanités sur mesure et finition durable adaptés aux contraintes d'humidité et de plomberie.",
+      "Rénovation de salle de bain par un entrepreneur général : permis, plomberie, ventilation, membrane d'étanchéité, tuilage, vanité sur mesure et finition.",
     url: SITE.url + "/services/renovation/salle-de-bain",
     serviceType: "Rénovation de salle de bain",
+    areaServed: [
+      "Montréal",
+      "Ouest-de-l'Île",
+      "Laval",
+      "Rive-Sud",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -34,144 +41,82 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Rénovation",
-          heading:
-            "Rénovation de salle de bain clé en main à Montréal, mieux gérer l'humidité, la plomberie et la finition",
+          eyebrow: "Rénovation de salle de bain",
+          heading: "Rénovation de salle de bain, de la plomberie à la céramique",
           description:
-            "Une rénovation de salle de bain est un projet où se combinent plomberie, ventilation, étanchéité, revêtements et mobilier dans un environnement humide. La qualité finale dépend autant de la coordination et de la séquence de chantier que des matériaux — c'est ce qui protège la durabilité à long terme.",
+            "On refait la plomberie, la ventilation et l'étanchéité, puis on pose la céramique et la vanité.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Soumission gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir les projets salle de bain",
+              label: "Voir nos réalisations",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Humidité", "Coordination", "Montréal"],
+          badges: ["Plomberie inspectée", "Étanchéité complète"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Rénovation de salle de bain sur mesure",
+            alt: "Salle de bain rénovée par un entrepreneur général",
           },
-          caption: "Montréal, Laval et Rive-Sud",
+          imageSide: "left",
+          caption: "Salles de bain, Ouest-de-l'Île et Laval",
         },
       },
     },
     {
-      id: "problems",
+      id: "included",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "icon-cards-bullets",
         props: {
-          heading:
-            "Ce qui rend une salle de bain plus exigeante qu'elle en a l'air",
-          description:
-            "Une salle de bain concentre eau, humidité, plomberie, ventilation, rangement et finition dans un espace souvent plus compact. Le projet vieillit mal quand ces éléments sont traités séparément ou trop tard.",
-          cards: [
-            {
-              title: "Risque d'eau et d'humidité",
-              description:
-                "Les mauvais arbitrages techniques se paient plus cher ici qu'ailleurs parce qu'ils affectent directement la durabilité.",
-            },
-            {
-              title: "Contraintes d'espace",
-              description:
-                "Circulation, dégagements, rangement et accès doivent être pensés finement dans une pièce limitée.",
-            },
-            {
-              title: "Coordination sensible",
-              description:
-                "Plomberie, ventilation, finition et mobilier doivent s'aligner pour éviter les reprises et les détails mal résolus.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "priorities",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Les priorités d'une rénovation de salle de bain",
-          intro:
-            "Le projet doit protéger contre l'eau, intégrer la plomberie et livrer une finition durable.",
-          badges: ["Ventilation", "Plomberie", "Protection", "Finitions"],
-          cardTitle: "Ce qu'on cherche à protéger",
-          items: [
-            "Réduire les risques liés à l'eau avec une planification claire.",
-            "Obtenir un résultat durable en milieu humide.",
-            "Éviter les zones grises entre intervenants et finitions.",
-          ],
-          actions: [
-            {
-              label: "Voir les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Quincaillerie",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Notre approche pour cadrer une salle de bain plus durable",
-          intro:
-            "L'objectif est de ne pas séparer les décisions de design des réalités du chantier. Une salle de bain doit être pensée comme un ensemble où humidité, rangement, plomberie et finition se tiennent.",
+          heading: "Ce que comprend la soumission",
+          columns: "2",
           items: [
             {
-              title: "Analyse du contexte réel",
-              description:
-                "On lit les contraintes d'espace, d'accès, de plomberie et de ventilation avant d'avancer des solutions.",
+              title: "Démolition",
+              description: "On enlève tout pour voir l'état du plancher",
+              icon: "hammer",
+              bullets: [
+                "On sort la douche, la vanité et les revêtements",
+                "On examine les poutres de plancher et le contreplaqué",
+                "On répare le plancher avant de poser quoi que ce soit",
+              ],
             },
             {
-              title: "Hiérarchie des choix",
-              description:
-                "Les décisions structurelles et techniques passent avant les détails purement esthétiques.",
+              title: "Plomberie et ventilation",
+              description: "On reprend ce que l'inspecteur vérifie",
+              icon: "droplets",
+              bullets: [
+                "On refait la pente du drain et l'arrivée d'eau",
+                "On sort le ventilateur dehors, jamais dans l'entretoit",
+                "On installe une valve qui empêche l'eau de brûler",
+              ],
             },
             {
-              title: "Séquence des interventions",
-              description:
-                "Le chantier est organisé pour mieux protéger les étapes sensibles et réduire les retouches.",
+              title: "Étanchéité et céramique",
+              description: "On imperméabilise avant de poser la tuile",
+              icon: "shieldCheck",
+              bullets: [
+                "Panneau résistant à l'eau sur les murs mouillés",
+                "Membrane remontée sur les murs et collée au drain",
+                "Pente vérifiée avant la première tuile",
+              ],
             },
             {
-              title: "Qualité du rendu final",
-              description:
-                "Vanité, rangement, transitions et finition doivent donner une lecture propre et durable de la pièce.",
+              title: "Vanité et accessoires",
+              description: "On installe le meuble-lavabo et le reste",
+              icon: "bath",
+              bullets: [
+                "Vanité fournie par notre usine partenaire",
+                "Robinetterie, miroir et éclairage",
+                "Toilette, porte de douche et moulures",
+              ],
             },
           ],
-          actions: [
-            {
-              label: "Voir la page salle de bain",
-              href: "/espaces/salle-de-bain",
-              variant: "ghost",
-            },
-            {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-bath-approach-01.webp",
-            alt: "Planification d'une rénovation de salle de bain",
-          },
-          cardTitle: "Ce qu'on cherche à éviter",
-          cardDescription:
-            "Les salles de bain qui vieillissent mal ont souvent été décidées sans assez de clarté sur l'eau, l'usage quotidien et la qualité des raccords.",
         },
       },
     },
@@ -181,220 +126,160 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Séquence type d'une rénovation de salle de bain",
-          intro:
-            "La logique reste la même: clarifier les contraintes, valider les choix sensibles puis exécuter proprement dans un milieu humide.",
+          heading: "Comment se déroule le chantier",
           steps: [
             {
               number: "1",
-              title: "Cadrage",
+              title: "Visite et mesures",
               description:
-                "Portée, contraintes du lieu, accès, plomberie et niveau d'intervention à confirmer.",
+                "On examine la ventilation, la plomberie et les traces d'eau.",
             },
             {
               number: "2",
-              title: "Design",
+              title: "Démolition",
               description:
-                "Vanité, rangement, circulation, dégagements et décisions de finition.",
+                "Si le plancher est abîmé, on le photographie et on le chiffre avec vous.",
             },
             {
               number: "3",
-              title: "Matériaux",
+              title: "Plomberie et ventilation",
               description:
-                "Choix de composantes adaptés à l'humidité, à l'entretien et à la durabilité attendue.",
+                "On pose les drains, les fils et le ventilateur, puis on fait inspecter.",
             },
             {
               number: "4",
-              title: "Coordination",
+              title: "Étanchéité et céramique",
               description:
-                "Travaux connexes séquencés pour mieux protéger les détails sensibles et la finition.",
+                "On pose la membrane, on vérifie la pente, puis on tuile.",
             },
             {
               number: "5",
-              title: "Installation",
+              title: "Vanité et livraison",
               description:
-                "Pose, ajustements et validation finale pour une lecture propre de l'ensemble.",
+                "On installe la vanité, la robinetterie et la porte de douche.",
             },
           ],
         },
       },
     },
     {
-      id: "technical",
+      id: "prix",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "price-tiles",
         props: {
-          heading:
-            "Points techniques qui comptent vraiment dans une salle de bain",
-          intro:
-            "La durabilité d'une salle de bain ne dépend pas d'un seul produit. Elle dépend d'un ensemble de décisions techniques bien alignées.",
-          columns: "2",
-          items: [
+          heading: "Combien coûte une salle de bain",
+          tiles: [
             {
-              title: "Gestion de l'humidité",
-              description:
-                "Le milieu humide exige des choix plus rigoureux qu'une autre pièce.",
-              icon: "doorOpen",
-              bullets: [
-                "Matériaux et finis adaptés à l'environnement.",
-                "Détails de construction pensés pour durer.",
-                "Moins de risques visibles à moyen terme.",
+              title: "Salle d'eau",
+              price: "à partir de 10 000 $",
+              hint: "toilette et lavabo, sans douche",
+              includes: [
+                "Démolition, plomberie gardée au même endroit",
+                "Céramique au sol",
+                "Vanité, toilette et éclairage",
               ],
             },
             {
-              title: "Structure de la vanité",
-              description:
-                "Les composantes invisibles influencent directement la tenue dans le temps.",
-              icon: "package2",
-              bullets: [
-                "Bois massif de bouleau pour les éléments critiques.",
-                "Contreplaqué de bouleau pour mieux résister à la charge.",
-                "Meilleure sensation de solidité à l'usage.",
+              title: "Salle de bain complète",
+              price: "15 000 $ à 35 000 $",
+              hint: "douche, bain et vanité",
+              featured: true,
+              includes: [
+                "Membrane d'étanchéité sur toute la douche",
+                "Plomberie et ventilation refaites",
+                "Céramique au sol et sur les murs",
+                "Vanité, comptoir et robinetterie",
               ],
             },
             {
-              title: "Ergonomie et rangement",
-              description:
-                "La pièce doit rester simple à utiliser même quand elle est compacte.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Dégagements pensés selon l'espace réel.",
-                "Rangement adapté aux habitudes quotidiennes.",
-                "Moins de friction dans l'usage.",
-              ],
-            },
-            {
-              title: "Exécution sur chantier",
-              description:
-                "La finition dépend de l'ordre des interventions et de la qualité des ajustements.",
-              icon: "wrench",
-              bullets: [
-                "Moins de conflits entre interventions.",
-                "Moins de reprises de fin de chantier.",
-                "Finition plus nette à la livraison.",
+              title: "Douche de plain-pied",
+              price: "près de 35 000 $",
+              hint: "le plancher doit être abaissé",
+              includes: [
+                "Plancher abaissé pour enlever le seuil",
+                "Drain linéaire et pente calculée",
+                "Verre trempé fait sur mesure",
               ],
             },
           ],
+          note: "Ce sont des ordres de grandeur. Le prix change si la plomberie se déplace et selon la céramique choisie.",
+          action: {
+            label: "Soumission gratuite",
+            href: "/contact",
+            variant: "primary",
+          },
         },
       },
     },
     {
-      id: "intégration",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading:
-            "Cette page service soutient surtout votre projet de salle de bain sur mesure",
-          intro:
-            "La rénovation de salle de bain explique surtout la méthode, les risques et la coordination. Pour la vision complète du produit, des matériaux et des réalisations, la page pilier salle de bain reste la destination principale.",
-          items: [
+          heading: "Des salles de bain qu'on a refaites",
+          tiles: [
             {
-              title: "Salle de bain sur mesure",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Douche de plain-pied avec paroi de verre",
+              },
+              caption: "Douche sans seuil, paroi de verre",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
+                alt: "Vanité avec comptoir de quartz et miroir rétroéclairé",
+              },
+              caption: "Vanité et miroir éclairé",
+            },
+            {
+              kind: "stat",
+              value: "2 vérifications",
+              label: "Avant de fermer les murs, puis avant de tuiler",
+            },
+            {
+              kind: "text",
+              title: "Voir d'autres salles de bain",
+              description:
+                "Douches et vanités photographiées après les travaux.",
               href: "/espaces/salle-de-bain",
-              description:
-                "La page pilier principale pour voir le niveau de finition, les matériaux, les projets et la logique de rangement.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure haut de gamme",
-              },
-              badges: ["Page pilier", "Salle de bain"],
-              footerCtaLabel: "Voir la page salle de bain",
-            },
-            {
-              title: "Service de fabrication",
-              href: "/services/fabrication",
-              description:
-                "Pour comprendre ce qui rend la vanité plus stable, plus durable et mieux exécutée dans le temps.",
-              image: {
-                src: "/images/generated/services/service-fabrication-hero-01.webp",
-                alt: "Fabrication sur mesure et détails techniques",
-              },
-              badges: ["Fabrication", "Durabilité"],
-              footerCtaLabel: "Voir fabrication",
-            },
-            {
-              title: "Service d'installation",
-              href: "/services/installation",
-              description:
-                "Pour voir comment la pose, les ajustements et les alignements protègent un rendu plus propre en fin de chantier.",
-              image: {
-                src: "/images/generated/services/service-installation-hero-01.webp",
-                alt: "Installation sur mesure avec ajustements précis",
-              },
-              badges: ["Installation", "Finition"],
-              footerCtaLabel: "Voir installation",
             },
           ],
-        },
-      },
-    },
-    {
-      id: "proof",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading:
-            "Ce qu'une rénovation de salle de bain bien maîtrisée doit livrer",
-          description:
-            "La preuve de compétence ne tient pas seulement à l'apparence. Elle se voit dans la façon dont la pièce vieillit, se nettoie et fonctionne au quotidien sans faiblesse visible.",
-          cards: [
-            {
-              title: "Pièce plus durable",
-              description:
-                "Les choix techniques soutiennent mieux l'humidité, la charge et l'usage quotidien.",
-            },
-            {
-              title: "Usage plus simple",
-              description:
-                "Rangement, circulation et dégagements donnent une salle de bain plus agréable à utiliser.",
-            },
-            {
-              title: "Finition plus crédible",
-              description:
-                "Les raccords, alignements et détails de pose soutiennent un rendu plus propre et plus premium.",
-            },
-          ],
-          columns: "1",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - rénovation de salle de bain",
-          intro:
-            "Réponses claires sur délais, humidité, coordination et portée du projet.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien de temps dure une rénovation de salle de bain?",
-              a: "La durée d'une rénovation de salle de bain dépend de la portée (remplacement de la vanité ou refonte complète), des contraintes du lieu et des travaux connexes — plomberie, ventilation, étanchéité, revêtements. Une rénovation complète s'étale généralement sur plusieurs semaines, séquencées pour respecter les temps de séchage et protéger l'étanchéité. Un échéancier réaliste est établi une fois la portée clarifiée.",
+              q: "C'est quoi, une membrane d'étanchéité ?",
+              a: "C'est une couche posée sous la céramique, remontée sur les murs de la douche et collée au drain. Elle arrête l'eau avant qu'elle atteigne le bois de la maison.",
             },
             {
-              q: "Est-ce risqué au niveau des dégâts d'eau?",
-              a: "Le risque de dégât d'eau existe dans toute salle de bain, mais il se maîtrise par l'exécution. Une membrane d'étanchéité bien posée, des matériaux adaptés à l'humidité, une ventilation suffisante et des raccords de plomberie soignés réduisent fortement les risques à long terme. C'est justement pourquoi la séquence de chantier et la qualité d'installation sont déterminantes dans une salle de bain.",
+              q: "Peut-on installer une douche sans seuil ?",
+              a: "Souvent oui. Il faut abaisser le plancher entre les poutres, ou entailler la dalle de béton, pour loger le drain et la pente. On le vérifie à la visite.",
             },
             {
-              q: "Travaillez-vous avec d'autres intervenants sur ce type de chantier?",
-              a: "Oui, lorsque la portée l'exige. La coordination sert justement à mieux ordonner plomberie, ventilation, finition et pose pour éviter les zones grises.",
+              q: "La ventilation est-elle obligatoire dans une salle de bain ?",
+              a: "Oui, et elle doit sortir dehors. Un ventilateur qui souffle dans l'entretoit fait du givre, puis de la moisissure. On refait le conduit quand il s'arrête sous le toit.",
             },
             {
-              q: "Est-ce possible en condo?",
-              a: "Oui. L'accès, les horaires et les contraintes de bâtiment sont cadrés dès le départ.",
+              q: "Et si vous trouvez du bois pourri en démolissant ?",
+              a: "C'est fréquent après vingt ans sous une douche qui coule. On vous montre les photos, on chiffre la réparation par écrit, puis on continue.",
             },
             {
-              q: "Puis-je faire une rénovation partielle?",
-              a: "Oui. Certains projets visent surtout la vanité et le rangement, d'autres sont plus complets.",
-            },
-            {
-              q: "Où voir l'approche complète pour une salle de bain sur mesure?",
-              a: "La page rénovation de salle de bain sert surtout à expliquer la logique de chantier et de coordination. Pour la vision complète du produit, des matériaux et des projets, la page salle de bain sur mesure reste la référence principale.",
+              q: "Faut-il un permis pour une salle de bain ?",
+              a: "Pas pour remplacer au même endroit. Il en faut un pour déplacer la plomberie ou ajouter une salle de bain, avec une inspection avant de refermer les murs.",
             },
           ],
         },
@@ -406,22 +291,22 @@ export const renovationSalleDeBainPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'une rénovation de salle de bain bien cadrée ?",
+          heading: "Faites chiffrer votre salle de bain",
           intro:
-            "On vous aide à structurer le projet, la séquence et les bons choix pour un environnement humide, puis à vous orienter vers la page pilier salle de bain pour la vision complète.",
+            "On mesure la pièce, on vérifie la ventilation et on vous remet une soumission détaillée.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Soumission gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir la page salle de bain",
-              href: "/espaces/salle-de-bain",
+              label: "Rénovation clé en main",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Salle de bain, vanité sur mesure, rangement et environnement humide",
+          note: "Licence RBQ 8306-0806-27 · Étanchéité, ventilation et plomberie conformes",
         },
       },
     },

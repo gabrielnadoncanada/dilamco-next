@@ -6,9 +6,9 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
   metadata: {
     title: "Bathroom renovation in Montreal — turnkey",
     description:
-      "Turnkey bathroom renovation: coordination, moisture control, custom vanities and durable finishes in Montréal.",
+      "Full bathroom renovation: waterproofing, membrane, ventilation, plumbing, tiling and vanity. RBQ-licensed general contractor.",
     path: "/services/renovation/salle-de-bain",
-    ogAlt: "Dilamco bathroom renovation",
+    ogAlt: "Bathroom renovation by a general contractor",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -22,9 +22,16 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
   service: {
     name: "Bathroom renovation",
     description:
-      "Design, coordination, custom vanities and durable finishes suited to moisture and plumbing constraints.",
+      "Bathroom renovation by a general contractor: permit, plumbing, ventilation, waterproofing membrane, tiling, custom vanity and finishing.",
     url: SITE.url + "/services/renovation/salle-de-bain",
     serviceType: "Bathroom renovation",
+    areaServed: [
+      "Montreal",
+      "West Island",
+      "Laval",
+      "South Shore",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -34,144 +41,82 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
-          heading:
-            "Turnkey bathroom renovation in Montréal — better managing moisture, plumbing and finishes",
+          eyebrow: "Bathroom renovation",
+          heading: "Bathroom renovation, from the plumbing to the tile",
           description:
-            "A bathroom renovation is a project where plumbing, ventilation, waterproofing, surfaces and cabinetry come together in a humid environment. The final quality depends as much on coordination and the work sequence as on the materials — that is what protects long-term durability.",
+            "We redo the plumbing, the ventilation and the waterproofing, then we tile and set the vanity.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View bathroom projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Moisture", "Coordination", "Montréal"],
+          badges: ["Plumbing inspected", "Fully waterproofed"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-            alt: "Custom bathroom renovation",
+            alt: "Bathroom renovated by a general contractor",
           },
-          caption: "Montréal, Laval and the South Shore",
+          imageSide: "left",
+          caption: "Bathrooms in the West Island and Laval",
         },
       },
     },
     {
-      id: "problems",
+      id: "included",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "icon-cards-bullets",
         props: {
-          heading:
-            "What makes a bathroom more demanding than it looks",
-          description:
-            "A bathroom concentrates water, moisture, plumbing, ventilation, storage and finishes in an often more compact space. The project ages poorly when these elements are handled separately or too late.",
-          cards: [
-            {
-              title: "Water and moisture risk",
-              description:
-                "Poor technical trade-offs cost more here than elsewhere because they directly affect durability.",
-            },
-            {
-              title: "Space constraints",
-              description:
-                "Circulation, clearances, storage and access must be carefully thought out in a limited room.",
-            },
-            {
-              title: "Sensitive coordination",
-              description:
-                "Plumbing, ventilation, finishes and furniture must align to avoid rework and poorly resolved details.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "priorities",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "The priorities of a bathroom renovation",
-          intro:
-            "The project must protect against water, integrate the plumbing and deliver a durable finish.",
-          badges: ["Ventilation", "Plumbing", "Protection", "Finishes"],
-          cardTitle: "What we aim to protect",
-          items: [
-            "Reduce water-related risks with clear planning.",
-            "Achieve a durable result in a humid environment.",
-            "Avoid grey areas between trades and finishes.",
-          ],
-          actions: [
-            {
-              label: "View materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Our approach to framing a more durable bathroom",
-          intro:
-            "The goal is not to separate design decisions from the realities of the site. A bathroom must be thought of as a whole where moisture, storage, plumbing and finishes hold together.",
+          heading: "What the quote covers",
+          columns: "2",
           items: [
             {
-              title: "Analysis of the real context",
-              description:
-                "We read the space, access, plumbing and ventilation constraints before proposing solutions.",
+              title: "Demolition",
+              description: "We strip it out to see the state of the floor",
+              icon: "hammer",
+              bullets: [
+                "We take out the shower, the vanity and the finishes",
+                "We inspect the floor joists and the plywood",
+                "We repair the floor before anything goes back down",
+              ],
             },
             {
-              title: "Hierarchy of choices",
-              description:
-                "Structural and technical decisions come before purely aesthetic details.",
+              title: "Plumbing and ventilation",
+              description: "We redo what the inspector checks",
+              icon: "droplets",
+              bullets: [
+                "We redo the drain slope and the water supply",
+                "We vent the fan outdoors, never into the attic",
+                "We install a valve that prevents scalding",
+              ],
             },
             {
-              title: "Sequence of work",
-              description:
-                "The site is organized to better protect the sensitive stages and reduce touch-ups.",
+              title: "Waterproofing and tile",
+              description: "We seal the shower before any tile goes on",
+              icon: "shieldCheck",
+              bullets: [
+                "Water-resistant board on every wet wall",
+                "Membrane carried up the walls and sealed to the drain",
+                "Slope verified before the first tile",
+              ],
             },
             {
-              title: "Quality of the final result",
-              description:
-                "Vanity, storage, transitions and finishes must give a clean, durable read of the room.",
+              title: "Vanity and fixtures",
+              description: "We install the vanity and everything else",
+              icon: "bath",
+              bullets: [
+                "Vanity supplied by our partner factory",
+                "Faucets, mirror and lighting",
+                "Toilet, shower door and mouldings",
+              ],
             },
           ],
-          actions: [
-            {
-              label: "View the bathroom page",
-              href: "/espaces/salle-de-bain",
-              variant: "ghost",
-            },
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-bath-approach-01.webp",
-            alt: "Planning a bathroom renovation",
-          },
-          cardTitle: "What we aim to avoid",
-          cardDescription:
-            "Bathrooms that age poorly were often decided without enough clarity on water, daily use and the quality of the joints.",
         },
       },
     },
@@ -181,220 +126,160 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Typical sequence of a bathroom renovation",
-          intro:
-            "The logic stays the same: clarify the constraints, validate the sensitive choices, then execute cleanly in a humid environment.",
+          heading: "How the work goes",
           steps: [
             {
               number: "1",
-              title: "Scoping",
+              title: "Visit and measurements",
               description:
-                "Scope, site constraints, access, plumbing and level of intervention to confirm.",
+                "We look at the ventilation, the plumbing and any water stains.",
             },
             {
               number: "2",
-              title: "Design",
+              title: "Demolition",
               description:
-                "Vanity, storage, circulation, clearances and finish decisions.",
+                "If the floor is damaged, we photograph it and price it with you.",
             },
             {
               number: "3",
-              title: "Materials",
+              title: "Plumbing and ventilation",
               description:
-                "Selection of components suited to moisture, maintenance and the expected durability.",
+                "We set the drains, the wiring and the fan, then call the inspector.",
             },
             {
               number: "4",
-              title: "Coordination",
+              title: "Waterproofing and tile",
               description:
-                "Related work sequenced to better protect the sensitive details and the finish.",
+                "We lay the membrane, check the slope, then we tile.",
             },
             {
               number: "5",
-              title: "Installation",
+              title: "Vanity and handover",
               description:
-                "Fitting, adjustments and final validation for a clean read of the whole.",
+                "We install the vanity, the faucets and the shower door.",
             },
           ],
         },
       },
     },
     {
-      id: "technical",
+      id: "prix",
       content: {
         type: "grid",
-        variant: "icon-cards-bullets",
+        variant: "price-tiles",
         props: {
-          heading:
-            "Technical points that really matter in a bathroom",
-          intro:
-            "A bathroom's durability does not depend on a single product. It depends on a set of well-aligned technical decisions.",
-          columns: "2",
-          items: [
+          heading: "What a bathroom costs",
+          tiles: [
             {
-              title: "Moisture management",
-              description:
-                "A humid environment calls for more rigorous choices than another room.",
-              icon: "doorOpen",
-              bullets: [
-                "Materials and finishes suited to the environment.",
-                "Construction details designed to last.",
-                "Fewer visible risks in the medium term.",
+              title: "Powder room",
+              price: "from $10,000",
+              hint: "toilet and sink, no shower",
+              includes: [
+                "Demolition, plumbing kept in place",
+                "Floor tile",
+                "Vanity, toilet and lighting",
               ],
             },
             {
-              title: "Vanity structure",
-              description:
-                "The invisible components directly influence how it holds up over time.",
-              icon: "package2",
-              bullets: [
-                "Solid birch wood for the critical elements.",
-                "Birch plywood to better resist the load.",
-                "A better sense of solidity in use.",
+              title: "Full bathroom",
+              price: "$15,000 to $35,000",
+              hint: "shower, tub and vanity",
+              featured: true,
+              includes: [
+                "Waterproofing membrane over the whole shower",
+                "Plumbing and ventilation redone",
+                "Floor and wall tile",
+                "Vanity, counter and faucets",
               ],
             },
             {
-              title: "Ergonomics and storage",
-              description:
-                "The room must stay simple to use even when it is compact.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Clearances planned around the real space.",
-                "Storage suited to daily habits.",
-                "Less friction in use.",
-              ],
-            },
-            {
-              title: "On-site execution",
-              description:
-                "The finish depends on the order of the work and the quality of the adjustments.",
-              icon: "wrench",
-              bullets: [
-                "Fewer conflicts between trades.",
-                "Fewer end-of-site touch-ups.",
-                "A cleaner finish at delivery.",
+              title: "Curbless shower",
+              price: "close to $35,000",
+              hint: "the floor has to be lowered",
+              includes: [
+                "Floor lowered to remove the threshold",
+                "Linear drain and calculated slope",
+                "Custom tempered glass",
               ],
             },
           ],
+          note: "These are ballpark ranges. The price changes if the plumbing moves and with the tile you choose.",
+          action: {
+            label: "Free quote",
+            href: "/contact",
+            variant: "primary",
+          },
         },
       },
     },
     {
-      id: "intégration",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading:
-            "This service page mainly supports your custom bathroom project",
-          intro:
-            "The bathroom renovation mainly explains the method, the risks and the coordination. For the full view of the product, the materials and the completed projects, the bathroom pillar page remains the main destination.",
-          items: [
+          heading: "Bathrooms we have redone",
+          tiles: [
             {
-              title: "Custom bathroom",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Curbless shower with a glass panel",
+              },
+              caption: "Curbless shower, glass panel",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
+                alt: "Vanity with quartz counter and backlit mirror",
+              },
+              caption: "Vanity and lit mirror",
+            },
+            {
+              kind: "stat",
+              value: "2 checks",
+              label: "Before the walls close, then before tiling",
+            },
+            {
+              kind: "text",
+              title: "See more bathrooms",
+              description:
+                "Showers and vanities photographed after the work.",
               href: "/espaces/salle-de-bain",
-              description:
-                "The main pillar page to see the finish level, the materials, the projects and the storage logic.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "High-end custom bathroom",
-              },
-              badges: ["Pillar page", "Bathroom"],
-              footerCtaLabel: "View the bathroom page",
-            },
-            {
-              title: "Fabrication service",
-              href: "/services/fabrication",
-              description:
-                "To understand what makes the vanity more stable, more durable and better executed over time.",
-              image: {
-                src: "/images/generated/services/service-fabrication-hero-01.webp",
-                alt: "Custom fabrication and technical details",
-              },
-              badges: ["Fabrication", "Durability"],
-              footerCtaLabel: "View fabrication",
-            },
-            {
-              title: "Installation service",
-              href: "/services/installation",
-              description:
-                "To see how fitting, adjustments and alignments protect a cleaner result at the end of the site.",
-              image: {
-                src: "/images/generated/services/service-installation-hero-01.webp",
-                alt: "Custom installation with precise adjustments",
-              },
-              badges: ["Installation", "Finish"],
-              footerCtaLabel: "View installation",
             },
           ],
-        },
-      },
-    },
-    {
-      id: "proof",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading:
-            "What a well-managed bathroom renovation should deliver",
-          description:
-            "Proof of competence is not only about appearance. It shows in how the room ages, cleans up and functions day to day without visible weakness.",
-          cards: [
-            {
-              title: "A more durable room",
-              description:
-                "The technical choices better support moisture, load and daily use.",
-            },
-            {
-              title: "Simpler to use",
-              description:
-                "Storage, circulation and clearances make the bathroom more pleasant to use.",
-            },
-            {
-              title: "A more credible finish",
-              description:
-                "Joints, alignments and installation details support a cleaner, more premium result.",
-            },
-          ],
-          columns: "1",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - bathroom renovation",
-          intro:
-            "Clear answers on timelines, moisture, coordination and project scope.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "How long does a bathroom renovation take?",
-              a: "How long a bathroom renovation takes depends on the scope (replacing the vanity or a full redesign), the site constraints and the related work — plumbing, ventilation, waterproofing, surfaces. A full renovation generally spans several weeks, sequenced to respect drying times and protect the waterproofing. A realistic schedule is set once the scope is clarified.",
+              q: "What is a waterproofing membrane?",
+              a: "It is a layer set under the tile, carried up the shower walls and sealed to the drain. It stops water before it reaches the wood of the house.",
             },
             {
-              q: "Is there a risk of water damage?",
-              a: "There's a risk of water damage in any bathroom, but it's controlled through execution. A well-installed waterproofing membrane, materials suited to moisture, adequate ventilation and careful plumbing connections greatly reduce long-term risks. That's exactly why the work sequence and installation quality are decisive in a bathroom.",
+              q: "Can I have a shower with no threshold?",
+              a: "Often yes. The floor has to be lowered between the joists, or the concrete slab cut, to house the drain and its slope. We check that at the visit.",
             },
             {
-              q: "Do you work with other trades on this kind of project?",
-              a: "Yes, when the scope requires it. Coordination is precisely there to better order plumbing, ventilation, finishes and fitting to avoid grey areas.",
+              q: "Is ventilation mandatory in a bathroom?",
+              a: "Yes, and it has to exhaust outdoors. A fan blowing into the attic creates frost, then mould. We redo the duct whenever it stops short under the roof.",
             },
             {
-              q: "Is it possible in a condo?",
-              a: "Yes. Access, scheduling and building constraints are framed from the start.",
+              q: "What if you find rotten wood during demolition?",
+              a: "That is common after twenty years under a leaking shower. We show you the photos, price the repair in writing, then carry on.",
             },
             {
-              q: "Can I do a partial renovation?",
-              a: "Yes. Some projects focus mainly on the vanity and storage, others are more complete.",
-            },
-            {
-              q: "Where can I see the full approach for a custom bathroom?",
-              a: "The bathroom renovation page mainly serves to explain the site and coordination logic. For the full view of the product, the materials and the projects, the custom bathroom page remains the main reference.",
+              q: "Do I need a permit for a bathroom?",
+              a: "Not to replace fixtures in the same spot. You do need one to move plumbing or add a bathroom, with an inspection before the walls close again.",
             },
           ],
         },
@@ -406,22 +291,22 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need a well-framed bathroom renovation?",
+          heading: "Get your bathroom priced",
           intro:
-            "We help you structure the project, the sequence and the right choices for a humid environment, then guide you toward the bathroom pillar page for the full view.",
+            "We measure the room, check the ventilation and hand you a detailed quote.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free quote",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View the bathroom page",
-              href: "/espaces/salle-de-bain",
+              label: "Turnkey renovation",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Bathroom, custom vanity, storage and humid environment",
+          note: "RBQ licence 8306-0806-27 · Waterproofing, ventilation and plumbing to code",
         },
       },
     },

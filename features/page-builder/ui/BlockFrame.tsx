@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { cva } from "class-variance-authority";
 
 import { Heading } from "@/components/elements/heading";
+import { Reveal } from "@/components/animations/Reveal";
 import { cn } from "@/lib/utils";
 import type { FrameOptions } from "../model/block-types";
 
@@ -40,14 +41,13 @@ const sectionVariants = cva("", {
   },
 });
 
-// Gutter horizontal unifié avec la boutique (référence « un seul produit »).
+// Gutter horizontal unifié (largeur de contenu canonique : 1440px).
 const containerVariants = cva(
   "mx-auto px-[clamp(20px,1rem,56px)] max-[700px]:px-[18px]",
   {
     variants: {
       container: {
         full: "max-w-none",
-        // Largeur de contenu canonique du site : 1440px (alignée boutique).
         xl: "max-w-[1440px]",
         "2xl": "max-w-[1440px]",
         sm: "max-w-screen-sm",
@@ -99,8 +99,44 @@ export function BlockFrame(props: {
 }) {
   const frame = { ...defaultFrame, ...(props.frame ?? {}) };
   const hasHeading = Boolean(props.title || props.intro);
-  const hasCustomTitleVariant = props.frame?.titleVariant !== undefined;
   const headingLevel = frame.headingLevel ?? frame.titleAs;
+  // Le hero n'est jamais animé : il doit être net dès le premier rendu.
+  const isHero = props.id === "hero";
+
+  const content = (
+    <div className={containerVariants({ container: frame.container })}>
+      {hasHeading && (
+        <header className={headerVariants({ headerAlign: frame.headerAlign })}>
+          {props.title ? (
+            <Heading
+              as={headingLevel}
+              variant={
+                frame.titleVariant === "h4" ? "card" : frame.titleVariant
+              }
+            >
+              {props.title}
+            </Heading>
+          ) : null}
+          {props.intro ? (
+            <p className="mt-3 text-base leading-relaxed opacity-80 sm:text-lg">
+              {props.intro}
+            </p>
+          ) : null}
+        </header>
+      )}
+
+      <div
+        className={cn(
+          contentVariants({
+            contentAlign: frame.contentAlign,
+            hasHeading,
+          }),
+        )}
+      >
+        {props.children}
+      </div>
+    </div>
+  );
 
   return (
     <section
@@ -108,49 +144,15 @@ export function BlockFrame(props: {
       data-surface={frame.surface}
       className={cn(
         sectionVariants({
-          paddingY: frame.paddingY,
+          paddingY: isHero ? "none" : frame.paddingY,
           divider: frame.divider,
         }),
         "relative",
+        isHero ? "pt-4 pb-[var(--section-py-compact)] md:pt-6" : "border-t border-border/60",
         frame.className,
       )}
     >
-      <div className={containerVariants({ container: frame.container })}>
-        {hasHeading && (
-          <header
-            className={headerVariants({ headerAlign: frame.headerAlign })}
-          >
-            {props.title ? (
-              <Heading
-                as={headingLevel}
-                variant={frame.titleVariant}
-                className={cn(
-                  "font-semibold",
-                  !hasCustomTitleVariant && "sm:text-3xl",
-                )}
-              >
-                {props.title}
-              </Heading>
-            ) : null}
-            {props.intro ? (
-              <p className="mt-3 text-base leading-relaxed opacity-80 sm:text-lg">
-                {props.intro}
-              </p>
-            ) : null}
-          </header>
-        )}
-
-        <div
-          className={cn(
-            contentVariants({
-              contentAlign: frame.contentAlign,
-              hasHeading,
-            }),
-          )}
-        >
-          {props.children}
-        </div>
-      </div>
+      {isHero ? content : <Reveal>{content}</Reveal>}
     </section>
   );
 }

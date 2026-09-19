@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const renovationPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Turnkey renovation in Montreal: kitchen & bathroom",
+    title: "Turnkey renovation — general contractor in Montreal",
     description:
-      "Turnkey renovation in Montréal: design, coordination, fabrication, installation and a better-managed worksite sequence.",
+      "Turnkey renovation: permits, coordinated trades, schedule and written contract. RBQ-licensed general contractor since 2004.",
     path: "/services/renovation",
-    ogAlt: "Dilamco turnkey renovation",
+    ogAlt: "Turnkey renovation by a general contractor",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -18,9 +18,16 @@ export const renovationPageEn: PageTemplateData = {
   service: {
     name: "Turnkey renovation",
     description:
-      "Design, coordination and execution when the project involves several trades.",
+      "General contractor accountable for the whole project: permit application, trade coordination, inspections, schedule and handover, under RBQ licence 8306-0806-27.",
     url: SITE.url + "/services/renovation",
-    serviceType: "Renovation",
+    serviceType: "Turnkey residential renovation",
+    areaServed: [
+      "Montreal",
+      "West Island",
+      "Laval",
+      "South Shore",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -28,90 +35,106 @@ export const renovationPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading:
-            "Turnkey renovation in Montréal, a single framework from design to installation",
+          badges: ["Permit included", "Written contract", "Insured"],
+          heading: "One contractor, from the permit to the handover",
           description:
-            "A turnkey renovation is a mandate where a single team takes charge of the full sequence — design, fabrication, worksite coordination and finishing — instead of leaving the client to orchestrate several trades. The value is decided as much by the coordination and the quality of technical decisions as by the final result.",
+            "We sign the contract, file the permit, pay the trades and answer for the result.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Turnkey", "Coordination", "Montréal"],
-          image: {
-            src: "/images/generated/services/service-renovation-hero-01.webp",
-            alt: "Custom renovation project",
-          },
-          caption: "Montréal, Laval and the South Shore",
         },
       },
     },
     {
-      id: "différence",
+      id: "subservices",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "grid",
+        variant: "image-cards-slider",
         props: {
-          heading:
-            "Why Dilamco doesn't operate like a simple retailer",
-          description:
-            "A turnkey renovation takes more than a cabinet supplier. The advantage comes from controlling the chain, from consistent fabrication and from better management of the sequence between design, procurement, installation and related work.",
-          cards: [
-            {
-              title: "Better-controlled procurement",
-              description:
-                "Choices of materials, components and finishes are framed earlier to reduce variances and better protect the schedule.",
-            },
-            {
-              title: "More stable quality",
-              description:
-                "Design, fabrication and installation are thought of as a whole, not as pieces delivered without shared logic.",
-            },
-            {
-              title: "Real coordination",
-              description:
-                "When the worksite involves several stages, a clear framework limits fragmentation and the grey areas between contributors.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "When a turnkey renovation makes sense",
-          intro:
-            "This approach becomes relevant when the project goes beyond just fabricating and installing cabinets and the overall sequence needs better management.",
-          badges: ["Plumbing", "Electrical", "Flooring", "Coordination"],
-          cardTitle: "What it brings",
+          heading: "The six kinds of renovation we do",
           items: [
-            "Less fragmentation between contributors.",
-            "A better-framed schedule from the start.",
-            "More coherent execution on site.",
-          ],
-          actions: [
             {
-              label: "View design",
-              href: "/services/design",
+              title: "Kitchen",
+              href: "/services/renovation/cuisine",
+              description:
+                "We redo the whole room and we supply the cabinets.",
+              image: {
+                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
+                alt: "Full kitchen renovation",
+              },
+              badges: ["Multi-trade"],
+              footerCtaLabel: "See kitchen",
             },
             {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
+              title: "Bathroom",
+              href: "/services/renovation/salle-de-bain",
+              description:
+                "We waterproof the shower and vent the fan outdoors.",
+              image: {
+                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
+                alt: "Full bathroom renovation",
+              },
+              badges: ["Waterproofing"],
+              footerCtaLabel: "See bathroom",
+            },
+            {
+              title: "Basement",
+              href: "/services/renovation/sous-sol",
+              description:
+                "We settle the moisture before the first wall goes up.",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Basement finished by a general contractor",
+              },
+              badges: ["Permit required"],
+              footerCtaLabel: "See basement",
+            },
+            {
+              title: "Flooring",
+              href: "/services/renovation/plancher",
+              description:
+                "We repair the subfloor before laying the new floor.",
+              image: {
+                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
+                alt: "Residential flooring renovation",
+              },
+              badges: ["Subfloor"],
+              footerCtaLabel: "See flooring",
+            },
+            {
+              title: "Addition",
+              href: "/services/renovation/agrandissement-de-maison",
+              description:
+                "We check the zoning, then we build the new room.",
+              image: {
+                src: "/images/generated/renovation/renovation-extension-approach-01.webp",
+                alt: "Home addition under construction",
+              },
+              badges: ["Structure"],
+              footerCtaLabel: "See addition",
+            },
+            {
+              title: "Disaster rebuild",
+              href: "/services/renovation/apres-sinistre",
+              description:
+                "We document the damage, then put the house back together.",
+              image: {
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Rebuild after water damage",
+              },
+              badges: ["Insurance"],
+              footerCtaLabel: "See disaster rebuild",
             },
           ],
         },
@@ -123,242 +146,77 @@ export const renovationPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "A turnkey process that keeps the worksite readable",
-          intro:
-            "The logic stays the same from one project to the next: clarify first, lock in the important decisions, then execute in the right order.",
+          heading: "How we run a project",
           steps: [
             {
               number: "1",
-              title: "Scoping",
+              title: "Call and visit",
               description:
-                "Needs, scope, site constraints and the level of renovation to confirm before opening the worksite.",
+                "We come see the place and note the constraints, at no charge.",
             },
             {
               number: "2",
-              title: "Design",
+              title: "Detailed quote",
               description:
-                "Space organization, uses, circulation and decisions that will impact fabrication and the sequence.",
+                "You get the work, the materials, the exclusions and the price.",
             },
             {
               number: "3",
-              title: "Materials",
+              title: "Contract and permit",
               description:
-                "Choice of components, finishes and solutions suited to durability, maintenance and the expected level of use.",
+                "You sign the dates and the payments, we file the application.",
             },
             {
               number: "4",
-              title: "Fabrication and worksite",
+              title: "Site work",
               description:
-                "Preparation of custom elements and coordination of related stages to limit rework and conflicts.",
+                "Each trade shows up on its date, following the signed schedule.",
             },
             {
               number: "5",
-              title: "Installation",
+              title: "Handover",
               description:
-                "Fitting, adjustments and finishing with a clear reading of the whole project.",
+                "We walk through with you and fix things before the final payment.",
             },
           ],
         },
       },
     },
     {
-      id: "materials",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Technical choices that justify a premium renovation",
-          intro:
-            "The positioning doesn't rely on marketing talk. It relies on the quality of the components, the stability of fabrication and the integration of technical decisions into the worksite.",
-          items: [
+          heading: "What a turnkey mandate covers",
+          intro: "The answers to the questions people ask us before signing.",
+          rows: [
             {
-              title: "Drawer structure in solid birch wood",
-              description:
-                "A stronger, more durable choice than a weak build when the project targets intensive daily use.",
+              label: "What you sign",
+              value: "A contract setting out the work, the price, the dates and the payments",
             },
             {
-              title: "Drawer bottoms in birch plywood",
-              description:
-                "Better load resistance, better dimensional stability and a better perception of quality over the long term.",
+              label: "Who files the permit",
+              value: "We do. We check your city's requirements and follow the file",
             },
             {
-              title: "Material selection based on the space",
-              description:
-                "A kitchen, bathroom, storage area or service zone don't call for exactly the same technical trade-offs.",
+              label: "Who coordinates the trades",
+              value: "We hire them and we pay them, you receive a single invoice",
             },
             {
-              title: "Execution designed for the install",
-              description:
-                "A renovation goes better when choices are made with fabrication and installation in mind, not separately.",
-            },
-          ],
-          actions: [
-            {
-              label: "View materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Insurance",
+              value: "Our civil liability and builder's risk coverage are in force",
             },
             {
-              label: "View fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "First reply",
+              value: "You hear back from us within 24 to 48 business hours",
+            },
+            {
+              label: "Territory",
+              value: "West Island, Montreal, Laval, South Shore and Vaudreuil-Soulanges",
             },
           ],
-          image: {
-            src: "/images/spaces/cabinet-cuisines.webp",
-            alt: "Material details for a custom renovation",
-          },
-          cardTitle: "Why it matters",
-          cardDescription:
-            "In a full renovation, the invisible components influence durability as much as the visible final result.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Projects that show the level of coordination",
-          intro:
-            "Proof of mastery shows in projects where design, fabrication, fitting and finishing stay coherent through to delivery.",
-          items: [
-            {
-              title: "Custom kitchen",
-              href: "/projets",
-              description:
-                "Residential project with precise layout, better-framed technical decisions and a clean finish.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-01.webp",
-                alt: "Kitchen renovation project in Montréal",
-              },
-              badges: ["Montréal", "Kitchen"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Custom kitchen",
-              href: "/projets",
-              description:
-                "Renovation designed for everyday use with better coherence between fabrication, worksite and installation.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-02.webp",
-                alt: "Residential renovation project in Laval",
-              },
-              badges: ["Laval", "Coordination"],
-              footerCtaLabel: "View project",
-            },
-            {
-              title: "Custom kitchen",
-              href: "/projets",
-              description:
-                "Full project with cleaner management of the sequence, the adjustments and the finishing details.",
-              image: {
-                src: "/images/generated/services/service-renovation-project-03.webp",
-                alt: "Renovation project on the South Shore",
-              },
-              badges: ["South Shore", "Turnkey"],
-              footerCtaLabel: "View project",
-            },
-          ],
-          ctaLabel: "View all our projects",
-          ctaHref: "/projets/",
-        },
-      },
-    },
-    {
-      id: "subservices",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Types of renovation",
-          intro:
-            "Go to the page that fits the nature of the work to coordinate.",
-          items: [
-            {
-              title: "Kitchen renovation",
-              href: "/services/renovation/cuisine",
-              description:
-                "A full kitchen with worksite sequencing, cabinet integration and coordination of related work.",
-              image: {
-                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-                alt: "Turnkey kitchen renovation",
-              },
-              badges: ["Kitchen", "Coordination"],
-              footerCtaLabel: "View kitchen",
-            },
-            {
-              title: "Bathroom renovation",
-              href: "/services/renovation/salle-de-bain",
-              description:
-                "A bathroom better framed for moisture, plumbing, storage and durable finishing.",
-              image: {
-                src: "/images/generated/renovation/renovation-bath-hero-01.webp",
-                alt: "Turnkey bathroom renovation",
-              },
-              badges: ["Bathroom", "Moisture"],
-              footerCtaLabel: "View bathroom",
-            },
-            {
-              title: "Flooring renovation",
-              href: "/services/renovation/plancher",
-              description:
-                "Flooring integrated in the right order to manage levels, transitions and finishing without needless rework.",
-              image: {
-                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-                alt: "Flooring renovation integrated into a residential project",
-              },
-              badges: ["Flooring", "Transitions"],
-              footerCtaLabel: "View flooring",
-            },
-            {
-              title: "Home extension",
-              href: "/services/renovation/agrandissement-de-maison",
-              description:
-                "A residential extension with feasibility, connections and execution better coordinated with the existing structure.",
-              image: {
-                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
-                alt: "Turnkey home extension",
-              },
-              badges: ["Extension", "Execution"],
-              footerCtaLabel: "View extension",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "faq",
-      content: {
-        type: "faq",
-        variant: "accordion",
-        props: {
-          heading: "FAQ - turnkey renovation",
-          intro:
-            "Clear answers on price, timelines, coordination and the difference with a more fragmented approach.",
-          items: [
-            {
-              q: "How much does a turnkey renovation cost?",
-              a: "The price of a turnkey renovation depends on the scope of the project (one room or several), the materials and finishes, the complexity of the worksite and the level of coordination required between trades. Since every project is different, there's no single price: a structured quote is exactly what clarifies the scope, the choices and the budget before starting, to avoid unpleasant surprises along the way.",
-            },
-            {
-              q: "What's the difference with buying cabinets then managing the rest separately?",
-              a: "A fragmented approach multiplies the grey areas between design, fabrication, worksite and finishing. Turnkey, on the contrary, aims for better continuity between decisions and execution.",
-            },
-            {
-              q: "Do you handle only the cabinets or also the worksite coordination?",
-              a: "Depending on the defined scope, the renovation can include a broader level of coordination to better structure the stages and reduce rework.",
-            },
-            {
-              q: "What are the timelines for a renovation?",
-              a: "Renovation timelines vary depending on the space involved, the complexity of the worksite, material procurement and related work (plumbing, electrical, flooring). Rather than a generic estimate, a realistic schedule is set once the project scope is clarified, with the key stages sequenced to limit downtime and rework. That way you know when each phase starts and ends.",
-            },
-            {
-              q: "Is it relevant for a kitchen, a bathroom or an extension?",
-              a: "Yes. The turnkey logic becomes particularly useful as soon as several decisions need to align between space, materials, sequence and finishing.",
-            },
-          ],
+          note: "RBQ licence 8306-0806-27, categories 1.2 and 1.3, valid since 2004.",
         },
       },
     },
@@ -368,22 +226,22 @@ export const renovationPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Do you have a renovation project to scope seriously?",
+          heading: "Tell us about your renovation project",
           intro:
-            "Get a clear, detailed quote for a turnkey renovation project that's better structured, better sequenced and better executed.",
+            "Give us the room, the budget in mind and the deadline. We book the visit.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
-              href: "/projets",
+              label: "See our service areas",
+              href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Residential, kitchen, bathroom, flooring and extension",
+          note: "RBQ licence 8306-0806-27 · General contractor since 2004",
         },
       },
     },

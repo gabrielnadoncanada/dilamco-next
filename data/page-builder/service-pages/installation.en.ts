@@ -6,7 +6,7 @@ export const installationPageEn: PageTemplateData = {
   metadata: {
     title: "Custom cabinet & kitchen installation",
     description:
-      "Professional installation service: precise alignments, on-site adjustments and careful finishing.",
+      "Custom cabinet and kitchen installation by our own crews: precise alignments, on-site adjustments and coordination with the rest of the job site.",
     path: "/services/installation",
     ogAlt: "Dilamco installation service",
   },
@@ -33,11 +33,10 @@ export const installationPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading:
-            "Professional installation: precision, alignment and finish",
+          eyebrow: "Cabinetry division",
+          heading: "How we install your cabinets at home",
           description:
-            "Installation is the final stage where cabinets are set and adjusted on site: levelling, precise alignments, fastening and finishing. It is what turns fabricated elements into a clean, durable whole — on-site adjustments are an integral part of a professional install.",
+            "Our crews hang the cabinets after the plumbing and the wiring, and before the countertops.",
           actions: [
             {
               label: "Request a quote",
@@ -45,175 +44,128 @@ export const installationPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View installed projects",
+              label: "See installed projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Alignments", "Adjustments", "Finish"],
+          badges: ["Levelling", "Alignment", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
-            alt: "Technical drawing and panel samples for custom installation",
+            alt: "Custom cabinets being installed in a kitchen",
           },
-          caption: "A clean install changes how the whole room is perceived",
+          caption: "Residential and commercial installs",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "différence",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Why installation makes all the difference",
-          description:
-            "Walls, floors and ceilings are never perfectly straight. A professional installation absorbs that reality to deliver a clean and durable result.",
-          cards: [
+          heading: "How installation day goes",
+          steps: [
             {
-              title: "Alignments",
+              number: "1",
+              title: "We protect the house",
               description:
-                "Doors, drawers and modules kept straight despite site irregularities.",
+                "We cover the floors and keep the dust inside the room we work in.",
             },
             {
-              title: "Adjustments",
+              number: "2",
+              title: "We fix the boxes",
               description:
-                "Fine on-site tuning for a uniform and stable result.",
+                "We level each box, then screw it into the framing behind the wall.",
             },
             {
-              title: "Durability",
+              number: "3",
+              title: "We adjust the doors",
               description:
-                "A good installation reduces premature wear and visible defects.",
+                "We set every door so the gaps are even from one end to the other.",
+            },
+            {
+              number: "4",
+              title: "We finish and show you",
+              description:
+                "We fit the mouldings and handles, then walk through it all with you.",
             },
           ],
-          columns: "3",
         },
       },
     },
     {
-      id: "included",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "What's included in a Dilamco installation",
-          intro:
-            "Installation is not just about fastening modules. It includes preparation, adjustment and final verification.",
-          items: [
+          heading: "Installation in brief",
+          intro: "What happens in your home during the installation days.",
+          rows: [
             {
-              title: "Site preparation",
-              description:
-                "Checking walls, floors, levels and visible constraints.",
+              label: "How long",
+              value:
+                "One to two days for a vanity, three to five for a full kitchen.",
             },
             {
-              title: "Levelling and fastening",
-              description: "Secure and stable anchoring of the modules.",
+              label: "What you receive",
+              value:
+                "Cabinets hung, doors properly set, and every touch-up done.",
             },
             {
-              title: "Door and drawer adjustment",
-              description: "Precise alignment and smooth operation.",
+              label: "Who handles it",
+              value:
+                "Our own installers, working in step with the electrician and the countertop.",
             },
             {
-              title: "Final inspection",
-              description:
-                "Verification and adjustments before the project is delivered.",
-            },
-          ],
-          actions: [
-            {
-              label: "See the process",
-              href: "/processus",
-              variant: "ghost",
+              label: "Needed beforehand",
+              value:
+                "The plumbing, the wiring and the floor must be finished before we arrive.",
             },
             {
-              label: "View fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "Warranty",
+              value:
+                "One adjustment visit is included in the year following installation.",
+            },
+            {
+              label: "Cleanliness",
+              value:
+                "We sweep up every evening and haul out all the debris at the end.",
             },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
-            alt: "Custom installation in progress",
+            alt: "Cabinets adjusted and aligned after installation",
           },
-          cardTitle: "On-site coordination",
-          cardDescription:
-            "A clean install depends as much on preparation as on on-site adjustments.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Installation by project type",
-          intro:
-            "Installation logic changes depending on the space, the access and the level of use.",
-          items: [
-            {
-              title: "Kitchen",
-              href: "/espaces/cuisine",
-              description:
-                "Cabinets, islands and appliance integration.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen with precise installation",
-              },
-              badges: ["Kitchen", "Integration"],
-              footerCtaLabel: "View kitchen",
-            },
-            {
-              title: "Bathroom",
-              href: "/espaces/salle-de-bain",
-              description: "Vanities and edge protection in humid environments.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom with clean finish",
-              },
-              badges: ["Humidity", "Finish"],
-              footerCtaLabel: "View bathroom",
-            },
-            {
-              title: "Commercial",
-              href: "/espaces/commercial",
-              description: "Heavy use, durability and coordination.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Commercial fit-out with planned installation",
-              },
-              badges: ["Commercial", "Coordination"],
-              footerCtaLabel: "View commercial",
-            },
-          ],
+          note: "We set the installation date as soon as the delivery is confirmed.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - installation",
-          intro:
-            "Clear answers about the install, the adjustments and how the job unfolds.",
+          heading: "Questions about installation",
           items: [
             {
-              q: "How long does an installation take?",
-              a: "How long an installation takes depends on the project type and its complexity. A bathroom vanity or a walk-in is generally set in a day or two, while a full kitchen — with an island, tall cabinets and appliance coordination — takes longer. We confirm the expected duration during planning, once the project scope is set, so you know what to expect on site.",
+              q: "Do we have to leave the house during install?",
+              a: "No. The room stays out of service for a few days, but the rest of the house remains protected and usable. Water is restored each evening where possible.",
             },
             {
-              q: "Are adjustments normal?",
-              a: "Yes. Adjustments are part of a professional installation and are essential to the final result.",
+              q: "Who installs the countertop?",
+              a: "The countertop supplier, after our install. They template on the boxes already anchored, which removes millimetre-level gaps.",
             },
             {
-              q: "Do you only install your own cabinets?",
-              a: "Yes. We install the elements we design and fabricate, which lets us guarantee consistency between fabrication and installation: same standards, same tolerances, one team responsible for the result. This continuity avoids the grey areas that are common when fabrication and installation are handled by different parties, and it makes final on-site adjustments easier.",
+              q: "Do you install cabinets bought elsewhere?",
+              a: "No. We install what we designed and supplied, so that one responsibility covers the drawings, the parts and the install.",
             },
             {
-              q: "Do you work in condos or commercial spaces?",
-              a: "Yes. We adapt the installation to the access, scheduling and usage constraints of each environment.",
+              q: "What if a door rubs six months later?",
+              a: "Call us. Wood that moves with the seasons is corrected in a few minutes of adjustment, and it is covered in the first year.",
             },
           ],
         },
@@ -225,9 +177,9 @@ export const installationPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need a clean, well-controlled installation?",
+          heading: "Schedule your cabinet installation",
           intro:
-            "We frame the install, the adjustments and the coordination to deliver a crisp, durable result.",
+            "We pick the date with you, and we only leave once we have checked it all together.",
           actions: [
             {
               label: "Request a quote",
@@ -235,12 +187,12 @@ export const installationPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          note: "Residential and commercial installation",
+          note: "RBQ licence 8306-0806-27",
         },
       },
     },

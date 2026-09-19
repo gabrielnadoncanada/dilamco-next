@@ -6,7 +6,7 @@ export const cuisinePageEn: PageTemplateData = {
   metadata: {
     title: "Custom kitchen cabinets in Pierrefonds and Montréal",
     description:
-      "High-end custom kitchen cabinetry: design, controlled fabrication and precise installation in Pierrefonds, Montréal, Laval and Greater Montréal.",
+      "Custom kitchen cabinets in Pierrefonds and Greater Montréal, designed, supplied and installed by Dilamco, a licensed general contractor (RBQ).",
     path: "/espaces/cuisine",
     ogAlt: "Dilamco custom kitchen cabinets",
   },
@@ -27,13 +27,12 @@ export const cuisinePageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Spaces",
-          heading:
-            "Custom kitchens and cabinetry in Pierrefonds and Greater Montréal",
+          badges: ["Custom-built", "Cabinet division"],
+          heading: "Custom kitchen cabinets, installed by your general contractor",
           description:
-            "A custom kitchen is a set of cabinets designed and built to the exact dimensions of your room — island, storage and heights included — rather than assembled from stock modules. At Dilamco, in Pierrefonds and across Greater Montréal, we handle the design, controlled fabrication at our partner factory and installation, in solid birch and birch plywood.",
+            "We measure the room after demolition, order the cabinets, then install them.",
           actions: [
             {
               label: "Get a quote",
@@ -46,248 +45,136 @@ export const cuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Custom cabinets", "Pierrefonds", "West Island"],
           image: {
-            src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-            alt: "High-end custom kitchen cabinets in Pierrefonds",
+            src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+            alt: "U-shaped kitchen with white shaker cabinets and subway tile backsplash",
           },
-          caption:
-            "High-end residential in Pierrefonds, the West Island and Greater Montréal",
+          caption: "Shaker cabinets, subway backsplash",
         },
       },
     },
     {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "A custom kitchen built to last",
-          intro:
-            "A kitchen's value comes from its structure, ergonomics and execution quality — not just the final look.",
-          badges: ["Durability", "Ergonomics", "Coordination"],
-          cardTitle: "A good fit for this kind of project",
-          items: [
-            "Primary residence or long-term project.",
-            "A layout that needs to fit the real space.",
-            "Priority on stability, finishes and coordination.",
-          ],
-          actions: [
-            {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "See our process",
-              href: "/processus",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "A clear process from design to installation",
-          intro:
-            "A single partner helps frame decisions better and reduce fragmentation on site.",
-          steps: [
-            {
-              number: "1",
-              title: "Design",
-              description:
-                "Space analysis, work-zone organization and validation of choices.",
-            },
-            {
-              number: "2",
-              title: "Materials",
-              description:
-                "Selection of components and finishes suited to durability and daily use.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Controlled production with stable standards and repeatable quality.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Precise adjustments, clean alignments and finishes verified on site.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Material choices that justify the premium",
-          intro:
-            "Real durability is structural. The invisible components matter as much as the surfaces.",
-          items: [
-            {
-              title: "Drawer structure",
-              description:
-                "Solid birch wood for better resistance and a lasting sense of solidity.",
-            },
-            {
-              title: "Drawer bottoms",
-              description:
-                "Birch plywood to better support load and keep its stability.",
-            },
-            {
-              title: "Consistent finish",
-              description:
-                "Choices aligned with maintenance, longevity and the real use of the kitchen.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "In-stock kitchen cabinets",
-              href: "/boutique/armoires-cuisine",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/spaces/cabinet-cuisines.webp",
-            alt: "Material detail for a custom kitchen",
-          },
-          cardTitle: "Why it matters",
-          cardDescription:
-            "A sound structure reduces premature replacements and protects usability over many years.",
-        },
-      },
-    },
-    {
-      id: "projects",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading: "Featured kitchen projects",
-          intro:
-            "A few projects that show the level of execution, not just the aesthetics.",
-          items: [
+          heading: "Kitchens we have delivered",
+          tiles: [
             {
-              title: "Custom kitchen, Pierrefonds",
-              href: "/projets/cuisine/cuisine-sur-mesure-pierrefonds",
-              description:
-                "Custom kitchen cabinets in the West Island: precise layout and careful finish.",
+              kind: "image",
+              span: "wide",
               image: {
-                src: "/images/projects/chene-moderne.webp",
-                alt: "Custom kitchen cabinet project in Pierrefonds",
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Open-plan kitchen with island and full-height cabinet columns",
               },
-              badges: ["Pierrefonds", "Cabinets"],
-              footerCtaLabel: "View project",
+              caption: "Island and columns, open plan",
             },
             {
-              title: "Custom kitchen, Montréal",
-              href: "/projets/cuisine/cuisine-sur-mesure-montreal",
-              description:
-                "A kitchen designed for everyday use and long-term durability.",
-              image: {
-                src: "/images/projects/cuisine-haut-de-gamme-blanche-laval.webp",
-                alt: "Custom kitchen project in Montréal",
-              },
-              badges: ["Montréal", "Custom"],
-              footerCtaLabel: "View project",
+              kind: "stat",
+              value: "$30,000",
+              label: "The starting price for a full kitchen",
             },
             {
-              title: "Custom kitchen, South Shore",
-              href: "/projets/cuisine/cuisine-sur-mesure-rive-sud",
-              description:
-                "Full execution with project coordination and controlled details.",
+              kind: "image",
+              span: "tall",
               image: {
-                src: "/images/projects/cuisine-blanche-sur-mesure-brossard.webp",
-                alt: "Custom kitchen project on the South Shore",
+                src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+                alt: "White kitchen with island and quartz countertop",
               },
-              badges: ["South Shore", "Turnkey"],
-              footerCtaLabel: "View project",
+              caption: "Quartz countertop, white island",
+            },
+            {
+              kind: "quote",
+              quote:
+                "Excellent contractor. They did my floors and other projects and we are very satisfied. I recommend them 100%.",
+              author: "Mélina Desbiens, Google review (translated)",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
+                alt: "Glass-front kitchen cabinets and tile backsplash",
+              },
+              caption: "Glass fronts and backsplash",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+                alt: "Navy blue island with birch-lined drawers",
+              },
+              caption: "Navy island, birch interior",
             },
           ],
         },
       },
     },
     {
-      id: "zones",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "fact-sheet",
         props: {
-          heading: "Custom kitchen cabinets across Greater Montréal",
+          heading: "The kitchen in brief",
           intro:
-            "Based in Pierrefonds-Roxboro, we design, fabricate and install custom cabinets and kitchens in the West Island and across Greater Montréal.",
-          badges: [
-            "Pierrefonds-Roxboro",
-            "West Island",
-            "Montréal",
-            "Laval",
-            "North Shore",
-            "South Shore",
-          ],
-          cardTitle: "Areas served",
-          items: [
-            "Pierrefonds-Roxboro and the West Island",
-            "Montréal and central neighbourhoods",
-            "Laval and the North Shore",
-            "South Shore and southern suburbs",
-          ],
-          actions: [
+            "The questions homeowners ask us before they agree to meet.",
+          rows: [
             {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
+              label: "How long",
+              value: "Expect nine to fifteen weeks between the signed plan and installation.",
             },
             {
-              label: "View our kitchens",
-              href: "/projets/cuisine",
-              variant: "ghost",
+              label: "Typical price",
+              value: "A full kitchen runs between $30,000 and $65,000, confirmed after the survey.",
+            },
+            {
+              label: "Materials",
+              value: "The cabinet boxes are birch plywood and the drawers are solid birch.",
+            },
+            {
+              label: "Hardware",
+              value: "Drawers run on hidden rails and the doors close softly.",
+            },
+            {
+              label: "Who installs",
+              value: "Our own crew, once the plumbing is redone and the floor is laid.",
+            },
+            {
+              label: "Warranty",
+              value: "The term is written into the contract and we come back to adjust the doors.",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-cuisine-hero-01.webp",
+            alt: "High-end custom kitchen with a central island",
+          },
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - custom kitchens",
-          intro:
-            "Clear answers to the most common questions before starting a project.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does a custom kitchen or custom cabinets cost?",
-              a: "For a high-end custom kitchen or custom cabinets, the investment generally ranges between $30,000 and $65,000, depending on four main factors: the dimensions and area to cover, the complexity of the layout (island, pantry, cabinets to the ceiling), the materials and finishes chosen, and the level of coordination required on site. A project is typically completed in 9 to 15 weeks, from design sign-off to final installation. We provide a precise estimate once we've scoped the project with you — real measurements, priorities and finish level — which avoids surprises and gives you a clear budget before you commit.",
+              q: "When do you measure the kitchen?",
+              a: "After demolition, once the walls sit in their final position. That is what keeps dead space from showing up beside the columns and under the ceiling.",
             },
             {
-              q: "Do you make custom kitchen cabinets in Pierrefonds and the West Island?",
-              a: "Yes. We are based in Pierrefonds-Roxboro and install custom cabinets and kitchens throughout the West Island, Montréal, Laval and Greater Montréal.",
+              q: "Can the kitchen stay usable during the work?",
+              a: "A temporary station, sink and fridge, goes somewhere else in the house. The room itself stays closed while demolition, plumbing and flooring are under way.",
             },
             {
-              q: "What's the difference with stock cabinets?",
-              a: "The difference comes down to three things: fit, structure and control of the result. Stock cabinets are sold in fixed sizes, so the room has to be adapted to the modules, which often leaves wasted space or poorly used heights. A custom kitchen is designed the other way around: each cabinet is sized to the millimetre for your actual space, up to the ceiling if needed. The structure is also more robust — solid birch for the drawers, birch plywood for the bottoms — where stock cabinets often use particleboard. Finally, because the same team handles the design, fabrication at our partner factory and installation, the result is better controlled, with alignments and finishes checked on site.",
+              q: "Who supplies the countertop and backsplash?",
+              a: "We do. The countertop template is taken once the boxes are anchored, then the backsplash follows. Both are priced in the same quote as the cabinets.",
             },
             {
-              q: "Do you also handle installation?",
-              a: "Yes. The goal is consistent execution from design to installation, by the same team.",
+              q: "Do you handle the wiring and the range hood vent?",
+              a: "Yes. Dedicated circuits, island outlets and the hood duct are set on the kitchen drawing and run by our trades before the cabinets arrive.",
             },
           ],
         },
@@ -301,7 +188,7 @@ export const cuisinePageEn: PageTemplateData = {
         props: {
           heading: "Tell us about your kitchen project",
           intro:
-            "Get a structured quote tailored to your space, your priorities and your finish level.",
+            "Free estimate, on-site survey and an itemized quote before anything is ordered.",
           actions: [
             {
               label: "Request a quote",
@@ -310,10 +197,11 @@ export const cuisinePageEn: PageTemplateData = {
             },
             {
               label: "View our kitchens",
-              href: "/projets",
+              href: "/projets/cuisine",
               variant: "ghost",
             },
           ],
+          note: "RBQ licence 8306-0806-27 · West Island, Montréal, Laval, South Shore",
         },
       },
     },

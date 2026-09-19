@@ -4,11 +4,11 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Custom kitchens, vanities & cabinets in Montréal | Dilamco",
+    title: "General Contractor, Renovation — West Island | Dilamco",
     description:
-      "Dilamco designs and builds high-end custom kitchens, vanities and cabinets.",
+      "RBQ-licensed general contractor since 2004. Kitchen, bathroom, basement and home addition renovations across the West Island and Greater Montréal.",
     path: "/",
-    ogAlt: "Dilamco, custom, durable, well executed",
+    ogAlt: "Residential renovation site managed by Dilamco",
   },
   breadcrumbs: [
     {
@@ -19,56 +19,63 @@ export const pageEn: PageTemplateData = {
   blocks: [
     {
       id: "hero",
-      frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "image-overlay",
         props: {
-          eyebrow: "Dilamco - Spaces",
-          heading:
-            "Custom spaces: kitchen, bathroom, storage and commercial",
+          heading: "Your renovation, run by a licensed general contractor.",
           description:
-            "A custom cabinetry specialist established in Greater Montréal, we design and install custom kitchens, cabinets, vanities and storage, made exclusively for us by our partner factory. Every space has its constraints: our role is to deliver durable, functional and well-executed solutions.",
+            "We handle the permit, the trades, the schedule and the budget. One person accountable, from first call to handover.",
           actions: [
             {
-              label: "Get a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
-              href: "/projets",
-              variant: "ghost",
+              label: "See our services",
+              href: "/services/renovation",
+              variant: "ghost-light",
             },
           ],
-          badges: ["Custom", "Durable", "Turnkey"],
           image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Dilamco custom spaces",
+            src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+            alt: "Kitchen renovated by Dilamco in a West Island home",
           },
-          caption: "Montréal, Laval and the South Shore",
+          overlay: "dark-gradient",
+          proofs: [
+            { title: "2004", description: "RBQ licence since" },
+            { title: "5.0", description: "Google rating" },
+            { title: "24 h", description: "First reply" },
+          ],
         },
       },
     },
     {
-      id: "quality-pillars",
+      id: "promesse",
       content: {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Spaces built to last - not standard modules",
+          heading: "Why hand your project to a general contractor",
           description:
-            "Every Dilamco space follows the same logic: design tailored to your reality, controlled fabrication, premium materials and structured execution. The goal is simple: a durable, consistent and controlled result, with a single point of responsibility from start to finish.",
+            "One contractor plans the job, brings the trades in the right order and answers for the result. Here is what that changes for you.",
           cards: [
             {
-              title: "Tangible quality",
-              description:
-                "Construction details, hardware, finishes and durability you can verify.",
+              title: "A written schedule",
+              description: "Every stage of the job is dated in the contract, with the inspections planned.",
             },
             {
-              title: "Turnkey management",
-              description:
-                "Fewer parties, fewer surprises, clear coordination.",
+              title: "A price set before work starts",
+              description: "The quote lists the work, the materials and what is not included. Any change is priced and signed before it is done.",
+            },
+            {
+              title: "One person accountable",
+              description: "We hire and coordinate the plumber, the electrician, the carpenter and the finishers. You deal with one person.",
+            },
+            {
+              title: "Licence, insurance and warranty",
+              description: "Valid RBQ licence with no restrictions, liability and site insurance, work warranted in writing.",
             },
           ],
           columns: "2",
@@ -76,242 +83,218 @@ export const pageEn: PageTemplateData = {
       },
     },
     {
-      id: "spaces",
+      id: "services",
       content: {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Choose your space",
-          intro:
-            "Go to the matching pillar page to discover the approach, the materials, completed projects and a tailored FAQ.",
+          heading: "What we renovate",
           items: [
             {
-              title: "Custom cabinets & kitchens",
-              href: "/espaces/cuisine",
-              description:
-                "Custom kitchen cabinets: ergonomics, durability and full coordination for a controlled result.",
+              title: "Kitchen",
+              href: "/services/renovation/cuisine",
+              description: "Demolition, plumbing, electrical, cabinets and finishing, in the right order.",
               image: {
-                src: "/images/generated/home/home-space-cuisine-card-01.webp",
-                alt: "High-end custom kitchen cabinets",
+                src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+                alt: "Complete residential kitchen renovation",
               },
-              badges: ["Custom", "Turnkey", "High-end"],
-              quickActionLabel: "View",
-              footerCtaLabel: "View custom kitchens",
+              badges: ["Turnkey"],
+              footerCtaLabel: "See kitchens",
             },
             {
-              title: "Custom vanities & bathrooms",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Custom bathroom vanities, optimized storage and moisture-resistant finishes built to last.",
+              title: "Bathroom",
+              href: "/services/renovation/salle-de-bain",
+              description: "Plumbing, waterproofing membrane, tile, ventilation and vanity.",
               image: {
-                src: "/images/generated/home/home-space-bath-card-01.webp",
-                alt: "Custom bathroom vanity",
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Renovated bathroom with tiled shower",
               },
-              badges: ["Vanities", "Durable", "Finishes"],
-              quickActionLabel: "View",
-              footerCtaLabel: "View custom vanities",
+              badges: ["Waterproofing"],
+              footerCtaLabel: "See bathrooms",
             },
             {
-              title: "Laundry room",
-              href: "/espaces/salle-de-lavage",
-              description:
-                "Storage and organization solutions designed for everyday use, with no compromise on sturdiness.",
+              title: "Basement",
+              href: "/services/renovation/sous-sol",
+              description: "Moisture and headroom checked before insulating, dividing and finishing.",
               image: {
-                src: "/images/generated/home/home-space-laundry-card-01.webp",
-                alt: "Custom laundry room",
+                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
+                alt: "Basement finished as a living space",
               },
-              badges: ["Storage", "Functional", "Custom"],
-              quickActionLabel: "View",
-              footerCtaLabel: "Discover the laundry room",
+              badges: ["Insulation"],
+              footerCtaLabel: "See basements",
             },
             {
-              title: "Walk-in",
-              href: "/espaces/walk-in",
-              description:
-                "Personalized organization: drawers, hanging space, accessories and a configuration tailored to your needs.",
+              title: "Home addition",
+              href: "/services/renovation/agrandissement-de-maison",
+              description: "Permit, plans, foundation, structure and tie-in to the existing house.",
               image: {
-                src: "/images/generated/home/home-space-walkin-card-01.webp",
-                alt: "Custom walk-in",
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                alt: "Rear addition on a single-family home",
               },
-              badges: ["Organization", "Personalized", "Premium"],
-              quickActionLabel: "View",
-              footerCtaLabel: "Discover the walk-in",
+              badges: ["Permit"],
+              footerCtaLabel: "See additions",
             },
             {
-              title: "Basement finishing",
-              href: "/espaces/sous-sol",
-              description:
-                "Home theatre, bar, wine cellar and custom bookcase to turn the basement into a living space.",
+              title: "Flooring",
+              href: "/services/renovation/plancher",
+              description: "Hardwood, engineered, vinyl or tile, on a levelled subfloor.",
               image: {
-                src: "/images/generated/home/home-space-sous-sol-card-01.webp",
-                alt: "Custom basement finishing",
+                src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
+                alt: "Hardwood floor installed in a home",
               },
-              badges: ["Basement", "Home theatre", "Custom"],
-              quickActionLabel: "View",
-              footerCtaLabel: "Discover basement finishing",
+              badges: ["Hardwood"],
+              footerCtaLabel: "See flooring",
             },
             {
-              title: "Commercial",
-              href: "/espaces/commercial",
-              description:
-                "Durable and repeatable fit-outs: offices, customer areas, storage and custom furniture.",
+              title: "Disaster recovery",
+              href: "/services/renovation/apres-sinistre",
+              description: "Water or fire damage: drying, rebuild and documentation for your insurer.",
               image: {
-                src: "/images/generated/home/home-space-commercial-card-01.webp",
-                alt: "Custom commercial fit-out",
+                src: "/images/generated/services/service-renovation-project-02.webp",
+                alt: "Room rebuilt after water damage",
               },
-              badges: ["Commercial", "Durable", "Controlled execution"],
-              quickActionLabel: "View",
-              footerCtaLabel: "Discover commercial",
+              badges: ["Insurance"],
+              footerCtaLabel: "See disaster recovery",
             },
           ],
         },
       },
     },
     {
-      id: "boutique-stock",
-      content: {
-        type: "grid",
-        variant: "image-cards-badges-cta",
-        props: {
-          heading: "In-stock cabinets, ready to install",
-          intro:
-            "No production lead time: a selection of in-stock cabinets and vanities, ready to install. Pick your cabinets and get a firm quote within 48 h.",
-          ctaLabel: "Browse the shop",
-          ctaHref: "/boutique",
-          items: [
-            {
-              title: "In-stock kitchen cabinets",
-              href: "/boutique/armoires-cuisine",
-              description:
-                "Standard kitchen cabinets - bases, wall units and tall cabinets - in stock and ready to install, with no production wait.",
-              image: {
-                src: "/images/generated/home/home-featured-cuisine-project-01.webp",
-                alt: "In-stock kitchen cabinets ready to install",
-              },
-              badges: ["In stock", "Ready to install"],
-              footerCtaLabel: "View kitchen cabinets",
-            },
-            {
-              title: "In-stock bathroom vanities",
-              href: "/boutique/vanites",
-              description:
-                "24 and 30 inch vanities in stock, with durable moisture-resistant finishes, ready to install.",
-              image: {
-                src: "/images/generated/home/home-featured-bath-project-01.webp",
-                alt: "In-stock bathroom vanities, 24 and 30 inch",
-              },
-              badges: ["24 & 30 in", "In stock"],
-              footerCtaLabel: "View vanities",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "standard",
+      id: "process",
       content: {
         type: "process",
-        variant: "split-cards",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Our standard, whatever the space",
-          description:
-            "A repeatable method to protect quality, reduce surprises and deliver a consistent result.",
+          heading: "How your project unfolds",
           steps: [
             {
               number: "1",
-              title: "Design",
-              description:
-                "Clear plans, a tailored configuration and validations before fabrication.",
+              title: "First reply within 24 h",
+              description: "You describe the project, we book the visit and give a ballpark.",
             },
             {
               number: "2",
-              title: "Materials",
-              description:
-                "Durable choices and construction details designed for longevity.",
+              title: "Quote and contract",
+              description: "Scope, materials, exclusions, price, schedule and payments in writing.",
             },
             {
               number: "3",
-              title: "Controlled fabrication",
-              description:
-                "Stable standards, quality control and consistency from one project to the next.",
+              title: "Permit and planning",
+              description: "Plans, permit application to the city, trades booked before we open.",
             },
             {
               number: "4",
-              title: "Installation",
-              description:
-                "Precise adjustments, clean finishes and structured coordination on site.",
-            },
-          ],
-          actions: [
-            {
-              label: "View our services",
-              href: "/services",
-              variant: "ghost",
+              title: "Coordinated job site",
+              description: "Each trade comes in turn, after inspection of the previous stage.",
             },
             {
-              label: "Understand our materials",
-              href: "/materiaux",
-              variant: "ghost",
+              number: "5",
+              title: "Handover and warranty",
+              description: "Final walkthrough with you, deficiencies fixed before the last payment.",
             },
           ],
         },
       },
     },
-
+    {
+      id: "zones",
+      content: {
+        type: "grid",
+        variant: "link-cards-compact",
+        props: {
+          heading: "Where we work",
+          intro:
+            "Our office is in Pierrefonds-Roxboro. We work across the West Island, Montréal, Laval, the South Shore and Vaudreuil-Soulanges.",
+          columns: "3",
+          items: [
+            { title: "Pierrefonds-Roxboro", href: "/zones/pierrefonds-roxboro", description: "Our base" },
+            { title: "Dollard-des-Ormeaux", href: "/zones/dollard-des-ormeaux" },
+            { title: "Kirkland", href: "/zones/kirkland" },
+            { title: "Pointe-Claire", href: "/zones/pointe-claire" },
+            { title: "Beaconsfield", href: "/zones/beaconsfield" },
+            { title: "Dorval", href: "/zones/dorval" },
+            { title: "L'Île-Bizard–Sainte-Geneviève", href: "/zones/ile-bizard-sainte-genevieve" },
+            { title: "Saint-Laurent", href: "/zones/saint-laurent" },
+            { title: "Laval", href: "/zones/laval" },
+            { title: "Vaudreuil-Dorion", href: "/zones/vaudreuil-dorion" },
+            { title: "South Shore", href: "/zones/rive-sud" },
+          ],
+        },
+      },
+    },
+    {
+      id: "armoires",
+      content: {
+        type: "split",
+        variant: "list-actions-image-card",
+        props: {
+          heading: "Custom cabinets, included in the same contract",
+          intro:
+            "Our licence also covers cabinets and countertops. You have no extra supplier to manage: everything is in the same quote.",
+          items: [
+            { title: "Installed at the right time", description: "Cabinets are ordered, delivered and installed when the site is ready for them." },
+            { title: "Measured after demolition", description: "We take the dimensions once the walls are in their final position, not before." },
+            { title: "Kitchen, bathroom, walk-in", description: "Kitchen cabinets, vanities and built-in storage, depending on the room being renovated." },
+          ],
+          actions: [
+            { label: "See the spaces", href: "/espaces", variant: "primary" },
+            { label: "Our materials", href: "/materiaux", variant: "ghost" },
+          ],
+          image: {
+            src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+            alt: "Custom kitchen cabinets installed by Dilamco",
+          },
+          cardTitle: "Cabinet division",
+          cardDescription: "RBQ subclass 12, cabinets and countertops.",
+        },
+      },
+    },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ",
-          intro:
-            "Clear answers to the questions that most often block the decision.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "What budget should I plan for a custom kitchen?",
-              a: "The budget for a custom kitchen depends on the dimensions, the layout (drawers, accessories, island), the materials and the level of coordination. For a custom, turnkey approach, the investment generally ranges between $30,000 and $65,000, with a typical lead time of 9 to 15 weeks. We clarify a realistic budget from the initial consultation, once the project is scoped.",
+              q: "How much does a renovation cost?",
+              a: "Our projects start around $25,000. A complete kitchen usually lands between $35,000 and $50,000. The firm price is set after the on-site survey, in the detailed quote.",
             },
             {
-              q: "What's the difference with IKEA / big-box stores?",
-              a: "Standardized solutions can suit some contexts. Custom work aims for full personalization, a sturdier structure and better-controlled execution - especially important in a primary residence.",
+              q: "How long does a job take?",
+              a: "A bathroom takes weeks, a kitchen or basement months, an addition longer because of the permit and foundation. The schedule is written into the contract.",
             },
             {
-              q: "What are typical lead times?",
-              a: "Lead times vary with complexity and production load, but you should generally allow 9 to 15 weeks between design approval and installation. A structured process — validation before fabrication, then installation coordination — allows more predictable planning and limits surprises.",
+              q: "Do I need a permit?",
+              a: "Often, as soon as the work touches structure, openings, plumbing or living area. We check your city's requirements and file the application for you.",
             },
             {
-              q: "Do you handle the full renovation?",
-              a: "Yes, when required: coordination of the key stages and integration with design, fabrication and installation. The goal is to reduce fragmentation and ensure consistent execution.",
+              q: "Are you licensed and insured?",
+              a: "Yes. RBQ licence 8306-0806-27, valid with no restrictions since 2004, classes 1.2 and 1.3, bond in force, no claims on file. Liability insurance and site coverage.",
+            },
+            {
+              q: "Is your work warranted?",
+              a: "Yes, with the scope and duration written in the contract. Deficiencies noted at the final walkthrough are fixed before the last payment. We do not build new homes, so the GCR plan does not apply.",
             },
           ],
         },
       },
     },
     {
-      id: "cta-plan",
-
+      id: "cta",
       content: {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Ready to frame your project properly?",
-          intro:
-            "Get a clear, structured quote tailored to a durable and controlled project.",
+          heading: "Tell us about your project",
+          intro: "The estimate is free and we reply within 24 to 48 business hours.",
           actions: [
-            {
-              label: "Get a quote",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Custom kitchen",
-              href: "/espaces/cuisine",
-              variant: "ghost",
-            },
+            { label: "Free estimate", href: "/contact", variant: "primary" },
+            { label: "See our work", href: "/projets", variant: "ghost" },
           ],
-          note: "Montréal • Laval • South Shore - residential & commercial",
+          note: "RBQ licence 8306-0806-27 · West Island, Montréal, Laval, South Shore",
         },
       },
     },

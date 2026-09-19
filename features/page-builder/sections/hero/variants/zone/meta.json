@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "hero",
+  "variant": "zone",
+  "title": "Hero Zone",
+  "description": "Hero de page locale : photo pleine largeur, nom de la ville en display, fiche locale flottante (base, permis, bâti).",
+  "propsModel": ["eyebrow", "heading", "description", "actions", "image", "facts"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 150,
+    "viewport": "desktop"
+  }
+}

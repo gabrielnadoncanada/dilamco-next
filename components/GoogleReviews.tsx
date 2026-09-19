@@ -1,27 +1,31 @@
+import { ArrowUpRight } from "lucide-react";
 import { getLocale } from "next-intl/server";
+
 import { Container } from "./elements/container";
+import { Heading } from "./elements/heading";
+import { Reveal } from "./animations/Reveal";
 import { SITE } from "@/seo/schema/site";
 
 const COPY = {
   fr: {
     heading: "Ce que disent nos clients",
     subhead: (count: number, rating: number) =>
-      `Note de ${rating.toLocaleString("fr-CA")} sur 5 — ${count} avis Google`,
-    cta: "Voir tous les avis sur Google",
+      `${rating.toLocaleString("fr-CA", { minimumFractionDigits: 1 })} sur 5 · ${count} avis Google`,
+    cta: "Voir les avis sur Google",
   },
   en: {
     heading: "What our clients say",
     subhead: (count: number, rating: number) =>
-      `Rated ${rating.toLocaleString("en-CA")} out of 5 — ${count} Google reviews`,
-    cta: "See all reviews on Google",
+      `${rating.toLocaleString("en-CA", { minimumFractionDigits: 1 })} out of 5 · ${count} Google reviews`,
+    cta: "See the reviews on Google",
   },
 } as const;
 
-function Stars({ rating }: { rating: number }) {
-  // Étoiles monochromes (couleur foreground) — pas d'or/accent.
+function Stars({ rating, className }: { rating: number; className?: string }) {
+  // Étoiles monochromes (couleur primaire) — jamais de doré.
   return (
     <span
-      className="inline-flex items-center gap-0.5 text-foreground"
+      className={`inline-flex items-center gap-0.5 text-primary ${className ?? ""}`}
       aria-hidden="true"
     >
       {Array.from({ length: 5 }).map((_, i) => (
@@ -47,47 +51,52 @@ export default async function GoogleReviews() {
   const { reviews, googleReviewsUrl } = SITE;
 
   return (
-    <section aria-label={t.heading} className="border-t bg-muted/20">
+    <section aria-label={t.heading} className="bg-background">
       <Container>
-        <div className="py-12 md:py-16">
-          <div className="flex flex-col items-start gap-2">
-            <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-              {t.heading}
-            </h2>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Stars rating={reviews.ratingValue} />
-              <span>{t.subhead(reviews.reviewCount, reviews.ratingValue)}</span>
-            </div>
-          </div>
-
-          <ul className="mt-8 grid gap-6 md:grid-cols-2">
-            {reviews.items.map((r) => (
-              <li
-                key={r.author}
-                className="rounded-none border bg-background p-6"
+        <Reveal className="py-[var(--section-py)]">
+          <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
+            <div className="lg:col-span-4">
+              <p className="text-numeral text-[length:var(--title-1)] text-foreground">
+                {reviews.ratingValue.toLocaleString(locale === "fr" ? "fr-CA" : "en-CA", {
+                  minimumFractionDigits: 1,
+                })}
+              </p>
+              <Stars rating={reviews.ratingValue} className="mt-2" />
+              <Heading as="h2" variant="h3" className="mt-4">
+                {t.heading}
+              </Heading>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {t.subhead(reviews.reviewCount, reviews.ratingValue)}
+              </p>
+              <a
+                href={googleReviewsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group mt-5 inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-primary transition-ui focus-ring hover:text-primary-deep"
               >
-                <Stars rating={r.rating} />
-                <blockquote className="mt-3 text-base leading-relaxed text-foreground">
-                  « {r.body} »
-                </blockquote>
-                <figcaption className="mt-4 text-sm font-medium text-muted-foreground">
-                  — {r.author}
-                </figcaption>
-              </li>
-            ))}
-          </ul>
+                {t.cta}
+                <ArrowUpRight className="size-4 transition-ui group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </a>
+            </div>
 
-          <div className="mt-8">
-            <a
-              href={googleReviewsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-semibold text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-            >
-              {t.cta}
-            </a>
+            <ul className="grid gap-4 sm:grid-cols-2 lg:col-span-8">
+              {reviews.items.map((r) => (
+                <li
+                  key={r.author}
+                  className="flex flex-col rounded-card bg-primary-soft/70 p-6"
+                >
+                  <Stars rating={r.rating} />
+                  <blockquote className="mt-4 font-display text-[length:var(--title-5)] font-medium leading-snug tracking-[-0.01em] text-foreground">
+                    « {r.body} »
+                  </blockquote>
+                  <figcaption className="mt-auto pt-5 text-sm font-semibold text-muted-foreground">
+                    {r.author}
+                  </figcaption>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

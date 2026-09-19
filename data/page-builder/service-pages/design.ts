@@ -6,7 +6,7 @@ export const designPage: PageTemplateData = {
   metadata: {
     title: "Design de cuisine et d'armoires sur mesure",
     description:
-      "Service de design : optimisation de l'espace, planification et choix des matériaux pour cuisines, vanités, walk-in et projets commerciaux.",
+      "Design d'armoires sur mesure : optimisation de l'espace, planification et choix des matériaux, intégré à votre rénovation par un entrepreneur général.",
     path: "/services/design",
     ogAlt: "Service de design Dilamco",
   },
@@ -30,10 +30,10 @@ export const designPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading: "Service de design, structurer le projet avant de fabriquer",
+          eyebrow: "Division armoires",
+          heading: "On dessine votre cuisine avant d'ouvrir un mur",
           description:
-            "Le design d'armoires sur mesure est l'étape de conception où l'on cadre l'usage, organise l'espace, intègre les contraintes techniques et valide les choix de matériaux — avant la fabrication et l'installation. C'est là que se prennent les bonnes décisions, en plan, pour éviter les compromis coûteux plus tard.",
+            "Mesures, plans, hauteurs et matériaux sont décidés et signés avant qu'on commande quoi que ce soit.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -46,171 +46,123 @@ export const designPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Usage réel", "Planification", "Exécution"],
+          badges: ["Relevé sur place", "Plans", "Matériaux"],
           image: {
             src: "/images/generated/services/service-design-hero-01.webp",
             alt: "Plan de cuisine sur mesure et échantillons de matériaux",
           },
-          caption: "Montréal, Laval et Rive-Sud",
+          caption: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "rôle",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Le rôle du design dans un projet sur mesure",
-          description:
-            "Un bon design rend le projet clair et exécutable. Il permet d'anticiper les contraintes et d'éviter les reprises en fabrication ou les compromis visibles à la fin.",
-          cards: [
+          heading: "Comment se passe le design",
+          steps: [
             {
-              title: "Optimiser l'espace",
+              number: "1",
+              title: "On mesure la pièce",
               description:
-                "Circulation, zones de travail, dégagements et hauteurs adaptées à votre usage.",
+                "On relève les murs, les fenêtres et les sorties de plomberie et d'électricité.",
             },
             {
-              title: "Structurer le rangement",
+              number: "2",
+              title: "On dessine les plans",
               description:
-                "Accès, organisation et priorités définies avant la production.",
+                "On place chaque armoire, chaque électroménager et chaque prise sur le plan.",
             },
             {
-              title: "Aligner les décisions",
+              number: "3",
+              title: "On choisit avec vous",
               description:
-                "Matériaux, finition, calendrier et niveau de complexité restent cohérents.",
+                "Vous voyez les échantillons de matériaux, de couleurs et de poignées.",
+            },
+            {
+              number: "4",
+              title: "Vous signez",
+              description:
+                "Vous recevez les plans, le prix détaillé et les dates de chantier.",
             },
           ],
-          columns: "1",
         },
       },
     },
     {
-      id: "includes",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce que comprend le service de design",
-          intro:
-            "Le design Dilamco est orienté usage et exécution, pas inspiration déconnectée du chantier.",
-          items: [
+          heading: "Le design en bref",
+          intro: "Ce que l'étape de design vous donne, et ce qu'elle vous coûte.",
+          rows: [
             {
-              title: "Analyse des besoins",
-              description: "Vos priorités, votre usage et vos contraintes.",
+              label: "Combien de temps",
+              value:
+                "Il faut deux à quatre semaines entre la première visite et les plans signés.",
             },
             {
-              title: "Organisation fonctionnelle",
-              description: "Plan d'espace et logique de rangement.",
+              label: "Ce que vous recevez",
+              value:
+                "Un plan de la pièce, les dessins de chaque mur, la liste des matériaux et le prix.",
             },
             {
-              title: "Choix matériaux et finis",
-              description: "Décisions cohérentes avec durabilité et entretien.",
+              label: "Qui s'en occupe",
+              value:
+                "Un designer dessine, et l'entrepreneur général vérifie que c'est réalisable.",
             },
             {
-              title: "Préparation à l'exécution",
-              description:
-                "Un design pensé pour être fabriqué et posé proprement.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir la fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "Rencontres prévues",
+              value:
+                "Une visite pour mesurer, une autre pour vous présenter les plans.",
             },
             {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
+              label: "Garantie",
+              value:
+                "Les plans que vous signez servent de référence pendant tout le chantier.",
+            },
+            {
+              label: "Prix indicatif",
+              value:
+                "Le design est crédité à votre projet si vous nous confiez les travaux.",
             },
           ],
           image: {
             src: "/images/services/design-hero.webp",
-            alt: "Design sur mesure en cours de planification",
+            alt: "Plans et élévations d'une cuisine en cours de conception",
           },
-          cardTitle: "Pourquoi c'est utile",
-          cardDescription:
-            "Plus les décisions sont prises tôt, plus le projet est prévisible et exécutable.",
-        },
-      },
-    },
-    {
-      id: "types",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Design par type de projet",
-          intro:
-            "La logique de design change selon l'espace, les contraintes et le niveau d'usage.",
-          items: [
-            {
-              title: "Cuisine",
-              href: "/espaces/cuisine",
-              description:
-                "Zones de travail, circulation, îlot, rangement et intégration.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure pensée pour l'usage réel",
-              },
-              badges: ["Ergonomie", "Rangement"],
-              footerCtaLabel: "Voir cuisine",
-            },
-            {
-              title: "Salle de bain",
-              href: "/espaces/salle-de-bain",
-              description:
-                "Contraintes d'humidité, rangement et ergonomie quotidienne.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure pensée pour l'humidité",
-              },
-              badges: ["Humidité", "Finitions"],
-              footerCtaLabel: "Voir salle de bain",
-            },
-            {
-              title: "Walk-in",
-              href: "/espaces/walk-in",
-              description:
-                "Organisation par zones, accessibilité et rangement vertical.",
-              image: {
-                src: "/images/generated/spaces/space-walkin-hero-01.webp",
-                alt: "Walk-in sur mesure pensé pour l'organisation",
-              },
-              badges: ["Organisation", "Accès"],
-              footerCtaLabel: "Voir walk-in",
-            },
-          ],
+          note: "Si les plans changent après la signature, le prix est revu avec vous.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - design",
-          intro:
-            "Réponses claires sur le rôle du design dans un projet sur mesure.",
+          heading: "Questions sur l'étape de design",
           items: [
             {
-              q: "Le design est-il obligatoire?",
-              a: "Dans un projet sur mesure, le design n'est pas une formalité : c'est lui qui cadre toutes les décisions avant la fabrication. Il permet de valider les dimensions réelles, l'organisation des zones, l'intégration des électroménagers et des contraintes techniques, et les choix de matériaux. Sauter cette étape, c'est prendre le risque de compromis coûteux découverts trop tard, en cours de fabrication ou d'installation. Un bon design réduit les imprévus et fait gagner du temps sur l'ensemble du projet.",
+              q: "Combien de temps prend le design ?",
+              a: "Comptez deux à quatre semaines selon la taille de la pièce et le nombre d'allers-retours. Une vanité seule se règle souvent en une rencontre.",
             },
             {
-              q: "Peut-on passer directement à la fabrication?",
-              a: "Seulement si les contraintes, l'organisation et les dimensions sont déjà clarifiées de façon fiable.",
+              q: "Dois-je avoir choisi mes électroménagers ?",
+              a: "Oui, au moins les modèles. Les dégagements, l'encastrement et les raccords se dessinent à partir de leurs fiches techniques, pas d'une estimation.",
             },
             {
-              q: "Est-ce que ça fonctionne en condo?",
-              a: "Oui. Le design est particulièrement utile en condo pour gérer l'accès, l'espace et l'intégration des équipements.",
+              q: "Le design couvre-t-il l'éclairage ?",
+              a: "Oui quand nous menons la rénovation complète. Circuits, encastrés et bandes sous armoires se placent sur le plan avant l'ouverture des murs.",
             },
             {
-              q: "Quand intervient le design dans le projet?",
-              a: "Le design intervient au tout début, avant la fabrication. On commence par analyser l'espace réel (mesures, circulation, plomberie et électricité), puis on valide la logique d'aménagement, les hauteurs, les zones de rangement et les choix de matériaux et de finis. Une fois ces décisions arrêtées et validées avec vous, elles servent de référence stable pour la fabrication et l'installation — ce qui limite les changements coûteux en cours de route.",
+              q: "Peut-on modifier le plan après signature ?",
+              a: "Oui, tant que la production n'est pas lancée. Ensuite, tout changement passe par un avenant écrit, avec son coût et son effet sur l'échéancier.",
             },
           ],
         },
@@ -222,9 +174,9 @@ export const designPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Parlez-nous de votre projet",
+          heading: "Commencer par les plans de votre projet",
           intro:
-            "Dites-nous votre espace, votre secteur et votre échéance. On vous aide à cadrer un projet réaliste et exécutable.",
+            "Décrivez-nous la pièce et la date qui vous convient, on vous rappelle.",
           actions: [
             {
               label: "Demander une soumission",
@@ -237,7 +189,7 @@ export const designPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Réponse généralement sous 24-48 h.",
+          note: "Premier retour sous 24 à 48 heures ouvrables.",
         },
       },
     },

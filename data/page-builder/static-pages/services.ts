@@ -4,22 +4,29 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Armoires sur mesure à Montréal — nos services",
+    title: "Services de rénovation et construction résidentielle",
     description:
-      "Services Dilamco : design, fabrication sur mesure, installation et rénovation clé en main.",
+      "Entrepreneur général à Montréal : cuisine, salle de bain, sous-sol, plancher, agrandissement, après sinistre. Licence RBQ, contrat écrit.",
     path: "/services",
-    ogAlt: "Services Dilamco",
+    ogAlt: "Services de rénovation Dilamco, entrepreneur général",
   },
   breadcrumbs: [
     { name: "Accueil", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services" },
   ],
   service: {
-    name: "Services Dilamco",
+    name: "Services d'entrepreneur général",
     description:
-      "Design, fabrication sur mesure, installation et rénovation clé en main selon la portée du projet.",
+      "Rénovation résidentielle et commerciale coordonnée par un entrepreneur général titulaire de la licence RBQ 8306-0806-27 : permis, corps de métier, échéancier et contrat écrit.",
     url: SITE.url + "/services",
-    serviceType: "Services sur mesure",
+    serviceType: "Entrepreneur général en rénovation",
+    areaServed: [
+      "Montréal",
+      "Ouest-de-l'Île",
+      "Laval",
+      "Rive-Sud",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -27,70 +34,22 @@ export const page: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          heading:
-            "Services : design, fabrication, installation et rénovation clé en main",
+          badges: ["RBQ 8306-0806-27", "Depuis 2004", "Contrat écrit"],
+          heading: "Rénovation résidentielle, commerciale et armoires sur mesure",
           description:
-            "Selon le projet, nous prenons en charge l'ensemble du plan à la finition.",
+            "Un entrepreneur général licencié rénove vos pièces et fournit vos armoires, sous le même contrat.",
           actions: [
             {
-              label: "Demander une soumission",
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "Voir nos réalisations",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
-          badges: ["Design", "Fabrication", "Installation", "Coordination"],
-          image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Vue d'ensemble des services Dilamco",
-          },
-          caption: "De la planification à l'installation selon la portée",
-        },
-      },
-    },
-    {
-      id: "primary-services",
-      content: {
-        type: "grid",
-        variant: "link-cards-compact",
-        props: {
-          heading: "Nos services principaux",
-          intro: "Choisissez le service qui correspond à votre étape.",
-          columns: "2",
-          items: [
-            {
-              title: "Design",
-              description: "Cadrage du plan, ergonomie et choix de matériaux.",
-              href: "/services/design",
-              badges: ["Planification", "Usage"],
-              ctaLabel: "Voir le design",
-            },
-            {
-              title: "Fabrication",
-              description: "Production sur mesure orientée durabilité.",
-              href: "/services/fabrication",
-              badges: ["Sur mesure", "Durabilité"],
-              ctaLabel: "Voir la fabrication",
-            },
-            {
-              title: "Installation",
-              description: "Ajustements et finition sur place.",
-              href: "/services/installation",
-              badges: ["Pose", "Précision"],
-              ctaLabel: "Voir l'installation",
-            },
-            {
-              title: "Rénovation clé en main",
-              description: "Coordination des travaux connexes selon le projet.",
+              label: "Rénovation clé en main",
               href: "/services/renovation",
-              badges: ["Coordination", "Exécution"],
-              ctaLabel: "Voir la rénovation",
+              variant: "ghost",
             },
           ],
         },
@@ -100,107 +59,194 @@ export const page: PageTemplateData = {
       id: "renovation-types",
       content: {
         type: "grid",
-        variant: "link-cards-compact",
+        variant: "image-cards-slider",
         props: {
-          heading: "Rénovation par type",
-          columns: "2",
+          heading: "Ce que nous prenons en charge",
           items: [
             {
-              title: "Rénovation de cuisine",
+              title: "Cuisine",
               href: "/services/renovation/cuisine",
-              badges: ["Cuisine", "Coordination"],
-              ctaLabel: "Voir cuisine",
+              description:
+                "Nous démolissons, refaisons la plomberie et posons les armoires.",
+              image: {
+                src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+                alt: "Cuisine shaker en U avec dosseret métro",
+              },
+              badges: ["Multi-métiers"],
+              footerCtaLabel: "Voir la cuisine",
             },
             {
-              title: "Rénovation salle de bain",
+              title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
-              badges: ["Humidité", "Technique"],
-              ctaLabel: "Voir salle de bain",
+              description:
+                "Nous rendons la douche étanche avant de poser la céramique.",
+              image: {
+                src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
+                alt: "Salle de bain avec meuble-lavabo flottant et marbre",
+              },
+              badges: ["Étanchéité"],
+              footerCtaLabel: "Voir la salle de bain",
             },
             {
-              title: "Rénovation de plancher",
+              title: "Sous-sol",
+              href: "/services/renovation/sous-sol",
+              description:
+                "Nous vérifions l'humidité, obtenons le permis, puis finissons.",
+              image: {
+                src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
+                alt: "Sous-sol aménagé en salle de jeux",
+              },
+              badges: ["Permis"],
+              footerCtaLabel: "Voir le sous-sol",
+            },
+            {
+              title: "Plancher",
               href: "/services/renovation/plancher",
-              badges: ["Transitions", "Finition"],
-              ctaLabel: "Voir plancher",
+              description:
+                "Nous arrachons, réparons le dessous, puis posons le neuf.",
+              image: {
+                src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
+                alt: "Pose de plancher de bois franc dans une résidence",
+              },
+              badges: ["Bois franc"],
+              footerCtaLabel: "Voir le plancher",
             },
             {
-              title: "Agrandissement de maison",
+              title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
-              badges: ["Portée", "Coordination"],
-              ctaLabel: "Voir l'agrandissement",
+              description:
+                "Nous ajoutons une pièce et la raccordons à votre maison.",
+              image: {
+                src: "/images/generated/renovation/renovation-extension-hero-01.webp",
+                alt: "Agrandissement arrière d'une maison unifamiliale",
+              },
+              badges: ["Ingénieur"],
+              footerCtaLabel: "Voir l'agrandissement",
+            },
+            {
+              title: "Après sinistre",
+              href: "/services/renovation/apres-sinistre",
+              description:
+                "Nous remettons la maison en état après l'eau ou le feu.",
+              image: {
+                src: "/images/generated/services/service-renovation-project-01.webp",
+                alt: "Pièce remise en état après un sinistre",
+              },
+              badges: ["Assurances"],
+              footerCtaLabel: "Voir l'après sinistre",
+            },
+            {
+              title: "Aménagement commercial",
+              href: "/espaces/commercial",
+              description:
+                "Nous aménageons bureaux et commerces, sous la catégorie RBQ 1.3.",
+              image: {
+                src: "/images/generated/spaces/espaces-card-commercial-01.webp",
+                alt: "Aménagement commercial livré prêt à occuper",
+              },
+              badges: ["RBQ 1.3"],
+              footerCtaLabel: "Voir le commercial",
+            },
+            {
+              title: "Design d'armoires",
+              href: "/services/design",
+              description:
+                "Nous dessinons vos armoires et choisissons les finis avec vous.",
+              image: {
+                src: "/images/generated/services/service-design-hero-01.webp",
+                alt: "Séance de design d'armoires sur mesure",
+              },
+              badges: ["Sous-catégorie 12"],
+              footerCtaLabel: "Voir le design",
+            },
+            {
+              title: "Production des armoires",
+              href: "/services/fabrication",
+              description:
+                "Vos armoires sont produites par notre usine partenaire.",
+              image: {
+                src: "/images/generated/services/service-fabrication-hero-01.webp",
+                alt: "Caissons et façades d'armoires sur mesure",
+              },
+              badges: ["Sur mesure"],
+              footerCtaLabel: "Voir la production",
+            },
+            {
+              title: "Installation",
+              href: "/services/installation",
+              description:
+                "Nous posons les armoires, ajustons les portes et branchons tout.",
+              image: {
+                src: "/images/generated/services/service-installation-hero-01.webp",
+                alt: "Installation d'armoires sur mesure pendant un chantier",
+              },
+              badges: ["Nos équipes"],
+              footerCtaLabel: "Voir l'installation",
             },
           ],
         },
       },
     },
     {
-      id: "turnkey-approach",
-      frame: { surface: "muted" },
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "fact-sheet",
         props: {
-          heading: "Quand choisir une approche clé en main",
-          intro:
-            "Cette approche devient pertinente quand le projet dépasse la seule fabrication et installation d'armoires.",
-          badges: ["Cuisine", "Salle de bain", "Coordination"],
-          cardTitle: "Situations où l'approche est pertinente",
-          items: [
-            "Rénovation complète de cuisine.",
-            "Salle de bain avec contraintes techniques.",
-            "Projet multi-intervenants.",
-          ],
-          actions: [
+          heading: "Ce qu'il faut savoir sur Dilamco",
+          intro: "Les faits vérifiables avant de nous confier un chantier.",
+          rows: [
             {
-              label: "Voir la rénovation",
-              href: "/services/renovation",
-              variant: "ghost",
+              label: "Notre licence RBQ",
+              value: "Le numéro 8306-0806-27, délivré le 7 septembre 2004, sans restriction",
             },
             {
-              label: "Parler de votre projet",
+              label: "Ce que la licence couvre",
+              value: "Les catégories 1.2 et 1.3, plus les armoires et les comptoirs",
+            },
+            {
+              label: "Construisez-vous du neuf",
+              value: "Non. Nous travaillons seulement sur des bâtiments déjà construits",
+            },
+            {
+              label: "Où nous sommes",
+              value: "À Pierrefonds-Roxboro, dans l'Ouest-de-l'Île",
+            },
+            {
+              label: "Qui s'occupe de vous",
+              value: "La même personne, du devis jusqu'au dernier paiement",
+            },
+            {
+              label: "Combien coûte une estimation",
+              value: "Rien. Nous venons chez vous et vous n'avez aucune obligation",
+            },
+          ],
+          note: "Licence vérifiable au registre de la Régie du bâtiment du Québec.",
+        },
+      },
+    },
+    {
+      id: "cta",
+      content: {
+        type: "cta",
+        variant: "band-split-actions",
+        props: {
+          heading: "Quel service correspond à votre projet ?",
+          intro:
+            "Décrivez la pièce ou le bâtiment. Nous vous dirons quelle équipe s'en occupe.",
+          actions: [
+            {
+              label: "Estimation gratuite",
               href: "/contact",
               variant: "primary",
             },
-          ],
-        },
-      },
-    },
-    {
-      id: "quality",
-      content: {
-        type: "grid",
-        variant: "link-cards-compact",
-        props: {
-          heading: "Qualité et durabilité",
-          intro:
-            "Le haut de gamme repose sur un système cohérent : matériaux, assemblage, quincaillerie et installation.",
-          columns: "3",
-          items: [
             {
-              title: "Pourquoi le contreplaqué",
-              description:
-                "Voir pourquoi la structure du panneau change la stabilité et la longévité.",
-              href: "/materiaux/contreplaque",
-              badges: ["Structure", "Durabilité"],
-              ctaLabel: "Voir le contreplaqué",
-            },
-            {
-              title: "Quincaillerie",
-              description:
-                "Comprendre l'impact des mécanismes sur le confort d'usage et l'usure.",
-              href: "/materiaux/quincaillerie",
-              badges: ["Usage", "Précision"],
-              ctaLabel: "Voir la quincaillerie",
-            },
-            {
-              title: "Tous les matériaux",
-              description:
-                "Comparer les options selon l'espace, l'humidité et la finition attendue.",
-              href: "/materiaux",
-              badges: ["Comparatif", "Choix techniques"],
-              ctaLabel: "Voir les matériaux",
+              label: "Voir les zones desservies",
+              href: "/zones",
+              variant: "ghost",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île et Grand Montréal",
         },
       },
     },

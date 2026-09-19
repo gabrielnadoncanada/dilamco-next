@@ -18,15 +18,33 @@ const contactFormSchema = z.object({
     .min(7, "Entrez un numero de telephone valide.")
     .max(40),
   ville: z.string().trim().min(2, "Entrez votre ville ou secteur.").max(120),
+  // Types de projet d'un entrepreneur général (pivot 2026-09) ; les anciennes
+  // valeurs armoires restent acceptées pour ne casser aucun formulaire en vol.
   espace: z.enum(
-    ["cuisine", "salle-de-bain", "walk-in", "salle-de-lavage", "commercial"],
+    [
+      "cuisine",
+      "salle-de-bain",
+      "sous-sol",
+      "agrandissement",
+      "plancher",
+      "apres-sinistre",
+      "renovation-complete",
+      "armoires",
+      "walk-in",
+      "salle-de-lavage",
+      "commercial",
+      "autre",
+    ],
     {
-      error: () => ({ message: "Selectionnez un type d'espace." }),
+      error: () => ({ message: "Selectionnez un type de projet." }),
     },
   ),
-  type_projet: z.enum(["sur-mesure", "renovation", "a-determiner"], {
-    error: () => ({ message: "Selectionnez la nature du projet." }),
-  }),
+  type_projet: z.enum(
+    ["cle-en-main", "armoires-seulement", "sur-mesure", "renovation", "a-determiner"],
+    {
+      error: () => ({ message: "Selectionnez la nature du projet." }),
+    },
+  ),
   budget: z.enum(
     [
       "moins-15000",
@@ -54,13 +72,22 @@ const contactFormSchema = z.object({
 
 const labelMap = {
   espace: {
-    cuisine: "Cuisine",
-    "salle-de-bain": "Salle de bain / vanite",
+    cuisine: "Renovation de cuisine",
+    "salle-de-bain": "Renovation de salle de bain",
+    "sous-sol": "Finition de sous-sol",
+    agrandissement: "Agrandissement de maison",
+    plancher: "Plancher",
+    "apres-sinistre": "Apres sinistre (eau, feu)",
+    "renovation-complete": "Renovation complete / plusieurs pieces",
+    armoires: "Armoires sur mesure seulement",
     "walk-in": "Walk-in / rangement",
     "salle-de-lavage": "Salle de lavage",
     commercial: "Commercial",
+    autre: "Autre",
   },
   type_projet: {
+    "cle-en-main": "Cle en main (entrepreneur general, permis et coordination)",
+    "armoires-seulement": "Armoires sur mesure seulement",
     "sur-mesure": "Sur mesure (design + fabrication + installation)",
     renovation: "Renovation avec coordination",
     "a-determiner": "A determiner / besoin de conseils",

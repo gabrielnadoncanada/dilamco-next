@@ -261,4 +261,4 @@ export const MOBILE_BUTTONS: NavAction[] = [
 
 export const DEFAULT_MOBILE_BREAKPOINT = 1024;
 
-export const DESKTOP_GROUP_WIDTH = 248;
+export const DESKTOP_GROUP_WIDTH = 272;

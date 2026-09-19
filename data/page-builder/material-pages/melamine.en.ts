@@ -23,10 +23,10 @@ export const melaminePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materials",
-          heading: "Melamine: uses, limits and alternatives",
+          eyebrow: "Materials",
+          heading: "Melamine, the budget choice that wipes clean",
           description:
-            "Melamine is a panel (particleboard or MDF) covered with a thermofused decorative layer, offering a wide variety of finishes at a controlled cost. Its durability depends mainly on the quality of the edges, real use and installation precision.",
+            "The panel arrives already finished, so there is nothing to paint and the surface washes down.",
           actions: [
             {
               label: "Request a quote",
@@ -34,215 +34,88 @@ export const melaminePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
+              label: "See the comparison",
               href: "/materiaux/comparatif",
               variant: "ghost",
             },
           ],
-          badges: ["Decor", "Maintenance", "Controlled cost"],
-          image: {
-            src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Melamine-type decorative finishes",
-          },
-          caption:
-            "Relevant in some contexts, less forgiving in others",
-        },
-      },
-    },
-    {
-      id: "overview",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What melamine brings",
-          description:
-            "Melamine is a panel covered with a decorative surface. It can be very relevant for some projects thanks to its variety of decors and its easy maintenance.",
-          cards: [
-            {
-              title: "Wide variety of finishes",
-              description: "Wood, solids, textures and other decors available.",
-            },
-            {
-              title: "Easy maintenance",
-              description:
-                "A concrete advantage in many everyday uses.",
-            },
-            {
-              title: "Often controlled cost",
-              description:
-                "Particularly appealing for certain budgets and project scopes.",
-            },
-            {
-              title: "Edge sensitivity",
-              description:
-                "Impacts and infiltration are often decisive there.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "fit",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "When melamine is a good choice",
-          intro:
-            "Melamine becomes relevant when the project values decor, maintenance and a better-framed cost above all, while keeping a rigorous execution.",
-          badges: ["Decor", "Interiors", "Budget"],
-          cardTitle: "Good use of melamine",
-          items: [
-            "Target components or interiors",
-            "Projects oriented toward decor and rationalization",
-            "Configurations where the edges are well handled",
-            "Choices combined with other materials for critical zones",
-          ],
-          actions: [
-            {
-              label: "View all materials",
-              href: "/materiaux",
-              variant: "primary",
-            },
-            {
-              label: "View design",
-              href: "/services/design",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Limits to watch for",
-          intro:
-            "Melamine can degrade if moisture seeps in, especially through the edges. Execution and the use context therefore matter a great deal.",
-          items: [
-            {
-              title: "Sensitive edges.",
-              description: "They must be well chosen and well executed.",
-            },
-            {
-              title: "Moisture to manage.",
-              description:
-                "Wet zones require particular attention.",
-            },
-            {
-              title: "Less discreet repairs.",
-              description:
-                "Damage is often harder to make invisible.",
-            },
-          ],
-          actions: [
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Compare with MDF",
-              href: "/materiaux/mdf",
-              variant: "ghost",
-            },
-          ],
+          badges: ["Decor", "Easy care", "Budget"],
           image: {
             src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-            alt: "Decorative melamine panels",
+            alt: "Close-up of a melamine panel and its edge band",
           },
-          cardTitle: "Recommended approach",
-          cardDescription:
-            "Melamine works best when used in a targeted way, with a clear logic on the sensitive zones.",
+          caption: "Cabinet interiors and tight budgets",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "related",
-      frame: { surface: "muted" },
+      id: "fiche",
       content: {
-        type: "grid",
-        variant: "image-cards-slider",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Compare with the other options",
-          items: [
+          heading: "What you should know about melamine",
+          intro: "What it does well, and the detail that decides how long it lasts.",
+          rows: [
             {
-              title: "Full comparison",
-              href: "/materiaux/comparatif",
-              description: "Understand the right use of each option.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Visual comparison of several cabinet materials",
-              },
-              badges: ["Comparison"],
-              footerCtaLabel: "View the page",
+              label: "What it is made of",
+              value:
+                "A printed paper heat-bonded onto a wood fibreboard core.",
             },
             {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "More oriented toward painted finish.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "MDF panel with a painted finish",
-              },
-              badges: ["Paint"],
-              footerCtaLabel: "View the page",
+              label: "Does it handle humidity?",
+              value:
+                "The surface does. Water gets in through an edge that was not closed properly.",
             },
             {
-              title: "Plywood",
-              href: "/materiaux/contreplaque",
-              description: "More oriented toward durable structure.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Plywood detail for custom cabinets",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "View the page",
+              label: "Upkeep",
+              value:
+                "A damp cloth does the job, with no powder or scouring pad.",
             },
             {
-              title: "Colours and finishes",
-              href: "/materiaux/couleurs",
-              description: "The decor must stay consistent with the use.",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Colour and finish samples for custom furniture",
-              },
-              badges: ["Finish"],
-              footerCtaLabel: "View the page",
+              label: "Best used for",
+              value:
+                "Cabinet interiors, shelves and the storage nobody sees.",
+            },
+            {
+              label: "Price against the others",
+              value:
+                "It is the cheapest cabinet material there is.",
+            },
+            {
+              label: "Finishes offered",
+              value:
+                "Plain or wood-look decors, with a PVC edge band of at least 1 mm.",
             },
           ],
+          note: "A chip cannot be repaired. We replace the part instead.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - melamine",
+          heading: "Questions about melamine",
           items: [
             {
-              q: "Is melamine low-end?",
-              a: "Not necessarily. Melamine covers a broad category: its quality depends on the substrate, the thickness, the finish and above all the edge treatment. Well installed, with quality edges, it offers a scratch-resistant, easy-to-maintain surface that is relevant for many projects. What lets it down is sloppy execution or prolonged exposure to moisture through poorly sealed edges — not the material itself.",
+              q: "Does melamine yellow over time?",
+              a: "Today's whites hold, even beside a window. It was the very glossy decors of older series that turned, not the panels made now.",
             },
             {
-              q: "Does melamine swell?",
-              a: "It can degrade if moisture seeps in, especially through the edges.",
+              q: "Can you drill without chipping the decor?",
+              a: "Yes, with a centre-point bit and tape over the line. It is a question of tooling, not of panel.",
             },
             {
-              q: "Melamine or MDF?",
-              a: "The two serve different needs. MDF is preferred when you want a perfectly uniform painted surface (smooth doors, custom colour). Melamine arrives already finished with a thermofused decor: it offers a wide choice of colours and wood looks at a controlled cost, with no painting step. The choice depends on the finish you want, the budget and the real use of the room.",
+              q: "Melamine or laminate on a door?",
+              a: "Laminate is thicker and takes knocks better, at a higher price. Melamine is enough as soon as a door is not opened fifty times a day.",
             },
             {
-              q: "Is it recommended in a bathroom?",
-              a: "It depends on the context. Ventilation and execution quality are critical there.",
+              q: "Does it suit a laundry room?",
+              a: "Yes, that is one of its strongest settings. Washable surfaces, shelves that do not stain, and a cost that leaves budget for the visible areas.",
             },
           ],
         },
@@ -254,9 +127,9 @@ export const melaminePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want to know if melamine is the right fit here?",
+          heading: "Bringing your kitchen within budget",
           intro:
-            "We help you see whether it is consistent for your space, or whether another combination will be more durable.",
+            "We put melamine where it will not show and keep the money for the fronts.",
           actions: [
             {
               label: "Request a quote",
@@ -264,8 +137,8 @@ export const melaminePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
-              href: "/materiaux/comparatif",
+              label: "Compare with MDF",
+              href: "/materiaux/mdf",
               variant: "ghost",
             },
           ],

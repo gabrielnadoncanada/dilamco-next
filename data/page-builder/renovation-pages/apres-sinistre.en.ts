@@ -4,27 +4,35 @@ import { SITE } from "@/seo/schema/site";
 export const renovationApresSinistrePageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Water damage restoration in the West Island & Pierrefonds",
+    title: "Disaster rebuild in Pierrefonds and the West Island",
     description:
-      "Rebuilding after water damage or a flood: damage assessment, insurance claim support, custom fabrication and installation in Pierrefonds-Roxboro, the West Island and Greater Montreal.",
+      "Rebuilding after water damage, fire, smoke or mould: scope documented for your insurer, permits and construction. RBQ-licensed contractor.",
     path: "/services/renovation/apres-sinistre",
-    ogAlt: "Dilamco water damage restoration",
+    ogAlt: "Disaster rebuild by a general contractor",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
     { name: "Services", url: SITE.url + "/services" },
     { name: "Renovation", url: SITE.url + "/services/renovation" },
     {
-      name: "Water damage restoration",
+      name: "Disaster rebuild",
       url: SITE.url + "/services/renovation/apres-sinistre",
     },
   ],
   service: {
-    name: "Water damage restoration",
+    name: "Disaster rebuild",
     description:
-      "Rebuilding after water damage or a flood: damage assessment, coordination, custom fabrication and installation, with insurance claim support, in Pierrefonds-Roxboro and the West Island.",
+      "Rebuilding after water damage, fire, smoke or mould by a general contractor: damage assessment, detailed scope and quote for the insurance claim, permits, trade coordination and full restoration.",
     url: SITE.url + "/services/renovation/apres-sinistre",
-    serviceType: "Water damage restoration",
+    serviceType: "Disaster rebuild",
+    areaServed: [
+      "Pierrefonds-Roxboro",
+      "West Island",
+      "Montreal",
+      "Laval",
+      "South Shore",
+      "Vaudreuil-Soulanges",
+    ],
   },
   blocks: [
     {
@@ -34,11 +42,10 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Renovation",
-          heading:
-            "Water damage restoration: rebuilding properly after a flood, in Pierrefonds and the West Island",
+          eyebrow: "Disaster rebuild",
+          heading: "Rebuilding after water damage or a fire",
           description:
-            "Once the water is out and the space is dry, the rebuild begins. We take over the renovation: restoring flooded basements, kitchens, bathrooms and floors with the same fabrication standards as our custom projects. Based in Pierrefonds-Roxboro, we know the buildings in the affected area.",
+            "We come in once the place is dry, describe the damage room by room, then rebuild.",
           actions: [
             {
               label: "Request an assessment",
@@ -46,201 +53,113 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See basement renovation",
-              href: "/espaces/sous-sol",
+              label: "See the basement",
+              href: "/services/renovation/sous-sol",
               variant: "ghost",
             },
           ],
-          badges: ["After water damage", "Rebuild", "West Island"],
+          badges: ["Insurance file", "West Island"],
           image: {
-            src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-            alt: "Basement rebuilt after water damage",
+            src: "/images/generated/services/service-renovation-project-02.webp",
+            alt: "Room rebuilt after water damage",
           },
-          caption: "Pierrefonds-Roxboro, DDO, the West Island and Greater Montreal",
+          imageSide: "left",
+          caption: "Pierrefonds-Roxboro and the West Island",
         },
       },
     },
     {
-      id: "problems",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "Why rebuilding after water damage is different",
-          description:
-            "Rebuilding after a flood is not an ordinary renovation. You have to deal with sometimes hidden damage, a timeline driven by insurance, and the need to return to a healthy home, not just a refinished one.",
-          cards: [
-            {
-              title: "Underestimated damage",
-              description:
-                "Water travels behind finishes. A scope set too quickly misses hidden damage that resurfaces later.",
-            },
-            {
-              title: "Timeline under pressure",
-              description:
-                "Between drying, insurance and getting back to normal, decisions pile up fast. A clear sequence avoids rework.",
-            },
-            {
-              title: "Claim to document",
-              description:
-                "A well-built file — scope, photos, detailed quote — makes the claim smoother and reduces gaps with the insurer.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "approach",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Our approach: rebuild, not just patch",
-          intro:
-            "The emergency market (drying, decontamination) is a separate step. We handle what comes next: a durable rebuild, with material and fabrication choices made to last.",
-          items: [
-            {
-              title: "Damage assessment",
-              description:
-                "We document the real extent of the damage before setting a scope, to avoid surprises mid-project.",
-            },
-            {
-              title: "Insurance claim support",
-              description:
-                "Detailed quote, photos and a clear scope: a file that speaks the insurer's language and supports your claim.",
-            },
-            {
-              title: "Moisture-aware materials",
-              description:
-                "Material and finish choices that make sense for a space that has already taken on water, especially basements.",
-            },
-            {
-              title: "Custom fabrication and install",
-              description:
-                "Cabinets, storage and finishes built and installed to the same standard as our regular projects.",
-            },
-          ],
-          actions: [
-            {
-              label: "See renovation service",
-              href: "/services/renovation",
-              variant: "ghost",
-            },
-            {
-              label: "See basement renovation",
-              href: "/espaces/sous-sol",
-              variant: "ghost",
-            },
-          ],
-          image: {
-            src: "/images/generated/renovation/renovation-plancher-approach-01.webp",
-            alt: "Floor rebuilt after water damage",
-          },
-          cardTitle: "What we protect",
-          cardDescription:
-            "A space rebuilt after a flood must become healthy and durable again, not just presentable. The value is in what you no longer see once the work is done.",
-        },
-      },
-    },
-    {
-      id: "included",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Typical sequence of a post-flood rebuild",
-          intro:
-            "The exact scope is confirmed after the assessment and based on your insurance coverage, but the logic stays the same: assess, document, fabricate, coordinate and install cleanly.",
-          steps: [
-            {
-              number: "1",
-              title: "Assessment",
-              description:
-                "Survey of visible and hidden damage, measuring the extent to rebuild.",
-            },
-            {
-              number: "2",
-              title: "File",
-              description:
-                "Detailed quote and documentation to support the insurance claim.",
-            },
-            {
-              number: "3",
-              title: "Design",
-              description:
-                "Layout of the restored space and choice of moisture-aware materials.",
-            },
-            {
-              number: "4",
-              title: "Fabrication",
-              description:
-                "Custom cabinets, storage and finishes prepared ahead of the worksite.",
-            },
-            {
-              number: "5",
-              title: "Installation",
-              description:
-                "Coordination of related work and careful install for a functional space again.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "technical",
+      id: "sinistres",
       content: {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Technical points that matter after water damage",
+          heading: "What we rebuild after a loss",
           intro:
-            "The quality of a rebuild comes down to decisions that seem minor but determine whether the problem comes back.",
+            "Pumping and decontamination are done by emergency firms. We rebuild afterwards.",
           columns: "2",
           items: [
             {
-              title: "Basement and lower walls",
-              description:
-                "The area most affected by floods needs particular attention.",
-              icon: "package2",
+              title: "Water damage",
+              description: "Sewer backup, burst pipe or flooding",
+              icon: "droplets",
               bullets: [
-                "Finishes and materials chosen with residual moisture in mind.",
-                "Lower-wall details designed for a return to a healthy space.",
-                "Storage and cabinets built to last in the rebuilt room.",
+                "We open the walls to see how far the water went",
+                "We replace the drywall, the insulation and the subfloor",
+                "We check the joists before anything closes",
               ],
             },
             {
-              title: "Floors",
-              description:
-                "Flooring almost always needs full replacement after a flood.",
-              icon: "slidersHorizontal",
+              title: "Fire and smoke",
+              description: "Soot and odour stay inside the materials",
+              icon: "hardHat",
               bullets: [
-                "Subfloor preparation before the new covering is laid.",
-                "Choice consistent with the room's use and location.",
-                "Clean transitions with the elements being kept.",
+                "We demolish the affected sections completely",
+                "We rebuild the structure, the walls and the roof to drawings",
+                "We rebuild the room, from the framing to the paint",
               ],
             },
             {
-              title: "Cabinets and fabrication",
-              description:
-                "Modules swollen or stained by water must be replaced, not hidden.",
-              icon: "doorOpen",
+              title: "Mould",
+              description: "Almost always the result of a slow leak",
+              icon: "shieldCheck",
               bullets: [
-                "Solid birch wood for drawers.",
-                "Birch plywood to better carry the load.",
-                "Controlled fabrication at our partner factory, no improvised assembly.",
+                "We rebuild after the specialized decontamination",
+                "We correct the cause: ventilation, sealing or drain",
+                "We choose materials that handle humidity",
               ],
             },
             {
-              title: "Site coordination",
-              description:
-                "A clean rebuild depends on a properly sequenced site.",
-              icon: "wrench",
+              title: "Flooded basement",
+              description: "The most common case near the river",
+              icon: "layers",
               bullets: [
-                "Step order framed after drying.",
-                "Fewer reworks between fabrication and installation.",
-                "Clear follow-up through to handover.",
+                "We cut the finishes and insulation back to sound height",
+                "We re-examine the drain, the pump and the cracks",
+                "We apply for the permit if the basement is refinished",
               ],
+            },
+          ],
+        },
+      },
+    },
+    {
+      id: "process",
+      content: {
+        type: "process",
+        variant: "horizontal-steps-cards",
+        props: {
+          heading: "How a rebuild unfolds",
+          steps: [
+            {
+              number: "1",
+              title: "Site visit",
+              description:
+                "We come once the place is dry and open the walls in spots.",
+            },
+            {
+              number: "2",
+              title: "Description and price",
+              description:
+                "We describe the damage room by room, with photos and a price.",
+            },
+            {
+              number: "3",
+              title: "Contract and permit",
+              description:
+                "We sign, then file an application if the structure is affected.",
+            },
+            {
+              number: "4",
+              title: "Demolition",
+              description:
+                "We remove the damaged materials and log any hidden damage.",
+            },
+            {
+              number: "5",
+              title: "Rebuild",
+              description:
+                "Plumbing, wiring, drywall, paint, floors, then the keys go back.",
             },
           ],
         },
@@ -250,109 +169,49 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
       id: "assurance",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "list-actions-image-card",
         props: {
-          heading: "Insurance claim: what we bring to the file",
-          description:
-            "Rebuilding is simpler when the insurance file is solid. Without replacing your insurer or adjuster, we provide the material the claim needs.",
-          cards: [
-            {
-              title: "Documented scope",
-              description:
-                "A clear description of the rebuild work, room by room, with supporting photos.",
-            },
-            {
-              title: "Detailed quote",
-              description:
-                "Transparent pricing that separates what stems from the claim and what is a chosen upgrade.",
-            },
-            {
-              title: "Single point of contact",
-              description:
-                "One person responsible for the rebuild, from survey to handover, to limit grey areas.",
-            },
-          ],
-          columns: "1",
-        },
-      },
-    },
-    {
-      id: "intégration",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "The spaces we rebuild most often",
+          heading: "What we provide for your claim",
           intro:
-            "After water damage, it is mostly the basement, kitchen and floors that need rebuilding. Each space has its own page.",
+            "We replace neither your insurer nor the adjuster. We provide the technical documents.",
           items: [
             {
-              title: "Basement renovation",
-              href: "/espaces/sous-sol",
-              description:
-                "The space most exposed to floods. Full rebuild, from lower walls to storage.",
-              image: {
-                src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
-                alt: "Basement rebuilt after water damage",
-              },
-              badges: ["Basement", "After flood"],
-              footerCtaLabel: "See basement",
+              title: "The list of damage, room by room",
+              description: "every item described, instead of one lump sum.",
             },
             {
-              title: "Kitchen renovation",
-              href: "/services/renovation/cuisine",
+              title: "A price for each kind of work",
               description:
-                "When water reaches the kitchen, cabinets and base units often need replacing.",
-              image: {
-                src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
-                alt: "Kitchen rebuilt after water damage",
-              },
-              badges: ["Kitchen", "Rebuild"],
-              footerCtaLabel: "See kitchen",
+                "demolition, plumbing, materials and finishing costed separately.",
             },
             {
-              title: "Flooring renovation",
-              href: "/services/renovation/plancher",
-              description:
-                "Floor coverings almost always need redoing after a flood.",
-              image: {
-                src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
-                alt: "Flooring rebuilt after water damage",
-              },
-              badges: ["Flooring", "Covering"],
-              footerCtaLabel: "See flooring",
+              title: "Photos of everything",
+              description: "the state before work, the openings made, the hidden damage.",
+            },
+            {
+              title: "Upgrades kept apart",
+              description: "anything unrelated to the loss sits on its own lines.",
             },
           ],
-        },
-      },
-    },
-    {
-      id: "proof",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What a well-run rebuild should deliver",
-          description:
-            "Proof of competence is not a quick finish. It shows in a space that becomes healthy, durable and coherent again, without the damage resurfacing a few months later.",
-          cards: [
+          actions: [
             {
-              title: "A healthy space again",
-              description:
-                "Affected areas are rebuilt, not hidden, so the problem does not come back.",
+              label: "Turnkey renovation",
+              href: "/services/renovation",
+              variant: "ghost",
             },
             {
-              title: "A readable site",
-              description:
-                "Less uncertainty about sequence and responsibilities, during an already trying time.",
-            },
-            {
-              title: "A clean file",
-              description:
-                "Documentation that supports the claim and clarifies what was rebuilt.",
+              label: "Request an assessment",
+              href: "/contact",
+              variant: "primary",
             },
           ],
-          columns: "1",
+          image: {
+            src: "/images/generated/services/service-renovation-project-03.webp",
+            alt: "Damage assessment before a room is rebuilt",
+          },
+          cardTitle: "One person to talk to",
+          cardDescription:
+            "The same contractor signs the quote, coordinates the trades and answers the claims adjuster's questions.",
         },
       },
     },
@@ -362,33 +221,27 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - water damage restoration",
-          intro:
-            "Clear answers on insurance, timelines, drying and scope of work.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "Do you handle emergency drying?",
-              a: "No. Drying, pumping and decontamination are emergency steps handled by specialized firms. We take over the rebuild that follows, once the space is dry.",
+              q: "Do you handle pumping and drying?",
+              a: "No. Emergency work, pumping and decontamination go to specialized firms, often sent by the insurer. We take over once the place is dry.",
             },
             {
-              q: "Do you work with my insurance?",
-              a: "We provide the scope of work, a detailed quote and the photo documentation your claim needs. You remain the insurer's contact; we support the rebuild file.",
+              q: "Do you work with my insurer?",
+              a: "We hand over the list of damage, the detailed price and the photos your claim needs, and we answer the adjuster. You remain the insured and the contact.",
             },
             {
-              q: "Do you serve Pierrefonds-Roxboro and the West Island?",
-              a: "Yes. We are based in Pierrefonds-Roxboro and work across the West Island, DDO and Greater Montreal — the area most affected by the recent floods.",
+              q: "Can I choose my own contractor after a loss?",
+              a: "As a rule yes, even when the insurer suggests firms from its network. Check your policy. We provide what is needed so our price can be compared.",
             },
             {
-              q: "How soon after the damage can work start?",
-              a: "The rebuild starts once drying is complete and the scope is confirmed. We can run the assessment and build the file in parallel to save time.",
+              q: "What if you uncover more damage?",
+              a: "That is common behind a flooded wall. We photograph it, price it in writing and let you add to your claim before we carry on.",
             },
             {
-              q: "Which spaces do you rebuild?",
-              a: "Mostly basements, kitchens, bathrooms and floors affected by water, with custom cabinet and storage fabrication.",
-            },
-            {
-              q: "Where can I see your full basement approach?",
-              a: "The basement renovation page details possible layouts and finish level. For a rebuild after water damage, that page is the logical next step.",
+              q: "Is a permit required to rebuild?",
+              a: "Often. As soon as the rebuild touches the structure, moves plumbing or refinishes a basement as living space, the city requires one. We file the application.",
             },
           ],
         },
@@ -400,9 +253,9 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Water damage to rebuild in the West Island?",
+          heading: "Have the damage assessed at your home",
           intro:
-            "We assess the damage, build the insurance file and rebuild properly. Request an assessment to frame the next steps.",
+            "We document the damage, build the quote, then rebuild under a single contract.",
           actions: [
             {
               label: "Request an assessment",
@@ -410,12 +263,12 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "See basement renovation",
-              href: "/espaces/sous-sol",
+              label: "See our service areas",
+              href: "/zones",
               variant: "ghost",
             },
           ],
-          note: "Rebuilding after water damage, Pierrefonds-Roxboro and the West Island",
+          note: "RBQ licence 8306-0806-27 · Pierrefonds-Roxboro and Greater Montreal",
         },
       },
     },

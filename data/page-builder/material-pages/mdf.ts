@@ -23,10 +23,10 @@ export const mdfPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Matériaux",
-          heading: "MDF : quand et pourquoi l'utiliser en sur mesure",
+          eyebrow: "Matériaux",
+          heading: "Pourquoi nos portes peintes sont en MDF",
           description:
-            "Le MDF (panneau de fibres à densité moyenne) est un matériau composé de fibres de bois compressées avec un liant, qui offre une surface très uniforme — idéale pour des portes peintes. Ce n'est pas un matériau universel : le contexte d'usage et la protection des chants déterminent sa pertinence.",
+            "C'est le panneau le plus lisse, sans nœud ni veinage, donc la peinture est parfaitement unie.",
           actions: [
             {
               label: "Demander une soumission",
@@ -39,211 +39,87 @@ export const mdfPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Peinture", "Uniformité", "Façades"],
-          image: {
-            src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Échantillons et surface peinte uniforme",
-          },
-          caption:
-            "Très utile pour certains rendus, moins universel qu'on le croit",
-        },
-      },
-    },
-    {
-      id: "overview",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "Ce que le MDF fait bien",
-          description:
-            "Composé de fibres compressées, le MDF offre une densité uniforme qui favorise les finitions peintes et un rendu régulier. Il devient intéressant quand la qualité visuelle de la surface est prioritaire.",
-          cards: [
-            {
-              title: "Surface uniforme",
-              description: "Particulièrement utile pour les finitions peintes.",
-            },
-            {
-              title: "Rendu régulier",
-              description:
-                "Permet une lecture visuelle plus propre sur certaines façades.",
-            },
-            {
-              title: "Bon fit pour certaines portes",
-              description:
-                "Quand le projet vise avant tout une esthétique peinte.",
-            },
-            {
-              title: "Sensibilité à l'humidité",
-              description:
-                "La protection des chants et le contexte restent critiques.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "fit",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Où le MDF peut être pertinent",
-          intro:
-            "Le MDF est surtout pertinent quand la finition peinte uniforme est une priorité et que le projet gère correctement les zones plus sensibles.",
-          badges: ["Portes peintes", "Façades", "Design"],
-          cardTitle: "Bon usage du MDF",
-          items: [
-            "Portes et façades peintes",
-            "Projets où l'uniformité visuelle compte beaucoup",
-            "Zones bien exécutées et bien protégées",
-            "Configurations combinées avec d'autres matériaux plus stables",
-          ],
-          actions: [
-            {
-              label: "Voir le design",
-              href: "/services/design",
-              variant: "primary",
-            },
-            {
-              label: "Voir tous les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Limites et précautions",
-          intro:
-            "Le MDF peut réagir à l'eau si la protection est insuffisante, surtout aux chants. C'est là où les détails d'exécution deviennent décisifs.",
-          items: [
-            {
-              title: "Humidité.",
-              description:
-                "Le risque augmente si les chants ou zones sensibles sont mal protégés.",
-            },
-            {
-              title: "Chants critiques.",
-              description:
-                "Ils déterminent une grande partie du comportement à long terme.",
-            },
-            {
-              title: "Pas idéal partout.",
-              description:
-                "Certaines zones structurelles ou très exposées seront mieux servies autrement.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir l'installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Comparer avec la mélamine",
-              href: "/materiaux/melamine",
-              variant: "ghost",
-            },
-          ],
+          badges: ["Peinture", "Portes", "Uniformité"],
           image: {
             src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-            alt: "Finition peinte uniforme sur panneau MDF",
+            alt: "Panneau MDF avec finition peinte uniforme",
           },
-          cardTitle: "Approche recommandée",
-          cardDescription:
-            "Le MDF fonctionne mieux quand on l'utilise là où il est fort, puis qu'on combine avec d'autres matériaux là où l'usage demande plus de robustesse.",
+          caption: "Portes peintes et façades lisses",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "related",
-      frame: { surface: "muted" },
+      id: "fiche",
       content: {
-        type: "grid",
-        variant: "image-cards-slider",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Comparer avec les autres options",
-          items: [
+          heading: "Ce qu'il faut savoir sur le MDF",
+          intro: "Ses forces, sa limite, et où on l'utilise chez vous.",
+          rows: [
             {
-              title: "Comparatif complet",
-              href: "/materiaux/comparatif",
-              description: "Vue d'ensemble par usage.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Comparatif visuel de plusieurs matériaux d'armoires",
-              },
-              badges: ["Comparatif"],
-              footerCtaLabel: "Voir la page",
+              label: "De quoi c'est fait",
+              value:
+                "De fibres de bois mélangées à une résine, puis pressées en panneau bien dense.",
             },
             {
-              title: "Mélamine",
-              href: "/materiaux/melamine",
-              description: "Décor et coût plus maîtrisé.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Panneau de mélamine pour mobilier sur mesure",
-              },
-              badges: ["Décor"],
-              footerCtaLabel: "Voir la page",
+              label: "Résiste à l'humidité ?",
+              value:
+                "C'est son point faible : un bord laissé nu gonfle et ne redevient jamais droit.",
             },
             {
-              title: "Contreplaqué",
-              href: "/materiaux/contreplaque",
-              description: "Plus orienté structure.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Détail de contreplaqué pour armoires sur mesure",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "Voir la page",
+              label: "Entretien",
+              value:
+                "Un linge à peine humide et un savon doux, sans laisser d'eau sur les joints.",
             },
             {
-              title: "Couleurs et finis",
-              href: "/materiaux/couleurs",
-              description: "Le fini choisi change beaucoup la perception.",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Échantillons de couleurs et finis pour mobilier sur mesure",
-              },
-              badges: ["Finition"],
-              footerCtaLabel: "Voir la page",
+              label: "Usage recommandé",
+              value:
+                "Les portes peintes et les façades avec des moulures.",
+            },
+            {
+              label: "Prix par rapport aux autres",
+              value:
+                "Le deuxième moins cher, juste après la mélamine.",
+            },
+            {
+              label: "Finis offerts",
+              value:
+                "La peinture de votre choix, en fini mat, satiné ou lustré.",
             },
           ],
+          image: {
+            src: "/images/generated/materials/material-kitchen-durability-card-01.webp",
+            alt: "Façades peintes dans une cuisine sur mesure",
+          },
+          note: "Il existe une version qui craint moins l'eau, utilisée sous les lavabos.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - MDF",
+          heading: "Questions sur le MDF",
           items: [
             {
-              q: "Le MDF est-il bas de gamme ?",
-              a: "Non. Le MDF est un panneau technique dont la densité et l'homogénéité en font un excellent support pour les portes peintes : ni fil ni nœud, une surface parfaitement lisse une fois peinte. Sa pertinence dépend de l'application et de l'exécution — chants protégés, finition soignée. Mal utilisé ou exposé à l'eau sans protection, il performe moins bien ; bien mis en œuvre, il peut viser le haut de gamme.",
+              q: "Une porte MDF peut-elle se déformer ?",
+              a: "Sur une grande hauteur, oui, si elle reste peinte d'un seul côté. Les deux faces reçoivent le même nombre de couches, ce qui équilibre les tensions.",
             },
             {
-              q: "Le MDF gonfle-t-il avec l'humidité ?",
-              a: "Le MDF peut absorber l'eau et gonfler si sa surface ou ses chants ne sont pas protégés, car il est composé de fibres compressées. La protection (fini, scellant, chants bien fermés) et une conception adaptée à la pièce limitent nettement ce risque. Dans les zones très humides ou exposées aux éclaboussures, d'autres matériaux ou un MDF hydrofuge peuvent être préférables.",
+              q: "Le MDF résiste-t-il aux coups ?",
+              a: "Moins qu'une porte en bois. Un angle cogné s'écrase au lieu d'éclater, et la reprise demande un enduit puis une repeinte locale.",
             },
             {
-              q: "MDF ou mélamine ?",
-              a: "Le MDF sert souvent la peinture uniforme; la mélamine sert plutôt un décor et un coût maîtrisé.",
+              q: "Peut-on repeindre une porte MDF plus tard ?",
+              a: "Oui. Ponçage léger, apprêt adhérent, deux couches. C'est son avantage principal face à un décor thermofusionné, qui lui se remplace.",
             },
             {
-              q: "Le MDF est-il adapté à la salle de bain ?",
-              a: "Selon ventilation, usage et protection. Dans certains contextes, d'autres matériaux seront préférables.",
+              q: "Y a-t-il du formaldéhyde dans ces panneaux ?",
+              a: "Les panneaux courants au Canada respectent la norme CARB 2. La fiche du lot accompagne la commande et vous est remise sur demande.",
             },
           ],
         },
@@ -255,9 +131,9 @@ export const mdfPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous hésitez entre MDF et autres options ?",
+          heading: "Vous voulez des portes peintes qui restent nettes",
           intro:
-            "On vous aide à voir si le MDF est cohérent pour votre niveau de finition, votre espace et votre usage réel.",
+            "On choisit l'épaisseur, la forme et le nombre de couches selon la pièce.",
           actions: [
             {
               label: "Demander une soumission",
@@ -265,8 +141,8 @@ export const mdfPage: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "Voir le comparatif",
-              href: "/materiaux/comparatif",
+              label: "Voir les couleurs et finis",
+              href: "/materiaux/couleurs",
               variant: "ghost",
             },
           ],

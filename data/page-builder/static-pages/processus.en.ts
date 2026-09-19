@@ -5,11 +5,11 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Our process, from design to installation",
+    title: "Process: how a renovation project runs",
     description:
-      "The Dilamco process: scoping, design, fabrication, installation and, depending on the project, coordination of a turnkey renovation.",
+      "From free estimate to guarantee: site visit, itemized quote, written contract, permits, coordinated trades, deficiency list and handover.",
     path: "/processus",
-    ogAlt: "Dilamco process",
+    ogAlt: "The stages of a renovation project run by Dilamco",
   },
   breadcrumbs: [
     { name: "Home", url: SITE.url + "/" },
@@ -17,12 +17,18 @@ export const pageEn: PageTemplateData = {
   ],
   extraJsonLd: [
     serviceJsonLd({
-      name: "Dilamco process",
+      name: "Residential renovation project management",
       description:
-        "A structured process for custom projects: scoping, design, selections, fabrication, installation and coordination depending on scope.",
+        "How a project runs with a general contractor: site visit and estimate, itemized quote, written contract with schedule, municipal permit, coordinated site work, deficiency list, handover and guarantee.",
       url: SITE.url + "/processus",
-      serviceType: "Custom project process",
-      areaServed: ["Montréal", "Laval", "Rive-Sud", "Québec"],
+      serviceType: "Renovation project management",
+      areaServed: [
+        "West Island",
+        "Montréal",
+        "Laval",
+        "South Shore",
+        "Vaudreuil-Soulanges",
+      ],
     }),
   ],
   blocks: [
@@ -31,88 +37,22 @@ export const pageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Process",
-          heading: "A clear process, from scoping to installation",
+          badges: ["Written contract", "Permits"],
+          heading: "How a renovation project runs",
           description:
-            "The Dilamco process is a defined sequence — design, validation, fabrication, installation — built to reduce grey areas, validate decisions at the right time and protect the final quality of every project.",
+            "Five stages. Each one ends with a signed document, a permit issued or an inspection passed.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our services",
-              href: "/services",
+              label: "See our services",
+              href: "/services/renovation",
               variant: "ghost",
-            },
-          ],
-          badges: ["Design", "Fabrication", "Installation", "Coordination"],
-          image: {
-            src: "/images/generated/spaces/espaces-hero-overview-01.webp",
-            alt: "Dilamco process for a custom project",
-          },
-          caption:
-            "A single working logic to better frame decisions and execution",
-        },
-      },
-    },
-    {
-      id: "benefits",
-      content: {
-        type: "grid",
-        variant: "icon-cards-bullets",
-        props: {
-          heading: "What the process protects in practice",
-          intro:
-            "The goal isn't to add steps. The goal is to keep the project clear, executable and consistent from start to finish.",
-          columns: "2",
-          items: [
-            {
-              title: "Clearer scope",
-              description:
-                "We clarify what's included, what needs to be validated and what could slow the project down.",
-              icon: "slidersHorizontal",
-              bullets: [
-                "Constraints identified earlier",
-                "Priorities better ranked",
-                "Fewer grey areas along the way",
-              ],
-            },
-            {
-              title: "Choices locked in better",
-              description:
-                "Structural decisions are made before fabrication, not in reaction.",
-              icon: "doorOpen",
-              bullets: [
-                "Plans and configuration validated",
-                "Materials and finishes confirmed",
-                "Trade-offs made before production",
-              ],
-            },
-            {
-              title: "More stable fabrication",
-              description:
-                "A well-launched production relies on stable information and clean scoping.",
-              icon: "package2",
-              bullets: [
-                "Fewer avoidable reworks",
-                "More predictable execution",
-                "Better consistency between pieces",
-              ],
-            },
-            {
-              title: "Better-controlled installation",
-              description:
-                "Installation goes more smoothly when the project sequence has been properly prepared.",
-              icon: "wrench",
-              bullets: [
-                "Cleaner coordination on site",
-                "More precise adjustments",
-                "Simpler final inspection",
-              ],
             },
           ],
         },
@@ -120,160 +60,85 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "steps",
-      frame: { surface: "muted" },
       content: {
         type: "process",
-        variant: "split-cards",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "The main steps of a Dilamco project",
-          description:
-            "The scope varies by project, but the logic stays the same: scope, validate, produce, install.",
+          heading: "The five stages, always in this order",
           steps: [
             {
               number: "1",
-              title: "Initial scoping",
+              title: "Visit to your home",
               description:
-                "We understand the space, the scope, the site constraints, the level of expectation and the target timeline.",
+                "We take the measurements and give you a first price bracket.",
             },
             {
               number: "2",
-              title: "Design and configuration",
+              title: "Detailed quote",
               description:
-                "We structure the layout, the functions, the dimensions and the choices that influence the final result.",
+                "Every item is priced, with the quantities and what stays excluded.",
             },
             {
               number: "3",
-              title: "Material selection",
+              title: "Signing and permit",
               description:
-                "We confirm panels, hardware, finishes and details based on real use and the durability sought.",
+                "You sign the schedule and the payment calendar. We file the permit.",
             },
             {
               number: "4",
-              title: "Validation before production",
+              title: "The work",
               description:
-                "The essential decisions are locked in before launching fabrication to reduce reworks.",
+                "Each trade starts once the previous one has been inspected.",
             },
             {
               number: "5",
-              title: "Fabrication",
+              title: "End of the work",
               description:
-                "Custom production starts from a stable base, which protects consistency and precision.",
-            },
-            {
-              number: "6",
-              title: "Installation and finishing",
-              description:
-                "Installation, adjustments and the final inspection serve to deliver a clean, consistent result.",
-            },
-          ],
-          actions: [
-            {
-              label: "View the design service",
-              href: "/services/design",
-              variant: "ghost",
-            },
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
+                "We walk through, note the corrections, then you pay the balance.",
             },
           ],
         },
       },
     },
     {
-      id: "inputs",
+      id: "documents",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "fact-sheet",
         props: {
-          heading: "What helps move faster",
+          heading: "What you receive",
           intro:
-            "A good start mostly speeds up the validations. A few simple pieces of information are enough to frame the discussion properly.",
-          badges: ["Area", "Type of space", "Scope", "Priorities"],
-          cardTitle: "Useful information from the first conversation",
-          items: [
-            "The type of space and the project location",
-            "The real scope: design only, custom, renovation or coordination",
-            "The priorities: timeline, storage, durability, aesthetics or budget",
-            "Photos, basic measurements or inspiration if available",
-            "Building or site constraints when they exist",
-          ],
-          actions: [
+            "Six documents you should demand from any contractor you consider.",
+          rows: [
             {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
+              label: "The quote",
+              value: "It details the work, the materials and the exclusions before signing",
             },
             {
-              label: "View our projects",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "resources",
-      content: {
-        type: "grid",
-        variant: "link-cards-compact",
-        props: {
-          heading: "Useful pages to go further",
-          intro:
-            "Depending on where you are, these pages help you better understand the method, the services and the technical choices.",
-          columns: "3",
-          items: [
-            {
-              title: "Design service",
-              description:
-                "To understand how we structure the choices before fabrication.",
-              href: "/services/design",
-              badges: ["Plans", "Configuration"],
-              ctaLabel: "View design",
+              label: "The contract",
+              value: "It sets the price, the payment terms and the warranty on the work",
             },
             {
-              title: "Fabrication service",
-              description:
-                "To see how production fits into the overall project.",
-              href: "/services/fabrication",
-              badges: ["Production", "Custom"],
-              ctaLabel: "View fabrication",
+              label: "The schedule",
+              value: "It gives the start and end dates, and the order of the trades",
             },
             {
-              title: "Installation service",
-              description:
-                "To understand installation, adjustments and on-site finishing.",
-              href: "/services/installation",
-              badges: ["Installation", "Adjustments"],
-              ctaLabel: "View installation",
+              label: "Changes along the way",
+              value: "Every change is priced and accepted in writing before it is done",
             },
             {
-              title: "Turnkey renovation",
-              description:
-                "When the project requires coordinating more than the cabinets.",
-              href: "/services/renovation",
-              badges: ["Coordination", "Related work"],
-              ctaLabel: "View renovation",
+              label: "The permit",
+              value: "You receive a copy of the permit, issued in the owner's name",
             },
             {
-              title: "Materials",
-              description:
-                "To compare the options and understand what really changes durability.",
-              href: "/materiaux",
-              badges: ["Panels", "Hardware"],
-              ctaLabel: "View materials",
-            },
-            {
-              title: "Projects",
-              description:
-                "To see concrete projects and the expected level of finish.",
-              href: "/projets",
-              badges: ["References", "Execution"],
-              ctaLabel: "View projects",
+              label: "The correction list",
+              value: "We draw it up with you at the end, and it is cleared before the balance",
             },
           ],
+          image: {
+            src: "/images/process3.jpg",
+            alt: "Construction drawings and project documents on a work table",
+          },
         },
       },
     },
@@ -283,25 +148,23 @@ export const pageEn: PageTemplateData = {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - process",
-          intro:
-            "Quick answers to the questions that come up most often before starting.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "Do all projects follow exactly the same steps?",
-              a: "The logic stays similar, but the scope changes depending on whether it's a design mandate, a full custom project or a renovation with coordination.",
+              q: "Is the estimate really free?",
+              a: "Yes. The visit and the first estimate are not billed and commit you to nothing. If architectural drawings or an engineer are needed, they are priced separately and approved first.",
             },
             {
-              q: "When does fabrication begin?",
-              a: "Once the structural decisions are validated: configuration, dimensions, materials, finishes and the elements that directly influence production.",
+              q: "Who handles the permit application?",
+              a: "We do. We check your city's requirements, prepare the drawings, file the application and follow the file. The permit is still issued in the owner's name.",
             },
             {
-              q: "Do you also handle installation?",
-              a: "Yes. Installation, on-site adjustments and the final inspection are an integral part of our execution logic when the mandate provides for it. Entrusting the install to the same team as the design and fabrication guarantees a consistent result: same standards, same tolerances, and single responsibility from the plan through to the finish.",
+              q: "How are the payments split up?",
+              a: "A deposit on signing, then instalments tied to real progress rather than fixed dates. The last instalment is due once the corrections have been made.",
             },
             {
-              q: "Does the process also work in a condo or in constrained contexts?",
-              a: "Yes. The process exists precisely to identify early the access (elevator, parking), scheduling (allowed work hours) or coordination constraints specific to the building, so they can be integrated into the planning. Once these constraints are framed, a project in a condo or a tight space proceeds with the same rigour as anywhere else.",
+              q: "What happens if a hidden problem is found?",
+              a: "We stop, document it, explain the options and price the fix in writing. Nothing is carried out before you agree.",
             },
           ],
         },
@@ -313,22 +176,22 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need to scope a project cleanly before moving forward?",
+          heading: "It starts with a visit",
           intro:
-            "We help you clarify the scope, the priorities and the best sequence to launch a custom project with fewer surprises.",
+            "Tell us about the project. You leave with a detailed quote, not a number given over the phone.",
           actions: [
             {
-              label: "Request a quote",
+              label: "Free estimate",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our services",
-              href: "/services",
+              label: "See our services",
+              href: "/services/renovation",
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval and South Shore",
+          note: "RBQ licence 8306-0806-27 • West Island, Montréal, Laval, South Shore and Vaudreuil-Soulanges",
         },
       },
     },

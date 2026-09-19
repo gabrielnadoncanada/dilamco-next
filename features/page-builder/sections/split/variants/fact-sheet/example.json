@@ -1,0 +1,16 @@
+{
+  "heading": "Ce qu'on sait des maisons de Kirkland",
+  "intro": "Une ville coupée en deux par l'autoroute 40, un parc résidentiel homogène et des terrains généreux.",
+  "rows": [
+    { "label": "Bâti dominant", "value": "Unifamiliales détachées, 1965 à 1985" },
+    { "label": "Permis", "value": "Service de l'aménagement urbain, 17200 boul. Hymus, portail en ligne" },
+    { "label": "Particularité", "value": "Certificat d'excavation distinct du permis de construction" },
+    { "label": "Projets fréquents", "value": "Agrandissement latéral ou arrière, cuisine, sous-sol" },
+    { "label": "Depuis notre base", "value": "15 minutes par le boulevard Saint-Charles" }
+  ],
+  "image": {
+    "src": "/images/generated/renovation/renovation-extension-hero-01.webp",
+    "alt": "Agrandissement arrière d'une maison de Kirkland"
+  },
+  "note": "Sources : Ville de Kirkland, Wikipédia (recensement 2021). Vérifié le 2026-09-18."
+}

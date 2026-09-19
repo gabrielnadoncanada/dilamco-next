@@ -23,10 +23,10 @@ export const mdfPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materials",
-          heading: "MDF: when and why to use it for custom work",
+          eyebrow: "Materials",
+          heading: "Why our painted doors are made of MDF",
           description:
-            "MDF (medium-density fibreboard) is a material made of wood fibres compressed with a binder, giving a very uniform surface — ideal for painted doors. It is not a universal material: the context of use and edge protection determine whether it's the right choice.",
+            "It is the smoothest panel, with no knots and no grain, so the paint comes out perfectly even.",
           actions: [
             {
               label: "Request a quote",
@@ -34,216 +34,92 @@ export const mdfPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
+              label: "See the comparison",
               href: "/materiaux/comparatif",
               variant: "ghost",
             },
           ],
-          badges: ["Paint", "Uniformity", "Fronts"],
-          image: {
-            src: "/images/generated/materials/material-finish-samples-01.webp",
-            alt: "Samples and uniform painted surface",
-          },
-          caption:
-            "Very useful for certain results, less universal than people think",
-        },
-      },
-    },
-    {
-      id: "overview",
-      content: {
-        type: "split",
-        variant: "text-divider-cards",
-        props: {
-          heading: "What MDF does well",
-          description:
-            "Made of compressed fibres, MDF offers a uniform density that favours painted finishes and a consistent result. It becomes worthwhile when the visual quality of the surface is the priority.",
-          cards: [
-            {
-              title: "Uniform surface",
-              description: "Particularly useful for painted finishes.",
-            },
-            {
-              title: "Consistent result",
-              description:
-                "Allows a cleaner visual reading on certain fronts.",
-            },
-            {
-              title: "A good fit for certain doors",
-              description:
-                "When the project is aimed above all at a painted aesthetic.",
-            },
-            {
-              title: "Sensitivity to moisture",
-              description:
-                "Edge protection and context remain critical.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "fit",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Where MDF can be the right choice",
-          intro:
-            "MDF is mainly worthwhile when a uniform painted finish is a priority and the project properly manages the more sensitive areas.",
-          badges: ["Painted doors", "Fronts", "Design"],
-          cardTitle: "Good use of MDF",
-          items: [
-            "Painted doors and fronts",
-            "Projects where visual uniformity matters a lot",
-            "Well-executed and well-protected areas",
-            "Setups combined with other, more stable materials",
-          ],
-          actions: [
-            {
-              label: "View design",
-              href: "/services/design",
-              variant: "primary",
-            },
-            {
-              label: "View all materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Limitations and precautions",
-          intro:
-            "MDF can react to water if protection is insufficient, especially at the edges. This is where execution details become decisive.",
-          items: [
-            {
-              title: "Moisture.",
-              description:
-                "The risk increases if the edges or sensitive areas are poorly protected.",
-            },
-            {
-              title: "Critical edges.",
-              description:
-                "They determine a large part of the long-term behaviour.",
-            },
-            {
-              title: "Not ideal everywhere.",
-              description:
-                "Some structural or highly exposed areas will be better served by other options.",
-            },
-          ],
-          actions: [
-            {
-              label: "View installation",
-              href: "/services/installation",
-              variant: "ghost",
-            },
-            {
-              label: "Compare with melamine",
-              href: "/materiaux/melamine",
-              variant: "ghost",
-            },
-          ],
+          badges: ["Paint", "Doors", "Evenness"],
           image: {
             src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-            alt: "Uniform painted finish on an MDF panel",
+            alt: "MDF panel with an even painted finish",
           },
-          cardTitle: "Recommended approach",
-          cardDescription:
-            "MDF works best when used where it is strong, then combined with other materials where the use calls for more robustness.",
+          caption: "Painted doors and smooth fronts",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "related",
-      frame: { surface: "muted" },
+      id: "fiche",
       content: {
-        type: "grid",
-        variant: "image-cards-slider",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Compare with the other options",
-          items: [
+          heading: "What you should know about MDF",
+          intro: "Its strengths, its one weakness, and where we use it.",
+          rows: [
             {
-              title: "Full comparison",
-              href: "/materiaux/comparatif",
-              description: "An overview by use.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Visual comparison of several cabinet materials",
-              },
-              badges: ["Comparison"],
-              footerCtaLabel: "View page",
+              label: "What it is made of",
+              value:
+                "Wood fibres mixed with resin, then pressed into a dense, even panel.",
             },
             {
-              title: "Melamine",
-              href: "/materiaux/melamine",
-              description: "Decor and more controlled cost.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Melamine panel for custom furniture",
-              },
-              badges: ["Decor"],
-              footerCtaLabel: "View page",
+              label: "Does it handle humidity?",
+              value:
+                "This is its weak point: a bare edge swells and never goes back flat.",
             },
             {
-              title: "Plywood",
-              href: "/materiaux/contreplaque",
-              description: "More structure-oriented.",
-              image: {
-                src: "/images/generated/materials/material-plywood-hero-01.webp",
-                alt: "Plywood detail for custom cabinets",
-              },
-              badges: ["Structure"],
-              footerCtaLabel: "View page",
+              label: "Upkeep",
+              value:
+                "A barely damp cloth and a mild soap, with no water left sitting on the joints.",
             },
             {
-              title: "Colours and finishes",
-              href: "/materiaux/couleurs",
-              description: "The chosen finish changes the perception a lot.",
-              image: {
-                src: "/images/generated/materials/material-color-finish-lifestyle-01.webp",
-                alt: "Colour and finish samples for custom furniture",
-              },
-              badges: ["Finish"],
-              footerCtaLabel: "View page",
+              label: "Best used for",
+              value:
+                "Painted doors and fronts with mouldings on them.",
+            },
+            {
+              label: "Price against the others",
+              value:
+                "The second cheapest, just after melamine.",
+            },
+            {
+              label: "Finishes offered",
+              value:
+                "Any paint colour you like, in a matte, satin or gloss finish.",
             },
           ],
+          image: {
+            src: "/images/generated/materials/material-kitchen-durability-card-01.webp",
+            alt: "Painted fronts in a custom kitchen",
+          },
+          note: "There is a version that handles water better, used under sinks.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - MDF",
+          heading: "Questions about MDF",
           items: [
             {
-              q: "Is MDF a low-end material?",
-              a: "No. MDF is an engineered panel whose density and homogeneity make it an excellent base for painted doors: no grain or knots, a perfectly smooth surface once painted. Its suitability depends on the application and the execution — protected edges, careful finishing. Misused or exposed to water without protection, it performs less well; well executed, it can be high-end.",
+              q: "Can an MDF door warp?",
+              a: "Over a tall height, yes, if it stays painted on one side only. Both faces get the same number of coats, which balances the tension.",
             },
             {
-              q: "Does MDF swell with moisture?",
-              a: "MDF can absorb water and swell if its surface or edges aren't protected, because it's made of compressed fibres. Protection (finish, sealant, well-closed edges) and a design suited to the room clearly limit this risk. In very humid areas or those exposed to splashes, other materials or a moisture-resistant MDF may be preferable.",
+              q: "Does MDF stand up to knocks?",
+              a: "Less than a wood door. A bumped corner crushes instead of chipping, and the repair calls for filler then a local repaint.",
             },
             {
-              q: "MDF or melamine?",
-              a: "MDF often serves uniform paint; melamine serves more of a decor and a controlled cost.",
+              q: "Can an MDF door be repainted later?",
+              a: "Yes. Light sanding, bonding primer, two coats. That is its main edge over a thermofused decor, which has to be replaced instead.",
             },
             {
-              q: "Is MDF suitable for the bathroom?",
-              a: "It depends on ventilation, use and protection. In some contexts, other materials will be preferable.",
+              q: "Is there formaldehyde in these panels?",
+              a: "Standard panels in Canada meet the CARB 2 rule. The batch sheet comes with the order and is handed to you on request.",
             },
           ],
         },
@@ -255,9 +131,9 @@ export const mdfPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Torn between MDF and other options?",
+          heading: "You want painted doors that stay crisp",
           intro:
-            "We help you see whether MDF is consistent with your finish level, your space and your real use.",
+            "We pick the thickness, the shape and the number of coats room by room.",
           actions: [
             {
               label: "Request a quote",
@@ -265,8 +141,8 @@ export const mdfPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View the comparison",
-              href: "/materiaux/comparatif",
+              label: "See colours and finishes",
+              href: "/materiaux/couleurs",
               variant: "ghost",
             },
           ],

@@ -1,5 +1,7 @@
-import { Heading } from "@/components/elements/heading";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  SectionHeader,
+  sectionBodyClassName,
+} from "@/features/page-builder/sections/shared/ui/SectionHeader";
 import {
   Table,
   TableBody,
@@ -15,36 +17,48 @@ export function ComparisonTableBasic(props: ComparisonTableBasicProps) {
   const [leftColumn, rightColumn] = props.columns;
 
   return (
-    <div>
-      <div className="mx-auto max-w-3xl text-center">
-        <Heading as="h2" variant="h2">{props.heading}</Heading>
-        {props.intro ? (
-          <p className="mt-4 text-muted-foreground">{props.intro}</p>
-        ) : null}
-      </div>
+    <div className="text-left">
+      <SectionHeader heading={props.heading} intro={props.intro} />
 
-      <Card className="mt-10 rounded-2xl">
-        <CardContent className="p-0">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Critere</TableHead>
-                <TableHead>{leftColumn}</TableHead>
-                <TableHead>{rightColumn}</TableHead>
+      <div className={`${sectionBodyClassName} relative`}>
+        {/* Indice de défilement horizontal sur petit écran. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-y-px right-px z-10 w-12 rounded-r-card bg-gradient-to-l from-card to-transparent sm:hidden"
+        />
+        <div className="overflow-x-auto rounded-card border border-border/80 bg-card">
+        <Table className="min-w-[560px]">
+          <TableHeader>
+            <TableRow className="bg-primary-soft/60 hover:bg-primary-soft/60">
+              <TableHead className="text-label px-5 py-4 text-muted-foreground">
+                Critère
+              </TableHead>
+              <TableHead className="px-5 py-4 font-display text-base font-semibold tracking-[-0.01em] text-foreground">
+                {leftColumn}
+              </TableHead>
+              <TableHead className="px-5 py-4 font-display text-base font-semibold tracking-[-0.01em] text-foreground">
+                {rightColumn}
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {props.rows.map((row) => (
+              <TableRow key={row.label} className="hover:bg-muted/40">
+                <TableCell className="px-5 py-4 font-semibold text-foreground">
+                  {row.label}
+                </TableCell>
+                <TableCell className="px-5 py-4 text-muted-foreground">
+                  {row.values[0]}
+                </TableCell>
+                <TableCell className="px-5 py-4 text-muted-foreground">
+                  {row.values[1]}
+                </TableCell>
               </TableRow>
-            </TableHeader>
-            <TableBody>
-              {props.rows.map((row) => (
-                <TableRow key={row.label}>
-                  <TableCell className="font-medium">{row.label}</TableCell>
-                  <TableCell>{row.values[0]}</TableCell>
-                  <TableCell>{row.values[1]}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </CardContent>
-      </Card>
+            ))}
+          </TableBody>
+        </Table>
+        </div>
+      </div>
     </div>
   );
 }

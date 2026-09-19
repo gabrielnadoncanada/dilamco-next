@@ -10,6 +10,7 @@ import { page as materiaux } from "./materiaux";
 import { page as processus } from "./processus";
 import { page as projets } from "./projets";
 import { page as services } from "./services";
+import { page as zones } from "./zones";
 import { renovationPage as servicesRenovation } from "@/data/page-builder/service-pages/renovation";
 
 // --- Traductions EN ---
@@ -21,6 +22,7 @@ import { pageEn as materiauxEn } from "./materiaux.en";
 import { pageEn as processusEn } from "./processus.en";
 import { pageEn as projetsEn } from "./projets.en";
 import { pageEn as servicesEn } from "./services.en";
+import { pageEn as zonesEn } from "./zones.en";
 import { renovationPageEn as servicesRenovationEn } from "@/data/page-builder/service-pages/renovation.en";
 
 const fr = {
@@ -32,6 +34,7 @@ const fr = {
   processus,
   projets,
   services,
+  zones,
   "services-renovation": servicesRenovation,
 } satisfies Record<string, PageTemplateData>;
 
@@ -44,6 +47,7 @@ const en: Partial<Record<keyof typeof fr, PageTemplateData>> = {
   processus: processusEn,
   projets: projetsEn,
   services: servicesEn,
+  zones: zonesEn,
   "services-renovation": servicesRenovationEn,
 };
 

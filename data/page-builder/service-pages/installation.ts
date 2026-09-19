@@ -6,7 +6,7 @@ export const installationPage: PageTemplateData = {
   metadata: {
     title: "Installation d'armoires et de cuisines sur mesure",
     description:
-      "Service d'installation professionnelle : alignements précis, ajustements sur place et finition soignée.",
+      "Pose d'armoires et de cuisines sur mesure par nos équipes : alignements précis, ajustements sur place et coordination avec le reste du chantier.",
     path: "/services/installation",
     ogAlt: "Service d'installation Dilamco",
   },
@@ -33,11 +33,10 @@ export const installationPage: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading:
-            "Installation professionnelle, précision, alignement et finition",
+          eyebrow: "Division armoires",
+          heading: "Comment on installe vos armoires chez vous",
           description:
-            "L'installation est l'étape finale où les armoires sont posées et ajustées sur place : mise à niveau, alignements précis, fixation et finition. C'est elle qui transforme des éléments fabriqués en un ensemble net et durable — les ajustements sur place font partie intégrante d'une pose professionnelle.",
+            "Nos équipes posent les armoires après la plomberie et l'électricité, et avant les comptoirs.",
           actions: [
             {
               label: "Demander une soumission",
@@ -50,170 +49,123 @@ export const installationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Alignements", "Ajustements", "Finition"],
+          badges: ["Mise à niveau", "Alignements", "Coordination"],
           image: {
             src: "/images/generated/services/service-installation-hero-01.webp",
-            alt: "Plan technique et échantillons de panneaux pour installation sur mesure",
+            alt: "Pose d'armoires sur mesure en cours dans une cuisine",
           },
-          caption: "Une pose propre change la perception de toute la pièce",
+          caption: "Installation résidentielle et commerciale",
+          imageSide: "left",
         },
       },
     },
     {
-      id: "différence",
+      id: "etapes",
       content: {
-        type: "split",
-        variant: "text-divider-cards",
+        type: "process",
+        variant: "horizontal-steps-cards",
         props: {
-          heading: "Pourquoi l'installation fait toute la différence",
-          description:
-            "Les murs, planchers et plafonds ne sont jamais parfaitement droits. Une installation professionnelle absorbe cette réalité pour livrer un résultat propre et durable.",
-          cards: [
+          heading: "Comment se passe la journée de pose",
+          steps: [
             {
-              title: "Alignements",
+              number: "1",
+              title: "On protège la maison",
               description:
-                "Portes, tiroirs et modules droits malgré les irrégularités du site.",
+                "On couvre les planchers et on garde la poussière dans la pièce.",
             },
             {
-              title: "Ajustements",
+              number: "2",
+              title: "On fixe les caissons",
               description:
-                "Réglages fins sur place pour un rendu uniforme et stable.",
+                "On met chaque caisson de niveau, puis on le visse dans la structure du mur.",
             },
             {
-              title: "Durabilité",
+              number: "3",
+              title: "On règle les portes",
               description:
-                "Une bonne installation réduit l'usure prématurée et les défauts visibles.",
+                "On ajuste chaque porte pour que les espaces soient égaux partout.",
+            },
+            {
+              number: "4",
+              title: "On finit et on vous montre",
+              description:
+                "On pose les moulures et les poignées, puis on fait le tour avec vous.",
             },
           ],
-          columns: "3",
         },
       },
     },
     {
-      id: "included",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Ce qui est inclus dans l'installation Dilamco",
-          intro:
-            "L'installation ne se limite pas à fixer des modules. Elle comprend la préparation, l'ajustement et la vérification finale.",
-          items: [
+          heading: "La pose en bref",
+          intro: "Ce qui se passe chez vous pendant les journées d'installation.",
+          rows: [
             {
-              title: "Préparation du site",
-              description:
-                "Vérification des murs, planchers, niveaux et contraintes visibles.",
+              label: "Combien de temps",
+              value:
+                "Une à deux journées pour une vanité, trois à cinq pour une cuisine complète.",
             },
             {
-              title: "Mise à niveau et fixation",
-              description: "Ancrage sécuritaire et stable des modules.",
+              label: "Ce que vous recevez",
+              value:
+                "Des armoires posées, des portes bien réglées et les retouches faites.",
             },
             {
-              title: "Ajustement des portes et tiroirs",
-              description: "Alignement précis et fonctionnement fluide.",
+              label: "Qui s'en occupe",
+              value:
+                "Nos propres poseurs, qui s'accordent avec l'électricien et le comptoir.",
             },
             {
-              title: "Inspection finale",
-              description:
-                "Vérification et ajustements avant la livraison du projet.",
-            },
-          ],
-          actions: [
-            {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "ghost",
+              label: "À faire avant",
+              value:
+                "La plomberie, l'électricité et le plancher doivent être finis avant qu'on arrive.",
             },
             {
-              label: "Voir la fabrication",
-              href: "/services/fabrication",
-              variant: "ghost",
+              label: "Garantie",
+              value:
+                "Une visite de réglage est comprise dans l'année qui suit l'installation.",
+            },
+            {
+              label: "Propreté",
+              value:
+                "On balaie chaque soir et on sort tous les rebuts à la fin.",
             },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
-            alt: "Installation sur mesure en cours",
+            alt: "Armoires ajustées et alignées après la pose",
           },
-          cardTitle: "Coordination sur site",
-          cardDescription:
-            "Une pose propre dépend autant de la préparation que des ajustements sur place.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Installation par type de projet",
-          intro:
-            "La logique de pose change selon l'espace, l'accès et le niveau d'usage.",
-          items: [
-            {
-              title: "Cuisine",
-              href: "/espaces/cuisine",
-              description:
-                "Armoires, îlots et intégration des électroménagers.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Cuisine sur mesure avec installation précise",
-              },
-              badges: ["Cuisine", "Intégration"],
-              footerCtaLabel: "Voir cuisine",
-            },
-            {
-              title: "Salle de bain",
-              href: "/espaces/salle-de-bain",
-              description: "Vanités et protection des chants en milieu humide.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Salle de bain sur mesure avec finition propre",
-              },
-              badges: ["Humidité", "Finition"],
-              footerCtaLabel: "Voir salle de bain",
-            },
-            {
-              title: "Commercial",
-              href: "/espaces/commercial",
-              description: "Usage intensif, durabilité et coordination.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Aménagement commercial avec installation planifiée",
-              },
-              badges: ["Commercial", "Coordination"],
-              footerCtaLabel: "Voir commercial",
-            },
-          ],
+          note: "On fixe la date de pose dès que la livraison est confirmée.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - installation",
-          intro:
-            "Réponses claires sur la pose, les ajustements et le déroulement du chantier.",
+          heading: "Questions sur la pose",
           items: [
             {
-              q: "Combien de temps dure une installation?",
-              a: "La durée d'une installation dépend du type de projet et de sa complexité. Une vanité de salle de bain ou un walk-in se posent généralement en une journée ou deux, tandis qu'une cuisine complète — avec îlot, armoires hautes et coordination des électroménagers — demande davantage de temps. Nous confirmons la durée prévue à la planification, une fois la portée du projet établie, pour que vous sachiez à quoi vous attendre sur place.",
+              q: "Faut-il quitter la maison pendant la pose ?",
+              a: "Non. La pièce reste inutilisable quelques jours, mais le reste de la maison demeure protégé et accessible. L'eau est rétablie chaque soir quand c'est possible.",
             },
             {
-              q: "Des ajustements sont-ils normaux?",
-              a: "Oui. Les ajustements font partie d'une installation professionnelle et sont essentiels au rendu final.",
+              q: "Qui installe le comptoir ?",
+              a: "Le fournisseur du comptoir, après notre pose. Il prend ses mesures directement sur les caissons déjà fixés, ce qui évite tout écart.",
             },
             {
-              q: "Installez-vous seulement vos propres armoires?",
-              a: "Oui. Nous installons les éléments que nous concevons et fournissons, ce qui nous permet de garantir la cohérence entre la fabrication et la pose : mêmes standards, mêmes tolérances, une seule équipe responsable du résultat. Cette continuité évite les zones grises fréquentes quand la fabrication et l'installation relèvent d'intervenants différents, et facilite les ajustements finaux sur place.",
+              q: "Posez-vous des armoires achetées ailleurs ?",
+              a: "Non. Nous installons ce que nous avons conçu et fourni, pour que la même responsabilité couvre les plans, les pièces et la pose.",
             },
             {
-              q: "Travaillez-vous en condo ou en commercial?",
-              a: "Oui. Nous adaptons l'installation aux contraintes d'accès, d'horaire et d'usage de chaque environnement.",
+              q: "Et si une porte frotte six mois plus tard ?",
+              a: "Appelez-nous. Un bois qui bouge avec les saisons se rattrape en quelques minutes de réglage, et c'est compris la première année.",
             },
           ],
         },
@@ -225,9 +177,9 @@ export const installationPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'une installation propre et maîtrisée ?",
+          heading: "Planifier la pose de vos armoires",
           intro:
-            "On cadre la pose, les ajustements et la coordination pour livrer un résultat net et durable.",
+            "On choisit la date avec vous, et on ne repart qu'après avoir tout vérifié ensemble.",
           actions: [
             {
               label: "Demander une soumission",
@@ -240,7 +192,7 @@ export const installationPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Installation résidentielle et commerciale",
+          note: "Licence RBQ 8306-0806-27",
         },
       },
     },

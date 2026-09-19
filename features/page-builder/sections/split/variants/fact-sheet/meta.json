@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "split",
+  "variant": "fact-sheet",
+  "title": "Split Fact Sheet",
+  "description": "Fiche technique : titre + intro + photo à gauche, rangées label → valeur à droite.",
+  "propsModel": ["heading", "intro", "rows", "image", "note"],
+  "kitchenSink": {
+    "group": "content",
+    "order": 320,
+    "viewport": "desktop"
+  }
+}

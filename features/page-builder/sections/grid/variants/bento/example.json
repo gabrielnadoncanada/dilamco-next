@@ -1,0 +1,11 @@
+{
+  "heading": "Vingt ans de chantiers résidentiels",
+  "tiles": [
+    { "kind": "image", "span": "wide", "image": { "src": "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp", "alt": "Cuisine à aire ouverte rénovée" }, "caption": "Cuisine, Ouest-de-l'Île" },
+    { "kind": "stat", "value": "2004", "label": "Licence RBQ délivrée, valide sans restriction" },
+    { "kind": "image", "span": "tall", "image": { "src": "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp", "alt": "Douche en céramique" } },
+    { "kind": "quote", "quote": "Excellent contracteur. Ils ont fait mes planchers et autres projets et nous sommes très satisfaites.", "author": "Mélina Desbiens, avis Google" },
+    { "kind": "image", "image": { "src": "/images/realisations/plancher-bois-franc-neuf-01.webp", "alt": "Plancher de bois franc" } },
+    { "kind": "text", "title": "Un seul responsable", "description": "Permis, métiers, échéancier et budget au contrat.", "href": "/processus" }
+  ]
+}

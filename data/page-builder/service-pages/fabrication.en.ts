@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const fabricationPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Custom cabinetry fabrication in Montreal",
+    title: "Custom cabinetry fabrication — partner factory",
     description:
-      "Custom fabrication: durability, precision and high-end finish for a consistent, long-lasting result.",
+      "Custom cabinets produced by our partner factory, with quality control and job-site coordination handled by Dilamco, a licensed general contractor.",
     path: "/services/fabrication",
     ogAlt: "Dilamco fabrication service",
   },
@@ -21,7 +21,7 @@ export const fabricationPageEn: PageTemplateData = {
   service: {
     name: "Fabrication service",
     description:
-      "Custom fabrication: durability, precision and high-end finish.",
+      "Custom cabinets built for us by our partner factory, under Dilamco's specifications, quality control and coordination.",
     url: SITE.url + "/services/fabrication",
     serviceType: "Fabrication",
   },
@@ -33,176 +33,139 @@ export const fabricationPageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Services",
-          heading: "Custom fabrication: precision, consistency and durability",
+          eyebrow: "Cabinetry division",
+          heading: "Who builds your cabinets and who checks them",
           description:
-            "Fabrication is the stage where cabinets are produced from the approved plans: cutting, assembly and finishing of the boxes, doors and drawers. It determines a project's solidity, stability and longevity. At Dilamco, it is carried out under control at our partner factory, for a consistent result that is clean to install.",
+            "Our partner factory builds them to our drawings, and we check every piece when it arrives.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Precision", "Durability", "Custom"],
+          badges: ["Custom-built", "Quality control", "One contract"],
           image: {
             src: "/images/generated/services/service-fabrication-hero-01.webp",
-            alt: "Technical drawings and material samples for custom fabrication",
+            alt: "Technical drawings and material samples for a custom order",
           },
-          caption:
-            "Materials, assembly and details that hold up over time",
+          caption: "Checked on delivery, before install",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "meaning",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "What custom fabrication really means",
-          intro:
-            "Custom work aims for a real fit to the space and the use, not just cutting to the right width.",
-          badges: ["Real dimensions", "Consistent assembly", "Real use"],
-          cardTitle: "What makes the difference",
-          items: [
-            "Adapting to the space and to real constraints.",
-            "Controlled alignments and proportions between modules.",
-            "Choice of materials and hardware based on use.",
-          ],
-          actions: [
-            {
-              label: "View materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "Hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
+      id: "etapes",
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Fabrication process",
-          intro:
-            "Each step prepares the next one to reduce rework and make for a clean installation.",
+          heading: "From the order to your door",
           steps: [
             {
               number: "1",
-              title: "Validation",
+              title: "We place the order",
               description:
-                "Design, measurements and constraints clarified before production.",
+                "We order the panels, the finishes and the hardware from your signed drawings.",
             },
             {
               number: "2",
-              title: "Selection",
+              title: "The factory builds",
               description:
-                "Materials chosen based on durability, moisture and maintenance.",
+                "Our partner factory assembles the boxes, the doors and the drawers.",
             },
             {
               number: "3",
-              title: "Assembly",
+              title: "We check everything",
               description:
-                "Modules, doors and drawers built with consistency and precision.",
+                "We count the parts and measure every module the moment it arrives.",
             },
             {
               number: "4",
-              title: "Preparation",
+              title: "We deliver to you",
               description:
-                "Final check and conditioning for a precise installation.",
+                "We wrap the modules and drop them in the order we will install them.",
             },
           ],
         },
       },
     },
     {
-      id: "types",
+      id: "fiche",
       content: {
-        type: "grid",
-        variant: "image-cards-slider",
+        type: "split",
+        variant: "fact-sheet",
         props: {
-          heading: "Fabrication by project type",
-          intro:
-            "The level of use and the constraints change with the space, but the execution standard stays high.",
-          items: [
+          heading: "Production in brief",
+          intro: "Who builds your cabinets, who inspects them and how long it takes.",
+          rows: [
             {
-              title: "Kitchen",
-              href: "/espaces/cuisine",
-              description:
-                "Modules, islands, optimized storage and appliance integration.",
-              image: {
-                src: "/images/generated/spaces/space-cuisine-hero-01.webp",
-                alt: "Custom kitchen with precise fabrication",
-              },
-              badges: ["Kitchen", "Storage"],
-              footerCtaLabel: "View kitchen",
+              label: "How long",
+              value:
+                "Nine to fifteen weeks pass between your signed drawings and installation day.",
             },
             {
-              title: "Bathroom",
-              href: "/espaces/salle-de-bain",
-              description: "Vanities and storage suited to moisture.",
-              image: {
-                src: "/images/generated/spaces/space-bath-hero-01.webp",
-                alt: "Custom bathroom with durable fabrication",
-              },
-              badges: ["Moisture", "Durability"],
-              footerCtaLabel: "View bathroom",
+              label: "What you receive",
+              value:
+                "Cabinet boxes, doors, drawers and shelves that arrive already assembled.",
             },
             {
-              title: "Commercial",
-              href: "/espaces/commercial",
-              description:
-                "Heavy use, durability and functional consistency.",
-              image: {
-                src: "/images/generated/spaces/space-commercial-hero-01.webp",
-                alt: "Custom commercial fit-out with robust fabrication",
-              },
-              badges: ["Commercial", "Heavy use"],
-              footerCtaLabel: "View commercial",
+              label: "Who handles it",
+              value:
+                "Our partner factory builds, and Dilamco picks the materials and inspects.",
+            },
+            {
+              label: "Inspection",
+              value:
+                "Every module is opened and measured before it comes into your home.",
+            },
+            {
+              label: "Warranty",
+              value:
+                "A part that does not match is reordered at our cost, not yours.",
+            },
+            {
+              label: "If the site runs late",
+              value:
+                "We keep your cabinets at our place until the room is ready for them.",
             },
           ],
+          image: {
+            src: "/images/services/fabrication-hero.webp",
+            alt: "Wrapped cabinet modules waiting for delivery",
+          },
+          note: "Your delivery date is confirmed in writing as soon as the order goes out.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - fabrication",
-          intro:
-            "Clear answers about custom fabrication and what it involves.",
+          heading: "Questions about production",
           items: [
             {
-              q: "What's the difference between custom and semi-custom?",
-              a: "Custom starts from your real space: each cabinet is sized to the millimetre according to your measurements, layout and constraints. Semi-custom starts from predefined modules that are adapted within certain limits (a few widths, finish options), without redesigning entirely. Custom makes better use of corners, heights and unusual spaces; semi-custom can be enough when the space is standard. The difference shows mostly in the final fit and in making the most of every centimetre.",
+              q: "Who actually produces your cabinets?",
+              a: "Our exclusive partner factory, to our drawings and specifications. Dilamco keeps the design, the receiving inspection, the install and the after-sales service.",
             },
             {
-              q: "Which materials age best?",
-              a: "It depends on the space, moisture, maintenance, edge banding, hardware and installation.",
+              q: "What if a part arrives damaged?",
+              a: "It is refused on receiving and reordered the same day. That is exactly why the check happens before modules enter the job site.",
             },
             {
-              q: "Is it 100% customizable?",
-              a: "The goal is to adapt the project to the space and the use, within the limits of real technical constraints.",
+              q: "Can a module be added along the way?",
+              a: "Before production starts, yes, at no restart cost. After that, the addition ships separately and carries its own lead time.",
             },
             {
-              q: "What are the fabrication lead times?",
-              a: "Fabrication lead times vary with the project's complexity, material availability and coordination with installation. For a custom project, you should generally allow 9 to 15 weeks between design approval and the final install. A precise schedule is confirmed once the plans are settled, to give you clear visibility on each stage.",
+              q: "Custom or semi-custom?",
+              a: "Custom starts from your measurements, box by box. Semi-custom adapts preset widths. The gap shows up in corners and heights.",
             },
           ],
         },
@@ -214,9 +177,9 @@ export const fabricationPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want a project built to last?",
+          heading: "Put your cabinets into production",
           intro:
-            "We help you frame the right technical choices, materials and execution details before production.",
+            "We settle the materials, the hardware and the dates before the order goes out.",
           actions: [
             {
               label: "Request a quote",
@@ -224,12 +187,12 @@ export const fabricationPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View materials",
+              label: "See the materials",
               href: "/materiaux",
               variant: "ghost",
             },
           ],
-          note: "Montréal, Laval and the South Shore",
+          note: "West Island, Montreal, Laval, South Shore",
         },
       },
     },

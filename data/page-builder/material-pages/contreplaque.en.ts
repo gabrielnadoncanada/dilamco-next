@@ -32,228 +32,108 @@ export const contreplaquePageEn: PageTemplateData = {
         type: "hero",
         variant: "split-image",
         props: {
-          eyebrow: "Dilamco - Materials",
-          heading:
-            "Plywood: stability, durability and smart structure",
+          eyebrow: "Materials",
+          heading: "Why our cabinet boxes are made of plywood",
           description:
-            "Plywood is a panel made of thin layers of wood (plies) glued with the grain crossed, which gives it more stable and predictable behaviour than particleboard. That is why it is often preferred in custom work for the structure of cabinets.",
+            "It is the panel that stays straight over time and holds the hinge screws.",
           actions: [
             {
-              label: "Discuss your project",
+              label: "Talk about your project",
               href: "/contact",
               variant: "primary",
             },
             {
-              label: "View our projects",
+              label: "See our projects",
               href: "/projets",
               variant: "ghost",
             },
           ],
-          badges: ["Structure", "Stability", "Durability"],
+          badges: ["Structure", "Stability", "Cabinet boxes"],
           image: {
             src: "/images/generated/materials/material-plywood-hero-01.webp",
-            alt: "Custom kitchen with a durable structure",
+            alt: "Birch plywood cabinet box",
           },
-          caption:
-            "Often relevant when structural strength really matters",
+          caption: "Boxes, drawers and parts under load",
+          imageSide: "right",
         },
       },
     },
     {
-      id: "benefits",
+      id: "fiche",
       content: {
         type: "split",
-        variant: "text-divider-cards",
+        variant: "fact-sheet",
         props: {
-          heading: "Why it is often chosen for the structure",
-          description:
-            "Plywood is made of wood plies glued with cross-grain fibres. This constructive logic improves dimensional stability, mechanical strength and the holding of fasteners.",
-          cards: [
+          heading: "What you should know about plywood",
+          intro: "Answers to the questions people ask us about this panel.",
+          rows: [
             {
-              title: "Cross-grain plies",
-              description:
-                "They limit movement and make the panel more stable.",
+              label: "What it is made of",
+              value:
+                "Thin layers of birch glued crosswise, 13 to 15 mm thick in total.",
             },
             {
-              title: "Strong screw-holding",
-              description:
-                "Useful for cabinets, drawers and modules subject to daily use.",
+              label: "Does it handle humidity?",
+              value:
+                "Yes, as long as the edges of the panel are properly sealed.",
             },
             {
-              title: "Robust structure",
-              description:
-                "Particularly relevant in long-term residential projects.",
+              label: "Upkeep",
+              value:
+                "None, because it stays hidden behind the doors and the finish.",
             },
             {
-              title: "Versatility",
-              description: "Kitchen, storage and other demanding areas.",
-            },
-          ],
-          columns: "2",
-        },
-      },
-    },
-    {
-      id: "fit",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "Where plywood is most relevant",
-          intro:
-            "This material gains value when structure, load and stability matter more than the decorative look alone.",
-          badges: ["Cabinet boxes", "Drawers", "Long term"],
-          cardTitle: "Typical applications",
-          items: [
-            "Cabinet boxes",
-            "Load-bearing internal components",
-            "Drawers and modules subject to loads",
-            "Projects focused on long-term durability",
-          ],
-          actions: [
-            {
-              label: "View fabrication",
-              href: "/services/fabrication",
-              variant: "primary",
+              label: "Best used for",
+              value:
+                "Cabinet boxes, drawer bottoms and any shelf that carries weight.",
             },
             {
-              label: "View hardware",
-              href: "/materiaux/quincaillerie",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "limits",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Moisture, limits and points to watch",
-          intro:
-            "Plywood is not waterproof. The edges, assembly, grade and finish remain decisive for the final result.",
-          items: [
-            {
-              title: "Quality varies by grade.",
-              description: "Not all plywood is created equal.",
+              label: "Price against the others",
+              value:
+                "Dearer than MDF, cheaper than solid wood.",
             },
             {
-              title: "Often a higher cost.",
-              description:
-                "The payoff comes mainly through structure and longevity.",
+              label: "Does it hold screws?",
+              value:
+                "About twice as well as particleboard, so the hinges stay put.",
             },
             {
-              title: "Critical final execution.",
-              description:
-                "Visible edges, moisture and installation strongly influence the result.",
-            },
-          ],
-          actions: [
-            {
-              label: "Compare materials",
-              href: "/materiaux/comparatif",
-              variant: "ghost",
-            },
-            {
-              label: "View all materials",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "What to ask for",
+              value:
+                "At least seven layers, and no visible gaps inside the thickness of the panel.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-plywood-detail-01.webp",
-            alt: "Detail of a custom kitchen in plywood",
+            alt: "Cross-grain plies visible on a plywood edge",
           },
-          cardTitle: "Key takeaway",
-          cardDescription:
-            "Plywood is often an excellent structural choice, but its real performance also depends on the execution details.",
-        },
-      },
-    },
-    {
-      id: "related",
-      frame: { surface: "muted" },
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Related pages",
-          items: [
-            {
-              title: "Full comparison",
-              href: "/materiaux/comparatif",
-              description:
-                "Compare plywood, MDF, melamine and solid wood.",
-              image: {
-                src: "/images/generated/materials/comparatif-materiaux-01.webp",
-                alt: "Visual comparison of several cabinet materials",
-              },
-              badges: ["Comparison"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "MDF",
-              href: "/materiaux/mdf",
-              description: "More geared toward painted finishes.",
-              image: {
-                src: "/images/generated/materials/material-mdf-painted-panel-01.webp",
-                alt: "MDF panel with a painted finish",
-              },
-              badges: ["Paint"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Melamine",
-              href: "/materiaux/melamine",
-              description: "More geared toward decor and budget.",
-              image: {
-                src: "/images/generated/materials/material-melamine-panel-detail-01.webp",
-                alt: "Melamine panel for custom furniture",
-              },
-              badges: ["Decor"],
-              footerCtaLabel: "View page",
-            },
-            {
-              title: "Solid wood",
-              href: "/materiaux/bois-massif",
-              description: "More relevant on visible elements.",
-              image: {
-                src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
-                alt: "Natural solid wood finish",
-              },
-              badges: ["Natural"],
-              footerCtaLabel: "View page",
-            },
-          ],
+          note: "The quality of the panel matters more than the wood you see on the surface.",
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - Plywood",
+          heading: "Questions about plywood",
           items: [
             {
-              q: "Is plywood always better than MDF?",
-              a: "Not necessarily — they excel in different places. Thanks to its cross-grain plies, plywood is more stable and holds screws and hinges better: it is often ideal for cabinet structure and drawers. MDF offers a smoother, more uniform surface, which suits certain painted fronts better. The best approach often combines the two, each where it performs best.",
+              q: "Is plywood needed under the sink?",
+              a: "Yes, that is where it pays off fastest. With a sealed edge and a removable bottom, a slow leak is repaired without pulling the box apart.",
             },
             {
-              q: "Is plywood suitable for the bathroom?",
-              a: "Depending on the context, yes. The protection and installation details remain decisive.",
+              q: "How many plies should you look for?",
+              a: "Seven plies over 13 mm for a cabinet box. Fewer plies means thicker layers, so more voids and more dips under the veneer.",
             },
             {
-              q: "Is it more expensive?",
-              a: "Often yes: quality plywood generally costs more than MDF or particleboard. In return, it brings better structural stability, greater moisture resistance and better fastener retention over time. It's an investment that's justified mainly on the structural elements used every day.",
+              q: "Is an exposed edge acceptable?",
+              a: "Yes, several clients ask for it on shelves and island ends. It then needs a void-free veneer, sanded fine and varnished.",
             },
             {
-              q: "Is it visible once installed?",
-              a: "Generally not, unless a specific design choice exposes the edges.",
+              q: "Is plywood heavier?",
+              a: "At equal thickness it weighs less than MDF. You feel it when hanging upper cabinets and on the wall anchors.",
             },
           ],
         },
@@ -265,9 +145,9 @@ export const contreplaquePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want to prioritize a more durable structure?",
+          heading: "You want cabinet boxes that stay square",
           intro:
-            "We help you see whether plywood is relevant for your project, or whether a combination of materials will be more coherent.",
+            "The quality of the panel and its thickness are written into your quote.",
           actions: [
             {
               label: "Request a quote",

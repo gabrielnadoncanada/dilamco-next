@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const salleDeLavagePage: PageTemplateData = {
   template: "spaces",
   metadata: {
-    title: "Salle de lavage sur mesure haut de gamme",
+    title: "Salle de lavage sur mesure — entrepreneur général",
     description:
-      "Salle de lavage sur mesure : conception, fabrication contrôlée et installation précise à Montréal, Laval et sur la Rive-Sud.",
+      "Salle de lavage sur mesure à Montréal, Laval et sur la Rive-Sud : conception, production en usine partenaire et pose par un entrepreneur général licencié.",
     path: "/espaces/salle-de-lavage",
     ogAlt: "Salle de lavage sur mesure Dilamco",
   },
@@ -30,12 +30,12 @@ export const salleDeLavagePage: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Espaces",
-          heading: "Salle de lavage sur mesure, espace technique bien cadré",
+          badges: ["Fini lavable"],
+          heading: "Salle de lavage sur mesure à Montréal et Laval",
           description:
-            "Une salle de lavage sur mesure est un espace technique — rangement, plan de travail, colonnes lave-linge et sèche-linge — conçu et fabriqué pour votre configuration réelle, avec des matériaux adaptés à l'humidité et à l'usage fréquent. Chez Dilamco, dans le Grand Montréal, on conçoit et installe cet aménagement du plan à la finition.",
+            "Comptoir de pliage, colonnes de rangement et cuve, dessinés autour de vos appareils.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -44,213 +44,147 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets",
+              href: "/projets/salle-de-lavage",
               variant: "ghost",
             },
           ],
-          badges: ["Fonctionnel", "Durable", "Sur mesure"],
           image: {
             src: "/images/generated/spaces/space-laundry-hero-01.webp",
-            alt: "Salle de lavage sur mesure à Pierrefonds et dans le Grand Montréal",
+            alt: "Salle de lavage avec comptoir de pliage continu au-dessus des appareils",
           },
-          caption:
-            "Un espace de service conçu pour durer et rester simple à utiliser",
+          caption: "Comptoir de pliage continu",
         },
       },
     },
     {
-      id: "why",
+      id: "galerie",
       content: {
-        type: "split",
-        variant: "badges-checklist-cta",
+        type: "grid",
+        variant: "bento",
         props: {
-          heading: "Un espace de lavage pensé comme un espace technique",
-          intro:
-            "Le sur mesure sert à gérer machines, circulation, comptoir, rangement vertical et contraintes d'humidité dans un ensemble cohérent.",
-          badges: ["Rangement", "Humidité", "Usage fréquent"],
-          cardTitle: "Quand cette approche est utile",
-          items: [
-            "Vous devez optimiser un espace restreint.",
-            "Le rangement et le comptoir pliage sont importants.",
-            "Vous cherchez une solution plus stable qu'un assemblage standard.",
-          ],
-          actions: [
+          heading: "Des salles de lavage qu'on a aménagées",
+          tiles: [
             {
-              label: "Demander une soumission",
+              kind: "image",
+              span: "wide",
+              image: {
+                src: "/images/generated/spaces/espaces-card-laundry-01.webp",
+                alt: "Salle de lavage blanche avec appareils surélevés et armoire à balais",
+              },
+              caption: "Appareils surélevés, armoire à balais",
+            },
+            {
+              kind: "image",
+              span: "tall",
+              image: {
+                src: "/images/generated/spaces/space-laundry-project-02.webp",
+                alt: "Colonnes de rangement et paniers dans une salle de lavage à Laval",
+              },
+              caption: "Colonnes et paniers, Laval",
+            },
+            {
+              kind: "stat",
+              value: "9 à 15 sem.",
+              label: "Le délai de production des armoires",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-laundry-project-01.webp",
+                alt: "Salle de lavage compacte aménagée dans un logement de Montréal",
+              },
+              caption: "Espace compact, Montréal",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/generated/spaces/space-laundry-project-03.webp",
+                alt: "Cuve de lavage et comptoir alignés sur le même mur",
+              },
+              caption: "Cuve et comptoir alignés",
+            },
+            {
+              kind: "text",
+              title: "Déplacer les appareils",
+              description:
+                "On refait l'entrée d'eau, le drain et la sortie d'air avant de dessiner.",
               href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "Voir le processus",
-              href: "/processus",
-              variant: "ghost",
             },
           ],
         },
       },
     },
     {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "Une séquence claire pour réduire les imprévus",
-          intro:
-            "Le projet est cadré dès le départ pour intégrer contraintes techniques, rangement et finition.",
-          steps: [
-            {
-              number: "1",
-              title: "Analyse",
-              description:
-                "Contraintes de plomberie, ventilation, circulation et profondeur disponible.",
-            },
-            {
-              number: "2",
-              title: "Conception",
-              description:
-                "Validation des zones de rangement, du comptoir et de l'accès aux machines.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Production contrôlée avec choix de matériaux adaptés à l'usage.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Ajustements et finitions vérifiés sur place pour une exécution nette.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "list-actions-image-card",
+        variant: "fact-sheet",
         props: {
-          heading: "Des matériaux qui tiennent dans le temps",
+          heading: "La salle de lavage en bref",
           intro:
-            "Dans une salle de lavage, humidité et usage quotidien punissent vite les choix faibles ou mal adaptés.",
-          items: [
+            "Ce qu'il faut prévoir dans une pièce où passent l'eau, l'air chaud et le courant.",
+          rows: [
             {
-              title: "Structure robuste",
-              description:
-                "Bois massif de bouleau sur les éléments critiques pour mieux résister à l'usage.",
+              label: "Combien de temps",
+              value:
+                "Il faut 9 à 15 semaines, et la plomberie se refait avant la pose.",
             },
             {
-              title: "Stabilité dimensionnelle",
-              description:
-                "Contreplaqué de bouleau pour limiter la déformation et mieux supporter la charge.",
+              label: "Prix indicatif",
+              value:
+                "Le prix suit le nombre de colonnes, la surface de comptoir et la cuve de lavage.",
             },
             {
-              title: "Rangement utile",
-              description:
-                "Configuration pensée pour paniers, produits, comptoir et accès quotidien.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explorer les matériaux",
-              href: "/materiaux",
-              variant: "ghost",
+              label: "Matériaux",
+              value:
+                "Du contreplaqué de bouleau, avec les arrières scellés à cause de la vapeur.",
             },
             {
-              label: "Voir nos espaces",
-              href: "/espaces",
-              variant: "ghost",
+              label: "Quincaillerie",
+              value:
+                "Des fixations choisies pour des tablettes pleines de bouteilles et de savon.",
+            },
+            {
+              label: "Qui installe",
+              value:
+                "Notre équipe, en gardant l'espace nécessaire autour de la laveuse et de la sécheuse.",
+            },
+            {
+              label: "Garantie",
+              value:
+                "Le contrat prévoit que nous revenions ajuster les portes et les tiroirs.",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-laundry-project-01.webp",
-            alt: "Détail matériau pour salle de lavage sur mesure",
+            alt: "Détail d'armoires de salle de lavage sur mesure",
           },
-          cardTitle: "Impact concret",
-          cardDescription:
-            "Une structure plus stable évite les compromis visibles trop tôt et protège la qualité d'usage de la pièce.",
-        },
-      },
-    },
-    {
-      id: "projects",
-      content: {
-        type: "grid",
-        variant: "image-cards-slider",
-        props: {
-          heading: "Projets salle de lavage en vedette",
-          intro:
-            "Quelques exemples de configurations bien exécutées pour un usage fréquent.",
-          items: [
-            {
-              title: "Salle de lavage sur mesure",
-              href: "/projets",
-              description:
-                "Rangement et surfaces de travail intégrés dans un espace de service compact.",
-              image: {
-                src: "/images/generated/spaces/space-laundry-project-01.webp",
-                alt: "Projet salle de lavage sur mesure à Montréal",
-              },
-              badges: ["Montréal", "Fonctionnel"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Salle de lavage sur mesure",
-              href: "/projets",
-              description:
-                "Aménagement durable avec rangement vertical et finition propre.",
-              image: {
-                src: "/images/generated/spaces/space-laundry-project-02.webp",
-                alt: "Projet salle de lavage sur mesure à Laval",
-              },
-              badges: ["Laval", "Durable"],
-              footerCtaLabel: "Voir le projet",
-            },
-            {
-              title: "Salle de lavage sur mesure",
-              href: "/projets",
-              description:
-                "Projet conçu pour simplifier l'usage quotidien sans sacrifier la qualité.",
-              image: {
-                src: "/images/generated/spaces/space-laundry-project-03.webp",
-                alt: "Projet salle de lavage sur mesure sur la Rive-Sud",
-              },
-              badges: ["Rive-Sud", "Sur mesure"],
-              footerCtaLabel: "Voir le projet",
-            },
-          ],
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - salle de lavage sur mesure",
-          intro:
-            "Les questions les plus utiles avant de cadrer ce type d'espace.",
+          heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien coûte une salle de lavage sur mesure ?",
-              a: "Le prix d'une salle de lavage sur mesure dépend de la configuration (colonnes ou appareils côte à côte, plan de travail, cuve), du volume de rangement, des matériaux et finis, et des contraintes techniques du local — plomberie, ventilation, espace disponible. Comme la pièce subit humidité et usage fréquent, on privilégie des matériaux stables et une quincaillerie durable, ce qui influence le budget. Nous confirmons une estimation précise une fois la configuration cadrée, pour éviter les surprises.",
+              q: "Faut-il un drain de plancher dans la salle de lavage ?",
+              a: "Il n'est pas exigé partout, mais il évite des dégâts coûteux à l'étage. À défaut, on installe un bac de rétention sous la laveuse et un robinet d'arrêt accessible.",
             },
             {
-              q: "Est-ce que vous pouvez coordonner d'autres travaux ?",
-              a: "Oui, selon la portée du projet. L'objectif est de réduire la fragmentation quand c'est pertinent.",
+              q: "Peut-on empiler la laveuse et la sécheuse ?",
+              a: "Oui, si les appareils sont conçus pour l'empilage. Ça libère un demi-mur pour une colonne de rangement et un panneau d'accès à la tuyauterie.",
             },
             {
-              q: "Quels matériaux recommandez-vous ?",
-              a: "Pour une salle de lavage, on privilégie des matériaux stables face à l'humidité et à l'usage fréquent : panneaux et finis résistants à la vapeur et aux éclaboussures, quincaillerie durable (coulisses et charnières qui tiennent la cadence), et plans de travail faciles à entretenir. Les détails de construction — arrières, fixations, dégagements autour des appareils — sont soignés pour limiter le gondolement et prolonger la tenue dans le temps. L'objectif : un espace qui reste propre et fonctionnel malgré une utilisation intensive.",
+              q: "Où passe l'évacuation de la sécheuse ?",
+              a: "Le plus court chemin vers un mur extérieur, en conduit rigide. Un parcours long ou plein de coudes allonge les cycles et encrasse le conduit.",
             },
             {
-              q: "Travaillez-vous à Montréal et autour ?",
-              a: "Oui. Montréal, Laval et la Rive-Sud font partie de notre secteur.",
+              q: "Peut-on installer la salle de lavage à l'étage ?",
+              a: "Oui, avec un plancher renforcé au besoin, un coupe-eau et une évacuation dédiée. On valide la structure et le tracé des conduits avant de dessiner le rangement.",
             },
           ],
         },
@@ -264,7 +198,7 @@ export const salleDeLavagePage: PageTemplateData = {
         props: {
           heading: "Parlez-nous de votre salle de lavage",
           intro:
-            "On vous aide à définir une solution durable, organisée et réaliste pour votre espace.",
+            "Estimation gratuite. Les contraintes de plomberie sont relevées sur place.",
           actions: [
             {
               label: "Demander une soumission",
@@ -273,10 +207,11 @@ export const salleDeLavagePage: PageTemplateData = {
             },
             {
               label: "Voir nos réalisations",
-              href: "/projets",
+              href: "/projets/salle-de-lavage",
               variant: "ghost",
             },
           ],
+          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Sud",
         },
       },
     },

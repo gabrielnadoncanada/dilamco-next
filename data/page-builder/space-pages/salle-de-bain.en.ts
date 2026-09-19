@@ -6,7 +6,7 @@ export const salleDeBainPageEn: PageTemplateData = {
   metadata: {
     title: "Custom bathroom vanity in Laval and Montréal",
     description:
-      "High-end custom bathroom vanity: design, controlled fabrication and precise installation in Montréal, Laval, the North Shore and the South Shore.",
+      "Custom bathroom vanity in Laval, Montréal and on both shores, designed, supplied and installed by Dilamco, a licensed general contractor (RBQ).",
     path: "/espaces/salle-de-bain",
     ogAlt: "Dilamco custom bathroom vanity",
   },
@@ -30,13 +30,12 @@ export const salleDeBainPageEn: PageTemplateData = {
       frame: { divider: "bottom" },
       content: {
         type: "hero",
-        variant: "split-image",
+        variant: "centered",
         props: {
-          eyebrow: "Dilamco - Spaces",
-          heading:
-            "Custom bathroom vanity in Laval and Greater Montréal",
+          badges: ["Single or double", "Washable finish"],
+          heading: "Custom bathroom vanity in Laval and Montréal",
           description:
-            "A custom bathroom vanity is a sink cabinet designed and built to the exact dimensions of your room, with materials chosen to withstand moisture. At Dilamco, in Laval and across Greater Montréal, we design, fabricate and install custom vanities — stable structure, tailored storage and precise installation, from plan to finish.",
+            "We draw the vanity, have it built, then install it with the rest of the room.",
           actions: [
             {
               label: "Get a quote",
@@ -44,249 +43,147 @@ export const salleDeBainPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our bathroom projects",
-              href: "/projets",
-              variant: "ghost",
-            },
-          ],
-          badges: ["Custom", "Greater Montréal", "Moisture"],
-          image: {
-            src: "/images/generated/spaces/space-bath-hero-01.webp",
-            alt: "Custom bathroom vanity in Pierrefonds and Greater Montréal",
-          },
-          caption: "Built for daily use and a humid environment",
-        },
-      },
-    },
-    {
-      id: "why",
-      content: {
-        type: "split",
-        variant: "badges-checklist-cta",
-        props: {
-          heading: "A custom bathroom built to last",
-          intro:
-            "In a bathroom, structure and durability over time matter as much as the design.",
-          badges: ["Stability", "Moisture", "Finish"],
-          cardTitle: "When custom work makes sense",
-          items: [
-            "You want to optimize a genuinely constrained space.",
-            "Durability and stability are priorities.",
-            "You're looking for execution that's better controlled than a stock solution.",
-          ],
-          actions: [
-            {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
-            },
-            {
-              label: "View our services",
-              href: "/services",
-              variant: "ghost",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "process",
-      content: {
-        type: "process",
-        variant: "horizontal-steps-cards",
-        props: {
-          heading: "From plan to installation, no improvising",
-          intro:
-            "The project is framed early to better manage plumbing, storage, ergonomics and finish.",
-          steps: [
-            {
-              number: "1",
-              title: "Analysis",
-              description:
-                "Space constraints, circulation, plumbing and storage needs.",
-            },
-            {
-              number: "2",
-              title: "Design",
-              description:
-                "Validation of dimensions, finishes and the logic of use.",
-            },
-            {
-              number: "3",
-              title: "Fabrication",
-              description:
-                "Controlled production with standards suited to a demanding environment.",
-            },
-            {
-              number: "4",
-              title: "Installation",
-              description:
-                "Adjustments, alignments and finishes verified at delivery.",
-            },
-          ],
-        },
-      },
-    },
-    {
-      id: "materials",
-      content: {
-        type: "split",
-        variant: "list-actions-image-card",
-        props: {
-          heading: "Materials suited to moisture",
-          intro:
-            "A premium bathroom rests on a stable structure, durable components and choices that are simple to maintain.",
-          items: [
-            {
-              title: "Solid birch wood",
-              description:
-                "Used on critical elements for its resistance and stability.",
-            },
-            {
-              title: "Birch plywood",
-              description:
-                "Better dimensional stability and better load resistance.",
-            },
-            {
-              title: "Finish choices",
-              description:
-                "Selection aligned with maintenance, use and the humid environment.",
-            },
-          ],
-          actions: [
-            {
-              label: "Explore materials",
-              href: "/materiaux",
-              variant: "ghost",
-            },
-            {
-              label: "In-stock vanities",
-              href: "/boutique/vanites",
+              label: "See our work",
+              href: "/projets/salle-de-bain",
               variant: "ghost",
             },
           ],
           image: {
             src: "/images/generated/spaces/space-bath-project-01.webp",
-            alt: "Material detail for a custom bathroom",
+            alt: "Bathroom with a light oak double vanity and glass shower",
           },
-          cardTitle: "Why it matters",
-          cardDescription:
-            "Less warping, better durability over time and a more lasting sense of solidity.",
+          caption: "Double vanity and matching linen tower",
         },
       },
     },
     {
-      id: "projects",
+      id: "galerie",
       content: {
         type: "grid",
-        variant: "image-cards-slider",
+        variant: "bento",
         props: {
-          heading: "Featured bathroom projects",
-          intro:
-            "A few projects that show the finish level and the quality of execution.",
-          items: [
+          heading: "Bathrooms we redid completely",
+          tiles: [
             {
-              title: "Custom vanity",
-              href: "/projets",
-              description:
-                "Optimized storage and precise finish suited to the bathroom.",
+              kind: "image",
+              span: "wide",
               image: {
-                src: "/images/generated/spaces/space-bath-project-01.webp",
-                alt: "Custom bathroom project in Laval",
+                src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
+                alt: "Marble bathroom with a floating vanity",
               },
-              badges: ["Laval", "Vanity"],
-              footerCtaLabel: "View project",
+              caption: "Floating vanity, marble",
             },
             {
-              title: "Custom bathroom",
-              href: "/projets",
-              description:
-                "A custom project designed for everyday use and durability over time.",
+              kind: "image",
+              span: "tall",
               image: {
-                src: "/images/generated/spaces/space-bath-project-02.webp",
-                alt: "Custom bathroom project in Montréal",
+                src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
+                alt: "Curbless shower with a glass panel",
               },
-              badges: ["Montréal", "Custom"],
-              footerCtaLabel: "View projects",
+              caption: "Curbless shower, glass panel",
             },
             {
-              title: "Custom bathroom",
-              href: "/projets",
-              description:
-                "Clean execution with suitable materials and careful alignments.",
+              kind: "stat",
+              value: "9–15 wks",
+              label: "The wait before your vanity is installed",
+            },
+            {
+              kind: "image",
               image: {
-                src: "/images/generated/spaces/space-bath-project-03.webp",
-                alt: "Custom bathroom project on the South Shore",
+                src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
+                alt: "Vanity with an LED mirror and quartz countertop",
               },
-              badges: ["South Shore", "Finish"],
-              footerCtaLabel: "View projects",
+              caption: "LED mirror and quartz top",
+            },
+            {
+              kind: "quote",
+              quote:
+                "Customer experience sits at the centre of what Dilamco Construction does!",
+              author: "Jean-Philippe Hébert, Google review (translated)",
+            },
+            {
+              kind: "image",
+              image: {
+                src: "/images/realisations/salle-de-bain-douche-pierre-claire-01.webp",
+                alt: "Shower clad in pale stone in a renovated bathroom",
+              },
+              caption: "Pale stone, West Island",
             },
           ],
         },
       },
     },
     {
-      id: "zones",
+      id: "en-bref",
       content: {
         type: "split",
-        variant: "badges-checklist-cta",
+        variant: "fact-sheet",
         props: {
-          heading: "Custom vanities across Greater Montréal",
+          heading: "The bathroom in brief",
           intro:
-            "We design, fabricate and install custom bathroom vanities on both sides of the river: from the West Island to Laval, the North Shore and the South Shore.",
-          badges: ["Montréal", "Laval", "North Shore", "South Shore"],
-          cardTitle: "Areas served",
-          items: [
-            "Montréal and the West Island",
-            "Laval and the North Shore",
-            "South Shore and southern suburbs",
-            "Design, fabrication and installation included",
-          ],
-          actions: [
+            "What you should know before redoing a room that gets wet every day.",
+          rows: [
             {
-              label: "Request a quote",
-              href: "/contact",
-              variant: "primary",
+              label: "How long",
+              value:
+                "The vanity takes nine to fifteen weeks to build, starting from the survey.",
             },
             {
-              label: "View our bathroom projects",
-              href: "/projets",
-              variant: "ghost",
+              label: "Typical price",
+              value:
+                "The price depends on the width, the number of sinks and the storage you want.",
+            },
+            {
+              label: "Materials",
+              value:
+                "Birch plywood, with the edges sealed so steam cannot get into the panel.",
+            },
+            {
+              label: "Hardware",
+              value:
+                "Hinges and slides treated so they will not rust in a humid room.",
+            },
+            {
+              label: "Who installs",
+              value:
+                "Our own crew, after the tile is set and before the faucets are hooked up.",
+            },
+            {
+              label: "Warranty",
+              value:
+                "Anything wrong is fixed before you pay the final instalment.",
             },
           ],
+          image: {
+            src: "/images/generated/spaces/space-bath-hero-01.webp",
+            alt: "Custom bathroom vanity in a renovated room",
+          },
         },
       },
     },
     {
       id: "faq",
-
       content: {
         type: "faq",
         variant: "accordion",
         props: {
-          heading: "FAQ - custom bathrooms",
-          intro:
-            "The points we clarify most often before starting a project.",
+          heading: "Frequently asked questions",
           items: [
             {
-              q: "How much does a custom bathroom vanity cost?",
-              a: "The price of a custom bathroom vanity depends mainly on five things: the dimensions and format (single or double sink), the amount of storage (drawers, columns, niches), the materials and finishes chosen, the hardware (slides, hinges), and the constraints of the space. Because the room is humid, the materials and construction details are selected for stability and durability over time, which also affects the budget. We provide a precise estimate once the project is scoped — real measurements, desired storage and finish level — for a clear budget with no surprises.",
+              q: "Can the toilet or tub be moved?",
+              a: "Yes, provided the supply and drain are redone. On a concrete slab that means opening the floor, which shifts both budget and calendar. We settle it during the survey.",
             },
             {
-              q: "Do you make custom vanities in Laval and on the North Shore?",
-              a: "Yes. We design, fabricate and install custom bathroom vanities in Laval, on the North Shore, in Montréal and on the South Shore.",
+              q: "How do you keep mould from forming behind the vanity?",
+              a: "A continuous membrane under the tile, sealant at every junction, and a fan sized for the room and vented outdoors rather than into the attic.",
             },
             {
-              q: "What's the difference with a stock bathroom vanity?",
-              a: "A stock vanity is sold in fixed sizes, so you have to work around the leftover space, often losing centimetres around the sink or the plumbing. A custom vanity is sized to the millimetre for your bathroom, which lets you use the corners, heights and niches, and tailor the storage precisely around the pipes. The structure is also chosen for the room's humid environment — stable materials, construction details that limit warping — where many stock vanities age poorly. The result: a cabinet that fits better, lasts longer and is integrated into the room.",
+              q: "How long is the bathroom out of service?",
+              a: "Expect two to four weeks of work on site, depending on demolition and drying. The dates are set in the schedule, not improvised as the job goes.",
             },
             {
-              q: "Does moisture change your material choices?",
-              a: "Yes. The materials and construction details are selected for this humid environment, for stability and durability over time.",
-            },
-            {
-              q: "What's the lead time for a custom vanity?",
-              a: "The lead time depends on complexity, finishes and the fabrication schedule. We confirm it during the design phase.",
+              q: "Is a custom vanity worth it in a small bathroom?",
+              a: "That is where it changes the most: width matched to the centimetre, drawers routed around the trap, height suited to the people using it rather than to a catalogue.",
             },
           ],
         },
@@ -299,8 +196,7 @@ export const salleDeBainPageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your bathroom",
-          intro:
-            "We help you frame a durable project, suited to the space and well executed.",
+          intro: "Free site visit. You leave with a line-by-line quote.",
           actions: [
             {
               label: "Request a quote",
@@ -308,11 +204,12 @@ export const salleDeBainPageEn: PageTemplateData = {
               variant: "primary",
             },
             {
-              label: "View our bathroom projects",
-              href: "/projets",
+              label: "See our work",
+              href: "/projets/salle-de-bain",
               variant: "ghost",
             },
           ],
+          note: "RBQ licence 8306-0806-27 · Montréal, Laval, North Shore, South Shore",
         },
       },
     },

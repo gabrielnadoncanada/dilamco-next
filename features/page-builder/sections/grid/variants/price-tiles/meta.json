@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "price-tiles",
+  "title": "Grid Price Tiles",
+  "description": "Deux ou trois tuiles de prix indicatifs avec inclusions, note obligatoire et action.",
+  "propsModel": ["heading", "intro", "tiles", "note", "action"],
+  "kitchenSink": {
+    "group": "content",
+    "order": 340,
+    "viewport": "desktop"
+  }
+}
