@@ -27,9 +27,9 @@ export const quincailleriePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Matériaux",
-          heading: "La quincaillerie décide de la durée de vos armoires",
+          heading: "Pourquoi la quincaillerie fait durer vos armoires",
           description:
-            "Charnières, coulisses et amortisseurs encaissent des milliers de cycles par année. C'est la pièce qui lâche en premier.",
+            "Une porte s'ouvre des milliers de fois par année, et c'est la charnière qui lâche en premier.",
           actions: [
             {
               label: "Voir nos cuisines",
@@ -47,51 +47,56 @@ export const quincailleriePage: PageTemplateData = {
             src: "/images/generated/materials/material-hardware-hero-01.webp",
             alt: "Coulisse de tiroir et charnière dans une armoire sur mesure",
           },
-          caption: "Le détail qu'on ne voit jamais",
+          caption: "La pièce qu'on ne voit jamais",
           imageSide: "right",
         },
       },
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "La quincaillerie en fiche",
-          intro: "Ce qu'on spécifie par défaut sur chaque porte et chaque tiroir.",
+          heading: "Ce qu'on installe sur chaque porte",
+          intro: "La quincaillerie comprise dans toutes nos armoires, sans supplément.",
           rows: [
             {
-              label: "Composition",
-              value: "Acier embouti nickelé, amortisseur hydraulique intégré",
+              label: "De quoi c'est fait",
+              value:
+                "De l'acier nickelé, avec un petit piston qui freine la porte à la fermeture.",
             },
             {
-              label: "Humidité",
-              value: "Finition nickelée exigée en salle de bain",
+              label: "Résiste à l'humidité ?",
+              value:
+                "Oui, et en salle de bain nous exigeons un fini nickelé qui ne rouille pas.",
             },
             {
               label: "Entretien",
-              value: "Un réglage de charnière par année, rien d'autre",
+              value:
+                "Un tour de tournevis une fois par année, et c'est tout.",
             },
             {
-              label: "Usages recommandés",
-              value: "Toutes les portes et tous les tiroirs, sans exception",
+              label: "Usage recommandé",
+              value:
+                "Sur toutes les portes et tous les tiroirs, sans exception.",
             },
             {
-              label: "Prix relatif",
-              value: "5 à 10 pour cent du coût des armoires",
+              label: "Prix par rapport aux autres",
+              value:
+                "Cela représente 5 à 10 pour cent du prix de vos armoires.",
             },
             {
               label: "Garantie",
-              value: "À vie chez les grandes marques européennes",
+              value:
+                "Les grandes marques européennes la garantissent à vie.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-hardware-detail-01.webp",
             alt: "Détail d'une charnière réglable sur une porte d'armoire",
           },
-          note: "Modèles exacts inscrits au devis avant la signature.",
+          note: "Les modèles exacts sont écrits dans la soumission avant la signature.",
         },
       },
     },
@@ -101,28 +106,28 @@ export const quincailleriePage: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Standard ou haut de gamme",
-          columns: ["Standard", "Haut de gamme"],
+          heading: "La différence entre le standard et le haut de gamme",
+          columns: ["Quincaillerie standard", "Quincaillerie haut de gamme"],
           rows: [
             {
-              label: "Extension du tiroir",
-              values: ["Partielle", "Complète"],
+              label: "Le tiroir sort-il au complet ?",
+              values: ["Non, le fond reste caché", "Oui, jusqu'au fond"],
             },
             {
-              label: "Fermeture",
-              values: ["Sèche", "Amortie"],
+              label: "Comment la porte ferme",
+              values: ["Elle claque", "Elle ralentit toute seule"],
             },
             {
-              label: "Charge",
+              label: "Poids que le tiroir supporte",
               values: ["25 kg", "35 à 60 kg"],
             },
             {
-              label: "Réglage",
-              values: ["Deux axes", "Trois axes"],
+              label: "Peut-on réaligner la porte ?",
+              values: ["Dans deux sens", "Dans les trois sens"],
             },
             {
               label: "Garantie de la marque",
-              values: ["Limitée", "Souvent à vie"],
+              values: ["Limitée dans le temps", "Souvent à vie"],
             },
           ],
         },
@@ -162,9 +167,9 @@ export const quincailleriePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Choisir la quincaillerie avant la commande",
+          heading: "Choisir votre quincaillerie avant la commande",
           intro:
-            "On vous fait ouvrir et fermer les modèles, puis on inscrit la référence retenue.",
+            "Vous ouvrez et fermez les modèles vous-même, puis on note celui que vous avez choisi.",
           actions: [
             {
               label: "Obtenir une soumission",

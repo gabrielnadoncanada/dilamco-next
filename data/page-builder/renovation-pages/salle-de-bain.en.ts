@@ -42,9 +42,9 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Bathroom renovation",
-          heading: "A bathroom kept watertight before it is pretty",
+          heading: "Bathroom renovation, from the plumbing to the tile",
           description:
-            "Drains, ventilation, membrane and tiling redone in order, with an inspection before the walls close.",
+            "We redo the plumbing, the ventilation and the waterproofing, then we tile and set the vanity.",
           actions: [
             {
               label: "Free quote",
@@ -57,7 +57,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Continuous membrane", "Plumbing inspected"],
+          badges: ["Plumbing inspected", "Fully waterproofed"],
           image: {
             src: "/images/generated/renovation/renovation-bath-hero-01.webp",
             alt: "Bathroom renovated by a general contractor",
@@ -73,47 +73,47 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the mandate includes",
+          heading: "What the quote covers",
           columns: "2",
           items: [
             {
-              title: "Strip-out",
-              description: "The substrate is judged bare",
+              title: "Demolition",
+              description: "We strip it out to see the state of the floor",
               icon: "hammer",
               bullets: [
-                "Shower, vanity and finishes removed",
-                "Joists and plywood inspected",
-                "Subfloor corrected before tiling",
+                "We take out the shower, the vanity and the finishes",
+                "We inspect the floor joists and the plywood",
+                "We repair the floor before anything goes back down",
               ],
             },
             {
-              title: "Drains and ventilation",
-              description: "What an inspector looks at",
+              title: "Plumbing and ventilation",
+              description: "We redo what the inspector checks",
               icon: "droplets",
               bullets: [
-                "Drain slope and supply lines redone",
-                "Fan ducted outdoors, never into the attic",
-                "Anti-scald valve installed",
+                "We redo the drain slope and the water supply",
+                "We vent the fan outdoors, never into the attic",
+                "We install a valve that prevents scalding",
               ],
             },
             {
-              title: "Membrane and tile",
-              description: "The hidden layer that decides lifespan",
+              title: "Waterproofing and tile",
+              description: "We seal the shower before any tile goes on",
               icon: "shieldCheck",
               bullets: [
-                "Water-resistant board on wet surfaces",
-                "Membrane carried up the walls, tied to the drain",
-                "Slope verified before tiling",
+                "Water-resistant board on every wet wall",
+                "Membrane carried up the walls and sealed to the drain",
+                "Slope verified before the first tile",
               ],
             },
             {
               title: "Vanity and fixtures",
-              description: "The visible part, on a sound base",
+              description: "We install the vanity and everything else",
               icon: "bath",
               bullets: [
-                "Vanity from our partner factory",
-                "Faucets, mirror, lighting",
-                "Toilet, shower door, mouldings",
+                "Vanity supplied by our partner factory",
+                "Faucets, mirror and lighting",
+                "Toilet, shower door and mouldings",
               ],
             },
           ],
@@ -126,37 +126,37 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "How a bathroom unfolds",
+          heading: "How the work goes",
           steps: [
             {
               number: "1",
-              title: "Site measure",
+              title: "Visit and measurements",
               description:
-                "Ventilation, plumbing and signs of leaks examined on site.",
+                "We look at the ventilation, the plumbing and any water stains.",
             },
             {
               number: "2",
-              title: "Strip-out and findings",
+              title: "Demolition",
               description:
-                "A damaged subfloor is photographed, then priced with you.",
+                "If the floor is damaged, we photograph it and price it with you.",
             },
             {
               number: "3",
-              title: "Mechanical and inspection",
+              title: "Plumbing and ventilation",
               description:
-                "Drains, circuits and exhaust set, checked before closing.",
+                "We set the drains, the wiring and the fan, then call the inspector.",
             },
             {
               number: "4",
               title: "Waterproofing and tile",
               description:
-                "Board, membrane, slope, then tile from floor to walls.",
+                "We lay the membrane, check the slope, then we tile.",
             },
             {
               number: "5",
               title: "Vanity and handover",
               description:
-                "Vanity, faucets, shower door and final adjustments.",
+                "We install the vanity, the faucets and the shower door.",
             },
           ],
         },
@@ -175,35 +175,35 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               price: "from $10,000",
               hint: "toilet and sink, no shower",
               includes: [
-                "Strip-out, plumbing kept in place",
+                "Demolition, plumbing kept in place",
                 "Floor tile",
-                "Vanity, toilet, lighting",
+                "Vanity, toilet and lighting",
               ],
             },
             {
               title: "Full bathroom",
               price: "$15,000 to $35,000",
-              hint: "shower, tub, vanity",
+              hint: "shower, tub and vanity",
               featured: true,
               includes: [
-                "Continuous waterproofing membrane",
-                "Drains and ventilation redone",
-                "Wall and floor tile",
-                "Vanity, counter, faucets",
+                "Waterproofing membrane over the whole shower",
+                "Plumbing and ventilation redone",
+                "Floor and wall tile",
+                "Vanity, counter and faucets",
               ],
             },
             {
               title: "Curbless shower",
-              price: "top of the range",
-              hint: "recessed floor, linear drain",
+              price: "close to $35,000",
+              hint: "the floor has to be lowered",
               includes: [
-                "Floor dropped for a zero threshold",
+                "Floor lowered to remove the threshold",
                 "Linear drain and calculated slope",
                 "Custom tempered glass",
               ],
             },
           ],
-          note: "Indicative ranges. The firm amount depends on how far plumbing moves and on the tile format chosen.",
+          note: "These are ballpark ranges. The price changes if the plumbing moves and with the tile you choose.",
           action: {
             label: "Free quote",
             href: "/contact",
@@ -218,7 +218,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Bathrooms already delivered",
+          heading: "Bathrooms we have redone",
           tiles: [
             {
               kind: "image",
@@ -227,7 +227,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Curbless shower with a glass panel",
               },
-              caption: "Curbless shower",
+              caption: "Curbless shower, glass panel",
             },
             {
               kind: "image",
@@ -235,18 +235,18 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
                 src: "/images/realisations/salle-de-bain-vanite-miroir-del-quartz-01.webp",
                 alt: "Vanity with quartz counter and backlit mirror",
               },
-              caption: "Vanity and backlit mirror",
+              caption: "Vanity and lit mirror",
             },
             {
               kind: "stat",
               value: "2 checks",
-              label: "Inspection before closing, then slope verified",
+              label: "Before the walls close, then before tiling",
             },
             {
               kind: "text",
               title: "See more bathrooms",
               description:
-                "Showers, vanities and finishes photographed after handover.",
+                "Showers and vanities photographed after the work.",
               href: "/espaces/salle-de-bain",
             },
           ],
@@ -263,23 +263,23 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
           items: [
             {
               q: "What is a waterproofing membrane?",
-              a: "A continuous layer set under the tile, carried up the shower walls and tied into the drain. It stops water before it reaches the wood framing underneath.",
+              a: "It is a layer set under the tile, carried up the shower walls and sealed to the drain. It stops water before it reaches the wood of the house.",
             },
             {
-              q: "Can I have a curbless shower?",
-              a: "Often yes. The floor has to drop between the joists, or the slab has to be cut, to house the drain and its slope. We verify that at the visit, before pricing.",
+              q: "Can I have a shower with no threshold?",
+              a: "Often yes. The floor has to be lowered between the joists, or the concrete slab cut, to house the drain and its slope. We check that at the visit.",
             },
             {
-              q: "Is bathroom ventilation mandatory?",
-              a: "Yes, and it has to exhaust outdoors. A fan blowing into the attic builds frost, then mould. We redo the duct whenever it stops short under the roof.",
+              q: "Is ventilation mandatory in a bathroom?",
+              a: "Yes, and it has to exhaust outdoors. A fan blowing into the attic creates frost, then mould. We redo the duct whenever it stops short under the roof.",
             },
             {
-              q: "What if you find rotten wood during the strip-out?",
-              a: "Common after twenty years under a leaking shower. We show you the photos, price the repair in writing, then carry on. Nothing gets closed over a known problem.",
+              q: "What if you find rotten wood during demolition?",
+              a: "That is common after twenty years under a leaking shower. We show you the photos, price the repair in writing, then carry on.",
             },
             {
               q: "Do I need a permit for a bathroom?",
-              a: "Replacing fixtures in place usually does not. Moving plumbing or adding a bathroom does, with an inspection before the walls are closed back up.",
+              a: "Not to replace fixtures in the same spot. You do need one to move plumbing or add a bathroom, with an inspection before the walls close again.",
             },
           ],
         },
@@ -293,7 +293,7 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
         props: {
           heading: "Get your bathroom priced",
           intro:
-            "We measure, check the ventilation and hand you a detailed quote.",
+            "We measure the room, check the ventilation and hand you a detailed quote.",
           actions: [
             {
               label: "Free quote",

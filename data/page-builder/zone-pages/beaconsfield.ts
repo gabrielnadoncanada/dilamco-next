@@ -65,7 +65,7 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
           eyebrow: "Entrepreneur général à",
           heading: "Beaconsfield",
           description:
-            "Des maisons de 1951 à 1963 sur des terrains boisés où chaque arbre relève d'un règlement.",
+            "Rénovation majeure et agrandissement pour les maisons de Beaconsfield, sur des terrains boisés où l'abattage est réglementé.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -83,10 +83,22 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
             alt: "Intérieur rénové d'une maison de Beaconsfield",
           },
           facts: [
-            { label: "Notre base", value: "Pierrefonds-Roxboro, vingt-cinq minutes" },
-            { label: "Permis", value: "Service de l'urbanisme, 514 428-4430" },
-            { label: "Bâti", value: "Maisons de 1951 à 1963, terrains boisés" },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro, à vingt-cinq minutes de route",
+            },
+            {
+              label: "Où demander le permis",
+              value: "Service de l'urbanisme de la Ville, 514 428-4430",
+            },
+            {
+              label: "Type de maisons",
+              value: "Des maisons de 1951 à 1963, sur des terrains boisés",
+            },
+            {
+              label: "Premier retour",
+              value: "Nous rappelons dans les 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -97,33 +109,38 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Une ville bâtie en quinze ans",
+          heading: "Ce qu'on sait des maisons de Beaconsfield",
           intro:
-            "De 990 résidents en 1951 à 16 800 en 1967, sur 1 050 hectares dont 5 % ont été cédés en espaces verts.",
+            "La ville est passée de 990 résidents en 1951 à 16 800 en 1967, et les maisons en gardent la trace.",
           rows: [
             {
-              label: "Quartiers datés",
-              value: "Kensington Gardens 1951, Drummond Park 1955, Sherwood 1963",
+              label: "Âge des quartiers",
+              value:
+                "Kensington Gardens date de 1951, Drummond Park de 1955 et Sherwood de 1963.",
             },
             {
               label: "Village d'origine",
-              value: "Beaurepaire, habité dès 1925, près de la gare",
+              value:
+                "Beaurepaire, près de la gare, est habité depuis 1925 et ses maisons sont plus anciennes.",
             },
             {
-              label: "Zonage",
-              value: "Règlement 720, consolidé au 1er août 2025",
+              label: "Particularité locale",
+              value:
+                "Abattre un arbre demande un permis, un remplacement et un dépôt que la Ville rembourse ensuite.",
             },
             {
-              label: "Abattage",
-              value: "Permis exigé, remplacement obligatoire, dépôt remboursable",
+              label: "Ce que la Ville vérifie",
+              value:
+                "Le règlement de zonage dit où poser le bâtiment, quelles marges respecter et quelle hauteur ne pas dépasser.",
             },
             {
-              label: "Projets fréquents",
-              value: "Reprise complète, cuisine, salle de bain, rallonge",
+              label: "Projets courants",
+              value:
+                "Reprendre la maison au complet, refaire la cuisine ou la salle de bain, ajouter une rallonge.",
             },
             {
-              label: "Temps de route",
-              value: "Vingt-cinq minutes par l'autoroute 40",
+              label: "Depuis notre base",
+              value: "Vingt-cinq minutes de route par l'autoroute 40.",
             },
           ],
           image: {
@@ -140,13 +157,13 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise à Beaconsfield",
+          heading: "Nos services à Beaconsfield",
           items: [
             {
               title: "Rénovation majeure",
               href: "/services/renovation",
               description:
-                "Une maison de 1955 reprise au complet dans une seule séquence",
+                "On reprend une maison de 1955 au complet, dans une seule séquence de travaux",
               image: {
                 src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Rénovation majeure d'une maison de Beaconsfield",
@@ -158,7 +175,7 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Implantation dessinée autour des arbres que le règlement 720 protège",
+                "On place la rallonge autour des arbres que le règlement de la Ville protège",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Planification d'un agrandissement sur un terrain boisé",
@@ -170,7 +187,7 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Ventilation sortie dehors, pas dans l'entretoit d'un bungalow de Beacon Hill",
+                "On sort la ventilation dehors plutôt que dans l'entretoit de la maison",
               image: {
                 src: "/images/generated/spaces/space-bath-hero-01.webp",
                 alt: "Salle de bain rénovée dans une maison de Beacon Hill",
@@ -188,7 +205,7 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Villes desservies autour de Beaconsfield",
+          heading: "Aussi desservies près de Beaconsfield",
           columns: "3",
           items: [
             { title: "Kirkland", href: "/zones/kirkland" },
@@ -208,19 +225,19 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
           items: [
             {
               q: "Puis-je abattre un arbre pour agrandir à Beaconsfield ?",
-              a: "Seulement avec un permis. Un arbre situé à moins de trois mètres de l'emprise d'une construction projetée peut être abattu, mais uniquement si le bâtiment ne peut pas être implanté ailleurs.",
+              a: "Seulement avec un permis. Un arbre situé à moins de trois mètres de la construction projetée peut être abattu, mais uniquement si le bâtiment ne peut pas être placé ailleurs sur le terrain.",
             },
             {
-              q: "Combien coûte le certificat d'abattage à Beaconsfield ?",
-              a: "Un dépôt de 500 $ couvre les cinq premiers arbres, puis 100 $ par arbre supplémentaire. La Ville le rembourse une fois le remplacement réalisé selon les conditions du règlement.",
+              q: "Combien coûte le permis d'abattage à Beaconsfield ?",
+              a: "Un dépôt de 500 $ couvre les cinq premiers arbres, puis 100 $ par arbre de plus. La Ville rembourse ce dépôt une fois les arbres remplacés selon les conditions du règlement.",
             },
             {
-              q: "Le règlement de zonage 720 limite-t-il ma rallonge ?",
-              a: "Il fixe l'implantation, les marges et les hauteurs, dans sa version consolidée du 1er août 2025. Les conseillers en urbanisme confirment ce que permet votre zone avant qu'on dessine.",
+              q: "Le règlement de zonage limite-t-il ma rallonge à Beaconsfield ?",
+              a: "Oui. Il dit où poser le bâtiment, quelles marges respecter et quelle hauteur ne pas dépasser, dans sa version du 1er août 2025. Les conseillers en urbanisme confirment ce que votre zone permet avant qu'on dessine.",
             },
             {
               q: "Vaut-il mieux rénover par étapes à Beaconsfield ?",
-              a: "Rarement. Dans les quartiers bâtis entre 1951 et 1963, toiture, fenêtres, plomberie et électricité arrivent à échéance ensemble. Une seule séquence évite de repayer chaque fois mobilisation et protection des lieux.",
+              a: "Rarement. Dans les quartiers bâtis entre 1951 et 1963, la toiture, les fenêtres, la plomberie et l'électricité arrivent à bout de vie en même temps. Tout faire d'un coup évite de repayer chaque fois l'installation du chantier.",
             },
           ],
         },
@@ -232,8 +249,9 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Votre maison de Beaconsfield",
-          intro: "Terrain, arbres et bâtiment relevés avant le chiffrage.",
+          heading: "Un projet à Beaconsfield ?",
+          intro:
+            "On relève le terrain, les arbres et la maison avant de donner un prix.",
           actions: [
             {
               label: "Demander une soumission",

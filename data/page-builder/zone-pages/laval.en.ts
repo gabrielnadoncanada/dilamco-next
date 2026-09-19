@@ -43,7 +43,7 @@ export const zoneLavalPageEn: PageTemplateData = {
           eyebrow: "General contractor in",
           heading: "Laval",
           description:
-            "Chomedey and Laval-des-Rapides date from the 1960s. Here the sector tells you what sits behind the walls.",
+            "Basements, kitchens and water damage rebuilds for Laval homes, from a licensed general contractor.",
           actions: [
             {
               label: "Request a quote",
@@ -63,17 +63,20 @@ export const zoneLavalPageEn: PageTemplateData = {
           facts: [
             {
               label: "Our base",
-              value: "Pierrefonds-Roxboro · 25 min on Highway 13",
+              value: "Pierrefonds-Roxboro, twenty-five minutes on Highway 13",
             },
             {
-              label: "Permits",
+              label: "Where to apply for the permit",
               value: "Urban planning service, 1333 Chomedey Boulevard",
             },
             {
-              label: "Housing stock",
-              value: "1960s bungalows on concrete block foundations",
+              label: "Type of homes",
+              value: "1960s bungalows, on concrete block foundations",
             },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "First reply",
+              value: "Our first reply comes within 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -84,37 +87,44 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Laval reads sector by sector",
+          heading: "What we know about Laval homes",
           intro:
-            "Four building waves, flood elevations written into the zoning by-law and two separate permits depending on the work.",
+            "Every Laval sector has its own building era, and its own surprises.",
           rows: [
             {
-              label: "Housing stock",
-              value: "1960-1970 wave in Chomedey, 1980-1990 in Duvernay-Vimont",
+              label: "Age of the neighbourhoods",
+              value:
+                "Chomedey and Laval-des-Rapides date mostly from 1960-1970, Duvernay and Vimont from 1980-1990.",
             },
             {
-              label: "Permits",
-              value: "Two separate files, interior or exterior renovation",
+              label: "Which permit to apply for",
+              value:
+                "The City splits interior renovation and exterior renovation into two permits.",
             },
             {
-              label: "Process",
-              value: "Filed online, tracked in Mon dossier, permit sent by email",
+              label: "How to file the application",
+              value:
+                "Online, tracked in Mon dossier, and the permit then arrives by email.",
             },
             {
-              label: "Local risks",
-              value: "2017 floods in Laval-Ouest, Fabreville and Sainte-Dorothée",
+              label: "Local risk",
+              value:
+                "The river flooded streets in Laval-Ouest, Fabreville and Sainte-Dorothée in 2017.",
             },
             {
-              label: "Flood zones",
-              value: "Flood elevations in the zoning, from a 2014 study",
+              label: "What the City checks",
+              value:
+                "In a flood zone, it compares your lot to the flood elevations written into the zoning by-law.",
             },
             {
               label: "Common projects",
-              value: "Basements, opening a closed kitchen, water damage rebuilds",
+              value:
+                "Finishing a basement, opening a closed kitchen, rebuilding after water damage.",
             },
             {
               label: "From our base",
-              value: "Louis-Bisson bridge, then Highway 440 or Saint-Martin",
+              value:
+                "Louis-Bisson bridge, then Highway 440 or Saint-Martin Boulevard.",
             },
           ],
           image: {
@@ -131,13 +141,13 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build inside Laval homes",
+          heading: "Our services in Laval",
           items: [
             {
               title: "Basement finishing",
               href: "/services/renovation/sous-sol",
               description:
-                "Family room and bedroom under a Vimont bungalow, built to Code",
+                "We build a family room and a bedroom under a Vimont bungalow",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Basement with a bar area in a Laval home",
@@ -149,7 +159,7 @@ export const zoneLavalPageEn: PageTemplateData = {
               title: "Kitchen renovation",
               href: "/services/renovation/cuisine",
               description:
-                "Taking down the wall of a closed 1960s bungalow kitchen",
+                "We take down the wall of a closed kitchen in a 1960s bungalow",
               image: {
                 src: "/images/generated/spaces/space-cuisine-project-02.webp",
                 alt: "Kitchen opened to the dining room of a Laval bungalow",
@@ -161,7 +171,7 @@ export const zoneLavalPageEn: PageTemplateData = {
               title: "Post-damage rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Rebuilding Laval-Ouest basements after a river flood event",
+                "We restore Laval-Ouest basements after a flood from the river",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Interior rebuild after flooding in Laval-Ouest",
@@ -179,7 +189,7 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Also nearby",
+          heading: "Also served near Laval",
           columns: "2",
           items: [
             {
@@ -216,19 +226,19 @@ export const zoneLavalPageEn: PageTemplateData = {
           items: [
             {
               q: "Which permit does a Laval renovation need?",
-              a: "The City splits interior and exterior residential renovation into two permits. We identify the right one during scoping, file online and follow the case in Mon dossier until the permit arrives by email.",
+              a: "The City splits interior and exterior renovation into two permits. We pick the right one, file the application online and follow the case until the permit arrives by email.",
             },
             {
               q: "My Laval-Ouest home sits in a flood zone, is that a dead end?",
-              a: "Not necessarily. Laval flood plains are set by the flood elevations written into the zoning by-law, from a study approved by the provincial government in 2014. We check the elevation for your address before drawing.",
+              a: "Not necessarily. These zones are set by flood elevations written into the zoning by-law, from a study approved in 2014. We check the elevation for your address before drawing.",
             },
             {
               q: "What can be done with a flooded Fabreville basement?",
-              a: "We step in once it is dry, as after the 2017 floods: selective demolition, decontamination, then rebuilding. Drainage, sump pump and backflow valve get reviewed, and the lower walls take materials that survive a repeat.",
+              a: "We step in once the place is dry: targeted demolition, decontamination, then rebuilding. The drain, the pump and the backflow valve get redone, and the lower walls take materials that survive a repeat.",
             },
             {
               q: "Should I worry about vermiculite in a Duvernay bungalow?",
-              a: "It is worth testing. Attics from the Laval 1980-1990 building wave sometimes contain it. A sample goes to the lab before we open the ceiling, and the result changes the site method, not the project.",
+              a: "It is worth testing. Attics in houses built between 1980 and 1990 sometimes contain it. A sample goes to the lab before we open the ceiling, and the result changes the method, not the project.",
             },
           ],
         },
@@ -240,8 +250,9 @@ export const zoneLavalPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A Laval renovation, from Chomedey to Sainte-Rose",
-          intro: "Tell us the sector and the work. We book the visit.",
+          heading: "A renovation in Laval?",
+          intro:
+            "Tell us the sector and the work you want done. We book the visit.",
           actions: [
             {
               label: "Request a quote",

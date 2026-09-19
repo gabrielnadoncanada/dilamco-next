@@ -42,9 +42,9 @@ export const renovationSousSolPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Basement finishing",
-          heading: "Fix the water before a single panel goes up",
+          heading: "Basement finishing, from the moisture check to the paint",
           description:
-            "Diagnosis, drainage, insulation, egress and finishing carried out under a single contract.",
+            "We check the moisture first, then insulate, divide the rooms and finish, under a single contract.",
           actions: [
             {
               label: "Free quote",
@@ -73,47 +73,47 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the basement mandate covers",
+          heading: "What a finished basement includes",
           columns: "2",
           items: [
             {
-              title: "Water and foundation",
-              description: "The step everything else depends on",
+              title: "Moisture and foundation",
+              description: "We settle the water before anything else starts",
               icon: "droplets",
               bullets: [
-                "Slab, walls and seepage marks examined",
-                "Drain, ground slope and sump pump checked",
-                "Cracks repaired before any insulation",
+                "We examine the slab, the walls and any water marks",
+                "We check the drain, the ground slope and the sump pump",
+                "We repair the cracks before we insulate",
               ],
             },
             {
-              title: "Insulation and framing",
-              description: "The wall that manages vapour",
+              title: "Insulation and walls",
+              description: "We build walls that will not grow mould",
               icon: "layers",
               bullets: [
-                "Continuous insulation against the concrete",
-                "Studs held back off the slab",
-                "Rim joists and slab perimeter treated",
+                "We apply continuous insulation against the concrete",
+                "We hold the stud walls slightly back off the slab",
+                "We also insulate the perimeter of the floor above",
               ],
             },
             {
-              title: "Egress",
-              description: "The condition for a bedroom",
+              title: "Emergency exit",
+              description: "Required if you want a bedroom down there",
               icon: "doorOpen",
               bullets: [
-                "Opening window or door to the outside",
-                "Foundation cut and window well",
-                "Smoke and carbon monoxide alarms",
+                "A window that opens, or a door to the outside",
+                "We cut the foundation and install a window well",
+                "We add the smoke and carbon monoxide alarms",
               ],
             },
             {
               title: "Finishing and storage",
-              description: "The visible part, on a sound base",
+              description: "We finish the walls, the ceiling and the floor",
               icon: "package2",
               bullets: [
-                "Flooring a concrete slab can tolerate",
-                "Drop ceiling or drywall, depending on access",
-                "Stairs, doors and built-in storage",
+                "We choose flooring that can sit on concrete",
+                "Drop ceiling or drywall, depending on pipe access",
+                "We redo the stairs, the doors and the storage",
               ],
             },
           ],
@@ -126,37 +126,37 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "How a basement unfolds",
+          heading: "The stages of a basement finish",
           steps: [
             {
               number: "1",
-              title: "Moisture diagnosis",
+              title: "Moisture check",
               description:
-                "Slab, cracks, sump pump and clear ceiling height measured.",
+                "We look for cracks and measure the height of the ceiling.",
             },
             {
               number: "2",
-              title: "Corrective work",
+              title: "Repairs",
               description:
-                "Cracks sealed, drainage redone. Nothing gets finished over a leak.",
+                "We seal the cracks and fix the drainage. We never finish over a leak.",
             },
             {
               number: "3",
               title: "Layout and permit",
               description:
-                "Floor plan drawn, application filed with your city.",
+                "We draw the room plan and file the application with your city.",
             },
             {
               number: "4",
-              title: "Insulation and framing",
+              title: "Insulation and walls",
               description:
-                "Insulation, studs, egress, circuits and plumbing inspected.",
+                "We insulate, frame the walls, run the wiring, and the inspector comes.",
             },
             {
               number: "5",
               title: "Finishing",
               description:
-                "Drywall, ceiling, flooring, stairs, paint, then handover.",
+                "We hang the drywall, the ceiling and the floor, then paint.",
             },
           ],
         },
@@ -168,32 +168,32 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "grid",
         variant: "price-tiles",
         props: {
-          heading: "What a basement costs",
+          heading: "What a finished basement costs",
           tiles: [
             {
-              title: "Open floor",
+              title: "One large room",
               price: "from $25,000",
-              hint: "one large room, no plumbing",
+              hint: "no bedroom and no bathroom",
               includes: [
                 "Insulation and vapour control",
-                "Framing, drywall and paint",
-                "Lighting and circuits",
+                "Walls, drywall and paint",
+                "Lighting and outlets",
               ],
             },
             {
               title: "Full basement",
               price: "$40,000 to $80,000",
-              hint: "bedroom, bathroom, storage",
+              hint: "bedroom, bathroom and storage",
               featured: true,
               includes: [
                 "Floor plan and conversion permit",
-                "Egress window",
+                "Emergency exit window",
                 "Bathroom connected to the drain",
-                "Flooring, ceiling, doors",
+                "Flooring, ceiling and doors",
               ],
             },
           ],
-          note: "Indicative ranges. Corrective drainage or foundation work is priced separately.",
+          note: "These are ballpark ranges. Drainage or foundation repairs are priced separately.",
           action: {
             label: "Free quote",
             href: "/contact",
@@ -208,7 +208,7 @@ export const renovationSousSolPageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Basements already finished",
+          heading: "Basements we have finished",
           tiles: [
             {
               kind: "image",
@@ -225,18 +225,18 @@ export const renovationSousSolPageEn: PageTemplateData = {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Basement bar with counter and storage",
               },
-              caption: "Bar and counter",
+              caption: "Bar with counter and storage",
             },
             {
               kind: "stat",
               value: "1 permit",
-              label: "Required as soon as a living space is added",
+              label: "Required as soon as you add a living space",
             },
             {
               kind: "text",
               title: "See basement layouts",
               description:
-                "Theatre, bar, wine room, office: what a basement can become.",
+                "Theatre, bar, wine room or office: what a basement can become.",
               href: "/espaces/sous-sol",
             },
           ],
@@ -253,23 +253,23 @@ export const renovationSousSolPageEn: PageTemplateData = {
           items: [
             {
               q: "My basement takes on water, can it still be finished?",
-              a: "Not before the water is stopped: a crack, a blocked weeping tile, ground sloping toward the house or a failing pump. Finishing over seepage means doing it all again.",
+              a: "Not before the water is stopped: a crack, a blocked weeping tile, ground sloping toward the house or a pump that no longer works. Finishing over it means starting again.",
             },
             {
               q: "Do I need a permit to finish a basement?",
-              a: "Yes. Turning a raw basement into living space requires a permit in most municipalities, with a drawing attached. We prepare the file and submit the application.",
+              a: "Yes. Turning a raw basement into living space requires a permit in most cities, with a drawing attached. We prepare the file and submit the application.",
             },
             {
               q: "Can I put a bedroom in the basement?",
-              a: "Only with an egress: a reachable opening window or a door to the outside. That usually means cutting the concrete foundation and adding a window well.",
+              a: "Only with an emergency exit: a window that opens and can be reached, or a door to the outside. That often means cutting the concrete and adding a window well.",
             },
             {
               q: "Can a bathroom be added to the basement?",
-              a: "Yes. Depending on how deep the main drain sits, we break the slab to connect by gravity or install an ejector pump. Ventilation follows, with an inspection.",
+              a: "Yes. Depending on how deep the main drain sits, we break the slab to connect by gravity, or we install a pump. Ventilation follows, with an inspection.",
             },
             {
-              q: "What if the ceiling height is tight?",
-              a: "A few centimetres come back from hanging less, rerouting ducts and choosing a thin floor assembly. We measure the clear height at the visit and give you the verdict.",
+              q: "What if my ceiling is too low?",
+              a: "We gain a few centimetres by rerouting the ducts and choosing a thin floor. We measure the height at the visit and give you a straight answer.",
             },
           ],
         },
@@ -283,7 +283,7 @@ export const renovationSousSolPageEn: PageTemplateData = {
         props: {
           heading: "Have your basement assessed",
           intro:
-            "We start with moisture and clear height, then price the layout.",
+            "We start by checking the moisture and the ceiling height, then we price the work.",
           actions: [
             {
               label: "Free quote",

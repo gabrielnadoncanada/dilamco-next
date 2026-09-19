@@ -35,7 +35,7 @@ export const salleDeLavagePage: PageTemplateData = {
           badges: ["Fini lavable"],
           heading: "Salle de lavage sur mesure à Montréal et Laval",
           description:
-            "Comptoir de pliage, colonnes et cuve calés sur l'alimentation, le drain et l'évacuation.",
+            "Comptoir de pliage, colonnes de rangement et cuve, dessinés autour de vos appareils.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -57,7 +57,7 @@ export const salleDeLavagePage: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Une pièce technique tenue au cordeau",
+          heading: "Des salles de lavage qu'on a aménagées",
           tiles: [
             {
               kind: "image",
@@ -80,7 +80,7 @@ export const salleDeLavagePage: PageTemplateData = {
             {
               kind: "stat",
               value: "9 à 15 sem.",
-              label: "Armoires livrées une fois la plomberie refaite",
+              label: "Le délai de production des armoires",
             },
             {
               kind: "image",
@@ -102,7 +102,7 @@ export const salleDeLavagePage: PageTemplateData = {
               kind: "text",
               title: "Déplacer les appareils",
               description:
-                "L'alimentation, le drain et l'évacuation suivent, et décident souvent de la configuration.",
+                "On refait l'entrée d'eau, le drain et la sortie d'air avant de dessiner.",
               href: "/contact",
             },
           ],
@@ -111,38 +111,43 @@ export const salleDeLavagePage: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "La salle de lavage en bref",
           intro:
-            "Trois fluides passent dans cette pièce : eau, air chaud et électricité.",
+            "Ce qu'il faut prévoir dans une pièce où passent l'eau, l'air chaud et le courant.",
           rows: [
             {
-              label: "Délai",
-              value: "9 à 15 semaines, plomberie et électricité faites avant",
+              label: "Combien de temps",
+              value:
+                "Il faut 9 à 15 semaines, et la plomberie se refait avant la pose.",
             },
             {
-              label: "Prix",
-              value: "Fonction de la cuve, du plan de travail et des colonnes",
+              label: "Prix indicatif",
+              value:
+                "Le prix suit le nombre de colonnes, la surface de comptoir et la cuve de lavage.",
             },
             {
               label: "Matériaux",
-              value: "Contreplaqué de bouleau, arrières scellés contre la vapeur",
+              value:
+                "Du contreplaqué de bouleau, avec les arrières scellés à cause de la vapeur.",
             },
             {
               label: "Quincaillerie",
-              value: "Fixations calculées pour des tablettes chargées de produits",
+              value:
+                "Des fixations choisies pour des tablettes pleines de bouteilles et de savon.",
             },
             {
-              label: "Pose",
-              value: "Dégagements respectés autour de la laveuse et sécheuse",
+              label: "Qui installe",
+              value:
+                "Notre équipe, en gardant l'espace nécessaire autour de la laveuse et de la sécheuse.",
             },
             {
               label: "Garantie",
-              value: "Reprise des ajustements inscrite au contrat signé",
+              value:
+                "Le contrat prévoit que nous revenions ajuster les portes et les tiroirs.",
             },
           ],
           image: {

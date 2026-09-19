@@ -29,7 +29,7 @@ export const BRAND: Brand = {
   alt: "Dilamco",
   title: "Dilamco",
   tagline:
-    "Entrepreneur général en rénovation résidentielle — Ouest-de-l'Île, Montréal, Laval et Rive-Sud. Licence RBQ 8306-0806-27.",
+    "Entrepreneur général en rénovation résidentielle. Ouest-de-l'Île, Montréal, Laval et Rive-Sud.",
 };
 
 export const MAIN_NAV: MenuItem[] = [
@@ -286,15 +286,15 @@ export const FOOTER_NAV: FooterNavSection[] = [
   {
     title: "Services",
     links: [
-      { text: "Rénovation clé en main", url: "/services/renovation/" },
-      { text: "Rénovation de cuisine", url: "/services/renovation/cuisine/" },
+      { text: "Clé en main", url: "/services/renovation/" },
+      { text: "Cuisine", url: "/services/renovation/cuisine/" },
       {
-        text: "Rénovation de salle de bain",
+        text: "Salle de bain",
         url: "/services/renovation/salle-de-bain/",
       },
-      { text: "Finition de sous-sol", url: "/services/renovation/sous-sol/" },
+      { text: "Sous-sol", url: "/services/renovation/sous-sol/" },
       {
-        text: "Agrandissement de maison",
+        text: "Agrandissement",
         url: "/services/renovation/agrandissement-de-maison/",
       },
       { text: "Après sinistre", url: "/services/renovation/apres-sinistre/" },
@@ -315,9 +315,9 @@ export const FOOTER_NAV: FooterNavSection[] = [
   {
     title: "Armoires",
     links: [
-      { text: "Cuisine sur mesure", url: "/espaces/cuisine/" },
-      { text: "Salle de bain & vanités", url: "/espaces/salle-de-bain/" },
-      { text: "Walk-in & rangement", url: "/espaces/walk-in/" },
+      { text: "Cuisines", url: "/espaces/cuisine/" },
+      { text: "Vanités", url: "/espaces/salle-de-bain/" },
+      { text: "Walk-in", url: "/espaces/walk-in/" },
       { text: "Matériaux", url: "/materiaux/" },
       { text: "Projets", url: "/projets/" },
     ],

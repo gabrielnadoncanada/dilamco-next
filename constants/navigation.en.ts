@@ -29,7 +29,7 @@ export const BRAND_EN: Brand = {
   alt: "Dilamco",
   title: "Dilamco",
   tagline:
-    "General contractor for residential renovation — West Island, Montréal, Laval and South Shore. RBQ licence 8306-0806-27.",
+    "General contractor for residential renovation. West Island, Montréal, Laval and South Shore.",
 };
 
 export const MAIN_NAV_EN: MenuItem[] = [
@@ -286,10 +286,10 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
   {
     title: "Services",
     links: [
-      { text: "Turnkey renovation", url: "/services/renovation/" },
-      { text: "Kitchen renovation", url: "/services/renovation/cuisine/" },
-      { text: "Bathroom renovation", url: "/services/renovation/salle-de-bain/" },
-      { text: "Basement finishing", url: "/services/renovation/sous-sol/" },
+      { text: "Turnkey", url: "/services/renovation/" },
+      { text: "Kitchen", url: "/services/renovation/cuisine/" },
+      { text: "Bathroom", url: "/services/renovation/salle-de-bain/" },
+      { text: "Basement", url: "/services/renovation/sous-sol/" },
       {
         text: "Home addition",
         url: "/services/renovation/agrandissement-de-maison/",
@@ -312,9 +312,9 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
   {
     title: "Cabinetry",
     links: [
-      { text: "Custom kitchens", url: "/espaces/cuisine/" },
-      { text: "Bathrooms & vanities", url: "/espaces/salle-de-bain/" },
-      { text: "Walk-in & storage", url: "/espaces/walk-in/" },
+      { text: "Kitchens", url: "/espaces/cuisine/" },
+      { text: "Vanities", url: "/espaces/salle-de-bain/" },
+      { text: "Walk-in", url: "/espaces/walk-in/" },
       { text: "Materials", url: "/materiaux/" },
       { text: "Projects", url: "/projets/" },
     ],

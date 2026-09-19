@@ -46,7 +46,7 @@ export const page: PageTemplateData = {
           badges: ["Ouest-de-l'Île", "Montréal", "Laval"],
           heading: "Où nous travaillons, ville par ville",
           description:
-            "Onze pages locales. Chacune dit le bâti du secteur, le service des permis concerné et la route depuis notre base.",
+            "Onze pages locales. Chacune dit le type de maisons du secteur, où demander le permis et le temps de route depuis notre bureau.",
           actions: [
             {
               label: "Demander une soumission",
@@ -74,68 +74,68 @@ export const page: PageTemplateData = {
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              description: "Notre base d'affaires",
+              description: "Notre bureau est ici",
               badges: ["Base"],
               ctaLabel: "Voir la zone",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              description: "Zonage refondu en 2025",
+              description: "Nouveau zonage depuis 2025",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Kirkland",
               href: "/zones/kirkland",
-              description: "Grands terrains, agrandissements majeurs",
+              description: "Grands terrains, place pour agrandir",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Pointe-Claire",
               href: "/zones/pointe-claire",
-              description: "Village patrimonial assujetti au PIIA",
+              description: "Le Village ancien passe devant un comité",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Beaconsfield",
               href: "/zones/beaconsfield",
-              description: "Règlement d'abattage d'arbres",
+              description: "Abattre un arbre demande un permis",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Dorval",
               href: "/zones/dorval",
-              description: "Résidentiel près de l'aéroport",
+              description: "Bungalows entre le lac et l'autoroute",
               ctaLabel: "Voir la zone",
             },
             {
               title: "L'Île-Bizard–Sainte-Geneviève",
               href: "/zones/ile-bizard-sainte-genevieve",
-              description: "Zones inondables cartographiées",
+              description: "Zones inondables à vérifier avant tout",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              description: "Plex d'après-guerre et copropriétés",
+              description: "Plex d'après-guerre et condos récents",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              description: "Bungalows des années 1960",
+              description: "Bungalows des années 1960 à reprendre",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Vaudreuil-Dorion",
               href: "/zones/vaudreuil-dorion",
-              description: "Sous-sols livrés bruts",
+              description: "Beaucoup de sous-sols à finir",
               ctaLabel: "Voir la zone",
             },
             {
               title: "Rive-Sud",
               href: "/zones/rive-sud",
-              description: "Mandats d'envergure seulement",
+              description: "Projets d'envergure seulement",
               ctaLabel: "Voir la zone",
             },
           ],
@@ -148,33 +148,38 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Notre territoire, mesuré en minutes",
+          heading: "Notre territoire, en bref",
           intro:
             "Sur un chantier de plusieurs semaines, la distance décide de la vitesse à laquelle un problème se règle.",
           rows: [
             {
-              label: "Base",
-              value: "18625, rue Larocque, Pierrefonds-Roxboro",
+              label: "Notre adresse",
+              value: "18625, rue Larocque, Pierrefonds-Roxboro.",
             },
             {
-              label: "Rayon",
-              value: "Ouest-de-l'Île, Montréal, Laval, Vaudreuil-Soulanges, Rive-Sud",
+              label: "Villes couvertes",
+              value:
+                "L'Ouest-de-l'Île, Montréal, Laval, Vaudreuil-Soulanges et la Rive-Sud.",
             },
             {
               label: "Temps de route",
-              value: "De 10 minutes sur l'île Bizard à une heure à Châteauguay",
+              value:
+                "De dix minutes sur l'île Bizard à une heure à Châteauguay.",
             },
             {
               label: "Permis",
-              value: "Un service d'urbanisme différent par ville et par arrondissement",
+              value:
+                "Chaque ville et chaque arrondissement a son propre service d'urbanisme.",
             },
             {
               label: "Premier retour",
-              value: "24 à 48 heures ouvrables, visite et estimation gratuites",
+              value:
+                "Nous répondons en 24 à 48 heures ouvrables, et la visite est gratuite.",
             },
             {
-              label: "Déplacement",
-              value: "Chiffré dans la soumission, pas facturé en cours de route",
+              label: "Frais de déplacement",
+              value:
+                "Ils sont chiffrés dans la soumission, jamais ajoutés en cours de chantier.",
             },
           ],
           image: {
@@ -193,7 +198,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Dites-nous où est votre projet",
           intro:
-            "Ville, type de travaux, échéance. On confirme et on fixe la visite.",
+            "Donnez-nous la ville, le type de travaux et l'échéance. On fixe la visite.",
           actions: [
             {
               label: "Demander une soumission",

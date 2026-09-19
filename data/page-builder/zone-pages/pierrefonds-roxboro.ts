@@ -65,7 +65,7 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
           eyebrow: "Entrepreneur général à",
           heading: "Pierrefonds-Roxboro",
           description:
-            "Notre bureau est rue Larocque, dans l'arrondissement où nous menons des chantiers résidentiels depuis 2004.",
+            "Rénovation, sous-sol et reconstruction après dégât d'eau pour les maisons de l'arrondissement, depuis notre bureau de la rue Larocque.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -83,10 +83,22 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
             alt: "Rénovation résidentielle à Pierrefonds-Roxboro",
           },
           facts: [
-            { label: "Notre base", value: "Rue Larocque, dans l'arrondissement" },
-            { label: "Permis", value: "Comptoir du 13665, boul. de Pierrefonds" },
-            { label: "Bâti", value: "Bungalows et cottages, 1950 à 1980" },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            {
+              label: "Notre base",
+              value: "Notre bureau est rue Larocque, dans l'arrondissement",
+            },
+            {
+              label: "Où demander le permis",
+              value: "Comptoir des permis, 13665, boul. de Pierrefonds",
+            },
+            {
+              label: "Type de maisons",
+              value: "Des bungalows et des cottages bâtis entre 1950 et 1980",
+            },
+            {
+              label: "Premier retour",
+              value: "Un premier retour en 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -97,33 +109,38 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Le terrain de jeu, rue par rue",
+          heading: "Ce qu'il faut savoir avant de rénover ici",
           intro:
-            "Soixante-dix mille résidents sur vingt-sept kilomètres carrés, une rivière au nord et des sous-sols qui ont déjà pris l'eau.",
+            "Soixante-dix mille résidents, une rivière au nord, et beaucoup de sous-sols qui ont déjà pris l'eau.",
           rows: [
             {
-              label: "Bâti dominant",
-              value: "Split-levels et jumelés, dalles souvent non isolées",
+              label: "Risque local",
+              value:
+                "La rivière des Prairies a débordé en 2017 et en 2019, et les sous-sols riverains ont écopé.",
             },
             {
-              label: "Dépôt du dossier",
-              value: "Plans par courriel, signature sur rendez-vous",
+              label: "Particularité locale",
+              value:
+                "Beaucoup de split-levels reposent sur une dalle qui n'a jamais été isolée.",
             },
             {
-              label: "Agrandissement",
-              value: "Marges et implantation validées par l'arrondissement",
+              label: "Ce que la Ville vérifie",
+              value:
+                "Pour un agrandissement, l'arrondissement valide les marges et la position du bâtiment sur le terrain.",
             },
             {
-              label: "Risque riverain",
-              value: "Crues de la rivière des Prairies, 2017 et 2019",
+              label: "Comment déposer la demande",
+              value:
+                "Les plans partent par courriel et la signature se prend sur rendez-vous.",
             },
             {
-              label: "Projets fréquents",
-              value: "Sous-sol repris, après-sinistre, mur central ouvert",
+              label: "Projets courants",
+              value:
+                "Reprendre un sous-sol, rebâtir après un dégât d'eau, ouvrir le mur central d'un bungalow.",
             },
             {
-              label: "Temps de route",
-              value: "Sur place en dix minutes, toute l'année",
+              label: "Depuis notre base",
+              value: "Nous sommes chez vous en dix minutes, toute l'année.",
             },
           ],
           image: {
@@ -140,13 +157,13 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise dans l'arrondissement",
+          heading: "Nos services à Pierrefonds-Roxboro",
           items: [
             {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Clapet et pompe validés avant d'isoler, secteur riverain oblige",
+                "On valide le clapet et la pompe avant d'isoler, parce que le secteur est riverain",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Sous-sol aménagé en salle de jeux à Pierrefonds",
@@ -158,7 +175,7 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
               title: "Après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Refoulement ou crue printanière, reconstruction documentée pour l'assureur",
+                "On rebâtit après un refoulement ou une crue, avec un dossier pour l'assureur",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction après un dégât d'eau à Roxboro",
@@ -170,7 +187,7 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Mur central porteur des bungalows d'ici, poutre calculée d'abord",
+                "On calcule la poutre avant d'ouvrir le mur central d'un bungalow",
               image: {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Cuisine ouverte dans un bungalow de l'arrondissement",
@@ -188,7 +205,7 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Nos autres secteurs de l'Ouest-de-l'Île",
+          heading: "Aussi desservies près de Pierrefonds-Roxboro",
           columns: "2",
           items: [
             {
@@ -215,19 +232,19 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
           items: [
             {
               q: "Où obtient-on un permis de rénovation à Pierrefonds-Roxboro ?",
-              a: "Au comptoir des permis de l'arrondissement, 13665, boulevard de Pierrefonds. Les plans partent par courriel et la signature se prend sur rendez-vous. Nous montons le dossier et suivons son cheminement.",
+              a: "Au comptoir des permis de l'arrondissement, 13665, boulevard de Pierrefonds. Les plans partent par courriel et la signature se prend sur rendez-vous. Nous montons le dossier et nous suivons son avancement.",
             },
             {
-              q: "Mon sous-sol de Roxboro a été inondé, que vérifiez-vous ?",
-              a: "Le drain, le clapet antiretour, la pompe submersible et l'état de la dalle, avant toute isolation. Après les crues de 2017 et de 2019, on retient des matériaux qui tolèrent une remontée d'eau.",
+              q: "Mon sous-sol de Roxboro a été inondé, que vérifiez-vous d'abord ?",
+              a: "Le drain, le clapet antiretour, la pompe et l'état de la dalle, avant toute isolation. Après les crues de 2017 et de 2019, nous posons des matériaux qui supportent une remontée d'eau.",
             },
             {
-              q: "Combien de temps dure un chantier de sous-sol ici ?",
-              a: "Quelques semaines pour une pièce simple, davantage quand le drainage doit être corrigé avant de refermer. Les dates de début et de livraison sont inscrites au contrat, pas promises à l'oral.",
+              q: "Combien de temps dure un chantier de sous-sol dans l'arrondissement ?",
+              a: "Quelques semaines pour une pièce simple, plus longtemps s'il faut corriger le drainage avant de refermer les murs. La date de début et la date de fin sont écrites au contrat.",
             },
             {
-              q: "Combien coûte un sous-sol de bungalow à Pierrefonds ?",
-              a: "Un mandat démarre autour de 25 000 $, et une salle d'eau ajoutée au sous-sol fait monter la portée. Ce qu'on trouve sous la dalle décide du reste. Visite et estimation gratuites.",
+              q: "Combien coûte l'aménagement d'un sous-sol de bungalow ici ?",
+              a: "Un mandat démarre autour de 25 000 $, et ajouter une salle d'eau fait monter le total. Ce qu'on trouve sous la dalle décide du reste. La visite et l'estimation sont gratuites.",
             },
           ],
         },
@@ -239,8 +256,9 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Rénover à Pierrefonds-Roxboro",
-          intro: "Votre maison est à dix minutes de notre bureau.",
+          heading: "Un projet à Pierrefonds-Roxboro ?",
+          intro:
+            "Notre bureau est à dix minutes de chez vous et la visite ne coûte rien.",
           actions: [
             {
               label: "Demander une soumission",

@@ -25,7 +25,7 @@ export const pageEn: PageTemplateData = {
           eyebrow: "About",
           heading: "A residential renovation general contractor since 2004",
           description:
-            "Same licence, same officer, same address for twenty years. The work stays in Greater Montréal.",
+            "The same licence, the same person in charge and the same address for twenty years.",
           actions: [
             {
               label: "Free estimate",
@@ -54,7 +54,7 @@ export const pageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "What twenty years leave behind",
+          heading: "The company in numbers",
           tiles: [
             {
               kind: "image",
@@ -68,7 +68,7 @@ export const pageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "2004",
-              label: "RBQ licence issued, never lapsed",
+              label: "The year our licence was issued",
             },
             {
               kind: "image",
@@ -82,12 +82,12 @@ export const pageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "5.0",
-              label: "Google rating, 11 reviews",
+              label: "Our Google rating, from 11 customer reviews",
             },
             {
               kind: "stat",
               value: "$40,000",
-              label: "FACCQ licence bond, no claim on file",
+              label: "The sum held in guarantee to protect our clients",
             },
             {
               kind: "image",
@@ -103,56 +103,57 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "licence",
-      frame: { surface: "muted" },
       content: {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Licence, insurance and warranty",
+          heading: "What protects you when you hire us",
           intro:
-            "All of it can be checked on the Régie du bâtiment du Québec register.",
+            "You can check every bit of it on the Régie du bâtiment du Québec register.",
           columns: "2",
           items: [
             {
-              title: "RBQ licence 8306-0806-27",
+              title: "Our RBQ licence",
               description:
-                "General contractor, issued September 7, 2004, no restrictions.",
+                "Issued on September 7, 2004 as a general contractor, with no restrictions at all.",
               icon: "fileCheck",
               bullets: [
-                "Class 1.2, small buildings",
-                "Class 1.3, buildings of all kinds",
-                "Subclass 12, cabinets and countertops",
+                "The number to check is 8306-0806-27",
+                "It covers houses as well as larger buildings",
+                "It also covers cabinets and countertops",
               ],
             },
             {
-              title: "Bond and record",
+              title: "A guarantee deposit",
               description:
-                "The licence bond protects the client if the contractor defaults.",
+                "A sum set aside in advance pays you back if we fail to meet our obligations.",
               icon: "shieldCheck",
               bullets: [
-                "$40,000 licence bond with FACCQ",
-                "No claim on file",
-                "Designated officer: Sean Diffley",
+                "The deposit is $40,000",
+                "Nobody has ever had to draw on it",
+                "The person on record is Sean Diffley",
               ],
             },
             {
-              title: "Insurance in force",
-              description: "Certificates provided before signing.",
+              title: "Our insurance",
+              description:
+                "You get the certificates in hand before you sign anything.",
               icon: "hardHat",
               bullets: [
-                "Civil liability",
-                "Site coverage for the duration of the work",
-                "Certificates on request",
+                "We carry civil liability insurance",
+                "The site is covered while the work goes on",
+                "You can ask for the paperwork at any time",
               ],
             },
             {
-              title: "Warranty on the work",
-              description: "Scope and duration written into the contract.",
+              title: "The warranty on our work",
+              description:
+                "What is covered, and for how long, is written into your contract.",
               icon: "clipboardCheck",
               bullets: [
-                "Deficiencies fixed before the final payment",
-                "Compliance with the Québec Construction Code",
-                "No new homes, so no GCR plan",
+                "We fix everything before you pay the balance",
+                "The work meets the Québec Construction Code",
+                "We do not build new homes",
               ],
             },
           ],

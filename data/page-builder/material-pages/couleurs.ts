@@ -24,9 +24,9 @@ export const couleursPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Matériaux",
-          heading: "Choisir une couleur qui tient à l'usage",
+          heading: "Comment choisir la couleur de vos armoires",
           description:
-            "La teinte se décide chez vous, dans la lumière réelle de la pièce. Le lustre, lui, décide de l'entretien.",
+            "On décide la couleur chez vous, dans la vraie lumière de la pièce.",
           actions: [
             {
               label: "Parler design et finitions",
@@ -51,44 +51,49 @@ export const couleursPage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Les finis en fiche",
-          intro: "Six repères pour arrêter une palette sans mauvaise surprise.",
+          heading: "Ce qu'il faut savoir sur les finis",
+          intro: "Six repères pour arrêter vos couleurs sans mauvaise surprise.",
           rows: [
             {
-              label: "Support",
-              value: "Le même ton rend autrement sur MDF, mélamine ou bois",
+              label: "Le matériau change la couleur",
+              value:
+                "La même teinte ne rend pas pareil sur du MDF, de la mélamine ou du bois.",
             },
             {
-              label: "Lustre",
-              value: "Mat, satiné, lustré, du plus feutré au plus réfléchissant",
+              label: "Mat, satiné ou lustré",
+              value:
+                "Le mat absorbe la lumière, le lustré la renvoie, le satiné est entre les deux.",
             },
             {
               label: "Entretien",
-              value: "Le satiné demande le moins de nettoyage en cuisine",
+              value:
+                "En cuisine, le satiné est celui qui se nettoie le plus facilement.",
             },
             {
-              label: "Usages recommandés",
-              value: "Neutres sur les grandes surfaces, couleur sur l'îlot",
+              label: "Usage recommandé",
+              value:
+                "Des tons neutres sur les grands murs d'armoires, la couleur sur l'îlot.",
             },
             {
-              label: "Prix relatif",
-              value: "Peinture sur mesure au-dessus d'un décor de série",
+              label: "Prix par rapport aux autres",
+              value:
+                "Une peinture sur mesure coûte plus cher qu'une couleur déjà offerte.",
             },
             {
-              label: "Validation",
-              value: "Échantillon posé dans la pièce, vu matin et soir",
+              label: "Comment valider",
+              value:
+                "On laisse un échantillon dans la pièce et vous le regardez le matin et le soir.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Échantillons de couleurs et de niveaux de lustre",
           },
-          note: "Un écran ajoute du bleu et efface le lustre : on ne valide jamais dessus.",
+          note: "Ne choisissez jamais une couleur sur un écran, elle ne sera pas fidèle.",
         },
       },
     },
@@ -126,7 +131,7 @@ export const couleursPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Besoin d'arrêter la palette ?",
+          heading: "Arrêter les couleurs de votre cuisine",
           intro:
             "On apporte les échantillons chez vous et on les regarde dans votre éclairage.",
           actions: [

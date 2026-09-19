@@ -35,7 +35,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
           badges: ["Washable finish"],
           heading: "Custom laundry room in Montréal and Laval",
           description:
-            "Folding counter, towers and sink set around the supply, drain and dryer vent.",
+            "Folding counter, storage towers and utility sink, drawn around your appliances.",
           actions: [
             {
               label: "Get a quote",
@@ -57,7 +57,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "A service room kept in line",
+          heading: "Laundry rooms we have fitted out",
           tiles: [
             {
               kind: "image",
@@ -80,7 +80,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "9–15 wks",
-              label: "Cabinets delivered once the plumbing is redone",
+              label: "How long the cabinets take to build",
             },
             {
               kind: "image",
@@ -102,7 +102,7 @@ export const salleDeLavagePageEn: PageTemplateData = {
               kind: "text",
               title: "Moving the appliances",
               description:
-                "Supply, drain and vent follow along, and often decide the final layout.",
+                "We redo the water line, the drain and the vent before drawing anything.",
               href: "/contact",
             },
           ],
@@ -111,38 +111,43 @@ export const salleDeLavagePageEn: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "The laundry room at a glance",
+          heading: "The laundry room in brief",
           intro:
-            "Three things run through this room: water, hot air and power.",
+            "What to plan for in a room that carries water, hot air and power.",
           rows: [
             {
-              label: "Lead time",
-              value: "Nine to fifteen weeks, plumbing and wiring done first",
+              label: "How long",
+              value:
+                "It takes nine to fifteen weeks, and the plumbing is redone before we install.",
             },
             {
-              label: "Price",
-              value: "Driven by the sink, the worktop and the tower count",
+              label: "Typical price",
+              value:
+                "The price follows the number of towers, the counter area and the utility sink.",
             },
             {
               label: "Materials",
-              value: "Birch plywood, backs sealed against steam",
+              value:
+                "Birch plywood, with the backs sealed because of the steam.",
             },
             {
               label: "Hardware",
-              value: "Anchors sized for shelves loaded with detergent",
+              value:
+                "Anchors chosen for shelves full of bottles and boxes of detergent.",
             },
             {
-              label: "Installation",
-              value: "Clearances kept around the washer and dryer",
+              label: "Who installs",
+              value:
+                "Our own crew, keeping the clearance the washer and dryer need.",
             },
             {
               label: "Warranty",
-              value: "Adjustment work written into the signed contract",
+              value:
+                "The contract covers us coming back to adjust the doors and drawers.",
             },
           ],
           image: {

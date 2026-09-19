@@ -130,7 +130,7 @@ export function GridImageCardsSliderLightbox(
                         <Link
                           href={href}
                           aria-label={footerLabel}
-                          className="icon-pill size-10 border border-border/80 bg-transparent text-foreground focus-ring hover:border-primary hover:bg-primary hover:text-primary-foreground"
+                          className="icon-pill -mt-2 size-10 border border-border/80 bg-transparent text-foreground focus-ring hover:border-primary hover:bg-primary hover:text-primary-foreground"
                         >
                           <ArrowUpRight className="size-4" strokeWidth={2.25} />
                         </Link>

@@ -46,7 +46,7 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
           eyebrow: "General contractor in",
           heading: "Pierrefonds-Roxboro",
           description:
-            "Our office sits on rue Larocque, in the borough where we have run residential job sites since 2004.",
+            "Renovations, basements and rebuilding after water damage for borough homes, from our office on rue Larocque.",
           actions: [
             {
               label: "Free quote",
@@ -64,10 +64,22 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
             alt: "Home renovation in Pierrefonds-Roxboro",
           },
           facts: [
-            { label: "Our base", value: "Rue Larocque, inside the borough" },
-            { label: "Permits", value: "Counter at 13665 boul. de Pierrefonds" },
-            { label: "Housing stock", value: "Bungalows and cottages, 1950 to 1980" },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "Our base",
+              value: "Our office is on rue Larocque, inside the borough",
+            },
+            {
+              label: "Where to apply for the permit",
+              value: "Permit counter, 13665 boul. de Pierrefonds",
+            },
+            {
+              label: "Type of homes",
+              value: "Bungalows and cottages built between 1950 and 1980",
+            },
+            {
+              label: "First reply",
+              value: "You hear back within 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -78,33 +90,38 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Our home turf, street by street",
+          heading: "What to know before renovating here",
           intro:
-            "Seventy thousand residents over twenty-seven square kilometres, a river to the north and basements that have already taken on water.",
+            "Seventy thousand residents, a river to the north, and plenty of basements that have already taken on water.",
           rows: [
             {
-              label: "Dominant stock",
-              value: "Split-levels and semis, slabs rarely insulated",
+              label: "Local risk",
+              value:
+                "The Rivière des Prairies overflowed in 2017 and in 2019, and riverside basements paid for it.",
             },
             {
-              label: "Filing",
-              value: "Drawings by email, signature by appointment",
+              label: "What is different here",
+              value:
+                "Many split-levels sit on a concrete slab that was never insulated.",
             },
             {
-              label: "Additions",
-              value: "Setbacks and siting confirmed by the borough",
+              label: "What the borough checks",
+              value:
+                "For an addition, it confirms the setbacks and where the building sits on the lot.",
             },
             {
-              label: "Riverside risk",
-              value: "Rivière des Prairies floods, 2017 and 2019",
+              label: "How to file the application",
+              value:
+                "Drawings go in by email and the signature is booked by appointment.",
             },
             {
               label: "Common projects",
-              value: "Basement redo, post-disaster work, centre wall opened",
+              value:
+                "Redoing a basement, rebuilding after water damage, opening a bungalow's centre wall.",
             },
             {
-              label: "Drive time",
-              value: "On site in ten minutes, all year round",
+              label: "From our base",
+              value: "We are at your door in ten minutes, all year round.",
             },
           ],
           image: {
@@ -121,13 +138,13 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in the borough",
+          heading: "Our services in Pierrefonds-Roxboro",
           items: [
             {
               title: "Basement",
               href: "/services/renovation/sous-sol",
               description:
-                "Backflow valve and pump checked before insulating, riverside obliges",
+                "We check the backflow valve and the pump before insulating, because the sector is riverside",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Basement games room finished in Pierrefonds",
@@ -139,7 +156,7 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
               title: "After a disaster",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Backup or spring flood, rebuilt with a file your insurer can follow",
+                "We rebuild after a sewer backup or a spring flood, with a file for your insurer",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Rebuilding after water damage in Roxboro",
@@ -151,7 +168,7 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "Centre wall of local bungalows carries load, beam sized first",
+                "We size the beam before opening a bungalow's centre wall",
               image: {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Open kitchen in a borough bungalow",
@@ -169,7 +186,7 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Our other West Island sectors",
+          heading: "Also served near Pierrefonds-Roxboro",
           columns: "2",
           items: [
             {
@@ -196,19 +213,19 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
           items: [
             {
               q: "Where do I get a renovation permit in Pierrefonds-Roxboro?",
-              a: "At the borough permit counter, 13665 boulevard de Pierrefonds. Drawings go in by email and the signature is booked by appointment. We assemble the file and follow it through.",
+              a: "At the borough permit counter, 13665 boulevard de Pierrefonds. Drawings go in by email and the signature is booked by appointment. We assemble the file and we follow its progress.",
             },
             {
-              q: "My Roxboro basement flooded. What do you check?",
-              a: "The drain, the backflow valve, the sump pump and the slab, before any insulation goes back. After the 2017 and 2019 floods we pick materials that tolerate water coming up.",
+              q: "My Roxboro basement flooded. What do you check first?",
+              a: "The drain, the backflow valve, the pump and the slab, before any insulation goes back. After the 2017 and 2019 floods we use materials that can take water coming up.",
             },
             {
-              q: "How long does a basement job take here?",
-              a: "A few weeks for a simple room, longer when drainage has to be corrected before closing up. Start and delivery dates are written into the contract, never promised verbally.",
+              q: "How long does a basement job take in the borough?",
+              a: "A few weeks for a simple room, longer if the drainage has to be corrected before the walls close. The start date and the end date are written into the contract.",
             },
             {
-              q: "What does a Pierrefonds bungalow basement cost?",
-              a: "A mandate starts around $25,000, and adding a powder room widens the scope. What we find under the slab decides the rest. Site visit and estimate are free.",
+              q: "What does finishing a bungalow basement cost here?",
+              a: "A mandate starts around $25,000, and adding a powder room raises the total. What we find under the slab decides the rest. The site visit and the estimate are free.",
             },
           ],
         },
@@ -220,8 +237,9 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Renovating in Pierrefonds-Roxboro",
-          intro: "Your house is ten minutes from our office.",
+          heading: "A project in Pierrefonds-Roxboro?",
+          intro:
+            "Our office is ten minutes from your door and the visit costs nothing.",
           actions: [
             {
               label: "Request a quote",

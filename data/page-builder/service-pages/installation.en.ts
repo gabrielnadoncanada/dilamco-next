@@ -34,9 +34,9 @@ export const installationPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Cabinetry division",
-          heading: "Installation is planned around the other trades",
+          heading: "How we install your cabinets at home",
           description:
-            "Our crews hang the cabinets at the right moment, after plumbing and electrical, before the countertops.",
+            "Our crews hang the cabinets after the plumbing and the wiring, and before the countertops.",
           actions: [
             {
               label: "Request a quote",
@@ -65,31 +65,31 @@ export const installationPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Four steps on site",
+          heading: "How installation day goes",
           steps: [
             {
               number: "1",
-              title: "Protection",
+              title: "We protect the house",
               description:
-                "Floors covered, thresholds protected, dust kept to the room.",
+                "We cover the floors and keep the dust inside the room we work in.",
             },
             {
               number: "2",
-              title: "Levelling",
+              title: "We fix the boxes",
               description:
-                "Boxes shimmed, then anchored into the wall studs.",
+                "We level each box, then screw it into the framing behind the wall.",
             },
             {
               number: "3",
-              title: "Adjustment",
+              title: "We adjust the doors",
               description:
-                "Hinges set on three axes, gaps evened out across the run.",
+                "We set every door so the gaps are even from one end to the other.",
             },
             {
               number: "4",
-              title: "Finishing",
+              title: "We finish and show you",
               description:
-                "Mouldings, toe kicks, handles and a walk-through with you.",
+                "We fit the mouldings and handles, then walk through it all with you.",
             },
           ],
         },
@@ -97,44 +97,49 @@ export const installationPageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "In short",
-          intro: "What happens in your home during the install days.",
+          heading: "Installation in brief",
+          intro: "What happens in your home during the installation days.",
           rows: [
             {
-              label: "Timeline",
-              value: "One to two days for a vanity, three to five for a kitchen",
+              label: "How long",
+              value:
+                "One to two days for a vanity, three to five for a full kitchen.",
             },
             {
-              label: "Deliverables",
-              value: "Cabinets hung, doors adjusted, deficiencies corrected",
+              label: "What you receive",
+              value:
+                "Cabinets hung, doors properly set, and every touch-up done.",
             },
             {
-              label: "Who does what",
-              value: "Our installers, coordinated with countertop and electrician",
+              label: "Who handles it",
+              value:
+                "Our own installers, working in step with the electrician and the countertop.",
             },
             {
-              label: "Prerequisite",
-              value: "Plumbing, electrical and flooring done before we arrive",
+              label: "Needed beforehand",
+              value:
+                "The plumbing, the wiring and the floor must be finished before we arrive.",
             },
             {
               label: "Warranty",
-              value: "One catch-up adjustment included in the first year",
+              value:
+                "One adjustment visit is included in the year following installation.",
             },
             {
-              label: "Job site",
-              value: "Swept every evening, debris hauled out at the end",
+              label: "Cleanliness",
+              value:
+                "We sweep up every evening and haul out all the debris at the end.",
             },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
             alt: "Cabinets adjusted and aligned after installation",
           },
-          note: "The install date is set once the delivery is confirmed.",
+          note: "We set the installation date as soon as the delivery is confirmed.",
         },
       },
     },
@@ -174,7 +179,7 @@ export const installationPageEn: PageTemplateData = {
         props: {
           heading: "Schedule your cabinet installation",
           intro:
-            "We set the date against the rest of the job site and hand over after a walk-through.",
+            "We pick the date with you, and we only leave once we have checked it all together.",
           actions: [
             {
               label: "Request a quote",

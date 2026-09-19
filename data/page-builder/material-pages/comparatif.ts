@@ -24,9 +24,9 @@ export const comparatifPage: PageTemplateData = {
         variant: "centered",
         props: {
           badges: ["Structure", "Humidité", "Finition"],
-          heading: "Quel panneau pour quelle partie de l'armoire",
+          heading: "Quel matériau pour quelle partie de l'armoire",
           description:
-            "Aucun matériau ne gagne partout. Une cuisine bien pensée en combine trois ou quatre, chacun à sa place.",
+            "Aucun matériau n'est bon partout. Une cuisine bien pensée en combine trois ou quatre.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -48,32 +48,32 @@ export const comparatifPage: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Quatre panneaux, quatre rôles",
-          columns: ["Point fort", "Où l'utiliser"],
+          heading: "Chaque matériau et l'usage qui lui convient",
+          columns: ["Ce qu'il fait de mieux", "Où on l'utilise"],
           rows: [
             {
               label: "Contreplaqué",
-              values: ["Stabilité et tenue des vis", "Caissons, tiroirs, tablettes"],
+              values: ["Il reste droit et tient les vis", "Caissons, tiroirs, tablettes"],
             },
             {
               label: "MDF",
-              values: ["Surface sans fil", "Portes et façades peintes"],
+              values: ["Il donne une peinture parfaitement lisse", "Portes et façades peintes"],
             },
             {
               label: "Mélamine",
-              values: ["Déjà fini, coût bas", "Intérieurs et rangement secondaire"],
+              values: ["Il coûte peu et arrive déjà fini", "Intérieurs d'armoires et tablettes"],
             },
             {
               label: "Bois massif",
-              values: ["Grain et valeur perçue", "Portes, moulures, détails vus"],
+              values: ["Il montre un vrai grain de bois", "Portes, moulures et détails visibles"],
             },
             {
               label: "Quincaillerie",
-              values: ["Confort et longévité", "Charnières, coulisses, mécanismes"],
+              values: ["Elle tient des années sans jeu", "Charnières et coulisses de tiroir"],
             },
             {
               label: "Panneau de particules",
-              values: ["Coût minimal", "Rien qui porte ou qui bouge"],
+              values: ["Il ne coûte presque rien", "Rien qui porte du poids, chez nous"],
             },
           ],
         },
@@ -81,44 +81,49 @@ export const comparatifPage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "Comment choisir",
-          intro: "Deux questions suffisent à trancher dans la majorité des pièces.",
+          intro: "Deux questions suffisent à trancher dans la plupart des pièces.",
           rows: [
             {
               label: "Première question",
-              value: "La pièce porte-t-elle une charge ou reçoit-elle de l'eau ?",
+              value:
+                "Est-ce que la pièce porte du poids ou est-ce qu'elle risque de recevoir de l'eau ?",
             },
             {
               label: "Deuxième question",
-              value: "Le fini visé est-il peint, décor ou bois naturel ?",
+              value:
+                "Voulez-vous une porte peinte, un décor déjà fini ou du vrai bois ?",
             },
             {
-              label: "Structure",
-              value: "Contreplaqué dès qu'il y a des vis et du poids",
+              label: "Pour la structure",
+              value:
+                "Du contreplaqué partout où il y a des vis et du poids à porter.",
             },
             {
-              label: "Façade",
-              value: "MDF pour peindre, massif pour le grain, mélamine pour le prix",
+              label: "Pour les façades",
+              value:
+                "Du MDF si on peint, du bois massif pour le grain, de la mélamine pour le prix.",
             },
             {
-              label: "Budget",
-              value: "Déplacer la dépense vers ce qui se voit et se touche",
+              label: "Pour le budget",
+              value:
+                "Mettez l'argent sur ce que vous voyez et touchez tous les jours.",
             },
             {
-              label: "Point de rupture",
-              value: "Les chants et la pose, pas le panneau lui-même",
+              label: "Ce qui lâche en premier",
+              value:
+                "Ce sont les bords des panneaux et la pose, rarement le matériau lui-même.",
             },
           ],
           image: {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Panneaux d'armoires comparés côte à côte",
           },
-          note: "Le tableau donne la règle, le relevé sur place donne l'exception.",
+          note: "Le tableau donne la règle générale. Votre pièce peut demander autre chose.",
         },
       },
     },
@@ -152,9 +157,9 @@ export const comparatifPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Arbitrer les matériaux de votre projet",
+          heading: "Choisir les matériaux de votre projet",
           intro:
-            "On tranche structure, fini, humidité et budget après le relevé chez vous.",
+            "On passe la pièce en revue chez vous, puis on arrête chaque matériau avec vous.",
           actions: [
             {
               label: "Demander une soumission",

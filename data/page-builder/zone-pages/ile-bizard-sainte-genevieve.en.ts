@@ -44,7 +44,7 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
           eyebrow: "General contractor in",
           heading: "L'Île-Bizard–Sainte-Geneviève",
           description:
-            "Two islands, a river that rises every spring, and basements rebuilt after the 2017 and 2019 floods.",
+            "Renovations, basements and rebuilding after flooding for homes on Île Bizard and in Sainte-Geneviève.",
           actions: [
             {
               label: "Request a quote",
@@ -64,17 +64,20 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
           facts: [
             {
               label: "Our base",
-              value: "Pierrefonds-Roxboro · 10 min over the bridge",
+              value: "Pierrefonds-Roxboro, ten minutes over the bridge",
             },
             {
-              label: "Permits",
-              value: "Counter at 15795 Gouin Boulevard West",
+              label: "Where to apply for the permit",
+              value: "Permit counter, 15795 Gouin Boulevard West",
             },
             {
-              label: "Housing stock",
-              value: "Single-family homes on deep lots, 1845 village",
+              label: "Type of homes",
+              value: "Single-family homes on large lots, and an 1845 village",
             },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "First reply",
+              value: "You hear from us within 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -85,34 +88,39 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "What the water dictates on the island",
+          heading: "What to know before renovating on the island",
           intro:
-            "Rivière des Prairies to the north, Lac des Deux Montagnes to the west. The flood-plain map drives the project.",
+            "The river to the north, the lake to the west, and a flood-zone map that drives the project.",
           rows: [
             {
-              label: "Housing stock",
+              label: "Local risk",
               value:
-                "Single-family homes on deep lots, Chemin Cherrier and Jacques-Bizard Boulevard",
+                "The 2017 and 2019 floods submerged Île Mercier and forced people out of their homes.",
             },
             {
-              label: "Permits",
-              value: "Every flood-plain job needs one, with no exception",
+              label: "When a permit is required",
+              value:
+                "In a flood zone, every single job needs a permit, with no exception.",
             },
             {
-              label: "By-laws",
-              value: "11-018 construction, 11-010 sewer backup protection",
+              label: "What the by-law requires",
+              value:
+                "The house must be protected against sewer backups before it is finished.",
             },
             {
-              label: "Local risks",
-              value: "2017 and 2019 floods, Île Mercier submerged, evacuations",
+              label: "Neighbourhoods",
+              value:
+                "Single-family homes line up on deep lots, on Chemin Cherrier and Jacques-Bizard Boulevard.",
             },
             {
               label: "Common projects",
-              value: "Rebuilt basements, additions, older homes on Gouin West",
+              value:
+                "Rebuilding a basement, adding on, restoring an older home on Gouin Boulevard.",
             },
             {
               label: "From our base",
-              value: "Jacques-Bizard bridge, then Montée de l'Église",
+              value:
+                "We cross the Jacques-Bizard bridge, then take Montée de l'Église.",
             },
           ],
           image: {
@@ -129,13 +137,13 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we rebuild on Île Bizard",
+          heading: "Our services on Île Bizard",
           items: [
             {
               title: "Basement rebuild",
               href: "/services/renovation/sous-sol",
               description:
-                "Drain, backflow valve and sump pump checked before a riverside basement closes",
+                "We check the drain, the backflow valve and the pump before the walls close",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-cinema-01.webp",
                 alt: "Basement finished as a home cinema on Île Bizard",
@@ -147,7 +155,7 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
               title: "Post-damage rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Rebuilding homes hit by the flood waters around Île Mercier",
+                "We restore the homes hit by the flood waters around Île Mercier",
               image: {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Interior rebuild after flooding near Île Mercier",
@@ -159,7 +167,7 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
               title: "Home addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Shoreline strip, setbacks and fill confirmed before the first sketch",
+                "We confirm the shoreline strip, the setbacks and the fill before drawing",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Planning an addition on a riverside lot on the island",
@@ -177,7 +185,7 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Across the bridge",
+          heading: "Neighbouring areas we serve",
           columns: "2",
           items: [
             {
@@ -213,20 +221,20 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
           heading: "Questions we hear on the island",
           items: [
             {
-              q: "Where are permits filed in L'Île-Bizard–Sainte-Geneviève?",
+              q: "Where do you file a permit application on Île Bizard?",
               a: "At the permit counter, 15795 Gouin Boulevard West, or with the urban planning, permits and inspections division at 406 Montée de l'Église, 514 620-6607. We prepare and file the application.",
             },
             {
-              q: "Can I renovate in a high-velocity flood zone on Île Bizard?",
-              a: "In the 0 to 20 year high-velocity zone, construction and work are prohibited apart from listed exceptions. In the 20 to 100 year zone, any non flood-proofed construction is banned. We confirm the elevation before drawing.",
+              q: "Can I renovate if my house is in a flood zone?",
+              a: "It depends on the zone. In the most exposed one, work is banned apart from the exceptions listed in the by-law. In the other, the construction must be protected against water. We confirm your address before drawing.",
             },
             {
-              q: "What does by-law 11-010 change for a Sainte-Geneviève basement?",
-              a: "It requires the building to be protected against sewer backups. Backflow valve, sump pump and French drain come before finishes, and the lower wall materials have to survive a repeat event.",
+              q: "What do you plan for a basement in Sainte-Geneviève?",
+              a: "The house must be protected against sewer backups. The backflow valve, the pump and the drain come before the finishes, and the lower walls get materials that can take water coming up again.",
             },
             {
               q: "Can an older house in old Sainte-Geneviève be transformed?",
-              a: "Yes, starting with a survey of what is there. The village core is recognized as exceptional in character, around the 1843-1845 church and the D'Ailleboust-De-Manthet house at 15886 Gouin Boulevard West.",
+              a: "Yes, provided we survey what is there first. The village core is recognized as a site of special interest, around the 1843-1845 church and the D'Ailleboust-De-Manthet house at 15886 Gouin Boulevard West.",
             },
           ],
         },
@@ -239,7 +247,8 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "A project in L'Île-Bizard or Sainte-Geneviève?",
-          intro: "We cross the bridge, survey the house and price the work.",
+          intro:
+            "We cross the bridge, survey the house and hand you a written price.",
           actions: [
             {
               label: "Request a quote",

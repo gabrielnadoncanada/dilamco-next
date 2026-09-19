@@ -24,9 +24,9 @@ export const couleursPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "Choosing a colour that survives daily use",
+          heading: "How to choose the colour of your cabinets",
           description:
-            "The shade is settled in your home, in the room's real light. The sheen level is what decides the upkeep.",
+            "We settle the colour at your place, in the real light of the room.",
           actions: [
             {
               label: "Talk design and finishes",
@@ -51,44 +51,49 @@ export const couleursPageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Finishes at a glance",
-          intro: "Six markers for locking a palette without a bad surprise.",
+          heading: "What you should know about finishes",
+          intro: "Six pointers for settling your colours without a bad surprise.",
           rows: [
             {
-              label: "Substrate",
-              value: "The same shade reads differently on MDF, melamine or wood",
+              label: "The material changes the colour",
+              value:
+                "The same shade does not read the same on MDF, on melamine or on wood.",
             },
             {
-              label: "Sheen",
-              value: "Matte, satin, gloss, from softest to most reflective",
+              label: "Matte, satin or gloss",
+              value:
+                "Matte soaks up light, gloss bounces it back, and satin sits in between.",
             },
             {
               label: "Upkeep",
-              value: "Satin asks for the least cleaning in a kitchen",
+              value:
+                "In a kitchen, satin is the one that cleans up most easily.",
             },
             {
-              label: "Recommended uses",
-              value: "Neutrals on large runs, colour on the island",
+              label: "Best used for",
+              value:
+                "Neutral tones on the long runs of cabinets, colour on the island.",
             },
             {
-              label: "Relative cost",
-              value: "Custom paint above a catalogue decor",
+              label: "Price against the others",
+              value:
+                "A custom paint costs more than a colour already on offer.",
             },
             {
-              label: "Sign-off",
-              value: "Sample left in the room, seen morning and evening",
+              label: "How to sign off",
+              value:
+                "We leave a sample in the room and you look at it morning and evening.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-finish-samples-01.webp",
             alt: "Colour samples and sheen levels side by side",
           },
-          note: "A screen adds blue and erases sheen, so we never sign off on one.",
+          note: "Never pick a colour off a screen, it will not be true to life.",
         },
       },
     },
@@ -126,7 +131,7 @@ export const couleursPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Need help locking the palette?",
+          heading: "Settle the colours of your kitchen",
           intro:
             "We bring the samples to your home and look at them under your own lighting.",
           actions: [

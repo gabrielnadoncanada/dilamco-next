@@ -33,9 +33,9 @@ export const contreplaquePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "Plywood carries the structure of your cabinets",
+          heading: "Why our cabinet boxes are made of plywood",
           description:
-            "Cross-grain plies bonded under heat. The panel stays straight and holds the screws of hinges and drawer slides.",
+            "It is the panel that stays straight over time and holds the hinge screws.",
           actions: [
             {
               label: "Talk about your project",
@@ -60,48 +60,54 @@ export const contreplaquePageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Plywood at a glance",
-          intro: "The numbers we ask the supplier for before ordering.",
+          heading: "What you should know about plywood",
+          intro: "Answers to the questions people ask us about this panel.",
           rows: [
             {
-              label: "Composition",
-              value: "Birch plies cross-bonded, 13 to 15 mm thick",
+              label: "What it is made of",
+              value:
+                "Thin layers of birch glued crosswise, 13 to 15 mm thick in total.",
             },
             {
-              label: "Humidity",
-              value: "Tolerant as long as the edges stay sealed",
+              label: "Does it handle humidity?",
+              value:
+                "Yes, as long as the edges of the panel are properly sealed.",
             },
             {
               label: "Upkeep",
-              value: "None, it lives hidden behind the finish",
+              value:
+                "None, because it stays hidden behind the doors and the finish.",
             },
             {
-              label: "Recommended uses",
-              value: "Boxes, drawer bottoms, loaded shelves",
+              label: "Best used for",
+              value:
+                "Cabinet boxes, drawer bottoms and any shelf that carries weight.",
             },
             {
-              label: "Relative cost",
-              value: "Above MDF, below solid wood",
+              label: "Price against the others",
+              value:
+                "Dearer than MDF, cheaper than solid wood.",
             },
             {
-              label: "Screw hold",
-              value: "Roughly twice that of a particleboard panel",
+              label: "Does it hold screws?",
+              value:
+                "About twice as well as particleboard, so the hinges stay put.",
             },
             {
-              label: "Grade to target",
-              value: "Seven plies minimum, no visible internal voids",
+              label: "What to ask for",
+              value:
+                "At least seven layers, and no visible gaps inside the thickness of the panel.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-plywood-detail-01.webp",
             alt: "Cross-grain plies visible on a plywood edge",
           },
-          note: "Grade and glue matter more than the face veneer species.",
+          note: "The quality of the panel matters more than the wood you see on the surface.",
         },
       },
     },
@@ -139,9 +145,9 @@ export const contreplaquePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Cabinet boxes that stay square?",
+          heading: "You want cabinet boxes that stay square",
           intro:
-            "We write the grade, the thickness and the edge treatment into the quote.",
+            "The quality of the panel and its thickness are written into your quote.",
           actions: [
             {
               label: "Request a quote",

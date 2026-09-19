@@ -105,7 +105,7 @@
   --secondary: #eef1ec;
   --secondary-foreground: #222825;
 
-  --muted: #f0f3ef;
+  --muted: #edf1ec;
   --muted-foreground: #5f6762;
 
   /* `accent` = surface de survol/focus subtile (sémantique shadcn standard).
@@ -128,7 +128,7 @@
   /* Échelle typographique des titres serif — SOURCE UNIQUE vitrine + boutique.
      Le composant Heading (vitrine) et Headline (boutique) pointent tous deux
      ici, pour une seule échelle de titres cohérente sur tout le site. */
-  --title-1: clamp(2.5rem, 1.2rem + 4.6vw, 5rem); /* hero / display */
+  --title-1: clamp(2.25rem, 1rem + 4.6vw, 5rem); /* hero / display */
   --title-2: clamp(2.25rem, 1.3rem + 3.2vw, 3.75rem); /* h1 */
   --title-3: clamp(1.75rem, 1.1rem + 2.2vw, 2.75rem); /* h2 / titre de section */
   --title-4: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); /* h3 */
@@ -136,7 +136,7 @@
   --title-6: 1rem; /* sous-titre */
 
   --surface-default-bg: var(--background);
-  --surface-muted-bg: #f0f3ef;
+  --surface-muted-bg: #edf1ec;
   --surface-tint-bg: #edf1ec;
   --surface-tint-glow: rgb(37 59 47 / 6%);
   --surface-separator: rgb(26 31 28 / 7%);

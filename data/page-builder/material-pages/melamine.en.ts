@@ -24,9 +24,9 @@ export const melaminePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "Melamine arrives already finished, at a controlled cost",
+          heading: "Melamine, the budget choice that wipes clean",
           description:
-            "A thermofused decor on panel. No painting stage, a washable surface, and edges that decide how long it lasts.",
+            "The panel arrives already finished, so there is nothing to paint and the surface washes down.",
           actions: [
             {
               label: "Request a quote",
@@ -51,40 +51,45 @@ export const melaminePageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Melamine at a glance",
-          intro: "A panel judged on its edge band more than on its decor.",
+          heading: "What you should know about melamine",
+          intro: "What it does well, and the detail that decides how long it lasts.",
           rows: [
             {
-              label: "Composition",
-              value: "Decor paper press-fused onto a fibreboard core",
+              label: "What it is made of",
+              value:
+                "A printed paper heat-bonded onto a wood fibreboard core.",
             },
             {
-              label: "Humidity",
-              value: "Sealed surface, core exposed through an open edge",
+              label: "Does it handle humidity?",
+              value:
+                "The surface does. Water gets in through an edge that was not closed properly.",
             },
             {
               label: "Upkeep",
-              value: "Damp cloth, no abrasive product",
+              value:
+                "A damp cloth does the job, with no powder or scouring pad.",
             },
             {
-              label: "Recommended uses",
-              value: "Interiors, shelves, secondary storage",
+              label: "Best used for",
+              value:
+                "Cabinet interiors, shelves and the storage nobody sees.",
             },
             {
-              label: "Relative cost",
-              value: "The least expensive cabinetry line item",
+              label: "Price against the others",
+              value:
+                "It is the cheapest cabinet material there is.",
             },
             {
-              label: "Edge banding",
-              value: "PVC band of 1 mm or more, press-glued",
+              label: "Finishes offered",
+              value:
+                "Plain or wood-look decors, with a PVC edge band of at least 1 mm.",
             },
           ],
-          note: "A chip cannot be sanded out: the affected part is replaced.",
+          note: "A chip cannot be repaired. We replace the part instead.",
         },
       },
     },
@@ -122,9 +127,9 @@ export const melaminePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Does melamine fit your budget?",
+          heading: "Bringing your kitchen within budget",
           intro:
-            "We separate what gets seen from what gets stored, then split the budget.",
+            "We put melamine where it will not show and keep the money for the fronts.",
           actions: [
             {
               label: "Request a quote",

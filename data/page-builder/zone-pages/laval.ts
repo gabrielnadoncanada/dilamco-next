@@ -68,7 +68,7 @@ export const zoneLavalPage: PageTemplateData = {
           eyebrow: "Entrepreneur général à",
           heading: "Laval",
           description:
-            "Chomedey et Laval-des-Rapides datent des années 1960. Ici, le secteur annonce ce qui se cache derrière les murs.",
+            "Sous-sol, cuisine et reconstruction après dégât d'eau pour les maisons de Laval, par un entrepreneur général licencié.",
           actions: [
             {
               label: "Demander une soumission",
@@ -88,17 +88,20 @@ export const zoneLavalPage: PageTemplateData = {
           facts: [
             {
               label: "Notre base",
-              value: "Pierrefonds-Roxboro · 25 min par l'autoroute 13",
+              value: "Pierrefonds-Roxboro, à vingt-cinq minutes par l'autoroute 13",
             },
             {
-              label: "Permis",
+              label: "Où demander le permis",
               value: "Service de l'urbanisme, 1333, boulevard Chomedey",
             },
             {
-              label: "Bâti",
-              value: "Bungalows 1960-1970, fondations en blocs de béton",
+              label: "Type de maisons",
+              value: "Des bungalows de 1960-1970, sur fondations de blocs",
             },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            {
+              label: "Premier retour",
+              value: "Un retour d'appel en 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -109,37 +112,44 @@ export const zoneLavalPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Laval se lit secteur par secteur",
+          heading: "Ce qu'on sait des maisons de Laval",
           intro:
-            "Quatre vagues de construction, des cotes de crue inscrites au zonage et deux permis distincts selon les travaux.",
+            "Chaque secteur de Laval a son époque de construction, et son lot de surprises.",
           rows: [
             {
-              label: "Bâti dominant",
-              value: "Vague 1960-1970 à Chomedey, vague 1980-1990 à Duvernay-Vimont",
+              label: "Âge des quartiers",
+              value:
+                "Chomedey et Laval-des-Rapides datent surtout de 1960-1970, Duvernay et Vimont de 1980-1990.",
             },
             {
-              label: "Permis",
-              value: "Deux dossiers séparés, rénovation intérieure ou extérieure",
+              label: "Quel permis demander",
+              value:
+                "La Ville sépare la rénovation intérieure et la rénovation extérieure en deux permis.",
             },
             {
-              label: "Démarche",
-              value: "Demande en ligne, suivi dans Mon dossier, permis par courriel",
+              label: "Comment déposer la demande",
+              value:
+                "En ligne, avec un suivi dans Mon dossier, et le permis arrive ensuite par courriel.",
             },
             {
-              label: "Risques locaux",
-              value: "Crues de 2017 à Laval-Ouest, Fabreville et Sainte-Dorothée",
+              label: "Risque local",
+              value:
+                "La rivière a inondé des rues de Laval-Ouest, de Fabreville et de Sainte-Dorothée en 2017.",
             },
             {
-              label: "Zones inondables",
-              value: "Cotes de crue au zonage, issues d'une étude de 2014",
+              label: "Ce que la Ville vérifie",
+              value:
+                "En zone inondable, elle compare votre terrain aux cotes de crue inscrites au règlement de zonage.",
             },
             {
-              label: "Projets fréquents",
-              value: "Sous-sol, ouverture d'une cuisine fermée, reprise après dégât d'eau",
+              label: "Projets courants",
+              value:
+                "Finir un sous-sol, ouvrir une cuisine fermée, remettre en état après un dégât d'eau.",
             },
             {
               label: "Depuis notre base",
-              value: "Pont Louis-Bisson, puis autoroute 440 ou boulevard Saint-Martin",
+              value:
+                "Pont Louis-Bisson, puis l'autoroute 440 ou le boulevard Saint-Martin.",
             },
           ],
           image: {
@@ -156,13 +166,13 @@ export const zoneLavalPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise dans les maisons lavalloises",
+          heading: "Nos services à Laval",
           items: [
             {
               title: "Aménagement de sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Salle familiale et chambre sous un bungalow de Vimont, conformes au Code",
+                "On aménage une salle familiale et une chambre sous un bungalow de Vimont",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bar-01.webp",
                 alt: "Sous-sol aménagé avec coin bar dans une maison lavalloise",
@@ -174,7 +184,7 @@ export const zoneLavalPage: PageTemplateData = {
               title: "Rénovation de cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Abattre le mur d'une cuisine fermée de bungalow des années 1960",
+                "On abat le mur d'une cuisine fermée dans un bungalow des années 1960",
               image: {
                 src: "/images/generated/spaces/space-cuisine-project-02.webp",
                 alt: "Cuisine ouverte sur la salle à manger d'un bungalow de Laval",
@@ -186,7 +196,7 @@ export const zoneLavalPage: PageTemplateData = {
               title: "Rénovation après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Reprise des sous-sols de Laval-Ouest après une crue de la rivière",
+                "On remet en état les sous-sols de Laval-Ouest après une crue de la rivière",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction intérieure après une inondation à Laval-Ouest",
@@ -204,7 +214,7 @@ export const zoneLavalPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Aussi dans le secteur",
+          heading: "Aussi desservies près de Laval",
           columns: "2",
           items: [
             {
@@ -241,19 +251,19 @@ export const zoneLavalPage: PageTemplateData = {
           items: [
             {
               q: "Quel permis faut-il pour rénover à Laval ?",
-              a: "La Ville sépare la rénovation résidentielle intérieure et l'extérieure en deux permis. On identifie le bon au cadrage, on dépose en ligne et on suit le dossier dans Mon dossier jusqu'à l'envoi du permis par courriel.",
+              a: "La Ville sépare la rénovation intérieure et l'extérieure en deux permis. On choisit le bon, on dépose la demande en ligne et on suit le dossier jusqu'à l'envoi du permis par courriel.",
             },
             {
               q: "Ma maison de Laval-Ouest est en zone inondable, est-ce bloquant ?",
-              a: "Pas nécessairement. Les plaines inondables lavalloises sont délimitées par les cotes de crue inscrites au règlement de zonage, issues d'une étude approuvée par le gouvernement en 2014. On vérifie la cote de l'adresse avant de dessiner.",
+              a: "Pas forcément. Ces zones sont délimitées par des cotes de crue inscrites au règlement de zonage, issues d'une étude approuvée en 2014. Nous vérifions la cote de votre adresse avant de dessiner.",
             },
             {
               q: "Que faire d'un sous-sol inondé à Fabreville ou à Sainte-Dorothée ?",
-              a: "On intervient après l'assèchement, comme après les crues de 2017 : démolition sélective, assainissement, puis reconstruction. Drainage, pompe de puisard et clapet antiretour sont repris, et le bas de mur reçoit des matériaux qui encaissent une récidive.",
+              a: "On intervient une fois les lieux asséchés : démolition ciblée, assainissement, puis reconstruction. Le drain, la pompe et le clapet sont repris, et le bas des murs reçoit des matériaux qui supportent une récidive.",
             },
             {
               q: "Faut-il craindre la vermiculite dans un bungalow de Duvernay ?",
-              a: "C'est à vérifier. Les combles des maisons lavalloises de la vague 1980-1990 en contiennent parfois. Un échantillon part au laboratoire avant qu'on ouvre le plafond, et le résultat change la méthode de chantier, pas le projet.",
+              a: "C'est à vérifier. Les combles des maisons bâties entre 1980 et 1990 en contiennent parfois. Un échantillon part au laboratoire avant qu'on ouvre le plafond, et le résultat change la méthode, pas le projet.",
             },
           ],
         },
@@ -265,8 +275,9 @@ export const zoneLavalPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Une rénovation à Laval, de Chomedey à Sainte-Rose",
-          intro: "Dites le secteur et les travaux. On fixe la visite.",
+          heading: "Une rénovation à Laval ?",
+          intro:
+            "Dites-nous le secteur et les travaux souhaités. On fixe la visite.",
           actions: [
             {
               label: "Demander une soumission",

@@ -32,7 +32,7 @@ export const pageEn: PageTemplateData = {
           badges: ["Cabinet division"],
           heading: "Custom cabinetry for six rooms of the house",
           description:
-            "The general contractor draws it, orders it and installs it. No supplier for you to chase.",
+            "We draw it, we order it and we install it. There is nobody else for you to call.",
           actions: [
             {
               label: "Get a quote",
@@ -128,38 +128,43 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "division",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "The cabinetry division at a glance",
+          heading: "The cabinet division in brief",
           intro:
-            "A division of the general contracting firm, not a second company to hire.",
+            "It is a division of our own firm, not a second company you have to hire.",
           rows: [
             {
               label: "Licence",
-              value: "RBQ subclass 12, cabinets and countertops, held by us",
+              value:
+                "Our RBQ licence already covers cabinets and countertops.",
             },
             {
-              label: "Production",
-              value: "Partner factory, ordered after the on-site survey",
+              label: "Who builds it",
+              value:
+                "Our partner factory, once the survey has been done at your place.",
             },
             {
-              label: "Lead time",
-              value: "Nine to fifteen weeks from drawing approval to delivery",
+              label: "How long",
+              value:
+                "It takes nine to fifteen weeks from drawing approval to delivery.",
             },
             {
               label: "Materials",
-              value: "Solid birch in drawers, plywood in the boxes",
+              value:
+                "Solid birch for the drawers and plywood for the cabinet boxes.",
             },
             {
-              label: "Installation",
-              value: "By our crew, in its place among the trades",
+              label: "Who installs",
+              value:
+                "Our own crew, at the right moment in the order of works.",
             },
             {
-              label: "Contract",
-              value: "Work and cabinets gathered into a single quote",
+              label: "What you sign",
+              value:
+                "A single quote, covering both the renovation and the cabinets.",
             },
           ],
           image: {
@@ -175,9 +180,9 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Tell us about your space",
+          heading: "Tell us about the room you want redone",
           intro:
-            "Free estimate for the room you have in mind, and one contract to sign.",
+            "The estimate is free and there is only one contract for you to sign.",
           actions: [
             {
               label: "Get a quote",

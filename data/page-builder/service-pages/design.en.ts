@@ -31,9 +31,9 @@ export const designPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Cabinetry division",
-          heading: "Plans are settled before a wall is opened",
+          heading: "We draw your kitchen before a wall is opened",
           description:
-            "On-site survey, layout, heights, materials. Everything is decided and signed before production starts.",
+            "Measurements, drawings, heights and materials are settled and signed before we order anything.",
           actions: [
             {
               label: "Talk about your project",
@@ -62,31 +62,31 @@ export const designPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Four design steps",
+          heading: "How the design stage works",
           steps: [
             {
               number: "1",
-              title: "Survey",
+              title: "We measure the room",
               description:
-                "Real measurements of walls, openings, columns and existing outlets.",
+                "We record the walls, the windows and the existing plumbing and wiring.",
             },
             {
               number: "2",
-              title: "Drawings",
+              title: "We draw the plans",
               description:
-                "Layout, elevations, position of every module and every outlet.",
+                "We place every cabinet, every appliance and every outlet on the drawing.",
             },
             {
               number: "3",
-              title: "Selections",
+              title: "We choose with you",
               description:
-                "Panels, hardware, colours and finishes settled on samples.",
+                "You see the samples for materials, colours and handles.",
             },
             {
               number: "4",
-              title: "Sign-off",
+              title: "You sign off",
               description:
-                "Signed drawings, detailed quote, schedule written into the contract.",
+                "You get the drawings, the itemized price and the job site dates.",
             },
           ],
         },
@@ -94,44 +94,49 @@ export const designPageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "In short",
-          intro: "What the design stage covers, and what it produces.",
+          heading: "The design stage in brief",
+          intro: "What the design stage gives you, and what it costs you.",
           rows: [
             {
-              label: "Timeline",
-              value: "Two to four weeks from survey to signed drawings",
+              label: "How long",
+              value:
+                "It takes two to four weeks between the first visit and the signed drawings.",
             },
             {
-              label: "Deliverables",
-              value: "Layout plan, elevations, material list, detailed quote",
+              label: "What you receive",
+              value:
+                "A floor plan, a drawing of each wall, the list of materials and the price.",
             },
             {
-              label: "Who does what",
-              value: "The designer leads, the general contractor checks feasibility",
+              label: "Who handles it",
+              value:
+                "A designer draws it, and the general contractor checks that it can be built.",
             },
             {
-              label: "On site",
-              value: "One survey visit, one presentation visit",
+              label: "Meetings planned",
+              value:
+                "One visit to measure, and another one to walk you through the drawings.",
             },
             {
               label: "Warranty",
-              value: "Signed drawings govern the whole job site",
+              value:
+                "The drawings you sign are the reference for the whole job site.",
             },
             {
-              label: "Cost",
-              value: "Credited to the project if the work is awarded to us",
+              label: "Typical price",
+              value:
+                "The design is credited to your project if you award us the work.",
             },
           ],
           image: {
             src: "/images/services/design-hero.webp",
             alt: "Drawings and elevations of a kitchen being designed",
           },
-          note: "Prices and quantities are revised if drawings change after signing.",
+          note: "If the drawings change after signing, the price is reviewed with you.",
         },
       },
     },
@@ -169,9 +174,9 @@ export const designPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Start with the drawings",
+          heading: "Start with the drawings for your project",
           intro:
-            "Describe the room and your deadline, and we come back with a first read.",
+            "Tell us about the room and the date that suits you, and we will call you back.",
           actions: [
             {
               label: "Request a quote",

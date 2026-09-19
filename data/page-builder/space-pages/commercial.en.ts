@@ -32,7 +32,7 @@ export const commercialPageEn: PageTemplateData = {
           badges: ["Offices", "Retail"],
           heading: "Commercial fit-outs in Montréal, delivered on the agreed date",
           description:
-            "Offices, retail and leasehold improvements, run in phases so your unit keeps trading.",
+            "Offices, stores and leasehold improvements, done in stages so you can stay open.",
           actions: [
             {
               label: "Get a quote",
@@ -77,7 +77,7 @@ export const commercialPageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "1.2 and 1.3",
-              label: "RBQ classes, buildings of all kinds covered",
+              label: "Our RBQ classes, valid for any type of building",
             },
             {
               kind: "image",
@@ -100,7 +100,7 @@ export const commercialPageEn: PageTemplateData = {
               kind: "text",
               title: "Work outside opening hours",
               description:
-                "Dated phases in the contract, so the unit keeps serving its customers.",
+                "We work evenings or overnight so you can keep serving customers.",
               href: "/processus",
             },
           ],
@@ -109,38 +109,43 @@ export const commercialPageEn: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "The commercial mandate at a glance",
+          heading: "The commercial project in brief",
           intro:
-            "A unit closed longer than planned costs more than the work itself.",
+            "What an owner or a tenant should know before a site opens.",
           rows: [
             {
-              label: "Lead time",
-              value: "Set in the contract after scoping, the permit drives it",
+              label: "How long",
+              value:
+                "The date is set in the contract, and the permit sets the pace.",
             },
             {
               label: "Permit",
-              value: "Municipal application filed by us, inspections followed",
+              value:
+                "We file the application with the city and follow the inspections through.",
             },
             {
               label: "Compliance",
-              value: "Québec Construction Code, RBQ classes 1.2 and 1.3",
+              value:
+                "Our RBQ classes 1.2 and 1.3 cover buildings of every kind.",
             },
             {
               label: "Insurance",
-              value: "Civil liability and site cover, certificates provided",
+              value:
+                "We carry civil liability cover and you get the certificates in hand.",
             },
             {
               label: "Millwork",
-              value: "Reception and service storage, nine to fifteen weeks",
+              value:
+                "A reception counter or custom storage takes nine to fifteen weeks.",
             },
             {
-              label: "Installation",
-              value: "In phases, off-hours while the unit stays open",
+              label: "Who installs",
+              value:
+                "Our own crew, in stages and outside opening hours if you must stay open.",
             },
           ],
           image: {

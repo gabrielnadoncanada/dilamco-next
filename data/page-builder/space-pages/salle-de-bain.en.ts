@@ -35,7 +35,7 @@ export const salleDeBainPageEn: PageTemplateData = {
           badges: ["Single or double", "Washable finish"],
           heading: "Custom bathroom vanity in Laval and Montréal",
           description:
-            "The vanity lands between the waterproof membrane and the faucets, never before.",
+            "We draw the vanity, have it built, then install it with the rest of the room.",
           actions: [
             {
               label: "Get a quote",
@@ -57,7 +57,7 @@ export const salleDeBainPageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Bathrooms taken back to the studs",
+          heading: "Bathrooms we redid completely",
           tiles: [
             {
               kind: "image",
@@ -80,7 +80,7 @@ export const salleDeBainPageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "9–15 wks",
-              label: "From design sign-off to vanity installation",
+              label: "The wait before your vanity is installed",
             },
             {
               kind: "image",
@@ -110,38 +110,43 @@ export const salleDeBainPageEn: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "The bathroom at a glance",
+          heading: "The bathroom in brief",
           intro:
-            "What a wet room demands of the furniture, the calendar and the contract.",
+            "What you should know before redoing a room that gets wet every day.",
           rows: [
             {
-              label: "Lead time",
-              value: "Nine to fifteen weeks, ordered after the on-site survey",
+              label: "How long",
+              value:
+                "The vanity takes nine to fifteen weeks to build, starting from the survey.",
             },
             {
-              label: "Price",
-              value: "Driven by single or double sink, and storage volume",
+              label: "Typical price",
+              value:
+                "The price depends on the width, the number of sinks and the storage you want.",
             },
             {
               label: "Materials",
-              value: "Birch plywood, edges sealed against steam",
+              value:
+                "Birch plywood, with the edges sealed so steam cannot get into the panel.",
             },
             {
               label: "Hardware",
-              value: "Hinges and slides treated against corrosion",
+              value:
+                "Hinges and slides treated so they will not rust in a humid room.",
             },
             {
-              label: "Installation",
-              value: "After membrane and tile, before the faucets",
+              label: "Who installs",
+              value:
+                "Our own crew, after the tile is set and before the faucets are hooked up.",
             },
             {
               label: "Warranty",
-              value: "Deficiencies fixed before the balance, term in the contract",
+              value:
+                "Anything wrong is fixed before you pay the final instalment.",
             },
           ],
           image: {

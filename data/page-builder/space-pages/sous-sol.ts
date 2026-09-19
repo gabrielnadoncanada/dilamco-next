@@ -32,7 +32,7 @@ export const sousSolPage: PageTemplateData = {
           badges: ["Clé en main"],
           heading: "Aménagement de sous-sol sur mesure à Pierrefonds",
           description:
-            "Cinéma maison, bar, cellier ou bibliothèque, dessinés une fois l'humidité et la hauteur libre validées.",
+            "Cinéma maison, bar, cellier ou bibliothèque, dessinés une fois le sous-sol vérifié.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -54,7 +54,7 @@ export const sousSolPage: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Ce qu'on installe sous le rez-de-chaussée",
+          heading: "Ce qu'on aménage dans un sous-sol",
           tiles: [
             {
               kind: "image",
@@ -77,7 +77,7 @@ export const sousSolPage: PageTemplateData = {
             {
               kind: "stat",
               value: "9 à 15 sem.",
-              label: "Mobilier intégré, commandé pendant le gros œuvre",
+              label: "Le temps qu'il faut pour produire le mobilier intégré",
             },
             {
               kind: "image",
@@ -91,7 +91,7 @@ export const sousSolPage: PageTemplateData = {
               kind: "text",
               title: "Après un dégât d'eau",
               description:
-                "Assèchement, reconstruction et dossier monté pour votre assureur.",
+                "On assèche, on reconstruit et on monte votre dossier d'assurance.",
               href: "/services/renovation/apres-sinistre",
             },
             {
@@ -108,38 +108,43 @@ export const sousSolPage: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "Le sous-sol en bref",
           intro:
-            "Un étage enfoui impose ses règles avant qu'on parle de finition.",
+            "Ce qu'on vérifie et ce qu'on prévoit avant de parler de finition.",
           rows: [
             {
-              label: "Préalable",
-              value: "Drain, fissures et taux d'humidité vérifiés avant d'isoler",
+              label: "À vérifier d'abord",
+              value:
+                "On contrôle le drain, les fissures et l'humidité avant de poser l'isolant.",
             },
             {
               label: "Permis",
-              value: "Exigé dès qu'on ajoute une cloison, une chambre, un bain",
+              value:
+                "La Ville en exige un dès qu'on ajoute un mur, une chambre ou une salle de bain.",
             },
             {
-              label: "Délai",
-              value: "9 à 15 semaines pour le mobilier, posé après le plancher",
+              label: "Combien de temps",
+              value:
+                "Le mobilier prend 9 à 15 semaines et s'installe une fois le plancher fini.",
             },
             {
               label: "Matériaux",
-              value: "Contreplaqué de bouleau sur les tablettes chargées",
+              value:
+                "Les tablettes qui portent du poids sont en contreplaqué de bouleau.",
             },
             {
-              label: "Pose",
-              value: "Accès à la mécanique conservés et dissimulés derrière portes",
+              label: "Qui installe",
+              value:
+                "Notre équipe, en laissant des portes d'accès à la plomberie et à l'électricité.",
             },
             {
               label: "Garantie",
-              value: "Conformité au Code de construction, durée écrite au contrat",
+              value:
+                "Les travaux respectent le Code de construction et la durée figure au contrat.",
             },
           ],
           image: {

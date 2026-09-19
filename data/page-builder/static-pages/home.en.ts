@@ -23,9 +23,9 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "image-overlay",
         props: {
-          heading: "Your renovation, run by a real general contractor.",
+          heading: "Your renovation, run by a licensed general contractor.",
           description:
-            "Permits, trades, schedule and budget written into the contract. One person accountable, from first call to handover.",
+            "We handle the permit, the trades, the schedule and the budget. One person accountable, from first call to handover.",
           actions: [
             {
               label: "Free estimate",
@@ -57,25 +57,25 @@ export const pageEn: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "What derails a job site, we took off yours.",
+          heading: "Why hand your project to a general contractor",
           description:
-            "One contractor holds the project. Trades come in the right order, the price is set before, changes are put in writing.",
+            "One contractor plans the job, brings the trades in the right order and answers for the result. Here is what that changes for you.",
           cards: [
             {
-              title: "Written schedule",
-              description: "Every stage is dated in the contract, with its inspection milestones.",
+              title: "A written schedule",
+              description: "Every stage of the job is dated in the contract, with the inspections planned.",
             },
             {
-              title: "Budget set in the contract",
-              description: "Work, materials and exclusions itemized. Any change goes through a priced change order.",
+              title: "A price set before work starts",
+              description: "The quote lists the work, the materials and what is not included. Any change is priced and signed before it is done.",
             },
             {
               title: "One person accountable",
-              description: "Plumbing, electrical, structure, drywall and finishing coordinated by us.",
+              description: "We hire and coordinate the plumber, the electrician, the carpenter and the finishers. You deal with one person.",
             },
             {
-              title: "Licence, insurance, warranty",
-              description: "Valid RBQ licence with no restrictions, site insurance, work warranted in the contract.",
+              title: "Licence, insurance and warranty",
+              description: "Valid RBQ licence with no restrictions, liability and site insurance, work warranted in writing.",
             },
           ],
           columns: "2",
@@ -162,12 +162,11 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "process",
-      frame: { surface: "muted" },
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Five steps, always the same",
+          heading: "How your project unfolds",
           steps: [
             {
               number: "1",
@@ -204,9 +203,9 @@ export const pageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "A general contractor near you",
+          heading: "Where we work",
           intro:
-            "Based in Pierrefonds-Roxboro. We cover the West Island, Montréal, Laval, the South Shore and Vaudreuil-Soulanges.",
+            "Our office is in Pierrefonds-Roxboro. We work across the West Island, Montréal, Laval, the South Shore and Vaudreuil-Soulanges.",
           columns: "3",
           items: [
             { title: "Pierrefonds-Roxboro", href: "/zones/pierrefonds-roxboro", description: "Our base" },
@@ -232,11 +231,11 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Custom cabinets, included in the same contract",
           intro:
-            "Our licence covers cabinets and countertops. One less supplier to coordinate, one quote.",
+            "Our licence also covers cabinets and countertops. You have no extra supplier to manage: everything is in the same quote.",
           items: [
-            { title: "One person accountable", description: "Ordered, delivered and installed in the job-site sequence." },
-            { title: "Measured after demolition", description: "Once the walls are in their final position." },
-            { title: "Kitchen, bathroom, walk-in", description: "Cabinets, vanities and built-in storage." },
+            { title: "Installed at the right time", description: "Cabinets are ordered, delivered and installed when the site is ready for them." },
+            { title: "Measured after demolition", description: "We take the dimensions once the walls are in their final position, not before." },
+            { title: "Kitchen, bathroom, walk-in", description: "Kitchen cabinets, vanities and built-in storage, depending on the room being renovated." },
           ],
           actions: [
             { label: "See the spaces", href: "/espaces", variant: "primary" },
@@ -290,7 +289,7 @@ export const pageEn: PageTemplateData = {
         variant: "band-split-actions",
         props: {
           heading: "Tell us about your project",
-          intro: "Free estimate. First reply within 24 to 48 business hours.",
+          intro: "The estimate is free and we reply within 24 to 48 business hours.",
           actions: [
             { label: "Free estimate", href: "/contact", variant: "primary" },
             { label: "See our work", href: "/projets", variant: "ghost" },

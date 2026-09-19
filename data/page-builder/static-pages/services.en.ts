@@ -37,9 +37,9 @@ export const pageEn: PageTemplateData = {
         variant: "centered",
         props: {
           badges: ["RBQ 8306-0806-27", "Since 2004", "Written contract"],
-          heading: "Two divisions, one contractor accountable for both",
+          heading: "Residential and commercial renovation, plus custom cabinets",
           description:
-            "Residential and commercial renovation on one side, custom cabinetry on the other, under the same contract.",
+            "A licensed general contractor renovates your rooms and supplies your cabinets, under the same contract.",
           actions: [
             {
               label: "Free estimate",
@@ -67,7 +67,7 @@ export const pageEn: PageTemplateData = {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "A room stripped bare, rebuilt and reconnected by one crew.",
+                "We demolish, redo the plumbing and install the cabinets.",
               image: {
                 src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
                 alt: "U-shaped shaker kitchen with subway tile backsplash",
@@ -79,7 +79,7 @@ export const pageEn: PageTemplateData = {
               title: "Bathroom",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Waterproofing, slope and exhaust before a single tile.",
+                "We seal the shower before a single tile goes on.",
               image: {
                 src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
                 alt: "Bathroom with floating vanity and marble surfaces",
@@ -91,7 +91,7 @@ export const pageEn: PageTemplateData = {
               title: "Basement",
               href: "/services/renovation/sous-sol",
               description:
-                "Moisture diagnosis, permit, egress, then the finishing work.",
+                "We check the moisture, get the permit, then finish.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Basement turned into a games room",
@@ -103,7 +103,7 @@ export const pageEn: PageTemplateData = {
               title: "Flooring",
               href: "/services/renovation/plancher",
               description:
-                "Tear-out, substrate corrected, levelling, install and thresholds.",
+                "We tear out, fix what is underneath, then lay the new floor.",
               image: {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Hardwood flooring installed in a home",
@@ -115,7 +115,7 @@ export const pageEn: PageTemplateData = {
               title: "Addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Setbacks, foundation, framing and the tie-in to the house.",
+                "We add a room and tie it into your house.",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Rear addition on a single-family home",
@@ -127,7 +127,7 @@ export const pageEn: PageTemplateData = {
               title: "Disaster rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Findings, itemized quote and restoration once drying is done.",
+                "We put the house back together after water or fire.",
               image: {
                 src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Room restored after a loss",
@@ -139,7 +139,7 @@ export const pageEn: PageTemplateData = {
               title: "Commercial fit-out",
               href: "/espaces/commercial",
               description:
-                "Offices, storefronts and leasehold improvements, RBQ category 1.3.",
+                "We fit out offices and storefronts, under RBQ category 1.3.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Commercial fit-out delivered ready to occupy",
@@ -151,7 +151,7 @@ export const pageEn: PageTemplateData = {
               title: "Cabinet design",
               href: "/services/design",
               description:
-                "Layout, finishes and hardware settled before the order goes in.",
+                "We draw your cabinets and choose the finishes with you.",
               image: {
                 src: "/images/generated/services/service-design-hero-01.webp",
                 alt: "Custom cabinet design session",
@@ -163,7 +163,7 @@ export const pageEn: PageTemplateData = {
               title: "Cabinet production",
               href: "/services/fabrication",
               description:
-                "Boxes and fronts produced by our partner factory.",
+                "Your cabinets are produced by our partner factory.",
               image: {
                 src: "/images/generated/services/service-fabrication-hero-01.webp",
                 alt: "Custom cabinet boxes and fronts",
@@ -175,7 +175,7 @@ export const pageEn: PageTemplateData = {
               title: "Installation",
               href: "/services/installation",
               description:
-                "Setting, door alignment and appliance hook-ups on site.",
+                "We set the cabinets, align the doors and hook everything up.",
               image: {
                 src: "/images/generated/services/service-installation-hero-01.webp",
                 alt: "Custom cabinets installed during a renovation",
@@ -189,37 +189,36 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "The company at a glance",
+          heading: "What you should know about Dilamco",
           intro: "The verifiable facts before you hand us a job site.",
           rows: [
             {
-              label: "Licence",
-              value: "8306-0806-27, issued 7 September 2004, no restriction",
+              label: "Our RBQ licence",
+              value: "Number 8306-0806-27, issued on 7 September 2004, with no restriction",
             },
             {
-              label: "Categories",
-              value: "1.2 and 1.3, plus subcategory 12, cabinets and countertops",
+              label: "What the licence covers",
+              value: "Categories 1.2 and 1.3, plus cabinets and countertops",
             },
             {
-              label: "New houses",
-              value: "We build none, only work on existing buildings",
+              label: "Do you build new houses",
+              value: "No. We only work on buildings that already exist",
             },
             {
-              label: "Base",
-              value: "Pierrefonds-Roxboro, in the West Island",
+              label: "Where we are",
+              value: "In Pierrefonds-Roxboro, in the West Island",
             },
             {
-              label: "Point of contact",
-              value: "One person accountable, from quote to final payment",
+              label: "Who looks after you",
+              value: "The same person, from the quote to the final payment",
             },
             {
-              label: "Estimate",
-              value: "Free, on site, with no obligation",
+              label: "What an estimate costs",
+              value: "Nothing. We come to you and there is no obligation",
             },
           ],
           note: "Licence verifiable in the Régie du bâtiment du Québec register.",
@@ -234,7 +233,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Which service fits your project?",
           intro:
-            "Describe the room or the building. We will tell you which division handles it.",
+            "Describe the room or the building. We will tell you which team handles it.",
           actions: [
             {
               label: "Free estimate",

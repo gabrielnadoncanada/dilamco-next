@@ -45,7 +45,7 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
           eyebrow: "General contractor in",
           heading: "Dollard-des-Ormeaux",
           description:
-            "Forty-eight thousand residents, a housing stock built in twenty-five years, and the same faults from street to street.",
+            "Kitchens, basements and additions for Dollard-des-Ormeaux homes, from a licensed general contractor based ten minutes away.",
           actions: [
             {
               label: "Free quote",
@@ -63,10 +63,22 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
             alt: "Renovated kitchen in a Dollard-des-Ormeaux home",
           },
           facts: [
-            { label: "Our base", value: "Pierrefonds-Roxboro, ten minutes" },
-            { label: "Permits", value: "City hall, 12001 boul. De Salaberry" },
-            { label: "Housing stock", value: "Bungalows and split-levels, 1960 to 1985" },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro, ten minutes from DDO",
+            },
+            {
+              label: "Where to apply for the permit",
+              value: "City hall, 12001 boul. De Salaberry",
+            },
+            {
+              label: "Type of homes",
+              value: "Bungalows and split-levels built from 1960 to 1985",
+            },
+            {
+              label: "First reply",
+              value: "We answer within 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -77,33 +89,38 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "DDO homes, sector by sector",
+          heading: "Dollard-des-Ormeaux homes, in brief",
           intro:
             "The city counted 1,800 residents in the early 1960s and close to 40,000 twenty years later.",
           rows: [
             {
-              label: "First wave",
-              value: "Sunnybrooke, then Westpark and the Saint-Jean sector",
+              label: "What changed recently",
+              value:
+                "The new planning programme applies since 24 April 2025 and the new zoning since 16 May 2025.",
             },
             {
-              label: "Zoning",
-              value: "R-2025-199, in force since 16 May 2025",
+              label: "What the city checks",
+              value:
+                "That by-law sets the setbacks, the heights allowed and where the building sits on the lot.",
             },
             {
-              label: "Planning programme",
-              value: "R-2024-190, applicable since 24 April 2025",
+              label: "How to file the application",
+              value:
+                "Online or at city hall, with sketches or drawings that clearly show the work.",
             },
             {
-              label: "Documents required",
-              value: "Sketches, plans or detailed drawings of the work",
+              label: "What is different here",
+              value:
+                "The neighbourhoods were built in waves, from Sunnybrooke to Westpark and the Saint-Jean sector.",
             },
             {
               label: "Common projects",
-              value: "Centre wall opened, bathroom, basement, rear addition",
+              value:
+                "Opening the centre wall, redoing a bathroom, finishing a basement, adding on at the back.",
             },
             {
-              label: "Drive time",
-              value: "Ten minutes along boulevard Saint-Jean",
+              label: "From our base",
+              value: "Ten minutes of driving along boulevard Saint-Jean.",
             },
           ],
           image: {
@@ -120,13 +137,13 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in Dollard-des-Ormeaux",
+          heading: "Our services in Dollard-des-Ormeaux",
           items: [
             {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "In DDO split-levels the centre wall often carries the upper floor",
+                "We size the beam before opening the centre wall of a split-level",
               image: {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Kitchen opened onto the living room of a DDO split-level",
@@ -138,7 +155,7 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
               title: "Basement",
               href: "/services/renovation/sous-sol",
               description:
-                "Insulation and vapour barrier rebuilt to today's code, not to 1975",
+                "We redo the insulation and vapour barrier to today's code, not to 1975",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Basement family room finished in Dollard-des-Ormeaux",
@@ -150,7 +167,7 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
               title: "Addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Rear addition or sunroom cleared under zoning R-2025-199",
+                "We clear the rear addition or sunroom under the 2025 zoning by-law",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Rear addition on a Dollard-des-Ormeaux house",
@@ -168,7 +185,7 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Around DDO, we also serve",
+          heading: "Also served near Dollard-des-Ormeaux",
           columns: "3",
           items: [
             {
@@ -190,20 +207,20 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Does zoning R-2025-199 change my DDO project?",
-              a: "It may. Setbacks, heights and siting were revised when it came into force on 16 May 2025. We read your zone sheet at city hall before anything gets drawn.",
+              q: "Does the new 2025 zoning change my DDO project?",
+              a: "It may. Setbacks, heights and where the building sits were revised when the by-law came into force on 16 May 2025. We read your zone sheet before anything gets drawn.",
             },
             {
-              q: "What documents does Dollard-des-Ormeaux require?",
-              a: "Sketches, plans or detailed drawings that clearly show the work. Filing is done online or at 12001 boulevard De Salaberry. We prepare the application and answer the inspector.",
+              q: "What documents does the city ask for with a DDO permit?",
+              a: "Sketches, plans or detailed drawings that clearly show the work. Filing is done online or at 12001 boulevard De Salaberry. We prepare the application and we answer the inspector.",
             },
             {
               q: "Can the wall between kitchen and living room come out in DDO?",
-              a: "Often yes, rarely without structural work. In Sunnybrooke split-levels that wall frequently carries the floor above. Beam and posts are sized before you sign anything.",
+              a: "Often yes, but rarely without structural work. In Sunnybrooke split-levels that wall often carries the floor above. The beam and the posts are sized before you sign.",
             },
             {
               q: "What does a kitchen cost in Dollard-des-Ormeaux?",
-              a: "Most often between $35,000 and $50,000, structure, electrical and plumbing included. Smaller mandates start near $25,000. The budget is fixed in the written contract after the visit.",
+              a: "Most often between $35,000 and $50,000, structure, electrical and plumbing included. Smaller mandates start near $25,000. The budget is fixed in the contract, after the visit.",
             },
           ],
         },
@@ -215,8 +232,9 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A job site in Dollard-des-Ormeaux",
-          intro: "Ten minutes separate us from your street.",
+          heading: "A job site in Dollard-des-Ormeaux?",
+          intro:
+            "Ten minutes separate us from your street. We come and look, then we price it.",
           actions: [
             {
               label: "Request a quote",

@@ -43,7 +43,7 @@ export const zonePointeClairePageEn: PageTemplateData = {
           eyebrow: "General contractor in",
           heading: "Pointe-Claire",
           description:
-            "From the 1854 Village to the post-war streets, two neighbouring houses can fall under different rules.",
+            "Interior renovations and additions for Pointe-Claire homes, from the old Village to the post-war neighbourhoods.",
           actions: [
             {
               label: "Free quote",
@@ -61,10 +61,22 @@ export const zonePointeClairePageEn: PageTemplateData = {
             alt: "Renovated bathroom in a Pointe-Claire home",
           },
           facts: [
-            { label: "Our base", value: "Pierrefonds-Roxboro, twenty minutes" },
-            { label: "Permits", value: "Planning counter, 451 boul. Saint-Jean" },
-            { label: "Housing stock", value: "Heritage homes and post-war bungalows" },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro, twenty minutes from Pointe-Claire",
+            },
+            {
+              label: "Where to apply for the permit",
+              value: "Planning counter, 451 boul. Saint-Jean",
+            },
+            {
+              label: "Type of homes",
+              value: "Older heritage houses and post-war bungalows",
+            },
+            {
+              label: "First reply",
+              value: "A call back within 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -75,33 +87,38 @@ export const zonePointeClairePageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Three building eras on one territory",
+          heading: "What to know before renovating in Pointe-Claire",
           intro:
-            "A municipality in 1854, a city in 1911, two railways in the nineteenth century, then a suburban wave after 1945.",
+            "Two neighbouring houses can fall under different rules, depending on how old the area is.",
           rows: [
             {
-              label: "Older sectors",
-              value: "The Village and the Lakeshore, stone foundations",
+              label: "Older neighbourhoods",
+              value:
+                "The Village and the lakefront still have stone foundations and original framing.",
             },
             {
-              label: "Post-war sectors",
-              value: "Cedar Park Heights, Northview, Oneida, Valois",
+              label: "Post-war neighbourhoods",
+              value:
+                "Cedar Park Heights, Northview, Oneida and Valois were built after 1945.",
             },
             {
-              label: "SPAIP",
-              value: "By-law PC-2787, qualitative review of the project",
+              label: "What is different here",
+              value:
+                "In the older sectors, a planning committee approves how the work will look before the permit.",
             },
             {
-              label: "Zoning",
-              value: "PC-2775, codified 10 December 2024",
+              label: "What the city checks",
+              value:
+                "Elsewhere, the zoning by-law sets the setbacks, the heights and the use allowed on the lot.",
             },
             {
               label: "Common projects",
-              value: "Bathroom, kitchen, levelled floor, rear addition",
+              value:
+                "Redoing a bathroom, opening a kitchen, levelling a floor, adding on at the back.",
             },
             {
-              label: "Drive time",
-              value: "Twenty minutes along boulevard Saint-Jean",
+              label: "From our base",
+              value: "Twenty minutes of driving along boulevard Saint-Jean.",
             },
           ],
           image: {
@@ -118,13 +135,13 @@ export const zonePointeClairePageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in Pointe-Claire",
+          heading: "Our services in Pointe-Claire",
           items: [
             {
               title: "Bathroom",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Original Lakeshore plumbing replaced back to the supply line",
+                "We replace the original plumbing right back to the water supply line",
               image: {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Bathroom rebuilt in a Lakeshore house",
@@ -136,7 +153,7 @@ export const zonePointeClairePageEn: PageTemplateData = {
               title: "Older home",
               href: "/services/renovation",
               description:
-                "Levels, stone foundation and framing surveyed before the first drawing",
+                "We survey the levels, the stone foundation and the framing before drawing",
               image: {
                 src: "/images/generated/services/service-renovation-hero-01.webp",
                 alt: "Renovation job site in Pointe-Claire Village",
@@ -148,7 +165,7 @@ export const zonePointeClairePageEn: PageTemplateData = {
               title: "Flooring",
               href: "/services/renovation/plancher",
               description:
-                "Subfloor and transitions rebuilt when the house is a century old",
+                "We rebuild the subfloor and the transitions when the house is a century old",
               image: {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Hardwood floor laid in a Pointe-Claire home",
@@ -166,7 +183,7 @@ export const zonePointeClairePageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Pointe-Claire neighbours we serve",
+          heading: "Also served near Pointe-Claire",
           columns: "2",
           items: [
             { title: "Dorval", href: "/zones/dorval" },
@@ -189,20 +206,20 @@ export const zonePointeClairePageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "Is my Pointe-Claire address subject to SPAIP?",
-              a: "By-law PC-2787 covers heritage-interest buildings and older sectors such as the Village. We check your address at the planning counter before pricing anything.",
+              q: "Does my project go before a committee in Pointe-Claire?",
+              a: "If your house is in the Village or another older sector, yes. A planning committee approves how the work will look before the permit. We check your address at the planning counter before pricing.",
             },
             {
-              q: "Does a SPAIP file stretch the schedule?",
-              a: "Yes. The city reviews the project against qualitative criteria, which takes longer than an ordinary application. That delay appears in the schedule at quote time, never mid-job.",
+              q: "Does that approval stretch the schedule?",
+              a: "Yes. The city judges the project on how it will look, which takes longer than an ordinary application. That delay appears in the schedule at quote time, never mid-job.",
             },
             {
-              q: "Do you renovate older homes in the Village?",
-              a: "We do. Floor levels, the stone foundation and systems added in layers get surveyed first. The budget carries a margin for whatever shows up once walls are open.",
+              q: "Do you renovate older homes in Pointe-Claire Village?",
+              a: "We do. We first survey the floor levels, the stone foundation and the systems added over the years. The budget carries a margin for whatever shows up once the walls are open.",
             },
             {
               q: "What does a bathroom cost in Pointe-Claire?",
-              a: "In a pre-1950 house, plumbing and subfloor weigh as much as the finishes. A mandate starts near $25,000 and the scope is set after the survey. Estimates are free.",
+              a: "In a pre-1950 house, the plumbing and the subfloor cost as much as the finishes. A mandate starts near $25,000 and the scope is set after the survey. The estimate is free.",
             },
           ],
         },
@@ -214,8 +231,9 @@ export const zonePointeClairePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Your Pointe-Claire home",
-          intro: "We confirm which rules apply before pricing.",
+          heading: "A project in Pointe-Claire?",
+          intro:
+            "We confirm which rules apply at your address, then we price the work.",
           actions: [
             {
               label: "Request a quote",
@@ -228,7 +246,7 @@ export const zonePointeClairePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · Pointe-Claire SPAIP files prepared",
+          note: "Dilamco · Pointe-Claire planning files prepared",
         },
       },
     },

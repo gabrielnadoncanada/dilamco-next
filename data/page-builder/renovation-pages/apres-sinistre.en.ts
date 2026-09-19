@@ -43,9 +43,9 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Disaster rebuild",
-          heading: "Putting the house back together after water or fire",
+          heading: "Rebuilding after water damage or a fire",
           description:
-            "We step in once the place is dry: findings, written scope, line-by-line quote and rebuild.",
+            "We come in once the place is dry, describe the damage room by room, then rebuild.",
           actions: [
             {
               label: "Request an assessment",
@@ -74,49 +74,49 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the rebuild mandate covers",
+          heading: "What we rebuild after a loss",
           intro:
-            "Pumping and decontamination stay with the emergency firms. We rebuild afterwards.",
+            "Pumping and decontamination are done by emergency firms. We rebuild afterwards.",
           columns: "2",
           items: [
             {
               title: "Water damage",
-              description: "Sewer backup, burst pipe, flooding",
+              description: "Sewer backup, burst pipe or flooding",
               icon: "droplets",
               bullets: [
-                "Walls opened to measure the real extent",
-                "Drywall, insulation and substrate replaced",
-                "Joists checked before anything closes",
+                "We open the walls to see how far the water went",
+                "We replace the drywall, the insulation and the subfloor",
+                "We check the joists before anything closes",
               ],
             },
             {
               title: "Fire and smoke",
-              description: "Soot and odours inside porous materials",
+              description: "Soot and odour stay inside the materials",
               icon: "hardHat",
               bullets: [
-                "Affected sections demolished outright",
-                "Structure and envelope rebuilt to drawings",
-                "Rooms rebuilt from studs to paint",
+                "We demolish the affected sections completely",
+                "We rebuild the structure, the walls and the roof to drawings",
+                "We rebuild the room, from the framing to the paint",
               ],
             },
             {
               title: "Mould",
-              description: "The tail of a slow leak or stagnant air",
+              description: "Almost always the result of a slow leak",
               icon: "shieldCheck",
               bullets: [
-                "Rebuild after specialized decontamination",
-                "Cause corrected: ventilation, seal, drain",
-                "Assemblies chosen for damp areas",
+                "We rebuild after the specialized decontamination",
+                "We correct the cause: ventilation, sealing or drain",
+                "We choose materials that handle humidity",
               ],
             },
             {
               title: "Flooded basement",
-              description: "The most frequent case near the shoreline",
+              description: "The most common case near the river",
               icon: "layers",
               bullets: [
-                "Finishes and insulation cut back to sound height",
-                "Drain, pump and cracks re-examined",
-                "Permit filed if the basement is refinished",
+                "We cut the finishes and insulation back to sound height",
+                "We re-examine the drain, the pump and the cracks",
+                "We apply for the permit if the basement is refinished",
               ],
             },
           ],
@@ -133,33 +133,33 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
           steps: [
             {
               number: "1",
-              title: "On-site findings",
+              title: "Site visit",
               description:
-                "Visit after drying, targeted openings behind the finishes.",
+                "We come once the place is dry and open the walls in spots.",
             },
             {
               number: "2",
-              title: "Scope and quote",
+              title: "Description and price",
               description:
-                "Room-by-room description, price per item, photos attached.",
+                "We describe the damage room by room, with photos and a price.",
             },
             {
               number: "3",
               title: "Contract and permit",
               description:
-                "Signature, then an application if the structure is affected.",
+                "We sign, then file an application if the structure is affected.",
             },
             {
               number: "4",
-              title: "Selective demolition",
+              title: "Demolition",
               description:
-                "Damaged materials removed, hidden damage logged in the file.",
+                "We remove the damaged materials and log any hidden damage.",
             },
             {
               number: "5",
               title: "Rebuild",
               description:
-                "Mechanical, inspections, drywall, paint, floors, keys returned.",
+                "Plumbing, wiring, drywall, paint, floors, then the keys go back.",
             },
           ],
         },
@@ -171,26 +171,26 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "What we bring to your claim",
+          heading: "What we provide for your claim",
           intro:
-            "We replace neither your insurer nor the adjuster. We supply the technical substance.",
+            "We replace neither your insurer nor the adjuster. We provide the technical documents.",
           items: [
             {
-              title: "A room-by-room scope",
-              description: "every damage described, instead of one lump sum.",
+              title: "The list of damage, room by room",
+              description: "every item described, instead of one lump sum.",
             },
             {
-              title: "A price per item",
+              title: "A price for each kind of work",
               description:
-                "demolition, mechanical, materials and finishing costed apart.",
+                "demolition, plumbing, materials and finishing costed separately.",
             },
             {
-              title: "Photo documentation",
-              description: "condition before work, test openings, hidden damage.",
+              title: "Photos of everything",
+              description: "the state before work, the openings made, the hidden damage.",
             },
             {
-              title: "Upgrades kept separate",
-              description: "anything beyond the loss sits on its own lines.",
+              title: "Upgrades kept apart",
+              description: "anything unrelated to the loss sits on its own lines.",
             },
           ],
           actions: [
@@ -209,9 +209,9 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
             src: "/images/generated/services/service-renovation-project-03.webp",
             alt: "Damage assessment before a room is rebuilt",
           },
-          cardTitle: "One point of contact",
+          cardTitle: "One person to talk to",
           cardDescription:
-            "The same contractor signs the quote, coordinates the trades and answers the adjuster's technical questions.",
+            "The same contractor signs the quote, coordinates the trades and answers the claims adjuster's questions.",
         },
       },
     },
@@ -225,23 +225,23 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
           items: [
             {
               q: "Do you handle pumping and drying?",
-              a: "No. Emergency work, pumping and decontamination go to specialized firms, often hired by the insurer. We take over once the place is dry and measured.",
+              a: "No. Emergency work, pumping and decontamination go to specialized firms, often sent by the insurer. We take over once the place is dry.",
             },
             {
               q: "Do you work with my insurer?",
-              a: "We hand over the written scope, the itemized quote and the photos the claim needs, and we answer the adjuster. You remain the insured and the contact on file.",
+              a: "We hand over the list of damage, the detailed price and the photos your claim needs, and we answer the adjuster. You remain the insured and the contact.",
             },
             {
               q: "Can I choose my own contractor after a loss?",
-              a: "As a rule yes, even when the insurer suggests firms from its network. Check the wording of your policy. We provide documents so our quote can be compared.",
+              a: "As a rule yes, even when the insurer suggests firms from its network. Check your policy. We provide what is needed so our price can be compared.",
             },
             {
               q: "What if you uncover more damage?",
-              a: "Common behind a flooded wall. We photograph it, price it in writing and let you file a supplementary claim before we continue. Nothing gets closed over a known problem.",
+              a: "That is common behind a flooded wall. We photograph it, price it in writing and let you add to your claim before we carry on.",
             },
             {
               q: "Is a permit required to rebuild?",
-              a: "Often. As soon as the rebuild touches structure, moves plumbing or refinishes a basement as living space, the city requires one. We verify and file the application.",
+              a: "Often. As soon as the rebuild touches the structure, moves plumbing or refinishes a basement as living space, the city requires one. We file the application.",
             },
           ],
         },
@@ -253,7 +253,7 @@ export const renovationApresSinistrePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A loss to rebuild?",
+          heading: "Have the damage assessed at your home",
           intro:
             "We document the damage, build the quote, then rebuild under a single contract.",
           actions: [

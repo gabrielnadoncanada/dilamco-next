@@ -42,7 +42,7 @@ export const pageEn: PageTemplateData = {
           badges: ["Written contract", "Permits"],
           heading: "How a renovation project runs",
           description:
-            "Five milestones. Each closes on a signed document, a permit issued or an inspection passed.",
+            "Five stages. Each one ends with a signed document, a permit issued or an inspection passed.",
           actions: [
             {
               label: "Free estimate",
@@ -60,42 +60,41 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "steps",
-      frame: { surface: "muted" },
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Five milestones, always in this order",
+          heading: "The five stages, always in this order",
           steps: [
             {
               number: "1",
-              title: "Visit and survey",
+              title: "Visit to your home",
               description:
-                "Measurements taken at your place and a first budget bracket.",
+                "We take the measurements and give you a first price bracket.",
             },
             {
               number: "2",
-              title: "Line-by-line quote",
+              title: "Detailed quote",
               description:
-                "Every line priced, with quantities and what stays excluded.",
+                "Every item is priced, with the quantities and what stays excluded.",
             },
             {
               number: "3",
               title: "Signing and permit",
               description:
-                "Dated schedule, payment calendar, application filed with your city.",
+                "You sign the schedule and the payment calendar. We file the permit.",
             },
             {
               number: "4",
-              title: "Trades on site",
+              title: "The work",
               description:
                 "Each trade starts once the previous one has been inspected.",
             },
             {
               number: "5",
-              title: "Handover",
+              title: "End of the work",
               description:
-                "Final walkthrough, deficiency list, corrections before the balance.",
+                "We walk through, note the corrections, then you pay the balance.",
             },
           ],
         },
@@ -109,31 +108,31 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "What you receive",
           intro:
-            "Six documents worth demanding from any contractor you consider.",
+            "Six documents you should demand from any contractor you consider.",
           rows: [
             {
-              label: "Quote",
-              value: "Work, materials and exclusions detailed before signing",
+              label: "The quote",
+              value: "It details the work, the materials and the exclusions before signing",
             },
             {
-              label: "Contract",
-              value: "Scope, price, payment terms and the warranty clause",
+              label: "The contract",
+              value: "It sets the price, the payment terms and the warranty on the work",
             },
             {
-              label: "Schedule",
-              value: "Start and end dates, milestones trade by trade",
+              label: "The schedule",
+              value: "It gives the start and end dates, and the order of the trades",
             },
             {
-              label: "Change orders",
-              value: "Every change priced and accepted before it is carried out",
+              label: "Changes along the way",
+              value: "Every change is priced and accepted in writing before it is done",
             },
             {
-              label: "Permit",
-              value: "A copy of the issued permit, in the owner's name",
+              label: "The permit",
+              value: "You receive a copy of the permit, issued in the owner's name",
             },
             {
-              label: "Handover",
-              value: "Deficiency list drawn up with you, cleared at the balance",
+              label: "The correction list",
+              value: "We draw it up with you at the end, and it is cleared before the balance",
             },
           ],
           image: {
@@ -153,19 +152,19 @@ export const pageEn: PageTemplateData = {
           items: [
             {
               q: "Is the estimate really free?",
-              a: "Yes. The site visit and the initial estimate are not billed and commit you to nothing. If architectural drawings or an engineer's assessment are required, they are priced separately and approved first.",
+              a: "Yes. The visit and the first estimate are not billed and commit you to nothing. If architectural drawings or an engineer are needed, they are priced separately and approved first.",
             },
             {
               q: "Who handles the permit application?",
-              a: "We do. We check your city's requirements, prepare the drawings, file the application and follow the file through to issuance. The permit is still issued in the owner's name.",
+              a: "We do. We check your city's requirements, prepare the drawings, file the application and follow the file. The permit is still issued in the owner's name.",
             },
             {
-              q: "How are payments structured?",
-              a: "A deposit on signing, then instalments tied to actual progress rather than fixed dates. The final instalment is due once the deficiency list has been corrected.",
+              q: "How are the payments split up?",
+              a: "A deposit on signing, then instalments tied to real progress rather than fixed dates. The last instalment is due once the corrections have been made.",
             },
             {
               q: "What happens if a hidden problem is found?",
-              a: "We stop, document it, explain the options and price the fix in a change order. Nothing is carried out before you agree in writing.",
+              a: "We stop, document it, explain the options and price the fix in writing. Nothing is carried out before you agree.",
             },
           ],
         },
@@ -179,7 +178,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "It starts with a visit",
           intro:
-            "Tell us about the project. You leave with an itemized quote, not a number thrown out over the phone.",
+            "Tell us about the project. You leave with a detailed quote, not a number given over the phone.",
           actions: [
             {
               label: "Free estimate",

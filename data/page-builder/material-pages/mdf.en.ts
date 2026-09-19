@@ -24,9 +24,9 @@ export const mdfPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "MDF, the most even surface to paint on",
+          heading: "Why our painted doors are made of MDF",
           description:
-            "Pressed fibres, no knots, no grain. The base for uniform painted doors, provided the edges are sealed.",
+            "It is the smoothest panel, with no knots and no grain, so the paint comes out perfectly even.",
           actions: [
             {
               label: "Request a quote",
@@ -51,44 +51,49 @@ export const mdfPageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "MDF at a glance",
-          intro: "The engineered panel behind painted doors, strengths and limit.",
+          heading: "What you should know about MDF",
+          intro: "Its strengths, its one weakness, and where we use it.",
           rows: [
             {
-              label: "Composition",
-              value: "Wood fibres and resin pressed to a constant density",
+              label: "What it is made of",
+              value:
+                "Wood fibres mixed with resin, then pressed into a dense, even panel.",
             },
             {
-              label: "Humidity",
-              value: "Weak point, a bare edge swells for good",
+              label: "Does it handle humidity?",
+              value:
+                "This is its weak point: a bare edge swells and never goes back flat.",
             },
             {
               label: "Upkeep",
-              value: "Mild cleaner, never water left on a joint",
+              value:
+                "A barely damp cloth and a mild soap, with no water left sitting on the joints.",
             },
             {
-              label: "Recommended uses",
-              value: "Painted doors, moulded panels, applied panels",
+              label: "Best used for",
+              value:
+                "Painted doors and fronts with mouldings on them.",
             },
             {
-              label: "Relative cost",
-              value: "The most affordable after melamine",
+              label: "Price against the others",
+              value:
+                "The second cheapest, just after melamine.",
             },
             {
-              label: "Available finishes",
-              value: "Matte, satin or gloss paint, any colour",
+              label: "Finishes offered",
+              value:
+                "Any paint colour you like, in a matte, satin or gloss finish.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-kitchen-durability-card-01.webp",
             alt: "Painted fronts in a custom kitchen",
           },
-          note: "A moisture-resistant version exists for vanities and sink base cabinets.",
+          note: "There is a version that handles water better, used under sinks.",
         },
       },
     },
@@ -126,9 +131,9 @@ export const mdfPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Painted doors that stay crisp?",
+          heading: "You want painted doors that stay crisp",
           intro:
-            "We pick the thickness, the profile and the number of coats room by room.",
+            "We pick the thickness, the shape and the number of coats room by room.",
           actions: [
             {
               label: "Request a quote",

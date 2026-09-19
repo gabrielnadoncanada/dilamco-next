@@ -24,9 +24,9 @@ export const comparatifPageEn: PageTemplateData = {
         variant: "centered",
         props: {
           badges: ["Structure", "Humidity", "Finish"],
-          heading: "Which panel for which part of the cabinet",
+          heading: "Which material for which part of the cabinet",
           description:
-            "No material wins everywhere. A well-planned kitchen mixes three or four, each one where it belongs.",
+            "No material is good everywhere. A well-planned kitchen mixes three or four of them.",
           actions: [
             {
               label: "Talk about your project",
@@ -48,32 +48,32 @@ export const comparatifPageEn: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Four panels, four roles",
-          columns: ["Strength", "Where to use it"],
+          heading: "Each material and what it does best",
+          columns: ["What it does best", "Where we use it"],
           rows: [
             {
               label: "Plywood",
-              values: ["Stability and screw hold", "Boxes, drawers, shelves"],
+              values: ["It stays straight and holds screws", "Cabinet boxes, drawers, shelves"],
             },
             {
               label: "MDF",
-              values: ["Grain-free surface", "Painted doors and fronts"],
+              values: ["It takes paint perfectly smooth", "Painted doors and fronts"],
             },
             {
               label: "Melamine",
-              values: ["Pre-finished, low cost", "Interiors and secondary storage"],
+              values: ["It costs little and comes pre-finished", "Cabinet interiors and shelves"],
             },
             {
               label: "Solid wood",
-              values: ["Grain and perceived value", "Doors, mouldings, visible details"],
+              values: ["It shows real wood grain", "Doors, mouldings and visible details"],
             },
             {
               label: "Hardware",
-              values: ["Comfort and lifespan", "Hinges, slides, mechanisms"],
+              values: ["It lasts years without loosening", "Hinges and drawer slides"],
             },
             {
               label: "Particleboard",
-              values: ["Lowest cost", "Nothing that carries or moves"],
+              values: ["It costs almost nothing", "Nothing that carries weight, with us"],
             },
           ],
         },
@@ -81,44 +81,49 @@ export const comparatifPageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "How to choose",
-          intro: "Two questions settle the call in most rooms.",
+          intro: "Two questions settle it in most rooms.",
           rows: [
             {
               label: "First question",
-              value: "Does the part carry a load or meet water?",
+              value:
+                "Does that part carry weight, or is it likely to get wet?",
             },
             {
               label: "Second question",
-              value: "Is the target finish painted, decor or natural wood?",
+              value:
+                "Do you want a painted door, a pre-finished decor or real wood?",
             },
             {
-              label: "Structure",
-              value: "Plywood wherever there are screws and weight",
+              label: "For the structure",
+              value:
+                "Plywood everywhere there are screws and weight to carry.",
             },
             {
-              label: "Fronts",
-              value: "MDF to paint, solid wood for grain, melamine for price",
+              label: "For the fronts",
+              value:
+                "MDF if you paint, solid wood for the grain, melamine for the price.",
             },
             {
-              label: "Budget",
-              value: "Shift the spending to what is seen and touched",
+              label: "For the budget",
+              value:
+                "Put the money on what you see and touch every day.",
             },
             {
-              label: "Breaking point",
-              value: "The edges and the install, not the panel itself",
+              label: "What fails first",
+              value:
+                "The edges of the panels and the installation, rarely the material itself.",
             },
           ],
           image: {
             src: "/images/generated/materials/comparatif-materiaux-01.webp",
             alt: "Cabinet panels compared side by side",
           },
-          note: "The table gives the rule; the on-site survey gives the exception.",
+          note: "The table gives the general rule. Your room may call for something else.",
         },
       },
     },
@@ -152,9 +157,9 @@ export const comparatifPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Settle the materials for your project",
+          heading: "Choose the materials for your project",
           intro:
-            "We weigh structure, finish, humidity and budget after the survey at your place.",
+            "We go through the room with you at home, then settle every material together.",
           actions: [
             {
               label: "Request a quote",

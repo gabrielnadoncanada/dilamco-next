@@ -43,7 +43,7 @@ export const zoneRiveSudPageEn: PageTemplateData = {
           eyebrow: "General contractor on the",
           heading: "South Shore",
           description:
-            "Eight cities, eight sets of rules, one bridge to cross. We take the substantial mandates here, not two-day jobs.",
+            "Full renovations, additions and post-damage rebuilds on the South Shore, for substantial projects.",
           actions: [
             {
               label: "Request a quote",
@@ -63,17 +63,20 @@ export const zoneRiveSudPageEn: PageTemplateData = {
           facts: [
             {
               label: "Our base",
-              value: "Pierrefonds-Roxboro · 45 to 60 min",
+              value: "Pierrefonds-Roxboro, 45 to 60 minutes away",
             },
             {
-              label: "Permits",
-              value: "Varies by city; Longueuil and Brossard online",
+              label: "Where to apply for the permit",
+              value: "Each city has its own planning department and rules",
             },
             {
-              label: "Housing stock",
-              value: "Post-war bungalows, planned 1960s sectors",
+              label: "Type of homes",
+              value: "Post-war bungalows and planned 1960s neighbourhoods",
             },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "First reply",
+              value: "We call back within 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -84,37 +87,39 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Eight cities, eight planning by-laws",
+          heading: "What to know before renovating on the South Shore",
           intro:
-            "Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, Châteauguay. Knowing which one applies changes the quote.",
+            "Eight cities, eight planning by-laws. Knowing which one applies changes the price.",
           rows: [
             {
-              label: "Housing stock",
-              value: "Old Longueuil bungalows, Brossard's alphabet sectors",
+              label: "Age of the neighbourhoods",
+              value:
+                "Old Longueuil is lined with bungalows, and Brossard was planned in the 1960s.",
             },
             {
-              label: "Permits",
-              value: "Longueuil via Permis en ligne, Brossard via its planning department",
+              label: "How to file the application",
+              value:
+                "In Longueuil through the Permis en ligne portal, in Brossard through its planning department.",
             },
             {
-              label: "Heritage",
-              value: "Saint-Lambert PIIA review, Old Boucherville heritage site",
+              label: "What is different here",
+              value:
+                "In Saint-Lambert, a committee approves how work visible from the street will look.",
             },
             {
-              label: "Local risks",
-              value: "Châteauguay dykes unrecognized, up to 1,100 homes concerned",
-            },
-            {
-              label: "Growth",
-              value: "Candiac issued 2,406 residential permits between 2000 and 2010",
+              label: "Local risk",
+              value:
+                "In Châteauguay, up to 1,100 homes sit in a flood zone and the dykes are not recognized.",
             },
             {
               label: "Common projects",
-              value: "Full renovations, additions, water damage rebuilds",
+              value:
+                "Renovating a whole house, adding on, rebuilding after water damage.",
             },
             {
               label: "From our base",
-              value: "Highway 30, Samuel-De Champlain bridge or La Fontaine tunnel",
+              value:
+                "Highway 30, the Samuel-De Champlain bridge or the Louis-Hippolyte-La Fontaine tunnel.",
             },
           ],
           image: {
@@ -131,13 +136,13 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "The mandates we take south of the river",
+          heading: "Our services on the South Shore",
           items: [
             {
               title: "Home addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Rear extension or added storey on an Old Longueuil bungalow",
+                "We add a rear extension or a storey on an Old Longueuil bungalow",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Addition plan for an Old Longueuil bungalow",
@@ -149,7 +154,7 @@ export const zoneRiveSudPageEn: PageTemplateData = {
               title: "Full renovation",
               href: "/services/renovation",
               description:
-                "Taking a Brossard sector home from end to end in one go",
+                "We take a Brossard home from end to end in one go",
               image: {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Full renovation of a house in a Brossard sector",
@@ -161,7 +166,7 @@ export const zoneRiveSudPageEn: PageTemplateData = {
               title: "Post-damage rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Sewer backup or water damage in Châteauguay, documented rebuild",
+                "We restore a home after a sewer backup or water damage in Châteauguay",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
                 alt: "Materials ready for a basement rebuild in Châteauguay",
@@ -179,7 +184,7 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Elsewhere across our territory",
+          heading: "Also served across our territory",
           columns: "2",
           items: [
             {
@@ -216,15 +221,15 @@ export const zoneRiveSudPageEn: PageTemplateData = {
           items: [
             {
               q: "Which South Shore cities do you cover?",
-              a: "Longueuil and its Vieux-Longueuil, Saint-Hubert and Greenfield Park boroughs, then Brossard, Saint-Lambert, Boucherville, Saint-Bruno-de-Montarville, Candiac, La Prairie and Châteauguay. Beyond that, the answer depends on the scope.",
+              a: "Longueuil, with Vieux-Longueuil, Saint-Hubert and Greenfield Park, then Brossard, Saint-Lambert, Boucherville, Saint-Bruno-de-Montarville, Candiac, La Prairie and Châteauguay. Beyond that, the answer depends on the size of the project.",
             },
             {
               q: "Who prepares the permit file in Longueuil or Brossard?",
-              a: "We do. In Longueuil the file goes through the planning department and the Permis en ligne portal, open for filing, payment and tracking. In Brossard it goes through its planning department and online request portal.",
+              a: "We do. In Longueuil the file goes through the planning department and the Permis en ligne portal. In Brossard it goes through its planning department and its online request portal.",
             },
             {
               q: "Does renovating in Saint-Lambert take longer?",
-              a: "Longer, mainly. Any exterior change visible from the street falls under the site planning and architectural integration by-law, reviewed by the planning advisory committee before the permit. Interior work skips that detour.",
+              a: "Often, yes. Any exterior change visible from the street goes before a planning committee before the permit is issued. Interior work skips that detour.",
             },
             {
               q: "What does the Châteauguay flood zone change for a basement?",
@@ -240,8 +245,9 @@ export const zoneRiveSudPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A substantial mandate on the South Shore",
-          intro: "Address, scope, timeline. We answer you straight.",
+          heading: "A substantial project on the South Shore?",
+          intro:
+            "Give us the address, the size of the work and the timeline. We answer you straight.",
           actions: [
             {
               label: "Request a quote",

@@ -24,9 +24,9 @@ export const boisMassifPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "Solid wood in the right place, not everywhere",
+          heading: "Where solid wood is really worth the price",
           description:
-            "Full boards, visible grain. A material that moves with humidity, so we keep it on the parts you actually see.",
+            "Wood moves with the seasons, so we keep it for the parts you see up close.",
           actions: [
             {
               label: "Talk about your project",
@@ -51,44 +51,49 @@ export const boisMassifPageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Solid wood at a glance",
-          intro: "What to know before it goes into the quote.",
+          heading: "What you should know about solid wood",
+          intro: "Its qualities, its cost, and where it holds up best.",
           rows: [
             {
-              label: "Composition",
-              value: "Full boards edge-glued, in maple, oak or walnut",
+              label: "What it is made of",
+              value:
+                "Real boards of maple, oak or walnut, glued side by side.",
             },
             {
-              label: "Humidity",
-              value: "Strong reaction, swells in summer, shrinks in winter",
+              label: "Does it handle humidity?",
+              value:
+                "It reacts a lot: it swells in summer and tightens up in winter.",
             },
             {
               label: "Upkeep",
-              value: "Soft cloth, never leave water sitting on a joint",
+              value:
+                "A soft cloth, and wipe up any water right away.",
             },
             {
-              label: "Recommended uses",
-              value: "Doors, mouldings, crowns, exposed shelves",
+              label: "Best used for",
+              value:
+                "Doors, mouldings and the shelves you see up close.",
             },
             {
-              label: "Relative cost",
-              value: "The highest of the four panels",
+              label: "Price against the others",
+              value:
+                "It is the dearest of the four materials.",
             },
             {
-              label: "Available finishes",
-              value: "Stain, varnish, oil, opaque lacquer",
+              label: "Finishes offered",
+              value:
+                "A stain that keeps the grain visible, or an opaque paint.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
             alt: "Finish detail on a solid wood component",
           },
-          note: "Indicative values. The species is confirmed in the quote.",
+          note: "The wood species you choose is confirmed in your quote.",
         },
       },
     },
@@ -126,9 +131,9 @@ export const boisMassifPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Solid wood in your kitchen?",
+          heading: "You want solid wood in your kitchen",
           intro:
-            "We tell you which parts are worth the price and where a panel will hold up better.",
+            "We tell you which parts are worth the price, and where a panel will hold up better.",
           actions: [
             {
               label: "Request a quote",

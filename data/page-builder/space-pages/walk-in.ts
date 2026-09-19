@@ -32,7 +32,7 @@ export const walkInPage: PageTemplateData = {
           badges: ["Sur mesure"],
           heading: "Garde-robe et walk-in sur mesure à Montréal",
           description:
-            "Penderies, tiroirs et tablettes calculés par type de vêtement, montés du plancher au plafond.",
+            "On compte vos vêtements, puis on dessine les penderies, les tiroirs et les tablettes.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -54,7 +54,7 @@ export const walkInPage: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Du mur de rangement à la pièce complète",
+          heading: "Des rangements qu'on a réalisés",
           tiles: [
             {
               kind: "image",
@@ -77,7 +77,7 @@ export const walkInPage: PageTemplateData = {
             {
               kind: "stat",
               value: "3 000 $",
-              label: "Départ d'un mur de rangement, walk-in dès 8 000 $",
+              label: "Le prix de départ d'un mur de rangement",
             },
             {
               kind: "image",
@@ -97,9 +97,9 @@ export const walkInPage: PageTemplateData = {
             },
             {
               kind: "text",
-              title: "Face au modulaire",
+              title: "Pourquoi pas du modulaire",
               description:
-                "Dimensions imposées, tablettes qui fléchissent sous la charge après quelques saisons.",
+                "Les largeurs sont imposées et les tablettes plient sous la charge.",
               href: "/materiaux",
             },
           ],
@@ -108,38 +108,43 @@ export const walkInPage: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "Le rangement en bref",
           intro:
-            "Un walk-in se juge cinq ans plus tard, tiroirs pleins et tablettes chargées.",
+            "Ce qu'il faut savoir avant de faire dessiner une garde-robe ou un walk-in.",
           rows: [
             {
-              label: "Prix",
-              value: "3 000 $ à 8 000 $ le mur, 8 000 $ à 20 000 $ le walk-in",
+              label: "Prix indicatif",
+              value:
+                "Un mur de rangement coûte de 3 000 $ à 8 000 $, un walk-in de 8 000 $ à 20 000 $.",
             },
             {
-              label: "Délai",
-              value: "9 à 15 semaines, selon le nombre de modules et les finis",
+              label: "Combien de temps",
+              value:
+                "Comptez 9 à 15 semaines, selon le nombre de modules et le fini choisi.",
             },
             {
               label: "Matériaux",
-              value: "Tiroirs en bouleau massif, tablettes en contreplaqué",
+              value:
+                "Les tiroirs sont en bouleau massif et les tablettes en contreplaqué.",
             },
             {
               label: "Quincaillerie",
-              value: "Coulisses à extension complète, charnières amorties",
+              value:
+                "Les tiroirs sortent au complet, pour voir ce qui traîne au fond.",
             },
             {
-              label: "Pose",
-              value: "Après la peinture, avant les plinthes et l'éclairage",
+              label: "Qui installe",
+              value:
+                "Notre équipe, après la peinture et avant les plinthes et l'éclairage.",
             },
             {
               label: "Garantie",
-              value: "Ajustement des portes et tiroirs repris, durée au contrat",
+              value:
+                "Nous réglons les portes et les tiroirs après coup, pour la durée prévue au contrat.",
             },
           ],
           image: {
@@ -163,7 +168,7 @@ export const walkInPage: PageTemplateData = {
             },
             {
               q: "Combien de penderie et combien de tablettes ?",
-              a: "On compte vos vêtements longs, vos vestons et vos piles de chandails avant de dessiner. La répartition sort du contenu réel, pas d'un gabarit standard.",
+              a: "On compte vos vêtements longs, vos vestons et vos piles de chandails avant de dessiner. Le plan sort de ce que vous avez vraiment, pas d'un modèle standard.",
             },
             {
               q: "Faut-il des portes sur un walk-in ?",

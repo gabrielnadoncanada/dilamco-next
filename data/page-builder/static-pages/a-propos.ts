@@ -26,7 +26,7 @@ export const page: PageTemplateData = {
           heading:
             "Entrepreneur général en rénovation résidentielle depuis 2004",
           description:
-            "Même licence, même répondant, même adresse depuis vingt ans. Les chantiers restent dans le Grand Montréal.",
+            "La même licence, la même personne responsable et la même adresse depuis vingt ans.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -55,7 +55,7 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Ce que vingt ans laissent derrière",
+          heading: "L'entreprise en chiffres",
           tiles: [
             {
               kind: "image",
@@ -69,7 +69,7 @@ export const page: PageTemplateData = {
             {
               kind: "stat",
               value: "2004",
-              label: "Licence RBQ délivrée, jamais interrompue",
+              label: "L'année où notre licence a été délivrée",
             },
             {
               kind: "image",
@@ -83,12 +83,12 @@ export const page: PageTemplateData = {
             {
               kind: "stat",
               value: "5,0",
-              label: "Note Google, 11 avis",
+              label: "Notre note Google, sur 11 avis de clients",
             },
             {
               kind: "stat",
               value: "40 000 $",
-              label: "Cautionnement FACCQ, aucune réclamation",
+              label: "Le montant déposé en garantie pour protéger nos clients",
             },
             {
               kind: "image",
@@ -104,56 +104,57 @@ export const page: PageTemplateData = {
     },
     {
       id: "licence",
-      frame: { surface: "muted" },
       content: {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Licence, assurances et garantie",
+          heading: "Ce qui vous protège quand vous nous engagez",
           intro:
-            "Tout est vérifiable au registre de la Régie du bâtiment du Québec.",
+            "Vous pouvez tout vérifier au registre de la Régie du bâtiment du Québec.",
           columns: "2",
           items: [
             {
-              title: "Licence RBQ 8306-0806-27",
+              title: "Notre licence RBQ",
               description:
-                "Entrepreneur général, délivrée le 7 septembre 2004, sans restriction.",
+                "Délivrée le 7 septembre 2004 comme entrepreneur général, sans aucune restriction.",
               icon: "fileCheck",
               bullets: [
-                "Catégorie 1.2, petits bâtiments",
-                "Catégorie 1.3, bâtiments de tout genre",
-                "Sous-catégorie 12, armoires et comptoirs",
+                "Le numéro à vérifier est le 8306-0806-27",
+                "Elle couvre les maisons comme les immeubles",
+                "Elle couvre aussi les armoires et les comptoirs",
               ],
             },
             {
-              title: "Cautionnement et dossier",
+              title: "Un dépôt de garantie",
               description:
-                "Le cautionnement protège le client en cas de défaut.",
+                "Une somme déposée d'avance sert à vous dédommager si nous manquons à nos obligations.",
               icon: "shieldCheck",
               bullets: [
-                "Cautionnement de 40 000 $ à la FACCQ",
-                "Aucune réclamation au dossier",
-                "Répondant : Sean Diffley",
+                "Le dépôt est de 40 000 $",
+                "Personne n'a eu à s'en servir à ce jour",
+                "Le responsable inscrit est Sean Diffley",
               ],
             },
             {
-              title: "Assurances en vigueur",
-              description: "Attestations fournies avant la signature.",
+              title: "Nos assurances",
+              description:
+                "Vous recevez les attestations avant de signer quoi que ce soit.",
               icon: "hardHat",
               bullets: [
-                "Responsabilité civile",
-                "Couverture de chantier pendant les travaux",
-                "Attestations sur demande",
+                "Nous sommes assurés en responsabilité civile",
+                "Le chantier est couvert pendant les travaux",
+                "Vous pouvez demander les papiers en tout temps",
               ],
             },
             {
-              title: "Garantie des travaux",
-              description: "Portée et durée inscrites au contrat.",
+              title: "La garantie de nos travaux",
+              description:
+                "Ce qui est couvert et pour combien de temps est écrit dans votre contrat.",
               icon: "clipboardCheck",
               bullets: [
-                "Déficiences corrigées avant le paiement final",
-                "Conformité au Code de construction du Québec",
-                "Pas de maisons neuves, donc pas de GCR",
+                "On corrige tout avant que vous payiez la fin",
+                "Les travaux respectent le Code de construction",
+                "Nous ne bâtissons pas de maisons neuves",
               ],
             },
           ],

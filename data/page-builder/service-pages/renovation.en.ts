@@ -62,13 +62,13 @@ export const renovationPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "The six kinds of renovation",
+          heading: "The six kinds of renovation we do",
           items: [
             {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "From the drain to the countertop, cabinets supplied and installed.",
+                "We redo the whole room and we supply the cabinets.",
               image: {
                 src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
                 alt: "Full kitchen renovation",
@@ -80,7 +80,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Bathroom",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Continuous membrane, verified slope, exhaust vented outdoors.",
+                "We waterproof the shower and vent the fan outdoors.",
               image: {
                 src: "/images/generated/renovation/renovation-bath-hero-01.webp",
                 alt: "Full bathroom renovation",
@@ -92,7 +92,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Basement",
               href: "/services/renovation/sous-sol",
               description:
-                "Water and clear height are settled before the first partition.",
+                "We settle the moisture before the first wall goes up.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Basement finished by a general contractor",
@@ -104,7 +104,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Flooring",
               href: "/services/renovation/plancher",
               description:
-                "Substrate brought back true, thresholds and levels set on plan.",
+                "We repair the subfloor before laying the new floor.",
               image: {
                 src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
                 alt: "Residential flooring renovation",
@@ -116,7 +116,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Zoning read, drawings sealed, footings poured below the frost line.",
+                "We check the zoning, then we build the new room.",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Home addition under construction",
@@ -128,7 +128,7 @@ export const renovationPageEn: PageTemplateData = {
               title: "Disaster rebuild",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Room-by-room scope and an itemized quote for your claim.",
+                "We document the damage, then put the house back together.",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Rebuild after water damage",
@@ -142,12 +142,11 @@ export const renovationPageEn: PageTemplateData = {
     },
     {
       id: "process",
-      frame: { surface: "muted" },
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Five steps, always the same",
+          heading: "How we run a project",
           steps: [
             {
               number: "1",
@@ -159,25 +158,25 @@ export const renovationPageEn: PageTemplateData = {
               number: "2",
               title: "Detailed quote",
               description:
-                "Scope, materials, exclusions and budget within 24 to 48 hours.",
+                "You get the work, the materials, the exclusions and the price.",
             },
             {
               number: "3",
               title: "Contract and permit",
               description:
-                "Dates and payment terms signed, file submitted to the city.",
+                "You sign the dates and the payments, we file the application.",
             },
             {
               number: "4",
-              title: "Coordinated site",
+              title: "Site work",
               description:
-                "Trades follow the schedule, walls opened then closed again.",
+                "Each trade shows up on its date, following the signed schedule.",
             },
             {
               number: "5",
               title: "Handover",
               description:
-                "Closing walkthrough with you, touch-ups done before the balance.",
+                "We walk through with you and fix things before the final payment.",
             },
           ],
         },
@@ -189,32 +188,32 @@ export const renovationPageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "At a glance",
-          intro: "The terms of a turnkey mandate.",
+          heading: "What a turnkey mandate covers",
+          intro: "The answers to the questions people ask us before signing.",
           rows: [
             {
-              label: "Contract",
-              value: "Scope, price, schedule and payments in writing, priced change orders",
+              label: "What you sign",
+              value: "A contract setting out the work, the price, the dates and the payments",
             },
             {
-              label: "Permit",
-              value: "Verified with your city, filed and followed by us",
+              label: "Who files the permit",
+              value: "We do. We check your city's requirements and follow the file",
             },
             {
-              label: "Trades",
-              value: "Hired and paid by us, a single invoice stream",
+              label: "Who coordinates the trades",
+              value: "We hire them and we pay them, you receive a single invoice",
             },
             {
               label: "Insurance",
-              value: "Civil liability and builder's risk coverage in force",
+              value: "Our civil liability and builder's risk coverage are in force",
             },
             {
-              label: "Response time",
-              value: "24 to 48 business hours after your request",
+              label: "First reply",
+              value: "You hear back from us within 24 to 48 business hours",
             },
             {
               label: "Territory",
-              value: "West Island, Montreal, Laval, South Shore, Vaudreuil-Soulanges",
+              value: "West Island, Montreal, Laval, South Shore and Vaudreuil-Soulanges",
             },
           ],
           note: "RBQ licence 8306-0806-27, categories 1.2 and 1.3, valid since 2004.",

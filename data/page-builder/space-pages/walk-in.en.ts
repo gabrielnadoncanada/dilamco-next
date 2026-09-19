@@ -32,7 +32,7 @@ export const walkInPageEn: PageTemplateData = {
           badges: ["Custom-built"],
           heading: "Custom closets and walk-ins in Montréal",
           description:
-            "Hanging rails, drawers and shelves worked out by garment type, built floor to ceiling.",
+            "We count what you own, then draw the hanging rails, the drawers and the shelves.",
           actions: [
             {
               label: "Get a quote",
@@ -54,7 +54,7 @@ export const walkInPageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "From a storage wall to a full room",
+          heading: "Storage we have built",
           tiles: [
             {
               kind: "image",
@@ -77,7 +77,7 @@ export const walkInPageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "$3,000",
-              label: "Storage wall starting point, walk-ins from $8,000",
+              label: "The starting price for a storage wall",
             },
             {
               kind: "image",
@@ -97,9 +97,9 @@ export const walkInPageEn: PageTemplateData = {
             },
             {
               kind: "text",
-              title: "Against modular kits",
+              title: "Why not a modular kit",
               description:
-                "Fixed sizes, and shelves that sag under load after a few seasons.",
+                "The widths are fixed and the shelves sag once you load them.",
               href: "/materiaux",
             },
           ],
@@ -108,38 +108,43 @@ export const walkInPageEn: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Storage at a glance",
+          heading: "Storage in brief",
           intro:
-            "A walk-in is judged five years later, drawers full and shelves loaded.",
+            "What to know before having a closet or a walk-in drawn for you.",
           rows: [
             {
-              label: "Price",
-              value: "$3,000 to $8,000 a wall, $8,000 to $20,000 a walk-in",
+              label: "Typical price",
+              value:
+                "A storage wall runs $3,000 to $8,000 and a walk-in $8,000 to $20,000.",
             },
             {
-              label: "Lead time",
-              value: "Nine to fifteen weeks, driven by unit count and finishes",
+              label: "How long",
+              value:
+                "Expect nine to fifteen weeks, depending on the number of units and the finish.",
             },
             {
               label: "Materials",
-              value: "Solid birch drawers, plywood shelving",
+              value:
+                "The drawers are solid birch and the shelves are plywood.",
             },
             {
               label: "Hardware",
-              value: "Full-extension slides, soft-close hinges",
+              value:
+                "The drawers pull all the way out, so you can see what sits at the back.",
             },
             {
-              label: "Installation",
-              value: "After painting, before baseboards and lighting",
+              label: "Who installs",
+              value:
+                "Our own crew, after the painting and before the baseboards and lighting.",
             },
             {
               label: "Warranty",
-              value: "Door and drawer adjustments redone, term in the contract",
+              value:
+                "We adjust the doors and drawers later on, for the term set in the contract.",
             },
           ],
           image: {

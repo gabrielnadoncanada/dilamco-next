@@ -42,7 +42,7 @@ export const page: PageTemplateData = {
           badges: ["Contrat écrit", "Permis"],
           heading: "Le déroulement d'un projet de rénovation",
           description:
-            "Cinq jalons. Chacun se ferme sur un document signé, un permis délivré ou une inspection passée.",
+            "Cinq étapes. Chacune se termine par un document signé, un permis obtenu ou une inspection réussie.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -60,42 +60,41 @@ export const page: PageTemplateData = {
     },
     {
       id: "steps",
-      frame: { surface: "muted" },
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Cinq jalons, toujours dans cet ordre",
+          heading: "Les cinq étapes, toujours dans cet ordre",
           steps: [
             {
               number: "1",
-              title: "Visite et relevé",
+              title: "Visite chez vous",
               description:
-                "Prise de mesures chez vous et première fourchette de budget.",
+                "Nous prenons les mesures et donnons une première fourchette de prix.",
             },
             {
               number: "2",
-              title: "Soumission poste par poste",
+              title: "Soumission détaillée",
               description:
-                "Chaque poste chiffré, avec les quantités et ce qui reste exclu.",
+                "Chaque travail est chiffré, avec les quantités et ce qui reste exclu.",
             },
             {
               number: "3",
               title: "Signature et permis",
               description:
-                "Échéancier daté, calendrier de paiements, demande déposée à votre ville.",
+                "Vous signez l'échéancier et le calendrier de paiements. Nous déposons le permis.",
             },
             {
               number: "4",
-              title: "Exécution par métiers",
+              title: "Travaux",
               description:
                 "Chaque corps de métier entre après l'inspection du précédent.",
             },
             {
               number: "5",
-              title: "Réception des travaux",
+              title: "Fin des travaux",
               description:
-                "Visite finale, liste de déficiences, correction avant le solde.",
+                "Nous faisons le tour, notons les corrections, puis vous payez le solde.",
             },
           ],
         },
@@ -109,31 +108,31 @@ export const page: PageTemplateData = {
         props: {
           heading: "Ce que vous recevez",
           intro:
-            "Six documents qu'on devrait exiger de n'importe quel entrepreneur.",
+            "Six documents que vous devriez exiger de n'importe quel entrepreneur.",
           rows: [
             {
-              label: "Soumission",
-              value: "Travaux, matériaux et exclusions détaillés avant signature",
+              label: "La soumission",
+              value: "Elle détaille les travaux, les matériaux et les exclusions avant la signature",
             },
             {
-              label: "Contrat",
-              value: "Portée, prix, modalités de paiement et clause de garantie",
+              label: "Le contrat",
+              value: "Il fixe le prix, les modalités de paiement et la garantie des travaux",
             },
             {
-              label: "Échéancier",
-              value: "Dates de début et de fin, jalons par corps de métier",
+              label: "L'échéancier",
+              value: "Il donne les dates de début et de fin, et l'ordre des corps de métier",
             },
             {
-              label: "Avenants",
-              value: "Chaque changement chiffré et accepté avant exécution",
+              label: "Les changements en cours de route",
+              value: "Chaque changement est chiffré et accepté par écrit avant d'être exécuté",
             },
             {
-              label: "Permis",
-              value: "Copie du permis délivré, émis au nom du propriétaire",
+              label: "Le permis",
+              value: "Vous recevez une copie du permis, émis au nom du propriétaire",
             },
             {
-              label: "Réception",
-              value: "Liste de déficiences dressée avec vous, corrigée au solde",
+              label: "La liste des corrections",
+              value: "Nous la dressons avec vous à la fin, et tout est corrigé avant le solde",
             },
           ],
           image: {
@@ -153,19 +152,19 @@ export const page: PageTemplateData = {
           items: [
             {
               q: "L'estimation est-elle vraiment gratuite ?",
-              a: "Oui. La visite et l'estimation initiale ne sont pas facturées et ne vous engagent à rien. Si des plans d'architecte ou une expertise d'ingénieur sont requis, ils sont chiffrés à part et approuvés avant.",
+              a: "Oui. La visite et la première estimation ne sont pas facturées et ne vous engagent à rien. Si des plans d'architecte ou un ingénieur sont nécessaires, ils sont chiffrés à part et approuvés avant.",
             },
             {
               q: "Qui s'occupe de la demande de permis ?",
-              a: "Nous. On vérifie les exigences de votre ville, on prépare les plans, on dépose la demande et on suit le dossier jusqu'à la délivrance. Le permis reste émis au nom du propriétaire.",
+              a: "Nous. Nous vérifions les exigences de votre ville, préparons les plans, déposons la demande et suivons le dossier. Le permis reste émis au nom du propriétaire.",
             },
             {
-              q: "Comment les paiements sont-ils structurés ?",
-              a: "Un dépôt à la signature, puis des versements liés à l'avancement réel des travaux plutôt qu'à des dates fixes. Le dernier versement est dû une fois la liste de déficiences corrigée.",
+              q: "Comment les paiements sont-ils répartis ?",
+              a: "Un dépôt à la signature, puis des versements liés à l'avancement réel des travaux plutôt qu'à des dates fixes. Le dernier versement est dû une fois les corrections faites.",
             },
             {
               q: "Que se passe-t-il si on découvre un problème caché ?",
-              a: "On arrête, on documente, on vous explique les options et on chiffre le correctif dans un avenant. Rien n'est exécuté avant votre accord écrit.",
+              a: "On arrête, on documente, on vous explique les options et on chiffre le correctif par écrit. Rien n'est exécuté avant votre accord.",
             },
           ],
         },
@@ -179,7 +178,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "On commence par une visite",
           intro:
-            "Décrivez-nous le projet. Vous repartez avec une soumission détaillée, pas un chiffre lancé au téléphone.",
+            "Décrivez-nous le projet. Vous repartez avec une soumission détaillée, pas un chiffre donné au téléphone.",
           actions: [
             {
               label: "Estimation gratuite",

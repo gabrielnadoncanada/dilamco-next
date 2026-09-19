@@ -62,7 +62,7 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
           eyebrow: "Entrepreneur général à",
           heading: "Dollard-des-Ormeaux",
           description:
-            "Quarante-huit mille résidents, un parc bâti en vingt-cinq ans et les mêmes défauts d'une rue à l'autre.",
+            "Cuisine, sous-sol et agrandissement pour les maisons de Dollard-des-Ormeaux, par un entrepreneur général licencié basé à dix minutes.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -80,10 +80,22 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
             alt: "Cuisine rénovée dans une maison de Dollard-des-Ormeaux",
           },
           facts: [
-            { label: "Notre base", value: "Pierrefonds-Roxboro, dix minutes" },
-            { label: "Permis", value: "Hôtel de ville, 12001 boul. De Salaberry" },
-            { label: "Bâti", value: "Bungalows et split-levels, 1960 à 1985" },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro, à dix minutes de DDO",
+            },
+            {
+              label: "Où demander le permis",
+              value: "Hôtel de ville, 12001, boul. De Salaberry",
+            },
+            {
+              label: "Type de maisons",
+              value: "Des bungalows et des split-levels de 1960 à 1985",
+            },
+            {
+              label: "Premier retour",
+              value: "Nous répondons en 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -94,33 +106,38 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Les maisons de DDO, secteur par secteur",
+          heading: "Les maisons de Dollard-des-Ormeaux, en bref",
           intro:
             "La ville comptait 1 800 résidents au début des années 1960 et près de 40 000 vingt ans plus tard.",
           rows: [
             {
-              label: "Première vague",
-              value: "Sunnybrooke, puis Westpark et le secteur Saint-Jean",
+              label: "Ce qui a changé récemment",
+              value:
+                "Le nouveau plan d'urbanisme s'applique depuis le 24 avril 2025 et le nouveau zonage depuis le 16 mai 2025.",
             },
             {
-              label: "Zonage",
-              value: "R-2025-199, en vigueur depuis le 16 mai 2025",
+              label: "Ce que la Ville vérifie",
+              value:
+                "Ce règlement fixe les marges, les hauteurs permises et la position du bâtiment sur le terrain.",
             },
             {
-              label: "Plan d'urbanisme",
-              value: "R-2024-190, applicable depuis le 24 avril 2025",
+              label: "Comment déposer la demande",
+              value:
+                "En ligne ou à l'hôtel de ville, avec des croquis ou des plans qui montrent clairement les travaux.",
             },
             {
-              label: "Pièces exigées",
-              value: "Croquis, plans ou dessins détaillés des travaux",
+              label: "Particularité locale",
+              value:
+                "Les quartiers se sont bâtis par vagues, de Sunnybrooke à Westpark puis au secteur Saint-Jean.",
             },
             {
-              label: "Projets fréquents",
-              value: "Mur central ouvert, salle de bain, sous-sol, rallonge",
+              label: "Projets courants",
+              value:
+                "Ouvrir le mur central, refaire une salle de bain, finir un sous-sol, ajouter une rallonge.",
             },
             {
-              label: "Temps de route",
-              value: "Dix minutes par le boulevard Saint-Jean",
+              label: "Depuis notre base",
+              value: "Dix minutes de route par le boulevard Saint-Jean.",
             },
           ],
           image: {
@@ -137,13 +154,13 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise à Dollard-des-Ormeaux",
+          heading: "Nos services à Dollard-des-Ormeaux",
           items: [
             {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Le mur central des split-levels porte souvent l'étage, poutre d'abord",
+                "On dimensionne la poutre avant d'ouvrir le mur central d'un split-level",
               image: {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Cuisine ouverte sur le salon d'un split-level de DDO",
@@ -155,7 +172,7 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Isolation et pare-vapeur repris selon le code actuel, pas celui de 1975",
+                "On refait l'isolation et le pare-vapeur selon le code actuel, pas celui de 1975",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol aménagé en salle familiale à Dollard-des-Ormeaux",
@@ -167,7 +184,7 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Rallonge ou solarium validés sous le zonage R-2025-199",
+                "On valide la rallonge ou le solarium sous le règlement de zonage de 2025",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement arrière d'une maison de Dollard-des-Ormeaux",
@@ -185,7 +202,7 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Autour de DDO, nous desservons aussi",
+          heading: "Aussi desservies près de Dollard-des-Ormeaux",
           columns: "3",
           items: [
             {
@@ -207,20 +224,20 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Le zonage R-2025-199 change-t-il mon projet à DDO ?",
-              a: "Possiblement. Marges, hauteurs et implantation ont été revues à son entrée en vigueur, le 16 mai 2025. On lit la fiche de votre zone auprès de la ville avant de faire dessiner quoi que ce soit.",
+              q: "Le nouveau zonage de 2025 change-t-il mon projet à DDO ?",
+              a: "Peut-être. Les marges, les hauteurs et la position du bâtiment ont été revues quand le règlement est entré en vigueur, le 16 mai 2025. Nous lisons la fiche de votre zone avant de faire dessiner quoi que ce soit.",
             },
             {
-              q: "Quels documents Dollard-des-Ormeaux exige-t-elle ?",
-              a: "Des croquis, des plans ou des dessins détaillés qui montrent clairement les travaux. Le dépôt se fait en ligne ou au 12001, boulevard De Salaberry. Nous préparons la demande et répondons à l'inspecteur.",
+              q: "Quels documents la Ville demande-t-elle pour un permis à DDO ?",
+              a: "Des croquis, des plans ou des dessins détaillés qui montrent clairement les travaux. Le dépôt se fait en ligne ou au 12001, boulevard De Salaberry. Nous préparons la demande et nous répondons à l'inspecteur.",
             },
             {
               q: "Peut-on ouvrir le mur entre la cuisine et le salon à DDO ?",
-              a: "Souvent oui, rarement sans travail structural. Dans les split-levels du secteur Sunnybrooke, ce mur porte fréquemment le plancher du haut. La poutre et les colonnes sont dimensionnées avant la signature.",
+              a: "Souvent oui, mais rarement sans travail de structure. Dans les split-levels du secteur Sunnybrooke, ce mur porte souvent le plancher de l'étage. La poutre et les colonnes sont calculées avant la signature.",
             },
             {
               q: "Combien coûte une cuisine à Dollard-des-Ormeaux ?",
-              a: "Le plus souvent entre 35 000 $ et 50 000 $, structure, électricité et plomberie comprises. Les mandats plus modestes partent vers 25 000 $. Le budget est arrêté au contrat écrit, après la visite.",
+              a: "Le plus souvent entre 35 000 $ et 50 000 $, structure, électricité et plomberie comprises. Les mandats plus modestes partent vers 25 000 $. Le budget est arrêté au contrat, après la visite.",
             },
           ],
         },
@@ -232,8 +249,9 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un chantier à Dollard-des-Ormeaux",
-          intro: "Dix minutes nous séparent de votre rue.",
+          heading: "Un chantier à Dollard-des-Ormeaux ?",
+          intro:
+            "Dix minutes nous séparent de votre rue. On passe voir, puis on chiffre.",
           actions: [
             {
               label: "Demander une soumission",

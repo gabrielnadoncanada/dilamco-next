@@ -24,9 +24,9 @@ export const mdfPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Matériaux",
-          heading: "Le MDF, la surface la plus régulière pour peindre",
+          heading: "Pourquoi nos portes peintes sont en MDF",
           description:
-            "Fibres pressées, sans nœud ni veinage. Le support des portes peintes uniformes, à condition de fermer les chants.",
+            "C'est le panneau le plus lisse, sans nœud ni veinage, donc la peinture est parfaitement unie.",
           actions: [
             {
               label: "Demander une soumission",
@@ -51,44 +51,49 @@ export const mdfPage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Le MDF en fiche",
-          intro: "Le panneau technique des portes peintes, ses forces et sa limite.",
+          heading: "Ce qu'il faut savoir sur le MDF",
+          intro: "Ses forces, sa limite, et où on l'utilise chez vous.",
           rows: [
             {
-              label: "Composition",
-              value: "Fibres de bois et résine pressées à densité constante",
+              label: "De quoi c'est fait",
+              value:
+                "De fibres de bois mélangées à une résine, puis pressées en panneau bien dense.",
             },
             {
-              label: "Humidité",
-              value: "Point faible, un chant nu gonfle sans retour",
+              label: "Résiste à l'humidité ?",
+              value:
+                "C'est son point faible : un bord laissé nu gonfle et ne redevient jamais droit.",
             },
             {
               label: "Entretien",
-              value: "Nettoyant doux, jamais d'eau sur un joint",
+              value:
+                "Un linge à peine humide et un savon doux, sans laisser d'eau sur les joints.",
             },
             {
-              label: "Usages recommandés",
-              value: "Portes peintes, panneaux moulurés, faux-panneaux",
+              label: "Usage recommandé",
+              value:
+                "Les portes peintes et les façades avec des moulures.",
             },
             {
-              label: "Prix relatif",
-              value: "Le plus abordable après la mélamine",
+              label: "Prix par rapport aux autres",
+              value:
+                "Le deuxième moins cher, juste après la mélamine.",
             },
             {
-              label: "Finis disponibles",
-              value: "Peinture mate, satinée ou lustrée, toute teinte",
+              label: "Finis offerts",
+              value:
+                "La peinture de votre choix, en fini mat, satiné ou lustré.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-kitchen-durability-card-01.webp",
             alt: "Façades peintes dans une cuisine sur mesure",
           },
-          note: "Une version hydrofuge existe pour les vanités et les caissons sous lavabo.",
+          note: "Il existe une version qui craint moins l'eau, utilisée sous les lavabos.",
         },
       },
     },
@@ -126,9 +131,9 @@ export const mdfPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Des portes peintes qui restent nettes ?",
+          heading: "Vous voulez des portes peintes qui restent nettes",
           intro:
-            "On choisit l'épaisseur, le profil et le nombre de couches selon la pièce.",
+            "On choisit l'épaisseur, la forme et le nombre de couches selon la pièce.",
           actions: [
             {
               label: "Demander une soumission",

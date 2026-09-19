@@ -20,7 +20,7 @@ export function Logo({ logo }: LogoProps) {
         alt={logoConfig.alt}
         width={128}
         height={32}
-        className="block h-7 w-auto md:h-8"
+        className="block h-5 w-auto md:h-[22px]"
       />
       <span className="sr-only">{logoConfig.title}</span>
     </Link>

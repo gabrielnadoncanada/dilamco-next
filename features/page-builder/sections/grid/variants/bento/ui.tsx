@@ -15,41 +15,97 @@ type Tile = GridBentoProps["tiles"][number];
 
 const COLS = 3;
 
+type Placed = { row: number; col: number; span: number; tall: boolean };
+
+/**
+ * Simule le placement automatique de CSS grid (mode « sparse », le curseur
+ * n'avance que vers l'avant) pour connaître la case de chaque tuile.
+ */
+function place(tiles: Tile[], spans: number[]): Placed[] {
+  const rows: boolean[][] = [];
+  const free = (r: number, c: number) => !(rows[r]?.[c] ?? false);
+  const mark = (r: number, c: number) => {
+    rows[r] ??= Array(COLS).fill(false);
+    rows[r][c] = true;
+  };
+  const fits = (r: number, c: number, span: number, tall: boolean) => {
+    if (c + span > COLS) return false;
+    for (let k = 0; k < span; k++) {
+      if (!free(r, c + k) || (tall && !free(r + 1, c + k))) return false;
+    }
+    return true;
+  };
+  const out: Placed[] = [];
+  let row = 0;
+  let col = 0;
+  tiles.forEach((t, i) => {
+    const span = Math.min(spans[i], COLS);
+    const tall = t.kind === "image" && t.span === "tall";
+    for (;;) {
+      if (fits(row, col, span, tall)) break;
+      col++;
+      if (col >= COLS) {
+        col = 0;
+        row++;
+      }
+    }
+    for (let k = 0; k < span; k++) {
+      mark(row, col + k);
+      if (tall) mark(row + 1, col + k);
+    }
+    out.push({ row, col, span, tall });
+    col += span;
+    if (col >= COLS) {
+      col = 0;
+      row++;
+    }
+  });
+  return out;
+}
+
 /**
  * Calcule la largeur de chaque tuile en colonnes : les tuiles `wide` prennent
- * 2 colonnes, les autres 1 ; si la dernière rangée reste incomplète, sa
- * dernière tuile s'étire pour la remplir (jamais de trou dans la grille).
+ * 2 colonnes, les autres 1. On simule ensuite le placement et, tant qu'une
+ * rangée contient une case vide, on étire la tuile voisine (celle de gauche,
+ * sinon celle de droite) pour la remplir. Les tuiles hautes ne sont jamais
+ * étirées : elles entreraient en collision avec la rangée d'à côté.
  */
 function computeSpans(tiles: Tile[]): number[] {
   const spans = tiles.map((t) =>
     t.kind === "image" && t.span === "wide" ? 2 : 1,
   );
-  let used = 0;
-  let rowStart = 0;
-  spans.forEach((span, i) => {
-    if (used + span > COLS) {
-      // La tuile précédente ferme la rangée : elle absorbe le reste.
-      if (i > 0) spans[i - 1] += COLS - used;
-      used = 0;
-      rowStart = i;
-    }
-    used += span;
-    if (used === COLS) {
-      used = 0;
-      rowStart = i + 1;
-    }
-  });
-  if (used > 0 && used < COLS) {
-    // Le reste va de préférence à une photo de la dernière rangée (une tuile
-    // texte ou chiffre étirée sur 2 colonnes serait vide).
-    let target = spans.length - 1;
-    for (let j = spans.length - 1; j >= rowStart; j--) {
-      if (tiles[j].kind === "image") {
-        target = j;
-        break;
+  for (let iter = 0; iter < tiles.length + 2; iter++) {
+    const placed = place(tiles, spans);
+    const rowCount = Math.max(...placed.map((p) => p.row + (p.tall ? 2 : 1)));
+    const occ: (number | null)[][] = Array.from({ length: rowCount }, () =>
+      Array(COLS).fill(null),
+    );
+    placed.forEach((p, i) => {
+      for (let k = 0; k < p.span; k++) {
+        occ[p.row][p.col + k] = i;
+        if (p.tall) occ[p.row + 1][p.col + k] = i;
+      }
+    });
+    let hole: { row: number; start: number; width: number } | null = null;
+    for (let r = 0; r < rowCount && !hole; r++) {
+      for (let c = 0; c < COLS; c++) {
+        if (occ[r][c] === null) {
+          let w = 1;
+          while (c + w < COLS && occ[r][c + w] === null) w++;
+          hole = { row: r, start: c, width: w };
+          break;
+        }
       }
     }
-    spans[target] += COLS - used;
+    if (!hole) return spans;
+    const left = hole.start > 0 ? occ[hole.row][hole.start - 1] : null;
+    const rightIdx = hole.start + hole.width;
+    const right = rightIdx < COLS ? occ[hole.row][rightIdx] : null;
+    const stretchable = (i: number | null) =>
+      i !== null && !placed[i].tall && placed[i].row === hole!.row;
+    const target = stretchable(left) ? left : stretchable(right) ? right : null;
+    if (target === null) return spans;
+    spans[target] += hole.width;
   }
   return spans;
 }

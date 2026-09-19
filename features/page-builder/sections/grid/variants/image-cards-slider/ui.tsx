@@ -94,7 +94,7 @@ export function GridImageCardsSlider({
                       </p>
                     ) : null}
                   </div>
-                  {href ? <ArrowPill className="border border-border/80 bg-transparent" /> : null}
+                  {href ? <ArrowPill className="-mt-2 border border-border/80 bg-transparent" /> : null}
                 </div>
                 {href && label ? <span className="sr-only">{label}</span> : null}
               </>

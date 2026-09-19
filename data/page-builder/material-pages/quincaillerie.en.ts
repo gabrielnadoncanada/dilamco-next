@@ -27,9 +27,9 @@ export const quincailleriePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Materials",
-          heading: "Hardware decides how long your cabinets last",
+          heading: "Why hardware is what makes cabinets last",
           description:
-            "Hinges, slides and dampers absorb thousands of cycles a year. It is the part that gives out first.",
+            "A door opens thousands of times a year, and the hinge is what gives out first.",
           actions: [
             {
               label: "See our kitchens",
@@ -47,51 +47,56 @@ export const quincailleriePageEn: PageTemplateData = {
             src: "/images/generated/materials/material-hardware-hero-01.webp",
             alt: "Drawer slide and hinge inside a custom cabinet",
           },
-          caption: "The detail nobody ever sees",
+          caption: "The part nobody ever sees",
           imageSide: "right",
         },
       },
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Hardware at a glance",
-          intro: "What we specify by default on every door and every drawer.",
+          heading: "What we fit on every door",
+          intro: "The hardware included with all our cabinets, at no extra charge.",
           rows: [
             {
-              label: "Composition",
-              value: "Nickel-plated stamped steel, built-in hydraulic damper",
+              label: "What it is made of",
+              value:
+                "Nickel-plated steel, with a small piston that slows the door as it shuts.",
             },
             {
-              label: "Humidity",
-              value: "Nickel-plated finish required in bathrooms",
+              label: "Does it handle humidity?",
+              value:
+                "Yes, and in a bathroom we insist on a nickel-plated finish that will not rust.",
             },
             {
               label: "Upkeep",
-              value: "One hinge adjustment a year, nothing else",
+              value:
+                "One turn of a screwdriver once a year, and that is all.",
             },
             {
-              label: "Recommended uses",
-              value: "Every door and every drawer, no exception",
+              label: "Best used for",
+              value:
+                "Every door and every drawer, with no exception.",
             },
             {
-              label: "Relative cost",
-              value: "5 to 10 per cent of the cabinetry cost",
+              label: "Price against the others",
+              value:
+                "It comes to 5 to 10 per cent of the price of your cabinets.",
             },
             {
               label: "Warranty",
-              value: "Lifetime from the major European brands",
+              value:
+                "The major European brands back theirs for life.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-hardware-detail-01.webp",
             alt: "Close-up of an adjustable hinge on a cabinet door",
           },
-          note: "Exact models are written into the quote before signing.",
+          note: "The exact models are written into the quote before you sign.",
         },
       },
     },
@@ -101,28 +106,28 @@ export const quincailleriePageEn: PageTemplateData = {
         type: "comparison",
         variant: "table-basic",
         props: {
-          heading: "Standard or high-end",
-          columns: ["Standard", "High-end"],
+          heading: "The difference between standard and high-end",
+          columns: ["Standard hardware", "High-end hardware"],
           rows: [
             {
-              label: "Drawer extension",
-              values: ["Partial", "Full"],
+              label: "Does the drawer pull right out?",
+              values: ["No, the back stays hidden", "Yes, all the way"],
             },
             {
-              label: "Closing",
-              values: ["Hard stop", "Damped"],
+              label: "How the door closes",
+              values: ["It bangs shut", "It slows down on its own"],
             },
             {
-              label: "Load rating",
+              label: "Weight the drawer carries",
               values: ["25 kg", "35 to 60 kg"],
             },
             {
-              label: "Adjustment",
-              values: ["Two axes", "Three axes"],
+              label: "Can the door be realigned?",
+              values: ["In two directions", "In all three directions"],
             },
             {
-              label: "Brand warranty",
-              values: ["Limited", "Often lifetime"],
+              label: "Manufacturer warranty",
+              values: ["Limited in time", "Often lifetime"],
             },
           ],
         },
@@ -162,9 +167,9 @@ export const quincailleriePageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Choose the hardware before ordering",
+          heading: "Choose your hardware before we order",
           intro:
-            "You open and close the models yourself, then we write the chosen reference down.",
+            "You open and close the models yourself, then we note the one you picked.",
           actions: [
             {
               label: "Get a quote",

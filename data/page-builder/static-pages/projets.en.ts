@@ -25,7 +25,7 @@ export const pageEn: PageTemplateData = {
           badges: ["Real cases"],
           heading: "Kitchens, vanities, storage and commercial work",
           description:
-            "Job sites run across Greater Montréal, from the on-site survey to the final fitting.",
+            "Job sites we ran from start to finish across Greater Montréal.",
           actions: [
             {
               label: "Request a quote",
@@ -44,18 +44,17 @@ export const pageEn: PageTemplateData = {
 
     {
       id: "categories",
-      frame: { surface: "muted" },
       content: {
         type: "grid",
         variant: "image-cards-slider-lightbox",
         props: {
-          heading: "Explore the projects",
-          intro: "Pick the area closest to your own project.",
+          heading: "Browse the projects by room",
+          intro: "Pick the room that looks most like your own project.",
           items: [
             {
               title: "Kitchens",
               href: "/projets/cuisine",
-              description: "Optimized storage and precise finish.",
+              description: "Kitchens rebuilt from top to bottom.",
               footerCtaLabel: "View kitchens",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
@@ -65,7 +64,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Bathrooms & vanities",
               href: "/projets/salle-de-bain",
-              description: "Durable vanities, built for humidity.",
+              description: "Vanities that hold up in a wet room.",
               footerCtaLabel: "View bathrooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
@@ -75,7 +74,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Walk-in closets & storage",
               href: "/projets/walk-in",
-              description: "Custom storage, optimized and functional.",
+              description: "Storage drawn around what you actually own.",
               footerCtaLabel: "View walk-ins",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
@@ -85,7 +84,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Laundry rooms",
               href: "/projets/salle-de-lavage",
-              description: "Organized, durable laundry rooms.",
+              description: "Laundry rooms that are easy to keep clean.",
               footerCtaLabel: "View laundry rooms",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
@@ -153,7 +152,7 @@ export const pageEn: PageTemplateData = {
               kind: "text",
               title: "Something similar in mind?",
               description:
-                "Send your photos and dimensions, we come back with a budget bracket.",
+                "Send us your photos and measurements and we will give you a price range.",
               href: "/contact",
             },
           ],
@@ -167,8 +166,8 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Have a similar project?",
-          intro: "Free estimate. Reply within 24 to 48 business hours.",
+          heading: "You have a project of the same kind",
+          intro: "The estimate is free and we get back to you within a day or two.",
           actions: [
             {
               label: "Request a quote",

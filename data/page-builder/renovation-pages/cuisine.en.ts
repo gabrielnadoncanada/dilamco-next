@@ -42,9 +42,9 @@ export const renovationCuisinePageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Kitchen renovation",
-          heading: "A kitchen rebuilt from the drain to the countertop",
+          heading: "Complete kitchen renovation, from permit to finishing",
           description:
-            "Demolition, plumbing, electrical, ventilation, cabinets and countertop handled by the same crew.",
+            "The same crew handles the demolition, the plumbing, the electrical, the cabinets and the countertop.",
           actions: [
             {
               label: "Free quote",
@@ -73,48 +73,48 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Four scopes, one contract",
-          intro: "Exclusions are listed in the quote.",
+          heading: "What a kitchen renovation includes",
+          intro: "It all sits in one contract. The quote also says what is excluded.",
           columns: "2",
           items: [
             {
               title: "Demolition and protection",
-              description: "The site opened cleanly",
+              description: "We empty the kitchen without messing up the house",
               icon: "hammer",
               bullets: [
-                "Cabinets, countertop and finishes removed",
-                "Floors and hallways protected daily",
-                "Bin supplied, debris hauled away",
+                "We remove the cabinets, the countertop and the finishes",
+                "We protect the floors and the hallways every day",
+                "We supply the bin and haul the debris away",
               ],
             },
             {
               title: "Plumbing and electrical",
-              description: "Redone before the walls close",
+              description: "We redo the pipes and the wiring before the walls close",
               icon: "wrench",
               bullets: [
-                "Sink, dishwasher and fridge connected",
-                "Island circuits and counter outlets",
-                "Range hood vented outside, then inspected",
+                "We connect the sink, the dishwasher and the fridge",
+                "We add the island circuits and the counter outlets",
+                "We vent the range hood outdoors, then it gets inspected",
               ],
             },
             {
               title: "Cabinets and countertop",
-              description: "Supplied and set in the same mandate",
+              description: "We supply both and we install them",
               icon: "package2",
               bullets: [
-                "Cabinets from our partner factory",
-                "Countertop templated, cut, installed",
-                "Doors and drawers adjusted at handover",
+                "The cabinets come from our partner factory",
+                "The countertop is measured in your home, cut, then set",
+                "We adjust the doors and the drawers at handover",
               ],
             },
             {
-              title: "Surfaces and finishing",
-              description: "What you see walking in",
+              title: "Floor, backsplash and paint",
+              description: "We finish with everything you can see",
               icon: "layers",
               bullets: [
-                "Subfloor corrected and levelled",
-                "Backsplash, drywall, taping and paint",
-                "Mouldings, lighting and hardware",
+                "We correct the floor before laying the new surface",
+                "We set the backsplash, tape the joints and paint",
+                "We install the mouldings, the lighting and the handles",
               ],
             },
           ],
@@ -127,37 +127,37 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "How a kitchen unfolds",
+          heading: "How a kitchen renovation unfolds",
           steps: [
             {
               number: "1",
-              title: "Measure and quote",
+              title: "Visit and quote",
               description:
-                "Dimensions, electrical panel, drain and structure checked on site.",
+                "We measure the room and check the electrical panel and the drain.",
             },
             {
               number: "2",
               title: "Demolition",
               description:
-                "Cabinets, countertop and old finishes stripped out.",
+                "We take out the old cabinets, the countertop and the finishes.",
             },
             {
               number: "3",
-              title: "Mechanical",
+              title: "Plumbing and electrical",
               description:
-                "Drains, supply lines, circuits and hood duct redone.",
+                "We redo the drains, the circuits and the range hood duct.",
             },
             {
               number: "4",
               title: "Cabinets and countertop",
               description:
-                "Boxes set, countertop templated, sink opening cut.",
+                "We install the cabinets, then measure and cut the countertop.",
             },
             {
               number: "5",
               title: "Finishing",
               description:
-                "Backsplash, paint, appliances hooked up, doors aligned.",
+                "We set the backsplash, paint and hook up the appliances.",
             },
           ],
         },
@@ -169,42 +169,42 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "grid",
         variant: "price-tiles",
         props: {
-          heading: "What a kitchen costs",
+          heading: "What a kitchen renovation costs",
           tiles: [
             {
               title: "Refresh",
               price: "from $20,000",
-              hint: "existing boxes kept",
+              hint: "we keep your current cabinets",
               includes: [
                 "Countertop and backsplash replaced",
-                "New paint and hardware",
+                "New paint and new handles",
                 "Appliances reconnected",
               ],
             },
             {
               title: "Full kitchen",
               price: "$35,000 to $50,000",
-              hint: "cabinets and countertop included",
+              hint: "new cabinets and countertop",
               featured: true,
               includes: [
-                "Demolition and debris handling",
+                "Demolition and debris removal",
                 "Plumbing and electrical redone",
                 "Cabinets and countertop installed",
-                "Backsplash, paint, mouldings",
+                "Backsplash, paint and mouldings",
               ],
             },
             {
               title: "Kitchen and open plan",
               price: "above $50,000",
-              hint: "load-bearing wall or floor included",
+              hint: "with a wall opening or new flooring",
               includes: [
                 "Beam sized by an engineer",
-                "Flooring tied into adjoining rooms",
+                "Flooring tied into the adjoining rooms",
                 "Lighting and ventilation reworked",
               ],
             },
           ],
-          note: "Indicative ranges. The firm amount for a kitchen is set in the quote, after the on-site measure.",
+          note: "These are ballpark ranges. The exact price is written in the quote, after the visit to your home.",
           action: {
             label: "Free quote",
             href: "/contact",
@@ -219,7 +219,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Kitchens already delivered",
+          heading: "Kitchens we have delivered",
           tiles: [
             {
               kind: "image",
@@ -228,12 +228,12 @@ export const renovationCuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Kitchen open to the living room with island and tall columns",
               },
-              caption: "Island and full-height columns",
+              caption: "Kitchen open to the living room",
             },
             {
               kind: "stat",
               value: "9 to 15 wks",
-              label: "Cabinet production, scheduled in parallel",
+              label: "Cabinet production at our partner factory",
             },
             {
               kind: "image",
@@ -241,13 +241,13 @@ export const renovationCuisinePageEn: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "White kitchen with a quartz island",
               },
-              caption: "Quartz island",
+              caption: "Island with a quartz countertop",
             },
             {
               kind: "text",
               title: "See more kitchens",
               description:
-                "Layouts, storage and finishes photographed in client homes.",
+                "Photos taken in our clients' homes.",
               href: "/espaces/cuisine",
             },
           ],
@@ -263,24 +263,24 @@ export const renovationCuisinePageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "How long is the kitchen unusable?",
-              a: "A few weeks without a sink or appliances. We set up a temporary corner and time the cabinet delivery to the end of the mechanical work, which shortens the gap.",
+              q: "How long will I be without a kitchen?",
+              a: "A few weeks without a sink or appliances. We set up a temporary corner and have the cabinets delivered as soon as the plumbing is done.",
             },
             {
-              q: "Can the wall between kitchen and living room come out?",
-              a: "Often yes. If it carries a load, an engineer sizes the beam and its supports, and that drawing goes with the permit application. We tell you at the first visit.",
+              q: "Can the wall between the kitchen and the living room come out?",
+              a: "Often yes. If the wall carries a load, an engineer sizes the beam and its supports, and that drawing goes with the permit application.",
             },
             {
               q: "Do I need a permit to renovate a kitchen?",
-              a: "Yes as soon as a bearing wall changes, plumbing moves or a hood duct pierces the exterior wall. Replacing fixtures in the same spot usually does not require one.",
+              a: "Yes if a load-bearing wall changes, if plumbing moves or if the range hood goes through an exterior wall. Replacing fixtures in the same spot usually does not.",
             },
             {
-              q: "Where do the cabinets and countertop come from?",
-              a: "Custom cabinets come from our partner factory and our crews install them. The countertop is templated once the boxes are set, then cut and fitted.",
+              q: "Where do the cabinets and the countertop come from?",
+              a: "The custom cabinets come from our partner factory and our own crews install them. The countertop is measured once the cabinets are in place.",
             },
             {
-              q: "What if the island moves?",
-              a: "The drain, supply lines and circuits have to follow. We open the floor or run the services from the basement, and that work is priced before demolition starts.",
+              q: "What if I want to move the island?",
+              a: "The drain, the water lines and the wiring have to follow. We open the floor or run the services from the basement, and that work is priced before demolition.",
             },
           ],
         },
@@ -294,7 +294,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
         props: {
           heading: "Get your kitchen priced",
           intro:
-            "On-site visit, full measure and a detailed quote, at no charge.",
+            "We come to your home, take the measurements and hand you a detailed quote, at no charge.",
           actions: [
             {
               label: "Free quote",
@@ -307,7 +307,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Permit, mechanical, cabinets and countertop",
+          note: "RBQ licence 8306-0806-27 · Permit, plumbing, electrical, cabinets and countertop",
         },
       },
     },

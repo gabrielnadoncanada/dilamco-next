@@ -35,7 +35,7 @@ export const salleDeBainPage: PageTemplateData = {
           badges: ["Simple ou double", "Fini lavable"],
           heading: "Vanité de salle de bain sur mesure à Laval",
           description:
-            "Le meuble-lavabo arrive entre la membrane d'étanchéité et les robinets, jamais avant.",
+            "On dessine la vanité, on la fait produire, puis on la pose avec le reste de la pièce.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -80,7 +80,7 @@ export const salleDeBainPage: PageTemplateData = {
             {
               kind: "stat",
               value: "9 à 15 sem.",
-              label: "Du design validé à la pose de la vanité",
+              label: "Le temps d'attente avant la pose de la vanité",
             },
             {
               kind: "image",
@@ -110,38 +110,43 @@ export const salleDeBainPage: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "La salle de bain en bref",
           intro:
-            "Ce qu'une pièce humide impose au meuble, au calendrier et au contrat.",
+            "Ce qu'il faut savoir avant de refaire une pièce qui reçoit de l'eau.",
           rows: [
             {
-              label: "Délai",
-              value: "9 à 15 semaines, commande lancée après le relevé",
+              label: "Combien de temps",
+              value:
+                "La vanité prend 9 à 15 semaines à produire, à partir du relevé.",
             },
             {
-              label: "Prix",
-              value: "Selon le format, simple ou double lavabo, et le rangement",
+              label: "Prix indicatif",
+              value:
+                "Le prix dépend de la largeur, du nombre de lavabos et du rangement voulu.",
             },
             {
               label: "Matériaux",
-              value: "Contreplaqué de bouleau, chants scellés contre la vapeur",
+              value:
+                "Du contreplaqué de bouleau, avec les bords scellés pour que la vapeur n'entre pas.",
             },
             {
               label: "Quincaillerie",
-              value: "Charnières et coulisses traitées contre la corrosion",
+              value:
+                "Des charnières et des rails traités pour ne pas rouiller dans une pièce humide.",
             },
             {
-              label: "Pose",
-              value: "Après la membrane et la céramique, avant la robinetterie",
+              label: "Qui installe",
+              value:
+                "Notre équipe, après la céramique et avant le raccordement des robinets.",
             },
             {
               label: "Garantie",
-              value: "Déficiences reprises avant le solde, durée au contrat",
+              value:
+                "Tout ce qui cloche est corrigé avant que vous payiez le dernier versement.",
             },
           ],
           image: {

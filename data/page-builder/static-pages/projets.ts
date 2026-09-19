@@ -25,7 +25,7 @@ export const page: PageTemplateData = {
           badges: ["Cas réels"],
           heading: "Cuisines, vanités, rangement et projets commerciaux",
           description:
-            "Des chantiers menés dans le Grand Montréal, du relevé sur place à la pose finale.",
+            "Des chantiers que nous avons menés du début à la fin dans le Grand Montréal.",
           actions: [
             {
               label: "Demander une soumission",
@@ -44,18 +44,17 @@ export const page: PageTemplateData = {
 
     {
       id: "categories",
-      frame: { surface: "muted" },
       content: {
         type: "grid",
         variant: "image-cards-slider-lightbox",
         props: {
-          heading: "Explorer les projets",
-          intro: "Choisissez l'univers le plus proche de votre projet.",
+          heading: "Voir les projets par type de pièce",
+          intro: "Choisissez la pièce qui ressemble le plus à votre projet.",
           items: [
             {
               title: "Cuisines",
               href: "/projets/cuisine",
-              description: "Rangement optimisé et finition précise.",
+              description: "Des cuisines refaites au complet.",
               footerCtaLabel: "Voir les cuisines",
               image: {
                 src: "/images/generated/spaces/espaces-card-cuisine-01.webp",
@@ -65,7 +64,7 @@ export const page: PageTemplateData = {
             {
               title: "Salles de bain & vanités",
               href: "/projets/salle-de-bain",
-              description: "Vanités durables, conçues pour l'humidité.",
+              description: "Des vanités qui tiennent dans une pièce humide.",
               footerCtaLabel: "Voir les salles de bain",
               image: {
                 src: "/images/generated/spaces/espaces-card-bath-01.webp",
@@ -75,7 +74,7 @@ export const page: PageTemplateData = {
             {
               title: "Walk-in & rangement",
               href: "/projets/walk-in",
-              description: "Rangement sur mesure, optimisé et fonctionnel.",
+              description: "Du rangement dessiné pour ce que vous possédez.",
               footerCtaLabel: "Voir les walk-in",
               image: {
                 src: "/images/generated/spaces/espaces-card-walkin-01.webp",
@@ -85,7 +84,7 @@ export const page: PageTemplateData = {
             {
               title: "Salles de lavage",
               href: "/projets/salle-de-lavage",
-              description: "Salles de lavage organisées et durables.",
+              description: "Des salles de lavage faciles à entretenir.",
               footerCtaLabel: "Voir les salles de lavage",
               image: {
                 src: "/images/generated/spaces/espaces-card-laundry-01.webp",
@@ -113,7 +112,7 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Quelques chantiers livrés",
+          heading: "Quelques chantiers qu'on a livrés",
           tiles: [
             {
               kind: "image",
@@ -153,7 +152,7 @@ export const page: PageTemplateData = {
               kind: "text",
               title: "Un projet semblable ?",
               description:
-                "Envoyez vos photos et vos dimensions, on revient avec un ordre de grandeur.",
+                "Envoyez-nous vos photos et vos mesures, on vous donne un ordre de prix.",
               href: "/contact",
             },
           ],
@@ -167,8 +166,8 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Vous avez un projet similaire ?",
-          intro: "Estimation gratuite. Retour sous 24 à 48 heures ouvrables.",
+          heading: "Vous avez un projet du même genre",
+          intro: "L'estimation est gratuite et on vous répond en un ou deux jours.",
           actions: [
             {
               label: "Demander une soumission",

@@ -61,7 +61,7 @@ export const zoneKirklandPage: PageTemplateData = {
           eyebrow: "Entrepreneur général à",
           heading: "Kirkland",
           description:
-            "Grands terrains, maisons détachées, propriétaires qui choisissent d'agrandir plutôt que de déménager.",
+            "Rénovation et agrandissement pour les maisons de Kirkland, par un entrepreneur général licencié basé à quinze minutes.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -79,10 +79,19 @@ export const zoneKirklandPage: PageTemplateData = {
             alt: "Agrandissement d'une maison unifamiliale à Kirkland",
           },
           facts: [
-            { label: "Notre base", value: "Pierrefonds-Roxboro, quinze minutes" },
-            { label: "Permis", value: "Aménagement urbain, 17200 boul. Hymus" },
-            { label: "Bâti", value: "Unifamiliales détachées, 1965 à 1985" },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            { label: "Notre base", value: "Pierrefonds-Roxboro, à quinze minutes d'ici" },
+            {
+              label: "Où demander le permis",
+              value: "Service de l'aménagement urbain, 17200 boul. Hymus",
+            },
+            {
+              label: "Type de maisons",
+              value: "Des unifamiliales détachées, bâties entre 1965 et 1985",
+            },
+            {
+              label: "Premier retour",
+              value: "Nous vous rappelons en 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -93,33 +102,39 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Une ville coupée par l'autoroute 40",
+          heading: "Ce qu'on sait des maisons de Kirkland",
           intro:
-            "Moins de vingt mille résidents sur 9,6 kilomètres carrés, un parc industriel de chaque côté de la Transcanadienne.",
+            "Voici ce qui revient sur presque tous nos chantiers de Kirkland.",
           rows: [
             {
-              label: "Densité",
-              value: "Environ 2 000 habitants au kilomètre carré",
+              label: "Taille des terrains",
+              value:
+                "Les terrains sont larges, avec environ deux mille résidents au kilomètre carré.",
             },
             {
-              label: "Excavation",
-              value: "Certificat distinct du permis de construction",
+              label: "Ce que la Ville vérifie",
+              value:
+                "Elle regarde les marges de recul et la part du terrain que la maison a le droit d'occuper.",
             },
             {
-              label: "Dépôt en ligne",
-              value: "Portail Gestion des permis, suivi et paiement",
+              label: "Particularité locale",
+              value:
+                "Creuser une nouvelle fondation demande un certificat d'excavation en plus du permis.",
             },
             {
-              label: "Ce qui tranche",
-              value: "Recul, occupation du sol et normes de votre zone",
+              label: "Comment déposer la demande",
+              value:
+                "En ligne sur le portail de la Ville, qui affiche l'état du dossier et permet de payer.",
             },
             {
-              label: "Projets fréquents",
-              value: "Rallonge latérale, ajout d'étage, solarium, cuisine",
+              label: "Projets courants",
+              value:
+                "Rallonge sur le côté, ajout d'un étage, solarium et ouverture de la cuisine.",
             },
             {
-              label: "Temps de route",
-              value: "Quinze minutes par le boulevard Saint-Charles",
+              label: "Depuis notre base",
+              value:
+                "Quinze minutes de route par le boulevard Saint-Charles.",
             },
           ],
           image: {
@@ -136,13 +151,13 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise à Kirkland",
+          heading: "Nos services à Kirkland",
           items: [
             {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Le terrain permet souvent la rallonge latérale, marges de recul validées",
+                "On ajoute une rallonge sur le côté quand les marges de recul le permettent",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Chantier d'agrandissement dans une rue de Kirkland",
@@ -154,7 +169,7 @@ export const zoneKirklandPage: PageTemplateData = {
               title: "Rénovation majeure",
               href: "/services/renovation",
               description:
-                "Toiture, fenêtres, panneau et salles de bain arrivent à échéance ensemble",
+                "On refait la toiture, les fenêtres, l'entrée électrique et les salles de bain",
               image: {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Rénovation complète d'une maison de Kirkland",
@@ -166,7 +181,7 @@ export const zoneKirklandPage: PageTemplateData = {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Maisons des années 1970 rouvertes sur les aires de vie",
+                "On ouvre la cuisine sur le salon dans les maisons des années 1970",
               image: {
                 src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
                 alt: "Cuisine ouverte dans une maison détachée de Kirkland",
@@ -184,7 +199,7 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Kirkland et ses voisines",
+          heading: "Aussi desservies près de Kirkland",
           columns: "2",
           items: [
             { title: "Beaconsfield", href: "/zones/beaconsfield" },
@@ -210,20 +225,20 @@ export const zoneKirklandPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Comment dépose-t-on une demande de permis à Kirkland ?",
-              a: "Par le portail Gestion des permis en ligne, qui affiche l'état du dossier et permet souvent de payer à distance. Sinon en personne au 17200, boulevard Hymus. Nous montons le dossier pour vous.",
+              q: "Où demande-t-on un permis de rénovation à Kirkland ?",
+              a: "Au Service de l'aménagement urbain, 17200, boulevard Hymus, ou en ligne sur le portail de la Ville. Nous préparons le dossier, nous le déposons et nous répondons à l'inspecteur.",
             },
             {
-              q: "Un agrandissement à Kirkland exige-t-il un certificat d'excavation ?",
-              a: "Oui. La ville traite l'excavation comme une demande séparée du permis de construction. Pour une fondation neuve, il faut donc les deux autorisations, inscrites à l'échéancier dès le départ.",
+              q: "Faut-il un certificat d'excavation pour agrandir à Kirkland ?",
+              a: "Oui, dès que la rallonge repose sur une nouvelle fondation. La Ville traite l'excavation comme une demande à part. Les deux autorisations sont prévues à l'échéancier dès le départ.",
             },
             {
-              q: "Peut-on vraiment agrandir sur un terrain de Kirkland ?",
-              a: "Souvent. Avec environ deux mille habitants au kilomètre carré, les terrains restent larges. Ce sont les marges de recul et l'occupation du sol de votre zone qui tranchent, validées avant les frais de plans.",
+              q: "Mon terrain de Kirkland permet-il vraiment une rallonge ?",
+              a: "Souvent, oui, parce que les terrains d'ici sont larges. Ce sont les marges de recul et la part du terrain occupée qui décident. Nous le vérifions avant que vous payiez des plans.",
             },
             {
-              q: "Combien coûte de reprendre une maison de Kirkland au complet ?",
-              a: "Plus que nos mandats d'entrée, qui démarrent vers 25 000 $. Reprendre toiture, fenêtres, panneau et salles de bain dans une même séquence se chiffre en dizaines de milliers. Estimation gratuite.",
+              q: "Combien coûte de rénover une maison de Kirkland au complet ?",
+              a: "Refaire la toiture, les fenêtres, l'entrée électrique et les salles de bain dans la même séquence se compte en dizaines de milliers de dollars. Nos plus petits mandats partent vers 25 000 $.",
             },
           ],
         },
@@ -235,8 +250,9 @@ export const zoneKirklandPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un projet à Kirkland ?",
-          intro: "On valide la faisabilité avant de parler de prix.",
+          heading: "Un projet à Kirkland ? Parlons-en.",
+          intro:
+            "On vérifie d'abord ce que la Ville permet chez vous, puis on parle de prix.",
           actions: [
             {
               label: "Demander une soumission",

@@ -24,9 +24,9 @@ export const melaminePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Matériaux",
-          heading: "La mélamine arrive déjà finie, à coût maîtrisé",
+          heading: "La mélamine, le choix économique et lavable",
           description:
-            "Un décor thermofusionné sur panneau. Aucune étape de peinture, une surface lavable, et des chants qui décident de sa durée.",
+            "Le panneau arrive déjà fini, donc il n'y a aucune peinture à faire et la surface se lave.",
           actions: [
             {
               label: "Demander une soumission",
@@ -51,40 +51,45 @@ export const melaminePage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "La mélamine en fiche",
-          intro: "Un panneau jugé sur son chant plus que sur son décor.",
+          heading: "Ce qu'il faut savoir sur la mélamine",
+          intro: "Ce qu'elle fait bien, et le détail qui décide de sa durée.",
           rows: [
             {
-              label: "Composition",
-              value: "Papier décor fusionné sous presse sur panneau de fibres",
+              label: "De quoi c'est fait",
+              value:
+                "Un papier imprimé collé à chaud sur un panneau de fibres de bois.",
             },
             {
-              label: "Humidité",
-              value: "Surface étanche, panneau exposé par un chant ouvert",
+              label: "Résiste à l'humidité ?",
+              value:
+                "La surface, oui. C'est par un bord mal fermé que l'eau finit par entrer.",
             },
             {
               label: "Entretien",
-              value: "Linge humide, aucun produit abrasif",
+              value:
+                "Un linge humide suffit, sans poudre ni éponge qui gratte.",
             },
             {
-              label: "Usages recommandés",
-              value: "Intérieurs, tablettes, rangement secondaire",
+              label: "Usage recommandé",
+              value:
+                "L'intérieur des armoires, les tablettes et le rangement qu'on ne voit pas.",
             },
             {
-              label: "Prix relatif",
-              value: "Le poste armoires le moins cher",
+              label: "Prix par rapport aux autres",
+              value:
+                "C'est le matériau d'armoire le moins cher.",
             },
             {
-              label: "Chants",
-              value: "Bande PVC de 1 mm ou plus, collée sous presse",
+              label: "Finis offerts",
+              value:
+                "Des décors unis ou imitation bois, avec un bord de PVC d'au moins 1 mm.",
             },
           ],
-          note: "Un éclat ne se ponce pas : la pièce touchée se remplace.",
+          note: "Un éclat ne se répare pas. On remplace la pièce touchée.",
         },
       },
     },
@@ -122,9 +127,9 @@ export const melaminePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "La mélamine tient-elle dans votre budget ?",
+          heading: "Faire entrer votre cuisine dans le budget",
           intro:
-            "On sépare ce qui se voit de ce qui se range, puis on répartit le budget.",
+            "On met la mélamine là où ça ne se voit pas et on garde l'argent pour les façades.",
           actions: [
             {
               label: "Demander une soumission",

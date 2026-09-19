@@ -37,9 +37,9 @@ export const page: PageTemplateData = {
         variant: "centered",
         props: {
           badges: ["RBQ 8306-0806-27", "Depuis 2004", "Contrat écrit"],
-          heading: "Deux divisions, un seul entrepreneur responsable",
+          heading: "Rénovation résidentielle, commerciale et armoires sur mesure",
           description:
-            "La rénovation résidentielle et commerciale d'un côté, les armoires sur mesure de l'autre, sous le même contrat.",
+            "Un entrepreneur général licencié rénove vos pièces et fournit vos armoires, sous le même contrat.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -67,7 +67,7 @@ export const page: PageTemplateData = {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Une pièce mise à nu, refaite et rebranchée par la même équipe.",
+                "Nous démolissons, refaisons la plomberie et posons les armoires.",
               image: {
                 src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
                 alt: "Cuisine shaker en U avec dosseret métro",
@@ -79,7 +79,7 @@ export const page: PageTemplateData = {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Étanchéité, pente et extraction avant la moindre céramique.",
+                "Nous rendons la douche étanche avant de poser la céramique.",
               image: {
                 src: "/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp",
                 alt: "Salle de bain avec meuble-lavabo flottant et marbre",
@@ -91,7 +91,7 @@ export const page: PageTemplateData = {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Diagnostic d'humidité, permis, issue de secours, puis finition.",
+                "Nous vérifions l'humidité, obtenons le permis, puis finissons.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-salle-jeux-01.webp",
                 alt: "Sous-sol aménagé en salle de jeux",
@@ -103,7 +103,7 @@ export const page: PageTemplateData = {
               title: "Plancher",
               href: "/services/renovation/plancher",
               description:
-                "Arrachage, support corrigé, nivellement, pose et seuils.",
+                "Nous arrachons, réparons le dessous, puis posons le neuf.",
               image: {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Pose de plancher de bois franc dans une résidence",
@@ -115,7 +115,7 @@ export const page: PageTemplateData = {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Marges de recul, fondation, charpente et raccord à l'existant.",
+                "Nous ajoutons une pièce et la raccordons à votre maison.",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement arrière d'une maison unifamiliale",
@@ -127,7 +127,7 @@ export const page: PageTemplateData = {
               title: "Après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Constat, devis par poste et remise en état après l'assèchement.",
+                "Nous remettons la maison en état après l'eau ou le feu.",
               image: {
                 src: "/images/generated/services/service-renovation-project-01.webp",
                 alt: "Pièce remise en état après un sinistre",
@@ -139,7 +139,7 @@ export const page: PageTemplateData = {
               title: "Aménagement commercial",
               href: "/espaces/commercial",
               description:
-                "Bureaux, commerces et améliorations locatives, catégorie RBQ 1.3.",
+                "Nous aménageons bureaux et commerces, sous la catégorie RBQ 1.3.",
               image: {
                 src: "/images/generated/spaces/espaces-card-commercial-01.webp",
                 alt: "Aménagement commercial livré prêt à occuper",
@@ -151,7 +151,7 @@ export const page: PageTemplateData = {
               title: "Design d'armoires",
               href: "/services/design",
               description:
-                "Implantation, finis et quincaillerie arrêtés avant la commande.",
+                "Nous dessinons vos armoires et choisissons les finis avec vous.",
               image: {
                 src: "/images/generated/services/service-design-hero-01.webp",
                 alt: "Séance de design d'armoires sur mesure",
@@ -163,7 +163,7 @@ export const page: PageTemplateData = {
               title: "Production des armoires",
               href: "/services/fabrication",
               description:
-                "Caissons et façades produits par notre usine partenaire.",
+                "Vos armoires sont produites par notre usine partenaire.",
               image: {
                 src: "/images/generated/services/service-fabrication-hero-01.webp",
                 alt: "Caissons et façades d'armoires sur mesure",
@@ -175,7 +175,7 @@ export const page: PageTemplateData = {
               title: "Installation",
               href: "/services/installation",
               description:
-                "Pose, ajustement des portes et raccordement des électroménagers.",
+                "Nous posons les armoires, ajustons les portes et branchons tout.",
               image: {
                 src: "/images/generated/services/service-installation-hero-01.webp",
                 alt: "Installation d'armoires sur mesure pendant un chantier",
@@ -189,37 +189,36 @@ export const page: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "L'entreprise en bref",
+          heading: "Ce qu'il faut savoir sur Dilamco",
           intro: "Les faits vérifiables avant de nous confier un chantier.",
           rows: [
             {
-              label: "Licence",
-              value: "8306-0806-27, délivrée le 7 septembre 2004, sans restriction",
+              label: "Notre licence RBQ",
+              value: "Le numéro 8306-0806-27, délivré le 7 septembre 2004, sans restriction",
             },
             {
-              label: "Catégories",
-              value: "1.2 et 1.3, plus la sous-catégorie 12, armoires et comptoirs",
+              label: "Ce que la licence couvre",
+              value: "Les catégories 1.2 et 1.3, plus les armoires et les comptoirs",
             },
             {
-              label: "Maisons neuves",
-              value: "Nous n'en construisons pas, uniquement du bâti existant",
+              label: "Construisez-vous du neuf",
+              value: "Non. Nous travaillons seulement sur des bâtiments déjà construits",
             },
             {
-              label: "Base",
-              value: "Pierrefonds-Roxboro, dans l'Ouest-de-l'Île",
+              label: "Où nous sommes",
+              value: "À Pierrefonds-Roxboro, dans l'Ouest-de-l'Île",
             },
             {
-              label: "Interlocuteur",
-              value: "Un seul responsable, du devis au dernier paiement",
+              label: "Qui s'occupe de vous",
+              value: "La même personne, du devis jusqu'au dernier paiement",
             },
             {
-              label: "Estimation",
-              value: "Gratuite, sur place, sans engagement",
+              label: "Combien coûte une estimation",
+              value: "Rien. Nous venons chez vous et vous n'avez aucune obligation",
             },
           ],
           note: "Licence vérifiable au registre de la Régie du bâtiment du Québec.",
@@ -234,7 +233,7 @@ export const page: PageTemplateData = {
         props: {
           heading: "Quel service correspond à votre projet ?",
           intro:
-            "Décrivez la pièce ou le bâtiment. Nous vous dirons quelle division s'en occupe.",
+            "Décrivez la pièce ou le bâtiment. Nous vous dirons quelle équipe s'en occupe.",
           actions: [
             {
               label: "Estimation gratuite",

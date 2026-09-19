@@ -25,7 +25,7 @@ export const pageEn: PageTemplateData = {
           badges: ["Plywood", "MDF", "Hardware"],
           heading: "The materials that go into your cabinets",
           description:
-            "Panels, hardware and finishes are specified by us, produced by our partner factory, then checked on delivery.",
+            "We are the ones who pick the panels, the hardware and the finishes, and who check them.",
           actions: [
             {
               label: "Request a quote",
@@ -43,7 +43,6 @@ export const pageEn: PageTemplateData = {
     },
     {
       id: "pages",
-      frame: { surface: "muted" },
       content: {
         type: "grid",
         variant: "link-cards-compact",
@@ -84,7 +83,7 @@ export const pageEn: PageTemplateData = {
             {
               title: "Comparison",
               href: "/materiaux/comparatif",
-              description: "All four side by side",
+              description: "Which one to use where",
             },
           ],
         },
@@ -96,39 +95,45 @@ export const pageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "What we specify by default",
-          intro: "The cabinetry division standard, before any upgrade.",
+          heading: "What goes into your cabinets by default",
+          intro: "Our standard, before any option you might choose to add.",
           rows: [
             {
-              label: "Boxes",
-              value: "Birch plywood, 15 mm, sealed edges",
+              label: "Cabinet boxes",
+              value:
+                "Birch plywood 15 mm thick, with the edges sealed.",
             },
             {
               label: "Fronts",
-              value: "Painted MDF, melamine or solid birch by room",
+              value:
+                "Painted MDF, melamine or solid birch, depending on the room.",
             },
             {
               label: "Hardware",
-              value: "Adjustable hinges and full-extension drawer slides",
+              value:
+                "Hinges you can adjust and drawers that pull all the way out.",
             },
             {
-              label: "Finishes",
-              value: "Custom paint or thermofused decor",
+              label: "Finishes offered",
+              value:
+                "Paint in the colour of your choice, or a pre-finished decor.",
             },
             {
-              label: "Origin",
-              value: "Production entrusted to our exclusive partner factory",
+              label: "Who builds it",
+              value:
+                "Our exclusive partner factory, to our drawings and our specifications.",
             },
             {
-              label: "Receiving",
-              value: "Every delivery counted and inspected before install",
+              label: "Checking",
+              value:
+                "Every delivery is counted and inspected before installation day.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-plywood-card-01.webp",
             alt: "Birch box and painted front of a custom cabinet",
           },
-          note: "Any substitution is written into the quote, never decided on site.",
+          note: "A change of material is written into the quote, never decided mid-job.",
         },
       },
     },
@@ -138,9 +143,9 @@ export const pageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Want a read on your technical choices?",
+          heading: "Advice on choosing your materials",
           intro:
-            "We lock panels, hardware and finishes in a detailed quote before the order goes out.",
+            "Panels, hardware and finishes are written into the quote before we order.",
           actions: [
             {
               label: "Request a quote",

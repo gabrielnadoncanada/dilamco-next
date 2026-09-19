@@ -60,7 +60,7 @@ export const Footer = async ({
                   src={logo.src}
                   alt={logo.alt}
                   title={logo.title}
-                  className="h-8 w-auto [filter:brightness(0)_invert(1)]"
+                  className="h-6 w-auto [filter:brightness(0)_invert(1)]"
                 />
               </Logo>
               <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-muted">

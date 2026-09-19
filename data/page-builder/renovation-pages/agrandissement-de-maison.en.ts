@@ -42,9 +42,9 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Home addition",
-          heading: "Gain a room without leaving your neighbourhood",
+          heading: "Home addition, from the zoning to the finishing",
           description:
-            "Zoning verified, drawings sealed, footings poured below the frost line and a clean tie-in to the house.",
+            "We check the zoning, have the drawings made, pour the foundation and tie the new space into your house.",
           actions: [
             {
               label: "Free estimate",
@@ -73,47 +73,47 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "What the addition mandate covers",
+          heading: "What an addition includes",
           columns: "2",
           items: [
             {
-              title: "Feasibility and file",
-              description: "Checked before anything is drawn",
+              title: "Checks and permit",
+              description: "We look at what the city allows before drawing",
               icon: "fileCheck",
               bullets: [
-                "Setbacks, height and lot coverage",
-                "Foundation, structure and services surveyed",
-                "Sealed drawings filed with the application",
+                "We read the required setbacks and the allowed height",
+                "We survey the foundation, the structure and the services",
+                "The engineer's sealed drawings go with the application",
               ],
             },
             {
-              title: "Excavation and foundation",
-              description: "The part that carries everything",
+              title: "Digging and foundation",
+              description: "This is what carries the whole addition",
               icon: "hardHat",
               bullets: [
-                "Underground services located before digging",
-                "Footings poured below the frost line",
-                "Drain, damp-proofing, draining backfill",
+                "We locate the underground services before digging",
+                "We pour the footings below the frost line",
+                "We lay the drain and damp-proof the foundation",
               ],
             },
             {
-              title: "Framing and envelope",
-              description: "Closed in before the weather decides",
+              title: "Framing, walls and roof",
+              description: "We close the building in before winter",
               icon: "building2",
               bullets: [
-                "Framing raised to the sealed drawings",
-                "Opened wall's load carried by a beam",
-                "Roof, air barrier, windows, matched siding",
+                "We raise the framing to the engineer's drawings",
+                "We install a beam wherever the wall is opened",
+                "Roof, windows and siding matched to your house",
               ],
             },
             {
               title: "Connections and finishing",
-              description: "The room joins the house",
+              description: "The new room is joined to the house",
               icon: "wrench",
               bullets: [
-                "Heating, ventilation and circuits extended",
-                "Inspections before the walls close",
-                "Drywall, paint, floors brought to level",
+                "We extend the heating, the ventilation and the circuits",
+                "We have it inspected before the walls close",
+                "We hang the drywall, paint and level the floors",
               ],
             },
           ],
@@ -126,37 +126,37 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "How an addition unfolds",
+          heading: "The stages of an addition",
           steps: [
             {
               number: "1",
-              title: "Feasibility",
+              title: "Checking the lot",
               description:
-                "Zoning, location certificate and allowable area reviewed.",
+                "We read the zoning and the location certificate to see what is allowed.",
             },
             {
               number: "2",
               title: "Drawings and engineer",
               description:
-                "Construction drawings and load calculations by an engineer.",
+                "An engineer calculates the loads and seals the construction drawings.",
             },
             {
               number: "3",
               title: "Permit and contract",
               description:
-                "File submitted to the city, schedule and budget signed.",
+                "We file with the city and sign the schedule with you.",
             },
             {
               number: "4",
               title: "Foundation and structure",
               description:
-                "Excavation, footings, drain, framing, roof, envelope closed.",
+                "We dig, pour the foundation, raise the framing and the roof.",
             },
             {
               number: "5",
-              title: "Mechanical and finishing",
+              title: "Connections and finishing",
               description:
-                "Services extended, inspections, drywall, floors, then handover.",
+                "We extend the services, have it inspected, then finish the walls.",
             },
           ],
         },
@@ -168,25 +168,25 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "The shapes an addition can take",
+          heading: "The kinds of addition that are possible",
           intro:
-            "The lot and the zoning by-law usually decide before the original wish does.",
+            "The lot and the city by-law usually decide before your original wish does.",
           items: [
             {
-              title: "Rear extension",
-              description: "the most common, if the yard leaves the setback.",
+              title: "Extension at the back",
+              description: "the most common one, if the yard leaves enough room.",
             },
             {
-              title: "Side extension",
-              description: "depends on the distance to the neighbouring lot line.",
+              title: "Extension on the side",
+              description: "possible depending on the distance to your neighbour.",
             },
             {
-              title: "Second storey",
-              description: "possible when the foundation carries the added load.",
+              title: "Adding a storey",
+              description: "possible if the foundation can carry the added weight.",
             },
             {
               title: "Primary suite or garage",
-              description: "an attached volume tied into the home's heating.",
+              description: "a room attached to the house and heated with it.",
             },
           ],
           actions: [
@@ -205,9 +205,9 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
             src: "/images/generated/renovation/renovation-extension-approach-01.webp",
             alt: "Addition under construction tied into an existing house",
           },
-          cardTitle: "What we weigh first",
+          cardTitle: "What we look at first",
           cardDescription:
-            "Site access for excavation, position of the electrical entrance and the drain, daylight reaching the existing windows.",
+            "Access to the lot for the machinery, where the electrical entrance and the drain sit, and the daylight your current windows will lose.",
         },
       },
     },
@@ -221,23 +221,23 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
           items: [
             {
               q: "Does my lot allow an addition?",
-              a: "The zoning by-law sets the setbacks, the buildable share of the lot and the permitted height. We read those against your location certificate before anything gets drawn.",
+              a: "The zoning by-law sets the setbacks you must respect, how much of the lot you may cover and the permitted height. We read those against your location certificate.",
             },
             {
               q: "Do I need a permit to add on?",
-              a: "Always. Adding floor area changes the building's footprint, so a building permit is required, together with sections, elevations and structural drawings.",
+              a: "Always. Adding floor area changes the footprint of the building, so a building permit is required, with the structural drawings, the sections and the elevations.",
             },
             {
-              q: "Do I need an engineer for an addition?",
-              a: "In nearly every case. Footings, framing and any replacement beam rest on a load calculation. The sealed drawings go with the application and guide the site.",
+              q: "Do I need an engineer?",
+              a: "In nearly every case. Footings, framing and any replacement beam call for a load calculation. The sealed drawings go with the application and guide the site.",
             },
             {
               q: "How long does an addition take?",
-              a: "Count in months. The paper phase, feasibility, drawings and municipal review, often weighs as much as the foundation. The detailed schedule comes with the contract.",
+              a: "Count in months. The paperwork, meaning the checks, the drawings and the city's review, often takes as long as the foundation itself.",
             },
             {
               q: "Add on or build new?",
-              a: "We do not build new houses. Our work always starts from an existing building: extending, converting, rebuilding. For many families an extension costs less than moving.",
+              a: "We do not build new houses. Our work always starts from an existing building. For many families an extension costs less than moving.",
             },
           ],
         },
@@ -249,9 +249,9 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "An addition to validate?",
+          heading: "Have your addition project checked",
           intro:
-            "First step, read the zoning and the foundation to see what is truly allowed.",
+            "We start by reading the zoning and the foundation to see what is allowed at your address.",
           actions: [
             {
               label: "Free estimate",

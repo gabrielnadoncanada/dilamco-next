@@ -34,9 +34,9 @@ export const fabricationPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Division armoires",
-          heading: "Nos plans, notre usine partenaire, notre contrôle qualité",
+          heading: "Qui produit vos armoires et qui les vérifie",
           description:
-            "La production part chez notre usine partenaire exclusive. Spécifications, suivi de commande et vérification à la réception restent chez nous.",
+            "Nos armoires sont produites par notre usine partenaire, sur nos plans, et nous les vérifions à l'arrivée.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -65,31 +65,31 @@ export const fabricationPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "De la commande au chantier",
+          heading: "De la commande à la livraison chez vous",
           steps: [
             {
               number: "1",
-              title: "Commande",
+              title: "On passe la commande",
               description:
-                "Panneaux, finis et quincaillerie commandés sur les plans signés.",
+                "On commande les panneaux, les finis et la quincaillerie sur vos plans signés.",
             },
             {
               number: "2",
-              title: "Production",
+              title: "L'usine produit",
               description:
-                "Caissons, portes et tiroirs produits par notre usine partenaire.",
+                "Notre usine partenaire monte les caissons, les portes et les tiroirs.",
             },
             {
               number: "3",
-              title: "Contrôle",
+              title: "On vérifie tout",
               description:
-                "Comptage, dimensions et finis vérifiés dès la réception.",
+                "On compte les pièces et on mesure chaque module dès qu'il arrive.",
             },
             {
               number: "4",
-              title: "Livraison",
+              title: "On livre chez vous",
               description:
-                "Modules protégés et déposés au chantier selon l'ordre de pose.",
+                "On protège les modules et on les dépose dans l'ordre où on va les poser.",
             },
           ],
         },
@@ -97,44 +97,49 @@ export const fabricationPage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "En bref",
-          intro: "Qui produit, qui vérifie, et dans quels délais.",
+          heading: "La production en bref",
+          intro: "Qui produit vos armoires, qui les contrôle et en combien de temps.",
           rows: [
             {
-              label: "Délai",
-              value: "9 à 15 semaines entre les plans signés et la pose",
+              label: "Combien de temps",
+              value:
+                "Il s'écoule 9 à 15 semaines entre vos plans signés et la journée de pose.",
             },
             {
-              label: "Livrables",
-              value: "Caissons, portes, tiroirs, tablettes et quincaillerie montés",
+              label: "Ce que vous recevez",
+              value:
+                "Des caissons, des portes, des tiroirs et des tablettes déjà montés.",
             },
             {
-              label: "Qui fait quoi",
-              value: "L'usine partenaire produit, Dilamco spécifie et vérifie",
+              label: "Qui s'en occupe",
+              value:
+                "Notre usine partenaire produit, et Dilamco décide des matériaux et vérifie.",
             },
             {
               label: "Contrôle",
-              value: "Chaque module ouvert et mesuré avant d'entrer au chantier",
+              value:
+                "Chaque module est ouvert et mesuré avant d'entrer chez vous.",
             },
             {
               label: "Garantie",
-              value: "Reprise des pièces non conformes à nos frais",
+              value:
+                "Une pièce non conforme est recommandée à nos frais, pas aux vôtres.",
             },
             {
-              label: "Entreposage",
-              value: "Possible chez nous si le chantier prend du retard",
+              label: "Si le chantier retarde",
+              value:
+                "On garde vos armoires chez nous jusqu'à ce que la pièce soit prête.",
             },
           ],
           image: {
             src: "/images/services/fabrication-hero.webp",
             alt: "Modules d'armoires emballés en attente de livraison",
           },
-          note: "Les délais de production sont confirmés par écrit au moment de la commande.",
+          note: "La date de livraison vous est confirmée par écrit dès la commande.",
         },
       },
     },
@@ -174,7 +179,7 @@ export const fabricationPage: PageTemplateData = {
         props: {
           heading: "Lancer la production de vos armoires",
           intro:
-            "On cadre matériaux, quincaillerie et échéancier avant d'envoyer la commande.",
+            "On arrête les matériaux, la quincaillerie et les dates avant d'envoyer la commande.",
           actions: [
             {
               label: "Demander une soumission",

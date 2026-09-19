@@ -34,9 +34,9 @@ export const installationPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Division armoires",
-          heading: "La pose se planifie avec les autres corps de métier",
+          heading: "Comment on installe vos armoires chez vous",
           description:
-            "Nos équipes posent les armoires au bon moment, après la plomberie et l'électricité, avant les comptoirs.",
+            "Nos équipes posent les armoires après la plomberie et l'électricité, et avant les comptoirs.",
           actions: [
             {
               label: "Demander une soumission",
@@ -65,31 +65,31 @@ export const installationPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Quatre étapes sur le chantier",
+          heading: "Comment se passe la journée de pose",
           steps: [
             {
               number: "1",
-              title: "Protection",
+              title: "On protège la maison",
               description:
-                "Planchers couverts, seuils protégés, poussière confinée à la pièce.",
+                "On couvre les planchers et on garde la poussière dans la pièce.",
             },
             {
               number: "2",
-              title: "Mise à niveau",
+              title: "On fixe les caissons",
               description:
-                "Caissons calés puis ancrés dans les montants du mur.",
+                "On met chaque caisson de niveau, puis on le visse dans la structure du mur.",
             },
             {
               number: "3",
-              title: "Ajustement",
+              title: "On règle les portes",
               description:
-                "Charnières réglées sur trois axes, jeux égalisés partout.",
+                "On ajuste chaque porte pour que les espaces soient égaux partout.",
             },
             {
               number: "4",
-              title: "Finition",
+              title: "On finit et on vous montre",
               description:
-                "Moulures, plinthes, poignées et tour d'inspection avec vous.",
+                "On pose les moulures et les poignées, puis on fait le tour avec vous.",
             },
           ],
         },
@@ -97,44 +97,49 @@ export const installationPage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "En bref",
-          intro: "Ce qui se passe chez vous pendant les journées de pose.",
+          heading: "La pose en bref",
+          intro: "Ce qui se passe chez vous pendant les journées d'installation.",
           rows: [
             {
-              label: "Délai",
-              value: "Une à deux journées pour une vanité, trois à cinq pour une cuisine",
+              label: "Combien de temps",
+              value:
+                "Une à deux journées pour une vanité, trois à cinq pour une cuisine complète.",
             },
             {
-              label: "Livrables",
-              value: "Armoires posées, portes réglées, déficiences corrigées",
+              label: "Ce que vous recevez",
+              value:
+                "Des armoires posées, des portes bien réglées et les retouches faites.",
             },
             {
-              label: "Qui fait quoi",
-              value: "Nos poseurs, coordonnés avec le comptoir et l'électricien",
+              label: "Qui s'en occupe",
+              value:
+                "Nos propres poseurs, qui s'accordent avec l'électricien et le comptoir.",
             },
             {
-              label: "Préalable",
-              value: "Plomberie, électricité et plancher terminés avant notre arrivée",
+              label: "À faire avant",
+              value:
+                "La plomberie, l'électricité et le plancher doivent être finis avant qu'on arrive.",
             },
             {
               label: "Garantie",
-              value: "Un réglage de rattrapage inclus dans l'année suivant la pose",
+              value:
+                "Une visite de réglage est comprise dans l'année qui suit l'installation.",
             },
             {
-              label: "Chantier",
-              value: "Site balayé chaque soir, rebuts sortis à la fin",
+              label: "Propreté",
+              value:
+                "On balaie chaque soir et on sort tous les rebuts à la fin.",
             },
           ],
           image: {
             src: "/images/services/installation-hero.webp",
             alt: "Armoires ajustées et alignées après la pose",
           },
-          note: "La date de pose est fixée une fois la livraison confirmée.",
+          note: "On fixe la date de pose dès que la livraison est confirmée.",
         },
       },
     },
@@ -152,7 +157,7 @@ export const installationPage: PageTemplateData = {
             },
             {
               q: "Qui installe le comptoir ?",
-              a: "Le fournisseur du comptoir, après notre pose. Il prend son gabarit sur les caissons déjà fixés, ce qui évite les écarts au millimètre près.",
+              a: "Le fournisseur du comptoir, après notre pose. Il prend ses mesures directement sur les caissons déjà fixés, ce qui évite tout écart.",
             },
             {
               q: "Posez-vous des armoires achetées ailleurs ?",
@@ -174,7 +179,7 @@ export const installationPage: PageTemplateData = {
         props: {
           heading: "Planifier la pose de vos armoires",
           intro:
-            "On cale la date avec le reste du chantier et on livre après inspection avec vous.",
+            "On choisit la date avec vous, et on ne repart qu'après avoir tout vérifié ensemble.",
           actions: [
             {
               label: "Demander une soumission",

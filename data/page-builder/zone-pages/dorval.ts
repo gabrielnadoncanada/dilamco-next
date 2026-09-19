@@ -63,7 +63,7 @@ export const zoneDorvalPage: PageTemplateData = {
           eyebrow: "Entrepreneur général à",
           heading: "Dorval",
           description:
-            "Bungalows d'après-guerre entre le lac Saint-Louis et l'autoroute 20, cottages de Strathmore au centre.",
+            "Rénovation de cuisine, de salle de bain et de sous-sol pour les maisons de Dorval, par un entrepreneur général licencié.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -81,10 +81,22 @@ export const zoneDorvalPage: PageTemplateData = {
             alt: "Rénovation intérieure d'une maison de Dorval",
           },
           facts: [
-            { label: "Notre base", value: "Pierrefonds-Roxboro, vingt minutes de route" },
-            { label: "Permis", value: "Aménagement urbain, 514 633-4084" },
-            { label: "Bâti", value: "Bungalows d'après-guerre, 1950 à 1975" },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro, à vingt minutes de Dorval",
+            },
+            {
+              label: "Où demander le permis",
+              value: "Service de l'aménagement urbain, 514 633-4084",
+            },
+            {
+              label: "Type de maisons",
+              value: "Des bungalows d'après-guerre bâtis de 1950 à 1975",
+            },
+            {
+              label: "Premier retour",
+              value: "Vous avez un retour en 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -95,33 +107,39 @@ export const zoneDorvalPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "La Cité de Dorval en trois bandes",
+          heading: "Ce qu'il faut savoir avant de rénover à Dorval",
           intro:
-            "Le lac au sud, la voie ferrée et l'aéroport au nord, et entre les deux un tissu résidentiel d'après-guerre.",
+            "Le lac au sud, la voie ferrée et l'aéroport au nord, et des quartiers résidentiels entre les deux.",
           rows: [
             {
-              label: "Bord-du-Lac",
-              value: "Bâtiments du chemin soumis à l'approbation du conseil",
-            },
-            {
-              label: "Strathmore",
-              value: "Cottages des années 1950 et 1960, parc Surrey",
-            },
-            {
               label: "Délai de permis",
-              value: "Trente jours ouvrables, dossier complet et payé",
+              value:
+                "La Cité compte trente jours ouvrables une fois le dossier complet, conforme et payé.",
             },
             {
-              label: "Dépôt",
-              value: "Demandes déposées et suivies en ligne auprès de la Cité",
+              label: "Particularité locale",
+              value:
+                "Le conseil municipal approuve l'apparence des agrandissements et des maisons du chemin du Bord-du-Lac.",
             },
             {
-              label: "Règlement",
-              value: "RCM-60H-2024 sur les plans d'aménagement d'ensemble",
+              label: "Comment déposer la demande",
+              value:
+                "Les demandes se déposent et se suivent en ligne, sur la plateforme de la Cité.",
             },
             {
-              label: "Projets fréquents",
-              value: "Cuisine, salle de bain, sous-sol, rénovation de condo",
+              label: "Ce que la Ville vérifie",
+              value:
+                "Le Service de l'urbanisme interprète le zonage et dit ce que votre terrain permet vraiment.",
+            },
+            {
+              label: "Quartiers",
+              value:
+                "Strathmore aligne des cottages des années 1950 et 1960, autour du parc Surrey.",
+            },
+            {
+              label: "Projets courants",
+              value:
+                "Refaire la cuisine ou la salle de bain, finir un sous-sol, rénover un condo près de la gare.",
             },
           ],
           image: {
@@ -138,13 +156,13 @@ export const zoneDorvalPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise à Dorval",
+          heading: "Nos services à Dorval",
           items: [
             {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Entrée électrique des bungalows d'ici souvent à remonter avant l'ouverture",
+                "On remonte souvent l'entrée électrique du bungalow avant d'ouvrir la cuisine",
               image: {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "Cuisine rénovée dans un bungalow de Dorval",
@@ -156,19 +174,19 @@ export const zoneDorvalPage: PageTemplateData = {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Dossier PIIA monté pour le conseil avant l'émission du permis",
+                "On monte le dossier présenté au conseil avant que le permis soit émis",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Agrandissement résidentiel planifié à Dorval",
               },
-              badges: ["PIIA"],
+              badges: ["Approbation"],
               footerCtaLabel: "Voir l'agrandissement",
             },
             {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "Hauteur libre et humidité mesurées dans les fondations de blocs",
+                "On mesure la hauteur libre et l'humidité dans les fondations de blocs",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol fini dans une maison de Dorval",
@@ -186,7 +204,7 @@ export const zoneDorvalPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Villes desservies près de Dorval",
+          heading: "Aussi desservies près de Dorval",
           columns: "3",
           items: [
             { title: "Pointe-Claire", href: "/zones/pointe-claire" },
@@ -208,20 +226,20 @@ export const zoneDorvalPage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien de temps la Cité de Dorval prend-elle pour un permis ?",
-              a: "Trente jours ouvrables à compter du moment où le dossier est complet, conforme et payé. Un document manquant relance le compte, c'est pourquoi nous préparons la demande nous-mêmes.",
+              q: "Combien de temps la Cité de Dorval prend-elle pour émettre un permis ?",
+              a: "Trente jours ouvrables à partir du moment où le dossier est complet, conforme et payé. Un document manquant fait repartir le compte, c'est pourquoi nous préparons la demande nous-mêmes.",
             },
             {
-              q: "Le PIIA s'applique-t-il à ma maison du Bord-du-Lac ?",
-              a: "Probablement. À Dorval, l'approbation du conseil vise la nouvelle construction, l'agrandissement résidentiel et les bâtiments du chemin du Bord-du-Lac. Elle est planifiée au cadrage, avant de fixer les dates.",
+              q: "Mon agrandissement doit-il être approuvé par le conseil à Dorval ?",
+              a: "Probablement. Le conseil approuve l'apparence des nouvelles constructions, des agrandissements résidentiels et des bâtiments du chemin du Bord-du-Lac. Cette étape est prévue avant qu'on fixe les dates.",
             },
             {
               q: "Rénovez-vous les condos près de la gare de Dorval ?",
-              a: "Oui. Horaires autorisés par le syndicat, accès par l'ascenseur, protection des aires communes et colonnes de plomberie partagées se règlent avant le premier jour de chantier.",
+              a: "Oui. Les heures permises par le syndicat, l'accès par l'ascenseur, la protection des aires communes et les colonnes de plomberie partagées se règlent avant le premier jour de chantier.",
             },
             {
               q: "Combien coûte de rénover un bungalow de Dorval ?",
-              a: "Tout dépend de l'entrée électrique et des murs à ouvrir. Un mandat démarre vers 25 000 $ et une cuisine complète se chiffre nettement plus haut. Visite et estimation gratuites.",
+              a: "Tout dépend de l'entrée électrique et des murs à ouvrir. Un mandat démarre vers 25 000 $ et une cuisine complète se chiffre nettement plus haut. La visite et l'estimation sont gratuites.",
             },
           ],
         },
@@ -233,8 +251,9 @@ export const zoneDorvalPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Rénover à Dorval",
-          intro: "On visite, on cadre la portée, on remet un prix écrit.",
+          heading: "Un projet à Dorval ?",
+          intro:
+            "On visite, on définit les travaux, puis on remet un prix écrit.",
           actions: [
             {
               label: "Demander une soumission",

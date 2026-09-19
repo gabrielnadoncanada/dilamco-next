@@ -42,9 +42,9 @@ export const renovationCuisinePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Rénovation de cuisine",
-          heading: "Une cuisine remise à neuf, du drain au comptoir",
+          heading: "Rénovation complète de cuisine, du permis à la finition",
           description:
-            "Démolition, plomberie, électricité, ventilation, armoires et comptoir menés par la même équipe.",
+            "La même équipe s'occupe de la démolition, de la plomberie, de l'électricité, des armoires et du comptoir.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -73,48 +73,48 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Quatre postes, un seul contrat",
-          intro: "Les exclusions sont listées dans la soumission.",
+          heading: "Ce qui est inclus dans une rénovation de cuisine",
+          intro: "Tout est dans le même contrat. La soumission dit aussi ce qui est exclu.",
           columns: "2",
           items: [
             {
               title: "Démolition et protection",
-              description: "Le chantier ouvert proprement",
+              description: "On vide la cuisine sans salir le reste de la maison",
               icon: "hammer",
               bullets: [
-                "Armoires, comptoir et revêtements retirés",
-                "Planchers et corridors protégés chaque jour",
-                "Conteneur et évacuation des débris",
+                "On retire les armoires, le comptoir et les revêtements",
+                "On protège les planchers et les corridors chaque jour",
+                "On fournit le conteneur et on sort les débris",
               ],
             },
             {
               title: "Plomberie et électricité",
-              description: "Repris avant de refermer les murs",
+              description: "On refait les tuyaux et les fils avant de fermer les murs",
               icon: "wrench",
               bullets: [
-                "Évier, lave-vaisselle et réfrigérateur raccordés",
-                "Circuits d'îlot et prises de comptoir",
-                "Hotte évacuée dehors, puis inspection",
+                "On raccorde l'évier, le lave-vaisselle et le réfrigérateur",
+                "On ajoute les circuits de l'îlot et les prises de comptoir",
+                "On sort la hotte dehors, puis l'inspecteur passe",
               ],
             },
             {
               title: "Armoires et comptoir",
-              description: "Fournis et posés dans le même mandat",
+              description: "On fournit les deux et on les installe",
               icon: "package2",
               bullets: [
-                "Armoires venues de notre usine partenaire",
-                "Comptoir gabarié, découpé, posé",
-                "Portes et tiroirs ajustés à la livraison",
+                "Les armoires viennent de notre usine partenaire",
+                "Le comptoir est mesuré chez vous, découpé, puis posé",
+                "On ajuste les portes et les tiroirs à la livraison",
               ],
             },
             {
-              title: "Surfaces et finition",
-              description: "Ce que l'oeil voit en entrant",
+              title: "Plancher, dosseret et peinture",
+              description: "On termine par tout ce qui se voit",
               icon: "layers",
               bullets: [
-                "Sous-plancher corrigé et mis à niveau",
-                "Dosseret, gypse, joints et peinture",
-                "Moulures, éclairage et quincaillerie",
+                "On corrige le plancher avant de poser le revêtement",
+                "On pose le dosseret, on tire les joints et on peint",
+                "On installe les moulures, l'éclairage et les poignées",
               ],
             },
           ],
@@ -127,37 +127,37 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "La séquence d'une cuisine",
+          heading: "Comment se déroule une rénovation de cuisine",
           steps: [
             {
               number: "1",
-              title: "Relevé et soumission",
+              title: "Visite et soumission",
               description:
-                "Dimensions, panneau électrique, drain et structure vérifiés sur place.",
+                "On mesure la pièce et on vérifie le panneau électrique et le drain.",
             },
             {
               number: "2",
               title: "Démolition",
               description:
-                "Retrait des armoires, du comptoir et des anciens revêtements.",
+                "On sort les vieilles armoires, le comptoir et les revêtements.",
             },
             {
               number: "3",
-              title: "Mécanique",
+              title: "Plomberie et électricité",
               description:
-                "Drains, alimentation, circuits et sortie de hotte repris.",
+                "On refait les drains, les circuits et la sortie de hotte.",
             },
             {
               number: "4",
               title: "Armoires et comptoir",
               description:
-                "Caissons posés, gabarit du comptoir, découpe de l'évier.",
+                "On pose les armoires, puis on mesure et on découpe le comptoir.",
             },
             {
               number: "5",
               title: "Finition",
               description:
-                "Dosseret, peinture, électroménagers branchés, portes ajustées.",
+                "On pose le dosseret, on peint et on branche les électroménagers.",
             },
           ],
         },
@@ -169,34 +169,34 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "grid",
         variant: "price-tiles",
         props: {
-          heading: "Ce que coûte une cuisine",
+          heading: "Combien coûte une rénovation de cuisine",
           tiles: [
             {
               title: "Rafraîchissement",
               price: "à partir de 20 000 $",
-              hint: "caissons existants conservés",
+              hint: "on garde vos armoires actuelles",
               includes: [
                 "Comptoir et dosseret remplacés",
-                "Peinture et quincaillerie neuves",
+                "Peinture et poignées neuves",
                 "Électroménagers rebranchés",
               ],
             },
             {
               title: "Cuisine complète",
               price: "35 000 $ à 50 000 $",
-              hint: "armoires et comptoir compris",
+              hint: "armoires et comptoir neufs",
               featured: true,
               includes: [
-                "Démolition et gestion des débris",
-                "Plomberie et électricité reprises",
-                "Armoires et comptoir posés",
-                "Dosseret, peinture, moulures",
+                "Démolition et sortie des débris",
+                "Plomberie et électricité refaites",
+                "Armoires et comptoir installés",
+                "Dosseret, peinture et moulures",
               ],
             },
             {
               title: "Cuisine et aire ouverte",
               price: "au-delà de 50 000 $",
-              hint: "mur porteur ou plancher inclus",
+              hint: "avec ouverture de mur ou plancher neuf",
               includes: [
                 "Poutre calculée par un ingénieur",
                 "Plancher raccordé aux pièces voisines",
@@ -204,7 +204,7 @@ export const renovationCuisinePage: PageTemplateData = {
               ],
             },
           ],
-          note: "Prix indicatifs. Le montant ferme d'une cuisine est arrêté dans la soumission, après le relevé sur place.",
+          note: "Ce sont des ordres de grandeur. Le prix exact est écrit dans la soumission, après la visite chez vous.",
           action: {
             label: "Soumission gratuite",
             href: "/contact",
@@ -219,7 +219,7 @@ export const renovationCuisinePage: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Des cuisines déjà livrées",
+          heading: "Des cuisines qu'on a livrées",
           tiles: [
             {
               kind: "image",
@@ -228,12 +228,12 @@ export const renovationCuisinePage: PageTemplateData = {
                 src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
                 alt: "Cuisine ouverte sur le salon avec îlot et colonnes",
               },
-              caption: "Îlot et colonnes pleine hauteur",
+              caption: "Cuisine ouverte sur le salon",
             },
             {
               kind: "stat",
               value: "9 à 15 sem.",
-              label: "Production des armoires, planifiée en parallèle",
+              label: "Fabrication des armoires à notre usine partenaire",
             },
             {
               kind: "image",
@@ -241,13 +241,13 @@ export const renovationCuisinePage: PageTemplateData = {
                 src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
                 alt: "Cuisine blanche avec îlot en quartz",
               },
-              caption: "Îlot en quartz",
+              caption: "Îlot avec comptoir de quartz",
             },
             {
               kind: "text",
               title: "Voir d'autres cuisines",
               description:
-                "Aménagements, rangements et finis photographiés chez nos clients.",
+                "Des photos prises chez nos clients.",
               href: "/espaces/cuisine",
             },
           ],
@@ -263,24 +263,24 @@ export const renovationCuisinePage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Combien de temps la cuisine reste-t-elle inutilisable ?",
-              a: "Quelques semaines sans évier ni électroménagers. Nous montons un coin temporaire et calons la livraison des armoires sur la fin de la mécanique, pour raccourcir la période creuse.",
+              q: "Combien de temps serai-je sans cuisine ?",
+              a: "Quelques semaines sans évier ni électroménagers. On installe un coin temporaire et on fait livrer les armoires dès que la plomberie est finie.",
             },
             {
               q: "Peut-on ouvrir le mur entre la cuisine et le salon ?",
-              a: "Souvent oui. S'il porte une charge, un ingénieur calcule la poutre et les appuis, et son plan accompagne la demande de permis. Nous le disons dès la visite.",
+              a: "Souvent oui. Si le mur porte une charge, un ingénieur calcule la poutre et ses appuis, et son plan part avec la demande de permis.",
             },
             {
               q: "Faut-il un permis pour rénover une cuisine ?",
-              a: "Oui dès qu'un mur porteur change, que la plomberie se déplace ou qu'une sortie de hotte perce le mur extérieur. Un remplacement au même endroit n'en demande habituellement pas.",
+              a: "Oui si un mur porteur change, si la plomberie se déplace ou si la hotte perce le mur extérieur. Sinon, habituellement non.",
             },
             {
               q: "D'où viennent les armoires et le comptoir ?",
-              a: "Les armoires sur mesure sortent de notre usine partenaire et nos équipes les posent. Le comptoir est gabarié une fois les caissons en place, puis découpé et installé.",
+              a: "Les armoires sur mesure viennent de notre usine partenaire et nos équipes les installent. Le comptoir est mesuré une fois les armoires en place, puis découpé et posé.",
             },
             {
-              q: "Et si l'îlot change de position ?",
-              a: "Le drain, l'alimentation et les circuits doivent suivre. On ouvre le plancher ou on passe par le sous-sol, et ce travail est chiffré avant la démolition.",
+              q: "Et si je veux déplacer l'îlot ?",
+              a: "Le drain, l'eau et les fils doivent suivre. On ouvre le plancher ou on passe par le sous-sol, et ce travail est chiffré avant la démolition.",
             },
           ],
         },
@@ -294,7 +294,7 @@ export const renovationCuisinePage: PageTemplateData = {
         props: {
           heading: "Faites chiffrer votre cuisine",
           intro:
-            "Visite sur place, relevé des mesures et soumission détaillée, sans frais.",
+            "On passe chez vous, on mesure et on vous remet une soumission détaillée, sans frais.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -307,7 +307,7 @@ export const renovationCuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Permis, mécanique, armoires et comptoir",
+          note: "Licence RBQ 8306-0806-27 · Permis, plomberie, électricité, armoires et comptoir",
         },
       },
     },

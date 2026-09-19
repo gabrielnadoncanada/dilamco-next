@@ -111,6 +111,12 @@ Chaque famille a sa composition (détail dans `docs/redaction-web.md › Recette
 - **Matériau** : `hero.split-image` → fiche technique → comparatif → FAQ → CTA.
 - **À propos** : hero image à gauche → bento (photos + stats) → licence en tuiles → FAQ → CTA.
 
+### Rythme des fonds de section
+`PageRenderer` alterne automatiquement fond de page (`--background`) et gris-vert léger (`--muted` #edf1ec) d'une section à l'autre ; le hero reste sur le fond de page, un bloc peut imposer `frame.surface`. Chaque section (sauf le hero) porte un filet supérieur `border-border/60`. Pas de fond vert plein pour une section : le vert primaire n'apparaît que sur des panneaux (hero de zone, checklist, tuile chiffre, bouton).
+
+### Logo
+Wordmark SVG plein cadre (158 × 31) : hauteur 20 px sur mobile, 22 px dès `md`, 24 px au pied de page. Jamais 32 px : les capitales du wordmark font toute la hauteur, il écraserait le menu.
+
 ### Frise d'étapes (`process.horizontal-steps-cards`)
 Rail continu : horizontal avec jalons numérotés (cercle vert 40 px, `ring` fond) dès `lg`, vertical à gauche en dessous. Titres alignés (`content-start`, sinon la grille étire les pistes).
 

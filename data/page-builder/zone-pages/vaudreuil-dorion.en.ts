@@ -41,7 +41,7 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
           eyebrow: "General contractor in",
           heading: "Vaudreuil-Dorion",
           description:
-            "From 18,600 residents in 1995 to nearly 46,000 today. A lot of basements are still waiting to be finished.",
+            "Basement finishing, kitchens and additions for Vaudreuil-Dorion homes, from a licensed general contractor.",
           actions: [
             {
               label: "Request a quote",
@@ -61,17 +61,20 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
           facts: [
             {
               label: "Our base",
-              value: "Pierrefonds-Roxboro · 30 min on Highway 40",
+              value: "Pierrefonds-Roxboro, thirty minutes on Highway 40",
             },
             {
-              label: "Permits",
+              label: "Where to apply for the permit",
               value: "Permits and inspections division, 450 455-3371",
             },
             {
-              label: "Housing stock",
-              value: "2000-2020 subdivisions, old Dorion from before 1960",
+              label: "Type of homes",
+              value: "Houses from 2000 to 2020, plus old Dorion before 1960",
             },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "First reply",
+              value: "We get back to you in 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -82,37 +85,43 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "A city that doubled in thirty years",
+          heading: "What to know before renovating in Vaudreuil-Dorion",
           intro:
-            "The 2021 census counted 43,268 residents, 13.5% more than in 2016. The building stock follows that curve exactly.",
+            "The city went from about 18,600 residents in 1995 to nearly 46,000 today.",
           rows: [
             {
-              label: "Housing stock",
-              value: "Homes built 2000 to 2020, entry-level original finishes",
+              label: "Age of the neighbourhoods",
+              value:
+                "The newer areas date from 2000 to 2020 and come with entry-level original finishes.",
             },
             {
-              label: "Older core",
-              value: "Old Dorion from before 1960, systems to replace outright",
+              label: "What is different here",
+              value:
+                "Many recent houses were handed over with a basement that was never finished.",
             },
             {
-              label: "Permits",
-              value: "No permit issued on the spot, invoice paid before release",
+              label: "How to get the permit",
+              value:
+                "No permit is handed over on the spot, and the invoice must be paid before it is released.",
             },
             {
-              label: "Fees",
-              value: "Set by municipal by-law no. 1709, according to the work",
+              label: "What the permit costs",
+              value:
+                "The fee is set by a municipal by-law and varies with the nature of the work.",
             },
             {
-              label: "Planning rules",
-              value: "Urban plan under review, Harwood – De Lotbinière PPU updated",
+              label: "What is changing soon",
+              value:
+                "The urban plan is under review and the Harwood corridor was updated on 12 November 2025.",
             },
             {
               label: "Common projects",
-              value: "Finishing basements, kitchens, adding a room or a garage",
+              value:
+                "Finishing a basement, redoing a kitchen, adding a room or a garage.",
             },
             {
               label: "From our base",
-              value: "Île-aux-Tourtes bridge, then the Harwood exit",
+              value: "Île-aux-Tourtes bridge, then the Harwood exit.",
             },
           ],
           image: {
@@ -129,13 +138,13 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Three typical Vaudreuil-Soulanges jobs",
+          heading: "Our services in Vaudreuil-Dorion",
           items: [
             {
               title: "Basement finishing",
               href: "/services/renovation/sous-sol",
               description:
-                "Finishing the bare basement handed over by a Cité-des-Jeunes builder",
+                "We finish the bare basement the builder handed over",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-bibliotheque-bureau-01.webp",
                 alt: "Basement turned into an office in a Cité-des-Jeunes home",
@@ -147,7 +156,7 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
               title: "Kitchen renovation",
               href: "/services/renovation/cuisine",
               description:
-                "Replacing the original cabinets of a 2008 model and reworking the island",
+                "We replace the original cabinets of a 2008 house and rework the island",
               image: {
                 src: "/images/generated/spaces/espaces-featured-cuisine-project-01.webp",
                 alt: "Island replacing the original kitchen of a 2008 house",
@@ -159,7 +168,7 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
               title: "Home addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Adding a room or a garage, by-law 1709 fees included in the scope",
+                "We add a room or a garage, permit fees included in the price",
               image: {
                 src: "/images/generated/renovation/renovation-extension-hero-01.webp",
                 alt: "Addition blended into a Vaudreuil-Dorion house",
@@ -177,7 +186,7 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Before the bridge, in the West Island",
+          heading: "Neighbouring towns we serve",
           columns: "3",
           items: [
             {
@@ -209,19 +218,19 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
           items: [
             {
               q: "How do you obtain a permit in Vaudreuil-Dorion?",
-              a: "Through the permits and inspections division. The City strongly recommends applying online, where the required document list is shown. No permit is handed over in person and the invoice must be paid before it is released.",
+              a: "Through the permits and inspections division. The City recommends applying online, where the required document list is shown. No permit is handed over on the spot and the invoice is paid before release.",
             },
             {
               q: "What does a Vaudreuil-Dorion permit cost?",
-              a: "Fees are set by municipal by-law no. 1709 and vary with the nature of the work. The amount goes into the scope. The permits and inspections division answers at 450 455-3371 for address-specific cases.",
+              a: "The fee is set by a municipal by-law and varies with the nature of the work. The amount goes into our price. The permits and inspections division answers at 450 455-3371 for specific cases.",
             },
             {
               q: "Are the planning rules changing right now?",
-              a: "Yes. The urban plan and its by-laws are under review, and the Harwood – De Lotbinière corridor has a special planning programme updated on 12 November 2025. Rules are confirmed at the time of the project.",
+              a: "Yes. The urban plan and its by-laws are under review, and the Harwood corridor has a special programme updated on 12 November 2025. We confirm the rules at the time of your project.",
             },
             {
               q: "Why are so many basements here left unfinished?",
-              a: "Subdivisions built between 2000 and 2020 were often delivered with a bare basement. Finishing stays possible later: headroom, egress, drainage and fire separation are checked before the rooms are drawn.",
+              a: "Areas built between 2000 and 2020 were often handed over with a bare basement. The headroom, the exit route, the drainage and the fire separation are checked before the rooms are drawn.",
             },
           ],
         },
@@ -233,8 +242,9 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Finishing or reworking your Vaudreuil-Dorion home",
-          intro: "Send the address and the list of work you want done.",
+          heading: "A project in Vaudreuil-Dorion?",
+          intro:
+            "Send us the address and the list of work you would like done.",
           actions: [
             {
               label: "Request a quote",

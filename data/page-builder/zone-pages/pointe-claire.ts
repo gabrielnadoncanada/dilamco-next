@@ -63,7 +63,7 @@ export const zonePointeClairePage: PageTemplateData = {
           eyebrow: "Entrepreneur général à",
           heading: "Pointe-Claire",
           description:
-            "Du Village de 1854 aux quartiers d'après-guerre, deux maisons voisines relèvent parfois de règles différentes.",
+            "Rénovation intérieure et agrandissement pour les maisons de Pointe-Claire, du Village ancien aux quartiers d'après-guerre.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -81,10 +81,22 @@ export const zonePointeClairePage: PageTemplateData = {
             alt: "Salle de bain rénovée dans une maison de Pointe-Claire",
           },
           facts: [
-            { label: "Notre base", value: "Pierrefonds-Roxboro, vingt minutes" },
-            { label: "Permis", value: "Comptoir urbanisme, 451 boul. Saint-Jean" },
-            { label: "Bâti", value: "Maisons anciennes et bungalows d'après-guerre" },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            {
+              label: "Notre base",
+              value: "Pierrefonds-Roxboro, à vingt minutes de Pointe-Claire",
+            },
+            {
+              label: "Où demander le permis",
+              value: "Comptoir urbanisme, 451, boul. Saint-Jean",
+            },
+            {
+              label: "Type de maisons",
+              value: "Des maisons anciennes et des bungalows d'après-guerre",
+            },
+            {
+              label: "Premier retour",
+              value: "Un appel de retour en 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -95,33 +107,38 @@ export const zonePointeClairePage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Trois époques de bâti sur un même territoire",
+          heading: "Ce qu'il faut savoir avant de rénover à Pointe-Claire",
           intro:
-            "Municipalité en 1854, ville en 1911, deux chemins de fer au XIXe siècle, puis une vague de banlieue après 1945.",
+            "Deux maisons voisines peuvent relever de règles différentes, selon l'âge du quartier.",
           rows: [
             {
-              label: "Secteurs anciens",
-              value: "Le Village et le Lakeshore, fondations de pierre",
+              label: "Quartiers anciens",
+              value:
+                "Le Village et le bord du lac gardent des fondations de pierre et des charpentes d'origine.",
             },
             {
-              label: "Secteurs d'après-guerre",
-              value: "Cedar Park Heights, Northview, Oneida, Valois",
+              label: "Quartiers d'après-guerre",
+              value:
+                "Cedar Park Heights, Northview, Oneida et Valois ont été bâtis après 1945.",
             },
             {
-              label: "PIIA",
-              value: "Règlement PC-2787, évaluation qualitative du projet",
+              label: "Particularité locale",
+              value:
+                "Dans les secteurs anciens, un comité d'urbanisme approuve l'apparence des travaux avant le permis.",
             },
             {
-              label: "Zonage",
-              value: "PC-2775, codification du 10 décembre 2024",
+              label: "Ce que la Ville vérifie",
+              value:
+                "Ailleurs, le règlement de zonage fixe les marges, les hauteurs et l'usage permis sur le terrain.",
             },
             {
-              label: "Projets fréquents",
-              value: "Salle de bain, cuisine, plancher redressé, rallonge",
+              label: "Projets courants",
+              value:
+                "Refaire une salle de bain, ouvrir une cuisine, redresser un plancher, ajouter une rallonge.",
             },
             {
-              label: "Temps de route",
-              value: "Vingt minutes par le boulevard Saint-Jean",
+              label: "Depuis notre base",
+              value: "Vingt minutes de route par le boulevard Saint-Jean.",
             },
           ],
           image: {
@@ -138,13 +155,13 @@ export const zonePointeClairePage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Ce qu'on réalise à Pointe-Claire",
+          heading: "Nos services à Pointe-Claire",
           items: [
             {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Plomberie d'origine du Lakeshore remplacée jusqu'à l'alimentation",
+                "On remplace la plomberie d'origine jusqu'à l'alimentation d'eau de la maison",
               image: {
                 src: "/images/realisations/salle-de-bain-douche-italienne-verre-01.webp",
                 alt: "Salle de bain refaite dans une maison du Lakeshore",
@@ -156,7 +173,7 @@ export const zonePointeClairePage: PageTemplateData = {
               title: "Maison ancienne",
               href: "/services/renovation",
               description:
-                "Niveaux, fondation de pierre et charpente relevés avant le premier dessin",
+                "On relève les niveaux, la fondation de pierre et la charpente avant de dessiner",
               image: {
                 src: "/images/generated/services/service-renovation-hero-01.webp",
                 alt: "Chantier de rénovation dans le Village de Pointe-Claire",
@@ -168,7 +185,7 @@ export const zonePointeClairePage: PageTemplateData = {
               title: "Plancher",
               href: "/services/renovation/plancher",
               description:
-                "Sous-plancher et raccords repris quand la maison a cent ans",
+                "On reprend le sous-plancher et les raccords quand la maison a cent ans",
               image: {
                 src: "/images/realisations/plancher-bois-franc-neuf-01.webp",
                 alt: "Plancher de bois franc posé dans une maison de Pointe-Claire",
@@ -186,7 +203,7 @@ export const zonePointeClairePage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Voisines de Pointe-Claire desservies",
+          heading: "Aussi desservies près de Pointe-Claire",
           columns: "2",
           items: [
             { title: "Dorval", href: "/zones/dorval" },
@@ -209,20 +226,20 @@ export const zonePointeClairePage: PageTemplateData = {
           heading: "Questions fréquentes",
           items: [
             {
-              q: "Suis-je assujetti au PIIA à Pointe-Claire ?",
-              a: "Le règlement PC-2787 vise notamment les bâtiments d'intérêt patrimonial et les secteurs anciens comme Le Village. Nous vérifions votre adresse au comptoir urbanisme avant de chiffrer quoi que ce soit.",
+              q: "Mon projet doit-il passer devant un comité à Pointe-Claire ?",
+              a: "Si votre maison est dans Le Village ou dans un autre secteur ancien, oui. Un comité d'urbanisme approuve l'apparence des travaux avant le permis. Nous vérifions votre adresse au comptoir urbanisme avant de chiffrer.",
             },
             {
-              q: "Un dossier PIIA rallonge-t-il l'échéancier ?",
-              a: "Oui. La ville évalue le projet sur des critères qualitatifs, ce qui prend plus de temps qu'une demande ordinaire. Ce délai figure à l'échéancier dès la soumission, jamais en cours de chantier.",
+              q: "Cette approbation allonge-t-elle l'échéancier ?",
+              a: "Oui. La Ville juge le projet sur des critères d'apparence, ce qui prend plus de temps qu'une demande ordinaire. Ce délai figure à l'échéancier dès la soumission, jamais en cours de chantier.",
             },
             {
-              q: "Rénovez-vous les maisons anciennes du Village ?",
-              a: "Oui. On relève d'abord les niveaux de plancher, la fondation de pierre et les systèmes ajoutés par couches. Le budget prévoit une marge pour ce qui apparaît à l'ouverture des murs.",
+              q: "Rénovez-vous les maisons anciennes du Village de Pointe-Claire ?",
+              a: "Oui. Nous relevons d'abord les niveaux de plancher, la fondation de pierre et les systèmes ajoutés au fil des ans. Le budget prévoit une marge pour ce qui apparaît à l'ouverture des murs.",
             },
             {
               q: "Combien coûte une salle de bain à Pointe-Claire ?",
-              a: "Dans une maison d'avant 1950, la plomberie et le sous-plancher pèsent autant que la finition. Un mandat démarre vers 25 000 $ et la portée se fixe après le relevé. Estimation gratuite.",
+              a: "Dans une maison d'avant 1950, la plomberie et le sous-plancher coûtent autant que la finition. Un mandat démarre vers 25 000 $ et la portée se fixe après le relevé. L'estimation est gratuite.",
             },
           ],
         },
@@ -234,8 +251,9 @@ export const zonePointeClairePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Votre maison de Pointe-Claire",
-          intro: "On valide le cadre applicable avant de chiffrer.",
+          heading: "Un projet à Pointe-Claire ?",
+          intro:
+            "On vérifie quelles règles s'appliquent à votre adresse, puis on chiffre.",
           actions: [
             {
               label: "Demander une soumission",
@@ -248,7 +266,7 @@ export const zonePointeClairePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · dossiers PIIA de Pointe-Claire préparés",
+          note: "Dilamco · dossiers d'urbanisme de Pointe-Claire préparés",
         },
       },
     },

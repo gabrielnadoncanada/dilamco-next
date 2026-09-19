@@ -32,7 +32,7 @@ export const cuisinePageEn: PageTemplateData = {
           badges: ["Custom-built", "Cabinet division"],
           heading: "Custom kitchen cabinets, installed by your general contractor",
           description:
-            "Measured once demolition is done, ordered afterwards, installed in step with the rest of the job.",
+            "We measure the room after demolition, order the cabinets, then install them.",
           actions: [
             {
               label: "Get a quote",
@@ -54,7 +54,7 @@ export const cuisinePageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Kitchens delivered across the West Island",
+          heading: "Kitchens we have delivered",
           tiles: [
             {
               kind: "image",
@@ -68,7 +68,7 @@ export const cuisinePageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "$30,000",
-              label: "Low end of the range, full kitchen",
+              label: "The starting price for a full kitchen",
             },
             {
               kind: "image",
@@ -107,38 +107,37 @@ export const cuisinePageEn: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "The kitchen at a glance",
+          heading: "The kitchen in brief",
           intro:
-            "The numbers homeowners ask about before they book an appointment.",
+            "The questions homeowners ask us before they agree to meet.",
           rows: [
             {
-              label: "Lead time",
-              value: "Nine to fifteen weeks from design sign-off to installation",
+              label: "How long",
+              value: "Expect nine to fifteen weeks between the signed plan and installation.",
             },
             {
-              label: "Price",
-              value: "$30,000 to $65,000 for a full kitchen, survey required",
+              label: "Typical price",
+              value: "A full kitchen runs between $30,000 and $65,000, confirmed after the survey.",
             },
             {
               label: "Materials",
-              value: "Solid birch drawers, birch plywood cabinet boxes",
+              value: "The cabinet boxes are birch plywood and the drawers are solid birch.",
             },
             {
               label: "Hardware",
-              value: "Undermount slides and soft-close hinges",
+              value: "Drawers run on hidden rails and the doors close softly.",
             },
             {
-              label: "Installation",
-              value: "By our crew, once plumbing and flooring are done",
+              label: "Who installs",
+              value: "Our own crew, once the plumbing is redone and the floor is laid.",
             },
             {
               label: "Warranty",
-              value: "Scope and term in the contract, adjustments redone on site",
+              value: "The term is written into the contract and we come back to adjust the doors.",
             },
           ],
           image: {

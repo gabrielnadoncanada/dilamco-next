@@ -42,7 +42,7 @@ export const zoneKirklandPageEn: PageTemplateData = {
           eyebrow: "General contractor in",
           heading: "Kirkland",
           description:
-            "Wide lots, detached houses, owners who choose to add on rather than move away.",
+            "Renovation and additions for Kirkland homes, from a licensed general contractor based fifteen minutes away.",
           actions: [
             {
               label: "Free quote",
@@ -60,10 +60,22 @@ export const zoneKirklandPageEn: PageTemplateData = {
             alt: "Addition to a single-family house in Kirkland",
           },
           facts: [
-            { label: "Our base", value: "Pierrefonds-Roxboro, fifteen minutes" },
-            { label: "Permits", value: "Urban planning, 17200 boul. Hymus" },
-            { label: "Housing stock", value: "Detached singles, 1965 to 1985" },
-            { label: "First reply", value: "24 to 48 business hours" },
+            {
+              label: "Our base",
+              value: "Pierrefonds-Roxboro, fifteen minutes from Kirkland",
+            },
+            {
+              label: "Where to apply for the permit",
+              value: "Urban planning department, 17200 boul. Hymus",
+            },
+            {
+              label: "Type of homes",
+              value: "Detached single-family houses built from 1965 to 1985",
+            },
+            {
+              label: "First reply",
+              value: "We call you back within 24 to 48 business hours",
+            },
           ],
         },
       },
@@ -74,33 +86,37 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "A town split by Highway 40",
-          intro:
-            "Fewer than twenty thousand residents over 9.6 square kilometres, with an industrial park on each side of the Trans-Canada.",
+          heading: "What we know about Kirkland homes",
+          intro: "Here is what comes up on nearly every Kirkland job site.",
           rows: [
             {
-              label: "Density",
-              value: "Roughly 2,000 residents per square kilometre",
+              label: "Lot sizes",
+              value:
+                "Lots are wide here, with roughly two thousand residents per square kilometre.",
             },
             {
-              label: "Excavation",
-              value: "Certificate separate from the building permit",
+              label: "What the town checks",
+              value:
+                "It looks at setbacks and at how much of the lot your house is allowed to cover.",
             },
             {
-              label: "Online filing",
-              value: "Permit management portal, tracking and payment",
+              label: "What is different here",
+              value:
+                "Digging a new foundation needs an excavation certificate on top of the building permit.",
             },
             {
-              label: "What decides",
-              value: "Setbacks, lot coverage and your zone's standards",
+              label: "How to file the application",
+              value:
+                "Online, through the town portal, which shows the file status and lets you pay.",
             },
             {
               label: "Common projects",
-              value: "Side addition, second storey, sunroom, kitchen",
+              value:
+                "Side additions, a second storey, a sunroom, and opening up the kitchen.",
             },
             {
-              label: "Drive time",
-              value: "Fifteen minutes along boulevard Saint-Charles",
+              label: "From our base",
+              value: "Fifteen minutes of driving along boulevard Saint-Charles.",
             },
           ],
           image: {
@@ -117,13 +133,13 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "What we build in Kirkland",
+          heading: "Our services in Kirkland",
           items: [
             {
               title: "Addition",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Lots here often allow a side addition once setbacks are cleared",
+                "We add a side extension when the setbacks allow it",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Addition under construction on a Kirkland street",
@@ -135,7 +151,7 @@ export const zoneKirklandPageEn: PageTemplateData = {
               title: "Major renovation",
               href: "/services/renovation",
               description:
-                "Roof, windows, panel and bathrooms all reach end of life together",
+                "We redo the roof, the windows, the electrical panel and the bathrooms",
               image: {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Full renovation of a Kirkland house",
@@ -147,7 +163,7 @@ export const zoneKirklandPageEn: PageTemplateData = {
               title: "Kitchen",
               href: "/services/renovation/cuisine",
               description:
-                "Nineteen-seventies houses reopened onto the living areas",
+                "We open the kitchen onto the living room in 1970s houses",
               image: {
                 src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
                 alt: "Open kitchen in a detached Kirkland home",
@@ -165,7 +181,7 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Kirkland and its neighbours",
+          heading: "Also served near Kirkland",
           columns: "2",
           items: [
             { title: "Beaconsfield", href: "/zones/beaconsfield" },
@@ -191,20 +207,20 @@ export const zoneKirklandPageEn: PageTemplateData = {
           heading: "Frequently asked questions",
           items: [
             {
-              q: "How do you file a permit application in Kirkland?",
-              a: "Through the online permit management portal, which shows the file status and usually allows remote payment. Otherwise in person at 17200 boulevard Hymus. We assemble the file for you.",
+              q: "Where do you apply for a renovation permit in Kirkland?",
+              a: "At the urban planning department, 17200 boulevard Hymus, or online through the town portal. We prepare the file, we submit it and we answer the inspector.",
             },
             {
               q: "Does a Kirkland addition need an excavation certificate?",
-              a: "Yes. The town treats excavation as a request separate from the building permit. A new foundation therefore needs both authorizations, scheduled from the outset.",
+              a: "Yes, as soon as the addition sits on a new foundation. The town treats excavation as a separate application. Both authorizations are scheduled from the start.",
             },
             {
-              q: "Can you really add on to a Kirkland lot?",
-              a: "Often. At roughly two thousand residents per square kilometre, lots stay wide. Setbacks and lot coverage in your zone decide it, and we confirm that before you pay for drawings.",
+              q: "Does my Kirkland lot really allow an addition?",
+              a: "Often, yes, because lots here are wide. Setbacks and lot coverage are what decide it. We check that before you pay for any drawings.",
             },
             {
-              q: "What does taking a Kirkland house back to bare bones cost?",
-              a: "More than our entry mandates, which start near $25,000. Redoing roof, windows, panel and bathrooms in one sequence runs into tens of thousands. Estimates are free.",
+              q: "What does renovating a whole Kirkland house cost?",
+              a: "Redoing the roof, the windows, the electrical panel and the bathrooms in one sequence runs into tens of thousands of dollars. Our smallest mandates start near $25,000.",
             },
           ],
         },
@@ -216,8 +232,9 @@ export const zoneKirklandPageEn: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "A project in Kirkland?",
-          intro: "We confirm feasibility before we talk price.",
+          heading: "A project in Kirkland? Let's talk.",
+          intro:
+            "We check what the town allows at your address first, then we talk price.",
           actions: [
             {
               label: "Request a quote",

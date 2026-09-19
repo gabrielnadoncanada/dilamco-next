@@ -32,7 +32,7 @@ export const page: PageTemplateData = {
           badges: ["Division armoires"],
           heading: "Armoires sur mesure pour six espaces de la maison",
           description:
-            "L'entrepreneur général dessine, commande et pose. Aucun fournisseur à coordonner de votre côté.",
+            "On dessine, on commande et on installe. Vous n'avez personne d'autre à appeler.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -128,38 +128,43 @@ export const page: PageTemplateData = {
     },
     {
       id: "division",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "La division armoires en bref",
           intro:
-            "Une division de l'entreprise générale, pas une deuxième entreprise à engager.",
+            "C'est une division de notre entreprise, pas une deuxième compagnie à engager.",
           rows: [
             {
               label: "Licence",
-              value: "Sous-catégorie RBQ 12, armoires et comptoirs, sur la nôtre",
+              value:
+                "Notre licence RBQ couvre déjà les armoires et les comptoirs.",
             },
             {
-              label: "Production",
-              value: "Usine partenaire, commande lancée après le relevé",
+              label: "Qui produit",
+              value:
+                "Notre usine partenaire, une fois que le relevé est fait chez vous.",
             },
             {
-              label: "Délai",
-              value: "9 à 15 semaines entre l'approbation des dessins et la livraison",
+              label: "Combien de temps",
+              value:
+                "Il faut 9 à 15 semaines entre l'approbation des dessins et la livraison.",
             },
             {
               label: "Matériaux",
-              value: "Bouleau massif aux tiroirs, contreplaqué aux caissons",
+              value:
+                "Du bouleau massif pour les tiroirs et du contreplaqué pour les caissons.",
             },
             {
-              label: "Pose",
-              value: "Par notre équipe, à son rang dans la séquence des métiers",
+              label: "Qui installe",
+              value:
+                "Notre équipe, au bon moment dans l'ordre des travaux.",
             },
             {
-              label: "Contrat",
-              value: "Travaux et armoires réunis dans une seule soumission",
+              label: "Ce que vous signez",
+              value:
+                "Une seule soumission, qui réunit les travaux et les armoires.",
             },
           ],
           image: {
@@ -175,9 +180,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Parlez-nous de votre espace",
+          heading: "Parlez-nous de la pièce à refaire",
           intro:
-            "Estimation gratuite pour l'espace qui vous intéresse, et un seul contrat à signer.",
+            "L'estimation est gratuite et vous n'avez qu'un seul contrat à signer.",
           actions: [
             {
               label: "Obtenir une soumission",

@@ -32,7 +32,7 @@ export const commercialPage: PageTemplateData = {
           badges: ["Bureaux", "Commerces"],
           heading: "Aménagement commercial à Montréal, livré à la date convenue",
           description:
-            "Bureaux, commerces et améliorations locatives, menés par phases pour garder votre local en activité.",
+            "Bureaux, commerces et améliorations locatives, réalisés par étapes pour garder votre local ouvert.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -77,7 +77,7 @@ export const commercialPage: PageTemplateData = {
             {
               kind: "stat",
               value: "1.2 et 1.3",
-              label: "Catégories RBQ, bâtiments de tout genre couverts",
+              label: "Nos catégories RBQ, valables pour tout type de bâtiment",
             },
             {
               kind: "image",
@@ -100,7 +100,7 @@ export const commercialPage: PageTemplateData = {
               kind: "text",
               title: "Travaux hors des heures",
               description:
-                "Phases datées au contrat, pour un local qui continue de recevoir sa clientèle.",
+                "On travaille le soir ou la nuit pour que vous puissiez rester ouvert.",
               href: "/processus",
             },
           ],
@@ -109,38 +109,43 @@ export const commercialPage: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Le mandat commercial en bref",
+          heading: "Le projet commercial en bref",
           intro:
-            "Un local fermé plus longtemps que prévu coûte plus cher que les travaux.",
+            "Ce qu'un propriétaire ou un locataire doit savoir avant d'ouvrir un chantier.",
           rows: [
             {
-              label: "Délai",
-              value: "Fixé au contrat après cadrage, le permis mène le calendrier",
+              label: "Combien de temps",
+              value:
+                "La date est fixée au contrat, et c'est le permis qui donne le rythme.",
             },
             {
               label: "Permis",
-              value: "Demande municipale déposée par nous, inspections suivies",
+              value:
+                "Nous déposons la demande à la Ville et nous suivons les inspections.",
             },
             {
               label: "Conformité",
-              value: "Code de construction du Québec, catégories RBQ 1.2 et 1.3",
+              value:
+                "Nos catégories RBQ 1.2 et 1.3 couvrent les bâtiments de tout genre.",
             },
             {
               label: "Assurances",
-              value: "Responsabilité civile et chantier, attestations fournies",
+              value:
+                "Nous sommes assurés en responsabilité civile et les attestations vous sont remises.",
             },
             {
               label: "Mobilier",
-              value: "Accueil et rangement technique, 9 à 15 semaines de délai",
+              value:
+                "Un comptoir d'accueil ou un rangement sur mesure demande 9 à 15 semaines.",
             },
             {
-              label: "Pose",
-              value: "Par phases, hors des heures quand le local reste actif",
+              label: "Qui installe",
+              value:
+                "Notre équipe, par étapes et hors des heures si le local doit rester ouvert.",
             },
           ],
           image: {

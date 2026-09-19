@@ -26,7 +26,7 @@ export function GridLinkCardsCompact(props: GridLinkCardsCompactProps) {
             <Link
               href={item.href}
               aria-label={item.ctaLabel}
-              className="group flex h-full items-center justify-between gap-4 rounded-card border border-border/80 bg-card px-5 py-4 transition-ui focus-ring hover:border-primary hover:bg-primary-soft"
+              className="group flex h-full min-h-[4.75rem] items-center justify-between gap-4 rounded-card border border-border/80 bg-card px-5 py-3 transition-ui focus-ring hover:border-primary hover:bg-primary-soft"
             >
               <span className="min-w-0">
                 <Heading as="h3" variant="card" className="block">

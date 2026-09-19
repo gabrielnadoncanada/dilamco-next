@@ -34,9 +34,9 @@ export const fabricationPageEn: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Cabinetry division",
-          heading: "Our drawings, our partner factory, our quality control",
+          heading: "Who builds your cabinets and who checks them",
           description:
-            "Production goes to our exclusive partner factory. Specifications, order follow-up and receiving checks stay with us.",
+            "Our partner factory builds them to our drawings, and we check every piece when it arrives.",
           actions: [
             {
               label: "Talk about your project",
@@ -65,31 +65,31 @@ export const fabricationPageEn: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "From order to job site",
+          heading: "From the order to your door",
           steps: [
             {
               number: "1",
-              title: "Order",
+              title: "We place the order",
               description:
-                "Panels, finishes and hardware ordered against the signed drawings.",
+                "We order the panels, the finishes and the hardware from your signed drawings.",
             },
             {
               number: "2",
-              title: "Production",
+              title: "The factory builds",
               description:
-                "Boxes, doors and drawers produced by our partner factory.",
+                "Our partner factory assembles the boxes, the doors and the drawers.",
             },
             {
               number: "3",
-              title: "Inspection",
+              title: "We check everything",
               description:
-                "Counts, dimensions and finishes checked as soon as it lands.",
+                "We count the parts and measure every module the moment it arrives.",
             },
             {
               number: "4",
-              title: "Delivery",
+              title: "We deliver to you",
               description:
-                "Modules wrapped and dropped on site in install sequence.",
+                "We wrap the modules and drop them in the order we will install them.",
             },
           ],
         },
@@ -97,44 +97,49 @@ export const fabricationPageEn: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "In short",
-          intro: "Who produces, who checks, and on what timeline.",
+          heading: "Production in brief",
+          intro: "Who builds your cabinets, who inspects them and how long it takes.",
           rows: [
             {
-              label: "Timeline",
-              value: "9 to 15 weeks from signed drawings to install",
+              label: "How long",
+              value:
+                "Nine to fifteen weeks pass between your signed drawings and installation day.",
             },
             {
-              label: "Deliverables",
-              value: "Boxes, doors, drawers, shelves and hardware assembled",
+              label: "What you receive",
+              value:
+                "Cabinet boxes, doors, drawers and shelves that arrive already assembled.",
             },
             {
-              label: "Who does what",
-              value: "The partner factory produces, Dilamco specifies and checks",
+              label: "Who handles it",
+              value:
+                "Our partner factory builds, and Dilamco picks the materials and inspects.",
             },
             {
               label: "Inspection",
-              value: "Every module opened and measured before it enters the site",
+              value:
+                "Every module is opened and measured before it comes into your home.",
             },
             {
               label: "Warranty",
-              value: "Non-conforming parts reordered at our cost",
+              value:
+                "A part that does not match is reordered at our cost, not yours.",
             },
             {
-              label: "Storage",
-              value: "Held at our place if the job site runs late",
+              label: "If the site runs late",
+              value:
+                "We keep your cabinets at our place until the room is ready for them.",
             },
           ],
           image: {
             src: "/images/services/fabrication-hero.webp",
             alt: "Wrapped cabinet modules waiting for delivery",
           },
-          note: "Production lead times are confirmed in writing when the order goes out.",
+          note: "Your delivery date is confirmed in writing as soon as the order goes out.",
         },
       },
     },
@@ -174,7 +179,7 @@ export const fabricationPageEn: PageTemplateData = {
         props: {
           heading: "Put your cabinets into production",
           intro:
-            "We frame materials, hardware and schedule before the order is sent out.",
+            "We settle the materials, the hardware and the dates before the order goes out.",
           actions: [
             {
               label: "Request a quote",

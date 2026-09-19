@@ -148,7 +148,7 @@ export function BlockFrame(props: {
           divider: frame.divider,
         }),
         "relative",
-        isHero && "pt-4 pb-[var(--section-py-compact)] md:pt-6",
+        isHero ? "pt-4 pb-[var(--section-py-compact)] md:pt-6" : "border-t border-border/60",
         frame.className,
       )}
     >

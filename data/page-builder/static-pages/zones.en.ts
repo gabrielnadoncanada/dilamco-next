@@ -39,7 +39,7 @@ export const pageEn: PageTemplateData = {
           badges: ["West Island", "Montréal", "Laval"],
           heading: "Where we work, city by city",
           description:
-            "Eleven local pages. Each one gives the housing stock, the permit office involved and the drive from our base.",
+            "Eleven local pages. Each one gives the type of homes in the area, where to apply for the permit and the drive from our office.",
           actions: [
             {
               label: "Request a quote",
@@ -67,68 +67,68 @@ export const pageEn: PageTemplateData = {
             {
               title: "Pierrefonds-Roxboro",
               href: "/zones/pierrefonds-roxboro",
-              description: "Our home base",
+              description: "Our office is here",
               badges: ["Base"],
               ctaLabel: "See the area",
             },
             {
               title: "Dollard-des-Ormeaux",
               href: "/zones/dollard-des-ormeaux",
-              description: "Zoning overhauled in 2025",
+              description: "New zoning since 2025",
               ctaLabel: "See the area",
             },
             {
               title: "Kirkland",
               href: "/zones/kirkland",
-              description: "Large lots, major additions",
+              description: "Large lots, room to add on",
               ctaLabel: "See the area",
             },
             {
               title: "Pointe-Claire",
               href: "/zones/pointe-claire",
-              description: "Heritage village under PIIA",
+              description: "The old Village goes before a committee",
               ctaLabel: "See the area",
             },
             {
               title: "Beaconsfield",
               href: "/zones/beaconsfield",
-              description: "Tree felling by-law",
+              description: "Felling a tree needs a permit",
               ctaLabel: "See the area",
             },
             {
               title: "Dorval",
               href: "/zones/dorval",
-              description: "Housing near the airport",
+              description: "Bungalows between the lake and the highway",
               ctaLabel: "See the area",
             },
             {
               title: "L'Île-Bizard–Sainte-Geneviève",
               href: "/zones/ile-bizard-sainte-genevieve",
-              description: "Mapped flood zones",
+              description: "Flood zones to check before anything",
               ctaLabel: "See the area",
             },
             {
               title: "Saint-Laurent",
               href: "/zones/saint-laurent",
-              description: "Post-war plexes and condos",
+              description: "Post-war plexes and newer condos",
               ctaLabel: "See the area",
             },
             {
               title: "Laval",
               href: "/zones/laval",
-              description: "Bungalows from the 1960s",
+              description: "1960s bungalows ready for a redo",
               ctaLabel: "See the area",
             },
             {
               title: "Vaudreuil-Dorion",
               href: "/zones/vaudreuil-dorion",
-              description: "Basements delivered bare",
+              description: "Plenty of basements left to finish",
               ctaLabel: "See the area",
             },
             {
               title: "South Shore",
               href: "/zones/rive-sud",
-              description: "Substantial mandates only",
+              description: "Substantial projects only",
               ctaLabel: "See the area",
             },
           ],
@@ -141,33 +141,38 @@ export const pageEn: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Our territory, measured in minutes",
+          heading: "Our territory, in brief",
           intro:
             "On a job that runs for weeks, distance decides how fast a problem gets solved on site.",
           rows: [
             {
-              label: "Base",
-              value: "18625 Larocque Street, Pierrefonds-Roxboro",
+              label: "Our address",
+              value: "18625 Larocque Street, Pierrefonds-Roxboro.",
             },
             {
-              label: "Radius",
-              value: "West Island, Montréal, Laval, Vaudreuil-Soulanges, South Shore",
+              label: "Cities covered",
+              value:
+                "The West Island, Montréal, Laval, Vaudreuil-Soulanges and the South Shore.",
             },
             {
               label: "Drive time",
-              value: "From 10 minutes on Île Bizard to an hour in Châteauguay",
+              value:
+                "From ten minutes on Île Bizard to an hour in Châteauguay.",
             },
             {
               label: "Permits",
-              value: "A different planning office in every city and borough",
+              value:
+                "Every city and every borough has its own planning department.",
             },
             {
               label: "First reply",
-              value: "24 to 48 business hours, free visit and estimate",
+              value:
+                "We answer within 24 to 48 business hours, and the visit is free.",
             },
             {
-              label: "Travel",
-              value: "Priced into the quote, not billed along the way",
+              label: "Travel costs",
+              value:
+                "They are priced into the quote, never added once the job has started.",
             },
           ],
           image: {
@@ -186,7 +191,7 @@ export const pageEn: PageTemplateData = {
         props: {
           heading: "Tell us where your project is",
           intro:
-            "City, type of work, timeline. We confirm and book the visit.",
+            "Give us the city, the type of work and the timeline. We book the visit.",
           actions: [
             {
               label: "Request a quote",

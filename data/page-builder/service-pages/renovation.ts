@@ -62,13 +62,13 @@ export const renovationPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Les six types de rénovation",
+          heading: "Les six types de rénovation que nous faisons",
           items: [
             {
               title: "Cuisine",
               href: "/services/renovation/cuisine",
               description:
-                "Du drain au comptoir, armoires fournies et posées dans le même mandat.",
+                "On refait la pièce au complet et on fournit les armoires.",
               image: {
                 src: "/images/generated/renovation/renovation-cuisine-hero-01.webp",
                 alt: "Rénovation de cuisine complète",
@@ -80,7 +80,7 @@ export const renovationPage: PageTemplateData = {
               title: "Salle de bain",
               href: "/services/renovation/salle-de-bain",
               description:
-                "Membrane continue, pente validée, ventilation sortie à l'extérieur.",
+                "On imperméabilise la douche et on sort la ventilation dehors.",
               image: {
                 src: "/images/generated/renovation/renovation-bath-hero-01.webp",
                 alt: "Rénovation de salle de bain complète",
@@ -92,7 +92,7 @@ export const renovationPage: PageTemplateData = {
               title: "Sous-sol",
               href: "/services/renovation/sous-sol",
               description:
-                "L'eau et la hauteur libre se règlent avant la première division.",
+                "On règle l'humidité avant de monter le premier mur.",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-hero-01.webp",
                 alt: "Sous-sol fini par un entrepreneur général",
@@ -104,7 +104,7 @@ export const renovationPage: PageTemplateData = {
               title: "Plancher",
               href: "/services/renovation/plancher",
               description:
-                "Support remis d'aplomb, seuils et niveaux réglés au plan.",
+                "On répare le sous-plancher avant de poser le revêtement.",
               image: {
                 src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
                 alt: "Rénovation de plancher résidentiel",
@@ -116,7 +116,7 @@ export const renovationPage: PageTemplateData = {
               title: "Agrandissement",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Zonage lu, plans scellés, semelles coulées sous le niveau de gel.",
+                "On vérifie le zonage, puis on construit la nouvelle pièce.",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Agrandissement de maison en construction",
@@ -128,7 +128,7 @@ export const renovationPage: PageTemplateData = {
               title: "Après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Portée pièce par pièce et devis par poste pour votre réclamation.",
+                "On documente les dommages, puis on remet la maison en état.",
               image: {
                 src: "/images/generated/services/service-renovation-project-02.webp",
                 alt: "Reconstruction après un dégât d'eau",
@@ -142,42 +142,41 @@ export const renovationPage: PageTemplateData = {
     },
     {
       id: "process",
-      frame: { surface: "muted" },
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Cinq étapes, toujours les mêmes",
+          heading: "Comment nous menons un projet",
           steps: [
             {
               number: "1",
               title: "Appel et visite",
               description:
-                "Nous venons voir les lieux et relever les contraintes, sans frais.",
+                "Nous venons voir les lieux et noter les contraintes, sans frais.",
             },
             {
               number: "2",
               title: "Soumission détaillée",
               description:
-                "Portée, matériaux, exclusions et budget remis en 24 à 48 heures.",
+                "Vous recevez les travaux, les matériaux, les exclusions et le prix.",
             },
             {
               number: "3",
               title: "Contrat et permis",
               description:
-                "Dates et modalités de paiement signées, dossier déposé à la ville.",
+                "Vous signez les dates et les paiements, nous déposons la demande.",
             },
             {
               number: "4",
-              title: "Chantier coordonné",
+              title: "Chantier",
               description:
-                "Les métiers se succèdent au calendrier, mur ouvert puis refermé.",
+                "Chaque corps de métier entre à sa date, selon l'échéancier signé.",
             },
             {
               number: "5",
               title: "Livraison",
               description:
-                "Visite de fin avec vous, retouches réglées avant le solde.",
+                "Nous faisons le tour avec vous et corrigeons avant le dernier paiement.",
             },
           ],
         },
@@ -189,32 +188,32 @@ export const renovationPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "En bref",
-          intro: "Les conditions d'un mandat clé en main.",
+          heading: "Ce que comprend un mandat clé en main",
+          intro: "Les réponses aux questions qu'on nous pose avant de signer.",
           rows: [
             {
-              label: "Contrat",
-              value: "Portée, prix, échéancier et paiements écrits, avenant chiffré",
+              label: "Ce que vous signez",
+              value: "Un contrat qui décrit les travaux, le prix, les dates et les paiements",
             },
             {
-              label: "Permis",
-              value: "Vérifié auprès de votre ville, déposé et suivi par nous",
+              label: "Qui demande le permis",
+              value: "Nous. Nous vérifions les exigences de votre ville et suivons le dossier",
             },
             {
-              label: "Corps de métier",
-              value: "Engagés et payés par nous, une seule facturation",
+              label: "Qui coordonne les métiers",
+              value: "Nous les engageons et nous les payons, vous recevez une seule facture",
             },
             {
               label: "Assurances",
-              value: "Responsabilité civile et assurance chantier en vigueur",
+              value: "Notre responsabilité civile et notre assurance chantier sont en vigueur",
             },
             {
-              label: "Délai de retour",
-              value: "24 à 48 heures ouvrables après votre demande",
+              label: "Premier retour",
+              value: "Vous avez de nos nouvelles en 24 à 48 heures ouvrables",
             },
             {
               label: "Territoire",
-              value: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud, Vaudreuil-Soulanges",
+              value: "Ouest-de-l'Île, Montréal, Laval, Rive-Sud et Vaudreuil-Soulanges",
             },
           ],
           note: "Licence RBQ 8306-0806-27, catégories 1.2 et 1.3, valide depuis 2004.",

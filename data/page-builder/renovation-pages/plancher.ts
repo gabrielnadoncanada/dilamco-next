@@ -42,9 +42,9 @@ export const renovationPlancherPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Rénovation de plancher",
-          heading: "Ce qui tient un plancher se trouve dessous",
+          heading: "Rénovation de plancher, de l'arrachage à la pose",
           description:
-            "Support, planéité et humidité mesurés avant la pose. Seuils et niveaux décidés au plan.",
+            "On vérifie le sous-plancher et l'humidité avant de poser votre nouveau revêtement.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -57,7 +57,7 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          badges: ["Support vérifié", "Contrat écrit"],
+          badges: ["Sous-plancher vérifié", "Contrat écrit"],
           image: {
             src: "/images/generated/renovation/renovation-plancher-hero-01.webp",
             alt: "Rénovation de plancher résidentiel par un entrepreneur général",
@@ -73,47 +73,47 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que couvre le mandat plancher",
+          heading: "Ce qui est inclus dans une réfection de plancher",
           columns: "2",
           items: [
             {
-              title: "Arrachage et lecture",
-              description: "Le support se juge à nu",
+              title: "Arrachage de l'ancien plancher",
+              description: "On enlève tout pour voir ce qu'il y a dessous",
               icon: "hammer",
               bullets: [
-                "Revêtements, plinthes et seuils enlevés",
-                "Traces d'eau et panneaux mous repérés",
-                "Taux d'humidité mesuré sur dalle ou bois",
+                "On enlève le revêtement, les plinthes et les seuils",
+                "On repère les traces d'eau et les panneaux ramollis",
+                "On mesure l'humidité du béton ou du bois",
               ],
             },
             {
-              title: "Remise en état du support",
-              description: "La ligne que les poseurs facturent en extra",
+              title: "Réparation du sous-plancher",
+              description: "C'est ce que les poseurs facturent souvent en extra",
               icon: "ruler",
               bullets: [
-                "Panneaux abîmés changés, vissage repris",
-                "Nivellement selon la tolérance du produit",
-                "Solives renforcées si le plancher plie",
+                "On change les panneaux abîmés et on revisse",
+                "On nivelle selon ce que le revêtement tolère",
+                "On renforce les poutres si le plancher plie",
               ],
             },
             {
               title: "Pose du revêtement",
-              description: "Bois franc, ingénierie, vinyle ou céramique",
+              description: "Bois franc, bois d'ingénierie, vinyle ou céramique",
               icon: "layers",
               bullets: [
-                "Bois acclimaté dans la maison avant la pose",
-                "Membrane ou sous-tapis choisis selon l'étage",
-                "Jeux périphériques respectés partout",
+                "On laisse le bois s'acclimater dans la maison",
+                "On choisit la membrane selon l'étage et le support",
+                "On laisse partout l'espace que le bois exige",
               ],
             },
             {
-              title: "Seuils et raccords",
-              description: "Les détails d'une pose propre",
+              title: "Seuils, plinthes et portes",
+              description: "On finit les jonctions entre les pièces",
               icon: "slidersHorizontal",
               bullets: [
-                "Transitions entre pièces prévues au plan",
-                "Nez de marche et raccords d'escalier",
-                "Plinthes, quarts-de-rond, portes rabotées",
+                "On prévoit les transitions d'une pièce à l'autre",
+                "On refait les nez de marche et les raccords d'escalier",
+                "On repose les plinthes et on rabote les portes",
               ],
             },
           ],
@@ -126,37 +126,37 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "La séquence d'un plancher",
+          heading: "Comment on refait un plancher",
           steps: [
             {
               number: "1",
-              title: "Relevé des niveaux",
+              title: "Mesures",
               description:
-                "Surfaces, planéité, différences entre pièces et seuils actuels.",
+                "On mesure les surfaces et les différences de hauteur entre les pièces.",
             },
             {
               number: "2",
               title: "Arrachage",
               description:
-                "Lieux protégés, anciens revêtements sortis, support mis à nu.",
+                "On protège la maison et on sort l'ancien revêtement.",
             },
             {
               number: "3",
               title: "Réparation",
               description:
-                "Panneaux remplacés, vissage complet, solives reprises au besoin.",
+                "On remplace les panneaux abîmés et on revisse tout le sous-plancher.",
             },
             {
               number: "4",
-              title: "Nivellement et séchage",
+              title: "Nivellement",
               description:
-                "Ragréage appliqué, temps de séchage inscrit à l'échéancier.",
+                "On coule le produit de nivellement et on attend qu'il sèche.",
             },
             {
               number: "5",
               title: "Pose et seuils",
               description:
-                "Revêtement, transitions, plinthes, portes ajustées, remise des lieux.",
+                "On pose le revêtement, les seuils et les plinthes, puis on rabote les portes.",
             },
           ],
         },
@@ -168,25 +168,25 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Quand poser le plancher dans un chantier",
+          heading: "À quel moment poser le plancher",
           intro:
-            "L'ordre des travaux fait varier la facture autant que le produit choisi.",
+            "L'ordre des travaux change la facture autant que le revêtement choisi.",
           items: [
             {
-              title: "Après la mécanique et la peinture",
-              description: "un revêtement neuf sous un chantier ouvert se marque.",
+              title: "Après la plomberie et la peinture",
+              description: "un plancher neuf se marque si le chantier est encore ouvert.",
             },
             {
               title: "Avant les armoires",
-              description: "évite un décalage de hauteur si un appareil change.",
+              description: "on évite une différence de hauteur si un électroménager change.",
             },
             {
-              title: "Niveaux arrêtés au plan",
-              description: "céramique, bois et vinyle n'ont pas la même épaisseur.",
+              title: "Les hauteurs se décident au plan",
+              description: "la céramique, le bois et le vinyle n'ont pas la même épaisseur.",
             },
             {
               title: "Sur une dalle de béton",
-              description: "sous-plancher isolant ou membrane de désolidarisation.",
+              description: "il faut d'abord un sous-plancher isolant ou une membrane.",
             },
           ],
           actions: [
@@ -207,7 +207,7 @@ export const renovationPlancherPage: PageTemplateData = {
           },
           cardTitle: "Un seul calendrier",
           cardDescription:
-            "Le raccord avec les armoires, la salle de bain et l'escalier relève du même contrat.",
+            "Le raccord avec les armoires, la salle de bain et l'escalier fait partie du même contrat.",
         },
       },
     },
@@ -221,23 +221,23 @@ export const renovationPlancherPage: PageTemplateData = {
           items: [
             {
               q: "Pourquoi mon plancher craque-t-il ?",
-              a: "Presque toujours le support : panneaux mal fixés, vis manquantes, contreplaqué trop mince. Le revêtement ne fait que révéler le défaut. On arrache, on revisse et on change ce qui a bougé.",
+              a: "Presque toujours à cause du sous-plancher : panneaux mal fixés, vis manquantes, contreplaqué trop mince. Le revêtement ne fait que révéler le défaut. On arrache, on revisse et on remplace.",
             },
             {
               q: "Peut-on poser par-dessus l'ancien plancher ?",
-              a: "Rarement une bonne idée. La hauteur monte, les portes frottent, les seuils se compliquent et l'état du support reste invisible. Nous recommandons l'arrachage, sauf exception notée dans la soumission.",
+              a: "C'est rarement une bonne idée. La hauteur monte, les portes frottent, les seuils se compliquent et on ne voit pas l'état du dessous. On recommande d'arracher, sauf exception écrite.",
             },
             {
-              q: "Quel revêtement pour un plancher de sous-sol ?",
-              a: "On mesure d'abord l'humidité de la dalle. Le vinyle de luxe et la céramique s'en accommodent bien. Le bois franc massif posé directement sur béton est à éviter.",
+              q: "Quel plancher choisir pour un sous-sol ?",
+              a: "On mesure d'abord l'humidité du béton. Le vinyle de qualité et la céramique s'en accommodent bien. Le bois franc posé directement sur le béton est à éviter.",
             },
             {
               q: "Faut-il un permis pour refaire un plancher ?",
-              a: "Pas pour changer un revêtement. Le permis devient nécessaire dès que la structure bouge : solives modifiées, ouverture d'une trémie, dalle abaissée. Nous validons avec votre ville.",
+              a: "Pas pour changer un revêtement. Il en faut un dès que la structure bouge : poutres modifiées, ouverture pour un escalier, dalle abaissée. On vérifie avec votre ville.",
             },
             {
               q: "Pourquoi laisser le bois s'acclimater ?",
-              a: "Le bois franc gonfle et rétrécit selon l'humidité ambiante. Posé trop vite, il ouvre des joints en hiver. Quelques jours dans la maison, à température normale, règlent la question.",
+              a: "Le bois gonfle et rétrécit avec l'humidité de la maison. Posé trop vite, il ouvre des joints en hiver. Quelques jours à l'intérieur, à température normale, règlent la question.",
             },
           ],
         },
@@ -249,9 +249,9 @@ export const renovationPlancherPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un plancher à refaire ?",
+          heading: "Un plancher à refaire ? Parlons-en.",
           intro:
-            "Nous mesurons la planéité, ouvrons un coin du support, puis chiffrons la réfection.",
+            "On mesure les niveaux, on ouvre un coin du sous-plancher, puis on chiffre les travaux.",
           actions: [
             {
               label: "Estimation gratuite",
@@ -264,7 +264,7 @@ export const renovationPlancherPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Support, nivellement, pose et seuils",
+          note: "Licence RBQ 8306-0806-27 · Sous-plancher, nivellement, pose et seuils",
         },
       },
     },

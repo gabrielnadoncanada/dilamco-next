@@ -16,14 +16,11 @@ export function HeroZone(props: HeroZoneProps) {
   const secondary = props.actions[1];
 
   const factSheet = (
-    <dl className="grid gap-3 rounded-card bg-white/94 p-5 text-foreground shadow-[0_24px_60px_-28px_rgb(21_25_26/45%)] backdrop-blur sm:p-6">
+    <dl className="grid grid-cols-2 gap-x-6 gap-y-5 rounded-card bg-white/94 p-5 text-foreground shadow-[0_24px_60px_-28px_rgb(21_25_26/45%)] backdrop-blur sm:p-6">
       {props.facts.map((f) => (
-        <div
-          key={f.label}
-          className="grid grid-cols-[7.5rem_1fr] items-baseline gap-3 border-b border-border/80 pb-3 last:border-0 last:pb-0"
-        >
+        <div key={f.label} className="min-w-0">
           <dt className="text-label text-muted-foreground">{f.label}</dt>
-          <dd className="text-sm font-semibold leading-snug">{f.value}</dd>
+          <dd className="mt-1.5 text-[0.9375rem] font-semibold leading-snug">{f.value}</dd>
         </div>
       ))}
     </dl>
@@ -77,7 +74,7 @@ export function HeroZone(props: HeroZoneProps) {
             </div>
           </div>
 
-          <div className="hidden lg:col-span-5 lg:block xl:col-span-4 xl:col-start-9">
+          <div className="hidden lg:col-span-5 lg:block xl:col-start-8">
             {factSheet}
           </div>
         </div>

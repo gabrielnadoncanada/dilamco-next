@@ -33,7 +33,7 @@ export const cuisinePage: PageTemplateData = {
           heading:
             "Armoires de cuisine sur mesure, posées par votre entrepreneur général",
           description:
-            "Dimensions relevées après la démolition, commande lancée ensuite, pose calée sur le reste du chantier.",
+            "On mesure la pièce après la démolition, on commande les armoires, puis on les pose.",
           actions: [
             {
               label: "Obtenir une soumission",
@@ -55,7 +55,7 @@ export const cuisinePage: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "Des cuisines livrées dans l'Ouest-de-l'Île",
+          heading: "Des cuisines qu'on a livrées",
           tiles: [
             {
               kind: "image",
@@ -69,7 +69,7 @@ export const cuisinePage: PageTemplateData = {
             {
               kind: "stat",
               value: "30 000 $",
-              label: "Bas de la fourchette observée, cuisine complète",
+              label: "Le prix de départ d'une cuisine complète",
             },
             {
               kind: "image",
@@ -108,42 +108,42 @@ export const cuisinePage: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
           heading: "La cuisine en bref",
           intro:
-            "Les chiffres que les propriétaires demandent avant de fixer un rendez-vous.",
+            "Les questions que les propriétaires nous posent avant de nous rencontrer.",
           rows: [
             {
-              label: "Délai",
-              value: "9 à 15 semaines entre le design validé et la pose",
+              label: "Combien de temps",
+              value: "Comptez 9 à 15 semaines entre le plan signé et la pose.",
             },
             {
-              label: "Prix",
+              label: "Prix indicatif",
               value:
-                "30 000 $ à 65 000 $ pour une cuisine complète, relevé requis",
+                "Une cuisine complète se situe entre 30 000 $ et 65 000 $, confirmé après le relevé.",
             },
             {
               label: "Matériaux",
               value:
-                "Tiroirs en bouleau massif, caissons en contreplaqué de bouleau",
+                "Les caissons sont en contreplaqué de bouleau et les tiroirs en bouleau massif.",
             },
             {
               label: "Quincaillerie",
               value:
-                "Coulisses sous caisson et charnières à fermeture amortie",
+                "Les tiroirs coulissent sur des rails cachés et les portes ferment en douceur.",
             },
             {
-              label: "Pose",
-              value: "Par notre équipe, une fois la plomberie et le plancher faits",
+              label: "Qui installe",
+              value:
+                "Notre équipe, une fois la plomberie refaite et le plancher posé.",
             },
             {
               label: "Garantie",
               value:
-                "Portée et durée écrites au contrat, ajustements repris sur place",
+                "La durée est écrite au contrat et nous revenons ajuster les portes au besoin.",
             },
           ],
           image: {
@@ -171,7 +171,7 @@ export const cuisinePage: PageTemplateData = {
             },
             {
               q: "Qui fournit le comptoir et le dosseret ?",
-              a: "Nous. Le gabarit du comptoir est pris une fois les caissons ancrés, puis la pose du dosseret suit. Le tout est chiffré dans la même soumission que les armoires.",
+              a: "Nous. On prend les mesures du comptoir une fois les caissons fixés, puis on pose le dosseret. Tout est chiffré dans la même soumission que les armoires.",
             },
             {
               q: "Gérez-vous l'électricité et la ventilation de la hotte ?",

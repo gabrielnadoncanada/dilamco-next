@@ -24,9 +24,9 @@ export const boisMassifPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Matériaux",
-          heading: "Le bois massif au bon endroit, pas partout",
+          heading: "Où le bois massif vaut vraiment son prix",
           description:
-            "Planches pleines, grain visible. Un matériau qui travaille avec l'humidité, donc réservé aux pièces qui se voient.",
+            "Le bois bouge avec les saisons, alors on le garde pour les pièces qu'on voit de près.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -51,44 +51,49 @@ export const boisMassifPage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Le bois massif en fiche",
-          intro: "Ce qu'il faut savoir avant de l'inscrire au devis.",
+          heading: "Ce qu'il faut savoir sur le bois massif",
+          intro: "Ses qualités, son coût, et les endroits où il tient le mieux.",
           rows: [
             {
-              label: "Composition",
-              value: "Planches pleines collées sur chant, érable, chêne ou noyer",
+              label: "De quoi c'est fait",
+              value:
+                "De vraies planches d'érable, de chêne ou de noyer, collées côte à côte.",
             },
             {
-              label: "Humidité",
-              value: "Réaction forte, gonfle l'été et retreint l'hiver",
+              label: "Résiste à l'humidité ?",
+              value:
+                "Il y réagit beaucoup : il gonfle l'été et se resserre l'hiver.",
             },
             {
               label: "Entretien",
-              value: "Chiffon doux, aucune eau laissée sur un joint",
+              value:
+                "Un chiffon doux, et on essuie tout de suite l'eau qui traîne.",
             },
             {
-              label: "Usages recommandés",
-              value: "Portes, moulures, corniches, tablettes apparentes",
+              label: "Usage recommandé",
+              value:
+                "Les portes, les moulures et les tablettes qu'on voit de près.",
             },
             {
-              label: "Prix relatif",
-              value: "Le plus élevé des quatre panneaux",
+              label: "Prix par rapport aux autres",
+              value:
+                "C'est le plus cher des quatre matériaux.",
             },
             {
-              label: "Finis disponibles",
-              value: "Teinture, vernis, huile, laque opaque",
+              label: "Finis offerts",
+              value:
+                "Une teinture qui laisse voir le grain, ou une peinture opaque.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-solid-wood-finish-detail-01.webp",
             alt: "Détail de finition sur une pièce en bois massif",
           },
-          note: "Valeurs indicatives. L'essence retenue est confirmée au devis.",
+          note: "L'essence de bois retenue est confirmée dans votre soumission.",
         },
       },
     },
@@ -126,9 +131,9 @@ export const boisMassifPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Du bois massif dans votre cuisine ?",
+          heading: "Vous voulez du bois massif dans votre cuisine",
           intro:
-            "On vous dit sur quelles pièces il vaut son prix et où un panneau tiendra mieux.",
+            "On vous dit sur quelles pièces il vaut son prix, et où un panneau tiendra mieux.",
           actions: [
             {
               label: "Demander une soumission",

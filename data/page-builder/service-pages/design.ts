@@ -31,9 +31,9 @@ export const designPage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Division armoires",
-          heading: "On arrête les plans avant d'ouvrir un mur",
+          heading: "On dessine votre cuisine avant d'ouvrir un mur",
           description:
-            "Relevé sur place, implantation, hauteurs, matériaux. Tout est décidé et signé avant la mise en production.",
+            "Mesures, plans, hauteurs et matériaux sont décidés et signés avant qu'on commande quoi que ce soit.",
           actions: [
             {
               label: "Parler de votre projet",
@@ -62,31 +62,31 @@ export const designPage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Quatre étapes de design",
+          heading: "Comment se passe le design",
           steps: [
             {
               number: "1",
-              title: "Relevé",
+              title: "On mesure la pièce",
               description:
-                "Mesures réelles des murs, ouvertures, colonnes et sorties existantes.",
+                "On relève les murs, les fenêtres et les sorties de plomberie et d'électricité.",
             },
             {
               number: "2",
-              title: "Plan",
+              title: "On dessine les plans",
               description:
-                "Implantation, élévations, position de chaque module et de chaque prise.",
+                "On place chaque armoire, chaque électroménager et chaque prise sur le plan.",
             },
             {
               number: "3",
-              title: "Choix",
+              title: "On choisit avec vous",
               description:
-                "Panneaux, quincaillerie, couleurs et finis arrêtés sur échantillon.",
+                "Vous voyez les échantillons de matériaux, de couleurs et de poignées.",
             },
             {
               number: "4",
-              title: "Validation",
+              title: "Vous signez",
               description:
-                "Plans signés, soumission détaillée, échéancier inscrit au contrat.",
+                "Vous recevez les plans, le prix détaillé et les dates de chantier.",
             },
           ],
         },
@@ -94,44 +94,49 @@ export const designPage: PageTemplateData = {
     },
     {
       id: "fiche",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "En bref",
-          intro: "Ce que couvre l'étape de design, et ce qu'elle produit.",
+          heading: "Le design en bref",
+          intro: "Ce que l'étape de design vous donne, et ce qu'elle vous coûte.",
           rows: [
             {
-              label: "Délai",
-              value: "Deux à quatre semaines du relevé aux plans signés",
+              label: "Combien de temps",
+              value:
+                "Il faut deux à quatre semaines entre la première visite et les plans signés.",
             },
             {
-              label: "Livrables",
-              value: "Plan d'implantation, élévations, liste de matériaux, devis",
+              label: "Ce que vous recevez",
+              value:
+                "Un plan de la pièce, les dessins de chaque mur, la liste des matériaux et le prix.",
             },
             {
-              label: "Qui fait quoi",
-              value: "Le designer mène, l'entrepreneur général valide la faisabilité",
+              label: "Qui s'en occupe",
+              value:
+                "Un designer dessine, et l'entrepreneur général vérifie que c'est réalisable.",
             },
             {
-              label: "Sur place",
-              value: "Une visite de relevé, une visite de présentation",
+              label: "Rencontres prévues",
+              value:
+                "Une visite pour mesurer, une autre pour vous présenter les plans.",
             },
             {
               label: "Garantie",
-              value: "Les plans signés font foi pendant tout le chantier",
+              value:
+                "Les plans que vous signez servent de référence pendant tout le chantier.",
             },
             {
-              label: "Coût",
-              value: "Crédité au projet si les travaux nous sont confiés",
+              label: "Prix indicatif",
+              value:
+                "Le design est crédité à votre projet si vous nous confiez les travaux.",
             },
           ],
           image: {
             src: "/images/services/design-hero.webp",
             alt: "Plans et élévations d'une cuisine en cours de conception",
           },
-          note: "Prix et quantités sont révisés si les plans changent après signature.",
+          note: "Si les plans changent après la signature, le prix est revu avec vous.",
         },
       },
     },
@@ -169,9 +174,9 @@ export const designPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Commencer par les plans",
+          heading: "Commencer par les plans de votre projet",
           intro:
-            "Décrivez la pièce et votre échéance, on revient avec une première lecture.",
+            "Décrivez-nous la pièce et la date qui vous convient, on vous rappelle.",
           actions: [
             {
               label: "Demander une soumission",

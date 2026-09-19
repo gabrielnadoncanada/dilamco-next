@@ -93,7 +93,7 @@ export const zoneRiveSudPage: PageTemplateData = {
           eyebrow: "Entrepreneur général sur la",
           heading: "Rive-Sud",
           description:
-            "Huit villes, huit réglementations, un pont à traverser. On y prend les mandats d'envergure, pas les chantiers de deux jours.",
+            "Rénovation complète, agrandissement et reconstruction après sinistre sur la Rive-Sud, pour les projets d'envergure.",
           actions: [
             {
               label: "Demander une soumission",
@@ -113,17 +113,20 @@ export const zoneRiveSudPage: PageTemplateData = {
           facts: [
             {
               label: "Notre base",
-              value: "Pierrefonds-Roxboro · 45 à 60 min",
+              value: "Pierrefonds-Roxboro, à 45 à 60 minutes de route",
             },
             {
-              label: "Permis",
-              value: "Varie par ville ; Longueuil et Brossard en ligne",
+              label: "Où demander le permis",
+              value: "Chaque ville a son service d'urbanisme, et ses propres règles",
             },
             {
-              label: "Bâti",
-              value: "Bungalows d'après-guerre, secteurs planifiés des années 1960",
+              label: "Type de maisons",
+              value: "Des bungalows d'après-guerre et des quartiers planifiés",
             },
-            { label: "Premier retour", value: "24 à 48 h ouvrables" },
+            {
+              label: "Premier retour",
+              value: "Nous vous rappelons sous 24 à 48 heures ouvrables",
+            },
           ],
         },
       },
@@ -134,37 +137,39 @@ export const zoneRiveSudPage: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Huit villes, huit règlements d'urbanisme",
+          heading: "Ce qu'il faut savoir avant de rénover sur la Rive-Sud",
           intro:
-            "Longueuil, Brossard, Saint-Lambert, Boucherville, Candiac, Châteauguay. Savoir lequel s'applique change la soumission.",
+            "Huit villes, huit règlements d'urbanisme. Savoir lequel s'applique change le prix.",
           rows: [
             {
-              label: "Bâti dominant",
-              value: "Bungalows du Vieux-Longueuil, secteurs alphabétiques de Brossard",
+              label: "Âge des quartiers",
+              value:
+                "Le Vieux-Longueuil aligne des bungalows, et Brossard a été planifié dans les années 1960.",
             },
             {
-              label: "Permis",
-              value: "Longueuil par Permis en ligne, Brossard par la Direction de l'urbanisme",
+              label: "Comment déposer la demande",
+              value:
+                "À Longueuil par le portail Permis en ligne, à Brossard par la Direction de l'urbanisme.",
             },
             {
-              label: "Patrimoine",
-              value: "PIIA à Saint-Lambert, site patrimonial du Vieux-Boucherville",
+              label: "Particularité locale",
+              value:
+                "À Saint-Lambert, un comité approuve l'apparence des travaux visibles de la rue.",
             },
             {
-              label: "Risques locaux",
-              value: "Digues de Châteauguay non reconnues, jusqu'à 1 100 résidences visées",
+              label: "Risque local",
+              value:
+                "À Châteauguay, jusqu'à 1 100 résidences sont en zone inondable et les digues ne sont pas reconnues.",
             },
             {
-              label: "Croissance",
-              value: "Candiac, 2 406 permis résidentiels délivrés entre 2000 et 2010",
-            },
-            {
-              label: "Projets fréquents",
-              value: "Rénovation complète, agrandissement, reprise après dégât d'eau",
+              label: "Projets courants",
+              value:
+                "Rénover une maison au complet, agrandir, remettre en état après un dégât d'eau.",
             },
             {
               label: "Depuis notre base",
-              value: "Autoroute 30, pont Samuel-De Champlain ou pont-tunnel La Fontaine",
+              value:
+                "Autoroute 30, pont Samuel-De Champlain ou pont-tunnel Louis-Hippolyte-La Fontaine.",
             },
           ],
           image: {
@@ -181,13 +186,13 @@ export const zoneRiveSudPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Les mandats qu'on prend au sud du fleuve",
+          heading: "Nos services sur la Rive-Sud",
           items: [
             {
               title: "Agrandissement de maison",
               href: "/services/renovation/agrandissement-de-maison",
               description:
-                "Rallonge ou ajout d'étage sur un bungalow du Vieux-Longueuil",
+                "On ajoute une rallonge ou un étage sur un bungalow du Vieux-Longueuil",
               image: {
                 src: "/images/generated/renovation/renovation-extension-approach-01.webp",
                 alt: "Plan d'agrandissement pour un bungalow du Vieux-Longueuil",
@@ -199,7 +204,7 @@ export const zoneRiveSudPage: PageTemplateData = {
               title: "Rénovation complète",
               href: "/services/renovation",
               description:
-                "Reprendre une maison de secteur brossardois d'un bout à l'autre",
+                "On reprend une maison de Brossard d'un bout à l'autre",
               image: {
                 src: "/images/generated/services/service-renovation-project-03.webp",
                 alt: "Rénovation complète d'une maison d'un secteur de Brossard",
@@ -211,7 +216,7 @@ export const zoneRiveSudPage: PageTemplateData = {
               title: "Rénovation après sinistre",
               href: "/services/renovation/apres-sinistre",
               description:
-                "Refoulement ou dégât d'eau à Châteauguay, reconstruction documentée",
+                "On remet en état après un refoulement ou un dégât d'eau à Châteauguay",
               image: {
                 src: "/images/generated/spaces/space-sous-sol-materials-01.webp",
                 alt: "Matériaux prêts pour une reconstruction de sous-sol à Châteauguay",
@@ -229,7 +234,7 @@ export const zoneRiveSudPage: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Ailleurs sur notre territoire",
+          heading: "Aussi desservies sur notre territoire",
           columns: "2",
           items: [
             {
@@ -266,19 +271,19 @@ export const zoneRiveSudPage: PageTemplateData = {
           items: [
             {
               q: "Quelles villes de la Rive-Sud couvrez-vous ?",
-              a: "Longueuil et ses arrondissements du Vieux-Longueuil, de Saint-Hubert et de Greenfield Park, puis Brossard, Saint-Lambert, Boucherville, Saint-Bruno-de-Montarville, Candiac, La Prairie et Châteauguay. Ailleurs, la réponse dépend de la portée du projet.",
+              a: "Longueuil, avec le Vieux-Longueuil, Saint-Hubert et Greenfield Park, puis Brossard, Saint-Lambert, Boucherville, Saint-Bruno-de-Montarville, Candiac, La Prairie et Châteauguay. Ailleurs, la réponse dépend de l'ampleur du projet.",
             },
             {
               q: "Qui monte le dossier de permis à Longueuil ou à Brossard ?",
-              a: "Nous. À Longueuil, le dossier passe par la Direction de l'aménagement et de l'urbanisme et le portail Permis en ligne, ouvert au dépôt, au paiement et au suivi. À Brossard, par la Direction de l'urbanisme et son portail de demandes.",
+              a: "Nous. À Longueuil, le dossier passe par la Direction de l'aménagement et de l'urbanisme et le portail Permis en ligne. À Brossard, par la Direction de l'urbanisme et son portail de demandes.",
             },
             {
               q: "Rénover à Saint-Lambert prend-il plus de temps ?",
-              a: "Plus long, surtout. Toute modification extérieure visible de la rue est assujettie au règlement sur les plans d'implantation et d'intégration architecturale, examiné par le comité consultatif d'urbanisme avant le permis. L'intérieur se modernise sans ce détour.",
+              a: "Souvent, oui. Toute modification extérieure visible de la rue passe devant un comité d'urbanisme avant le permis. Les travaux intérieurs se font sans ce détour.",
             },
             {
               q: "Que change la zone inondable de Châteauguay pour un sous-sol ?",
-              a: "Beaucoup. De 700 à 1 100 résidences sont potentiellement visées, et les digues des boulevards Salaberry Nord et D'Youville ne sont pas reconnues comme ouvrages de protection. Le bas de mur et le drainage se conçoivent en conséquence.",
+              a: "Beaucoup. De 700 à 1 100 résidences sont potentiellement visées, et les digues des boulevards Salaberry Nord et D'Youville ne sont pas reconnues comme ouvrages de protection. Le bas des murs et le drainage se conçoivent en conséquence.",
             },
           ],
         },
@@ -290,8 +295,9 @@ export const zoneRiveSudPage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un mandat d'envergure sur la Rive-Sud",
-          intro: "Adresse, portée des travaux, échéance. On répond franchement.",
+          heading: "Un projet d'envergure sur la Rive-Sud ?",
+          intro:
+            "Donnez-nous l'adresse, l'ampleur des travaux et l'échéance. On répond franchement.",
           actions: [
             {
               label: "Demander une soumission",

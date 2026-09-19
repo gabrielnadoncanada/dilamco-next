@@ -55,7 +55,9 @@ Le site migre de l'ancien système de pages statiques (`createStaticPage`, modul
 
 **Une composition par famille de page** (zone, rénovation, espace, matériau, à propos, processus, projets, hubs) : recettes dans `docs/redaction-web.md`. Le test `tests/duplicate-content.test.ts` interdit toute phrase ≥ 60 caractères partagée entre deux pages de même langue ; les FAQ génériques (licence, garantie) n'existent que sur l'accueil et à propos.
 
-**Texte** : le site doit se scanner, pas se lire. Toute rédaction suit `docs/redaction-web.md` (budgets par page mesurés avec `node scripts/copy-wordcount.mjs`, longueurs par champ, mots interdits). Titre de hero sans deux-points ni tiret cadratin.
+**Rythme des sections** : `PageRenderer` alterne automatiquement fond de page ↔ `muted` (#edf1ec) avec un filet supérieur ; ne pas forcer `frame.surface` dans les données sauf besoin précis, et jamais de fond vert plein sur une section entière.
+
+**Texte** : le site doit se scanner, pas se lire. Toute rédaction suit `docs/redaction-web.md` (budgets par page mesurés avec `node scripts/copy-wordcount.mjs`, longueurs par champ, mots interdits, règles de clarté : un titre dit ce qu'il y a dessous, une étiquette est la question du client, une valeur est une phrase complète). Titre de hero sans deux-points ni tiret cadratin.
 
 **Piège dev** : `globals.css` n'est pas recompilé par le serveur dev (cache Turbopack) → tuer le serveur, `rm -rf .next/dev`, relancer.
 

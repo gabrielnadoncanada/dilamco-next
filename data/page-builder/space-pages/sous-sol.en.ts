@@ -32,7 +32,7 @@ export const sousSolPageEn: PageTemplateData = {
           badges: ["Turnkey"],
           heading: "Custom basement finishing in Pierrefonds",
           description:
-            "Home theatre, bar, cellar or library, drawn once moisture and headroom have been checked.",
+            "Home theatre, bar, wine cellar or library, drawn once we have checked the basement.",
           actions: [
             {
               label: "Get a quote",
@@ -54,7 +54,7 @@ export const sousSolPageEn: PageTemplateData = {
         type: "grid",
         variant: "bento",
         props: {
-          heading: "What we build below the main floor",
+          heading: "What we build in a basement",
           tiles: [
             {
               kind: "image",
@@ -77,7 +77,7 @@ export const sousSolPageEn: PageTemplateData = {
             {
               kind: "stat",
               value: "9–15 wks",
-              label: "Built-in millwork, ordered during framing",
+              label: "The time it takes to build the cabinetry",
             },
             {
               kind: "image",
@@ -91,7 +91,7 @@ export const sousSolPageEn: PageTemplateData = {
               kind: "text",
               title: "After water damage",
               description:
-                "Drying, rebuilding and a file put together for your insurer.",
+                "We dry the space, rebuild it and put your insurance file together.",
               href: "/services/renovation/apres-sinistre",
             },
             {
@@ -108,38 +108,43 @@ export const sousSolPageEn: PageTemplateData = {
     },
     {
       id: "en-bref",
-      frame: { surface: "muted" },
       content: {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "The basement at a glance",
+          heading: "The basement in brief",
           intro:
-            "A buried floor sets its own rules long before anyone picks a finish.",
+            "What we check and what we plan before anyone talks about finishes.",
           rows: [
             {
-              label: "Prerequisite",
-              value: "Drain, cracks and moisture level checked before insulating",
+              label: "Checked first",
+              value:
+                "We inspect the drain, the cracks and the moisture level before any insulation goes in.",
             },
             {
               label: "Permit",
-              value: "Required as soon as a wall, bedroom or bathroom is added",
+              value:
+                "The city requires one as soon as you add a wall, a bedroom or a bathroom.",
             },
             {
-              label: "Lead time",
-              value: "Nine to fifteen weeks for millwork, fitted after flooring",
+              label: "How long",
+              value:
+                "The cabinetry takes nine to fifteen weeks and goes in once the floor is finished.",
             },
             {
               label: "Materials",
-              value: "Birch plywood wherever shelves carry real weight",
+              value:
+                "Shelves that carry weight are made of birch plywood.",
             },
             {
-              label: "Installation",
-              value: "Mechanical access kept and hidden behind panels",
+              label: "Who installs",
+              value:
+                "Our own crew, leaving access doors to the plumbing and the wiring.",
             },
             {
               label: "Warranty",
-              value: "Québec Construction Code compliance, term in the contract",
+              value:
+                "The work meets the Québec Construction Code and the term is in the contract.",
             },
           ],
           image: {

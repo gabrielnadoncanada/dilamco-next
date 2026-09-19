@@ -25,7 +25,7 @@ export const page: PageTemplateData = {
           badges: ["Contreplaqué", "MDF", "Quincaillerie"],
           heading: "Les matériaux qu'on met dans vos armoires",
           description:
-            "Panneaux, quincaillerie et finis sont spécifiés par nous, produits par notre usine partenaire, puis vérifiés à la réception.",
+            "C'est nous qui choisissons les panneaux, la quincaillerie et les finis, et qui les vérifions.",
           actions: [
             {
               label: "Demander une soumission",
@@ -43,7 +43,6 @@ export const page: PageTemplateData = {
     },
     {
       id: "pages",
-      frame: { surface: "muted" },
       content: {
         type: "grid",
         variant: "link-cards-compact",
@@ -84,7 +83,7 @@ export const page: PageTemplateData = {
             {
               title: "Comparatif",
               href: "/materiaux/comparatif",
-              description: "Les quatre côte à côte",
+              description: "Lequel choisir et où",
             },
           ],
         },
@@ -96,39 +95,45 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "fact-sheet",
         props: {
-          heading: "Ce qu'on spécifie par défaut",
-          intro: "Le standard de la division armoires, avant toute option.",
+          heading: "Ce qu'on met dans vos armoires par défaut",
+          intro: "Notre standard, avant toute option que vous pourriez ajouter.",
           rows: [
             {
               label: "Caissons",
-              value: "Contreplaqué de bouleau, 15 mm, chants scellés",
+              value:
+                "Du contreplaqué de bouleau de 15 mm, avec les bords scellés.",
             },
             {
               label: "Façades",
-              value: "MDF peint, mélamine ou bouleau massif selon la pièce",
+              value:
+                "Du MDF peint, de la mélamine ou du bouleau massif, selon la pièce.",
             },
             {
               label: "Quincaillerie",
-              value: "Charnières réglables et coulisses à extension complète",
+              value:
+                "Des charnières qui se règlent et des tiroirs qui sortent au complet.",
             },
             {
-              label: "Finis",
-              value: "Peinture sur mesure ou décor thermofusionné",
+              label: "Finis offerts",
+              value:
+                "Une peinture de la couleur de votre choix, ou un décor déjà fini.",
             },
             {
-              label: "Provenance",
-              value: "Production confiée à notre usine partenaire exclusive",
+              label: "Qui produit",
+              value:
+                "Notre usine partenaire exclusive, sur nos plans et nos spécifications.",
             },
             {
-              label: "Réception",
-              value: "Chaque livraison comptée et inspectée avant la pose",
+              label: "Vérification",
+              value:
+                "Chaque livraison est comptée et inspectée avant la journée de pose.",
             },
           ],
           image: {
             src: "/images/generated/materials/material-plywood-card-01.webp",
             alt: "Caisson de bouleau et façade peinte d'une armoire sur mesure",
           },
-          note: "Toute substitution est écrite au devis, jamais décidée sur le chantier.",
+          note: "Un changement de matériau s'écrit au devis, jamais en cours de chantier.",
         },
       },
     },
@@ -138,9 +143,9 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un avis sur vos choix techniques ?",
+          heading: "Un avis sur le choix de vos matériaux",
           intro:
-            "On fixe panneaux, quincaillerie et finis dans une soumission détaillée avant la commande.",
+            "Panneaux, quincaillerie et finis sont écrits dans la soumission avant la commande.",
           actions: [
             {
               label: "Demander une soumission",

@@ -43,9 +43,9 @@ export const renovationApresSinistrePage: PageTemplateData = {
         variant: "split-image",
         props: {
           eyebrow: "Rénovation après sinistre",
-          heading: "Remettre la maison en état après l'eau ou le feu",
+          heading: "Reconstruction après un dégât d'eau ou un incendie",
           description:
-            "Nous entrons une fois les lieux asséchés : constat, portée écrite, devis par poste et reconstruction.",
+            "On arrive une fois les lieux asséchés, on décrit les dommages pièce par pièce, puis on reconstruit.",
           actions: [
             {
               label: "Demander une évaluation",
@@ -74,49 +74,49 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "grid",
         variant: "icon-cards-bullets",
         props: {
-          heading: "Ce que couvre le mandat de reconstruction",
+          heading: "Ce qu'on reconstruit après un sinistre",
           intro:
-            "Le pompage et la décontamination restent aux firmes d'urgence. Nous rebâtissons ensuite.",
+            "Le pompage et la décontamination sont faits par des firmes d'urgence. On reconstruit après.",
           columns: "2",
           items: [
             {
               title: "Dégât d'eau",
-              description: "Refoulement, tuyau éclaté, crue",
+              description: "Refoulement d'égout, tuyau éclaté ou crue",
               icon: "droplets",
               bullets: [
-                "Murs ouverts pour mesurer l'étendue réelle",
-                "Gypse, isolant et support remplacés",
-                "Solives contrôlées avant de refermer",
+                "On ouvre les murs pour voir jusqu'où l'eau s'est rendue",
+                "On remplace le gypse, l'isolant et le sous-plancher",
+                "On vérifie les poutres avant de refermer",
               ],
             },
             {
               title: "Feu et fumée",
-              description: "Suie et odeurs dans les matériaux poreux",
+              description: "La suie et l'odeur restent dans les matériaux",
               icon: "hardHat",
               bullets: [
-                "Sections atteintes démolies au complet",
-                "Structure et enveloppe reprises aux plans",
-                "Pièces rebâties du colombage à la peinture",
+                "On démolit complètement les sections touchées",
+                "On refait la structure, les murs et le toit selon les plans",
+                "On rebâtit la pièce, de la charpente à la peinture",
               ],
             },
             {
               title: "Moisissures",
-              description: "Suite d'une fuite lente ou d'un air stagnant",
+              description: "Presque toujours le résultat d'une fuite lente",
               icon: "shieldCheck",
               bullets: [
-                "Reconstruction après décontamination spécialisée",
-                "Cause corrigée : ventilation, étanchéité, drain",
-                "Assemblages choisis pour les zones humides",
+                "On reconstruit après la décontamination spécialisée",
+                "On corrige la cause : ventilation, étanchéité ou drain",
+                "On choisit des matériaux qui supportent l'humidité",
               ],
             },
             {
               title: "Sous-sol inondé",
-              description: "Le cas le plus fréquent près des berges",
+              description: "Le cas le plus fréquent près de la rivière",
               icon: "layers",
               bullets: [
-                "Finis et isolant retirés jusqu'à hauteur saine",
-                "Drain, pompe et fissures réexaminés",
-                "Permis demandé si le sous-sol est refini",
+                "On enlève les finis et l'isolant jusqu'à hauteur saine",
+                "On réexamine le drain, la pompe et les fissures",
+                "On demande le permis si le sous-sol est refini",
               ],
             },
           ],
@@ -129,37 +129,37 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "La séquence après un sinistre",
+          heading: "Comment se déroule une reconstruction",
           steps: [
             {
               number: "1",
-              title: "Constat sur place",
+              title: "Visite des lieux",
               description:
-                "Visite après l'assèchement, ouvertures ciblées derrière les finis.",
+                "On vient une fois les lieux secs et on ouvre les murs par endroits.",
             },
             {
               number: "2",
-              title: "Portée et devis",
+              title: "Description et prix",
               description:
-                "Description pièce par pièce, prix par poste, photos à l'appui.",
+                "On décrit les dommages pièce par pièce, avec des photos et un prix.",
             },
             {
               number: "3",
               title: "Contrat et permis",
               description:
-                "Signature, puis demande déposée si la structure est touchée.",
+                "On signe, puis on dépose une demande si la structure est touchée.",
             },
             {
               number: "4",
-              title: "Démolition sélective",
+              title: "Démolition",
               description:
-                "Matériaux atteints sortis, dommages cachés notés au dossier.",
+                "On sort les matériaux atteints et on note les dommages cachés.",
             },
             {
               number: "5",
               title: "Reconstruction",
               description:
-                "Mécanique, inspections, gypse, peinture, planchers, remise des clés.",
+                "Plomberie, électricité, gypse, peinture, planchers, puis remise des clés.",
             },
           ],
         },
@@ -171,26 +171,26 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "split",
         variant: "list-actions-image-card",
         props: {
-          heading: "Ce que nous apportons à votre réclamation",
+          heading: "Ce qu'on fournit pour votre réclamation",
           intro:
-            "Nous ne remplaçons ni votre assureur ni son expert. Nous fournissons la matière technique.",
+            "On ne remplace ni votre assureur ni son expert. On fournit les documents techniques.",
           items: [
             {
-              title: "Une portée pièce par pièce",
-              description: "chaque dommage décrit, plutôt qu'un montant global.",
+              title: "La liste des dommages, pièce par pièce",
+              description: "chaque dommage est décrit, au lieu d'un seul montant global.",
             },
             {
-              title: "Un devis par poste",
+              title: "Un prix pour chaque type de travaux",
               description:
-                "démolition, mécanique, matériaux et finition chiffrés à part.",
+                "démolition, plomberie, matériaux et finition sont chiffrés séparément.",
             },
             {
-              title: "Une documentation photo",
-              description: "état avant travaux, ouvertures de constat, dommages cachés.",
+              title: "Des photos de tout",
+              description: "l'état avant les travaux, les ouvertures faites, les dommages cachés.",
             },
             {
-              title: "Les améliorations isolées",
-              description: "ce qui sort du sinistre apparaît sur ses propres lignes.",
+              title: "Les améliorations à part",
+              description: "ce qui n'est pas lié au sinistre apparaît sur ses propres lignes.",
             },
           ],
           actions: [
@@ -209,9 +209,9 @@ export const renovationApresSinistrePage: PageTemplateData = {
             src: "/images/generated/services/service-renovation-project-03.webp",
             alt: "Constat des dommages avant la reconstruction d'une pièce",
           },
-          cardTitle: "Un interlocuteur unique",
+          cardTitle: "Une seule personne à qui parler",
           cardDescription:
-            "Le même entrepreneur signe le devis, coordonne les métiers et répond aux questions techniques de l'expert.",
+            "Le même entrepreneur signe le devis, coordonne les corps de métier et répond aux questions de l'expert en sinistre.",
         },
       },
     },
@@ -225,23 +225,23 @@ export const renovationApresSinistrePage: PageTemplateData = {
           items: [
             {
               q: "Faites-vous le pompage et l'assèchement ?",
-              a: "Non. L'urgence, le pompage et la décontamination reviennent à des firmes spécialisées, souvent mandatées par l'assureur. Nous prenons la suite quand les lieux sont secs et mesurés.",
+              a: "Non. L'urgence, le pompage et la décontamination reviennent à des firmes spécialisées, souvent envoyées par l'assureur. On prend la suite quand les lieux sont secs.",
             },
             {
               q: "Travaillez-vous avec mon assureur ?",
-              a: "Nous remettons la portée écrite, le devis par poste et les photos dont la réclamation a besoin, et répondons à l'expert. Vous restez l'assuré et l'interlocuteur au dossier.",
+              a: "On remet la liste des dommages, le prix détaillé et les photos dont votre réclamation a besoin, et on répond à l'expert. Vous restez l'assuré et la personne au dossier.",
             },
             {
               q: "Puis-je choisir mon entrepreneur après un sinistre ?",
-              a: "En règle générale oui, même si l'assureur suggère des entreprises de son réseau. Vérifiez les modalités de votre police. Nous fournissons les documents pour que notre devis soit comparé.",
+              a: "En général oui, même si l'assureur suggère des entreprises de son réseau. Vérifiez votre police. On fournit les documents nécessaires pour que notre prix soit comparé.",
             },
             {
               q: "Et si vous découvrez d'autres dommages ?",
-              a: "C'est courant derrière un mur inondé. Nous photographions, chiffrons par écrit et vous laissons déposer un complément de réclamation avant de continuer. Rien n'est refermé sur un problème connu.",
+              a: "C'est fréquent derrière un mur inondé. On photographie, on chiffre par écrit et on vous laisse ajouter à votre réclamation avant de continuer.",
             },
             {
               q: "Faut-il un permis pour reconstruire ?",
-              a: "Souvent. Dès que la reconstruction touche la structure, déplace la plomberie ou refait un sous-sol habitable, la ville l'exige. Nous validons le cas et déposons la demande.",
+              a: "Souvent. Dès que la reconstruction touche la structure, déplace la plomberie ou refait un sous-sol habitable, la ville l'exige. On valide et on dépose la demande.",
             },
           ],
         },
@@ -253,9 +253,9 @@ export const renovationApresSinistrePage: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Un sinistre à reconstruire ?",
+          heading: "Faites évaluer les dommages chez vous",
           intro:
-            "Nous constatons les dommages, montons le devis, puis rebâtissons sous un seul contrat.",
+            "On constate les dommages, on monte le devis, puis on reconstruit sous un seul contrat.",
           actions: [
             {
               label: "Demander une évaluation",

@@ -23,9 +23,9 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "image-overlay",
         props: {
-          heading: "Votre rénovation, menée par un vrai entrepreneur général.",
+          heading: "Votre rénovation, menée par un entrepreneur général licencié.",
           description:
-            "Permis, corps de métier, échéancier et budget écrits au contrat. Un seul responsable, du premier appel à la livraison.",
+            "On s'occupe du permis, des corps de métier, de l'échéancier et du budget. Un seul responsable, du premier appel à la livraison.",
           actions: [
             {
               label: "Soumission gratuite",
@@ -57,25 +57,25 @@ export const page: PageTemplateData = {
         type: "split",
         variant: "text-divider-cards",
         props: {
-          heading: "Ce qui fait dérailler un chantier, on l'a retiré du vôtre.",
+          heading: "Pourquoi confier votre projet à un entrepreneur général",
           description:
-            "Un seul entrepreneur tient le projet. Les métiers entrent dans le bon ordre, le prix est fixé avant, les changements sont écrits.",
+            "Un seul entrepreneur planifie le chantier, fait entrer les métiers dans le bon ordre et répond du résultat.",
           cards: [
             {
-              title: "Échéancier écrit",
-              description: "Chaque étape est datée au contrat, avec ses jalons d'inspection.",
+              title: "Un échéancier écrit",
+              description: "Chaque étape du chantier est datée dans le contrat, avec les inspections prévues.",
             },
             {
-              title: "Budget fixé au contrat",
-              description: "Travaux, matériaux et exclusions détaillés. Tout changement passe par un avenant chiffré.",
+              title: "Un prix fixé avant les travaux",
+              description: "La soumission détaille les travaux, les matériaux et ce qui n'est pas inclus. Tout changement est chiffré et signé avant.",
             },
             {
               title: "Un seul responsable",
-              description: "Plomberie, électricité, structure, gypse et finition coordonnés par nous.",
+              description: "Nous engageons et coordonnons le plombier, l'électricien, le charpentier et les finisseurs. Vous n'avez qu'un interlocuteur.",
             },
             {
-              title: "Licence, assurances, garantie",
-              description: "Licence RBQ valide sans restriction, assurance chantier, travaux garantis au contrat.",
+              title: "Licence, assurances et garantie",
+              description: "Licence RBQ valide sans restriction, assurance responsabilité et chantier, travaux garantis par écrit.",
             },
           ],
           columns: "2",
@@ -162,12 +162,11 @@ export const page: PageTemplateData = {
     },
     {
       id: "process",
-      frame: { surface: "muted" },
       content: {
         type: "process",
         variant: "horizontal-steps-cards",
         props: {
-          heading: "Cinq étapes, toujours les mêmes",
+          heading: "Comment se déroule votre projet",
           steps: [
             {
               number: "1",
@@ -204,9 +203,9 @@ export const page: PageTemplateData = {
         type: "grid",
         variant: "link-cards-compact",
         props: {
-          heading: "Entrepreneur général près de chez vous",
+          heading: "Où nous travaillons",
           intro:
-            "Base à Pierrefonds-Roxboro. On couvre l'Ouest-de-l'Île, Montréal, Laval, la Rive-Sud et Vaudreuil-Soulanges.",
+            "Notre bureau est à Pierrefonds-Roxboro. Nous travaillons dans l'Ouest-de-l'Île, à Montréal, à Laval et sur la Rive-Sud.",
           columns: "3",
           items: [
             { title: "Pierrefonds-Roxboro", href: "/zones/pierrefonds-roxboro", description: "Notre base" },
@@ -232,11 +231,11 @@ export const page: PageTemplateData = {
         props: {
           heading: "Les armoires sur mesure, incluses dans le même contrat",
           intro:
-            "Notre licence couvre les armoires et comptoirs. Un fournisseur de moins à coordonner, une seule soumission.",
+            "Notre licence couvre aussi les armoires et les comptoirs. Pas de fournisseur de plus à gérer : tout est dans la même soumission.",
           items: [
-            { title: "Un seul responsable", description: "Commandées, livrées et posées dans la séquence du chantier." },
-            { title: "Mesures prises après démolition", description: "Quand les murs sont à leur position définitive." },
-            { title: "Cuisine, salle de bain, walk-in", description: "Armoires, vanités et rangements intégrés." },
+            { title: "Posées au bon moment", description: "Les armoires sont commandées, livrées et installées quand le chantier est prêt à les recevoir." },
+            { title: "Mesurées après la démolition", description: "On prend les dimensions quand les murs sont à leur place définitive, pas avant." },
+            { title: "Cuisine, salle de bain, walk-in", description: "Armoires de cuisine, vanités et rangements intégrés, selon la pièce à rénover." },
           ],
           actions: [
             { label: "Voir les espaces", href: "/espaces", variant: "primary" },
@@ -261,23 +260,23 @@ export const page: PageTemplateData = {
           items: [
             {
               q: "Combien coûte une rénovation ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe généralement entre 35 000 $ et 50 000 $. Le prix ferme est fixé après le relevé sur place, dans la soumission détaillée.",
+              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $. Le prix ferme est fixé après le relevé sur place, dans la soumission.",
             },
             {
               q: "Combien de temps dure un chantier ?",
-              a: "Une salle de bain se compte en semaines, une cuisine ou un sous-sol en mois, un agrandissement davantage à cause du permis et de la fondation. L'échéancier est écrit au contrat.",
+              a: "Une salle de bain se compte en semaines, une cuisine ou un sous-sol en mois, un agrandissement davantage (permis, fondation). L'échéancier est écrit au contrat.",
             },
             {
               q: "Faut-il un permis pour mes travaux ?",
-              a: "Souvent, dès qu'on touche à la structure, aux ouvertures, à la plomberie ou à la superficie habitable. On vérifie les exigences de votre ville et on dépose la demande pour vous.",
+              a: "Souvent, dès qu'on touche à la structure, aux ouvertures, à la plomberie ou à la superficie. On vérifie les exigences de votre ville et on dépose la demande.",
             },
             {
               q: "Êtes-vous licenciés et assurés ?",
-              a: "Oui. Licence RBQ 8306-0806-27, valide sans restriction depuis 2004, catégories 1.2 et 1.3, cautionnement en vigueur, aucune réclamation au dossier. Assurance responsabilité civile et couverture chantier.",
+              a: "Oui. Licence RBQ 8306-0806-27, valide sans restriction depuis 2004, cautionnement en vigueur, aucune réclamation au dossier. Assurance responsabilité civile et chantier.",
             },
             {
               q: "Vos travaux sont-ils garantis ?",
-              a: "Oui, avec la portée et la durée inscrites au contrat. Les déficiences relevées à l'inspection finale sont corrigées avant le paiement final. Nous ne construisons pas de maisons neuves, le plan GCR ne s'applique donc pas.",
+              a: "Oui, portée et durée inscrites au contrat. Les déficiences relevées à l'inspection finale sont corrigées avant le dernier paiement. Nous ne construisons pas de maisons neuves : le plan GCR ne s'applique pas.",
             },
           ],
         },
@@ -289,8 +288,8 @@ export const page: PageTemplateData = {
         type: "cta",
         variant: "band-split-actions",
         props: {
-          heading: "Décrivez-nous votre projet",
-          intro: "Estimation gratuite. Premier retour sous 24 à 48 heures ouvrables.",
+          heading: "Parlez-nous de votre projet",
+          intro: "L'estimation est gratuite et nous répondons en 24 à 48 heures ouvrables.",
           actions: [
             { label: "Soumission gratuite", href: "/contact", variant: "primary" },
             { label: "Voir nos réalisations", href: "/projets", variant: "ghost" },

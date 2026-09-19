@@ -86,3 +86,16 @@ Chaque famille de pages a SA composition. Deux pages de familles différentes ne
 - Les descriptions du slider de services sur une page zone parlent de CETTE ville (type de maisons, règlement, secteur), pas du service en général.
 - Le `cta` final varie : heading avec le nom de la ville / du service, intro différente, note différente.
 - Les `facts` du `hero.zone` et les `rows` du `fact-sheet` ne se répètent pas entre eux.
+
+## Clarté (passe 2026-09, 4e) — le texte doit se comprendre en deux secondes
+
+Le propriétaire a jugé que « les textes n'ont pas de sens ». Cause : titres-fragments façon magazine, étiquettes cryptiques, valeurs télégraphiques, jargon de chantier. Règles :
+
+1. **Un titre de section dit ce qu'il y a dessous**, dans les mots du client. Bon : « Ce qu'on sait des maisons de Kirkland », « Nos services à Kirkland », « Combien coûte une cuisine », « Comment se déroule le chantier », « Ce que couvre notre licence ». Interdit : un fait posé en titre (« Une ville coupée par l'autoroute 40 », « Une ville bâtie en quinze ans », « Trois époques de bâti »), une image ou une formule (« tenue au cordeau », « Ce que vingt ans laissent derrière », « mesuré en minutes », « du drain au comptoir »), un impératif abstrait (« Régler l'eau avant de poser un panneau »).
+2. **Une étiquette de fiche est la question que le client se pose**, en 1 à 3 mots courants : « Type de maisons », « Où demander le permis », « Depuis notre base », « Projets courants », « Particularité locale », « Délai », « Prix indicatif », « Garantie », « Matériaux », « Entretien », « Usage recommandé ». Interdit : « Bâti », « Densité », « Croissance », « Ce qui tranche », « Excavation », « Zonage », « Patrimoine », « Prix relatif », « Réception », « Préalable », « Livrables », « Qui fait quoi », « Composition » seul.
+3. **Une valeur est une phrase complète et concrète**, pas une suite de noms : « La Ville vérifie les marges de recul et les normes de la zone avant d'émettre le permis » plutôt que « Recul, occupation du sol et normes de votre zone ». Elle répond à l'étiquette.
+4. **Pas de jargon** : « gabarié », « au cordeau », « mécanique » (dire plomberie et électricité), « poste », « livrable », « mobilisation », « enveloppe » (dire murs et toit), « PIIA » sans explication, « PPU », numéros de règlement sans dire ce qu'ils imposent.
+5. **Une carte ou une étape = un verbe** : « On refait la plomberie et l'électricité avant de refermer les murs », pas « Plomberie et électricité reprises ».
+6. **Le hero d'une zone** dit pour qui et pour quoi : « Rénovation et agrandissement pour les maisons de Kirkland, par un entrepreneur général licencié basé à quinze minutes. »
+7. **Les CTA** sont des phrases simples : « Un projet à Kirkland ? Parlons-en. », « Faites chiffrer votre cuisine ».
+8. Test de relecture : lire chaque titre et chaque rangée à voix haute comme si on l'expliquait à un voisin. Si on doit ajouter un mot pour que ça se comprenne, le texte est à réécrire.
