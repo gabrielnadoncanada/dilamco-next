@@ -99,7 +99,6 @@ export const designPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Le design en bref",
-          intro: "Ce que l'étape de design vous donne, et ce qu'elle vous coûte.",
           rows: [
             {
               label: "Combien de temps",
@@ -189,7 +188,6 @@ export const designPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Premier retour sous 24 à 48 heures ouvrables.",
         },
       },
     },

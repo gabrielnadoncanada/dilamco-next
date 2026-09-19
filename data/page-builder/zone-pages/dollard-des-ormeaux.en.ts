@@ -90,8 +90,6 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Dollard-des-Ormeaux homes, in brief",
-          intro:
-            "The city counted 1,800 residents in the early 1960s and close to 40,000 twenty years later.",
           rows: [
             {
               label: "What changed recently",
@@ -247,7 +245,6 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · general contractor, ten minutes from DDO",
         },
       },
     },

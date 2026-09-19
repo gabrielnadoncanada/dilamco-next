@@ -120,8 +120,6 @@ export const salleDeBainPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "La salle de bain en bref",
-          intro:
-            "Ce qu'il faut savoir avant de refaire une pièce qui reçoit de l'eau.",
           rows: [
             {
               label: "Combien de temps",
@@ -210,7 +208,6 @@ export const salleDeBainPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Montréal, Laval, Rive-Nord, Rive-Sud",
         },
       },
     },

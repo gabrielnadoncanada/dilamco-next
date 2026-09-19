@@ -96,7 +96,6 @@ export const page: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'on met dans vos armoires par défaut",
-          intro: "Notre standard, avant toute option que vous pourriez ajouter.",
           rows: [
             {
               label: "Caissons",

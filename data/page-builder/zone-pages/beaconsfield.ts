@@ -110,8 +110,6 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'on sait des maisons de Beaconsfield",
-          intro:
-            "La ville est passée de 990 résidents en 1951 à 16 800 en 1967, et les maisons en gardent la trace.",
           rows: [
             {
               label: "Âge des quartiers",
@@ -264,7 +262,6 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · permis et abattage gérés à Beaconsfield",
         },
       },
     },

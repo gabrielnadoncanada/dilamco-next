@@ -118,8 +118,6 @@ export const sousSolPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Le sous-sol en bref",
-          intro:
-            "Ce qu'on vérifie et ce qu'on prévoit avant de parler de finition.",
           rows: [
             {
               label: "À vérifier d'abord",
@@ -208,7 +206,6 @@ export const sousSolPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Ouest-de-l'Île, Montréal, Laval, Rive-Sud",
         },
       },
     },

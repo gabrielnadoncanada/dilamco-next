@@ -56,7 +56,6 @@ export const mdfPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir sur le MDF",
-          intro: "Ses forces, sa limite, et où on l'utilise chez vous.",
           rows: [
             {
               label: "De quoi c'est fait",

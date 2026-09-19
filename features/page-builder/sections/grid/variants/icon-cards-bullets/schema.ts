@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const ItemSchema = z.object({
   title: z.string().min(1),
-  description: z.string().min(1),
+  description: z.string().min(1).optional(),
   icon: z.string().min(1),
   bullets: z.array(z.string().min(1)).min(1).max(8),
 });

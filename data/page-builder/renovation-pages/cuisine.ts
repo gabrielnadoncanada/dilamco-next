@@ -74,12 +74,10 @@ export const renovationCuisinePage: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading: "Ce qui est inclus dans une rénovation de cuisine",
-          intro: "Tout est dans le même contrat. La soumission dit aussi ce qui est exclu.",
           columns: "2",
           items: [
             {
               title: "Démolition et protection",
-              description: "On vide la cuisine sans salir le reste de la maison",
               icon: "hammer",
               bullets: [
                 "On retire les armoires, le comptoir et les revêtements",
@@ -89,7 +87,6 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               title: "Plomberie et électricité",
-              description: "On refait les tuyaux et les fils avant de fermer les murs",
               icon: "wrench",
               bullets: [
                 "On raccorde l'évier, le lave-vaisselle et le réfrigérateur",
@@ -99,7 +96,6 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               title: "Armoires et comptoir",
-              description: "On fournit les deux et on les installe",
               icon: "package2",
               bullets: [
                 "Les armoires viennent de notre usine partenaire",
@@ -109,7 +105,6 @@ export const renovationCuisinePage: PageTemplateData = {
             },
             {
               title: "Plancher, dosseret et peinture",
-              description: "On termine par tout ce qui se voit",
               icon: "layers",
               bullets: [
                 "On corrige le plancher avant de poser le revêtement",
@@ -307,7 +302,6 @@ export const renovationCuisinePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Permis, plomberie, électricité, armoires et comptoir",
         },
       },
     },

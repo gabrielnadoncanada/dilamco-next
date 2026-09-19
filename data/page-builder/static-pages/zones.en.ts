@@ -142,8 +142,6 @@ export const pageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Our territory, in brief",
-          intro:
-            "On a job that runs for weeks, distance decides how fast a problem gets solved on site.",
           rows: [
             {
               label: "Our address",
@@ -204,7 +202,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · 18625 Larocque Street, Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

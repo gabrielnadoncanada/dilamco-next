@@ -87,7 +87,6 @@ export const zoneKirklandPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What we know about Kirkland homes",
-          intro: "Here is what comes up on nearly every Kirkland job site.",
           rows: [
             {
               label: "Lot sizes",
@@ -247,7 +246,6 @@ export const zoneKirklandPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · West Island · Kirkland job sites",
         },
       },
     },

@@ -74,12 +74,10 @@ export const renovationCuisinePageEn: PageTemplateData = {
         variant: "icon-cards-bullets",
         props: {
           heading: "What a kitchen renovation includes",
-          intro: "It all sits in one contract. The quote also says what is excluded.",
           columns: "2",
           items: [
             {
               title: "Demolition and protection",
-              description: "We empty the kitchen without messing up the house",
               icon: "hammer",
               bullets: [
                 "We remove the cabinets, the countertop and the finishes",
@@ -89,7 +87,6 @@ export const renovationCuisinePageEn: PageTemplateData = {
             },
             {
               title: "Plumbing and electrical",
-              description: "We redo the pipes and the wiring before the walls close",
               icon: "wrench",
               bullets: [
                 "We connect the sink, the dishwasher and the fridge",
@@ -99,7 +96,6 @@ export const renovationCuisinePageEn: PageTemplateData = {
             },
             {
               title: "Cabinets and countertop",
-              description: "We supply both and we install them",
               icon: "package2",
               bullets: [
                 "The cabinets come from our partner factory",
@@ -109,7 +105,6 @@ export const renovationCuisinePageEn: PageTemplateData = {
             },
             {
               title: "Floor, backsplash and paint",
-              description: "We finish with everything you can see",
               icon: "layers",
               bullets: [
                 "We correct the floor before laying the new surface",
@@ -307,7 +302,6 @@ export const renovationCuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Permit, plumbing, electrical, cabinets and countertop",
         },
       },
     },

@@ -119,8 +119,6 @@ export const commercialPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "The commercial project in brief",
-          intro:
-            "What an owner or a tenant should know before a site opens.",
           rows: [
             {
               label: "How long",
@@ -209,7 +207,6 @@ export const commercialPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Montréal, Laval, South Shore, Vaudreuil-Soulanges",
         },
       },
     },

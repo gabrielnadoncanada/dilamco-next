@@ -118,8 +118,6 @@ export const sousSolPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "The basement in brief",
-          intro:
-            "What we check and what we plan before anyone talks about finishes.",
           rows: [
             {
               label: "Checked first",
@@ -208,7 +206,6 @@ export const sousSolPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · West Island, Montréal, Laval, South Shore",
         },
       },
     },

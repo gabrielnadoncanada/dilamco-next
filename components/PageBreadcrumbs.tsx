@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { getLocale } from "next-intl/server";
 
 import { AppLink as Link } from "@/components/AppLink";
@@ -14,12 +14,24 @@ export async function PageBreadcrumbs({ items }: { items?: Crumb[] }) {
   if (!items || items.length < 2) return null;
   const locale = await getLocale();
 
+  const parent = items[items.length - 2];
+  const parentHref = parent.url.replace(SITE.url, "") || "/";
+
   return (
     <nav
       aria-label={locale === "en" ? "Breadcrumb" : "Fil d'Ariane"}
-      className="mx-auto w-full max-w-[1440px] px-[clamp(20px,1rem,56px)] pt-5 max-[700px]:px-[18px]"
+      className="mx-auto w-full max-w-[1440px] px-[clamp(20px,1rem,56px)] pt-4 max-[700px]:px-[18px] sm:pt-5"
     >
-      <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground">
+      {/* Mobile : un seul lien de retour vers le parent, sur une ligne. */}
+      <Link
+        href={parentHref}
+        className="inline-flex min-h-11 items-center gap-1 rounded-sm text-sm font-medium text-muted-foreground transition-ui focus-ring hover:text-foreground sm:hidden"
+      >
+        <ChevronLeft aria-hidden className="size-4" />
+        {parent.name}
+      </Link>
+
+      <ol className="hidden flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted-foreground sm:flex">
         {items.map((item, i) => {
           const isLast = i === items.length - 1;
           const href = item.url.replace(SITE.url, "") || "/";

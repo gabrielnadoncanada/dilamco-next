@@ -194,7 +194,6 @@ export const pageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What you should know about Dilamco",
-          intro: "The verifiable facts before you hand us a job site.",
           rows: [
             {
               label: "Our RBQ licence",
@@ -246,7 +245,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · West Island and Greater Montreal",
         },
       },
     },

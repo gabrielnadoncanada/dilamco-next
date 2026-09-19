@@ -99,7 +99,6 @@ export const designPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "The design stage in brief",
-          intro: "What the design stage gives you, and what it costs you.",
           rows: [
             {
               label: "How long",
@@ -189,7 +188,6 @@ export const designPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "First reply within 24 to 48 business hours.",
         },
       },
     },

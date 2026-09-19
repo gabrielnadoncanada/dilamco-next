@@ -88,8 +88,6 @@ export const zoneLavalPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What we know about Laval homes",
-          intro:
-            "Every Laval sector has its own building era, and its own surprises.",
           rows: [
             {
               label: "Age of the neighbourhoods",
@@ -265,7 +263,6 @@ export const zoneLavalPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · general contractor in renovation since 2004 · (514) 820-0773",
         },
       },
     },

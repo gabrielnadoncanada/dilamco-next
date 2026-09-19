@@ -86,8 +86,6 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What to know before renovating in Vaudreuil-Dorion",
-          intro:
-            "The city went from about 18,600 residents in 1995 to nearly 46,000 today.",
           rows: [
             {
               label: "Age of the neighbourhoods",
@@ -257,7 +255,6 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · Vaudreuil-Soulanges and the West Island · (514) 820-0773",
         },
       },
     },

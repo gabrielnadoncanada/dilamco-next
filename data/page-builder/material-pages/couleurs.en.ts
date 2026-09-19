@@ -56,7 +56,6 @@ export const couleursPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What you should know about finishes",
-          intro: "Six pointers for settling your colours without a bad surprise.",
           rows: [
             {
               label: "The material changes the colour",

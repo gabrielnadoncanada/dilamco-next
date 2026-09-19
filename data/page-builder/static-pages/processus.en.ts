@@ -107,8 +107,6 @@ export const pageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What you receive",
-          intro:
-            "Six documents you should demand from any contractor you consider.",
           rows: [
             {
               label: "The quote",
@@ -191,7 +189,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 • West Island, Montréal, Laval, South Shore and Vaudreuil-Soulanges",
         },
       },
     },

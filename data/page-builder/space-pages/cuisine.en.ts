@@ -117,8 +117,6 @@ export const cuisinePageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "The kitchen in brief",
-          intro:
-            "The questions homeowners ask us before they agree to meet.",
           rows: [
             {
               label: "How long",
@@ -201,7 +199,6 @@ export const cuisinePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · West Island, Montréal, Laval, South Shore",
         },
       },
     },

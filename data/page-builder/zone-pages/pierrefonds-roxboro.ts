@@ -110,8 +110,6 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir avant de rénover ici",
-          intro:
-            "Soixante-dix mille résidents, une rivière au nord, et beaucoup de sous-sols qui ont déjà pris l'eau.",
           rows: [
             {
               label: "Risque local",
@@ -271,7 +269,6 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · 18625, rue Larocque, Pierrefonds-Roxboro",
         },
       },
     },

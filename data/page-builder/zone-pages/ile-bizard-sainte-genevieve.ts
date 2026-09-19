@@ -116,8 +116,6 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir avant de rénover sur l'île",
-          intro:
-            "La rivière au nord, le lac à l'ouest, et une carte des zones inondables qui décide du projet.",
           rows: [
             {
               label: "Risque local",
@@ -288,7 +286,6 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · entrepreneur général établi à Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

@@ -80,9 +80,11 @@ export function GridIconCardsBullets(props: GridIconCardsBulletsProps) {
               <Heading as="h3" variant="card" className="mt-5">
                 {item.title}
               </Heading>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {item.description}
-              </p>
+              {item.description ? (
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {item.description}
+                </p>
+              ) : null}
               <ul className="mt-4 space-y-2 border-t border-primary/10 pt-4">
                 {item.bullets.slice(0, 4).map((bullet) => (
                   <li

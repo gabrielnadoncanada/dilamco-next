@@ -102,7 +102,6 @@ export const installationPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Installation in brief",
-          intro: "What happens in your home during the installation days.",
           rows: [
             {
               label: "How long",
@@ -192,7 +191,6 @@ export const installationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27",
         },
       },
     },

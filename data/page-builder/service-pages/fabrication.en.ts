@@ -102,7 +102,6 @@ export const fabricationPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Production in brief",
-          intro: "Who builds your cabinets, who inspects them and how long it takes.",
           rows: [
             {
               label: "How long",
@@ -192,7 +191,6 @@ export const fabricationPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "West Island, Montreal, Laval, South Shore",
         },
       },
     },

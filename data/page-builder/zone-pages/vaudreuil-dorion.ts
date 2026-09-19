@@ -110,8 +110,6 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir avant de rénover à Vaudreuil-Dorion",
-          intro:
-            "La ville est passée d'environ 18 600 résidents en 1995 à près de 46 000 aujourd'hui.",
           rows: [
             {
               label: "Âge des quartiers",
@@ -281,7 +279,6 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · Vaudreuil-Soulanges et Ouest-de-l'Île · (514) 820-0773",
         },
       },
     },

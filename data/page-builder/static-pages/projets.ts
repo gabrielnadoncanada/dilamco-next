@@ -49,7 +49,6 @@ export const page: PageTemplateData = {
         variant: "image-cards-slider-lightbox",
         props: {
           heading: "Voir les projets par type de pièce",
-          intro: "Choisissez la pièce qui ressemble le plus à votre projet.",
           items: [
             {
               title: "Cuisines",
@@ -180,7 +179,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Résidentiel et commercial · Montréal, Laval, Rive-Sud",
         },
       },
     },

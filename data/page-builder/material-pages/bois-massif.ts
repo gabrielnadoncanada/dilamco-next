@@ -56,7 +56,6 @@ export const boisMassifPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir sur le bois massif",
-          intro: "Ses qualités, son coût, et les endroits où il tient le mieux.",
           rows: [
             {
               label: "De quoi c'est fait",

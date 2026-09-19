@@ -56,7 +56,6 @@ export const melaminePageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What you should know about melamine",
-          intro: "What it does well, and the detail that decides how long it lasts.",
           rows: [
             {
               label: "What it is made of",

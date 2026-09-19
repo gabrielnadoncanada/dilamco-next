@@ -65,7 +65,6 @@ export const contreplaquePage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir sur le contreplaqué",
-          intro: "Les réponses aux questions qu'on nous pose sur ce panneau.",
           rows: [
             {
               label: "De quoi c'est fait",

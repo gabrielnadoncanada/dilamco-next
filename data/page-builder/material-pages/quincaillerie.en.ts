@@ -59,7 +59,6 @@ export const quincailleriePageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What we fit on every door",
-          intro: "The hardware included with all our cabinets, at no extra charge.",
           rows: [
             {
               label: "What it is made of",
@@ -182,7 +181,6 @@ export const quincailleriePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "West Island, Montreal, Laval, South Shore",
         },
       },
     },

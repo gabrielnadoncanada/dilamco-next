@@ -107,8 +107,6 @@ export const page: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce que vous recevez",
-          intro:
-            "Six documents que vous devriez exiger de n'importe quel entrepreneur.",
           rows: [
             {
               label: "La soumission",
@@ -191,7 +189,6 @@ export const page: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 • Ouest-de-l'Île, Montréal, Laval, Rive-Sud et Vaudreuil-Soulanges",
         },
       },
     },

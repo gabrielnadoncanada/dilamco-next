@@ -91,8 +91,6 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What to know before renovating here",
-          intro:
-            "Seventy thousand residents, a river to the north, and plenty of basements that have already taken on water.",
           rows: [
             {
               label: "Local risk",
@@ -252,7 +250,6 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · 18625 rue Larocque, Pierrefonds-Roxboro",
         },
       },
     },

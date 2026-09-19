@@ -56,7 +56,6 @@ export const couleursPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir sur les finis",
-          intro: "Six repères pour arrêter vos couleurs sans mauvaise surprise.",
           rows: [
             {
               label: "Le matériau change la couleur",

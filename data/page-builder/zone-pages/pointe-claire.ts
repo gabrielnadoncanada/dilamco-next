@@ -108,8 +108,6 @@ export const zonePointeClairePage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir avant de rénover à Pointe-Claire",
-          intro:
-            "Deux maisons voisines peuvent relever de règles différentes, selon l'âge du quartier.",
           rows: [
             {
               label: "Quartiers anciens",
@@ -266,7 +264,6 @@ export const zonePointeClairePage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · dossiers d'urbanisme de Pointe-Claire préparés",
         },
       },
     },

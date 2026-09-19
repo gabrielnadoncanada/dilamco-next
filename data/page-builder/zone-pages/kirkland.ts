@@ -103,8 +103,6 @@ export const zoneKirklandPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'on sait des maisons de Kirkland",
-          intro:
-            "Voici ce qui revient sur presque tous nos chantiers de Kirkland.",
           rows: [
             {
               label: "Taille des terrains",
@@ -265,7 +263,6 @@ export const zoneKirklandPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · Ouest-de-l'Île · chantiers de Kirkland",
         },
       },
     },

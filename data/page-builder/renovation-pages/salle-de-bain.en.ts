@@ -78,7 +78,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
           items: [
             {
               title: "Demolition",
-              description: "We strip it out to see the state of the floor",
               icon: "hammer",
               bullets: [
                 "We take out the shower, the vanity and the finishes",
@@ -88,7 +87,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             },
             {
               title: "Plumbing and ventilation",
-              description: "We redo what the inspector checks",
               icon: "droplets",
               bullets: [
                 "We redo the drain slope and the water supply",
@@ -98,7 +96,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             },
             {
               title: "Waterproofing and tile",
-              description: "We seal the shower before any tile goes on",
               icon: "shieldCheck",
               bullets: [
                 "Water-resistant board on every wet wall",
@@ -108,7 +105,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
             },
             {
               title: "Vanity and fixtures",
-              description: "We install the vanity and everything else",
               icon: "bath",
               bullets: [
                 "Vanity supplied by our partner factory",
@@ -306,7 +302,6 @@ export const renovationSalleDeBainPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Waterproofing, ventilation and plumbing to code",
         },
       },
     },

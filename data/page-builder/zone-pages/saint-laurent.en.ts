@@ -86,8 +86,6 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Saint-Laurent homes, in brief",
-          intro:
-            "Norgate went up in 1949 and Nouveau-Saint-Laurent in the early 1990s.",
           rows: [
             {
               label: "Age of the neighbourhoods",
@@ -257,7 +255,6 @@ export const zoneSaintLaurentPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licensed general contractor · based at 18625 Larocque Street · (514) 820-0773",
         },
       },
     },

@@ -56,7 +56,6 @@ export const melaminePage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir sur la mélamine",
-          intro: "Ce qu'elle fait bien, et le détail qui décide de sa durée.",
           rows: [
             {
               label: "De quoi c'est fait",

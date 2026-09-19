@@ -49,7 +49,6 @@ export const pageEn: PageTemplateData = {
         variant: "image-cards-slider-lightbox",
         props: {
           heading: "Browse the projects by room",
-          intro: "Pick the room that looks most like your own project.",
           items: [
             {
               title: "Kitchens",
@@ -180,7 +179,6 @@ export const pageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Residential and commercial · Montréal, Laval, South Shore",
         },
       },
     },

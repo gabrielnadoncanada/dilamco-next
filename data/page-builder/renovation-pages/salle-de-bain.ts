@@ -78,7 +78,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
           items: [
             {
               title: "Démolition",
-              description: "On enlève tout pour voir l'état du plancher",
               icon: "hammer",
               bullets: [
                 "On sort la douche, la vanité et les revêtements",
@@ -88,7 +87,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             },
             {
               title: "Plomberie et ventilation",
-              description: "On reprend ce que l'inspecteur vérifie",
               icon: "droplets",
               bullets: [
                 "On refait la pente du drain et l'arrivée d'eau",
@@ -98,7 +96,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             },
             {
               title: "Étanchéité et céramique",
-              description: "On imperméabilise avant de poser la tuile",
               icon: "shieldCheck",
               bullets: [
                 "Panneau résistant à l'eau sur les murs mouillés",
@@ -108,7 +105,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
             },
             {
               title: "Vanité et accessoires",
-              description: "On installe le meuble-lavabo et le reste",
               icon: "bath",
               bullets: [
                 "Vanité fournie par notre usine partenaire",
@@ -306,7 +302,6 @@ export const renovationSalleDeBainPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Étanchéité, ventilation et plomberie conformes",
         },
       },
     },

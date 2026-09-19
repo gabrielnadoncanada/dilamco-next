@@ -118,8 +118,6 @@ export const walkInPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Storage in brief",
-          intro:
-            "What to know before having a closet or a walk-in drawn for you.",
           rows: [
             {
               label: "Typical price",
@@ -208,7 +206,6 @@ export const walkInPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Montréal, Laval, West Island, South Shore",
         },
       },
     },

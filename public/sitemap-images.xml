@@ -1138,6 +1138,11 @@
   <url>
     <loc>https://dilamco.com/en/spaces/basement</loc>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Basement finished as a family room with built-in storage</image:caption>
+      <image:title>Basement finished as a family room with built-in storage</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
       <image:caption>Home theatre with a riser platform and acoustic panels</image:caption>
       <image:title>Home theatre with a riser platform and acoustic panels</image:title>
@@ -1165,6 +1170,11 @@
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/bathroom</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
+      <image:caption>Bathroom with a light oak double vanity and glass shower</image:caption>
+      <image:title>Bathroom with a light oak double vanity and glass shower</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp</image:loc>
       <image:caption>Marble bathroom with a floating vanity</image:caption>
@@ -1199,6 +1209,11 @@
       <image:title>Office refitted in a downtown Montréal building</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-featured-commercial-project-01.webp</image:loc>
+      <image:caption>Oak reception counter and storage in a commercial space</image:caption>
+      <image:title>Oak reception counter and storage in a commercial space</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-02.webp</image:loc>
       <image:caption>Leasehold improvements carried out in a Laval unit</image:caption>
       <image:title>Leasehold improvements carried out in a Laval unit</image:title>
@@ -1216,6 +1231,11 @@
   </url>
   <url>
     <loc>https://dilamco.com/en/spaces/kitchen</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp</image:loc>
+      <image:caption>U-shaped kitchen with white shaker cabinets and subway tile backsplash</image:caption>
+      <image:title>U-shaped kitchen with white shaker cabinets and subway tile backsplash</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
       <image:caption>Open-plan kitchen with island and full-height cabinet columns</image:caption>
@@ -1250,6 +1270,11 @@
       <image:title>Laundry room with a continuous folding counter above the appliances</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-laundry-01.webp</image:loc>
+      <image:caption>White laundry room with raised appliances and a broom cabinet</image:caption>
+      <image:title>White laundry room with raised appliances and a broom cabinet</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-02.webp</image:loc>
       <image:caption>Storage towers and pull-out baskets in a Laval laundry room</image:caption>
       <image:title>Storage towers and pull-out baskets in a Laval laundry room</image:title>
@@ -1271,6 +1296,11 @@
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
       <image:caption>Custom walk-in closet with double-height hanging rails</image:caption>
       <image:title>Custom walk-in closet with double-height hanging rails</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-walkin-01.webp</image:loc>
+      <image:caption>Light oak walk-in with drawers, shelves and a jewellery tray</image:caption>
+      <image:title>Light oak walk-in with drawers, shelves and a jewellery tray</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-02.webp</image:loc>
@@ -1334,6 +1364,11 @@
       <image:title>Bureau réaménagé dans un immeuble du centre-ville de Montréal</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-featured-commercial-project-01.webp</image:loc>
+      <image:caption>Comptoir d&amp;#x27;accueil et rangement en chêne dans un espace commercial</image:caption>
+      <image:title>Comptoir d&amp;#x27;accueil et rangement en chêne dans un espace commercial</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-commercial-project-02.webp</image:loc>
       <image:caption>Améliorations locatives réalisées dans un local de Laval</image:caption>
       <image:title>Améliorations locatives réalisées dans un local de Laval</image:title>
@@ -1351,6 +1386,11 @@
   </url>
   <url>
     <loc>https://dilamco.com/espaces/cuisine</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp</image:loc>
+      <image:caption>Cuisine en U avec armoires shaker blanches et dosseret métro</image:caption>
+      <image:title>Cuisine en U avec armoires shaker blanches et dosseret métro</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp</image:loc>
       <image:caption>Cuisine à aire ouverte avec îlot et colonnes pleine hauteur</image:caption>
@@ -1379,6 +1419,11 @@
   </url>
   <url>
     <loc>https://dilamco.com/espaces/salle-de-bain</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-bath-project-01.webp</image:loc>
+      <image:caption>Salle de bain avec vanité double en chêne clair et douche vitrée</image:caption>
+      <image:title>Salle de bain avec vanité double en chêne clair et douche vitrée</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/salle-de-bain-marbre-meuble-lavabo-flottant-01.webp</image:loc>
       <image:caption>Salle de bain en marbre avec meuble-lavabo flottant</image:caption>
@@ -1413,6 +1458,11 @@
       <image:title>Salle de lavage avec comptoir de pliage continu au-dessus des appareils</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-laundry-01.webp</image:loc>
+      <image:caption>Salle de lavage blanche avec appareils surélevés et armoire à balais</image:caption>
+      <image:title>Salle de lavage blanche avec appareils surélevés et armoire à balais</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-laundry-project-02.webp</image:loc>
       <image:caption>Colonnes de rangement et paniers dans une salle de lavage à Laval</image:caption>
       <image:title>Colonnes de rangement et paniers dans une salle de lavage à Laval</image:title>
@@ -1430,6 +1480,11 @@
   </url>
   <url>
     <loc>https://dilamco.com/espaces/sous-sol</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Sous-sol aménagé en salon familial avec rangements intégrés</image:caption>
+      <image:title>Sous-sol aménagé en salon familial avec rangements intégrés</image:title>
+    </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-cinema-01.webp</image:loc>
       <image:caption>Salle de cinéma maison avec estrade et panneaux acoustiques</image:caption>
@@ -1462,6 +1517,11 @@
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-hero-01.webp</image:loc>
       <image:caption>Walk-in sur mesure avec penderie sur deux hauteurs</image:caption>
       <image:title>Walk-in sur mesure avec penderie sur deux hauteurs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-walkin-01.webp</image:loc>
+      <image:caption>Walk-in en chêne clair avec tiroirs, tablettes et plateau à bijoux</image:caption>
+      <image:title>Walk-in en chêne clair avec tiroirs, tablettes et plateau à bijoux</image:title>
     </image:image>
     <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/space-walkin-project-02.webp</image:loc>

@@ -108,8 +108,6 @@ export const zoneDorvalPage: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "Ce qu'il faut savoir avant de rénover à Dorval",
-          intro:
-            "Le lac au sud, la voie ferrée et l'aéroport au nord, et des quartiers résidentiels entre les deux.",
           rows: [
             {
               label: "Délai de permis",
@@ -266,7 +264,6 @@ export const zoneDorvalPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · permis de la Cité de Dorval préparés",
         },
       },
     },

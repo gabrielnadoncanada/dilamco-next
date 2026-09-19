@@ -78,7 +78,6 @@ export const renovationSousSolPage: PageTemplateData = {
           items: [
             {
               title: "Humidité et fondation",
-              description: "On règle l'eau avant de commencer le reste",
               icon: "droplets",
               bullets: [
                 "On examine la dalle, les murs et les traces d'eau",
@@ -88,7 +87,6 @@ export const renovationSousSolPage: PageTemplateData = {
             },
             {
               title: "Isolation et murs",
-              description: "On monte des murs qui ne moisiront pas",
               icon: "layers",
               bullets: [
                 "On applique un isolant continu contre le béton",
@@ -98,7 +96,6 @@ export const renovationSousSolPage: PageTemplateData = {
             },
             {
               title: "Issue de secours",
-              description: "Obligatoire si vous voulez une chambre",
               icon: "doorOpen",
               bullets: [
                 "Fenêtre qui s'ouvre ou porte donnant dehors",
@@ -108,7 +105,6 @@ export const renovationSousSolPage: PageTemplateData = {
             },
             {
               title: "Finition et rangement",
-              description: "On finit les murs, le plafond et le plancher",
               icon: "package2",
               bullets: [
                 "On choisit un plancher qui supporte le béton",
@@ -296,7 +292,6 @@ export const renovationSousSolPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Humidité, isolation, permis et issue de secours",
         },
       },
     },

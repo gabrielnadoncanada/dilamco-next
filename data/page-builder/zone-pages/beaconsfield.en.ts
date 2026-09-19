@@ -89,8 +89,6 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What we know about Beaconsfield homes",
-          intro:
-            "The town went from 990 residents in 1951 to 16,800 in 1967, and the houses still show it.",
           rows: [
             {
               label: "Age of the neighbourhoods",
@@ -243,7 +241,6 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · permits and tree filings handled in Beaconsfield",
         },
       },
     },

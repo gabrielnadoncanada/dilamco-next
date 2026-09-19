@@ -89,8 +89,6 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "What to know before renovating on the island",
-          intro:
-            "The river to the north, the lake to the west, and a flood-zone map that drives the project.",
           rows: [
             {
               label: "Local risk",
@@ -261,7 +259,6 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Dilamco · general contractor based in Pierrefonds-Roxboro · (514) 820-0773",
         },
       },
     },

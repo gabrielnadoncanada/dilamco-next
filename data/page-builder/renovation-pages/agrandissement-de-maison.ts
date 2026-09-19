@@ -78,7 +78,6 @@ export const agrandissementMaisonPage: PageTemplateData = {
           items: [
             {
               title: "Vérifications et permis",
-              description: "On regarde ce que la ville permet avant de dessiner",
               icon: "fileCheck",
               bullets: [
                 "On lit les distances à respecter et la hauteur permise",
@@ -88,7 +87,6 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
             {
               title: "Creusage et fondation",
-              description: "C'est ce qui porte tout l'agrandissement",
               icon: "hardHat",
               bullets: [
                 "On localise les services souterrains avant de creuser",
@@ -98,7 +96,6 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
             {
               title: "Charpente, murs et toit",
-              description: "On ferme le bâtiment avant l'hiver",
               icon: "building2",
               bullets: [
                 "On monte la charpente selon les plans de l'ingénieur",
@@ -108,7 +105,6 @@ export const agrandissementMaisonPage: PageTemplateData = {
             },
             {
               title: "Raccordements et finition",
-              description: "La nouvelle pièce est reliée à la maison",
               icon: "wrench",
               bullets: [
                 "On prolonge le chauffage, la ventilation et les circuits",
@@ -205,9 +201,6 @@ export const agrandissementMaisonPage: PageTemplateData = {
             src: "/images/generated/renovation/renovation-extension-approach-01.webp",
             alt: "Chantier d'agrandissement raccordé à une maison existante",
           },
-          cardTitle: "Ce qu'on regarde d'abord",
-          cardDescription:
-            "L'accès au terrain pour la machinerie, la position de l'entrée électrique et du drain, et la lumière que perdront vos fenêtres actuelles.",
         },
       },
     },
@@ -264,7 +257,6 @@ export const agrandissementMaisonPage: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "Licence RBQ 8306-0806-27 · Zonage, permis, ingénieur et fondations",
         },
       },
     },

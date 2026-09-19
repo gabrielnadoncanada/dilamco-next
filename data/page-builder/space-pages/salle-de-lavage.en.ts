@@ -121,8 +121,6 @@ export const salleDeLavagePageEn: PageTemplateData = {
         variant: "fact-sheet",
         props: {
           heading: "The laundry room in brief",
-          intro:
-            "What to plan for in a room that carries water, hot air and power.",
           rows: [
             {
               label: "How long",
@@ -211,7 +209,6 @@ export const salleDeLavagePageEn: PageTemplateData = {
               variant: "ghost",
             },
           ],
-          note: "RBQ licence 8306-0806-27 · Montréal, Laval, South Shore",
         },
       },
     },
