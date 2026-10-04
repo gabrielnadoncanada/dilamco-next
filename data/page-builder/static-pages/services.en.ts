@@ -6,7 +6,7 @@ export const pageEn: PageTemplateData = {
   metadata: {
     title: "Residential renovation and construction services",
     description:
-      "General contractor in Montreal: kitchen, bathroom, basement, flooring, addition, disaster rebuild. RBQ licence, written contract.",
+      "General contractor in Montreal: kitchen, bathroom, basement, flooring, windows and doors, addition, disaster rebuild. RBQ licence.",
     path: "/services",
     ogAlt: "Dilamco renovation services, general contractor",
   },
@@ -127,6 +127,17 @@ export const pageEn: PageTemplateData = {
                 alt: "Room restored after a loss",
               },
               footerCtaLabel: "See disaster rebuild",
+            },
+            {
+              title: "Windows and doors",
+              href: "/services/renovation/portes-et-fenetres",
+              description:
+                "We replace windows and doors, from install to trim.",
+              image: {
+                src: "/images/generated/renovation/renovation-portes-fenetres-approach-01.webp",
+                alt: "New window being installed in a house",
+              },
+              footerCtaLabel: "See windows and doors",
             },
             {
               title: "Commercial fit-out",

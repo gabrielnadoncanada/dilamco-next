@@ -6,7 +6,7 @@ export const page: PageTemplateData = {
   metadata: {
     title: "Services de rénovation et construction résidentielle",
     description:
-      "Entrepreneur général à Montréal : cuisine, salle de bain, sous-sol, plancher, agrandissement, après sinistre. Licence RBQ, contrat écrit.",
+      "Entrepreneur général à Montréal : cuisine, salle de bain, sous-sol, plancher, portes et fenêtres, agrandissement, après sinistre. Licence RBQ.",
     path: "/services",
     ogAlt: "Services de rénovation Dilamco, entrepreneur général",
   },
@@ -127,6 +127,17 @@ export const page: PageTemplateData = {
                 alt: "Pièce remise en état après un sinistre",
               },
               footerCtaLabel: "Voir l'après sinistre",
+            },
+            {
+              title: "Portes et fenêtres",
+              href: "/services/renovation/portes-et-fenetres",
+              description:
+                "Nous remplaçons fenêtres et portes, de la pose aux moulures.",
+              image: {
+                src: "/images/generated/renovation/renovation-portes-fenetres-approach-01.webp",
+                alt: "Pose d'une fenêtre neuve dans une maison",
+              },
+              footerCtaLabel: "Voir portes et fenêtres",
             },
             {
               title: "Aménagement commercial",

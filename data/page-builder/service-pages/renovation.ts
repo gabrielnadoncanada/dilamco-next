@@ -62,7 +62,7 @@ export const renovationPage: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "Les six types de rénovation que nous faisons",
+          heading: "Les sept types de rénovation que nous faisons",
           items: [
             {
               title: "Cuisine",
@@ -129,6 +129,17 @@ export const renovationPage: PageTemplateData = {
                 alt: "Reconstruction après un dégât d'eau",
               },
               footerCtaLabel: "Voir après sinistre",
+            },
+            {
+              title: "Portes et fenêtres",
+              href: "/services/renovation/portes-et-fenetres",
+              description:
+                "On change l'unité et on refait l'étanchéité et les moulures.",
+              image: {
+                src: "/images/generated/renovation/renovation-portes-fenetres-hero-01.webp",
+                alt: "Fenêtres et porte patio remplacées",
+              },
+              footerCtaLabel: "Voir portes et fenêtres",
             },
           ],
         },

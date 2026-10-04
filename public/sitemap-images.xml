@@ -912,6 +912,11 @@
       <image:title>Room restored after a loss</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-approach-01.webp</image:loc>
+      <image:caption>New window being installed in a house</image:caption>
+      <image:title>New window being installed in a house</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
       <image:caption>Commercial fit-out delivered ready to occupy</image:caption>
       <image:title>Commercial fit-out delivered ready to occupy</image:title>
@@ -1002,6 +1007,11 @@
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-02.webp</image:loc>
       <image:caption>Rebuild after water damage</image:caption>
       <image:title>Rebuild after water damage</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-hero-01.webp</image:loc>
+      <image:caption>Replaced windows and patio door</image:caption>
+      <image:title>Replaced windows and patio door</image:title>
     </image:image>
   </url>
   <url>
@@ -1095,6 +1105,19 @@
       <image:loc>https://dilamco.com/images/generated/services/service-renovation-project-03.webp</image:loc>
       <image:caption>Damage assessment before a room is rebuilt</image:caption>
       <image:title>Damage assessment before a room is rebuilt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/services/renovation/windows-and-doors</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-hero-01.webp</image:loc>
+      <image:caption>Living room with new windows and a sliding patio door</image:caption>
+      <image:title>Living room with new windows and a sliding patio door</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-approach-01.webp</image:loc>
+      <image:caption>New window being installed over a membrane on the sill</image:caption>
+      <image:title>New window being installed over a membrane on the sill</image:title>
     </image:image>
   </url>
   <url>
@@ -2001,6 +2024,11 @@
       <image:title>Pièce remise en état après un sinistre</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-approach-01.webp</image:loc>
+      <image:caption>Pose d&amp;#x27;une fenêtre neuve dans une maison</image:caption>
+      <image:title>Pose d&amp;#x27;une fenêtre neuve dans une maison</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://dilamco.com/images/generated/spaces/espaces-card-commercial-01.webp</image:loc>
       <image:caption>Aménagement commercial livré prêt à occuper</image:caption>
       <image:title>Aménagement commercial livré prêt à occuper</image:title>
@@ -2092,6 +2120,11 @@
       <image:caption>Reconstruction après un dégât d&amp;#x27;eau</image:caption>
       <image:title>Reconstruction après un dégât d&amp;#x27;eau</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-hero-01.webp</image:loc>
+      <image:caption>Fenêtres et porte patio remplacées</image:caption>
+      <image:title>Fenêtres et porte patio remplacées</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://dilamco.com/services/renovation/agrandissement-de-maison</loc>
@@ -2148,6 +2181,19 @@
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-plancher-approach-01.webp</image:loc>
       <image:caption>Préparation du sous-plancher avant la pose d&amp;#x27;un revêtement</image:caption>
       <image:title>Préparation du sous-plancher avant la pose d&amp;#x27;un revêtement</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/services/renovation/portes-et-fenetres</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-hero-01.webp</image:loc>
+      <image:caption>Salon avec fenêtres neuves et porte patio coulissante</image:caption>
+      <image:title>Salon avec fenêtres neuves et porte patio coulissante</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/renovation/renovation-portes-fenetres-approach-01.webp</image:loc>
+      <image:caption>Pose d&amp;#x27;une fenêtre neuve avec membrane sur l&amp;#x27;appui</image:caption>
+      <image:title>Pose d&amp;#x27;une fenêtre neuve avec membrane sur l&amp;#x27;appui</image:title>
     </image:image>
   </url>
   <url>

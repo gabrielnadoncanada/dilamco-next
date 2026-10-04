@@ -4,12 +4,14 @@ import { agrandissementMaisonPage } from "./agrandissement-de-maison";
 import { renovationApresSinistrePage } from "./apres-sinistre";
 import { renovationCuisinePage } from "./cuisine";
 import { renovationPlancherPage } from "./plancher";
+import { renovationPortesFenetresPage } from "./portes-et-fenetres";
 import { renovationSalleDeBainPage } from "./salle-de-bain";
 import { renovationSousSolPage } from "./sous-sol";
 import { agrandissementMaisonPageEn } from "./agrandissement-de-maison.en";
 import { renovationApresSinistrePageEn } from "./apres-sinistre.en";
 import { renovationCuisinePageEn } from "./cuisine.en";
 import { renovationPlancherPageEn } from "./plancher.en";
+import { renovationPortesFenetresPageEn } from "./portes-et-fenetres.en";
 import { renovationSalleDeBainPageEn } from "./salle-de-bain.en";
 import { renovationSousSolPageEn } from "./sous-sol.en";
 
@@ -20,6 +22,7 @@ const renovationPages = {
   plancher: renovationPlancherPage,
   "agrandissement-de-maison": agrandissementMaisonPage,
   "apres-sinistre": renovationApresSinistrePage,
+  "portes-et-fenetres": renovationPortesFenetresPage,
 };
 
 const renovationPagesEn: Partial<
@@ -31,6 +34,7 @@ const renovationPagesEn: Partial<
   plancher: renovationPlancherPageEn,
   "agrandissement-de-maison": agrandissementMaisonPageEn,
   "apres-sinistre": renovationApresSinistrePageEn,
+  "portes-et-fenetres": renovationPortesFenetresPageEn,
 };
 
 export const PUBLIC_RENOVATION_PAGE_TYPES = Object.keys(renovationPages);
