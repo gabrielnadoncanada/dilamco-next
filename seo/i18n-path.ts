@@ -12,7 +12,7 @@ const EN_SEGMENT: Record<string, string> = {
   zones: "areas",
 };
 
-// Valeurs d'espace traduites (interne FR -> externe EN). Enum borné (6).
+// Valeurs d'espace traduites (interne FR -> externe EN). Enum borné (7).
 export const SPACE_EN: Record<string, string> = {
   cuisine: "kitchen",
   "salle-de-bain": "bathroom",
@@ -30,6 +30,7 @@ export const RENOVATION_EN: Record<string, string> = {
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
   "apres-sinistre": "water-damage",
+  "portes-et-fenetres": "windows-and-doors",
 };
 
 // Zones desservies (pages géo SEO local, /zones/<ville> -> /en/areas/<city>).

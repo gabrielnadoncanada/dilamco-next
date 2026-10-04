@@ -54,6 +54,7 @@ const RENOVATION_EN = {
   plancher: "flooring",
   "agrandissement-de-maison": "home-extension",
   "apres-sinistre": "water-damage",
+  "portes-et-fenetres": "windows-and-doors",
 };
 const MATERIAL_EN = {
   contreplaque: "plywood",

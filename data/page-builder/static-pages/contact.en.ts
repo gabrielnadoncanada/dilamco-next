@@ -111,6 +111,7 @@ export const pageEn: PageTemplateData = {
                     { label: "Basement finishing", value: "sous-sol" },
                     { label: "Home addition", value: "agrandissement" },
                     { label: "Flooring", value: "plancher" },
+                    { label: "Windows and doors", value: "portes-et-fenetres" },
                     {
                       label: "Disaster restoration (water, fire)",
                       value: "apres-sinistre",

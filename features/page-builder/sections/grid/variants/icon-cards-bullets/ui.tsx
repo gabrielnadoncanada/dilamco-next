@@ -5,9 +5,11 @@ import {
   ChefHat,
   ClipboardCheck,
   Clock,
+  Columns2,
   DoorOpen,
   Droplets,
   FileCheck,
+  Grid2x2,
   Hammer,
   HardHat,
   Layers,
@@ -15,6 +17,7 @@ import {
   Package2,
   Ruler,
   ShieldCheck,
+  Shovel,
   SlidersHorizontal,
   Sofa,
   Wrench,
@@ -47,6 +50,9 @@ const iconMap = {
   bath: Bath,
   chefHat: ChefHat,
   sofa: Sofa,
+  window: Grid2x2,
+  patioDoor: Columns2,
+  shovel: Shovel,
 } as const;
 
 function resolveIcon(icon: string) {

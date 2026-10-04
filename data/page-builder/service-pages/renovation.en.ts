@@ -62,7 +62,7 @@ export const renovationPageEn: PageTemplateData = {
         type: "grid",
         variant: "image-cards-slider",
         props: {
-          heading: "The six kinds of renovation we do",
+          heading: "The seven kinds of renovation we do",
           items: [
             {
               title: "Kitchen",
@@ -129,6 +129,17 @@ export const renovationPageEn: PageTemplateData = {
                 alt: "Rebuild after water damage",
               },
               footerCtaLabel: "See disaster rebuild",
+            },
+            {
+              title: "Windows and doors",
+              href: "/services/renovation/portes-et-fenetres",
+              description:
+                "We swap the unit, then redo the seal and the trim.",
+              image: {
+                src: "/images/generated/renovation/renovation-portes-fenetres-hero-01.webp",
+                alt: "Replaced windows and patio door",
+              },
+              footerCtaLabel: "See windows and doors",
             },
           ],
         },

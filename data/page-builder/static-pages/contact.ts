@@ -119,6 +119,10 @@ export const page: PageTemplateData = {
                     },
                     { label: "Plancher", value: "plancher" },
                     {
+                      label: "Portes et fenêtres",
+                      value: "portes-et-fenetres",
+                    },
+                    {
                       label: "Après sinistre (eau, feu)",
                       value: "apres-sinistre",
                     },

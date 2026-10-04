@@ -344,6 +344,22 @@ export const imageManifest = [
     ],
   }),
   asset({
+    id: "renovation-portes-fenetres-hero-01",
+    output: "/images/generated/renovation/renovation-portes-fenetres-hero-01.webp",
+    promptText:
+      "Window and door replacement hero image, bright living and dining room of a West Island Montreal suburban house with newly installed black-framed hybrid casement windows and a wide sliding patio door opening onto a backyard deck, crisp white interior casing, clean drywall returns, autumn daylight, finished believable renovation result, wide editorial shot.",
+    pages: ["/services/renovation/portes-et-fenetres/"],
+    targets: [],
+  }),
+  asset({
+    id: "renovation-portes-fenetres-approach-01",
+    output: "/images/generated/renovation/renovation-portes-fenetres-approach-01.webp",
+    promptText:
+      "On-site window replacement in a Quebec brick house, installer setting a new white PVC window into a prepared rough opening, self-adhering membrane folded over the sill, shims and level visible, low-expansion foam can on the sill, tidy work area, documentary renovation photo, medium close shot.",
+    pages: ["/services/renovation/portes-et-fenetres/"],
+    targets: [],
+  }),
+  asset({
     id: "renovation-extension-hero-01",
     output: "/images/generated/renovation/renovation-extension-hero-01.webp",
     promptText:

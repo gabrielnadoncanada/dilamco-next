@@ -18,6 +18,7 @@ import {
   Info,
   MapPin,
   Droplets,
+  Grid2x2,
   Home,
 } from "lucide-react";
 import type { MenuItem } from "@/components/navbar/navbar.types";
@@ -80,6 +81,12 @@ export const MAIN_NAV_EN: MenuItem[] = [
             url: "/services/renovation/apres-sinistre/",
             icon: Droplets,
             description: "Water or fire damage: rebuild and insurance claims.",
+          },
+          {
+            label: "Windows and doors",
+            url: "/services/renovation/portes-et-fenetres/",
+            icon: Grid2x2,
+            description: "Windows, patio doors, entry doors, basement egress.",
           },
           {
             label: "Commercial",
@@ -282,6 +289,10 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
         url: "/services/renovation/agrandissement-de-maison/",
       },
       { text: "Disaster recovery", url: "/services/renovation/apres-sinistre/" },
+      {
+        text: "Windows and doors",
+        url: "/services/renovation/portes-et-fenetres/",
+      },
     ],
   },
   {

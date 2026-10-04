@@ -18,6 +18,7 @@ import {
   Info,
   MapPin,
   Droplets,
+  Grid2x2,
   Home,
 } from "lucide-react";
 import type { MenuItem } from "@/components/navbar/navbar.types";
@@ -80,6 +81,12 @@ export const MAIN_NAV: MenuItem[] = [
             url: "/services/renovation/apres-sinistre/",
             icon: Droplets,
             description: "Dégât d'eau ou feu : reconstruction et assurances.",
+          },
+          {
+            label: "Portes et fenêtres",
+            url: "/services/renovation/portes-et-fenetres/",
+            icon: Grid2x2,
+            description: "Fenêtres, porte patio, porte d'entrée, sous-sol.",
           },
           {
             label: "Commercial",
@@ -285,6 +292,10 @@ export const FOOTER_NAV: FooterNavSection[] = [
         url: "/services/renovation/agrandissement-de-maison/",
       },
       { text: "Après sinistre", url: "/services/renovation/apres-sinistre/" },
+      {
+        text: "Portes et fenêtres",
+        url: "/services/renovation/portes-et-fenetres/",
+      },
     ],
   },
   {
