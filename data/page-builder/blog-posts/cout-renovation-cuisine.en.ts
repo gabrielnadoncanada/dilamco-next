@@ -7,8 +7,15 @@
 // each question, official sources.
 //
 // Facts and sources (checked 2026-10-08):
-// - Ranges $20,000+ / $35,000-$50,000 / $50,000+ and projects from $25,000:
-//   data/page-builder/renovation-pages/cuisine.ts, static-pages/home.ts.
+// - Real Dilamco quotes (Ventes/Résidentiel folder, anonymized: no names, no
+//   addresses): kitchen A, Oct. 2025, North Shore, $29,250 in 11 line items;
+//   kitchen B, March 2026, North Shore, $49,225 in 9 line items; full kitchen,
+//   Nov. 2025, Montreal, $25,835; kitchen without countertop with ~408 sq ft of
+//   hardwood, Oct. 2025, Laval, $41,300. All prices before tax, appliances
+//   excluded (confirmed by Sean Diffley on 2026-10-08). 40% deposit at order.
+//   On-site work: 7 to 10 working days for kitchen A.
+// - Refresh from $20,000 and open-concept over $50,000:
+//   data/page-builder/renovation-pages/cuisine.ts.
 // - 9 to 15 weeks between signed plans and installation; 2 to 4 weeks of design:
 //   space pages and design service.
 // - Montreal (montreal.ca/demarches/renover-linterieur-dun-batiment): cabinets,
@@ -27,9 +34,9 @@ export const post: BlogPost = {
   title: "How much does a kitchen renovation cost in Quebec in 2026",
   metaTitle: "Kitchen renovation cost in Quebec (2026 prices)",
   description:
-    "Kitchen renovation cost in Quebec in 2026: $20,000 for a refresh, $35,000 to $50,000 for a full kitchen, over $50,000 with an open wall.",
+    "Kitchen renovation cost in Quebec in 2026: $25,000 to $50,000 before tax for a full kitchen. Two real quotes broken down line by line.",
   excerpt:
-    "Our real ranges in Greater Montreal, what moves the bill, the timelines and the mistakes that cost the most.",
+    "Two of our real quotes, line by line, what moves the bill, the timelines and the mistakes that cost the most.",
   cover: {
     src: "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
     alt: "Renovated white kitchen with a quartz island",
@@ -40,7 +47,8 @@ export const post: BlogPost = {
       title: "In short",
       items: [
         "Refresh that keeps the cabinet boxes: **from $20,000**.",
-        "Kitchen fully redone, same layout: **$35,000 to $50,000**.",
+        "Kitchen fully redone, same layout: **$25,000 to $50,000** before tax.",
+        "Cabinets account for **40% to 51%** of the price in our quotes; new flooring makes the biggest difference.",
         "Kitchen opened to the living room or flooring redone in the adjoining rooms: **over $50,000**.",
         "The three decisions that cost the most: moving the sink, removing a load-bearing wall, venting the range hood outdoors.",
         "Allow 9 to 15 weeks between signed plans and installation of the custom cabinets.",
@@ -53,11 +61,11 @@ export const post: BlogPost = {
     },
     {
       type: "p",
-      text: "In Greater Montreal, a full kitchen renovation costs **$35,000 to $50,000** in 2026 when the layout stays the same. A refresh that keeps the cabinet boxes starts at **$20,000**. A kitchen opened to the living room, with a load-bearing wall removed, goes **over $50,000**.",
+      text: "In Greater Montreal, a full kitchen renovation costs **$25,000 to $50,000 before tax** in 2026 when the layout stays the same. A refresh that keeps the cabinet boxes starts at **$20,000**. A kitchen opened to the living room, with a load-bearing wall removed, goes **over $50,000**.",
     },
     {
       type: "p",
-      text: "These amounts come from our quotes in the West Island, Montreal, Laval and the South Shore. They include labour, cabinets, countertop and trades, but not appliances.",
+      text: "These amounts come from our 2025 and 2026 quotes in Montreal, Laval and the North Shore. They include labour, cabinets, countertop and trades. Appliances are never included, and taxes are added at the end.",
     },
     {
       type: "table",
@@ -71,7 +79,7 @@ export const post: BlogPost = {
         ],
         [
           "Full kitchen",
-          "$35,000 to $50,000",
+          "$25,000 to $50,000",
           "Demolition, new cabinets, countertop, plumbing and circuits redone, kitchen flooring.",
         ],
         [
@@ -80,6 +88,42 @@ export const post: BlogPost = {
           "All of the above, plus the beam, the engineer, the permit and the extended flooring.",
         ],
       ],
+    },
+    {
+      type: "h2",
+      text: "Two real quotes, line by line",
+      id: "soumissions-reelles",
+    },
+    {
+      type: "p",
+      text: "Here are two full-kitchen quotes we issued, without names or addresses. In both cases: custom cabinets, quartz countertop, no structural work. **Kitchen B costs $19,975 more**, and flooring alone explains 39% of the gap.",
+    },
+    {
+      type: "table",
+      caption: "Amounts before tax, appliances excluded. Kitchen A: October 2025, North Shore. Kitchen B: March 2026, North Shore.",
+      head: ["Line item", "Kitchen A", "Kitchen B"],
+      rows: [
+        ["Custom cabinets, supplied and installed", "$14,800", "$19,500"],
+        ["Quartz countertop", "$3,200", "$7,475"],
+        ["Ceramic or porcelain backsplash", "$1,800", "$3,500"],
+        ["Flooring", "$800 (patching)", "$8,600 (new hardwood)"],
+        ["Electrical, light fixtures included", "$2,200", "$2,900"],
+        ["Plumbing, sink and faucet included", "$2,400", "$2,600"],
+        ["Drywall, paint and baseboards", "$900", "$4,650"],
+        ["Demolition and disposal", "$1,500", "within line items"],
+        ["Design and project management", "$1,250", "within line items"],
+        ["Appliance hook-ups", "$400", "within line items"],
+        ["**Total before tax**", "**$29,250**", "**$49,225**"],
+        ["Total with GST and QST", "$33,630", "$56,596"],
+      ],
+    },
+    {
+      type: "p",
+      text: "Three lessons stand out. Cabinets take 40% to 51% of the total, whatever the budget. Flooring is the line that varies most: simple patching around the new cabinets, or new hardwood across the whole room. And the countertop easily doubles with its length and number of cut-outs.",
+    },
+    {
+      type: "p",
+      text: "On our two other recent quotes, a full kitchen in Montreal came to **$25,835**, and a Laval kitchen with 408 sq ft of hardwood, countertop excluded, to **$41,300**, again before tax.",
     },
     {
       type: "h2",
@@ -174,7 +218,7 @@ export const post: BlogPost = {
     },
     {
       type: "p",
-      text: "Also ask whether the price is before or after tax. In Quebec, the GST (5%) and the QST (9.975%) are added: on a $40,000 kitchen before tax, they come to $5,990.",
+      text: "Also ask whether the price is before or after tax; ours always are before tax. In Quebec, the GST (5%) and the QST (9.975%) are added: on a $40,000 kitchen before tax, they come to $5,990.",
     },
     {
       type: "callout",
@@ -197,12 +241,12 @@ export const post: BlogPost = {
         ["Visit and quote", "1 to 2 weeks", "Measurements, check of the panel and the basement, written price"],
         ["Design", "2 to 4 weeks", "Plans, choice of finishes, adjustments"],
         ["Cabinet production", "9 to 15 weeks", "Production from the signed plans"],
-        ["Work on site", "a few weeks", "Demolition, plumbing, electrical, installation, countertop, finishing"],
+        ["Work on site", "7 to 10 working days and up", "Demolition, plumbing, electrical, installation, countertop, finishing"],
       ],
     },
     {
       type: "p",
-      text: "We time the demolition to the cabinet delivery date, so the plumbing and electrical are redone while the cabinets are in production. That way you live without a sink for as short a time as possible.",
+      text: "For kitchen A, we planned 7 to 10 working days on site. New flooring, opened walls or a countertop installed after the cabinets lengthen that time. We time the demolition to the cabinet delivery date, so you live without a sink for as short a time as possible.",
     },
     {
       type: "h2",
@@ -259,7 +303,7 @@ export const post: BlogPost = {
       },
       {
         q: "Do I have to pay a deposit?",
-        a: "A deposit is common, because custom cabinets are ordered before demolition. The payment schedule must be written in the contract and follow the actual progress of the work.",
+        a: "Yes, because custom cabinets are ordered before demolition. With us, it is 40% at order, then the balance in two payments tied to cabinet delivery and completion, written in the contract.",
       },
       {
         q: "Does a renovated kitchen increase the value of the house?",
