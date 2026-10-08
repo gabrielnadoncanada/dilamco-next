@@ -241,6 +241,52 @@ export function webPageJsonLd(args: {
   return data;
 }
 
+/**
+ * Article du blogue, signé par le répondant de la licence RBQ (Sean Diffley a
+ * accepté de signer les articles le 2026-10-08) et publié par l'entreprise.
+ */
+export function blogPostingJsonLd(args: {
+  url: string;
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+  section?: string;
+  wordCount?: number;
+  locale: SchemaLocale;
+}): JsonLd {
+  const image = args.image.startsWith("http") ? args.image : `${SITE.url}${args.image}`;
+  const data: JsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${args.url}#article`,
+    mainEntityOfPage: args.url,
+    url: args.url,
+    headline: args.headline,
+    description: args.description,
+    image: [image],
+    datePublished: args.datePublished,
+    dateModified: args.dateModified ?? args.datePublished,
+    inLanguage: BCP47[args.locale],
+    // Signé par le répondant de la licence (expertise vérifiable au registre RBQ).
+    author: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#principal`,
+      name: SITE.principal.name,
+      jobTitle: SITE.principal.jobTitle[args.locale],
+      worksFor: { "@id": ORG_ID },
+      url: `${SITE.url}${args.locale === "en" ? "/en/about" : "/a-propos"}`,
+      sameAs: [SITE.rbqRegistryUrl],
+    },
+    publisher: { "@id": ORG_ID },
+    isPartOf: { "@id": `${SITE.url}/#website` },
+  };
+  if (args.section) data.articleSection = args.section;
+  if (args.wordCount) data.wordCount = args.wordCount;
+  return data;
+}
+
 export function serviceJsonLd(args: {
   name: string;
   description: string;

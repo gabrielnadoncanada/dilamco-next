@@ -12,6 +12,16 @@ export const SITE = {
   rbqRegistryUrl:
     "https://www.pes.rbq.gouv.qc.ca/RegistreLicences/FicheDetenteur/8306080627",
   foundingDate: "2004-09-07",
+  // Répondant unique de la licence (gestion et exécution des travaux) ; signe
+  // les articles du blogue (accord donné le 2026-10-08).
+  principal: {
+    name: "Sean H. Diffley",
+    shortName: "Sean Diffley",
+    jobTitle: {
+      fr: "Propriétaire et répondant de la licence RBQ",
+      en: "Owner and RBQ licence respondent",
+    },
+  },
   telephone: "+1-514-820-0773",
   email: "info@dilamco.com",
   logoUrl: "https://dilamco.com/logo.png",

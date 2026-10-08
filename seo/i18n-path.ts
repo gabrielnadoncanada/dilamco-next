@@ -1,7 +1,10 @@
+import blogSlugs from "./blog-slugs.json";
+
 // Source unique de vérité pour la traduction des segments d'URL (FR interne -> EN externe).
 // Doit rester synchronisée avec les pathnames de i18n/routing.ts.
 // Seul le PREMIER segment se traduit ; les valeurs dynamiques (cuisine, slug…) passent.
 const EN_SEGMENT: Record<string, string> = {
+  blogue: "blog",
   espaces: "spaces",
   projets: "projects",
   materiaux: "materials",
@@ -76,6 +79,12 @@ export const PROJECT_SLUG_EN: Record<string, string> = {
     "custom-office-downtown-montreal",
 };
 
+// Articles du blogue (/blogue/<slug FR> -> /en/blog/<slug EN>). La map vit
+// dans seo/blog-slugs.json pour que next-sitemap.config.js et
+// scripts/generate-image-sitemap.mjs la lisent telle quelle : publier un
+// article n'exige qu'une ligne ici, jamais une copie à la main.
+export const BLOG_SLUG_EN: Record<string, string> = blogSlugs;
+
 // Les espaces apparaissent comme 2e segment sous /espaces et /projets.
 const SPACE_PARENTS = new Set(["espaces", "projets"]);
 
@@ -104,6 +113,10 @@ export function localizePath(path: string, locale: "fr" | "en"): string {
   // Traduit le slug matériau (2e segment) sous /materiaux.
   if (head === "materiaux" && segs[1]) {
     segs[1] = MATERIAL_EN[segs[1]] ?? segs[1];
+  }
+  // Traduit le slug d'article (2e segment) sous /blogue.
+  if (head === "blogue" && segs[1]) {
+    segs[1] = BLOG_SLUG_EN[segs[1]] ?? segs[1];
   }
   segs[0] = EN_SEGMENT[head] ?? head;
   return `/en/${segs.join("/")}`;

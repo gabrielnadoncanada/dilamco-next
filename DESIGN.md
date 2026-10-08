@@ -145,3 +145,6 @@ Tout panneau sur vert primaire (tuile chiffre, tuile prix mise en avant, panneau
 - Eyebrow ou numéro `01 / 02` au-dessus de chaque section (les numéros ne servent que les vraies séquences).
 - Texte sous 12 px, gris sur couleur, taille de titre hors échelle.
 - Cartes bordées imbriquées ; une tuile teintée ou un filet suffit.
+
+### Lecture longue (`prose.toc-aside`, `hero.centered-meta`)
+Articles du blogue. Colonne de lecture de 42 rem (≈ 68 caractères) centrée, corps 16 → 17 px, interligne 1,75. Intertitres h2 sur `--title-4` (variante `h3` de `Heading`, la page a déjà son h1), h3 sur `--title-5`. Table des matières tirée des h2 : collante à gauche dès `xl`, repliée (`<details>`) en tête de texte en dessous. Encadré « En bref » en `primary-soft`, `rounded-card`. Tableaux dans une carte bordée, défilement horizontal sur mobile, en-têtes en `text-label`. Liens en primaire souligné. Le hero de lecture n'a pas d'actions : la conversion vit dans la bande CTA de fin.

@@ -15,4 +15,9 @@ export interface PageMetadataOptions {
     width?: number;
     height?: number;
   };
+  /** Article de blogue : Open Graph `article` avec ses dates (YYYY-MM-DD). */
+  article?: {
+    publishedTime: string;
+    modifiedTime?: string;
+  };
 }

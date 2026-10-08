@@ -249,7 +249,7 @@ export const page: PageTemplateData = {
           items: [
             {
               q: "Combien coûte une rénovation ?",
-              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe entre 35 000 $ et 50 000 $. Le prix ferme est fixé après le relevé sur place, dans la soumission.",
+              a: "Nos mandats démarrent autour de 25 000 $. Une cuisine complète se situe entre 25 000 $ et 50 000 $ avant taxes. Le prix ferme est fixé après le relevé sur place, dans la soumission.",
             },
             {
               q: "Combien de temps dure un chantier ?",

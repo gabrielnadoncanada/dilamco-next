@@ -1,0 +1,31 @@
+{
+  "tocLabel": "Dans cet article",
+  "nodes": [
+    {
+      "type": "callout",
+      "title": "En bref",
+      "items": [
+        "Un permis est exigé dès qu'un mur porteur change.",
+        "Le prix ferme est écrit dans la soumission."
+      ]
+    },
+    { "type": "h2", "text": "Ce qui fait varier le prix" },
+    {
+      "type": "p",
+      "text": "Déplacer l'évier coûte plus cher que le garder en place. Voir notre page [rénovation de cuisine](/services/renovation/cuisine)."
+    },
+    {
+      "type": "ul",
+      "items": ["**Plomberie** déplacée", "Mur porteur ouvert", "Hotte sortie dehors"]
+    },
+    { "type": "h2", "text": "Combien de temps dure le chantier" },
+    {
+      "type": "table",
+      "head": ["Étape", "Durée"],
+      "rows": [
+        ["Démolition", "2 à 3 jours"],
+        ["Plomberie et électricité", "1 semaine"]
+      ]
+    }
+  ]
+}

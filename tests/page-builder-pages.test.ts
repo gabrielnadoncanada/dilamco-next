@@ -39,7 +39,12 @@ import {
   PUBLIC_ZONE_PAGE_SLUGS,
   getZonePageBySlug,
 } from "@/data/page-builder/zone-pages";
-import { ZONE_EN } from "@/seo/i18n-path";
+import {
+  PUBLIC_BLOG_POST_SLUGS,
+  getBlogPost,
+  getBlogPostPageBySlug,
+} from "@/data/page-builder/blog-posts";
+import { BLOG_SLUG_EN, ZONE_EN } from "@/seo/i18n-path";
 
 // Garde-fou build-time : chaque page page-builder (FR + EN) doit passer les
 // schémas Zod de ses blocs — sinon `next build` échoue au prerender, bien plus
@@ -55,6 +60,7 @@ const STATIC_KEYS: StaticPageKey[] = [
   "services",
   "zones",
   "services-renovation",
+  "blogue",
 ];
 
 type Entry = { label: string; page: PageTemplateData };
@@ -83,6 +89,7 @@ const ENTRIES: Entry[] = [
     getRenovationPageByType,
   ),
   ...collect("zones", PUBLIC_ZONE_PAGE_SLUGS, getZonePageBySlug),
+  ...collect("blogue", PUBLIC_BLOG_POST_SLUGS, getBlogPostPageBySlug),
 ];
 
 describe("pages page-builder", () => {
@@ -116,4 +123,26 @@ describe("pages page-builder", () => {
   it("chaque zone routable a une page et inversement", () => {
     expect([...PUBLIC_ZONE_PAGE_SLUGS].sort()).toEqual(Object.keys(ZONE_EN).sort());
   });
+
+  it("chaque article routable existe en FR et en EN, et inversement", () => {
+    expect([...PUBLIC_BLOG_POST_SLUGS].sort()).toEqual(Object.keys(BLOG_SLUG_EN).sort());
+    for (const slug of PUBLIC_BLOG_POST_SLUGS) {
+      expect(getBlogPost(slug, "fr")?.locale).toBe("fr");
+      expect(getBlogPost(slug, "en")?.locale).toBe("en");
+    }
+  });
+
+  it.each(PUBLIC_BLOG_POST_SLUGS.flatMap((s) => (["fr", "en"] as const).map((l) => [s, l] as const)))(
+    "article %s [%s] : liens internes connus, au moins une source, un FAQ",
+    (slug, locale) => {
+      const post = getBlogPost(slug, locale)!;
+      const text = JSON.stringify(post.body);
+      // Liens internes : chemins FR (AppLink les localise), jamais /en/… en dur.
+      for (const [, href] of text.matchAll(/\]\((\/[^)]*)\)/g)) {
+        expect(href, `${slug} [${locale}] lien interne en dur vers /en`).not.toMatch(/^\/en(\/|$)/);
+      }
+      expect(post.sources?.length ?? 0, `${slug} [${locale}] sans source`).toBeGreaterThan(0);
+      expect(post.faq?.items.length ?? 0).toBeGreaterThanOrEqual(3);
+    },
+  );
 });

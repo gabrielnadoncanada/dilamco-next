@@ -177,7 +177,7 @@ export const renovationCuisinePageEn: PageTemplateData = {
             },
             {
               title: "Full kitchen",
-              price: "$35,000 to $50,000",
+              price: "$25,000 to $50,000",
               featured: true,
               includes: [
                 "Demolition and debris removal",

@@ -1,0 +1,15 @@
+{
+  "heading": "Tous les articles",
+  "items": [
+    {
+      "title": "Combien coûte une rénovation de cuisine",
+      "description": "Les fourchettes réelles de nos chantiers et ce qui fait monter la facture.",
+      "href": "/blogue/cout-renovation-cuisine",
+      "image": {
+        "src": "/images/realisations/cuisine-blanche-ilot-quartz-01.webp",
+        "alt": "Cuisine blanche avec îlot en quartz"
+      },
+      "meta": ["Budget", "8 oct. 2026"]
+    }
+  ]
+}

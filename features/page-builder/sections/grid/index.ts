@@ -6,6 +6,7 @@ import { gridLinkCardsCompact } from "./variants/link-cards-compact";
 import { gridLinkCardsSlider } from "./variants/link-cards-slider";
 import { gridBento } from "./variants/bento";
 import { gridPriceTiles } from "./variants/price-tiles";
+import { gridImageCardsMeta } from "./variants/image-cards-meta";
 
 export const gridDefs = [
   gridImageCardsBadgesCta,
@@ -16,4 +17,5 @@ export const gridDefs = [
   gridLinkCardsSlider,
   gridBento,
   gridPriceTiles,
+  gridImageCardsMeta,
 ] as const;

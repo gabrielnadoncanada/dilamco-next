@@ -30,6 +30,7 @@ async function walkHtml(dir) {
 
 // Traduction des segments pour l'EN (synchronisé avec i18n/routing.ts).
 const EN_SEGMENT = {
+  blogue: "blog",
   espaces: "spaces",
   projets: "projects",
   materiaux: "materials",
@@ -77,6 +78,11 @@ const PROJECT_SLUG_EN = {
     "custom-office-downtown-montreal",
 };
 
+// Slugs d'articles traduits : lus dans la source unique (pas de copie à la main).
+const BLOG_SLUG_EN = JSON.parse(
+  await fs.readFile(path.join(process.cwd(), "seo", "blog-slugs.json"), "utf8"),
+);
+
 function fileToRoute(fp) {
   let r = fp.slice(APP_DIR.length).replace(/\\/g, "/").replace(/\.html$/, "");
   if (r.endsWith("/index")) r = r.slice(0, -"/index".length);
@@ -100,6 +106,9 @@ function fileToRoute(fp) {
     }
     if (head === "materiaux" && segs[1]) {
       segs[1] = MATERIAL_EN[segs[1]] ?? segs[1];
+    }
+    if (head === "blogue" && segs[1]) {
+      segs[1] = BLOG_SLUG_EN[segs[1]] ?? segs[1];
     }
     segs[0] = EN_SEGMENT[head] ?? head;
     return `/en/${segs.join("/")}`;

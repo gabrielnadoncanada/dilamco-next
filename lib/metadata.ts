@@ -9,7 +9,7 @@ type MetaLocale = "fr" | "en";
 const OG_LOCALE: Record<MetaLocale, string> = { fr: "fr_CA", en: "en_CA" };
 
 export function createPageMetadata(
-  { title, description, path, localizedPaths, ogAlt, ogImage }: PageMetadataOptions,
+  { title, description, path, localizedPaths, ogAlt, ogImage, article }: PageMetadataOptions,
   locale: MetaLocale = "fr",
 ): Metadata {
   const frUrl = `${SITE.url}${localizedPaths?.fr ?? localizePath(path, "fr")}`;
@@ -43,7 +43,13 @@ export function createPageMetadata(
       },
     },
     openGraph: {
-      type: "website",
+      ...(article
+        ? {
+            type: "article" as const,
+            publishedTime: article.publishedTime,
+            modifiedTime: article.modifiedTime ?? article.publishedTime,
+          }
+        : { type: "website" as const }),
       url,
       title: `${title} | ${SITE.name}`,
       description,

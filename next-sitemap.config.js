@@ -12,6 +12,7 @@ function splitLocale(path) {
 
 // Traduction des segments pour l'EN (synchronisé avec i18n/routing.ts).
 const EN_SEGMENT = {
+  blogue: "blog",
   espaces: "spaces",
   projets: "projects",
   materiaux: "materials",
@@ -68,6 +69,10 @@ const PROJECT_SLUG_EN = {
     "custom-office-downtown-montreal",
 };
 
+// Slugs d'articles traduits : lus dans la source unique (pas de copie à la main).
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- config CommonJS
+const BLOG_SLUG_EN = require("./seo/blog-slugs.json");
+
 // FR à la racine (jamais /fr), EN sous /en avec segments + valeur d'espace traduits.
 function localizedUrl(slug, locale) {
   if (locale !== "en") return `${SITE}${slug === "/" ? "" : slug}`;
@@ -86,6 +91,9 @@ function localizedUrl(slug, locale) {
   }
   if (head === "materiaux" && segs[1]) {
     segs[1] = MATERIAL_EN[segs[1]] ?? segs[1];
+  }
+  if (head === "blogue" && segs[1]) {
+    segs[1] = BLOG_SLUG_EN[segs[1]] ?? segs[1];
   }
   segs[0] = EN_SEGMENT[head] ?? head;
   return `${SITE}/en/${segs.join("/")}`;
@@ -156,6 +164,11 @@ module.exports = {
       changefreq = "monthly";
     } else if (slug === "/materiaux") {
       priority = 0.7;
+    } else if (slug.startsWith("/blogue/")) {
+      priority = 0.6;
+      changefreq = "monthly";
+    } else if (slug === "/blogue") {
+      priority = 0.6;
     }
 
     // EN = secondaire : légère décote de priorité.

@@ -69,6 +69,53 @@
     </image:image>
   </url>
   <url>
+    <loc>https://dilamco.com/blogue</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Cuisine blanche rénovée avec îlot en quartz</image:caption>
+      <image:title>Cuisine blanche rénovée avec îlot en quartz</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/escalier-rampe-verre-finition-interieure-01.webp</image:loc>
+      <image:caption>Escalier avec rampe de verre après une rénovation intérieure</image:caption>
+      <image:title>Escalier avec rampe de verre après une rénovation intérieure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Sous-sol fini avec meuble télé encastré et coin bar</image:caption>
+      <image:title>Sous-sol fini avec meuble télé encastré et coin bar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/blogue/cout-renovation-cuisine</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Cuisine blanche rénovée avec îlot en quartz</image:caption>
+      <image:title>Cuisine blanche rénovée avec îlot en quartz</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/blogue/sous-sol-apres-degat-eau</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Sous-sol fini avec meuble télé encastré et coin bar</image:caption>
+      <image:title>Sous-sol fini avec meuble télé encastré et coin bar</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/blogue/verifier-licence-rbq-entrepreneur</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/escalier-rampe-verre-finition-interieure-01.webp</image:loc>
+      <image:caption>Escalier avec rampe de verre après une rénovation intérieure</image:caption>
+      <image:title>Escalier avec rampe de verre après une rénovation intérieure</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Salle de bain rénovée avec douche à l&amp;#x27;italienne et paroi de verre</image:caption>
+      <image:title>Salle de bain rénovée avec douche à l&amp;#x27;italienne et paroi de verre</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dilamco.com/en</loc>
     <image:image>
       <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
@@ -448,6 +495,53 @@
       <image:loc>https://dilamco.com/images/generated/renovation/renovation-extension-hero-01.webp</image:loc>
       <image:caption>Addition blended into a Vaudreuil-Dorion house</image:caption>
       <image:title>Addition blended into a Vaudreuil-Dorion house</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/blog</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Renovated white kitchen with a quartz island</image:caption>
+      <image:title>Renovated white kitchen with a quartz island</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/escalier-rampe-verre-finition-interieure-01.webp</image:loc>
+      <image:caption>Staircase with a glass railing after an interior renovation</image:caption>
+      <image:title>Staircase with a glass railing after an interior renovation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Finished basement with a built-in TV unit and a bar corner</image:caption>
+      <image:title>Finished basement with a built-in TV unit and a bar corner</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/blog/basement-after-water-damage</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/generated/spaces/space-sous-sol-hero-01.webp</image:loc>
+      <image:caption>Finished basement with a built-in TV unit and a bar corner</image:caption>
+      <image:title>Finished basement with a built-in TV unit and a bar corner</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/blog/check-contractor-rbq-licence</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/escalier-rampe-verre-finition-interieure-01.webp</image:loc>
+      <image:caption>Staircase with a glass railing after an interior renovation</image:caption>
+      <image:title>Staircase with a glass railing after an interior renovation</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/salle-de-bain-douche-italienne-verre-01.webp</image:loc>
+      <image:caption>Renovated bathroom with a curbless shower and glass panel</image:caption>
+      <image:title>Renovated bathroom with a curbless shower and glass panel</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dilamco.com/en/blog/kitchen-renovation-cost</loc>
+    <image:image>
+      <image:loc>https://dilamco.com/images/realisations/cuisine-blanche-ilot-quartz-01.webp</image:loc>
+      <image:caption>Renovated white kitchen with a quartz island</image:caption>
+      <image:title>Renovated white kitchen with a quartz island</image:title>
     </image:image>
   </url>
   <url>

@@ -129,3 +129,19 @@ Le propriétaire a jugé que « les textes n'ont pas de sens ». Cause : titres-
 6. **Le hero d'une zone** dit pour qui et pour quoi : « Rénovation et agrandissement pour les maisons de Kirkland, par un entrepreneur général licencié basé à quinze minutes. »
 7. **Les CTA** sont des phrases simples : « Un projet à Kirkland ? Parlons-en. », « Faites chiffrer votre cuisine ».
 8. Test de relecture : lire chaque titre et chaque rangée à voix haute comme si on l'expliquait à un voisin. Si on doit ajouter un mot pour que ça se comprenne, le texte est à réécrire.
+
+## Articles de blogue (2026-10) — l'exception au budget de mots
+
+Les pages du site se scannent ; un article se lit, mais il doit **se citer**. Il vise une requête informationnelle (« prix rénovation cuisine », « vérifier licence RBQ ») et doit battre l'article le mieux classé sur la précision, pas sur la longueur. Référence battue : cuisinesrochon.com/blogue/renovation-cuisine-prix (~2 000 mots, aucune source, chiffres contradictoires).
+
+- **Longueur** : 1 200 à 2 200 mots de corps. On ne délaie pas pour atteindre un nombre.
+- **En bref** en tête (`callout`, 3 à 5 puces) : les chiffres clés, chacun compréhensible seul.
+- **Intertitres h2 = questions du client** (« Combien de temps dure une rénovation de cuisine ? »). La **première phrase** sous chaque h2 répond directement, avec le chiffre, en 40 à 60 mots, sans « comme mentionné plus haut » : c'est ce passage que Google et les moteurs IA extraient.
+- **Un tableau** dès qu'il y a des fourchettes, des étapes ou une comparaison.
+- **Chiffres** : uniquement ceux déjà publiés sur le site ou tirés d'une source officielle citée. Mêmes chiffres partout dans l'article (En bref, tableau, FAQ) : une contradiction tue la citation.
+- **`sources`** obligatoires : organismes officiels (RBQ, Ville, Revenu Québec) en priorité, URL vérifiée. Les commentaires de tête du fichier listent d'où vient chaque fait et la date de consultation.
+- **Liens internes** : 3 à 6 dans le corps vers les pages service/zone concernées (chemins FR, AppLink localise), plus 2 à 4 `related`.
+- **FAQ** : 4 à 5 questions que l'article ne traite pas déjà en h2.
+- **Dates** : `publishedAt` à la mise en ligne ; `updatedAt` seulement après une vraie révision des faits.
+- **Auteur** : Sean Diffley, répondant de la licence RBQ (accord du 2026-10-08), affiché sous le titre et déclaré en JSON-LD `Person` (`SITE.principal`). Il relit chaque article avant publication ; l'entreprise reste l'éditeur.
+- Mots interdits, vouvoiement et clarté : mêmes règles que le reste du site. L'EN reprend la même structure, nœud pour nœud.
