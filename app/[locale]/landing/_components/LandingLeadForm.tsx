@@ -8,6 +8,7 @@ import {
   submitContactLead,
   type ContactFormState,
 } from "@/lib/contact-actions";
+import { useLeadSubmitTracking } from "@/lib/use-lead-submit-tracking";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 
@@ -175,6 +176,7 @@ export function LandingLeadForm() {
     submitContactLead,
     initialState,
   );
+  useLeadSubmitTracking(formState, "landing");
 
   const err = formState.fieldErrors ?? {};
 

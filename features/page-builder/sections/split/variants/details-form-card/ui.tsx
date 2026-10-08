@@ -1,6 +1,7 @@
 "use client";
 
 import { submitContactLead, type ContactFormState } from "@/lib/contact-actions";
+import { useLeadSubmitTracking } from "@/lib/use-lead-submit-tracking";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -115,6 +116,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
     submitContactLead,
     initialContactFormState,
   );
+  useLeadSubmitTracking(formState, "contact");
   const isContactSubmission =
     props.formAction === "/contact/" && (props.formMethod ?? "post") === "post";
 

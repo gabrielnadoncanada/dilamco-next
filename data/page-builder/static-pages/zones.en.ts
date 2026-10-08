@@ -4,7 +4,7 @@ import { SITE } from "@/seo/schema/site";
 export const pageEn: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Service areas — West Island, Montréal, Laval",
+    title: "West Island general contractor — service areas",
     description:
       "General contractor based in Pierrefonds-Roxboro: West Island, Montréal, Laval, Vaudreuil-Soulanges and the South Shore on request. See our service areas.",
     path: "/zones",
@@ -37,7 +37,7 @@ export const pageEn: PageTemplateData = {
         variant: "centered",
         props: {
           badges: ["West Island", "Montréal", "Laval"],
-          heading: "Where we work, city by city",
+          heading: "West Island general contractor, city by city",
           description:
             "We renovate across the West Island, Montréal, Laval, Vaudreuil-Soulanges and the South Shore.",
           actions: [

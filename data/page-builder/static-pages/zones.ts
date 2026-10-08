@@ -11,7 +11,7 @@ import { SITE } from "@/seo/schema/site";
 export const page: PageTemplateData = {
   template: "default",
   metadata: {
-    title: "Zones desservies — Ouest-de-l'Île, Montréal, Laval",
+    title: "Entrepreneur général Ouest-de-l'Île — zones desservies",
     description:
       "Entrepreneur général basé à Pierrefonds-Roxboro : Ouest-de-l'Île, Montréal, Laval, Vaudreuil-Soulanges et Rive-Sud sur demande. Voir les zones desservies.",
     path: "/zones",
@@ -44,7 +44,7 @@ export const page: PageTemplateData = {
         variant: "centered",
         props: {
           badges: ["Ouest-de-l'Île", "Montréal", "Laval"],
-          heading: "Où nous travaillons, ville par ville",
+          heading: "Entrepreneur général dans l'Ouest-de-l'Île, ville par ville",
           description:
             "Nous rénovons dans l'Ouest-de-l'Île, à Montréal, à Laval, dans Vaudreuil-Soulanges et sur la Rive-Sud.",
           actions: [
