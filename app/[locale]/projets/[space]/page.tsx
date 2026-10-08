@@ -56,8 +56,8 @@ export async function generateMetadata({
         loc === "en" ? `Custom ${ll} projects` : `Projets ${ll} sur mesure`,
       description:
         loc === "en"
-          ? `Custom ${ll} projects by Dilamco: design, fabrication and installation in Montréal, Laval and across Greater Montréal.`
-          : `Réalisations de ${ll} sur mesure par Dilamco : conception, fabrication et installation à Montréal, Laval et dans le Grand Montréal.`,
+          ? `Custom ${ll} projects by Dilamco: design and installation in Montréal, Laval and across Greater Montréal.`
+          : `Réalisations de ${ll} sur mesure par Dilamco : conception et installation à Montréal, Laval et dans le Grand Montréal.`,
       path: `/projets/${space}`,
     },
     loc,

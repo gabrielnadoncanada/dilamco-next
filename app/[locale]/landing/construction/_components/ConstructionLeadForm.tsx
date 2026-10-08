@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect } from "react";
+import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { ArrowRight, Loader2 } from "lucide-react";
 
@@ -10,6 +10,7 @@ import {
 } from "../actions";
 import { Button } from "../../_components/button";
 import { cn } from "@/lib/utils";
+import { useLeadSubmitTracking } from "@/lib/use-lead-submit-tracking";
 
 const initialState: ConstructionLeadState = {
   status: "idle",
@@ -186,14 +187,7 @@ export function ConstructionLeadForm() {
     initialState,
   );
 
-  useEffect(() => {
-    if (formState.status === "success") {
-      (window as unknown as { dataLayer?: unknown[] }).dataLayer?.push({
-        event: "lead_submit",
-        form: "construction",
-      });
-    }
-  }, [formState.status]);
+  useLeadSubmitTracking(formState, "construction");
 
   const err = formState.fieldErrors ?? {};
 

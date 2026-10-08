@@ -90,7 +90,7 @@ const labelMap = {
   type_projet: {
     "cle-en-main": "Cle en main (entrepreneur general, permis et coordination)",
     "armoires-seulement": "Armoires sur mesure seulement",
-    "sur-mesure": "Sur mesure (design + fabrication + installation)",
+    "sur-mesure": "Sur mesure (conception + installation)",
     renovation: "Renovation avec coordination",
     "a-determiner": "A determiner / besoin de conseils",
   },
