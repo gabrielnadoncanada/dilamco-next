@@ -29,6 +29,10 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+            alt: "Navy blue kitchen island with birch interior",
+          },
           heading: "Custom cabinetry for six rooms of the house",
           description:
             "We draw it, we order it and we install it. There is nobody else for you to call.",

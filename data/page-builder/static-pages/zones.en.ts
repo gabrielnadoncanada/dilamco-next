@@ -36,6 +36,11 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/showroom-dorval-cuisine-exposition-01.webp",
+            alt: "Display kitchen in our Dorval showroom",
+          },
+          caption: "Showroom in Dorval",
           badges: ["West Island", "Montréal", "Laval"],
           heading: "West Island general contractor, city by city",
           description:

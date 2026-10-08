@@ -22,6 +22,11 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
+            alt: "Cabinet door and finish displays",
+          },
+          caption: "Finishes on display in Dorval",
           heading: "The materials that go into your cabinets",
           description:
             "We are the ones who pick the panels, the hardware and the finishes, and who check them.",

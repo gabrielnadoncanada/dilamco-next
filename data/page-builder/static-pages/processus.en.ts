@@ -39,6 +39,10 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+            alt: "U-shaped kitchen with shaker cabinets and subway tile backsplash",
+          },
           heading: "How a renovation project runs",
           description:
             "Five stages. Each one ends with a signed document, a permit issued or an inspection passed.",

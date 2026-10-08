@@ -25,6 +25,10 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
+            alt: "Kitchen with glass-front cabinets and ceramic backsplash",
+          },
           heading: "Renovate without bad surprises",
           description:
             "Costs, permits, licences and the job site: what we explain to clients before they sign, written for you.",

@@ -37,6 +37,10 @@ export const renovationPageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+            alt: "Open-concept kitchen with island and pantry columns",
+          },
           badges: ["Permit included", "Written contract", "Insured"],
           heading: "One contractor, from the permit to the handover",
           description:
