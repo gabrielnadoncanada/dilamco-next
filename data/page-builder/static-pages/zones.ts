@@ -43,6 +43,11 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/showroom-dorval-cuisine-exposition-01.webp",
+            alt: "Cuisine d'exposition dans notre salle de montre de Dorval",
+          },
+          caption: "Salle de montre à Dorval",
           badges: ["Ouest-de-l'Île", "Montréal", "Laval"],
           heading: "Entrepreneur général dans l'Ouest-de-l'Île, ville par ville",
           description:

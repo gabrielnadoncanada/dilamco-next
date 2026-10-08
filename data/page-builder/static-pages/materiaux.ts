@@ -22,6 +22,11 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/showroom-dorval-presentoirs-finis-01.webp",
+            alt: "Présentoirs de portes et de finis d'armoires",
+          },
+          caption: "Finis à voir à Dorval",
           heading: "Les matériaux qu'on met dans vos armoires",
           description:
             "C'est nous qui choisissons les panneaux, la quincaillerie et les finis, et qui les vérifions.",

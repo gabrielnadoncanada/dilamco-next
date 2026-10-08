@@ -22,6 +22,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-blanche-electros-inox-01.webp",
+            alt: "Cuisine blanche rénovée avec électroménagers en inox",
+          },
           heading: "Cuisines, vanités, rangement et projets commerciaux",
           description:
             "Des chantiers que nous avons menés du début à la fin dans le Grand Montréal.",

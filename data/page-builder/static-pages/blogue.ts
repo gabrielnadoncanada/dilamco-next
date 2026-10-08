@@ -25,6 +25,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-armoires-vitrees-dosseret-01.webp",
+            alt: "Cuisine avec armoires vitrées et dosseret de céramique",
+          },
           heading: "Rénover sans mauvaise surprise",
           description:
             "Prix, permis, licence et chantier : ce qu'on explique à nos clients avant de signer, écrit pour vous.",

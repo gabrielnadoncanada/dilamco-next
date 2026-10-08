@@ -29,6 +29,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/ilot-bleu-marine-interieur-bouleau-01.webp",
+            alt: "Îlot de cuisine bleu marine avec intérieur en bouleau",
+          },
           heading: "Armoires sur mesure pour six espaces de la maison",
           description:
             "On dessine, on commande et on installe. Vous n'avez personne d'autre à appeler.",

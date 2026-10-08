@@ -37,6 +37,10 @@ export const renovationPage: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-aire-ouverte-ilot-colonnes-01.webp",
+            alt: "Cuisine ouverte sur le séjour avec îlot et colonnes",
+          },
           badges: ["Permis inclus", "Contrat écrit", "Assuré"],
           heading: "Un seul entrepreneur, du permis à la livraison",
           description:

@@ -39,6 +39,10 @@ export const page: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-shaker-en-u-dosseret-metro-01.webp",
+            alt: "Cuisine en U avec armoires shaker et dosseret métro",
+          },
           heading: "Le déroulement d'un projet de rénovation",
           description:
             "Cinq étapes. Chacune se termine par un document signé, un permis obtenu ou une inspection réussie.",

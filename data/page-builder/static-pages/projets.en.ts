@@ -22,6 +22,10 @@ export const pageEn: PageTemplateData = {
         type: "hero",
         variant: "centered",
         props: {
+          image: {
+            src: "/images/realisations/cuisine-blanche-electros-inox-01.webp",
+            alt: "Renovated white kitchen with stainless steel appliances",
+          },
           heading: "Kitchens, vanities, storage and commercial work",
           description:
             "Job sites we ran from start to finish across Greater Montréal.",
