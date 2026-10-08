@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "grid",
+  "variant": "image-cards-meta",
+  "title": "Grid Image Cards Meta",
+  "description": "Responsive grid (1/2/3 columns) of clickable photo cards with a short meta line (category, date), title, two-line description and arrow.",
+  "propsModel": ["heading", "items"],
+  "kitchenSink": {
+    "group": "content",
+    "order": 330,
+    "viewport": "desktop"
+  }
+}

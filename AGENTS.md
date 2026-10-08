@@ -32,6 +32,19 @@ rénovations, projets) ; seule l'URL EN est traduite au niveau routing.
    mirroir à la main dans les deux, sinon les sitemaps divergent de l'app
 5. `next.config.ts` — redirection 308 de l'ancien slug EN vers le nouveau
 
+### Blogue (exception : 1 seul endroit pour le slug)
+
+Les articles (`/blogue/<slug FR>` → `/en/blog/<slug EN>`) ne suivent PAS la règle
+des 5 endroits : la map des slugs vit dans `seo/blog-slugs.json`, lue telle quelle
+par `seo/i18n-path.ts`, `i18n/routing.ts`, `components/AppLink.tsx`,
+`next-sitemap.config.js` et `scripts/generate-image-sitemap.mjs`. Publier un
+article = une ligne dans ce JSON + `<slug>.ts` / `<slug>.en.ts` dans
+`data/page-builder/blog-posts` + la paire dans son `index.ts`. Un article est un
+`BlogPost` (`features/blog/model.ts`, contenu seulement) ; la page (blocs
+`hero.centered-meta` → `prose.toc-aside` → FAQ → liens → CTA, Open Graph
+`article`, JSON-LD BlogPosting) est dérivée par `features/blog/build-post-page.ts`.
+Changer un slug déjà publié = redirection 308 dans `next.config.ts`.
+
 ### Métadonnées
 
 - title/description par page = `metadata.title`/`metadata.description` dans les

@@ -5,6 +5,7 @@ import {
   MATERIAL_EN,
   PROJECT_SLUG_EN,
   ZONE_EN,
+  BLOG_SLUG_EN,
 } from "@/seo/i18n-path";
 
 // Pathnames explicites par espace : la VALEUR du slug est traduite
@@ -64,6 +65,15 @@ const materialPathnames = Object.fromEntries(
   ]),
 );
 
+// Pathnames explicites par article (/blogue/<slug FR> -> /en/blog/<slug EN>).
+// Énumérés depuis seo/blog-slugs.json : next-intl ne traduit pas un [slug].
+const blogPathnames = Object.fromEntries(
+  Object.entries(BLOG_SLUG_EN).map(([fr, en]) => [
+    `/blogue/${fr}`,
+    { fr: `/blogue/${fr}`, en: `/blog/${en}` },
+  ]),
+);
+
 export const routing = defineRouting({
   locales: ["fr", "en"],
   defaultLocale: "fr",
@@ -100,6 +110,8 @@ export const routing = defineRouting({
     "/a-propos": { fr: "/a-propos", en: "/about" },
     "/contact": "/contact",
     "/processus": { fr: "/processus", en: "/process" },
+    "/blogue": { fr: "/blogue", en: "/blog" },
+    ...blogPathnames,
     "/politique-de-confidentialite": {
       fr: "/politique-de-confidentialite",
       en: "/privacy-policy",

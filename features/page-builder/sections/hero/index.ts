@@ -3,6 +3,7 @@ import { heroCentered } from "./variants/centered";
 import { heroSplitImage } from "./variants/split-image";
 import { heroFeatureListImage } from "./variants/feature-list-image";
 import { heroZone } from "./variants/zone";
+import { heroCenteredMeta } from "./variants/centered-meta";
 
 export const heroDefs = [
   heroImageOverlay,
@@ -10,4 +11,5 @@ export const heroDefs = [
   heroSplitImage,
   heroFeatureListImage,
   heroZone,
+  heroCenteredMeta,
 ] as const;

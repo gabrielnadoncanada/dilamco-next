@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "prose",
+  "variant": "toc-aside",
+  "title": "Prose with Table of Contents",
+  "description": "Long-form reading column (headings, paragraphs, lists, callouts, tables, images) with a table of contents built from h2 nodes: sticky aside on desktop, collapsible on mobile.",
+  "propsModel": ["tocLabel", "nodes"],
+  "kitchenSink": {
+    "group": "content",
+    "order": 700,
+    "viewport": "desktop"
+  }
+}

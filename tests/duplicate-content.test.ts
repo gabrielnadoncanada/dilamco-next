@@ -9,7 +9,13 @@ import { join, relative } from "node:path";
 const ROOT = join(process.cwd(), "data", "page-builder");
 const MIN_LEN = 60;
 // Formules institutionnelles tolérées partout (licence, bande CTA…).
-const ALLOW = [/^Licence RBQ 8306-0806-27/i, /^RBQ licence 8306-0806-27/i];
+// Titres de sources citées par les articles (« Organisme, « Titre » ») : une
+// même page officielle peut être citée par plusieurs articles.
+const ALLOW = [
+  /^Licence RBQ 8306-0806-27/i,
+  /^RBQ licence 8306-0806-27/i,
+  /^[^,]{3,60}, (« |\\")/,
+];
 
 function walk(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {

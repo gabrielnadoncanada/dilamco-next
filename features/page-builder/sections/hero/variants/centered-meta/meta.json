@@ -1,0 +1,13 @@
+{
+  "$schemaVersion": 1,
+  "type": "hero",
+  "variant": "centered-meta",
+  "title": "Hero Centered Meta",
+  "description": "Centered reading hero: eyebrow, heading, description, a meta line (dates, reading time) and an optional framed image. No actions.",
+  "propsModel": ["eyebrow", "heading", "description", "meta", "image"],
+  "kitchenSink": {
+    "group": "marketing",
+    "order": 125,
+    "viewport": "desktop"
+  }
+}

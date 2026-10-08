@@ -241,6 +241,43 @@ export function webPageJsonLd(args: {
   return data;
 }
 
+/**
+ * Article du blogue. Auteur = l'entreprise (Organization) : aucun article
+ * n'est attribué à une personne sans qu'elle l'ait relu et signé.
+ */
+export function blogPostingJsonLd(args: {
+  url: string;
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified?: string;
+  section?: string;
+  wordCount?: number;
+  locale: SchemaLocale;
+}): JsonLd {
+  const image = args.image.startsWith("http") ? args.image : `${SITE.url}${args.image}`;
+  const data: JsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${args.url}#article`,
+    mainEntityOfPage: args.url,
+    url: args.url,
+    headline: args.headline,
+    description: args.description,
+    image: [image],
+    datePublished: args.datePublished,
+    dateModified: args.dateModified ?? args.datePublished,
+    inLanguage: BCP47[args.locale],
+    author: { "@type": "Organization", "@id": ORG_ID, name: SITE.name, url: SITE.url },
+    publisher: { "@id": ORG_ID },
+    isPartOf: { "@id": `${SITE.url}/#website` },
+  };
+  if (args.section) data.articleSection = args.section;
+  if (args.wordCount) data.wordCount = args.wordCount;
+  return data;
+}
+
 export function serviceJsonLd(args: {
   name: string;
   description: string;

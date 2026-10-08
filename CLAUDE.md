@@ -39,6 +39,8 @@ docs/media/              photos réelles de Sean (JPG bruts) → public/images/r
 scripts/                 génération d'images, sitemaps
 ```
 
+Blogue (`/blogue`, EN `/en/blog`) : articles = `BlogPost` dans `data/page-builder/blog-posts`, slugs EN dans `seo/blog-slugs.json` (source unique, voir `AGENTS.md`), page dérivée par `features/blog`. Rédaction : `docs/redaction-web.md › Articles de blogue`.
+
 Pages zones (`/zones/<ville>`, SEO local) : une par ville dans `data/page-builder/zone-pages`, bornées par `ZONE_EN` (assertion build-time dans l'index). Ajouter une zone = les 5 endroits d'`AGENTS.md` + le fichier de données + l'index.
 
 ## Direction du projet

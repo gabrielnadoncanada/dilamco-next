@@ -20,6 +20,7 @@ import {
   Droplets,
   Grid2x2,
   Home,
+  Newspaper,
 } from "lucide-react";
 import type { MenuItem } from "@/components/navbar/navbar.types";
 import type { Brand, FooterNavSection, LegalLink } from "@/types/navigation";
@@ -270,6 +271,12 @@ export const MAIN_NAV_EN: MenuItem[] = [
             icon: Hammer,
             description: "From estimate to delivered job site.",
           },
+          {
+            label: "Blog",
+            url: "/blogue/",
+            icon: Newspaper,
+            description: "Costs, permits and licences explained before you sign.",
+          },
         ],
       },
     ],
@@ -322,6 +329,7 @@ export const FOOTER_NAV_EN: FooterNavSection[] = [
     links: [
       { text: "Our approach", url: "/a-propos/" },
       { text: "Process", url: "/processus/" },
+      { text: "Blog", url: "/blogue/" },
       { text: "Contact", url: "/contact/" },
     ],
   },

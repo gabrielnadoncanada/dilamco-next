@@ -8,6 +8,7 @@ import {
   RENOVATION_EN,
   PROJECT_SLUG_EN,
   ZONE_EN,
+  BLOG_SLUG_EN,
 } from "@/seo/i18n-path";
 
 // Templates explicites par espace (valeur traduite via routing.ts).
@@ -35,6 +36,9 @@ const RENOVATION_TEMPLATES = Object.keys(RENOVATION_EN).map(
 // Templates littéraux par zone desservie (segment zones -> areas via routing.ts).
 const ZONE_TEMPLATES = Object.keys(ZONE_EN).map((z) => `/zones/${z}`);
 
+// Templates littéraux par article (slug traduit via routing.ts).
+const BLOG_TEMPLATES = Object.keys(BLOG_SLUG_EN).map((s) => `/blogue/${s}`);
+
 // Pathnames internes connus (doivent rester synchronisés avec i18n/routing.ts).
 // Les plus spécifiques (espaces) en premier pour gagner le match.
 const TEMPLATES = [
@@ -54,6 +58,8 @@ const TEMPLATES = [
   "/a-propos",
   "/contact",
   "/processus",
+  "/blogue",
+  ...BLOG_TEMPLATES,
   "/politique-de-confidentialite",
   "/conditions-dutilisation",
   "/landing",

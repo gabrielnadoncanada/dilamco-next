@@ -25,6 +25,9 @@ const CORE_TYPES = new Set([
   "cta",
   "stats",
   "testimonial",
+  // Texte long (articles) : modèle de nœuds, colonne de lecture et table des
+  // matières propres, réutilisé par chaque article.
+  "prose",
 ]);
 
 const FORBIDDEN_NAME_PARTS = [

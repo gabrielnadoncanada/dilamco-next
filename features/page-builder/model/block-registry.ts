@@ -6,6 +6,7 @@ import { processDefs } from "@/features/page-builder/sections/process";
 import { gridDefs } from "@/features/page-builder/sections/grid";
 import { comparisonDefs } from "@/features/page-builder/sections/comparison";
 import { faqDefs } from "@/features/page-builder/sections/faq";
+import { proseDefs } from "@/features/page-builder/sections/prose";
 
 export const blockDefinitions = [
   ...heroDefs,
@@ -15,6 +16,7 @@ export const blockDefinitions = [
   ...gridDefs,
   ...comparisonDefs,
   ...faqDefs,
+  ...proseDefs,
 ] as const;
 
 export const blockRegistry = createRegistry(blockDefinitions);
