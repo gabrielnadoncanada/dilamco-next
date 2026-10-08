@@ -249,7 +249,7 @@ export const pageEn: PageTemplateData = {
           items: [
             {
               q: "How much does a renovation cost?",
-              a: "Our projects start around $25,000. A complete kitchen usually lands between $35,000 and $50,000. The firm price is set after the on-site survey, in the detailed quote.",
+              a: "Our projects start around $25,000. A complete kitchen usually lands between $25,000 and $50,000 before tax. The firm price is set after the on-site survey, in the detailed quote.",
             },
             {
               q: "How long does a job take?",

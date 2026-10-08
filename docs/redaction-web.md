@@ -143,5 +143,5 @@ Les pages du site se scannent ; un article se lit, mais il doit **se citer**. Il
 - **Liens internes** : 3 à 6 dans le corps vers les pages service/zone concernées (chemins FR, AppLink localise), plus 2 à 4 `related`.
 - **FAQ** : 4 à 5 questions que l'article ne traite pas déjà en h2.
 - **Dates** : `publishedAt` à la mise en ligne ; `updatedAt` seulement après une vraie révision des faits.
-- **Auteur** : l'entreprise (JSON-LD Organization). On n'attribue un article à une personne que si elle l'a relu et accepte de le signer.
+- **Auteur** : Sean Diffley, répondant de la licence RBQ (accord du 2026-10-08), affiché sous le titre et déclaré en JSON-LD `Person` (`SITE.principal`). Il relit chaque article avant publication ; l'entreprise reste l'éditeur.
 - Mots interdits, vouvoiement et clarté : mêmes règles que le reste du site. L'EN reprend la même structure, nœud pour nœud.

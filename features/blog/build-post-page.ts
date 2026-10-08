@@ -16,6 +16,7 @@ const LABELS = {
     published: "Publié le",
     updated: "Mis à jour le",
     readingTime: (min: number) => `${min} min de lecture`,
+    by: "Par",
     quote: "Soumission gratuite",
     call: "Nous appeler",
     sources: "Sources",
@@ -27,6 +28,7 @@ const LABELS = {
     published: "Published",
     updated: "Updated",
     readingTime: (min: number) => `${min} min read`,
+    by: "By",
     quote: "Free estimate",
     call: "Call us",
     sources: "Sources",
@@ -34,6 +36,8 @@ const LABELS = {
 } as const;
 
 const DATE_LOCALE = { fr: "fr-CA", en: "en-CA" } as const;
+
+const lowerFirst = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
 
 /** « 8 octobre 2026 » / « October 8, 2026 » (UTC : la date ISO n'a pas d'heure). */
 export function formatPostDate(iso: string, locale: BlogPost["locale"], month: "long" | "short" = "long") {
@@ -94,6 +98,7 @@ export function buildBlogPostPage(post: BlogPost): PageTemplateData {
   const lastDate = post.updatedAt ?? post.publishedAt;
 
   const meta = [
+    { label: `${t.by} ${SITE.principal.shortName}, ${lowerFirst(SITE.principal.jobTitle[post.locale])}` },
     {
       label: `${post.updatedAt ? t.updated : t.published} ${formatPostDate(lastDate, post.locale)}`,
       dateTime: lastDate,

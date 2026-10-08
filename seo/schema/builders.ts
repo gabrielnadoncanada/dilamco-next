@@ -242,8 +242,8 @@ export function webPageJsonLd(args: {
 }
 
 /**
- * Article du blogue. Auteur = l'entreprise (Organization) : aucun article
- * n'est attribué à une personne sans qu'elle l'ait relu et signé.
+ * Article du blogue, signé par le répondant de la licence RBQ (Sean Diffley a
+ * accepté de signer les articles le 2026-10-08) et publié par l'entreprise.
  */
 export function blogPostingJsonLd(args: {
   url: string;
@@ -269,7 +269,16 @@ export function blogPostingJsonLd(args: {
     datePublished: args.datePublished,
     dateModified: args.dateModified ?? args.datePublished,
     inLanguage: BCP47[args.locale],
-    author: { "@type": "Organization", "@id": ORG_ID, name: SITE.name, url: SITE.url },
+    // Signé par le répondant de la licence (expertise vérifiable au registre RBQ).
+    author: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#principal`,
+      name: SITE.principal.name,
+      jobTitle: SITE.principal.jobTitle[args.locale],
+      worksFor: { "@id": ORG_ID },
+      url: `${SITE.url}${args.locale === "en" ? "/en/about" : "/a-propos"}`,
+      sameAs: [SITE.rbqRegistryUrl],
+    },
     publisher: { "@id": ORG_ID },
     isPartOf: { "@id": `${SITE.url}/#website` },
   };
