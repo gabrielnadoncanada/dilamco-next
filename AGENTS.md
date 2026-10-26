@@ -57,7 +57,9 @@ Changer un slug déjà publié = redirection 308 dans `next.config.ts`.
 ### Déploiement & canonicalisation
 
 - `git push origin master` → déploiement Vercel auto (~60-75s).
-- www→non-www, trailing-slash→sans, et redirections legacy : `next.config.ts`.
+- www→non-www, `/fr/...`→sans préfixe et redirections legacy : `next.config.ts`.
+- trailing-slash→sans : `middleware.ts` (`skipTrailingSlashRedirect` est actif
+  pour le proxy PostHog `/ingest`, qui exige les barres finales).
 - Données structurées riches déjà en place (HomeAndConstructionBusiness, FAQ,
   Service, Breadcrumb) — vérifier avant d'en rajouter.
 
