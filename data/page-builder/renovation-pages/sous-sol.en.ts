@@ -232,6 +232,13 @@ export const renovationSousSolPageEn: PageTemplateData = {
                 "Theatre, bar, wine room or office: what a basement can become.",
               href: "/espaces/sous-sol",
             },
+            {
+              kind: "text",
+              title: "Flooded basement?",
+              description:
+                "We rebuild after water damage and prepare the list of damages for your insurer.",
+              href: "/services/renovation/apres-sinistre",
+            },
           ],
         },
       },
@@ -247,6 +254,10 @@ export const renovationSousSolPageEn: PageTemplateData = {
             {
               q: "My basement takes on water, can it still be finished?",
               a: "Not before the water is stopped: a crack, a blocked weeping tile, ground sloping toward the house or a pump that no longer works. Finishing over it means starting again.",
+            },
+            {
+              q: "My basement flooded. Can you rebuild it?",
+              a: "Yes, once a drying company has done its work. We cut out the wet walls, redo the insulation and drywall, and give your insurer a line-by-line price.",
             },
             {
               q: "Do I need a permit to finish a basement?",
