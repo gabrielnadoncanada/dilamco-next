@@ -9,6 +9,7 @@ import {
   type ContactFormState,
 } from "@/lib/contact-actions";
 import { useLeadSubmitTracking } from "@/lib/use-lead-submit-tracking";
+import { LeadAttributionInput } from "@/components/forms/LeadAttributionInput";
 import { Button } from "./button";
 import { cn } from "@/lib/utils";
 
@@ -183,6 +184,7 @@ export function LandingLeadForm() {
   return (
     <form action={formAction} className="grid gap-4 md:grid-cols-2">
       <input type="hidden" name="espace" value="cuisine" />
+      <LeadAttributionInput />
       <input
         type="text"
         name="website"

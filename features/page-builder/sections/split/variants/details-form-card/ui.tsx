@@ -2,6 +2,7 @@
 
 import { submitContactLead, type ContactFormState } from "@/lib/contact-actions";
 import { useLeadSubmitTracking } from "@/lib/use-lead-submit-tracking";
+import { LeadAttributionInput } from "@/components/forms/LeadAttributionInput";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -199,6 +200,7 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
               method={isContactSubmission ? undefined : (props.formMethod ?? "post")}
               className="space-y-6"
             >
+              {isContactSubmission ? <LeadAttributionInput /> : null}
               {props.honeypotName ? (
                 <input
                   type="text"

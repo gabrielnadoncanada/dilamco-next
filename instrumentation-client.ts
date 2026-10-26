@@ -1,4 +1,6 @@
 import posthog from "posthog-js";
+import { captureLeadAttribution } from "./lib/lead-attribution";
+import { trackPhoneClicks } from "./lib/track-phone-clicks";
 
 // PostHog (parcours, enregistrements de session, origine des demandes).
 // Passe par le proxy /ingest (voir rewrites dans next.config.ts) pour ne pas
@@ -13,3 +15,6 @@ if (key) {
     person_profiles: "identified_only",
   });
 }
+
+captureLeadAttribution();
+trackPhoneClicks();
