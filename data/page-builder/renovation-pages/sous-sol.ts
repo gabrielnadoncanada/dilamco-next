@@ -232,6 +232,13 @@ export const renovationSousSolPage: PageTemplateData = {
                 "Cinéma, bar, cellier ou bureau : ce qu'un sous-sol peut devenir.",
               href: "/espaces/sous-sol",
             },
+            {
+              kind: "text",
+              title: "Sous-sol inondé ?",
+              description:
+                "On reconstruit après un dégât d'eau et on prépare la liste des dommages pour votre assureur.",
+              href: "/services/renovation/apres-sinistre",
+            },
           ],
         },
       },
@@ -247,6 +254,10 @@ export const renovationSousSolPage: PageTemplateData = {
             {
               q: "Mon sous-sol prend l'eau, peut-on le finir quand même ?",
               a: "Pas avant d'avoir arrêté l'eau : une fissure, un drain bouché, un terrain qui verse vers la maison ou une pompe qui ne fonctionne plus. Finir par-dessus, c'est tout recommencer.",
+            },
+            {
+              q: "Mon sous-sol a été inondé, pouvez-vous le refaire ?",
+              a: "Oui, une fois qu'une firme d'assèchement a fait son travail. On coupe les murs mouillés, on refait l'isolation et le gypse, et on remet à votre assureur un prix ligne par ligne.",
             },
             {
               q: "Faut-il un permis pour finir un sous-sol ?",
