@@ -31,9 +31,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à L'Île-Bizard–Sainte-Geneviève",
+    title: "Agrandissement et rénovation à L'Île-Bizard",
     description:
-      "Entrepreneur général RBQ à L'Île-Bizard–Sainte-Geneviève : rénovation, sous-sol, reconstruction après inondation, permis de l'arrondissement.",
+      "Agrandissement de maison, sous-sol et reconstruction après inondation à L'Île-Bizard–Sainte-Geneviève. Entrepreneur général RBQ, permis inclus.",
     path: "/zones/ile-bizard-sainte-genevieve",
     ogAlt: "Rénovation résidentielle à L'Île-Bizard–Sainte-Geneviève par Dilamco",
   },

@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneKirklandPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "General contractor in Kirkland — renovation",
+    title: "Home renovation contractor in Kirkland",
     description:
-      "RBQ-licensed general contractor in Kirkland: major renovations, additions, kitchens and basements on the West Island's larger lots.",
+      "Home renovation contractor in Kirkland, RBQ-licensed: additions, bathrooms, kitchens and basements on the West Island's larger lots.",
     path: "/zones/kirkland",
     ogAlt: "Home renovation in Kirkland by Dilamco",
   },

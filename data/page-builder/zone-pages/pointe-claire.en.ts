@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const zonePointeClairePageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "General contractor in Pointe-Claire",
+    title: "Pointe-Claire general contractor & bathrooms",
     description:
-      "RBQ-licensed general contractor in Pointe-Claire: renovations, bathrooms, kitchens, additions. Site Planning and Architectural Integration files handled.",
+      "RBQ-licensed general contractor in Pointe-Claire: bathroom remodels, kitchens, basements and additions, with Village heritage permits handled.",
     path: "/zones/pointe-claire",
     ogAlt: "Home renovation in Pointe-Claire by Dilamco",
   },

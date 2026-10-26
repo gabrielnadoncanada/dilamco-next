@@ -2,6 +2,7 @@
 
 import { Resend } from "resend";
 import { z } from "zod";
+import { leadAttributionLines } from "@/lib/lead-attribution-email";
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
@@ -191,6 +192,7 @@ export async function submitContactLead(
     echeance: labelMap.echeance[data.echeance],
     message: data.message,
   };
+  const attribution = leadAttributionLines(getStringValue(formData, "attribution"));
 
   const { error } = await resend.emails.send({
     from: fromEmail,
@@ -212,6 +214,8 @@ export async function submitContactLead(
       "",
       "Message:",
       summary.message,
+      "",
+      ...attribution,
     ].join("\n"),
     html: `
       <div style="font-family: Arial, sans-serif; line-height: 1.5; color: #111827;">
@@ -226,6 +230,8 @@ export async function submitContactLead(
         <p><strong>Calendrier souhaite:</strong> ${escapeHtml(summary.echeance)}</p>
         <p><strong>Message:</strong></p>
         <p style="white-space: pre-wrap;">${escapeHtml(summary.message)}</p>
+        <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;" />
+        ${attribution.map((line) => `<p style="color: #4b5563;">${escapeHtml(line)}</p>`).join("")}
       </div>
     `,
   });

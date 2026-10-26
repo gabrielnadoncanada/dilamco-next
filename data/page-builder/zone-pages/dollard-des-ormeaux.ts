@@ -21,9 +21,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneDollardDesOrmeauxPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à Dollard-des-Ormeaux",
+    title: "Agrandissement et rénovation à Dollard-des-Ormeaux",
     description:
-      "Entrepreneur général licencié RBQ à Dollard-des-Ormeaux : cuisine, salle de bain, sous-sol, agrandissement. Base à Pierrefonds, à dix minutes de DDO.",
+      "Agrandissement de maison, cuisine, salle de bain et sous-sol à Dollard-des-Ormeaux. Entrepreneur général RBQ basé à Pierrefonds, à dix minutes.",
     path: "/zones/dollard-des-ormeaux",
     ogAlt: "Rénovation résidentielle à Dollard-des-Ormeaux par Dilamco",
   },

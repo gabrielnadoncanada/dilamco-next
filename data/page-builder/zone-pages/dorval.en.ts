@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneDorvalPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "General Contractor in Dorval — Renovation",
+    title: "Renovation & general contractor in Dorval",
     description:
-      "RBQ-licensed general contractor in Dorval: post-war bungalow renovations, City of Dorval permits, Lakeshore SPAIP, one accountable lead.",
+      "RBQ-licensed renovation and general contractor in Dorval: post-war bungalows, City of Dorval permits, Lakeshore SPAIP, one accountable lead.",
     path: "/zones/dorval",
     ogAlt: "Residential renovation in Dorval by Dilamco",
   },

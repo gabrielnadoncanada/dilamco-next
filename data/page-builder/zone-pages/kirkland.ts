@@ -23,9 +23,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneKirklandPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à Kirkland — rénovation",
+    title: "Agrandissement et rénovation à Kirkland",
     description:
-      "Entrepreneur général licencié RBQ à Kirkland : rénovation complète, agrandissement, cuisine et sous-sol sur les grands terrains de l'Ouest-de-l'Île.",
+      "Agrandissement de maison, salle de bain, cuisine et sous-sol à Kirkland. Entrepreneur en rénovation licencié RBQ : permis et chantier gérés pour vous.",
     path: "/zones/kirkland",
     ogAlt: "Rénovation résidentielle à Kirkland par Dilamco",
   },

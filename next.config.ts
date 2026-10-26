@@ -437,6 +437,11 @@ const nextConfig = {
         destination: "https://dilamco.com/:path*",
         permanent: true,
       },
+      // FR est servi sans préfixe (localePrefix "as-needed") : next-intl redirige
+      // /fr/... en 307 (temporaire), et Google garde ces URL indexées. On force
+      // une 308 permanente ici, avant le middleware.
+      { source: "/fr", destination: "/", permanent: true },
+      { source: "/fr/:path*", destination: "/:path*", permanent: true },
       // Site frère retiré : entrepreneurgeneralmontreal.com fondu dans dilamco.
       // Audit backlinks 2026-06-28 : il portait 146 liens de navigation sitewide
       // (concentration anormale) sans valeur propre (36 backlinks, spam score 50).

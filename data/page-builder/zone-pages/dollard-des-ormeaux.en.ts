@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "General contractor in Dollard-des-Ormeaux",
+    title: "Basement & home renovation in Dollard-des-Ormeaux",
     description:
-      "RBQ-licensed general contractor in Dollard-des-Ormeaux: kitchens, bathrooms, basements, additions. Based in Pierrefonds, ten minutes from DDO.",
+      "Basement remodels, home renovations, kitchens, bathrooms and additions in Dollard-des-Ormeaux. RBQ-licensed, based in Pierrefonds, ten minutes away.",
     path: "/zones/dollard-des-ormeaux",
     ogAlt: "Home renovation in Dollard-des-Ormeaux by Dilamco",
   },

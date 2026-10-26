@@ -23,9 +23,9 @@ import { SITE } from "@/seo/schema/site";
 export const zonePierrefondsRoxboroPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à Pierrefonds-Roxboro",
+    title: "Rénovation et agrandissement à Pierrefonds-Roxboro",
     description:
-      "Entrepreneur général licencié RBQ basé rue Larocque à Pierrefonds-Roxboro : rénovation, sous-sol, agrandissement et reconstruction après sinistre.",
+      "Salle de bain, cuisine, sous-sol, agrandissement et reconstruction après sinistre à Pierrefonds-Roxboro. Entrepreneur RBQ basé rue Larocque.",
     path: "/zones/pierrefonds-roxboro",
     ogAlt: "Rénovation résidentielle à Pierrefonds-Roxboro par Dilamco",
   },

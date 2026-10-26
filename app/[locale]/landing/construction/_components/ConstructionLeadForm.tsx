@@ -11,6 +11,7 @@ import {
 import { Button } from "../../_components/button";
 import { cn } from "@/lib/utils";
 import { useLeadSubmitTracking } from "@/lib/use-lead-submit-tracking";
+import { LeadAttributionInput } from "@/components/forms/LeadAttributionInput";
 
 const initialState: ConstructionLeadState = {
   status: "idle",
@@ -193,6 +194,7 @@ export function ConstructionLeadForm() {
 
   return (
     <form action={formAction} className="grid gap-4 md:grid-cols-2">
+      <LeadAttributionInput />
       <input
         type="text"
         name="website"

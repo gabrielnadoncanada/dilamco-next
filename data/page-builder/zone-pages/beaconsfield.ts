@@ -25,9 +25,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneBeaconsfieldPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à Beaconsfield",
+    title: "Agrandissement et rénovation à Beaconsfield",
     description:
-      "Entrepreneur général licencié RBQ à Beaconsfield : rénovation majeure, agrandissement, cuisine et sous-sol, avec zonage 720 et permis d'abattage.",
+      "Agrandissement de maison et rénovation majeure à Beaconsfield par un entrepreneur licencié RBQ : cuisine, sous-sol, zonage 720 et permis d'abattage.",
     path: "/zones/beaconsfield",
     ogAlt: "Rénovation résidentielle à Beaconsfield par Dilamco",
   },
