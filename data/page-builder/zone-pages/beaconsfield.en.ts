@@ -4,9 +4,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneBeaconsfieldPageEn: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "General contractor in Beaconsfield",
+    title: "Renovation & general contractor in Beaconsfield",
     description:
-      "RBQ-licensed general contractor in Beaconsfield: major renovations, additions, kitchens and basements, with zoning by-law 720 and tree permits handled.",
+      "RBQ-licensed renovation contractor in Beaconsfield: bathrooms, additions, kitchens and basements, with zoning by-law 720 and tree permits handled.",
     path: "/zones/beaconsfield",
     ogAlt: "Home renovation in Beaconsfield by Dilamco",
   },

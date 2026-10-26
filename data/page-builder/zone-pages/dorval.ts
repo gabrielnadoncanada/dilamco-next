@@ -25,9 +25,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneDorvalPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à Dorval — rénovation",
+    title: "Agrandissement et rénovation à Dorval",
     description:
-      "Entrepreneur général licencié RBQ à Dorval : rénovation de bungalows d'après-guerre, permis de la Cité, PIIA du Bord-du-Lac, un seul responsable.",
+      "Agrandissement et rénovation de bungalows d'après-guerre à Dorval : permis de la Cité, PIIA du Bord-du-Lac, un seul entrepreneur RBQ responsable.",
     path: "/zones/dorval",
     ogAlt: "Rénovation résidentielle à Dorval par Dilamco",
   },

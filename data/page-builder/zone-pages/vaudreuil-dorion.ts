@@ -28,9 +28,9 @@ import { SITE } from "@/seo/schema/site";
 export const zoneVaudreuilDorionPage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à Vaudreuil-Dorion — rénovation",
+    title: "Rénovation et agrandissement à Vaudreuil-Dorion",
     description:
-      "Entrepreneur général RBQ à Vaudreuil-Dorion : rénovation de maisons des années 2000, sous-sols, permis de la Division permis et inspections.",
+      "Rénovation de cuisine, agrandissement de maison et sous-sol à Vaudreuil-Dorion. Entrepreneur général RBQ, permis déposés auprès de la Ville.",
     path: "/zones/vaudreuil-dorion",
     ogAlt: "Rénovation résidentielle à Vaudreuil-Dorion par Dilamco",
   },

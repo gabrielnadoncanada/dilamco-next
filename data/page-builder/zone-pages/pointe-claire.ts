@@ -24,9 +24,9 @@ import { SITE } from "@/seo/schema/site";
 export const zonePointeClairePage: PageTemplateData = {
   template: "services",
   metadata: {
-    title: "Entrepreneur général à Pointe-Claire",
+    title: "Agrandissement et rénovation à Pointe-Claire",
     description:
-      "Entrepreneur général licencié RBQ à Pointe-Claire : rénovation, salle de bain, cuisine, agrandissement. Dossiers PIIA du Village et des secteurs anciens.",
+      "Agrandissement de maison, salle de bain et cuisine à Pointe-Claire. Entrepreneur général licencié RBQ, dossiers PIIA du Village pris en charge.",
     path: "/zones/pointe-claire",
     ogAlt: "Rénovation résidentielle à Pointe-Claire par Dilamco",
   },
