@@ -379,8 +379,25 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  // L'API PostHog exige les barres obliques finales (/ingest/e/) : on coupe la
+  // redirection automatique de Next et on la refait dans middleware.ts pour
+  // toutes les autres routes.
+  skipTrailingSlashRedirect: true,
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
+  },
+  // Proxy PostHog sur notre domaine (contourne les bloqueurs de pub).
+  async rewrites() {
+    return [
+      {
+        source: "/ingest/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://us.i.posthog.com/:path*",
+      },
+    ];
   },
   images: {
     // BYPASS de l'Image Optimization Vercel (quota payant → 402
