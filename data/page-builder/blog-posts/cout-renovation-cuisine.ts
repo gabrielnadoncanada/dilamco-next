@@ -33,7 +33,7 @@ export const post: BlogPost = {
   category: "budget",
   publishedAt: "2026-10-08",
   title: "Combien coûte une rénovation de cuisine au Québec en 2026",
-  metaTitle: "Prix d'une rénovation de cuisine en 2026 (Québec)",
+  metaTitle: "Coût d'une rénovation de cuisine au Québec (prix 2026)",
   description:
     "Rénovation de cuisine en 2026 : 25 000 à 50 000 $ avant taxes pour une cuisine complète. Deux vraies soumissions ventilées poste par poste.",
   excerpt:

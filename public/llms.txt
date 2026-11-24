@@ -1,8 +1,15 @@
 # Dilamco
 
-> Entrepreneur général en rénovation résidentielle et commerciale dans l'Ouest-de-l'Île de Montréal, le Grand Montréal, Laval et Vaudreuil-Soulanges. Licence RBQ 8306-0806-27 (valide, catégories 1.2 et 1.3 + sous-catégorie 12 armoires), en activité depuis 2004. Basé à Pierrefonds-Roxboro (18625 rue Larocque, H9K 1P1). Téléphone : 514-820-0773. Courriel : info@dilamco.com.
+> Entrepreneur général en rénovation résidentielle et commerciale dans l'Ouest-de-l'Île de Montréal, le Grand Montréal, Laval et Vaudreuil-Soulanges. Licence RBQ 8306-0806-27 (valide, délivrée le 2004-09-07), en activité depuis 2004. Basé à Pierrefonds-Roxboro (18625 rue Larocque, H9K 1P1). Téléphone : 514-820-0773. Courriel : info@dilamco.com.
 
 Dilamco (raison sociale 9139-1250 Québec inc., aussi connu sous « Dilamco Construction ») agit comme entrepreneur général unique : estimation gratuite, soumission détaillée, contrat écrit avec échéancier, permis municipaux, coordination de tous les corps de métier, inspection et garantie de travaux. Division armoires sur mesure intégrée (armoires fabriquées pour Dilamco par une usine partenaire, installées par ses équipes).
+
+## Licence RBQ : travaux autorisés
+
+Registre de la RBQ, consulté le 2026-11-24. Cautionnement de licence de 40 000 $ (FACCQ), aucune réclamation au dossier.
+
+- Entrepreneur général : 1.2 Petits bâtiments ; 1.3 Bâtiments de tout genre.
+- Entrepreneur spécialisé : 2.7 Travaux d'emplacement ; 3.2 Petits ouvrages de béton ; 4.2 Maçonnerie non structurale, marbre et céramique ; 5.1 Structures métalliques et éléments préfabriqués de béton ; 5.2 Ouvrages métalliques ; 6.2 Travaux de bois et plastique ; 7 Isolation, étanchéité, couvertures et revêtement extérieur ; 8 Portes et fenêtres ; 9 Travaux de finition ; 10 Systèmes de chauffage localisé à combustible solide ; 11.2 Équipements et produits spéciaux ; 12 Armoires et comptoirs usinés ; 15.7 Ventilation résidentielle.
 
 ## Services
 
@@ -12,6 +19,7 @@ Dilamco (raison sociale 9139-1250 Québec inc., aussi connu sous « Dilamco Cons
 - [Finition de sous-sol](https://dilamco.com/services/renovation/sous-sol)
 - [Agrandissement de maison](https://dilamco.com/services/renovation/agrandissement-de-maison)
 - [Rénovation de plancher](https://dilamco.com/services/renovation/plancher)
+- [Portes et fenêtres](https://dilamco.com/services/renovation/portes-et-fenetres)
 - [Reconstruction après sinistre (dégât d'eau, feu)](https://dilamco.com/services/renovation/apres-sinistre)
 - [Aménagement commercial](https://dilamco.com/espaces/commercial)
 - [Armoires et cuisines sur mesure](https://dilamco.com/espaces)

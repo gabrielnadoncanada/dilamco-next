@@ -468,6 +468,19 @@ const nextConfig = {
         destination: "https://dilamco.com/",
         permanent: true,
       },
+      // Lien court à donner aux clients (courriel, facture, carte d'affaires) :
+      // ouvre la fenêtre « Rédiger un avis » de la fiche Google Dilamco
+      // Construction. Temporaire (307) : le lien Google peut changer.
+      {
+        source: "/avis",
+        destination: "https://g.page/r/CSNoRO8NxEUQEBM/review",
+        permanent: false,
+      },
+      {
+        source: "/en/review",
+        destination: "https://g.page/r/CSNoRO8NxEUQEBM/review",
+        permanent: false,
+      },
       ...expandRedirects(redirectRules),
     ];
   },
