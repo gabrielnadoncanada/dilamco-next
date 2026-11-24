@@ -186,8 +186,8 @@ export const agrandissementMaisonPageEn: PageTemplateData = {
           ],
           actions: [
             {
-              label: "See the kitchen",
-              href: "/services/renovation/cuisine",
+              label: "Permit cost by city",
+              href: "/blogue/permis-agrandissement-maison",
               variant: "ghost",
             },
             {

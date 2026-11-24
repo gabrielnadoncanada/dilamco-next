@@ -20,6 +20,7 @@ export const BLOG_CATEGORIES = {
   budget: { fr: "Budget", en: "Budget" },
   entrepreneur: { fr: "Choisir un entrepreneur", en: "Hiring a contractor" },
   sinistre: { fr: "Après sinistre", en: "After a disaster" },
+  permis: { fr: "Permis et règlements", en: "Permits and bylaws" },
 } as const;
 
 export type BlogCategory = keyof typeof BLOG_CATEGORIES;

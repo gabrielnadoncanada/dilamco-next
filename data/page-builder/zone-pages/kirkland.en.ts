@@ -203,6 +203,10 @@ export const zoneKirklandPageEn: PageTemplateData = {
               q: "What does renovating a whole Kirkland house cost?",
               a: "Redoing the roof, the windows, the electrical panel and the bathrooms in one sequence runs into tens of thousands of dollars. Our smallest mandates start near $25,000.",
             },
+            {
+              q: "What does an addition permit cost in Kirkland?",
+              a: "$8 per $1,000 of work for a single-family house, at least $50. If the addition changes the front facade or makes the house 25% larger than the average of homes within 100 m, the planning committee must review its look: a $400 study fee, and an opinion given only after 60 days.",
+            },
           ],
         },
       },

@@ -129,13 +129,40 @@ Le courriel « Rénovation d'un garage à Montréal » (transféré par Sean le 
 - [x] `llms.txt` : catégories RBQ complètes (dont 7 couvertures/revêtement, 8 portes et fenêtres) + page portes et fenêtres.
 - [x] Article cuisine : `metaTitle` aligné sur les requêtes (« Coût d'une rénovation de cuisine au Québec (prix 2026) »).
 
+**Fait le 2026-11-24, 2ᵉ passe (permis d'agrandissement)** :
+
+Constat : sur « agrandissement de maison beaconsfield », l'aperçu IA de Google répond avec des prix (immohorizon) et les frais de permis de la Ville. Les pages zones sont en position 4 à 9 sur « agrandissement de maison <ville> » sans clic.
+
+- [x] Frais et délais officiels du permis d'agrandissement ajoutés en FAQ (FR + EN) sur 8 pages zones : Beaconsfield, Kirkland, Pointe-Claire, DDO, Pierrefonds-Roxboro, Dorval, L'Île-Bizard, Vaudreuil-Dorion (réponse vague remplacée par 3,50 $/m²). Sources en tête de chaque fichier.
+- [x] Article `/blogue/permis-agrandissement-maison` (EN `/en/blog/home-addition-permit`) : tableau des tarifs 2026 par ville, délais, comité d'apparence, seuils de la Loi sur les architectes, documents, exclusion GCR, exemple chiffré pour 150 000 $ de travaux. Nouvelle catégorie de blogue « Permis et règlements ».
+- [x] Page service agrandissement : bouton « Coût du permis par ville » au lieu de « Voir la cuisine ».
+- [x] `llms.txt` : article ajouté.
+- Contradictions officielles relevées (non publiées) : Beaconsfield « minimum 4 months » (page permis) contre « minimum 2 months » (tableau des délais) ; Dorval, trois critères différents pour le comité ; lien du tarif mort sur la page permis de Vaudreuil-Dorion.
+- [ ] Mesurer dans 4 semaines (≈ 2026-12-22) : clics et position des requêtes « agrandissement de maison <ville> » et « permis agrandissement », et citation dans l'aperçu IA.
+
 **Reste à faire (humain)** :
 
 - [ ] **Sean** : corriger le téléphone au registre RBQ (fiche → « Mettez à jour votre dossier », connexion clicSÉQUR) si 514-626-1343 n'est plus le bon numéro. Puis Canpages et Infobel.
 - [ ] **GA4** : dès que `phone_click` apparaît dans Admin → Événements → Événements récents (sous 24 h), cocher son étoile (événement clé).
 - [ ] Envoyer `dilamco.com/avis` aux clients des 12 derniers mois. Les concurrents cités par ChatGPT ont 17 à 47 avis.
-- [ ] Mettre à jour la description Facebook et l'étude de cas devactif.ca (positionnement entrepreneur général).
+- [ ] **Facebook** (admin de la Page requis) : l'intro dit « Cabinet Maker. Residential Renovation and Construction. », catégorie « Magasin de meubles et comptoirs », dernière publication = liquidation d'armoires (juin). Mettre « Entrepreneur général » en catégorie et une intro du type « Entrepreneur général en rénovation résidentielle, Ouest-de-l'Île, depuis 2004. RBQ 8306-0806-27. »
+- [ ] Étude de cas devactif.ca : elle présente Dilamco comme boutique d'armoires (ChatGPT la lit).
 - [ ] Avis signé « Gabriel Nadon » sur la fiche : à retirer s'il ne s'agit pas d'un vrai client.
+
+### À faire plus tard : vrais projets et vrais prix (bloqué, attend Sean)
+
+**Pourquoi** : sur « agrandissement de maison beaconsfield », la page zone est 8ᵉ (258 impressions / 90 j) sans clic. L'aperçu IA de Google cite d'abord des **prix** (immohorizon : 150 000-250 000 $ pour une annexe d'un étage) et les frais de permis. La carte locale montre des concurrents avec 17 à 32 avis. ChatGPT a classé Innovco 1ᵉʳ pour sa « galerie de réalisations consacrée aux agrandissements ». Les pages zones de Dilamco utilisent des images générées et les pages projets sont presque vides.
+
+**Vérifier d'abord** : aucune soumission d'agrandissement dans `Ventes/Résidentiel` (seulement cuisines, sous-sols, sinistres, fenêtres, fournaise). Si Dilamco n'a pas réalisé d'agrandissement, ne publier ni projet ni prix pour ce service : miser sur cuisine, sous-sol et après sinistre.
+
+**À demander à Sean, pour 2 ou 3 projets réels par service** (rien d'identifiable ne sera publié) :
+
+- [ ] Type de travaux, ville ou secteur, année
+- [ ] Surface (pi²) et prix final avant taxes, ou fourchette
+- [ ] Durée du chantier et délai du permis
+- [ ] 5 à 10 photos : avant, pendant, après
+
+**Ensuite (Claude)** : pages projets (`data/project-pages/`), section « prix réels » sur la page service et sur les pages zones, au format repris par l'aperçu IA (fourchette chiffrée en première phrase, tableau). Photos : `docs/media/` → `pnpm run images:webp`.
 
 ## Autres chantiers ouverts le même jour
 

@@ -16,6 +16,12 @@
 //   https://fr.wikipedia.org/wiki/Inondations_printanières_de_2017_au_Québec
 // - Les inondations au Québec (UQAM), fiche Pierrefonds-Roxboro :
 //   https://inondations.uqam.ca/loc/pierrefonds-roxboro-arrondissement/
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - « Rénovations, agrandissements et nouvelles constructions » (PIIA exigé pour les
+//   agrandissements ; rendez-vous, CCU, conseil dans certains cas, documents additionnels) :
+//   https://montreal.ca/articles/renovations-agrandissements-et-nouvelles-constructions-pierrefonds-roxboro-108318
+// - Règlement CA29 0152 sur les tarifs (exercice 2026) : étude PIIA d'un agrandissement 180 $ :
+//   https://applicatif.ville.montreal.qc.ca/som-fr/pdf_avis/pdfav41191.pdf
 
 import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
@@ -230,6 +236,10 @@ export const zonePierrefondsRoxboroPage: PageTemplateData = {
             {
               q: "Combien coûte l'aménagement d'un sous-sol de bungalow ici ?",
               a: "Un mandat démarre autour de 25 000 $, et ajouter une salle d'eau fait monter le total. Ce qu'on trouve sous la dalle décide du reste. La visite et l'estimation sont gratuites.",
+            },
+            {
+              q: "Un agrandissement passe-t-il devant un comité à Pierrefonds-Roxboro ?",
+              a: "Oui. L'arrondissement fait juger l'apparence de tout agrandissement : l'étude coûte 180 $, puis le comité consultatif d'urbanisme donne son avis, et parfois le conseil d'arrondissement. Le permis suit, avec des documents additionnels. Nous rencontrons l'urbanisme avant de faire dessiner les plans.",
             },
           ],
         },

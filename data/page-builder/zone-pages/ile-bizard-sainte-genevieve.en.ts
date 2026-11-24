@@ -216,6 +216,10 @@ export const zoneIleBizardSainteGenevievePageEn: PageTemplateData = {
               q: "Can an older house in old Sainte-Geneviève be transformed?",
               a: "Yes, provided we survey what is there first. The village core is recognized as a site of special interest, around the 1843-1845 church and the D'Ailleboust-De-Manthet house at 15886 Gouin Boulevard West.",
             },
+            {
+              q: "What does an addition permit cost on Île Bizard?",
+              a: "$9.80 per $1,000 of work. The borough asks for the certificate of location, the proposed site plan, plans of every level, the elevations and structural plans prepared by an engineer, with a detailed quote.",
+            },
           ],
         },
       },

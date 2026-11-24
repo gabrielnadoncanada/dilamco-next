@@ -198,6 +198,10 @@ export const zoneBeaconsfieldPageEn: PageTemplateData = {
               q: "Is it better to renovate in stages in Beaconsfield?",
               a: "Rarely. In neighbourhoods built between 1951 and 1963, the roof, the windows, the plumbing and the wiring reach end of life together. Doing it all at once avoids paying twice to set up the site.",
             },
+            {
+              q: "What does an addition permit cost in Beaconsfield, and how long does it take?",
+              a: "$14.75 per $1,000 of work, at least $200, plus a $2,500 deposit. An addition visible from the street also goes before the committee that reviews the look of the work: a $600 study fee and at least four months, according to the City. Otherwise, allow one month from March to September and two weeks from October to February.",
+            },
           ],
         },
       },

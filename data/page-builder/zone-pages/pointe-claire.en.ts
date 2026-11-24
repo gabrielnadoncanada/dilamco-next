@@ -206,6 +206,10 @@ export const zonePointeClairePageEn: PageTemplateData = {
               q: "What does a bathroom cost in Pointe-Claire?",
               a: "In a pre-1950 house, the plumbing and the subfloor cost as much as the finishes. A mandate starts near $25,000 and the scope is set after the survey. The estimate is free.",
             },
+            {
+              q: "What does an addition permit cost in Pointe-Claire?",
+              a: "$13 per $1,000 of work, calculated on at least $1,410 per m² added. The deposit is $645 if the addition is under half the house's floor area, $3,120 otherwise. Past one third more floor area, the plans must carry the seal of an architect or a technologist.",
+            },
           ],
         },
       },

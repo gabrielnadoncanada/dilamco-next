@@ -14,6 +14,14 @@
 // - Ville de Dollard-des-Ormeaux, plan de la ville (secteurs Saint-Jean, Westpark, Sunnybrooke ;
 //   rues Spring Garden, Hyman, boul. Sunnybrooke) :
 //   https://ville.ddo.qc.ca/ma-municipalite/plan-de-la-ville
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - Règlement R-2025-211 sur les tarifs 2026 : rénovation ou agrandissement, résidentiel de
+//   12 logements et moins, 100 $ jusqu'à 24 999 $, 11 $/1 000 $ à partir de 25 000 $ :
+//   https://ville.ddo.qc.ca/wp-content/uploads/2025/12/TARIFS_R-2025-211_CODIFIE.pdf
+// - Règlement PIIA 99-875, art. 5.1.1 (tout agrandissement d'un bâtiment principal) :
+//   https://ville.ddo.qc.ca/wp-content/uploads/2021/07/PIIA_99-875_CODIFIE.pdf
+// - Règlement R-2026-217 sur les permis, art. 80 (30 jours après le dossier complet) :
+//   https://ville.ddo.qc.ca/wp-content/uploads/2024/01/Reglement_R-2026-217_Permis_certificats.pdf
 
 import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
@@ -218,6 +226,10 @@ export const zoneDollardDesOrmeauxPage: PageTemplateData = {
             {
               q: "Combien coûte une cuisine à Dollard-des-Ormeaux ?",
               a: "Le plus souvent entre 35 000 $ et 50 000 $, structure, électricité et plomberie comprises. Les mandats plus modestes partent vers 25 000 $. Le budget est arrêté au contrat, après la visite.",
+            },
+            {
+              q: "Combien coûte un permis d'agrandissement à DDO ?",
+              a: "100 $ jusqu'à 24 999 $ de travaux, puis 11 $ par tranche de 1 000 $. À DDO, l'apparence de tout agrandissement est jugée par le comité d'urbanisme, puis approuvée par le conseil. Une fois le dossier complet, la Ville dispose de 30 jours pour délivrer ou refuser le permis.",
             },
           ],
         },

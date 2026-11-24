@@ -194,7 +194,7 @@ export const zoneVaudreuilDorionPageEn: PageTemplateData = {
             },
             {
               q: "What does a Vaudreuil-Dorion permit cost?",
-              a: "The fee is set by a municipal by-law and varies with the nature of the work. The amount goes into our price. The permits and inspections division answers at 450 455-3371 for specific cases.",
+              a: "To extend a house, by-law 1709 sets $3.50 per m² of added floor area, at least $200: a 60 m² addition therefore costs $210 in permit fees. Other work has its own rate. The amount goes into our price, and the permits and inspections division answers at 450 455-3371.",
             },
             {
               q: "Are the planning rules changing right now?",

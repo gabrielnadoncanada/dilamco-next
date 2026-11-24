@@ -23,6 +23,11 @@
 //   villageois de Sainte-Geneviève déclaré à caractère exceptionnel ; église de
 //   1843-1845 de François Baillargé ; maison D'Ailleboust-De-Manthet, 15886, boul.
 //   Gouin Ouest, 1845) : https://www.sphib-sg.org/patrimoine/sainte-genevieve/monuments-historiques/
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - Ville de Montréal, « Obtenir un permis pour l'agrandissement d'un immeuble »,
+//   arrondissement IBZSGV (9,80 $ par tranche de 1 000 $ ; documents exigés, dont plans de
+//   structure par un ingénieur et soumission détaillée) :
+//   https://montreal.ca/demarches/obtenir-un-permis-pour-lagrandissement-dun-immeuble?arrondissement=IBZSGV
 // - Licence RBQ 8306-0806-27 (registre RBQ, consulté 2026-09-18).
 
 import type { PageTemplateData } from "@/features/page-builder";
@@ -242,6 +247,10 @@ export const zoneIleBizardSainteGenevievePage: PageTemplateData = {
             {
               q: "Peut-on transformer une maison du vieux Sainte-Geneviève ?",
               a: "Oui, à condition de relever l'existant d'abord. Le cœur du village est reconnu comme un ensemble d'intérêt, autour de l'église de 1843-1845 et de la maison D'Ailleboust-De-Manthet, au 15886, boulevard Gouin Ouest.",
+            },
+            {
+              q: "Combien coûte un permis d'agrandissement sur l'île Bizard ?",
+              a: "9,80 $ par tranche de 1 000 $ de travaux. L'arrondissement demande le certificat de localisation, le plan d'implantation projetée, les plans de tous les niveaux, les élévations et des plans de structure préparés par un ingénieur, avec une soumission détaillée.",
             },
           ],
         },

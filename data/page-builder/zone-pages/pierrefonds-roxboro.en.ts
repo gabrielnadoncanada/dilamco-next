@@ -212,6 +212,10 @@ export const zonePierrefondsRoxboroPageEn: PageTemplateData = {
               q: "What does finishing a bungalow basement cost here?",
               a: "A mandate starts around $25,000, and adding a powder room raises the total. What we find under the slab decides the rest. The site visit and the estimate are free.",
             },
+            {
+              q: "Does an addition go before a committee in Pierrefonds-Roxboro?",
+              a: "Yes. The borough has the look of every addition reviewed: the study costs $180, then the planning advisory committee gives its opinion, and sometimes the borough council. The permit follows, with additional documents. We meet the planning division before having plans drawn.",
+            },
           ],
         },
       },

@@ -18,6 +18,14 @@
 // - Wikipédia, « Beaconsfield (Québec) » (19 277 hab. en 2021, 24,5 km2, gares Beaconsfield et
 //   Beaurepaire sur la ligne Vaudreuil-Hudson) :
 //   https://fr.wikipedia.org/wiki/Beaconsfield_(Québec)
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - Règlement BEAC-172 sur les tarifs (janvier 2026) : agrandissement résidentiel 14,75 $/1 000 $
+//   (min. 200 $) + dépôt 2 500 $ ; étude PIIA 600 $ pour 2 présentations :
+//   https://www.beaconsfield.ca/storage/app/media/ma-ville/administration-et-finances/reglements/FR/beac_172_VS%20tarifs_FR_2026%20.pdf
+// - « Renovation permit and certificate » (agrandissement visible de la rue soumis au PAC :
+//   minimum 4 mois ; sinon 1 mois de mars à septembre, 2 semaines d'octobre à février ;
+//   demande déposée en personne). Le tableau « Permit delays » dit plutôt « minimum 2 months »
+//   à ajouter : on cite la page permis. https://www.beaconsfield.ca/en/renovation-permit-and-certificate
 
 import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
@@ -218,6 +226,10 @@ export const zoneBeaconsfieldPage: PageTemplateData = {
             {
               q: "Vaut-il mieux rénover par étapes à Beaconsfield ?",
               a: "Rarement. Dans les quartiers bâtis entre 1951 et 1963, la toiture, les fenêtres, la plomberie et l'électricité arrivent à bout de vie en même temps. Tout faire d'un coup évite de repayer chaque fois l'installation du chantier.",
+            },
+            {
+              q: "Combien coûte le permis d'agrandissement à Beaconsfield, et en combien de temps ?",
+              a: "14,75 $ par tranche de 1 000 $ de travaux, au moins 200 $, plus un dépôt de 2 500 $. Une rallonge visible de la rue passe aussi devant le comité qui juge l'apparence des travaux : 600 $ d'étude et au moins quatre mois selon la Ville. Sinon, comptez un mois de mars à septembre et deux semaines d'octobre à février.",
             },
           ],
         },

@@ -204,6 +204,10 @@ export const zoneDorvalPageEn: PageTemplateData = {
               q: "What does renovating a Dorval bungalow cost?",
               a: "It depends on the electrical service and on the walls being opened. A mandate starts near $25,000 and a full kitchen runs distinctly higher. The visit and the estimate are free.",
             },
+            {
+              q: "What does an addition permit cost in Dorval?",
+              a: "$8 per $1,000 on the first $100,000 of work, then $6 beyond, plus a $2,500 guarantee deposit. For a house of four units or fewer, the committee's review of an addition's look costs $1,000.",
+            },
           ],
         },
       },

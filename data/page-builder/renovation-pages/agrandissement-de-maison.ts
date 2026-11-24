@@ -186,8 +186,8 @@ export const agrandissementMaisonPage: PageTemplateData = {
           ],
           actions: [
             {
-              label: "Voir la cuisine",
-              href: "/services/renovation/cuisine",
+              label: "Coût du permis par ville",
+              href: "/blogue/permis-agrandissement-maison",
               variant: "ghost",
             },
             {

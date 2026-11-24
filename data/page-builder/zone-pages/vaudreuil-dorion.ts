@@ -21,6 +21,11 @@
 //   13,5 % par rapport à 2016 :
 //   https://www12.statcan.gc.ca/census-recensement/2021/as-sa/fogs-spg/Page.cfm?lang=F&topic=1&dguid=2021A00052471083
 // - Licence RBQ 8306-0806-27 (registre RBQ, consulté 2026-09-18).
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - Règlement 1709 sur les tarifs (amendement 1709-40, en vigueur le 2026-11-03), art. 8.24.4 :
+//   agrandissement d'un usage habitation 3,50 $/m² de superficie de plancher (min. 200 $). Le lien
+//   de la page « Permis » (Reg_1709_comp.pdf) est mort ; fichier actuel :
+//   https://www.ville.vaudreuil-dorion.qc.ca/uploads/sections/La_Ville/Reglementation/Reglements_generaux/Reg_1709_comp-40_finale.pdf
 
 import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
@@ -218,7 +223,7 @@ export const zoneVaudreuilDorionPage: PageTemplateData = {
             },
             {
               q: "Combien coûte un permis à Vaudreuil-Dorion ?",
-              a: "Le tarif est fixé par un règlement municipal et varie selon la nature des travaux. Le montant entre dans notre prix. La Division permis et inspections répond au 450 455-3371 pour les cas particuliers.",
+              a: "Pour agrandir une maison, le règlement 1709 fixe 3,50 $ par m² de plancher ajouté, au minimum 200 $ : une rallonge de 60 m² coûte donc 210 $ de permis. Les autres travaux ont leur propre tarif. Le montant entre dans notre prix, et la Division permis et inspections répond au 450 455-3371.",
             },
             {
               q: "Les règles d'urbanisme changent-elles en ce moment ?",

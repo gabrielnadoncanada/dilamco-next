@@ -16,6 +16,15 @@
 //   reconstituée le 1er janvier 2006, ville coupée en deux par l'autoroute Transcanadienne,
 //   parc industriel de part et d'autre de l'A-40, huit districts) :
 //   https://fr.wikipedia.org/wiki/Kirkland_(Québec)
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - Règlement GEN-2026-51 sur les tarifs (en vigueur le 2025-12-05, version anglaise) :
+//   extension, maison unifamiliale, 8 $/1 000 $ (min. 50 $) ; étude PIIA d'un agrandissement 400 $ :
+//   https://www.ville.kirkland.qc.ca/client_file/upload/Avis%20publics%202025/GEN-2026-51_EN.pdf
+// - Règlement PIIA-2022-55, art. 3(4) (façade avant modifiée ou superficie > 25 % de la moyenne
+//   des bâtiments résidentiels à moins de 100 m) et art. 19 (avis du CCU à sa première réunion
+//   après 60 jours) :
+//   https://www.ville.kirkland.qc.ca/client_file/upload/document/PIIA-2022-55%20(FR)%20Version%20administrative.pdf
+// - « Solariums / Agrandissement » : https://www.ville.kirkland.qc.ca/solarium---building-extension
 
 import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
@@ -218,6 +227,10 @@ export const zoneKirklandPage: PageTemplateData = {
             {
               q: "Combien coûte de rénover une maison de Kirkland au complet ?",
               a: "Refaire la toiture, les fenêtres, l'entrée électrique et les salles de bain dans la même séquence se compte en dizaines de milliers de dollars. Nos plus petits mandats partent vers 25 000 $.",
+            },
+            {
+              q: "Combien coûte un permis d'agrandissement à Kirkland ?",
+              a: "8 $ par tranche de 1 000 $ de travaux pour une maison unifamiliale, au moins 50 $. Si la rallonge change la façade avant ou rend la maison 25 % plus grande que la moyenne des maisons à moins de 100 m, le comité d'urbanisme doit en juger l'apparence : 400 $ d'étude, et un avis rendu seulement après 60 jours.",
             },
           ],
         },

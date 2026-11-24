@@ -17,6 +17,12 @@
 // - Wikipédia, « Pointe-Claire » (33 488 hab. en 2021, 34,7 km2, origines au XVIIe siècle,
 //   municipalité en 1854, ville en 1911, chemins de fer 1853 et 1887, moulin et église
 //   Saint-Joachim) : https://fr.wikipedia.org/wiki/Pointe-Claire
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - « Comment obtenir un permis de construction » (2026) : 13 $/1 000 $ (min. 80 $), valeur d'au
+//   moins 1 410 $/m² de plancher ; dépôt 3 120 $ (≥ 50 % de la superficie) ou 645 $ (< 50 %) ;
+//   sceau d'architecte ou de technologue au-delà d'un tiers de superficie ou pour un étage ajouté ;
+//   permis en 30 jours si le dossier est complet, plus long sous PIIA :
+//   https://www.pointe-claire.ca/assets/images/Documents/PRO_permis_construire-R_FR_2026.pdf
 
 import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
@@ -225,6 +231,10 @@ export const zonePointeClairePage: PageTemplateData = {
             {
               q: "Combien coûte une salle de bain à Pointe-Claire ?",
               a: "Dans une maison d'avant 1950, la plomberie et le sous-plancher coûtent autant que la finition. Un mandat démarre vers 25 000 $ et la portée se fixe après le relevé. L'estimation est gratuite.",
+            },
+            {
+              q: "Combien coûte un permis d'agrandissement à Pointe-Claire ?",
+              a: "13 $ par tranche de 1 000 $ de travaux, calculé sur au moins 1 410 $ par m² ajouté. Le dépôt est de 645 $ si l'ajout fait moins de la moitié de la maison, 3 120 $ sinon. Au-delà d'un tiers de superficie en plus, les plans doivent porter le sceau d'un architecte ou d'un technologue.",
             },
           ],
         },

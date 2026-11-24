@@ -18,6 +18,11 @@
 //   et locatifs près de la gare de Dorval et de l'avenue Dorval) :
 //   https://loaamanseur-remax.ca/articles-blogue/living-in-dorval-neighbourhood-guide
 // - Licence RBQ 8306-0806-27 (registre RBQ, consulté 2026-09-18).
+// Permis d'agrandissement (consulté le 2026-11-24) :
+// - Règlement RCM-98-2023 sur la tarification (codification au 2026-05-15) : résidentiel de
+//   moins de 4 logements, 8 $/1 000 $ (premiers 100 000 $) + 6 $/1 000 $ au-delà + dépôt de
+//   garantie 2 500 $ ; PIIA, agrandissement de 4 logements et moins, 1 000 $ :
+//   https://www.ville.dorval.qc.ca/storage/app/media/la-cite/administration-et-finances/reglements-municipaux/reglements-en-vigueur/cod-rcm-98-2023-tarification-fr-au-2026-05-15.pdf
 
 import type { PageTemplateData } from "@/features/page-builder";
 import { SITE } from "@/seo/schema/site";
@@ -224,6 +229,10 @@ export const zoneDorvalPage: PageTemplateData = {
             {
               q: "Combien coûte de rénover un bungalow de Dorval ?",
               a: "Tout dépend de l'entrée électrique et des murs à ouvrir. Un mandat démarre vers 25 000 $ et une cuisine complète se chiffre nettement plus haut. La visite et l'estimation sont gratuites.",
+            },
+            {
+              q: "Combien coûte un permis d'agrandissement à Dorval ?",
+              a: "8 $ par tranche de 1 000 $ sur les premiers 100 000 $ de travaux, puis 6 $ au-delà, plus un dépôt de garantie de 2 500 $. Pour une maison de quatre logements et moins, l'étude de l'apparence d'un agrandissement par le comité coûte 1 000 $.",
             },
           ],
         },

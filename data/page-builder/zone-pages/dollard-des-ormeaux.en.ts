@@ -202,6 +202,10 @@ export const zoneDollardDesOrmeauxPageEn: PageTemplateData = {
               q: "What does a kitchen cost in Dollard-des-Ormeaux?",
               a: "Most often between $35,000 and $50,000, structure, electrical and plumbing included. Smaller mandates start near $25,000. The budget is fixed in the contract, after the visit.",
             },
+            {
+              q: "What does an addition permit cost in DDO?",
+              a: "$100 up to $24,999 of work, then $11 per $1,000. In DDO, the look of every addition is reviewed by the planning committee, then approved by council. Once the file is complete, the City has 30 days to issue or refuse the permit.",
+            },
           ],
         },
       },

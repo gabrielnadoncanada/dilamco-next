@@ -9,6 +9,8 @@ import { post as verifierLicenceRbq } from "./verifier-licence-rbq-entrepreneur"
 import { post as verifierLicenceRbqEn } from "./verifier-licence-rbq-entrepreneur.en";
 import { post as sousSolApresDegatEau } from "./sous-sol-apres-degat-eau";
 import { post as sousSolApresDegatEauEn } from "./sous-sol-apres-degat-eau.en";
+import { post as permisAgrandissement } from "./permis-agrandissement-maison";
+import { post as permisAgrandissementEn } from "./permis-agrandissement-maison.en";
 
 // Ajouter un article : 1) une ligne dans seo/blog-slugs.json (slug FR → EN),
 // 2) <slug>.ts + <slug>.en.ts ici, 3) la paire ci-dessous. Routing, liens,
@@ -18,6 +20,7 @@ const PAIRS: Array<{ fr: BlogPost; en: BlogPost }> = [
   { fr: coutRenovationCuisine, en: coutRenovationCuisineEn },
   { fr: verifierLicenceRbq, en: verifierLicenceRbqEn },
   { fr: sousSolApresDegatEau, en: sousSolApresDegatEauEn },
+  { fr: permisAgrandissement, en: permisAgrandissementEn },
 ];
 
 for (const { fr, en } of PAIRS) {
