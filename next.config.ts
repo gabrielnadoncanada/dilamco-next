@@ -383,6 +383,13 @@ const nextConfig = {
   // redirection automatique de Next et on la refait dans middleware.ts pour
   // toutes les autres routes.
   skipTrailingSlashRedirect: true,
+  // Pièces jointes du formulaire de contact (lib/contact-files.ts) : 1 Mo par
+  // défaut, relevé au plafond des fonctions Vercel (4,5 Mo).
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "4.5mb",
+    },
+  },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },

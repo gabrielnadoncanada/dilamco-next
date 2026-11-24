@@ -3,6 +3,7 @@
 import { submitContactLead, type ContactFormState } from "@/lib/contact-actions";
 import { useLeadSubmitTracking } from "@/lib/use-lead-submit-tracking";
 import { LeadAttributionInput } from "@/components/forms/LeadAttributionInput";
+import { FileUploadField } from "@/components/forms/FileUploadField";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -52,7 +53,19 @@ function renderField(
   field: SplitDetailsFormCardProps["groups"][number]["fields"][number],
   error: string | undefined,
   selectPlaceholder: string,
+  locale: string,
 ) {
+  if (field.kind === "file") {
+    return (
+      <FileUploadField
+        id={field.name}
+        name={field.name}
+        locale={locale}
+        invalid={Boolean(error)}
+      />
+    );
+  }
+
   const requiredClassName = field.required ? "required" : undefined;
 
   if (field.kind === "textarea") {
@@ -229,14 +242,15 @@ export function SplitDetailsFormCard(props: SplitDetailsFormCardProps) {
                           key={field.name}
                           className={cn(
                             "space-y-2",
-                            field.kind === "textarea" && "md:col-span-2",
+                            (field.kind === "textarea" || field.kind === "file") &&
+                              "md:col-span-2",
                             field.required && "required",
                           )}
                         >
                           <Label htmlFor={field.name}>
                             {field.label}
                           </Label>
-                          {renderField(field, fieldError, selectPlaceholder)}
+                          {renderField(field, fieldError, selectPlaceholder, locale)}
                           {fieldError ? (
                             <p className="text-xs text-destructive">{fieldError}</p>
                           ) : null}

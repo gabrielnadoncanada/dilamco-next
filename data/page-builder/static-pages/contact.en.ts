@@ -192,6 +192,13 @@ export const pageEn: PageTemplateData = {
                   placeholder:
                     "E.g. 1968 bungalow, original kitchen to be redone entirely, wall to open toward the dining room, plumbing and electrical never touched, basement to be revisited later.",
                 },
+                {
+                  kind: "file",
+                  name: "fichiers",
+                  label: "Photos or plans (optional)",
+                  helper:
+                    "A few photos of the room as it is now are enough for a first estimate.",
+                },
               ],
             },
           ],

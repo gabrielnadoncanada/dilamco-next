@@ -3,6 +3,13 @@
 import { Resend } from "resend";
 import { z } from "zod";
 import { leadAttributionLines } from "@/lib/lead-attribution-email";
+import {
+  CONTACT_FILES_FIELD,
+  CONTACT_FILES_MAX_COUNT,
+  CONTACT_FILES_MAX_TOTAL_BYTES,
+  formatFileSize,
+  isAllowedContactFileType,
+} from "@/lib/contact-files";
 
 export type ContactFormState = {
   status: "idle" | "success" | "error";
@@ -115,6 +122,34 @@ function getStringValue(formData: FormData, key: string) {
   return String(formData.get(key) ?? "").trim();
 }
 
+// Pièces jointes facultatives (photos, plans). Le champ envoie un fichier vide
+// quand rien n'est choisi : on l'ignore.
+function readAttachments(formData: FormData):
+  | { ok: true; files: File[] }
+  | { ok: false; error: string } {
+  const files = formData
+    .getAll(CONTACT_FILES_FIELD)
+    .filter((value): value is File => value instanceof File && value.size > 0);
+
+  if (files.length > CONTACT_FILES_MAX_COUNT) {
+    return {
+      ok: false,
+      error: `Joignez au plus ${CONTACT_FILES_MAX_COUNT} fichiers.`,
+    };
+  }
+  if (files.some((file) => !isAllowedContactFileType(file.type))) {
+    return { ok: false, error: "Joignez des photos ou des PDF seulement." };
+  }
+  const total = files.reduce((sum, file) => sum + file.size, 0);
+  if (total > CONTACT_FILES_MAX_TOTAL_BYTES) {
+    return {
+      ok: false,
+      error: `Les fichiers dépassent ${formatFileSize(CONTACT_FILES_MAX_TOTAL_BYTES)} au total.`,
+    };
+  }
+  return { ok: true, files };
+}
+
 function escapeHtml(value: string) {
   return value
     .replaceAll("&", "&amp;")
@@ -147,17 +182,22 @@ export async function submitContactLead(
     message: getStringValue(formData, "message"),
   });
 
-  if (!parsed.success) {
-    const fieldErrors = parsed.error.flatten().fieldErrors;
+  const attachments = readAttachments(formData);
+
+  if (!parsed.success || !attachments.ok) {
+    const fieldErrors = parsed.success ? {} : parsed.error.flatten().fieldErrors;
 
     return {
       status: "error",
       message: "Corrigez les champs indiques puis renvoyez le formulaire.",
-      fieldErrors: Object.fromEntries(
-        Object.entries(fieldErrors).flatMap(([key, value]) =>
-          value && value[0] ? [[key, value[0]]] : [],
+      fieldErrors: {
+        ...Object.fromEntries(
+          Object.entries(fieldErrors).flatMap(([key, value]) =>
+            value && value[0] ? [[key, value[0]]] : [],
+          ),
         ),
-      ),
+        ...(attachments.ok ? {} : { [CONTACT_FILES_FIELD]: attachments.error }),
+      },
     };
   }
 
@@ -193,13 +233,34 @@ export async function submitContactLead(
     message: data.message,
   };
   const attribution = leadAttributionLines(getStringValue(formData, "attribution"));
+  const files = attachments.files;
+  const fileLines =
+    files.length > 0
+      ? [
+          `Fichiers joints (${files.length}):`,
+          ...files.map((file) => `- ${file.name} (${formatFileSize(file.size)})`),
+        ]
+      : ["Fichiers joints: aucun"];
 
   const { error } = await resend.emails.send({
     from: fromEmail,
     to: [toEmail],
     cc: ["gabriel@dilamco.com", "sean@dilamco.com"],
     replyTo: data.courriel,
-    subject: `Nouvelle demande de soumission - ${data.nom}`,
+    subject: `Nouvelle demande de soumission - ${data.nom}${
+      files.length > 0 ? ` (${files.length} fichier${files.length > 1 ? "s" : ""})` : ""
+    }`,
+    ...(files.length > 0
+      ? {
+          attachments: await Promise.all(
+            files.map(async (file) => ({
+              filename: file.name,
+              content: Buffer.from(await file.arrayBuffer()),
+              contentType: file.type,
+            })),
+          ),
+        }
+      : {}),
     text: [
       "Nouvelle demande de soumission Dilamco",
       "",
@@ -214,6 +275,8 @@ export async function submitContactLead(
       "",
       "Message:",
       summary.message,
+      "",
+      ...fileLines,
       "",
       ...attribution,
     ].join("\n"),
@@ -230,6 +293,7 @@ export async function submitContactLead(
         <p><strong>Calendrier souhaite:</strong> ${escapeHtml(summary.echeance)}</p>
         <p><strong>Message:</strong></p>
         <p style="white-space: pre-wrap;">${escapeHtml(summary.message)}</p>
+        ${fileLines.map((line) => `<p>${escapeHtml(line)}</p>`).join("")}
         <hr style="margin: 24px 0; border: 0; border-top: 1px solid #e5e7eb;" />
         ${attribution.map((line) => `<p style="color: #4b5563;">${escapeHtml(line)}</p>`).join("")}
       </div>

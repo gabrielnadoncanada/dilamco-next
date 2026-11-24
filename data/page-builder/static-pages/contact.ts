@@ -205,6 +205,13 @@ export const page: PageTemplateData = {
                   placeholder:
                     "Ex. bungalow 1968, cuisine d'origine à refaire au complet, mur à ouvrir vers la salle à manger, plomberie et électricité jamais touchées, sous-sol fini à revoir plus tard.",
                 },
+                {
+                  kind: "file",
+                  name: "fichiers",
+                  label: "Photos ou plans (facultatif)",
+                  helper:
+                    "Quelques photos de la pièce actuelle suffisent pour une première estimation.",
+                },
               ],
             },
           ],

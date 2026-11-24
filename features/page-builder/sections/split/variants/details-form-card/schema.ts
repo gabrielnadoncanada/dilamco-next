@@ -37,10 +37,16 @@ const SelectFieldSchema = BaseFieldSchema.extend({
   options: z.array(FormOptionSchema).min(1).max(12),
 });
 
+// Pièces jointes (photos, plans) : limites dans lib/contact-files.ts.
+const FileFieldSchema = BaseFieldSchema.omit({ placeholder: true }).extend({
+  kind: z.literal("file"),
+});
+
 const FormFieldSchema = z.discriminatedUnion("kind", [
   TextFieldSchema,
   TextareaFieldSchema,
   SelectFieldSchema,
+  FileFieldSchema,
 ]);
 
 const FormGroupSchema = z.object({
