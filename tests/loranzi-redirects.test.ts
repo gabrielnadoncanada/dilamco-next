@@ -9,7 +9,9 @@ describe("loranziRedirect", () => {
   });
 
   it("ignores a trailing slash", () => {
-    expect(loranziRedirect("/espaces/cuisine/")).toBe("https://loranzi.com/fr/spaces/kitchens");
+    expect(loranziRedirect("/boutique/produit/armoire-cuisine-bas-1-porte-12-pouces/")).toBe(
+      "https://loranzi.com/fr/catalog/base/base-1-door",
+    );
   });
 
   it("sends unknown shop paths to the catalogue", () => {
@@ -17,14 +19,19 @@ describe("loranziRedirect", () => {
     expect(loranziRedirect("/en/shop/whatever")).toBe("https://loranzi.com/en/catalog");
   });
 
-  it("moves the kitchen pages", () => {
-    expect(loranziRedirect("/en/spaces/kitchen")).toBe("https://loranzi.com/en/spaces/kitchens");
-    expect(loranziRedirect("/projets/cuisine/cuisine-sur-mesure-laval")).toBe("https://loranzi.com/fr/projects");
-    expect(loranziRedirect("/services/renovation/cuisine")).toBe("https://loranzi.com/fr/homeowners");
-  });
-
   it("keeps the rest of Dilamco", () => {
-    for (const path of ["/", "/en", "/espaces/salle-de-bain", "/espaces/walk-in", "/services/renovation/sous-sol", "/contact"]) {
+    for (const path of [
+      "/",
+      "/en",
+      "/espaces/cuisine",
+      "/en/spaces/kitchen",
+      "/services/renovation/cuisine",
+      "/blogue/cout-renovation-cuisine",
+      "/projets/cuisine/cuisine-sur-mesure-laval",
+      "/espaces/salle-de-bain",
+      "/espaces/walk-in",
+      "/contact",
+    ]) {
       expect(loranziRedirect(path)).toBeNull();
     }
   });

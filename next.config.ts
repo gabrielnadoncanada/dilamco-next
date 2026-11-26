@@ -2,7 +2,7 @@
 
 const redirectRules = [
   // Boutique (caissons en stock) : redirigée vers Loranzi (loranzi.com) le
-  // 2026-11-26, avec les pages cuisine. Voir lib/loranzi-redirects.ts, appliqué
+  // 2026-11-26. Voir lib/loranzi-redirects.ts, appliqué
   // par middleware.ts (une règle par produit : trop pour next.config).
   { source: "/landing/alto", destination: "/espaces/walk-in" },
 

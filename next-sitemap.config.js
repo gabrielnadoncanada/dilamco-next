@@ -113,12 +113,6 @@ module.exports = {
     "/page-builder",
     "**/opengraph-image",
     "**/opengraph-image/*",
-    // Pages cuisine redirigées vers loranzi.com (lib/loranzi-redirects.ts).
-    "*/espaces/cuisine",
-    "*/projets/cuisine",
-    "*/projets/cuisine/*",
-    "*/services/renovation/cuisine",
-    "*/blogue/cout-renovation-cuisine",
   ],
 
   robotsTxtOptions: {

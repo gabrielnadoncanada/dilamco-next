@@ -6,7 +6,7 @@ import { loranziRedirect } from "./lib/loranzi-redirects";
 const intlMiddleware = createMiddleware(routing);
 
 export default function middleware(request: NextRequest) {
-  // Kitchen pages and the former cabinet shop moved to Loranzi (lib/loranzi-redirects.ts):
+  // The former cabinet shop moved to Loranzi (lib/loranzi-redirects.ts):
   // one 301 straight to the final URL, trailing slash or not.
   const moved = loranziRedirect(request.nextUrl.pathname);
   if (moved) return NextResponse.redirect(moved, 301);

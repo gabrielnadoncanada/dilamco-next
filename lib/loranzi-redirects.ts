@@ -1,6 +1,6 @@
-// Kitchen pages and the former cabinet shop now belong to Loranzi (loranzi.com), which sells
-// the White Shaker cabinets in stock and installs kitchens. Decision of Gabriel, 2026-11-26:
-// dilamco.com only redirects them (301); bathrooms, walk-ins and the rest stay Dilamco.
+// The former cabinet shop now belongs to Loranzi (loranzi.com), which sells the same White
+// Shaker cabinets in stock. Decision of Gabriel, 2026-11-26: only the shop redirects (301);
+// every other page, kitchen pages included, stays Dilamco.
 // Shop map generated from loranzi/web/docs/seo/dilamco-redirects.csv (each product URL to the
 // Loranzi page of the same model). Read by middleware.ts, before next-intl.
 
@@ -8,7 +8,6 @@ const LORANZI = "https://loranzi.com";
 
 /** Exact paths (no trailing slash) -> Loranzi URL. */
 const EXACT: Record<string, string> = {
-  "/blogue/cout-renovation-cuisine": "https://loranzi.com/fr/homeowners",
   "/boutique": "https://loranzi.com/fr/catalog",
   "/boutique/armoires-cuisine": "https://loranzi.com/fr/catalog",
   "/boutique/produit/armoire-cuisine-bas-1-porte-12-pouces": "https://loranzi.com/fr/catalog/base/base-1-door",
@@ -199,9 +198,6 @@ const EXACT: Record<string, string> = {
   "/boutique/produit/vanite-salle-de-bain-2-portes-24-pouces": "https://loranzi.com/fr/catalog/vanity/vanity-sink",
   "/boutique/produit/vanite-salle-de-bain-2-portes-30-pouces": "https://loranzi.com/fr/catalog/vanity/vanity-sink",
   "/boutique/vanites": "https://loranzi.com/fr/catalog/vanity",
-  "/en/blog/kitchen-renovation-cost": "https://loranzi.com/en/homeowners",
-  "/en/projects/kitchen": "https://loranzi.com/en/projects",
-  "/en/services/renovation/kitchen": "https://loranzi.com/en/homeowners",
   "/en/shop": "https://loranzi.com/en/catalog",
   "/en/shop/produit/base-kitchen-blind-corner-cabinet-42-inch": "https://loranzi.com/en/catalog/base/base-blind-corner",
   "/en/shop/produit/base-kitchen-blind-corner-cabinet-45-inch": "https://loranzi.com/en/catalog/base/base-blind-corner",
@@ -390,18 +386,12 @@ const EXACT: Record<string, string> = {
   "/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-30-inch": "https://loranzi.com/en/catalog/wall/wall-corner-45",
   "/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-36-inch": "https://loranzi.com/en/catalog/wall/wall-corner-45",
   "/en/shop/produit/wall-kitchen-corner-cabinet-45-24-x-48-inch": "https://loranzi.com/en/catalog/wall/wall-corner-45",
-  "/en/spaces/kitchen": "https://loranzi.com/en/spaces/kitchens",
-  "/espaces/cuisine": "https://loranzi.com/fr/spaces/kitchens",
-  "/projets/cuisine": "https://loranzi.com/fr/projects",
-  "/services/renovation/cuisine": "https://loranzi.com/fr/homeowners",
 };
 
 /** Whole sections: anything under the prefix that the exact map does not name. */
 const PREFIXES: [string, string][] = [
   ["/boutique/", `${LORANZI}/fr/catalog`],
   ["/en/shop/", `${LORANZI}/en/catalog`],
-  ["/projets/cuisine/", `${LORANZI}/fr/projects`],
-  ["/en/projects/kitchen/", `${LORANZI}/en/projects`],
 ];
 
 /** The Loranzi URL a Dilamco path moves to, or null when it stays on dilamco.com. */
